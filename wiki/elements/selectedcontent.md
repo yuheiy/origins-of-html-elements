@@ -1,6 +1,8 @@
-# `<selectedcontent>`
+---
+status: 完成
+---
 
-> 状態: 完成
+# `<selectedcontent>`
 
 ## 概要
 

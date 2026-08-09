@@ -1,6 +1,8 @@
-# `<template>`
+---
+status: 完成
+---
 
-> 状態: 完成
+# `<template>`
 
 ## 概要
 

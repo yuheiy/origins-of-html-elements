@@ -1,6 +1,8 @@
-# `<colgroup>`
+---
+status: 完成
+---
 
-> 状態: 完成
+# `<colgroup>`
 
 ## 概要
 

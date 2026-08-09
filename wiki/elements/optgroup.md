@@ -1,6 +1,8 @@
-# `<optgroup>`
+---
+status: 完成
+---
 
-> 状態: 完成
+# `<optgroup>`
 
 ## 概要
 

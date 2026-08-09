@@ -1,6 +1,8 @@
-# `<textarea>`
+---
+status: 完成
+---
 
-> 状態: 完成
+# `<textarea>`
 
 ## 概要
 

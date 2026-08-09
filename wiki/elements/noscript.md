@@ -1,6 +1,8 @@
-# `<noscript>`
+---
+status: 完成
+---
 
-> 状態: 完成
+# `<noscript>`
 
 ## 概要
 

@@ -1,6 +1,8 @@
-# `<figcaption>`
+---
+status: 完成
+---
 
-> 状態: 完成
+# `<figcaption>`
 
 ## 概要
 

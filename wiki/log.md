@@ -353,3 +353,11 @@ WHATWG公式Git履歴と同時代mailから、旧`header`を`hgroup`へ分離し
 ## [2026-08-10] lint | figureとfigcaptionの敵対的検証
 
 初回調査と分離して、2006年4月・5月の原提案、11月の導入説明、仕様commitと親diff、2009年の構文変更メール、Bug 7657／7669、ISSUE-83、2010年の変更提案と仕様commitへ戻り、日付、主体、要素名、引用文脈、各矢印を再照合した。DocBookへの言及がheading処理の別件であること、XHTML 2が`figure`ではなく`object`の子`caption`を定義することも反例として維持した。対象2ページの必須見出し、証拠表、相対リンク、確度、共有系譜、全体集計を検査して合格とし、状態を`完成`とした。
+
+## [2026-08-10] update | 要素ページの状態管理
+
+全110要素ページの状態を本文中の状態行からYAML frontmatterの`status`へ移し、`AGENTS.md`のページ契約と敵対的検証手順を新形式に揃えた。
+
+## [2026-08-10] lint | 要素ページのfrontmatter
+
+全110要素ページでfrontmatterがYAMLとして解釈でき、`status`が許可値であること、旧状態行が残っていないこと、Markdown whitespaceに不整合がないことを確認した。

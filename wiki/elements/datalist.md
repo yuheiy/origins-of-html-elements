@@ -1,6 +1,8 @@
-# `<datalist>`
+---
+status: 完成
+---
 
-> 状態: 完成
+# `<datalist>`
 
 ## 概要
 

@@ -1,6 +1,8 @@
-# `<progress>`
+---
+status: 完成
+---
 
-> 状態: 完成
+# `<progress>`
 
 ## 概要
 
