@@ -8,7 +8,7 @@
 
 最終確認日は2026年8月9日である。[WHATWG HTML Living StandardのElements index](https://html.spec.whatwg.org/multipage/indices.html#elements-3)にあるHTML名前空間の組み込み要素113件と、HTML構文で使用できる名前付きforeign rootの`math`と`svg`を合わせた115要素を収録する。この一覧は特定日のsnapshotではなく、Living Standardに追従して更新する。
 
-- Elements indexの`h1, h2, h3, h4, h5, h6`は6要素として数え、共通史料と系譜は[`hx.md`](elements/hx.md)へまとめる。
+- Elements indexの`h1, h2, h3, h4, h5, h6`は6要素として数え、共通史料と系譜は[`h1-h6.md`](elements/h1-h6.md)へまとめる。
 - [HTML syntax](https://html.spec.whatwg.org/multipage/syntax.html#elements-2)がforeign elementsと定義するMathMLの`math`とSVGの`svg`はHTML名前空間要素と分けて数えるが、HTML文書内でforeign contentを開始する名前付きrootなので対象へ含める。
 - [Custom elements](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-core-concepts)のうち、autonomous custom elementsは名前集合が開いており、customized built-in elementsは既存の組み込み要素名を使うため、どちらも追加の要素名として数えない。
 - [Non-conforming features](https://html.spec.whatwg.org/multipage/obsolete.html#non-conforming-features)でentirely obsoleteとされる要素は除外し、現行要素の系譜を説明する場合だけ歴史的要素として扱う。
@@ -17,7 +17,7 @@
 ## 現在の状態
 
 - 対象要素数: 115
-- 要素ページ: 110ファイルで全115要素を収録（`h1`〜`h6`は`hx.md`へ統合）
+- 要素ページ: 110ファイルで全115要素を収録（`h1`〜`h6`は`h1-h6.md`へ統合）
 - 史料検証済み: 115件（A: 65件、A−: 17件、B: 29件、C: 4件）
 - 史料未検証: 0件（未評価）
 - 現在の意味を要約済み: 115件
@@ -60,7 +60,7 @@
 
 ### H
 
-[`<h1>`〜`<h6>`](elements/hx.md) · [`<head>`](elements/head.md) · [`<header>`](elements/header.md) · [`<hgroup>`](elements/hgroup.md) · [`<hr>`](elements/hr.md) · [`<html>`](elements/html.md)
+[`<h1>`〜`<h6>`](elements/h1-h6.md) · [`<head>`](elements/head.md) · [`<header>`](elements/header.md) · [`<hgroup>`](elements/hgroup.md) · [`<hr>`](elements/hr.md) · [`<html>`](elements/html.md)
 
 ### I
 

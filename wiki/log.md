@@ -270,7 +270,7 @@ WHATWG公式Git履歴と同時代mailから、旧`header`を`hgroup`へ分離し
 
 ## [2026-08-09] update | h1〜h6要素ページの統合
 
-`wiki/elements/h1.md`〜`h6.md`を削除し、共通の歴史、証拠、確度、未解決点を[`hx.md`](elements/hx.md)へ統合した。対象集合は115要素のまま、要素ページは110ファイルとなった。索引、横断調査、AAP調査ノート、運用規約を同時更新した。
+`wiki/elements/h1.md`〜`h6.md`を削除し、共通の歴史、証拠、確度、未解決点を[`hx.md`](elements/h1-h6.md)へ統合した。対象集合は115要素のまま、要素ページは110ファイルとなった。索引、横断調査、AAP調査ノート、運用規約を同時更新した。
 
 ## [2026-08-09] lint | h1〜h6要素ページの統合
 
@@ -361,3 +361,7 @@ WHATWG公式Git履歴と同時代mailから、旧`header`を`hgroup`へ分離し
 ## [2026-08-10] lint | 要素ページのfrontmatter
 
 全110要素ページでfrontmatterがYAMLとして解釈でき、`status`が許可値であること、旧状態行が残っていないこと、Markdown whitespaceに不整合がないことを確認した。
+
+## [2026-08-10] update | 見出し要素ページの改名
+
+`wiki/elements/hx.md`を`wiki/elements/h1-h6.md`へ改名し、索引、共有系譜、運用規約の参照を更新した。
