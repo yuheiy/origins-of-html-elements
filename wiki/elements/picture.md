@@ -1,58 +1,64 @@
 # `<picture>`
 
-> 状態: 骨格作成済み（史料未検証）
+> 状態: Responsive Images Community GroupからHTMLへの系譜を検証済み（最初のmarkup提案は未確認）
 
 ## 概要
 
-未調査。現在の意味と歴史的な由来を混同せずに記述する。
+Responsive Images Community Groupの提案とPicturefillを、HTML Working Groupのextension draftを経てWHATWG HTMLへ統合した要素である。
 
 ## 現在の意味
 
-一次定義: [WHATWG HTML Living Standardの `<picture>` 定義](https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element)（2026-08-09確認）。定義内容の要約は未作成。
+WHATWG HTML Living Standardでは、子の`img`が使う画像resourceを、pixel density、viewport size、画像format等に応じて選べるよう複数のsourceを提供するcontainerである。`picture`自体は表示されず、子要素を表す。[一次定義](https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element)（2026-08-09確認）
 
 ## HTMLへの導入
 
-未調査。初出、導入主体、導入理由を分離して記録する。
+Responsive Images Community Groupは2012年に提案中の`picture` markupを動かすPicturefillを公開した。2013年のHTML Working Group草案は同Community Groupとの共同開発を明記し、2014年6月17日のWHATWG commitがupstreamの`picture`更新をHTML Living Standardへ統合した。[Picturefill](https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/) [HTML WG草案](https://www.w3.org/TR/2013/WD-html-picture-element-20130226/) [仕様commit](https://github.com/whatwg/html/commit/a7716b7a2463323c7f25176f4b3768008d170204)
+
+導入理由は、resolution switching、art direction、breakpoint、画像format等に応じた複数sourceの選択を宣言的に行い、legacy user agentには`img`でfallbackすることだった。[要求文書](https://www.w3.org/TR/2013/WD-respimg-usecases-20130226/)
 
 ## HTML直前の祖先
 
-未確認。名称、外見、現在の用途の類似だけから祖先を推定しない。
+Responsive Images Community Groupの`picture`提案と、同じmarkupを実行したPicturefillである。HTML Working Group草案は共同開発を、WHATWG commitはupstream統合を明記する。
 
 ## さらに上流の由来
 
 ### 証拠
 
-未確認。
+2013年の要求文書は、当時使われていたcustom techniqueの欠点を標準化の動機として列挙するが、最終構文を特定の一手法から採用したとは述べない。
 
 ### 解釈
 
-なし。史料確認後も、証拠とは別に記述する。
+client-side workaroundを不要にするnativeな宣言的画像選択として標準化されたと解釈できる。
 
 ## 系譜
 
-未確定。史料で確認済みの接続だけを記載する。
+RICG `picture`提案／Picturefill（2012年） → HTML WG `picture` extension（2013年） → WHATWG HTML統合（2014年） → 現行HTML `picture`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 2012-02-21 | A sample picture implementation | Community Group実装資料 | 提案中の`picture` markup、media query、`img` fallbackを実行するPicturefill。 | [一次資料](https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/) | 2026-08-09 |
+| 2013-02-26 | *The picture element* | W3C First Public Working Draft | RICGとの共同開発と`picture`の構文・意味。 | [一次資料](https://www.w3.org/TR/2013/WD-html-picture-element-20130226/) | 2026-08-09 |
+| 2013-02-26 | Responsive Images Use Cases | W3C First Public Working Draft | workaroundの欠点とresponsive imagesの標準化要求。 | [一次資料](https://www.w3.org/TR/2013/WD-respimg-usecases-20130226/) | 2026-08-09 |
+| 2014-06-17 | WHATWG HTML commit `a7716b7a` | 仕様commit | upstream `picture`更新のHTML Living Standardへの統合。 | [一次資料](https://github.com/whatwg/html/commit/a7716b7a2463323c7f25176f4b3768008d170204) | 2026-08-09 |
 
 ## 確度
 
-**未評価**
+**A**
 
-ハンドオフの確度は出発仮説として扱い、一次資料の再確認後に評価する。
+Community Groupの提案と実装、HTML Working Group草案、WHATWGへのupstream統合が要素単位で連続して確認できるため。
 
 ## 否定された仮説
 
-なし。ハンドオフで撤回済みの説明がある場合は、個別調査時に理由とともに移記する。
+`video`／`audio`の`source`から`picture`自体が派生したという説明。既存`source`を再利用したことは確認できるが、`picture`の採用元とする記録はない。
 
 ## 未解決
 
-- HTMLへの導入理由は確認できるか。
-- HTML直前の具体的祖先は確認できるか。
-- さらに上流の由来を示す直接史料はあるか。
+- `picture`という名称と最初のmarkupを提案した正確な議論またはcommitはどれか。
+- WHATWG sourceへ要素本体を最初に置いたcommitはどれか。
+- Picturefill以外のworkaroundから最終構文へ採用された個別機構はあるか。
 
 ## 調査記録
 
-未着手。
+RICGの同時代記事とrepository、HTML Working Groupのelement草案と要求文書、WHATWG統合commitを確認した。横断比較は[Modern HTML要素とforeign rootの調査ノート](../research/modern-html-foreign-roots.md)を参照する。

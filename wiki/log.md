@@ -97,3 +97,15 @@ HTML 4.01、GNU Texinfo 2.16、GNU Texinfo 3.7の配布アーカイブを展開�
 ## [2026-08-09] update | Rawリソース取得
 
 取得元と保存先をマニフェストへ集約し、各URLの最新版を一時領域へ取得してから`raw/`を更新するスクリプトを追加した。以後の追加と再取得はこのスクリプトを経由する。
+
+## [2026-08-09] research | Modern HTML要素とforeign root
+
+`picture`, `template`, `slot`, `data`, `selectedcontent`, `ruby`, `rt`, `rp`, `math`, `svg`について、Responsive Images、Web Components、HTML Working Group、Open UI、W3C Internationalization、MathML、SVGの一次資料を照合した。[調査ノート](research/modern-html-foreign-roots.md)
+
+`picture`, `slot`, `data`, `selectedcontent`, `math`, `svg`をA、`ruby`, `rt`, `rp`をA−、`template`をBとして個別ページへ統合した。`template`はstandalone提案からWHATWG HTMLへの統合commitが未確認のためBに留め、`content → slot`は単純改名ではなくdistribution modelの再設計として記録した。`svg`は2008年の初回統合・削除・2009年の再導入を分離した。
+
+対象10ページの現在の意味も各現行仕様から要約した。史料検証済みは70ページ、現在の意味の要約済みは83ページとなった。
+
+## [2026-08-09] lint | 70検証済みページ
+
+全115ページの確度集計を再計算し、A 48件、A− 7件、B 15件、未評価45件が`wiki/README.md`と一致することを確認した。Modern HTML／foreign root系10ページについて、必須見出しの順序、現行定義の要約、空でない証拠表、相対リンク、generic placeholderの除去、Markdown whitespaceを検査した。確認できない`template`の統合経路、ruby三要素の個別対応、外見が似たUI／template機構は系譜へ接続していない。
