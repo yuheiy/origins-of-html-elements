@@ -441,3 +441,19 @@ OASIS TRP 9501:1995とTM 9502:1995を保存し、CALS table modelの1990年初�
 初回調査と分離して2004年8月・11月、2005年4月のWHATWG mail、2004年9月・12月と2005年9月の保存草案、2008年の`aside`名称説明へ戻り、より早い版、日付、主体、旧名、現名、引用文脈、系譜の各矢印を再照合した。2005年Google調査が初期草案より後であること、XHTML 2の`section`／`nl`と出版上のasideに採用因果がないこと、`footer`と`nav`の個別対応および`navigation`から`nav`への名称変更判断が未確認であることを維持した。
 
 対象5ページと共有系譜について必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査した。全115要素の確度集計がA 77件、A− 19件、B 16件、C 3件、未評価0件で`wiki/README.md`と一致し、敵対的検証済み115件を維持できることを確認して合格とし、状態を`完成`とした。
+
+## [2026-08-10] research | 初期WHATWGのprogressとsmall
+
+`progress`と`small`について、2004年・2005年のWHATWG保存草案、同時代mail、WHATWG仕様commit、HTML 3.0、HTML+、XFormsを照合した。`progress`は2004年12月8日のProgress meters placeholderが2006年3月の正式要素へ具体化されたことを確認した。File upload progress要求はplaceholderより後で、編集者もpage側の機構として退けており、XUL／XAML等についても同じ草案が仕様の独立性を明記するため、直接祖先としなかった。
+
+`small`はHTML 3.0が“New in 3.0”とする一方、導入以前の提案者と具体的祖先は確認できなかった。WHATWGのsemantic reinterpretationは保存草案上2005年4月6日後から13日以前に絞れ、4月12日の編集者回答からsmall printという表示非依存の意味、名称維持、legacy browser互換性という判断を確認した。
+
+## [2026-08-10] update | 初期WHATWG残件の系譜と確度
+
+`progress`の初出、直前祖先、系譜、証拠、否定された仮説、未解決点を更新し、2004年の具体的placeholderからの直接変更を確認できたためBからAへ変更した。`small`は2005年の意味変更時期と理由を更新したが、HTML 3.0への導入経路が未確認なのでBを維持した。新しい共有系譜は追加せず、確度集計をA 78件、A− 19件、B 15件、C 3件へ更新した。
+
+## [2026-08-10] lint | progressとsmallの敵対的検証
+
+初回調査と分離して2004年12月のWHATWG草案、file upload提案と編集者回答、2005年4月6日・13日の保存草案、4月12日の改名提案と編集者回答、HTML 3.0、WHATWG仕様commit、2009年の編集者説明へ戻り、より早い版、日付、主体、要素名、引用文脈、各矢印を再照合した。2009年mailの日付を原文表示の8月12日へ、file uploadへの回答日を12月16日PST（17日UTC）へ訂正した。XUL／XAML／XFormsおよびNetscapeとの未確認接続、placeholderとHTML 3.0より上流の欠落を維持した。
+
+対象2ページについて必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査した。全115要素の確度集計がA 78件、A− 19件、B 15件、C 3件、未評価0件で`wiki/README.md`と一致し、敵対的検証済み115件を維持できることを確認して合格とし、状態を`完成`とした。

@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-HTML 3.0草案でsmall printを小さいfontで表示するpresentational elementとして確認でき、HTML 3.2へ継承された。WHATWG sourceの最初の公開履歴時点では、legal restrictions等のsmall printまたはside commentsという現行のsemantic modelへ再定義済みだったが、その変更前の編集記録は未確認である。
+HTML 3.0草案でsmall printを小さいfontで表示する新要素として確認でき、HTML 3.2以降へ継承された。WHATWGは2005年4月に、legacy browserとの互換性から名称を維持しつつ、legal restrictions等のsmall printまたはside commentsという表示非依存の意味へ再定義した。HTML 3.0への最初の導入経路は未確認である。
 
 ## 現在の意味
 
@@ -18,7 +18,7 @@ WHATWG HTML Living Standardでは、small printのような短いside commentを
 
 HTML 3.2は`SMALL`をtext-level font style elementとして収録し、「small fontへ置く」と定義した。HTML 3.2は1996年初頭のrecommended practiceとwidely deployed featuresを取り込んだが、`SMALL`個別の提案者や採用元は明記しない。[HTML 3.2](https://www.w3.org/TR/REC-html32#font-style)
 
-2006年3月2日のWHATWG source初回check-inでは、`small`をlegal restrictions、copyrights、disadvantages等のsmall printまたはother side commentsとして定義し、単なるde-emphasisではないと明記している。したがってsemantic reinterpretationは遅くともこの時点までに成立していたが、初回check-in以前の変更commitと判断理由はこの履歴から確認できない。[WHATWG初回source](https://github.com/whatwg/html/blob/c3550d90867392905edbd91c94fec8c89fbfe648/source#L4084-L4090)
+2005年4月6日のWHATWG保存草案には`small`の要素定義がなく、4月13日保存版にはlegal restrictions、copyrights等のsmall printまたはother side commentsという定義がある。4月12日、Hicksonは`small`がfont sizeでなくlegal text／disclaimersという“small print”を意味し、既存名ならlegacy browsersでも機能するため名称を維持したと説明した。したがってsemantic reinterpretationは保存資料上4月6日後から13日以前に成立し、その設計理由も確認できる。[4月6日保存版](https://web.archive.org/web/20050406023711id_/http://whatwg.org/specs/web-apps/current-work/) [編集者の説明](https://lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0190.html) [4月13日保存版](https://web.archive.org/web/20050413075549id_/http://www.whatwg.org/specs/web-apps/current-work/)
 
 ## HTML直前の祖先
 
@@ -28,39 +28,48 @@ HTML 3.2は`SMALL`をtext-level font style elementとして収録し、「small 
 
 ### 証拠
 
-HTML 3.0草案とHTML 3.2は、small printを小さいfontで表示するpresentational meaningを示す。Netscape保存資料も同様の定義を持つが、保存日は1997年で原公開日は確定できない。WHATWGの初回sourceはsmall printという語を維持しつつ、表示ではなくlegal restrictions等のside commentとして定義する。[HTML 3.0](https://www.w3.org/MarkUp/html3/emphasis.html) [Netscape保存版](https://web.archive.org/web/19970613212205id_/http://home.netscape.com:80/assist/net_sites/html_extensions_3.html) [WHATWG初回source](https://github.com/whatwg/html/blob/c3550d90867392905edbd91c94fec8c89fbfe648/source#L4084-L4090)
+HTML 3.0草案は`SMALL`を“New in 3.0”とし、small printを小さいfontで表示するpresentational meaningを示す。HTML+には`SMALL`がなく、Netscape保存資料にはHTML 3.0とほぼ同じ定義があるが、Netscape資料の原公開日は確定できない。[HTML 3.0](https://www.w3.org/MarkUp/html3/emphasis.html) [HTML+ DTD](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html) [Netscape保存版](https://web.archive.org/web/19970613212205id_/http://home.netscape.com:80/assist/net_sites/html_extensions_3.html)
+
+2005年4月12日の改名提案は、当時`SMALL`がcopyright noticeやlegal descriptionに使われていたと述べた。Hicksonは同日、表示寸法ではなくsmall printという意味と、旧browserでも機能する既存名の利点を説明し、4月13日保存版はその表示非依存の定義を持つ。[改名提案](https://lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0187.html) [編集者の回答](https://lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0190.html) [保存草案](https://web.archive.org/web/20050413075549id_/http://www.whatwg.org/specs/web-apps/current-work/)
 
 ### 解釈
 
-WHATWGは従来の“small print”を表示寸法ではなく、legal restrictions等を含むside commentというmedia-independentな意味へ再解釈した。初回source以前の判断過程は不明なので、このsemantic modelから1995年の導入理由は逆算しない。
+WHATWGは従来の名称を後方互換性のため再利用し、“small print”を表示寸法ではなくlegal restrictions等を含むside commentというmedia-independentな意味へ再解釈した。この2005年の判断から1995年の導入理由は逆算しない。
 
 ## 系譜
 
 HTML 3.0 `SMALL`（1995年） → HTML 3.2 `SMALL` → HTML 4 `SMALL`
 
-→（遅くとも2006年3月までにsemantic reinterpretation）WHATWG `small` → 現行HTML `<small>`
+→（2005年4月にsemantic reinterpretation）WHATWG `small` → 現行HTML `<small>`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 1993-11-08 | HTML+ DTD | W3C保存仕様草案 | 要素集合に`SMALL`がない | [一次資料](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html) | 2026-08-10 |
 | 1995-03 | HTML 3.0 draft “Font Style Elements” | W3C保存仕様草案 | `SMALL`をsmall printを小さいfontで表示する要素として定義。 | [一次資料](https://www.w3.org/MarkUp/html3/emphasis.html) | 2026-08-09 |
 | 1997-01-14 | HTML 3.2 | W3C Recommendation | `SMALL`をsmall font用のfont-style elementとして収録。 | [一次資料](https://www.w3.org/TR/REC-html32#font-style) | 2026-08-09 |
 | 日付未確定（1997-06-13保存） | *Extensions to HTML 3.0* | Netscape公式資料の保存版 | Navigator 2.0文脈の`SMALL`定義。HTML 3.0との採用方向は確定できない。 | [保存版](https://web.archive.org/web/19970613212205id_/http://home.netscape.com:80/assist/net_sites/html_extensions_3.html) | 2026-08-09 |
-| 2006-03-02（WHATWG source初回check-in） | WHATWG, *Web Applications 1.0* source | 仕様source | `small`をlegal restrictions等のsmall printまたはother side commentsとし、de-emphasisではないと定義。 | [一次資料](https://github.com/whatwg/html/blob/c3550d90867392905edbd91c94fec8c89fbfe648/source#L4084-L4090) | 2026-08-09 |
+| 1997-12-18 | HTML 4.0 | W3C Recommendation | `SMALL`をfont style elementとして継承 | [一次資料](https://www.w3.org/TR/REC-html40/present/graphics.html#h-15.2.1) | 2026-08-10 |
+| 2005-04-06（保存日） | WHATWG, *Web Applications 1.0* | 同時代保存草案 | `small`の要素定義節がまだないことを確認できる変更時期の下限 | [保存版](https://web.archive.org/web/20050406023711id_/http://whatwg.org/specs/web-apps/current-work/) | 2026-08-10 |
+| 2005-04-12 | Henrik Lied, “HTML5: Deprecate the SMALL element” | WHATWG mailing-list proposal | `SMALL`の実利用をcopyright notice／legal descriptionとし、改名を提案 | [一次資料](https://lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0187.html) | 2026-08-10 |
+| 2005-04-12 | Ian Hicksonの回答 | WHATWG mailing-list・編集者説明 | Small printという表示非依存の意味、既存名によるlegacy browser互換性、名称維持の判断 | [一次資料](https://lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0190.html) | 2026-08-10 |
+| 2005-04-13（保存日） | WHATWG, *Web Applications 1.0* | 同時代保存草案 | Legal restrictions等のsmall printまたはother side commentsという定義 | [保存版](https://web.archive.org/web/20050413075549id_/http://www.whatwg.org/specs/web-apps/current-work/) | 2026-08-10 |
 
 ## 確度
 
 **B**
 
-現行のsemantic design modelが遅くともWHATWG sourceの初回check-in時点で成立していたことは確認できるが、その変更理由、正確な変更時点、HTML 3.0以前の具体的祖先は確認できないため。
+2005年のsemantic reinterpretationの時期と理由は確認できるが、HTML 3.0への導入理由と、それ以前の具体的祖先は確認できないため。
 
 ## 否定された仮説
 
-Netscape `SMALL`からHTML 3.0へ入ったという説明。両資料の文言は近いが、Netscape資料は後代のsnapshotしか確認できず、作成日と採用方向を固定できない。出版上のsmall print慣習からの直接採用も、判断を示す史料がない。
+Netscape `SMALL`からHTML 3.0へ入ったという説明。両資料の文言は近いが、Netscape資料は後代のsnapshotしか確認できず、作成日と採用方向を固定できない。出版上のsmall print慣習からHTML 3.0への直接採用も、判断を示す史料がない。
+
+2005年4月12日のHenrik Liedによる改名提案がsemantic reinterpretationを起こしたという説明。Hicksonの返答は当時の草案がすでに表示非依存だと述べるため、このmailを変更原因とはしない。
 
 ## 未解決
 
 - HTML 3.0 `SMALL`の最初の提案者、初出diff、mail、導入要求は確認できるか。
 - Netscape資料の初版日、Navigatorでの初回実装版、HTML 3.0草案との編集関係は何か。
-- presentational font-style elementから現行side-comment elementへ意味を変えた、2006年3月2日以前の編集記録と理由は確認できるか。
+- 2005年4月6日から13日の間にsemantic reinterpretationを反映した草案編集diff自体は確認できるか。
