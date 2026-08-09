@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-tableの一つ以上のcolumnsをgroupingする要素である。1995年10月27日のHTML Tables draft revision 03が、旧`COL` grouping modelではgroup内を異なるwidthにできない制約を解く新要素として導入し、RFC 1942を経てHTML 4.0が標準化した。HTML 4への個別採録経路は確認できない。
+tableの一つ以上のcolumnsをgroupingする要素である。1995年10月27日のHTML Tables draft revision 03が、旧`COL` grouping modelではgroup内を異なるwidthにできない制約を解く新要素として導入し、RFC 1942を経てHTML 4.0が標準化した。
 
 ## 現在の意味
 
@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、親`table`内の一つ以上のcolumnsから
 
 ## HTMLへの導入
 
-1995年10月27日の`draft-ietf-html-tables-03`は`COLGROUP`を「new element」と明記し、異なるwidthとalignment propertiesを持つcolumn集合を一つ以上の`COL`によってgroupingするため導入した。10月10日のrevision 02には`COLGROUP`がなく、revision 03はgroup間のrule描画と、groupからcellsへのproperty defaultsもmodelに含めた。RFC 1942はこのmodelをExperimental RFCとして標準化し、RecommendationとしてはHTML 4.0が1997年12月18日に採録した。[revision 02](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt) [revision 03](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 4.01 changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1)
+1995年10月27日の`draft-ietf-html-tables-03`は`COLGROUP`を「new element」と明記し、異なるwidthとalignment propertiesを持つcolumn集合を一つ以上の`COL`によってgroupingするため導入した。10月10日のrevision 02には`COLGROUP`がなく、revision 03はgroup間のrule描画と、groupからcellsへのproperty defaultsもmodelに含めた。RFC 1942はこのmodelをExperimental RFCとして標準化し、HTML 4.0の変更付録も同じ導入理由を記して採録した。[revision 02](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt) [revision 03](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 4.01 changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.7)
 
 ## HTML直前の祖先
 
@@ -34,21 +34,19 @@ HTML直前の設計上の祖先はrevision 02までの`COL`によるcolumn group
 
 `draft-ietf-html-tables-02`までの`COL` grouping model → `draft-ietf-html-tables-03` `COLGROUP`（1995-10-27）→ RFC 1942 `COLGROUP` → HTML 4.0 `COLGROUP` → 現行HTML `<colgroup>`
 
-HTML 4への個別採録決定は未確認である。
-
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
 | 1995-10-27 | `draft-ietf-html-tables-03` | IETF Internet-Draft | revision 02までの`COL` groupではgroup内を異なるwidthにできない制約を示し、異なるwidthとalignment propertiesを与えられる新要素`COLGROUP`を導入する。 | [revision 02](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt)・[revision 03](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt) | 2026-08-09 |
 | 1996-05 | RFC 1942, *HTML Tables* | Experimental RFC | `COLGROUP`を異なるwidthとalignment propertiesを持つcolumn集合のための新要素として導入し、DTDとproperty inheritanceを定義する。 | [一次資料](https://www.rfc-editor.org/rfc/rfc1942.html) | 2026-08-09 |
-| 1997-12-18 | HTML 4.0 | W3C Recommendation | `COLGROUP`をHTML 3.2以後の新要素として採録したことをHTML 4.01の差分付録が記録する。 | [HTML 4.01 changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1) | 2026-08-09 |
+| 1997-12-18 | HTML 4.0 | W3C Recommendation | `COLGROUP`をHTML 3.2以後の新要素として採録し、異なるwidthとalignment propertiesを一つ以上の`COL`で指定できるcolumn groupのため導入したと変更付録が記録する。5要素を含むtable DTD blockはRFC 1942のIETF table standardへ帰属する。 | [HTML 4.01 DTD](../../raw/html-4.01/strict.dtd)・[changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.7) | 2026-08-10 |
 
 ## 確度
 
-**B**
+**A**
 
-旧`COL` group modelの具体的制約から`COLGROUP`を導入した設計因果は確認できるが、HTML 4への要素単位の採録経路とHTML外の具体的祖先が確認できないため。
+旧`COL` group modelの具体的制約から`COLGROUP`を導入した要素単位の設計因果を1995年草案で確認でき、HTML 4の変更付録も同じ導入理由を明記するため。
 
 ## 否定された仮説
 
@@ -57,5 +55,5 @@ HTML 4への個別採録決定は未確認である。
 ## 未解決
 
 - revision 03の本文外で`COLGROUP`を提案・合意した人物と議論。
-- RFC 1942からHTML 4へ`COLGROUP`を個別採録した決定記録。
+- RFC 1942からHTML 4へ`COLGROUP`を移した要素単位の議論または編集履歴。
 - `COLGROUP`要素自体へ影響したSGML table modelがあるか。

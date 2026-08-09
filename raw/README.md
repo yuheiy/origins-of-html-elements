@@ -4,7 +4,7 @@
 
 取得元と保存先は[`tools/raw-sources.tsv`](../tools/raw-sources.tsv)に記録する。`./tools/fetch-raw.sh`を実行すると各URLの最新版を一時領域へ取得し、すべて成功した場合だけ`raw/`へ反映する。
 
-既存資料の取得日は2026-08-09である。
+既存資料の取得日は2026-08-10である。
 
 | ディレクトリ | 仕様・資料 | 正本 | 目的 |
 |---|---|---|---|
@@ -15,6 +15,7 @@
 | `html-3.0/` | HTML 3.0草案 | https://www.w3.org/MarkUp/html3/ | 論理スタイルと強調関連要素の変遷を検証する。 |
 | `html-3.2/` | HTML 3.2 Reference Specification | https://www.w3.org/TR/REC-html32 | HTML+の要素がW3C勧告へ入るまでを追跡する基準。 |
 | `html-4.01/` | HTML 4.01公式ZIP配布物（展開済み） | https://www.w3.org/TR/html401/html40.zip | 仕様全体、DTD、変更点、付属資料を含む。 |
+| `cals-table-model/` | OASIS Technical Research Paper 9501:1995およびTechnical Memorandum 9502:1995 | https://www.oasis-open.org/specs/a501.htm・https://www.oasis-open.org/specs/a502.htm | CALS table modelの公開時期と`thead`、`tbody`、`tfoot`の構造、および1995年改訂時の意味を検証する。 |
 | `rfc1942-html-tables/` | RFC 1942 HTML Tables | https://www.rfc-editor.org/rfc/rfc1942.html | 表関連要素の設計と標準化を検証する。 |
 | `rfc2070-html-internationalization/` | RFC 2070 HTML Internationalization | https://www.rfc-editor.org/rfc/rfc2070.html | 国際化と双方向テキスト関連要素を検証する。 |
 | `texinfo-2.16/` | GNU Texinfo 2.16公式配布物（展開済み） | https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z | 1992年前後のマクロ名を確認する一次配布物。 |

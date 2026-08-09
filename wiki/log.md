@@ -365,3 +365,17 @@ WHATWG公式Git履歴と同時代mailから、旧`header`を`hgroup`へ分離し
 ## [2026-08-10] update | 見出し要素ページの改名
 
 `wiki/elements/hx.md`を`wiki/elements/h1-h6.md`へ改名し、索引、共有系譜、運用規約の参照を更新した。
+
+## [2026-08-10] research | CALS table群の未解決事項
+
+1995年4月21日のDave Raggettによるtable proposalと4月29日のHarvey Binghamによる転載・批評を確認し、`THEAD`、`TBODY`、`TFOOT`がCALSから借用されたことと、CALSの`TGROUP`や局所`COLSPEC`を除いた構造差を特定した。`COL`は7月草案の`COLW`、`HSPEC`、`VSPEC`から9月25日のW3C Working Draftへ機能が再編されたことを確認したが、変更と命名の因果は未解決とした。`COLGROUP`は10月27日のrevision 03が旧`COL` grouping modelの同一幅制約を解くため導入したことを確認した。
+
+OASIS TRP 9501:1995とTM 9502:1995を保存し、CALS table modelの1990年初公開、1993年baseline、三つの同名row group要素の構造と意味を照合した。HTML 3.2が対象5要素を含まないことと、HTML 4のtable DTD blockがRFC 1942のIETF table standardへ集合単位で帰属することも確認した。
+
+## [2026-08-10] update | CALS table群の系譜と確度
+
+`thead`、`tbody`、`tfoot`をA−からAへ、`colgroup`をBからAへ変更し、`col`は具体的祖先との因果が未確認のためBを維持した。5要素ページとCALS共有系譜、raw資料目録、取得元manifest、Wiki進捗を更新し、確度集計をA 69件、A− 14件、B 28件、C 4件とした。
+
+## [2026-08-10] lint | CALS table群の敵対的検証
+
+初回調査と分離してRaggett／Bingham mail、各IETF draft、W3C Working Draft、RFC 1942、OASIS資料、HTML 3.2、HTML 4 DTDと変更付録へ戻り、より早い版、構造差、日付、主体、要素名、各系譜の矢印を再照合した。CALSからの直接採用を三つのrow group要素に限定し、`COL`の機能再編とHTML 4への5要素の採録は因果を確認できる範囲を越えて接続していない。全110要素ページの必須見出し順、空でない証拠表、frontmatter、相対リンク、Markdown whitespace、確度集計、敵対的検証済み115件を検査して合格とし、対象5ページの状態を`完成`とした。

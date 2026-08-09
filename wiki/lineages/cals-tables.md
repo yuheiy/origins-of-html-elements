@@ -2,13 +2,13 @@
 
 ## Row groups
 
-1995年7月のIETF table draftはCALS table modelのfeaturesを取り込み、表の行を`THEAD`、`TBODY`、`TFOOT`へ分けると明記し、RFC 1942もこのrow groupingを継承した。CALSから三要素を含むHTML proposalへの集合単位の因果は確認できるが、CALS側の具体的な要素名は確認できない。[IETF table draft-00](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00) [RFC 1942](../../raw/rfc1942-html-tables/rfc1942.txt)
+OASIS TRP 9501:1995はCALS table modelのbaselineを1993年のMIL-M-28001Bとし、各`TGROUP`が`TBODY`と任意の`THEAD`、`TFOOT`を持つ構造を記す。1995年4月21日のRaggett proposalは三要素をCALSから借用したと明記し、4月29日に転載・批評したHarvey Binghamは、CALSの`TGROUP`を除去し、`THEAD`／`TFOOT`内の局所`COLSPEC`を持たないHTML向け簡略化だと対照した。7月のIETF table draftとRFC 1942がこのrow groupingを継承したため、CALSの各要素からHTMLの同名要素への個別対応を確認できるが、CALS DTD全体の移植とは扱わない。[OASIS TRP 9501:1995](../../raw/cals-table-model/tr9501.html) [OASIS TM 9502:1995](../../raw/cals-table-model/tm9502.html) [Raggett／Bingham mail](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html) [IETF table draft-00](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00) [RFC 1942](../../raw/rfc1942-html-tables/rfc1942.txt)
 
 対象: [`thead`](../elements/thead.md)、[`tbody`](../elements/tbody.md)、[`tfoot`](../elements/tfoot.md)
 
 ## Column model
 
-IETF table draftは`-00`の`COLW`から`-01`の`COL`へmodelを変更し、`-03`は旧`COL`のgroupでは各columnを同じ幅にする制約を避けるため`COLGROUP`を新設した。`COLW`から`COL`への改名・採用理由は確認できない一方、旧`COL`の制約から`COLGROUP`を導入した因果は直接確認できる。[IETF table draft-00](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00) [draft-01](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-01) [draft-03](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03)
+1995年7月のIETF table draftはwidth専用の`COLW`とalignment用の`HSPEC`／`VSPEC`を別々に定義するが、9月25日のW3C Working Draftは三要素を持たず、width、span、alignment defaultsを担う`COL`を定義する。機能の置換・統合は版間で観察できるが、命名と設計変更の理由は確認できない。10月27日のIETF revision 03は、旧`COL`のgroupでは各columnを同じ幅にする制約を避けるため`COLGROUP`を新設した。[IETF table draft-00](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00) [W3C Working Draft](https://www.w3.org/TR/WD-tables-950925.html) [draft-03](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03)
 
 RFC 1942はCALS tableのimportを設計目標とし、`COL`／`COLGROUP`の相対幅記法がCALS representationからのimportを容易にすると述べる。この関係は変換要件と記法への影響に限定し、要素名または要素分割そのものをCALSから採用したとはしない。[RFC 1942](../../raw/rfc1942-html-tables/rfc1942.txt)
 
@@ -17,17 +17,18 @@ RFC 1942はCALS tableのimportを設計目標とし、`COL`／`COLGROUP`の相�
 ## 共有系譜
 
 ```text
-CALSのhead/body/foot row grouping
+CALS THEAD/TBODY/TFOOT（1993 baseline）
+  → Raggett HTML table proposal THEAD/TBODY/TFOOT
   → IETF table draft-00 THEAD/TBODY/TFOOT
   → RFC 1942 THEAD/TBODY/TFOOT
 
 CALSからのimport要件
   → IETF table draft系列／RFC 1942 COL/COLGROUPの相対幅記法
 
-draft-00 COLW [改名・採用因果は未確認] draft-01 COL
+draft-00 COLW + HSPEC/VSPEC [機能統合・命名の因果は未確認] W3C WD COL
 
 draft-01 COLのgroup model上の制約
   → draft-03 COLGROUP
 ```
 
-HTML 3.2はRFC 1942のsubsetを採用したと述べるが、DTDに対象五要素を含まない。HTML 4.01は五要素をHTML 3.2からの新要素として列挙するため、RFC 1942での提案とHTML 3.2への採録を同一視せず、RFC 1942からHTML 4への個別採録因果も未確認のまま分離する。[HTML 3.2](../../raw/html-3.2/index.html) [HTML 4.01 changes](../../raw/html-4.01/appendix/changes.html)
+HTML 3.2はRFC 1942のsubsetを採用したと述べるが、DTDに対象五要素を含まない。HTML 4.01は五要素をHTML 3.2からの新要素として列挙し、その5要素を含むtable DTD blockをRFC 1942のIETF table standardへ帰属させる。これによりRFC 1942からHTML 4への集合単位の採録は確認できるが、要素単位の議論または編集履歴は未確認である。[HTML 3.2](../../raw/html-3.2/index.html) [HTML 4.01 DTD](../../raw/html-4.01/strict.dtd) [HTML 4.01 changes](../../raw/html-4.01/appendix/changes.html)
