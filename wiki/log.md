@@ -135,3 +135,15 @@ HTML DTD内部の前身構造と欠落を確認できた`body`, `head`をA−、
 ## [2026-08-09] lint | 88検証済みページ
 
 全115ページの確度集計を再計算し、A 48件、A− 12件、B 27件、C 1件、未評価27件が`wiki/README.md`と一致することを確認した。初期SGML/GML系13ページについて、必須見出し順、空でない証拠表、具体的な未解決点、相対リンク、generic placeholder、Markdown whitespaceを検査した。現在の意味の要約済みは88件のままである。
+
+## [2026-08-09] research | 初期hypertext・文書制御要素群
+
+`a`, `base`, `br`, `hr`, `link`, `menu`, `meta`について、WorldWideWeb source、1992年CERN資料とDTD、1993年HTML draft、NCSA Mosaic変更記録、HTML+、1994年`META`提案、HTML 2.0を照合した。[調査ノート](research/early-hypertext-elements.md)
+
+具体提案からHTML 2.0まで追跡できた`meta`をA、同名提案からDTDまでの中間記録が欠ける`link`をA−、HTML側の設計modelまたは導入理由を確認できた`a`, `base`をB、初期出現と意味までを固定した`br`, `hr`, `menu`をCとした。ENQUIRE、GUI menu、印刷上のruleなどは採用因果を確認できないため系譜へ接続していない。
+
+対象7ページの現在の意味もWHATWG HTML Living Standard本文から要約した。史料検証済みは95ページ、現在の意味の要約済みは95ページとなった。
+
+## [2026-08-09] lint | 95検証済みページ
+
+全115ページの確度集計を再計算し、A 49件、A− 13件、B 29件、C 4件、未評価20件が`wiki/README.md`と一致することを確認した。初期hypertext・文書制御系7ページについて、必須見出し順、現行定義の要約、空でない証拠表、具体的な未解決点、相対リンク、generic placeholder、Markdown whitespaceを検査した。`br`／`hr`のMosaic・HTML+・HTML 2.0間と、初期`menu`から現行意味への未確認接続は矢印で補っていない。

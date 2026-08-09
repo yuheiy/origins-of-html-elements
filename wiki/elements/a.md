@@ -1,58 +1,62 @@
 # `<a>`
 
-> 状態: 骨格作成済み（史料未検証）
+> 状態: 初期HTMLでの実装とhyperlink設計を検証済み（HTML以前の具体的祖先は未確認）
 
 ## 概要
 
-未調査。現在の意味と歴史的な由来を混同せずに記述する。
+NeXT WorldWideWebの1991年1月の実装履歴と1992年のCERNタグ一覧で、linkの始点・終点となるanchorを確認できる。WWWがnode間のlinkを必要としたことは一次資料に明記されるが、ENQUIRE、NeXTのHyperText機能、HyTimeなどからHTMLの`A`へ採用した因果関係は確認できない。
 
 ## 現在の意味
 
-一次定義: [WHATWG HTML Living Standardの `<a>` 定義](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element)（2026-08-09確認）。定義内容の要約は未作成。
+WHATWG HTML Living Standardでは、`href`属性がある場合は内容をlabelとするhyperlink（hypertext anchor）を表し、ない場合はlinkが置かれ得た位置のplaceholderを表す。 [一次定義](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element)（2026-08-09確認）
 
 ## HTMLへの導入
 
-未調査。初出、導入主体、導入理由を分離して記録する。
+今回確認できる最初期の実装記録は、Tim Berners-LeeのNeXT WorldWideWeb version 0.4で、1991年1月30日にanchorの作成と編集状態の処理を記したものである。1991年保存sourceでは、node内の領域であるAnchor objectをHTML parserが`A`の`HREF`／`NAME`へ写像し、保存時に同じmarkupへ直列化する。1992年CERNタグ一覧は`A`を、textをlinkの始点、終点、または両方にする要素として定義する。`A`という要素名または上流のmodelを選んだ理由までは記録しない。[CERN/W3C, *Features and Bug Fixes*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/NeXT/Implementation/Features.html) [*Anchor.h*](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Anchor.h) [*ParseHTML.h*](https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h) [Berners-Lee, *HTML Tags*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
 
 ## HTML直前の祖先
 
-未確認。名称、外見、現在の用途の類似だけから祖先を推定しない。
+未確認。ENQUIREや他のhypertext systemがWWWの設計比較に現れることは確認できるが、そのanchor modelまたはmarkupをHTMLの`A`へ採用したとする資料は確認できない。
 
 ## さらに上流の由来
 
 ### 証拠
 
-未確認。
+Berners-LeeのWWW設計資料は、情報をnodeとlinkのwebとして扱い、linkをたどって情報へ到達するmodelを記録する。別の設計ノートはKMSとHyperCardのone-way link、ENQUIREのtwo-way linkを比較するが、HTML `A`の採用元は指定しない。[Berners-Lee, *Information Management: A Proposal*](https://www.w3.org/History/1989/proposal.html) [Berners-Lee, *Topology*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/Topology.html)
 
 ### 解釈
 
-なし。史料確認後も、証拠とは別に記述する。
+`A`はWWWのnode間linkをtextへ埋め込むHTML上の表現として導入されたと説明できる。特定の先行systemから要素単位で派生したとは説明できない。
 
 ## 系譜
 
-未確定。史料で確認済みの接続だけを記載する。
+WWWのnode／link設計（1989–1990）→ NeXT WorldWideWebのAnchor objectとHTML `A`の写像（1991年保存source）→ 現行HTML `<a>`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 1989-03 | *Information Management: A Proposal* | CERNでのWWW提案 | 情報をnodeとlinkからなるhypertextとして扱うWWWの設計要求を記録する。 | [W3C History](https://www.w3.org/History/1989/proposal.html) | 2026-08-09 |
+| 1991-01-30 | *Features and Bug Fixes* | CERN/W3Cの公式実装履歴 | NeXT WorldWideWeb 0.4でanchor作成を実装済みだったことを記録する。 | [W3C History](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/NeXT/Implementation/Features.html) | 2026-08-09 |
+| 1991-09-04／09-27（HTTP Last-Modified） | *Anchor.h*／*ParseHTML.h* | W3C保存のWorldWideWeb実装source | node内のAnchor objectとHTML `A`の`HREF`／`NAME`を相互に写像する。 | [Anchor object](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Anchor.h)・[HTML parser／serializer](https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h) | 2026-08-09 |
+| 1992-11-13（更新日） | *HTML Tags* | CERN公式HTML資料のhistorical snapshot | `A`の`HREF`と`NAME`によりlinkの始点・終点を表す初期HTMLの機能を定義する。 | [W3C History](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) | 2026-08-09 |
+| 1993-06 | *Hypertext Markup Language (HTML)* | IETF Internet-Draft | anchorをlinkの始点・終点として定義し、`A`と属性をDTDへ収録する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) | 2026-08-09 |
 
 ## 確度
 
-**未評価**
+**B**
 
-ハンドオフの確度は出発仮説として扱い、一次資料の再確認後に評価する。
+WWWのhyperlink要求とHTMLでのanchorの設計・初期実装は確認できるが、具体的な先行技術から`A`への採用因果を確認できないため。
 
 ## 否定された仮説
 
-なし。ハンドオフで撤回済みの説明がある場合は、個別調査時に理由とともに移記する。
+ENQUIRE、NeXTのHyperText機能、KMS、HyperCard、SGML／HyTimeを、名称または機能の類似だけからHTML `A`の直接祖先とする説明。今回確認した資料は比較対象または背景として言及するにとどまり、要素への採用を示さない。
 
 ## 未解決
 
-- HTMLへの導入理由は確認できるか。
-- HTML直前の具体的祖先は確認できるか。
-- さらに上流の由来を示す直接史料はあるか。
+- `A`という要素名と`HREF`／`NAME`のmarkupを選んだ判断を記録する1990年の設計資料またはsource historyは残っているか。
+- ENQUIREまたはNeXT WorldWideWebの内部link modelからHTML serializationへの具体的な写像を示す資料はあるか。
 
 ## 調査記録
 
-未着手。
+1989年WWW提案、WWWのlink topology設計ノート、1991年NeXT WorldWideWeb実装履歴と`Anchor`／HTML parser source、1992年CERNタグ一覧、1993年HTML Internet-Draft、HTML 2.0を確認した。ENQUIRE、KMS、HyperCard、NeXTの一般機能、HyTimeは採用因果を示す資料を回収できず、系譜へ接続しなかった。対象群全体は[初期hypertext／document control調査ノート](../research/early-hypertext-elements.md)を参照する。

@@ -1,58 +1,61 @@
 # `<base>`
 
-> 状態: 骨格作成済み（史料未検証）
+> 状態: 初期HTMLでの導入要求を検証済み（`SAVEDAS`提案から`BASE`への具体化過程は未回収）
 
 ## 概要
 
-未調査。現在の意味と歴史的な由来を混同せずに記述する。
+1992年CERNタグ一覧は、mail送信や複数addressでの参照により文書が取得時のcontextを失ってもrelative addressを解決するため、base addressが必要だと説明する。同年の設計ノートには`SAVEDAS`案、1993年1月6日版DTDには`BASE`があるが、その間の具体化記録は回収できていない。
 
 ## 現在の意味
 
-一次定義: [WHATWG HTML Living Standardの `<base>` 定義](https://html.spec.whatwg.org/multipage/semantics.html#the-base-element)（2026-08-09確認）。定義内容の要約は未作成。
+WHATWG HTML Living Standardでは、URL解析に使うdocument base URLと、hyperlink navigationおよびform submissionに使うdefault navigable名を指定する。要素自体はそれ以外の内容を表さない。 [一次定義](https://html.spec.whatwg.org/multipage/semantics.html#the-base-element)（2026-08-09確認）
 
 ## HTMLへの導入
 
-未調査。初出、導入主体、導入理由を分離して記録する。
+1992年11月のCERNタグ一覧はbase address用tagのformatを未定・未使用としつつ、文書がmailされた場合や複数のaddressで見える場合にもrelative addressを正しく解決するという要素固有の要求を記録する。Berners-Leeの*Future plans for HTML*は、文書を保存したaddressを持たせるtag名として`SAVEDAS`を提案する。1993年6月draftに収録されたRCS id `93/01/06`のDTDは、URLのreference contextとなる`BASE HREF`を宣言する。[Berners-Lee, *HTML Tags*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) [Berners-Lee, *Future plans for HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html) [1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)
 
 ## HTML直前の祖先
 
-未確認。名称、外見、現在の用途の類似だけから祖先を推定しない。
+未確認。HTML内部のBase Address要求と`SAVEDAS`提案は確認できるが、`SAVEDAS`から`BASE`への改名・採用を直接記録する資料は回収できていない。
 
 ## さらに上流の由来
 
 ### 証拠
 
-未確認。
+1992年資料が直接示す背景は、relative addressが文書の取得URLをcontextとして必要とし、mailや複数addressによりそのcontextを失いうるというURL処理上の問題である。
 
 ### 解釈
 
-なし。史料確認後も、証拠とは別に記述する。
+`BASE`は文書を移送・再保存してもrelative URLの解決基準を文書内に保持するためのdocument control要素として成立したと説明できる。
 
 ## 系譜
 
-未確定。史料で確認済みの接続だけを記載する。
+HTMLのBase Address要求／`SAVEDAS`提案（1992）→［`BASE`への具体化記録は未回収］→ HTML DTD `BASE`（1993-01-06）→ 現行HTML `<base>`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 1992-11-13（更新日） | *HTML Tags* | CERN公式HTML資料のhistorical snapshot | out-of-contextな文書でrelative addressを解決するためbase addressが必要だと説明し、tag formatは未定・未使用と記す。 | [W3C History](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) | 2026-08-09 |
+| 1992-12-02（更新日） | *Future plans for HTML* | CERN設計ノート | 保存時の文書addressを記録するtagとして`SAVEDAS`を提案する。 | [W3C History](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html) | 2026-08-09 |
+| 1993-01-06（DTD RCS id） | *Hypertext Markup Language (HTML)*収録DTD | IETF Internet-Draft内のDTD | URLのreference contextとなる`BASE`と`HREF`属性を宣言する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) | 2026-08-09 |
+| 1995-11 | RFC 1866: *Hypertext Markup Language - 2.0* | IETF Standards Track RFC | out-of-contextな文書のrelative URLを解釈するbase addressとして標準化する。 | [RFC Editor](https://www.rfc-editor.org/rfc/rfc1866#section-5.2.2) | 2026-08-09 |
 
 ## 確度
 
-**未評価**
+**B**
 
-ハンドオフの確度は出発仮説として扱い、一次資料の再確認後に評価する。
+HTMLへの導入理由と設計要求は直接史料で確認できるが、具体的な先行要素または`SAVEDAS`から`BASE`への変更過程を確認できないため。
 
 ## 否定された仮説
 
-なし。ハンドオフで撤回済みの説明がある場合は、個別調査時に理由とともに移記する。
+SGMLの同名概念または後代のURL仕様から`BASE`の起源を逆算する説明。今回確認できる直接の背景は初期HTMLにおけるout-of-context文書のrelative address解決要求である。
 
 ## 未解決
 
-- HTMLへの導入理由は確認できるか。
-- HTML直前の具体的祖先は確認できるか。
-- さらに上流の由来を示す直接史料はあるか。
+- `SAVEDAS`案を`BASE HREF`へ具体化または改名したmail、DTD revision、source changeは残っているか。
+- base address機構を既存のhypertext systemまたは文書形式から採用したことを示す資料はあるか。
 
 ## 調査記録
 
-未着手。
+1992年CERNタグ一覧と将来計画、1992年Connolly DTD群、1993年HTML Internet-Draft本文・DTD、HTML 2.0を比較した。1992年11月の未使用要求から1993年1月のDTDまでを固定したが、中間の具体化記録は確認できなかった。対象群全体は[初期hypertext／document control調査ノート](../research/early-hypertext-elements.md)を参照する。
