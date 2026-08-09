@@ -4,6 +4,7 @@
 
 | 共通の上流または要求 | 確認済みの経路 | 現行要素 | 制約 | 主な一次資料 |
 |---|---|---|---|---|
+| CERN-SGML tagset | ［集合単位］CERN-SGML tags → 初期HTML accepted tag集合 | [`ul`](../elements/ul.md)、[`ol`](../elements/ol.md)、[`li`](../elements/li.md)、[`dl`](../elements/dl.md)、[`dt`](../elements/dt.md)、[`dd`](../elements/dd.md) | 採録されたCERN-SGMLの個々のtagは列挙されない。1990年の`OL`はunordered表示で、後に一時不使用となる。 | [1990年WorldWideWeb test file](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html) |
 | AAP tag setのheading語彙 | AAP headings → CERN SGML guide → 初期HTML | [`h1`〜`h6`](../elements/h1-h6.md) | AAP BK-1は5 identifiers、HTMLは6段階であり、個別番号対応ではなく集合単位の関係である。 | [AAP Book DTD](https://ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd) / [CERN, *Tags used in HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) |
 | GNU Texinfo macro names | ［集合単位］Texinfo macro names → 1993年HTML draftのcharacter highlighting集合。対応macroを確認できた十要素は個別枝を持つ。 | [`b`](../elements/b.md)、[`i`](../elements/i.md)、[`em`](../elements/em.md)、[`strong`](../elements/strong.md)、[`code`](../elements/code.md)、[`samp`](../elements/samp.md)、[`kbd`](../elements/kbd.md)、[`var`](../elements/var.md)、[`dfn`](../elements/dfn.md)、[`cite`](../elements/cite.md)、[`u`](../elements/u.md) | `u`の対応macroは未確認。`dfn`と`u`は1993年草案から現行要素までの再採録経路にも欠落がある。 | [1993年IETF草案](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)、[GNU Texinfo 2.16](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z) |
 | HTML+ forms | HTML+ forms → HTML 2.0 forms → 後続HTML | [`form`](../elements/form.md)、[`input`](../elements/input.md)、[`select`](../elements/select.md)、[`option`](../elements/option.md)、[`textarea`](../elements/textarea.md) | RFC 1866がforms materialのHTML+由来を集合として明記する。 | [HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)、[RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html) |
@@ -31,6 +32,7 @@
 
 ## 詳細
 
+- [CERN-SGMLから初期HTML list群への系譜](cern-sgml-lists.md)
 - [HTML phrase要素とTexinfo](texinfo.md)
 - [HTML+から現行要素への系譜](html-plus.md)
 - [IETF HTML国際化草案の共有系譜](html-internationalization.md)

@@ -399,3 +399,17 @@ OASIS TRP 9501:1995とTM 9502:1995を保存し、CALS table modelの1990年初�
 ## [2026-08-10] lint | 初期HTMLのC要素の敵対的検証
 
 初回調査と分離して1991年WorldWideWeb change history、保存sourceとdirectory timestamp、Line Mode Browser履歴、1992年のHTML説明・用例・DTD議論、1993年のCERN/IETF draft、NCSA Mosaic公開mailとchange log、HTML+関連mailとdraftへ戻り、より早い出現、競合系列、日付、主体、要素名、引用文脈を再照合した。HTML+からNCSAへの未確認の接続、GUI menuや印刷上のruleからの類似推論、`Address` styleの先行性を系譜へ加えていないことを確認した。必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespace、全115要素の確度集計を検査し、A 72件、A− 12件、B 28件、C 3件、未評価0件、敵対的検証済み115件が`wiki/README.md`と一致することを確認して合格とし、対象4ページの状態を`完成`とした。
+
+## [2026-08-10] research | 初期HTML core
+
+初期HTMLのlist群、document wrapper群、hyperlink群について、1990〜1992年のWorldWideWeb test filesとsource、CERN設計資料、www-talk、Connollyの仕様旧版とDTDを照合した。1990年12月7日のHTTP保存日時を持つWorldWideWeb test fileが、CERN-SGML tagsetから一部のtagをHTMLへ含めたと明記し、`UL`、`OL`、`LI`、`DL`、`DT`、`DD`を同じaccepted tag集合で使うことを確認した。個々のCERN-SGML tagとの対応は列挙されないため、六要素を集合単位のA−とした。
+
+1990年の`OL`はunordered表示で、1991年版では`UL`へ置換され、1992年1月には未使用とされた後、unordered listとの区別のため再収録された。1992年2月11日のHTTP保存日時を持つtest sourceには`MENU`があり、Line Mode Browser 1.2aの導入記録区間より早いため、`menu`の初出時系列を未解決へ戻した。document wrapper群とhyperlink群では、既存ページを上回る具体的祖先または欠落区間の直接史料へ到達せず、確度を維持した。
+
+## [2026-08-10] update | CERN-SGMLと初期HTML list群
+
+`ul`、`ol`、`li`、`dl`、`dt`、`dd`の初出、直前祖先、系譜、証拠、確度、否定された仮説、未解決点を更新し、CERN-SGMLからの集合単位採録を共有系譜へ追加した。六要素をBからA−へ変更し、`menu`には競合する1992年2月11日の保存資料を反映した。確度集計をA 72件、A− 18件、B 22件、C 3件、共有系譜文書を6件へ更新した。
+
+## [2026-08-10] lint | 初期HTML coreの敵対的検証
+
+初回調査と分離して1990年test backup、1991年test fileとparser source、1992年test source、Line Mode Browser change history、CERNの`OL`再導入ノート、www-talk、初期DTDへ戻り、保存日時、要素名、markup、表示実装、版差、引用文脈を再照合した。CERN-SGMLの個別tag対応、Waterlooとの接続、1990年`OL`のordered表示、`MENU`の2月11日実装・公開を断定していないことを確認した。変更した7ページと共有系譜について必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査し、A 72件、A− 18件、B 22件、C 3件、未評価0件、敵対的検証済み115件が`wiki/README.md`と一致することを確認して合格とし、状態を`完成`とした。
