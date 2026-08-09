@@ -147,3 +147,13 @@ HTML DTD内部の前身構造と欠落を確認できた`body`, `head`をA−、
 ## [2026-08-09] lint | 95検証済みページ
 
 全115ページの確度集計を再計算し、A 49件、A− 13件、B 29件、C 4件、未評価20件が`wiki/README.md`と一致することを確認した。初期hypertext・文書制御系7ページについて、必須見出し順、現行定義の要約、空でない証拠表、具体的な未解決点、相対リンク、generic placeholder、Markdown whitespaceを検査した。`br`／`hr`のMosaic・HTML+・HTML 2.0間と、初期`menu`から現行意味への未確認接続は矢印で補っていない。
+
+## [2026-08-09] research | detailsとsummary
+
+`details`と`summary`について、WHATWG仕様commit、public-html mail、導入commitが参照するApple HIGとGNOME usability threadを照合した。[調査ノート](research/html5-semantic-elements.md)
+
+`details`はGUIのdisclosure triangle/widget慣習と`fieldset`／`legend`構造からの採用因果、`summary`は既存`details` caption機構からの置換を直接確認できたため、両方をAとした。対象2ページの現在の意味もWHATWG HTML Living Standard本文から要約した。史料検証済みと現在の意味の要約済みは97ページとなった。
+
+## [2026-08-09] lint | 97検証済みページ
+
+全115ページの確度集計を再計算し、A 51件、A− 13件、B 29件、C 4件、未評価18件が`wiki/README.md`と一致することを確認した。`details`と`summary`について、必須見出し順、現行定義の要約、空でない証拠表、具体的な未解決点、相対リンク、generic placeholder、Markdown whitespaceを検査した。

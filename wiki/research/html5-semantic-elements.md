@@ -2,7 +2,7 @@
 
 ## 調査範囲
 
-`article`, `aside`, `section`, `header`, `footer`, `nav`, `hgroup`, `figure`, `figcaption`, `mark`, `dialog`について、WHATWGの保存草案、HTML Standardの仕様履歴、同時代のWeb usage調査、W3C HTML Working Groupの説明資料を照合した。対象は「確認可能な初出」「導入時の意味または要求」「具体的な先行物からの採用因果」を分離して評価する。閲覧日はすべて2026-08-09である。
+`article`, `aside`, `section`, `header`, `footer`, `nav`, `hgroup`, `figure`, `figcaption`, `details`, `summary`, `mark`, `dialog`について、WHATWGの保存草案、HTML Standardの仕様履歴、同時代のWeb usage調査、W3C HTML Working Groupの説明資料を照合した。対象は「確認可能な初出」「導入時の意味または要求」「具体的な先行物からの採用因果」を分離して評価する。閲覧日はすべて2026-08-09である。
 
 ## 結論
 
@@ -17,6 +17,8 @@
 | `hgroup` | 2009-04-30にWHATWG editor Ian Hicksonが旧`header`を改名し、subheading用へ限定 | HTML5草案の旧`header` | A | その後の意味変更はあるが、要素導入の直接経路はcommitが明記する |
 | `figure` | 2006-11-27にIan HicksonがWHATWG sourceへ追加 | 未確認 | B | 初期captionには既存`legend`を再利用したが、HTML+ `FIG`からの採用因果は未確認 |
 | `figcaption` | 2010-01-30に`figure`のcaption機構を`dt`/`dd`または`legend`から専用要素へ変更 | HTML5草案の`figure` caption機構 | A | `CAPTION`という語の類似だけではHTML+ `CAPTION`へ接続しない |
+| `details` | 2006-07-06にIan Hicksonがdisclosure triangle widgetとして追加 | commitが直接参照するGUI disclosure widget慣習と、caption構造に再利用した`fieldset > legend` | A | Google Base参照先の当時の本文と、3例のどれを主たるモデルとしたかは未確認 |
+| `summary` | 2010-01-30に`details`のcaption機構を`dt`/`dd`または`legend`から専用要素へ変更 | HTML5草案の`details` caption機構 | A | 専用要素名を選んだ議論は未確認 |
 | `mark` | 2005-09-01草案の`m`を2008-02-17に`mark`へ改名し、relevance/highlightの意味を詳述 | HTML5草案の`m` | A | `m`自体の具体的なHTML外祖先は未確認 |
 | `dialog` | 会話用旧`dialog`を2009-09-15に削除し、2012-04-11にapplication UI用として再導入 | 未確認 | B | 同じ名前の旧要素やGUI dialogとの類似だけでは系譜を結ばない |
 
@@ -81,6 +83,36 @@ HTML+は1993年に`FIG`とその子`CAPTION`を定義していたが、確認し
 - 2006年の`figure`案がHTML+ `FIG`、DocBook、XHTML 2、または別のmarkup vocabularyを参照していたか。
 - `legend → dt/dd → figcaption`というcaption機構変更それぞれのissue、互換性問題、parser上の要求。
 
+## `details`と`summary`
+
+### 証拠
+
+2006-07-06のIan HicksonによるWHATWG revision 77は、`details`を“disclosure triangle widget”として定義するcommitである。直前版のTBWだった“Disclosure widget”節へ要素名、`HTMLDetailsElement`、先頭`legend`をsummaryとするcontent model、on demandで得る追加情報、`open()`/`close()`を追加した。差分末尾の編集コメントはGNOME usability thread、Apple Human Interface GuidelinesのDisclosure Triangles節、Google Base settingsを直接参照する。[WHATWG HTML commit `f98736ae`, 6 July 2006](https://github.com/whatwg/html/commit/f98736ae6caf9250ffaed0df557e214f0bf5aebd)
+
+導入commitが参照する2006-06-07のGNOME usability threadは、閉じたlabelを展開して追加情報を示すdisclosure widgetと、そのlabel設計を議論している。Apple Human Interface Guidelinesの同時代版はdisclosure triangleを、windowのprimary informationを補足する情報や機能を表示するcontrolと定義し、default closed、clickで下向きになり追加情報を表示する挙動を説明する。commitがこれらを直接参照するため、名称や外見の類似だけでなく、GUI disclosure widget慣習を`details`の設計モデルとして採用した因果を確認できる。ただし、Apple実装をそのまま複製した、または名称`details`をこれらから採ったとは述べない。[Matthew Paul Thomas, reply in GNOME usability thread “Using nouns or verbs for the disclosure widgets”, 7 June 2006](https://web.archive.org/web/20060701000000id_/http://mail.gnome.org/archives/usability/2006-June/msg00015.html) [Apple, *Apple Human Interface Guidelines*, “Disclosure Triangles”, 2005-12-06版](https://web.archive.org/web/20060701000000id_/http://developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html)
+
+2006-07-17の第二稿は、`open()`/`close()`をboolean `open` content/IDL attributeへ変更し、意味を追加情報またはcontrolsへ広げ、default closedとuserによるtoggleを定義した。想定renderingは閉状態の▶、開状態の▼、先頭`legend`を使うもので、上記3参照も維持された。[WHATWG HTML commit `d31535ee`, 17 July 2006](https://github.com/whatwg/html/commit/d31535eef7ec728bc34ce170fea624b77edf16d3)
+
+同じ履歴サイトが保存するWHATWG Web Applications 1.0 revision 228は、表題上の版日が2006-10-31で、editorをIan Hicksonと記す。同版は`details`をinteractiveなblock-level elementとして定義し、on demandで得られる追加情報またはcontrolsを表すものとした。content modelは先頭の`legend`と後続contentであり、先頭`legend`をdetailsのsummary、`legend`がなければUAが“Details”等を用意するものとした。`open`属性と、userが表示・非表示を要求できることも規定した。[WHATWG, *Web Applications 1.0*, revision 228, 31 October 2006](https://platform.html5.org/history/webapps/r228.html#disclosure-widgets:-the-details-element)
+
+2009-09-15のJeremy Keithによるmailは`details > dt + dd`を提案し、Ian Hicksonは“Ok, done.”と応じた。Ianは初期`legend`の主な利点を、`details`がformでも使われそうなため`fieldset`と一貫することだったと説明した。同日のcommitは`figure`と`details`を`legend`から`dt`/`dd`へ変更したと明記し、`details`では`dt`がsummary、`dd`が残りの内容を担った。[Ian Hickson, “Re: <details>”, W3C public-html, 15 September 2009](https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html) [WHATWG HTML commit `9c490f21`, 15 September 2009](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)
+
+2009-09-29にW3C HTML WG ISSUE-83は、`figure`と`details`内で`dt`/`dd`へdescription listとは異なるsemanticsを与える問題を正式課題として記録した。2010-01-12に最終編集されたWHATWG Wikiのchange proposalは、legacy parsing、既存CSSとdefault style、構造と意味の不一致を`dt`/`dd`方式の問題として列挙し、`dlabel`や`dsummary`等の専用要素案を比較した。ただし、最終名`summary`の選択理由は示さない。[W3C HTML WG ISSUE-83, opened 29 September 2009](https://www.w3.org/html/wg/tracker/issues/83) [WHATWG Wiki, “Change Proposal: figure and details”, last edited 12 January 2010](https://wiki.whatwg.org/wiki/Change_Proposal%3A_figure_and_details)
+
+2010-01-30のIan HicksonによるWHATWG仕様commitは、`figure`と`details`で`dt`/`dd`または`legend`を使っていた方式を、それぞれ専用の`figcaption`と`summary`へ変更するとcommit messageで明記する。差分は`summary`を目次と要素定義へ追加し、`details`のcontent modelとcaption参照を`summary`へ置換した。[WHATWG HTML commit `c3974951`, 30 January 2010](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)
+
+### 解釈
+
+`details`は、GUIのdisclosure triangle widgetをHTMLのon-demand disclosureへ採用したことを導入commitのmessageと直接参照から確認できる。captionへ`legend`を選んだ理由も後の編集者説明が`fieldset`との一貫性に置くため、安全な系譜は`GUI disclosure widget慣習 + fieldset > legendの構造モデル → details > legend + contents`である。要素単位の具体的な先行UI慣習からHTMLへ入った因果が直接史料にあるためAを推奨する。
+
+`summary`は新しいdisclosure概念の導入ではなく、既存`details`内で`legend`、のちに`dt`/`dd`が担ったcaption役を専用要素へ置き換えたものである。commitが要素単位の置換を直接明記するため、安全な系譜は`details + legend（後にdt/dd） → details + summary`であり、Aを推奨する。`summary`という名称がHTML 4の`table summary`属性や別の先行markupから採られたとは、確認した史料は述べない。
+
+### 未解決
+
+- 導入commitが参照するGoogle Base settingsの2006年当時の本文と、3参照のどれを主たるモデルとしたか。
+- GNOMEとApple以外に、`details`の設計判断へ直接使われたbrowser UI、JavaScript library、または別のUI languageがあったか。
+- 2010年に専用名`summary`を選んだ提案または議論と、HTML 4の`table summary`属性等との混同を検討した記録。
+
 ## `mark`
 
 ### 証拠
@@ -127,16 +159,27 @@ HTML+は1993年に`FIG`とその子`CAPTION`を定義していたが、確認し
 | 2004-11-10 | WHATWG thread “Semantic elements and spec complexity” | mailing list | `section`, `navigation`, `header`, `footer`, `article`, `sidebar`の提案集合と`div`との差。 | https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/date.html | 2026-08-09 |
 | 2005-09-01 | WHATWG Web Applications 1.0 | 保存Early Working Draft | `section`, `nav`, `article`, `aside`, `header`, `footer`, `m`の存在と導入時の意味。 | https://whatwg.org/specs/web-apps/2005-09-01/ | 2026-08-09 |
 | 2005-12 | Google Web Authoring Statistics: Classes | 当時のusage調査（保存複製） | class名頻度と`article`, `header`, `footer`, `nav`への対応。公開時期は2005-09草案より後。 | https://web.archive.org/web/20060101000000id_/http://code.google.com/webstats/2005-12/classes.html | 2026-08-09 |
+| 2006-06-07 | GNOME usability thread “Using nouns or verbs for the disclosure widgets” | UI設計議論（保存複製） | 閉じたlabelから追加情報へ展開するdisclosure widget。`details`導入commitが参照する。 | https://web.archive.org/web/20060701000000id_/http://mail.gnome.org/archives/usability/2006-June/msg00015.html | 2026-08-09 |
+| 2006-07-01以前 | Apple HIG “Disclosure Triangles” | platform UI guideline（保存複製） | disclosure triangleの状態、操作、追加情報を必要時に示す用途。`details`導入commitが参照する。 | https://web.archive.org/web/20060701000000id_/http://developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html | 2026-08-09 |
+| 2006-06/07 | A feature history of the modern Web Platform | WHATWG FAQ参照先の後代索引 | `details`導入を2006年6月・7月の区分に置く。正確な日付、commit、採用理由は示さない。 | https://platform.html5.org/history/ | 2026-08-09 |
+| 2006-07-06 | WHATWG commit `f98736ae` | 仕様commit | disclosure triangle widgetとして`details`を追加し、先頭`legend`と追加情報を定義。 | https://github.com/whatwg/html/commit/f98736ae6caf9250ffaed0df557e214f0bf5aebd | 2026-08-09 |
+| 2006-07-17 | WHATWG commit `d31535ee` | 仕様commit | `open`属性、default closed、user操作、初期renderingを追加。 | https://github.com/whatwg/html/commit/d31535eef7ec728bc34ce170fea624b77edf16d3 | 2026-08-09 |
+| 2006-10-31 | WHATWG Web Applications 1.0 revision 228 | 保存Working Draft | `details`をon-demandの追加情報・controlsとして定義し、先頭`legend`、`open`、userによる開閉を規定。 | https://platform.html5.org/history/webapps/r228.html#disclosure-widgets:-the-details-element | 2026-08-09 |
 | 2006-11-27 | WHATWG commit `32bff0ac` | 仕様commit | `figure`追加、embedded contentとcaptionのモデル、`legend`の再利用。 | https://github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059 | 2026-08-09 |
 | 2008-01-22 | HTML 5 differences from HTML 4 | W3C Working Draft | 2004年開始のdeployed content調査という全体背景、新要素群の当時の説明。 | https://www.w3.org/TR/2008/WD-html5-diff-20080122/ | 2026-08-09 |
 | 2008-02-17 | WHATWG commit `a1b2ff77` | 仕様commit | `m`から`mark`への改名とrelevance/highlight用例の拡張。 | https://github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635 | 2026-08-09 |
+| 2008-06-10 | W3C HTML 5 | Working Draft | `details`、先頭`legend`によるsummary、`open`を収録。独立した`summary`要素はない。 | https://www.w3.org/TR/2008/WD-html5-20080610/interactive-elements.html#the-details | 2026-08-09 |
+| 2009-04-23 | W3C HTML 5 | Working Draft | `details`のcaptionが引き続き先頭`legend`だったことを確認。 | https://www.w3.org/TR/2009/WD-html5-20090423/interactive-elements.html#the-details-element | 2026-08-09 |
 | 2009-04-30 | WHATWG commit `7e9b2d1b` | 仕様commit | `header`から`hgroup`への改名とsubheading用途への限定。 | https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4 | 2026-08-09 |
 | 2009-09-15 | WHATWG commit `9c490f21` | 仕様commit | conversation用`dialog`の削除。 | https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7 | 2026-08-09 |
-| 2010-01-30 | WHATWG commit `c3974951` | 仕様commit | `figure` captionを専用`figcaption`へ変更。 | https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f | 2026-08-09 |
+| 2009-09-15 | public-html “Re: &lt;details&gt;”／WHATWG commit `9c490f21` | 標準化mail／仕様commit | `dt`／`dd`案の採用と、旧`legend`方式を`fieldset`と一貫させた理由。 | https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html / https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7 | 2026-08-09 |
+| 2009-12-18 | “Validation Errors on Figures and Details” | WHATWG help mailing list | 当時の仕様が`details`の最初のchildとしてcaption用`dt`を許可していたことを引用。 | https://lists.whatwg.org/pipermail/help-whatwg.org/2009-December/002989.html | 2026-08-09 |
+| 2010-01-19 | W3C Bug 8379 comment 13 | HTML5 editor回答 | Ian Hicksonが`details`の設計要求をcommon application widgetのaccessibleなHTML表現と説明。導入後の回顧。 | https://www.w3.org/Bugs/Public/show_bug.cgi?id=8379#c13 | 2026-08-09 |
+| 2010-01-30 | WHATWG commit `c3974951` | 仕様commit | `figure`と`details`のcaptionを専用`figcaption`と`summary`へ変更。 | https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f | 2026-08-09 |
 | 2012-04-11 | WHATWG commit `2fb24fcf` | 仕様commit | application UI用`dialog`、modal/non-modal API、関連機構の再導入。 | https://github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9 | 2026-08-09 |
 
 ## 調査記録
 
-WHATWGの公式保存スナップショット一覧は2005-09-01を最古としており、それ以前の公開草案は同一覧から確認できなかった。WHATWG HTMLのGit/SVN移行済み履歴は2006-03-02のinitial checkin以降を検索し、要素名の追加・改名・削除と関連commit messageを確認した。2004年から2005年8月までの編集履歴、6 sectioning要素の個別提案、`figure`とHTML+の接続、2012年`dialog`の先行提案は今回の探索では確定できなかった。
+WHATWGの公式保存スナップショット、Git/SVN移行済み履歴、仕様commit、public-html mail、W3C tracker、導入commitが参照するApple HIGとGNOME usability threadを照合した。2004年から2005年8月までの編集履歴、6 sectioning要素の個別提案、`figure`とHTML+の接続、`details`と`summary`の名称選択、2012年`dialog`の先行提案は今回の探索では確定できなかった。
 
-確度は、後代の仕様説明やusage統計が意味の妥当性を補強しても、当時の採用行為を直接示さない場合にはAへ上げていない。名称の類似だけによる`HTML+ FIG/CAPTION → figure/figcaption`、外見・機能の類似だけによる`GUI dialog → dialog`、同名だけによる`conversation dialog → application dialog`は採用しない。
+確度は、後代の仕様説明やusage統計が意味の妥当性を補強しても、当時の採用行為を直接示さない場合にはAへ上げていない。`details`は導入commitが具体的UI資料を直接参照するため、GUI disclosure widgetとの接続を採用する。名称の類似だけによる`HTML+ FIG/CAPTION → figure/figcaption`、HTML 4 `table summary`属性等から`summary`への接続、外見・機能の類似だけによる`GUI dialog → dialog`、同名だけによる`conversation dialog → application dialog`は採用しない。
