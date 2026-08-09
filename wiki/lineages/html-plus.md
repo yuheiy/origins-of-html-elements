@@ -53,6 +53,6 @@ HTML+ FIG内のshaped links + server-side image maps
 
 ## 接続しない境界
 
-- HTML+／HTML 3.0の`ABBREV`とHTML 4の[`abbr`](../elements/abbr.md)は、改名・採用因果が確認できないため接続しない。[HTML+ `ABBREV`](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html) [HTML 3.0](https://www.w3.org/MarkUp/html3/logical.html) [HTML 4.01 changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1)
+- HTML+／HTML 3.0の`ABBREV`とHTML 4の[`abbr`](../elements/abbr.md)は、改名・採用因果が確認できないため接続しない。HTML 4 Proposed Recommendationが直接示す改名前の要素は初期HTML 4草案の`ACRONYM`である。[HTML+ `ABBREV`](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html) [HTML 3.0](https://www.w3.org/MarkUp/html3/logical.html) [HTML 4 Proposed Recommendation](https://www.w3.org/TR/PR-html40-971107/struct/text.html)
 - HTML+／HTML 3.0の`S`からHTML 4の[`s`](../elements/s.md)への再採録は、HTML 3.2での欠落後の因果が確認できないため接続しない。HTML4由来のobsoleteな`S`／`STRIKE`から2010年のHTML5 `s`再導入への接続は個別ページで確認済みである。[HTML+ `S`](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_16.html) [W3C Bug 9429](https://www.w3.org/Bugs/Public/show_bug.cgi?id=9429)
-- HTML+の`Q`、`SUB`、`SUP`は後続要素への個別採用を確認できない。[HTML+ `Q`](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html) [HTML+ `SUB`／`SUP`](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html) 1995年IETF国際化草案からの共有経路は[国際化草案の系譜](html-internationalization.md)で扱う。
+- HTML+の`Q`は後続要素への個別採用を確認できない。`SUB`／`SUP`はHTML+ DTDの一般テキスト向け設計をHTML 3.0でも有用とするRaggettの説明により、HTML 3.0まで要素単位で接続できるが、1995年IETF国際化草案へ採用した記録はない。[HTML+ `Q`](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html) [HTML+ `SUB`／`SUP`](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html) [Raggettの回答](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html) IETF系列は[国際化草案の系譜](html-internationalization.md)で扱う。

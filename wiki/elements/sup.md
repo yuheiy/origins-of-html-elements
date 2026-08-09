@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-HTML+とHTML 3.0に同名のsuperscript要素があり、HTML 3.0全体がHTML+の先行作業に基づくという集合レベルの関係を確認できる。個別採用は未確認で、1995年国際化草案が一般組版上の要求から`SUP`を導入し、HTML 3.2へ至る。
+HTML+のDTDが一般テキストでも許可した`SUP`をHTML 3.0へ引き継ぐ設計意図を、Dave Raggettの同時代メールで確認できる。別枝の1995年国際化草案は一般組版上の要求から`SUP`を導入し、RFC 2070へ至る。
 
 ## 現在の意味
 
@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、superscriptを表す。単なる表示上の
 
 ## HTMLへの導入
 
-1993年HTML+は数学式で`SUP`をsuperscriptとして使用した。W3CのHTML 3.0保存ページはHTML 3.0全体をHTML+の先行作業に基づくと説明し、HTML 3.0は`SUP`を一般のfont-style elementとして定義する。ただし`SUP`個別の採用は明記しない。1995年9月のIETF国際化草案は一般テキストでもsuperscriptが必要だという理由から`SUP`を導入し、RFC 2070とHTML 3.2が採録した。[HTML+ math](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html) [HTML 3.0 materials](https://www.w3.org/MarkUp/html3/) [HTML 3.0 element](https://www.w3.org/MarkUp/html3/emphasis.html) [国際化草案](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01) [RFC 2070](https://www.rfc-editor.org/rfc/rfc2070.html) [HTML 3.2](https://www.w3.org/TR/REC-html32)
+1993年HTML+は数学式で`SUP`をsuperscriptとして使用し、DTDでは一般テキストにも許可した。1994年9月、Dave RaggettはこのHTML+の設計を指してHTML 3.0でも同じ許可が有用だと述べ、1995年HTML 3.0は`SUP`を一般のfont-style elementとして定義した。別枝では、1995年9月のIETF国際化草案が一般テキストでもsuperscriptが必要だという理由から`SUP`を導入し、RFC 2070へ至った。HTML 3.2も`SUP`を採録したが、どちらの枝から採用したかは明記しない。[HTML+ math](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html) [Raggettの回答](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html) [HTML 3.0 element](https://www.w3.org/MarkUp/html3/emphasis.html) [国際化草案](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01) [RFC 2070](https://www.rfc-editor.org/rfc/rfc2070.html) [HTML 3.2](https://www.w3.org/TR/REC-html32)
 
 ## HTML直前の祖先
 
-HTML+ mathの`SUP`は集合レベルの先行作業として確認できるが、HTML 3.0の`SUP`へ個別採用した記録は未確認である。HTML 3.0と1995年国際化草案が現行系統直前の確認済み提案である。
+HTML+ DTDの`SUP`。Dave Raggettは、HTML+がordinary textで`SUP`を許可したことを明示し、HTML 3.0でも同じことが有用だと述べたため、HTML+からHTML 3.0への個別の設計継承を確認できる。HTML 3.0系列とIETF国際化系列の接続、およびHTML 3.2がどちらから採用したかは未確認である。
 
 ## さらに上流の由来
 
@@ -32,30 +32,38 @@ HTML+の数学提案全体はLaTeXのapproachに着想を得たと明記する�
 
 ## 系譜
 
-[集合単位] HTML+ `SUP`を含むHTML+作業 → HTML 3.0 `SUP`
+HTML+ `SUP` → HTML 3.0 `SUP`
 
-IETF国際化草案 `SUP`（1995年） → RFC 2070／HTML 3.2 `SUP` → 現行HTML `<sup>`
+IETF国際化草案 `SUP`（1995年） → RFC 2070 `SUP`
+
+HTML 3.2 `SUP` → 現行HTML `<sup>`
+
+HTML 3.0系列、国際化系列、HTML 3.2の間は個別採用因果が未確認のため矢印で結ばない。
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
 | 1993-11-08 | HTML+ §12 | 一次仕様・提案 | 数学式で`SUP`をsuperscriptとして使用する。 | [一次資料](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html) | 2026-08-09 |
-| 1995 | HTML 3.0 materials／font style elements | W3C保存の失効草案群 | HTML 3.0全体がHTML+作業に基づくことと、一般用`SUP`を確認できる。個別採用は述べない。 | [全体](https://www.w3.org/MarkUp/html3/)・[要素](https://www.w3.org/MarkUp/html3/emphasis.html) | 2026-08-09 |
+| 1994-09-09 | Murray Maloney, “Re: HTML 3.0 Process” | HTML-WG mailing list（Calgary大学保存） | `SUB`／`SUP`をmathだけでなく一般テキストでも使えるinline要素にするよう提案する。 | [保存資料](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/340.html) | 2026-08-10 |
+| 1994-09-12 | Dave Raggett, “Re: HTML 3.0 Process” | HTML-WG mailing list（Calgary大学保存） | HTML+ DTDがordinary textで`SUB`／`SUP`を許可し、HTML 3.0でも同じ設計が有用だと述べる。 | [保存資料](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html) | 2026-08-10 |
+| 1995 | HTML 3.0 font style elements | W3C保存の失効草案 | 一般テキスト用`SUP`を定義する。 | [一次資料](https://www.w3.org/MarkUp/html3/emphasis.html) | 2026-08-10 |
 | 1995-09-25 | `draft-ietf-html-i18n-01` | IETF Internet-Draft | 一般テキストの国際化要求から`SUP`を導入する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01) | 2026-08-09 |
 | 1997-01 | RFC 2070 §4.2 | 一次仕様・提案 | 一般テキストでも必要なsuperscriptとして追加する。 | [一次資料](https://www.rfc-editor.org/rfc/rfc2070.html) | 2026-08-09 |
 | 1997-01-14 | HTML 3.2 | 一次仕様・提案 | `SUP`を採録する。 | [一次資料](https://www.w3.org/TR/REC-html32) | 2026-08-09 |
 
 ## 確度
 
-**A−**
+**A**
 
-HTML 3.0全体がHTML+に基づく集合単位の因果と、国際化草案から後続標準への導入を確認できるが、HTML+ `SUP`の個別採用を確認できないため。
+HTML+ DTDの`SUP`をHTML 3.0の一般テキストでも許可する個別の設計継承をRaggettの同時代説明で確認でき、国際化草案にも要素単位の導入理由があるため。二つの枝とHTML 3.2の間は未接続として限定する。
 
 ## 否定された仮説
 
-HTML+ math全体がLaTeXに着想を得たことから、`SUP`というタグ名もLaTeX由来だと推論すること。
+HTML+ math全体がLaTeXに着想を得たことから、`SUP`というタグ名もLaTeX由来だと推論すること。HTML 3.0とIETF国際化草案に同名要素があることだけから両系列を接続すること。
 
 ## 未解決
 
 - `SUP`という個別名称のさらに上流のmarkup祖先。
+- IETF国際化草案がHTML+またはHTML 3.0の`SUP`を採用した記録はあるか。
+- HTML 3.2はHTML 3.0系列とIETF国際化系列のどちらから`SUP`を採用したか。

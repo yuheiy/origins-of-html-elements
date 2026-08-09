@@ -379,3 +379,15 @@ OASIS TRP 9501:1995とTM 9502:1995を保存し、CALS table modelの1990年初�
 ## [2026-08-10] lint | CALS table群の敵対的検証
 
 初回調査と分離してRaggett／Bingham mail、各IETF draft、W3C Working Draft、RFC 1942、OASIS資料、HTML 3.2、HTML 4 DTDと変更付録へ戻り、より早い版、構造差、日付、主体、要素名、各系譜の矢印を再照合した。CALSからの直接採用を三つのrow group要素に限定し、`COL`の機能再編とHTML 4への5要素の採録は因果を確認できる範囲を越えて接続していない。全110要素ページの必須見出し順、空でない証拠表、frontmatter、相対リンク、Markdown whitespace、確度集計、敵対的検証済み115件を検査して合格とし、対象5ページの状態を`完成`とした。
+
+## [2026-08-10] research | HTML+／phrase／国際化群
+
+`abbr`、`q`、`sub`、`sup`、`u`について、HTML+、HTML 3.0、HTML-WG mail、IETF国際化草案の版差、HTML 4草案、HTML 3.2、HTML WG decisionを照合した。HTML 4初期草案の`ACRONYM`からProposed Recommendationの`ABBR`への直接改名、HTML+ DTDの`SUB`／`SUP`をHTML 3.0へ継承する個別意図、国際化草案`-00`での`Q`導入と`-01`での`SUB`／`SUP`追加、2011年のW3C HTML5における`U`再適合化を確認した。
+
+`ABBREV`から`ABBR`への採用、HTML 3.0系列からIETF国際化系列への採用、HTML 3.2での`U`再採録理由、W3C HTML5の決定から現行Living Standardへの編集経路は確認できなかったため接続しない。`abbr`をBからA、`sub`と`sup`をA−からAへ変更し、確度集計をA 72件、A− 12件、B 27件、C 4件とした。
+
+## [2026-08-10] lint | HTML+／phrase／国際化群の敵対的検証
+
+初回調査と分離してHTML+、HTML 3.0、HTML-WG mail、IETF国際化草案`-00`／`-01`、HTML 4 Working Draft／Proposed Recommendation／Recommendation、RFC 1866、HTML 3.2、2011年HTML WG decisionへ戻り、より早い版、別系統、日付、主体、要素名、引用文脈、各矢印を再照合した。`ABBR`と`ACRONYM`の最終的な併存、国際化草案`-00`での`SUB`／`SUP`不在、HTML 3.0系列とIETF系列の未接続、W3C HTML5とLiving Standardの編集経路の欠落を反例と制約へ反映した。
+
+変更した5要素ページの必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespace、全115要素の確度集計を検査し、A 72件、A− 12件、B 27件、C 4件、未評価0件、敵対的検証済み115件が`wiki/README.md`と一致することを確認して合格とし、状態を`完成`とした。

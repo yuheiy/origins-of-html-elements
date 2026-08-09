@@ -2,16 +2,16 @@
 
 ## 一般テキスト要素
 
-1995年9月25日の`draft-ietf-html-i18n-01`は、言語やplatformに応じたquotation markのための`Q`と、一般テキストのsubscript／superscriptのための`SUB`／`SUP`を同じ改訂で導入し、RFC 2070が三要素を標準化した。[IETF i18n draft-01](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01) [RFC 2070](https://www.rfc-editor.org/rfc/rfc2070.html)
+1995年8月15日の`draft-ietf-html-i18n-00`は言語やplatformに応じたquotation markのため`Q`を導入した。9月25日の`draft-ietf-html-i18n-01`は、一般テキストのsubscript／superscriptのため`SUB`／`SUP`を追加し、RFC 2070が三要素を標準化した。[IETF i18n draft-00](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00) [IETF i18n draft-01](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01) [RFC 2070](https://www.rfc-editor.org/rfc/rfc2070.html)
 
 ```text
-IETF i18n draft-01 Q / SUB / SUP
-  → RFC 2070 Q / SUB / SUP
+IETF i18n draft-00 Q → 後続草案 Q → RFC 2070 Q
+IETF i18n draft-01 SUB / SUP → RFC 2070 SUB / SUP
 ```
 
 対象: [`q`](../elements/q.md)、[`sub`](../elements/sub.md)、[`sup`](../elements/sup.md)
 
-HTML+とHTML 3.0にも`Q`、`SUB`、`SUP`は存在するが、国際化草案が各要素をそこから採用した記録は確認できないため、二つの系列を矢印で結ばない。[HTML+ `Q`](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html) [HTML+ `SUB`／`SUP`](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html) [HTML 3.0](https://www.w3.org/MarkUp/html3/)
+HTML+とHTML 3.0にも`Q`、`SUB`、`SUP`は存在する。HTML+からHTML 3.0への`SUB`／`SUP`の設計継承は確認できるが、国際化草案が三要素をそこから採用した記録はないため、HTML 3.0系列とIETF系列を矢印で結ばない。[HTML+ `Q`](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html) [HTML+ `SUB`／`SUP`](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html) [Raggettの回答](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html) [HTML 3.0](https://www.w3.org/MarkUp/html3/)
 
 ## 双方向テキストとstyle
 
