@@ -391,3 +391,11 @@ OASIS TRP 9501:1995とTM 9502:1995を保存し、CALS table modelの1990年初�
 初回調査と分離してHTML+、HTML 3.0、HTML-WG mail、IETF国際化草案`-00`／`-01`、HTML 4 Working Draft／Proposed Recommendation／Recommendation、RFC 1866、HTML 3.2、2011年HTML WG decisionへ戻り、より早い版、別系統、日付、主体、要素名、引用文脈、各矢印を再照合した。`ABBR`と`ACRONYM`の最終的な併存、国際化草案`-00`での`SUB`／`SUP`不在、HTML 3.0系列とIETF系列の未接続、W3C HTML5とLiving Standardの編集経路の欠落を反例と制約へ反映した。
 
 変更した5要素ページの必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespace、全115要素の確度集計を検査し、A 72件、A− 12件、B 27件、C 4件、未評価0件、敵対的検証済み115件が`wiki/README.md`と一致することを確認して合格とし、状態を`完成`とした。
+
+## [2026-08-10] research | 初期HTMLのC要素
+
+`address`、`br`、`hr`、`menu`について、CERN実装履歴とsource、Line Mode Browser履歴、www-talk mail、初期DTD、NCSA Mosaic公開記録とchange log、HTML+ draftを照合した。WorldWideWeb editorの`Address` paragraph styleとHTML `ADDRESS` tagの相互変換を実装上の設計モデルとして確認し、`address`をCからBへ変更した。`menu`は1992年の導入区間と初期用例を特定したが導入要求と具体的祖先を確認できず、`br`と`hr`はNCSA MosaicとHTML+の前後・因果関係を確定できないためCを維持した。確度集計をA 72件、A− 12件、B 28件、C 3件へ更新した。
+
+## [2026-08-10] lint | 初期HTMLのC要素の敵対的検証
+
+初回調査と分離して1991年WorldWideWeb change history、保存sourceとdirectory timestamp、Line Mode Browser履歴、1992年のHTML説明・用例・DTD議論、1993年のCERN/IETF draft、NCSA Mosaic公開mailとchange log、HTML+関連mailとdraftへ戻り、より早い出現、競合系列、日付、主体、要素名、引用文脈を再照合した。HTML+からNCSAへの未確認の接続、GUI menuや印刷上のruleからの類似推論、`Address` styleの先行性を系譜へ加えていないことを確認した。必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespace、全115要素の確度集計を検査し、A 72件、A− 12件、B 28件、C 3件、未評価0件、敵対的検証済み115件が`wiki/README.md`と一致することを確認して合格とし、対象4ページの状態を`完成`とした。
