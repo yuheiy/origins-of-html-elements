@@ -125,3 +125,13 @@ RFC 1942がCALSにならったrow groupingとして集合単位で明記する`t
 ## [2026-08-09] lint | 75検証済みページ
 
 全115ページの確度集計を再計算し、A 48件、A− 10件、B 17件、未評価40件が`wiki/README.md`と一致することを確認した。CALS／高度なtable model系5ページについて、必須見出しの順序、現行定義の要約、空でない証拠表、相対リンク、generic placeholderの除去、Markdown whitespaceを検査した。
+
+## [2026-08-09] research | 初期SGML/GML要素群（第2回）
+
+`address`, `body`, `head`, `title`, `html`, `p`, `ul`, `li`, `ol`, `dl`, `dt`, `dd`, `blockquote`について、NeXT WorldWideWeb実装履歴、1991–1992年www-talk、CERN設計ノート、Connolly DTD、1993年HTML Internet-Draft、Waterloo SCRIPT/GMLを照合した。[調査ノート](research/early-sgml-elements.md)
+
+HTML DTD内部の前身構造と欠落を確認できた`body`, `head`をA−、HTML側の導入理由または集合単位の設計モデルを確認できた10要素をB、最初期実装と意味までを固定した`address`をCとした。Waterloo／CERNの同名先行要素は、採用因果を確認できないため系譜へ接続していない。
+
+## [2026-08-09] lint | 88検証済みページ
+
+全115ページの確度集計を再計算し、A 48件、A− 12件、B 27件、C 1件、未評価27件が`wiki/README.md`と一致することを確認した。初期SGML/GML系13ページについて、必須見出し順、空でない証拠表、具体的な未解決点、相対リンク、generic placeholder、Markdown whitespaceを検査した。現在の意味の要約済みは88件のままである。

@@ -1,10 +1,10 @@
 # `<blockquote>`
 
-> 状態: 骨格作成済み（史料未検証）
+> 状態: 1992年の追加主体と設計意図を検証済み（直前祖先は未確認）
 
 ## 概要
 
-未調査。現在の意味と歴史的な由来を混同せずに記述する。
+Dan Connollyが1992年12月4日のmailで、新しいparagraph styleとしてHTML DTDへ追加すると説明し、1993年1月6日版DTDで確認できる。HTML以前の具体的祖先は確認できない。
 
 ## 現在の意味
 
@@ -12,47 +12,49 @@ WHATWG HTML Living Standardでは、別の出典から引用されたsectionを�
 
 ## HTMLへの導入
 
-未調査。初出、導入主体、導入理由を分離して記録する。
+Dan Connollyは1992年12月4日のmailで、既存codeを大きく変えず`html.dtd`へ加えられる新しいparagraph styleの例として`BLOCKQUOTE`を挙げる。1993年6月draft収録のRCS id `93/01/06`のDTDは、他のsourceを引用する要素として宣言する。[Connolly, “Re: The spec evolves...”](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html) [1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)
 
 ## HTML直前の祖先
 
-未確認。名称、外見、現在の用途の類似だけから祖先を推定しない。
+未確認。同名または類似用途のSGML/GML要素からHTMLへ採用したことを示す史料は確認できない。
 
 ## さらに上流の由来
 
 ### 証拠
 
-未確認。
+今回確認した資料からは、HTMLより前の具体的な系譜を結べない。
 
 ### 解釈
 
-なし。史料確認後も、証拠とは別に記述する。
+なし。
 
 ## 系譜
 
-未確定。史料で確認済みの接続だけを記載する。
+HTML DTDへの`BLOCKQUOTE`追加説明（1992-12-04）→ HTML DTD `BLOCKQUOTE`（1993-01-06）→ 現行HTML `<blockquote>`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 1992-11-13（更新日） | *Tags used in HTML* | CERN公式HTML資料のhistorical snapshot | 当時のHTML tag一覧に`BLOCKQUOTE`を確認できない。 | [W3C History](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) | 2026-08-09 |
+| 1992-12-04 | “Re: The spec evolves...” | www-talkへの当事者投稿 | Connollyが新しいparagraph styleとして`BLOCKQUOTE`をDTDへ追加すると説明する。 | [W3C Mail Archive](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html) | 2026-08-09 |
+| 1993-06 | *Hypertext Markup Language (HTML)* | IETF Internet-Draft | `BLOCKQUOTE`の引用用途、typical rendering、例、DTD宣言を記録する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) | 2026-08-09 |
 
 ## 確度
 
-**未評価**
+**B**
 
-ハンドオフの確度は出発仮説として扱い、一次資料の再確認後に評価する。
+HTMLへ加えた主体と設計意図は当事者資料で確認できるが、HTML以前の具体的祖先を確認できないため。
 
 ## 否定された仮説
 
-なし。ハンドオフで撤回済みの説明がある場合は、個別調査時に理由とともに移記する。
+名称と引用用途の類似だけから、先行SGML/GMLの`BLOCKQUOTE`または印刷上のblock quotationを直接祖先とする説明。
 
 ## 未解決
 
-- HTMLへの導入理由は確認できるか。
-- HTML直前の具体的祖先は確認できるか。
-- さらに上流の由来を示す直接史料はあるか。
+- 1992年タグ一覧から1993年draftまでの提案、change record、www-talk議論に`BLOCKQUOTE`の導入判断は残っているか。
+- 同名または対応する先行要素からの採用因果を示す資料はあるか。
 
 ## 調査記録
 
-未着手。
+1992年CERN HTMLタグ一覧、1992年Connolly版仕様の公開告知、1993年HTML Internet-Draftの本文とDTD、www-talkの同時期archiveを探索した。1992年資料での不在と1993年での出現を固定したが、間の導入記録は確認できなかった。対象群全体は[初期SGML/GML調査ノート](../research/early-sgml-elements.md)を参照する。
