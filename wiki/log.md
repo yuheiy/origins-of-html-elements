@@ -93,3 +93,7 @@ HTML 4.01、GNU Texinfo 2.16、GNU Texinfo 3.7の配布アーカイブを展開�
 ## [2026-08-09] lint | 60検証済みページ
 
 全115ページの確度集計を再計算し、A 42件、A− 4件、B 14件、未評価55件が`wiki/README.md`と一致することを確認した。HTML5 semantic elements系11ページについて、必須見出しの順序、現行定義の要約、空でない証拠表、相対リンク、generic placeholderの除去、Markdown whitespaceを検査した。既存Web classとの対応、同名のHTML+要素、旧conversation用`dialog`を、採用因果が確認できないまま系譜へ接続していないことも確認した。
+
+## [2026-08-09] update | Rawリソース取得
+
+取得元と保存先をマニフェストへ集約し、各URLの最新版を一時領域へ取得してから`raw/`を更新するスクリプトを追加した。以後の追加と再取得はこのスクリプトを経由する。
