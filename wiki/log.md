@@ -413,3 +413,15 @@ OASIS TRP 9501:1995とTM 9502:1995を保存し、CALS table modelの1990年初�
 ## [2026-08-10] lint | 初期HTML coreの敵対的検証
 
 初回調査と分離して1990年test backup、1991年test fileとparser source、1992年test source、Line Mode Browser change history、CERNの`OL`再導入ノート、www-talk、初期DTDへ戻り、保存日時、要素名、markup、表示実装、版差、引用文脈を再照合した。CERN-SGMLの個別tag対応、Waterlooとの接続、1990年`OL`のordered表示、`MENU`の2月11日実装・公開を断定していないことを確認した。変更した7ページと共有系譜について必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査し、A 72件、A− 18件、B 22件、C 3件、未評価0件、敵対的検証済み115件が`wiki/README.md`と一致することを確認して合格とし、状態を`完成`とした。
+
+## [2026-08-10] research | WAI／Cougar form群
+
+1995年のRaman／Raggettによるspeech-form作業を伝える同時代mail、1996年3月の`LABEL`／`LGROUP`＋`IS`案、1997年2月・4月のCougar向け`LABEL`／`FIELDSET`＋`CAPTION`案、HTML 4 FPWDを照合した。WAI HTML & CSS Review GroupはFPWD後の1997年9月に設置され、10月のreview reportも三要素の導入を要求していないため、WAI recommendationsを起源とする従来の説明を訂正した。
+
+## [2026-08-10] update | WAI／Cougar form群の系譜と確度
+
+`label`、`fieldset`、`legend`の初出、導入要求、直前祖先、共有系譜、否定された仮説、未解決点を更新し、Cougar概要と1996〜1997年のforms草案をraw資料へ追加した。`label`をBからA、`fieldset`をA−からAへ変更し、改名判断が未確認の`legend`はA−を維持した。確度集計をA 74件、A− 17件、B 21件、C 3件へ更新した。本記録は2026-08-09のWAI form群に関するresearch／update記録の起源説明を訂正する。
+
+## [2026-08-10] lint | WAI／Cougar form群の敵対的検証
+
+初回調査と分離して1996年・1997年のforms草案、Cougar概要、Raman／Dardailler mail、WAI group設置mail、WAI review report、HTML 3.2、HTML 4 FPWDへ戻り、より早い版、日付、主体、要素名、引用文脈、各矢印を再照合した。`LGROUP`から`FIELDSET`への変更理由、`CAPTION`から`LEGEND`への改名判断、特定GUI toolkitを未解決として維持した。対象3ページの必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespace、全115要素の確度集計を検査し、A 74件、A− 17件、B 21件、C 3件、未評価0件、敵対的検証済み115件が`wiki/README.md`と一致することを確認して合格とし、状態を`完成`とした。

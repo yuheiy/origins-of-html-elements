@@ -1,0 +1,699 @@
+<TITLE>Design Issues for HTML Forms</TITLE>
+<H3 align=right><A HREF="https://www.w3.org/pub/WWW/Consortium/"><IMG align=left alt="W3C" src="https://www.w3.org/pub/WWW/Icons/WWW/w3c_48x48.gif"></A>
+WD-forms-960308</H3>
+
+<H1 align=center>Design Issues for HTML Forms</H1>
+
+<H3 align=center>W3C Working Draft 08-Mar-96</H3>
+
+<DL>
+<DT>This version:
+<DD>http://www.w3.org/pub/WWW/TR/WD-forms-960308.html
+<DT>Latest version:
+<DD>http://www.w3.org/pub/WWW/TR/WD-forms.html
+<DT>Editor:
+<DD>Dave Raggett <A href="mailto:dsr@w3.org">&lt;dsr@w3.org&gt;</A>
+<DT>Authors:
+<DD>David Singer, <A href="http://www.ibm.com/">IBM</A>
+<BR>
+</DL>
+
+<HR>
+
+<H3>Status of this document</H3>
+
+<P>This is a W3C Working Draft for review by W3C members and other
+interested parties. It is a draft document and may be updated,
+replaced or obsoleted by other documents at any time. It is inappropriate
+to use W3C Working Drafts as reference material or to cite them
+as other than "work in progress". A list of current
+W3C working drafts can be found at: <A href="https://www.w3.org/pub/WWW/TR">http://www.w3.org/pub/WWW/TR</A>
+
+<P><B>Note:</B> since working drafts are subject to frequent change,
+you are advised to reference the above URL, rather than the URLs
+for working drafts themselves. 
+<H2>Abstract </H2>
+
+<blockquote>The HyperText Markup Language (HTML) is a simple markup
+language used to create hypertext documents that are portable from one
+platform to another. HTML documents are SGML documents with generic
+semantics that are appropriate for representing information from a
+wide range of applications. This document reviews the design requirements
+for forms in hypertext documents and presents some possible directions
+for extending HTML 2.0 to meet these requirements. A phased implementation
+plan is proposed.</blockquote>
+
+<h2>Introduction</h2>
+
+<p>The initial version of HTML provided a crude mechanism for entering
+one or more keywords to be sent to an HTTP server to perform a query.
+It soon became obvious that a more general approach was needed. NCSA
+Mosaic added markup for basic form fields such as radio buttons,
+checkboxes, single and multiline text fields, single and multiselect
+menus etc.  When the user presses the submit button the contents of
+the form are converted into a list of attribute/value pairs and sent
+to the server for processing.
+
+<p>The approach allowed for initializing form fields but suffers from
+a number of problems:
+
+<ul> <li><p>Tabbing order for moving between fields or hypertext links
+is undefined.</p>
+
+<li><p>There is no provision for keyboard short cuts for particular
+actions, or for access keys for driving menus etc.</p>
+
+<li><p>Label text for radio buttons and checkboxes is not active,
+i.e. clicking on label text doesn't effect the button state.</p>
+
+<li><p>There is no provision for checking values as they are entered
+into form fields. All checking is done at the server when the form's
+contents are submitted.</p>
+
+<li><p>The range of form field types is too limited in comparison with
+modern user interfaces. For instance there is no provision for tabular
+data entry, sliders or multiple pages.</p>
+
+<li><p>There is no means to markup groups of related form fields in a
+way that effectively supports browsing with speech based user
+agents.</p>
+
+<li><p>Servers can't update the fields in a submitted form and instead
+have to send a complete HTML document causing screen flicker.</p>
+
+<li><p>There is no provision for client-side scripting, and the extension
+of forms with externally define field types, e.g. defined by Java applets
+or OLE controls.</p>
+</ul>
+
+<p>These also cause problems for speech based browsers, making
+it difficult for the visual impaired to interact with HTML forms.
+
+<h3>How much backwards compatibility is needed?</h3>
+
+<p>Some new idioms are only useable in an interactive context, unlike
+traditional form fields like radio buttons, check boxes and text fields
+which also make sense on paper. The following features have no hope of
+backwards compatibility because they either require scripting to be useful,
+or because old browsers can't provide a reasonable way of dealing with them.
+
+<ul>
+<li>Buttons
+<li>Menus as actions, rather than selections
+<li>Nested Menus
+<li>Gauges and status fields
+<li>Sliders and spin controls
+<li>FIELD elements
+</ul>
+
+<p>Other proposed extensions will work acceptably with existing browsers,
+e.g. labelled INPUT fields, SELECT with LIST and COMBO, labelled groups
+and card sets (tab controls).
+
+<p>This document doesn't cover all the potential dialog elements, for
+instance, tree-based browsers for hierarchies, and perhaps more importantly
+for traditional database applications, a good mechanism for record entry
+which allows multiple records to be entered on the same form.
+
+<p>Some people may say: "Why don't you just do all these things as Java
+applets or OLE controls?". The answer is that such an approach will limit
+portability of HTML documents across media. For this to work well, its
+important to preserve a declarative semantics for the common interaction
+idioms that have been developed over the last twenty years. This is vital
+for the use of HTML for non-graphical or speech-based browsers.
+
+<hr>
+<h2>Phased Implementation Plan</h2>
+
+<p>It is proposed that changes to HTML form capabilities are phased in
+during two or more rounds of extensions:
+
+<h3>Phase One</h3>
+
+<ul>
+<li><a href="#tabindex">TABINDEX=number</a>
+<li><a href="#shortcut">SHORTCUT=letter</a>
+<li><a href="#accesskey">ACCESSKEY=letter</a>
+<li>&lt;<a href="#label">LABEL</a>&gt;
+<li><a href="#readonly">READONLY</a>
+<li><a href="#disabled">DISABLED</a>
+<li><a href="#error">ERROR</a>
+<li><a href="#mask">MASK=pattern</a>
+<li><a href="#number">TYPE=NUMBER</a>
+<li><a href="#currency">TYPE=CURRENCY</a>
+<li><a href="#date">TYPE=DATE</a>
+<li>&lt;OBJECT NAME=name ...&gt;
+</ul>
+
+<h3>Phase Two</h3>
+
+<ul>
+<li>&lt;<a href="#button">BUTTON</a>&gt;
+<li><a href="#range">TYPE=RANGE</a>
+<li><a href="#select">Enhanced Menus</a> &lt;SELECT&gt; and &lt;MENUBAR&gt;
+<li><a href="#lgroup">Labelled Groups</a> &lt;LGROUP&gt;
+<li><a href="#cardset">Card Sets</a> &lt;CARDSET&gt;
+<li>Tree Browser control
+<li>Tabular Data entry
+<li>Server-driven Form Updates
+</ul>
+
+<hr>
+<h2>Driving Forms from the Keyboard</h2>
+
+<p>The ability to drive forms without needing to use the mouse (or other
+pointing device) can be met by several new attributes:
+
+<H3><a name=tabindex>Defining Tab Order</a></H3>
+
+<P>The keyboard focus determines which object in a document gets
+keyboard events. Until now, most browsers require you to use the mouse
+(or other pointer device) to give the focus to the form field you
+wish to interact with.
+
+<p>The proposed <b>tabindex</b> attribute:
+
+<UL>
+
+<LI>Identifies elements in the document which are reachable via the
+tab key
+
+<LI>Specifies a integer value (e.g. <tt>tabindex=4</tt>) defining the
+order in which the tab key traverses the elements
+
+<LI>Can be supplied with any element that can be given the keyboard
+focus, e.g. INPUT, SELECT, TEXTAREA and A (anchors)
+
+</UL>
+
+<P>Incremental display of documents as data is received from the Net
+creates special problems. The idea that the focus is given to the lowest
+valued tabindex seems reasonable enough at first glance, but would mean
+having to wait until all of the document's text is received, as until
+then, the lowest valued tabindex is liable to change. If the user hits
+the tab key before then, it is reasonable to move the focus to the
+lowest currently available tabindex.
+
+<p>Browsers should prevent forms from being submitted
+until all of the form's elements have been received. If forms are
+associated with client-side scripts, there is further potential for
+problems. For instance, a script handler for a given field may refer to
+a field which doesn't yet exist!
+
+<P>A variety of HTML elements may in principle be associated with
+keyboard events, for instance, form fields, hypertext links, embedded
+objects and client-side image maps. Embedded objects capable of
+receiving the keyboard focus should form part of the tabbing sequence.
+Such objects may in turn consist of subsidiary objects which themselves
+can get the focus. In this situation, these objects form a tabbing
+sequence that is inserted into the tabbing sequence of the parent HTML
+document. Client-side image maps may define a tabbing sequence, giving
+users the ability to tab through the various hotzones. The Enter key can
+be used to activate the object with the focus, whether this is a
+hypertext link or a radio button in a form field.
+
+<P>What is the default tabbing behaviour for form fields without a
+tabindex attribute? One approach is to define tab order according to the
+order in which the fields appear in the HTML markup. What happens if the
+some, but not all fields have tabindex attributes? How does this
+interact with incremental display? For instance when the first few
+fields don't have tabindex attributes, and the next few do. In this
+case, the browser would apply the default tabbing behaviour until fields
+were seen with the tabindex attribute.
+
+<P>It might seem reasonable to disable tabbing through fields without a
+tabindex attribute, but this is probably unacceptable to terminal-based
+browsers without pointer devices. The safest course is for tabindices to
+be implicitly defined unless explicitly overridden by the tabindex
+attribute. It is proposed that the initial value for tabindex is one and
+is incremented for each subsequent form field, or hypertext link. Any
+element with the tabindex attribute causes the index to be reset to that
+value. This works just like the Netscape VALUE attribute for list items.
+
+<p>Each successive tab key takes the cursor to the input element with
+the next greater value of <B>tabindex</B>. After visiting the element
+with the greatest value of <B>tabindex</B>, the next tabkey returns to
+the initial element. Pressing Shift-tab should be interpreted as a
+reverse tab.
+
+<p>There is no requirement that the values of <B>tabindex</B> be
+consecutive or that they begin with any particular value.  If multiple
+elements in the same form have the same <B> tabindex</B> value, the
+browser may choose any one of them or all of them in turn -- this is a
+markup error.
+
+<p>The intent is to treat the new <B>tabindex</B> attribute in the same
+way that OS/2 Presentation Manager and Microsoft Windows treat the
+<B>tabindex</B> attribute in their controls.
+
+<h3><a name=shortcut>Keyboard Short Cuts</a></h3>
+
+<p>Most windowing systems allow authors to specify short cuts for
+certain actions, for instance Control-X to cut and Control-V to paste.
+The SHORTCUT attribute is proposed for defining short cuts, e.g.
+<b><tt>shortcut="x"</tt></b>. The attribute value is case sensitive and
+specifies a letter or other character to be used with the control key or
+command key, depending on the platform. On the Macintosh, the command (or
+apple key) is used, while other platforms tend to use the control key.
+
+<h3><a name=accesskey>Access Keys</a></h3>
+
+<p>On Windows, you can use the Alt key plus a letter to drive menus
+without needing to use the pointer device. For a given menu action, you
+typically need to use several Alt+letter key presses to invoke the
+action. This is in contrast to keyboard short cuts which invoke actions
+with a single key press. The ACCESSKEY attribute is proposed for
+defining access keys. The attribute value is a case sensitive letter,
+e.g. <b><tt>accesskey="T"</tt></b>. Browsers are recommended to underline the
+corresponding letter in the label.
+
+<hr>
+<h2><a name=label>Labels for INPUT elements</a></h2>
+
+<p>Labels for radio buttons and checkboxes are currently missing from HTML.
+Authors can place text next to the fields, but the connection is missing
+from the markup. This means clicking on the label text doesn't work. This
+is a minor nuisance for most of us, but a critical failing for the visually
+impaired. Speech-based browsers are forced into the unsatisfactory position
+of having to use the NAME and VALUE attributes to describe each field.
+
+
+<p>The LABEL element is proposed to solve this problem. LABEL is a
+container that encloses the label for an input field. The binding
+between the LABEL element and the INPUT element can be implicit as
+when the LABEL encloses the INPUT element, e.g.
+
+<pre>    &lt;LABEL&gt;&lt;INPUT SIZE=20 NAME=flavor VALUE=vanilla&gt; Vanilla&lt;/LABEL&gt;</pre>
+
+<p>Alternatively the FOR attribute can be used to explicitly reference
+the INPUT element via its ID attribute or NAME/VALUE attribute pair,
+e.g.
+
+<pre>    &lt;INPUT TYPE=RADIO NAME=flavor VALUE=vanilla&gt
+    &lt;LABEL FOR="#field:flavor/vanilla"&gt;Vanilla&lt;/LABEL&gt;</pre>
+</ol>
+
+<p>FOR uses a URL to reference an INPUT field. The URL fragment identifier
+takes one of the following formats:
+
+<dl>
+<dt><b>#</b><i>idvalue</i><dd>matches an ID attribute for some field
+(restricted to letters, digits, "-" and "." characters)
+<dt><b>#field:</b><i>name</i><dd>matches a field with a given NAME attribute
+<dt><b>#field:</b><i>name<b>/</b>value</i><dd>matches a field with given NAME/VALUE attributes
+</dl>
+
+<p>The above syntax allows you to take advantage of the NAME and VALUE
+attributes that are present with all form fields. You aren't required to
+add an ID attribute merely for the purposes of attaching a label. When
+matching on field NAMEs, the scope is that of the form enclosing the
+LABEL element. The LABEL element offers backwards compatibility with
+existing browsers and provides considerable freedom in placing the label
+and associated field. For instance, the label and fields can be placed
+in adjacent table cells. 
+
+<hr>
+<h2>Field Flags</h2>
+
+<p>There are three generic flags controlling the behaviour of form fields:
+
+<h3><a name=readonly>Read-Only Fields</a></h3>
+
+<p>These are used to display status info, for instance status messages
+and gauges. Read-only fields are represented using the INPUT element
+with the READONLY attribute, e.g.
+
+<pre>    &lt;INPUT READONLY NAME=status1 SIZE=20 VALUE="40 Topics Found"&gt;</pre>
+
+<h3><a name=disabled>Disabling Fields</a></h3>
+
+<p>Sometimes fields need to be disabled (greyed out) for instance when
+a particular choice in a set of radio buttons is unavailable. The DISABLED
+attribute is used for this purpose, e.g.
+
+<pre>    &lt;INPUT DISABLED TYPE=RADIO NAME=flavor VALUE="chocolate"&gt;</pre>
+
+<h3><a name=error>Error Flag</a></h3>
+
+<p>Some combinations of choices on a form may be forbidden, or the value of a given
+field may be simply invalid, e.g. an out of range value. In this situtation the
+ERROR attribute can be included with the field to mark the field as being in error.
+Browsers can use color and other emphasis to indicate this to the user, e.g.
+
+<pre>    &lt;INPUT ERROR NAME=date SIZE=20 VALUE="20/13/96"&gt;</pre>
+
+<hr>
+<h2><a name=mask>Masked Input Fields</a></h2>
+
+<p>Most form builders allow you to specify mask patterns that constrain
+the allowed input strings. A control string or "mask" defines a pattern,
+for instance <B><tt>MASK="##-##-##"</tt></b> matches strings like
+"12-03-96" but not strings like "12/05/94". The mask consists of a
+sequence of symbols. Certain symbols match only digits, others match
+only letters and may force input to upper or lower case. In the example,
+the "#" symbol matches a digit. Other characters match themselves, e.g.
+"-". The intent is to support the same mask patterns as the Visual Basic
+Masked Edit Control.
+
+<hr>
+<h2>Regional Variations for Numbers, Currencies and Dates</h2>
+
+<p>The conventions for dates and currency values vary between countries:
+
+<dl>
+<dt><b>Decimal Point</b>
+<dd>Most countries use "." but european countries except for the UK use ","
+
+<dt><b>Thousands Separator</b>
+<dd>English speakers use "," while the germans use ".". Countries
+like France, Greece and Japan use a space character.
+
+<dt><b>List Separator</b>
+<dd>This is generally "," or ";". The latter are used in countries
+where a comma is interpreted as a decimal point.
+
+<dt><b>Currency</b>
+<dd>The Dollar, Pound and Yen signs precede the amount, while the Frank and
+DeutchMark signs follow the amount. Negative values may be indicated by a
+preceding minus sign, or by round brackets around the currency sign and amount.
+
+<dt><b>Short Dates</b>
+<dd>These are generally represented by a list of numbers for day, month
+and year, with a delimiter character between each number. This delimiter
+is "/", "-" or "." depending on the country. In the USA, the month is placed
+before the day. In some countries 4 digits are expected for years, while for
+others the last two digits will suffice.
+<dt>
+</dl>
+
+<p>The global nature of the Web means that servers will have to deal with
+users in different countries. One approach is for the server to have to
+recognize and cope with all possible variations. This is problematic to
+say the least! When do you interpret a comma as a decimal point rather
+than as a list separator?  How do you decide that "4/12/96" is the 4th
+December rather than the 12th April?
+
+<p>One solution is to get browsers to send a <b>locale</b> parameter
+that can be used by servers to disambiguate values. This places the
+intelligence in servers, and requires us to agree on the naming
+conventions for locales. Another solution is to use canonical values for
+transferring field values and place the intelligence in the browser for
+mapping to and from local values. This approach can take advantage of
+operating system support for locales, and seems inherently more
+scalable.
+
+<p>It is proposed INPUT elements can be designated for use with
+canonical number, currency and date values using the TYPE attribute.
+This provides for backwards compatibility with existing browsers which
+will treat them as text fields.
+
+<h4><a name=number>TYPE=NUMBER</a></h4>
+
+<p>The canonical format is a minus sign for negative numbers followed
+by one or more digits. If a fractional part is needed, this is followed
+by a "." character denoting the decimal point, and zero or more digits.
+If an exponent is needed, a letter "e" is given followed by a minus
+sign if needed and one or more digits. All numbers are given in base 10.
+
+<h4><a name=currency>TYPE=CURRENCY</a></h4>
+
+<p>The canonical format is a string denoting the currency type followed
+by a space character and then a number in the canonical format defining
+the amount. Currency types are given in upper case using the
+internationally agreed abbreviations for banking, e.g. "USD" for
+Dollars.
+
+<h4><a name=date>TYPE=DATE</a></h4>
+
+<p>The canonical format is defined as the number of days since
+1st January 1970. Browsers should accept/display both short and
+long date styles according to the length of the field as set by
+the SIZE and MAXLENGTH attributes.
+
+<hr>
+<img src="images/button.gif" align=right>
+<h2><a name=button>Buttons</a></h2>
+
+<br clear=all>
+<p>For compatibility with JavaScript, the INPUT element is extended to support
+simple buttons with <tt>TYPE=Button</tt>. The button label is specified by
+the VALUE attribute.
+
+<p>The new BUTTON element is more flexible and allows images as well as
+text, for instance:
+
+<pre>    &lt;BUTTON NAME=button1&gt;
+        &lt;IMG SRC=icon.gif&gt;&lt;BR&gt;Button1
+    &lt;/BUTTON&gt;</pre>
+
+<p>The button's label is centered. The width and height are by default
+adjusted to fit the label, but you can specify WIDTH and HEIGHT attributes
+in pixels. Leading and trailing white space characters on each line are
+ignored. The DISABLE attribute greys the button's label and disactivates
+the button. The ACTIVE attribute places the button into a permanently
+depressed state, and works independently of the DISABLE attribute.
+
+<p>Authors can specify tabbing order with the new TABINDEX attribute,
+common to all form field elements.
+
+<hr>
+<h2><a name=range>Sliders, Spin Controls and Gauges</a></h2>
+
+<p>The INPUT element can be used for both of these.
+
+<h4>(a) Slider (or Trackbar) <img src="images/slider.gif" align=middle></h4>
+
+<pre>&lt;INPUT CLASS=slider TYPE=RANGE NAME=slider1 MIN=1 MAX=10 VALUE=1&gt;</pre>
+
+<p>Users can move the slider between the limits designated by MIN and MAX.
+
+<h4>(b) Spin Control <img src="images/spin.gif" align=middle></h4>
+
+<pre>&lt;INPUT CLASS=spin TYPE=RANGE NAME=spin1 VALUE="06:11:07PM" SIZE=10&gt;</pre>
+
+<p>This is rendered as a single line text input box next to a pair of
+spin up/down buttons. The semantics of up/down defaults to incrementing
+or decrementing an integer value between the optional limits specified
+by the MIN and MAX attribute values. The semantics for richer values
+like dates may be defined by associated script handlers. The SIZE
+attribute acts as per the TYPE=TEXT field, i.e. it gives the width in
+characters (or half the point size for variable pitch fonts).
+
+<hr>
+<h2><a name=select>Menu Extensions</a></h2>
+
+<p>The SELECT element was designed for selecting from a number of
+options, with the ability to allow one-from-many or many-from-many
+choices. However, for use with scripts, it falls short of what is
+needed:
+
+<p><img src="images/menu.gif" align=right>
+
+<h4>Missing features ...</h4>
+
+<ul>
+<li>Menu bars
+<li>Menu titles
+<li>Keyboard shortcuts and access keys
+<li>Dividers
+<li>check marks
+<li>Child menus
+<li>Disabled menu items
+</ul>
+
+<p>These can be easily provided by extensions to the SELECT/OPTION elements,
+plus a new element MENUBAR for menubars.
+
+<h3>Proposed Changes:</h3>
+
+<br clear=all>
+<p>The MENUBAR element is a container and requires a start and an end tag.
+It can only contain one or more SELECT elements, e.g.
+
+<pre>    &lt;MENUBAR&gt;
+      &lt;SELECT&gt; ... &lt;/SELECT&gt;
+      &lt;SELECT&gt; ... &lt;/SELECT&gt;
+      ...
+    &lt;/MENUBAR&gt;</pre>
+
+<p>The SELECT element is modified to start with an optional title,
+followed by one or more OPTION, HR or nested SELECT elements. The
+optional SHORTCUT and ACCESSKEY attributes are added to SELECT and
+OPTION to specify short cuts and access keys respectively. The optional
+FLAG attribute is added to OPTION for check marks of various kinds.
+
+<pre>    &lt;SELECT CLASS=menu NAME=View ACCESSKEY=V&gt;
+      View
+        &lt;OPTION VALUE=toolbar ACCESSKEY=T&gt;Toolbar
+        &lt;OPTION VALUE=statusbar ACCESSKEY=B FLAG=checked&gt;Status Bar
+        &lt;HR&gt;
+        &lt;OPTION VALUE=large-icons ACCESSKEY=g FLAG=selected&gt;Large Icons
+        &lt;OPTION VALUE=small-icons ACCESSKEY=m &gt;Small Icons
+        &lt;OPTION VALUE=list ACCESSKEY=L &gt;List
+        &lt;OPTION VALUE=detail ACCESSKEY=D &gt;Details
+        &lt;HR&gt;
+        &lt;SELECT CLASS=menu NAME=arrange-icons ACCESSKEY=I&gt;
+          Arrange Icons
+             &lt;OPTION VALUE=name ACCESSKEY=N &gt;by Name
+             &lt;OPTION VALUE=type ACCESSKEY=T &gt;by Type
+             &lt;OPTION VALUE=size ACCESSKEY=s &gt;by Size
+             &lt;OPTION VALUE=date ACCESSKEY=D &gt;by Sate
+             &lt;HR&gt;
+             &lt;OPTION VALUE=auto ACCESSKEY=A &gt;Auto Arrange
+        &lt;/SELECT&gt;
+        &lt;OPTION VALUE=lineup-icons ACCESSKEY=e &gt;Line up Icons
+        &lt;HR&gt;
+        &lt;OPTION VALUE=refresh ACCESSKEY=R &gt;Refresh
+        &lt;OPTION VALUE=options ACCESSKEY=O &gt;Options
+    &lt;/SELECT&gt;</pre>
+
+<p>The DISABLED attribute may be used with SELECT and OPTION to disable
+(grey out) a menu or menu item. The TABINDEX attribute is added to
+SELECT to specify tab order within the document. The MULTIPLE attribute
+for many-from-many selections is retained for SELECT.
+
+<p><B>Note</B> that menu items can contain images: Just place an
+IMG or OBJECT element in the OPTION text.
+
+<hr>
+<h2>Using SELECT for other kinds of controls</h2>
+
+<p>The SELECT element can be used for a variety of controls as well
+as for menus.  The behaviour is determined by the CLASS attribute:
+
+<dl>
+<dt><b>MENU</b>
+<dd>The select element defines a menu control, as explained above.<p>
+
+<dt><b>LIST</b>
+<dd>The select element defines a list control. Each item in the list is
+given with an OPTION element. The width of the list box is by default
+sized according to the largest item, but you can use the WIDTH and
+HEIGHT attributes with the SELECT element to alter this.<p>
+
+<dt><b>COMBO</b>
+<dd>With this class, the SELECT element provides an editable text field
+plus a button to select predefined choices. This is commonly known as
+a combo box on Microsoft Windows. The predefined choices are specified
+with OPTION elements.
+</dl>
+
+<p><i><b>Note</b> what units should we use with WIDTH and HEIGHT to allow
+allow authors to specify width in characters and height in text lines?
+Should we support the SIZE attribute as per TEXT fields?</i>
+
+<hr>
+<h2><a name=lgroup>Labelled Groups</a></h2>
+
+<p>These allow you to group related fields of a form and to
+give the group a label. This is a common feature of modern
+user interfaces, where it is generally rendered as a line
+or 3D groove with the label inset in the top left. For the
+visually impaired, labelled groups permit efficient traversal
+of forms, providing the context for related form fields.
+
+<p><img src="images/group.gif" align=right>
+The proposed markup uses a new element
+LGROUP and looks like:
+
+<pre>
+    &lt;LGROUP&gt; <i>Group label</i>> &lt;IS&gt;
+       <i>... group contents ...</i>
+    &lt;/LGROUP&gt;</pre>
+
+<br clear=all>
+<p>The width is set by the space between the left and right
+margins. The height is automatically determined by the contents of the group.
+The IS element delimits the label and syntactically contains the
+contents of the group. Its end tag can always be left out.
+
+<hr>
+<h2><a name=cardset>Card Sets</a></h2>
+
+<p>This feature allows you to define a sequence of equally sized
+labelled cards only one of which is (normally) shown at a time. In
+Windows 95 this is known as a "tab control". The basic structure looks
+like:
+
+<pre>
+    &lt;CARDSET&gt;
+      &lt;CARD&gt; <i>Card label</i> &lt;IS&gt;
+       <i>... card contents ...</i>
+      &lt;CARD TOP&gt; <i>Card label</i> &lt;IS&gt;
+       <i>... card contents ...</i>
+      <i>more cards ...</i>
+    &lt;/CARDSET&gt;</pre>
+
+<p>The width of the cards is set by the space between the left and
+right margins. Only one card is shown at a time, with the all the
+card labels as tabs at the top. Click the label to see the card.
+The height is the same for all cards and autmatically determined
+to ensure its sufficient for each card in the set. The TOP attribute
+specifies which card is at the top. This means the browser has to make
+a single pass through all cards before it can display the card set.
+
+<p><b>Note</b> that card sets provide a means for organizing forms,
+but don't alter the semantics of form processing in any way.
+
+<hr>
+<p><img src="images/dialog1.gif">
+
+<p>Under this proposal this example would be represented as the
+following in HTML:
+
+<pre>&lt;CARDSET&gt;
+&lt;CARD&gt;Contents&lt;IS&gt;
+&lt;TABLE WIDTH="100%"&gt;
+&lt;TR&gt;
+&lt;TD&gt;
+&lt;SELECT CLASS=Combo NAME=findword ACCESSKEY=T&gt;1 Type the words you want to Find
+  &lt;OPTION&gt;...
+  &lt;OPTION&gt;...
+&lt;/SELECT&gt;
+
+&lt;TD ROWSPAN=2&gt;
+&lt;BUTTON NAME=clear ACCESSKEY=e SIZE=18&gt;Clear&lt;/BUTTON&gt;&lt;BR&gt;
+&lt;BUTTON NAME=options ACCESSKEY=O SIZE=18&gt;Options...&lt;/BUTTON&gt;&lt;BR&gt;
+&lt;BUTTON NAME=findsimilar ACCESSKEY=m DISABLED SIZE=18&gt;Find Similar...&lt;/BUTTON&gt;&lt;BR&gt;
+&lt;BUTTON NAME=findnow ACCESSKEY=F DISABLED SIZE=18&gt;Find Now&lt;/BUTTON&gt;&lt;BR&gt;
+&lt;BUTTON NAME=rebuild ACCESSKEY=R SIZE=18&gt;Rebuild&lt;/BUTTON&gt;
+
+&lt;TR&gt;
+&lt;TD&gt;
+&lt;SELECT CLASS=LIST NAME=narrow ACCESSKEY=S HEIGHT="7 lines"&gt;2 Select some
+matching words to narrow your search
+  &lt;OPTION&gt;window
+  &lt;OPTION&gt;Window
+  ...
+&lt;/SELECT&gt;
+&lt;/TABLE&gt;
+
+&lt;P&gt;
+&lt;SELECT CLASS=LIST NAME=topic ACCESSKEY=C WIDTH="100%" HEIGHT="7 lines"&gt;3 Click a
+topic, then click Display
+  &lt;OPTION&gt;Adding comments to a Help topic
+  &lt;OPTION&gt;Browsing the Internet
+  ...
+&lt;/SELECT&gt;
+
+&lt;P&gt;
+&lt;OUPUT NAME=found WIDTH="48%" VALUE="40 Topics Found"&gt;
+&lt;OUPUT NAME=found WIDTH="48%" VALUE="All words,Begin,Auto,Pause"&gt;
+
+&lt;CARD&gt;Index&lt;IS&gt;
+... contents ...
+&lt;CARD&gt;Find&lt;IS&gt;
+... contents ...
+&lt;/CARDSET&gt;</pre>
+
+<hr>
+<p><img src="images/dialog2.gif">
+
+<p><i>HTML representation to be added ...</i>
+<hr>
+<p><img src="images/dialog3.gif">
+<p><i>HTML representation to be added ...</i>
+<hr>
+<A HREF="/pub/WWW/Consortium/"><img align=left alt="W3C:" src="https://www.w3.org/pub/WWW/Icons/WWW/w3c_48x48.gif"></a>
+The World Wide Web Consortium:
+<A HREF="https://www.w3.org/">http://www.w3.org/</a>

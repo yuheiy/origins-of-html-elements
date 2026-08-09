@@ -1,0 +1,559 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 2.0">
+<title>Design Issues for HTML Forms</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<h3 align="right"><a href="https://www.w3.org/pub/WWW/Consortium/"><img src="https://www.w3.org/pub/WWW/Icons/WWW/w3c_home" alt="W3C" align="left" border="0" hspace="0"></a>WD-forms-970203</h3>
+
+<h1 align="center">Design Issues for HTML Forms</h1>
+
+<h3 align="center">W3C Working Draft 03-Feb-97</h3>
+
+<dl>
+    <dt>This version: </dt>
+    <dd><a href="https://www.w3.org/pub/WWW/TR/WD-html-forms-970203">http://www.w3.org/pub/WWW/TR/WD-forms-970203</a></dd>
+    <dt>Latest Release: </dt>
+    <dd><a href="https://www.w3.org/pub/WWW/TR/WD-html-forms">http://www.w3.org/pub/WWW/TR/WD-html-forms</a></dd>
+    <dt>Editor: </dt>
+    <dd>Dave Raggett <a href="mailto:dsr@w3.org">&lt;dsr@w3.org&gt;</a>
+    </dd>
+    <dt>Author</dt>
+    <dd>Scott Isaacs <a href="mailto:scotti@microsoft.com">&lt;scotti@microsoft.com&gt;</a></dd>
+</dl>
+
+<hr>
+
+<h3>Status of this document</h3>
+
+<p>This document is an <em>intermediate draft</em> produced by the W3C
+HTML Working Group Board as part of the <a
+href="../MarkUp/Activity">HTML Activity</a>; it is stable enough
+to be released for public comment (to <a href="mailto:www-html@w3.org">
+<tt>www-html@w3.org</tt></a>) but may change before approval as
+(part of) a recommendation. Hence it should not be implemented as part
+of a production system, but may be implemented on an experimental
+basis.</p>
+
+<p>This is a W3C Working Draft for review by W3C members and
+other interested parties. It is a draft document and may be
+updated, replaced or obsoleted by other documents at any time. It
+is inappropriate to use W3C Working Drafts as reference material
+or to cite them as other than "work in progress." A
+list of current W3C technical reports can be found at <a
+href="./">http://www.w3.org/pub/WWW/TR</a>.
+Since working drafts are subject to frequent change, you are
+advised to reference the latter URL, rather than the URL for this
+working draft. </p>
+
+<h2>Abstract </h2>
+
+<blockquote>
+    <p>The HyperText Markup Language (HTML) is a simple markup
+    language used to create hypertext documents that are portable
+    from one platform to another. HTML documents are SGML
+    documents with generic semantics that are appropriate for
+    representing information from a wide range of applications.
+    This document reviews the design requirements for forms in
+    hypertext documents and presents some possible directions for
+    extending HTML 2.0 to meet these requirements. A phased
+    implementation plan is proposed.</p>
+</blockquote>
+
+<h2>Introduction</h2>
+
+<p>The initial version of HTML provided a crude mechanism for
+entering one or more keywords to be sent to an HTTP server to
+perform a query. It soon became obvious that a more general
+approach was needed. NCSA Mosaic added markup for basic form
+fields such as radio buttons, checkboxes, single and multiline
+text fields, single and multiselect menus etc. When the user
+presses the submit button the contents of the form are converted
+into a list of attribute/value pairs and sent to the server for
+processing. </p>
+
+<p>The approach allowed for initializing form fields but suffers
+from a number of problems: </p>
+
+<ul>
+    <li>Tabbing order for moving between fields or hypertext
+        links is undefined. </li>
+    <li>There is no provision for keyboard short cuts for
+        particular actions, or for access keys for driving menus
+        etc. </li>
+    <li>Label text for radio buttons and checkboxes is not
+        active, i.e. clicking on label text doesn't effect the
+        button state. </li>
+    <li>There is no means to markup groups of related form fields
+        in a way that effectively supports browsing with speech
+        based user agents. </li>
+    <li>There is no provision for checking values as they are
+        entered into form fields. All checking is done at the
+        server when the form's contents are submitted. </li>
+    <li>The range of form field types is too limited in
+        comparison with modern user interfaces. For instance
+        there is no provision for tabular data entry, sliders or
+        multiple pages. </li>
+    <li>Servers can't update the fields in a submitted form and
+        instead have to send a complete HTML document causing
+        screen flicker. </li>
+    <li>These also cause problems for speech based browsers,
+        making it difficult for the visual impaired to interact
+        with HTML forms. </li>
+</ul>
+
+<h3>How much backwards compatibility is needed?</h3>
+
+<p>Some new idioms are only useable in an interactive context,
+unlike traditional form fields like radio buttons, check boxes
+and text fields which also make sense on paper. The following
+features have no hope of backwards compatibility because they
+either require scripting to be useful, or because old browsers
+can't provide a reasonable way of dealing with them. </p>
+
+<p>Other proposed extensions will work acceptably with existing
+browsers, e.g. labeled INPUT fields and labeled groups. </p>
+
+<hr>
+
+<h2>Phased Implementation Plan</h2>
+
+<p>It is proposed that changes to HTML form capabilities are
+phased in during two or more rounds of extensions: </p>
+
+<h3>Phase One</h3>
+
+<ul>
+    <li><a href="#accesskey">ACCESSKEY=letter</a> </li>
+    <li><a href="#tabindex">TABINDEX=number </a></li>
+    <li><a href="#Title">TITLE=cdata</a></li>
+    <li><a href="#disabled">disabled (compact)</a></li>
+    <li>&lt;<a href="#label">LABEL</a>&gt; </li>
+    <li>&lt;<a href="#FieldsetAndCaption">FIELDSET</a>&gt;</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>You will also find a <a href="#dtd">Fragment DTD</a> at the
+end of this document.</p>
+
+<h3>Phase Two</h3>
+
+<p>Phase two will address more complex control types, menu
+enhancements, multiple page layouts, and server driven updates.
+Phase Two is not discussed within the context of this document.</p>
+
+<hr>
+
+<h2><a name="Attributes">Attributes</a></h2>
+
+<h3><a name="AccessKey">AccessKey Attribute</a></h3>
+
+<p><em>Value</em>: Single Character<br>
+<em>Initial Value</em>: None<br>
+<em>Applies To</em>: Label, Anchor, and Caption</p>
+
+<p>Justification: Accessibility for systems without a mouse or
+other pointing device. Optimization for more sophisticated users.</p>
+
+<p>The AccessKey is an attribute on the Label and Anchor Tag. The
+AccessKey takes a single character in the current charset that
+provides a keyboard shortcut for clicking on the label or anchor.
+To the user, the accesskey is case insensitive. For example, when
+the accesskey is set to 'u' or 'U', it should not matter whether
+the user referenced an upper or lower-case 'u', both should work.
+There is no suggested or required rendering for the AccessKey.
+The author can choose to supply HTML around the appropriate
+letter with their own specified rendering. The accessKey is
+invoked on Windows pressing the 'alt' key in addition to the
+accessKey and on the Macintosh by pressing the 'cmd' key in
+addition to the AccessKey. Invoking an accessKey performs the
+same action as clicking on the element (follows the link for
+anchors, or scrolls the element specified by the caption or label
+into view) For example:</p>
+
+<pre>&lt;STYLE&gt;
+  span.access {text-decoration:underline;font-size:+1}
+&lt;/STYLE&gt;
+
+&lt;LABEL for=radioMale accessKey=M&gt;&lt;SPAN class=access&gt;M&lt;/SPAN&gt;ale&lt;/LABEL&gt;
+&lt;INPUT type=id=radioMale value=&quot;Male&quot;&gt;</pre>
+
+<h3><a name="tabindex">TabIndex Attribute</a></h3>
+
+<p>The keyboard focus determines which object in a document gets
+keyboard events. Until now, most browsers require you to use the
+mouse (or other pointer device) to give the focus to the form
+field you wish to interact with or they assume an implicit order
+based on the document's source. By default, all elements should
+play in the tabbing order unless the element is explicitly marked
+not as a tabstop. This is necessary to ensure reasonable
+down-level compatibility with documents that rely on the
+browser's implementation to provide a tabbing order. </p>
+
+<p>The proposed tabindex attribute: </p>
+
+<ul>
+    <li>Identifies elements in the document which are reachable
+        via the tab key </li>
+    <li>Specifies a integer value (e.g. tabindex=4) defining the
+        order in which the tab key traverses the elements </li>
+    <li>Can be supplied with any element that can be given the
+        keyboard focus, e.g. INPUT, SELECT, TEXTAREA and A
+        (anchors) </li>
+    <li>The treatment of elements without explicit values for
+        TABINDEX or when a document is partially loaded is user
+        agent dependent. </li>
+    <li>Elements can be skipped in the taborder through assigning
+        -1 to the tabindex attribute.</li>
+</ul>
+
+<p>Incremental display of documents as data is received from the
+Net creates special problems. The idea that the focus is given to
+the lowest valued tabindex seems reasonable enough at first
+glance, but would mean having to wait until all of the document's
+text is received, as until then, the lowest valued tabindex is
+liable to change. If the user hits the tab key before then, it is
+reasonable to move the focus to the lowest currently available
+tabindex. </p>
+
+<p>Browsers should prevent forms from being submitted until all
+of the form's elements have been received. If forms are
+associated with client-side scripts, there is further potential
+for problems. For instance, a script handler for a given field
+may refer to a field which doesn't yet exist! </p>
+
+<p>A variety of HTML elements may in principle be associated with
+keyboard events, for instance, form fields, hypertext links,
+embedded objects and client-side image maps. Embedded objects
+capable of receiving the keyboard focus should form part of the
+tabbing sequence. Such objects may in turn consist of subsidiary
+objects which themselves can get the focus. In this situation,
+these objects form a tabbing sequence that is inserted into the
+tabbing sequence of the parent HTML document. Client-side image
+maps may define a tabbing sequence, giving users the ability to
+tab through the various hotzones. The Enter key can be used to
+activate the object with the focus, whether this is a hypertext
+link or a radio button in a form field. </p>
+
+<p>What is the default tabbing behavior for form fields without a
+tabindex attribute? One approach is to define tab order according
+to the order in which the fields appear in the HTML markup. What
+happens if the some, but not all fields have tabindex attributes?
+How does this interact with incremental display? For instance
+when the first few fields don't have tabindex attributes, and the
+next few do. In this case, the browser would apply the default
+tabbing behavior until fields were seen with the tabindex
+attribute.</p>
+
+<p>It might seem reasonable to disable tabbing through fields
+without a tabindex attribute, but this is probably unacceptable
+to terminal-based browsers without pointer devices. The safest
+course is for tabindices to be implicitly defined unless
+explicitly overridden by the tabindex attribute. When the order
+is implicit, the order should be defined by the source order. To
+always skip the element, tabindex of '-1' attribute is explicitly
+supplied.</p>
+
+<p>Each successive tab key takes the cursor to the input element
+with the next greater value of tabindex. After visiting the
+element with the greatest value of tabindex, the next tabkey
+returns to the initial element. Pressing Shift-tab should be
+interpreted as a reverse tab. </p>
+
+<p>There is no requirement that the values of tabindex be
+consecutive or that they begin with any particular value. If
+multiple elements in the same form have the same tabindex value,
+the browser may choose any one of them or all of them in turn --
+this is a markup error. </p>
+
+<p>The intent is to treat the new tabindex attribute in the same
+way that OS/2 Presentation Manager and Microsoft Windows treat
+the tabindex attribute in their controls..</p>
+
+<p>For example:</p>
+
+<pre>&lt;INPUT TYPE=TEXT NAME=FOO TABINDEX=1&gt;
+&lt;INPUT TYPE=BUTTON NAME=SKIP TABINDEX=-1&gt; &lt;!--Can't tab
+here--&gt;
+&lt;INPUT TYPE=TEXT NAME=ZAM&gt;  &lt;!--Can tab here, Taborder
+implicitly assumed to follow FOO--&gt;
+&lt;INPUT TYPE=TEXT NAME=BAR TABINDEX=2&gt;</pre>
+
+<h3><a name="Title">Title Attribute</a></h3>
+
+<p><em>Value</em>: String<br>
+<em>Initial Value</em>: None<br>
+<em>Applies To</em>: All Elements</p>
+
+<p>Justification: To provide similar functionality to window's
+tooltips and macintosh's balloon help.</p>
+
+<p>The title attribute is used to provide a small piece of extra
+information that is associated with an anchor, image, or
+intrinsic control. How the tip is rendered to the user is up to
+the UA. On Windows, tips are generally displayed when the mouse
+hovers over the element as small pop-up windows. Once the mouse
+is subsequently moved or clicked, the window goes away. On the
+Macintosh, the tip may be displayed as baloon help. Other
+operating systems may choose to display tip text in a status bar.
+It is recommended that tips are not displayed in a model dialog
+box.</p>
+
+<p>For example:</p>
+
+<pre>&lt;IMG SRC=main.gif TITLE=&quot;Click where you want to
+go&quot;&gt;</pre>
+
+<h3><a name="disabled">Disabled Attribute </a></h3>
+
+<p><em>Applies To</em>: input, textarea, select, object,
+fieldset, button</p>
+
+<p>Justification: Currently there is no way to disable a control
+from receiving the focus</p>
+
+<p>When supplied, the control will be disabled. Disabled controls
+cannot receive the focus and are skipped in the tabbing order. On
+windows (need other operating systems), the control is usually
+rendered in 'grayed' out state. When this attribute is supplied,
+the element is initally disabled.</p>
+
+<h2><a name="Tags">Elements</a></h2>
+
+<h3><a name="label">Label Element</a></h3>
+
+<p>&lt;label for=id AccessKey=character&gt;&lt;/label&gt;</p>
+
+<p>Justification: The current HTML model lacks a way to associate
+the label with a particular control. </p>
+
+<p>Labels for radio buttons and checkboxes are currently missing
+from HTML. Authors can place text next to the fields, but the
+connection is missing from the markup. This means clicking on the
+label text doesn't work. This is a minor nuisance for most of us,
+but a critical failing for the visually impaired. Speech-based
+browsers are forced into the unsatisfactory position of having to
+use the NAME and VALUE attributes to describe each field.</p>
+
+<p>The new label element serves two purposes: To structurally
+associate a description with an input control and to provide a UI
+active region for selecting a control. On systems that expose a
+pointing device, clicking on the label gives the control the
+focus by generating a click on the control. For buttons that keep
+state (i.e,. option buttons and checkboxes) this causes the value
+to change. </p>
+
+<p>Labels can be associated either implicitly or explicitly.
+Labels are implicitly associated with controls by wrapping the
+Label tag around a control. Implicit labels can only contain a
+single object or control-like element. For implicit labels, the
+label may appear either before or after the control<em>.</em>
+Labels cannot be nested, and there is no limit to how many labels
+may be associated with a single element.</p>
+
+<p>A disadvantage to implicit labels are they assume they can be
+constructed within the same context of the control. To allow
+labels to be independently positioned, explicit association can
+also be made. An example where this is necessary is where you
+want to have the labels in the first column of a table, and the
+control in a second column. Explicit association is done with the
+FOR attribute. The FOR references the ID of a control on the
+page. More than one label may be associated with a single control
+by creating multiple for references. </p>
+
+<p>Examples:</p>
+
+<pre>&lt;!--Implicit Label--&gt;
+&lt;LABEL ACCESSKEY=U&gt;User Name&lt;INPUT TYPE=&quot;TEXT&quot;
+NAME=USER ID=USER&gt;&lt;/LABEL&gt;</pre>
+
+<pre>&lt;!--Explicit Label--&gt;
+&lt;TABLE&gt;&lt;TR&gt;&lt;TD&gt;
+    &lt;LABEL FOR=USER ACCESSKEY=U&gt;User Name&lt;/LABEL&gt;
+  &lt;/TD&gt;&lt;TD&gt;
+    &lt;INPUT TYPE=TEXT NAME=USERNAME ID=USER&gt;&lt;/TD&gt;
+  &lt;/TR&gt;
+&lt;/TABLE&gt;</pre>
+
+<h3><a name="FieldsetAndCaption">FieldSet and Caption </a>Elements</h3>
+
+<p>Justification: Accessibility. For example, in a
+speech-synthesized browser, this allows the user to move from
+group to group. This is similar to the DIV but is for the
+specific purpose of grouping related fields on a page.</p>
+
+<p>The FieldSet Tag is a container and nestable. Its content
+model is body-content. A FieldSet can contain a single caption
+that must immediately follow the FieldSet tag. The caption is
+used to identify the contained set of fields. </p>
+
+<p>The rendering for a field set is left up to the browser. The
+recommended rendering is to place a box around the group and
+transpose the caption over the upper-left or lower-left portion
+of the box depending upon the align attribute value.</p>
+
+<h4>For Example:</h4>
+
+<pre>&lt;FIELDSET&gt;&lt;CAPTION ACCESSKEY=G
+TABINDEX=1&gt;Gender&lt;/CAPTION&gt;
+&lt;LABEL ACCESSKEY=M&gt;&lt;INPUT TYPE=RADIO NAME=Gender
+VALUE=Male&gt;Male&lt;/LABEL&gt;&lt;BR&gt;
+&lt;LABEL ACCESSKEY=F&gt;&lt;INPUT TYPE=RADIO NAME=Gender
+VALUE=Female&gt;Female&lt;/LABEL&gt;
+&lt;/FIELDSET&gt;</pre>
+
+<p>When a caption in a FieldSet has a tabindex or an accesskey,
+when the FieldSet is tabbed or referenced through the accesskey,
+the control within the FieldSet with the lowest tabbing order
+receives the focus.</p>
+
+<h2><a name="dtd">Fragment DTD</a></h2>
+
+<p>The DTD fragment below uses HTML 3.2 for the basis:
+&quot;-//W3C//DTD HTML 3.2//EN&quot;</p>
+
+<pre>&lt;!-- Added label to %text --&gt;
+&lt;!ENTITY % text 
+  &quot;#PCDATA | label | %font | %phrase | %special |
+%form&quot;&gt;</pre>
+
+<pre>&lt;!-- defined new entities for control and label --&gt;
+&lt;!ENTITY % control &quot;%form | img | object | applet&quot;&gt;
+&lt;!ENTITY % labelcontent &quot;#PCDATA | %font | %phrase | FONT |
+SCRIPT&quot;&gt;</pre>
+
+<pre>&lt;!-- defined element LABEL --&gt;
+&lt;!ELEMENT LABEL - - ((%labelcontent)*, (%control)?,
+(%labelcontent)*)&gt;</pre>
+
+<pre>&lt;!ATTLIST LABEL 
+	for IDREF #IMPLIED -- for is required when using explicit labels --
+	accesskey CDATA #IMPLIED --accessibility key character--
+	title CDATA #IMPLIED --advisory title string--
+&gt;</pre>
+
+<pre>&lt;!-- Added fieldset to %block--&gt;
+&lt;!ENTITY % block 
+  &quot;P | %list | %preformatted | DL | DIV | CENTER |
+   BLOCKQUOTE | FORM | ISINDEX | HR | TABLE | FIELDSET&quot;&gt;</pre>
+
+<pre>&lt;!-- defined element FIELDSET --&gt;
+&lt;!ELEMENT FIELDSET - - (caption?, %body.content)&gt;</pre>
+
+<pre>&lt;!ATTLIST FIELDSET
+	title CDATA #IMPLIED --advisory title string--
+&gt;</pre>
+
+<pre>&lt;!-- Added title to the following elements--&gt;
+&lt;!-- Added download to the following tags if they have a src
+attribute--&gt;
+&lt;!-- ID also needs to be added for labels to work properly--&gt;
+&lt;!-- Name should also be made optional to allow fields to be
+specified that do not take part in forms--&gt;
+&lt;!ATTLIST IMG
+	src %URL #REQUIRED --URL of image to embed--
+	alt CDATA #IMPLIED -- for display in place of image--
+	align %IAlign #IMPLIED --vertical or horizontal alignment--
+	height %Pixels #IMPLIED --suggested height--
+	width %Pixels #IMPLIED --suggested width
+	border %Pixels #IMPLIED --suggested link border width--
+	hspace %Pixels #IMPLIED --suggested horizontal gutter--
+	vspace $Pixels #IMPLIED --suggested vertical gutter--
+	usemap %URL #IMPLIED --use client-side image map--
+	ismap (ismap) #IMPLIED --use server image map--
+	title CDATA #IMPLIED --advisory title string--
+	tabindex NUMBER #IMPLIED&gt;</pre>
+
+<pre>&lt;!ATTLIST APPLET
+	codebase %URL #IMPLIED --code base--
+	code CDATA #REQUIRED --class file--
+	name CDATA #IMPLIED --applet name--
+	alt CDATA #IMPLIED --for display in place of applet--
+	align %IAlign #IMPLIED --vertical or horizontal alignment--
+	height %Pixels #IMPLIED --suggested height--
+	width %Pixels #IMPLIED --suggested width
+	hspace %Pixels #IMPLIED --suggested horizontal gutter--
+	vspace $Pixels #IMPLIED --suggested vertical gutter--
+	title CDATA #IMPLIED --advisory title string--
+	tabindex NUMBER #IMPLIED
+	&gt;</pre>
+
+<pre>&lt;!ATTLIST INPUT
+	type %InputType TEXT --what kind of widget is needed--
+	name CDATA #IMPLIED --name of the input--
+	value CDATA #IMPLIED --value used for form submission--
+	checked (checked) #IMPLIED --for radio and checkboxes--
+	size DATA #IMPLIED --specific to each type of field--
+	maxlength NUMBER #IMPLIED 
+	src %URL #IMPLIED --for fields with backgroudn images--
+	align (t0p|middle|bottom|left|right) top -- image alignment--
+	title CDATA #IMPLIED --advisory title string--
+	tabindex NUMBER #IMPLIED
+	notabstop (notabstop) #IMPLIED 
+&gt;
+
+&lt;!ATTLIST SELECT
+	name CDATA #REQUIRED
+	size NUMBER #IMPLIED
+	multiple (multiple) #IMPLIED
+	title CDATA #IMPLIED --advisory title string--
+	tabindex NUMBER #IMPLIED
+	notabstop (notabstop) #IMPLIED 
+&gt;</pre>
+
+<pre>&lt;!ATTLIST TEXTAREA
+	name CDATA #REQUIRED
+	rows NUMBER #REQUIRED
+	cols NUMBER #REQUIRED
+	title CDATA #IMPLIED --advisory title string--
+	tabindex NUMBER #IMPLIED
+	&gt;</pre>
+
+<pre>&lt;!ATTLIST object
+        %attrs      -- id, class, style, lang, dir --
+        declare (declare) #IMPLIED  -- declare but don't instantiate
+flag --
+        classid %URL     #IMPLIED   -- identifies an implementation --
+        codebase %URL    #IMPLIED   -- some systems need an additional
+URL --
+        data    %URL     #IMPLIED   -- reference to object's data --
+        type    CDATA    #IMPLIED   -- Internet media type for data --
+        codetype CDATA   #IMPLIED   -- Internet media type for code --
+        standby CDATA    #IMPLIED   -- message to show while loading --
+        align   %Align   #IMPLIED   -- positioning inside document --
+        height  %Length  #IMPLIED   -- suggested height --
+        width   %Length  #IMPLIED   -- suggested width --
+        border  %Length  #IMPLIED   -- suggested link border width --
+        hspace  %Length  #IMPLIED   -- suggested horizontal gutter --
+        vspace  %Length  #IMPLIED   -- suggested vertical gutter --
+        usemap  %URL     #IMPLIED   -- reference to image map --
+        shapes  (shapes) #IMPLIED   -- object has shaped hypertext links
+--
+        name    %URL     #IMPLIED   -- submit as part of form --
+	title   CDATA    #IMPLIED   -- advisory title string--
+	tabindex NUMBER #IMPLIED
+	&gt;</pre>
+
+<pre>&lt;!-- Added accesskey to anchor and caption.--&gt;
+&lt;!ATTLIST A
+	name CDATA #IMPLIED --named link end--
+	href %URL #IMPLIED --URL for linked resource--
+	rel CDATA #IMPLIED --forward link types--
+	rev CDATA #IMPLIED --reverse link types--
+	title CDATA #IMPLIED --advisory title string--
+	accesskey CDATA #IMPLIED --
+	tabindex NUMBER #IMPLIED
+	&gt;</pre>
+
+<pre>&lt;!ATTLIST CAPTION
+	align (top|bottom) #IMPLIED
+	accesskey CDATA #IMPLIED
+	tabindex NUMBER #IMPLIED
+	&gt;</pre>
+</body>
+</html>

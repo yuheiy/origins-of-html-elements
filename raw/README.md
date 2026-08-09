@@ -14,6 +14,7 @@
 | `html-plus/` | HTML+および設計論文 | https://www.w3.org/MarkUp/HTMLPlus/htmlplus_1.html | フォーム、表、フレーズマークアップの導入を検証する。 |
 | `html-3.0/` | HTML 3.0草案 | https://www.w3.org/MarkUp/html3/ | 論理スタイルと強調関連要素の変遷を検証する。 |
 | `html-3.2/` | HTML 3.2 Reference Specification | https://www.w3.org/TR/REC-html32 | HTML+の要素がW3C勧告へ入るまでを追跡する基準。 |
+| `cougar-forms/` | Cougar概要および1996〜1997年のform拡張草案 | https://www.w3.org/MarkUp/Cougar/・https://www.w3.org/TR/WD-forms-960308.html・https://www.w3.org/TR/WD-forms-970203.html・https://www.w3.org/TR/WD-forms-970402 | `label`、`fieldset`、`legend`へ至るform labeling／grouping案とHTML 4への採録を検証する。 |
 | `html-4.01/` | HTML 4.01公式ZIP配布物（展開済み） | https://www.w3.org/TR/html401/html40.zip | 仕様全体、DTD、変更点、付属資料を含む。 |
 | `cals-table-model/` | OASIS Technical Research Paper 9501:1995およびTechnical Memorandum 9502:1995 | https://www.oasis-open.org/specs/a501.htm・https://www.oasis-open.org/specs/a502.htm | CALS table modelの公開時期と`thead`、`tbody`、`tfoot`の構造、および1995年改訂時の意味を検証する。 |
 | `rfc1942-html-tables/` | RFC 1942 HTML Tables | https://www.rfc-editor.org/rfc/rfc1942.html | 表関連要素の設計と標準化を検証する。 |

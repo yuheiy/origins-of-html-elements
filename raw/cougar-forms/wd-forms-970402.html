@@ -1,0 +1,844 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Enhancing HTML Forms</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<h3 align="right"><a href="https://www.w3.org/pub/WWW/Consortium/"><img src="https://www.w3.org/pub/WWW/Icons/WWW/w3c_home.gif" alt="W3C" align="left" border="0" hspace="0"></a>WD-forms-970402</h3>
+
+<br>
+<h1 align="center">Enhancing Interactive HTML documents</h1>
+
+<h3 align="center">W3C Working Draft 02-Apr-97</h3>
+
+<dl>
+    <dt>This version:
+    <dd>http://www.w3.org/pub/WWW/TR/WD-forms-970402
+    <dt>Latest version:
+    <dd>http://www.w3.org/pub/WWW/TR/WD-forms
+    <dt>Editors:
+    <dd>Dave Raggett<a href="mailto:dsr@w3.org">&lt;dsr@w3.org&gt;</a>
+    <dd>Arnaud Le Hors<a href="mailto:lehors@w3.org">&lt;lehors@w3.org&gt;</a>
+    <dt>Author:
+    <dd>Scott Isaacs <a href="mailto:scotti@microsoft.com">&lt;scotti@microsoft.com&gt;</a>
+</dl>
+
+<hr>
+
+<h3>Status of this document</h3>
+
+<p>This draft is work under review by the W3C HTML Working Group,
+for potential incorporation in an upcoming version of the HTML
+specification, code named Cougar. Please remember this is subject
+to change at any time, and may be updated, replaced or obsoleted
+by other documents. It is inappropriate to use W3C Working Drafts
+as reference material or to cite them as other than "work in
+progress".
+
+<p>A list of current W3C Working Drafts can be found at
+<a href="https://www.w3.org/pub/WWW/TR">http://www.w3.org/pub/WWW/TR</a>.
+This is work in progress and does
+not imply endorsement by, or the consensus of, either W3C or
+members of the HTML working group. Further information about
+Cougar is available at
+<a href="https://www.w3.org/pub/WWW/MarkUp/Cougar/">http://www.w3.org/pub/WWW/MarkUp/Cougar/</a>.
+
+<p>Please send detailed comments to 
+<a href="mailto:www-html-editor@w3.org">www-html-editor@w3.org</a>.
+We cannot garantee a personal response, but summaries will
+be maintained off the Cougar page. Public discussion on HTML
+features takes place on www-html@w3.org. To subscribe send a message to
+<a href="mailto:www-html-request@w3.org?subject=subscribe">www-html-request@w3.org</a>
+with subscribe in the subject.
+
+<h2>Abstract </h2>
+
+<p>Although HTML and HTTP were originally designed to provide users with a
+means to retrieve documents from a server, they also provide for sending
+user input to the server. Initially only a crude mechanism to enter one or
+more keywords was supported. This served the need for performing simple
+queries but it soon became obvious that a more general approach was needed
+to provide for requesting information from the user. NCSA Mosaic added
+markups for basic form fields such as radio buttons, checkboxes, single and
+multiline text fields, single and multiselect menus etc.
+
+<p>Forms have proven to be useful in a wide variety of applications
+however, as defined in HTML 3.2, they suffer from a number of limitations
+that this specification addresses.
+
+<p>In addition this document defines some extensions which go beyond the
+scope of HTML forms. They are meant to improve user agent interactivity in
+general and to provide better support for speech based user agents in
+particular.
+
+<h2><a name="changes">Changes from HTML 3.2</a></h2>
+
+<p>The forms specified in HTML 3.2 have the following problems:
+
+<ul>
+<li>There is no provision for keyboard short cuts for particular actions,
+or for access keys for driving menus etc.
+
+<li>Although form controls can dynamically be made insensitive, they cannot
+be declared as such at initialization time.
+
+<li>Along the same line form controls, such as form fields, cannot be made
+'read only'.
+
+<li>Labels for radio buttons and checkboxes are not sensitive, i.e.
+clicking on a label text doesn't effect the button state.
+
+<li>There is no means to markup groups of related form fields in a way that
+effectively supports browsing with speech based user agents.
+
+<li>There is no provision for checking values as they are entered into form
+fields. All checking is done at the server when the form's contents are
+submitted.
+
+<li>Nothing is provided to specify what type of data file is expected when
+the user is asked to submit files.
+
+<li>Forms can only contain the two buttons submit and reset.
+
+<li>There is no way to specify what character sets the server issuing
+a form can handle.
+</ul>
+
+
+<p>To solve these problems this specification introduces several new
+attributes and elements.
+
+<ul>
+<li>The <a href=#accesskey><samp>ACCESSKEY</samp></a> attribute provides for
+specifying direct keyboard access to form fields.
+
+<li>The new attribute <a href=#disabled><samp>DISABLED</samp></a> allows
+form providers to make a form control initially insensitive.
+
+<li>And with the additional attribute <a
+href=#readonly><samp>READONLY</samp></a> they can prohibit changes to a
+form field.
+
+<li>The <a href=#label><samp>LABEL</samp></a> element associates a label
+with a particular form control.  The <a
+href=#fieldset><samp>FIELDSET</samp></a> element groups related fields
+together and, in association with a <samp>CAPTION</samp>, can name the
+group. Both of these new elements allow better rendering and better
+interactivity. Speech based browsers can better describe the form and
+graphic browsers can make labels sensitive.
+
+<li>A new set of attributes, including <a
+href=#events><samp>ONCHANGE</samp></a>, in association with support for
+scripting languages allows form providers to include some code checking on
+entered data.
+
+<li>The <samp>INPUT</samp> element has a new attribute <a
+href=#accept><samp>ACCEPT</samp></a>, allowing to specify a list of media
+types or type patterns for the input.
+
+<li>The new <samp>BUTTON</samp> element can be used to make richer forms
+with more than two buttons.
+
+<li>The <samp>FORM</samp> element includes the attribute <a
+href=#accept-charset><samp>ACCEPT-CHARSET</samp></a> modeled on the HTTP
+Accept-Charset header (see [HTTP]) which can be used to specify a list of
+character sets acceptable to the server. <em>This attribute was first
+proposed through the RFC 1867</em>
+</ul>
+
+<p>In addition user agent interactivity suffers from the following
+limitations:
+
+<ul>
+<li>Elements do not have any placeholder for advisory titles to be rendered
+as additional help.
+
+<li>Tabbing order for moving focus between fields or hypertext links is
+undefined.
+</ul>
+
+<p>To solve these, this document introduces two new attributes:
+
+<ul>
+<li>The attribute <a href=#title><samp>TITLE</samp></a> is added to most
+existing elements as a placeholder for additional information to be
+rendered when help is needed and/or requested by the user.
+
+<li>The <a href=#tabindex><samp>TABINDEX</samp></a> attribute is introduced
+to allow explicit specification of the tabbing order when traversing a
+web page from an interactive element to another. Interactive elements are
+form controls as well as anchors and any element which is made interactive
+by providing a script to handle events occuring on the element.
+</ul>
+
+<h3>Note on backwards compatibility</h3>
+
+<p>Some new idioms are only useable in an interactive context, unlike
+traditional form fields like radio buttons, check boxes and text fields
+which also make sense on paper. The following features have no hope of
+backwards compatibility because they either require scripting to be useful,
+or because old browsers can't provide a reasonable way of dealing with
+them.
+
+<p>Other proposed extensions will work acceptably with existing browsers,
+e.g. labeled <samp>INPUT</samp> fields and labeled groups.
+
+
+<h3>Note on possible future developments</h3>
+
+<p>This specification defines a set of elements and attributes powerful
+enough to fulfill the general need for producing forms. However there is
+still room for many possible improvements. For instance the following
+problems could be addressed in the future:
+
+<ul>
+<li>The range of form field types is too limited in comparison with
+modern user interfaces. For instance there is no provision for tabular 
+data entry, sliders or multiple page layouts.
+
+<li>Servers cannot update the fields in a submitted form and instead have
+to send a complete HTML document causing screen flicker.
+
+<li>These also cause problems for speech based browsers, making it
+difficult for the visual impaired to interact with HTML forms.
+</ul>
+
+<p>Further extensions are anticipated, but they are not discussed in this
+document.
+
+<hr>
+
+<h2><a name="Attributes">Attributes</a></h2>
+
+<p>The new attributes common to most of the form fields elements are: 
+
+<pre>
+    accesskey CDATA      #IMPLIED  -- accessibility key character --
+    disabled  (disabled) #IMPLIED  -- to disable element --
+    onClick   %script    #IMPLIED  -- intrinsic event --
+    onFocus   %script    #IMPLIED  -- intrinsic event --
+    onBlur    %script    #IMPLIED  -- intrinsic event --
+    onSelect  %script    #IMPLIED  -- intrinsic event --
+    onChange  %script    #IMPLIED  -- intrinsic event --
+</pre>
+
+The following sections described each of these attributes and how they can
+be used.
+
+<dl>
+<dt><a name=accesskey><B>accesskey</B></a>
+
+<dd><samp>ACCESSKEY</samp> is an attribute on the <samp>LABEL</samp>,
+<samp>A</samp> (anchor), and <samp>CAPTION</samp> tags. Its value is a
+single character in the current character set that provides a keyboard
+shortcut for activating an element. This can be used either as an
+alternative for clicking on systems without a pointing device or as an
+optimization for advanced users on other systems. To the user,
+<samp>ACCESSKEY</samp> is case insensitive. For example, when
+<samp>ACCESSKEY</samp> is set to 'u' or 'U', it should not matter whether
+the user referenced an upper or lower-case 'u', both should work.
+
+<p>Although authors can choose to supply HTML markups around the
+appropriate character to control the rendering, the user agent should
+perform the default rendering accordingly to the appropriate style
+guide. In general, characters corresponding to an accesskey are
+underlined. Also, while authors are not required to use a character that is
+exposed on the label to define an accesskey it is highly recommended.
+
+<p>The way the accesskey is invoked depends on the system but should follow
+the appropriate style guide. For instance, on Windows one has to press the
+'alt' key in addition to the accesskey, and on the Macintosh the 'cmd' key
+in addition to the accesskey.
+
+<p>Invoking an accesskey performs the same action as clicking on the
+element. This is following the link for anchors, giving focus for fields,
+changing the value for radio buttons and checkboxes. In addition for
+elements other than anchors it is recommended that action, such as
+scrolling, is taken to get the element into view.
+
+<p>For Example: 
+
+<pre>
+&lt;FORM&gt;
+&lt;LABEL ACCESSKEY=&quot;U&quot;&gt;User Name
+    &lt;INPUT TYPE=&quot;TEXT&quot; NAME=USER&gt;&lt;/LABEL&gt;
+&lt;/FORM&gt;
+</pre>
+
+<p>This could be rendered as:<br>
+
+<IMG src=images/access_attrib.gif alt="you should see the U underlined in
+UserName followed by a text box">
+
+<p>When the user types the appropriate key sequence for the accesskey 'U',
+the input box, user, is given the focus.
+
+<dt><a name=disabled><B>disabled</B></a>
+<dd>An attribute to disable form controls.
+
+<p><samp>DISABLED</samp> is an attribute of the <samp>INPUT</samp>,
+<samp>TEXTAREA</samp>, <samp>SELECT</samp>, <samp>OPTION</samp>,
+<samp>OBJECT</samp>, <samp>LABEL</samp> and <samp>BUTTON</samp>
+elements. When supplied, the related element cannot receive the keyboard
+focus and is skipped in the tabbing order. A form control should be
+disabled when the form is in a state where this control is irrelevant. For
+instance, the submit button could be disabled when the form is presented to
+the user and some input is required. The submit button would then be enable
+when the user has entered the required data.<BR>
+When a form control is initially disabled by supplying the
+<samp>DISABLED</samp> attribute, the only way to enable it later on is by
+using some associated script to change this state dynamically.
+
+<p>The way disabled form controls are rendered is user agent dependent and
+should follow the appropriate style guide. In general, disabled form
+controls are 'grayed out'.
+
+<dt><a name=readonly><B>readonly</B></a>
+<dd>An attribute to prohibit changes to form controls.
+
+<p><samp>READONLY</samp> applies to <samp>INPUT</samp> elements of type
+<samp>TEXT</samp> or <samp>PASSWORD</samp> and to the <samp>TEXTAREA</samp>
+element. <samp>READONLY</samp> is quite like <samp>DISABLED</samp> as it
+prohibits user input however, unlike disabled form controls, read-only form
+controls are not considered irrelevant. They can be used to display data
+that the user cannot modify in the current state of the form.<BR>
+Like disabled form controls, read-only form controls can only be made
+modifyable by using some associated script to change this state
+dynamically.
+
+<p>The way read-only form controls are rendered is also user agent
+dependent and should follow the appropriate style guide. In general, read
+only form controls are rendered the same way as modifyable ones; they are
+not 'grayed out'. But the user just cannot modify their state or content.
+
+<dt><a name=events><B>onClick, onFocus, onBlur, onSelect, onChange</B></a>
+
+<dd>These attributes can be used in association with a scripting language
+to control the user input. Each of them is a placeholder for a small
+program to be run when one of the <a href=script.html#intrinsic>Intrinsic
+Events</a> occurs. Each event occurs in a particular situation. For
+example, onChange occurs when a form control loses the focus and its value
+has changed. See <a href=script.html>HTML and Scripting</a> for further
+explanations.
+
+</dl>
+
+<p>The new attributes introduced to improve user agent interactivity are:
+
+<pre>
+  title       CDATA      #IMPLIED  -- advisory title string --
+  tabindex    NUMBER     #IMPLIED  -- position in tabbing order --
+</pre>
+
+The following sections described each of these attributes and how they can
+be used.
+
+<dl>
+<dt><a name=title><B>title</B></a>
+<dd>A text string providing additional help related to a particular element.
+
+<p>The <samp>TITLE</samp> attribute is used to provide a small piece of
+extra information that is associated with an interactive element such as an
+anchor, an image, or a form control. How the title is rendered to the user
+is up to the user agent but should follow whatever style guide is defined
+on the system. For instance, on Windows this should be displayed as
+tooltips and on the Macintosh as help balloons. On other window systems
+they may be displayed in a status bar. The use of a modal dialog box is not
+recommended.
+
+<p>For example:
+
+<pre>
+&lt;INPUT TYPE=reset TITLE=&quot;Reset form and start over&quot;&gt;
+</pre>
+<dt><a name=tabindex><B>tabindex</B></a>
+
+<dd>The keyboard focus determines which interactive element in a document
+gets keyboard events. To give focus to a particular interactive element the
+user has to either use the mouse, or other pointing device, to click on the
+object or use the tab key to traverse the document up to the object. By
+default, the user agent only includes form controls and anchors elements in
+the tabbing sequence and it assumes an implicit order based on the document
+source. However, with the <samp>TABINDEX</samp> attribute authors can
+include other elements in the tabbing sequence and specify the exact order
+in which the focus should traverse the document. Typically authors may want
+to add to the tabbing sequence any element for which they handle input
+events by means of a script.
+
+<p>The value of <samp>TABINDEX</samp> is an integer which is used to sort
+the elements from the lowest to the highest <B>absolute value</B>.
+
+<p>This sort is based on the absolute value to allow authors to use a
+negative value to indicate that an element is to be left out of the tabbing
+sequence. This is merely a suggestion though. Indeed when appropriate user
+agents may ignore this directive. For example speech-based browsers must
+let users go through every interactive element. Another browser may let the
+user choose one behavior or the other via some preference setting. For this
+reason, authors should first give every element a meaningful tabindex, and
+then mark the ones which are to be skipped by making their tabindex
+negative.
+
+<p>The example below defines the raw tabbing sequence: field1, field2, and
+submit, based on the absolute values of their <samp>TABINDEX</samp>
+attribute.
+
+<pre>
+&lt;FORM&gt;
+&lt;INPUT TYPE=TEXT NAME=field1 TABINDEX=1&gt;
+&lt;INPUT TYPE=TEXT NAME=field2 TABINDEX=-2&gt;
+&lt;INPUT TYPE=SUBMIT NAME=submit TABINDEX=3&gt;
+&lt;/FORM&gt;
+</pre>
+
+<p>However, the negative tabindex of field2 indicates that this text field
+is to be skipped in the tabbing sequence.
+
+<p>There is no requirement that the values of <samp>TABINDEX</samp> be
+consecutive or that they begin with any particular value. When there are
+more than one element with the same tabindex value the order of appearance
+in the document source is used to sort them out.
+
+<p>Thus, in the following example the tabbing sequence is: field1, field2,
+field4, submit.
+
+<pre>
+&lt;FORM&gt;
+&lt;INPUT TYPE=TEXT NAME=field1 TABINDEX=1&gt;
+&lt;INPUT TYPE=TEXT NAME=field2 TABINDEX=2&gt;
+&lt;INPUT TYPE=TEXT NAME=field4 TABINDEX=2&gt;
+&lt;INPUT TYPE=SUBMIT NAME=submit TABINDEX=4&gt;
+&lt;/FORM&gt;
+</pre>
+
+<p>Finally, to ensure reasonable down-level compatibility, form controls
+and anchors without an explicit tabindex are given an implicit value based
+on their order of appearance in the document source. And these elements are
+always part of the tabbing sequence.
+
+<p>Based on this, the example below defines the tabbing sequence: help,
+field1, field2, field4, field3.
+
+<pre>
+&lt;a href="help" &gt;Help&lt;/a&gt;
+&lt;FORM&gt;
+&lt;INPUT TYPE=TEXT NAME=field1 TABINDEX=1&gt;
+&lt;INPUT TYPE=TEXT NAME=field2 TABINDEX=2&gt;
+&lt;INPUT TYPE=TEXT NAME=field4&gt;
+&lt;INPUT TYPE=SUBMIT NAME=submit TABINDEX=4&gt;
+&lt;/FORM&gt;
+</pre>
+
+<h4>Further considerations</h4>
+
+<p>Each successive tab key takes the focus to the interactive element with
+the next greater value of tabindex. After visiting the element with the
+greatest value of tabindex, the next tab key returns to the initial
+element. Pressing Shift-tab should be interpreted as a reverse tab.
+
+<p>A variety of HTML elements may in principle be associated with keyboard
+events, for instance, form fields, hypertext links, embedded objects and
+client-side image maps. Embedded objects capable of receiving the keyboard
+focus should form part of the tabbing sequence. Such objects may in turn
+consist of subsidiary objects which themselves can get the focus. In this
+situation, these objects form a tabbing sequence that is inserted into the
+tabbing sequence of the parent HTML document. Client-side image maps may
+define a tabbing sequence, giving users the ability to tab through the
+various hotzones. The Enter key can be used to activate the object with the
+focus, whether this is a hypertext link or a radio button in a form field.
+
+<p>Incremental display of documents as data is received from the network
+creates special problems. The idea that the focus is given to the lowest
+valued tabindex within the whole document seems reasonable enough at first
+glance. But it would mean having to wait until all of the document's text
+is received, as until then, the lowest valued tabindex is liable to
+change. If the user hits the tab key before then, it is reasonable to move
+the focus to the lowest currently available tabindex.
+</dl>
+
+
+<h2><a name="Tags">Elements</a></h2>
+
+<P>This section describes the new elements which are introduced to make
+richer forms possible.
+
+<h3><a name=label>LABEL <em>field label text</em></a></h3>
+
+<pre>
+&lt;!ELEMENT LABEL - - (%text)* -(LABEL) -- field label text --&gt;
+&lt;!ATTLIST LABEL
+  %attrs;                          -- id, class, style, lang, dir, title --
+  for         IDREF      #IMPLIED  -- matches field ID value --
+  disabled    (disabled) #IMPLIED  -- control is unavailable in this context --
+  accesskey   CDATA      #IMPLIED  -- accessibility key character --
+  onClick     %script    #IMPLIED  -- intrinsic event --
+  onFocus     %script    #IMPLIED  -- intrinsic event --
+  onBlur      %script    #IMPLIED  -- intrinsic event --
+  &gt;
+</pre>
+
+
+<p>The <samp>LABEL</samp> element requires start and end tags. Labels
+cannot be nested.  This element serves two purposes: it provides a way to
+structurally associate a description with a form control and it provides a
+user interface active region for selecting the form control.
+
+<p>While speech-based browsers can take advantage of the description to
+easily describe the associated element, on systems that expose a pointing
+device, clicking on the label gives the form control the focus by
+generating a click on the element itself. For instance, this causes the
+value of an option button to change.
+
+<p>Labels can be associated either implicitly or explicitly. Labels are
+implicitly associated when the <samp>LABEL</samp> tag is wrapped around the
+element. Such labels can only contain a single form control. And the actual
+label may appear either before or after the contained element.
+
+<p>Example:
+
+<pre>
+&lt;!-- Implicit Labels --&gt;
+&lt;LABEL&gt;
+   First Name
+   &lt;INPUT TYPE=&quot;TEXT&quot; NAME=FIRSTNAME&gt;
+&lt;/LABEL&gt;
+&lt;LABEL&gt;
+   &lt;INPUT TYPE=&quot;TEXT&quot; NAME=LASTNAME&gt;
+   Last Name
+&lt;/LABEL&gt;
+</pre>
+
+<p>Implicit labels have the disadvantage to require the label and the
+associated element to be constructed together. In some cases it is
+necessary to define them separately though. An example is when one wants to
+have the label in the first column of a table, and the related form control
+in the second column. Explicit labels provide for doing this by using the
+<a href=#for><samp>FOR</samp></a> attribute to make the association. The
+form control is referenced by its <samp>ID</samp>. Associations are limited
+to form controls within the same page. More than one label may be
+associated with a single form control by creating multiple references.
+
+<p>Example:
+
+<pre>
+&lt;!--Explicit Label--&gt;
+&lt;TABLE&gt;
+  &lt;TR&gt;
+    &lt;TD&gt;&lt;LABEL FOR=FNAME&gt;First Name&lt;/LABEL&gt;
+    &lt;TD&gt;&lt;INPUT TYPE=TEXT NAME=FIRSTNAME ID=FNAME&gt;
+  &lt;TR&gt;
+    &lt;TD&gt;&lt;LABEL FOR=LNAME&gt;Last Name&lt;/LABEL&gt;
+    &lt;TD&gt;&lt;INPUT TYPE=TEXT NAME=LASTNAME ID=LNAME&gt;
+&lt;/TABLE&gt;
+</pre>
+
+<dl>
+<dt><b>for</b>
+<dd>The <samp>ID</samp> of a form control the label is to be associated to.
+<dt><b>id</b>
+<dd>Document-wide unique identifier.
+<dt><b>class</b>
+<dd>A comma separated list of class names which can be used in style sheets.
+<dt><b>style</b>
+<dd>Rendering information specific to this element.
+<dt><b>title</b>
+<dd>Advisory title to be displayed as additional help when needed.
+<dt><b>dir</b>
+<dd>Indicates the base directionnality of the text.
+<dt><b>lang</b>
+<dd>Specifies the language for the element and its contents.
+
+<dt><b>disabled</b>
+<dd>When present, element is initially disabled.
+
+<dt><b>accesskey</b>
+<dd>A single character to be used as a shortcut to activate or give focus to
+the associated element.
+
+<dt><b>onClick</b>
+<dd>Specifies a scripting language dependent string to be executed when the
+element is clicked.
+
+<dt><b>onFocus</b>
+<dd>Specifies a scripting language dependent string to be executed when the
+element gets the focus.
+
+<dt><b>onBlur</b>
+<dd>Specifies a scripting language dependent string to be executed when the
+element loses the focus.
+
+</dl>
+
+<h3><a name=button>BUTTON <em></em></a></h3>
+
+<pre>
+&lt;!ELEMENT BUTTON - -
+     (%text | %block)* -(A | %formctrl | FORM | ISINDEX | FIELDSET)&gt;
+&lt;!ATTLIST BUTTON
+  %attrs;                          -- id, class, style, lang, dir, title --
+  disabled    (disabled) #IMPLIED  -- control is unavailable in this context --
+  tabindex    NUMBER     #IMPLIED  -- position in tabbing order --
+  onClick     %script    #IMPLIED  -- intrinsic event --
+  onFocus     %script    #IMPLIED  -- intrinsic event --
+  onBlur      %script    #IMPLIED  -- intrinsic event --
+  &gt;
+</pre>
+
+<p>The <samp>BUTTON</samp> element allows richer forms with buttons
+different from the two submit and reset basic buttons available via the
+<samp>INPUT</samp> element. With this element whole HTML fragments can be
+encapsulated within buttons. The <samp>BUTTON</samp> element is a container
+which can basically contain any non interactive element such as a
+<samp>BUTTON</samp>, a <samp>FORM</samp>, etc... Start and end tags are
+required.
+
+<p>Example:
+
+In this example the <samp>BUTTON</samp> element is used to define a button
+which contains an icon plus some text.
+
+<pre>
+&lt;BUTTON&gt;
+   &lt;IMG ALIGN=middle SRC="helpicon.gif"&gt; Help
+   &lt;P&gt;
+   &lt;em;&gt;Click here to get information about how to fill in this form
+&lt;/em;&gt; 
+&lt;/BUTTON&gt;
+</pre>
+
+<p>The <samp>BUTTON</samp> element by itself is not sufficient though. It
+is intended to be used in association with some script define through its
+<samp>onClick</samp> attribute as well as other attributes related to the
+<a href="script.html#intrinsic">Intrinsic Events</a>, see <a
+href="script.html">HTML Scripts</a> for further details.
+
+<dl>
+<dt><b>id</b>
+<dd>Document-wide unique identifier.
+<dt><b>class</b>
+<dd>A comma separated list of class names which can be used in style sheets.
+<dt><b>style</b>
+<dd>Rendering information specific to this element.
+<dt><b>title</b>
+<dd>Advisory title to be displayed as additional help when needed.
+<dt><b>dir</b>
+<dd>Indicates the base directionnality of the text.
+<dt><b>lang</b>
+<dd>Specifies the language for the element and its contents.
+
+<dt><b>disabled</b>
+<dd>When present, element is initially disabled.
+
+<dt><b>tabindex</b>
+<dd>Specifies the position of this element in the tabbing order.
+
+<dt><b>onClick</b>
+<dd>Specifies a scripting language dependent string to be executed when the
+element is clicked.
+
+<dt><b>onFocus</b>
+<dd>Specifies a scripting language dependent string to be executed when the
+element gets the focus.
+
+<dt><b>onBlur</b>
+<dd>Specifies a scripting language dependent string to be executed when the
+element loses the focus.
+
+</dl>
+
+<p>The width and height of a button can be specified through the style
+sheets. However the actual width and height are determined by following
+these rules:
+
+<p>User agents should try their best to avoid clipping the button
+contents. This can occur when the button size is set too small, or
+when the button extends past the right margin so that it is clipped
+by the edge of the window.
+
+<p>In the former case, the user agent should increase the width and/or
+height as needed to avoid clipping. In the latter case, the button width
+should be reduced to avoid the button being clipped by the window edge.
+If there is still insufficient space, then the line can be wrapped to
+place the button on a new line.
+
+<h3><a name="fieldset">FIELDSET <em>field sets</em></a></h3>
+<pre>
+&lt;!--
+  #PCDATA is to solve the mixed content problem,
+  by specification only whitespace is allowed there!
+ --&gt;
+
+&lt;!ELEMENT FIELDSET - - (#PCDATA,CAPTION,%body.content)&gt;
+&lt;!ATTLIST FIELDSET
+  %attrs;                          -- id, class, style, lang, dir, title --
+</pre>
+
+<p>The <samp>FIELDSET</samp> element is similar to the <samp>DIV</samp>
+element but is for the specific purpose of grouping related fields. It is a
+container and it is nestable. It requires start and end tags and can
+contain a single <a href=table.html#caption><samp>CAPTION</samp></a> that
+must immediately follow the <samp>FIELDSET</samp> tag. The caption is used
+to identify the contained set of fields. This is especially useful to
+speech-based browsers which can then provide users with a way to move from
+group to group.
+
+<p>The rendering for a field set is left up to the browser. However it is
+recommended to place a box around the group and transpose the caption over
+the upper-left or lower-left portion of the box depending upon the align
+attribute value on the <samp>CAPTION</samp> element.
+
+<h4>For Example:</h4>
+
+<pre>&lt;FIELDSET&gt;
+  &lt;CAPTION ACCESSKEY=G TABINDEX=1&gt;Gender&lt;/CAPTION&gt;
+
+  &lt;LABEL ACCESSKEY=M&gt;&lt;INPUT TYPE=RADIO
+     NAME=Gender VALUE=Male&gt;Male&lt;/LABEL&gt;&lt;BR&gt;
+
+  &lt;LABEL ACCESSKEY=F&gt;&lt;INPUT TYPE=RADIO
+     NAME=Gender VALUE=Female&gt;Female&lt;/LABEL&gt;
+&lt;/FIELDSET&gt;</pre>
+
+<p>When a caption in a <samp>FIELDSET</samp> has a <samp>TABINDEX</samp> or
+an <samp>ACCESSKEY</samp>, when the <samp>FIELDSET</samp> is tabbed or
+referenced through the <samp>ACCESSKEY</samp>, the control within the
+<samp>FIELDSET</samp> with the lowest tabbing order receives the focus.
+
+<dl>
+<dt><b>id</b>
+<dd>Document-wide unique identifier.
+<dt><b>class</b>
+<dd>A comma separated list of class names which can be used in style sheets.
+<dt><b>style</b>
+<dd>Rendering information specific to this element.
+<dt><b>title</b>
+<dd>Advisory title to be displayed as additional help when needed.
+<dt><b>dir</b>
+<dd>Indicates the base directionnality of the text.
+<dt><b>lang</b>
+<dd>Specifies the language for the element and its contents.
+
+</dl>
+
+
+
+<h2><a name="dtd">DTD Fragment</a></h2>
+
+<p>The DTD fragment below exhibits the new elements and attributes
+discussed in this document.
+
+<pre>
+&lt;!ELEMENT FORM - - %body.content -(FORM)&gt;
+&lt;!ATTLIST FORM
+  action      %URL       #REQUIRED -- server-side form handler --
+  method      (GET|POST) GET       -- see HTTP specification --
+  enctype     %Content-Type; "application/x-www-form-urlencoded"
+  onSubmit    %script    #IMPLIED  -- intrinsic event --
+  target      CDATA      #IMPLIED  -- where to render result --
+  accept-charset CDATA   #IMPLIED  -- list of supported charsets --
+  &gt;
+
+&lt;!ELEMENT LABEL - - (%text)* -(LABEL) -- field label text --&gt;
+&lt;!ATTLIST LABEL
+  %attrs;                          -- id, class, style, lang, dir, title --
+  for         IDREF      #IMPLIED  -- matches field ID value --
+  disabled    (disabled) #IMPLIED  -- control is unavailable in this context --
+  accesskey   CDATA      #IMPLIED  -- accessibility key character --
+  onClick     %script    #IMPLIED  -- intrinsic event --
+  onFocus     %script    #IMPLIED  -- intrinsic event --
+  onBlur      %script    #IMPLIED  -- intrinsic event --
+  &gt;
+
+&lt;!ENTITY % InputType
+  "(TEXT | PASSWORD | CHECKBOX |
+    RADIO | SUBMIT | RESET |
+    FILE | HIDDEN | IMAGE | BUTTON)"
+   &gt;
+
+&lt;!-- HSPACE and VSPACE missing due to lack of widespread support --&gt;
+&lt;!ELEMENT INPUT - O EMPTY&gt;
+&lt;!ATTLIST INPUT
+  %attrs;                          -- id, class, style, lang, dir, title --
+  type        %InputType TEXT      -- what kind of widget is needed --
+  name        CDATA      #IMPLIED  -- required for all but submit & reset --
+  value       CDATA      #IMPLIED  -- required for radio and checkboxes --
+  checked     (checked)  #IMPLIED  -- for radio buttons and check boxes --
+  disabled    (disabled) #IMPLIED  -- control is unavailable in this context --
+  readonly    (readonly) #IMPLIED  -- for text and passwd --
+  size        CDATA      #IMPLIED  -- specific to each type of field --
+  maxlength   NUMBER     #IMPLIED  -- max chars for text fields --
+  src         %URL       #IMPLIED  -- for fields with images --
+  align       %IAlign    #IMPLIED  -- vertical or horizontal alignment --
+  usemap      %URL       #IMPLIED  -- use client-side image map --
+  tabindex    NUMBER     #IMPLIED  -- position in tabbing order --
+  onClick     %script    #IMPLIED  -- intrinsic event --
+  onFocus     %script    #IMPLIED  -- intrinsic event --
+  onBlur      %script    #IMPLIED  -- intrinsic event --
+  onSelect    %script    #IMPLIED  -- intrinsic event --
+  onChange    %script    #IMPLIED  -- intrinsic event --
+  accept      CDATA      #IMPLIED  -- list of MIME types for file upload --
+  &gt;
+
+&lt;!ELEMENT SELECT - - (OPTION+)&gt;
+&lt;!ATTLIST SELECT
+  %attrs;                          -- id, class, style, lang, dir, title --
+  name        CDATA      #REQUIRED -- field name --
+  size        NUMBER     #IMPLIED  -- rows visible --
+  multiple    (multiple) #IMPLIED  -- default is single selection --
+  disabled    (disabled) #IMPLIED  -- control is unavailable in this context --
+  tabindex    NUMBER     #IMPLIED  -- position in tabbing order --
+  onFocus     %script    #IMPLIED  -- intrinsic event --
+  onBlur      %script    #IMPLIED  -- intrinsic event --
+  onChange    %script    #IMPLIED  -- intrinsic event --
+  &gt;
+
+&lt;!ELEMENT OPTION - O (#PCDATA)*&gt;
+&lt;!ATTLIST OPTION
+  %attrs;                          -- id, class, style, lang, dir, title --
+  selected    (selected) #IMPLIED
+  disabled    (disabled) #IMPLIED  -- control is unavailable in this context --
+  value       CDATA      #IMPLIED  -- defaults to element content --
+  &gt;
+
+&lt;!ELEMENT TEXTAREA - - (#PCDATA)*&gt;
+&lt;!ATTLIST TEXTAREA
+  %attrs;                          -- id, class, style, lang, dir, title --
+  name        CDATA      #REQUIRED
+  rows        NUMBER     #REQUIRED
+  cols        NUMBER     #REQUIRED
+  disabled    (disabled) #IMPLIED  -- control is unavailable in this context --
+  readonly    (readonly) #IMPLIED
+  tabindex    NUMBER     #IMPLIED  -- position in tabbing order --
+  onFocus     %script    #IMPLIED  -- intrinsic event --
+  onBlur      %script    #IMPLIED  -- intrinsic event --
+  onSelect    %script    #IMPLIED  -- intrinsic event --
+  onChange    %script    #IMPLIED  -- intrinsic event --
+  &gt;
+
+&lt;!--
+  #PCDATA is to solve the mixed content problem,
+  by specification only whitespace is allowed there!
+ --&gt;
+
+&lt;!ELEMENT FIELDSET - - (#PCDATA,CAPTION,%body.content)&gt;
+&lt;!ATTLIST FIELDSET
+  %attrs;                          -- id, class, style, lang, dir, title --
+
+&lt;!ELEMENT CAPTION - - (%text;)+&gt;
+</pre>
+
+<p>
+<A href="https://www.w3.org/Consortium/Legal/ipr-notice.html#Copyright">
+Copyright</A> &nbsp;&copy;&nbsp; 1997 <A href="https://www.w3.org">W3C</A>
+(<A href="http://www.lcs.mit.edu">MIT</A>,
+<A href="http://www.inria.fr/">INRIA</A>,
+<A href="http://www.keio.ac.jp/">Keio</A> ), All Rights Reserved. W3C
+<A href="https://www.w3.org/Consortium/Legal/ipr-notice.html#Legal Disclaimer">liability,</A>
+<A href="https://www.w3.org/Consortium/Legal/ipr-notice.html#W3C Trademarks">trademark</A>,
+<A href="https://www.w3.org/Consortium/Legal/copyright-documents.html">document
+use </A>and
+<A href="https://www.w3.org/Consortium/Legal/copyright-software.html">software
+licensing </A>rules apply.
+</body>
+</html>
