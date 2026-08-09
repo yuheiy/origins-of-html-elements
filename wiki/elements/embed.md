@@ -1,6 +1,6 @@
 # `<embed>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。Netscape Navigator plug-in系譜を検証済み（HTML5への採録過程は未解決）
+> 状態: 完成
 
 ## 概要
 
@@ -54,9 +54,3 @@ Netscape自身の要素提案が、導入主体、要求、Navigator plug-in実�
 
 - Netscape提案からWHATWG／HTML5で現行要素として仕様化されるまでの具体的な採録記録はあるか。
 - Navigator 2.0以前にplug-in embedding modelへ影響した具体的systemはあるか。
-
-## 調査記録
-
-1993年HTML draft、1995年Netscape提案、1996年Compound Documents draftを確認した。横断比較は[browser vendor要素調査ノート](../research/browser-vendor-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、1993年の`REL=EMBED`、1995年Netscape提案、1996年Compound Documents draftを本文へ戻り、要素とlink relationshipを区別し、提案者、Navigator実装、plug-in要求を照合した。`OBJECT`、Java applet、Mosaic inline mediaを競合候補として確認したが、Netscape `EMBED`の系譜と確度Aを覆す資料はなかった。

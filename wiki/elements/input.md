@@ -1,6 +1,6 @@
 # `<input>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML+ forms系譜を検証済み（特定GUI toolkitからの上流は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -53,9 +53,3 @@ RFC 1866がHTML+ formsからの導出を明記し、要素の役割も確認で�
 
 - HTML+以前の各widget typeの具体的設計資料。
 - NCSA X Mosaic formsとの正確な時系列。
-
-## 調査記録
-
-HTML+ forms、HTML+ review、RFC 1866を確認した。横断比較は[HTML+調査ノート](../research/html-plus-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、HTML+ `INPUT`のtype modelとRFC 1866のforms material導出謝辞を原文へ戻って照合した。特定GUI toolkitやNCSA formsを個別祖先とする記録は確認できず、その限定を保ったまま集合由来と個別要素の対応によるA判定を維持した。

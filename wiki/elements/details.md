@@ -1,6 +1,6 @@
 # `<details>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。2006年のdisclosure triangle widgetからの導入を検証済み（名称の選択過程は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -56,9 +56,3 @@ GUI disclosure triangle/widget慣習＋`fieldset`／`legend` → HTML5 `details`
 
 - `details`という名称を選んだ提案または議論はあるか。
 - 導入commitが参照するGoogle Base settingsの2006年当時の本文は回収できるか。
-
-## 調査記録
-
-2006年と2009–2010年のWHATWG仕様commit、public-html mail、commitが参照するApple HIGとGNOME usability threadを確認した。名称の選択過程とGoogle Base参照先の当時の本文は確認できなかった。横断比較は[HTML5 semantic elements調査ノート](../research/html5-semantic-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、2006年導入commit patch、Apple HIG、GNOME thread、2009年mailとcommit、2010年`summary`変更commitを再読し、disclosure widget、`legend → dt/dd → summary`の順序と主体を照合した。既存HTMLの`fieldset`と各platform widgetを競合候補として確認したが、確定系譜と確度Aを覆す資料はなかった。

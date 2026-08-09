@@ -1,10 +1,8 @@
 # 現行HTML要素の横断系譜
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。17系統と5境界を独立検証済み。
-
 ## 範囲
 
-このページは、2026-08-09に敵対的レビューを通過した個別ページのうち、複数の現行要素が共有する上流、要求、または標準化経路を統合する。個別ページの証拠表を正本とし、集合レベルの関係はその旨を注記する。名称・用途・外見の類似、未確認の改名・再採録・統合は矢印で補わない。
+このページは、複数の現行要素が共有する上流、要求、または標準化経路を示す。個別要素の導入と証拠は各要素ページを正本とし、集合レベルの関係はその旨を注記する。名称・用途・外見の類似、未確認の改名・再採録・統合は矢印で補わない。
 
 この表は網羅的な全関係一覧ではなく、共通祖先からの採用、複数要素を一体として導入した要求、または現行要素間の直接変更を一次資料で確認できる代表的な系統を収録する。同じ仕様に共存するだけの要素、単一要素だけで完結する系譜、機能上の対比だけの関係は個別ページへ委ねる。
 
@@ -12,7 +10,7 @@
 
 | 共通の上流または要求 | 確認済みの経路 | 現行要素 | 制約 | 主な一次資料 |
 |---|---|---|---|---|
-| AAP tag setのheading語彙 | AAP headings → CERN SGML guide → 初期HTML | [`h1`〜`h6`](../elements/hx.md) | AAP BK-1は5 identifiers、HTMLは6段階であり、個別番号対応ではなく集合単位の関係である。 | [AAP DTD調査](aap-heading-dtd.md) / [CERN, *Tags used in HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) |
+| AAP tag setのheading語彙 | AAP headings → CERN SGML guide → 初期HTML | [`h1`〜`h6`](../elements/hx.md) | AAP BK-1は5 identifiers、HTMLは6段階であり、個別番号対応ではなく集合単位の関係である。 | [AAP Book DTD](https://ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd) / [CERN, *Tags used in HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) |
 | GNU Texinfo macro names | ［集合単位］Texinfo macro names → 1993年HTML draftのcharacter highlighting集合。対応macroを確認できた十要素は個別枝を持つ。 | [`b`](../elements/b.md)、[`i`](../elements/i.md)、[`em`](../elements/em.md)、[`strong`](../elements/strong.md)、[`code`](../elements/code.md)、[`samp`](../elements/samp.md)、[`kbd`](../elements/kbd.md)、[`var`](../elements/var.md)、[`dfn`](../elements/dfn.md)、[`cite`](../elements/cite.md)、[`u`](../elements/u.md) | `u`の対応macroは未確認。`dfn`と`u`は1993年草案から現行要素までの再採録経路にも欠落がある。 | [1993年IETF草案](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)、[GNU Texinfo 2.16](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z) |
 | HTML+ forms | HTML+ forms → HTML 2.0 forms → 後続HTML | [`form`](../elements/form.md)、[`input`](../elements/input.md)、[`select`](../elements/select.md)、[`option`](../elements/option.md)、[`textarea`](../elements/textarea.md) | RFC 1866がforms materialのHTML+由来を集合として明記する。 | [HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)、[RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html) |
 | HTML+の単純table model | HTML+ table work＋initial HTML 3 draft → RFC 1942 → HTML 3.2 → 後続HTML | [`table`](../elements/table.md)、[`caption`](../elements/caption.md)、[`tr`](../elements/tr.md)、[`th`](../elements/th.md)、[`td`](../elements/td.md) | `tr`はHTML+作業中にrow separatorからrow containerへ変わった。CALS由来の後続拡張と混同しない。 | [HTML+ tables](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)、[RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html)、[HTML 3.2](https://www.w3.org/TR/REC-html32#table) |
@@ -36,20 +34,11 @@
 - HTML+／HTML 3.0の`S`とHTML 4以降の[`s`](../elements/s.md)は、HTML 3.2での欠落後に再採録した因果を確認できないため接続しない。[HTML+ `S`](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_16.html) [HTML 3.2](https://www.w3.org/TR/REC-html32) [HTML 4.01 changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1)
 - Apple WebKitの`CANVAS`実装とWHATWGの[`canvas`](../elements/canvas.md)は、提案・採録の直接記録を確認できないため時系列上の候補として分離する。[WebKit timeline](https://trac.webkit.org/timeline?authors=&daysback=4&from=2004-05-30) [Ian Hickson, “Canvas tag”](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/043985.html)
 - CSS isolation／W3C `ubi`案から[`bdi`](../elements/bdi.md)への採用は確認できるが、override用の[`bdo`](../elements/bdo.md)から派生したとは接続しない。[W3C Bug 10807](https://www.w3.org/Bugs/Public/show_bug.cgi?id=10807) [W3C bidi requirements](https://www.w3.org/TR/html-bidi/#bidi-isolation)
-- 個別ページで競合候補として確認したWaterloo SCRIPT GMLの同名要素は、heading群を除き名称一致だけで初期HTMLへ接続しない。
+- 個別ページで競合候補として確認したWaterloo SCRIPT GMLの同名要素は、heading群を除き名称一致だけで初期HTMLへ接続しない。[Waterloo SCRIPT GML User’s Guide](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt) [CERN, *Tags used in HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
 
-前三項はそれぞれ比較した一次資料を個別ページに置く。Waterloo境界の比較資料は[Waterloo SCRIPT GML User’s Guide](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)と[CERN *Tags used in HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)である。
+## 詳細
 
-## 敵対的レビュー
-
-2026-08-09の独立レビューでは全16行と境界5項目を、個別ページ、横断ノート、ローカルraw、公開一次資料へ戻って検証した。16行中9行を維持し7行を訂正対象と判定した。詳細は[横断系譜に対する敵対的レビュー](cross-element-lineage-adversarial-review.md)を参照する。
-
-反証により、`q`と`sub`／`sup`の版経路、media枝、Texinfo集合、Ruby枝、単独要素行、直接出典、共有系統の高優先度漏れを訂正した。また、`template`の未確認境界は2013年の明示的なWHATWG merge記録により撤回した。
-
-訂正後の別レビュー（2026-08-09）では、17行すべてが複数の現行要素を含むこと、各行に直接一次資料があること、個別ページで切られた接続を越えていないこと、5境界と相対リンクが整合することを確認した。
-
-AAP DTD追加後の別レビュー（2026-08-09）では、heading行をAAP BK-1、CERN資料、`h1`〜`h6`の記述へ再照合した。AAP側の5 identifiersとHTML側の6段階を個別対応させず、集合単位の経路と制約が整合することを確認した。
-
-## 調査記録
-
-全115要素の`系譜`、`証拠`、`確度`、2026-08-09の敵対的レビュー記録を照合した。複数要素へ共有できる関係だけを抽出し、要素ページで切られている接続はこのページでも切った。横断反証の詳細は[歴史的結論の敵対的レビュー](adversarial-review.md)と[横断系譜に対する敵対的レビュー](cross-element-lineage-adversarial-review.md)を参照する。
+- [HTML phrase要素とTexinfo](texinfo.md)
+- [HTML+から現行要素への系譜](html-plus.md)
+- [IETF HTML国際化草案の共有系譜](html-internationalization.md)
+- [CALSとHTMLの表構造要素](cals-tables.md)

@@ -1,6 +1,6 @@
 # `<table>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML+ table系譜を検証済み（HTML+以前の個別祖先は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -53,9 +53,3 @@ RFC 1942がHTML+ table workからの発展を明記し、後続採録も確認�
 ## 未解決
 
 - HTML+以前の単純table modelに影響した具体的markup system。
-
-## 調査記録
-
-HTML+ tables、1994年review、RFC 1942、HTML 3.2を確認した。横断比較は[HTML+調査ノート](../research/html-plus-elements.md)を参照する。
-
-敵対的レビュー（2026-08-09）では、HTML+の単純table model、RFC 1942のHTML+／HTML 3由来文、HTML 3.2の採録をローカル保存資料で再照合した。RFC 1942がCALS由来とする後続拡張を`TABLE`自体の祖先へ広げず、Aを維持した。

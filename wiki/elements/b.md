@@ -1,6 +1,6 @@
 # `<b>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。1993-01-06 DTD収録とTexinfoからの命名系譜を検証済み
+> 状態: 完成
 
 ## 概要
 
@@ -52,11 +52,3 @@ HTML側が命名元を明示し、Texinfo側でも対応する同時代マクロ
 ## 未解決
 
 - presentationalなboldから現行semanticsへの再解釈過程を確認する。
-
-## 調査記録
-
-1993年HTML draftと埋込みDTDのRCS識別子、RFC 1866、GNU Texinfo 2.16および3.7を確認した。Texinfo系統全体の照合は[調査ノート](../research/texinfo-phrase-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、1993年draftの「TeXInfo macro names」記述とTexinfo 2.16の`@b`定義を本文へ戻って照合し、RFC 1866とTexinfo 3.7を後続比較に用いた。一般的なbold組版やSGMLの同名要素を反例候補として確認したが、明示された命名因果を覆す資料はなく、確度Aを維持した。
-
-埋込みDTD追加後の別レビュー（2026-08-09）では、RCS識別子`html.dtd,v 1.3 93/01/06`と`inline` entityのliteral nameをローカル保存資料で再照合した。RCS日付を実装初出や最終採用決定へ拡張せず、既存の系譜と確度を維持した。

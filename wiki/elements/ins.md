@@ -1,6 +1,6 @@
 # `<ins>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML 3.0での初出とHTML 4での標準化を検証済み（両版の個別採用因果とHTML外の祖先は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -62,9 +62,3 @@ HTML 3.0での初出・用途とHTML 4での標準化理由・設計modelは確�
 - HTML 3.0 `INS`をHTML 4へ個別に採用したことを示すHTML ERB／W3C HTML Working Groupの議論はあるか。
 - `cite`と`datetime`の設計が参照した版管理、法律編集、SGML vocabularyはあるか。
 - inlineとblockの両方を囲めるcontent modelを選んだ具体的要求は何か。
-
-## 調査記録
-
-HTML 3.0、1997年HTML 4.0草案・Recommendation、HTML 4.01、現行Living Standardを確認した。横断比較は[Text/structure/edits要素の調査ノート](../research/text-structure-edits-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、HTML 4.0 FPWDの文書変更節、changes付録、法案例を再読し、HTML 3.0にも同名`INS`があることを早い版の反例として確認した。初出をHTML 3.0へ訂正し、未確認のHTML 3.0→HTML 4接続を系譜から外した。訂正後に再読し、導入理由は確認できるが個別採用因果は欠けるためB判定を維持し、本文・証拠表・系譜・未解決点の整合を確認した。

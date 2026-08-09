@@ -1,6 +1,6 @@
 # `<label>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML 4での導入理由を検証済み（具体的な先行技術は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -53,9 +53,3 @@ HTMLへの導入理由とinteraction modelは確認できるが、その一段�
 
 - Cougar／HTML WGで`LABEL`を最初に提案した人物、日付、議論は何か。
 - 具体的GUI toolkit、accessibility API、既存markupからの影響を示す資料はあるか。
-
-## 調査記録
-
-HTML 3.0 forms、HTML 3.2、Cougar史料、HTML 4.0 FPWD、HTML 4.01を比較した。特定GUI toolkitからの採用記録は見つからなかった。横断比較は[国際化・アクセシビリティ調査ノート](../research/internationalization-accessibility-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、HTML 3.0／3.2 formsでの不在とHTML 4.0 FPWDの`LABEL`定義・changes付録を比較し、control操作とspeech UAの要求を再確認した。特定GUI widgetまたはaccessibility APIからの採用記録は見つからず、B判定を維持した。

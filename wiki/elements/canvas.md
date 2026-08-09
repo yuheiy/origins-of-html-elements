@@ -1,6 +1,6 @@
 # `<canvas>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。Apple WebKit／Dashboardでの導入を検証済み（WHATWGへの採録因果は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -64,9 +64,3 @@ Quartzからcanvasを直接派生させたという説明。Apple文書が明記
 - AppleからWHATWGへ渡された提案本文、提出日、採録時の編集記録はあるか。
 - Hyattの「提出済み」とHicksonの「未提出」の差は何に由来するか。
 - Quartzからの具体的な派生を示す当時の設計資料はあるか。
-
-## 調査記録
-
-WebKit公式履歴、Dave Hyattの同時代説明、Apple公式文書、WHATWGメーリングリストと仕様snapshot、AppleのIPR書簡を確認した。提案本文と受領記録は見つからなかった。横断比較は[browser vendor要素調査ノート](../research/browser-vendor-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、WebKit changeset履歴、Hyattの2004年7月記事、Apple文書、8月のHickson mail、2005年仕様snapshot、IPR書簡を再照合した。Hyattの「提出済み」とHicksonの「未提出」の競合に対して採録を示す第三の直接史料がないため、Apple実装からWHATWG仕様への矢印を削除し、確度をA−からBへ訂正した。Quartz・SVG・XHTMLも反例候補として再確認した。

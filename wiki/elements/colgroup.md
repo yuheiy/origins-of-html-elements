@@ -1,6 +1,6 @@
 # `<colgroup>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。旧`COL` grouping modelから1995年`COLGROUP`への設計因果を検証済み（HTML 4への個別採録経路は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -57,9 +57,3 @@ HTML 4への個別採録決定は未確認である。
 - revision 03の本文外で`COLGROUP`を提案・合意した人物と議論。
 - RFC 1942からHTML 4へ`COLGROUP`を個別採録した決定記録。
 - `COLGROUP`要素自体へ影響したSGML table modelがあるか。
-
-## 調査記録
-
-1995年HTML 3.0 table章、RFC 1942、HTML 3.2、HTML 4.01 DTD／table章／差分付録、Living Standardを比較した。RFC 1942が明記する導入理由と、個別祖先が未確認であることを分離した。横断比較は[CALS／高度なtable model調査ノート](../research/cals-table-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、HTML Tables revisions 00–03、RFC 1942、HTML 3.2、HTML 4を比較した。revision 03での早期`COLGROUP`を発見してRFC初出説を訂正し、旧`COL` groupの同一幅制約から新containerへ移る設計因果を追加した。CALSと既存SGML table modelをHTML外の競合祖先として再点検し、HTML 4への個別採録経路が欠けるため確度Bを維持した。

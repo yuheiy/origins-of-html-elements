@@ -1,6 +1,6 @@
 # `<col>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。1995年HTML Tables draftでの導入理由とHTML 4への採録を検証済み（具体的な先行要素は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -12,7 +12,7 @@ WHATWG HTML Living Standardでは、親`colgroup`が親`table`を持つとき、
 
 ## HTMLへの導入
 
-今回確認できた最初期の公開仕様はDave Raggettによる1995年10月3日の`draft-ietf-html-tables-01`である。大きなtableを全dataの受信前に表示するにはcolumn数とwidthが必要だという設計課題に対し、table dataより前にwidthとalignment defaultsを指定する空要素`COL`を定義した。7月7日のrevision 00は同じwidth要求を`COLW`で扱っており、`COL`はまだない。RFC 1942はこのdraft seriesをExperimental RFCとして標準化し、RecommendationとしてはHTML 4.0が1997年12月18日に採録した。[revision 00](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt) [revision 01](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-01.txt) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 4.01 changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1)
+確認できる最初期の公開仕様はDave Raggettによる1995年10月3日の`draft-ietf-html-tables-01`である。大きなtableを全dataの受信前に表示するにはcolumn数とwidthが必要だという設計課題に対し、table dataより前にwidthとalignment defaultsを指定する空要素`COL`を定義した。7月7日のrevision 00は同じwidth要求を`COLW`で扱っており、`COL`はまだない。RFC 1942はこのdraft seriesをExperimental RFCとして標準化し、RecommendationとしてはHTML 4.0が1997年12月18日に採録した。[revision 00](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt) [revision 01](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-01.txt) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 4.01 changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1)
 
 ## HTML直前の祖先
 
@@ -55,9 +55,3 @@ RFC 1942はtable model全体が既存SGML table models、word processors、紙�
 
 - `COLSPEC`属性またはrevision 00の`COLW`から`COL`要素への変更を決めた議論。
 - `COL`要素自体へ影響したSGML table modelがあるか。
-
-## 調査記録
-
-1995年HTML 3.0 table章、RFC 1942、HTML 3.2、HTML 4.01 DTD／table章／差分付録、Living Standardを比較した。CALSとの関係はRFC 1942が直接述べる`*` width表記に限定した。横断比較は[CALS／高度なtable model調査ノート](../research/cals-table-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、HTML 3.0の`COLSPEC`、HTML Tables revisions 00–03、RFC 1942、HTML 3.2での不在、HTML 4での採録を再照合した。revision 01での早期`COL`を発見してRFC初出説を訂正し、revision 00の`COLW`とCALSを競合祖先として再点検したが採用因果は確認できず、確度Bを維持した。

@@ -1,6 +1,6 @@
 # `<picture>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。Responsive Images Community GroupからHTMLへの系譜を検証済み（最初のmarkup提案は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -58,9 +58,3 @@ Community Groupの提案と実装、HTML Working Group草案、WHATWGへのupstr
 - `picture`という名称と最初のmarkupを提案した正確な議論またはcommitはどれか。
 - WHATWG sourceへ要素本体を最初に置いたcommitはどれか。
 - Picturefill以外のworkaroundから最終構文へ採用された個別機構はあるか。
-
-## 調査記録
-
-RICGの同時代記事とrepository、HTML Working Groupのelement草案と要求文書、WHATWG統合commitを確認した。横断比較は[Modern HTML要素とforeign rootの調査ノート](../research/modern-html-foreign-roots.md)を参照する。
-
-2026-08-09の敵対的レビューでは、2012年Picturefill、2013年RICG共同草案・use cases、2014年WHATWG統合commitを再照合した。最初の名称・markup提案と要素本体の初回commitは未回収だが、Community GroupからHTMLへの要素単位の統合は直接確認できるためA判定を維持した。

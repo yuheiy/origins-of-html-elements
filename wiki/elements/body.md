@@ -1,6 +1,6 @@
 # `<body>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。1992年7月の`BODY`公開と11月の内部版`DOCUMENT`から`BODY`へ戻す提案を検証済み（内部版DTDは未回収）
+> 状態: 完成
 
 ## 概要
 
@@ -55,9 +55,3 @@ Waterloo GMLなどの同名`BODY`からHTMLへ採用されたとする説明。�
 
 - `DOCUMENT`を含む内部版DTDと`BODY`へ戻した変更diffを回収できるか。
 - HTML DTD以前の具体的な先行文書体系は確認できるか。
-
-## 調査記録
-
-1988年Waterloo SCRIPT GML、1992年7月Connolly DTD、1992年CERN HTMLタグ一覧、1993年HTML Internet-Draftを確認した。先行する同名構造と採用因果は分離した。対象群全体は[初期SGML/GML調査ノート](../research/early-sgml-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、1992年7月15日の公開DTD、11月19日のConnollyとBerners-Leeのmail、1993年1月DTDを全文脈で再確認した。7月に`BODY`がすでに存在するため従来の時系列を訂正し、`BODY → 内部版DOCUMENT → BODYへの復帰案`とした後、証拠表・系譜・確度A−を再読して整合を確認した。

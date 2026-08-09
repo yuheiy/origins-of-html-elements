@@ -1,6 +1,6 @@
 # `<base>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。初期HTMLでの導入要求を検証済み（`SAVEDAS`提案から`BASE`への具体化過程は未回収）
+> 状態: 完成
 
 ## 概要
 
@@ -49,15 +49,9 @@ HTMLへの導入理由と設計要求は直接史料で確認できるが、具�
 
 ## 否定された仮説
 
-SGMLの同名概念または後代のURL仕様から`BASE`の起源を逆算する説明。今回確認できる直接の背景は初期HTMLにおけるout-of-context文書のrelative address解決要求である。
+SGMLの同名概念または後代のURL仕様から`BASE`の起源を逆算する説明。確認できる直接の背景は初期HTMLにおけるout-of-context文書のrelative address解決要求である。
 
 ## 未解決
 
 - `SAVEDAS`案を`BASE HREF`へ具体化または改名したmail、DTD revision、source changeは残っているか。
 - base address機構を既存のhypertext systemまたは文書形式から採用したことを示す資料はあるか。
-
-## 調査記録
-
-1992年CERNタグ一覧と将来計画、1992年Connolly DTD群、1993年HTML Internet-Draft本文・DTD、HTML 2.0を比較した。1992年11月の未使用要求から1993年1月のDTDまでを固定したが、中間の具体化記録は確認できなかった。対象群全体は[初期hypertext／document control調査ノート](../research/early-hypertext-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、1992年のbase address要求と`SAVEDAS`案、RCS id `93/01/06`の`BASE HREF`、HTML 2.0を本文へ戻って照合した。Connolly DTD群、SGMLの同名概念、より早いURL処理案を探索したが中間の改名・採用記録はなく、系譜と確度Bを維持した。

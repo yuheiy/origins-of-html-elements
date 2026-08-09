@@ -1,6 +1,6 @@
 # `<summary>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。2010年の`details` caption機構からの置換を検証済み（名称の選択過程は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -54,9 +54,3 @@ HTML 4の`table summary`属性から採用したという説明。名称の類�
 
 - `summary`という名称を選んだ提案または議論はあるか。
 - HTML 4の`table summary`属性との混同を検討した記録はあるか。
-
-## 調査記録
-
-2006年、2009年、2010年のWHATWG仕様commitとpublic-html mailを確認した。専用名称の選択過程は確認できなかった。横断比較は[HTML5 semantic elements調査ノート](../research/html5-semantic-elements.md)を参照する。
-
-敵対的レビュー（2026-08-09）では、`legend`、`dt`／`dd`、専用`summary`という三段階のcommit差分と同時代mailを再照合した。tableの`summary`属性との名称類似は採用因果にならず接続せず、要素置換を直接確認できるAを維持した。

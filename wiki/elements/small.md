@@ -1,6 +1,6 @@
 # `<small>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML 3.0での初期出現と意味を検証済み（導入理由と採用元は未解決）
+> 状態: 完成
 
 ## 概要
 
@@ -57,9 +57,3 @@ Netscape `SMALL`からHTML 3.0へ入ったという説明。両資料の文言�
 - HTML 3.0 `SMALL`の最初の提案者、初出diff、mail、導入要求は確認できるか。
 - Netscape資料の初版日、Navigatorでの初回実装版、HTML 3.0草案との編集関係は何か。
 - presentational font-style elementから現行side-comment elementへ意味を変えたcommitと理由は何か。
-
-## 調査記録
-
-HTML 3.0、HTML 3.2、Netscape資料の保存版、現行Living Standardを確認した。横断比較は[Text/structure/edits要素の調査ノート](../research/text-structure-edits-elements.md)を参照する。
-
-敵対的レビュー（2026-08-09）では、HTML 3.0と3.2の定義、日付未確定のNetscape保存文書を再確認した。Netscape実装とHTML 3.0草案の先後・採用方向を確定できず、現行semanticsも初期理由へ逆算しないためCを維持した。

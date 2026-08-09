@@ -1,6 +1,6 @@
 # `<datalist>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。Web Forms 2.0での導入目的を検証済み（`select editable`からの変更経路は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -59,9 +59,3 @@ GUI combo box、後代のautocomplete実装、2003年の`select editable`は、�
 - `datalist`／`list`を追加した正確なrevisionまたは議論は確認できるか。
 - `select editable`から構造を変えた主体、理由、fallback設計の由来は何か。
 - HTML5統合時の要素単位の差分は確認できるか。
-
-## 調査記録
-
-2003年Ian Hickson案、2004年Web Forms 2.0 Call for Comments、2005年W3C Member Submission、2010年HTML5差分、現行Living Standardを確認した。変更判断の議論と特定GUIからの採用記録は確認できなかった。横断比較は[Forms/UI要素の調査ノート](../research/forms-ui-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、2003年`select editable`案、2004年Web Forms 2.0、2005年Submission、2010年統合記録を再読し、任意入力、候補、fallbackの文脈と版順を照合した。GUI combo boxとautocompleteを競合祖先として再探索したが、`datalist`への採用因果は見つからず、系譜と確度Bを維持した。

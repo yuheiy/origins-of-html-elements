@@ -1,6 +1,6 @@
 # `<audio>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。2007年の初期定義と導入時用途を検証済み（追加決定と具体的祖先は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -55,9 +55,3 @@ WHATWG Web Applications 1.0 `audio`（2007年、具体的祖先は未確認） �
 
 - 2007年3月15日から23日までに要素のuse caseを確立した提案または実装feedbackはあるか。
 - 既存WHATWG `Audio` constructor/interfaceと`audio`要素の継承関係を直接示す史料はあるか。
-
-## 調査記録
-
-2007年3月のWHATWG `video`議論、revision 689、699、現行Living Standardを確認した。`Audio` API、SMIL、`object`、plugin、`bgsound`は候補として検討したが、要素への採用因果を示す資料は確認できなかった。横断比較は[HTML media要素の調査ノート](../research/media-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、2007年3月のmail、revision 689のcommit patch、revision 699、現行仕様を再読し、Ian Hicksonによる追加日、game sound effect用途、既存media modelの再利用を照合した。`Audio` API、SMIL、`object`、plugin、`bgsound`を競合祖先として再探索したが採用因果はなく、確度Bを維持した。

@@ -2,43 +2,35 @@
 
 このWikiは、HTML要素がどの文書体系、ソフトウェア、メディア、UI慣習、または標準化活動から生まれたかを、史料に基づいて追跡する。現在の意味、HTMLへの導入、HTML直前の祖先、さらに上流の由来を分離し、証拠がない接続は未解決として残す。
 
-調査と編集の規約は[AGENTS.md](../AGENTS.md)、調査履歴は[Wiki更新記録](log.md)を参照する。
+調査と編集の規約は[AGENTS.md](../AGENTS.md)、変更履歴は[Wiki更新記録](log.md)を参照する。
 
-## 対象と現在の状態
+## 収録範囲
 
-- 対象基準日: 2026-08-09
+最終確認日は2026年8月9日である。[WHATWG HTML Living StandardのElements index](https://html.spec.whatwg.org/multipage/indices.html#elements-3)にあるHTML名前空間の組み込み要素113件と、HTML構文で使用できる名前付きforeign rootの`math`と`svg`を合わせた115要素を収録する。この一覧は特定日のsnapshotではなく、Living Standardに追従して更新する。
+
+- Elements indexの`h1, h2, h3, h4, h5, h6`は6要素として数え、共通史料と系譜は[`hx.md`](elements/hx.md)へまとめる。
+- [HTML syntax](https://html.spec.whatwg.org/multipage/syntax.html#elements-2)がforeign elementsと定義するMathMLの`math`とSVGの`svg`はHTML名前空間要素と分けて数えるが、HTML文書内でforeign contentを開始する名前付きrootなので対象へ含める。
+- [Custom elements](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-core-concepts)のうち、autonomous custom elementsは名前集合が開いており、customized built-in elementsは既存の組み込み要素名を使うため、どちらも追加の要素名として数えない。
+- [Non-conforming features](https://html.spec.whatwg.org/multipage/obsolete.html#non-conforming-features)でentirely obsoleteとされる要素は除外し、現行要素の系譜を説明する場合だけ歴史的要素として扱う。
+- [`search`](https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element)と[`selectedcontent`](https://html.spec.whatwg.org/multipage/form-elements.html#the-selectedcontent-element)は独立したnormative定義を持ち、公式索引に掲載されるため含める。実装状況や外部サイト上の`experimental`表示は収録判断に使わない。
+
+## 現在の状態
+
 - 対象要素数: 115
 - 要素ページ: 110ファイルで全115要素を収録（`h1`〜`h6`は`hx.md`へ統合）
 - 史料検証済み: 115件（A: 56件、A−: 15件、B: 38件、C: 6件）
 - 史料未検証: 0件（未評価）
 - 現在の意味を要約済み: 115件
-- 横断系譜ページ: 完成（敵対的レビュー済み: 2026-08-09）
-- 敵対的レビュー済み: 115件
+- 共有系譜文書: 5件
+- 敵対的検証済み: 115件
 
-対象要素数は、WHATWG HTML Living Standardの組み込みHTML名前空間要素113個に、HTML文書で使用できるforeign rootの`math`と`svg`を加えた数である。custom elementsは名前集合が開いているため対象へ含めない。抽出根拠と境界事例は[現行HTML要素一覧の調査ノート](research/current-html-elements.md)を参照する。
+## 共有系譜
 
-## 横断調査
-
-- [現行HTML要素の横断系譜](research/cross-element-lineage.md)
-- [現行HTML要素の横断系譜に対する敵対的レビュー](research/cross-element-lineage-adversarial-review.md)
-- [歴史的結論の敵対的レビュー](research/adversarial-review.md)
-- [現行HTML要素の固定一覧](research/current-html-elements.md)
-- [HTML phrase elementsとTexinfo](research/texinfo-phrase-elements.md)
-- [HTML+から現行要素への系譜](research/html-plus-elements.md)
-- [CALSと高度なtable model](research/cals-table-elements.md)
-- [初期SGML/GML系統](research/early-sgml-elements.md)
-- [AAP Book DTDとHTML heading family](research/aap-heading-dtd.md)
-- [初期hypertext・文書制御要素](research/early-hypertext-elements.md)
-- [Browser vendor由来要素](research/browser-vendor-elements.md)
-- [国際化・アクセシビリティ関連要素](research/internationalization-accessibility-elements.md)
-- [HTML5 semantic elementsと既存Web慣習](research/html5-semantic-elements.md)
-- [現行`header`要素の再導入](research/header-reintroduction.md)
-- [Modern HTML要素とforeign root](research/modern-html-foreign-roots.md)
-- [WHATWG revision r8000とtemplate統合commitの対応](research/template-r8000-git-mapping.md)
-- [HTML media要素の導入](research/media-elements.md)
-- [Forms/UI要素の導入](research/forms-ui-elements.md)
-- [Scripting / embedding要素の起源](research/scripting-embedding-elements.md)
-- [Text/structure/edits要素の導入](research/text-structure-edits-elements.md)
+- [現行HTML要素の横断系譜](lineages/README.md)
+- [HTML phrase要素とTexinfo](lineages/texinfo.md)
+- [HTML+から現行要素への系譜](lineages/html-plus.md)
+- [IETF HTML国際化草案の共有系譜](lineages/html-internationalization.md)
+- [CALSとHTMLの表構造要素](lineages/cals-tables.md)
 
 ## 要素一覧
 

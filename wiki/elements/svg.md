@@ -1,6 +1,6 @@
 # `<svg>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。SVG rootからHTML `text/html` parserへの統合・削除・再導入を検証済み
+> 状態: 完成
 
 ## 概要
 
@@ -56,9 +56,3 @@ HTML名前空間の新要素として発明されたという説明。parserが�
 - SVG Working Groupによる削除要請の本文はどれか。
 - 2009年commitがいう“more recent feedback”の出典は何か。
 - 再導入後、現行foreign content algorithmまでの主要改訂は何か。
-
-## 調査記録
-
-SVG 1.0 Recommendation、2008年初回統合・削除commit、2009年再導入commitを確認した。削除要請とfeedback本文は確定できなかった。横断比較は[Modern HTML要素とforeign rootの調査ノート](../research/modern-html-foreign-roots.md)を参照する。
-
-敵対的レビュー（2026-08-09）では、SVG 1.0 root、2008年の統合と削除、2009年の再導入commitを順に再照合した。削除要請と“recent feedback”の本文を推定で埋めず、断絶を含めて現行系統まで確認できるAを維持した。

@@ -1,6 +1,6 @@
 # `<br>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。1993年NCSA Mosaicでの初期実装と当時の意味を検証済み（導入理由・直前祖先は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -22,7 +22,7 @@ WHATWG HTML Living Standardでは、contentの一部であるline breakを表す
 
 ### 証拠
 
-今回確認した直接史料はNCSA Mosaicにおける初期実装までであり、それ以前の系譜を示さない。
+確認できる直接史料はNCSA Mosaicにおける初期実装までであり、それ以前の系譜を示さない。
 
 ### 解釈
 
@@ -55,9 +55,3 @@ WHATWG HTML Living Standardでは、contentの一部であるline breakを表す
 
 - NCSA Mosaic 2.0 prerelease 3で`BR`を追加した発案者、要求、source commitは確認できるか。
 - NCSA実装からHTML+またはHTML 2.0へ`BR`を採用した議論は残っているか。
-
-## 調査記録
-
-1992年CERNタグ一覧、1993年6月・7月HTML Internet-Draft、NCSA Mosaicの`CHANGES`、HTML+ draft、HTML 2.0を比較した。1993年7月draftでの不在とNCSA prerelease 3での追加を固定したが、さらに早い実装と採用議論は確認できなかった。対象群全体は[初期hypertext／document control調査ノート](../research/early-hypertext-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、1993年7月draftの不在、NCSA Mosaic `CHANGES`、HTML+、HTML 2.0の`BR`を再照合し、版順、要素名、強制改行の文脈を確認した。SGML record end、組版・word processor、より早いbrowser実装を反例候補として探索したが導入因果はなく、確度Cを維持した。

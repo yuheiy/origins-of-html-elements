@@ -1,6 +1,6 @@
 # `<option>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML+ forms系譜を検証済み（特定GUI toolkitからの上流は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -22,7 +22,7 @@ HTML直前の祖先はHTML+ `OPTION`である。HTML+は各alternativeを`OPTION
 
 ### 証拠
 
-HTML+以前の個別markup祖先は今回確認していない。
+HTML+以前の個別markup祖先は確認できない。
 
 ### 解釈
 
@@ -52,9 +52,3 @@ RFC 1866がHTML+ formsからの導出を明記し、要素の役割も確認で�
 ## 未解決
 
 - HTML+以前の個別markup祖先。
-
-## 調査記録
-
-HTML+ forms、HTML+ review、RFC 1866を確認した。横断比較は[HTML+調査ノート](../research/html-plus-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、HTML+ `OPTION`の`SELECT`内choice modelとRFC 1866のforms material導出謝辞を原文へ戻って照合した。特定GUI menuやNCSA formsを個別祖先とする記録は確認できず、その限定を保ったままA判定を維持した。

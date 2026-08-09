@@ -1,6 +1,6 @@
 # `<menu>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。1992年HTMLでの出現とcompact list用途を検証済み（導入理由・名称の由来は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -12,7 +12,7 @@ WHATWG HTML Living Standardでは、利用者が実行・起動できるcommand�
 
 ## HTMLへの導入
 
-今回確認できる最初期のHTML記録は1992年のCERNタグ一覧で、list開始tagを`UL`、`MENU`、`DIR`に分け、`MENU`を`UL`よりcompactな小さいparagraphのlist、典型的には1 item 1 lineと説明する。1992年7月15日のConnolly DTDも`MENU`を`UL`、`OL`、`DIR`と同じ`LI` list familyへ収録する。要素を別名で導入した理由と導入主体は記録されていない。[Berners-Lee, *HTML Tags*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) [Connolly, “HTML DTD enclosed”](https://lists.w3.org/Archives/Public/www-talk/1992JulAug/0020.html)
+確認できる最初期のHTML記録は1992年のCERNタグ一覧で、list開始tagを`UL`、`MENU`、`DIR`に分け、`MENU`を`UL`よりcompactな小さいparagraphのlist、典型的には1 item 1 lineと説明する。1992年7月15日のConnolly DTDも`MENU`を`UL`、`OL`、`DIR`と同じ`LI` list familyへ収録する。要素を別名で導入した理由と導入主体は記録されていない。[Berners-Lee, *HTML Tags*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) [Connolly, “HTML DTD enclosed”](https://lists.w3.org/Archives/Public/www-talk/1992JulAug/0020.html)
 
 ## HTML直前の祖先
 
@@ -26,7 +26,7 @@ WHATWG HTML Living Standardでは、利用者が実行・起動できるcommand�
 
 ### 解釈
 
-初期`MENU`はGUI widgetのmenuではなく、短いitemをcompactに表示するためのlist variantだったと説明できる。現行のcommand toolbar semanticsへの経路は別途調査が必要である。
+初期`MENU`はGUI widgetのmenuではなく、短いitemをcompactに表示するためのlist variantだったと説明できる。現行のcommand toolbar semanticsへの経路は未解決である。
 
 ## 系譜
 
@@ -56,9 +56,3 @@ WHATWG HTML Living Standardでは、利用者が実行・起動できるcommand�
 
 - `MENU`を`UL`と別要素にした導入判断、名称のsource、最初期browser実装は確認できるか。
 - 初期のcompact listから現行のcommand toolbar／`ul` semantic alternativeへ意味を再定義した仕様変更はどれか。
-
-## 調査記録
-
-1992年CERNタグ一覧、1992年Connolly DTD、1993年HTML Internet-Draft、HTML+ DTD・review、HTML 2.0を比較した。GUI menuとの類似は採用因果を確認できず、系譜へ接続しなかった。現行意味との断絶を未解決として残した。対象群全体は[初期hypertext／document control調査ノート](../research/early-hypertext-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、1992年CERN資料とDTD、1993年draft、HTML+、HTML 2.0を再比較し、compact listとしての初期意味を確認した。GUI menu、Waterloo `:MENU`、現行toolbar意味への直接因果は見つからず、時系列だけを記すC判定を維持した。

@@ -1,6 +1,6 @@
 # `<tr>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML+ table系譜を検証済み（separatorからcontainerへの議論は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -53,9 +53,3 @@ RFC 1942がHTML+ table workからの発展を明記し、後続採録も確認�
 ## 未解決
 
 - separatorからcontainerへ変更された具体的な議論記録。
-
-## 調査記録
-
-HTML+ tables、1994年review、RFC 1942、HTML 3.2を確認した。横断比較は[HTML+調査ノート](../research/html-plus-elements.md)を参照する。
-
-敵対的レビュー（2026-08-09）では、1993年HTML+のrow separator、1994年reviewのrow container、RFC 1942、HTML 3.2を再照合した。途中の構造変更を隠さず、HTML+ table workから後続modelへの因果を支えるAを維持した。

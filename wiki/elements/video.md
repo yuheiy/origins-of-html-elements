@@ -1,6 +1,6 @@
 # `<video>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。Operaの実験実装・提案からWHATWGへの導入を検証済み（Opera側の完全な提案本文と実装sourceは未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -57,9 +57,3 @@ SMIL `video`をHTML `video`の直接祖先とする説明。Ian HicksonはSMIL `
 
 - Opera添付提案の完全な本文、実験実装のsource、実装日は確認できるか。
 - Operaが`video`という名称とAPIを選んだ、さらに上流のsourceはあるか。
-
-## 調査記録
-
-2007年2–3月のWHATWG mailing list、revision 674、678、699、現行Living Standardを確認した。Opera提案以前の実装・提案と、Operaの完全な添付資料・sourceは確認できなかった。横断比較は[HTML media要素の調査ノート](../research/media-elements.md)を参照する。
-
-敵対的レビュー（2026-08-09）では、Opera提案mail、編集者回答、revision 674／678／699を再照合し、実験実装と提案を受けた仕様追加の因果を確認した。SMILや`object`は比較対象であり直接祖先にせず、Aを維持した。

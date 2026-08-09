@@ -1,6 +1,6 @@
 # `<thead>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。1995年IETF table草案での初出とCALS由来を集合単位で検証済み
+> 状態: 完成
 
 ## 概要
 
@@ -16,7 +16,7 @@ WHATWG HTML Living Standardでは、親`table`のcolumn labels（headers）と�
 
 ## HTML直前の祖先
 
-HTML直前の祖先として確認できるのはCALS table modelのhead/body/foot row-grouping設計である。1995年草案はCALSのfeaturesを取り込み、そのHTML上の具体化を`thead`, `tbody`, `tfoot` sectionsと特定する。ただしCALS側の個別要素との一対一対応は今回未確認である。[1995年草案](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt)
+HTML直前の祖先として確認できるのはCALS table modelのhead/body/foot row-grouping設計である。1995年草案はCALSのfeaturesを取り込み、そのHTML上の具体化を`thead`, `tbody`, `tfoot` sectionsと特定する。ただしCALS側の個別要素との一対一対応は未確認である。[1995年草案](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt)
 
 ## さらに上流の由来
 
@@ -54,11 +54,3 @@ HTML+の単純table modelから`THEAD`を継承したという説明。RFC 1942�
 
 - 1995年7月草案より前に`THEAD`を加えた議論または編集履歴。
 - CALSより上流のhead row sectionの系譜。
-
-## 調査記録
-
-HTML+調査、1995年HTML 3.0 draft、RFC 1942、HTML 3.2、HTML 4.01 DTD／table章／差分付録、Living Standardを比較した。HTML 3.0とHTML 3.2には`THEAD`を確認できず、RFC 1942からHTML 4への経路を採用した。横断比較は[CALS／高度なtable model調査ノート](../research/cals-table-elements.md)を参照する。
-
-敵対的レビュー中の反証探索（2026-08-09）で、RFC 1942より早い`draft-ietf-html-tables-00`の`THEAD`定義とCALS由来文を確認した。初出と系譜を訂正し、集合レベルの制約は維持した。
-
-訂正後の別レビュー（2026-08-09）では、1995年草案のabstract、design influences、本文、DTDをRFC 1942とHTML 4へ再照合した。CALS側の個別要素名を補わず、初出・系譜・A−判定・未解決が証拠表に整合することを確認した。

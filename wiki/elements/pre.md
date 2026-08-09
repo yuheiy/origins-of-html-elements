@@ -1,6 +1,6 @@
 # `<pre>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。初期HTMLからHTML+への拡張史を検証済み
+> 状態: 完成
 
 ## 概要
 
@@ -53,9 +53,3 @@ computer outputとUnix manual pagesという導入・拡張理由をHTML+自身�
 
 - `PRE`というタグ名のHTML以前の直接祖先。
 - 初期HTMLでの最初の導入時期。
-
-## 調査記録
-
-HTML+、HTML 3.0、後続RFCおよびW3C Recommendationを確認した。横断比較は[HTML+調査ノート](../research/html-plus-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、HTML+の回顧的説明を原文へ戻り、初期HTMLのcomputer output用途とUnix manual pagesのhypertext化要求を再確認し、RFC 1866と比較した。タグ名のHTML以前の祖先は見つからなかったが、当事者資料が拡張因果を直接述べるためA判定を維持した。

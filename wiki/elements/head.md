@@ -1,6 +1,6 @@
 # `<head>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。header part／`HEADING`提案からの系譜を検証済み（`HEAD`への改名記録は未回収）
+> 状態: 完成
 
 ## 概要
 
@@ -55,9 +55,3 @@ HTMLの非要素header part → `HEADING` wrapper提案（1992-11-19）→［`HE
 
 - wrapper提案と1993年1月6日DTDの`HEAD`追加を直接結ぶmailまたはchange recordはあるか。
 - `HEAD`のunordered collection設計に影響した具体的な文書体系はあるか。
-
-## 調査記録
-
-1992年CERN HTMLタグ一覧、Connolly guide、Berners-Leeのwrapper提案、1993年HTML Internet-Draftの本文とDTDを確認した。`HEAD`がない1992年7月DTDも比較した。対象群全体は[初期SGML/GML調査ノート](../research/early-sgml-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、1992年11月のheader part、Connollyの`HEADING`提案、Berners-Leeの応答、1992年7月DTDでの不在、1993-01-06版DTDの`HEAD`を日付順に再確認した。`HEADING`から`HEAD`への改名記録は見つからず、欠落を明示するA−判定と系譜を維持した。

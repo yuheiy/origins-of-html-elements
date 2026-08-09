@@ -1,6 +1,6 @@
 # `<select>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML+ forms系譜を検証済み（特定GUI widgetとの直接関係は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -52,9 +52,3 @@ RFC 1866がHTML+ formsからの導出を明記し、要素の役割も確認で�
 ## 未解決
 
 - 特定GUI widgetとの設計史上の直接関係。
-
-## 調査記録
-
-HTML+ forms、HTML+ review、RFC 1866を確認した。横断比較は[HTML+調査ノート](../research/html-plus-elements.md)を参照する。
-
-敵対的レビュー（2026-08-09）では、HTML+の`SELECT`定義とRFC 1866のforms material由来文を再照合した。GUIのselection listとの類似を直接祖先とせず、HTML+からHTML 2.0への集合内の要素対応を支えるAを維持した。

@@ -1,6 +1,6 @@
 # `<aside>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。2004–2005年WHATWGでの導入と設計モデルを検証済み（`sidebar`からの改名理由は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -54,9 +54,3 @@ HTMLへの導入時の設計モデルは確認できるが、`sidebar → aside`
 
 - `sidebar`から`aside`への正確な改名日、提案者、理由は確認できるか。
 - 出版上のasideまたは既存Webのsidebar慣習を参照した同時代記録はあるか。
-
-## 調査記録
-
-2004年WHATWG mailing list、2005年保存草案、2008年W3C HTML5差分草案を確認した。`sidebar → aside`の改名経路と具体的祖先は確認できなかった。横断比較は[HTML5 semantic elements調査ノート](../research/html5-semantic-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、2004年の`sidebar`言及、2005年の`aside`定義、2008年差分草案を本文へ戻って比較し、名称、日付、semantic element集合の文脈を再確認した。`sidebar`からの改名判断と既存class慣習を反証候補として探索したが直接記録はなく、系譜と確度Bを維持した。

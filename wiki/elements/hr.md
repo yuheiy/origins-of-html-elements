@@ -1,6 +1,6 @@
 # `<hr>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。1993年NCSA Mosaicでの初期実装と当時の意味を検証済み（導入理由・直前祖先は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -22,7 +22,7 @@ WHATWG HTML Living Standardでは、storyのscene changeやsection内のtopic tr
 
 ### 証拠
 
-今回確認した直接史料はNCSA Mosaicにおけるhorizontal ruleとしての初期実装までであり、それ以前の系譜を示さない。
+確認できる直接史料はNCSA Mosaicにおけるhorizontal ruleとしての初期実装までであり、それ以前の系譜を示さない。
 
 ### 解釈
 
@@ -55,9 +55,3 @@ WHATWG HTML Living Standardでは、storyのscene changeやsection内のtopic tr
 
 - NCSA Mosaic 2.0 prerelease 3で`HR`を追加した発案者、要求、source commitは確認できるか。
 - presentation用horizontal ruleから現行のthematic breakへの意味変更を決定した仕様議論はどれか。
-
-## 調査記録
-
-1992年CERNタグ一覧、1993年6月・7月HTML Internet-Draft、NCSA Mosaicの`CHANGES`、HTML+ draft、HTML 2.0を比較した。1993年7月draftでの不在とNCSA prerelease 3での追加を固定したが、さらに早い実装と採用議論は確認できなかった。対象群全体は[初期hypertext／document control調査ノート](../research/early-hypertext-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、1993年7月draftでの不在、NCSA Mosaic `CHANGES`のprerelease 3追加、HTML+とHTML 2.0での後続収録を再照合した。NCSA以前の`HR`実装、発案者、印刷上のruleからの採用因果は確認できず、時系列を矢印で結ばないC判定を維持した。

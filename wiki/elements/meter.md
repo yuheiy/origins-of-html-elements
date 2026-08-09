@@ -1,6 +1,6 @@
 # `<meter>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。WHATWG `gauge`から`meter`への改名と仕様化を検証済み（`gauge`以前は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -56,9 +56,3 @@ WHATWG Web Applications 1.0 `gauge` → 2006年revision 15 `meter` → HTML5 `me
 - 初回Git収録より前に`gauge`を追加した草案、提案者、議論は確認できるか。
 - `gauge`から`meter`へ改名した理由は何か。
 - `low`, `high`, `optimum`の三領域modelを提案した一次資料はあるか。
-
-## 調査記録
-
-WHATWG公式Gitの初回sourceとrevision 15、同revisionの保存仕様、現行Living Standardを確認した。`gauge`以前と特定UI widgetからの採用記録は確認できなかった。横断比較は[Forms/UI要素の調査ノート](../research/forms-ui-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、2006年初回Git収録の`gauge`とrevision 15の`meter`改名・属性modelをcommit差分と保存仕様で再確認した。`gauge`以前の先行要素、特定UI widget、改名理由は見つからなかったが、直接の改名記録があるためA判定を維持した。

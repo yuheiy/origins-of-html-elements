@@ -1,6 +1,6 @@
 # `<bdo>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。1995年Internet-DraftとUnicode directional overrideの系譜を検証済み（名称の発案過程は未解決）
+> 状態: 完成
 
 ## 概要
 
@@ -54,9 +54,3 @@ Unicode directional override → `draft-ietf-html-i18n-01` `BDO`（1995-09-25）
 
 - `BDO`という名称を選んだ具体的な議論はあるか。
 - revision 00から01へ`BDO`を追加した具体的な提案・議論は残っているか。
-
-## 調査記録
-
-RFC 2070、HTML 4.01のdirectionality節と変更付録を確認した。横断比較は[国際化・アクセシビティ調査ノート](../research/internationalization-accessibility-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、RFC 2070本文とローカルsnapshot、HTML 4.01のdirectionality節・変更付録に加え、`draft-ietf-html-i18n-00`と01を比較した。revision 01での早期導入を発見してRFC初出説を訂正し、日付、著者、`BDO`名、Unicode overrideの文脈、系譜、確度Aを再点検した。

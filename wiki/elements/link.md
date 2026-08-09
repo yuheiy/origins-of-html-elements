@@ -1,6 +1,6 @@
 # `<link>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。1992年の`LINK`提案からの系譜を検証済み（DTD採録までのchange recordは未回収）
+> 状態: 完成
 
 ## 概要
 
@@ -55,9 +55,3 @@ ENQUIRE、HyperCard、HyTimeなどのtyped linkまたはnode relationを、機�
 
 - 1992年提案を1993年1月6日DTDへ採用したrevision recordまたは議論は残っているか。
 - document-wide linkのmarkupを特定の先行hypertext systemから採用したことを示す資料はあるか。
-
-## 調査記録
-
-WWWのlink type設計ノート、1992年CERN将来計画、1992年Connolly DTD群、1993年HTML Internet-Draft本文・DTD、HTML 2.0を確認した。localized `A`とdocument-wide `LINK`を区別し、先行systemとの類似は系譜へ接続しなかった。対象群全体は[初期hypertext／document control調査ノート](../research/early-hypertext-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、1992年CERNのlink type設計、Berners-Leeの`LINK`提案、Connolly DTD群、1993年draftを日付順に再読した。提案からDTD採録までのchange recordと特定先行systemは未回収であり、確認区間と欠落を分けるA−判定を維持した。

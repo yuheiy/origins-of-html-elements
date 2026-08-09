@@ -1,6 +1,6 @@
 # `<wbr>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。Netscapeでの導入要求を検証済み（具体的祖先と正確な公開日は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -53,9 +53,3 @@ HTMLへの導入主体と設計要求はvendor文書で確認できるが、そ�
 - Netscape文書の正確な公開日と対象Navigator版は何か。
 - `NOBR`との実装順序と設計議論を示す資料はあるか。
 - 組版・word processor・SGML・soft hyphen等の先行機構から採用した因果資料はあるか。
-
-## 調査記録
-
-Netscape Communicationsの1995年拡張文書と、Netscape 1.1 beta拡張という後代の索引情報を探索した。後者は当時の一次資料ではないため確定根拠に用いなかった。横断比較は[browser vendor要素調査ノート](../research/browser-vendor-elements.md)を参照する。
-
-敵対的レビュー（2026-08-09）では、Netscape公式文書の保存複製と後代索引を区別して再確認した。`NOBR`、soft hyphen、組版の任意改行との類似は採用因果を示さず、正確な公開日も確定できないためBを維持した。

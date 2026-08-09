@@ -1,6 +1,6 @@
 # `<time>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。WHATWG `<t>`からの改名と2011年の再導入を検証済み（`<t>`の上流は未解決）
+> 状態: 完成
 
 ## 概要
 
@@ -62,9 +62,3 @@ WHATWG `<t>`（2006年） → `<time>`への改名 → `data`へ一時置換（2
 - `<t> → time`改名を促したissueまたは議論はあるか。
 - 2006年設計がmicroformatsや他のmarkup vocabularyを参照したか。
 - 2011年の削除と再導入を決定した全議論とtrade-offは何か。
-
-## 調査記録
-
-WHATWG公式Git履歴の2006年初稿・改名と2011年削除・再導入、現行Living Standardを確認した。横断比較は[Text/structure/edits要素の調査ノート](../research/text-structure-edits-elements.md)を参照する。
-
-敵対的レビュー（2026-08-09）では、2006年の`<t>`初稿、`<time>`への明示的改名、2011年の削除と再導入commitを時系列で再照合した。microformats等を参照した記録は確認できず上流へ接続しない一方、直接前身からの因果を支えるAを維持した。

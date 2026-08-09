@@ -1,6 +1,6 @@
 # `<math>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。MathML rootからHTML `text/html` parserへの統合を検証済み
+> 状態: 完成
 
 ## 概要
 
@@ -54,9 +54,3 @@ HTML名前空間の新要素として2008年に発明されたという説明。
 - HTML parserへの統合を要求したissueまたはmailing-list議論はどれか。
 - 採用時に想定したMathML版と互換性範囲は何か。
 - XML／XHTML埋込みから`text/html`統合へ至る設計議論は確認できるか。
-
-## 調査記録
-
-MathML 1.0 Recommendationと2008年WHATWG parser統合commitを確認した。導入要求の議論は確定できなかった。横断比較は[Modern HTML要素とforeign rootの調査ノート](../research/modern-html-foreign-roots.md)を参照する。
-
-2026-08-09の敵対的レビューでは、MathML 1.0のroot `math`と2008年WHATWG parser commitのforeign-content統合・後続修正を再照合した。MathML語彙から`text/html` parserへ統合する因果はcommitで直接確認でき、導入要求の議論が欠けるという限定の下でA判定を維持した。

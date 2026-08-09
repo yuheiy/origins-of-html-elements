@@ -1,6 +1,6 @@
 # `<dl>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。初期HTMLのdefinition list設計モデルを検証済み（直前祖先は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -55,9 +55,3 @@ Waterloo、CERN、HTMLの同名`DL`だけからWaterloo → CERN → HTMLの系�
 
 - HTML `DL`の採用判断を記録する当事者資料はあるか。
 - CERN SGML guideまたは別のglossary markupを直前祖先として確認できるか。
-
-## 調査記録
-
-1988年Waterloo SCRIPT GML、1991年Berners-Lee mail、1992年CERN HTMLタグ一覧、1993年HTML Internet-Draftを確認した。対象群全体は[初期SGML/GML調査ノート](../research/early-sgml-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、Waterloo GML、1991年Berners-Lee mail、1992年タグ一覧、1993年draft本文・DTDを再読し、`DL`／`DT`／`DD`集合、glossary／definition list用途、日付を照合した。同名GML要素を直接祖先とする反例は見つからず、系譜と確度Bを維持した。

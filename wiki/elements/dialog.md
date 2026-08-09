@@ -1,6 +1,6 @@
 # `<dialog>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。2012年のapplication UI用要素としての再導入を検証済み（具体的祖先は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -57,9 +57,3 @@ conversation用HTML5 `dialog` → 削除（2009年）
 - 2012年commitより前の提案者、実装要求、mailing-listまたはbug記録はあるか。
 - 具体的に参照されたbrowser UI、library、GUI toolkitはあるか。
 - 旧要素と同じ名称を再利用した判断の記録はあるか。
-
-## 調査記録
-
-2008年W3C差分草案、2009年削除commit、2012年再導入commitを確認した。2012年以前の具体的提案・実装祖先は確認できなかった。横断比較は[HTML5 semantic elements調査ノート](../research/html5-semantic-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、会話用`dialog`の2008年定義、2009年削除commit、application UI用`dialog`の2012年導入commit patchを再読し、同名だが別機能であること、日付、Ian Hicksonの編集を照合した。GUI dialog、ARIA、browser実装を競合祖先として再探索したが採用因果はなく、系譜と確度Bを維持した。

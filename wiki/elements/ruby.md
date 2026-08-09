@@ -1,6 +1,6 @@
 # `<ruby>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。W3C Ruby語彙・既存Web利用からHTML5への集合レベルの系譜を検証済み
+> 状態: 完成
 
 ## 概要
 
@@ -58,9 +58,3 @@ W3C Ruby Recommendationだけから直接採用したという説明。名称と
 - IE実装とHTML5 parser設計の採用・不採用差分は何か。
 - W3C RecommendationをHTML5編集時に直接参照した記録はあるか。
 - 組版慣習からW3C markup語彙へ至る決定記録はあるか。
-
-## 調査記録
-
-W3Cの1998年草案、2001年Recommendation、2008年WHATWG追加commitを確認した。既存Web利用のcorpusは特定できなかった。横断比較は[Modern HTML要素とforeign rootの調査ノート](../research/modern-html-foreign-roots.md)を参照する。
-
-敵対的レビュー（2026-08-09）では、1998年草案、2001年Recommendation、2008年commitの語彙・役割・採録文脈を再照合した。W3C仕様、IE実装、既存Web利用のどれを直接採用したかはcommitから分離できず、集合レベルを越える矢印を追加せずA−を維持した。

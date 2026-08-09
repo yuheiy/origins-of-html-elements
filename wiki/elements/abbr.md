@@ -1,6 +1,6 @@
 # `<abbr>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML+／HTML 3.0の`ABBREV`とHTML 4の`ABBR`を確認済み（改名・採用の因果は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -58,9 +58,3 @@ HTML+／HTML 3.0とHTML 4における略語要素の設計modelは確認でき�
 
 - `ABBREV`から`ABBR`への改名理由。
 - HTML 4での具体的採用議論。
-
-## 調査記録
-
-HTML+、HTML 3.0、後続RFCおよびW3C Recommendationを確認した。横断比較は[HTML+調査ノート](../research/html-plus-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、HTML+、HTML 3.0、HTML 3.2、HTML 4の本文・変更付録へ戻り、`ABBREV`と`ABBR`の名称、役割、収録時期を比較した。改名・採用を直接示す資料がないため確度をA−からBへ訂正し、接続を系譜から外した後に再読して整合を確認した。

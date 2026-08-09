@@ -1,6 +1,6 @@
 # `<figcaption>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。2010年のHTML5 caption機構からの置換を検証済み（HTML+からの採用因果は未確認）
+> 状態: 完成
 
 ## 概要
 
@@ -56,9 +56,3 @@ HTML+ `CAPTION`から直接採用したという説明。名称と役割の類�
 
 - `legend → dt/dd`の変更を促したissueと正確な時期は何か。
 - `figcaption`という名称の提案過程は確認できるか。
-
-## 調査記録
-
-HTML+、2006年と2010年のWHATWG commit、2008年W3C差分草案を確認した。HTML+との採用因果は確認できなかった。横断比較は[HTML5 semantic elements調査ノート](../research/html5-semantic-elements.md)を参照する。
-
-2026-08-09の敵対的レビューでは、HTML+ `FIG/CAPTION`、2006年`figure`導入commit、2008年草案、2010年`figcaption`導入commit patchを再読し、`legend`・`dt/dd`から専用要素への置換と日付を照合した。HTML+を競合祖先として再確認したが採用記録はなく、HTML5内部の直接系譜と確度Aを維持した。

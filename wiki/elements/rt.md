@@ -1,6 +1,6 @@
 # `<rt>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。W3C Ruby語彙・既存Web利用からHTML5への集合レベルの系譜を検証済み
+> 状態: 完成
 
 ## 概要
 
@@ -57,9 +57,3 @@ W3C Recommendationだけから直接採用したという説明。役割は連�
 - 2008年commitが参照した`rt`利用のcorpusは何か。
 - IEの`rt`実装とHTML5 parser規則の差分は何か。
 - W3C Recommendationを直接参照した編集記録はあるか。
-
-## 調査記録
-
-W3Cの1998年草案、2001年Recommendation、2008年WHATWG追加commitを確認した。個別の採用元は特定できなかった。横断比較は[Modern HTML要素とforeign rootの調査ノート](../research/modern-html-foreign-roots.md)を参照する。
-
-敵対的レビュー（2026-08-09）では、1998年草案、2001年Recommendation、2008年commitの各`rt`定義を再照合し、三要素を一括採録した記録より強い個別経路がないことを確認した。IE実装、既存Web利用、組版慣習は採用元を特定できないため矢印を追加せず、A−を維持した。
