@@ -1,9 +1,5 @@
 # IETF HTML国際化草案の共有系譜
 
-## 範囲
-
-このページは、IETF HTML国際化草案で同時に導入された要素群と、Unicodeおよびstyle仕様から合流する枝を示す。個別の初出、意味、確度、未解決点は各要素ページを正本とする。
-
 ## 一般テキスト要素
 
 1995年9月25日の`draft-ietf-html-i18n-01`は、言語やplatformに応じたquotation markのための`Q`と、一般テキストのsubscript／superscriptのための`SUB`／`SUP`を同じ改訂で導入し、RFC 2070が三要素を標準化した。[IETF i18n draft-01](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01) [RFC 2070](https://www.rfc-editor.org/rfc/rfc2070.html)

@@ -1,9 +1,5 @@
 # CALSとHTMLの表構造要素
 
-## 範囲
-
-このページは、CALSの設計要求から複数のHTML table要素へ分岐する共有関係と、IETF table draft内の要素間変更だけを示す。個別の初出、現在の意味、確度、証拠表、未解決点は各要素ページを正本とする。
-
 ## Row groups
 
 1995年7月のIETF table draftはCALS table modelのfeaturesを取り込み、表の行を`THEAD`、`TBODY`、`TFOOT`へ分けると明記し、RFC 1942もこのrow groupingを継承した。CALSから三要素を含むHTML proposalへの集合単位の因果は確認できるが、CALS側の具体的な要素名は確認できない。[IETF table draft-00](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00) [RFC 1942](../../raw/rfc1942-html-tables/rfc1942.txt)

@@ -1,9 +1,5 @@
 # HTML+から現行HTML要素への共有系譜
 
-## 範囲
-
-このページは、HTML+を共通の上流とする複数要素の接続だけを示す。初出、現在の意味、確度、証拠表、要素ごとの未解決点は各要素ページを正本とする。
-
 ## Forms
 
 HTML+は`FORM`、`INPUT`、`SELECT`、`OPTION`、`TEXTAREA`を一つのform modelとして定義した。RFC 1866はforms materialがHTML+に基づくと明記するため、この五要素は集合単位でHTML+ formsからHTML 2.0 formsへ接続できる。[HTML+ Forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) [RFC 1866 §8](https://www.rfc-editor.org/rfc/rfc1866.html#section-8)

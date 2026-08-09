@@ -1,9 +1,5 @@
 # HTML phrase elementsとTexinfo
 
-## 範囲
-
-このページは、Texinfoを共通の命名元とするHTML phrase要素群の接続と、その集合に共通する制約だけを示す。個別の初出、現在の意味、確度、証拠表、未解決点は各要素ページを正本とする。
-
 ## 共有される命名経路
 
 1993年6月のHTML Internet-Draftは、character highlighting節に列挙した`TT`, `B`, `I`, `U`, `EM`, `STRONG`, `CODE`, `SAMP`, `KBD`, `VAR`, `DFN`, `CITE`の名前をTexinfo macro namesから派生したと明記する。[Tim Berners-Lee and Daniel W. Connolly, *Hypertext Markup Language (HTML)*, `draft-ietf-iiir-html-00`, June 1993](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)
