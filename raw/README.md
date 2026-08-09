@@ -10,7 +10,6 @@
 |---|---|---|---|
 | `html-living-standard/` | WHATWG HTML Living Standard multipage版 | https://html.spec.whatwg.org/multipage/ | 全115要素の現在の意味と対象集合を確認する共通基準。 |
 | `draft-ietf-iiir-html-00/` | 1993年HTML Internet-Draft | https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00 | フレーズ要素の名称がTexinfoに由来することを示す、頻繁に参照される証拠。 |
-| `html-1993/` | Hypertext Markup Language (HTML) | https://www.w3.org/MarkUp/html-spec/html-spec.html | 初期HTMLの要素集合と意味を確認する基準。 |
 | `html-2.0/` | HTML 2.0草案およびRFC 1866 | https://www.rfc-editor.org/rfc/rfc1866.html | 標準化前の草案と標準化された仕様を比較する。 |
 | `html-plus/` | HTML+および設計論文 | https://www.w3.org/MarkUp/HTMLPlus/htmlplus_1.html | フォーム、表、フレーズマークアップの導入を検証する。 |
 | `html-3.0/` | HTML 3.0草案 | https://www.w3.org/MarkUp/html3/ | 論理スタイルと強調関連要素の変遷を検証する。 |

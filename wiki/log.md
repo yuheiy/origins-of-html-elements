@@ -109,3 +109,7 @@ HTML 4.01、GNU Texinfo 2.16、GNU Texinfo 3.7の配布アーカイブを展開�
 ## [2026-08-09] lint | 70検証済みページ
 
 全115ページの確度集計を再計算し、A 48件、A− 7件、B 15件、未評価45件が`wiki/README.md`と一致することを確認した。Modern HTML／foreign root系10ページについて、必須見出しの順序、現行定義の要約、空でない証拠表、相対リンク、generic placeholderの除去、Markdown whitespaceを検査した。確認できない`template`の統合経路、ruby三要素の個別対応、外見が似たUI／template機構は系譜へ接続していない。
+
+## [2026-08-09] update | Rawリソース分類
+
+HTML 2.0のHTML版を誤って1993年資料として収録していた`html-1993/`を削除した。1993年資料は`draft-ietf-iiir-html-00`、HTML 2.0は草案とRFC 1866を正本として維持する。
