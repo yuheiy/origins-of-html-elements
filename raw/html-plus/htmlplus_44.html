@@ -1,0 +1,92 @@
+<HEADER>
+<TITLE>Literal and Preformatted Text</TITLE>
+</HEADER>
+<BODY>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_1.html">[Up]</A> <A HREF="htmlplus_45.html">[Next]</A> <A HREF="htmlplus_43.html">[Previous]</A> <P>
+<H1>11	 - Literal and Preformatted Text</H1>
+<HR>
+Preformatted text started off in HTML with a simple mechanism for showing computer output, for which the spaces and line breaks were significant in determining the layout. The desire to offer Unix manual pages as hypertext forced a rethink. The next version supported character emphasis and embedded hypertext buttons. HTML+ adds the capability to use variable pitch fonts and to set up tab stops.<P>
+The LIT element is rendered in a proportional font, e.g.<P>
+<PRE>
+&lt;LIT&gt;
+From Oberon in fairyland,
+   The king of ghosts and shadows there,
+Mad Robin I, at his command,
+   Am sent to view the night sports here.
+      What revel rout
+      Is kept about,
+   In every corner where I go,
+      I will o'ersee
+      And merry be
+   And make good sport, with ho, ho, ho!
+&lt;/LIT&gt;
+</PRE>
+This is rendered literally as:<P>
+<PRE>
+From Oberon in fairyland,
+   The king of ghosts and shadows there,
+Mad Robin I, at his command,
+   Am sent to view the night sports here.
+      What revel rout
+      Is kept about,
+   In every corner where I go,
+      I will o'ersee
+      And merry be
+   And make good sport, with a ho, ho, ho!
+</PRE>
+The ability to set tab stops in <TT>LITeral</TT> text makes it much easier to write filters that convert documents written on word processors into HTML+. Tab stops can be set by the <TT>TAB</TT> element and apply for the scope of the <TT>LIT</TT> element, e.g.<P>
+<PRE>
+&lt;tab at=40 align=right&gt;
+</PRE>
+The <TT>AT</TT> attribute specifies the position of the tab stop, as measured from the left margin in terms of the width of a capital M.<A NAME=htmlplus_FootNote_118 HREF=htmlplus_FootNote_118.html>*1</A> The <TT>ALIGN</TT> attribute can be <TT>LEFT</TT>, <TT>CENTER</TT> or <TT>RIGHT</TT>, defaulting to <TT>LEFT</TT>. These have the conventional meaning as used on most word processors. If greater control over fonts and layout is needed then authors should make a hypertext link to a document written in a page description format like Adobe's PDF.<P>
+For computer output or plain text files, you should use the PRE element which is rendered in a fixed pitch font. The following is part of the man page for the Unix ls command:<P>
+<PRE>
+&lt;PRE&gt;
+ The next 9 characters are interpreted as three sets of three
+ bits each which identify access permissions for owner,
+ group, and others as follows:
+
+ +------------------ 0400 read by owner (&lt;B&gt;r&lt;/B&gt; or &lt;B&gt;-&lt;/B&gt;)
+ | +---------------- 0200 write by owner (&lt;B&gt;w&lt;/B&gt; or &lt;B&gt;-&lt;/B&gt;)
+ | | +-------------- 0100 execute (search directory) by owner
+ | | | 			(&lt;B&gt;x&lt;/B&gt;, &lt;B&gt;s&lt;/B&gt;, &lt;B&gt;S&lt;/N&gt;, or &lt;B&gt;-&lt;/B&gt;)
+ | | | +------------ 0040 read by group (&lt;B&gt;r&lt;/B&gt; or &lt;B&gt;-&lt;/B&gt;)
+ | | | | +---------- 0020 write by group (&lt;B&gt;w&lt;/B&gt; or &lt;B&gt;-&lt;/B&gt;)
+ | | | | | +-------- 0010 execute/search by group
+ | | | | | | 			(&lt;B&gt;x&lt;/B&gt;, &lt;B&gt;s&lt;/B&gt;, &lt;B&gt;S&lt;/B&gt;, or &lt;B&gt;-&lt;/B&gt;)
+ | | | | | | +------ 0004 read by others (&lt;B&gt;r&lt;/B&gt; or &lt;B&gt;-&lt;/B&gt;)
+ | | | | | | | +---- 0002 write by others (&lt;B&gt;w&lt;/B&gt; or &lt;B&gt;-&lt;/B&gt;)
+ | | | | | | | | +-- 0001 execute/search by others
+ | | | | | | | | | 			(&lt;B&gt;x&lt;/B&gt;, &lt;B&gt;t&lt;/B&gt;, &lt;B&gt;T&lt;/B&gt;, or &lt;B&gt;-&lt;/B&gt;)
+ | | | | | | | | |
+ r w x r w x r w x
+
+&lt;/PRE&gt;
+</PRE>
+This is rendered as<P>
+<PRE>
+ The next 9 characters are interpreted as three sets of three
+ bits each which identify access permissions for owner,
+ group, and others as follows:
+
+ +------------------ 0400 read by owner (<B>r</B> or <B>-</B>)
+ | +---------------- 0200 write by owner (<B>w</B> or <B>-</B>)
+ | | +-------------- 0100 execute (search directory) by owner
+ | | | 			(<B>x</B>, <B>s</B>, <B>S</B>, or <B>-</B>)
+ | | | +------------ 0040 read by group (<B>r</B> or <B>-</B>)
+ | | | | +---------- 0020 write by group (<B>w</B> or <B>-</B>)
+ | | | | | +-------- 0010 execute/search by group
+ | | | | | | 			(<B>x</B>, <B>s</B>, <B>S</B>, or <B>-</B>)
+ | | | | | | +------ 0004 read by others (<B>r</B> or <B>-</B>)
+ | | | | | | | +---- 0002 write by others (<B>w</B> or <B>-</B>)
+ | | | | | | | | +-- 0001 execute/search by others
+ | | | | | | | | | 			(<B>x</B>, <B>t</B>, <B>T</B>, or <B>-</B>)
+ | | | | | | | | |
+ r w x r w x r w x
+
+</PRE>
+The SEE ALSO section of the Unix manual pages can be processed to make references to other manual pages into hypertext buttons using the <TT>&lt;A&gt;</TT> element (see <A HREF="htmlplus_14.html#0">Section 5.2</A>). The example shows how character emphasis can be added to literal or preformatted text.<P>
+<HR>
+<ADDRESS>HTML+ Discussion Document - November 8, 1993</ADDRESS><P>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_1.html">[Up]</A> <A HREF="htmlplus_45.html">[Next]</A> <A HREF="htmlplus_43.html">[Previous]</A> <P>
+</BODY>

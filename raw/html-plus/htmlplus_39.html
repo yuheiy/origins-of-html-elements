@@ -1,0 +1,39 @@
+<HEADER>
+<TITLE>Tables</TITLE>
+</HEADER>
+<BODY>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_1.html">[Up]</A> <A HREF="htmlplus_40.html">[Next]</A> <A HREF="htmlplus_38.html">[Previous]</A> <P>
+<H1>9	 - Tables</H1>
+<HR>
+Tables are specified using the TABLE element. This allows you to define a caption and to differentiate header and data cells. Cells may contain, text, multiple paragraphs, lists and headers. Adjacent cells can be merged, e.g. to define a header which spans two columns. A simple table could look like:<P><IMG SRC="htmlplus_Tbl_26.gif"><P>
+<P>
+This is defined by the markup:<P>
+<PRE>
+&lt;table border&gt;
+&lt;caption&gt;A simple table&lt;/caption&gt;
+&lt;th&gt;Year &lt;th&gt;Month &lt;th&gt;Day &lt;tr&gt;
+&lt;td&gt;1972 &lt;td&gt;June &lt;td&gt;23rd &lt;tr&gt;
+&lt;td&gt;1982 &lt;td&gt;October &lt;td&gt;7th
+&lt;/table&gt;
+</PRE>
+The <TT>BORDER</TT> attribute acts as a hint to the browser to draw lines enclosing each cell. The <TT>TH</TT> element precedes header cell text and the <TT>TD</TT> element precedes data cell text. The <TT>TR</TT> element is used to separate table rows. By default text is centered in each cell. Header text should be shown emphasised, e.g. the browser could use a bold sans serif font for headers and a serif font for the data cells. The next example shows how cells can be merged with their neighbors:<P><IMG SRC="htmlplus_Tbl_25.gif"><P>
+<P>
+This table is defined by the markup:<P>
+<PRE>
+&lt;table border&gt;
+&lt;caption&gt;A more complex table&lt;/caption&gt;
+&lt;th rowspan=2&gt;&lt;th colspan=2&gt;average&lt;th rowspan=2&gt;other&lt;br&gt;category&lt;tr&gt;
+&lt;th&gt;height &lt;th&gt;weight &lt;tr&gt;
+&lt;th align=left&gt;males &lt;td&gt;1.9 &lt;td&gt;0.003 &lt;td&gt;yyy &lt;tr&gt;
+&lt;th align=left&gt;females &lt;td&gt;1.7 &lt;td&gt;0.002 &lt;td&gt;xxx
+&lt;/table&gt;
+</PRE>
+The first cell (a header cell) is merged with the cell below it: <TT>&lt;th rowspan=2&gt;</TT>. Note that this merged cell is empty - the definition of the next column for the first row starts immediately. Looking again at the first row, the second column is merged with the third: &lt;th colspan=2&gt;. The definition for the third column is skipped as it was covered by the merged cell. The fourth column/first row is also merged, this time with the next row: &lt;th rowspan=2&gt;. The <TT>&lt;BR&gt;</TT> element has been used here to force a line break between <TT>other</TT> and <TT>category</TT>. The <TT>&lt;TR&gt;</TT> element signifies the end of the first row and the beginning of the second. Note that empty cells at the end of a row can be omitted as the <TT>&lt;TR&gt;</TT> element unambiguously marks the end of the row.<P>
+The second row only contains definitions for the second and third columns since the others were merged with cells on the preceding row. The general rule is to avoid defining any cell twice. The last two rows start with headers and the <TT>align=left</TT> attribute ensures that the browser will align these headers to the left of their cells. The <TT>ALIGN</TT> attribute can be one of <TT>LEFT</TT>, <TT>CENTER</TT> or <TT>RIGHT</TT>, with <TT>CENTER</TT> as the default. It can be used with both <TT>TH</TT> and <TT>TD</TT>.<P>
+<UL>
+<LI><A HREF="htmlplus_40.html"><B>9.1	</B> - Implementation Issues for Tables</A>
+</UL>
+<HR>
+<ADDRESS>HTML+ Discussion Document - November 8, 1993</ADDRESS><P>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_1.html">[Up]</A> <A HREF="htmlplus_40.html">[Next]</A> <A HREF="htmlplus_38.html">[Previous]</A> <P>
+</BODY>

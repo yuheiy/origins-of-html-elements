@@ -1,0 +1,30 @@
+<HEADER>
+<TITLE>Change Bars and Document Amendments</TITLE>
+</HEADER>
+<BODY>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_12.html">[Up]</A> <A HREF="htmlplus_23.html">[Next]</A> <A HREF="htmlplus_21.html">[Previous]</A> <P>
+<H1>5.10	 - Change Bars and Document Amendments</H1>
+<HR>
+Change bars are shown for parts of the document designated with the <TT>CHANGED</TT> element. This can appear anywhere that normal text is allowed (as shown by the <TT>%text;</TT> entity reference in the DTD):<P>
+<PRE>
+&lt;changed id=z34&gt;text including some changes&lt;changed idref=z34&gt;
+</PRE>
+The same element<A NAME=htmlplus_FootNote_109 HREF=htmlplus_FootNote_109.html>*1</A> is used to designate the start and end of changes, using matched <TT>ID</TT> and <TT>IDREF</TT> attribute values. This mechanism avoids syntactic problems that would arise from using a conventional start and end tag pair, as changes to a document can span different levels of the document's formal structure. Additional attributes may be used with the <TT>CHANGED</TT> element to hold related details, e.g. <TT>BY</TT>, <TT>WHEN</TT>, <TT>WHY</TT>, <TT>WHAT</TT>.<P>
+In legal documents and amendments to proposed legislation, there is often the need to show parts of the text as being removed or added to the document. This is commonly shown using strike-through and underlining respectively. The <TT>REMOVED</TT> and <TT>ADDED</TT> tags are provided for this purpose:<P>
+<PRE>
+&lt;P&gt;This bill would require the Legislative Counsel, with the advice of
+the Joint Rules Committee of the Senate and Assembly, to make 
+available to the public by means of access by way of &lt;removed&gt;computer
+modem&lt;/removed&gt; &lt;added&gt;the largest nonproprietary, nonprofit 
+cooperative public computer network,&lt;/added&gt; specified information 
+concerning bills, the proceedings of the houses and committees of the
+Legislature, statutory enactments, and the California Constitution.
+</PRE>
+Which might be displayed as:<P>
+<P><IMG SRC="htmlplus_AFrame_19.gif"><P>
+<P>
+Color enhancements may be used to further distinguish the amendments, e.g. red lines for strike-through. This mechanism is not intended for representing revision histories, which are better served by traditional change control mechanisms.<P>
+<HR>
+<ADDRESS>HTML+ Discussion Document - November 8, 1993</ADDRESS><P>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_12.html">[Up]</A> <A HREF="htmlplus_23.html">[Next]</A> <A HREF="htmlplus_21.html">[Previous]</A> <P>
+</BODY>

@@ -1,0 +1,128 @@
+<HEADER>
+<TITLE>Fill-out Forms and Input fields</TITLE>
+</HEADER>
+<BODY>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_1.html">[Up]</A> <A HREF="htmlplus_42.html">[Next]</A> <A HREF="htmlplus_40.html">[Previous]</A> <P>
+<H1>10	 - Fill-out Forms and Input fields</H1>
+<HR>
+Forms are composed by placing input fields within paragraphs, preformatted/literal text, lists and tables. This gives considerable scope in designing the layout of forms. Each field is defined by an <TT>INPUT</TT> element and must have an <TT>NAME</TT> attribute which uniquely names the field in the document. Additional optional attributes can be used to specify the type of the field (defaults to free text), its size/precision, its initial value and whether the field is currently disabled or in error:<P>
+<PRE>
+&lt;FORM ACTION="mailto:www_admin@info.cern.ch"&gt;
+&lt;MH HIDDEN&gt;Subject: WWW Questionaire&lt;/MH&gt;
+Please help up to improve the World Wide Web by filling in the
+following questionaire:
+&lt;P&gt;Your organization? &lt;INPUT NAME="org" SIZE="48"&gt;
+&lt;P&gt;Commercial? &lt;INPUT NAME="commerce" TYPE=checkbox&gt;
+How many users? &lt;INPUT NAME="users" TYPE=int&gt;
+&lt;P&gt;Which browsers do you use?
+&lt;UL&gt;
+&lt;LI&gt;X Mosaic &lt;INPUT NAME="browsers" TYPE=checkbox VALUE="xmosaic"&gt;
+&lt;LI&gt;Cello &lt;INPUT NAME="browsers" TYPE=checkbox VALUE="cello"&gt;
+&lt;LI&gt;Others &lt;TEXTAREA NAME="others" COLS=48 ROWS=4&gt;&lt;/TEXTAREA&gt;
+&lt;/UL&gt;
+A contact point for your site: &lt;INPUT NAME="contact" SIZE="42"&gt;
+&lt;P&gt;Many thanks on behalf of the WWW central support team.
+&lt;P ALIGN=CENTER&gt;&lt;INPUT TYPE=submit&gt; &lt;INPUT TYPE=reset&gt;
+&lt;/FORM&gt;
+</PRE>
+This fictitious example is a questionnaire that will be emailed to <TT>www_admin@info.cern.ch</TT>. The <TT>FORM</TT> element is used to delimit the form. There can be several forms in a single document, but the <TT>FORM</TT> element can't be nested. The <TT>ACTION</TT> attribute specifies a URL that designates an HTTP server or an email address. If missing, the URL for the document itself will be assumed. The effect of the action can be modified by including a method prefix, e.g. <TT>ACTION="POST http://...."</TT>. This prefix is used to select the HTTP method when sending the form's contents to an HTTP server. Would it be cleaner to use a separate attribute, e.g. <TT>METHOD</TT>?<P>
+Servers can disable forms by sending an appropriate header or by an attribute on the optional <TT>HTMLPLUS</TT> element at the very start of the document, e.g. <TT>&lt;htmlplus forms=off&gt;</TT>.<P>
+The <TT>MH</TT> element can be used to specify RFC 822 mail headers that are included when sending the form's content either as an email message or as a HTTP request, e.g.<P>
+<PRE>
+&lt;MH HIDDEN&gt;
+Subject: WWW Questionnaire
+Priority: Low
+&lt;/MH&gt;
+</PRE>
+The <TT>MH</TT> element can contain several headers separated by line breaks. The text within the MH element is transcribed directly<A NAME=htmlplus_FootNote_116 HREF=htmlplus_FootNote_116.html>*1</A>, preserving spaces, tabs and line breaks, with each line terminated by a <TT>CR</TT> <TT>LF</TT> pair as per the RFC 822 guidelines. The preceding example of a form might be rendered as:<P>
+<P><IMG SRC="htmlplus_AFrame_24.gif"><P>
+<P>
+Here, the <TT>&lt;P&gt;</TT> and <TT>&lt;UL&gt;</TT> elements have been used to lay out the text (and input fields. The browser has changed the background color within the <TT>FORM</TT> element to distinguish the form from other parts of the document. The browser is responsible for handling the input focus, i.e. which field will currently get keyboard input.<P>
+For many platforms there will be existing conventions for forms, e.g. <I>tab</I> and shift-<I>tab</I> keys to move the keyboard focus forwards and backwards between fields, while an <I>Enter</I> key submits the form. In the example, the <I>Submit</I> and <I>Reset</I> buttons are specified explicitly with special purpose fields. The <I>Submit</I> button is used to email the form or send its contents to the server as specified by the <TT>ACTION</TT> attribute, while the <I>Reset</I> button resets the fields to their initial values. When the form consists of a single text field, it may be appropriate to leave such buttons out and rely on the <I>Enter</I> key.<P>
+The <TT>INPUT</TT> element has the following attributes:<P>
+<DL>
+<DT><B><TT>NAME</TT></B>
+<DD>Symbolic name used when transferring the form's contents. This attribute is always needed and should uniquely identify this field.
+<DT><B><TT>TYPE</TT></B>
+<DD>Defines the type of data the field accepts. Defaults to free text.
+<DT><B><TT>SIZE</TT></B>
+<DD>Specifies the size or precision of the field according to its type.
+<DT><B><TT>MAXLENGTH</TT></B>
+<DD>The maximum number of characters that will be accepted as input. This can be greater that specified by <TT>SIZE</TT>, in which case the field will scroll appropriately. The default is unlimited.
+<DT><B><TT>VALUE</TT></B>
+<DD>The initial value for the field, or the value when checked for checkboxes and radio buttons. This attribute is required for radio buttons.
+<DT><B><TT>CHECKED</TT></B>
+<DD>When present indicates that a checkbox or radio button is selected.
+<DT><B><TT>DISABLED</TT></B>
+<DD>When present indicates that this field is temporarily disabled. Browsers should show this by "greying it" out in some manner.
+<DT><B><TT>ERROR</TT></B>
+<DD>When present indicates that the field's initial value is in error in some way, e.g. because it is inconsistent with the values of other fields. Servers should include an explanatory error message with the form's text.
+<DT><B><TT>SRC</TT></B>
+<DD>A URL or URN specifying an image - for use only with <TT>TYPE=IMAGEMAP.</TT>
+<DT><B></TT><TT>ALIGN</TT></B>
+<DD>Vertical alignment of the image - for use only with <TT>TYPE=IMAGEMAP.</TT>
+</DL>
+ The following types of fields can be defined with the </TT><TT>TYPE</TT> attribute <I>(upper or lower case)</I>:<P>
+<DL>
+<DT><B><TT>TEXT</TT></B>
+<DD>Single line text entry fields. Use the <TT>SIZE</TT> attribute to specify the visible width in characters, e.g. <TT>SIZE="24"</TT> for a 24 character field. The <TT>MAX</TT> attribute can be used to specify an upper limit to the number of characters that can be entered into a text field, e.g. <TT>MAX=72</TT>. Use the <TT>TEXTAREA</TT> element for text fields which can accept multiple lines (see below).
+<DT><B><TT>INT</TT></B>
+<DD>For entering integer numbers, the maximum number of digits can be specified with the <TT>SIZE</TT> attribute (excluding the sign character), e.g. <TT>size=3</TT> for a three digit number.
+<DT><B><TT>FLOAT</TT></B>
+<DD>For fields which can accept floating point numbers.
+<DT><B><TT>DATE</TT></B>
+<DD>Fields which can accept a recognized date format.
+<DT><B><TT>URL</TT></B>
+<DD>For fields which expect document references as URLs or URNs.
+<DT><B><TT>CHECKBOX</TT></B>
+<DD>Used for simple Boolean attributes, or for attributes which can take multiple values at the same time. The latter is represented by a number of checkbox fields each of which has the same <TT>NAME</TT>.
+<DT><B><TT>RADIO</TT></B>
+<DD>For attributes which can take a single value from a set of alternatives. Each radio button field in the group should be given the same <TT>NAME</TT>.
+<DT><B><TT>RANGE</TT></B>
+<DD>This allows you to specify an integer range with the <TT>MIN</TT> and <TT>MAX</TT> attributes, e.g. <TT>MIN=1</TT> <TT>MAX=100</TT>. Users can select any value in this range.
+<DT><B><TT>IMAGE</TT></B>
+<DD>This allows you to specify an image field upon which you can click with a pointing device. The <TT>SRC</TT> and <TT>ALIGN</TT> attributes are exactly the same as for the <TT>IMG</TT> and <TT>IMAGE</TT> elements. The symbolic names for the x and y coordinates of the click event are specified with <I>name</I>.x and <I>name</I>.y for the <I>name</I> given with the <TT>NAME</TT> attribute. The <TT>VALUE</TT> attribute is ignored.
+<DT><B><TT>SCRIBBLE</TT></B>
+<DD>A field upon which you can write with a pen or mouse. The size of the field in millimeters is given as <TT>SIZE=</TT>width<TT>,</TT>height. The units are absolute as they relate to the dimensions of the human hand, rather than pixels of varying resolution. The scribble may involve time and pressure data in addition to the basic ink data. You can use scribble for signatures or sketches. The field can be initialised by setting the <TT>SRC</TT> attribute to a URL which contains the ink<A NAME=htmlplus_FootNote_117 HREF=htmlplus_FootNote_117.html>*2</A>. The <TT>VALUE</TT> attribute is ignored.
+</DL>
+<DT><B><TT>AUDIO</TT></B>
+<DD>This provides a way of entering spoken messages into a form. Browsers might show an icon which when clicked pops-up a set of tape controls that you can use to record and replay messages. The initial message can be set by specifying a URL with the <TT>SRC</TT> attribute. The <TT>VALUE</TT> attribute is ignored.
+<DT><B><TT>SUBMIT</TT></B>
+<DD>This is a button that when pressed submits the form. It offers authors control over the location of this button. You can use an image as a submit button by specifying a URL with the <TT>SRC</TT> attribute.
+<DT><B><TT>RESET</TT></B>
+<DD>This is a button that when pressed resets the form's fields to their initial values as specified by the <TT>VALUE</TT> attribute. You can use an image as a reeset button by specifying a URL with the <TT>SRC</TT> attribute.
+</DL>
+When you need to let users enter more than one line of text, you should use the <TT>TEXTAREA</TT> element, e.g.<P>
+<PRE>
+&lt;TEXTAREA NAME="address" ROWS=64 COLS=6&gt;
+Hewlett Packard Laboratories
+1501 Page Mill Road
+Palo Alto, California 94304-1126
+&lt;/TEXTAREA&gt;
+</PRE>
+The text up to the end tag is used to initialize the field's value. This end tag is always required even if the field is initially blank. The <TT>ROWS</TT> and <TT>COLS</TT> attributes determine the visible dimension of the field in characters. Browsers are recommended to allow text to grow beyond these limits by scrolling as needed. In the initial design for forms, multi-line text fields were supported by the <TT>INPUT</TT> element with <TT>TYPE=TEXT</TT>. Unfortunately, this causes problems for fields with long text values as SGML limits the length of attribute literals. The HTML+ DTD allows for up to 1024 characters (the SGML default is only 240 characters!).<P>
+The <TT>RADIO</TT> and <TT>CHECKBOX</TT> fields can be used to specify multiple choice forms in which every alternative is visible as part of the form. An alternative is to use the <TT>SELECT</TT> element which is generally rendered in a more compact fashion as a pull down combo list. Every alternative is represented by the <TT>OPTION</TT> element, e.g.<P>
+<PRE>
+&lt;SELECT NAME="flavor"&gt;
+&lt;OPTION&gt;Vanilla
+&lt;OPTION&gt;Strawberry
+&lt;OPTION&gt;Rum and Raisin
+&lt;OPTION&gt;Peach and Orange
+&lt;/SELECT&gt;
+</PRE>
+The <TT>SEVERAL</TT> attribute is needed when users are allowed to make several selections, e.g. <TT>&lt;SELECT SEVERAL&gt;</TT>. The <TT>ERROR</TT> attribute can be used to indicate that the initial selection is in error in some way, e.g. because it is inconsistent with the values of other fields.<P>
+The <TT>OPTION</TT> element can take the following attributes:<P>
+<DL>
+<DT><B><TT>SELECTED</TT></B>
+<DD>Indicates that this option is initially selected.
+<DT><B><TT>DISABLED</TT></B>
+<DD>When present indicates that this option is temporarily disabled. Browsers should show this by "greying it" out in some manner.
+</DL>
+<UL>
+<LI><A HREF="htmlplus_42.html"><B>10.1	</B> - Sending form data to an HTTP server</A>
+<LI><A HREF="htmlplus_43.html"><B>10.2	</B> - Sending a form via Electronic Mail</A>
+</UL>
+<HR>
+<ADDRESS>HTML+ Discussion Document - November 8, 1993</ADDRESS><P>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_1.html">[Up]</A> <A HREF="htmlplus_42.html">[Next]</A> <A HREF="htmlplus_40.html">[Previous]</A> <P>
+</BODY>

@@ -1,0 +1,42 @@
+<HEADER>
+<TITLE>Logical Emphasis</TITLE>
+</HEADER>
+<BODY>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_12.html">[Up]</A> <A HREF="htmlplus_19.html">[Next]</A> <A HREF="htmlplus_17.html">[Previous]</A> <P>
+<H1>5.6	 - Logical Emphasis</H1>
+<HR>
+These tags indicate the role of the marked text, e.g. bibliographic references. By using a standard way of marking up text, it becomes possible to automatically index such references. There are a potentially huge number of different distinctions that could be made, and the set given below is intentionally minimalistic. Discussion is welcomed on just which elements should be included in HTML+ given its intended role as a delivery format for hypertext documents:<P>
+<DL>
+<DT><B><TT>q</TT></B>
+<DD>a short quotation which can be included inline,e.g.<TT> &lt;q&gt;to be or not to be, that is the question&lt;/q&gt; </TT>use<TT> &lt;q&gt; and &lt;/q&gt;</TT> in place of double quote marks.
+<DT><B><TT>cite</TT></B>
+<DD>citation, e.g. <TT>&lt;cite&gt;Festinger, L.(1957), &lt;I&gt;A Theory of Cognitive Dissonance&lt;/I&gt;, Stanford.&lt;/cite&gt;</TT>
+<DT><B></TT><TT>person</TT></B>
+<DD>proper names, e.g. <TT>&lt;person&gt;Albert Einstein&lt;/person&gt;</TT>
+<DT><B></TT><TT>acronym</TT></B>
+<DD>acronyms e.g <TT>&lt;acronym&gt;NATO&lt;/acronym&gt;</TT>
+<DT><B></TT><TT>abbrev</TT></B>
+<DD>abbreviations, e.g. <TT>&lt;abbrev&gt;v. aux&lt;/abbrev&gt;</TT>
+<DT><B></TT><TT>cmd</TT></B>
+<DD>command name, e.g. chmod in Unix
+<DT><B><TT>arg</TT></B>
+<DD>command argument, e.g. &lt;arg&gt;-s&lt;/arg&gt;
+<DT><B><TT>kbd</TT></B>
+<DD>something the use would have to type
+<DT><B><TT>var</TT></B>
+<DD>named place holder, e.g. <TT>&lt;var&gt;filename&lt;/var&gt;</TT>
+<DT><B></TT><TT>dfn</TT></B>
+<DD>defining instance of a term
+<DT><B><TT>code</TT></B>
+<DD>code example - usually shown in fixed pitch font
+<DT><B><TT>samp</TT></B>
+<DD>sequence of literal characters usually in variable pitch font
+</DL>
+All these tags require a matching closing tag like the other emphasis elements, e.g.<P>
+<PRE>
+&lt;cmd&gt;cmp&lt;/cmd&gt; [&lt;arg&gt;-l&lt;/arg&gt;] [&lt;arg&gt;-s&lt;/arg&gt;] &lt;var&gt;file1&lt;/var&gt; &lt;var&gt;file2&lt;/var&gt;
+</PRE>
+<HR>
+<ADDRESS>HTML+ Discussion Document - November 8, 1993</ADDRESS><P>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_12.html">[Up]</A> <A HREF="htmlplus_19.html">[Next]</A> <A HREF="htmlplus_17.html">[Previous]</A> <P>
+</BODY>

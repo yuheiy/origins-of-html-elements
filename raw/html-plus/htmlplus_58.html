@@ -1,0 +1,533 @@
+<HEADER>
+<TITLE>Appendix I</TITLE>
+</HEADER>
+<BODY>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_1.html">[Up]</A> <A HREF="htmlplus_59.html">[Next]</A> <A HREF="htmlplus_57.html">[Previous]</A> <P>
+<H1>Appendix I</H1>
+<HR>
+The HTML+ Document Type Definition (DTD). The preliminaries are taken from the HTML DTD and declares the character set as Latin-1, disables markup minimisation and sets limits for tag/attribute names to 34 characters, and attribute values to a maximum of 1024 characters.<P>
+<PRE>
+&lt;!SGML  "ISO 8879:1986"
+--
+Document Type Definition for the HyperText Markup Language Plus 
+for use with the World Wide Web application (HTML+ DTD). These
+initial settings are take from the HTML DTD.
+
+        NOTE: This is a definition of HTML with respect to
+        SGML, and assumes an understanding of SGML terms.
+--
+CHARSET
+        BASESET "ISO 646:1983//CHARSET
+                 International Reference Version (IRV)//ESC 2/5 4/0"
+        DESCSET 0   9   UNUSED
+                9   2   9
+                11  2   UNUSED
+                13  1   13
+                14 18   UNUSED
+                32 95   32
+               127  1   UNUSED
+        BASESET "ISO Registration Number 100//CHARSET
+                 ECMA-94 Right Part of Latin Alphabet Nr. 1//ESC 2/13 4/1"
+        DESCSET 128  32  UNUSED
+                160  95  32
+                255   1  UNUSED
+
+CAPACITY        SGMLREF
+                TOTALCAP        150000
+                GRPCAP          150000
+
+SCOPE   DOCUMENT
+SYNTAX
+        SHUNCHAR CONTROLS  0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+                           19 20 21 22 23 24 25 26 27 28 29 30 31 127 255
+        BASESET "ISO 646:1983//CHARSET
+                 International Reference Version (IRV)//ESC 2/5 4/0"
+        DESCSET 0 128 0
+        FUNCTION RE         13
+                 RS         10
+                 SPACE      32
+                 TAB SEPCHAR 9
+        NAMING   LCNMSTRT ""
+                 UCNMSTRT ""
+                 LCNMCHAR ".-"
+                 UCNMCHAR ".-"
+                 NAMECASE GENERAL YES
+                          ENTITY  NO
+        DELIM    GENERAL  SGMLREF
+                 SHORTREF SGMLREF
+        NAMES    SGMLREF
+        QUANTITY SGMLREF
+                 NAMELEN  34
+                 TAGLVL   100
+                 LITLEN   1024
+                 GRPGTCNT 150
+                 GRPCNT   64
+
+FEATURES
+  MINIMIZE
+    DATATAG  NO
+    OMITTAG  NO
+    RANK     NO
+    SHORTTAG NO
+  LINK
+    SIMPLE   NO
+    IMPLICIT NO
+    EXPLICIT NO
+  OTHER
+    CONCUR  NO
+    SUBDOC  NO
+    FORMAL  YES
+  APPINFO NONE
+&gt;
+&lt;!DOCTYPE HTMLPLUS [
+&lt;!-- DTD for HTML+ 
+Markup minimisation should be avoided, otherwise the default &lt;!SGML&gt; declaration is fine. Browsers should be forgiving of markup errors.
+
+Common Attributes:
+
+id      the id attribute allows authors to name elements such as headers 
+        and paragraphs as potential destinations for links. Note that 
+        links don't specify points, but rather extended objects.
+index   allows authors to specify how given headers etc should be 
+        indexed as primary or secondary keys, where "/" separates primary 
+        from secondary keys, ";" separates multiple entries
+--&gt;
+&lt;!-- ENTITY DECLARATIONS
+ &lt;!ENTITY % foo "X | Y | Z"&gt; is a macro definition for parameters and in 
+ subsequent statements, the string "%foo;" is expanded to "X | Y | Z"
+
+ Various classes of SGML text types:
+
+  #CDATA  text which doesn't include markup or entity references
+  #RCDATA text with entity references but no markup
+  #PCDATA text occurring in a context in which markup and entity references 
+     may occur.
+--&gt;
+&lt;!ENTITY % URL "CDATA" -- a URL or URN designating a hypertext node --&gt;
+&lt;!ENTITY % emph1 "I|B|U|S|SUP|SUB|TT"&gt;
+&lt;!ENTITY % emph2 "Q|CITE|PERSON|ACRONYM|ABBREV|EM|STRONG"&gt;
+&lt;!ENTITY % emph3 "CMD|ARG|KBD|VAR|DFN|CODE|SAMP|REMOVED|ADDED"&gt;
+&lt;!ENTITY % emph "%emph1;|%emph2;|%emph3;"&gt;
+&lt;!ENTITY % misc "RENDER|FOOTNOTE|MARGIN|INPUT|TEXTAREA|SELECT"&gt;
+&lt;!ENTITY % text "#PCDATA|A|IMG|IMAGE|%emph;|%misc;|BR|CHANGED"&gt;
+&lt;!ENTITY % paras "P|PRE|LIT|FIG"&gt;
+&lt;!ENTITY % lists "UL|OL|DL|MENU|DIR"&gt;
+&lt;!ENTITY % block "TABLE|FORM|MATH|NOTE|QUOTE|ABSTRACT|BYLINE|HR"&gt;
+&lt;!ENTITY % heading "H1|H2|H3|H4|H5|H6"&gt; 
+&lt;!ENTITY % table "%text;|P|%heading;|%lists;"&gt;
+&lt;!ENTITY % math "BOX|%text;"&gt;
+&lt;!ENTITY % main "%heading;|%block;|%lists;|%paras;|%text;"&gt;
+&lt;!ENTITY % setup "(TITLE? &amp; ISINDEX? &amp; NEXTID? &amp; LINK* &amp; BASE?)"&gt;
+
+&lt;!-- Basic types of elements:
+  &lt;!ELEMENT tagname - - CONTENT&gt; elements needing end tags
+  &lt;!ELEMENT tagname - O CONTENT&gt; elements with optional end tags
+  &lt;!ELEMENT tagname - O EMPTY&gt; elements without content or end tags
+
+The content definition is:
+       -  an entity definition as defined above
+       -  a tagname
+       -  (brackets enclosing the above)
+These may be combined with the operators:
+  A*      A occurs zero or more times
+  A+      A occurs one or more times
+  A|B     implies either A or B
+  A?      A occurs zero or one times
+  A,B     implies first A then B
+  A&amp;B     either or both A and B (in either order)
+--&gt;
+
+&lt;!ELEMENT HTMLPLUS O O ((HEAD, BODY) | ((%setup;), (%main;)*))&gt;
+&lt;!ATTLIST HTMLPLUS
+        version CDATA #IMPLIED -- the HTML+ version number --
+        forms   (on|off) on    -- used to disable form filling --&gt;
+
+&lt;!ELEMENT HEAD - - (%setup;) -- delimits document wide properties --&gt;
+&lt;!ELEMENT BODY - - (%main;)* -- delimits the document's body --&gt;
+
+&lt;!-- Document title --&gt;
+&lt;!ELEMENT TITLE - - (#PCDATA | %emph;)+&gt;
+&lt;!ATTLIST TITLE
+        id      ID      #IMPLIED -- link destination --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!-- Document headers --&gt;
+&lt;!ELEMENT (%heading;) - - (#PCDATA | %emph;)+&gt;
+&lt;!ATTLIST (%heading;)
+        id      ID      #IMPLIED -- defines link destination --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!-- character emphasis --&gt;
+&lt;!ELEMENT (%emph;) - - (%text;)*&gt;
+&lt;!ATTLIST (%emph;)
+        id      ID      #IMPLIED -- link destination --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!ELEMENT (FOOTNOTE|MARGIN) - - (%text;)* -(FOOTNOTE|MARGIN)&gt;
+&lt;!ATTLIST (FOOTNOTE|MARGIN)
+        id      ID      #IMPLIED -- link destination --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!ELEMENT RENDER -O (EMPTY) -- how to render unknown elements --&gt;
+&lt;!ATTLIST RENDER
+        tag     CDATA   #IMPLIED -- tag name --
+        style   CDATA   #IMPLIED -- comma separated list of styles --&gt;
+
+&lt;!-- Paragraphs which act as containers for the following text --&gt;
+&lt;!ELEMENT P - O (L|%text;)+&gt;
+&lt;!ATTLIST P
+        id      ID      #IMPLIED -- link destination --
+        align   (left|indent|center|right|justify) left
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+&lt;!ELEMENT L - O (%text;)+&gt;
+&lt;!ATTLIST L
+        id      ID      #IMPLIED -- link destination --
+        align   (left|indent|center|right|justify) left
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!ELEMENT HR - O EMPTY -- Horizontal Rule --&gt;
+&lt;!ELEMENT BR - O EMPTY -- line break in normal text--&gt;
+
+&lt;!ELEMENT PRE - - (TAB|%text;)+ -- preformatted fixed pitch text --&gt;
+&lt;!ATTLIST PRE
+        id      ID      #IMPLIED -- link destination --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!ELEMENT LIT - - (TAB|%text;)+ -- literal variable pitch text --&gt;
+&lt;!ATTLIST LIT
+        id      ID      #IMPLIED -- link destination --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!ELEMENT TAB - O EMPTY -- tabs for imported text --&gt;
+&lt;!ATTLIST TAB
+        at      NUMBER  #IMPLIED -- measured in widths of a capital M --
+        align   (left|center|right|decimal) left -- tab alignment --&gt;
+
+&lt;!ELEMENT QUOTE - - (P|%text;)* -- block quote --&gt;
+&lt;!ATTLIST QUOTE
+        id      ID      #IMPLIED -- link destination --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!ELEMENT ABSTRACT - - (P|%text;)* -- document summary --&gt;
+&lt;!ATTLIST ABSTRACT
+        id      ID      #IMPLIED -- link destination --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+&lt;!ELEMENT BYLINE - - (P|%text;)* -- info on author --&gt;
+&lt;!ATTLIST BYLINE
+        id      ID      #IMPLIED -- link destination --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+&lt;!ELEMENT NOTE - - (P|%text;)* -- admonishment --&gt;
+&lt;!ATTLIST NOTE
+        id      ID      #IMPLIED -- link destination --
+        role    CDATA   #IMPLIED -- e.g. Tip, Note, Warning, or Error --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!ELEMENT (ADDRESS|BLOCKQUOTE) - - (%text;|P)* --compatibility with HTML--&gt;
+
+&lt;!-- Lists which can be nested --&gt;
+&lt;!ELEMENT OL - - (LI | UL | OL)+ -- ordered list --&gt;
+&lt;!ATTLIST OL
+        id      ID      #IMPLIED
+        compact (compact)       #IMPLIED
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+&lt;!ELEMENT UL - - (LI | UL | OL)+ -- unordered list --&gt;
+&lt;!ATTLIST UL
+        id      ID      #IMPLIED    -- link destination --
+        compact (compact) #IMPLIED  -- reduced interitem spacing --
+        plain   (plain) #IMPLIED -- suppress bullets --
+        wrap    (vert|horiz) vert -- multicolumn list wrap style --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!-- List items for UL and OL lists --&gt;
+&lt;!ELEMENT LI - O (DL|P|%text;)+&gt;
+&lt;!ATTLIST LI
+        id      ID      #IMPLIED
+        src     %URL;   #IMPLIED -- icon for use in place of bullet --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!ELEMENT MENU - - (LI)* -- plain single column list --&gt;
+&lt;!ATTLIST MENU
+        id      ID      #IMPLIED
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+&lt;!ELEMENT DIR - - (LI)* -- plain multi column list --&gt;
+&lt;!ATTLIST DIR
+        id      ID      #IMPLIED
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!-- Definition Lists (terms + definitions) --&gt;
+&lt;!ELEMENT DL - - (DT+,DD)+&gt;
+&lt;!ATTLIST DL
+        id      ID      #IMPLIED
+        compact (compact)       #IMPLIED
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!ELEMENT DT - O (%text;)+ -- term text -- &gt;
+&lt;!ELEMENT DD - O (P|UL|OL|DL|%text;)+ -- definition text -- &gt;
+&lt;!ATTLIST (DT|DD)
+        id      ID      #IMPLIED
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!ELEMENT CAPTION - - (%text;)+ -- table or figure caption --&gt;
+&lt;!ATTLIST CAPTION
+        id      ID      #IMPLIED
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!ELEMENT TABLE - - (CAPTION?, (TH|TD|TR)*) -- mixed headers and data --&gt;
+&lt;!ATTLIST TABLE
+        id      ID      #IMPLIED
+        border (border) #IMPLIED -- draw borders --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!ELEMENT TH - O (%table;)* -- a header cell --&gt;
+&lt;!ATTLIST TH
+        colspan NUMBER    1     -- columns spanned --
+        rowspan NUMBER    1     --. rows spanned --
+        align   (left|center|right) center -- alignment in cell --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --&gt;
+&lt;!ELEMENT TD - O (%table;)* -- a data cell --&gt;
+&lt;!ATTLIST TD
+        colspan NUMBER    1     -- columns spanned --
+        rowspan NUMBER    1     --. rows spanned --
+        align   (left|center|right) center -- alignment in cell --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --&gt;
+&lt;!ELEMENT TR - O (EMPTY) -- row separator --&gt;
+&lt;!ATTLIST TR id ID #IMPLIED&gt;
+
+&lt;!ELEMENT FORM - - (MH, (%main;)*) -(FORM) -- forms can't be nested --&gt;
+&lt;!ATTLIST FORM
+        id      ID      #IMPLIED
+        action  %URL;   #IMPLIED -- defaults for URL for current doc --
+        method  CDATA   #IMPLIED -- PUT, POST, DELETE etc. --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --
+        index   CDATA   #IMPLIED -- entries for index compilation --&gt;
+
+&lt;!ELEMENT MH - - CDATA -- one or more RFC 822 header fields --&gt;
+&lt;!ATTLIST MH hidden (hidden) #IMPLIED -- hide the mail headers from view --&gt;
+
+&lt;!ELEMENT INPUT - O EMPTY&gt;
+&lt;!ATTLIST INPUT
+        name    CDATA   #IMPLIED -- attribute name (may not be unique) --
+        type    CDATA   #IMPLIED -- a wide variety of field types --
+        size    CDATA   #IMPLIED -- visible size of text fields --
+        min     NUMBER  #IMPLIED -- for range controls --
+        max     NUMBER  #IMPLIED -- for range controls or text fields --
+        value   CDATA   #IMPLIED -- attribute value (altered by user) --
+        checked (checked) #IMPLIED -- for check boxes and radio buttons --
+        disabled (disabled) #IMPLIED -- if grayed out --
+        error   (error) #IMPLIED -- if in error --
+        src      %URL;  #IMPLIED -- for certain fields e.g. IMAGEs --
+        align (top|middle|bottom) top -- for IMAGE fields only --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --&gt;
+
+&lt;!ELEMENT TEXTAREA - - CDATA -- multi-line text fields --&gt;
+&lt;!ATTLIST TEXTAREA
+        name    CDATA   #IMPLIED -- attribute name (may not be unique) --
+        cols    NUMBER  #IMPLIED -- visible width in characters --
+        rows    NUMBER  #IMPLIED -- visible height in characters --
+        disabled (disabled) #IMPLIED -- if grayed out --
+        error   (error) #IMPLIED -- if in error --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --&gt;
+
+&lt;!ELEMENT SELECT - - (OPTION+) -- combo style selection lists --&gt;
+&lt;!ATTLIST SELECT
+        name    CDATA   #IMPLIED -- attribute name (may not be unique) --
+        several (several) #IMPLIED -- permits multiple selections --
+        error   (error) #IMPLIED -- if in error --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --&gt;
+
+&lt;!ELEMENT OPTION - - CDATA&gt;
+&lt;!ATTLIST OPTION
+        selected (selected) #IMPLIED -- if initially selected --
+        disabled (disabled) #IMPLIED -- if grayed out --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --&gt;
+
+&lt;!ELEMENT FIG - - (CAPTION?,(%text;)*)&gt;
+&lt;!ATTLIST FIG
+        id      ID      #IMPLIED
+        align   (left|center|right|float) float -- position --
+        ismap   (ismap) #IMPLIED -- server can handle mouse clicks/drags --
+        src     %URL;   #IMPLIED -- link to image data --
+        index   CDATA   #IMPLIED -- entries for index compilation --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --&gt;
+&lt;!ELEMENT IMG - O EMPTY&gt;
+&lt;!ATTLIST IMG
+        src     %URL;   #REQUIRED -- where to get image data --
+        align   (top|middle|bottom) top  -- top, middle or bottom --
+        seethru CDATA   #IMPLIED  -- for chromakey --
+        alt     CDATA   #IMPLIED -- description for text-only displays --
+        ismap   (ismap) #IMPLIED  -- send mouse clicks/drags to server --&gt;
+&lt;!ELEMENT IMAGE - - (A|%text;)*&gt;
+&lt;!ATTLIST IMAGE
+        src     %URL;   #REQUIRED -- where to get image data --
+        align   (top|middle|bottom) top  -- top, middle or bottom --
+        seethru CDATA   #IMPLIED  -- for transparency --
+        ismap   (ismap) #IMPLIED  -- send mouse clicks/drags to server --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --&gt;
+
+&lt;!-- proposal for representing formulae --&gt;
+&lt;!ELEMENT MATH - - (%math;)*&gt;
+&lt;!ATTLIST MATH id ID #IMPLIED&gt;
+&lt;!ELEMENT BOX - - ((%math;)*, OVER?, (%math;)*)&gt;
+&lt;!ELEMENT OVER - O EMPTY&gt;
+
+&lt;!ELEMENT CHANGED - O EMPTY -- for change bars --&gt;
+&lt;!ATTLIST CHANGED -- one of id and idref is always required --
+        id      ID      #IMPLIED -- signals start of changes --
+        idref   IDREF   #IMPLIED -- signals end of changes --&gt;
+
+&lt;!-- Hypertext Links from points within document nodes --&gt;
+&lt;!ELEMENT A - - (#PCDATA | IMG | EM | EMBED)*&gt;
+&lt;!ATTLIST A
+        id      ID      #IMPLIED -- as target of link --
+        name    CDATA   #IMPLIED -- for backwards compatibility with HTML--
+        shape   CDATA   #IMPLIED -- list of points for shaped buttons --
+        href    %URL;   #IMPLIED -- destination node --
+        rel     CDATA   #IMPLIED -- forward relationship type --
+        rev     CDATA   #IMPLIED -- reverse relationship type --
+        methods CDATA   #IMPLIED -- supported public methods --
+        effect  CDATA   #IMPLIED -- replace/new/overlay/embed --
+        print   CDATA   #IMPLIED -- reference/footnote/section --
+        title   CDATA   #IMPLIED -- when otherwise unavailable --
+        type    CDATA   #IMPLIED -- for presentation cues --
+        size    NAMES   #IMPLIED -- for progress cues --
+        lang    CDATA   #IMPLIED -- ISO language abbreviation --&gt;
+&lt;!-- Other kinds of relationships between documents --&gt;
+&lt;!ELEMENT LINK - O EMPTY&gt;
+
+&lt;!ATTLIST LINK
+        idref  IDREF    #IMPLIED -- starting point --
+        href    %URL;   #IMPLIED -- destination node --
+        rel    CDATA    #IMPLIED -- forward relationship type --
+        rev    CDATA    #IMPLIED -- reverse relationship type --
+        methods CDATA   #IMPLIED -- supported public methods --&gt;
+
+&lt;!-- Original document URL for resolving relative URLs  --&gt;
+&lt;!ELEMENT BASE - O EMPTY&gt;
+&lt;!ATTLIST BASE HREF %URL; #IMPLIED&gt;
+&lt;!-- Signifies the document's URL accepts queries --&gt;
+&lt;!ELEMENT ISINDEX - O (EMPTY)&gt;
+&lt;!ATTLIST ISINDEX href %URL; #IMPLIED -- defaults to document's URL --&gt;
+&lt;!-- For use with autonumbering editors - don't reuse ids, allocate next one 
+starting from this one --&gt;
+&lt;!ELEMENT NEXTID - O (EMPTY)&gt;
+&lt;!ATTLIST NEXTID N NAME #REQUIRED&gt;
+
+&lt;!-- Mnemonic character entities for 8 bit ANSI Latin-1 
+     ignore when using other character sets --&gt;
+&lt;!ENTITY iexcl "&amp;#161;" -- inverted exclamation mark --&gt;
+&lt;!ENTITY cent "&amp;#161;" -- cent sign --&gt;
+&lt;!ENTITY pound "&amp;#163;" -- pound sign --&gt;
+&lt;!ENTITY yen "&amp;#165;" -- yen sign --&gt;
+&lt;!ENTITY brvbar "&amp;#166;" -- broken vertical bar --&gt;
+&lt;!ENTITY sect "&amp;#167;" -- section sign --&gt;
+&lt;!ENTITY copy "&amp;#169;" -- copyright sign --&gt;
+&lt;!ENTITY laquo "&amp;#171;" -- angle quotation mark, left --&gt;
+&lt;!ENTITY raquo "&amp;#187;" -- angle quotation mark, right --&gt;
+&lt;!ENTITY not "&amp;#172;" -- negation sign --&gt;
+&lt;!ENTITY reg "&amp;#174;" -- circled R registered sign --&gt;
+&lt;!ENTITY deg "&amp;#176;" -- degree sign --&gt;
+&lt;!ENTITY plusmn "&amp;#177;" -- plus or minus sign --&gt;
+&lt;!ENTITY sup2 "&amp;#178;" -- superscript 2 --&gt;
+&lt;!ENTITY sup3 "&amp;#179;" -- superscript 3 --&gt;
+&lt;!ENTITY micro "&amp;#181;" -- micro sign --&gt;
+&lt;!ENTITY para "&amp;#182;" -- paragraph sign --&gt;
+&lt;!ENTITY sup1 "&amp;#185;" -- superscript 1 --&gt;
+&lt;!ENTITY middot "&amp;#183;" -- center dot --&gt;
+&lt;!ENTITY frac14 "&amp;#188;" -- fraction 1/4 --&gt;
+&lt;!ENTITY frac12 "&amp;#189;" -- fraction 1/2 --&gt;
+&lt;!ENTITY iquest "&amp;#191;" -- inverted question mark --&gt;
+&lt;!ENTITY frac34 "&amp;#190;" -- fraction 3/4 --&gt;
+&lt;!ENTITY AElig "&amp;#198;" -- capital AE diphthong (ligature) --&gt;
+&lt;!ENTITY Aacute "&amp;#193;" -- capital A, acute accent --&gt;
+&lt;!ENTITY Acirc "&amp;#194;" -- capital A, circumflex accent --&gt;
+&lt;!ENTITY Agrave "&amp;#192;" -- capital A, grave accent --&gt;
+&lt;!ENTITY Aring "&amp;#197;" -- capital A, ring --&gt;
+&lt;!ENTITY Atilde "&amp;#195;" -- capital A, tilde --&gt;
+&lt;!ENTITY Auml "&amp;#196;" -- capital A, dieresis or umlaut mark --&gt;
+&lt;!ENTITY Ccedil "&amp;#199;" -- capital C, cedilla --&gt;
+&lt;!ENTITY ETH "&amp;#208;" -- capital Eth, Icelandic --&gt;
+&lt;!ENTITY Eacute "&amp;#201;" -- capital E, acute accent --&gt;
+&lt;!ENTITY Ecirc "&amp;#202;" -- capital E, circumflex accent --&gt;
+&lt;!ENTITY Egrave "&amp;#200;" -- capital E, grave accent --&gt;
+&lt;!ENTITY Euml "&amp;#203;" -- capital E, dieresis or umlaut mark --&gt;
+&lt;!ENTITY Iacute "&amp;#205;" -- capital I, acute accent --&gt;
+&lt;!ENTITY Icirc "&amp;#206;" -- capital I, circumflex accent --&gt;
+&lt;!ENTITY Igrave "&amp;#204;" -- capital I, grave accent --&gt;
+&lt;!ENTITY Iuml "&amp;#207;" -- capital I, dieresis or umlaut mark --&gt;
+&lt;!ENTITY Ntilde "&amp;#209;" -- capital N, tilde --&gt;
+&lt;!ENTITY Oacute "&amp;#211;" -- capital O, acute accent --&gt;
+&lt;!ENTITY Ocirc "&amp;#212;" -- capital O, circumflex accent --&gt;
+&lt;!ENTITY Ograve "&amp;#210;" -- capital O, grave accent --&gt;
+&lt;!ENTITY Oslash "&amp;#216;" -- capital O, slash --&gt;
+&lt;!ENTITY Otilde "&amp;#213;" -- capital O, tilde --&gt;
+&lt;!ENTITY Ouml "&amp;#214;" -- capital O, dieresis or umlaut mark --&gt;
+&lt;!ENTITY THORN "&amp;#222;" -- capital THORN, Icelandic --&gt;
+&lt;!ENTITY Uacute "&amp;#218;" -- capital U, acute accent --&gt;
+&lt;!ENTITY Ucirc "&amp;#219;" -- capital U, circumflex accent --&gt;
+&lt;!ENTITY Ugrave "&amp;#217;" -- capital U, grave accent --&gt;
+&lt;!ENTITY Uuml "&amp;#220;" -- capital U, dieresis or umlaut mark --&gt;
+&lt;!ENTITY Yacute "&amp;#221;" -- capital Y, acute accent --&gt;
+&lt;!ENTITY aacute "&amp;#225;" -- small a, acute accent --&gt;
+&lt;!ENTITY acirc "&amp;#226;" -- small a, circumflex accent --&gt;
+&lt;!ENTITY aelig "&amp;#230;" -- small ae diphthong (ligature) --&gt;
+&lt;!ENTITY agrave "&amp;#224;" -- small a, grave accent --&gt;
+&lt;!ENTITY amp "&amp;amp;" -- ampersand --&gt;
+&lt;!ENTITY aring "&amp;#229;" -- small a, ring --&gt;
+&lt;!ENTITY atilde "&amp;#227;" -- small a, tilde --&gt;
+&lt;!ENTITY auml "&amp;#228;" -- small a, dieresis or umlaut mark --&gt;
+&lt;!ENTITY ccedil "&amp;#231;" -- small c, cedilla --&gt;
+&lt;!ENTITY eacute "&amp;#233;" -- small e, acute accent --&gt;
+&lt;!ENTITY ecirc "&amp;#234;" -- small e, circumflex accent --&gt;
+&lt;!ENTITY egrave "&amp;#232;" -- small e, grave accent --&gt;
+&lt;!ENTITY eth "&amp;#240;" -- small eth, Icelandic --&gt;
+&lt;!ENTITY euml "&amp;#235;" -- small e, dieresis or umlaut mark --&gt;
+&lt;!ENTITY gt "&amp;#62;" -- greater than --&gt;
+&lt;!ENTITY iacute "&amp;#237;" -- small i, acute accent --&gt;
+&lt;!ENTITY icirc "&amp;#238;" -- small i, circumflex accent --&gt;
+&lt;!ENTITY igrave "&amp;#236;" -- small i, grave accent --&gt;
+&lt;!ENTITY iuml "&amp;#239;" -- small i, dieresis or umlaut mark --&gt;
+&lt;!ENTITY lt "&amp;lt;" -- less than --&gt;
+&lt;!ENTITY ntilde "&amp;#241;" -- small n, tilde --&gt;
+&lt;!ENTITY oacute "&amp;#243;" -- small o, acute accent --&gt;
+&lt;!ENTITY ocirc "&amp;#244;" -- small o, circumflex accent --&gt;
+&lt;!ENTITY ograve "&amp;#242;" -- small o, grave accent --&gt;
+&lt;!ENTITY oslash "&amp;#248;" -- small o, slash --&gt;
+&lt;!ENTITY otilde "&amp;#245;" -- small o, tilde --&gt;
+&lt;!ENTITY ouml "&amp;#246;" -- small o, dieresis or umlaut mark --&gt;
+&lt;!ENTITY szlig "&amp;#223;" -- small sharp s, German (sz ligature) --&gt;
+&lt;!ENTITY thorn "&amp;#254;" -- small thorn, Icelandic --&gt;
+&lt;!ENTITY uacute "&amp;#250;" -- small u, acute accent --&gt;
+&lt;!ENTITY ucirc "&amp;#251;" -- small u, circumflex accent --&gt;
+&lt;!ENTITY ugrave "&amp;#249;" -- small u, grave accent --&gt;
+&lt;!ENTITY uuml "&amp;#252;" -- small u, dieresis or umlaut mark --&gt;
+&lt;!ENTITY yacute "&amp;#253;" -- small y, acute accent --&gt;
+&lt;!ENTITY yuml "&amp;#255;" -- small y, dieresis or umlaut mark --&gt;
+
+&lt;!-- The END --&gt;
+]&gt;
+</PRE>
+<HR>
+<ADDRESS>HTML+ Discussion Document - November 8, 1993</ADDRESS><P>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_1.html">[Up]</A> <A HREF="htmlplus_59.html">[Next]</A> <A HREF="htmlplus_57.html">[Previous]</A> <P>
+</BODY>

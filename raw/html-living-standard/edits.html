@@ -1,0 +1,345 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><meta content="light dark" name=color-scheme><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=https://html.spec.whatwg.org/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  
+  
+  <script defer="" crossorigin="" src=/html-dfn.js></script>
+  <script defer="" crossorigin="" src=https://html.spec.whatwg.org/var-click-highlighting.js></script>
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" class=darkmode-aware src=https://resources.whatwg.org/logo.svg height=100></a>
+   <hgroup><h1 class=allcaps>HTML</h1><p id=living-standard>Living Standard — Last Updated <span class=pubdate>20 July 2026</span></hgroup>
+   
+   
+
+   
+  </header>
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <nav><a href=links.html>← 4.6 Links</a> — <a href=./>Table of Contents</a> — <a href=embedded-content.html>4.8 Embedded content →</a></nav><ol class=toc><li id=toc-semantics><ol><li><a href=edits.html#edits><span class=secno>4.7</span> Edits</a><ol><li><a href=edits.html#the-ins-element><span class=secno>4.7.1</span> The <code>ins</code> element</a><li><a href=edits.html#the-del-element><span class=secno>4.7.2</span> The <code>del</code> element</a><li><a href=edits.html#attributes-common-to-ins-and-del-elements><span class=secno>4.7.3</span> Attributes common to <code>ins</code> and <code>del</code> elements</a><li><a href=edits.html#edits-and-paragraphs><span class=secno>4.7.4</span> Edits and paragraphs</a><li><a href=edits.html#edits-and-lists><span class=secno>4.7.5</span> Edits and lists</a><li><a href=edits.html#edits-and-tables><span class=secno>4.7.6</span> Edits and tables</a></ol></ol></ol><h3 id=edits><span class=secno>4.7</span> Edits<a href=#edits class=self-link></a></h3>
+
+  <p>The <code id=edits:the-ins-element><a href=#the-ins-element>ins</a></code> and <code id=edits:the-del-element><a href=#the-del-element>del</a></code> elements represent edits to the document.</p>
+
+
+  <h4 id=the-ins-element><span class=secno>4.7.1</span> The <dfn data-dfn-type=element><code>ins</code></dfn> element<a href=#the-ins-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins title="The <ins> HTML element represents a range of text that has been added to a document. You can use the <del> element to similarly represent a range of text that has been deleted from the document.">Element/ins</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android unknown"><span>WebView Android</span><span>?</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=the-ins-element:concept-element-categories>Categories</a>:<dd><a id=the-ins-element:flow-content-2 href=dom.html#flow-content-2>Flow content</a>.<dd><a id=the-ins-element:phrasing-content-2 href=dom.html#phrasing-content-2>Phrasing content</a>.<dd><a id=the-ins-element:palpable-content-2 href=dom.html#palpable-content-2>Palpable content</a>.<dt><a href=dom.html#concept-element-contexts id=the-ins-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-ins-element:phrasing-content-2-2 href=dom.html#phrasing-content-2>phrasing content</a> is expected.<dt><a href=dom.html#concept-element-content-model id=the-ins-element:concept-element-content-model>Content model</a>:<dd><a id=the-ins-element:transparent href=dom.html#transparent>Transparent</a>.<dt><a href=dom.html#concept-element-tag-omission id=the-ins-element:concept-element-tag-omission>Tag omission in text/html</a>:<dd>Neither tag is omissible.<dt><a href=dom.html#concept-element-attributes id=the-ins-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-ins-element:global-attributes href=dom.html#global-attributes>Global attributes</a><dd><code id=the-ins-element:attr-mod-cite><a href=#attr-mod-cite>cite</a></code> —  Link to the source of the quotation or more information about the edit
+     <dd><code id=the-ins-element:attr-mod-datetime><a href=#attr-mod-datetime>datetime</a></code> —  Date and (optionally) time of the change
+     <dt><a href=dom.html#concept-element-accessibility-considerations id=the-ins-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-ins>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-ins>For implementers</a>.<dt><a href=dom.html#concept-element-sanitization id=the-ins-element:concept-element-sanitization>Sanitization</a>:<dd><a href=dynamic-markup-insertion.html#sanitizer-category-default id=the-ins-element:sanitizer-category-default>Default</a> with attributes <code id=the-ins-element:attr-mod-cite-2><a href=#attr-mod-cite>cite</a></code>, <code id=the-ins-element:attr-mod-datetime-2><a href=#attr-mod-datetime>datetime</a></code>.<dt><a href=dom.html#concept-element-dom id=the-ins-element:concept-element-dom>DOM interface</a>:<dd>Uses <code id=the-ins-element:htmlmodelement><a href=#htmlmodelement>HTMLModElement</a></code>.</dl>
+
+  <p>The <code id=the-ins-element:the-ins-element><a href=#the-ins-element>ins</a></code> element <a id=the-ins-element:represents href=dom.html#represents>represents</a> an addition to the document.</p>
+
+  <div class=example>
+
+   <p>The following represents the addition of a single paragraph:</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>aside</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>ins</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;</c-> I like fruit. <c- p>&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+ <c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>aside</c-><c- p>&gt;</c-></code></pre>
+
+   <p>As does the following, because everything in the <code id=the-ins-element:the-aside-element><a href=sections.html#the-aside-element>aside</a></code> element here counts as
+   <a id=the-ins-element:phrasing-content-2-3 href=dom.html#phrasing-content-2>phrasing content</a> and therefore there is just one <a id=the-ins-element:paragraph href=dom.html#paragraph>paragraph</a>:</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>aside</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>ins</c-><c- p>&gt;</c->
+  Apples are <c- p>&lt;</c-><c- f>em</c-><c- p>&gt;</c->tasty<c- p>&lt;/</c-><c- f>em</c-><c- p>&gt;</c->.
+ <c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>ins</c-><c- p>&gt;</c->
+  So are pears.
+ <c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>aside</c-><c- p>&gt;</c-></code></pre>
+
+  </div>
+
+  <p><code id=the-ins-element:the-ins-element-2><a href=#the-ins-element>ins</a></code> elements should not cross <a href=dom.html#paragraph id=the-ins-element:paragraph-2>implied paragraph</a>
+  boundaries.</p>
+
+  <div class=example>
+
+   <p>The following example represents the addition of two paragraphs, the second of which was
+   inserted in two parts. The first <code id=the-ins-element:the-ins-element-3><a href=#the-ins-element>ins</a></code> element in this example thus crosses a
+   paragraph boundary, which is considered poor form.</p>
+
+   <pre class=bad><code class='html'><c- p>&lt;</c-><c- f>aside</c-><c- p>&gt;</c->
+ <c- c>&lt;!-- don&apos;t do this --&gt;</c->
+ <c- p>&lt;</c-><c- f>ins</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2005-03-16 00:00Z&quot;</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;</c-> I like fruit. <c- p>&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+  Apples are <c- p>&lt;</c-><c- f>em</c-><c- p>&gt;</c->tasty<c- p>&lt;/</c-><c- f>em</c-><c- p>&gt;</c->.
+ <c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>ins</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2007-12-19 00:00Z&quot;</c-><c- p>&gt;</c->
+  So are pears.
+ <c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>aside</c-><c- p>&gt;</c-></code></pre>
+
+   <p>Here is a better way of marking this up. It uses more elements, but none of the elements cross
+   implied paragraph boundaries.</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>aside</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>ins</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2005-03-16 00:00Z&quot;</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;</c-> I like fruit. <c- p>&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+ <c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>ins</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2005-03-16 00:00Z&quot;</c-><c- p>&gt;</c->
+  Apples are <c- p>&lt;</c-><c- f>em</c-><c- p>&gt;</c->tasty<c- p>&lt;/</c-><c- f>em</c-><c- p>&gt;</c->.
+ <c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>ins</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2007-12-19 00:00Z&quot;</c-><c- p>&gt;</c->
+  So are pears.
+ <c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>aside</c-><c- p>&gt;</c-></code></pre>
+
+   
+
+  </div>
+
+
+  <h4 id=the-del-element><span class=secno>4.7.2</span> The <dfn data-dfn-type=element><code>del</code></dfn> element<a href=#the-del-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del title="The <del> HTML element represents a range of text that has been deleted from a document. This can be used when rendering &quot;track changes&quot; or source code diff information, for example. The <ins> element can be used for the opposite purpose: to indicate text that has been added to the document.">Element/del</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android unknown"><span>WebView Android</span><span>?</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=the-del-element:concept-element-categories>Categories</a>:<dd><a id=the-del-element:flow-content-2 href=dom.html#flow-content-2>Flow content</a>.<dd><a id=the-del-element:phrasing-content-2 href=dom.html#phrasing-content-2>Phrasing content</a>.<dd><a id=the-del-element:palpable-content-2 href=dom.html#palpable-content-2>Palpable content</a>.<dt><a href=dom.html#concept-element-contexts id=the-del-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-del-element:phrasing-content-2-2 href=dom.html#phrasing-content-2>phrasing content</a> is expected.<dt><a href=dom.html#concept-element-content-model id=the-del-element:concept-element-content-model>Content model</a>:<dd><a id=the-del-element:transparent href=dom.html#transparent>Transparent</a>.<dt><a href=dom.html#concept-element-tag-omission id=the-del-element:concept-element-tag-omission>Tag omission in text/html</a>:<dd>Neither tag is omissible.<dt><a href=dom.html#concept-element-attributes id=the-del-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-del-element:global-attributes href=dom.html#global-attributes>Global attributes</a><dd><code id=the-del-element:attr-mod-cite><a href=#attr-mod-cite>cite</a></code> —  Link to the source of the quotation or more information about the edit
+     <dd><code id=the-del-element:attr-mod-datetime><a href=#attr-mod-datetime>datetime</a></code> —  Date and (optionally) time of the change
+     <dt><a href=dom.html#concept-element-accessibility-considerations id=the-del-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-del>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-del>For implementers</a>.<dt><a href=dom.html#concept-element-sanitization id=the-del-element:concept-element-sanitization>Sanitization</a>:<dd><a href=dynamic-markup-insertion.html#sanitizer-category-default id=the-del-element:sanitizer-category-default>Default</a> with attributes <code id=the-del-element:attr-mod-cite-2><a href=#attr-mod-cite>cite</a></code>, <code id=the-del-element:attr-mod-datetime-2><a href=#attr-mod-datetime>datetime</a></code>.<dt><a href=dom.html#concept-element-dom id=the-del-element:concept-element-dom>DOM interface</a>:<dd>Uses <code id=the-del-element:htmlmodelement><a href=#htmlmodelement>HTMLModElement</a></code>.</dl>
+
+  <p>The <code id=the-del-element:the-del-element><a href=#the-del-element>del</a></code> element <a id=the-del-element:represents href=dom.html#represents>represents</a> a removal from the document.</p>
+
+  <p><code id=the-del-element:the-del-element-2><a href=#the-del-element>del</a></code> elements should not cross <a href=dom.html#paragraph id=the-del-element:paragraph>implied paragraph</a>
+  boundaries.</p>
+
+  <div class=example>
+
+   <p>The following shows a "to do" list where items that have been done are crossed-off with the
+   date and time of their completion.</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>h1</c-><c- p>&gt;</c->To Do<c- p>&lt;/</c-><c- f>h1</c-><c- p>&gt;</c->
+<c- p>&lt;</c-><c- f>ul</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;</c->Empty the dishwasher<c- p>&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;&lt;</c-><c- f>del</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2009-10-11T01:25-07:00&quot;</c-><c- p>&gt;</c->Watch Walter Lewin&apos;s lectures<c- p>&lt;/</c-><c- f>del</c-><c- p>&gt;&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;&lt;</c-><c- f>del</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2009-10-10T23:38-07:00&quot;</c-><c- p>&gt;</c->Download more tracks<c- p>&lt;/</c-><c- f>del</c-><c- p>&gt;&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;</c->Buy a printer<c- p>&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>ul</c-><c- p>&gt;</c-></code></pre>
+
+  </div>
+
+
+
+  <h4 id=attributes-common-to-ins-and-del-elements><span class=secno>4.7.3</span> Attributes common to <code id=attributes-common-to-ins-and-del-elements:the-ins-element><a href=#the-ins-element>ins</a></code> and <code id=attributes-common-to-ins-and-del-elements:the-del-element><a href=#the-del-element>del</a></code> elements<a href=#attributes-common-to-ins-and-del-elements class=self-link></a></h4>
+
+  <p>The <dfn data-dfn-for=ins,del id=attr-mod-cite data-dfn-type=element-attr><code>cite</code></dfn> attribute
+  may be used to specify the <a href=https://dom.spec.whatwg.org/#concept-document-url id="attributes-common-to-ins-and-del-elements:the-document's-address" data-x-internal="the-document's-address">URL</a> of a document that
+  explains the change. When that document is long, for instance the minutes of a meeting, authors
+  are encouraged to include a <a href=https://url.spec.whatwg.org/#concept-url-fragment id=attributes-common-to-ins-and-del-elements:concept-url-fragment data-x-internal=concept-url-fragment>fragment</a> pointing to the
+  specific part of that document that discusses the change.</p>
+
+  <p>If the <code id=attributes-common-to-ins-and-del-elements:attr-mod-cite><a href=#attr-mod-cite>cite</a></code> attribute is present, it must be a <a id=attributes-common-to-ins-and-del-elements:valid-url-potentially-surrounded-by-spaces href=urls-and-fetching.html#valid-url-potentially-surrounded-by-spaces>valid
+  URL potentially surrounded by spaces</a> that explains the change. To obtain
+  the corresponding citation link, the value of the attribute must be <a href=urls-and-fetching.html#encoding-parsing-a-url id=attributes-common-to-ins-and-del-elements:encoding-parsing-a-url>parsed</a> relative to the element's <a id=attributes-common-to-ins-and-del-elements:node-document href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>. User agents may
+  allow users to follow such citation links, but they are primarily intended for private use (e.g.,
+  by server-side scripts collecting statistics about a site's edits), not for readers.</p>
+
+
+  <p>The <dfn data-dfn-for=ins,del id=attr-mod-datetime data-dfn-type=element-attr><code>datetime</code></dfn>
+  attribute may be used to specify the time and date of the change.</p>
+
+  <p>If present, the <code id=attributes-common-to-ins-and-del-elements:attr-mod-datetime><a href=#attr-mod-datetime>datetime</a></code> attribute's value must be a
+  <a id=attributes-common-to-ins-and-del-elements:valid-date-string-with-optional-time href=common-microsyntaxes.html#valid-date-string-with-optional-time>valid date string with optional time</a>.</p>
+
+  
+
+  <div data-algorithm="">
+  <p>User agents must parse the <code id=attributes-common-to-ins-and-del-elements:attr-mod-datetime-2><a href=#attr-mod-datetime>datetime</a></code> attribute according
+  to the <a id=attributes-common-to-ins-and-del-elements:parse-a-date-or-time-string href=common-microsyntaxes.html#parse-a-date-or-time-string>parse a date or time string</a> algorithm. If that doesn't return a <a href=common-microsyntaxes.html#concept-date id=attributes-common-to-ins-and-del-elements:concept-date>date</a> or a <a href=common-microsyntaxes.html#concept-datetime id=attributes-common-to-ins-and-del-elements:concept-datetime>global date and time</a>,
+  then the modification has no associated timestamp (the value is non-conforming; it is not a
+  <a id=attributes-common-to-ins-and-del-elements:valid-date-string-with-optional-time-2 href=common-microsyntaxes.html#valid-date-string-with-optional-time>valid date string with optional time</a>). Otherwise, the modification is marked as
+  having been made at the given <a href=common-microsyntaxes.html#concept-date id=attributes-common-to-ins-and-del-elements:concept-date-2>date</a> or <a href=common-microsyntaxes.html#concept-datetime id=attributes-common-to-ins-and-del-elements:concept-datetime-2>global date and time</a>. If the given value is a <a href=common-microsyntaxes.html#concept-datetime id=attributes-common-to-ins-and-del-elements:concept-datetime-3>global date and time</a>, then user agents should use the associated
+  time-zone offset information to determine which time zone to present the given datetime in.</p>
+  </div>
+
+  
+
+  <p>This value may be shown to the user, but it is primarily intended for
+  private use.</p>
+
+  
+
+  <p>The <code id=attributes-common-to-ins-and-del-elements:the-ins-element-2><a href=#the-ins-element>ins</a></code> and <code id=attributes-common-to-ins-and-del-elements:the-del-element-2><a href=#the-del-element>del</a></code> elements must implement the
+  <code id=attributes-common-to-ins-and-del-elements:htmlmodelement><a href=#htmlmodelement>HTMLModElement</a></code> interface:</p>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLModElement title="The HTMLModElement interface provides special properties (beyond the regular methods and properties available through the HTMLElement interface they also have available to them by inheritance) for manipulating modification elements, that is <del> and <ins>.">HTMLModElement</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>3+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>6+</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android unknown"><span>WebView Android</span><span>?</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div><pre><code class='idl'>[<c- g>Exposed</c->=<c- n>Window</c->]
+<c- b>interface</c-> <dfn id='htmlmodelement' data-dfn-type='interface'><c- g>HTMLModElement</c-></dfn> : <a id='attributes-common-to-ins-and-del-elements:htmlelement' href='dom.html#htmlelement'><c- n>HTMLElement</c-></a> {
+  [<a id='attributes-common-to-ins-and-del-elements:htmlconstructor' href='dom.html#htmlconstructor'><c- g>HTMLConstructor</c-></a>] <c- g>constructor</c->();
+
+  [<a id='attributes-common-to-ins-and-del-elements:cereactions' href='custom-elements.html#cereactions'><c- g>CEReactions</c-></a>, <a href='common-dom-interfaces.html#xattr-reflecturl' id='attributes-common-to-ins-and-del-elements:xattr-reflecturl'><c- g>ReflectURL</c-></a>] <c- b>attribute</c-> <c- b>USVString</c-> <dfn data-dfn-for='HTMLModElement' id='dom-mod-cite' data-dfn-type='attribute'><c- g>cite</c-></dfn>;
+  [<a id='attributes-common-to-ins-and-del-elements:cereactions-2' href='custom-elements.html#cereactions'><c- g>CEReactions</c-></a>, <a href='common-dom-interfaces.html#xattr-reflect' id='attributes-common-to-ins-and-del-elements:xattr-reflect'><c- g>Reflect</c-></a>] <c- b>attribute</c-> <c- b>DOMString</c-> <dfn data-dfn-for='HTMLModElement' id='dom-mod-datetime' data-dfn-type='attribute'><c- g>dateTime</c-></dfn>;
+};</code></pre>
+
+  
+
+
+
+  <h4 id=edits-and-paragraphs><span class=secno>4.7.4</span> Edits and paragraphs<a href=#edits-and-paragraphs class=self-link></a></h4>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>Since the <code id=edits-and-paragraphs:the-ins-element><a href=#the-ins-element>ins</a></code> and <code id=edits-and-paragraphs:the-del-element><a href=#the-del-element>del</a></code> elements do not affect <a href=dom.html#paragraph id=edits-and-paragraphs:paragraph>paragraphing</a>, it is possible, in some cases where paragraphs are <a href=dom.html#paragraph id=edits-and-paragraphs:paragraph-2>implied</a> (without explicit <code id=edits-and-paragraphs:the-p-element><a href=grouping-content.html#the-p-element>p</a></code> elements), for an
+  <code id=edits-and-paragraphs:the-ins-element-2><a href=#the-ins-element>ins</a></code> or <code id=edits-and-paragraphs:the-del-element-2><a href=#the-del-element>del</a></code> element to span both an entire paragraph or other
+  non-<a id=edits-and-paragraphs:phrasing-content-2 href=dom.html#phrasing-content-2>phrasing content</a> elements and part of another paragraph. For example:</p>
+
+  <pre><code class='html'><c- p>&lt;</c-><c- f>section</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>ins</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;</c->
+   This is a paragraph that was inserted.
+  <c- p>&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+  This is another paragraph whose first sentence was inserted
+  at the same time as the paragraph above.
+ <c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;</c->
+ This is a second sentence, which was there all along.
+<c- p>&lt;/</c-><c- f>section</c-><c- p>&gt;</c-></code></pre>
+
+  <p>By only wrapping some paragraphs in <code id=edits-and-paragraphs:the-p-element-2><a href=grouping-content.html#the-p-element>p</a></code> elements, one can even get the end of one
+  paragraph, a whole second paragraph, and the start of a third paragraph to be covered by the same
+  <code id=edits-and-paragraphs:the-ins-element-3><a href=#the-ins-element>ins</a></code> or <code id=edits-and-paragraphs:the-del-element-3><a href=#the-del-element>del</a></code> element (though this is very confusing, and not considered
+  good practice):</p>
+
+  <pre class=bad><code class='html'><c- p>&lt;</c-><c- f>section</c-><c- p>&gt;</c->
+ This is the first paragraph. <c- p>&lt;</c-><c- f>ins</c-><c- p>&gt;</c->This sentence was
+ inserted.
+ <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;</c->This second paragraph was inserted.<c- p>&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+ This sentence was inserted too.<c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;</c-> This is the
+ third paragraph in this example.
+ <c- c>&lt;!-- (don&apos;t do this) --&gt;</c->
+<c- p>&lt;/</c-><c- f>section</c-><c- p>&gt;</c-></code></pre>
+
+  <p>However, due to the way <a href=dom.html#paragraph id=edits-and-paragraphs:paragraph-3>implied paragraphs</a> are defined, it is
+  not possible to mark up the end of one paragraph and the start of the very next one using the same
+  <code id=edits-and-paragraphs:the-ins-element-4><a href=#the-ins-element>ins</a></code> or <code id=edits-and-paragraphs:the-del-element-4><a href=#the-del-element>del</a></code> element. You instead have to use one (or two) <code id=edits-and-paragraphs:the-p-element-3><a href=grouping-content.html#the-p-element>p</a></code>
+  element(s) and two <code id=edits-and-paragraphs:the-ins-element-5><a href=#the-ins-element>ins</a></code> or <code id=edits-and-paragraphs:the-del-element-5><a href=#the-del-element>del</a></code> elements, as for example:</p>
+
+  <pre><code class='html'><c- p>&lt;</c-><c- f>section</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;</c->This is the first paragraph. <c- p>&lt;</c-><c- f>del</c-><c- p>&gt;</c->This sentence was
+ deleted.<c- p>&lt;/</c-><c- f>del</c-><c- p>&gt;&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;&lt;</c-><c- f>del</c-><c- p>&gt;</c->This sentence was deleted too.<c- p>&lt;/</c-><c- f>del</c-><c- p>&gt;</c-> That
+ sentence needed a separate <c- ni>&amp;lt;</c->del<c- ni>&amp;gt;</c-> element.<c- p>&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>section</c-><c- p>&gt;</c-></code></pre>
+
+  <p>Partly because of the confusion described above, authors are strongly encouraged to always mark
+  up all paragraphs with the <code id=edits-and-paragraphs:the-p-element-4><a href=grouping-content.html#the-p-element>p</a></code> element, instead of having <code id=edits-and-paragraphs:the-ins-element-6><a href=#the-ins-element>ins</a></code> or
+  <code id=edits-and-paragraphs:the-del-element-6><a href=#the-del-element>del</a></code> elements that cross <a href=dom.html#paragraph id=edits-and-paragraphs:paragraph-4>implied paragraphs</a>
+  boundaries.</p>
+
+
+  <h4 id=edits-and-lists><span class=secno>4.7.5</span> Edits and lists<a href=#edits-and-lists class=self-link></a></h4>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>The content models of the <code id=edits-and-lists:the-ol-element><a href=grouping-content.html#the-ol-element>ol</a></code> and <code id=edits-and-lists:the-ul-element><a href=grouping-content.html#the-ul-element>ul</a></code> elements do not allow
+  <code id=edits-and-lists:the-ins-element><a href=#the-ins-element>ins</a></code> and <code id=edits-and-lists:the-del-element><a href=#the-del-element>del</a></code> elements as children. Lists always represent all their
+  items, including items that would otherwise have been marked as deleted.</p>
+
+  <p>To indicate that an item is inserted or deleted, an <code id=edits-and-lists:the-ins-element-2><a href=#the-ins-element>ins</a></code> or <code id=edits-and-lists:the-del-element-2><a href=#the-del-element>del</a></code>
+  element can be wrapped around the contents of the <code id=edits-and-lists:the-li-element><a href=grouping-content.html#the-li-element>li</a></code> element. To indicate that an
+  item has been replaced by another, a single <code id=edits-and-lists:the-li-element-2><a href=grouping-content.html#the-li-element>li</a></code> element can have one or more
+  <code id=edits-and-lists:the-del-element-3><a href=#the-del-element>del</a></code> elements followed by one or more <code id=edits-and-lists:the-ins-element-3><a href=#the-ins-element>ins</a></code> elements.</p>
+
+  <div class=example>
+
+   <p>In the following example, a list that started empty had items added and removed from it over
+   time. The bits in the example that have been emphasized show the parts that are the "current"
+   state of the list. The list item numbers don't take into account the edits, though.</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>h1</c-><c- p>&gt;</c->Stop-ship bugs<c- p>&lt;/</c-><c- f>h1</c-><c- p>&gt;</c->
+<c- p>&lt;</c-><c- f>ol</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;&lt;</c-><c- f>ins</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2008-02-12T15:20Z&quot;</c-><c- p>&gt;</c-><em>Bug 225:
+ Rain detector doesn&apos;t work in snow</em><c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;&lt;</c-><c- f>del</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2008-03-01T20:22Z&quot;</c-><c- p>&gt;&lt;</c-><c- f>ins</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2008-02-14T12:02Z&quot;</c-><c- p>&gt;</c->Bug 228:
+ Water buffer overflows in April<c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;&lt;/</c-><c- f>del</c-><c- p>&gt;&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;&lt;</c-><c- f>ins</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2008-02-16T13:50Z&quot;</c-><c- p>&gt;</c-><em>Bug 230:
+ Water heater doesn&apos;t use renewable fuels</em><c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;&lt;</c-><c- f>del</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2008-02-20T21:15Z&quot;</c-><c- p>&gt;&lt;</c-><c- f>ins</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2008-02-16T14:25Z&quot;</c-><c- p>&gt;</c->Bug 232:
+ Carbon dioxide emissions detected after startup<c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;&lt;/</c-><c- f>del</c-><c- p>&gt;&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>ol</c-><c- p>&gt;</c-></code></pre>
+
+  </div>
+
+  <div class=example>
+
+   <p>In the following example, a list that started with just fruit was replaced by a list with just
+   colors.</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>h1</c-><c- p>&gt;</c->List of <c- p>&lt;</c-><c- f>del</c-><c- p>&gt;</c->fruits<c- p>&lt;/</c-><c- f>del</c-><c- p>&gt;&lt;</c-><c- f>ins</c-><c- p>&gt;</c->colors<c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;&lt;/</c-><c- f>h1</c-><c- p>&gt;</c->
+<c- p>&lt;</c-><c- f>ul</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;&lt;</c-><c- f>del</c-><c- p>&gt;</c->Lime<c- p>&lt;/</c-><c- f>del</c-><c- p>&gt;&lt;</c-><c- f>ins</c-><c- p>&gt;</c->Green<c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;&lt;</c-><c- f>del</c-><c- p>&gt;</c->Apple<c- p>&lt;/</c-><c- f>del</c-><c- p>&gt;&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;</c->Orange<c- p>&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;&lt;</c-><c- f>del</c-><c- p>&gt;</c->Pear<c- p>&lt;/</c-><c- f>del</c-><c- p>&gt;&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;&lt;</c-><c- f>ins</c-><c- p>&gt;</c->Teal<c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;&lt;</c-><c- f>del</c-><c- p>&gt;</c->Lemon<c- p>&lt;/</c-><c- f>del</c-><c- p>&gt;&lt;</c-><c- f>ins</c-><c- p>&gt;</c->Yellow<c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;</c->Olive<c- p>&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;&lt;</c-><c- f>ins</c-><c- p>&gt;</c->Purple<c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>ul</c-><c- p>&gt;</c-></code></pre>
+
+  </div>
+
+
+  <h4 id=edits-and-tables><span class=secno>4.7.6</span> Edits and tables<a href=#edits-and-tables class=self-link></a></h4>
+
+  <p><i>This section is non-normative.</i></p>
+
+  <p>The elements that form part of the table model have complicated content model requirements that
+  do not allow for the <code id=edits-and-tables:the-ins-element><a href=#the-ins-element>ins</a></code> and <code id=edits-and-tables:the-del-element><a href=#the-del-element>del</a></code> elements, so indicating edits to a
+  table can be difficult.</p>
+
+  <p>To indicate that an entire row or an entire column has been added or removed, the entire
+  contents of each cell in that row or column can be wrapped in <code id=edits-and-tables:the-ins-element-2><a href=#the-ins-element>ins</a></code> or <code id=edits-and-tables:the-del-element-2><a href=#the-del-element>del</a></code>
+  elements (respectively).</p>
+
+  <div class=example>
+
+   <p>Here, a table's row has been added:</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>table</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>thead</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>tr</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>th</c-><c- p>&gt;</c-> Game name           <c- p>&lt;</c-><c- f>th</c-><c- p>&gt;</c-> Game publisher   <c- p>&lt;</c-><c- f>th</c-><c- p>&gt;</c-> Verdict
+ <c- p>&lt;</c-><c- f>tbody</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>tr</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> Diablo 2            <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> Blizzard         <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> 8/10
+  <c- p>&lt;</c-><c- f>tr</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> Portal              <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> Valve            <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> 10/10
+<strong>  <c- p>&lt;</c-><c- f>tr</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>ins</c-><c- p>&gt;</c->Portal 2<c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>ins</c-><c- p>&gt;</c->Valve<c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>ins</c-><c- p>&gt;</c->10/10<c- p>&lt;/</c-><c- f>ins</c-><c- p>&gt;</c-></strong>
+<c- p>&lt;/</c-><c- f>table</c-><c- p>&gt;</c-></code></pre>
+
+   <p>Here, a column has been removed (the time at which it was removed is given also, as is a link
+   to the page explaining why):</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>table</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>thead</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>tr</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>th</c-><c- p>&gt;</c-> Game name           <c- p>&lt;</c-><c- f>th</c-><c- p>&gt;</c-> Game publisher   <c- p>&lt;</c-><c- f>th</c-><c- p>&gt;</c-> <strong><c- p>&lt;</c-><c- f>del</c-> <c- e>cite</c-><c- o>=</c-><c- s>&quot;/edits/r192&quot;</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2011-05-02 14:23Z&quot;</c-><c- p>&gt;</c->Verdict<c- p>&lt;/</c-><c- f>del</c-><c- p>&gt;</c-></strong>
+ <c- p>&lt;</c-><c- f>tbody</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>tr</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> Diablo 2            <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> Blizzard         <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> <strong><c- p>&lt;</c-><c- f>del</c-> <c- e>cite</c-><c- o>=</c-><c- s>&quot;/edits/r192&quot;</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2011-05-02 14:23Z&quot;</c-><c- p>&gt;</c->8/10<c- p>&lt;/</c-><c- f>del</c-><c- p>&gt;</c-></strong>
+  <c- p>&lt;</c-><c- f>tr</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> Portal              <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> Valve            <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> <strong><c- p>&lt;</c-><c- f>del</c-> <c- e>cite</c-><c- o>=</c-><c- s>&quot;/edits/r192&quot;</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2011-05-02 14:23Z&quot;</c-><c- p>&gt;</c->10/10<c- p>&lt;/</c-><c- f>del</c-><c- p>&gt;</c-></strong>
+  <c- p>&lt;</c-><c- f>tr</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> Portal 2            <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> Valve            <c- p>&lt;</c-><c- f>td</c-><c- p>&gt;</c-> <strong><c- p>&lt;</c-><c- f>del</c-> <c- e>cite</c-><c- o>=</c-><c- s>&quot;/edits/r192&quot;</c-> <c- e>datetime</c-><c- o>=</c-><c- s>&quot;2011-05-02 14:23Z&quot;</c-><c- p>&gt;</c->10/10<c- p>&lt;/</c-><c- f>del</c-><c- p>&gt;</c-></strong>
+<c- p>&lt;/</c-><c- f>table</c-><c- p>&gt;</c-></code></pre>
+
+  </div>
+
+  <p>Generally speaking, there is no good way to indicate more complicated edits (e.g. that a cell
+  was removed, moving all subsequent cells up or to the left).</p>
+
+
+
+
+  <nav><a href=links.html>← 4.6 Links</a> — <a href=./>Table of Contents</a> — <a href=embedded-content.html>4.8 Embedded content →</a></nav>

@@ -1,0 +1,1280 @@
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><meta content="light dark" name=color-scheme><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=https://html.spec.whatwg.org/styles.css crossorigin=""><script>
+   function toggleStatus(div) {
+     div.parentNode.classList.toggle('wrapped');
+   }
+   function setLinkFragment(link) {
+     link.hash = location.hash;
+   }
+  </script><body>
+  
+  
+  <script defer="" crossorigin="" src=/html-dfn.js></script>
+  <script defer="" crossorigin="" src=https://html.spec.whatwg.org/var-click-highlighting.js></script>
+  
+  <header id=head class="head with-buttons">
+   <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" class=darkmode-aware src=https://resources.whatwg.org/logo.svg height=100></a>
+   <hgroup><h1 class=allcaps>HTML</h1><p id=living-standard>Living Standard — Last Updated <span class=pubdate>20 July 2026</span></hgroup>
+   
+   
+
+   
+  </header>
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <nav><a href=form-control-infrastructure.html>← 4.10.18 Form control infrastructure</a> — <a href=./>Table of Contents</a> — <a href=scripting.html>4.12 Scripting →</a></nav><ol class=toc><li id=toc-semantics><ol><li><a href=interactive-elements.html#interactive-elements><span class=secno>4.11</span> Interactive elements</a><ol><li><a href=interactive-elements.html#the-details-element><span class=secno>4.11.1</span> The <code>details</code> element</a><li><a href=interactive-elements.html#the-summary-element><span class=secno>4.11.2</span> The <code>summary</code> element</a><li><a href=interactive-elements.html#commands><span class=secno>4.11.3</span> Commands</a><ol><li><a href=interactive-elements.html#facets-2><span class=secno>4.11.3.1</span> Facets</a><li><a href=interactive-elements.html#using-the-a-element-to-define-a-command><span class=secno>4.11.3.2</span> Using the <code>a</code> element to define a command</a><li><a href=interactive-elements.html#using-the-button-element-to-define-a-command><span class=secno>4.11.3.3</span> Using the <code>button</code> element to define a command</a><li><a href=interactive-elements.html#using-the-input-element-to-define-a-command><span class=secno>4.11.3.4</span> Using the <code>input</code> element to define a command</a><li><a href=interactive-elements.html#using-the-option-element-to-define-a-command><span class=secno>4.11.3.5</span> Using the <code>option</code> element to define a command</a><li><a href=interactive-elements.html#using-the-accesskey-attribute-on-a-legend-element-to-define-a-command><span class=secno>4.11.3.6</span> Using the <code>accesskey</code> attribute
+  on a <code>legend</code> element to define a command</a><li><a href=interactive-elements.html#using-the-accesskey-attribute-to-define-a-command-on-other-elements><span class=secno>4.11.3.7</span> Using the <code>accesskey</code>
+  attribute to define a command on other elements</a></ol><li><a href=interactive-elements.html#the-dialog-element><span class=secno>4.11.4</span> The <code>dialog</code> element</a><li><a href=interactive-elements.html#dialog-light-dismiss><span class=secno>4.11.5</span> Dialog light dismiss</a></ol></ol></ol><h3 id=interactive-elements><span class=secno>4.11</span> Interactive elements<a href=#interactive-elements class=self-link></a></h3>
+
+  <h4 id=the-details-element><span class=secno>4.11.1</span> The <dfn data-dfn-type=element><code>details</code></dfn> element<a href=#the-details-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details title="The <details> HTML element creates a disclosure widget in which information is visible only when the widget is toggled into an &quot;open&quot; state. A summary or label must be provided using the <summary> element.">Element/details</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>49+</span></span><span class="safari yes"><span>Safari</span><span>6+</span></span><span class="chrome yes"><span>Chrome</span><span>12+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge unknown"><span>Edge (Legacy)</span><span>?</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>49+</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android unknown"><span>WebView Android</span><span>?</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement title="The HTMLDetailsElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <details> elements.">HTMLDetailsElement</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>49+</span></span><span class="safari yes"><span>Safari</span><span>6+</span></span><span class="chrome yes"><span>Chrome</span><span>10+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge unknown"><span>Edge (Legacy)</span><span>?</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement/open title="The open property of the HTMLDetailsElement interface is a boolean value reflecting the open HTML attribute, indicating whether the <details>'s contents (not counting the <summary>) is to be shown to the user.">HTMLDetailsElement/open</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>49+</span></span><span class="safari yes"><span>Safari</span><span>6+</span></span><span class="chrome yes"><span>Chrome</span><span>10+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge unknown"><span>Edge (Legacy)</span><span>?</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div><dl class=element><dt><a href=dom.html#concept-element-categories id=the-details-element:concept-element-categories>Categories</a>:<dd><a id=the-details-element:flow-content-2 href=dom.html#flow-content-2>Flow content</a>.<dd><a id=the-details-element:interactive-content-2 href=dom.html#interactive-content-2>Interactive content</a>.<dd><a id=the-details-element:palpable-content-2 href=dom.html#palpable-content-2>Palpable content</a>.<dt><a href=dom.html#concept-element-contexts id=the-details-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-details-element:flow-content-2-2 href=dom.html#flow-content-2>flow content</a> is expected.<dt><a href=dom.html#concept-element-content-model id=the-details-element:concept-element-content-model>Content model</a>:<dd>One <code id=the-details-element:the-summary-element><a href=#the-summary-element>summary</a></code> element followed by <a id=the-details-element:flow-content-2-3 href=dom.html#flow-content-2>flow content</a>.<dt><a href=dom.html#concept-element-tag-omission id=the-details-element:concept-element-tag-omission>Tag omission in text/html</a>:<dd>Neither tag is omissible.<dt><a href=dom.html#concept-element-attributes id=the-details-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-details-element:global-attributes href=dom.html#global-attributes>Global attributes</a><dd><code id=the-details-element:attr-details-name><a href=#attr-details-name>name</a></code> —  Name of group of mutually-exclusive <code id=the-details-element:the-details-element><a href=#the-details-element>details</a></code> elements
+     <dd><code id=the-details-element:attr-details-open><a href=#attr-details-open>open</a></code> —  Whether the details are visible
+     <dt><a href=dom.html#concept-element-accessibility-considerations id=the-details-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-details>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-details>For implementers</a>.<dt><a href=dom.html#concept-element-sanitization id=the-details-element:concept-element-sanitization>Sanitization</a>:<dd><a href=dynamic-markup-insertion.html#sanitizer-uncategorized id=the-details-element:sanitizer-uncategorized>Uncategorized</a>.<dt><a href=dom.html#concept-element-dom id=the-details-element:concept-element-dom>DOM interface</a>:<dd>
+    <pre><code class='idl'>[<c- g>Exposed</c->=<c- n>Window</c->]
+<c- b>interface</c-> <dfn id='htmldetailselement' data-dfn-type='interface'><c- g>HTMLDetailsElement</c-></dfn> : <a id='the-details-element:htmlelement' href='dom.html#htmlelement'><c- n>HTMLElement</c-></a> {
+  [<a id='the-details-element:htmlconstructor' href='dom.html#htmlconstructor'><c- g>HTMLConstructor</c-></a>] <c- g>constructor</c->();
+
+  [<a id='the-details-element:cereactions' href='custom-elements.html#cereactions'><c- g>CEReactions</c-></a>, <a href='common-dom-interfaces.html#xattr-reflect' id='the-details-element:xattr-reflect'><c- g>Reflect</c-></a>] <c- b>attribute</c-> <c- b>DOMString</c-> <dfn data-dfn-for='HTMLDetailsElement' id='dom-details-name' data-dfn-type='attribute'><c- g>name</c-></dfn>;
+  [<a id='the-details-element:cereactions-2' href='custom-elements.html#cereactions'><c- g>CEReactions</c-></a>, <a href='common-dom-interfaces.html#xattr-reflect' id='the-details-element:xattr-reflect-2'><c- g>Reflect</c-></a>] <c- b>attribute</c-> <c- b>boolean</c-> <dfn data-dfn-for='HTMLDetailsElement' id='dom-details-open' data-dfn-type='attribute'><c- g>open</c-></dfn>;
+};</code></pre>
+   </dl>
+
+  <p>The <code id=the-details-element:the-details-element-2><a href=#the-details-element>details</a></code> element <a id=the-details-element:represents href=dom.html#represents>represents</a> a disclosure widget from which the
+  user can obtain additional information or controls.</p>
+
+  <p class=note>As with all HTML elements, it is not conforming to use the <code id=the-details-element:the-details-element-3><a href=#the-details-element>details</a></code>
+  element when attempting to represent another type of control. For example, tab widgets and
+  menu widgets are not disclosure widgets, so abusing the <code id=the-details-element:the-details-element-4><a href=#the-details-element>details</a></code> element to
+  implement these patterns is incorrect.</p>
+
+  <p class=note>The <code id=the-details-element:the-details-element-5><a href=#the-details-element>details</a></code> element is not appropriate for footnotes. Please see <a href=semantics-other.html#footnotes>the section on footnotes</a> for details on how to mark up footnotes.</p>
+
+  <p>The first <code id=the-details-element:the-summary-element-2><a href=#the-summary-element>summary</a></code> element child of the element, if any,
+  <a id=the-details-element:represents-2 href=dom.html#represents>represents</a> the summary or legend of the details. If there is no
+  child <code id=the-details-element:the-summary-element-3><a href=#the-summary-element>summary</a></code> element, the user agent should provide its own legend (e.g.
+  "Details").</p>
+
+  <p>The rest of the element's contents <a id=the-details-element:represents-3 href=dom.html#represents>represents</a> the additional information or
+  controls.</p>
+
+  <p>The <dfn data-dfn-for=details id=attr-details-name data-dfn-type=element-attr><code>name</code></dfn> content
+  attribute gives the name of the group of related <code id=the-details-element:the-details-element-6><a href=#the-details-element>details</a></code> elements that the element is
+  a member of. Opening one member of this group causes other members of the group to close. If the
+  attribute is specified, its value must not be the empty string.</p>
+
+  <p>Before using this feature, authors should consider whether this grouping of related
+  <code id=the-details-element:the-details-element-7><a href=#the-details-element>details</a></code> elements into an exclusive accordion is helpful or harmful to users.
+  While using an exclusive accordion can reduce the maximum amount of space that a set of content
+  can occupy, it can also frustrate users who have to open many items to find what they want or
+  users who want to look at the contents of multiple items at the same time.</p>
+
+  <p>A document must not contain more than one <code id=the-details-element:the-details-element-8><a href=#the-details-element>details</a></code> element in the same
+  <a href=#details-name-group id=the-details-element:details-name-group>details name group</a> that has the <code id=the-details-element:attr-details-open-2><a href=#attr-details-open>open</a></code>
+  attribute present.  Authors must not use script to add <code id=the-details-element:the-details-element-9><a href=#the-details-element>details</a></code> elements to a document
+  in a way that would cause a <a href=#details-name-group id=the-details-element:details-name-group-2>details name group</a> to have more than one
+  <code id=the-details-element:the-details-element-10><a href=#the-details-element>details</a></code> element with the <code id=the-details-element:attr-details-open-3><a href=#attr-details-open>open</a></code> attribute
+  present.</p>
+
+  <p class=note>The group of elements that is created by a common <code id=the-details-element:attr-details-name-2><a href=#attr-details-name>name</a></code> attribute is exclusive, meaning that at most one of the
+  <code id=the-details-element:the-details-element-11><a href=#the-details-element>details</a></code> elements can be open at once.  While this exclusivity is enforced by user
+  agents, the resulting enforcement immediately changes the <code id=the-details-element:attr-details-open-4><a href=#attr-details-open>open</a></code> attributes in the markup.  This requirement on authors
+  forbids such misleading markup.</p>
+
+  <p>A document must not contain a <code id=the-details-element:the-details-element-12><a href=#the-details-element>details</a></code> element that is a descendant of another
+  <code id=the-details-element:the-details-element-13><a href=#the-details-element>details</a></code> element in the same <a href=#details-name-group id=the-details-element:details-name-group-3>details name group</a>.</p>
+
+  <p>Documents that use the <code id=the-details-element:attr-details-name-3><a href=#attr-details-name>name</a></code> attribute to group multiple
+  related <code id=the-details-element:the-details-element-14><a href=#the-details-element>details</a></code> elements should keep those related elements together in a containing
+  element (such as a <code id=the-details-element:the-section-element><a href=sections.html#the-section-element>section</a></code> element or <code id=the-details-element:the-article-element><a href=sections.html#the-article-element>article</a></code> element). When it makes
+  sense for the group to be introduced with a heading, authors should put that heading in a <a href=sections.html#concept-heading id=the-details-element:concept-heading>heading</a> element at the start of the containing element.</p>
+
+  <p class=note>Visually and programmatically grouping related elements together can be important
+  for accessible user experiences. This can help users understand the relationship between such
+  elements. When related elements are in disparate sections of a web page rather than being grouped,
+  the elements' relationships to each other can be less discoverable or understandable.</p>
+
+  <p>The <dfn data-dfn-for=details id=attr-details-open data-dfn-type=element-attr><code>open</code></dfn> content
+  attribute is a <a id=the-details-element:boolean-attribute href=common-microsyntaxes.html#boolean-attribute>boolean attribute</a>. If present, it indicates that both the summary and
+  the additional information is to be shown to the user. If the attribute is absent, only the
+  summary is to be shown.</p>
+
+  
+
+  <p>When the element is created, if the attribute is absent, the additional information should be
+  hidden; if the attribute is present, that information should be shown. Subsequently, if the
+  attribute is removed, then the information should be hidden; if the attribute is added, the
+  information should be shown.</p>
+
+  <p>The user agent should allow the user to request that the additional information be shown or
+  hidden. To honor a request for the details to be shown, the user agent must <a href=https://dom.spec.whatwg.org/#concept-element-attributes-set-value id=the-details-element:concept-element-attributes-set-value data-x-internal=concept-element-attributes-set-value>set</a> the <code id=the-details-element:attr-details-open-5><a href=#attr-details-open>open</a></code> attribute on the element to the empty string. To honor a
+  request for the information to be hidden, the user agent must <a href=https://dom.spec.whatwg.org/#concept-element-attributes-remove id=the-details-element:concept-element-attributes-remove data-x-internal=concept-element-attributes-remove>remove</a> the <code id=the-details-element:attr-details-open-6><a href=#attr-details-open>open</a></code> attribute from the element.</p>
+
+  <p class=note>This ability to request that additional information be shown or hidden
+  may simply be the <a id=the-details-element:activation-behaviour href=https://dom.spec.whatwg.org/#eventtarget-activation-behavior data-x-internal=activation-behaviour>activation behavior</a> of the appropriate
+  <code id=the-details-element:the-summary-element-4><a href=#the-summary-element>summary</a></code> element, in the case such an element exists. However, if no such element
+  exists, user agents can still provide this ability through some other user interface
+  affordance.</p>
+
+  <div data-algorithm="">
+  <p>The <dfn id=details-name-group>details name group</dfn> that contains a <code id=the-details-element:the-details-element-15><a href=#the-details-element>details</a></code> element <var>a</var>
+  also contains all the other <code id=the-details-element:the-details-element-16><a href=#the-details-element>details</a></code> elements <var>b</var> that fulfill all of the
+  following conditions:</p>
+
+  <ul><li>Both <var>a</var> and <var>b</var> are in the same <a id=the-details-element:tree href=https://dom.spec.whatwg.org/#concept-tree data-x-internal=tree>tree</a>.<li>They both have a <code id=the-details-element:attr-details-name-4><a href=#attr-details-name>name</a></code> attribute, their <code id=the-details-element:attr-details-name-5><a href=#attr-details-name>name</a></code> attributes are not the empty string, and the value of
+   <var>a</var>'s <code id=the-details-element:attr-details-name-6><a href=#attr-details-name>name</a></code> attribute equals the value of
+   <var>b</var>'s <code id=the-details-element:attr-details-name-7><a href=#attr-details-name>name</a></code> attribute.</ul>
+  </div>
+
+  <p>Every <code id=the-details-element:the-details-element-17><a href=#the-details-element>details</a></code> element has a <dfn id=details-toggle-task-tracker>details toggle task tracker</dfn>, which is a
+  <a id=the-details-element:toggle-task-tracker href=interaction.html#toggle-task-tracker>toggle task tracker</a> or null, initially null.</p>
+
+  <div data-algorithm="">
+  <p>The following <a href=https://dom.spec.whatwg.org/#concept-element-attributes-change-ext id=the-details-element:concept-element-attributes-change-ext data-x-internal=concept-element-attributes-change-ext>attribute change
+  steps</a>, given <var>element</var>, <var>localName</var>, <var>oldValue</var>,
+  <var>value</var>, and <var>namespace</var>, are used for all <code id=the-details-element:the-details-element-18><a href=#the-details-element>details</a></code> elements:</p>
+
+  <ol><li><p>If <var>namespace</var> is not null, then return.<li><p>If <var>localName</var> is <code id=the-details-element:attr-details-name-8><a href=#attr-details-name>name</a></code>, then <a href=#ensure-details-exclusivity-by-closing-the-given-element-if-needed id=the-details-element:ensure-details-exclusivity-by-closing-the-given-element-if-needed>ensure
+   details exclusivity by closing the given element if needed</a> given
+   <var>element</var>.<li><p>If <var>localName</var> is <code id=the-details-element:attr-details-open-7><a href=#attr-details-open>open</a></code>:
+    <ol><li>
+      <p>If one of <var>oldValue</var> or <var>value</var> is null and the other is not null,
+      run the following steps, which are known as the <dfn id=details-notification-task-steps>details notification task steps</dfn>, for
+      this <code id=the-details-element:the-details-element-19><a href=#the-details-element>details</a></code> element:</p>
+
+      <p class=note>When the <code id=the-details-element:attr-details-open-8><a href=#attr-details-open>open</a></code> attribute is toggled
+      several times in succession, the resulting tasks essentially get coalesced so that only one
+      event is fired.</p>
+
+      <ol><li><p>If <var>oldValue</var> is null, <a href=#queue-a-details-toggle-event-task id=the-details-element:queue-a-details-toggle-event-task>queue a details toggle event task</a> given
+        the <code id=the-details-element:the-details-element-20><a href=#the-details-element>details</a></code> element, "<code>closed</code>", and "<code>open</code>".<li><p>Otherwise, <a href=#queue-a-details-toggle-event-task id=the-details-element:queue-a-details-toggle-event-task-2>queue a details toggle event task</a> given the
+        <code id=the-details-element:the-details-element-21><a href=#the-details-element>details</a></code> element, "<code>open</code>", and "<code>closed</code>".</ol>
+     <li><p>If <var>oldValue</var> is null and <var>value</var> is not null, then <a href=#ensure-details-exclusivity-by-closing-other-elements-if-needed id=the-details-element:ensure-details-exclusivity-by-closing-other-elements-if-needed>ensure
+     details exclusivity by closing other elements if needed</a> given
+     <var>element</var>.</ol>
+   </ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <code id=the-details-element:the-details-element-22><a href=#the-details-element>details</a></code> <a href=infrastructure.html#html-element-insertion-steps id=the-details-element:html-element-insertion-steps>HTML element insertion
+  steps</a>, given <var>insertedNode</var>, are:</p>
+
+  <ol><li><p><a href=#ensure-details-exclusivity-by-closing-the-given-element-if-needed id=the-details-element:ensure-details-exclusivity-by-closing-the-given-element-if-needed-2>Ensure details exclusivity by closing the given element if needed</a> given
+   <var>insertedNode</var>.</ol>
+  </div>
+
+  <p class=note>To be clear, these attribute change and insertion steps also run when an attribute
+  or element is inserted via the parser.</p>
+
+  <div data-algorithm="">
+  <p>To <dfn id=queue-a-details-toggle-event-task>queue a details toggle event task</dfn> given a <code id=the-details-element:the-details-element-23><a href=#the-details-element>details</a></code> element
+  <var>element</var>, a string <var>oldState</var>, and a string <var>newState</var>:
+
+  <ol><li>
+    <p>If <var>element</var>'s <a href=#details-toggle-task-tracker id=the-details-element:details-toggle-task-tracker>details toggle task tracker</a> is not null:</p>
+
+    <ol><li><p>Set <var>oldState</var> to <var>element</var>'s <a href=#details-toggle-task-tracker id=the-details-element:details-toggle-task-tracker-2>details toggle task
+     tracker</a>'s <a href=interaction.html#toggle-task-old-state id=the-details-element:toggle-task-old-state>old state</a>.<li><p>Remove <var>element</var>'s <a href=#details-toggle-task-tracker id=the-details-element:details-toggle-task-tracker-3>details toggle task tracker</a>'s <a href=interaction.html#toggle-task-task id=the-details-element:toggle-task-task>task</a> from its <a id=the-details-element:task-queue href=webappapis.html#task-queue>task queue</a>.<li><p>Set <var>element</var>'s <a href=#details-toggle-task-tracker id=the-details-element:details-toggle-task-tracker-4>details toggle task tracker</a> to null.</ol>
+   <li>
+    <p><a id=the-details-element:queue-an-element-task href=webappapis.html#queue-an-element-task>Queue an element task</a> given the <a id=the-details-element:dom-manipulation-task-source href=webappapis.html#dom-manipulation-task-source>DOM manipulation task source</a> and
+    <var>element</var> to run the following steps:</p>
+
+    <ol><li><p><a href=https://dom.spec.whatwg.org/#concept-event-fire id=the-details-element:concept-event-fire data-x-internal=concept-event-fire>Fire an event</a> named <code id=the-details-element:event-toggle><a href=indices.html#event-toggle>toggle</a></code> at <var>element</var>, using <code id=the-details-element:toggleevent><a href=interaction.html#toggleevent>ToggleEvent</a></code>, with
+     the <code id=the-details-element:dom-toggleevent-oldstate><a href=interaction.html#dom-toggleevent-oldstate>oldState</a></code> attribute initialized to
+     <var>oldState</var> and the <code id=the-details-element:dom-toggleevent-newstate><a href=interaction.html#dom-toggleevent-newstate>newState</a></code> attribute
+     initialized to <var>newState</var>.<li><p>Set <var>element</var>'s <a href=#details-toggle-task-tracker id=the-details-element:details-toggle-task-tracker-5>details toggle task tracker</a> to null.</ol>
+   <li><p>Set <var>element</var>'s <a href=#details-toggle-task-tracker id=the-details-element:details-toggle-task-tracker-6>details toggle task tracker</a> to a struct with <a href=interaction.html#toggle-task-task id=the-details-element:toggle-task-task-2>task</a> set to the just-queued <a href=webappapis.html#concept-task id=the-details-element:concept-task>task</a> and <a href=interaction.html#toggle-task-old-state id=the-details-element:toggle-task-old-state-2>old state</a> set
+   to <var>oldState</var>.</ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>To <dfn id=ensure-details-exclusivity-by-closing-other-elements-if-needed>ensure details exclusivity by closing other elements if needed</dfn> given a
+  <code id=the-details-element:the-details-element-24><a href=#the-details-element>details</a></code> element <var>element</var>:</p>
+
+  <ol><li><p><a id=the-details-element:assert href=https://infra.spec.whatwg.org/#assert data-x-internal=assert>Assert</a>: <var>element</var> has an <code id=the-details-element:attr-details-open-9><a href=#attr-details-open>open</a></code> attribute.<li><p>If <var>element</var> does not have a <code id=the-details-element:attr-details-name-9><a href=#attr-details-name>name</a></code>
+   attribute, or its <code id=the-details-element:attr-details-name-10><a href=#attr-details-name>name</a></code> attribute is the empty string,
+   then return.<li><p>Let <var>groupMembers</var> be a list of elements, containing all elements in
+   <var>element</var>'s <a href=#details-name-group id=the-details-element:details-name-group-4>details name group</a> except for <var>element</var>, in <a id=the-details-element:tree-order href=https://dom.spec.whatwg.org/#concept-tree-order data-x-internal=tree-order>tree
+   order</a>.<li>
+    <p><a href=https://infra.spec.whatwg.org/#list-iterate id=the-details-element:list-iterate data-x-internal=list-iterate>For each</a> element <var>otherElement</var> of
+    <var>groupMembers</var>:</p>
+    <ol><li>
+      <p>If the <code id=the-details-element:attr-details-open-10><a href=#attr-details-open>open</a></code> attribute is set on
+      <var>otherElement</var>:</p>
+
+      <ol><li><p><a id=the-details-element:assert-2 href=https://infra.spec.whatwg.org/#assert data-x-internal=assert>Assert</a>: <var>otherElement</var> is the only element in
+       <var>groupMembers</var> that has the <code id=the-details-element:attr-details-open-11><a href=#attr-details-open>open</a></code> attribute
+       set.<li><p><a href=https://dom.spec.whatwg.org/#concept-element-attributes-remove id=the-details-element:concept-element-attributes-remove-2 data-x-internal=concept-element-attributes-remove>Remove</a> the <code id=the-details-element:attr-details-open-12><a href=#attr-details-open>open</a></code> attribute on <var>otherElement</var>.<li><p><a id=the-details-element:break href=https://infra.spec.whatwg.org/#iteration-break data-x-internal=break>Break</a>.</ol>
+    </ol>
+   </ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>To <dfn id=ensure-details-exclusivity-by-closing-the-given-element-if-needed>ensure details exclusivity by closing the given element if needed</dfn> given a
+  <code id=the-details-element:the-details-element-25><a href=#the-details-element>details</a></code> element <var>element</var>:</p>
+
+  <ol><li><p>If <var>element</var> does not have an <code id=the-details-element:attr-details-open-13><a href=#attr-details-open>open</a></code>
+   attribute, then return.<li><p>If <var>element</var> does not have a <code id=the-details-element:attr-details-name-11><a href=#attr-details-name>name</a></code>
+   attribute, or its <code id=the-details-element:attr-details-name-12><a href=#attr-details-name>name</a></code> attribute is the empty string,
+   then return.<li><p>Let <var>groupMembers</var> be a list of elements, containing all elements in
+   <var>element</var>'s <a href=#details-name-group id=the-details-element:details-name-group-5>details name group</a> except for <var>element</var>, in <a id=the-details-element:tree-order-2 href=https://dom.spec.whatwg.org/#concept-tree-order data-x-internal=tree-order>tree
+   order</a>.<li>
+    <p><a href=https://infra.spec.whatwg.org/#list-iterate id=the-details-element:list-iterate-2 data-x-internal=list-iterate>For each</a> element <var>otherElement</var> of
+    <var>groupMembers</var>:</p>
+
+    <ol><li>
+      <p>If the <code id=the-details-element:attr-details-open-14><a href=#attr-details-open>open</a></code> attribute is set on
+      <var>otherElement</var>:</p>
+
+      <ol><li><p><a href=https://dom.spec.whatwg.org/#concept-element-attributes-remove id=the-details-element:concept-element-attributes-remove-3 data-x-internal=concept-element-attributes-remove>Remove</a> the <code id=the-details-element:attr-details-open-15><a href=#attr-details-open>open</a></code> attribute on <var>element</var>.<li><p><a id=the-details-element:break-2 href=https://infra.spec.whatwg.org/#iteration-break data-x-internal=break>Break</a>.</ol>
+     </ol>
+   </ol>
+  </div>
+
+  
+
+  <div class=example>
+
+   <p>The following example shows the <code id=the-details-element:the-details-element-26><a href=#the-details-element>details</a></code> element being used to hide technical
+   details in a progress report.</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>section</c-> <c- e>class</c-><c- o>=</c-><c- s>&quot;progress window&quot;</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>h1</c-><c- p>&gt;</c->Copying &quot;Really Achieving Your Childhood Dreams&quot;<c- p>&lt;/</c-><c- f>h1</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>details</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>summary</c-><c- p>&gt;</c->Copying... <c- p>&lt;</c-><c- f>progress</c-> <c- e>max</c-><c- o>=</c-><c- s>&quot;375505392&quot;</c-> <c- e>value</c-><c- o>=</c-><c- s>&quot;97543282&quot;</c-><c- p>&gt;&lt;/</c-><c- f>progress</c-><c- p>&gt;</c-> 25%<c- p>&lt;/</c-><c- f>summary</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>dl</c-><c- p>&gt;</c->
+   <c- p>&lt;</c-><c- f>dt</c-><c- p>&gt;</c->Transfer rate:<c- p>&lt;/</c-><c- f>dt</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>dd</c-><c- p>&gt;</c->452KB/s<c- p>&lt;/</c-><c- f>dd</c-><c- p>&gt;</c->
+   <c- p>&lt;</c-><c- f>dt</c-><c- p>&gt;</c->Local filename:<c- p>&lt;/</c-><c- f>dt</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>dd</c-><c- p>&gt;</c->/home/rpausch/raycd.m4v<c- p>&lt;/</c-><c- f>dd</c-><c- p>&gt;</c->
+   <c- p>&lt;</c-><c- f>dt</c-><c- p>&gt;</c->Remote filename:<c- p>&lt;/</c-><c- f>dt</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>dd</c-><c- p>&gt;</c->/var/www/lectures/raycd.m4v<c- p>&lt;/</c-><c- f>dd</c-><c- p>&gt;</c->
+   <c- p>&lt;</c-><c- f>dt</c-><c- p>&gt;</c->Duration:<c- p>&lt;/</c-><c- f>dt</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>dd</c-><c- p>&gt;</c->01:16:27<c- p>&lt;/</c-><c- f>dd</c-><c- p>&gt;</c->
+   <c- p>&lt;</c-><c- f>dt</c-><c- p>&gt;</c->Color profile:<c- p>&lt;/</c-><c- f>dt</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>dd</c-><c- p>&gt;</c->SD (6-1-6)<c- p>&lt;/</c-><c- f>dd</c-><c- p>&gt;</c->
+   <c- p>&lt;</c-><c- f>dt</c-><c- p>&gt;</c->Dimensions:<c- p>&lt;/</c-><c- f>dt</c-><c- p>&gt;</c-> <c- p>&lt;</c-><c- f>dd</c-><c- p>&gt;</c->320×240<c- p>&lt;/</c-><c- f>dd</c-><c- p>&gt;</c->
+  <c- p>&lt;/</c-><c- f>dl</c-><c- p>&gt;</c->
+ <c- p>&lt;/</c-><c- f>details</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>section</c-><c- p>&gt;</c-></code></pre>
+
+  </div>
+
+  <div class=example>
+
+   <p>The following shows how a <code id=the-details-element:the-details-element-27><a href=#the-details-element>details</a></code> element can be used to hide some controls by
+   default:</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>details</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>summary</c-><c- p>&gt;&lt;</c-><c- f>label</c-> <c- e>for</c-><c- o>=</c-><c- s>fn</c-><c- p>&gt;</c->Name &amp; Extension:<c- p>&lt;/</c-><c- f>label</c-><c- p>&gt;&lt;/</c-><c- f>summary</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;&lt;</c-><c- f>input</c-> <c- e>type</c-><c- o>=</c-><c- s>text</c-> <c- e>id</c-><c- o>=</c-><c- s>fn</c-> <c- e>name</c-><c- o>=</c-><c- s>fn</c-> <c- e>value</c-><c- o>=</c-><c- s>&quot;Pillar Magazine.pdf&quot;</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;&lt;</c-><c- f>label</c-><c- p>&gt;&lt;</c-><c- f>input</c-> <c- e>type</c-><c- o>=</c-><c- s>checkbox</c-> <c- e>name</c-><c- o>=</c-><c- s>ext</c-> <c- e>checked</c-><c- p>&gt;</c-> Hide extension<c- p>&lt;/</c-><c- f>label</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>details</c-><c- p>&gt;</c-></code></pre>
+
+   <p>One could use this in conjunction with other <code id=the-details-element:the-details-element-28><a href=#the-details-element>details</a></code> in a list to allow the user
+   to collapse a set of fields down to a small set of headings, with the ability to open each
+   one.</p>
+
+   <p class=details-example><img src=/images/sample-details-1.png width=345 alt="" height=611><img src=/images/sample-details-2.png width=345 alt="" height=666></p>
+
+   <p>In these examples, the summary really just summarizes what the controls can change, and not
+   the actual values, which is less than ideal.</p>
+
+  </div>
+
+  <div id=example-details-exclusive-accordion class=example><a href=#example-details-exclusive-accordion class=self-link></a>
+   <p>The following example shows the <code id=the-details-element:attr-details-name-13><a href=#attr-details-name>name</a></code> attribute of the
+   <code id=the-details-element:the-details-element-29><a href=#the-details-element>details</a></code> element being used to create an exclusive accordion, a set of
+   <code id=the-details-element:the-details-element-30><a href=#the-details-element>details</a></code> elements where a user action to open one <code id=the-details-element:the-details-element-31><a href=#the-details-element>details</a></code> element causes
+   any open <code id=the-details-element:the-details-element-32><a href=#the-details-element>details</a></code> to close.</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>section</c-> <c- e>class</c-><c- o>=</c-><c- s>&quot;characteristics&quot;</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>details</c-> <c- e>name</c-><c- o>=</c-><c- s>&quot;frame-characteristics&quot;</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>summary</c-><c- p>&gt;</c->Material<c- p>&lt;/</c-><c- f>summary</c-><c- p>&gt;</c->
+  The picture frame is made of solid oak wood.
+ <c- p>&lt;/</c-><c- f>details</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>details</c-> <c- e>name</c-><c- o>=</c-><c- s>&quot;frame-characteristics&quot;</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>summary</c-><c- p>&gt;</c->Size<c- p>&lt;/</c-><c- f>summary</c-><c- p>&gt;</c->
+  The picture frame fits a photo 40cm tall and 30cm wide.
+  The frame is 45cm tall, 35cm wide, and 2cm thick.
+ <c- p>&lt;/</c-><c- f>details</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>details</c-> <c- e>name</c-><c- o>=</c-><c- s>&quot;frame-characteristics&quot;</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>summary</c-><c- p>&gt;</c->Color<c- p>&lt;/</c-><c- f>summary</c-><c- p>&gt;</c->
+  The picture frame is available in its natural wood
+  color, or with black stain.
+ <c- p>&lt;/</c-><c- f>details</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>section</c-><c- p>&gt;</c-></code></pre>
+  </div>
+
+  <div id=example-details-exclusive-accordion-setting-open class=example><a href=#example-details-exclusive-accordion-setting-open class=self-link></a>
+   <p>The following example shows what happens when the <code id=the-details-element:attr-details-open-16><a href=#attr-details-open>open</a></code>
+   attribute is set on a <code id=the-details-element:the-details-element-33><a href=#the-details-element>details</a></code> element that is part of a set of elements using the
+   <code id=the-details-element:attr-details-name-14><a href=#attr-details-name>name</a></code> attribute to create an exclusive accordion.</p>
+
+   <p>Given the initial markup:</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>section</c-> <c- e>class</c-><c- o>=</c-><c- s>&quot;characteristics&quot;</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>details</c-> <c- e>name</c-><c- o>=</c-><c- s>&quot;frame-characteristics&quot;</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;d1&quot;</c-> <c- e>open</c-><c- p>&gt;</c->...<c- p>&lt;/</c-><c- f>details</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>details</c-> <c- e>name</c-><c- o>=</c-><c- s>&quot;frame-characteristics&quot;</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;d2&quot;</c-><c- p>&gt;</c->...<c- p>&lt;/</c-><c- f>details</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>details</c-> <c- e>name</c-><c- o>=</c-><c- s>&quot;frame-characteristics&quot;</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;d3&quot;</c-><c- p>&gt;</c->...<c- p>&lt;/</c-><c- f>details</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>section</c-><c- p>&gt;</c-></code></pre>
+
+   <p>and the script:</p>
+
+   <pre><code class='js'>document<c- p>.</c->getElementById<c- p>(</c-><c- u>&quot;d2&quot;</c-><c- p>).</c->setAttribute<c- p>(</c-><c- u>&quot;open&quot;</c-><c- p>,</c-> <c- u>&quot;&quot;</c-><c- p>);</c-></code></pre>
+
+   <p>then the resulting tree after the script executes will be equivalent to the markup:</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>section</c-> <c- e>class</c-><c- o>=</c-><c- s>&quot;characteristics&quot;</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>details</c-> <c- e>name</c-><c- o>=</c-><c- s>&quot;frame-characteristics&quot;</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;d1&quot;</c-><c- p>&gt;</c->...<c- p>&lt;/</c-><c- f>details</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>details</c-> <c- e>name</c-><c- o>=</c-><c- s>&quot;frame-characteristics&quot;</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;d2&quot;</c-> <c- e>open</c-><c- p>&gt;</c->...<c- p>&lt;/</c-><c- f>details</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>details</c-> <c- e>name</c-><c- o>=</c-><c- s>&quot;frame-characteristics&quot;</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;d3&quot;</c-><c- p>&gt;</c->...<c- p>&lt;/</c-><c- f>details</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>section</c-><c- p>&gt;</c-></code></pre>
+
+   <p>because setting the <code id=the-details-element:attr-details-open-17><a href=#attr-details-open>open</a></code> attribute on <code>d2</code> removes it from <code>d1</code>.</p>
+
+   <p>The same happens when the user activates the <code id=the-details-element:the-summary-element-5><a href=#the-summary-element>summary</a></code> element inside of <code>d2</code>.</p>
+  </div>
+
+  <div class=example>
+
+   <p>Because the <code id=the-details-element:attr-details-open-18><a href=#attr-details-open>open</a></code> attribute is added and removed
+   automatically as the user interacts with the control, it can be used in CSS to style the element
+   differently based on its state. Here, a style sheet is used to animate the color of the summary
+   when the element is opened or closed:</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>style</c-><c- p>&gt;</c->
+ <c- f>details</c-> <c- o>&gt;</c-> <c- f>summary</c-> <c- p>{</c-> <c- k>transition</c-><c- p>:</c-> <c- kc>color</c-> <c- mi>1</c-><c- b>s</c-><c- p>;</c-> <c- k>color</c-><c- p>:</c-> <c- kc>black</c-><c- p>;</c-> <c- p>}</c->
+ <c- f>details</c-><c- o>[</c-><c- f>open</c-><c- o>]</c-> <c- o>&gt;</c-> <c- f>summary</c-> <c- p>{</c-> <c- k>color</c-><c- p>:</c-> <c- kc>red</c-><c- p>;</c-> <c- p>}</c->
+<c- p>&lt;/</c-><c- f>style</c-><c- p>&gt;</c->
+<c- p>&lt;</c-><c- f>details</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>summary</c-><c- p>&gt;</c->Automated Status: Operational<c- p>&lt;/</c-><c- f>summary</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;</c->Velocity: 12m/s<c- p>&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;</c->Direction: North<c- p>&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>details</c-><c- p>&gt;</c-></code></pre>
+
+  </div>
+
+
+  <h4 id=the-summary-element><span class=secno>4.11.2</span> The <dfn data-dfn-type=element><code>summary</code></dfn> element<a href=#the-summary-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary title="The <summary> HTML element specifies a summary, caption, or legend for a <details> element's disclosure box. Clicking the <summary> element toggles the state of the parent <details> element open and closed.">Element/summary</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>49+</span></span><span class="safari yes"><span>Safari</span><span>6+</span></span><span class="chrome yes"><span>Chrome</span><span>12+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge unknown"><span>Edge (Legacy)</span><span>?</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android yes"><span>WebView Android</span><span>4+</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=the-summary-element:concept-element-categories>Categories</a>:<dd>None.<dt><a href=dom.html#concept-element-contexts id=the-summary-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>As the <a id=the-summary-element:first-child href=https://dom.spec.whatwg.org/#concept-tree-first-child data-x-internal=first-child>first child</a> of a <code id=the-summary-element:the-details-element><a href=#the-details-element>details</a></code> element.<dt><a href=dom.html#concept-element-content-model id=the-summary-element:concept-element-content-model>Content model</a>:<dd><a id=the-summary-element:phrasing-content-2 href=dom.html#phrasing-content-2>Phrasing content</a>, optionally intermixed with <a id=the-summary-element:heading-content-2 href=dom.html#heading-content-2>heading content</a>.<dt><a href=dom.html#concept-element-tag-omission id=the-summary-element:concept-element-tag-omission>Tag omission in text/html</a>:<dd>Neither tag is omissible.<dt><a href=dom.html#concept-element-attributes id=the-summary-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-summary-element:global-attributes href=dom.html#global-attributes>Global attributes</a><dt><a href=dom.html#concept-element-accessibility-considerations id=the-summary-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-summary>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-summary>For implementers</a>.<dt><a href=dom.html#concept-element-sanitization id=the-summary-element:concept-element-sanitization>Sanitization</a>:<dd><a href=dynamic-markup-insertion.html#sanitizer-uncategorized id=the-summary-element:sanitizer-uncategorized>Uncategorized</a>.<dt><a href=dom.html#concept-element-dom id=the-summary-element:concept-element-dom>DOM interface</a>:<dd>Uses <code id=the-summary-element:htmlelement><a href=dom.html#htmlelement>HTMLElement</a></code>.</dl>
+
+  <p>The <code id=the-summary-element:the-summary-element><a href=#the-summary-element>summary</a></code> element <a id=the-summary-element:represents href=dom.html#represents>represents</a> a summary, caption, or legend for the
+  rest of the contents of the <code id=the-summary-element:the-summary-element-2><a href=#the-summary-element>summary</a></code> element's parent <code id=the-summary-element:the-details-element-2><a href=#the-details-element>details</a></code>
+  element, if any.</p>
+
+  
+
+  <div data-algorithm="">
+  <p>A <code id=the-summary-element:the-summary-element-3><a href=#the-summary-element>summary</a></code> element is a <dfn id=summary-for-its-parent-details>summary for its parent details</dfn> if the following
+  algorithm returns true:</p>
+
+  <ol><li><p>If this <code id=the-summary-element:the-summary-element-4><a href=#the-summary-element>summary</a></code> element has no parent, then return false.<li><p>Let <var>parent</var> be this <code id=the-summary-element:the-summary-element-5><a href=#the-summary-element>summary</a></code> element's parent.<li><p>If <var>parent</var> is not a <code id=the-summary-element:the-details-element-3><a href=#the-details-element>details</a></code> element, then return false.<li><p>If <var>parent</var>'s first <code id=the-summary-element:the-summary-element-6><a href=#the-summary-element>summary</a></code> element child is not this
+   <code id=the-summary-element:the-summary-element-7><a href=#the-summary-element>summary</a></code> element, then return false.<li><p>Return true.</ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a id=the-summary-element:activation-behaviour href=https://dom.spec.whatwg.org/#eventtarget-activation-behavior data-x-internal=activation-behaviour>activation behavior</a> of <code id=the-summary-element:the-summary-element-8><a href=#the-summary-element>summary</a></code> elements is to run the following
+  steps:</p>
+
+  <ol><li><p>If this <code id=the-summary-element:the-summary-element-9><a href=#the-summary-element>summary</a></code> element is not the <a href=#summary-for-its-parent-details id=the-summary-element:summary-for-its-parent-details>summary for its parent
+   details</a>, then return.<li><p>Let <var>parent</var> be this <code id=the-summary-element:the-summary-element-10><a href=#the-summary-element>summary</a></code> element's parent.<li>
+    <p>If the <code id=the-summary-element:attr-details-open><a href=#attr-details-open>open</a></code> attribute is present on
+    <var>parent</var>, then <a href=https://dom.spec.whatwg.org/#concept-element-attributes-remove id=the-summary-element:concept-element-attributes-remove data-x-internal=concept-element-attributes-remove>remove</a> it.
+    Otherwise, <a href=https://dom.spec.whatwg.org/#concept-element-attributes-set-value id=the-summary-element:concept-element-attributes-set-value data-x-internal=concept-element-attributes-set-value>set</a> <var>parent</var>'s
+    <code id=the-summary-element:attr-details-open-2><a href=#attr-details-open>open</a></code> attribute to the empty string.</p>
+
+    <p class=note>This will then run the <a href=#details-notification-task-steps id=the-summary-element:details-notification-task-steps>details notification task steps</a>.</p>
+   </ol>
+  </div>
+
+  
+
+
+
+
+  <h4 id=commands><span class=secno>4.11.3</span> Commands<a href=#commands class=self-link></a></h4>
+
+  <h5 id=facets-2><span class=secno>4.11.3.1</span> Facets<a href=#facets-2 class=self-link></a></h5>
+
+  <p>A <dfn id=concept-command>command</dfn> is the abstraction behind menu items, buttons, and
+  links. Once a command is defined, other parts of the interface can refer to the same command,
+  allowing many access points to a single feature to share facets such as the <a href=#command-facet-disabledstate id=facets-2:command-facet-disabledstate>Disabled State</a>.</p>
+
+  <p id=facets>Commands are defined to have the following <dfn id=concept-facet>facets</dfn>:</p>
+
+  <dl><dt><dfn id=command-facet-label>Label</dfn><dd>The name of the command as seen by the user.<dt><dfn id=command-facet-accesskey>Access Key</dfn><dd>A key combination selected by the user agent that triggers the command. A command might not
+   have an Access Key.<dt><dfn id=command-facet-hiddenstate>Hidden State</dfn><dd>Whether the command is hidden or not (basically, whether it should be shown in menus).<dt><dfn id=command-facet-disabledstate>Disabled State</dfn><dd>Whether the command is relevant and can be triggered or not.<dt><dfn id=command-facet-action>Action</dfn><dd>The actual effect that triggering the command will have. This could be a scripted event
+   handler, a <a id=facets-2:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a> to which to <a id=facets-2:navigate href=browsing-the-web.html#navigate>navigate</a>, or a form submission.</dl>
+
+  <div data-algorithm="">
+  <p id=expose-commands-in-ui>User agents may expose the <a href=#concept-command id=facets-2:concept-command>commands</a> that match the following criteria:</p>
+
+  <ul><li><p>The <a href=#command-facet-hiddenstate id=facets-2:command-facet-hiddenstate>Hidden State</a> facet is false
+   (visible).<li><p>The element is <a id=facets-2:in-a-document href=https://dom.spec.whatwg.org/#in-a-document data-x-internal=in-a-document>in a document</a> with a non-null <a href=document-sequences.html#concept-document-bc id=facets-2:concept-document-bc>browsing context</a>.<li><p>Neither the element nor any of its ancestors has a <code id=facets-2:attr-hidden><a href=interaction.html#attr-hidden>hidden</a></code> attribute specified.</ul>
+  </div>
+
+  <p>User agents are encouraged to do this especially for commands that have <a href=#command-facet-accesskey id=facets-2:command-facet-accesskey>Access Keys</a>, as a way to advertise those keys to the
+  user.</p>
+
+  <p class=example>For example, such commands could be listed in the user agent's menu bar.</p>
+
+
+  
+
+  <h5 id=using-the-a-element-to-define-a-command><span class=secno>4.11.3.2</span> <dfn>Using the <code>a</code> element to define a command</dfn><a href=#using-the-a-element-to-define-a-command class=self-link></a></h5>
+
+  <div data-algorithm="">
+  <p>An <code id=using-the-a-element-to-define-a-command:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code> element with an <code id=using-the-a-element-to-define-a-command:attr-hyperlink-href><a href=links.html#attr-hyperlink-href>href</a></code> attribute <a href=#concept-command id=using-the-a-element-to-define-a-command:concept-command>defines a command</a>.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-label id=using-the-a-element-to-define-a-command:command-facet-label>Label</a> of the command is the element's
+  <a id=using-the-a-element-to-define-a-command:descendant-text-content href=https://dom.spec.whatwg.org/#concept-descendant-text-content data-x-internal=descendant-text-content>descendant text content</a>.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-accesskey id=using-the-a-element-to-define-a-command:command-facet-accesskey>Access Key</a> of the command is the element's
+  <a id=using-the-a-element-to-define-a-command:assigned-access-key href=interaction.html#assigned-access-key>assigned access key</a>, if any.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-hiddenstate id=using-the-a-element-to-define-a-command:command-facet-hiddenstate>Hidden State</a> of the command is true (hidden)
+  if the element has a <code id=using-the-a-element-to-define-a-command:attr-hidden><a href=interaction.html#attr-hidden>hidden</a></code> attribute, and false otherwise.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-disabledstate id=using-the-a-element-to-define-a-command:command-facet-disabledstate>Disabled State</a> facet of the command is
+  true if the element or one of its ancestors is <a id=using-the-a-element-to-define-a-command:inert href=interaction.html#inert>inert</a>, and false otherwise.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-action id=using-the-a-element-to-define-a-command:command-facet-action>Action</a> of the command is to <a id=using-the-a-element-to-define-a-command:fire-a-click-event href=webappapis.html#fire-a-click-event>fire a <code>click</code> event</a> at the element.</p>
+  </div>
+
+
+  <h5 id=using-the-button-element-to-define-a-command><span class=secno>4.11.3.3</span> <dfn>Using the <code>button</code> element to define a command</dfn><a href=#using-the-button-element-to-define-a-command class=self-link></a></h5>
+
+  <div data-algorithm="">
+  <p>A <code id=using-the-button-element-to-define-a-command:the-button-element><a href=form-elements.html#the-button-element>button</a></code> element always <a href=#concept-command id=using-the-button-element-to-define-a-command:concept-command>defines a
+  command</a>.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-label id=using-the-button-element-to-define-a-command:command-facet-label>Label</a>, <a href=#command-facet-accesskey id=using-the-button-element-to-define-a-command:command-facet-accesskey>Access Key</a>, <a href=#command-facet-hiddenstate id=using-the-button-element-to-define-a-command:command-facet-hiddenstate>Hidden State</a>, and <a href=#command-facet-action id=using-the-button-element-to-define-a-command:command-facet-action>Action</a> facets of the command are determined <a href=#using-the-a-element-to-define-a-command id=using-the-button-element-to-define-a-command:using-the-a-element-to-define-a-command>as for <code>a</code> elements</a> (see the previous section).</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-disabledstate id=using-the-button-element-to-define-a-command:command-facet-disabledstate>Disabled State</a> of the command is true if
+  the element or one of its ancestors is <a id=using-the-button-element-to-define-a-command:inert href=interaction.html#inert>inert</a>, or if the element's <a href=form-control-infrastructure.html#concept-fe-disabled id=using-the-button-element-to-define-a-command:concept-fe-disabled>disabled</a> state is set, and false otherwise.</p>
+  </div>
+
+
+  <h5 id=using-the-input-element-to-define-a-command><span class=secno>4.11.3.4</span> <dfn>Using the <code>input</code> element to define a command</dfn><a href=#using-the-input-element-to-define-a-command class=self-link></a></h5>
+
+  <div data-algorithm="">
+  <p>An <code id=using-the-input-element-to-define-a-command:the-input-element><a href=input.html#the-input-element>input</a></code> element whose <code id=using-the-input-element-to-define-a-command:attr-input-type><a href=input.html#attr-input-type>type</a></code> attribute is in
+  one of the <a href="input.html#submit-button-state-(type=submit)" id="using-the-input-element-to-define-a-command:submit-button-state-(type=submit)">Submit Button</a>, <a href="input.html#reset-button-state-(type=reset)" id="using-the-input-element-to-define-a-command:reset-button-state-(type=reset)">Reset Button</a>, <a href="input.html#image-button-state-(type=image)" id="using-the-input-element-to-define-a-command:image-button-state-(type=image)">Image
+  Button</a>, <a href="input.html#button-state-(type=button)" id="using-the-input-element-to-define-a-command:button-state-(type=button)">Button</a>, <a href="input.html#radio-button-state-(type=radio)" id="using-the-input-element-to-define-a-command:radio-button-state-(type=radio)">Radio Button</a>, or <a href="input.html#checkbox-state-(type=checkbox)" id="using-the-input-element-to-define-a-command:checkbox-state-(type=checkbox)">Checkbox</a> states <a href=#concept-command id=using-the-input-element-to-define-a-command:concept-command>defines a
+  command</a>.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-label id=using-the-input-element-to-define-a-command:command-facet-label>Label</a> of the command is determined as
+  follows:</p>
+
+  <ol><li><p>If the <code id=using-the-input-element-to-define-a-command:attr-input-type-2><a href=input.html#attr-input-type>type</a></code> attribute is in one of the
+    <a href="input.html#submit-button-state-(type=submit)" id="using-the-input-element-to-define-a-command:submit-button-state-(type=submit)-2">Submit Button</a>, <a href="input.html#reset-button-state-(type=reset)" id="using-the-input-element-to-define-a-command:reset-button-state-(type=reset)-2">Reset Button</a>, <a href="input.html#image-button-state-(type=image)" id="using-the-input-element-to-define-a-command:image-button-state-(type=image)-2">Image
+    Button</a>, or <a href="input.html#button-state-(type=button)" id="using-the-input-element-to-define-a-command:button-state-(type=button)-2">Button</a> states, then the
+    <a href=#command-facet-label id=using-the-input-element-to-define-a-command:command-facet-label-2>Label</a> is the string given by the
+    <code id=using-the-input-element-to-define-a-command:attr-input-value><a href=input.html#attr-input-value>value</a></code> attribute, if any, and a UA-dependent,
+    locale-dependent value that the UA uses to label the button itself if the attribute is
+    absent.<li><p>Otherwise, if the element is a <a id=using-the-input-element-to-define-a-command:labeled-control href=forms.html#labeled-control>labeled control</a>, then the <a href=#command-facet-label id=using-the-input-element-to-define-a-command:command-facet-label-3>Label</a> is the <a id=using-the-input-element-to-define-a-command:descendant-text-content href=https://dom.spec.whatwg.org/#concept-descendant-text-content data-x-internal=descendant-text-content>descendant text content</a> of the
+    first <code id=using-the-input-element-to-define-a-command:the-label-element><a href=forms.html#the-label-element>label</a></code> element in <a id=using-the-input-element-to-define-a-command:tree-order href=https://dom.spec.whatwg.org/#concept-tree-order data-x-internal=tree-order>tree order</a> whose <a id=using-the-input-element-to-define-a-command:labeled-control-2 href=forms.html#labeled-control>labeled control</a>
+    is the element in question. (In JavaScript terms, this is given by <code>element.labels[0].textContent</code>.)<li><p>Otherwise, if the <code id=using-the-input-element-to-define-a-command:attr-input-value-2><a href=input.html#attr-input-value>value</a></code> attribute is present, then
+    the <a href=#command-facet-label id=using-the-input-element-to-define-a-command:command-facet-label-4>Label</a> is the value of that attribute.<li><p>Otherwise, the <a href=#command-facet-label id=using-the-input-element-to-define-a-command:command-facet-label-5>Label</a> is the empty string.</ol>
+  </div>
+
+  <div class=note>
+    <p>Even though the <code id=using-the-input-element-to-define-a-command:attr-input-value-3><a href=input.html#attr-input-value>value</a></code> attribute on
+    <code id=using-the-input-element-to-define-a-command:the-input-element-2><a href=input.html#the-input-element>input</a></code> elements in the <a href="input.html#image-button-state-(type=image)" id="using-the-input-element-to-define-a-command:image-button-state-(type=image)-3">Image Button</a>
+    state is non-conformant, the attribute can still contribute to the <a href=#command-facet-label id=using-the-input-element-to-define-a-command:command-facet-label-6>Label</a> determination, if it is present and the Image Button's
+    <code id=using-the-input-element-to-define-a-command:attr-input-alt><a href=input.html#attr-input-alt>alt</a></code> attribute is missing.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-accesskey id=using-the-input-element-to-define-a-command:command-facet-accesskey>Access Key</a> of the command is the element's
+  <a id=using-the-input-element-to-define-a-command:assigned-access-key href=interaction.html#assigned-access-key>assigned access key</a>, if any.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-hiddenstate id=using-the-input-element-to-define-a-command:command-facet-hiddenstate>Hidden State</a> of the command is true (hidden)
+  if the element has a <code id=using-the-input-element-to-define-a-command:attr-hidden><a href=interaction.html#attr-hidden>hidden</a></code> attribute, and false otherwise.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-disabledstate id=using-the-input-element-to-define-a-command:command-facet-disabledstate>Disabled State</a> of the command is true if
+  the element or one of its ancestors is <a id=using-the-input-element-to-define-a-command:inert href=interaction.html#inert>inert</a>, or if the element's <a href=form-control-infrastructure.html#concept-fe-disabled id=using-the-input-element-to-define-a-command:concept-fe-disabled>disabled</a> state is set, and false otherwise.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-action id=using-the-input-element-to-define-a-command:command-facet-action>Action</a> of the command is to <a id=using-the-input-element-to-define-a-command:fire-a-click-event href=webappapis.html#fire-a-click-event>fire a <code>click</code> event</a> at the element.</p>
+  </div>
+
+
+  <h5 id=using-the-option-element-to-define-a-command><span class=secno>4.11.3.5</span> <dfn>Using the <code>option</code> element to define a command</dfn><a href=#using-the-option-element-to-define-a-command class=self-link></a></h5>
+
+  <div data-algorithm="">
+  <p>An <code id=using-the-option-element-to-define-a-command:the-option-element><a href=form-elements.html#the-option-element>option</a></code> element with an ancestor <code id=using-the-option-element-to-define-a-command:the-select-element><a href=form-elements.html#the-select-element>select</a></code> element and either no <code id=using-the-option-element-to-define-a-command:attr-option-value><a href=form-elements.html#attr-option-value>value</a></code> attribute or a <code id=using-the-option-element-to-define-a-command:attr-option-value-2><a href=form-elements.html#attr-option-value>value</a></code>
+  attribute that is not the empty string <a href=#concept-command id=using-the-option-element-to-define-a-command:concept-command>defines a command</a>.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-label id=using-the-option-element-to-define-a-command:command-facet-label>Label</a> of the command is the value of the
+  <code id=using-the-option-element-to-define-a-command:the-option-element-2><a href=form-elements.html#the-option-element>option</a></code> element's <code id=using-the-option-element-to-define-a-command:attr-option-label><a href=form-elements.html#attr-option-label>label</a></code> attribute, if there is
+  one, or else the <code id=using-the-option-element-to-define-a-command:the-option-element-3><a href=form-elements.html#the-option-element>option</a></code> element's <a id=using-the-option-element-to-define-a-command:descendant-text-content href=https://dom.spec.whatwg.org/#concept-descendant-text-content data-x-internal=descendant-text-content>descendant text content</a>, with <a href=https://infra.spec.whatwg.org/#strip-and-collapse-ascii-whitespace id=using-the-option-element-to-define-a-command:strip-and-collapse-ascii-whitespace data-x-internal=strip-and-collapse-ascii-whitespace>ASCII whitespace stripped and collapsed</a>.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-accesskey id=using-the-option-element-to-define-a-command:command-facet-accesskey>Access Key</a> of the command is the element's
+  <a id=using-the-option-element-to-define-a-command:assigned-access-key href=interaction.html#assigned-access-key>assigned access key</a>, if any.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-hiddenstate id=using-the-option-element-to-define-a-command:command-facet-hiddenstate>Hidden State</a> of the command is true (hidden)
+  if the element has a <code id=using-the-option-element-to-define-a-command:attr-hidden><a href=interaction.html#attr-hidden>hidden</a></code> attribute, and false otherwise.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-disabledstate id=using-the-option-element-to-define-a-command:command-facet-disabledstate>Disabled State</a> of the command is true if
+  the element is <a href=form-elements.html#concept-option-disabled id=using-the-option-element-to-define-a-command:concept-option-disabled>disabled</a>, or if its nearest ancestor
+  <code id=using-the-option-element-to-define-a-command:the-select-element-2><a href=form-elements.html#the-select-element>select</a></code> element is <a href=form-control-infrastructure.html#concept-fe-disabled id=using-the-option-element-to-define-a-command:concept-fe-disabled>disabled</a>, or if it or one
+  of its ancestors is <a id=using-the-option-element-to-define-a-command:inert href=interaction.html#inert>inert</a>, and false otherwise.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>If the <code id=using-the-option-element-to-define-a-command:the-option-element-4><a href=form-elements.html#the-option-element>option</a></code>'s nearest ancestor <code id=using-the-option-element-to-define-a-command:the-select-element-3><a href=form-elements.html#the-select-element>select</a></code> element has a <code id=using-the-option-element-to-define-a-command:attr-select-multiple><a href=form-elements.html#attr-select-multiple>multiple</a></code> attribute, the <a href=#command-facet-action id=using-the-option-element-to-define-a-command:command-facet-action>Action</a> of the command is to <a href=form-elements.html#concept-select-toggle id=using-the-option-element-to-define-a-command:concept-select-toggle>toggle</a> the <code id=using-the-option-element-to-define-a-command:the-option-element-5><a href=form-elements.html#the-option-element>option</a></code> element. Otherwise, the <a href=#command-facet-action id=using-the-option-element-to-define-a-command:command-facet-action-2>Action</a> is to <a href=form-elements.html#concept-select-pick id=using-the-option-element-to-define-a-command:concept-select-pick>pick</a> the <code id=using-the-option-element-to-define-a-command:the-option-element-6><a href=form-elements.html#the-option-element>option</a></code> element.</p>
+  </div>
+
+
+  <h5 id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command><span class=secno>4.11.3.6</span> <dfn>Using the <code>accesskey</code> attribute
+  on a <code>legend</code> element to define a command</dfn><a href=#using-the-accesskey-attribute-on-a-legend-element-to-define-a-command class=self-link></a></h5>
+
+  <div data-algorithm="">
+  <p>A <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-legend-element><a href=form-elements.html#the-legend-element>legend</a></code> element <a href=#concept-command id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:concept-command>defines a command</a> if all of
+  the following are true:</p>
+
+  <ul><li><p>It has an <a id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:assigned-access-key href=interaction.html#assigned-access-key>assigned access key</a>.<li><p>It is a child of a <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-fieldset-element><a href=form-elements.html#the-fieldset-element>fieldset</a></code> element.<li><p>Its parent has a descendant that <a href=#concept-command id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:concept-command-2>defines a command</a>
+   that is neither a <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-label-element><a href=forms.html#the-label-element>label</a></code> element nor a <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-legend-element-2><a href=form-elements.html#the-legend-element>legend</a></code> element. This element,
+   if it exists, is <dfn id="the-legend-element's-accesskey-delegatee">the <code>legend</code> element's <code>accesskey</code>
+   delegatee</dfn>.</ul>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-label id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:command-facet-label>Label</a> of the command is the element's
+  <a id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:descendant-text-content href=https://dom.spec.whatwg.org/#concept-descendant-text-content data-x-internal=descendant-text-content>descendant text content</a>.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-accesskey id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:command-facet-accesskey>Access Key</a> of the command is the element's
+  <a id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:assigned-access-key-2 href=interaction.html#assigned-access-key>assigned access key</a>.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-hiddenstate id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:command-facet-hiddenstate>Hidden State</a>, <a href=#command-facet-disabledstate id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:command-facet-disabledstate>Disabled State</a>, and <a href=#command-facet-action id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:command-facet-action>Action</a> facets of the command are the same as the respective
+  facets of <a href="#the-legend-element's-accesskey-delegatee" id="using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-legend-element's-accesskey-delegatee">the <code>legend</code> element's <code>accesskey</code> delegatee</a>.</p>
+  </div>
+
+  <div class=example>
+   <p>In this example, the <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-legend-element-3><a href=form-elements.html#the-legend-element>legend</a></code> element specifies an <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-accesskey-attribute><a href=interaction.html#the-accesskey-attribute>accesskey</a></code>, which, when activated, will delegate to the
+   <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-input-element><a href=input.html#the-input-element>input</a></code> element inside the <code id=using-the-accesskey-attribute-on-a-legend-element-to-define-a-command:the-legend-element-4><a href=form-elements.html#the-legend-element>legend</a></code> element.</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>fieldset</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>legend</c-> <c- e>accesskey</c-><c- o>=</c-><c- s>p</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>label</c-><c- p>&gt;</c->I want <c- p>&lt;</c-><c- f>input</c-> <c- e>name</c-><c- o>=</c-><c- s>pizza</c-> <c- e>type</c-><c- o>=</c-><c- s>number</c-> <c- e>step</c-><c- o>=</c-><c- s>1</c-> <c- e>value</c-><c- o>=</c-><c- s>1</c-> <c- e>min</c-><c- o>=</c-><c- s>0</c-><c- p>&gt;</c->
+   pizza(s) with these toppings<c- p>&lt;/</c-><c- f>label</c-><c- p>&gt;</c->
+ <c- p>&lt;/</c-><c- f>legend</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>label</c-><c- p>&gt;&lt;</c-><c- f>input</c-> <c- e>name</c-><c- o>=</c-><c- s>pizza-cheese</c-> <c- e>type</c-><c- o>=</c-><c- s>checkbox</c-> <c- e>checked</c-><c- p>&gt;</c-> Cheese<c- p>&lt;/</c-><c- f>label</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>label</c-><c- p>&gt;&lt;</c-><c- f>input</c-> <c- e>name</c-><c- o>=</c-><c- s>pizza-ham</c-> <c- e>type</c-><c- o>=</c-><c- s>checkbox</c-> <c- e>checked</c-><c- p>&gt;</c-> Ham<c- p>&lt;/</c-><c- f>label</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>label</c-><c- p>&gt;&lt;</c-><c- f>input</c-> <c- e>name</c-><c- o>=</c-><c- s>pizza-pineapple</c-> <c- e>type</c-><c- o>=</c-><c- s>checkbox</c-><c- p>&gt;</c-> Pineapple<c- p>&lt;/</c-><c- f>label</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>fieldset</c-><c- p>&gt;</c-></code></pre>
+  </div>
+
+
+  <h5 id=using-the-accesskey-attribute-to-define-a-command-on-other-elements><span class=secno>4.11.3.7</span> <dfn>Using the <code>accesskey</code>
+  attribute to define a command on other elements</dfn><a href=#using-the-accesskey-attribute-to-define-a-command-on-other-elements class=self-link></a></h5>
+
+  <div data-algorithm="">
+  <p>An element that has an <a id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:assigned-access-key href=interaction.html#assigned-access-key>assigned access key</a> <a href=#concept-command id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:concept-command>defines a
+  command</a>.</p>
+  </div>
+
+  <p>If one of the earlier sections that define elements that <a href=#concept-command id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:concept-command-2>define
+  commands</a> define that this element <a href=#concept-command id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:concept-command-3>defines a command</a>,
+  then that section applies to this element, and this section does not. Otherwise, this section
+  applies to that element.</p>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-label id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:command-facet-label>Label</a> of the command depends on the element. If
+  the element is a <a id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:labeled-control href=forms.html#labeled-control>labeled control</a>, the <a id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:descendant-text-content href=https://dom.spec.whatwg.org/#concept-descendant-text-content data-x-internal=descendant-text-content>descendant text content</a> of the
+  first <code id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:the-label-element><a href=forms.html#the-label-element>label</a></code> element in <a id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:tree-order href=https://dom.spec.whatwg.org/#concept-tree-order data-x-internal=tree-order>tree order</a> whose <a id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:labeled-control-2 href=forms.html#labeled-control>labeled control</a> is
+  the element in question is the <a href=#command-facet-label id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:command-facet-label-2>Label</a> (in JavaScript
+  terms, this is given by <code>element.labels[0].textContent</code>).
+  Otherwise, the <a href=#command-facet-label id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:command-facet-label-3>Label</a> is the element's <a id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:descendant-text-content-2 href=https://dom.spec.whatwg.org/#concept-descendant-text-content data-x-internal=descendant-text-content>descendant
+  text content</a>.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-accesskey id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:command-facet-accesskey>Access Key</a> of the command is the element's
+  <a id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:assigned-access-key-2 href=interaction.html#assigned-access-key>assigned access key</a>.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-hiddenstate id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:command-facet-hiddenstate>Hidden State</a> of the command is true (hidden)
+  if the element has a <code id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:attr-hidden><a href=interaction.html#attr-hidden>hidden</a></code> attribute, and false otherwise.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-disabledstate id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:command-facet-disabledstate>Disabled State</a> of the command is true if
+  the element or one of its ancestors is <a id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:inert href=interaction.html#inert>inert</a>, and false otherwise.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a href=#command-facet-action id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:command-facet-action>Action</a> of the command is to run the following
+  steps:</p>
+
+  <ol><li>Run the <a id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:focusing-steps href=interaction.html#focusing-steps>focusing steps</a> for the element.<li><a id=using-the-accesskey-attribute-to-define-a-command-on-other-elements:fire-a-click-event href=webappapis.html#fire-a-click-event>Fire a <code>click</code> event</a> at the element.</ol>
+  </div>
+
+  
+
+
+  <h4 id=the-dialog-element><span class=secno>4.11.4</span> The <dfn data-dfn-type=element><code>dialog</code></dfn> element<a href=#the-dialog-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog title="The <dialog> HTML element represents a dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.">Element/dialog</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>98+</span></span><span class="safari yes"><span>Safari</span><span>15.4+</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge unknown"><span>Edge (Legacy)</span><span>?</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android unknown"><span>WebView Android</span><span>?</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div>
+
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement title="The HTMLDialogElement interface provides methods to manipulate <dialog> elements. It inherits properties and methods from the HTMLElement interface.">HTMLDialogElement</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>98+</span></span><span class="safari yes"><span>Safari</span><span>15.4+</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge unknown"><span>Edge (Legacy)</span><span>?</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android unknown"><span>WebView Android</span><span>?</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/open title="The open property of the HTMLDialogElement interface is a boolean value reflecting the open HTML attribute, indicating whether the <dialog> is available for interaction.">HTMLDialogElement/open</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>98+</span></span><span class="safari yes"><span>Safari</span><span>15.4+</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge unknown"><span>Edge (Legacy)</span><span>?</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android unknown"><span>WebView Android</span><span>?</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div><dl class=element><dt><a href=dom.html#concept-element-categories id=the-dialog-element:concept-element-categories>Categories</a>:<dd><a id=the-dialog-element:flow-content-2 href=dom.html#flow-content-2>Flow content</a>.<dt><a href=dom.html#concept-element-contexts id=the-dialog-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-dialog-element:flow-content-2-2 href=dom.html#flow-content-2>flow content</a> is expected.<dt><a href=dom.html#concept-element-content-model id=the-dialog-element:concept-element-content-model>Content model</a>:<dd><a id=the-dialog-element:flow-content-2-3 href=dom.html#flow-content-2>Flow content</a>.<dt><a href=dom.html#concept-element-tag-omission id=the-dialog-element:concept-element-tag-omission>Tag omission in text/html</a>:<dd>Neither tag is omissible.<dt><a href=dom.html#concept-element-attributes id=the-dialog-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-dialog-element:global-attributes href=dom.html#global-attributes>Global attributes</a><dd><code id=the-dialog-element:attr-dialog-closedby><a href=#attr-dialog-closedby>closedby</a></code> —  Which user actions will close the dialog
+     <dd><code id=the-dialog-element:attr-dialog-open><a href=#attr-dialog-open>open</a></code> —  Whether the dialog box is showing
+     <dt><a href=dom.html#concept-element-accessibility-considerations id=the-dialog-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-dialog>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-dialog>For implementers</a>.<dt><a href=dom.html#concept-element-sanitization id=the-dialog-element:concept-element-sanitization>Sanitization</a>:<dd><a href=dynamic-markup-insertion.html#sanitizer-uncategorized id=the-dialog-element:sanitizer-uncategorized>Uncategorized</a>.<dt><a href=dom.html#concept-element-dom id=the-dialog-element:concept-element-dom>DOM interface</a>:<dd>
+    <pre><code class='idl'>[<c- g>Exposed</c->=<c- n>Window</c->]
+<c- b>interface</c-> <dfn id='htmldialogelement' data-dfn-type='interface'><c- g>HTMLDialogElement</c-></dfn> : <a id='the-dialog-element:htmlelement' href='dom.html#htmlelement'><c- n>HTMLElement</c-></a> {
+  [<a id='the-dialog-element:htmlconstructor' href='dom.html#htmlconstructor'><c- g>HTMLConstructor</c-></a>] <c- g>constructor</c->();
+
+  [<a id='the-dialog-element:cereactions' href='custom-elements.html#cereactions'><c- g>CEReactions</c-></a>, <a href='common-dom-interfaces.html#xattr-reflect' id='the-dialog-element:xattr-reflect'><c- g>Reflect</c-></a>] <c- b>attribute</c-> <c- b>boolean</c-> <dfn data-dfn-for='HTMLDialogElement' id='dom-dialog-open' data-dfn-type='attribute'><c- g>open</c-></dfn>;
+  <c- b>attribute</c-> <c- b>DOMString</c-> <a href='#dom-dialog-returnvalue' id='the-dialog-element:dom-dialog-returnvalue'><c- g>returnValue</c-></a>;
+  [<a id='the-dialog-element:cereactions-2' href='custom-elements.html#cereactions'><c- g>CEReactions</c-></a>, <a href='common-dom-interfaces.html#xattr-reflectsetter' id='the-dialog-element:xattr-reflectsetter'><c- g>ReflectSetter</c-></a>] <c- b>attribute</c-> <c- b>DOMString</c-> <a href='#dom-dialog-closedby' id='the-dialog-element:dom-dialog-closedby'><c- g>closedBy</c-></a>;
+  [<a id='the-dialog-element:cereactions-3' href='custom-elements.html#cereactions'><c- g>CEReactions</c-></a>] <c- b>undefined</c-> <a href='#dom-dialog-show' id='the-dialog-element:dom-dialog-show'><c- g>show</c-></a>();
+  [<a id='the-dialog-element:cereactions-4' href='custom-elements.html#cereactions'><c- g>CEReactions</c-></a>] <c- b>undefined</c-> <a href='#dom-dialog-showmodal' id='the-dialog-element:dom-dialog-showmodal'><c- g>showModal</c-></a>();
+  [<a id='the-dialog-element:cereactions-5' href='custom-elements.html#cereactions'><c- g>CEReactions</c-></a>] <c- b>undefined</c-> <a href='#dom-dialog-close' id='the-dialog-element:dom-dialog-close'><c- g>close</c-></a>(<c- b>optional</c-> <c- b>DOMString</c-> <c- g>returnValue</c->);
+  [<a id='the-dialog-element:cereactions-6' href='custom-elements.html#cereactions'><c- g>CEReactions</c-></a>] <c- b>undefined</c-> <a href='#dom-dialog-requestclose' id='the-dialog-element:dom-dialog-requestclose'><c- g>requestClose</c-></a>(<c- b>optional</c-> <c- b>DOMString</c-> <c- g>returnValue</c->);
+};</code></pre>
+   </dl>
+
+  <p>The <code id=the-dialog-element:the-dialog-element><a href=#the-dialog-element>dialog</a></code> element represents a transitory part of an application, in the form of
+  a small window ("dialog box"), which the user interacts with to perform a task or gather
+  information. Once the user is done, the dialog can be automatically closed by the application, or
+  manually closed by the user.</p>
+
+  <p>Especially for modal dialogs, which are a familiar pattern across all types of applications,
+  authors should work to ensure that dialogs in their web applications behave in a way that is
+  familiar to users of non-web applications.</p>
+
+  <p class=note>As with all HTML elements, it is not conforming to use the <code id=the-dialog-element:the-dialog-element-2><a href=#the-dialog-element>dialog</a></code>
+  element when attempting to represent another type of control. For example, context menus,
+  tooltips, and popup listboxes are not dialog boxes, so abusing the <code id=the-dialog-element:the-dialog-element-3><a href=#the-dialog-element>dialog</a></code> element to
+  implement these patterns is incorrect.</p>
+
+  <p>An important part of user-facing dialog behavior is the placement of initial focus. The
+  <a href=#dialog-focusing-steps id=the-dialog-element:dialog-focusing-steps>dialog focusing steps</a> attempt to pick a good candidate for initial focus when a
+  dialog is shown, but might not be a substitute for authors carefully thinking through the correct
+  choice to match user expectations for a specific dialog. As such, authors should use the <code id=the-dialog-element:attr-fe-autofocus><a href=interaction.html#attr-fe-autofocus>autofocus</a></code> attribute on the descendant element of the dialog that
+  the user is expected to immediately interact with after the dialog opens. If there is no such
+  element, then authors should use the <code id=the-dialog-element:attr-fe-autofocus-2><a href=interaction.html#attr-fe-autofocus>autofocus</a></code> attribute
+  on the <code id=the-dialog-element:the-dialog-element-4><a href=#the-dialog-element>dialog</a></code> element itself.</p>
+
+  <div class=example>
+   <p>In the following example, a dialog is used for editing the details of a product in an
+   inventory management web application.</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>dialog</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>label</c-><c- p>&gt;</c->Product Number <c- p>&lt;</c-><c- f>input</c-> <c- e>type</c-><c- o>=</c-><c- s>&quot;text&quot;</c-> <c- e>readonly</c-><c- p>&gt;&lt;/</c-><c- f>label</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>label</c-><c- p>&gt;</c->Product Name <c- p>&lt;</c-><c- f>input</c-> <c- e>type</c-><c- o>=</c-><c- s>&quot;text&quot;</c-> <c- e>autofocus</c-><c- p>&gt;&lt;/</c-><c- f>label</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>dialog</c-><c- p>&gt;</c-></code></pre>
+
+   <p>If the <code id=the-dialog-element:attr-fe-autofocus-3><a href=interaction.html#attr-fe-autofocus>autofocus</a></code> attribute was not present, the
+   Product Number field would have been focused by the dialog focusing steps. Although that is
+   reasonable behavior, the author determined that the more relevant field to focus was the Product
+   Name field, as the Product Number field is readonly and expects no user input. So, the author
+   used autofocus to override the default.</p>
+
+   <p>Even if the author wants to focus the Product Number field by default, they are best off
+   explicitly specifying that by using autofocus on that <code id=the-dialog-element:the-input-element><a href=input.html#the-input-element>input</a></code> element. This makes the
+   intent obvious to future readers of the code, and ensures the code stays robust in the face of
+   future updates. (For example, if another developer added a close button, and positioned it in the
+   node tree before the Product Number field).</p>
+  </div>
+
+  <p>Another important aspect of user behavior is whether dialogs are scrollable or not. In some
+  cases, overflow (and thus scrollability) cannot be avoided, e.g., when it is caused by the user's
+  high text zoom settings. But in general, scrollable dialogs are not expected by users. Adding
+  large text nodes directly to dialog elements is particularly bad as this is likely to cause the
+  dialog element itself to overflow. Authors are best off avoiding them.</p>
+
+  <div class=example>
+   <p>The following terms of service dialog respects the above suggestions.</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>dialog</c-> <c- e>style</c-><c- o>=</c-><c- s>&quot;height: 80vh;&quot;</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>div</c-> <c- e>style</c-><c- o>=</c-><c- s>&quot;overflow: auto; height: 60vh;&quot;</c-> <c- e>autofocus</c-><c- p>&gt;</c->
+    <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;</c->By placing an order via this Web site on the first day of the fourth month of the year
+    2010 Anno Domini, you agree to grant Us a non-transferable option to claim, for now and for
+    ever more, your immortal soul.<c- p>&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+    <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;</c->Should We wish to exercise this option, you agree to surrender your immortal soul,
+    and any claim you may have on it, within 5 (five) working days of receiving written
+    notification from  this site or one of its duly authorized minions.<c- p>&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+    <c- c>&lt;!-- ... etc., with many more &lt;p&gt; elements ... --&gt;</c->
+  <c- p>&lt;/</c-><c- f>div</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>form</c-> <c- e>method</c-><c- o>=</c-><c- s>&quot;dialog&quot;</c-><c- p>&gt;</c->
+    <c- p>&lt;</c-><c- f>button</c-> <c- e>type</c-><c- o>=</c-><c- s>&quot;submit&quot;</c-> <c- e>value</c-><c- o>=</c-><c- s>&quot;agree&quot;</c-><c- p>&gt;</c->Agree<c- p>&lt;/</c-><c- f>button</c-><c- p>&gt;</c->
+    <c- p>&lt;</c-><c- f>button</c-> <c- e>type</c-><c- o>=</c-><c- s>&quot;submit&quot;</c-> <c- e>value</c-><c- o>=</c-><c- s>&quot;disagree&quot;</c-><c- p>&gt;</c->Disagree<c- p>&lt;/</c-><c- f>button</c-><c- p>&gt;</c->
+  <c- p>&lt;/</c-><c- f>form</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>dialog</c-><c- p>&gt;</c-></code></pre>
+
+   <p>Note how the <a href=#dialog-focusing-steps id=the-dialog-element:dialog-focusing-steps-2>dialog focusing steps</a> would have picked the scrollable
+   <code id=the-dialog-element:the-div-element><a href=grouping-content.html#the-div-element>div</a></code> element by default, but similarly to the previous example, we have placed <code id=the-dialog-element:attr-fe-autofocus-4><a href=interaction.html#attr-fe-autofocus>autofocus</a></code> on the <code id=the-dialog-element:the-div-element-2><a href=grouping-content.html#the-div-element>div</a></code> so as to be more explicit and
+   robust against future changes.</p>
+
+   <p>In contrast, if the <code id=the-dialog-element:the-p-element><a href=grouping-content.html#the-p-element>p</a></code> elements expressing the terms of service did not have such
+   a wrapper <code id=the-dialog-element:the-div-element-3><a href=grouping-content.html#the-div-element>div</a></code> element, then the <code id=the-dialog-element:the-dialog-element-5><a href=#the-dialog-element>dialog</a></code> itself would become scrollable,
+   violating the above advice. Furthermore, in the absence of any <code id=the-dialog-element:attr-fe-autofocus-5><a href=interaction.html#attr-fe-autofocus>autofocus</a></code> attribute, such a markup pattern would have violated
+   the above advice and tripped up the <a href=#dialog-focusing-steps id=the-dialog-element:dialog-focusing-steps-3>dialog focusing steps</a>'s default behavior, and
+   caused focus to jump to the Agree <code id=the-dialog-element:the-button-element><a href=form-elements.html#the-button-element>button</a></code>, which is a bad user experience.</p>
+  </div>
+
+  <div class=example>
+   <p>This dialog box has some small print. The <code id=the-dialog-element:the-strong-element><a href=text-level-semantics.html#the-strong-element>strong</a></code> element is used to draw the
+   user's attention to the more important part.</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>dialog</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>h1</c-><c- p>&gt;</c->Add to Wallet<c- p>&lt;/</c-><c- f>h1</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;&lt;</c-><c- f>strong</c-><c- p>&gt;&lt;</c-><c- f>label</c-> <c- e>for</c-><c- o>=</c-><c- s>amt</c-><c- p>&gt;</c->How many gold coins do you want to add to your wallet?<c- p>&lt;/</c-><c- f>label</c-><c- p>&gt;&lt;/</c-><c- f>strong</c-><c- p>&gt;&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;&lt;</c-><c- f>input</c-> <c- e>id</c-><c- o>=</c-><c- s>amt</c-> <c- e>name</c-><c- o>=</c-><c- s>amt</c-> <c- e>type</c-><c- o>=</c-><c- s>number</c-> <c- e>min</c-><c- o>=</c-><c- s>0</c-> <c- e>step</c-><c- o>=</c-><c- s>0.01</c-> <c- e>value</c-><c- o>=</c-><c- s>100</c-><c- p>&gt;&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;&lt;</c-><c- f>small</c-><c- p>&gt;</c->You add coins at your own risk.<c- p>&lt;/</c-><c- f>small</c-><c- p>&gt;&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;&lt;</c-><c- f>label</c-><c- p>&gt;&lt;</c-><c- f>input</c-> <c- e>name</c-><c- o>=</c-><c- s>round</c-> <c- e>type</c-><c- o>=</c-><c- s>checkbox</c-><c- p>&gt;</c-> Only add perfectly round coins<c- p>&lt;/</c-><c- f>label</c-><c- p>&gt;&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;&lt;</c-><c- f>input</c-> <c- e>type</c-><c- o>=</c-><c- s>button</c-> <c- e>onclick</c-><c- o>=</c-><c- s>&quot;submit()&quot;</c-> <c- e>value</c-><c- o>=</c-><c- s>&quot;Add Coins&quot;</c-><c- p>&gt;&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>dialog</c-><c- p>&gt;</c-></code></pre>
+  </div>
+
+  <hr>
+
+  <p>The <dfn data-dfn-for=dialog id=attr-dialog-open data-dfn-type=element-attr><code>open</code></dfn> attribute
+  is a <a id=the-dialog-element:boolean-attribute href=common-microsyntaxes.html#boolean-attribute>boolean attribute</a>. When specified, it indicates that the <code id=the-dialog-element:the-dialog-element-6><a href=#the-dialog-element>dialog</a></code>
+  element is active and that the user can interact with it.</p>
+
+  <p>The <dfn data-dfn-for=dialog id=attr-dialog-closedby data-dfn-type=element-attr><code>closedby</code></dfn>
+  content attribute is an <a id=the-dialog-element:enumerated-attribute href=common-microsyntaxes.html#enumerated-attribute>enumerated attribute</a> with the following keywords and
+  states:</p>
+
+  <table><thead><tr><th>Keyword
+     <th>State
+     <th>Brief description
+   <tbody><tr><td><dfn data-dfn-for=dialog/closedby id=attr-dialog-closedby-any data-dfn-type=attr-value><code>any</code></dfn>
+     <td><dfn id=attr-dialog-closedby-any-state>Any</dfn>
+     <td><a href=interaction.html#close-request id=the-dialog-element:close-request>Close requests</a> or clicks outside close the dialog.
+    <tr><td><dfn data-dfn-for=dialog/closedby id=attr-dialog-closedby-closerequest data-dfn-type=attr-value><code>closerequest</code></dfn>
+     <td><dfn id=attr-dialog-closedby-closerequest-state>Close Request</dfn>
+     <td><a href=interaction.html#close-request id=the-dialog-element:close-request-2>Close requests</a> close the dialog.
+    <tr><td><dfn data-dfn-for=dialog/closedby id=attr-dialog-closedby-none data-dfn-type=attr-value><code>none</code></dfn>
+     <td><dfn id=attr-dialog-closedby-none-state>None</dfn>
+     <td>No user actions automatically close the dialog.
+  </table>
+
+  <p>The <code id=the-dialog-element:attr-dialog-closedby-2><a href=#attr-dialog-closedby>closedby</a></code> attribute's <i id=the-dialog-element:invalid-value-default><a href=common-microsyntaxes.html#invalid-value-default>invalid value default</a></i> and <i id=the-dialog-element:missing-value-default><a href=common-microsyntaxes.html#missing-value-default>missing value
+  default</a></i> are both the <dfn id=attr-dialog-closedby-auto-state>Auto</dfn> state.</p>
+
+  <p class=note>The <a href=#attr-dialog-closedby-auto-state id=the-dialog-element:attr-dialog-closedby-auto-state>Auto</a> state behaves as
+  <a href=#attr-dialog-closedby-closerequest-state id=the-dialog-element:attr-dialog-closedby-closerequest-state>Close Request</a> state when the
+  <code id=the-dialog-element:the-dialog-element-7><a href=#the-dialog-element>dialog</a></code> was shown using its <code id=the-dialog-element:dom-dialog-showmodal-2><a href=#dom-dialog-showmodal>showModal()</a></code>
+  method; otherwise the <a href=#attr-dialog-closedby-none-state id=the-dialog-element:attr-dialog-closedby-none-state>None</a> state.</p>
+
+  
+
+  <p>A <code id=the-dialog-element:the-dialog-element-8><a href=#the-dialog-element>dialog</a></code> element without an <code id=the-dialog-element:attr-dialog-open-2><a href=#attr-dialog-open>open</a></code> attribute
+  specified should not be shown to the user. This requirement may be implemented indirectly through
+  the style layer. For example, user agents that <a href=infrastructure.html#renderingUA>support the suggested
+  default rendering</a> implement this requirement using the CSS rules described in the <a href=rendering.html#rendering>Rendering section</a>.</p>
+
+  
+
+  <div id=note-dialog-remove-open-attribute class=note><a href=#note-dialog-remove-open-attribute class=self-link></a>
+   <p>Removing the <code id=the-dialog-element:attr-dialog-open-3><a href=#attr-dialog-open>open</a></code> attribute will usually hide the
+   dialog. However, doing so has a number of strange additional consequences:
+
+   <ul><li><p>The <code id=the-dialog-element:event-close><a href=indices.html#event-close>close</a></code> event will not be fired.<li><p>The <code id=the-dialog-element:dom-dialog-close-2><a href=#dom-dialog-close>close()</a></code> method, and any <a href=interaction.html#close-request id=the-dialog-element:close-request-3>close requests</a>, will no longer be able to close the dialog.<li><p>If the dialog was shown using its <code id=the-dialog-element:dom-dialog-showmodal-3><a href=#dom-dialog-showmodal>showModal()</a></code>
+    method, the <code id=the-dialog-element:document><a href=dom.html#document>Document</a></code> will still be <a href=interaction.html#blocked-by-a-modal-dialog id=the-dialog-element:blocked-by-a-modal-dialog>blocked</a>.</ul>
+
+   <p>For these reasons, it is generally better to never remove the <code id=the-dialog-element:attr-dialog-open-4><a href=#attr-dialog-open>open</a></code> attribute manually. Instead, use the <code id=the-dialog-element:dom-dialog-requestclose-2><a href=#dom-dialog-requestclose>requestClose()</a></code> or <code id=the-dialog-element:dom-dialog-close-3><a href=#dom-dialog-close>close()</a></code> methods to close the dialog, or the <code id=the-dialog-element:attr-hidden><a href=interaction.html#attr-hidden>hidden</a></code> attribute to hide it.</p>
+  </div>
+
+  <p>The <code id=the-dialog-element:attr-tabindex><a href=interaction.html#attr-tabindex>tabindex</a></code> attribute must not be specified on
+  <code id=the-dialog-element:the-dialog-element-9><a href=#the-dialog-element>dialog</a></code> elements.</p>
+
+  <hr>
+
+  <dl class=domintro><dt><code><var>dialog</var>.<a href=#dom-dialog-show id=dom-dialog-show-dev>show</a>()</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/show title="The show() method of the HTMLDialogElement interface displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog.">HTMLDialogElement/show</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>98+</span></span><span class="safari yes"><span>Safari</span><span>15.4+</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge unknown"><span>Edge (Legacy)</span><span>?</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android unknown"><span>WebView Android</span><span>?</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div><dd><p>Displays the <code id=the-dialog-element:the-dialog-element-10><a href=#the-dialog-element>dialog</a></code> element.<dt><code><var>dialog</var>.<a href=#dom-dialog-showmodal id=dom-dialog-showmodal-dev>showModal</a>()</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal title="The showModal() method of the HTMLDialogElement interface displays the dialog as a modal, over the top of any other dialogs that might be present. It displays in the top layer, along with a ::backdrop pseudo-element. Interaction outside the dialog is blocked and the content outside it is rendered inert.">HTMLDialogElement/showModal</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>98+</span></span><span class="safari yes"><span>Safari</span><span>15.4+</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge unknown"><span>Edge (Legacy)</span><span>?</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android unknown"><span>WebView Android</span><span>?</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div><dd>
+    <p>Displays the <code id=the-dialog-element:the-dialog-element-11><a href=#the-dialog-element>dialog</a></code> element and makes it the top-most modal dialog.</p>
+
+    <p>This method honors the <code id=the-dialog-element:attr-fe-autofocus-6><a href=interaction.html#attr-fe-autofocus>autofocus</a></code> attribute.</p>
+   <dt><code><var>dialog</var>.<a href=#dom-dialog-close id=dom-dialog-close-dev>close</a>([ <var>result</var> ])</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/close title="The close() method of the HTMLDialogElement interface closes the <dialog>. An optional string may be passed as an argument, updating the returnValue of the dialog.">HTMLDialogElement/close</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>98+</span></span><span class="safari yes"><span>Safari</span><span>15.4+</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge unknown"><span>Edge (Legacy)</span><span>?</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android unknown"><span>WebView Android</span><span>?</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div><dd>
+    <p>Closes the <code id=the-dialog-element:the-dialog-element-12><a href=#the-dialog-element>dialog</a></code> element.</p>
+
+    <p>The argument, if provided, provides a return value.</p>
+   <dt><code><var>dialog</var>.<a href=#dom-dialog-requestclose id=dom-dialog-requestclose-dev>requestClose</a>([ <var>result</var> ])</code><dd>
+    <p>Acts as if a <a href=interaction.html#close-request id=the-dialog-element:close-request-4>close request</a> was sent targeting
+    <var>dialog</var>, by first firing a <code id=the-dialog-element:event-cancel><a href=indices.html#event-cancel>cancel</a></code> event, and if
+    that event is not canceled with <code id=the-dialog-element:dom-event-preventdefault><a data-x-internal=dom-event-preventdefault href=https://dom.spec.whatwg.org/#dom-event-preventdefault>preventDefault()</a></code>,
+    proceeding to close the <var>dialog</var> in the same way as the <code id=the-dialog-element:dom-dialog-close-4><a href=#dom-dialog-close>close()</a></code> method (including firing a <code id=the-dialog-element:event-close-2><a href=indices.html#event-close>close</a></code> event).</p>
+
+    <p>This is a helper utility that can be used to consolidate cancelation and closing logic into
+    the <code id=the-dialog-element:event-cancel-2><a href=indices.html#event-cancel>cancel</a></code> and <code id=the-dialog-element:event-close-3><a href=indices.html#event-close>close</a></code> event
+    handlers, by having all non-<a href=interaction.html#close-request id=the-dialog-element:close-request-5>close request</a> closing
+    affordances call this method.</p>
+
+    <p>Note that this method ignores the <code id=the-dialog-element:attr-dialog-closedby-3><a href=#attr-dialog-closedby>closedby</a></code>
+    attribute: that is, even if <code id=the-dialog-element:attr-dialog-closedby-4><a href=#attr-dialog-closedby>closedby</a></code> is set to
+    "<code id=the-dialog-element:attr-dialog-closedby-none><a href=#attr-dialog-closedby-none>none</a></code>", the same behavior will apply.</p>
+
+    <p>The argument, if provided, provides a return value.</p>
+   <dt><code><var>dialog</var>.<a href=#dom-dialog-returnvalue id=dom-dialog-returnvalue-dev>returnValue</a> [ = <var>result</var> ]</code><div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/returnValue title="The returnValue property of the HTMLDialogElement interface gets or sets the return value for the <dialog>, usually to indicate which button the user pressed to close it.">HTMLDialogElement/returnValue</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>98+</span></span><span class="safari yes"><span>Safari</span><span>15.4+</span></span><span class="chrome yes"><span>Chrome</span><span>37+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge unknown"><span>Edge (Legacy)</span><span>?</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android unknown"><span>Chrome Android</span><span>?</span></span><span class="webview_android unknown"><span>WebView Android</span><span>?</span></span><span class="samsunginternet_android unknown"><span>Samsung Internet</span><span>?</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div><dd>
+    <p>Returns the <code id=the-dialog-element:the-dialog-element-13><a href=#the-dialog-element>dialog</a></code>'s return value.</p>
+
+    <p>Can be set, to update the return value.</p>
+   </dl>
+
+  
+
+  <div data-algorithm="">
+  <p>The <dfn data-dfn-for=HTMLDialogElement id=dom-dialog-show data-dfn-type=method><code>show()</code></dfn>
+  method steps are:</p>
+
+  <ol><li><p>If <a id=the-dialog-element:this href=https://webidl.spec.whatwg.org/#this data-x-internal=this>this</a> has an <code id=the-dialog-element:attr-dialog-open-5><a href=#attr-dialog-open>open</a></code> attribute and
+   <a href=#is-modal id=the-dialog-element:is-modal>is modal</a> of <a id=the-dialog-element:this-2 href=https://webidl.spec.whatwg.org/#this data-x-internal=this>this</a> is false, then return.<li><p>If <a id=the-dialog-element:this-3 href=https://webidl.spec.whatwg.org/#this data-x-internal=this>this</a> has an <code id=the-dialog-element:attr-dialog-open-6><a href=#attr-dialog-open>open</a></code> attribute, then
+   throw an <a id=the-dialog-element:invalidstateerror href=https://webidl.spec.whatwg.org/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=the-dialog-element:domexception><a data-x-internal=domexception href=https://webidl.spec.whatwg.org/#dfn-DOMException>DOMException</a></code>.<li><p>If the result of <a href=https://dom.spec.whatwg.org/#concept-event-fire id=the-dialog-element:concept-event-fire data-x-internal=concept-event-fire>firing an event</a> named <code id=the-dialog-element:event-beforetoggle><a href=indices.html#event-beforetoggle>beforetoggle</a></code>, using <code id=the-dialog-element:toggleevent><a href=interaction.html#toggleevent>ToggleEvent</a></code>, with the <code id=the-dialog-element:dom-event-cancelable><a data-x-internal=dom-event-cancelable href=https://dom.spec.whatwg.org/#dom-event-cancelable>cancelable</a></code> attribute initialized to true, the <code id=the-dialog-element:dom-toggleevent-oldstate><a href=interaction.html#dom-toggleevent-oldstate>oldState</a></code> attribute initialized to "<code>closed</code>", and the <code id=the-dialog-element:dom-toggleevent-newstate><a href=interaction.html#dom-toggleevent-newstate>newState</a></code>
+   attribute initialized to "<code>open</code>" at <a id=the-dialog-element:this-4 href=https://webidl.spec.whatwg.org/#this data-x-internal=this>this</a> is false, then
+   return.<li><p>If <a id=the-dialog-element:this-5 href=https://webidl.spec.whatwg.org/#this data-x-internal=this>this</a> has an <code id=the-dialog-element:attr-dialog-open-7><a href=#attr-dialog-open>open</a></code> attribute, then
+   return.<li><p><a href=#queue-a-dialog-toggle-event-task id=the-dialog-element:queue-a-dialog-toggle-event-task>Queue a dialog toggle event task</a> given <a id=the-dialog-element:this-6 href=https://webidl.spec.whatwg.org/#this data-x-internal=this>this</a>, "<code>closed</code>", "<code>open</code>", and null.<li><p>Add an <code id=the-dialog-element:attr-dialog-open-8><a href=#attr-dialog-open>open</a></code> attribute to <a id=the-dialog-element:this-7 href=https://webidl.spec.whatwg.org/#this data-x-internal=this>this</a>, whose
+   value is the empty string.<li><p>Set <a id=the-dialog-element:this-8 href=https://webidl.spec.whatwg.org/#this data-x-internal=this>this</a>'s <a href=#previously-focused-element id=the-dialog-element:previously-focused-element>previously focused element</a> to the
+   <a id=the-dialog-element:focused href=interaction.html#focused>focused</a> element.<li><p>Let <var>document</var> be <a id=the-dialog-element:this-9 href=https://webidl.spec.whatwg.org/#this data-x-internal=this>this</a>'s <a id=the-dialog-element:node-document href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>.<li><p>Let <var>hideUntil</var> be the result of running <a id=the-dialog-element:topmost-popover-ancestor href=popover.html#topmost-popover-ancestor>topmost popover ancestor</a>
+   given <a id=the-dialog-element:this-10 href=https://webidl.spec.whatwg.org/#this data-x-internal=this>this</a>, null, and false.<li><p>Run <a id=the-dialog-element:hide-popovers-until href=popover.html#hide-popovers-until>hide popovers until</a> given <var>document</var>, <var>hideUntil</var>,
+   false, and true.<li><p>Run the <a href=#dialog-focusing-steps id=the-dialog-element:dialog-focusing-steps-4>dialog focusing steps</a> given <a id=the-dialog-element:this-11 href=https://webidl.spec.whatwg.org/#this data-x-internal=this>this</a>.</ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <dfn data-dfn-for=HTMLDialogElement id=dom-dialog-showmodal data-dfn-type=method><code>showModal()</code></dfn> method steps are to <a href=#show-a-modal-dialog id=the-dialog-element:show-a-modal-dialog>show a modal
+  dialog</a> given <a id=the-dialog-element:this-12 href=https://webidl.spec.whatwg.org/#this data-x-internal=this>this</a> and null.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <dfn data-dfn-for=HTMLDialogElement id=dom-dialog-close data-dfn-type=method><code>close(<var>returnValue</var>)</code></dfn> method steps are:
+
+  <ol><li><p>If <var>returnValue</var> is not given, then set it to null.<li><p><a href=#close-the-dialog id=the-dialog-element:close-the-dialog>Close the dialog</a> <a id=the-dialog-element:this-13 href=https://webidl.spec.whatwg.org/#this data-x-internal=this>this</a> with <var>returnValue</var> and
+   null.</ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <dfn data-dfn-for=HTMLDialogElement id=dom-dialog-requestclose data-dfn-type=method><code>requestClose(<var>returnValue</var>)</code></dfn> method steps
+  are:</p>
+
+  <ol><li><p>If <var>returnValue</var> is not given, then set it to null.<li><p><a href=#dialog-request-close id=the-dialog-element:dialog-request-close>Request to close the dialog</a> <a id=the-dialog-element:this-14 href=https://webidl.spec.whatwg.org/#this data-x-internal=this>this</a>
+   with <var>returnValue</var> and null.</ol>
+  </div>
+
+  <div id=note-dialog-method-names class=note><a href=#note-dialog-method-names class=self-link></a>
+   <p>We use show/close as the verbs for <code id=the-dialog-element:the-dialog-element-14><a href=#the-dialog-element>dialog</a></code> elements, as opposed to verb pairs that
+   are more commonly thought of as antonyms such as show/hide or open/close, due to the following
+   constraints:</p>
+
+   <ul><li><p>Hiding a dialog is different from closing one. Closing a dialog gives it a return value,
+    fires an event, unblocks the page for other dialogs, and so on. Whereas hiding a dialog is a
+    purely visual property, and is something you can already do with the <code id=the-dialog-element:attr-hidden-2><a href=interaction.html#attr-hidden>hidden</a></code> attribute or by removing the <code id=the-dialog-element:attr-dialog-open-9><a href=#attr-dialog-open>open</a></code> attribute. (See also the <a href=#note-dialog-remove-open-attribute>note above</a> about removing the <code id=the-dialog-element:attr-dialog-open-10><a href=#attr-dialog-open>open</a></code> attribute, and how hiding the dialog in that way is
+    generally not desired.)<li><p>Showing a dialog is different from opening one. Opening a dialog consists of creating
+    and showing that dialog (similar to how <code id=the-dialog-element:dom-open><a href=nav-history-apis.html#dom-open>window.open()</a></code> both
+    creates and shows a new window). Whereas showing the dialog is the process of taking a
+    <code id=the-dialog-element:the-dialog-element-15><a href=#the-dialog-element>dialog</a></code> element that is already in the DOM, and making it interactive and visible
+    to the user.<li><p>If we were to have a <code>dialog.open()</code> method despite the above, it
+    would conflict with the <code id=the-dialog-element:dom-dialog-open><a href=#dom-dialog-open>dialog.open</a></code> property.</ul>
+
+   <p>Furthermore, a <a href=https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2013-December/041799.html>survey</a>
+   of many other UI frameworks contemporary to the original design of the <code id=the-dialog-element:the-dialog-element-16><a href=#the-dialog-element>dialog</a></code>
+   element made it clear that the show/close verb pair was reasonably common.</p>
+
+   <p>In summary, it turns out that the implications of certain verbs, and how they are used in
+   technology contexts, mean that paired actions such as showing and closing a dialog are not
+   always expressible as antonyms.</p>
+  </div>
+
+
+  <div data-algorithm="">
+  <p>The <dfn data-dfn-for=HTMLDialogElement id=dom-dialog-returnvalue data-dfn-type=attribute><code>returnValue</code></dfn> IDL attribute, on getting, must return
+  the last value to which it was set. On setting, it must be set to the new value. When the element
+  is created, it must be set to the empty string.</p>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <dfn data-dfn-for=HTMLDialogElement id=dom-dialog-closedby data-dfn-type=attribute><code>closedBy</code></dfn> getter steps are to return the keyword
+  corresponding to the <a href=#computed-closed-by-state id=the-dialog-element:computed-closed-by-state>computed closed-by state</a> given <a id=the-dialog-element:this-15 href=https://webidl.spec.whatwg.org/#this data-x-internal=this>this</a>.</p>
+  </div>
+
+  <hr>
+
+  <p>Each <code id=the-dialog-element:document-2><a href=dom.html#document>Document</a></code> has a <dfn id=dialog-pointerdown-target>dialog pointerdown target</dfn>, which is an <a href=#htmldialogelement id=the-dialog-element:htmldialogelement>HTML dialog element</a> or null, initially null.</p>
+
+  <p>Each <a href=infrastructure.html#html-elements id=the-dialog-element:html-elements>HTML element</a> has a <dfn id=previously-focused-element>previously focused
+  element</dfn> which is null or an element, and it is initially null. When <code id=the-dialog-element:dom-dialog-showmodal-4><a href=#dom-dialog-showmodal>showModal()</a></code> and <code id=the-dialog-element:dom-dialog-show-2><a href=#dom-dialog-show>show()</a></code>
+  are called, this element is set to the currently <a id=the-dialog-element:focused-2 href=interaction.html#focused>focused</a> element before running the
+  <a href=#dialog-focusing-steps id=the-dialog-element:dialog-focusing-steps-5>dialog focusing steps</a>. Elements with the <code id=the-dialog-element:attr-popover><a href=popover.html#attr-popover>popover</a></code>
+  attribute set this element to the currently <a id=the-dialog-element:focused-3 href=interaction.html#focused>focused</a> element during the <a href=popover.html#show-popover id=the-dialog-element:show-popover>show popover algorithm</a>.</p>
+
+  <p>Each <code id=the-dialog-element:the-dialog-element-17><a href=#the-dialog-element>dialog</a></code> element has a <dfn id=dialog-toggle-task-tracker>dialog toggle task tracker</dfn>, which is a
+  <a id=the-dialog-element:toggle-task-tracker href=interaction.html#toggle-task-tracker>toggle task tracker</a> or null, initially null.</p>
+
+  <p>Each <code id=the-dialog-element:the-dialog-element-18><a href=#the-dialog-element>dialog</a></code> element has a <dfn id=dialog-close-watcher>close watcher</dfn>,
+  which is a <a id=the-dialog-element:close-watcher href=interaction.html#close-watcher>close watcher</a> or null, initially null.</p>
+
+  <p>Each <code id=the-dialog-element:the-dialog-element-19><a href=#the-dialog-element>dialog</a></code> element has a <dfn id=request-close-return-value>request close return value</dfn>, which is a
+  string or null, initially null.</p>
+
+  <p>Each <code id=the-dialog-element:the-dialog-element-20><a href=#the-dialog-element>dialog</a></code> element has a <dfn id=request-close-source-element>request close source element</dfn>, which is an
+  <code id=the-dialog-element:element><a data-x-internal=element href=https://dom.spec.whatwg.org/#interface-element>Element</a></code> or null, initially null.</p>
+
+  <p>Each <code id=the-dialog-element:the-dialog-element-21><a href=#the-dialog-element>dialog</a></code> element has an <dfn id=enable-close-watcher-for-requestclose()>enable close watcher for request close</dfn> boolean,
+  initially false.</p>
+
+  <p class=note><code id=the-dialog-element:the-dialog-element-22><a href=#the-dialog-element>dialog</a></code>'s <a href=#enable-close-watcher-for-requestclose() id=the-dialog-element:enable-close-watcher-for-requestclose()>enable close watcher for request close</a> is used
+  to force enable the dialog's <a href=#dialog-close-watcher id=the-dialog-element:dialog-close-watcher>close watcher</a> while <a href=#dialog-request-close id=the-dialog-element:dialog-request-close-2>requesting to close</a> it. A dialog whose <a href=#computed-closed-by-state id=the-dialog-element:computed-closed-by-state-2>computed
+  closed-by state</a> is the <a href=#attr-dialog-closedby-none-state id=the-dialog-element:attr-dialog-closedby-none-state-2>None</a> state
+  would otherwise have a disabled <a href=#dialog-close-watcher id=the-dialog-element:dialog-close-watcher-2>close watcher</a>.</p>
+
+  <p>Each <code id=the-dialog-element:the-dialog-element-23><a href=#the-dialog-element>dialog</a></code> element has an <dfn id=is-modal>is modal</dfn> boolean, initially false.</p>
+
+  <hr>
+
+  <div data-algorithm="">
+  <p>The <code id=the-dialog-element:the-dialog-element-24><a href=#the-dialog-element>dialog</a></code> <a id=the-dialog-element:html-element-insertion-steps href=infrastructure.html#html-element-insertion-steps>HTML element insertion steps</a>, given
+  <var>insertedNode</var>, are:</p>
+
+  <ol><li><p>If <var>insertedNode</var>'s <a id=the-dialog-element:node-document-2 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a> is not <a id=the-dialog-element:fully-active href=document-sequences.html#fully-active>fully active</a>,
+   then return.<li><p>If <var>insertedNode</var> has an <code id=the-dialog-element:attr-dialog-open-11><a href=#attr-dialog-open>open</a></code> attribute
+   and is <a id=the-dialog-element:connected href=https://dom.spec.whatwg.org/#connected data-x-internal=connected>connected</a>, then run the <a href=#dialog-setup-steps id=the-dialog-element:dialog-setup-steps>dialog setup steps</a> given
+   <var>insertedNode</var>.</ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <code id=the-dialog-element:the-dialog-element-25><a href=#the-dialog-element>dialog</a></code> <a id=the-dialog-element:html-element-removing-steps href=infrastructure.html#html-element-removing-steps>HTML element removing steps</a>, given
+  <var>removedNode</var>, <var>isSubtreeRoot</var>, and <var>oldAncestor</var> are:</p>
+
+  <ol><li><p>If <var>removedNode</var> has an <code id=the-dialog-element:attr-dialog-open-12><a href=#attr-dialog-open>open</a></code> attribute,
+   then run the <a href=#dialog-cleanup-steps id=the-dialog-element:dialog-cleanup-steps>dialog cleanup steps</a> given <var>removedNode</var>.<li><p>If <var>removedNode</var>'s <a id=the-dialog-element:node-document-3 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s <a id=the-dialog-element:top-layer href=https://drafts.csswg.org/css-position-4/#document-top-layer data-x-internal=top-layer>top layer</a> <a href=https://infra.spec.whatwg.org/#list-contain id=the-dialog-element:list-contains data-x-internal=list-contains>contains</a> <var>removedNode</var>, then <a id=the-dialog-element:remove-an-element-from-the-top-layer-immediately href=https://drafts.csswg.org/css-position-4/#remove-an-element-from-the-top-layer-immediately data-x-internal=remove-an-element-from-the-top-layer-immediately>remove an element from
+   the top layer immediately</a> given <var>removedNode</var>.<li><p>Set <a href=#is-modal id=the-dialog-element:is-modal-2>is modal</a> of <var>removedNode</var> to false.</ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>The following <a href=https://dom.spec.whatwg.org/#concept-element-attributes-change-ext id=the-dialog-element:concept-element-attributes-change-ext data-x-internal=concept-element-attributes-change-ext>attribute change
+  steps</a>, given <var>element</var>, <var>localName</var>, <var>oldValue</var>,
+  <var>value</var>, and <var>namespace</var> are used for <code id=the-dialog-element:the-dialog-element-26><a href=#the-dialog-element>dialog</a></code> elements:</p>
+
+  <ol><li><p>If <var>namespace</var> is not null, then return.<li><p>If <var>localName</var> is not <code id=the-dialog-element:attr-dialog-open-13><a href=#attr-dialog-open>open</a></code>, then
+   return.<li><p>If <var>value</var> is null and <var>oldValue</var> is not null, then run the
+   <a href=#dialog-cleanup-steps id=the-dialog-element:dialog-cleanup-steps-2>dialog cleanup steps</a> given <var>element</var>.<li><p>If <var>element</var>'s <a id=the-dialog-element:node-document-4 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a> is not <a id=the-dialog-element:fully-active-2 href=document-sequences.html#fully-active>fully active</a>, then
+   return.<li>
+    <p>If <var>element</var> is not <a id=the-dialog-element:connected-2 href=https://dom.spec.whatwg.org/#connected data-x-internal=connected>connected</a>, then return.</p>
+
+    <p class=note>This ensures that the dialog setup steps are not run on nodes that are
+    disconnected, which would result in a <a id=the-dialog-element:close-watcher-2 href=interaction.html#close-watcher>close watcher</a> being established. The
+    <a href=#dialog-cleanup-steps id=the-dialog-element:dialog-cleanup-steps-3>dialog cleanup steps</a> need no such guard.</p>
+   <li><p>If <var>value</var> is not null and <var>oldValue</var> is null, then run the
+   <a href=#dialog-setup-steps id=the-dialog-element:dialog-setup-steps-2>dialog setup steps</a> given <var>element</var>.</ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>To <dfn id=show-a-modal-dialog>show a modal dialog</dfn> given a <code id=the-dialog-element:the-dialog-element-27><a href=#the-dialog-element>dialog</a></code> element <var>subject</var> and an
+  <code id=the-dialog-element:element-2><a data-x-internal=element href=https://dom.spec.whatwg.org/#interface-element>Element</a></code> or null <var>source</var>:</p>
+
+  <ol><li><p>If <var>subject</var> has an <code id=the-dialog-element:attr-dialog-open-14><a href=#attr-dialog-open>open</a></code> attribute and
+   <a href=#is-modal id=the-dialog-element:is-modal-3>is modal</a> of <var>subject</var> is true, then return.<li><p>If <var>subject</var> has an <code id=the-dialog-element:attr-dialog-open-15><a href=#attr-dialog-open>open</a></code> attribute, then
+   throw an <a id=the-dialog-element:invalidstateerror-2 href=https://webidl.spec.whatwg.org/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=the-dialog-element:domexception-2><a data-x-internal=domexception href=https://webidl.spec.whatwg.org/#dfn-DOMException>DOMException</a></code>.<li><p>If <var>subject</var>'s <a id=the-dialog-element:node-document-5 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a> is not <a id=the-dialog-element:fully-active-3 href=document-sequences.html#fully-active>fully active</a>, then
+   throw an <a id=the-dialog-element:invalidstateerror-3 href=https://webidl.spec.whatwg.org/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=the-dialog-element:domexception-3><a data-x-internal=domexception href=https://webidl.spec.whatwg.org/#dfn-DOMException>DOMException</a></code>.<li><p>If <var>subject</var> is not <a id=the-dialog-element:connected-3 href=https://dom.spec.whatwg.org/#connected data-x-internal=connected>connected</a>, then throw an
+   <a id=the-dialog-element:invalidstateerror-4 href=https://webidl.spec.whatwg.org/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a> <code id=the-dialog-element:domexception-4><a data-x-internal=domexception href=https://webidl.spec.whatwg.org/#dfn-DOMException>DOMException</a></code>.<li><p>If <var>subject</var> is in the <a href=popover.html#popover-showing-state id=the-dialog-element:popover-showing-state>popover showing
+   state</a>, then throw an <a id=the-dialog-element:invalidstateerror-5 href=https://webidl.spec.whatwg.org/#invalidstateerror data-x-internal=invalidstateerror>"<code>InvalidStateError</code>"</a>
+   <code id=the-dialog-element:domexception-5><a data-x-internal=domexception href=https://webidl.spec.whatwg.org/#dfn-DOMException>DOMException</a></code>.<li><p>If the result of <a href=https://dom.spec.whatwg.org/#concept-event-fire id=the-dialog-element:concept-event-fire-2 data-x-internal=concept-event-fire>firing an event</a> named <code id=the-dialog-element:event-beforetoggle-2><a href=indices.html#event-beforetoggle>beforetoggle</a></code>, using <code id=the-dialog-element:toggleevent-2><a href=interaction.html#toggleevent>ToggleEvent</a></code>, with the <code id=the-dialog-element:dom-event-cancelable-2><a data-x-internal=dom-event-cancelable href=https://dom.spec.whatwg.org/#dom-event-cancelable>cancelable</a></code> attribute initialized to true, the <code id=the-dialog-element:dom-toggleevent-oldstate-2><a href=interaction.html#dom-toggleevent-oldstate>oldState</a></code> attribute initialized to "<code>closed</code>", the <code id=the-dialog-element:dom-toggleevent-newstate-2><a href=interaction.html#dom-toggleevent-newstate>newState</a></code>
+   attribute initialized to "<code>open</code>", and the <code id=the-dialog-element:dom-toggleevent-source><a href=interaction.html#dom-toggleevent-source>source</a></code> attribute initialized to <var>source</var> at
+   <var>subject</var> is false, then return.<li><p>If <var>subject</var> has an <code id=the-dialog-element:attr-dialog-open-16><a href=#attr-dialog-open>open</a></code> attribute,
+   then return.<li><p>If <var>subject</var> is not <a id=the-dialog-element:connected-4 href=https://dom.spec.whatwg.org/#connected data-x-internal=connected>connected</a>, then return.<li><p>If <var>subject</var> is in the <a href=popover.html#popover-showing-state id=the-dialog-element:popover-showing-state-2>popover showing
+   state</a>, then return.<li><p><a href=#queue-a-dialog-toggle-event-task id=the-dialog-element:queue-a-dialog-toggle-event-task-2>Queue a dialog toggle event task</a> given <var>subject</var>, "<code>closed</code>", "<code>open</code>", and <var>source</var>.<li><p>Add an <code id=the-dialog-element:attr-dialog-open-17><a href=#attr-dialog-open>open</a></code> attribute to <var>subject</var>, whose
+   value is the empty string.<li><p><a id=the-dialog-element:assert href=https://infra.spec.whatwg.org/#assert data-x-internal=assert>Assert</a>: <var>subject</var>'s <a href=#dialog-close-watcher id=the-dialog-element:dialog-close-watcher-3>close
+   watcher</a> is not null.<li><p>Set <a href=#is-modal id=the-dialog-element:is-modal-4>is modal</a> of <var>subject</var> to true.<li>
+    <p>Set <var>subject</var>'s <a id=the-dialog-element:node-document-6 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a> to be <a href=interaction.html#blocked-by-a-modal-dialog id=the-dialog-element:blocked-by-a-modal-dialog-2>blocked by the modal dialog</a> <var>subject</var>.</p>
+
+    <p id=note-dialog-plus-focus-fixup class=note><a href=#note-dialog-plus-focus-fixup class=self-link></a>This will cause the <a id=the-dialog-element:focused-area-of-the-document href=interaction.html#focused-area-of-the-document>focused area of the
+    document</a> to become <a id=the-dialog-element:inert href=interaction.html#inert>inert</a> (unless that currently focused area is a
+    <a id=the-dialog-element:shadow-including-descendant href=https://dom.spec.whatwg.org/#concept-shadow-including-descendant data-x-internal=shadow-including-descendant>shadow-including descendant</a> of <var>subject</var>). In such cases, the
+    <a id=the-dialog-element:focused-area-of-the-document-2 href=interaction.html#focused-area-of-the-document>focused area of the document</a> will soon be <a href=webappapis.html#focus-fixup-rule>reset</a> to
+    the <a id=the-dialog-element:viewport href=https://drafts.csswg.org/css2/#viewport data-x-internal=viewport>viewport</a>. In a couple steps we will attempt to find a better candidate to
+    focus.</p>
+   <li><p>If <var>subject</var>'s <a id=the-dialog-element:node-document-7 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s <a id=the-dialog-element:top-layer-2 href=https://drafts.csswg.org/css-position-4/#document-top-layer data-x-internal=top-layer>top layer</a> does not
+   already <a href=https://infra.spec.whatwg.org/#list-contain id=the-dialog-element:list-contains-2 data-x-internal=list-contains>contain</a> <var>subject</var>, then <a id=the-dialog-element:add-an-element-to-the-top-layer href=https://drafts.csswg.org/css-position-4/#add-an-element-to-the-top-layer data-x-internal=add-an-element-to-the-top-layer>add an element
+   to the top layer</a> given <var>subject</var>.<li><p>Set <var>subject</var>'s <a href=#previously-focused-element id=the-dialog-element:previously-focused-element-2>previously focused element</a> to the
+   <a id=the-dialog-element:focused-4 href=interaction.html#focused>focused</a> element.<li><p>Let <var>document</var> be <var>subject</var>'s <a id=the-dialog-element:node-document-8 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>.<li><p>Let <var>hideUntil</var> be the result of running <a id=the-dialog-element:topmost-popover-ancestor-2 href=popover.html#topmost-popover-ancestor>topmost popover ancestor</a>
+   given <var>subject</var>, null, and false.<li><p>Run <a id=the-dialog-element:hide-popovers-until-2 href=popover.html#hide-popovers-until>hide popovers until</a> given <var>document</var>, <var>hideUntil</var>,
+   false, and true.<li><p>Run the <a href=#dialog-focusing-steps id=the-dialog-element:dialog-focusing-steps-6>dialog focusing steps</a> given <var>subject</var>.</ol>
+  </div>
+
+  <div data-algorithm="">
+  <p id=canceling-dialogs>To <dfn id=set-the-dialog-close-watcher>set the dialog close watcher</dfn>, given a <code id=the-dialog-element:the-dialog-element-28><a href=#the-dialog-element>dialog</a></code>
+  element <var>dialog</var>:</p>
+
+  <ol><li><p><a id=the-dialog-element:assert-2 href=https://infra.spec.whatwg.org/#assert data-x-internal=assert>Assert</a>: <var>dialog</var>'s <a href=#dialog-close-watcher id=the-dialog-element:dialog-close-watcher-4>close
+   watcher</a> is null.<li><p><a id=the-dialog-element:assert-3 href=https://infra.spec.whatwg.org/#assert data-x-internal=assert>Assert</a>: <var>dialog</var> has an <code id=the-dialog-element:attr-dialog-open-18><a href=#attr-dialog-open>open</a></code>
+   attribute and <var>dialog</var>'s <a id=the-dialog-element:node-document-9 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a> is <a id=the-dialog-element:fully-active-4 href=document-sequences.html#fully-active>fully active</a>.</p>
+   <li>
+    <p>Set <var>dialog</var>'s <a href=#dialog-close-watcher id=the-dialog-element:dialog-close-watcher-5>close watcher</a> to the
+    result of <a href=interaction.html#establish-a-close-watcher id=the-dialog-element:establish-a-close-watcher>establishing a close watcher</a> given
+    <var>dialog</var>'s <a id=the-dialog-element:concept-relevant-global href=webappapis.html#concept-relevant-global>relevant global object</a>, with:</p>
+
+    <ul><li><p><i id=the-dialog-element:create-close-watcher-cancelaction><a href=interaction.html#create-close-watcher-cancelaction>cancelAction</a></i> given
+     <var>canPreventClose</var> being to return the result of <a href=https://dom.spec.whatwg.org/#concept-event-fire id=the-dialog-element:concept-event-fire-3 data-x-internal=concept-event-fire>firing an event</a> named <code id=the-dialog-element:event-cancel-3><a href=indices.html#event-cancel>cancel</a></code> at <var>dialog</var>, with the <code id=the-dialog-element:dom-event-cancelable-3><a data-x-internal=dom-event-cancelable href=https://dom.spec.whatwg.org/#dom-event-cancelable>cancelable</a></code> attribute initialized to
+     <var>canPreventClose</var>.<li><p><i id=the-dialog-element:create-close-watcher-closeaction><a href=interaction.html#create-close-watcher-closeaction>closeAction</a></i> being to <a href=#close-the-dialog id=the-dialog-element:close-the-dialog-2>close the
+     dialog</a> given <var>dialog</var>, <var>dialog</var>'s <a href=#request-close-return-value id=the-dialog-element:request-close-return-value>request close return
+     value</a>, and <var>dialog</var>'s <a href=#request-close-source-element id=the-dialog-element:request-close-source-element>request close source element</a>.<li><p><i id=the-dialog-element:create-close-watcher-getenabledstate><a href=interaction.html#create-close-watcher-getenabledstate>getEnabledState</a></i> being to return
+     true if <var>dialog</var>'s <a href=#enable-close-watcher-for-requestclose() id=the-dialog-element:enable-close-watcher-for-requestclose()-2>enable close watcher for request close</a> is true or
+     <var>dialog</var>'s <a href=#computed-closed-by-state id=the-dialog-element:computed-closed-by-state-3>computed closed-by state</a> is not <a href=#attr-dialog-closedby-none-state id=the-dialog-element:attr-dialog-closedby-none-state-3>None</a>; otherwise false.</ul>
+   </ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a id=the-dialog-element:is-valid-command-steps href=form-elements.html#is-valid-command-steps>is valid command steps</a> for <code id=the-dialog-element:the-dialog-element-29><a href=#the-dialog-element>dialog</a></code> elements, given a <code id=the-dialog-element:attr-button-command><a href=form-elements.html#attr-button-command>command</a></code> attribute <var>command</var>, are:</p>
+
+  <ol><li><p>If <var>command</var> is in the <a href=form-elements.html#attr-button-command-close-state id=the-dialog-element:attr-button-command-close-state>Close</a> state, the <a href=form-elements.html#attr-button-command-request-close-state id=the-dialog-element:attr-button-command-request-close-state>Request Close</a> state, or the <a href=form-elements.html#attr-button-command-show-modal-state id=the-dialog-element:attr-button-command-show-modal-state>Show Modal</a> state, then return true.<li><p>Return false.</ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <a id=the-dialog-element:command-steps href=form-elements.html#command-steps>command steps</a> for <code id=the-dialog-element:the-dialog-element-30><a href=#the-dialog-element>dialog</a></code> elements, given an element
+  <var>element</var>, an element <var>source</var>, and a <code id=the-dialog-element:attr-button-command-2><a href=form-elements.html#attr-button-command>command</a></code> attribute <var>command</var>, are:</p>
+
+  <ol><li><p>If <var>element</var> is in the <a href=popover.html#popover-showing-state id=the-dialog-element:popover-showing-state-3>popover showing</a> state, then return.<li><p>If <var>command</var> is in the <a href=form-elements.html#attr-button-command-close-state id=the-dialog-element:attr-button-command-close-state-2>Close</a> state and <var>element</var> has an <code id=the-dialog-element:attr-dialog-open-19><a href=#attr-dialog-open>open</a></code> attribute, then <a href=#close-the-dialog id=the-dialog-element:close-the-dialog-3>close the dialog</a>
+   <var>element</var> with <var>source</var>'s <a href=form-control-infrastructure.html#concept-fe-optional-value id=the-dialog-element:concept-fe-optional-value>optional
+   value</a> and <var>source</var>.<li><p>If <var>command</var> is in the <a href=form-elements.html#attr-button-command-request-close-state id=the-dialog-element:attr-button-command-request-close-state-2>Request Close</a> state and
+   <var>element</var> has an <code id=the-dialog-element:attr-dialog-open-20><a href=#attr-dialog-open>open</a></code> attribute, then <a href=#dialog-request-close id=the-dialog-element:dialog-request-close-3>request to close the dialog</a> <var>element</var> with
+   <var>source</var>'s <a href=form-control-infrastructure.html#concept-fe-optional-value id=the-dialog-element:concept-fe-optional-value-2>optional value</a> and
+   <var>source</var>.<li><p>If <var>command</var> is the <a href=form-elements.html#attr-button-command-show-modal-state id=the-dialog-element:attr-button-command-show-modal-state-2>Show Modal</a> state and <var>element</var> does
+   not have an <code id=the-dialog-element:attr-dialog-open-21><a href=#attr-dialog-open>open</a></code> attribute, then
+   <a href=#show-a-modal-dialog id=the-dialog-element:show-a-modal-dialog-2>show a modal dialog</a> given <var>element</var> and <var>source</var>.</ol>
+  </div>
+
+  <div class=example>
+   <p>The following buttons use <code id=the-dialog-element:attr-button-commandfor><a href=form-elements.html#attr-button-commandfor>commandfor</a></code> to open and
+   close a "confirm" <code id=the-dialog-element:the-dialog-element-31><a href=#the-dialog-element>dialog</a></code> as modal when activated:</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>button</c-> <c- e>type</c-><c- o>=</c-><c- s>button</c->
+        <c- e>commandfor</c-><c- o>=</c-><c- s>&quot;the-dialog&quot;</c->
+        <c- e>command</c-><c- o>=</c-><c- s>&quot;show-modal&quot;</c-><c- p>&gt;</c->
+ Delete
+<c- p>&lt;/</c-><c- f>button</c-><c- p>&gt;</c->
+<c- p>&lt;</c-><c- f>dialog</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;the-dialog&quot;</c-><c- p>&gt;</c->
+ <c- p>&lt;</c-><c- f>form</c-> <c- e>action</c-><c- o>=</c-><c- s>&quot;/delete&quot;</c-> <c- e>method</c-><c- o>=</c-><c- s>&quot;POST&quot;</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>button</c-> <c- e>type</c-><c- o>=</c-><c- s>&quot;submit&quot;</c-><c- p>&gt;</c->
+   Delete
+  <c- p>&lt;/</c-><c- f>button</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>button</c-> <c- e>commandfor</c-><c- o>=</c-><c- s>&quot;the-dialog&quot;</c->
+          <c- e>command</c-><c- o>=</c-><c- s>&quot;close&quot;</c-><c- p>&gt;</c->
+   Cancel
+  <c- p>&lt;/</c-><c- f>button</c-><c- p>&gt;</c->
+ <c- p>&lt;/</c-><c- f>form</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>dialog</c-><c- p>&gt;</c->
+    </code></pre>
+  </div>
+
+  <div data-algorithm="">
+  <p>When a <code id=the-dialog-element:the-dialog-element-32><a href=#the-dialog-element>dialog</a></code> element <var>subject</var> is to be <dfn id=close-the-dialog>closed</dfn>, with null or a string <var>result</var> and an <code id=the-dialog-element:element-3><a data-x-internal=element href=https://dom.spec.whatwg.org/#interface-element>Element</a></code> or null
+  <var>source</var>, run these steps:</p>
+
+  <ol><li><p>If <var>subject</var> does not have an <code id=the-dialog-element:attr-dialog-open-22><a href=#attr-dialog-open>open</a></code>
+   attribute, then return.<li><p><a href=https://dom.spec.whatwg.org/#concept-event-fire id=the-dialog-element:concept-event-fire-4 data-x-internal=concept-event-fire>Fire an event</a> named <code id=the-dialog-element:event-beforetoggle-3><a href=indices.html#event-beforetoggle>beforetoggle</a></code>, using <code id=the-dialog-element:toggleevent-3><a href=interaction.html#toggleevent>ToggleEvent</a></code>, with the <code id=the-dialog-element:dom-toggleevent-oldstate-3><a href=interaction.html#dom-toggleevent-oldstate>oldState</a></code> attribute initialized to "<code>open</code>", the <code id=the-dialog-element:dom-toggleevent-newstate-3><a href=interaction.html#dom-toggleevent-newstate>newState</a></code> attribute
+   initialized to "<code>closed</code>", and the <code id=the-dialog-element:dom-toggleevent-source-2><a href=interaction.html#dom-toggleevent-source>source</a></code> attribute initialized to <var>source</var> at
+   <var>subject</var>.<li><p>If <var>subject</var> does not have an <code id=the-dialog-element:attr-dialog-open-23><a href=#attr-dialog-open>open</a></code>
+   attribute, then return.<li><p><a href=#queue-a-dialog-toggle-event-task id=the-dialog-element:queue-a-dialog-toggle-event-task-3>Queue a dialog toggle event task</a> given <var>subject</var>, "<code>open</code>", "<code>closed</code>", and <var>source</var>.<li><p>Remove <var>subject</var>'s <code id=the-dialog-element:attr-dialog-open-24><a href=#attr-dialog-open>open</a></code>
+   attribute.<li><p>If <a href=#is-modal id=the-dialog-element:is-modal-5>is modal</a> of <var>subject</var> is true, then <a id=the-dialog-element:request-an-element-to-be-removed-from-the-top-layer href=https://drafts.csswg.org/css-position-4/#request-an-element-to-be-removed-from-the-top-layer data-x-internal=request-an-element-to-be-removed-from-the-top-layer>request an
+   element to be removed from the top layer</a> given <var>subject</var>.<li><p>Let <var>wasModal</var> be the value of <var>subject</var>'s <a href=#is-modal id=the-dialog-element:is-modal-6>is
+   modal</a> flag.<li><p>Set <a href=#is-modal id=the-dialog-element:is-modal-7>is modal</a> of <var>subject</var> to false.<li><p>If <var>result</var> is not null, then set <var>subject</var>'s <code id=the-dialog-element:dom-dialog-returnvalue-2><a href=#dom-dialog-returnvalue>returnValue</a></code> attribute to <var>result</var>.<li><p>Set <var>subject</var>'s <a href=#request-close-return-value id=the-dialog-element:request-close-return-value-2>request close return value</a> to null.<li><p>Set <var>subject</var>'s <a href=#request-close-source-element id=the-dialog-element:request-close-source-element-2>request close source element</a> to null.<li>
+    <p>If <var>subject</var>'s <a href=#previously-focused-element id=the-dialog-element:previously-focused-element-3>previously focused element</a> is not null:</p>
+
+    <ol><li><p>Let <var>element</var> be <var>subject</var>'s <a href=#previously-focused-element id=the-dialog-element:previously-focused-element-4>previously focused
+     element</a>.<li><p>Set <var>subject</var>'s <a href=#previously-focused-element id=the-dialog-element:previously-focused-element-5>previously focused element</a> to null.<li><p>If <var>subject</var>'s <a id=the-dialog-element:node-document-10 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s <a id=the-dialog-element:focused-area-of-the-document-3 href=interaction.html#focused-area-of-the-document>focused area of the
+     document</a>'s <a id=the-dialog-element:dom-anchor href=interaction.html#dom-anchor>DOM anchor</a> is a <a id=the-dialog-element:shadow-including-inclusive-descendant href=https://dom.spec.whatwg.org/#concept-shadow-including-inclusive-descendant data-x-internal=shadow-including-inclusive-descendant>shadow-including inclusive
+     descendant</a> of <var>subject</var>, or <var>wasModal</var> is true, then run the
+     <a id=the-dialog-element:focusing-steps href=interaction.html#focusing-steps>focusing steps</a> for <var>element</var>; the viewport should not be scrolled by
+     doing this step.</ol>
+   <li><p><a id=the-dialog-element:queue-an-element-task href=webappapis.html#queue-an-element-task>Queue an element task</a> on the <a id=the-dialog-element:user-interaction-task-source href=webappapis.html#user-interaction-task-source>user interaction task source</a> given the
+   <var>subject</var> element to <a href=https://dom.spec.whatwg.org/#concept-event-fire id=the-dialog-element:concept-event-fire-5 data-x-internal=concept-event-fire>fire an event</a> named
+   <code id=the-dialog-element:event-close-4><a href=indices.html#event-close>close</a></code> at <var>subject</var>.</ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>To <dfn id=dialog-request-close>request to close</dfn> <code id=the-dialog-element:the-dialog-element-33><a href=#the-dialog-element>dialog</a></code> element
+  <var>subject</var>, given null or a string <var>returnValue</var> and null or an
+  <code id=the-dialog-element:element-4><a data-x-internal=element href=https://dom.spec.whatwg.org/#interface-element>Element</a></code> <var>source</var>:</p>
+
+  <ol><li><p>If <var>subject</var> does not have an <code id=the-dialog-element:attr-dialog-open-25><a href=#attr-dialog-open>open</a></code>
+   attribute, then return.<li><p>If <var>subject</var> is not <a id=the-dialog-element:connected-5 href=https://dom.spec.whatwg.org/#connected data-x-internal=connected>connected</a> or <var>subject</var>'s
+   <a id=the-dialog-element:node-document-11 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a> is not <a id=the-dialog-element:fully-active-5 href=document-sequences.html#fully-active>fully active</a>, then return.<li><p><a id=the-dialog-element:assert-4 href=https://infra.spec.whatwg.org/#assert data-x-internal=assert>Assert</a>: <var>subject</var>'s <a href=#dialog-close-watcher id=the-dialog-element:dialog-close-watcher-6>close
+   watcher</a> is not null.<li><p>Set <var>subject</var>'s <a href=#enable-close-watcher-for-requestclose() id=the-dialog-element:enable-close-watcher-for-requestclose()-3>enable close watcher for request close</a> to
+   true.<li><p>Set <var>subject</var>'s <a href=#request-close-return-value id=the-dialog-element:request-close-return-value-3>request close return value</a> to
+   <var>returnValue</var>.<li><p>Set <var>subject</var>'s <a href=#request-close-source-element id=the-dialog-element:request-close-source-element-3>request close source element</a> to
+   <var>source</var>.<li><p><a href=interaction.html#close-watcher-request-close id=the-dialog-element:close-watcher-request-close>Request to close</a> <var>subject</var>'s
+   <a href=#dialog-close-watcher id=the-dialog-element:dialog-close-watcher-7>close watcher</a> with false.<li><p>Set <var>subject</var>'s <a href=#enable-close-watcher-for-requestclose() id=the-dialog-element:enable-close-watcher-for-requestclose()-4>enable close watcher for request close</a> to
+   false.</ol>
+  </div>
+
+  
+
+  <div data-algorithm="">
+  <p>To <dfn id=queue-a-dialog-toggle-event-task>queue a dialog toggle event task</dfn> given a <code id=the-dialog-element:the-dialog-element-34><a href=#the-dialog-element>dialog</a></code> element
+  <var>element</var>, a string <var>oldState</var>, a string <var>newState</var>, and an
+  <code id=the-dialog-element:element-5><a data-x-internal=element href=https://dom.spec.whatwg.org/#interface-element>Element</a></code> or null <var>source</var>:</p>
+
+  <ol><li>
+    <p>If <var>element</var>'s <a href=#dialog-toggle-task-tracker id=the-dialog-element:dialog-toggle-task-tracker>dialog toggle task tracker</a> is not null:</p>
+
+    <ol><li><p>Set <var>oldState</var> to <var>element</var>'s <a href=#dialog-toggle-task-tracker id=the-dialog-element:dialog-toggle-task-tracker-2>dialog toggle task
+     tracker</a>'s <a href=interaction.html#toggle-task-old-state id=the-dialog-element:toggle-task-old-state>old state</a>.<li><p>Remove <var>element</var>'s <a href=#dialog-toggle-task-tracker id=the-dialog-element:dialog-toggle-task-tracker-3>dialog toggle task tracker</a>'s <a href=interaction.html#toggle-task-task id=the-dialog-element:toggle-task-task>task</a> from its <a id=the-dialog-element:task-queue href=webappapis.html#task-queue>task queue</a>.<li><p>Set <var>element</var>'s <a href=#dialog-toggle-task-tracker id=the-dialog-element:dialog-toggle-task-tracker-4>dialog toggle task tracker</a> to null.</ol>
+   <li>
+    <p><a id=the-dialog-element:queue-an-element-task-2 href=webappapis.html#queue-an-element-task>Queue an element task</a> given the <a id=the-dialog-element:dom-manipulation-task-source href=webappapis.html#dom-manipulation-task-source>DOM manipulation task source</a> and
+    <var>element</var> to run the following steps:</p>
+
+    <ol><li><p><a href=https://dom.spec.whatwg.org/#concept-event-fire id=the-dialog-element:concept-event-fire-6 data-x-internal=concept-event-fire>Fire an event</a> named <code id=the-dialog-element:event-toggle><a href=indices.html#event-toggle>toggle</a></code> at <var>element</var>, using <code id=the-dialog-element:toggleevent-4><a href=interaction.html#toggleevent>ToggleEvent</a></code>, with
+     the <code id=the-dialog-element:dom-toggleevent-oldstate-4><a href=interaction.html#dom-toggleevent-oldstate>oldState</a></code> attribute initialized to
+     <var>oldState</var>, the <code id=the-dialog-element:dom-toggleevent-newstate-4><a href=interaction.html#dom-toggleevent-newstate>newState</a></code> attribute
+     initialized to <var>newState</var>, and the <code id=the-dialog-element:dom-toggleevent-source-3><a href=interaction.html#dom-toggleevent-source>source</a></code> attribute initialized to
+     <var>source</var>.<li><p>Set <var>element</var>'s <a href=#dialog-toggle-task-tracker id=the-dialog-element:dialog-toggle-task-tracker-5>dialog toggle task tracker</a> to null.</ol>
+   <li><p>Set <var>element</var>'s <a href=#dialog-toggle-task-tracker id=the-dialog-element:dialog-toggle-task-tracker-6>dialog toggle task tracker</a> to a struct with <a href=interaction.html#toggle-task-task id=the-dialog-element:toggle-task-task-2>task</a> set to the just-queued <a href=webappapis.html#concept-task id=the-dialog-element:concept-task>task</a> and <a href=interaction.html#toggle-task-old-state id=the-dialog-element:toggle-task-old-state-2>old state</a> set
+   to <var>oldState</var>.</ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>To retrieve a dialog's <dfn id=computed-closed-by-state>computed closed-by state</dfn>, given a <code id=the-dialog-element:the-dialog-element-35><a href=#the-dialog-element>dialog</a></code>
+  <var>dialog</var>:
+
+  <ol><li>
+    <p>If the state of <var>dialog</var>'s <code id=the-dialog-element:attr-dialog-closedby-5><a href=#attr-dialog-closedby>closedby</a></code>
+    attribute is <a href=#attr-dialog-closedby-auto-state id=the-dialog-element:attr-dialog-closedby-auto-state-2>Auto</a>:</p>
+
+    <ol><li><p>If <var>dialog</var>'s <a href=#is-modal id=the-dialog-element:is-modal-8>is modal</a> is true, then return <a href=#attr-dialog-closedby-closerequest-state id=the-dialog-element:attr-dialog-closedby-closerequest-state-2>Close Request</a>.<li><p>Return <a href=#attr-dialog-closedby-none-state id=the-dialog-element:attr-dialog-closedby-none-state-4>None</a>.</ol>
+   <li><p>Return the state of <var>dialog</var>'s <code id=the-dialog-element:attr-dialog-closedby-6><a href=#attr-dialog-closedby>closedby</a></code> attribute.</ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <dfn id=dialog-focusing-steps>dialog focusing steps</dfn>, given a <code id=the-dialog-element:the-dialog-element-36><a href=#the-dialog-element>dialog</a></code> element <var>subject</var>,
+  are as follows:</p>
+
+  <ol><li><p>If the <a id=the-dialog-element:allow-focus-steps href=interaction.html#allow-focus-steps>allow focus steps</a> given <var>subject</var>'s <a id=the-dialog-element:node-document-12 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node
+   document</a> return false, then return.<li><p>Let <var>control</var> be null.<li><p>If <var>subject</var> has the <code id=the-dialog-element:attr-fe-autofocus-7><a href=interaction.html#attr-fe-autofocus>autofocus</a></code>
+   attribute, then set <var>control</var> to <var>subject</var>.<li><p>If <var>control</var> is null, then set <var>control</var> to the <a id=the-dialog-element:focus-delegate href=interaction.html#focus-delegate>focus
+   delegate</a> of <var>subject</var>.<li><p>If <var>control</var> is null, then set <var>control</var> to <var>subject</var>.<li>
+    <p>Run the <a id=the-dialog-element:focusing-steps-2 href=interaction.html#focusing-steps>focusing steps</a> for <var>control</var>.</p>
+
+    <p class=note>If <var>control</var> is not <a id=the-dialog-element:focusable href=interaction.html#focusable>focusable</a>, this will do nothing. This
+    would only happen if subject had no focus delegate, and the user agent decided that
+    <code id=the-dialog-element:the-dialog-element-37><a href=#the-dialog-element>dialog</a></code> elements were not generally focusable. In that case, any <a href=#note-dialog-plus-focus-fixup>earlier modifications</a> to the <a id=the-dialog-element:focused-area-of-the-document-4 href=interaction.html#focused-area-of-the-document>focused area of the
+    document</a> will apply.</p>
+   <li><p>Let <var>topDocument</var> be <var>control</var>'s <a id=the-dialog-element:node-navigable href=document-sequences.html#node-navigable>node navigable</a>'s <a href=document-sequences.html#nav-top id=the-dialog-element:nav-top>top-level traversable</a>'s <a href=document-sequences.html#nav-document id=the-dialog-element:nav-document>active
+   document</a>.<li><p>If <var>control</var>'s <a id=the-dialog-element:node-document-13 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s <a href=https://dom.spec.whatwg.org/#concept-document-origin id=the-dialog-element:concept-document-origin data-x-internal=concept-document-origin>origin</a> is not the <a href=browsers.html#same-origin id=the-dialog-element:same-origin>same</a>
+   as the <a href=https://dom.spec.whatwg.org/#concept-document-origin id=the-dialog-element:concept-document-origin-2 data-x-internal=concept-document-origin>origin</a> of <var>topDocument</var>, then
+   return.<li><p><a href=https://infra.spec.whatwg.org/#list-empty id=the-dialog-element:list-empty data-x-internal=list-empty>Empty</a> <var>topDocument</var>'s
+   <a id=the-dialog-element:autofocus-candidates href=interaction.html#autofocus-candidates>autofocus candidates</a>.<li><p>Set <var>topDocument</var>'s <a id=the-dialog-element:autofocus-processed-flag href=interaction.html#autofocus-processed-flag>autofocus processed flag</a> to true.</ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <dfn id=dialog-setup-steps>dialog setup steps</dfn>, given a <code id=the-dialog-element:the-dialog-element-38><a href=#the-dialog-element>dialog</a></code> element <var>subject</var>, are
+  as follows:</p>
+
+  <ol><li><p><a id=the-dialog-element:assert-5 href=https://infra.spec.whatwg.org/#assert data-x-internal=assert>Assert</a>: <var>subject</var> has an <code id=the-dialog-element:attr-dialog-open-26><a href=#attr-dialog-open>open</a></code>
+   attribute.<li><p><a id=the-dialog-element:assert-6 href=https://infra.spec.whatwg.org/#assert data-x-internal=assert>Assert</a>: <var>subject</var> is <a id=the-dialog-element:connected-6 href=https://dom.spec.whatwg.org/#connected data-x-internal=connected>connected</a>.<li><p><a id=the-dialog-element:assert-7 href=https://infra.spec.whatwg.org/#assert data-x-internal=assert>Assert</a>: <var>subject</var>'s <a id=the-dialog-element:node-document-14 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s <a id=the-dialog-element:open-dialogs-list href=dom.html#open-dialogs-list>open dialogs
+   list</a> does not <a href=https://infra.spec.whatwg.org/#list-contain id=the-dialog-element:list-contains-3 data-x-internal=list-contains>contain</a> <var>subject</var>.<li><p>Add <var>subject</var> to <var>subject</var>'s <a id=the-dialog-element:node-document-15 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s <a id=the-dialog-element:open-dialogs-list-2 href=dom.html#open-dialogs-list>open
+   dialogs list</a>.<li><p><a href=#set-the-dialog-close-watcher id=the-dialog-element:set-the-dialog-close-watcher>Set the dialog close watcher</a> with <var>subject</var>.</ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>The <dfn id=dialog-cleanup-steps>dialog cleanup steps</dfn>, given a <code id=the-dialog-element:the-dialog-element-39><a href=#the-dialog-element>dialog</a></code> element <var>subject</var>,
+  are as follows:</p>
+
+  <ol><li><p><a href=https://infra.spec.whatwg.org/#list-remove id=the-dialog-element:list-remove data-x-internal=list-remove>Remove</a> <var>subject</var> from <var>subject</var>'s
+   <a id=the-dialog-element:node-document-16 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s <a id=the-dialog-element:open-dialogs-list-3 href=dom.html#open-dialogs-list>open dialogs list</a>.<li>
+    <p>If <var>subject</var>'s <a href=#dialog-close-watcher id=the-dialog-element:dialog-close-watcher-8>close watcher</a> is not
+    null:</p>
+
+    <ol><li><p><a href=interaction.html#close-watcher-destroy id=the-dialog-element:close-watcher-destroy>Destroy</a> <var>subject</var>'s <a href=#dialog-close-watcher id=the-dialog-element:dialog-close-watcher-9>close watcher</a>.<li><p>Set <var>subject</var>'s <a href=#dialog-close-watcher id=the-dialog-element:dialog-close-watcher-10>close watcher</a> to
+     null.</ol>
+   </ol>
+  </div>
+
+  <h4 id=dialog-light-dismiss><span class=secno>4.11.5</span> <dfn>Dialog light dismiss</dfn><a href=#dialog-light-dismiss class=self-link></a></h4>
+
+  <p class=note>"Light dismiss" means that clicking outside of a <code id=dialog-light-dismiss:the-dialog-element><a href=#the-dialog-element>dialog</a></code> element whose <code id=dialog-light-dismiss:attr-dialog-closedby><a href=#attr-dialog-closedby>closedby</a></code> attribute is in the <a href=#attr-dialog-closedby-any-state id=dialog-light-dismiss:attr-dialog-closedby-any-state>Any</a> state will close the <code id=dialog-light-dismiss:the-dialog-element-2><a href=#the-dialog-element>dialog</a></code> element. This
+  is in addition to how such <code id=dialog-light-dismiss:the-dialog-element-3><a href=#the-dialog-element>dialog</a></code>s respond to <a href=interaction.html#close-request id=dialog-light-dismiss:close-request>close requests</a>.</p>
+
+  <div data-algorithm="">
+  <p>To <dfn id=light-dismiss-open-dialogs>light dismiss open dialogs</dfn>, given a <code id=dialog-light-dismiss:pointerevent><a data-x-internal=pointerevent href=https://w3c.github.io/pointerevents/#pointerevent-interface>PointerEvent</a></code> <var>event</var>:</p>
+
+  <ol><li><p><a id=dialog-light-dismiss:assert href=https://infra.spec.whatwg.org/#assert data-x-internal=assert>Assert</a>: <var>event</var>'s <code id=dialog-light-dismiss:dom-event-istrusted><a data-x-internal=dom-event-istrusted href=https://dom.spec.whatwg.org/#dom-event-istrusted>isTrusted</a></code> attribute is true.<li><p>Let <var>document</var> be <var>event</var>'s <a href=https://dom.spec.whatwg.org/#concept-event-target id=dialog-light-dismiss:concept-event-target data-x-internal=concept-event-target>target</a>'s <a id=dialog-light-dismiss:node-document href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>.<li><p>If <var>document</var>'s <a id=dialog-light-dismiss:open-dialogs-list href=dom.html#open-dialogs-list>open dialogs list</a> is <a href=https://infra.spec.whatwg.org/#list-is-empty id=dialog-light-dismiss:list-is-empty data-x-internal=list-is-empty>empty</a>, then return.<li><p>Let <var>ancestor</var> be the result of running <a href=#nearest-clicked-dialog id=dialog-light-dismiss:nearest-clicked-dialog>nearest clicked dialog</a>
+   given <var>event</var>.<li><p>If <var>event</var>'s <code id=dialog-light-dismiss:dom-event-type><a data-x-internal=dom-event-type href=https://dom.spec.whatwg.org/#dom-event-type>type</a></code> is
+   "<code id=dialog-light-dismiss:event-pointerdown><a data-x-internal=event-pointerdown href=https://w3c.github.io/pointerevents/#the-pointerdown-event>pointerdown</a></code>", then set <var>document</var>'s
+   <a href=#dialog-pointerdown-target id=dialog-light-dismiss:dialog-pointerdown-target>dialog pointerdown target</a> to <var>ancestor</var>.<li>
+    <p>If <var>event</var>'s <code id=dialog-light-dismiss:dom-event-type-2><a data-x-internal=dom-event-type href=https://dom.spec.whatwg.org/#dom-event-type>type</a></code> is
+    "<code id=dialog-light-dismiss:event-pointerup><a data-x-internal=event-pointerup href=https://w3c.github.io/pointerevents/#the-pointerup-event>pointerup</a></code>":</p>
+
+    <ol><li><p>Let <var>sameTarget</var> be true if <var>ancestor</var> is <var>document</var>'s
+     <a href=#dialog-pointerdown-target id=dialog-light-dismiss:dialog-pointerdown-target-2>dialog pointerdown target</a>.<li><p>Set <var>document</var>'s <a href=#dialog-pointerdown-target id=dialog-light-dismiss:dialog-pointerdown-target-3>dialog pointerdown target</a> to null.<li><p>If <var>sameTarget</var> is false, then return.<li><p>Let <var>topmostDialog</var> be the last element of <var>document</var>'s <a id=dialog-light-dismiss:open-dialogs-list-2 href=dom.html#open-dialogs-list>open
+     dialogs list</a>.<li><p>If <var>ancestor</var> is <var>topmostDialog</var>, then return.<li><p>If <var>topmostDialog</var>'s <a href=#computed-closed-by-state id=dialog-light-dismiss:computed-closed-by-state>computed closed-by state</a> is not <a href=#attr-dialog-closedby-any-state id=dialog-light-dismiss:attr-dialog-closedby-any-state-2>Any</a>, then return.<li><p><a id=dialog-light-dismiss:assert-2 href=https://infra.spec.whatwg.org/#assert data-x-internal=assert>Assert</a>: <var>topmostDialog</var>'s <a href=#dialog-close-watcher id=dialog-light-dismiss:dialog-close-watcher>close watcher</a> is not null.<li><p><a href=interaction.html#close-watcher-request-close id=dialog-light-dismiss:close-watcher-request-close>Request to close</a>
+     <var>topmostDialog</var>'s <a href=#dialog-close-watcher id=dialog-light-dismiss:dialog-close-watcher-2>close watcher</a> with
+     false.</ol>
+   </ol>
+  </div>
+
+  <div data-algorithm="">
+  <p>To <dfn id=run-light-dismiss-activities>run light dismiss activities</dfn>, given a <code id=dialog-light-dismiss:pointerevent-2><a data-x-internal=pointerevent href=https://w3c.github.io/pointerevents/#pointerevent-interface>PointerEvent</a></code>
+  <var>event</var>:</p>
+
+  <ol><li><p>Run <a id=dialog-light-dismiss:light-dismiss-open-popovers href=popover.html#light-dismiss-open-popovers>light dismiss open popovers</a> with <var>event</var>.<li><p>Run <a href=#light-dismiss-open-dialogs id=dialog-light-dismiss:light-dismiss-open-dialogs>light dismiss open dialogs</a> with <var>event</var>.</ol>
+  </div>
+
+  <p class=XXX><a href=#run-light-dismiss-activities id=dialog-light-dismiss:run-light-dismiss-activities>Run light dismiss activities</a> will be called by the <a href=https://github.com/w3c/pointerevents/pull/460>Pointer Events spec</a> when the user clicks
+  or touches anywhere on the page.</p>
+
+  <div data-algorithm="">
+  <p>To find the <dfn id=nearest-clicked-dialog>nearest clicked dialog</dfn>, given a <code id=dialog-light-dismiss:pointerevent-3><a data-x-internal=pointerevent href=https://w3c.github.io/pointerevents/#pointerevent-interface>PointerEvent</a></code>
+  <var>event</var>:</p>
+
+  <ol><li><p>Let <var>target</var> be <var>event</var>'s <a href=https://dom.spec.whatwg.org/#concept-event-target id=dialog-light-dismiss:concept-event-target-2 data-x-internal=concept-event-target>target</a>.<li><p>If <var>target</var> is a <code id=dialog-light-dismiss:the-dialog-element-4><a href=#the-dialog-element>dialog</a></code> element, <var>target</var> has an <code id=dialog-light-dismiss:attr-dialog-open><a href=#attr-dialog-open>open</a></code> attribute, <var>target</var>'s <a href=#is-modal id=dialog-light-dismiss:is-modal>is modal</a> is
+   true, and <var>event</var>'s <code id=dialog-light-dismiss:mouseevent-clientx><a data-x-internal=mouseevent-clientx href=https://drafts.csswg.org/cssom-view/#dom-mouseevent-clientx>clientX</a></code> and
+   <code id=dialog-light-dismiss:mouseevent-clienty><a data-x-internal=mouseevent-clienty href=https://drafts.csswg.org/cssom-view/#dom-mouseevent-clienty>clientY</a></code> are outside the bounds of <var>target</var>,
+   then return null.
+
+   <p class=note>The check for <code id=dialog-light-dismiss:mouseevent-clientx-2><a data-x-internal=mouseevent-clientx href=https://drafts.csswg.org/cssom-view/#dom-mouseevent-clientx>clientX</a></code> and <code id=dialog-light-dismiss:mouseevent-clienty-2><a data-x-internal=mouseevent-clienty href=https://drafts.csswg.org/cssom-view/#dom-mouseevent-clienty>clientY</a></code> is because a pointer event that hits the <code>::backdrop</code> pseudo element of a dialog will result in <var>event</var> having a
+   target of the dialog element itself.</p>
+
+   <li><p>Let <var>currentNode</var> be <var>target</var>.<li>
+    <p>While <var>currentNode</var> is not null:</p>
+
+    <ol><li><p>If <var>currentNode</var> is a <code id=dialog-light-dismiss:the-dialog-element-5><a href=#the-dialog-element>dialog</a></code> element and <var>currentNode</var>
+     has an <code id=dialog-light-dismiss:attr-dialog-open-2><a href=#attr-dialog-open>open</a></code> attribute, then return
+     <var>currentNode</var>.<li><p>Set <var>currentNode</var> to <var>currentNode</var>'s parent in the <a id=dialog-light-dismiss:flat-tree href=https://drafts.csswg.org/css-scoping/#flat-tree data-x-internal=flat-tree>flat
+     tree</a>.</ol>
+   <li><p>Return null.</ol>
+  </div>
+
+  <nav><a href=form-control-infrastructure.html>← 4.10.18 Form control infrastructure</a> — <a href=./>Table of Contents</a> — <a href=scripting.html>4.12 Scripting →</a></nav>
