@@ -1,6 +1,6 @@
 # `<strong>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML直前の祖先を検証済み（後続標準への採録経路は未解決）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。1993-01-06 DTD収録とHTML直前の祖先を検証済み（後続標準への採録経路は未解決）
 
 ## 概要
 
@@ -12,7 +12,7 @@ WHATWG HTML Living Standardでは、内容の強いimportance、seriousness、�
 
 ## HTMLへの導入
 
-1993年6月のHTML Internet-Draftはcharacter highlighting elementとして `<strong>` を列挙し、その集合の要素名をTexinfo macro namesから派生したと明記した。この史料は命名元を示すが、要素の最初の実装時期や採用理由の全体は示さない。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)
+1993年6月のHTML Internet-Draftに埋め込まれたHTML DTDはRCS識別子`html.dtd,v 1.3 93/01/06`を持ち、`inline` entityに`STRONG`を列挙するため、formal DTDへの収録を1993年1月6日まで遡って確認できる。同draft本文はcharacter highlighting elementとして `<strong>` を列挙し、その集合の要素名をTexinfo macro namesから派生したと明記する。このRCS日付は実装初出や、それ以前のprototypeがなかったことを示すものではない。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)
 
 ## HTML直前の祖先
 
@@ -37,7 +37,7 @@ Texinfo `@strong` → 1993年HTML draft `<strong>` → 後続HTML `<strong>`
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
 | 1992-10-06 | *Texinfo — The GNU Documentation Format*, Edition 2.16 | GNU公式配布物内マニュアル | `@strong` の当時の定義を確認できる。 | [GNU archive](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z) | 2026-08-09 |
-| 1993-06 | *Hypertext Markup Language (HTML)*, draft-ietf-iiir-html-00 | IETF Internet-Draft | `<strong>` を含むcharacter highlighting要素名をTexinfo macro names由来と明記する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) | 2026-08-09 |
+| 1993-01-06（埋込みDTDのRCS識別子）、1993-06（draft） | *Hypertext Markup Language (HTML)*, draft-ietf-iiir-html-00 | IETF Internet-Draft／埋込みDTD | `html.dtd,v 1.3 93/01/06`の`inline` entityに`STRONG`があり、本文は`<strong>`を含むcharacter highlighting要素名をTexinfo macro names由来と明記する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) | 2026-08-09 |
 
 ## 確度
 
@@ -51,11 +51,12 @@ HTML側が命名元を明示し、Texinfo側でも対応する同時代マクロ
 
 ## 未解決
 
-- 1993年draft以前のHTMLにおける初出を確認する。
 - 1993年案から後続標準への採録経路を確認する。
 
 ## 調査記録
 
-1993年HTML draft、RFC 1866、GNU Texinfo 2.16および3.7を確認した。Texinfo系統全体の照合は[調査ノート](../research/texinfo-phrase-elements.md)を参照する。
+1993年HTML draftと埋込みDTDのRCS識別子、RFC 1866、GNU Texinfo 2.16および3.7を確認した。Texinfo系統全体の照合は[調査ノート](../research/texinfo-phrase-elements.md)を参照する。
 
 敵対的レビュー（2026-08-09）では、1993年draftのTexinfo由来文と同時代Texinfoの`@strong`定義をローカル保存資料で再照合し、名称と用途の個別対応を確認した。より早いHTML初出と後続採録の欠落は系譜上の未解決として残し、Aを維持した。
+
+埋込みDTD追加後の別レビュー（2026-08-09）では、RCS識別子`html.dtd,v 1.3 93/01/06`と`inline` entityのliteral nameをローカル保存資料で再照合した。RCS日付を実装初出や最終採用決定へ拡張せず、既存の系譜と確度を維持した。

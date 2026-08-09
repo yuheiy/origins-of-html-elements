@@ -7,15 +7,15 @@
 ## 対象と現在の状態
 
 - 対象基準日: 2026-08-09
-- 固定ページ数: 115
-- 個別ページ: 全115件の骨格と現行定義リンクを作成済み
-- 史料検証済み: 115件（A: 55件、A−: 15件、B: 39件、C: 6件）
+- 対象要素数: 115
+- 要素ページ: 110ファイルで全115要素を収録（`h1`〜`h6`は`hx.md`へ統合）
+- 史料検証済み: 115件（A: 56件、A−: 15件、B: 38件、C: 6件）
 - 史料未検証: 0件（未評価）
 - 現在の意味を要約済み: 115件
 - 横断系譜ページ: 完成（敵対的レビュー済み: 2026-08-09）
 - 敵対的レビュー済み: 115件
 
-固定ページ数は、WHATWG HTML Living Standardの組み込みHTML名前空間要素113個に、HTML文書で使用できるforeign rootの`math`と`svg`を加えた数である。custom elementsは名前集合が開いているため固定ページへ含めない。抽出根拠と境界事例は[現行HTML要素一覧の調査ノート](research/current-html-elements.md)を参照する。
+対象要素数は、WHATWG HTML Living Standardの組み込みHTML名前空間要素113個に、HTML文書で使用できるforeign rootの`math`と`svg`を加えた数である。custom elementsは名前集合が開いているため対象へ含めない。抽出根拠と境界事例は[現行HTML要素一覧の調査ノート](research/current-html-elements.md)を参照する。
 
 ## 横断調査
 
@@ -27,10 +27,12 @@
 - [HTML+から現行要素への系譜](research/html-plus-elements.md)
 - [CALSと高度なtable model](research/cals-table-elements.md)
 - [初期SGML/GML系統](research/early-sgml-elements.md)
+- [AAP Book DTDとHTML heading family](research/aap-heading-dtd.md)
 - [初期hypertext・文書制御要素](research/early-hypertext-elements.md)
 - [Browser vendor由来要素](research/browser-vendor-elements.md)
 - [国際化・アクセシビリティ関連要素](research/internationalization-accessibility-elements.md)
 - [HTML5 semantic elementsと既存Web慣習](research/html5-semantic-elements.md)
+- [現行`header`要素の再導入](research/header-reintroduction.md)
 - [Modern HTML要素とforeign root](research/modern-html-foreign-roots.md)
 - [WHATWG revision r8000とtemplate統合commitの対応](research/template-r8000-git-mapping.md)
 - [HTML media要素の導入](research/media-elements.md)
@@ -66,7 +68,7 @@
 
 ### H
 
-[`<h1>`](elements/h1.md) · [`<h2>`](elements/h2.md) · [`<h3>`](elements/h3.md) · [`<h4>`](elements/h4.md) · [`<h5>`](elements/h5.md) · [`<h6>`](elements/h6.md) · [`<head>`](elements/head.md) · [`<header>`](elements/header.md) · [`<hgroup>`](elements/hgroup.md) · [`<hr>`](elements/hr.md) · [`<html>`](elements/html.md)
+[`<h1>〜<h6>`](elements/hx.md) · [`<head>`](elements/head.md) · [`<header>`](elements/header.md) · [`<hgroup>`](elements/hgroup.md) · [`<hr>`](elements/hr.md) · [`<html>`](elements/html.md)
 
 ### I
 

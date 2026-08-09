@@ -12,7 +12,7 @@
 
 | 共通の上流または要求 | 確認済みの経路 | 現行要素 | 制約 | 主な一次資料 |
 |---|---|---|---|---|
-| AAP tag setのheading語彙 | AAP headings → CERN SGML guide → 初期HTML | [`h1`](../elements/h1.md)、[`h2`](../elements/h2.md)、[`h3`](../elements/h3.md)、[`h4`](../elements/h4.md)、[`h5`](../elements/h5.md)、[`h6`](../elements/h6.md) | 六要素への対応をCERN資料が集合として明記する。 | [CERN, *Tags used in HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) |
+| AAP tag setのheading語彙 | AAP headings → CERN SGML guide → 初期HTML | [`h1`〜`h6`](../elements/hx.md) | AAP BK-1は5 identifiers、HTMLは6段階であり、個別番号対応ではなく集合単位の関係である。 | [AAP DTD調査](aap-heading-dtd.md) / [CERN, *Tags used in HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) |
 | GNU Texinfo macro names | ［集合単位］Texinfo macro names → 1993年HTML draftのcharacter highlighting集合。対応macroを確認できた十要素は個別枝を持つ。 | [`b`](../elements/b.md)、[`i`](../elements/i.md)、[`em`](../elements/em.md)、[`strong`](../elements/strong.md)、[`code`](../elements/code.md)、[`samp`](../elements/samp.md)、[`kbd`](../elements/kbd.md)、[`var`](../elements/var.md)、[`dfn`](../elements/dfn.md)、[`cite`](../elements/cite.md)、[`u`](../elements/u.md) | `u`の対応macroは未確認。`dfn`と`u`は1993年草案から現行要素までの再採録経路にも欠落がある。 | [1993年IETF草案](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)、[GNU Texinfo 2.16](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z) |
 | HTML+ forms | HTML+ forms → HTML 2.0 forms → 後続HTML | [`form`](../elements/form.md)、[`input`](../elements/input.md)、[`select`](../elements/select.md)、[`option`](../elements/option.md)、[`textarea`](../elements/textarea.md) | RFC 1866がforms materialのHTML+由来を集合として明記する。 | [HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)、[RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html) |
 | HTML+の単純table model | HTML+ table work＋initial HTML 3 draft → RFC 1942 → HTML 3.2 → 後続HTML | [`table`](../elements/table.md)、[`caption`](../elements/caption.md)、[`tr`](../elements/tr.md)、[`th`](../elements/th.md)、[`td`](../elements/td.md) | `tr`はHTML+作業中にrow separatorからrow containerへ変わった。CALS由来の後続拡張と混同しない。 | [HTML+ tables](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)、[RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html)、[HTML 3.2](https://www.w3.org/TR/REC-html32#table) |
@@ -48,6 +48,8 @@
 
 訂正後の別レビュー（2026-08-09）では、17行すべてが複数の現行要素を含むこと、各行に直接一次資料があること、個別ページで切られた接続を越えていないこと、5境界と相対リンクが整合することを確認した。
 
+AAP DTD追加後の別レビュー（2026-08-09）では、heading行をAAP BK-1、CERN資料、`h1`〜`h6`の記述へ再照合した。AAP側の5 identifiersとHTML側の6段階を個別対応させず、集合単位の経路と制約が整合することを確認した。
+
 ## 調査記録
 
-全115個別ページの`系譜`、`証拠`、`確度`、2026-08-09の敵対的レビュー記録を照合した。複数要素へ共有できる関係だけを抽出し、個別ページで切られている接続はこのページでも切った。横断反証の詳細は[歴史的結論の敵対的レビュー](adversarial-review.md)と[横断系譜に対する敵対的レビュー](cross-element-lineage-adversarial-review.md)を参照する。
+全115要素の`系譜`、`証拠`、`確度`、2026-08-09の敵対的レビュー記録を照合した。複数要素へ共有できる関係だけを抽出し、要素ページで切られている接続はこのページでも切った。横断反証の詳細は[歴史的結論の敵対的レビュー](adversarial-review.md)と[横断系譜に対する敵対的レビュー](cross-element-lineage-adversarial-review.md)を参照する。

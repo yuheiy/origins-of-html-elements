@@ -11,7 +11,7 @@
 | `article` | 2004-11-10までにWHATWGのsemantic element案、2005-09-01草案で定義 | 未確認。後発のusage調査は`content`, `main`, `body`, `post`との対応を示す | B | usage調査の公表が保存草案より後なので、個別classからの採用因果とはしない |
 | `aside` | 2004-11-10の案では`sidebar`、2005-09-01草案では`aside` | 未確認 | B | `sidebar → aside`の正確な改名記録と理由は未確認 |
 | `section` | 遅くとも2004-08-28にWA1で定義済み、2005-09-01草案で定義 | 未確認 | B | XHTML 2等の同名要素から採用したことを示す史料は未確認 |
-| `header` | 2004-11-10までにWHATWGのsemantic element案、2005-09-01草案で定義 | 未確認。後発usage調査は`title`, `header`, `top`との対応を示す | B | 2009年に一度`hgroup`へ改名されたが、現行`header`の再導入経路は追加確認が必要 |
+| `header` | 2004–2005年の旧要素を2009-04-30に`hgroup`へ分離し、直後のr3040で現行系統を再導入 | `div id="header"`相当を専用要素で表せないという2009年の要求とWHATWGの再設計 | A | 2004年の旧要素の個別提案者と、さらに上流の祖先は未確認 |
 | `footer` | 2004-11-10までにWHATWGのsemantic element案、2005-09-01草案で定義 | 未確認。後発usage調査は`footer`との対応を示す | B | usage調査を導入原因とは断定できない |
 | `nav` | 2004-11-10の案では`navigation`、2005-09-01草案では`nav` | 未確認。後発usage調査は`nav`との対応を示す | B | `navigation → nav`の正確な改名記録と理由は未確認 |
 | `hgroup` | 2009-04-30にWHATWG editor Ian Hicksonが旧`header`を改名し、subheading用へ限定 | HTML5草案の旧`header` | A | その後の意味変更はあるが、要素導入の直接経路はcommitが明記する |
@@ -38,14 +38,19 @@ Googleの2005年12月Web Authoring Statisticsは、約10億文書のsampleを対
 
 ### 解釈
 
-`section`は遅くとも2004-08-28、6役割の提案集合は遅くとも2004-11-10にWHATWGで議論され、2005-09-01には現行名のsectioning modelとして一体的に存在した。導入要求は、汎用`div`やheadingだけでは失われるoutlineと役割を機械可読に区別することだった。2008年文書はHTML5全体とdeployed content調査の関係を示し、2005年12月の統計は`article`, `header`, `footer`, `nav`と実在class慣習の具体的対応を示す。しかし統計の公表日は保存草案より後であり、その文言も「maps very well」であって「この調査結果から採用した」ではない。したがって個別の先行classからHTML要素への矢印は確定せず、6要素とも導入理由または設計モデルを確認できるBを推奨する。
+`section`は遅くとも2004-08-28、6役割の提案集合は遅くとも2004-11-10にWHATWGで議論され、2005-09-01には現行名のsectioning modelとして一体的に存在した。導入要求は、汎用`div`やheadingだけでは失われるoutlineと役割を機械可読に区別することだった。2008年文書はHTML5全体とdeployed content調査の関係を示し、2005年12月の統計は`article`, `header`, `footer`, `nav`と実在class慣習の具体的対応を示す。しかし統計の公表日は保存草案より後であり、その文言も「maps very well」であって「この調査結果から採用した」ではない。したがって個別の先行classからHTML要素への矢印は確定せず、`header`以外の5要素は導入理由または設計モデルを確認できるBを推奨する。`header`は後述する2009年の具体的な汎用markup、要求、現行系統再導入を要素単位で確認できるためAとする。
 
 ### 未解決
 
 - 2004年から2005年9月までの編集履歴または提案で、6要素それぞれの提案者、正確な初出、採用理由を示すもの。
 - 2005年12月に公開されたusage統計以前に、同じdatasetまたは予備調査が編集判断へ使われたことを示す記録。
 - `section`とXHTML 2 `section`、`aside`と出版・Webのsidebar慣習の間に、名称や意味の類似を越えた採用記録があるか。
-- 2009年の`header → hgroup`後、section header用の現行`header`を再導入した正確なcommitと理由。
+
+## 現行`header`の再導入
+
+2009年4月7日のWHATWG mailは、当時の`header`では`nav`を子にできず、見出し、menu、検索formをまとめた`div id="header"`相当を表せないと指摘した。4月30日のcommit `7e9b2d1b`（r3039）は旧`header`をsubheading用の`hgroup`へ改名し、30分後のcommit `a729fd0c`（r3040）は見出し、目次、検索form、logo、introductory／navigational aidsを含められる新しい`header`を導入した。編集者の同日返信も、`nav`を`header`内で許可し、提示された構造を可能にし、旧要素を`hgroup`へ改名したと説明する。[問題提起](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-April/061491.html) [改名commit](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4) [再導入commit](https://github.com/whatwg/html/commit/a729fd0c57b9a8cc7ed783a03e72cfc74549c9db) [編集者の返信](https://lists.w3.org/Archives/Public/public-whatwg-archive/2009Apr/0423.html)
+
+この経路は旧`header`から現行`header`への単純な改名ではない。heading group用途を`hgroup`へ分離し、広いpage／section header用途へ同名の新要素を割り当てた二枝の再設計である。詳細は[追加調査ノート](header-reintroduction.md)を参照する。
 
 ## `hgroup`
 
@@ -170,7 +175,10 @@ HTML+は1993年に`FIG`とその子`CAPTION`を定義していたが、確認し
 | 2008-02-17 | WHATWG commit `a1b2ff77` | 仕様commit | `m`から`mark`への改名とrelevance/highlight用例の拡張。 | https://github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635 | 2026-08-09 |
 | 2008-06-10 | W3C HTML 5 | Working Draft | `details`、先頭`legend`によるsummary、`open`を収録。独立した`summary`要素はない。 | https://www.w3.org/TR/2008/WD-html5-20080610/interactive-elements.html#the-details | 2026-08-09 |
 | 2009-04-23 | W3C HTML 5 | Working Draft | `details`のcaptionが引き続き先頭`legend`だったことを確認。 | https://www.w3.org/TR/2009/WD-html5-20090423/interactive-elements.html#the-details-element | 2026-08-09 |
+| 2009-04-07 | WHATWG “About Descendent Tags” | mailing list | 当時の`header`ではpage header相当を表せず、`nav`を子にできないという要求。 | https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-April/061491.html | 2026-08-09 |
 | 2009-04-30 | WHATWG commit `7e9b2d1b` | 仕様commit | `header`から`hgroup`への改名とsubheading用途への限定。 | https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4 | 2026-08-09 |
+| 2009-04-30 | WHATWG commit `a729fd0c` | 仕様commit | 現行系統の新しい`header`を導入し、広いintroductory／navigational contentを定義。 | https://github.com/whatwg/html/commit/a729fd0c57b9a8cc7ed783a03e72cfc74549c9db | 2026-08-09 |
+| 2009-04-30 | WHATWG “About Descendent Tags”への編集者返信 | mailing list | `nav`を`header`内で許可し、提示構造を可能にし、旧`header`を`hgroup`へ改名したという理由。 | https://lists.w3.org/Archives/Public/public-whatwg-archive/2009Apr/0423.html | 2026-08-09 |
 | 2009-09-15 | WHATWG commit `9c490f21` | 仕様commit | conversation用`dialog`の削除。 | https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7 | 2026-08-09 |
 | 2009-09-15 | public-html “Re: &lt;details&gt;”／WHATWG commit `9c490f21` | 標準化mail／仕様commit | `dt`／`dd`案の採用と、旧`legend`方式を`fieldset`と一貫させた理由。 | https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html / https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7 | 2026-08-09 |
 | 2009-12-18 | “Validation Errors on Figures and Details” | WHATWG help mailing list | 当時の仕様が`details`の最初のchildとしてcaption用`dt`を許可していたことを引用。 | https://lists.whatwg.org/pipermail/help-whatwg.org/2009-December/002989.html | 2026-08-09 |
@@ -180,6 +188,6 @@ HTML+は1993年に`FIG`とその子`CAPTION`を定義していたが、確認し
 
 ## 調査記録
 
-WHATWGの公式保存スナップショット、Git/SVN移行済み履歴、仕様commit、public-html mail、W3C tracker、導入commitが参照するApple HIGとGNOME usability threadを照合した。2004年から2005年8月までの編集履歴、6 sectioning要素の個別提案、`figure`とHTML+の接続、`details`と`summary`の名称選択、2012年`dialog`の先行提案は今回の探索では確定できなかった。
+WHATWGの公式保存スナップショット、Git/SVN移行済み履歴、仕様commit、public-html mail、W3C tracker、導入commitが参照するApple HIGとGNOME usability threadを照合した。追加調査では2009年の`header`再導入commitと理由を確定した。2004年から2005年8月までの編集履歴、6 sectioning要素の個別提案、`figure`とHTML+の接続、`details`と`summary`の名称選択、2012年`dialog`の先行提案は今回の探索では確定できなかった。
 
 確度は、後代の仕様説明やusage統計が意味の妥当性を補強しても、当時の採用行為を直接示さない場合にはAへ上げていない。`details`は導入commitが具体的UI資料を直接参照するため、GUI disclosure widgetとの接続を採用する。名称の類似だけによる`HTML+ FIG/CAPTION → figure/figcaption`、HTML 4 `table summary`属性等から`summary`への接続、外見・機能の類似だけによる`GUI dialog → dialog`、同名だけによる`conversation dialog → application dialog`は採用しない。

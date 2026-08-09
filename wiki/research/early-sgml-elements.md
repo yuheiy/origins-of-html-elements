@@ -4,7 +4,7 @@
 
 第2回調査では、`body`と`head`について直前のDTD構造または提案からの改名・採用を当事者mailで確認できたが、公開DTD間の中間版または最終名への変更記録が欠けるためA−を推奨する。`html`、`title`、`p`、`ul`、`li`、`ol`、`dl`、`dt`、`dd`、`blockquote`は、HTML側の導入理由または集合単位の設計モデルを当時の一次資料で確認できたためBを推奨する。`address`は1991年の実装初出と意味を固定できたが、採用因果または導入理由がないためCを推奨する。
 
-`h1`〜`h6`だけは別であり、1992年のCERN公式資料がCERN SGML guideから保持し、その定義がAAP tag setに由来すると明記するのでAである。この直接証拠を、同名タグがWaterloo SCRIPT/GMLやCERN SGMLに存在するだけの13要素へ拡張しない。[Tim Berners-Lee, *HTML Tags*, 1992-11-03 snapshot](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)（2026-08-09閲覧）
+`h1`〜`h6`だけは別であり、1992年のCERN公式資料がCERN SGML guideから保持し、その定義がAAP tag setに由来すると明記するのでAである。追加調査では、1991年2月1日のRCS識別子を持つAAP Book DTD BK-1保存版がheading familyを`h|h1|h2|h3|h4`と宣言することも確認した。AAP側の5 identifiersとHTML側の6段階は一致しないため個別番号対応は補わず、集合単位の系譜として扱う。この直接証拠を、同名タグがWaterloo SCRIPT/GMLやCERN SGMLに存在するだけの13要素へ拡張しない。[AAP DTD追加調査](aap-heading-dtd.md) [Tim Berners-Lee, *HTML Tags*, 1992-11-03 snapshot](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)（2026-08-09閲覧）
 
 CERNのHTML test documentは、CERNで使われたSGML tagsetから“some tags”をHTMLへ含めたと述べ、同じ文書で`TITLE`、`P`、glossary、unordered listを実演する。しかし、どのtagがその“some tags”に当たるかを指定しないため、この集合レベルの文だけで13要素の個別矢印は結ばない。[CERN/W3C, *Test Dataset*, 1992 historical snapshot](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/Test/test.html)（2026-08-09閲覧）
 

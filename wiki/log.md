@@ -241,3 +241,37 @@ W3C Bug 17930、WHATWG公式Git履歴、Ian Hicksonの同時代記録を照合�
 ## [2026-08-09] lint | template追加調査
 
 追加証拠反映後に`template`ページを独立して読み直し、Bug 17930のr8000記録、commit messageの`webapps@8000`、差分内容、系譜、確度A、残る未解決点の整合を確認した。全115ページの確度集計はA 55件、A− 15件、B 39件、C 6件、未評価0件、敵対的レビュー済み115件のままであり、`wiki/README.md`と一致する。
+
+## [2026-08-09] research | AAP heading DTDと現行header再導入
+
+全115ページの未解決252件を棚卸しし、複数ページへ波及するheading familyと、系譜が切断されていた`header`を優先調査した。AAP Book DTD BK-1の1991年RCS revision 1.1に`h|h1|h2|h3|h4`のheading familyがあることを確認し、`h1`〜`h6`へ集合単位の証拠と5対6の不一致を反映した。[AAP DTD調査](research/aap-heading-dtd.md)
+
+WHATWG公式Git履歴と同時代mailから、旧`header`を`hgroup`へ分離したr3039の直後、r3040が広いpage／section header用途の新`header`を導入したことを確認した。具体的な汎用markup、問題提起、編集者返信、commit差分が再導入理由を直接示すため、`header`をBからAへ変更した。[`header`再導入調査](research/header-reintroduction.md)
+
+## [2026-08-09] lint | AAP heading DTDと現行header再導入
+
+変更した7個別ページと関連横断調査を一次資料へ戻って別レビューし、AAPの5 identifiersをHTMLの6段階へ個別対応させていないこと、旧`header`と現行`header`を単純な連続系譜にしていないことを確認した。必須見出し、証拠表、未解決点、相対リンク、Markdown whitespace、確度集計を検査し、A 56件、A− 15件、B 38件、C 6件、未評価0件、敵対的レビュー済み115件が`wiki/README.md`と一致することを確認した。
+
+## [2026-08-09] update | emとciteの1992年提案
+
+1992年11月19日のwww-talkで、Dan Connollyが`HP1`〜`HP5`の代案として`em`, `tt`, `cite`を提案し、Tim Berners-Leeが番号式highlightingを退ける方向へ同意したことを確認した。`em`と`cite`の確認可能なHTML標準化上の提案を1993年草案以前へ遡らせ、解決した初出の問いを両ページの未解決から除いた。提案を実装初出または最終採用決定とは扱っていない。
+
+## [2026-08-09] lint | emとciteの1992年提案
+
+両mail、1993年draft、Texinfo 2.16を再照合し、日付、提案者、literal element names、応答の文脈を確認した。`em`と`cite`の証拠表、未解決点、調査記録を別レビューし、確度Aと全体集計は変更しなかった。
+
+## [2026-08-09] update | 1993年HTML DTDのphrase収録日
+
+1993年HTML draftの埋込みDTDがRCS識別子`html.dtd,v 1.3 93/01/06`を持ち、`inline` entityにphrase／font要素群を列挙することをローカル保存資料で確認した。`b`, `i`, `strong`, `code`, `samp`, `kbd`, `var`, `dfn`, `u`のformal DTD収録を1993年1月6日まで遡らせ、解決した草案以前の初出問いを未解決から除いた。RCS日付を実装初出や、それ以前のprototype不在の証拠とは扱っていない。
+
+## [2026-08-09] lint | 1993年HTML DTDのphrase収録日
+
+埋込みDTDのRCS識別子、`inline` entity、個別のliteral namesを再照合し、変更した9ページの状態、導入、証拠表、未解決、調査記録を別レビューした。確度と全体集計は変更せず、相対リンク、必須見出し、Markdown whitespaceの整合を確認した。今回の調査全体で未解決項目は252件から240件となった。
+
+## [2026-08-09] update | h1〜h6要素ページの統合
+
+`wiki/elements/h1.md`〜`h6.md`を削除し、共通の歴史、証拠、確度、未解決点を[`hx.md`](elements/hx.md)へ統合した。対象集合は115要素のまま、要素ページは110ファイルとなった。索引、横断調査、AAP調査ノート、運用規約を同時更新した。
+
+## [2026-08-09] lint | h1〜h6要素ページの統合
+
+`hx.md`の必須見出し順、証拠表、相対リンク、完成表示、敵対的レビュー記録を確認した。旧`h1.md`〜`h6.md`への参照が残っていないこと、110ファイルで115要素を収録し、`hx.md`のA評価を6要素へ計上するとA 56件、A− 15件、B 38件、C 6件になることを確認した。

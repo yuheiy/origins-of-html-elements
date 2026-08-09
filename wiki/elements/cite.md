@@ -1,6 +1,6 @@
 # `<cite>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。Texinfoからの命名系譜を検証済み（1993年draft以前の初出は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。1992年の`cite`提案とTexinfoからの命名系譜を検証済み
 
 ## 概要
 
@@ -12,7 +12,9 @@ WHATWG HTML Living Standardでは、引用または参照されるものを含�
 
 ## HTMLへの導入
 
-1993年6月のHTML Internet-Draftはcharacter highlighting elementとして `<cite>` を列挙し、その集合の要素名をTexinfo macro namesから派生したと明記した。この史料は命名元を示すが、要素の最初の実装時期や採用理由の全体は示さない。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)
+1992年11月19日、Dan ConnollyはHTML DTDのhighlighting候補として既存の`HP1`〜`HP5`を問う一方、番号式より`em`, `tt`, `cite`を好むと提案した。Tim Berners-Leeは同日、番号式はほぼ役に立たないとして応答した。これは`cite`の確認可能な最初のHTML標準化上の提案であるが、実装初出や最終語彙を決めた記録ではない。[提案](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html) [応答](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)
+
+1993年6月のHTML Internet-Draftはcharacter highlighting elementとして `<cite>` を列挙し、その集合の要素名をTexinfo macro namesから派生したと明記した。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)
 
 ## HTML直前の祖先
 
@@ -37,6 +39,7 @@ Texinfo `@cite` → 1993年HTML draft `<cite>` → 後続HTML `<cite>`
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
 | 1992-10-06 | *Texinfo — The GNU Documentation Format*, Edition 2.16 | GNU公式配布物内マニュアル | `@cite` の当時の定義を確認できる。 | [GNU archive](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z) | 2026-08-09 |
+| 1992-11-19 | “HTML DTD issues”とTim Berners-Leeの応答 | www-talk標準化議論 | Connollyが`HP1`〜`HP5`の代案として`cite`を具体的に提案し、Berners-Leeが番号式highlightingを退ける方向に同意した。 | [提案](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html) / [応答](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html) | 2026-08-09 |
 | 1993-06 | *Hypertext Markup Language (HTML)*, draft-ietf-iiir-html-00 | IETF Internet-Draft | `<cite>` を含むcharacter highlighting要素名をTexinfo macro names由来と明記する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) | 2026-08-09 |
 
 ## 確度
@@ -51,11 +54,12 @@ HTML側が命名元を明示し、Texinfo側でも対応する同時代マクロ
 
 ## 未解決
 
-- 1993年draft以前のHTMLにおける初出を確認する。
 - 1993年案から後続標準への採録経路を確認する。
 
 ## 調査記録
 
-1993年HTML draft、RFC 1866、GNU Texinfo 2.16および3.7を確認した。Texinfo系統全体の照合は[調査ノート](../research/texinfo-phrase-elements.md)を参照する。
+1992年11月のwww-talk提案と応答、1993年HTML draft、RFC 1866、GNU Texinfo 2.16および3.7を確認した。Texinfo系統全体の照合は[調査ノート](../research/texinfo-phrase-elements.md)を参照する。
 
 2026-08-09の敵対的レビューでは、1993年draftの命名由来記述とTexinfo 2.16の`@cite`定義を本文へ戻って照合し、RFC 1866とTexinfo 3.7も比較した。一般的な引用慣習やSGMLの同名要素を反例候補として確認したが、明示されたTexinfo命名因果を覆す資料はなく、確度Aを維持した。
+
+1992年提案追加後の別レビュー（2026-08-09）では、messageの日付、提案者、`cite`のliteral name、Berners-Leeの応答文脈を再確認した。提案を実装初出や最終採用決定へ拡張せず、既存のTexinfo命名系譜と確度Aを維持した。

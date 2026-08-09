@@ -10,7 +10,11 @@
 
 ## HTML側の証拠
 
+1992年11月19日、Dan ConnollyはHTML DTDのhighlighting候補を検討するmailで、既存の`HP1`〜`HP5`より`em`, `tt`, `cite`を好むと具体的に提案した。Tim Berners-Leeは同日、番号式highlightingはほぼ役に立たないとして応答した。これにより`em`と`cite`のHTML標準化上の出現を1993年draftより前へ固定できるが、mailは最終的な12要素集合の採用決定や実装時期を示さない。[Dan Connolly, “HTML DTD issues”, 1992-11-19](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html) [Tim Berners-Lee, “Re: HTML DTD issues”, 1992-11-19](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)
+
 1993年draftのcharacter highlighting節は、12要素を列挙する直前に、これらの要素名がTexinfoのマクロ名から派生したと記している。これはHTML側から命名元を明示する直接史料である。[IETF Datatracker上の1993年draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)
+
+同draftに埋め込まれたHTML DTDはRCS識別子`html.dtd,v 1.3 93/01/06 18:38:10 connolly Exp`を持ち、`inline` entityに`EM | TT | STRONG | B | I | U | CODE | SAMP | KBD | KEY | VAR | DFN | CITE`を列挙する。このため、現行要素に対応する`B`, `I`, `EM`, `STRONG`, `CODE`, `SAMP`, `KBD`, `VAR`, `DFN`, `CITE`, `U`のformal DTD収録を1993年1月6日まで遡って固定できる。ただしRCS metadataは実装初出や、それ以前のprototypeが存在しなかったことを示さない。[IETF Datatracker上の1993年draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)（[local snapshot](../../raw/draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt)）
 
 W3Cの`1995-archive`にも同じ由来文と列挙を持つ版が保存されているが、本文のDTD revisionは1994年5月18日である。このページを「1995年の最終HTML 2.0仕様」と呼ばない。[W3C, archived HTML specification](https://www.w3.org/MarkUp/1995-archive/html-spec.html)
 

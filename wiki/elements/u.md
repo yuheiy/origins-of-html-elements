@@ -1,6 +1,6 @@
 # `<u>`
 
-> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML draftの集合レベルの由来記述を検証済み（個別祖先と再採録経路は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。1993-01-06 DTD収録と集合レベルの由来記述を検証済み（個別祖先と再採録経路は未確認）
 
 ## 概要
 
@@ -12,7 +12,7 @@ WHATWG HTML Living Standardでは、明文化されていないが明示的にre
 
 ## HTMLへの導入
 
-1993年6月のHTML Internet-Draftは`U`をphysical character highlighting elementとして列挙し、その集合の要素名をTexinfo macro namesから派生したと明記した。ただし`U`は最終HTML 2.0のRFC 1866には採録されていない。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) [RFC 1866](https://www.w3.org/MarkUp/html-spec/html-spec.html)
+1993年6月のHTML Internet-Draftに埋め込まれたHTML DTDはRCS識別子`html.dtd,v 1.3 93/01/06`を持ち、`inline` entityに`U`を列挙するため、formal DTDへの収録を1993年1月6日まで遡って確認できる。同draft本文は`U`をphysical character highlighting elementとして列挙し、その集合の要素名をTexinfo macro namesから派生したと明記した。このRCS日付は実装初出や、それ以前のprototypeがなかったことを示すものではない。`U`は最終HTML 2.0のRFC 1866には採録されていない。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) [RFC 1866](https://www.w3.org/MarkUp/html-spec/html-spec.html)
 
 ## HTML直前の祖先
 
@@ -37,7 +37,7 @@ Texinfo macro names（HTML draftによる集合レベルの由来記述、`U`の
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
 | 1992-10-06 | *Texinfo — The GNU Documentation Format*, Edition 2.16 | GNU公式配布物内マニュアル | 印刷用font commandsにunderline用`@u`を確認できない。 | [GNU archive](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z) | 2026-08-09 |
-| 1993-06 | *Hypertext Markup Language (HTML)*, draft-ietf-iiir-html-00 | IETF Internet-Draft | `U`を含む12要素名をTexinfo macro names由来と一括して述べる。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) | 2026-08-09 |
+| 1993-01-06（埋込みDTDのRCS識別子）、1993-06（draft） | *Hypertext Markup Language (HTML)*, draft-ietf-iiir-html-00 | IETF Internet-Draft／埋込みDTD | `html.dtd,v 1.3 93/01/06`の`inline` entityに`U`があり、本文は`U`を含む12要素名をTexinfo macro names由来と一括して述べる。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) | 2026-08-09 |
 | 1995-06-07 | *Texinfo — The GNU Documentation Format*, Edition 2.21、および同梱実装 | GNU公式配布物内マニュアル・実装 | font commandsとcommand tableにunderline用`@u`を確認できない。 | [GNU archive](https://ftp.gnu.org/gnu/texinfo/texinfo37.tar-gz) | 2026-08-09 |
 
 ## 確度
@@ -52,12 +52,13 @@ HTML側の集合レベルの由来記述は直接史料で確認できるが、T
 
 ## 未解決
 
-- 1993年draftより前の`U`初出を確認する。
 - HTML draft執筆者が想定したTexinfo macroが何だったかを確認する。
 - RFC 1866で不採録となった後、現行`u`へ至る再採録経路を確認する。
 
 ## 調査記録
 
-1993年HTML draft、RFC 1866、GNU Texinfo 2.16および3.7を確認した。詳細は[Texinfo系統の調査ノート](../research/texinfo-phrase-elements.md)を参照する。
+1993年HTML draftと埋込みDTDのRCS識別子、RFC 1866、GNU Texinfo 2.16および3.7を確認した。詳細は[Texinfo系統の調査ノート](../research/texinfo-phrase-elements.md)を参照する。
 
 敵対的レビュー（2026-08-09）では、1993年draftの包括的なTexinfo由来文と、Texinfo 2.16／3.7にunderline用`@u`がないことを再照合した。`U → @u`を否定し、RFC 1866での不採録後の接続も補わないA−を維持した。
+
+埋込みDTD追加後の別レビュー（2026-08-09）では、RCS識別子`html.dtd,v 1.3 93/01/06`と`inline` entityの`U`をローカル保存資料で再照合した。RCS日付を実装初出や個別Texinfo祖先へ拡張せず、A−と残る再採録経路の未解決を維持した。
