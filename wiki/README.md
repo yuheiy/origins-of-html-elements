@@ -9,9 +9,9 @@
 - 対象基準日: 2026-08-09
 - 固定ページ数: 115
 - 個別ページ: 全115件の骨格と現行定義リンクを作成済み
-- 史料検証済み: 49件（A: 39件、A−: 4件、B: 6件、C: 0件）
-- 史料未検証: 66件（未評価）
-- 現在の意味を要約済み: 62件
+- 史料検証済み: 60件（A: 42件、A−: 4件、B: 14件、C: 0件）
+- 史料未検証: 55件（未評価）
+- 現在の意味を要約済み: 73件
 - 横断系譜ページ: 個別ページの検証後に作成予定
 - 敵対的レビュー済み: 0件
 
@@ -25,6 +25,7 @@
 - [初期SGML/GML系統](research/early-sgml-elements.md)
 - [Browser vendor由来要素](research/browser-vendor-elements.md)
 - [国際化・アクセシビリティ関連要素](research/internationalization-accessibility-elements.md)
+- [HTML5 semantic elementsと既存Web慣習](research/html5-semantic-elements.md)
 
 ## 要素一覧
 

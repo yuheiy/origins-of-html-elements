@@ -1,58 +1,59 @@
 # `<mark>`
 
-> 状態: 骨格作成済み（史料未検証）
+> 状態: 2005年HTML5 `m`から2008年`mark`への改名を検証済み
 
 ## 概要
 
-未調査。現在の意味と歴史的な由来を混同せずに記述する。
+2005年WHATWG草案のhighlight用`m`を、2008年に`mark`へ改名して導入された。改名とrelevanceを中心とする意味の詳述は仕様commitで確認できる。
 
 ## 現在の意味
 
-一次定義: [WHATWG HTML Living Standardの `<mark>` 定義](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-mark-element)（2026-08-09確認）。定義内容の要約は未作成。
+WHATWG HTML Living Standardでは、別の文脈における関連性を理由に、参照目的でmarkまたはhighlightされた一続きのtextを表す。本文ではuserの現在の行動に関連しそうな箇所、引用では原著者によらず後から注目させた箇所を示す。[一次定義](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-mark-element)（2026-08-09確認）
 
 ## HTMLへの導入
 
-未調査。初出、導入主体、導入理由を分離して記録する。
+2005年9月1日草案にはmarkedまたはhighlighted textを表す`m`があり、検索語に一致する箇所をserverがhighlightする例を示す。2008年2月17日、Ian Hicksonが`m`を`mark`へ改名し、引用中で後から注目させる箇所や文脈上のrelevanceを表す用例を追加した。[2005年草案](https://whatwg.org/specs/web-apps/2005-09-01/#the-m) [仕様commit](https://github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)
 
 ## HTML直前の祖先
 
-未確認。名称、外見、現在の用途の類似だけから祖先を推定しない。
+HTML5草案の`m`。2008年commitが同要素を`mark`へ改名したことを直接明記する。
 
 ## さらに上流の由来
 
 ### 証拠
 
-未確認。
+2005年の`m`は検索結果等のmarked/highlighted textという要求を示す。HTML外の具体的markup祖先は確認できない。
 
 ### 解釈
 
-なし。史料確認後も、証拠とは別に記述する。
+検索等の現在の文脈に応じたhighlightを、importanceを表す`strong`とは異なるsemanticとして形式化したと解釈できる。
 
 ## 系譜
 
-未確定。史料で確認済みの接続だけを記載する。
+WHATWG Web Applications 1.0 `m`（2005年） → `mark`への改名と意味の詳述（2008年） → 現行HTML `mark`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 2005-09-01 | Web Applications 1.0 | WHATWG保存Early Working Draft | marked/highlighted textを表す`m`と検索結果の用例。 | [一次資料](https://whatwg.org/specs/web-apps/2005-09-01/#the-m) | 2026-08-09 |
+| 2008-02-17 | WHATWG HTML commit `a1b2ff77` | 仕様commit | `m`から`mark`への改名とrelevance/highlight用例の拡張。 | [一次資料](https://github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635) | 2026-08-09 |
 
 ## 確度
 
-**未評価**
+**A**
 
-ハンドオフの確度は出発仮説として扱い、一次資料の再確認後に評価する。
+現行`mark`の直接祖先`m`、改名、導入主体、意味の変更を要素単位の仕様commitで直接確認できるため。
 
 ## 否定された仮説
 
-なし。ハンドオフで撤回済みの説明がある場合は、個別調査時に理由とともに移記する。
+紙の蛍光markerや`strong`から直接派生したという説明。確認できる直前祖先はHTML5草案の`m`であり、`strong`とは意味を区別している。
 
 ## 未解決
 
-- HTMLへの導入理由は確認できるか。
-- HTML直前の具体的祖先は確認できるか。
-- さらに上流の由来を示す直接史料はあるか。
+- `m`の正確な初出、提案者、名称選択の記録はあるか。
+- `m → mark`改名を促したissueまたはmailing-list提案は確認できるか。
 
 ## 調査記録
 
-未着手。
+2005年WHATWG保存草案と2008年改名commitを確認した。`m`より前の具体的祖先と改名を促した議論は確認できなかった。横断比較は[HTML5 semantic elements調査ノート](../research/html5-semantic-elements.md)を参照する。

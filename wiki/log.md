@@ -81,3 +81,15 @@ Texinfo系統11ページの現在の意味をWHATWG HTML Living Standard本文�
 ## [2026-08-09] update | Raw配布アーカイブ
 
 HTML 4.01、GNU Texinfo 2.16、GNU Texinfo 3.7の配布アーカイブを展開済みのファイル群へ置き換えた。今後もZIP、tarなどは内部一覧を検査してから展開し、アーカイブ自体は`raw/`へ保存しない運用へ変更した。
+
+## [2026-08-09] research | HTML5 semantic elements
+
+`article`, `aside`, `section`, `header`, `footer`, `nav`, `hgroup`, `figure`, `figcaption`, `mark`, `dialog`について、2004–2005年WHATWG mailing list・保存草案、同時代usage調査、仕様commit、W3C差分草案を照合した。[調査ノート](research/html5-semantic-elements.md)
+
+`hgroup`, `figcaption`, `mark`をA、残る8要素をBとして個別ページへ統合した。HTML+ `FIG`／`CAPTION`から現行`figure`／`figcaption`への未確認接続、conversation用旧`dialog`からapplication UI用の現行`dialog`への同名だけの接続は採用しなかった。
+
+対象11ページの現在の意味もWHATWG HTML Living Standard本文から要約した。史料検証済みは60ページ、現在の意味の要約済みは73ページとなった。
+
+## [2026-08-09] lint | 60検証済みページ
+
+全115ページの確度集計を再計算し、A 42件、A− 4件、B 14件、未評価55件が`wiki/README.md`と一致することを確認した。HTML5 semantic elements系11ページについて、必須見出しの順序、現行定義の要約、空でない証拠表、相対リンク、generic placeholderの除去、Markdown whitespaceを検査した。既存Web classとの対応、同名のHTML+要素、旧conversation用`dialog`を、採用因果が確認できないまま系譜へ接続していないことも確認した。

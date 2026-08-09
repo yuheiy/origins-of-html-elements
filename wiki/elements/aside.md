@@ -1,58 +1,60 @@
 # `<aside>`
 
-> 状態: 骨格作成済み（史料未検証）
+> 状態: 2004–2005年WHATWGでの導入と設計モデルを検証済み（`sidebar`からの改名理由は未確認）
 
 ## 概要
 
-未調査。現在の意味と歴史的な由来を混同せずに記述する。
+2004年11月のWHATWG提案集合では`sidebar`、2005年草案では`aside`として確認できる。両者の正確な改名経路と、出版上のasideやsidebarからの採用因果は未確認である。
 
 ## 現在の意味
 
-一次定義: [WHATWG HTML Living Standardの `<aside>` 定義](https://html.spec.whatwg.org/multipage/sections.html#the-aside-element)（2026-08-09確認）。定義内容の要約は未作成。
+WHATWG HTML Living Standardでは、周囲の内容へ間接的に関連し、その内容から分離して考えられるページのsectionを表す。pull quote、sidebar、広告、`nav`群などに使用できる。[一次定義](https://html.spec.whatwg.org/multipage/sections.html#the-aside-element)（2026-08-09確認）
 
 ## HTMLへの導入
 
-未調査。初出、導入主体、導入理由を分離して記録する。
+2004年11月10日のWHATWG議論はsemantic element集合に`sidebar`を列挙し、2005年9月1日版Web Applications 1.0は現行名`aside`で周囲の内容へtangentially relatedなsectionとして定義する。両版の間の改名日と理由は確認できない。[2004年議論](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/date.html) [2005年草案](https://whatwg.org/specs/web-apps/2005-09-01/#the-aside)
 
 ## HTML直前の祖先
 
-未確認。名称、外見、現在の用途の類似だけから祖先を推定しない。
+未確認。2004年の`sidebar`案は同じ提案集合内の先行役割だが、`aside`への直接改名を示す記録は確認できない。出版物のasideやWebのsidebarから採用したことを示す史料も確認できない。
 
 ## さらに上流の由来
 
 ### 証拠
 
-未確認。
+2005年草案で導入時の意味を確認でき、2008年W3C差分草案もHTML 4にないdocument markupとして列挙する。
 
 ### 解釈
 
-なし。史料確認後も、証拠とは別に記述する。
+HTML5のsectioning modelで、主内容から分離可能な関連内容へ専用のsectionを与えたと解釈できる。さらに上流は確定しない。
 
 ## 系譜
 
-未確定。史料で確認済みの接続だけを記載する。
+WHATWG `sidebar`案（2004年）　[改名経路未確認]　Web Applications 1.0 `aside`（2005年） → 現行HTML `aside`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 2004-11-10 | Semantic elements and spec complexity | WHATWG mailing list | semantic element集合に含まれた`sidebar`。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/date.html) | 2026-08-09 |
+| 2005-09-01 | Web Applications 1.0 | WHATWG保存Early Working Draft | `aside`の存在と、周囲へ間接的に関連するsectionという意味。 | [一次資料](https://whatwg.org/specs/web-apps/2005-09-01/#the-aside) | 2026-08-09 |
+| 2008-01-22 | HTML 5 differences from HTML 4 | W3C Working Draft | `aside`をHTML 4にないdocument markupとして列挙。 | [一次資料](https://www.w3.org/TR/2008/WD-html5-diff-20080122/#new-elements) | 2026-08-09 |
 
 ## 確度
 
-**未評価**
+**B**
 
-ハンドオフの確度は出発仮説として扱い、一次資料の再確認後に評価する。
+HTMLへの導入時の設計モデルは確認できるが、`sidebar → aside`の改名経路と具体的な先行物からの採用因果は確認できないため。
 
 ## 否定された仮説
 
-なし。ハンドオフで撤回済みの説明がある場合は、個別調査時に理由とともに移記する。
+出版上のasideまたはWebのsidebarから直接採用したという説明。2004年案に`sidebar`はあるが、`aside`への改名と外部慣習からの採用記録を確認できない。
 
 ## 未解決
 
-- HTMLへの導入理由は確認できるか。
-- HTML直前の具体的祖先は確認できるか。
-- さらに上流の由来を示す直接史料はあるか。
+- `sidebar`から`aside`への正確な改名日、提案者、理由は確認できるか。
+- 出版上のasideまたは既存Webのsidebar慣習を参照した同時代記録はあるか。
 
 ## 調査記録
 
-未着手。
+2004年WHATWG mailing list、2005年保存草案、2008年W3C HTML5差分草案を確認した。`sidebar → aside`の改名経路と具体的祖先は確認できなかった。横断比較は[HTML5 semantic elements調査ノート](../research/html5-semantic-elements.md)を参照する。

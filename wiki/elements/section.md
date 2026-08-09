@@ -1,58 +1,60 @@
 # `<section>`
 
-> 状態: 骨格作成済み（史料未検証）
+> 状態: 2004年WHATWGでの導入要求と設計モデルを検証済み（具体的祖先は未確認）
 
 ## 概要
 
-未調査。現在の意味と歴史的な由来を混同せずに記述する。
+遅くとも2004年8月にはWHATWG Web Applications 1.0で定義され、見出しだけでは文書構造とoutlineを確実に復元できない問題へのsectioning modelを担った。XHTML 2等の同名要素からの採用因果は未確認である。
 
 ## 現在の意味
 
-一次定義: [WHATWG HTML Living Standardの `<section>` 定義](https://html.spec.whatwg.org/multipage/sections.html#the-section-element)（2026-08-09確認）。定義内容の要約は未作成。
+WHATWG HTML Living Standardでは、文書またはアプリケーション内の汎用的なsection、すなわち通常は見出しを伴う主題別の内容群を表す。stylingやscriptingだけの汎用containerではない。[一次定義](https://html.spec.whatwg.org/multipage/sections.html#the-section-element)（2026-08-09確認）
 
 ## HTMLへの導入
 
-未調査。初出、導入主体、導入理由を分離して記録する。
+2004年8月のWHATWG議論でWeb Applications 1.0に定義済みであることをIan Hicksonが述べ、headingだけではdocument structureとoutlineを確実に復元できない問題が説明された。2005年9月1日草案は文書またはアプリケーションのgeneric sectionとして定義する。[2004年議論](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/date.html) [2005年草案](https://whatwg.org/specs/web-apps/2005-09-01/#the-section)
 
 ## HTML直前の祖先
 
-未確認。名称、外見、現在の用途の類似だけから祖先を推定しない。
+未確認。XHTML 2等にも同名要素が存在するが、WHATWGがそこから採用したことを示す史料は確認できない。
 
 ## さらに上流の由来
 
 ### 証拠
 
-未確認。
+2005年草案で、見出しと組み合わせて文書構造を表すsectioning modelを確認できる。
 
 ### 解釈
 
-なし。史料確認後も、証拠とは別に記述する。
+HTML5のdocument outlineを表すための汎用sectionとして導入されたと解釈できるが、さらに上流の語彙は確定しない。
 
 ## 系譜
 
-未確定。史料で確認済みの接続だけを記載する。
+WHATWG Web Applications 1.0 `section`（2004年まで） → 現行HTML `section`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 2004-08 | `<section>` and headings | WHATWG mailing list | WA1で定義済みの`section`と、headingだけからoutlineを復元する問題。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/date.html) | 2026-08-09 |
+| 2005-09-01 | Web Applications 1.0 | WHATWG保存Early Working Draft | `section`の存在と、見出しを伴うgeneric sectionという意味。 | [一次資料](https://whatwg.org/specs/web-apps/2005-09-01/#the-section) | 2026-08-09 |
+| 2008-01-22 | HTML 5 differences from HTML 4 | W3C Working Draft | `section`をHTML 4にないdocument markupとして列挙。 | [一次資料](https://www.w3.org/TR/2008/WD-html5-diff-20080122/#new-elements) | 2026-08-09 |
 
 ## 確度
 
-**未評価**
+**B**
 
-ハンドオフの確度は出発仮説として扱い、一次資料の再確認後に評価する。
+HTMLへの導入時の設計モデルは確認できるが、具体的な先行要素からの採用因果は確認できないため。
 
 ## 否定された仮説
 
-なし。ハンドオフで撤回済みの説明がある場合は、個別調査時に理由とともに移記する。
+XHTML 2等の同名`section`から採用したという説明。同名存在だけでは因果を示さない。
 
 ## 未解決
 
-- HTMLへの導入理由は確認できるか。
-- HTML直前の具体的祖先は確認できるか。
-- さらに上流の由来を示す直接史料はあるか。
+- 2004年8月より前の提案者と正確な初出は確認できるか。
+- XHTML 2等の先行語彙との関係を明記した同時代資料はあるか。
 
 ## 調査記録
 
-未着手。
+2004年WHATWG mailing list、2005年保存草案、2008年W3C HTML5差分草案を確認した。2004年8月より前の編集履歴と具体的祖先は確認できなかった。横断比較は[HTML5 semantic elements調査ノート](../research/html5-semantic-elements.md)を参照する。
