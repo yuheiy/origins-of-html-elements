@@ -457,3 +457,17 @@ OASIS TRP 9501:1995とTM 9502:1995を保存し、CALS table modelの1990年初�
 初回調査と分離して2004年12月のWHATWG草案、file upload提案と編集者回答、2005年4月6日・13日の保存草案、4月12日の改名提案と編集者回答、HTML 3.0、WHATWG仕様commit、2009年の編集者説明へ戻り、より早い版、日付、主体、要素名、引用文脈、各矢印を再照合した。2009年mailの日付を原文表示の8月12日へ、file uploadへの回答日を12月16日PST（17日UTC）へ訂正した。XUL／XAML／XFormsおよびNetscapeとの未確認接続、placeholderとHTML 3.0より上流の欠落を維持した。
 
 対象2ページについて必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査した。全115要素の確度集計がA 78件、A− 19件、B 15件、C 3件、未評価0件で`wiki/README.md`と一致し、敵対的検証済み115件を維持できることを確認して合格とし、状態を`完成`とした。
+
+## [2026-08-10] research | Vendor起源群
+
+`iframe`、`noscript`、`wbr`について、Microsoft IE3発表、Netscape manualとHTML reference、W3C frames／scripting草案、IETF HTML-WG mail、WHATWG仕様commit、HTML5 First Public Working Draftを照合した。`iframe`のW3C初出を1997年3月31日へ前倒しし、`FRAME`の属性・navigation modelと`IMG`型の配置から`IFRAME`を設計した要素単位の関係を確認した。`noscript`はNavigator 3.0実装を確認したがW3C案との前後・因果は確定できず、`wbr`は遅くとも1995年4月25日にNetscapeの提案として認識されていたことと、HTML 3.0側の`&cbsp;`／`&shy;`競合案を確認した。
+
+## [2026-08-10] update | Vendor起源群の系譜と確度
+
+3要素の初出、導入要求、直前祖先、系譜、証拠、否定された仮説、未解決点を更新した。`iframe`はW3C草案が具体的な先行要素からの設計を直接示すためBからAへ変更し、`noscript`と`wbr`はvendor実装と標準化案の採録因果が未確認なのでBを維持した。確度集計をA 79件、A− 19件、B 14件、C 3件へ更新した。Microsoftのframes拡張提出集合を`IFRAME`へ対応付けず、Netscape `WBR`からWHATWGへの未確認接続も矢印で補っていない。
+
+## [2026-08-10] lint | Vendor起源群の敵対的検証
+
+初回調査と分離してMicrosoft IE3発表、Netscape manualとHTML reference、1995年HTML-WG mail、W3C frames／scripting草案、WHATWG仕様commit、HTML5 First Public Working Draftへ戻り、より早い出現、競合案、日付、主体、要素名、引用文脈、各矢印を再照合した。Microsoftの提出集合が`IFRAME`を含むとは確認できない一方、W3C草案が`FRAME`と`IMG`からの設計を明示することを確認した。`noscript`のNetscape実装とW3C案の時間順序、Netscape `WBR`からWHATWGへの再採録因果は未解決のまま維持した。HTML5 First Public Working Draftについては、確認できる主張をparserとserializationが`wbr`をempty elementとして扱う範囲へ限定した。
+
+対象3ページについて必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査した。全115要素の確度集計がA 79件、A− 19件、B 14件、C 3件、未評価0件で`wiki/README.md`と一致し、敵対的検証済み115件を維持できることを確認して合格とし、状態を`完成`とした。
