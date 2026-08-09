@@ -1,6 +1,6 @@
 # `<source>`
 
-> 状態: 2007年の複数media resource設計を検証済み（追加提案と具体的なHTML外祖先は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。2007年の複数media resource設計を検証済み（追加提案と具体的なHTML外祖先は未確認）
 
 ## 概要
 
@@ -61,3 +61,5 @@ WHATWG `video`の単一`src`方式（2007年3月16日） → codec negotiation�
 ## 調査記録
 
 2007年3月のrevision 678、687、4月のrevision 791、2010年W3C Working Draft、2014年の`picture`統合commit、現行Living Standardを確認した。具体的なHTML外祖先は確認できなかった。横断比較は[HTML media要素の調査ノート](../research/media-elements.md)と[`picture`の横断調査](../research/modern-html-foreign-roots.md)を参照する。
+
+敵対的レビュー（2026-08-09）では、単一`src`のrevision 678、`source`追加のrevision 687、保存草案、後代の画像用途への拡張を再照合した。SMIL、plugin fallback、codec negotiation慣習は採用因果を示さないため祖先へ置かず、HTML内の設計変更を確認したBを維持した。

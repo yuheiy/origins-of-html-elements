@@ -1,6 +1,6 @@
 # `<div>`
 
-> 状態: HTML 3.0での導入目的を検証済み（HTML外の具体的祖先は未解決）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML 3.0での導入目的を検証済み（HTML外の具体的祖先は未解決）
 
 ## 概要
 
@@ -60,3 +60,5 @@ HTMLへの導入時に、汎用containerと`class`で文書divisionを表す設�
 ## 調査記録
 
 HTML 3.0草案、HTML 3.2、現行Living Standardを確認した。横断比較は[Text/structure/edits要素の調査ノート](../research/text-structure-edits-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、HTML 3.0の“Divisions”、HTML 3.2、現行仕様を本文へ戻り、chapter、section、abstract等を`CLASS`付きcontainerで表す導入modelと版順を再確認した。SGML `DIV`、DocBook、印刷上のdivisionを競合祖先として探索したが採用因果はなく、系譜と確度Bを維持した。

@@ -1,6 +1,6 @@
 # `<article>`
 
-> 状態: 2004–2005年WHATWGでの導入と設計モデルを検証済み（具体的祖先は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。2004–2005年WHATWGでの導入と設計モデルを検証済み（具体的祖先は未確認）
 
 ## 概要
 
@@ -62,3 +62,5 @@ WHATWG `article`提案（2004年まで） → Web Applications 1.0 `article`（2
 ## 調査記録
 
 2004年WHATWG mailing list、2005年WHATWG保存草案、Google Web Authoring Statistics、2008年W3C HTML5差分草案を確認した。2004年11月より前の編集履歴は確認できなかった。横断比較は[HTML5 semantic elements調査ノート](../research/html5-semantic-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、2004年mail archive、2005年草案、後発のclass usage調査、2008年差分草案を再読し、`article`の初期定義と公表順を照合した。`post`、`content`等のclassをより早い祖先候補として再検討したが採用記録はなく、系譜と確度Bを維持した。

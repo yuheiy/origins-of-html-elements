@@ -1,6 +1,6 @@
 # `<button>`
 
-> 状態: HTMLの`input` button群から内容を持てる`BUTTON`への拡張を検証済み（特定GUI toolkitからの上流は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTMLの`input` button群から内容を持てる`BUTTON`への拡張を検証済み（特定GUI toolkitからの上流は未確認）
 
 ## 概要
 
@@ -59,3 +59,5 @@ HTMLの`input type=submit`、`input type=reset`、`input type=button`。提案�
 ## 調査記録
 
 1997年のW3C forms提案、HTML 4.0初回公開草案、HTML 4.01変更一覧、現行Living Standardを確認した。特定GUIからの採用記録は確認できなかった。横断比較は[Forms/UI要素の調査ノート](../research/forms-ui-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、1997年forms提案とHTML 4.0草案、HTML 4.01変更付録を再読し、`INPUT`のbutton群から内容を持つ`BUTTON`へ拡張した目的、日付、要素名を確認した。GUI push button、XForms、既存browser extensionを競合祖先として再検討したが、直接史料の因果を覆す資料はなく、確度Aを維持した。

@@ -1,6 +1,6 @@
 # `<address>`
 
-> 状態: 初期HTMLでの出現と当時の意味を検証済み（導入理由・直前祖先は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。初期HTMLでの出現と当時の意味を検証済み（導入理由・直前祖先は未確認）
 
 ## 概要
 
@@ -58,3 +58,5 @@ NeXT WorldWideWebのHTML `ADDRESS`（1991年に確認）→ 現行HTML `<address
 ## 調査記録
 
 1991年NeXT WorldWideWeb実装履歴、1992年CERN HTMLタグ一覧、1992年Connolly DTD、1993年HTML Internet-Draft、Waterloo GMLの先行語彙を確認した。同名存在と採用因果を分離した。対象群全体は[初期SGML/GML調査ノート](../research/early-sgml-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、1991年実装履歴から1993年draftまでの本文とDTDを再読し、日付、`ADDRESS`名、署名・住所用途を照合した。Waterloo GMLの同名要素とより早いHTML版を反例候補として確認したが、導入因果は見つからず、系譜と確度Cを維持した。

@@ -6,7 +6,7 @@
 
 後続仕様との因果関係が最も強いのはformsとtablesである。RFC 1866はDave Raggettがforms materialをHTML+から導出したと明記し、RFC 1942はtable modelがHTML+の初期作業とHTML 3 draftから発展したと明記する。したがって、forms 5要素とtable 5要素のHTML直前の系譜はAと評価できる。[RFC 1866, November 1995, §12](https://www.rfc-editor.org/rfc/rfc1866.html#section-12) [RFC 1942, May 1996](https://www.rfc-editor.org/rfc/rfc1942.html)
 
-`q`, `sub`, `sup`はHTML+から、そのextended versionとW3Cが説明するHTML 3.0 draftを経て後続HTMLへ入った系譜が強い。`abbr`はHTML+とHTML 3.0で`ABBREV`、HTML 4で`ABBR`となるが、改名理由は今回の資料群では確認できない。`s`はHTML 3.2で一度欠落しHTML 4で再登場するため、HTML+から現行要素までの完全な採録経路には一段の未確認箇所がある。`pre`はHTML+初出ではなく、HTML+自身が既存HTMLでのcomputer outputとUnix manual pagesへの需要をその前史として説明している。
+`q`, `sub`, `sup`はHTML+とHTML 3.0に同名・近い役割で存在し、W3CがHTML 3.0全体をHTML+のextended workと説明するが、個別採用は明記しないため集合レベルのA−に限定する。`abbr`はHTML+／HTML 3.0の`ABBREV`とHTML 4の`ABBR`を結ぶ改名・採用因果がなくB以下、`s`はHTML 3.2で欠落した後のHTML 4再採録因果がなくCとする。`pre`はHTML+初出ではなく、HTML+自身が既存HTMLでのcomputer outputとUnix manual pagesへの需要を前史として説明している。
 
 ## 資料の位置づけと日付
 
@@ -80,7 +80,7 @@ HTML 3.2はRFC 1942の“widely deployed subset”として`TABLE`, `CAPTION`, `
 
 1995年HTML 3.0 draftも`ABBREV`を“used to markup abbreviations”とするが、HTML 3.2には採録されない。HTML 4では`ABBR`がHTML 3.2からのnew elementとして採録される。今回調べたHTML+、HTML 3.0、HTML 4の公式資料は`ABBREV`から`ABBR`への改名理由を説明していない。[HTML 3.0, 25 April 1995, “Information Type Elements”](https://www.w3.org/MarkUp/html3/logical.html) [HTML 4.01, “Changes between HTML 3.2 and HTML 4.0”](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1)
 
-安全な系譜は`HTML+ ABBREV → HTML 3.0 ABBREV → HTML 4 ABBR`であり、語彙の継承は強いが改名の一段が未確認なので推奨確度はA−とする。
+確認できる系譜は`HTML+ ABBREV → HTML 3.0 ABBREV`と`HTML 4 ABBR → 現行abbr`の二つであり、その間は矢印で結ばない。HTML 4の導入は確認できるが具体的祖先を確認できないため、推奨確度はB以下とする。
 
 ## `q`
 
@@ -88,7 +88,7 @@ HTML 3.2はRFC 1942の“widely deployed subset”として`TABLE`, `CAPTION`, `
 
 HTML 3.0 draftも`Q`をshort quotationとし、language contextに応じたquotation markで表示すると説明する。その後RFC 2070が、言語とplatform capabilityに応じたshort quotationのrenderingを可能にするphrase-level elementとして`Q`をHTML 2.0拡張へ正式に導入し、HTML 4が採録した。[HTML 3.0, 25 April 1995, “Information Type Elements”](https://www.w3.org/MarkUp/html3/logical.html) [RFC 2070, January 1997, §4.2.2](https://www.rfc-editor.org/rfc/rfc2070.html#section-4.2.2) [HTML 4.01, “Quotations”](https://www.w3.org/TR/html401/struct/text.html#h-9.2.2)
 
-初出時のinline quotationという目的と、RFC 2070で加わったlanguage-sensitive renderingという国際化上の標準化理由を同一視しない。推奨確度はAとする。
+初出時のinline quotationという目的と、1995年国際化草案でのlanguage-sensitive renderingという標準化理由を同一視しない。HTML+からHTML 3.0への個別採用は未確認だが、HTML 3.0全体のHTML+由来をW3Cが説明するため集合レベルのA−を推奨する。
 
 ## `s`
 
@@ -96,7 +96,7 @@ HTML 3.0 draftも`Q`をshort quotationとし、language contextに応じたquota
 
 HTML 3.0 draftには同じ`S`がstrike-throughとして存在する。HTML 3.2は`S`ではなく`STRIKE`を採録し、HTML 4でdeprecatedな`S`が再登場する。HTML 4.01の変更付録は`S`をHTML 4のnew elementとし、旧HTML 4 errataもHTML 3.2には`S`が実際には定義されていなかったと確認する。[HTML 3.0, 25 April 1995, “Font Style Elements”](https://www.w3.org/MarkUp/html3/emphasis.html) [HTML 3.2, 14 January 1997](https://www.w3.org/TR/REC-html32) [HTML 4.01 changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1) [HTML 4.0 errata](https://www.w3.org/MarkUp/html40-updates/REC-html40-19971218-errata)
 
-したがって`HTML+ S → HTML 3.0 S → [HTML 3.2では欠落] → HTML 4 S → 現行s`までは確認できるが、HTML 4での再採録判断をHTML+へ明示的に結ぶ史料は今回未発見である。さらに現行の「もはや正確または関連しない内容」は後世のsemantic reinterpretationであり、HTML+時代へ逆算しない。推奨確度はA−とする。
+確認できるのは`HTML+ S → HTML 3.0 S → [HTML 3.2では欠落]`と`HTML 4 S → 現行s`の二つであり、その間は矢印で結ばない。現行の「もはや正確または関連しない内容」は後世のsemantic reinterpretationであり、HTML+時代へ逆算しない。現行系統の初出と意味までは確認できるが導入理由と祖先が不明なため、推奨確度はCとする。
 
 ## `sub`と`sup`
 
@@ -104,7 +104,7 @@ HTML 3.0 draftには同じ`S`がstrike-throughとして存在する。HTML 3.2�
 
 HTML 3.0 draftは両要素を“New in 3.0”とし、数式外も含むfont-style elementとして定義する。RFC 2070は一般テキストでもsuperscript／subscriptを必要とする言語のため両要素を追加し、HTML 3.2も両方を採録した。つまり、HTML+での数学・科学表現を直接の導入文脈としつつ、後続標準化では一般組版と国際化へ用途が広がった。[HTML 3.0, 25 April 1995, “Font Style Elements”](https://www.w3.org/MarkUp/html3/emphasis.html) [RFC 2070, January 1997, §4.2](https://www.rfc-editor.org/rfc/rfc2070.html#section-4.2) [HTML 3.2, 14 January 1997](https://www.w3.org/TR/REC-html32)
 
-安全な系譜は`HTML+ SUB/SUP（math） → HTML 3.0 → RFC 2070／HTML 3.2 → 後続HTML`である。推奨確度は両方A。ただし`LaTeX → SUB/SUPというタグ名`は未確認とする。
+安全な系譜は`[集合単位] HTML+ SUB/SUPを含むHTML+作業 → HTML 3.0 SUB/SUP`と、`1995年IETF国際化草案 SUB/SUP → RFC 2070／HTML 3.2 → 後続HTML`である。推奨確度は両方A−とし、`LaTeX → SUB/SUPというタグ名`は未確認とする。
 
 ## `pre`
 
@@ -128,11 +128,11 @@ HTML 3.0 draftは両要素を“New in 3.0”とし、数式外も含むfont-sty
 | `tr` | `TR` | 1993年はrow separator | 1994年までにrow container化、RFC 1942へ | A | separatorからcontainerへの議論記録 |
 | `th` | `TH` | header cell | RFC 1942がHTML+からの発展を明記 | A | 個別名称のさらに上流 |
 | `td` | `TD` | data cell | RFC 1942がHTML+からの発展を明記 | A | 個別名称のさらに上流 |
-| `abbr` | `ABBREV` | abbreviation role | HTML 3 `ABBREV` → HTML 4 `ABBR` | A− | 改名理由、HTML 4での具体的採録判断 |
-| `q` | `Q` | inline short quotation | HTML 3 → RFC 2070 → HTML 4 | A | 初出理由とi18n強化を区別する |
-| `s` | `S` | presentational strike-through | HTML 3 → 3.2で欠落 → HTML 4で再登場 | A− | HTML 4再採録とHTML+を結ぶ明示史料 |
-| `sub` | `SUB` | 主にmathのsubscript | HTML 3 → RFC 2070／HTML 3.2 | A | タグ名自体のLaTeX由来は未証明 |
-| `sup` | `SUP` | 主にmathのsuperscript | HTML 3 → RFC 2070／HTML 3.2 | A | タグ名自体のLaTeX由来は未証明 |
+| `abbr` | `ABBREV` | abbreviation role | HTML 3 `ABBREV`／［接続未確認］／HTML 4 `ABBR` | B以下 | 改名・採用因果、HTML 4での具体的導入理由 |
+| `q` | `Q` | inline short quotation | ［集合単位］HTML 3、国際化草案、RFC 2070、HTML 4 | A− | HTML+からの個別採用 |
+| `s` | `S` | presentational strike-through | HTML 3で中断／［接続未確認］／HTML 4で再登場 | C | HTML 4再採録とHTML+を結ぶ明示史料 |
+| `sub` | `SUB` | 主にmathのsubscript | ［集合単位］HTML 3、国際化草案、RFC 2070／HTML 3.2 | A− | HTML+からの個別採用、タグ名自体のLaTeX由来 |
+| `sup` | `SUP` | 主にmathのsuperscript | ［集合単位］HTML 3、国際化草案、RFC 2070／HTML 3.2 | A− | HTML+からの個別採用、タグ名自体のLaTeX由来 |
 | `pre` | `PRE` | 既存HTML要素をHTML+で拡張 | 初期HTML → HTML+ → RFC 1866 | A | HTML以前のタグ名・markup祖先 |
 
 ## 否定された仮説と禁止する短絡

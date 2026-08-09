@@ -1,6 +1,6 @@
 # `<map>`
 
-> 状態: Spyglassのclient-side image map提案を検証済み（HTML 3.2の採録決定記録は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。Spyglassのclient-side image map提案を検証済み（HTML 3.2の採録決定記録は未確認）
 
 ## 概要
 
@@ -60,3 +60,5 @@ HTML+の`FIG`／`A SHAPE`が同じ構文のまま採録されたという説明�
 ## 調査記録
 
 HTML+ image map節、Seidmanの1994年論文、IETF draft、RFC 1980、HTML 3.2を確認した。横断比較は[browser vendor要素調査ノート](../research/browser-vendor-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、HTML+ server-side map、Spyglassのclient-side proposal、IETF draft、RFC 1980、HTML 3.2を再比較した。Spyglass提案の目的と`MAP`設計は直接確認でき、HTML 3.2の個別採録決定だけが欠けるという限定を保ってA判定を維持した。

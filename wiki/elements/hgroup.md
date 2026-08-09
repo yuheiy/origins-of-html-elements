@@ -1,6 +1,6 @@
 # `<hgroup>`
 
-> 状態: 2009年のHTML5 `header`からの改名を検証済み
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。2009年のHTML5 `header`からの改名を検証済み
 
 ## 概要
 
@@ -57,3 +57,5 @@ HTML5草案 `header`（2005年） → `hgroup`への改名とsubheading用途へ
 ## 調査記録
 
 2005年WHATWG保存草案と2009年の改名commitを確認した。名称の発案過程と後年の意味変更は追加調査が必要である。横断比較は[HTML5 semantic elements調査ノート](../research/html5-semantic-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、2005年`header`定義と2009年commitの要素名・意味の変更を再読し、2013年W3C HTML分岐での削除を競合資料として照合した。commitが改名を直接示し、W3C分岐の削除はWHATWG系譜の反例にならないため、A判定を維持した。

@@ -1,6 +1,6 @@
 # `<slot>`
 
-> 状態: Shadow DOM `content` insertion pointから再設計されたslot modelの系譜を検証済み
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。Shadow DOM `content` insertion pointから再設計されたslot modelの系譜を検証済み
 
 ## 概要
 
@@ -60,3 +60,5 @@ Shadow DOM v0 `content` insertion point → 再設計されたslot model → WHA
 ## 調査記録
 
 Shadow DOM草案、Web Components改名issue、WHATWG DOM／HTMLの追加commitを確認した。横断比較は[Modern HTML要素とforeign rootの調査ノート](../research/modern-html-foreign-roots.md)を参照する。
+
+敵対的レビュー（2026-08-09）では、2012年`content`、2015年issue、DOMのslot概念、2016年HTML commitを再照合した。HTML commitがDOM概念を基礎と明記する一方、distribution modelも変わるため単純改名とはせず、再設計を明記したAを維持した。

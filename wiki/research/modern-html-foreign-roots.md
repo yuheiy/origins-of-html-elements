@@ -45,17 +45,21 @@
 
 ### 証拠
 
-2012-01-09にDimitri GlazkovがW3C WebAppsWGへ作成したbug 15476は、`template`要素と関連処理を仕様化するumbrella bugである。これは遅くともこの日までにWeb Components作業で要素単位の標準化が始まっていたことを示す。[W3C Bugzilla 15476, “[Templates]: Specify how templates work”, 9 January 2012](https://www.w3.org/Bugs/Public/show_bug.cgi?ctype=xml&id=15476)
+2011-11-17にRafael WeinsteinはWHATWG mailing listへ、dynamic pageが利用前のDOM fragmentをinertに保持する要求と`template`構文を提案した。JavaScript文字列、hidden textarea、非script MIME typeの`script`、comment、`display: none`など当時の回避策とその問題も列挙する。[Rafael Weinstein, “Declarative Inert DOM”, 17 November 2011](https://lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html)
+
+2012-01-09にDimitri GlazkovがW3C WebAppsWGへ作成したbug 15476は、`template`要素と関連処理を仕様化するumbrella bugである。[W3C Bugzilla 15476, “[Templates]: Specify how templates work”, 9 January 2012](https://www.w3.org/Bugs/Public/show_bug.cgi?ctype=xml&id=15476)
 
 2013-02-14のHTML Templates First Public Working Draftは、dynamic pageが利用前のHTML fragmentを必要とするという要求を説明し、inert DOM subtreeを宣言して同一内容のDocumentFragmentをinstantiateする方法として`template`を定義した。[W3C Web Applications Working Group, *HTML Templates*, First Public Working Draft, 14 February 2013](https://www.w3.org/TR/2013/WD-html-templates-20130214/)
 
+2013-06-28にIan HicksonはW3C Bug 17930で`template`をWHATWG仕様へmergeしたと明記し、統合時のeditorial／normative changesを列挙した。直後のcomment 22はWHATWG revision r8000のcheck-in commentを“Integrate &lt;template&gt; into HTML”と記録する。[W3C Bug 17930, comments 21–22](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930#c21)
+
 ### 解釈
 
-standalone HTML Templates提案は、現行要素と同じ`template`、inert contents、DocumentFragmentへの複製という設計を持つため、HTML直前の具体的提案候補である。ただし今回確認した資料には、その提案をWHATWG HTMLへ統合したcommitまたは採用決定がない。したがって系譜は`HTML Templates proposal →? HTML Standard template`とし、導入理由と設計モデルを確認できるBを候補とする。server-side template、XBL、JavaScript libraryのtemplate慣習は機能的に似ていても採用因果を確認できない。
+2011年WHATWG提案からW3C WebAppsWGのHTML Templates作業を経てWHATWG HTMLへmergeした要素単位の経路を直接確認できる。安全な系譜は`WHATWG template提案（2011年）→ W3C WebAppsWG仕様化作業／HTML Templates草案 → WHATWG HTML merge r8000（2013年）→ 現行template`であり、Aを候補とする。2011年提案が列挙するclient-side workaroundは解決対象であって、特定のserver-side template、XBL、JavaScript libraryからの採用因果は確認できない。
 
 ### 未解決
 
-- HTML Templates editor's draftの最初のcommitと、WHATWG HTMLへ統合したcommit。
+- WHATWG revision r8000に対応する現行Git履歴上のcommit hash。
 - Glazkov、Rafael Weinsteinらの提案が、特定のbrowser prototypeまたは既存template mechanismから採用したことを示す資料。
 - parser、clone、`innerHTML`規則を現在のHTML Standardへ移した正確な中間経路。
 

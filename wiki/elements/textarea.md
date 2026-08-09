@@ -1,6 +1,6 @@
 # `<textarea>`
 
-> 状態: HTML+ forms系譜を検証済み（追加の上流調査あり）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML+ forms系譜を検証済み（初期案のより古い版は未確認）
 
 ## 概要
 
@@ -56,3 +56,5 @@ RFC 1866がHTML+ formsからの導出を明記し、要素の役割も確認で�
 ## 調査記録
 
 HTML+ forms、HTML+ review、RFC 1866を確認した。横断比較は[HTML+調査ノート](../research/html-plus-elements.md)を参照する。
+
+敵対的レビュー（2026-08-09）では、HTML+内で`INPUT TYPE=TEXT`から`TEXTAREA`へ分離した記述と、RFC 1866のforms material由来文を再照合した。GUIのmultiline fieldとの類似を祖先とせず、Aを維持した。

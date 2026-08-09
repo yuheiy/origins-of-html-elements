@@ -1,6 +1,6 @@
 # `<optgroup>`
 
-> 状態: HTML 4での導入理由を検証済み（具体的な先行技術は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML 4での導入理由を検証済み（具体的な先行技術は未確認）
 
 ## 概要
 
@@ -58,3 +58,5 @@ WHATWG HTML Living Standardでは、共通labelを持つ`option`要素のgroup�
 ## 調査記録
 
 HTML 3.0 forms、HTML 3.2、HTML 4.0の1997年7月・9月・11月版、HTML 4.01を比較した。特定menu widgetからの採用記録は見つからなかった。横断比較は[国際化・アクセシビリティ調査ノート](../research/internationalization-accessibility-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、HTML 4.0の7月・9月版での不在と11月Proposed Recommendationでの初出、choice hierarchyと非視覚UAの説明を比較した。特定menu widgetからの採用記録は見つからず、導入理由を確定するB判定を維持した。

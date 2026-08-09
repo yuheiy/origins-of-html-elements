@@ -1,6 +1,6 @@
 # `<bdi>`
 
-> 状態: W3C i18nの`ubi`提案からWHATWG `bdi`採録まで検証済み（revision diffの恒久保存先は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。W3C i18nの`ubi`提案からWHATWG `bdi`採録まで検証済み（revision diffの恒久保存先は未確認）
 
 ## 概要
 
@@ -57,3 +57,5 @@ Unicode Bidi Algorithmのisolation要求 → CSS `unicode-bidi:isolate`＋W3C `u
 ## 調査記録
 
 W3C Bug 10807、W3C bidi requirements、WHATWG check-in commentsを確認した。失効したhtml5.org trackerは500を返したため、完全diffは未確認として残した。横断比較は[国際化・アクセシビティ調査ノート](../research/internationalization-accessibility-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、Bug 10807とW3C bidi requirementsへ戻り、Aharon Laninの`ubi`案、Ian Hicksonの`bdi`選択、r5669／r5677の日付と文脈を再確認した。`bdo`との混同、LRM／RLM、CSS isolationを競合案として照合し、系譜と確度Aに反する資料は見つからなかった。

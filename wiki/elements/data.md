@@ -1,6 +1,6 @@
 # `<data>`
 
-> 状態: HTML Working Groupのchange proposalからの導入を検証済み（editor draft初回commitは未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML Working Groupのchange proposalからの導入を検証済み（editor draft初回commitは未確認）
 
 ## 概要
 
@@ -60,3 +60,5 @@ HTML Working Groupの提案、合意、決定が`data`追加の要求と採用�
 ## 調査記録
 
 HTML Working Groupのchange proposal、Call for Consensus、Working Group Decision、HTML 5.1草案を確認した。editor draft初回commitは確定できなかった。横断比較は[Modern HTML要素とforeign rootの調査ノート](../research/modern-html-foreign-roots.md)を参照する。
+
+2026-08-09の敵対的レビューでは、change proposal、2012年CfC、Working Group Decision、2013年HTML 5.1草案を本文へ戻り、日付、ISSUE-184、要素追加と型systemの争点を再確認した。`time`、`meta`、microdata、RDFaを競合案として再検討したが、HTML WGの採用因果を覆す資料はなく、確度Aを維持した。

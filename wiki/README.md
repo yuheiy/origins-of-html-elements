@@ -9,16 +9,19 @@
 - 対象基準日: 2026-08-09
 - 固定ページ数: 115
 - 個別ページ: 全115件の骨格と現行定義リンクを作成済み
-- 史料検証済み: 115件（A: 57件、A−: 15件、B: 38件、C: 5件）
+- 史料検証済み: 115件（A: 55件、A−: 15件、B: 39件、C: 6件）
 - 史料未検証: 0件（未評価）
 - 現在の意味を要約済み: 115件
-- 横断系譜ページ: 個別ページの検証後に作成予定
-- 敵対的レビュー済み: 0件
+- 横断系譜ページ: 完成（敵対的レビュー済み: 2026-08-09）
+- 敵対的レビュー済み: 115件
 
 固定ページ数は、WHATWG HTML Living Standardの組み込みHTML名前空間要素113個に、HTML文書で使用できるforeign rootの`math`と`svg`を加えた数である。custom elementsは名前集合が開いているため固定ページへ含めない。抽出根拠と境界事例は[現行HTML要素一覧の調査ノート](research/current-html-elements.md)を参照する。
 
 ## 横断調査
 
+- [現行HTML要素の横断系譜](research/cross-element-lineage.md)
+- [現行HTML要素の横断系譜に対する敵対的レビュー](research/cross-element-lineage-adversarial-review.md)
+- [歴史的結論の敵対的レビュー](research/adversarial-review.md)
 - [現行HTML要素の固定一覧](research/current-html-elements.md)
 - [HTML phrase elementsとTexinfo](research/texinfo-phrase-elements.md)
 - [HTML+から現行要素への系譜](research/html-plus-elements.md)

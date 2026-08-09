@@ -1,6 +1,6 @@
 # `<script>`
 
-> 状態: Netscape Navigator実装からW3C仕様への系譜を検証済み（Netscape内部の設計過程は未解決）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。Netscape Navigator実装からW3C仕様への系譜を検証済み（Netscape内部の設計過程は未解決）
 
 ## 概要
 
@@ -62,3 +62,5 @@ W3Cが実装とは独立に`SCRIPT`を新設したという説明は、1996年�
 ## 調査記録
 
 1996年HTML3 Scripting草案、Netscape Navigator 2.0向けhandbook、HTML 3.2、HTML 4.01、現行Living Standardを確認した。横断比較は[Scripting / embedding要素の調査ノート](../research/scripting-embedding-elements.md)を参照する。
+
+敵対的レビュー（2026-08-09）では、W3C草案がNetscape定義とNavigator 2.0 beta実装のformalizationを明記する文脈、Netscape保存文書、HTML 3.2・4.01を再確認した。JavaScript一般やevent handlerとの機能的一致を祖先にせず、要素単位の因果を支えるAを維持した。

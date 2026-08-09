@@ -1,6 +1,6 @@
 # `<base>`
 
-> 状態: 初期HTMLでの導入要求を検証済み（`SAVEDAS`提案から`BASE`への具体化過程は未回収）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。初期HTMLでの導入要求を検証済み（`SAVEDAS`提案から`BASE`への具体化過程は未回収）
 
 ## 概要
 
@@ -59,3 +59,5 @@ SGMLの同名概念または後代のURL仕様から`BASE`の起源を逆算す�
 ## 調査記録
 
 1992年CERNタグ一覧と将来計画、1992年Connolly DTD群、1993年HTML Internet-Draft本文・DTD、HTML 2.0を比較した。1992年11月の未使用要求から1993年1月のDTDまでを固定したが、中間の具体化記録は確認できなかった。対象群全体は[初期hypertext／document control調査ノート](../research/early-hypertext-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、1992年のbase address要求と`SAVEDAS`案、RCS id `93/01/06`の`BASE HREF`、HTML 2.0を本文へ戻って照合した。Connolly DTD群、SGMLの同名概念、より早いURL処理案を探索したが中間の改名・採用記録はなく、系譜と確度Bを維持した。

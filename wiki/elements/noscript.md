@@ -1,6 +1,6 @@
 # `<noscript>`
 
-> 状態: W3C scripting草案での導入要求を検証済み（提案者と先行実装は未解決）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。W3C scripting草案での導入要求を検証済み（提案者と先行実装は未解決）
 
 ## 概要
 
@@ -62,3 +62,5 @@ Netscape Navigator 2.0の`NOSCRIPT`を直接祖先とする説明は、導入日
 ## 調査記録
 
 1996年6月・7月と1997年3月のW3C scripting草案、HTML 4.01、現行Living Standardを確認した。横断比較は[Scripting / embedding要素の調査ノート](../research/scripting-embedding-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、1996-06-27草案での不在と07-09草案での`NOSCRIPT`初出、1997年草案、HTML 4.01を比較した。downlevel browser向けalternate contentという導入要求は確認できたが、提案者と先行実装は見つからずB判定を維持した。

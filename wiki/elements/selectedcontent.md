@@ -1,6 +1,6 @@
 # `<selectedcontent>`
 
-> 状態: Open UIの`selectedoption`提案から改名・HTML統合までを検証済み
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。Open UIの`selectedoption`提案から改名・HTML統合までを検証済み
 
 ## 概要
 
@@ -60,3 +60,5 @@ desktop GUIのselected-value表示または特定のcustom select libraryを直�
 ## 調査記録
 
 WHATWGのissue／PR／統合commitとOpen UIの改名issue／PRを確認した。最初のprototypeは確定できなかった。横断比較は[Modern HTML要素とforeign rootの調査ノート](../research/modern-html-foreign-roots.md)を参照する。
+
+敵対的レビュー（2026-08-09）では、旧名のclone model、Open UIの改名理由、2025年のcustomizable `select`統合commitを再照合した。統合commitの日付はauthorの現地日付2025-07-21とUTC 2025-07-22の差を確認し、表記をGitHub表示に合わせたまま維持した。特定libraryへの接続は追加せずAを維持した。

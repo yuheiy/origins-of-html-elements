@@ -1,6 +1,6 @@
 # `<li>`
 
-> 状態: 初期HTMLのlist設計モデルを検証済み（直前祖先は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。初期HTMLのlist設計モデルを検証済み（直前祖先は未確認）
 
 ## 概要
 
@@ -60,3 +60,5 @@ Waterloo、CERN、HTMLの同名`LI`だけからWaterloo → CERN → HTMLの系�
 ## 調査記録
 
 1988年Waterloo SCRIPT GML、1991年Berners-Lee mail、CERN *Design Constraints*、1992年CERN HTMLタグ一覧、1993年HTML Internet-Draftの本文とDTDを確認した。対象群全体は[初期SGML/GML調査ノート](../research/early-sgml-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、Waterloo `:LI`、1991年Berners-Lee mail、CERNのflat model、1993年DTDを再比較した。WaterlooからHTMLへの採用記録は確認できず、先行存在を矢印で結ばないB判定を維持した。

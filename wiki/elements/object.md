@@ -1,6 +1,6 @@
 # `<object>`
 
-> 状態: HTML3 `INSERT`からの改名系譜を検証済み（個々のvendor案からの設計採用は未解決）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML3 `INSERT`からの改名系譜を検証済み（個々のvendor案からの設計採用は未解決）
 
 ## 概要
 
@@ -63,3 +63,5 @@ Netscape `EMBED`を`OBJECT`へ改名したという説明。改名前は`INSERT`
 ## 調査記録
 
 1995〜1996年のW3C insert／object草案、Cougar標準化ページ、HTML 4.01、現行Living Standardを確認した。横断比較は[Scripting / embedding要素の調査ノート](../research/scripting-embedding-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、1995年`INSERT`草案、1996年のrename記録、後続object草案、Cougar、HTML 4を再照合した。`INSERT`→`OBJECT`は直接確認でき、個々のvendor案からの属性・fallback採用は未確認という限定の下でA判定を維持した。

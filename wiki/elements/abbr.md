@@ -1,10 +1,10 @@
 # `<abbr>`
 
-> 状態: HTML+系譜を検証済み（改名理由は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML+／HTML 3.0の`ABBREV`とHTML 4の`ABBR`を確認済み（改名・採用の因果は未確認）
 
 ## 概要
 
-HTML+／HTML 3.0の`ABBREV`からHTML 4の`ABBR`へ継承された略語要素で、改名理由は未確認である。
+HTML+／HTML 3.0には`ABBREV`、HTML 4には`ABBR`という略語要素がある。役割の連続は確認できるが、HTML 4が`ABBREV`を改名して採用したと直接示す資料は未確認である。
 
 ## 現在の意味
 
@@ -16,7 +16,7 @@ WHATWG HTML Living Standardでは、略語または頭字語を表し、任意�
 
 ## HTML直前の祖先
 
-HTML直前の語彙上の祖先はHTML+／HTML 3.0の`ABBREV`である。役割は連続するが、`ABBR`への改名判断を直接説明する史料は未確認である。
+未確認。HTML+／HTML 3.0の`ABBREV`は語彙上の先行候補であり役割も連続するが、HTML 4の`ABBR`への採用・改名を直接記録する史料は確認できない。
 
 ## さらに上流の由来
 
@@ -26,11 +26,15 @@ HTML+は`ABBREV`をstandardなrole markupの一つとして、reference等を自
 
 ### 解釈
 
-語彙の継承は強いが、名称の短縮理由を推定しない。
+`ABBREV`は`ABBR`の有力な先行候補であるが、名称と用途の類似を因果関係へ広げない。
 
 ## 系譜
 
-HTML+ `ABBREV` → HTML 3.0 `ABBREV` → HTML 4 `ABBR`（改名理由不明） → 現行HTML `<abbr>`
+HTML+ `ABBREV` → HTML 3.0 `ABBREV`
+
+HTML 4 `ABBR` → 現行HTML `<abbr>`
+
+`ABBREV`から`ABBR`への接続は未確認のため矢印で結ばない。
 
 ## 証拠
 
@@ -42,13 +46,13 @@ HTML+ `ABBREV` → HTML 3.0 `ABBREV` → HTML 4 `ABBR`（改名理由不明） �
 
 ## 確度
 
-**A−**
+**B**
 
-`ABBREV`から`ABBR`への語彙継承は強いが、改名理由とHTML 4での具体的採用判断が未確認であるため。
+HTML+／HTML 3.0とHTML 4における略語要素の設計modelは確認できるが、具体的な先行要素から`ABBR`を採用した因果関係は確認できないため。
 
 ## 否定された仮説
 
-`ABBREV`と`ABBR`の類似だけから、改名理由を単なる短縮や文字数制約と説明すること。
+`ABBREV`と`ABBR`の名称・用途の類似だけから直接の改名・採用を断定すること。改名理由を単なる短縮や文字数制約と説明すること。
 
 ## 未解決
 
@@ -58,3 +62,5 @@ HTML+ `ABBREV` → HTML 3.0 `ABBREV` → HTML 4 `ABBR`（改名理由不明） �
 ## 調査記録
 
 HTML+、HTML 3.0、後続RFCおよびW3C Recommendationを確認した。横断比較は[HTML+調査ノート](../research/html-plus-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、HTML+、HTML 3.0、HTML 3.2、HTML 4の本文・変更付録へ戻り、`ABBREV`と`ABBR`の名称、役割、収録時期を比較した。改名・採用を直接示す資料がないため確度をA−からBへ訂正し、接続を系譜から外した後に再読して整合を確認した。

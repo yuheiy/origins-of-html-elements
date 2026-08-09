@@ -8,8 +8,8 @@
 
 | 要素 | 確認できたHTML上の入口 | HTML直前の祖先 | 確度候補 | 主な制約 |
 |---|---|---|---|---|
-| `span` | RFC 2070（1997-01） | Unicodeのdirectional embeddingと、`LANG`／`DIR`を保持するgeneric inline containerという要求 | A | `SPAN`という名称をさらに古いmarkupから採用した証拠は未確認。 |
-| `bdo` | RFC 2070（1997-01） | Unicode／ISO 10646のLRO、RLO、PDF | A | `BDO`という名称自体の発案過程は未確認。 |
+| `span` | IETF国際化草案`-01`（1995-09-25）、style提案による再利用（1995-12） | Unicodeのdirectional embeddingと`LANG`／`DIR`用container要求、style用generic range要求 | A | `SPAN`という名称をさらに古いmarkupから採用した証拠は未確認。 |
+| `bdo` | IETF国際化草案`-01`（1995-09-25） | Unicode／ISO 10646のLRO、RLO、PDF | A | `BDO`という名称自体の発案過程は未確認。 |
 | `bdi` | W3C Bug 10807を受けたWHATWG revision r5669（2010-11-05） | `ubi`属性案とCSS `unicode-bidi:isolate` | A | r5669のdiff保存先は現在500を返すため、同時代Bugzillaのcheck-in記録で確認した。 |
 | `label` | HTML 4.0 First Public Working Draft（1997-07-08） | 未確認 | B | sensitiveなcontrol labelというUI要求は確認できるが、特定GUI toolkit等からの採用は未確認。 |
 | `fieldset` | HTML 4.0 First Public Working Draft（1997-07-08） | 未確認 | B | speech-based user agent向けgrouping要求は確認できるが、特定の先行group boxとの因果は未確認。 |
@@ -22,9 +22,11 @@
 
 ### 証拠
 
-RFC 2070は1997年1月、HTMLを国際化するStandards Track RFCとして、他に適切な要素がない箇所で`LANG`と`DIR`を保持するgeneric containerが必要だと述べ、その目的のため`SPAN`を導入した。したがって`span`の初出理由は後世のCSS用汎用containerから逆算したものではなく、言語と方向属性をinline textへ付ける要求として資料に明記されている。[RFC 2070 §4.2.1–4.2.2](https://www.rfc-editor.org/rfc/rfc2070.html#section-4.2.2)
+1995年8月15日の`draft-ietf-html-i18n-00`には`SPAN`と`BDO`がなく、同年9月25日の`-01`が両要素を導入する。`-01`は他に適切な要素がない箇所で`LANG`とbidi attributesを保持するgeneric containerとして`SPAN`を、文脈から方向を一意に解けない文字列のoverrideとしてnew `BDO`を定義する。RFC 2070は1997年1月にこのmodelをStandards Track RFCとしてまとめたが、初出ではない。[IETF `draft-ietf-html-i18n-00`](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00) [IETF `draft-ietf-html-i18n-01`](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01) [RFC 2070](https://www.rfc-editor.org/rfc/rfc2070.html)（2026-08-09閲覧）
 
-同RFCは、inline要素の`DIR`をISO 10646のLEFT-TO-RIGHT EMBEDDING（U+202A）またはRIGHT-TO-LEFT EMBEDDING（U+202B）と、その終了をPOP DIRECTIONAL FORMATTING（U+202C）に等価とする。さらに、文脈から方向を一意に解けない短い文字列のため`BDO`を導入し、内容全体を固有のdirectional propertyにかかわらず強制する効果をLEFT-TO-RIGHT OVERRIDE（U+202D）またはRIGHT-TO-LEFT OVERRIDE（U+202E）とPDFに等価とする。[RFC 2070 §4.2.4](https://www.rfc-editor.org/rfc/rfc2070.html#section-4.2.4)
+Michael J Hannahは1995年12月5日、style草案の新`C`要素を廃し、国際化提案ですでに定義された`SPAN`へ`STYLE`属性を加えて使うことを提案した。1996年1月15日のW3C Working Draftも`SPAN`をparagraph内でstyleを適用するgeneric rangeとして定義する。したがって`span`の入口は国際化要求だが、HTML 4以前にstyle要求との合流も直接確認できる。[W3C www-style投稿](https://lists.w3.org/Archives/Public/www-style/1995Dec/0039.html) [*HTML3 and Style Sheets*](https://www.w3.org/TR/WD-style-960115)（2026-08-09閲覧）
+
+`-01`とRFC 2070は、inline `DIR`をISO 10646のLEFT-TO-RIGHT EMBEDDING（U+202A）またはRIGHT-TO-LEFT EMBEDDING（U+202B）と、その終了をPOP DIRECTIONAL FORMATTING（U+202C）に対応させる。`BDO`はLEFT-TO-RIGHT OVERRIDE（U+202D）またはRIGHT-TO-LEFT OVERRIDE（U+202E）とPDFに対応する。[IETF `draft-ietf-html-i18n-01`](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01) [RFC 2070 §4.2.4](https://www.rfc-editor.org/rfc/rfc2070.html#section-4.2.4)
 
 RFC 2070は、このHTML側の高水準markupをUnicodeの低水準mechanismへ素直に変換できるよう設計したと明記する。またUnicode Standard 1.1とUnicode Technical Report #4（1993）のBidi algorithmを参照する。したがって、Unicodeとの関係は単なる機能的一致ではなく、RFC自身が示す設計上の採用関係である。[RFC 2070 §4.2.1およびReferences](https://www.rfc-editor.org/rfc/rfc2070.html)
 
@@ -32,15 +34,22 @@ HTML 4.01の変更付録は`SPAN`と`BDO`をHTML 4.0のnew elementsとして列�
 
 ### 解釈
 
-`span`は「generic container」という抽象的な分類だけでAとするのではない。RFC 2070が、Unicode directional embeddingをHTML markupへ移し、`LANG`／`DIR`を置く対象がないという具体的な欠落を`SPAN`で埋めたと明記するためA候補とする。`bdo`はUnicodeのoverride formatting charactersとの要素単位の対応と導入要求がさらに直接的なのでA候補とする。
+`span`は「generic container」という抽象的な分類だけでAとするのではない。1995年国際化草案がUnicode directional embeddingをHTML markupへ移し、属性を置く対象がないという欠落を`SPAN`で埋め、後続style提案が同要素を明示的に再利用するためA候補とする。`bdo`は同草案がUnicode overrideとの要素単位の対応と導入要求を直接記すためA候補とする。
 
 ```text
 Unicode directional embeddings + LANG/DIRを保持するinline container要求
+→ IETF i18n draft-01 SPAN (1995)
 → RFC 2070 SPAN
+
+style draftのCを廃して既存SPANを再利用する提案
+→ W3C style draft SPAN (1996)
+
+二つの枝
 → HTML 4 span
 → current HTML span
 
 Unicode LRO/RLO/PDF
+→ IETF i18n draft-01 BDO (1995)
 → RFC 2070 BDO
 → HTML 4 bdo
 → current HTML bdo
@@ -48,13 +57,13 @@ Unicode LRO/RLO/PDF
 
 ### 否定された仮説
 
-- `span`をCSS styling専用に発明したとはしない。RFC 2070が明記する導入目的は`LANG`と`DIR`の保持である。
+- `span`をCSS styling専用に発明したとはしない。最初の導入目的は国際化属性の保持である。ただしstyle proposalが既存`SPAN`を明示的に再利用したため、style系統と無関係だったとも書かない。
 - `bdo`を印刷・組版の左右反転から推定しない。確認できる直接祖先はUnicode／ISO 10646のdirectional overrideである。
 
 ### 未解決
 
 - `SPAN`および`BDO`という名前を選んだ具体的な議論。
-- RFC 2070以前のInternet-Draft各版で両要素が初めて現れた正確な版と変更理由。
+- `draft-ietf-html-i18n-00`から`-01`の間に両要素を追加した具体的な議論。
 
 ## `bdi`
 
@@ -209,7 +218,10 @@ XHTML Role search (2006)
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
 | 1995-04-25 | HTML 3.0 Forms | IETF Internet-Draft相当のW3C保存仕様 | 後の4フォーム要素がまだ存在しない比較基準。 | https://www.w3.org/MarkUp/html3/forms.html | 2026-08-09 |
-| 1997-01 | RFC 2070, *Internationalization of the Hypertext Markup Language* | Standards Track RFC | `SPAN`と`BDO`の導入要求、Unicode embedding／overrideとの直接対応。 | https://www.rfc-editor.org/rfc/rfc2070.html | 2026-08-09 |
+| 1995-08-15／09-25 | `draft-ietf-html-i18n-00`／`-01` | IETF Internet-Draft | `-00`には両要素がなく、`-01`が`SPAN`とnew `BDO`を要求・Unicode対応・DTDとともに導入。 | https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00 / https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01 | 2026-08-09 |
+| 1995-12-05 | Michael J Hannah, “draft-ietf-html-style-00.txt” | W3C www-style投稿 | style草案の`C`を廃し、既存の国際化`SPAN`へ`STYLE`を加えて再利用する提案。 | https://lists.w3.org/Archives/Public/www-style/1995Dec/0039.html | 2026-08-09 |
+| 1996-01-15 | *HTML3 and Style Sheets* | W3C Working Draft | paragraph内のstyle用generic rangeとして`SPAN`を定義。 | https://www.w3.org/TR/WD-style-960115 | 2026-08-09 |
+| 1997-01 | RFC 2070, *Internationalization of the Hypertext Markup Language* | Standards Track RFC | `SPAN`と`BDO`の国際化modelを標準化し、Unicode embedding／overrideとの対応を継承。 | https://www.rfc-editor.org/rfc/rfc2070.html | 2026-08-09 |
 | 1997-07-08 | HTML 4.0 First Public Working Draft | W3C Working Draft | `LABEL`, `FIELDSET`, `LEGEND`の定義とHTML 3.2 formsの具体的欠落への解決。 | https://www.w3.org/TR/WD-html40-970708/interact/forms.html / https://www.w3.org/TR/WD-html40-970708/appendix/changes.html | 2026-08-09 |
 | 1997-11-07 | HTML 4.0 Proposed Recommendation | W3C Proposed Recommendation | `OPTGROUP`をnew elementとして収録し、非視覚UA向けchoice hierarchyという理由を説明。 | https://www.w3.org/TR/PR-html40-971107/interact/forms.html / https://www.w3.org/TR/PR-html40-971107/appendix/changes.html | 2026-08-09 |
 | 1999-12-24 | HTML 4.01 | W3C Recommendation | 7要素をHTML 4系列で確認し、forms accessibility上の導入理由を再記録。 | https://www.w3.org/TR/html401/appendix/changes.html | 2026-08-09 |
@@ -235,6 +247,6 @@ XHTML Role search (2006)
 
 ## 調査記録
 
-既存の`wiki/README.md`、`wiki/research/current-html-elements.md`、対象9要素の個別ページを確認した。国際化はローカル保存したRFC 2070とHTML 4.01、W3C Bugzilla、W3C bidi requirementsを確認した。フォーム系はHTML 3.0、HTML 3.2、Cougar史料、HTML 4.0の1997年7月8日・9月17日・11月7日版、HTML 4.01を比較した。`OPTGROUP`は7月版と9月版に存在せず11月版に存在することを確認した。`main`と`search`はXHTML Role、初期WAI-ARIA、W3C mailing list／Working Draft、WHATWG issue／commitを確認した。
+既存の`wiki/README.md`、`wiki/research/current-html-elements.md`、対象9要素の個別ページを確認した。国際化は`draft-ietf-html-i18n-00`／`-01`、ローカル保存したRFC 2070とHTML 4.01、1995年style提案mail、1996年style草案、W3C Bugzilla、W3C bidi requirementsを確認した。フォーム系はHTML 3.0、HTML 3.2、Cougar史料、HTML 4.0の1997年7月8日・9月17日・11月7日版、HTML 4.01を比較した。`OPTGROUP`は7月版と9月版に存在せず11月版に存在することを確認した。`main`と`search`はXHTML Role、初期WAI-ARIA、W3C mailing list／Working Draft、WHATWG issue／commitを確認した。
 
 成果がなかった探索として、`LABEL`, `FIELDSET`, `LEGEND`, `OPTGROUP`の特定GUI toolkitからの採用、Cougar内部の初回提案、`main`のWHATWG初回統合commit、XHTML Role以前の`main`／`search`個別起源を探したが、因果を固定できる一次資料へ到達しなかった。これらを類似から補わず未解決として残す。

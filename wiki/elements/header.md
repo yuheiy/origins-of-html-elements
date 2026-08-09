@@ -1,6 +1,6 @@
 # `<header>`
 
-> 状態: 2004–2005年WHATWGでの導入と設計モデルを検証済み（現行要素の再導入経路は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。2004–2005年WHATWGでの導入と設計モデルを検証済み（現行要素の再導入経路は未確認）
 
 ## 概要
 
@@ -61,3 +61,5 @@ WHATWG `header`提案（2004年まで） → Web Applications 1.0 `header`（200
 ## 調査記録
 
 2004年WHATWG mailing list、2005年保存草案、Google usage調査、2009年改名commitを確認した。現行`header`の再導入commitは確認できなかった。横断比較は[HTML5 semantic elements調査ノート](../research/html5-semantic-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、2004年のsemantic element議論、2005年仕様、既存`header` class調査、2009年の`header`→`hgroup`改名commitを比較し、旧要素と現行`header`の再導入を結ぶ記録を探索した。再導入経路は確認できず、二系列を分ける系譜とB判定を維持した。

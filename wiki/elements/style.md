@@ -1,6 +1,6 @@
 # `<style>`
 
-> 状態: W3C style sheet草案からの系譜を検証済み（HTML 4への個別採録記録は未解決）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。W3C style sheet草案からの系譜を検証済み（HTML 4への個別採録記録は未解決）
 
 ## 概要
 
@@ -66,3 +66,5 @@ CSSが`STYLE`要素を発明してHTMLへ移植したという説明。CSS1は`S
 ## 調査記録
 
 HTML 3.0 introduction、1996〜1997年のW3C style草案、CSS1、HTML 3.2、HTML 4.01、Cougar標準化ページ、現行Living Standardを確認した。横断比較は[Scripting / embedding要素の調査ノート](../research/scripting-embedding-elements.md)を参照する。
+
+敵対的レビュー（2026-08-09）では、1996年W3C草案、CSS1、HTML 3.2 placeholder、Cougarページ、HTML 4.01を再照合した。HTML 4への接続はCougar草案群の集合単位を越えて確認できず、個別採録を補わないA−を維持した。

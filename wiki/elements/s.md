@@ -1,10 +1,10 @@
 # `<s>`
 
-> 状態: HTML+系譜を検証済み（HTML 4再採録の因果は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML 4での現行系統の初出を検証済み（HTML+／HTML 3.0との接続は未確認）
 
 ## 概要
 
-HTML+のpresentational strike-throughから始まり、HTML 3.2での欠落とHTML 4での再登場を経た要素である。
+HTML+とHTML 3.0にpresentational strike-throughの`S`が存在し、HTML 3.2で欠落した後、HTML 4がdeprecatedな`S`をnew elementとして採録した。HTML 4の再採録を以前の`S`へ結ぶ因果資料は未確認である。
 
 ## 現在の意味
 
@@ -16,7 +16,7 @@ WHATWG HTML Living Standardでは、もはや正確でない、または関係�
 
 ## HTML直前の祖先
 
-HTML+ `S`から現行名へ続く語彙は確認できるが、HTML 3.2で一度欠落している。HTML 4での再採録判断をHTML+へ明示的に結ぶ史料は未確認である。
+未確認。HTML+とHTML 3.0の`S`は先行する同名要素だが、HTML 3.2で一度欠落し、HTML 4が再び採録した判断をそれらへ明示的に結ぶ史料は確認できない。
 
 ## さらに上流の由来
 
@@ -30,7 +30,11 @@ legal documentsでの有用性は当時のユースケースであり、現行�
 
 ## 系譜
 
-HTML+ `S` → HTML 3.0 `S` → ［HTML 3.2では欠落］ → HTML 4 `S` → 現行HTML `<s>`
+HTML+ `S` → HTML 3.0 `S` → ［HTML 3.2では欠落］
+
+接続未確認
+
+HTML 4 `S` → 現行HTML `<s>`
 
 ## 証拠
 
@@ -42,9 +46,9 @@ HTML+ `S` → HTML 3.0 `S` → ［HTML 3.2では欠落］ → HTML 4 `S` → 現
 
 ## 確度
 
-**A−**
+**C**
 
-HTML+からの名称と初期用途は明確だが、HTML 3.2での断絶後にHTML 4が再採録した因果関係が未確認であるため。
+現行系統の確認可能な最初期出現はHTML 4のdeprecatedな`S`として特定できるが、再採録理由と具体的祖先を確認できないため。
 
 ## 否定された仮説
 
@@ -58,3 +62,7 @@ HTML+からの名称と初期用途は明確だが、HTML 3.2での断絶後にH
 ## 調査記録
 
 HTML+、HTML 3.0、後続RFCおよびW3C Recommendationを確認した。横断比較は[HTML+調査ノート](../research/html-plus-elements.md)を参照する。
+
+敵対的レビュー中の再評価（2026-08-09）で、HTML+／HTML 3.0とHTML 4の間に採録因果がなく、A−の要件を満たさないと判定した。未確認区間の矢印を切り、総合確度をCへ訂正した。
+
+訂正後の別レビュー（2026-08-09）では、HTML+、HTML 3.0、HTML 3.2、HTML 4の各語彙と変更付録を再照合した。HTML 4への再採録理由を補わず、系譜の切断、C判定、現行semanticsへの再解釈を未解決とする記述が証拠表に整合することを確認した。

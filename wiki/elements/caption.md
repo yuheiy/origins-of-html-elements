@@ -1,6 +1,6 @@
 # `<caption>`
 
-> 状態: HTML+ table系譜を検証済み（追加の上流調査あり）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML+ table系譜を検証済み（CALSからの個別採用は未確認）
 
 ## 概要
 
@@ -57,3 +57,5 @@ RFC 1942がHTML+ table workからの発展を明記し、後続採録も確認�
 ## 調査記録
 
 HTML+ tables、1994年review、RFC 1942、HTML 3.2を確認した。横断比較は[HTML+調査ノート](../research/html-plus-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、HTML+ table節、1994年review、RFC 1942、HTML 3.2を本文へ戻り、table用途の`CAPTION`とfigure用途を区別して照合した。CALSとの関係を競合仮説として再確認したが、RFCが明記するHTML+ table modelからの発展を覆す資料はなく、確度Aを維持した。

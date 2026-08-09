@@ -199,3 +199,33 @@ WHATWG `<t>`からの改名を確認した`time`をA、導入目的を確認し�
 ## [2026-08-09] lint | 115検証済みページ
 
 全115ページの確度集計を再計算し、A 57件、A− 15件、B 38件、C 5件、未評価0件が`wiki/README.md`と一致することを確認した。最後の9ページについて、必須見出し順、現行定義の要約、空でない証拠表、具体的な未解決点、相対リンク、generic placeholder、Markdown whitespaceを検査した。
+
+## [2026-08-09] research | 全115要素の敵対的レビュー
+
+全115個別ページについて、歴史的主張を一次資料へ戻し、因果、日付、主体、要素名、文脈、より早い版、競合資料、反例、系譜、確度を再点検した。[横断監査ノート](research/adversarial-review.md)
+
+反証探索により、`thead`／`tbody`／`tfoot`の初出を1995年7月のIETF table草案、`col`を同年10月3日版、`colgroup`を同年10月27日版、`span`／`bdo`を同年9月25日のIETF国際化草案、`ins`／`del`をHTML 3.0へ訂正した。`span`には国際化語彙をstyle用途へ再利用した枝を追加した。未確認の採録因果を矢印で結んでいた`abbr`、`canvas`、`q`、`s`、`sub`、`sup`も訂正し、総合確度はA 54件、A− 15件、B 40件、C 6件となった。
+
+歴史的結論を訂正したページは完成表示を一度失効させ、訂正後の別レビューで本文、証拠表、系譜、確度、未解決の整合を確認した。全115ページの状態行と調査記録へ敵対的レビュー実施記録を追加した。
+
+## [2026-08-09] update | 現行HTML要素の横断系譜
+
+敵対的レビュー済みの個別ページから、複数要素が共有する確認済み関係だけを[横断系譜](research/cross-element-lineage.md)へ統合した。集合レベルの関係を注記し、`ABBREV`／`ABBR`、旧`S`／現行`s`、Apple `CANVAS`／WHATWG `canvas`、HTML Templates草案／現行`template`などの未確認接続は矢印で結ばなかった。`wiki/README.md`へ索引を追加した。
+
+## [2026-08-09] lint | 全115要素の敵対的レビュー完了
+
+全115ページについて、確度集計、必須見出し順、完成表示と敵対的レビュー記録、現行定義要約、空でない証拠表、具体的な未解決点、相対リンク、generic placeholder、Markdown whitespaceを検査した。敵対的レビュー済み115件と実ページ数、A 54件、A− 15件、B 40件、C 6件、未評価0件の集計が`wiki/README.md`と一致することを確認した。
+
+## [2026-08-09] research | 現行HTML要素の横断系譜の敵対的レビュー
+
+[横断系譜](research/cross-element-lineage.md)の16行と接続しない境界5項目を、個別ページ、横断ノート、ローカルraw、公開一次資料へ戻って独立検証した。9行を維持し7行を訂正対象と判定した。[レビュー記録](research/cross-element-lineage-adversarial-review.md)
+
+`q`／`sub`／`sup`の版経路、media枝、Texinfo集合、Ruby枝、単独要素行、直接出典、共有系統の漏れを訂正した。W3C Bug 17930 comments 21–22が2013年のWHATWG `template`統合を明記するため、従来の未確認境界を撤回した。
+
+## [2026-08-09] update | templateのWHATWG統合経路
+
+2011年のWHATWG提案、W3C WebAppsWGのHTML Templates作業、2013年のWHATWG merge r8000を接続し、`template`の初出、直前祖先、系譜、証拠表、未解決点を訂正した。確度はBからAへ変更し、完成表示を一度失効させた後、訂正後の別レビューで復帰した。
+
+## [2026-08-09] lint | 横断系譜の敵対的レビュー完了
+
+訂正後の横断系譜17行について、複数現行要素、直接一次資料、個別ページとの矢印・制約、境界5項目、相対リンク、Markdown whitespaceを再検査した。個別ページの確度集計はA 55件、A− 15件、B 39件、C 6件、未評価0件となり、`wiki/README.md`と一致することを確認した。

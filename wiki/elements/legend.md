@@ -1,6 +1,6 @@
 # `<legend>`
 
-> 状態: HTML 4での導入理由を検証済み（具体的な先行技術は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML 4での導入理由を検証済み（具体的な先行技術は未確認）
 
 ## 概要
 
@@ -57,3 +57,5 @@ GUI group boxのlegendや紙formの見出しから直接借用したという説
 ## 調査記録
 
 HTML 3.0 forms、HTML 3.2、Cougar史料、HTML 4.0 FPWD、HTML 4.01を比較した。specific predecessorは見つからなかった。横断比較は[国際化・アクセシビリティ調査ノート](../research/internationalization-accessibility-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、HTML 3.0／3.2 formsでの不在とHTML 4.0 FPWDの`FIELDSET`／`LEGEND`定義・非視覚UAの説明を比較した。GUI group boxや紙formを個別祖先とする記録は見つからず、導入要求のみを確定するB判定を維持した。

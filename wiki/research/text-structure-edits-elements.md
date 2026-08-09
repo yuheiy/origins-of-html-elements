@@ -10,8 +10,8 @@
 |---|---|---|---|---|
 | `div` | 1995年3月のHTML 3.0 draftで、`class`によりchapter、section、abstract、appendix等を表すcontainerとして確認できる。HTML 3.2はHTML 3.0 `DIV`へのbrowser supportを明記する | 未確認 | B | HTML外のdivision要素・文書慣習から採用したことを示す史料は未確認 |
 | `small` | 1995年3月のHTML 3.0 draftでsmall printを小さいfontで表示する要素として確認でき、HTML 3.2へ継承された | 未確認 | C | HTML 3.0とNetscape資料の前後関係および採用方向を確定できない。現行のside-comment semanticsは後代の再定義 |
-| `ins` | 1997-07-08のHTML 4.0 Working Draftで確認でき、HTML 4.0はHTML 3.2からの新要素として、文書の挿入箇所を記録する目的を明記する | 未確認 | B | draft legislationは用途例であり、立法編集慣習からの採用因果までは述べない |
-| `del` | 1997-07-08のHTML 4.0 Working Draftで確認でき、HTML 4.0はHTML 3.2からの新要素として、文書の削除箇所を記録する目的を明記する | 未確認 | B | `s`/`strike`は表示上似るが、HTML 4は`del`を版間の削除、`s`/`strike`をpresentational elementとして分ける |
+| `ins` | 1995年HTML 3.0でinserted text用のnew elementとして確認でき、1997年HTML 4が版間の挿入箇所を記録する要素として標準化 | HTML 3.0 `INS`は先行するがHTML 4への個別採用は未確認 | B | draft legislationは用途例であり、立法編集慣習からの採用因果までは述べない |
+| `del` | 1995年HTML 3.0でdeleted text用のnew elementとして確認でき、1997年HTML 4が版間の削除箇所を記録する要素として標準化 | HTML 3.0 `DEL`は先行するがHTML 4への個別採用は未確認 | B | `s`/`strike`は表示上似るが、HTML 4は`del`を版間の削除、`s`/`strike`をpresentational elementとして分ける |
 | `time` | 2006-03-29までにWHATWG sourceで前身`<t>`が作業対象となり、2006-10-26にdate/timeと`datetime`を持つ初稿、2006-11-23に`time`へ明示的に改名。2011年に一時`data`へ置換後、同年再導入 | WHATWG草案の`<t>`要素 | A | `<t>`のHTML外の具体的祖先と命名理由は未確認 |
 
 ## `div`
@@ -78,15 +78,15 @@ Netscapeの“Extensions to HTML 3.0”保存版にも、`SMALL (small print)`�
 
 ### 証拠
 
-1997-07-08の最初期HTML 4.0 Working Draftは“Marking document changes”節に`INS`と`DEL`を収録する。両者を別版の文書に対して挿入・削除されたsectionのmarkupと定義し、draft legislationで議員が変更を見る例、inlineまたはblock-level contentを囲める構造、変更理由を指す`cite`、変更日時の`datetime`を規定する。[W3C, *HTML 4.0 Working Draft*, 8 July 1997, “Marking document changes”](https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4)
+1995年3月のHTML 3.0 “Information Type Elements”は、`INS`をinserted text、`DEL`をdeleted text用の“New in 3.0”要素として定義し、どちらもlegal documentsを用途例に挙げる。1997年7月8日のHTML 4.0 Working Draftは“Marking document changes”節に両要素を収録し、別版の文書に対して挿入・削除されたsectionのmarkup、draft legislation例、inlineまたはblock-level content、`cite`、`datetime`を規定する。ただしHTML 3.0案からHTML 4案への個別採用記録は未確認である。[HTML 3.0](https://www.w3.org/MarkUp/html3/logical.html) [HTML 4.0 Working Draft](https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4)
 
-HTML 4.0 Recommendationは`INS`と`DEL`をHTML 3.2からのnew elementsに列挙し、変更をmarkupするための追加だったと明記する。したがってHTML標準内の初出区間はHTML 3.2後、遅くとも1997-07-08までと確認できる。[W3C, *HTML 4.0 Specification*, 18 December 1997, “Changes between HTML 3.2 and HTML 4.0”](https://www.w3.org/TR/REC-html40-971218/appendix/changes.html#h-A.1.1) [W3C, *HTML 4.0 Specification*, “Marking document changes”](https://www.w3.org/TR/REC-html40-971218/struct/text.html#h-9.4)
+HTML 4.0 Recommendationは`INS`と`DEL`をHTML 3.2からのnew elementsに列挙し、変更をmarkupするための追加だったと明記する。これはRecommendationへの採録を示すが、HTML 3.0からの個別採用を述べるものではない。[W3C, *HTML 4.0 Specification*, 18 December 1997, “Changes between HTML 3.2 and HTML 4.0”](https://www.w3.org/TR/REC-html40-971218/appendix/changes.html#h-A.1.1) [W3C, *HTML 4.0 Specification*, “Marking document changes”](https://www.w3.org/TR/REC-html40-971218/struct/text.html#h-9.4)
 
 HTML 4.01も、両要素を別版に対して挿入・削除された箇所に使い、法案の人数を3から5へ変更する例を示す。削除textの表示例にはstrike-throughも挙げるが、これはuser-agent renderingの一例であり、`STRIKE`または`S`から`DEL`を派生させたとは述べない。[W3C, *HTML 4.01 Specification*, 24 December 1999, “Marking document changes”](https://www.w3.org/TR/html401/struct/text.html#h-9.4)
 
 ### 解釈
 
-`ins`と`del`はW3C HTML Working GroupがHTML 4.0で、版間の文書変更をmachine-readableにmarkupするため導入した対である。導入理由と設計modelは確認できるが、特定の先行markup vocabulary、word processor、法律編集体系から採用した因果は確認できないため、両者ともBを候補とする。安全な系譜はそれぞれ`HTML 4.0 INS → 現行ins`、`HTML 4.0 DEL → 現行del`までである。
+`ins`と`del`はHTML 3.0で同時に提案され、HTML 4.0が版間の文書変更をmachine-readableにmarkupする対として標準化した。両版の個別採用因果とHTML外の具体的祖先は確認できないため、両者ともBを候補とする。安全な系譜はHTML 3.0の各要素を先行例として分離し、`HTML 4.0 INS／DEL → 現行ins／del`だけを確定矢印で結ぶ。
 
 ### 否定された仮説
 
@@ -96,7 +96,7 @@ HTML 4.01も、両要素を別版に対して挿入・削除された箇所に�
 
 ### 未解決
 
-- 1997-07-08 Working Draft以前のHTML ERB/W3C HTML Working Group提案、提案者、採択議論。
+- HTML 3.0の`INS`／`DEL`をHTML 4へ個別採用したHTML ERB／W3C HTML Working Groupの議論。
 - `cite`と`datetime`を含む設計が参照した版管理、法律編集、SGML vocabulary。
 - inlineとblockの両方を囲める特殊なcontent modelを選んだ具体的要求。
 
@@ -141,6 +141,7 @@ commitが改名を直接明記するため、安全な系譜は`WHATWG草案 <t>
 |---|---|---|---|---|---|
 | 1995-03 | HTML 3.0 draft “Divisions” | W3C保存仕様草案 | `DIV`を`CLASS`付きのchapter、section、abstract、appendix等のcontainerとして定義 | https://www.w3.org/MarkUp/html3/divisions.html | 2026-08-09 |
 | 1995-03 | HTML 3.0 draft “Font Style Elements” | W3C保存仕様草案 | `SMALL`をsmall printを小さいfontで表示する要素として定義 | https://www.w3.org/MarkUp/html3/emphasis.html | 2026-08-09 |
+| 1995-03 | HTML 3.0 draft “Information Type Elements” | W3C保存仕様草案 | `INS`と`DEL`をinserted／deleted text用のnew elementsとして定義し、legal documentsを例示 | https://www.w3.org/MarkUp/html3/logical.html | 2026-08-09 |
 | 1997-01-14 | HTML 3.2 Reference Specification | W3C Recommendation | `DIV`のdivision hierarchy、HTML 3.0 `DIV`へのbrowser support、`SMALL`のsmall-font意味 | https://www.w3.org/TR/REC-html32 | 2026-08-09 |
 | 日付未確定（1997-06-13保存） | Netscape “Extensions to HTML 3.0” | vendor資料のarchive | Navigator 2.0文脈の`SMALL`定義と`DIV ALIGN` support。HTML 3.0との採用方向は確定不可 | https://web.archive.org/web/19970613212205id_/http://home.netscape.com:80/assist/net_sites/html_extensions_3.html | 2026-08-09 |
 | 1997-07-08 | HTML 4.0 Working Draft | W3C仕様草案 | `INS`/`DEL`、`cite`、`datetime`、版間の挿入・削除、draft legislation例 | https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4 | 2026-08-09 |
@@ -157,5 +158,5 @@ commitが改名を直接明記するため、安全な系譜は`WHATWG草案 <t>
 
 - HTML 3.0資料はW3Cが保存するexpired draftであり、公開月は確認できるが各分割HTML fileの個別改訂日は表示されない。
 - Netscape資料は1997年のarchive snapshotを確認したが原公開日は確定できないため、HTML 3.0との前後関係を主張しない。
-- HTML 4 Working Group内部資料まで遡る提案履歴は確認できず、`ins`/`del`の外部祖先は未確認のままとした。
+- HTML 3.0からHTML 4への`ins`／`del`個別採用記録とHTML外の祖先は未確認のままとした。
 - WHATWG `time`履歴は公式GitHub repositoryに移入されたgit-svn履歴のsource diffを確認した。

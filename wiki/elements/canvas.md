@@ -1,10 +1,10 @@
 # `<canvas>`
 
-> 状態: Apple WebKit／Dashboard系譜を検証済み（WHATWGへの提案受領経路は未解決）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。Apple WebKit／Dashboardでの導入を検証済み（WHATWGへの採録因果は未確認）
 
 ## 概要
 
-AppleがDashboard向けにWebKitへ実装した`CANVAS`と2D drawing contextが直接祖先である。WHATWG仕様への採録は確認できるが、提案の受領時点について同時代資料が矛盾する。
+AppleがDashboard向けにWebKitへ`CANVAS`と2D drawing contextを実装した事実と、後のWHATWG仕様に`canvas`がある事実は確認できる。AppleからWHATWGへの提案受領時点について同時代資料が矛盾し、両者の採録因果は未確認である。
 
 ## 現在の意味
 
@@ -16,7 +16,7 @@ WebKit公式履歴は2004年5月26日までに新しい`CANVAS` tagと2D drawing
 
 ## HTML直前の祖先
 
-HTML直前の祖先はDashboard用のApple WebKit `CANVAS`実装と2D drawing contextである。2005年9月までのWHATWG Web Applications 1.0 snapshotがbitmap canvas、drawing context、fallback contentを仕様化している。[WHATWG snapshot](https://web.archive.org/web/20050901000000/http://www.whatwg.org/specs/web-apps/2005-09-01/)
+未確認。Dashboard用のApple WebKit `CANVAS`実装と2D drawing contextは有力な先行候補であり、2005年9月までのWHATWG Web Applications 1.0 snapshotにもbitmap canvas、drawing context、fallback contentがある。しかし、Appleの提案をWHATWGが受領・採録したことを直接記録する資料は確認できない。[WHATWG snapshot](https://web.archive.org/web/20050901000000/http://www.whatwg.org/specs/web-apps/2005-09-01/)
 
 ## さらに上流の由来
 
@@ -30,7 +30,11 @@ Dashboardの要求に対する軽量なHTML drawing extensionとして成立し�
 
 ## 系譜
 
-Apple WebKit `CANVAS`実装 for Dashboard（2004年5月） → WHATWG Web Applications 1.0 `canvas`（遅くとも2005年9月、提案受領経路は未解決） → 現行HTML `<canvas>`
+Apple WebKit `CANVAS`実装 for Dashboard（2004年5月）
+
+WHATWG Web Applications 1.0 `canvas`（遅くとも2005年9月）→ 現行HTML `<canvas>`
+
+Apple実装からWHATWG仕様への接続は、提案受領・採録の直接史料がないため矢印で結ばない。
 
 ## 証拠
 
@@ -46,9 +50,9 @@ Apple WebKit `CANVAS`実装 for Dashboard（2004年5月） → WHATWG Web Applic
 
 ## 確度
 
-**A−**
+**B**
 
-Apple WebKit実装からWHATWG仕様、現行要素へ続く系譜は複数の強い史料で確認できるが、AppleからWHATWGへの具体的な提案受領時点について同時代資料が矛盾するため。
+AppleがDashboard要求のためWebKitへ`CANVAS`を導入した理由と、WHATWG仕様上の設計modelは確認できるが、Apple実装からWHATWG仕様へ採録した因果関係は確認できないため。
 
 ## 否定された仮説
 
@@ -64,3 +68,5 @@ Quartzからcanvasを直接派生させたという説明。Apple文書が明記
 ## 調査記録
 
 WebKit公式履歴、Dave Hyattの同時代説明、Apple公式文書、WHATWGメーリングリストと仕様snapshot、AppleのIPR書簡を確認した。提案本文と受領記録は見つからなかった。横断比較は[browser vendor要素調査ノート](../research/browser-vendor-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、WebKit changeset履歴、Hyattの2004年7月記事、Apple文書、8月のHickson mail、2005年仕様snapshot、IPR書簡を再照合した。Hyattの「提出済み」とHicksonの「未提出」の競合に対して採録を示す第三の直接史料がないため、Apple実装からWHATWG仕様への矢印を削除し、確度をA−からBへ訂正した。Quartz・SVG・XHTMLも反例候補として再確認した。

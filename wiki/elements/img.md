@@ -1,6 +1,6 @@
 # `<img>`
 
-> 状態: NCSA X Mosaicによる導入とHTML草案への収録を検証済み（さらに上流は未解決）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。NCSA X Mosaicによる導入とHTML草案への収録を検証済み（さらに上流は未解決）
 
 ## 概要
 
@@ -59,3 +59,5 @@ Midas `ICON`、ViolaWWW、`A REL="EMBED, PRESENT"`を`IMG`の直接祖先とす�
 ## 調査記録
 
 1993年`www-talk`の提案・応答、Mosaic 0.10公開告知、1993年HTML Internet-Draftを確認した。横断比較は[browser vendor要素調査ノート](../research/browser-vendor-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、Andreessenの1993-02-25提案、構文統一の説明、Mosaic 0.10公開告知、6月draft収録を日付順に再確認し、競合するMidas `ICON`と`A REL`も照合した。競合案からの派生は確認できず、Mosaic提案からdraft収録までのA判定を維持した。

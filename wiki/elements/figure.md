@@ -1,6 +1,6 @@
 # `<figure>`
 
-> 状態: 2006年WHATWGへの導入を検証済み（HTML+との採用因果は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。2006年WHATWGへの導入を検証済み（HTML+との採用因果は未確認）
 
 ## 概要
 
@@ -61,3 +61,5 @@ HTML+ `FIG`から直接採用したという説明。名称とcaption構造の�
 ## 調査記録
 
 HTML+、2006年と2010年のWHATWG commit、2008年W3C差分草案を確認した。HTML+等からの採用因果は確認できなかった。横断比較は[HTML5 semantic elements調査ノート](../research/html5-semantic-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、HTML+ `FIG/CAPTION`、2006年`figure`導入commit、2008年草案、2010年caption変更commitを再読し、Ian Hickson、導入日、embedded contentとcaptionのmodelを照合した。HTML+、DocBook、XHTML 2を競合祖先として再探索したが採用因果はなく、系譜と確度Bを維持した。

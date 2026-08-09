@@ -1,6 +1,6 @@
 # `<main>`
 
-> 状態: ARIA landmarkと既存Web慣習からの系譜を検証済み（WHATWG初回commitは未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。ARIA landmarkと既存Web慣習からの系譜を検証済み（WHATWG初回commitは未確認）
 
 ## 概要
 
@@ -61,3 +61,5 @@ XHTML Role `main` → WAI-ARIA `main` landmark → `<div role="main">`＋`id`／
 ## 調査記録
 
 XHTML Role、初期WAI-ARIA、2012年の提案・使用調査・FPWD、2013年の統合告知、WHATWG source historyを確認した。WHATWGの初回統合commitは固定できなかった。横断比較は[国際化・アクセシビリティ調査ノート](../research/internationalization-accessibility-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、XHTML Role／WAI-ARIA `main`、2012年の要素提案・usage調査・FPWD、2013年統合告知を再照合した。ARIA landmarkとWeb慣習からの導入因果は要素単位で確認でき、WHATWG初回commitの欠落は結論を覆さないためA判定を維持した。

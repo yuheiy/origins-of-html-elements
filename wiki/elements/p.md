@@ -1,6 +1,6 @@
 # `<p>`
 
-> 状態: 初期HTMLのflat document modelを検証済み（直前祖先は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。初期HTMLのflat document modelを検証済み（直前祖先は未確認）
 
 ## 概要
 
@@ -60,3 +60,5 @@ Waterlooの`:P`との同名・同用途だけから直接系譜を結ぶ説明�
 ## 調査記録
 
 1988年Waterloo SCRIPT GML、1992年1月Berners-Lee mail、CERN *Design Constraints*、1992年CERN HTMLタグ一覧、1993年HTML Internet-Draftを確認した。先行存在と採用因果、初期と現行のcontent modelを分離した。対象群全体は[初期SGML/GML調査ノート](../research/early-sgml-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、Waterloo `:P`、1992年Berners-Lee mail、CERNのflat model、1993年のempty separatorを再比較した。Waterlooからの採用因果とcontainer化の決定記録は確認できず、先行存在と初期HTMLの設計を分離するB判定を維持した。

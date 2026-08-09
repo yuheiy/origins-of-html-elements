@@ -1,6 +1,6 @@
 # `<progress>`
 
-> 状態: WHATWGでの初期仕様化と導入時の設計を検証済み（具体的な先行要素・UIは未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。WHATWGでの初期仕様化と導入時の設計を検証済み（具体的な先行要素・UIは未確認）
 
 ## 概要
 
@@ -63,3 +63,5 @@ revision 15は、残作業量が不明でも進行中であるindeterminate状�
 ## 調査記録
 
 WHATWG公式Gitの初回sourceとrevision 15、同revisionの保存仕様、2008年HTML 5 Working Draft、現行Living Standardを確認した。初回Git収録以前のsourceと特定UIからの採用記録は確認できなかった。横断比較は[Forms/UI要素の調査ノート](../research/forms-ui-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、2006年初回Git収録とrevision 15、保存仕様、2008年HTML 5草案を再照合し、determinate／indeterminateとscript更新の設計を確認した。初回収録以前の提案、GUI widget、2004年file-upload要求からの採用因果は見つからずB判定を維持した。

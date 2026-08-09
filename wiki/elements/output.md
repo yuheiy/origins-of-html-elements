@@ -1,6 +1,6 @@
 # `<output>`
 
-> 状態: XForms機能集合からHTML formsへの導入を検証済み（`output`単独の採用判断は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。XForms機能集合からHTML formsへの導入を検証済み（`output`単独の採用判断は未確認）
 
 ## 概要
 
@@ -64,3 +64,5 @@ HTML `samp`や一般的なprogram outputから生まれたとは確認できな�
 ## 調査記録
 
 2001年XForms草案、2003年Ian Hickson案、Web Forms 2.0、HTML5差分、現行Living Standardを確認した。要素単独の採用判断と設計変更の議論は確認できなかった。横断比較は[Forms/UI要素の調査ノート](../research/forms-ui-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、XForms `output`、2003年XForms Basic案、Web Forms 2.0、HTML5統合記録を再照合した。XForms機能集合をHTML formsへ加える因果は確認できるが、`output`単独の採用判断とscript更新modelへの変更理由は見つからずA−判定を維持した。

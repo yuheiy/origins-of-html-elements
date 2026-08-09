@@ -1,6 +1,6 @@
 # `<search>`
 
-> 状態: ARIA `search` landmarkからの採録経路を検証済み（2006年以前の起源は未解決）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。ARIA `search` landmarkからの採録経路を検証済み（2006年以前の起源は未解決）
 
 ## 概要
 
@@ -60,3 +60,5 @@ XHTML／ARIA roleから`div role=search`を経てnative HTML要素へ置換す�
 ## 調査記録
 
 XHTML Role、初期WAI-ARIAとRecommendation、WHATWG issue #5811、PR #7320とcommitを確認した。form機能を加える別PR #7382はmergeされずcloseされたため系譜へ含めなかった。横断比較は[国際化・アクセシビリティ調査ノート](../research/internationalization-accessibility-elements.md)を参照する。
+
+敵対的レビュー（2026-08-09）では、XHTML Role、WAI-ARIA、`div role=search`を置換するissue／PR、2023年merge commitを再照合した。非採用のform機能案を現行要素の系譜から除外し、2006年以前を接続しないA判定を維持した。

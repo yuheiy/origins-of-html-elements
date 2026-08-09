@@ -1,6 +1,6 @@
 # `<nav>`
 
-> 状態: 2004–2005年WHATWGでの導入と設計モデルを検証済み（`navigation`からの改名理由は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。2004–2005年WHATWGでの導入と設計モデルを検証済み（`navigation`からの改名理由は未確認）
 
 ## 概要
 
@@ -58,3 +58,5 @@ HTMLへの導入要求と設計モデルは確認できるが、`navigation → 
 ## 調査記録
 
 2004年WHATWG mailing list、2005年保存草案、Google usage調査を確認した。`navigation → nav`の改名経路と具体的祖先は確認できなかった。横断比較は[HTML5 semantic elements調査ノート](../research/html5-semantic-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、2004年の`navigation`議論、2005年仕様の`nav`、Googleの既存`nav` class調査を再比較した。`navigation`からの改名記録と具体的祖先は確認できず、導入要求と設計modelのみを確定するB判定を維持した。

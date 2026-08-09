@@ -1,6 +1,6 @@
 # `<iframe>`
 
-> 状態: floating-frame modelとHTML 4標準化を検証済み（Microsoftによる要素単位の導入経路は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。floating-frame modelとHTML 4標準化を検証済み（Microsoftによる要素単位の導入経路は未確認）
 
 ## 概要
 
@@ -62,3 +62,5 @@ IE3のfloating-frame機能を、資料なしに`IFRAME`要素そのものと同�
 ## 調査記録
 
 Microsoft IE3 beta発表、HTML 4.0 Working Draft／Recommendation、Microsoft DHTML reference保存複製を確認した。IE3のliteral tagを示すMicrosoft一次referenceは見つからなかった。横断比較は[browser vendor要素調査ノート](../research/browser-vendor-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、IE3 beta発表のfloating-frame表現、1997年HTML 4草案の`IFRAME`、後代Microsoft referenceのIE4表記を再比較した。IE3 featureとW3C要素を結ぶliteral tag・提出記録は見つからず、矛盾と未確認接続を残すB判定を維持した。

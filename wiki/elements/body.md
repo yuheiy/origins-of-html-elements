@@ -1,10 +1,10 @@
 # `<body>`
 
-> 状態: `DOCUMENT`から`BODY`への改名を検証済み（公開中間DTDは未回収）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。1992年7月の`BODY`公開と11月の内部版`DOCUMENT`から`BODY`へ戻す提案を検証済み（内部版DTDは未回収）
 
 ## 概要
 
-Dan Connollyが`HTML` document elementのmixed content問題を避けるため作った`DOCUMENT`を`BODY`へ改名すると説明し、Tim Berners-LeeがmailのHeader/Body用語に合うと支持した。改名前の公開DTDを回収できず、中間経路には欠落がある。
+Dan Connollyの1992年7月公開DTDはすでに`BODY`を宣言する。同年11月、Connollyは当時の内部版で本文containerを`DOCUMENT`と呼んでいると説明して`BODY`へ戻す案を示し、Tim Berners-LeeがmailのHeader/Body用語に合うと支持した。`DOCUMENT`を含む内部版DTDは回収できていない。
 
 ## 現在の意味
 
@@ -12,11 +12,11 @@ WHATWG HTML Living Standardでは、文書のcontentsを表す。 [一次定義]
 
 ## HTMLへの導入
 
-Dan Connollyが1992年7月15日にwww-talkへ送ったDTDは`BODY`を本文のcontainerとして宣言する。Connollyは11月19日のmailで、mixed content問題を避けるため`DOCUMENT`を作り、これを`BODY`へ改名できると説明した。Tim Berners-LeeはHeader/Bodyがmail nomenclatureに合うと支持した。[Connolly, “HTML DTD enclosed”](https://lists.w3.org/Archives/Public/www-talk/1992JulAug/0020.html) [Connolly, “HTML DTD issues”](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html) [Berners-Lee, “Re: HTML DTD issues”](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)
+Dan Connollyが1992年7月15日にwww-talkへ送ったDTDは`BODY`を本文のcontainerとして宣言し、`HTML`のmixed contentを避ける必要性をcommentに記す。Connollyは11月19日のmailで、当時のDTDでは同じ役割のcontainerを`DOCUMENT`と呼んでいると説明し、これを`BODY`へ戻す案を示した。Tim Berners-LeeはHeader/Bodyがmail nomenclatureに合うとして案を支持した。[Connolly, “HTML DTD enclosed”](https://lists.w3.org/Archives/Public/www-talk/1992JulAug/0020.html) [Connolly, “HTML DTD issues”](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html) [Berners-Lee, “Re: HTML DTD issues”](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)
 
 ## HTML直前の祖先
 
-直前の設計上の祖先はConnollyのHTML DTD draftにあった`DOCUMENT`である。当事者mailが改名関係を明記するが、`DOCUMENT`を含む公開中間DTDは回収できていない。[Connolly, “HTML DTD issues”](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)
+1993年DTDの`BODY`直前にあった可能性があるのは、Connollyが1992年11月に説明した内部版DTDの`DOCUMENT`である。当事者mailは`BODY`へ戻す案を明記するが、`DOCUMENT`を含むDTD本体と変更後の中間版は回収できていない。[Connolly, “HTML DTD issues”](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)
 
 ## さらに上流の由来
 
@@ -30,22 +30,22 @@ Waterloo GMLにも`BODY`／`eBODY`があるが、HTMLへの採用因果は示さ
 
 ## 系譜
 
-HTML DTD draft `DOCUMENT` →［公開中間DTDは未回収］→ HTML `BODY`（1992-07-15公開DTDで確認）→ 現行HTML `<body>`
+HTML `BODY`（1992-07-15公開DTD）→ 内部版DTD `DOCUMENT`（1992-11-19の説明、DTD本体は未回収）→ `BODY`へ戻す提案（同日）→ HTML DTD `BODY`（1993-01-06）→ 現行HTML `<body>`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
 | 1988-10-18 | *SCRIPT GML User’s Guide* | Waterloo公式文書の保存版 | 先行GMLに`BODY`／`eBODY`が存在する。HTMLへの採用因果は示さない。 | [Internet Archive](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt) | 2026-08-09 |
-| 1992-07-15 | “HTML DTD enclosed” | www-talkへの当事者投稿とDTD | `BODY`を宣言し、`HTML`のmixed content問題を避けるという必要性をcommentに記す。 | [W3C Mail Archive](https://lists.w3.org/Archives/Public/www-talk/1992JulAug/0020.html) | 2026-08-09 |
-| 1992-11-19 | “HTML DTD issues”／“Re: HTML DTD issues” | www-talkへの当事者投稿 | Connollyが`DOCUMENT`から`BODY`への改名を提案し、Berners-LeeがHeader/Body用語を支持する。 | [提案](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)・[応答](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html) | 2026-08-09 |
+| 1992-07-15 | “HTML DTD enclosed” | www-talkへの当事者投稿とDTD | `BODY`を宣言し、`HTML`のmixed content問題を避けるという必要性をcommentに記す。後の`DOCUMENT`より早い`BODY`の公開例である。 | [W3C Mail Archive](https://lists.w3.org/Archives/Public/www-talk/1992JulAug/0020.html) | 2026-08-09 |
+| 1992-11-19 | “HTML DTD issues”／“Re: HTML DTD issues” | www-talkへの当事者投稿 | Connollyが当時の内部版の`DOCUMENT`を`BODY`へ戻す案を示し、Berners-LeeがHeader/Body用語を支持する。 | [提案](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)・[応答](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html) | 2026-08-09 |
 | 1993-06 | *Hypertext Markup Language (HTML)* | IETF Internet-Draft | DTDで`BODY`とそのcontent modelを宣言する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) | 2026-08-09 |
 
 ## 確度
 
 **A−**
 
-HTML DTD内の`DOCUMENT`から`BODY`への改名を当事者資料で確認できるが、その中間DTDを回収できず経路の一部が欠けるため。
+1992年7月の`BODY`、11月時点の内部版`DOCUMENT`から`BODY`へ戻す提案、1993年1月の`BODY`を確認できるが、内部版DTDと変更diffを回収できず経路の一部が欠けるため。
 
 ## 否定された仮説
 
@@ -53,9 +53,11 @@ Waterloo GMLなどの同名`BODY`からHTMLへ採用されたとする説明。�
 
 ## 未解決
 
-- `DOCUMENT`を含む公開中間DTDを回収できるか。
+- `DOCUMENT`を含む内部版DTDと`BODY`へ戻した変更diffを回収できるか。
 - HTML DTD以前の具体的な先行文書体系は確認できるか。
 
 ## 調査記録
 
 1988年Waterloo SCRIPT GML、1992年7月Connolly DTD、1992年CERN HTMLタグ一覧、1993年HTML Internet-Draftを確認した。先行する同名構造と採用因果は分離した。対象群全体は[初期SGML/GML調査ノート](../research/early-sgml-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、1992年7月15日の公開DTD、11月19日のConnollyとBerners-Leeのmail、1993年1月DTDを全文脈で再確認した。7月に`BODY`がすでに存在するため従来の時系列を訂正し、`BODY → 内部版DOCUMENT → BODYへの復帰案`とした後、証拠表・系譜・確度A−を再読して整合を確認した。

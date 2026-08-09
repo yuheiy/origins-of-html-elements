@@ -1,6 +1,6 @@
 # `<area>`
 
-> 状態: Spyglassのclient-side image map提案を検証済み（HTML 3.2の採録決定記録は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。Spyglassのclient-side image map提案を検証済み（HTML 3.2の採録決定記録は未確認）
 
 ## 概要
 
@@ -60,3 +60,5 @@ HTML+の`A SHAPE`が名称も構造も変わらず`AREA`になったという説
 ## 調査記録
 
 HTML+ image map節、Seidmanの1994年論文、IETF draft、RFC 1980、HTML 3.2を確認した。横断比較は[browser vendor要素調査ノート](../research/browser-vendor-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、HTML+の二方式、Seidman論文、IETF draft、RFC 1980、HTML 3.2本文へ戻り、提案者、日付、`A SHAPE`から`AREA`へ再設計した理由を再確認した。draft内部の日付矛盾とserver-side方式を競合資料として保持し、系譜と確度Aに反する資料は見つからなかった。

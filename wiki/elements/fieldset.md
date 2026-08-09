@@ -1,6 +1,6 @@
 # `<fieldset>`
 
-> 状態: HTML 4での導入理由を検証済み（具体的な先行技術は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML 4での導入理由を検証済み（具体的な先行技術は未確認）
 
 ## 概要
 
@@ -57,3 +57,5 @@ WHATWG HTML Living Standardではform controlsまたは他の内容を一組に�
 ## 調査記録
 
 HTML 3.0 forms、HTML 3.2、Cougar史料、HTML 4.0 FPWD、HTML 4.01を比較した。特定のgroup box等からの採用記録は見つからなかった。横断比較は[国際化・アクセシビリティ調査ノート](../research/internationalization-accessibility-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、HTML 3.0／3.2、Cougar、HTML 4.0 FPWD、HTML 4.01を再読し、関連controlsのgrouping、tab／speech navigation、accessibilityの文脈と版順を照合した。紙formとGUI group boxを競合祖先として再探索したが採用因果はなく、系譜と確度Bを維持した。

@@ -1,6 +1,6 @@
 # `<menu>`
 
-> 状態: 1992年HTMLでの出現とcompact list用途を検証済み（導入理由・名称の由来は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。1992年HTMLでの出現とcompact list用途を検証済み（導入理由・名称の由来は未確認）
 
 ## 概要
 
@@ -60,3 +60,5 @@ WHATWG HTML Living Standardでは、利用者が実行・起動できるcommand�
 ## 調査記録
 
 1992年CERNタグ一覧、1992年Connolly DTD、1993年HTML Internet-Draft、HTML+ DTD・review、HTML 2.0を比較した。GUI menuとの類似は採用因果を確認できず、系譜へ接続しなかった。現行意味との断絶を未解決として残した。対象群全体は[初期hypertext／document control調査ノート](../research/early-hypertext-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、1992年CERN資料とDTD、1993年draft、HTML+、HTML 2.0を再比較し、compact listとしての初期意味を確認した。GUI menu、Waterloo `:MENU`、現行toolbar意味への直接因果は見つからず、時系列だけを記すC判定を維持した。

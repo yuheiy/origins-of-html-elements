@@ -1,10 +1,10 @@
 # `<sup>`
 
-> 状態: HTML+数学表現からの系譜を検証済み
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML+からHTML 3.0への集合レベルの系譜と国際化草案からの導入を検証済み
 
 ## 概要
 
-HTML+の数学表現から、一般組版と国際化へ用途を広げて標準化されたsuperscript要素である。
+HTML+とHTML 3.0に同名のsuperscript要素があり、HTML 3.0全体がHTML+の先行作業に基づくという集合レベルの関係を確認できる。個別採用は未確認で、1995年国際化草案が一般組版上の要求から`SUP`を導入し、HTML 3.2へ至る。
 
 ## 現在の意味
 
@@ -12,11 +12,11 @@ WHATWG HTML Living Standardでは、superscriptを表す。単なる表示上の
 
 ## HTMLへの導入
 
-1993年HTML+は数学式で`SUP`をsuperscriptとして使用した。HTML 3.0で一般のfont-style elementへ広がり、RFC 2070とHTML 3.2が採録した。[HTML+ math](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html) [HTML 3.0](https://www.w3.org/MarkUp/html3/emphasis.html) [RFC 2070](https://www.rfc-editor.org/rfc/rfc2070.html) [HTML 3.2](https://www.w3.org/TR/REC-html32)
+1993年HTML+は数学式で`SUP`をsuperscriptとして使用した。W3CのHTML 3.0保存ページはHTML 3.0全体をHTML+の先行作業に基づくと説明し、HTML 3.0は`SUP`を一般のfont-style elementとして定義する。ただし`SUP`個別の採用は明記しない。1995年9月のIETF国際化草案は一般テキストでもsuperscriptが必要だという理由から`SUP`を導入し、RFC 2070とHTML 3.2が採録した。[HTML+ math](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html) [HTML 3.0 materials](https://www.w3.org/MarkUp/html3/) [HTML 3.0 element](https://www.w3.org/MarkUp/html3/emphasis.html) [国際化草案](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01) [RFC 2070](https://www.rfc-editor.org/rfc/rfc2070.html) [HTML 3.2](https://www.w3.org/TR/REC-html32)
 
 ## HTML直前の祖先
 
-HTML直前の祖先はHTML+ mathの`SUP`である。HTML+では主に数学記法、後続標準では一般組版と国際化へ用途が広がった。
+HTML+ mathの`SUP`は集合レベルの先行作業として確認できるが、HTML 3.0の`SUP`へ個別採用した記録は未確認である。HTML 3.0と1995年国際化草案が現行系統直前の確認済み提案である。
 
 ## さらに上流の由来
 
@@ -30,21 +30,25 @@ HTML+の数学提案全体はLaTeXのapproachに着想を得たと明記する�
 
 ## 系譜
 
-HTML+ `SUP`（math） → HTML 3.0 → RFC 2070／HTML 3.2 → 現行HTML `<sup>`
+[集合単位] HTML+ `SUP`を含むHTML+作業 → HTML 3.0 `SUP`
+
+IETF国際化草案 `SUP`（1995年） → RFC 2070／HTML 3.2 `SUP` → 現行HTML `<sup>`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
 | 1993-11-08 | HTML+ §12 | 一次仕様・提案 | 数学式で`SUP`をsuperscriptとして使用する。 | [一次資料](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html) | 2026-08-09 |
+| 1995 | HTML 3.0 materials／font style elements | W3C保存の失効草案群 | HTML 3.0全体がHTML+作業に基づくことと、一般用`SUP`を確認できる。個別採用は述べない。 | [全体](https://www.w3.org/MarkUp/html3/)・[要素](https://www.w3.org/MarkUp/html3/emphasis.html) | 2026-08-09 |
+| 1995-09-25 | `draft-ietf-html-i18n-01` | IETF Internet-Draft | 一般テキストの国際化要求から`SUP`を導入する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01) | 2026-08-09 |
 | 1997-01 | RFC 2070 §4.2 | 一次仕様・提案 | 一般テキストでも必要なsuperscriptとして追加する。 | [一次資料](https://www.rfc-editor.org/rfc/rfc2070.html) | 2026-08-09 |
 | 1997-01-14 | HTML 3.2 | 一次仕様・提案 | `SUP`を採録する。 | [一次資料](https://www.w3.org/TR/REC-html32) | 2026-08-09 |
 
 ## 確度
 
-**A**
+**A−**
 
-HTML+の数学用途から後続仕様への役割の連続と採録を確認できるため。
+HTML 3.0全体がHTML+に基づく集合単位の因果と、国際化草案から後続標準への導入を確認できるが、HTML+ `SUP`の個別採用を確認できないため。
 
 ## 否定された仮説
 
@@ -57,3 +61,7 @@ HTML+ math全体がLaTeXに着想を得たことから、`SUP`というタグ名
 ## 調査記録
 
 HTML+、HTML 3.0、後続RFCおよびW3C Recommendationを確認した。横断比較は[HTML+調査ノート](../research/html-plus-elements.md)を参照する。
+
+敵対的レビュー中の再評価（2026-08-09）で、HTML+からHTML 3.0への関係は仕様全体の説明にとどまり、`SUP`個別の採用因果を示さないと確認した。集合レベルの欠落を明記し、確度をA−へ訂正した。
+
+訂正後の別レビュー（2026-08-09）では、HTML+、HTML 3.0全体の由来説明と個別定義、1995年国際化草案、RFC 2070、HTML 3.2を再照合した。個別採用を補わず、集合注記、A−判定、LaTeXとの限定が証拠表に整合することを確認した。

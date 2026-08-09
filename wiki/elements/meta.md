@@ -1,6 +1,6 @@
 # `<meta>`
 
-> 状態: Fieldingの具体提案からHTML 2.0への系譜を検証済み
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。Fieldingの具体提案からHTML 2.0への系譜を検証済み
 
 ## 概要
 
@@ -60,3 +60,5 @@ Fieldingの`META`提案（1994-06-01）→ HTML 2.0仕様patch（1994-06-12）�
 ## 調査記録
 
 1993年HTML Internet-Draft、HTML+ DTD・review、1994年6月のwww-html thread、HTML 2.0 draft・RFC 1866を比較した。Fieldingが転載元としたwww-talk原投稿は公開archiveから回収できなかったが、本人が原案全文をwww-htmlへ転載しているため提案内容は確認できる。対象群全体は[初期hypertext／document control調査ノート](../research/early-hypertext-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、1993年draft／HTML+での不在、Fieldingの1994-06-01提案と06-12仕様patch、RFC 1866を再照合した。元のwww-talk投稿は未回収だが当事者転載と具体patchで提案から採録まで確認でき、A判定を維持した。

@@ -1,6 +1,6 @@
 # `<td>`
 
-> 状態: HTML+ table系譜を検証済み（追加の上流調査あり）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。HTML+ table系譜を検証済み（HTML+以前の個別祖先は未確認）
 
 ## 概要
 
@@ -57,3 +57,5 @@ RFC 1942がHTML+ table workからの発展を明記し、後続採録も確認�
 ## 調査記録
 
 HTML+ tables、1994年review、RFC 1942、HTML 3.2を確認した。横断比較は[HTML+調査ノート](../research/html-plus-elements.md)を参照する。
+
+敵対的レビュー（2026-08-09）では、HTML+の`TD`、RFC 1942のHTML+／HTML 3由来文、HTML 3.2の採録を再照合した。CALSの影響をHTML+由来のdata cell名へ拡張せず、要素対応を確認できるAを維持した。

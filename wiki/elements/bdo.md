@@ -1,10 +1,10 @@
 # `<bdo>`
 
-> 状態: RFC 2070とUnicode directional overrideの系譜を検証済み（名称の発案過程は未解決）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。1995年Internet-DraftとUnicode directional overrideの系譜を検証済み（名称の発案過程は未解決）
 
 ## 概要
 
-RFC 2070が文脈だけでは方向を一意に解けないtextのため、Unicodeのdirectional overrideをHTML markupとして導入した要素である。
+1995年9月のHTML internationalization draftが、文脈だけでは方向を一意に解けないtextのため、Unicodeのdirectional overrideをHTML markupとして導入し、RFC 2070が標準化した要素である。
 
 ## 現在の意味
 
@@ -12,17 +12,17 @@ WHATWG HTML Living Standardでは、子のtext directionalityを明示的に制�
 
 ## HTMLへの導入
 
-1997年1月のRFC 2070は新しいphrase-level element `BDO`（BIDI Override）を導入した。文脈から方向を一意に解けない短い文字列のdirectionalityを強制することが理由である。HTML 4がRFC 2070を統合した。[RFC 2070 §4.2.2, §4.2.4](https://www.rfc-editor.org/rfc/rfc2070.html#section-4.2.4) [HTML 4.01 changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.13)
+1995年9月25日の`draft-ietf-html-i18n-01`は、新要素`BDO`（BIDI override）を導入した。part number、formula、telephone number等では数字、句読点、neutral characterの方向を文脈から一意に決めにくいため、必須の`DIR`属性でleft-to-rightまたはright-to-leftのoverrideを指定することが理由である。一つ前のrevision 00には`BDO`がなく、1997年1月のRFC 2070が発展版を標準化し、HTML 4が統合した。[revision 00](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00.txt) [revision 01](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt) [RFC 2070 §4.2.2, §4.2.4](https://www.rfc-editor.org/rfc/rfc2070.html#section-4.2.4) [HTML 4.01 changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.13)
 
 ## HTML直前の祖先
 
-Unicode／ISO 10646のLEFT-TO-RIGHT OVERRIDE（U+202D）、RIGHT-TO-LEFT OVERRIDE（U+202E）、POP DIRECTIONAL FORMATTING（U+202C）が具体的祖先である。RFC 2070自身が`BDO`の開始・終了をこれらに等価とする。[RFC 2070 §4.2.4](https://www.rfc-editor.org/rfc/rfc2070.html#section-4.2.4)
+Unicode／ISO 10646のdirectional overrideが具体的祖先である。1995年draftはUnicode Bidirectional Algorithmを基礎に`BDO`を導入し、RFC 2070は開始・終了をLEFT-TO-RIGHT OVERRIDE（U+202D）／RIGHT-TO-LEFT OVERRIDE（U+202E）とPOP DIRECTIONAL FORMATTING（U+202C）に等価とする。[1995年draft](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt) [RFC 2070 §4.2.4](https://www.rfc-editor.org/rfc/rfc2070.html#section-4.2.4)
 
 ## さらに上流の由来
 
 ### 証拠
 
-RFC 2070はUnicode Bidi Algorithmに従い、HTMLの高水準markupをUnicodeの低水準mechanismへ変換できるよう設計したと明記する。
+1995年draftとRFC 2070はUnicode Bidi Algorithmを基礎とし、HTMLの高水準markupをUnicodeの低水準mechanismへ対応させる設計を記す。
 
 ### 解釈
 
@@ -30,12 +30,13 @@ RFC 2070はUnicode Bidi Algorithmに従い、HTMLの高水準markupをUnicodeの
 
 ## 系譜
 
-Unicode LRO／RLO／PDF → RFC 2070 `BDO` → HTML 4 `<bdo>` → 現行HTML `<bdo>`
+Unicode directional override → `draft-ietf-html-i18n-01` `BDO`（1995-09-25）→ RFC 2070 `BDO` → HTML 4 `<bdo>` → 現行HTML `<bdo>`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 1995-09-25 | `draft-ietf-html-i18n-01` | IETF Internet-Draft | 文脈だけで方向を決めにくい文字列のため、必須`DIR`を持つ新要素`BDO`を導入する。revision 00には`BDO`がない。 | [revision 00](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00.txt)・[revision 01](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt) | 2026-08-09 |
 | 1997-01 | RFC 2070 | Standards Track RFC | `BDO`の導入要求とUnicode LRO／RLO／PDFとの要素単位の対応。 | [一次資料](https://www.rfc-editor.org/rfc/rfc2070.html) | 2026-08-09 |
 | 1999-12-24 | HTML 4.01 | W3C Recommendation | RFC 2070の国際化勧告を統合し、`BDO`をHTML 4.0のnew elementとして記録。 | [一次資料](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.13) | 2026-08-09 |
 
@@ -43,7 +44,7 @@ Unicode LRO／RLO／PDF → RFC 2070 `BDO` → HTML 4 `<bdo>` → 現行HTML `<b
 
 **A**
 
-導入要求とUnicode directional override charactersからの直接対応をRFC 2070が明記し、HTML 4がその勧告を統合したため。
+1995年draftがUnicode directionalityの問題への解として`BDO`を新規導入し、RFC 2070がLRO／RLO／PDFとの直接対応を明記し、HTML 4が統合したため。
 
 ## 否定された仮説
 
@@ -52,8 +53,10 @@ Unicode LRO／RLO／PDF → RFC 2070 `BDO` → HTML 4 `<bdo>` → 現行HTML `<b
 ## 未解決
 
 - `BDO`という名称を選んだ具体的な議論はあるか。
-- RFC 2070以前のInternet-Draftで最初に現れた版は何か。
+- revision 00から01へ`BDO`を追加した具体的な提案・議論は残っているか。
 
 ## 調査記録
 
 RFC 2070、HTML 4.01のdirectionality節と変更付録を確認した。横断比較は[国際化・アクセシビティ調査ノート](../research/internationalization-accessibility-elements.md)を参照する。
+
+2026-08-09の敵対的レビューでは、RFC 2070本文とローカルsnapshot、HTML 4.01のdirectionality節・変更付録に加え、`draft-ietf-html-i18n-00`と01を比較した。revision 01での早期導入を発見してRFC初出説を訂正し、日付、著者、`BDO`名、Unicode overrideの文脈、系譜、確度Aを再点検した。

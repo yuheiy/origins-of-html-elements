@@ -1,6 +1,6 @@
 # `<track>`
 
-> 状態: 2010年の外部字幕・caption機構としての導入を検証済み（特定の先行案からの採用因果は未確認）
+> 状態: 完成（敵対的レビュー済み: 2026-08-09）。2010年の外部字幕・caption機構としての導入を検証済み（特定の先行案からの採用因果は未確認）
 
 ## 概要
 
@@ -61,3 +61,5 @@ SRT、WebSRT、TTML、SMIL、または2010年4月のchange proposalのいずれ�
 ## 調査記録
 
 2010年のW3C video accessibility議論、revision 5067、WHATWG editorによるtimed track説明、同年10月のW3C Working Draft、現行Living Standardを確認した。SRT、WebSRT、TTML、SMILおよび4月案を検討したが、いずれか一つからの採用因果は確認できなかった。横断比較は[HTML media要素の調査ノート](../research/media-elements.md)を参照する。
+
+敵対的レビュー（2026-08-09）では、2010年4月案、`track`追加commit、7月の編集者説明、10月草案を再照合した。SRT、TTML、SMIL、`trackgroup`案は比較対象または競合案にとどまり、具体的祖先へ接続しないBを維持した。
