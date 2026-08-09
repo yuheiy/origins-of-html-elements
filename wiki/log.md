@@ -113,3 +113,15 @@ HTML 4.01、GNU Texinfo 2.16、GNU Texinfo 3.7の配布アーカイブを展開�
 ## [2026-08-09] update | Rawリソース分類
 
 HTML 2.0のHTML版を誤って1993年資料として収録していた`html-1993/`を削除した。1993年資料は`draft-ietf-iiir-html-00`、HTML 2.0は草案とRFC 1866を正本として維持する。
+
+## [2026-08-09] research | CALS／高度なtable model
+
+`thead`, `tbody`, `tfoot`, `col`, `colgroup`について、HTML 3.0、RFC 1942、HTML 3.2、HTML 4、Living Standardを照合した。[調査ノート](research/cals-table-elements.md)
+
+RFC 1942がCALSにならったrow groupingとして集合単位で明記する`thead`, `tbody`, `tfoot`をA−、導入理由は確認できるが具体的祖先を確認できない`col`, `colgroup`をBとして個別ページへ統合した。`COL`のCALS接続はrelative widthの`*`表記に限定し、`COLGROUP`をCALSから直接採用したとは扱わなかった。
+
+対象5ページの現在の意味もWHATWG HTML Living Standard本文から要約した。史料検証済みは75ページ、現在の意味の要約済みは88ページとなった。
+
+## [2026-08-09] lint | 75検証済みページ
+
+全115ページの確度集計を再計算し、A 48件、A− 10件、B 17件、未評価40件が`wiki/README.md`と一致することを確認した。CALS／高度なtable model系5ページについて、必須見出しの順序、現行定義の要約、空でない証拠表、相対リンク、generic placeholderの除去、Markdown whitespaceを検査した。

@@ -9,9 +9,9 @@
 - 対象基準日: 2026-08-09
 - 固定ページ数: 115
 - 個別ページ: 全115件の骨格と現行定義リンクを作成済み
-- 史料検証済み: 70件（A: 48件、A−: 7件、B: 15件、C: 0件）
-- 史料未検証: 45件（未評価）
-- 現在の意味を要約済み: 83件
+- 史料検証済み: 75件（A: 48件、A−: 10件、B: 17件、C: 0件）
+- 史料未検証: 40件（未評価）
+- 現在の意味を要約済み: 88件
 - 横断系譜ページ: 個別ページの検証後に作成予定
 - 敵対的レビュー済み: 0件
 
@@ -22,6 +22,7 @@
 - [現行HTML要素の固定一覧](research/current-html-elements.md)
 - [HTML phrase elementsとTexinfo](research/texinfo-phrase-elements.md)
 - [HTML+から現行要素への系譜](research/html-plus-elements.md)
+- [CALSと高度なtable model](research/cals-table-elements.md)
 - [初期SGML/GML系統](research/early-sgml-elements.md)
 - [Browser vendor由来要素](research/browser-vendor-elements.md)
 - [国際化・アクセシビリティ関連要素](research/internationalization-accessibility-elements.md)

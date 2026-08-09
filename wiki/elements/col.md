@@ -1,58 +1,61 @@
 # `<col>`
 
-> 状態: 骨格作成済み（史料未検証）
+> 状態: RFC 1942での導入理由とHTML 4への採録を検証済み（具体的な先行要素は未確認）
 
 ## 概要
 
-未調査。現在の意味と歴史的な由来を混同せずに記述する。
+tableの一つ以上のcolumnを表す空要素である。RFC 1942はincremental displayに必要なcolumn widthとcolumn-based defaultsをdataより先に指定するため提案し、HTML 4.0が標準化した。`COL`要素自体をCALSから採用した証拠は確認できない。
 
 ## 現在の意味
 
-一次定義: [WHATWG HTML Living Standardの `<col>` 定義](https://html.spec.whatwg.org/multipage/tables.html#the-col-element)（2026-08-09確認）。定義内容の要約は未作成。
+WHATWG HTML Living Standardでは、親`colgroup`が親`table`を持つとき、そのcolumn group内の一つ以上のcolumnsを表す。`span`属性でcolumn数を指定できる。[一次定義](https://html.spec.whatwg.org/multipage/tables.html#the-col-element)（2026-08-09確認）
 
 ## HTMLへの導入
 
-未調査。初出、導入主体、導入理由を分離して記録する。
+今回確認できた最初期の公開仕様は1996年5月のRFC 1942である。Dave Raggettが著者となり、大きなtableを全dataの受信前に表示するにはcolumn数とwidthが必要だという設計課題に対し、table dataより前にwidthとalignment defaultsを指定する空要素`COL`を提案した。RFC 1942はExperimental RFCであり、RecommendationとしてはHTML 4.0が1997年12月18日に初めて採録した。[RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 4.01 changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1)
 
 ## HTML直前の祖先
 
-未確認。名称、外見、現在の用途の類似だけから祖先を推定しない。
+未確認。HTML 3.0 draftの`TABLE`はcolumn widthを`COLSPEC`属性で指定しており、RFC 1942は`COL`を用いるmodelとの採用関係を明記しない。CALSとの直接関係としてRFC 1942が明記するのも`WIDTH`値の`*`表記までであり、`COL`要素自体の由来ではない。[HTML 3.0 tables](https://www.w3.org/MarkUp/html3/tables.html) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html)
 
 ## さらに上流の由来
 
 ### 証拠
 
-未確認。
+RFC 1942はtable model全体が既存SGML table models、word processors、紙媒体のtable layout研究から発展し、CALS tableのimport簡略化を副目標としたと記す。また`COL`のrelative widthに使う`*` suffixはCALS representationからのimportを簡略化するためと明記する。これは`COL`要素そのものの祖先を特定する証拠ではない。[RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html)
 
 ### 解釈
 
-なし。史料確認後も、証拠とは別に記述する。
+`COL`はHTML 3.0のtable-level `COLSPEC`が扱っていたcolumn width指定を独立要素へ分けたように見えるが、その設計変更を明示する議事録がないため、系譜には接続しない。
 
 ## 系譜
 
-未確定。史料で確認済みの接続だけを記載する。
+[具体的祖先は未確認] RFC 1942 `COL` → HTML 4.0 `COL` → 現行HTML `<col>`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 1995-04-25 | HTML 3.0 Internet-Draft, “Tables” | 失効したIETF Working Draft | column widthを`TABLE`の`COLSPEC`属性で指定し、`COL`要素は定義しない。 | [一次資料](https://www.w3.org/MarkUp/html3/tables.html) | 2026-08-09 |
+| 1996-05 | RFC 1942, *HTML Tables* | Experimental RFC | `COL`のDTDと、incremental displayのためcolumn widthをdataより先に指定する導入理由を記す。`*` width表記だけはCALS importとの関係を明記する。 | [一次資料](https://www.rfc-editor.org/rfc/rfc1942.html) | 2026-08-09 |
+| 1997-12-18 | HTML 4.0 | W3C Recommendation | `COL`をHTML 3.2以後の新要素として採録したことをHTML 4.01の差分付録が記録する。 | [HTML 4.01 changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1) | 2026-08-09 |
 
 ## 確度
 
-**未評価**
+**B**
 
-ハンドオフの確度は出発仮説として扱い、一次資料の再確認後に評価する。
+RFC 1942でHTMLへの導入理由と設計modelを確認できるが、`COL`要素を具体的な先行要素または`COLSPEC`から採用した因果関係は確認できないため。
 
 ## 否定された仮説
 
-なし。ハンドオフで撤回済みの説明がある場合は、個別調査時に理由とともに移記する。
+`COL`要素をCALSから直接採用したという説明。RFC 1942が直接結ぶのはrelative widthの`*`表記とCALS representationであり、要素自体ではない。
 
 ## 未解決
 
-- HTMLへの導入理由は確認できるか。
-- HTML直前の具体的祖先は確認できるか。
-- さらに上流の由来を示す直接史料はあるか。
+- `COLSPEC`属性から`COL`要素への変更を決めた草案または議論。
+- RFC 1942以前のHTML tables draftへ`COL`が加わった正確な日付。
+- `COL`要素自体へ影響したSGML table modelがあるか。
 
 ## 調査記録
 
-未着手。
+1995年HTML 3.0 table章、RFC 1942、HTML 3.2、HTML 4.01 DTD／table章／差分付録、Living Standardを比較した。CALSとの関係はRFC 1942が直接述べる`*` width表記に限定した。横断比較は[CALS／高度なtable model調査ノート](../research/cals-table-elements.md)を参照する。
