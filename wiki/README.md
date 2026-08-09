@@ -9,9 +9,9 @@
 - 対象基準日: 2026-08-09
 - 固定ページ数: 115
 - 個別ページ: 全115件の骨格と現行定義リンクを作成済み
-- 史料検証済み: 106件（A: 54件、A−: 14件、B: 34件、C: 4件）
-- 史料未検証: 9件（未評価）
-- 現在の意味を要約済み: 106件
+- 史料検証済み: 115件（A: 57件、A−: 15件、B: 38件、C: 5件）
+- 史料未検証: 0件（未評価）
+- 現在の意味を要約済み: 115件
 - 横断系譜ページ: 個別ページの検証後に作成予定
 - 敵対的レビュー済み: 0件
 
@@ -31,6 +31,8 @@
 - [Modern HTML要素とforeign root](research/modern-html-foreign-roots.md)
 - [HTML media要素の導入](research/media-elements.md)
 - [Forms/UI要素の導入](research/forms-ui-elements.md)
+- [Scripting / embedding要素の起源](research/scripting-embedding-elements.md)
+- [Text/structure/edits要素の導入](research/text-structure-edits-elements.md)
 
 ## 要素一覧
 

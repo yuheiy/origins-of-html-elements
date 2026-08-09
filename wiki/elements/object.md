@@ -1,58 +1,65 @@
 # `<object>`
 
-> 状態: 骨格作成済み（史料未検証）
+> 状態: HTML3 `INSERT`からの改名系譜を検証済み（個々のvendor案からの設計採用は未解決）
 
 ## 概要
 
-未調査。現在の意味と歴史的な由来を混同せずに記述する。
+画像、applet、plug-in等を別々の機構で扱う制約に対し、W3Cが汎用`INSERT`として提案し、1996年に`OBJECT`へ改名した要素である。`INSERT → OBJECT`は直接確認できるが、個々のvendor要素からの派生は確認できない。
 
 ## 現在の意味
 
-一次定義: [WHATWG HTML Living Standardの `<object>` 定義](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element)（2026-08-09確認）。定義内容の要約は未作成。
+WHATWG HTML Living Standardでは外部resourceを表し、resource typeに応じてimageまたはchild navigableとして扱われる。`data`がresourceのURLを、`type`がMIME typeを指定し、resourceを表示できない場合はchildrenがfallback contentになる。[一次定義](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element)（2026-08-09確認）
 
 ## HTMLへの導入
 
-未調査。初出、導入主体、導入理由を分離して記録する。
+1995年12月20日のW3C Working Draft *Inserting multimedia objects into HTML3*は、HTML 2.0 `IMG`、Microsoft `DYNSRC`、Netscape `EMBED`、Sun `APP`／`APPLET`の各案では要求全体を満たせないとして、`IMG`の役割を包摂し、新mediaへ拡張可能でfallbackを持つ汎用`INSERT`を提案した。[INSERT草案](https://www.w3.org/TR/WD-insert-951220.html)
+
+1996年3月8日の後続草案は、旧`INSERT`草案のelementsを各方面からのinputを受けて2月13日にrenameし、文書名もWD-objectへ変えたと記録する。`OBJECT`はJava applets、COM/OLE objects、plug-ins等を一つの一般機構で扱った。HTML 4はgeneric object inclusionのall-purpose solutionとして導入した。[OBJECT草案](https://www.w3.org/TR/WD-object-960308.html) [HTML 4.01](https://www.w3.org/TR/html401/struct/objects.html)
 
 ## HTML直前の祖先
 
-未確認。名称、外見、現在の用途の類似だけから祖先を推定しない。
+1995年のHTML3 `INSERT`である。後続草案が要素群の改名日を明記し、目的、attributes、fallback modelも連続する。
 
 ## さらに上流の由来
 
 ### 証拠
 
-未確認。
+`INSERT`草案はHTML 2.0 `IMG`のmedia restrictionを出発点とし、`DYNSRC`、`EMBED`、`APP`、`APPLET`をnew mediaへ対処した既存案として列挙する。その上で各案が要求全体を満たさないため、単一で将来拡張可能なextensionを提案した。[INSERT草案](https://www.w3.org/TR/WD-insert-951220.html)
 
 ### 解釈
 
-なし。史料確認後も、証拠とは別に記述する。
+`IMG`とvendor別案は`INSERT`／`OBJECT`が解こうとした問題領域を示すが、草案は各syntaxや実装から`INSERT`を派生させたとは述べない。確定系譜は`INSERT → OBJECT`から始める。
 
 ## 系譜
 
-未確定。史料で確認済みの接続だけを記載する。
+HTML3 `INSERT`（1995年） → `OBJECT`への改名（1996-02-13） → W3C `OBJECT`草案 → HTML 4 `OBJECT` → 現行HTML `<object>`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 1995-12-20 | *Inserting multimedia objects into HTML3* | W3C Working Draft | `IMG`とvendor別案の限界、汎用`INSERT`、data／code／parameters／fallback model。 | [一次資料](https://www.w3.org/TR/WD-insert-951220.html) | 2026-08-09 |
+| 1996-02-13（決定）、1996-03-08（公開版） | *Inserting objects into HTML* | W3C Working Draft | `INSERT` elementsを`OBJECT`へrenameした直接記録と継続する設計。 | [一次資料](https://www.w3.org/TR/WD-object-960308.html) | 2026-08-09 |
+| 1996-04-22 | *Inserting objects into HTML* | W3C Working Draft | editor／authors、複数vendorのmedia mechanismを一般化する目的、fallback。 | [一次資料](https://www.w3.org/TR/WD-object-960422) | 2026-08-09 |
+| 1995〜1997 | *Cougar — The next version of HTML* | W3C標準化ページ | object草案を含むlisted draftsがHTML 4.0のbasisを形成した集合単位の関係。 | [一次資料](https://www.w3.org/MarkUp/Cougar/) | 2026-08-09 |
+| 1999-12-24 | HTML 4.01 §13 | W3C Recommendation | generic object inclusion、限定的ancestorとしての`IMG`／`APPLET`、nested fallback。 | [一次資料](https://www.w3.org/TR/html401/struct/objects.html) | 2026-08-09 |
 
 ## 確度
 
-**未評価**
+**A**
 
-ハンドオフの確度は出発仮説として扱い、一次資料の再確認後に評価する。
+具体的な先行要素`INSERT`から`OBJECT`への改名と設計継承を、後続W3C草案が日付付きで直接記録するため。
 
 ## 否定された仮説
 
-なし。ハンドオフで撤回済みの説明がある場合は、個別調査時に理由とともに移記する。
+Netscape `EMBED`を`OBJECT`へ改名したという説明。改名前は`INSERT`であり、`EMBED`は統合対象の一つである。HTML 2.0 `IMG`の単純改名、後続container型`EMBED`からの派生も採らない。
 
 ## 未解決
 
-- HTMLへの導入理由は確認できるか。
-- HTML直前の具体的祖先は確認できるか。
-- さらに上流の由来を示す直接史料はあるか。
+- 1996年2月13日に`INSERT`から`OBJECT`へ名称を変えた議論本文はあるか。
+- `INSERT`のattributesやnested fallbackへ各vendor案のどの設計が採用されたか。
+- object草案からHTML 4本文へ統合した要素単位の編集・合意記録はあるか。
 
 ## 調査記録
 
-未着手。
+1995〜1996年のW3C insert／object草案、Cougar標準化ページ、HTML 4.01、現行Living Standardを確認した。横断比較は[Scripting / embedding要素の調査ノート](../research/scripting-embedding-elements.md)を参照する。

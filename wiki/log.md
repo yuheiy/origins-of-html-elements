@@ -181,3 +181,21 @@ Operaの実験実装・提案からWHATWGへの採用因果を確認できた`vi
 ## [2026-08-09] lint | 106検証済みページ
 
 全115ページの確度集計を再計算し、A 54件、A− 14件、B 34件、C 4件、未評価9件が`wiki/README.md`と一致することを確認した。Forms/UI系5ページについて、必須見出し順、現行定義の要約、空でない証拠表、具体的な未解決点、相対リンク、generic placeholder、Markdown whitespaceを検査した。
+
+## [2026-08-09] research | Scripting / embedding要素
+
+`script`, `noscript`, `style`, `object`について、Netscape Navigator資料、W3C scripting／style／insert／object草案、HTML 3.2、CSS1、HTML 4、現行Living Standardを照合した。[調査ノート](research/scripting-embedding-elements.md)
+
+Netscape実装からW3Cによるformalizationを確認した`script`と、HTML3 `INSERT`からの改名を確認した`object`をA、W3C style草案からHTML 4への集合単位の接続を確認した`style`をA−、導入要求は確認できるが先行実装を確定できない`noscript`をBとした。
+
+## [2026-08-09] research | Text/structure/edits要素
+
+`div`, `small`, `ins`, `del`, `time`について、HTML 3.0、HTML 3.2、HTML 4、Netscape保存資料、WHATWG仕様commit、現行Living Standardを照合した。[調査ノート](research/text-structure-edits-elements.md)
+
+WHATWG `<t>`からの改名を確認した`time`をA、導入目的を確認した`div`, `ins`, `del`をB、最初期の出現と当時の意味までを確認した`small`をCとした。`CENTER`, `S`／`STRIKE`, Netscape `SMALL`, 法律編集慣習、microformatsは、採用因果が確認できないまま系譜へ接続していない。
+
+対象9ページの現在の意味もWHATWG HTML Living Standard本文から要約した。史料検証済みと現在の意味の要約済みは全115ページとなった。
+
+## [2026-08-09] lint | 115検証済みページ
+
+全115ページの確度集計を再計算し、A 57件、A− 15件、B 38件、C 5件、未評価0件が`wiki/README.md`と一致することを確認した。最後の9ページについて、必須見出し順、現行定義の要約、空でない証拠表、具体的な未解決点、相対リンク、generic placeholder、Markdown whitespaceを検査した。
