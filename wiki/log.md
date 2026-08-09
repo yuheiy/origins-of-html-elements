@@ -343,3 +343,13 @@ WHATWG公式Git履歴と同時代mailから、旧`header`を`hgroup`へ分離し
 ## [2026-08-09] lint | 共有系譜の範囲規約の敵対的検証
 
 削除前の5文書と集約後の規約を再比較し、各文書固有の対象がタイトルと本文に残ること、共通する収録条件、除外条件、接続条件、個別ページとの責務分離に欠落や矛盾がないことを確認した。`範囲`見出しと責務説明の重複、相対リンク、Markdown whitespace、進捗集計への影響を検査し、合格とした。
+
+## [2026-08-10] research | figureの未解決事項
+
+2006年WHATWG image-caption議論、HTML+、DocBook、XHTML 2、仕様commit、2009年public-html、W3C Bug 7657／7669、ISSUE-83、変更提案を照合した。Simon PietersによるHTML+ `FIG`／`CAPTION`再利用案、Michel Fortinによる`figure`提案とuse cases、Ian Hicksonによる採用説明を確認し、[`figure`](elements/figure.md)をBからAへ変更した。DocBookとXHTML 2からの別系統の影響は未確認のままとした。
+
+`legend`から`dt`／`dd`への変更は`details`向け構文案の同時適用、`figcaption`への変更は意味、構造、旧IEとの互換性問題を解決するISSUE-83の要求だったことを確認した。[`figcaption`](elements/figcaption.md)と[HTML+共有系譜](lineages/html-plus.md)へ同じ経路を反映し、確度集計をA 65件、A− 17件、B 29件、C 4件へ更新した。
+
+## [2026-08-10] lint | figureとfigcaptionの敵対的検証
+
+初回調査と分離して、2006年4月・5月の原提案、11月の導入説明、仕様commitと親diff、2009年の構文変更メール、Bug 7657／7669、ISSUE-83、2010年の変更提案と仕様commitへ戻り、日付、主体、要素名、引用文脈、各矢印を再照合した。DocBookへの言及がheading処理の別件であること、XHTML 2が`figure`ではなく`object`の子`caption`を定義することも反例として維持した。対象2ページの必須見出し、証拠表、相対リンク、確度、共有系譜、全体集計を検査して合格とし、状態を`完成`とした。

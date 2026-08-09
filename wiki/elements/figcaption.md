@@ -4,7 +4,7 @@
 
 ## 概要
 
-2010年1月、HTML5草案の`figure` captionを`dt`／`dd`または`legend`で表す方式から、専用の`figcaption`へ変更して導入された。HTML+ `CAPTION`との採用因果は未確認である。
+2010年1月、HTML5草案の`figure` captionを`dt`／`dd`で表す方式が意味、構造、後方互換性の問題を指摘され、専用の`figcaption`へ変更された。さらに上流では、HTML+ `FIG`／`CAPTION`をWHATWGの`figure` caption構造へ採用した因果を確認できる。
 
 ## 現在の意味
 
@@ -12,47 +12,53 @@ WHATWG HTML Living Standardでは、親が`figure`である場合に、その残
 
 ## HTMLへの導入
 
-2010年1月30日、WHATWG editor Ian Hicksonが`figure`のcaption機構を`dt`／`dd`または`legend`から専用`figcaption`へ変更し、定義と例を追加した。[仕様commit](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)
+2009年9月のW3C Bug 7657と7669は、`dt`／`dd`を`dl`と異なる意味・構造で再利用する混乱、旧IEでのDOM互換性問題、不要なcontent wrapperを指摘し、`figure`専用caption要素を求めた。この問題はHTML WG ISSUE-83へ昇格し、2010年1月の変更提案では`fcaption`の代案として`figcaption`という名称も明示された。[Bug 7657](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7657) [Bug 7669](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7669) [変更提案](https://www.w3.org/html/wg/wiki/ChangeProposals/DdDtFcaptionDlabel)
+
+2010年1月30日、WHATWG editor Ian Hicksonが`figure`のcaption機構を専用`figcaption`へ変更し、caption以外のflow contentを直接置く構造、定義、例を追加した。HTML WGはこの編集を受けてISSUE-83をamicable resolutionとして閉じた。[仕様commit](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f) [ISSUE-83](https://www.w3.org/html/wg/tracker/issues/83)
 
 ## HTML直前の祖先
 
-HTML5草案の`figure` caption機構。2006年導入時は`legend`、その後`dt`／`dd`を使用し、2010年commitが専用`figcaption`で置換したことを明記する。
+HTML5草案の`figure`＋`dt`／`dd` caption機構。2010年commitが`dt`／`dd`を除き、専用`figcaption`と直接のflow contentへ置換したことを示す。
 
 ## さらに上流の由来
 
 ### 証拠
 
-1993年HTML+に`FIG`の子`CAPTION`が存在したことは確認できるが、WHATWGの変更commitはそこからの採用を述べない。
+2006年、Simon PietersはHTML+ `FIG`／`CAPTION`を示してHTML5向けの再利用を提案し、Ian Hicksonは`caption`のparser問題と`fig`から`figure`への名称変更を除いて同意し、仕様へ追加したと説明した。このcaption構造は`legend`、`dt`／`dd`を経て`figcaption`へ置換された。[Pietersの提案](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html) [Hicksonの総括](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)
 
 ### 解釈
 
-既存要素を流用していたcaption構造を、figure専用の明示的な要素へdeepeningした変更と解釈できる。
+HTML+のcaption付きfigure構造をHTML5へ採用した後、parser制約から既存要素を二度流用し、意味・構造・互換性の問題を解消するため専用要素へdeepeningした経路と解釈できる。HTML+ `CAPTION`から`figcaption`への直接改名ではない。
 
 ## 系譜
 
-HTML5 `figure`＋`legend` → `figure`＋`dt`／`dd` → `figure`＋`figcaption`（2010年） → 現行HTML `figcaption`
+HTML+ `FIG`＋`CAPTION` → WHATWG HTML `figure`＋`legend` → `figure`＋`dt`／`dd` → `figure`＋`figcaption`（2010年） → 現行HTML `figcaption`
 
-HTML+ `FIG`／`CAPTION`は採用因果が未確認のため接続しない。
+最初の矢印は2006年の提案とHicksonの採用説明、中間の二矢印は2009年の公開メール、Bug 7657／7669、ISSUE-83、2010年の仕様commitで確認できる。[2006年の総括](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html) [2009年の公開メール](https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html) [ISSUE-83](https://www.w3.org/html/wg/tracker/issues/83)
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
 | 1993-11-08 | HTML+ “Figures” | 失効したInternet-Draft | `FIG`の子`CAPTION`という先行存在。WHATWGへの採用因果は示さない。 | [一次資料](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html) | 2026-08-09 |
-| 2006-11-27 | WHATWG HTML commit `32bff0ac` | 仕様commit | `figure`導入時にcaptionとして`legend`を再利用。 | [一次資料](https://github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059) | 2026-08-09 |
-| 2010-01-30 | WHATWG HTML commit `c3974951` | 仕様commit | `dt`／`dd`または`legend`によるcaptionを専用`figcaption`へ変更。 | [一次資料](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f) | 2026-08-09 |
+| 2006-04-22 | Simon Pieters, image caption proposal | WHATWG mailing list | HTML+ `FIG`／`CAPTION`を明示し、HTML5向けの再利用案を提示した。 | [一次資料](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html) | 2026-08-10 |
+| 2006-11-28 | “many messages regarding image captions” | WHATWG feedback総括／W3C保存mail | HicksonがHTML+案への同意、二つの構文変更、仕様への追加を説明した。 | [一次資料](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html) | 2026-08-10 |
+| 2009-09-15 | “Re: `<details>`” | W3C public-html mailing list | `details`向け`dt`／`dd`案を`figure`にも適用した経緯。 | [一次資料](https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html) | 2026-08-10 |
+| 2009-09-17–2010-03-30 | W3C Bug 7657／7669 | Bugzilla | `dt`／`dd`再利用の意味・構造・互換性問題と、専用caption要素および直接のcontentを求める要求。 | [Bug 7657](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7657) [Bug 7669](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7669) | 2026-08-10 |
+| 2009-09-29–2010-02-12 | HTML WG ISSUE-83 | issue tracker | 代替案の審議と仕様編集後のamicable resolution。 | [一次資料](https://www.w3.org/html/wg/tracker/issues/83) | 2026-08-10 |
+| 2010-01-13 | “Change Proposal: `<fcaption>` and `<dlabel>`” | HTML WG変更提案 | `fcaption`の代案として`figcaption`を明示し、専用caption要素と直接のcontentを提案した。 | [一次資料](https://www.w3.org/html/wg/wiki/ChangeProposals/DdDtFcaptionDlabel) | 2026-08-10 |
+| 2010-01-30 | WHATWG HTML commit `c3974951` | 仕様commit | `dt`／`dd`を専用`figcaption`と直接のflow contentへ変更。 | [一次資料](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f) | 2026-08-10 |
 
 ## 確度
 
 **A**
 
-HTML5草案内の直前のcaption構造から専用要素へ置換した因果、導入主体、日付を仕様commitで直接確認できるため。
+HTML5草案内の直前のcaption構造から専用要素へ置換した要求、名称案、導入主体、日付をissue、変更提案、仕様commitで直接確認できるため。
 
 ## 否定された仮説
 
-HTML+ `CAPTION`から直接採用したという説明。名称と役割の類似だけであり、WHATWG commitは採用関係を述べない。
+HTML+ `CAPTION`から`figcaption`へ直接改名したという説明。HTML+構造からHTML5への採用は確認できるが、`legend`と`dt`／`dd`を経た二段階の置換があり、`figcaption`の直接祖先はHTML5草案のcaption機構である。
 
 ## 未解決
 
-- `legend → dt/dd`の変更を促したissueと正確な時期は何か。
-- `figcaption`という名称の提案過程は確認できるか。
+なし。
