@@ -32,6 +32,7 @@
 - [国際化・アクセシビリティ関連要素](research/internationalization-accessibility-elements.md)
 - [HTML5 semantic elementsと既存Web慣習](research/html5-semantic-elements.md)
 - [Modern HTML要素とforeign root](research/modern-html-foreign-roots.md)
+- [WHATWG revision r8000とtemplate統合commitの対応](research/template-r8000-git-mapping.md)
 - [HTML media要素の導入](research/media-elements.md)
 - [Forms/UI要素の導入](research/forms-ui-elements.md)
 - [Scripting / embedding要素の起源](research/scripting-embedding-elements.md)

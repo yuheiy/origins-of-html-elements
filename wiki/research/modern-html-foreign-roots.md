@@ -9,7 +9,7 @@
 | 要素 | 確認可能な導入経路 | HTML直前の祖先 | 確度候補 | 主な制約 |
 |---|---|---|---|---|
 | `picture` | 2012年RICG提案・Picturefillから2013年HTML WG extension draftを経て、2014-06-17にWHATWGへupstream統合 | Responsive Images Community Groupの`picture`提案 | A | 最初のmarkup提案commitは未確認 |
-| `template` | 2012-01-09のWeb Components仕様bug、2013-02-14のHTML Templates FPWD | standalone HTML Templates提案 | B | WHATWG HTMLへ統合したcommitを未確認 |
+| `template` | 2011年WHATWG提案、2012–2013年WebAppsWG仕様化、2013-06-28のWHATWG revision r8000統合 | WHATWG `template`提案とHTML Templates作業 | A | 特定のbrowser prototypeまたは既存template mechanismからの採用は未確認 |
 | `slot` | Shadow DOM v0の`content` insertion pointを再設計し、2016-04-20にHTMLへ追加 | WHATWG DOMのslot概念とShadow DOM slots proposal | A | `content`からの単純改名ではなく配布モデルの変更を含む |
 | `data` | 2011年のHTML WG議論、2012年change proposalと合意を経て導入 | HTML WGの`data` change proposal | A | editor draftへ最初に追加したcommitは未確認 |
 | `selectedcontent` | Open UIの`selectedoption`案を2024年に改名し、2025-07-21にcustomizable `select`の一部としてHTMLへ追加 | Open UI／WHATWGの`selectedoption`提案 | A | 最初のprototypeとOpen UI提案commitは未確認 |
@@ -51,7 +51,7 @@
 
 2013-02-14のHTML Templates First Public Working Draftは、dynamic pageが利用前のHTML fragmentを必要とするという要求を説明し、inert DOM subtreeを宣言して同一内容のDocumentFragmentをinstantiateする方法として`template`を定義した。[W3C Web Applications Working Group, *HTML Templates*, First Public Working Draft, 14 February 2013](https://www.w3.org/TR/2013/WD-html-templates-20130214/)
 
-2013-06-28にIan HicksonはW3C Bug 17930で`template`をWHATWG仕様へmergeしたと明記し、統合時のeditorial／normative changesを列挙した。直後のcomment 22はWHATWG revision r8000のcheck-in commentを“Integrate &lt;template&gt; into HTML”と記録する。[W3C Bug 17930, comments 21–22](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930#c21)
+2013-06-28にIan HicksonはW3C Bug 17930で`template`をWHATWG仕様へmergeしたと明記し、統合時のeditorial／normative changesを列挙した。直後のcomment 22はWHATWG revision r8000のcheck-in commentを“Integrate &lt;template&gt; into HTML”と記録する。現行Git履歴のcommit `685a5e0b27e963f6b0a62a21cb95078171076e3b`はmessageに`git-svn-id: http://svn.whatwg.org/webapps@8000`を保持し、その差分で要素、DOM API、parser、fragment parsing、renderingを統合している。[W3C Bug 17930, comments 21–22](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930#c21) [WHATWG HTML commit `685a5e0b`](https://github.com/whatwg/html/commit/685a5e0b27e963f6b0a62a21cb95078171076e3b)
 
 ### 解釈
 
@@ -59,7 +59,6 @@
 
 ### 未解決
 
-- WHATWG revision r8000に対応する現行Git履歴上のcommit hash。
 - Glazkov、Rafael Weinsteinらの提案が、特定のbrowser prototypeまたは既存template mechanismから採用したことを示す資料。
 - parser、clone、`innerHTML`規則を現在のHTML Standardへ移した正確な中間経路。
 
@@ -192,6 +191,7 @@ Open UI issue 1112は、`selectedoption`という要素名と「selected `option
 | 2013-02-26 | The picture Element | W3C First Public Working Draft | RICG共同開発、media query、`source`、`img` fallbackを持つ`picture`。 | https://www.w3.org/TR/2013/WD-html-picture-element-20130226/ | 2026-08-09 |
 | 2013-02-26 | Responsive Images Use Cases | W3C First Public Working Draft | custom techniqueの欠点とresponsive images標準化要求。 | https://www.w3.org/TR/2013/WD-respimg-usecases-20130226/ | 2026-08-09 |
 | 2013-05-28 | HTML 5.1 `data` | W3C Working Draft | `data`のmachine-readable valueと`time`との機能分担。 | https://www.w3.org/TR/2013/WD-html51-20130528/text-level-semantics.html#the-data-element | 2026-08-09 |
+| 2013-06-28 | WHATWG commit `685a5e0b` | 仕様commit | `git-svn-id`がrevision r8000との対応を直接保持し、`template`要素、DOM API、parser、fragment parsing、renderingをHTMLへ統合。 | https://github.com/whatwg/html/commit/685a5e0b27e963f6b0a62a21cb95078171076e3b | 2026-08-09 |
 | 2014-06-17 | WHATWG commit `a7716b7a` | 仕様commit | upstream `picture`仕様のHTML Living Standardへの統合。 | https://github.com/whatwg/html/commit/a7716b7a2463323c7f25176f4b3768008d170204 | 2026-08-09 |
 | 2015-04-27 | Web Components issue 92 | 標準化issue | `content`から`slot`への改名理由とmodel変更の議論。 | https://github.com/WICG/webcomponents/issues/92 | 2026-08-09 |
 | 2016-03-21 | WHATWG DOM commit `a2b04df5` | 仕様commit | slotとslotableのDOM概念。 | https://github.com/whatwg/dom/commit/a2b04df51b4342d7617c128e80e5aa892889d2e0 | 2026-08-09 |
@@ -205,4 +205,4 @@ Open UI issue 1112は、`selectedoption`という要素名と「selected `option
 
 WHATWG HTML／DOMのcommit history、W3C Technical Reports、W3C Bugzillaとmail archive、Responsive Images Community Group、WICG Web Components、Open UIのissue／PRを確認した。`picture`はcommunity proposalとprototypeからupstream統合まで、`slot`は旧`content`からDOM slot概念とHTML追加まで、`selectedcontent`は旧名提案から改名・統合まで、`ruby`群はW3C国際化語彙とHTML5追加まで、`math`／`svg`は独立XML語彙から`text/html` parser統合までを追跡した。
 
-今回の探索で確定できなかったのは、`template`のWHATWG統合commit、`picture`の最初のmarkup提案commit、`data`のeditor draft追加commit、`ruby`追加時に参照した具体的Web corpus、`math`／`svg`統合を要求した議論、SVG削除要請と再導入feedbackの本文である。これらは意味・外見・現行機能の類似で補わず、未解決として残した。
+初回探索で未確認だった`template`のWHATWG統合commitは、追加調査でrevision r8000に対応するcommit `685a5e0b`を確定した。引き続き確定できていないのは、`picture`の最初のmarkup提案commit、`data`のeditor draft追加commit、`ruby`追加時に参照した具体的Web corpus、`math`／`svg`統合を要求した議論、SVG削除要請と再導入feedbackの本文である。これらは意味・外見・現行機能の類似で補わず、未解決として残した。[r8000対応調査](template-r8000-git-mapping.md)

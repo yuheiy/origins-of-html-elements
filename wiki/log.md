@@ -229,3 +229,15 @@ WHATWG `<t>`からの改名を確認した`time`をA、導入目的を確認し�
 ## [2026-08-09] lint | 横断系譜の敵対的レビュー完了
 
 訂正後の横断系譜17行について、複数現行要素、直接一次資料、個別ページとの矢印・制約、境界5項目、相対リンク、Markdown whitespaceを再検査した。個別ページの確度集計はA 55件、A− 15件、B 39件、C 6件、未評価0件となり、`wiki/README.md`と一致することを確認した。
+
+## [2026-08-09] research | templateのWHATWG revision r8000対応commit
+
+W3C Bug 17930、WHATWG公式Git履歴、Ian Hicksonの同時代記録を照合し、revision r8000がcommit `685a5e0b27e963f6b0a62a21cb95078171076e3b`に対応することを確定した。commit messageの`git-svn-id`が`webapps@8000`を直接保持し、差分が`template`要素、DOM API、parser、fragment parsing、renderingを統合する。[調査ノート](research/template-r8000-git-mapping.md)
+
+## [2026-08-09] update | templateの未解決項目
+
+`template`個別ページとModern HTML横断調査ノートへ現行Git commitを追加し、解決したr8000対応hashの問いを未解決から除いた。既存の導入系譜と確度Aは維持し、browser prototype／先行mechanismと2013年以後の規則変更経路は未解決として残した。
+
+## [2026-08-09] lint | template追加調査
+
+追加証拠反映後に`template`ページを独立して読み直し、Bug 17930のr8000記録、commit messageの`webapps@8000`、差分内容、系譜、確度A、残る未解決点の整合を確認した。全115ページの確度集計はA 55件、A− 15件、B 39件、C 6件、未評価0件、敵対的レビュー済み115件のままであり、`wiki/README.md`と一致する。
