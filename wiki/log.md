@@ -425,3 +425,19 @@ OASIS TRP 9501:1995とTM 9502:1995を保存し、CALS table modelの1990年初�
 ## [2026-08-10] lint | WAI／Cougar form群の敵対的検証
 
 初回調査と分離して1996年・1997年のforms草案、Cougar概要、Raman／Dardailler mail、WAI group設置mail、WAI review report、HTML 3.2、HTML 4 FPWDへ戻り、より早い版、日付、主体、要素名、引用文脈、各矢印を再照合した。`LGROUP`から`FIELDSET`への変更理由、`CAPTION`から`LEGEND`への改名判断、特定GUI toolkitを未解決として維持した。対象3ページの必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespace、全115要素の確度集計を検査し、A 74件、A− 17件、B 21件、C 3件、未評価0件、敵対的検証済み115件が`wiki/README.md`と一致することを確認して合格とし、状態を`完成`とした。
+
+## [2026-08-10] research | 初期WHATWG sectioning群
+
+`article`、`aside`、`footer`、`nav`、`section`について、2004年8月から2005年4月のWHATWG mail、2004年・2005年の保存草案、後続の編集者説明、既存Web usage調査、XHTML 2との比較を照合した。WHATWG編集者が、当時の語彙集合を典型的siteのmarkup、特に`div`濫用の調査から直接得たと説明したことを確認した。
+
+要素単位では`div class="section"`から`section`、`div class="post"`から`article`への置換要求を確認した。`aside`は2004年の`sidebar`案と役割が連続し、pageのsideだけに用途を限定すると誤解されないため名称を変えたという編集者説明を確認した。`footer`と`nav`は個別markupとの対応が不明で、`navigation`から`nav`への名称変更判断も確認できなかった。
+
+## [2026-08-10] update | 初期WHATWG sectioning群の系譜と確度
+
+5要素の初出、導入要求、直前祖先、証拠、否定された仮説、未解決点を更新し、共通の`div`濫用調査とsectioning modelを共有系譜へ追加した。`article`、`aside`、`section`をBからAへ、`footer`と`nav`をBからA−へ変更し、確度集計をA 77件、A− 19件、B 16件、C 3件、共有系譜文書を7件へ更新した。2005年12月のGoogle調査を導入原因とせず、採用後の対応調査として限定した。
+
+## [2026-08-10] lint | 初期WHATWG sectioning群の敵対的検証
+
+初回調査と分離して2004年8月・11月、2005年4月のWHATWG mail、2004年9月・12月と2005年9月の保存草案、2008年の`aside`名称説明へ戻り、より早い版、日付、主体、旧名、現名、引用文脈、系譜の各矢印を再照合した。2005年Google調査が初期草案より後であること、XHTML 2の`section`／`nl`と出版上のasideに採用因果がないこと、`footer`と`nav`の個別対応および`navigation`から`nav`への名称変更判断が未確認であることを維持した。
+
+対象5ページと共有系譜について必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査した。全115要素の確度集計がA 77件、A− 19件、B 16件、C 3件、未評価0件で`wiki/README.md`と一致し、敵対的検証済み115件を維持できることを確認して合格とし、状態を`完成`とした。

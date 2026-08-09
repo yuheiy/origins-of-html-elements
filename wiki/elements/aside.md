@@ -6,53 +6,57 @@ status: 完成
 
 ## 概要
 
-2004年11月のWHATWG提案集合では`sidebar`、2005年草案では`aside`として確認できる。両者の正確な改名経路と、出版上のasideやsidebarからの採用因果は未確認である。
+2004年8月にWHATWG編集者Ian Hicksonが`sidebar`を提案し、11月には本文に関連するが本文のflow外にある内容と説明した。2005年草案までに`aside`となり、Hicksonは後に、pageのsideだけに用途を限定すると誤解されないため`sidebar`を採らなかったと説明した。
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、周囲の内容へ間接的に関連し、その内容から分離して考えられるページのsectionを表す。pull quote、sidebar、広告、`nav`群などに使用できる。[一次定義](https://html.spec.whatwg.org/multipage/sections.html#the-aside-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、周囲の内容へ間接的に関連し、その内容から分離して考えられるページのsectionを表す。pull quote、sidebar、広告、`nav`群などに使用できる。[一次定義](https://html.spec.whatwg.org/multipage/sections.html#the-aside-element)（2026-08-10確認）
 
 ## HTMLへの導入
 
-2004年11月10日のWHATWG議論はsemantic element集合に`sidebar`を列挙し、2005年9月1日版Web Applications 1.0は現行名`aside`で周囲の内容へtangentially relatedなsectionとして定義する。両版の間の改名日と理由は確認できない。[2004年議論](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/date.html) [2005年草案](https://whatwg.org/specs/web-apps/2005-09-01/#the-aside)
+2004年8月29日のWHATWG threadで、Hicksonは`sidebar`を今後定義する候補として挙げ、一般的な`div`のpseudo-semantic用途を減らす目的を説明した。11月12日にはsectioning element集合へ`sidebar`を含め、本文と関連するが本文のflow外にあるcontentだと説明し、12月8日版の保存草案も同じ役割で定義した。2005年4月5日のmailは、当時の仕様にある語彙が典型的なsiteのmarkup、特に`div`濫用の調査から直接得られたと明記し、9月1日版Web Applications 1.0は現行名`aside`で周囲の内容へtangentially relatedなsectionとして定義する。2008年にHicksonは、pageのsideだけに用途を限定すると誤解されないよう`sidebar`ではなく`aside`としたと説明した。改名の正確な日付は確認できない。[2004年8月の提案](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html) [2004年11月の役割](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002363.html) [2004年草案](https://web.archive.org/web/20041210054847id_/http://www.whatwg.org/specs/web-apps/current-work/#sidebar) [2005年の調査説明](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html) [2005年草案](https://whatwg.org/specs/web-apps/2005-09-01/#the-aside) [名称の説明](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-November/017596.html)
 
 ## HTML直前の祖先
 
-未確認。2004年の`sidebar`案は同じ提案集合内の先行役割だが、`aside`への直接改名を示す記録は確認できない。出版物のasideやWebのsidebarから採用したことを示す史料も確認できない。
+WHATWGの`sidebar`案である。2004年11月時点の「本文に関連するがflow外にあるcontent」という役割は2005年`aside`の定義へ続き、Hicksonの後の説明が`sidebar`を最終名にしなかった理由を直接示す。出版物のasideから採用したことを示す史料は確認できない。
 
 ## さらに上流の由来
 
 ### 証拠
 
-2005年草案で導入時の意味を確認でき、2008年W3C差分草案もHTML 4にないdocument markupとして列挙する。
+2004年の`sidebar`案、2005年の`aside`定義、2008年の編集者説明から、役割の連続と名称選択の理由を確認できる。
 
 ### 解釈
 
-HTML5のsectioning modelで、主内容から分離可能な関連内容へ専用のsectionを与えたと解釈できる。さらに上流は確定しない。
+既存Webでsidebar等として表現されていた、主内容から分離可能な関連内容を、配置方向に依存しない名称のsectioning elementへしたと解釈できる。具体的な既存classとの一対一の採用は確定しない。
 
 ## 系譜
 
-WHATWG `sidebar`案（2004年）　[改名経路未確認]　Web Applications 1.0 `aside`（2005年） → 現行HTML `aside`
+WHATWG `sidebar`案（2004年） → 配置方向に限定しない名称としてWeb Applications 1.0 `aside`（2005年まで、改名日未確認） → 現行HTML `aside`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
-| 2004-11-10 | Semantic elements and spec complexity | WHATWG mailing list | semantic element集合に含まれた`sidebar`。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/date.html) | 2026-08-09 |
+| 2004-08-29 | `<section>` and headings | WHATWG mailing list | Hicksonが`sidebar`を候補として挙げ、一般的な`div`のpseudo-semantic用途を減らす目的を説明したこと。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html) | 2026-08-10 |
+| 2004-11-12 | `<section>` and headings | WHATWG mailing list | `sidebar`をsectioning element集合へ含め、本文に関連するがflow外にあるcontentと説明したこと。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002363.html) | 2026-08-10 |
+| 2004-12-08 | Web Applications 1.0 | WHATWG保存Working Draft | `sidebar`をmain textの直接の一部ではないが関連topicのsectionとして定義したこと。 | [一次資料](https://web.archive.org/web/20041210054847id_/http://www.whatwg.org/specs/web-apps/current-work/#sidebar) | 2026-08-10 |
+| 2005-04-05 | Re: `<section>` and headings and other threads | WHATWG mailing list | 当時の仕様にある語彙が、典型的siteのmarkup、特に`div`濫用の調査から直接得られたという編集者の説明。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html) | 2026-08-10 |
 | 2005-09-01 | Web Applications 1.0 | WHATWG保存Early Working Draft | `aside`の存在と、周囲へ間接的に関連するsectionという意味。 | [一次資料](https://whatwg.org/specs/web-apps/2005-09-01/#the-aside) | 2026-08-09 |
 | 2008-01-22 | HTML 5 differences from HTML 4 | W3C Working Draft | `aside`をHTML 4にないdocument markupとして列挙。 | [一次資料](https://www.w3.org/TR/2008/WD-html5-diff-20080122/#new-elements) | 2026-08-09 |
+| 2008-11-29 | Thoughts on HTML 5 | WHATWG editorの返信 | `sidebar`ではpageのsideだけに使えると誤解されるため、`aside`という名称を選んだこと。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-November/017596.html) | 2026-08-10 |
 
 ## 確度
 
-**B**
+**A**
 
-HTMLへの導入時の設計モデルは確認できるが、`sidebar → aside`の改名経路と具体的な先行物からの採用因果は確認できないため。
+WHATWGの具体的な`sidebar`案から同じ役割の`aside`へ至る関係と、`sidebar`を最終名にしなかった理由を編集者の説明で直接確認できるため。正確な改名日は未確認だが、直前の要素と名称判断の因果に欠落はない。
 
 ## 否定された仮説
 
-出版上のasideまたはWebのsidebarから直接採用したという説明。2004年案に`sidebar`はあるが、`aside`への改名と外部慣習からの採用記録を確認できない。
+出版上のasideから直接採用したという説明。2004年案と編集者説明はWHATWG `sidebar`案からの名称選択を示すが、出版語彙からの採用を述べない。特定の既存Web `sidebar` classから個別採用したという説明も、調査との関係が集合単位なので採用しない。
 
 ## 未解決
 
-- `sidebar`から`aside`への正確な改名日、提案者、理由は確認できるか。
-- 出版上のasideまたは既存Webのsidebar慣習を参照した同時代記録はあるか。
+- `sidebar`から`aside`への正確な改名日と変更差分は確認できるか。
+- 出版上のasideを参照した同時代記録、または特定の既存Web `sidebar` classとの個別対応はあるか。

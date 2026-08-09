@@ -18,10 +18,10 @@
 
 - 対象要素数: 115
 - 要素ページ: 110ファイルで全115要素を収録（`h1`〜`h6`は`h1-h6.md`へ統合）
-- 史料検証済み: 115件（A: 74件、A−: 17件、B: 21件、C: 3件）
+- 史料検証済み: 115件（A: 77件、A−: 19件、B: 16件、C: 3件）
 - 史料未検証: 0件（未評価）
 - 現在の意味を要約済み: 115件
-- 共有系譜文書: 6件
+- 共有系譜文書: 7件
 - 敵対的検証済み: 115件
 
 ## 共有系譜
@@ -32,6 +32,7 @@
 - [HTML+から現行要素への系譜](lineages/html-plus.md)
 - [IETF HTML国際化草案の共有系譜](lineages/html-internationalization.md)
 - [CALSとHTMLの表構造要素](lineages/cals-tables.md)
+- [初期WHATWG sectioning語彙の共有系譜](lineages/whatwg-sectioning.md)
 
 ## 要素一覧
 
