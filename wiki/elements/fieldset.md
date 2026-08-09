@@ -4,7 +4,7 @@
 
 ## 概要
 
-HTML 4が関連するform controlsをgroup化し、特にspeech-based user agentで目的を理解・移動しやすくするため導入した。特定の先行group boxとの因果は未確認である。
+WAI HTML & CSS Review WGが開発しHTML 4 WGが取り込んだaccessibility改善の一つとして、関連するform controlsをgroup化し、speech-based user agentで目的を理解・移動しやすくするため導入された。要素単位の原提案と特定の先行group boxは未確認である。
 
 ## 現在の意味
 
@@ -16,7 +16,7 @@ WHATWG HTML Living Standardではform controlsまたは他の内容を一組に�
 
 ## HTML直前の祖先
 
-未確認。HTML 4はgrouping要求を直接示すが、GUI group box、紙form、既存markupから採用したとは記録しない。
+WAI HTML & CSS Review WGのrecommendationsである。WAI責任者Judy Brewerは、同WGが多くのrecommendationsを開発しHTML 4 WGが取り込み、その改善一覧に`FIELDSET`／`LEGEND`を挙げている。ただし要素単位の原提案と、GUI group box、紙form、既存markupとの接続は未確認である。[WAI説明](https://lists.w3.org/Archives/Public/w3c-wai-ig/1997OctDec/0220.html)
 
 ## さらに上流の由来
 
@@ -30,20 +30,23 @@ WHATWG HTML Living Standardではform controlsまたは他の内容を一組に�
 
 ## 系譜
 
-[具体的祖先は未確認] HTML 4.0 FPWD `FIELDSET`＋`LEGEND`（1997年7月） → HTML 4.0 Recommendation → 現行HTML `<fieldset>`
+［集合単位］WAI HTML & CSS Review WG recommendations →（HTML 4 WGが取り込み）HTML 4.0 `FIELDSET`＋`LEGEND` → 現行HTML `<fieldset>`
+
+要素単位の提案者と、さらに上流の具体的UI／markupは未確認である。
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
 | 1997-07-08 | HTML 4.0 First Public Working Draft | W3C Working Draft | related controlsのgroup化とtab／speech navigation、accessibilityという導入理由。 | [forms](https://www.w3.org/TR/WD-html40-970708/interact/forms.html) / [changes](https://www.w3.org/TR/WD-html40-970708/appendix/changes.html) | 2026-08-09 |
+| 1997-12-18 | Judy Brewer, “Accessibility in HTML 4.0” | WAI責任者による同時代説明 | WAI HTML & CSS Review WGがrecommendationsを開発しHTML 4 WGが取り込んだこと、および改善一覧中の`FIELDSET`／`LEGEND`。 | [一次資料](https://lists.w3.org/Archives/Public/w3c-wai-ig/1997OctDec/0220.html) | 2026-08-09 |
 | 1999-12-24 | HTML 4.01 | W3C Recommendation | `FIELDSET`／`LEGEND`によるgroup化・命名とspeech／graphic browser上の改善。 | [一次資料](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.9) | 2026-08-09 |
 
 ## 確度
 
-**B**
+**A−**
 
-導入理由とaccessibility modelは確認できるが、その一段上の具体的祖先を確認できないため。
+WAI recommendationsからHTML 4への因果関係を直接確認できるが、集合単位の説明に留まり、要素単位の原提案とさらに上流の具体的祖先が欠けるため。
 
 ## 否定された仮説
 
@@ -51,5 +54,5 @@ WHATWG HTML Living Standardではform controlsまたは他の内容を一組に�
 
 ## 未解決
 
-- Cougar／HTML WGで`FIELDSET`を最初に提案した人物、日付、議論は何か。
+- WAI／Cougar／HTML WGで`FIELDSET`を最初に提案した人物、日付、要素単位の議論は何か。
 - 具体的GUI toolkit、accessibility API、既存markupからの影響を示す資料はあるか。

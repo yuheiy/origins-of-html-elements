@@ -4,7 +4,7 @@
 
 ## 概要
 
-AppleがDashboard向けにWebKitへ`CANVAS`と2D drawing contextを実装した事実と、後のWHATWG仕様に`canvas`がある事実は確認できる。AppleからWHATWGへの提案受領時点について同時代資料が矛盾し、両者の採録因果は未確認である。
+Richard WilliamsonがDashboard向けにWebKitへ`CANVAS`を初めて実装し、その実装からWHATWGのcanvas機能が設計されたことを、WebKit変更履歴とWHATWG自身の謝辞で確認できる。提案本文、正式な提出日、採録時の編集記録は未確認であり、Dave HyattとIan Hicksonの同時代説明も提出時点について食い違う。
 
 ## 現在の意味
 
@@ -12,55 +12,63 @@ WHATWG HTML Living Standardでは、scriptがgraph、game graphics、artなど�
 
 ## HTMLへの導入
 
-WebKit公式履歴は2004年5月26日までに新しい`CANVAS` tagと2D drawing APIが実装されたことを示す。AppleのDave Hyattは同年7月、Dashboardの時計の針等をHTMLで描くためAppleが要素を追加し、当時SVG/XHTMLは実装量、性能、複雑性の面で適さず、Canvasなら数日で実装できたと説明した。[WebKit履歴](https://trac.webkit.org/timeline?authors=&daysback=4&from=2004-05-30) [Introducing the Canvas](https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913) [On Extending HTML](https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005928)
+Richard Williamsonは2004年5月25日のWebKit changeset 6685で`CANVAS` tagの要素、parser、renderer、`getContext`の土台を追加し、翌26日のchangeset 6693でbitmap drawing contextと2D drawing operationsを実装した。AppleのDave Hyattは同年7月、Dashboardの時計の針等をHTMLで描くためAppleが要素を追加し、当時SVG/XHTMLは実装量、性能、複雑性の面で適さず、Canvasなら数日で実装できたと説明した。[Part 1](https://github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c) [Part 2](https://github.com/WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb) [Introducing the Canvas](https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913) [On Extending HTML](https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005928)
+
+WHATWGの仕様謝辞は、WilliamsonがSafariで最初の`canvas`実装を作り、その実装からcanvas機能が設計されたと明記する。WHATWG仕様への収録はAppleの書簡が参照する2005年3月24日版まで確認できる。[WHATWG謝辞](https://html.spec.whatwg.org/multipage/acknowledgements.html#acknowledgments) [Apple書簡](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/010129.html)
 
 ## HTML直前の祖先
 
-未確認。Dashboard用のApple WebKit `CANVAS`実装と2D drawing contextは有力な先行候補であり、2005年9月までのWHATWG Web Applications 1.0 snapshotにもbitmap canvas、drawing context、fallback contentがある。しかし、Appleの提案をWHATWGが受領・採録したことを直接記録する資料は確認できない。[WHATWG snapshot](https://web.archive.org/web/20050901000000/http://www.whatwg.org/specs/web-apps/2005-09-01/)
+Dashboard用のApple WebKit/Safari `CANVAS`実装である。WHATWGは、この最初の実装からcanvas機能を設計したと明記する。提案の受領日や採録操作そのものは未確認だが、先行実装から仕様機能への因果関係は直接確認できる。[WHATWG謝辞](https://html.spec.whatwg.org/multipage/acknowledgements.html#acknowledgments)
 
 ## さらに上流の由来
 
 ### 証拠
 
-Apple公式文書はcanvas drawing APIがQuartzに似た機能を持つと説明するが、Quartzから派生したとは述べない。[Apple “Drawing Content”](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Canvas.html)
+WebKit changeset 6693では、`RenderCanvasImage`が`CGBitmapContextCreate`でbitmapの`CGContextRef`を作り、JavaScriptの`save`、`restore`、path、color、line、transform、drawing各操作を`CGContextSaveGState`、`CGContextBeginPath`、`CGContextSetRGBStrokeColor`、`CGContextScaleCTM`などへ直接対応させている。AppleのCore Graphics文書は`CGContext`をQuartz 2D drawing environmentと定義する。[WebKit Part 2](https://github.com/WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb) [Apple `CGContext`](https://developer.apple.com/documentation/coregraphics/cgcontext)
+
+Appleのcanvas解説も、canvas drawing APIがQuartzに似たdrawing featuresを提供すると説明する。[Apple “Drawing Content”](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Canvas.html)
 
 ### 解釈
 
-Dashboardの要求に対する軽量なHTML drawing extensionとして成立したと解釈できる。Quartzとの類似を直接の派生関係へ広げない。
+Dashboardの要求に対する軽量なHTML drawing extensionとして成立した。少なくとも最初の2D実装とAPI操作の実装系譜については、Quartz 2Dのbitmap contextとdrawing functionsを直接用いた薄いJavaScript wrapperであり、単なる外見上の類似ではない。Quartzを設計上の着想源として選んだ意思決定過程までは、実装差分だけから確定しない。
 
 ## 系譜
 
-Apple WebKit `CANVAS`実装 for Dashboard（2004年5月）
+Quartz 2D `CGContext` bitmap context・drawing functions
 
-WHATWG Web Applications 1.0 `canvas`（遅くとも2005年9月）→ 現行HTML `<canvas>`
+→（WebKit実装が直接呼び出す）Apple WebKit/Safari `CANVAS`実装 for Dashboard（2004年5月）
 
-Apple実装からWHATWG仕様への接続は、提案受領・採録の直接史料がないため矢印で結ばない。
+→（WHATWG謝辞が「この最初の実装から設計」と明記）WHATWG Web Applications 1.0 `canvas`（遅くとも2005年3月24日）
+
+→ 現行HTML `<canvas>`
+
+AppleからWHATWGへの提案本文、提出日、採録時の編集記録は未確認であるが、Apple実装からWHATWG機能への接続自体は確認済みである。
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
-| 2004-05-26 | WebKit Timeline / changeset 6693 | 公式実装履歴 | 新しい`CANVAS`実装Part 2としてtag、2D context、drawing operationsを実装。 | [一次資料](https://trac.webkit.org/timeline?authors=&daysback=4&from=2004-05-30) | 2026-08-09 |
+| 2004-05-25 | WebKit changeset 6685 / “Part 1 of the new `<CANVAS>` tag implementation” | 公式実装履歴・ソースコード | Richard Williamsonが`CANVAS`要素、parser、renderer、`getContext`の土台を追加。Dave Hyattがreview。 | [一次資料](https://github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c) | 2026-08-09 |
+| 2004-05-26 | WebKit changeset 6693 / “Part 2 of the new `<CANVAS>` tag implementation” | 公式実装履歴・ソースコード | Williamsonが2D contextとdrawing operationsを実装。bitmap `CGContextRef`を作成し、JavaScriptのdrawing operationsからQuartz 2Dの`CGContext`関数を直接呼ぶ。 | [一次資料](https://github.com/WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb) | 2026-08-09 |
 | 2004-07-05 | Dave Hyatt, “Introducing the Canvas” | 当事者による同時代説明 | Appleが`canvas`を追加し、Dashboard時計の針を描くために使用。 | [保存版](https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913) | 2026-08-09 |
 | 2004-07-07 | Dave Hyatt, “On Extending HTML” | 当事者による同時代説明 | Dashboardの要求、SVG/XHTMLを採らなかった実装上の理由、WHATWGへの提出というApple側の認識。 | [保存版](https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005928) | 2026-08-09 |
 | 2004-08-13 | Ian Hickson, “[whatwg] Canvas tag” | 標準化メーリングリスト | `canvas`提案は未提出で、Hyattらが準備中と回答。Hyattの説明と提出時点が矛盾。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/043985.html) | 2026-08-09 |
 | 2004-11-02 | Apple, *Safari JavaScript Programming Topics*初版 | 公式実装文書 | WebKit canvas、Dashboard World Clock、Quartzに似たdrawing features。 | [一次資料](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Canvas.html) | 2026-08-09 |
 | 2005-09-01 | WHATWG, *Web Applications 1.0* | 仕様snapshot | bitmap canvas、drawing context、fallback contentを仕様化。 | [保存版](https://web.archive.org/web/20050901000000/http://www.whatwg.org/specs/web-apps/2005-09-01/) | 2026-08-09 |
+| 2006-03-02（WHATWG source初回check-in） | WHATWG, *Web Applications 1.0*謝辞 | 仕様source | Richard WilliamsonによるSafari最初の`canvas`実装からcanvas機能を設計したと明記。 | [一次資料](https://github.com/whatwg/html/blob/c3550d90867392905edbd91c94fec8c89fbfe648/source#L19425-L19427) | 2026-08-09 |
 | 2007-03-14（書簡が参照する仕様日は2005-03-24） | Apple Senior Patent Counsel書簡 | 当事者の公式書簡 | AppleがWHATWG draftのbitmap canvas節に関係するIP rightsを持つと表明。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/010129.html) | 2026-08-09 |
 
 ## 確度
 
-**B**
+**A**
 
-AppleがDashboard要求のためWebKitへ`CANVAS`を導入した理由と、WHATWG仕様上の設計modelは確認できるが、Apple実装からWHATWG仕様へ採録した因果関係は確認できないため。
+要素単位の具体的な先行実装、実装者、実装理由をWebKit変更履歴と当事者説明で確認でき、WHATWG自身がそのSafari実装からcanvas機能を設計したと因果関係を明記するため。提案の正式な提出日と採録時の編集記録は欠けるが、先行実装から仕様機能への接続自体は直接確認できる。
 
 ## 否定された仮説
 
-Quartzからcanvasを直接派生させたという説明。Apple文書が明記するのはdrawing featuresの類似であり、採用・移植・派生ではない。Hyattの2004年7月7日の「提出済み」だけからWHATWGへの受領日を確定する説明も、Hicksonの8月13日投稿と矛盾する。
+WHATWGがApple実装とは独立にcanvas機能を設計したという説明。WHATWGの謝辞がSafari最初の実装から設計したと明記するため成立しない。Quartzとの関係が機能上の類似にとどまるという従来の説明も、WebKit実装がQuartz 2Dのbitmap contextを作成し各drawing operationから`CGContext`関数を直接呼ぶため成立しない。Hyattの2004年7月7日の「提出済み」だけからWHATWGへの受領日を確定する説明は、Hicksonの8月13日投稿と矛盾する。
 
 ## 未解決
 
-- WebKit changeset 6693より前のPart 1 changesetの番号、著者、日付は何か。
-- AppleからWHATWGへ渡された提案本文、提出日、採録時の編集記録はあるか。
-- Hyattの「提出済み」とHicksonの「未提出」の差は何に由来するか。
-- Quartzからの具体的な派生を示す当時の設計資料はあるか。
+- AppleからWHATWGへ渡された提案本文、正式な提出日、採録時の編集記録は残っているか。
+- Hyattの2004年7月7日の「すべての拡張を提出済み」とHicksonの8月13日の「canvas提案は未提出」の差は、非公開共有と正式提案の区別、対象範囲、または別の事情のどれに由来するか。

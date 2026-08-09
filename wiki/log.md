@@ -313,3 +313,17 @@ WHATWG公式Git履歴と同時代mailから、旧`header`を`hgroup`へ分離し
 ## [2026-08-09] update | 敵対的検証への用語統一
 
 規範、進捗表示、更新記録の用語を「検証」へ統一し、状態値も`要検証`へ変更した。同じ概念を指す過去の更新記録も表記を揃え、旧表現が残っていないこととMarkdown whitespaceを確認した。
+
+## [2026-08-09] research | 確度B以下の未解決事項
+
+確度BまたはCの44要素について、未解決事項のうちHTMLへの導入と直前系譜の確度向上に寄与しうる問いを棚卸しし、当時の仕様、標準化mail、会議録、bug、WHATWG Git履歴、WebKit実装履歴を調査した。
+
+直接の提案、採録、置換、実装由来を確認できた`audio`、`canvas`、`datalist`、`dialog`、`optgroup`、`s`、`source`、`track`をAへ変更した。WAI recommendationsからHTML 4への集合単位の採録を確認できた`fieldset`と`legend`をA−へ変更した。WHATWG source初回check-inまでに現行semantic modelが成立していた`small`をCからBへ変更した。残るB／C要素は、具体的な先行物からの採用因果または導入判断を直接示す一次資料へ到達しなかったため確度を維持した。
+
+## [2026-08-09] update | 未解決事項の調査結果
+
+変更した11個別ページへ、解決した問い、直接史料、確認済み系譜、限定した未解決点、確度判定を反映した。横断系譜のWAI form controls、WHATWG media model、HTML+ `S`境界、Apple WebKit `CANVAS`境界を個別ページと整合させ、`wiki/README.md`の確度集計をA 64件、A− 17件、B 30件、C 4件へ更新した。
+
+## [2026-08-09] lint | 確度B以下の未解決事項
+
+変更した11個別ページを初回調査と分離して一次資料へ戻り、より早い版、競合案、反例、日付、主体、要素名、引用文脈、系譜の各矢印、確度、残る未解決点を再検証した。必須見出し順、空でない証拠表、相対リンク、generic placeholder、Markdown whitespace、全115要素の状態と確度集計を検査し、A 64件、A− 17件、B 30件、C 4件、未評価0件、敵対的検証済み115件が`wiki/README.md`と一致することを確認した。

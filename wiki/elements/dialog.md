@@ -4,7 +4,7 @@
 
 ## 概要
 
-現行`dialog`は2012年4月、Web applicationのdialog box等を表す要素とAPIとしてWHATWG HTMLへ導入された。2009年に削除された同名の会話用要素とは意味とcontent modelが断絶しており、直接祖先とはしない。
+現行`dialog`は、CSS、JavaScript、WAI-ARIAで実装されていたin-page modal dialogとbrowserのblocking promptが抱える問題を、customizableで非同期なnative HTML機構にするため2012年4月に導入された。2009年に削除された同名の会話用要素とは断絶している。
 
 ## 現在の意味
 
@@ -12,27 +12,29 @@ WHATWG HTML Living Standardでは、userがtaskを行うか情報を得るため
 
 ## HTMLへの導入
 
-2012年4月11日、Ian Hicksonがapplication UI用`dialog`を`open`, `show()`, `showModal()`, `close()`, `form method=dialog`等とともにWHATWG HTML sourceへ追加した。taskを行うためuserが操作するapplication部分として、dialog box、inspector、windowを例示する。[仕様commit](https://github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9)
+2011年のW3C Issue 162は、desktop／Web UI toolkitでmodal dialogが一般的である一方、CSS、JavaScript、WAI-ARIAによるrobustな実装が難しいとしてnative mechanismを提案した。2012年4月11日、Ian Hicksonはmailing listの議論と既存use case調査に基づき、application UI用`dialog`を`open`, `show()`, `showModal()`, `close()`, `form method=dialog`等とともにWHATWG HTML sourceへ追加した。[Issue 162](https://lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html) [編集者説明](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html) [仕様commit](https://github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9)
 
 ## HTML直前の祖先
 
-未確認。2008年草案にはconversation用の同名`dialog`があったが、2009年に明示的に削除され、2012年版は別のcontent modelとAPIで再導入された。特定GUI toolkitのdialog widgetから採用した因果も確認できない。
+CSS、JavaScript、WAI-ARIAで作られていたin-page modal dialogと、`alert()`／`confirm()`等のblocking promptである。Issue 162と導入時の編集者説明は、jQuery UI、YUI、Drupal overlay等の既存Web実装、browser promptの実装問題、JS製lightbox-style dialogを具体的なuse caseおよび置換対象として挙げる。単一libraryのAPIを移植したのではなく、実装群と要求をまとめたHTML機構である。
 
 ## さらに上流の由来
 
 ### 証拠
 
-2012年commitはdialog box、inspector、windowを設計対象として挙げ、Web application UIという導入要求を直接示す。
+Issue 162はCSS、JavaScript、WAI-ARIAによるmodal dialogの実装例とaccessibility上の要求を列挙する。導入時の編集者説明は、Chromium、WebKit、Firefoxのblocking modal promptの問題を`showModal()`の非同期modelで避け、customizableなin-page dialogを標準化する意図を示す。
 
 ### 解釈
 
-非modal／modalな一時的UIとdocument blockingをHTML要素・APIとして統合した設計と解釈できる。ただし具体的な先行実装は確定しない。
+複数の既存Web UI実装とbrowser promptの問題を、markup、modal stack、inert subtree、form interactionを持つ非同期のplatform機能へ統合した設計と解釈できる。特定library一つを直接移植したとはしない。
 
 ## 系譜
 
 conversation用HTML5 `dialog` → 削除（2009年）
 
-[具体的祖先未確認] → application UI用`dialog`の導入（2012年） → 現行HTML `dialog`
+CSS／JavaScript／WAI-ARIA製modal dialog、JS lightbox、browser blocking prompt
+
+→（既存use case調査とmailing-list議論）application UI用`dialog`の導入（2012年） → 現行HTML `dialog`
 
 ## 証拠
 
@@ -40,20 +42,20 @@ conversation用HTML5 `dialog` → 削除（2009年）
 |---|---|---|---|---|---|
 | 2008-01-22 | HTML 5 differences from HTML 4 | W3C Working Draft | `dt`をspeaker、`dd`をspeechとするconversation用の旧`dialog`。 | [一次資料](https://www.w3.org/TR/2008/WD-html5-diff-20080122/#new-elements) | 2026-08-09 |
 | 2009-09-15 | WHATWG HTML commit `9c490f21` | 仕様commit | conversation用`dialog`を削除し、通常のHTMLによる会話markupへ置換。 | [一次資料](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7) | 2026-08-09 |
+| 2011-01-22 | W3C HTML Issue 162 | 標準化issue | CSS、JavaScript、WAI-ARIAでrobustなmodal dialogを作る難しさ、既存Web UI実装、native mechanismの提案。 | [一次資料](https://lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html) | 2026-08-09 |
 | 2012-04-11 | WHATWG HTML commit `2fb24fcf` | 仕様commit | application UI用`dialog`、modal/non-modal API、関連機構の導入。 | [一次資料](https://github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9) | 2026-08-09 |
+| 2012-04-11 | Ian Hickson, “Dialogs and prompts” | WHATWG mailing list・編集者説明 | 既存use caseと議論に基づく設計、browser promptの問題、JS lightbox-style dialog、非同期`showModal()`の採用理由。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html) | 2026-08-09 |
 
 ## 確度
 
-**B**
+**A**
 
-現行要素の導入主体、日付、Web application UIという設計モデルは確認できるが、具体的な先行widgetまたは実装からの採用因果は確認できないため。
+CSS、JavaScript、WAI-ARIAによる具体的な既存modal dialog実装群とbrowser promptの問題から、現行要素とAPIを設計した因果関係を標準化issueと編集者説明で確認できるため。
 
 ## 否定された仮説
 
-会話用旧`dialog`を現行要素の直接祖先とする説明。同名だが一度削除され、2012年に別の意味とAPIで再導入された。特定GUI dialogから直接採用したという説明も、外見と機能の類似だけなので採用しない。
+会話用旧`dialog`を現行要素の直接祖先とする説明。同名だが一度削除され、2012年に別の意味とAPIで再導入された。特定GUI toolkitまたはlibrary一つから直接移植したという説明も、一次資料が複数の実装群と要求を示すため採らない。
 
 ## 未解決
 
-- 2012年commitより前の提案者、実装要求、mailing-listまたはbug記録はあるか。
-- 具体的に参照されたbrowser UI、library、GUI toolkitはあるか。
-- 旧要素と同じ名称を再利用した判断の記録はあるか。
+- 旧要素と同じ名称を再利用した判断の記録は残っているか。

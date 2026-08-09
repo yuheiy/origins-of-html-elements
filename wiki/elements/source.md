@@ -16,7 +16,7 @@ WHATWG HTML Living Standardでは、`picture`では複数の画像source set、`
 
 ## HTML直前の祖先
 
-具体的なHTML外祖先は未確認。WHATWG仕様内では、単一の`src`を持つ`video`が直接の直前状態であり、追加commitがcodec negotiationのため`source`と複数resource selectionへ拡張したことを示す。
+単一の`src`を持つWHATWG `video`である。追加commitは、codec negotiationのため`src`方式を`source`要素と複数resource selectionへ変更したことを要素単位で示す。HTML外のさらに古い祖先は未確認である。
 
 ## さらに上流の由来
 
@@ -45,9 +45,9 @@ WHATWG `video`の単一`src`方式（2007年3月16日） → codec negotiation�
 
 ## 確度
 
-**B**
+**A**
 
-仕様内の直前状態、導入理由、複数候補と事前判定という設計modelは確認できるが、具体的なHTML外の先行技術、実装、慣習から採用した因果関係は確認できないため。
+具体的な先行要素である単一`src`版`video`から、codec negotiationのため`source`と複数resource selectionへ変更した因果関係を要素単位の仕様commitで直接確認できるため。HTML外のさらに古い祖先は未確認である。
 
 ## 否定された仮説
 
@@ -55,5 +55,4 @@ WHATWG `video`の単一`src`方式（2007年3月16日） → codec negotiation�
 
 ## 未解決
 
-- 複数format fallback、MIME type、media queryの設計要求を提起した議論またはbrowser実装は確認できるか。
 - SMILのmedia source指定や既存plugin fallback構文を参照した記録はあるか。
