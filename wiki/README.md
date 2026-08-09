@@ -60,7 +60,7 @@
 
 ### H
 
-[`<h1>〜<h6>`](elements/hx.md) · [`<head>`](elements/head.md) · [`<header>`](elements/header.md) · [`<hgroup>`](elements/hgroup.md) · [`<hr>`](elements/hr.md) · [`<html>`](elements/html.md)
+[`<h1>`〜`<h6>`](elements/hx.md) · [`<head>`](elements/head.md) · [`<header>`](elements/header.md) · [`<hgroup>`](elements/hgroup.md) · [`<hr>`](elements/hr.md) · [`<html>`](elements/html.md)
 
 ### I
 
