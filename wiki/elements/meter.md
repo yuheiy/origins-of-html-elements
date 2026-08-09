@@ -1,58 +1,62 @@
 # `<meter>`
 
-> 状態: 骨格作成済み（史料未検証）
+> 状態: WHATWG `gauge`から`meter`への改名と仕様化を検証済み（`gauge`以前は未確認）
 
 ## 概要
 
-未調査。現在の意味と歴史的な由来を混同せずに記述する。
+`meter`は2006年、WHATWG Web Applications 1.0のWIP `gauge`を改名し、既知範囲のscalar measurementを表す要素として仕様化された。
 
 ## 現在の意味
 
-一次定義: [WHATWG HTML Living Standardの `<meter>` 定義](https://html.spec.whatwg.org/multipage/form-elements.html#the-meter-element)（2026-08-09確認）。定義内容の要約は未作成。
+WHATWG HTML Living Standardでは、既知範囲内のscalar measurementまたはfractional valueを表す。task progressには使わない。[一次定義](https://html.spec.whatwg.org/multipage/form-elements.html#the-meter-element)（2026-08-09確認）
 
 ## HTMLへの導入
 
-未調査。初出、導入主体、導入理由を分離して記録する。
+WHATWG公式Gitの初回収録である2006年3月2日のsourceにはWIP `gauge`が存在した。Ian Hicksonは3月29日のrevision 15で同じ節を`meter`へ改名し、`min`, `max`, `value`, `low`, `high`, `optimum`とDOM interfaceを具体化した。[初回Git収録](https://github.com/whatwg/html/commit/c3550d90867392905edbd91c94fec8c89fbfe648) [仕様化commit](https://github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00)
 
 ## HTML直前の祖先
 
-未確認。名称、外見、現在の用途の類似だけから祖先を推定しない。
+WHATWG Web Applications 1.0の`gauge`要素。Git差分が同じ節の改名と、既知範囲のmeasurementという意味の継承を直接示す。
 
 ## さらに上流の由来
 
 ### 証拠
 
-未確認。
+初回Git収録の`gauge`はdisk usageとquery result relevanceを例示し、fraction、quota usage、vote share、good／bad rangeの表現を検討していた。
 
 ### 解釈
 
-なし。史料確認後も、証拠とは別に記述する。
+一般的な計器の外見ではなく、値の範囲と望ましい領域をmachine-readableに表す要求が`gauge`から`meter`へ引き継がれた。
 
 ## 系譜
 
-未確定。史料で確認済みの接続だけを記載する。
+WHATWG Web Applications 1.0 `gauge` → 2006年revision 15 `meter` → HTML5 `meter` → 現行HTML `meter`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 2006-03-02 | WHATWG HTML commit `c3550d90` | 仕様source・初回Git収録 | WIP `gauge`の初期意味と検討中の処理 | https://github.com/whatwg/html/commit/c3550d90867392905edbd91c94fec8c89fbfe648 | 2026-08-09 |
+| 2006-03-29 | WHATWG HTML commit `f8514de7`（revision 15） | 仕様commit | `gauge`から`meter`への改名、意味・属性・DOM modelの具体化 | https://github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00 | 2026-08-09 |
+| 2006-03-28 | *Web Applications 1.0*, revision 15 | WHATWG保存仕様 | `meter`の同時代定義と`progress`との役割分離 | https://platform.html5.org/history/webapps/r15.html#the-meter | 2026-08-09 |
+| 2026-08-09 | *HTML Living Standard: The meter element* | 現行仕様 | `meter`の現行定義 | https://html.spec.whatwg.org/multipage/form-elements.html#the-meter-element | 2026-08-09 |
 
 ## 確度
 
-**未評価**
+**A**
 
-ハンドオフの確度は出発仮説として扱い、一次資料の再確認後に評価する。
+同じ仕様節の`gauge`から`meter`への改名と設計の継承を要素単位のGit差分で確認できる。
 
 ## 否定された仮説
 
-なし。ハンドオフで撤回済みの説明がある場合は、個別調査時に理由とともに移記する。
+特定OSのmeter widget、CSS progress bar、または計器一般から直接採用されたとは確認できないため、外見と名称だけで上流へ結ばない。
 
 ## 未解決
 
-- HTMLへの導入理由は確認できるか。
-- HTML直前の具体的祖先は確認できるか。
-- さらに上流の由来を示す直接史料はあるか。
+- 初回Git収録より前に`gauge`を追加した草案、提案者、議論は確認できるか。
+- `gauge`から`meter`へ改名した理由は何か。
+- `low`, `high`, `optimum`の三領域modelを提案した一次資料はあるか。
 
 ## 調査記録
 
-未着手。
+WHATWG公式Gitの初回sourceとrevision 15、同revisionの保存仕様、現行Living Standardを確認した。`gauge`以前と特定UI widgetからの採用記録は確認できなかった。横断比較は[Forms/UI要素の調査ノート](../research/forms-ui-elements.md)を参照する。

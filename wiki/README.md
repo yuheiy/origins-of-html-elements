@@ -9,9 +9,9 @@
 - 対象基準日: 2026-08-09
 - 固定ページ数: 115
 - 個別ページ: 全115件の骨格と現行定義リンクを作成済み
-- 史料検証済み: 101件（A: 52件、A−: 13件、B: 32件、C: 4件）
-- 史料未検証: 14件（未評価）
-- 現在の意味を要約済み: 101件
+- 史料検証済み: 106件（A: 54件、A−: 14件、B: 34件、C: 4件）
+- 史料未検証: 9件（未評価）
+- 現在の意味を要約済み: 106件
 - 横断系譜ページ: 個別ページの検証後に作成予定
 - 敵対的レビュー済み: 0件
 
@@ -30,6 +30,7 @@
 - [HTML5 semantic elementsと既存Web慣習](research/html5-semantic-elements.md)
 - [Modern HTML要素とforeign root](research/modern-html-foreign-roots.md)
 - [HTML media要素の導入](research/media-elements.md)
+- [Forms/UI要素の導入](research/forms-ui-elements.md)
 
 ## 要素一覧
 

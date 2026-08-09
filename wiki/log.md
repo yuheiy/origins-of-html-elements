@@ -169,3 +169,15 @@ Operaの実験実装・提案からWHATWGへの採用因果を確認できた`vi
 ## [2026-08-09] lint | 101検証済みページ
 
 全115ページの確度集計を再計算し、A 52件、A− 13件、B 32件、C 4件、未評価14件が`wiki/README.md`と一致することを確認した。media系4ページについて、必須見出し順、現行定義の要約、空でない証拠表、具体的な未解決点、相対リンク、generic placeholder、Markdown whitespaceを検査した。
+
+## [2026-08-09] research | Forms/UI要素
+
+`button`, `datalist`, `meter`, `output`, `progress`について、W3C forms提案、XForms、Web Forms 2.0、WHATWG仕様commitと保存草案、HTML 5 Working Draft、現行Living Standardを照合した。[調査ノート](research/forms-ui-elements.md)
+
+既存`INPUT` controlから内容を持つ要素への拡張を確認した`button`と、`gauge`からの改名を確認した`meter`をA、XForms機能集合からHTML formsへの導入を確認した`output`をA−、導入理由は確認できるが具体的祖先を確定できない`datalist`, `progress`をBとした。GUI widgetや同じ要求を扱う先行案は、採用因果がないまま系譜へ接続していない。
+
+対象5ページの現在の意味もWHATWG HTML Living Standard本文から要約した。史料検証済みと現在の意味の要約済みは106ページとなった。
+
+## [2026-08-09] lint | 106検証済みページ
+
+全115ページの確度集計を再計算し、A 54件、A− 14件、B 34件、C 4件、未評価9件が`wiki/README.md`と一致することを確認した。Forms/UI系5ページについて、必須見出し順、現行定義の要約、空でない証拠表、具体的な未解決点、相対リンク、generic placeholder、Markdown whitespaceを検査した。

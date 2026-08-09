@@ -1,58 +1,65 @@
 # `<datalist>`
 
-> 状態: 骨格作成済み（史料未検証）
+> 状態: Web Forms 2.0での導入目的を検証済み（`select editable`からの変更経路は未確認）
 
 ## 概要
 
-未調査。現在の意味と歴史的な由来を混同せずに記述する。
+`datalist`は2004年のWeb Forms 2.0で、任意入力を許す`input`へauthor-specified suggestionsと非対応UA向けfallbackを与えるため導入された。具体的な直前祖先は確定できない。
 
 ## 現在の意味
 
-一次定義: [WHATWG HTML Living Standardの `<datalist>` 定義](https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element)（2026-08-09確認）。定義内容の要約は未作成。
+WHATWG HTML Living Standardでは、他のcontrolに対する定義済みoptionの集合を表す。通常は`input`の`list`属性から参照される。[一次定義](https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element)（2026-08-09確認）
 
 ## HTMLへの導入
 
-未調査。初出、導入主体、導入理由を分離して記録する。
+2004年12月10日のWHATWG Web Forms 2.0 Call for Commentsは、任意値を許したままUAが候補を提示する`input list`を補完する新要素として`datalist`を定義した。候補を`option`で与える役割と、非対応UA向けfallback contentを置く役割を持たせた。[Web Forms 2.0](http://www.whatwg.org/specs/web-forms/2004-12-10-call-for-comments/#the-datalist)
 
 ## HTML直前の祖先
 
-未確認。名称、外見、現在の用途の類似だけから祖先を推定しない。
+未確認。2003年案の`select editable`は自由入力と候補選択を組み合わせる同じ要求を扱うが、`input list` + `datalist`へ変更した決定記録は確認できない。
 
 ## さらに上流の由来
 
 ### 証拠
 
-未確認。
+2003年12月4日の*Proposed XHTML Module: XForms Basic*は`select`へ`editable`属性を加え、列挙した候補以外の値も入力できるcontrolを定義していた。[2003年案](https://www.hixie.ch/specs/html/forms/xforms-basic-1#the-select-element)
 
 ### 解釈
 
-なし。史料確認後も、証拠とは別に記述する。
+`select editable`と`datalist`は同じ要求への異なる構文と見られるが、採用因果を示す史料がないため、探索上の先行候補に留める。
 
 ## 系譜
 
-未確定。史料で確認済みの接続だけを記載する。
+2004年Web Forms 2.0 `datalist` → HTML5 `datalist` → 現行HTML `datalist`
+
+Web Forms 2.0からHTML5への矢印は仕様全体の統合記録に基づく。要素単位の統合差分は未確認である。
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 2003-12-04 | *Proposed XHTML Module: XForms Basic* | Editor's Working Draft | 自由入力と候補選択を組み合わせる`select editable` | https://www.hixie.ch/specs/html/forms/xforms-basic-1#the-select-element | 2026-08-09 |
+| 2004-12-10 | *Web Forms 2.0* | WHATWG Call for Comments | `input list`を補完する`datalist`、候補値、fallback | http://www.whatwg.org/specs/web-forms/2004-12-10-call-for-comments/#the-datalist | 2026-08-09 |
+| 2005-04-11 | *Web Forms 2.0* | W3C Member Submission | 同じ`input list`と`datalist`の構造 | https://www.w3.org/submissions/2005/SUBM-web-forms2-20050411/#the-datalist | 2026-08-09 |
+| 2010-03-04 | *HTML5 differences from HTML4* | W3C Working Draft | 独立仕様Web Forms 2.0がHTML5へ完全統合されたこと | https://www.w3.org/TR/2010/WD-html5-diff-20100304/#changes-2009-04-23 | 2026-08-09 |
+| 2026-08-09 | *HTML Living Standard: The datalist element* | 現行仕様 | `datalist`の現行定義 | https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element | 2026-08-09 |
 
 ## 確度
 
-**未評価**
+**B**
 
-ハンドオフの確度は出発仮説として扱い、一次資料の再確認後に評価する。
+導入時の目的と構文は確認できるが、具体的な先行物から`datalist`を採用した因果は確認できない。
 
 ## 否定された仮説
 
-なし。ハンドオフで撤回済みの説明がある場合は、個別調査時に理由とともに移記する。
+GUI combo box、後代のautocomplete実装、2003年の`select editable`は、機能の類似だけでは直接祖先としない。
 
 ## 未解決
 
-- HTMLへの導入理由は確認できるか。
-- HTML直前の具体的祖先は確認できるか。
-- さらに上流の由来を示す直接史料はあるか。
+- `datalist`／`list`を追加した正確なrevisionまたは議論は確認できるか。
+- `select editable`から構造を変えた主体、理由、fallback設計の由来は何か。
+- HTML5統合時の要素単位の差分は確認できるか。
 
 ## 調査記録
 
-未着手。
+2003年Ian Hickson案、2004年Web Forms 2.0 Call for Comments、2005年W3C Member Submission、2010年HTML5差分、現行Living Standardを確認した。変更判断の議論と特定GUIからの採用記録は確認できなかった。横断比較は[Forms/UI要素の調査ノート](../research/forms-ui-elements.md)を参照する。
