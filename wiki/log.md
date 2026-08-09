@@ -157,3 +157,15 @@ HTML DTD内部の前身構造と欠落を確認できた`body`, `head`をA−、
 ## [2026-08-09] lint | 97検証済みページ
 
 全115ページの確度集計を再計算し、A 51件、A− 13件、B 29件、C 4件、未評価18件が`wiki/README.md`と一致することを確認した。`details`と`summary`について、必須見出し順、現行定義の要約、空でない証拠表、具体的な未解決点、相対リンク、generic placeholder、Markdown whitespaceを検査した。
+
+## [2026-08-09] research | HTML media要素
+
+`audio`, `video`, `source`, `track`について、WHATWG mailing list、2007年の保存草案、2010年のW3C video accessibility議論とWorking Draft、現行Living Standardを照合した。[調査ノート](research/media-elements.md)
+
+Operaの実験実装・提案からWHATWGへの採用因果を確認できた`video`をA、導入理由または設計modelは確認できるが具体的祖先を確定できない`audio`, `source`, `track`をBとした。SMIL、plugin、各種timed-text format、同時代のchange proposalは、名称や用途の類似だけでは系譜へ接続していない。
+
+対象4ページの現在の意味もWHATWG HTML Living Standard本文から要約した。史料検証済みと現在の意味の要約済みは101ページとなった。
+
+## [2026-08-09] lint | 101検証済みページ
+
+全115ページの確度集計を再計算し、A 52件、A− 13件、B 32件、C 4件、未評価14件が`wiki/README.md`と一致することを確認した。media系4ページについて、必須見出し順、現行定義の要約、空でない証拠表、具体的な未解決点、相対リンク、generic placeholder、Markdown whitespaceを検査した。

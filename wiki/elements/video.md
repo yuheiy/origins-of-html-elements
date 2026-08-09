@@ -1,58 +1,63 @@
 # `<video>`
 
-> 状態: 骨格作成済み（史料未検証）
+> 状態: Operaの実験実装・提案からWHATWGへの導入を検証済み（Opera側の完全な提案本文と実装sourceは未確認）
 
 ## 概要
 
-未調査。現在の意味と歴史的な由来を混同せずに記述する。
+`video`は2007年、Operaの実験実装と提案を受けてWHATWGへ導入された。video固有のsemantics、timed mediaの共通API、fallbackを汎用`object`やpluginに依存せず提供することが目的だった。
 
 ## 現在の意味
 
-一次定義: [WHATWG HTML Living Standardの `<video>` 定義](https://html.spec.whatwg.org/multipage/media.html#the-video-element)（2026-08-09確認）。定義内容の要約は未作成。
+WHATWG HTML Living Standardでは、videoまたはmovie、およびcaption付きaudio fileの再生に使うmedia elementである。内容は非対応browser向けfallbackであり、accessibility用代替には`track`や近接するtranscript等を使う。[一次定義](https://html.spec.whatwg.org/multipage/media.html#the-video-element)（2026-08-09確認）
 
 ## HTMLへの導入
 
-未調査。初出、導入主体、導入理由を分離して記録する。
+2007年2月28日、OperaのAnne van Kesterenが内部実験版で実装した`video`要素をWHATWGへ提案した。WHATWG editor Ian Hicksonは3月9日のrevision 674で未完成の節を追加し、3月15日にOperaの提案と実装経験を受けた追加だと説明し、3月16日のrevision 678で要素とmedia APIを本格的に導入した。
 
 ## HTML直前の祖先
 
-未確認。名称、外見、現在の用途の類似だけから祖先を推定しない。
+Operaの実験的`video`要素とWHATWGへの提案。提案者のmailが実装と構文を示し、編集者の回答がその提案と実装経験を受けた仕様追加を明記する。
 
 ## さらに上流の由来
 
 ### 証拠
 
-未確認。
+導入議論は、pluginや汎用`object`ではvideoを種類として識別しにくく、pluginごとにAPIが異なる問題を挙げ、`img`と同様にmedia固有のsemanticsを持つ要素とtimed mediaの共通APIを要求した。
 
 ### 解釈
 
-なし。史料確認後も、証拠とは別に記述する。
+plugin／`object`中心のvideo埋め込みを、HTML上で識別可能な専用要素と共通script APIへ置き換える設計と解釈できる。
 
 ## 系譜
 
-未確定。史料で確認済みの接続だけを記載する。
+Operaの実験的`video`要素・提案（2007年） → WHATWG Web Applications 1.0 `video`（2007年） → 現行HTML `video`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 2007-02-28 | “`<video>` element proposal” | WHATWG mailing list・実装提案 | Operaの内部実験実装、`Audio()`に似たAPI、`object`型の埋め込みとvideo固有semanticsを組み合わせた提案。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-February/009702.html) | 2026-08-09 |
+| 2007-03-09 | WHATWG HTML commit `845c40c8`（revision 674） | 仕様commit | 未完成の`video`要素節の初回追加。 | [一次資料](https://github.com/whatwg/html/commit/845c40c8035ddccb20301433b2f1225a1203e4de) | 2026-08-09 |
+| 2007-03-15 | “Video proposals” | WHATWG mailing list・編集者回答 | Operaの提案と実装経験を受けた仕様追加、固有semantics、共通API、`object`実装上の問題、SMILとの差。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/052433.html) | 2026-08-09 |
+| 2007-03-16 | WHATWG HTML commit `753f385d`（revision 678） | 仕様commit | `video`本体と共通media APIの本格導入。 | [一次資料](https://github.com/whatwg/html/commit/753f385d6eb176f4cc7075ba9f41ed3190848b10) | 2026-08-09 |
+| 2007-03-29 | *Web Applications 1.0*, revision 699 | WHATWG保存仕様 | videoまたはmovieを表すmedia element、fallback、共通media API、当時の主用途。 | [一次資料](https://platform.html5.org/history/webapps/r699.html#video) | 2026-08-09 |
+| 2026-08-09 | WHATWG HTML Living Standard, “The video element” | 現行仕様 | `video`の現行定義。 | [一次資料](https://html.spec.whatwg.org/multipage/media.html#the-video-element) | 2026-08-09 |
 
 ## 確度
 
-**未評価**
+**A**
 
-ハンドオフの確度は出発仮説として扱い、一次資料の再確認後に評価する。
+要素単位の提案と実験実装からWHATWG仕様へ追加した因果関係を、提案者と編集者の同時代mailおよび直後の仕様で確認できるため。
 
 ## 否定された仮説
 
-なし。ハンドオフで撤回済みの説明がある場合は、個別調査時に理由とともに移記する。
+SMIL `video`をHTML `video`の直接祖先とする説明。Ian HicksonはSMIL `video`がSMIL `ref`とsemantically equivalentで、提案中のHTML `video`よりHTML `object`に近いと回答しているため、同名だけでは接続しない。
 
 ## 未解決
 
-- HTMLへの導入理由は確認できるか。
-- HTML直前の具体的祖先は確認できるか。
-- さらに上流の由来を示す直接史料はあるか。
+- Opera添付提案の完全な本文、実験実装のsource、実装日は確認できるか。
+- Operaが`video`という名称とAPIを選んだ、さらに上流のsourceはあるか。
 
 ## 調査記録
 
-未着手。
+2007年2–3月のWHATWG mailing list、revision 674、678、699、現行Living Standardを確認した。Opera提案以前の実装・提案と、Operaの完全な添付資料・sourceは確認できなかった。横断比較は[HTML media要素の調査ノート](../research/media-elements.md)を参照する。
