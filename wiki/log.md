@@ -537,3 +537,9 @@ XFormsで確認できる初期`output`、HTML版の追加時期、contentとdata
 ## [2026-08-11] update | Rawリソースの保守ファイル
 
 Rawリソースの取得スクリプトとマニフェストを`raw/`直下へ移し、配置に合わせて`fetch.sh`と`sources.tsv`へ改名した。`raw/README.md`の複数の正本URLは裸URLから明示的なMarkdownリンクへ変更し、GitHub Previewで区切りがリンクに取り込まれる表示崩れを解消した。
+
+## [2026-08-11] schema | LLM Wiki Scheme
+
+`AGENTS.md`をRaw sources、Wiki、Schemeの三層とIngest、Query、Research、Lintの基本操作で再構成した。証拠区分、確度、状態、要素ページ契約、敵対的検証をドメイン固有の制約として維持し、4操作のshortcutを`.agents/skills/`へ追加した。生成Indexの契約と標準ライブラリだけの生成器も追加した。
+
+既存Wikiには移行が必要である。Rawのappend-only化と全根拠資料の収録、任意のsourceページとsynthesis体系、frontmatterの`summary`、`wiki/index.md`への切り替え、`wiki/README.md`の廃止、Scheme適用後の一操作一Log項目への移行は、この変更では実施していない。過去のLogはappend-onlyの履歴として維持する。
