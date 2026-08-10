@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-HTMLへpresentation機能を増やし続けず、文書内のstyle rulesを`HEAD`へまとめるため、1996年のW3C草案が提案した要素である。HTML 3.2のplaceholderを経てHTML 4へ入ったが、HTML 4への接続は草案集合単位でしか確認できない。
+確認できる最初の`STYLE`は1995年4月25日のHTML 3.0草案にあり、文書内のstyle overridesを`HEAD`へ置く。11月22日のIETF HTML WG草案は既存`LINK`による外部sheetと新しい`STYLE`による文書内rulesの設計理由を説明するが、4月のHTML 3.0案からこの草案への個別採用経路は確認できない。
 
 ## 現在の意味
 
@@ -14,13 +14,15 @@ WHATWG HTML Living Standardでは、CSS style sheetを文書へ埋め込む。`m
 
 ## HTMLへの導入
 
-1996年1月15日のW3C Working Draft *HTML3 and Style Sheets*は、HTMLを新しい`STYLE`要素で拡張し、文書内style sheetを`HEAD`へ置くと定義した。rendering instructionsを個別要素、document head内のgroup、または外部style sheetへ置き、新しいrendering formのたびにHTML自体を拡張せず、特定のstyle-sheet notationから独立させることが目的だった。[HTML3 and Style Sheets](https://www.w3.org/TR/WD-style-960115)
+1995年4月25日のHTML 3.0草案は、外部style sheetを`LINK REL=StyleSheet`で参照し、文書固有のoverridesを`HEAD`内の`STYLE`へ置くと規定する。確認できる最初の出現はこの草案だが、提案者と採用以前の経路は確認できない。[HTML 3.0 introduction](https://www.w3.org/MarkUp/html3/intro.html) [HTML 3.0 document head](https://www.w3.org/MarkUp/html3/dochead.html)
 
-1月19日版は`STYLE`をdocument内inline style sheets用の新要素とし、`TYPE`でlanguageを指定した。HTML 3.2は将来のstyle sheets導入用placeholderとして収録し、1997年のCougar向け草案を経てHTML 4が`HEAD`内のstyle rulesとして規定した。[1月19日版](https://www.w3.org/TR/WD-style-960119) [HTML 3.2](https://www.w3.org/TR/REC-html32) [HTML 4.01](https://www.w3.org/TR/html401/present/styles.html#style-group)
+11月22日のIETF HTML WG Internet-Draft *HTML and Style Sheets*は、HTMLを新しい`STYLE`要素と同名属性で拡張すると明記し、文書内style sheet用の`STYLE`を`HEAD`へ置いた。同草案はHTML 2.0の`LINK`を基礎に`REL=stylesheet`を定義し、rendering instructionsを個別要素、document head内のgroup、または外部style sheetへ置いて、新しいrendering formのたびにHTML自体を拡張しないことを目的とした。ただし、この説明はHTML 3.0草案より後であり、4月の導入原因を単独では証明しない。[IETF draft-ietf-html-style-00](https://datatracker.ietf.org/doc/html/draft-ietf-html-style-00)
+
+1996年1月版は`STYLE`をdocument内inline style sheets用の新要素とし、属性名を`NOTATION`から`TYPE`へ変更した。HTML 3.2は将来のstyle sheets導入用placeholderとして収録し、1997年のCougar向け草案を経てHTML 4が`HEAD`内のstyle rulesとして規定した。[IETF draft-ietf-html-style-01](https://datatracker.ietf.org/doc/html/draft-ietf-html-style-01) [HTML 3.2](https://www.w3.org/TR/REC-html32) [HTML 4.01](https://www.w3.org/TR/html401/present/styles.html#style-group)
 
 ## HTML直前の祖先
 
-W3C *HTML3 and Style Sheets*の`STYLE`である。document-local rulesを`HEAD`へgroupingし、style languageをHTMLから分離する設計がHTML 3.2 placeholderとHTML 4へ続く。ただし、W3CがCougar草案群をHTML 4のbasisとする記録は集合単位であり、要素単位の採録記録は未確認である。
+HTML 3.0 `STYLE`より前の具体的な要素、実装、または提案は未確認である。後発のIETF HTML WG草案は既存のHTML 2.0 `HEAD`／`LINK`をdocument-local rulesと外部style sheetsの二つの経路に再利用する設計を明記するが、HTML 3.0からの採用を述べない。
 
 ## さらに上流の由来
 
@@ -30,19 +32,29 @@ HTML 3.0 introductionは、HTMLへのpresentation機能追加を抑え、user pr
 
 ### 解釈
 
-style sheets一般とcascadeは設計背景だが、1994年案は外部`LINK`を示すだけで`STYLE`要素の起源を直接説明しない。確定系譜は1996年のHTML側の提案から始める。
+style sheets一般とcascadeは設計背景だが、1994年案は外部`LINK`を示すだけで`STYLE`要素の起源を直接説明しない。要素として確認できる系譜は1995年4月のHTML 3.0から始める。
 
 ## 系譜
 
-presentationをHTMLから分離しdocument-local rulesを`HEAD`へまとめる要求 → W3C `STYLE`草案（1996年） → HTML 3.2 placeholder → ［集合単位の接続］HTML 4 `STYLE` → 現行HTML `<style>`
+presentationをHTMLから分離する要求 → HTML 3.0 `STYLE`（1995-04-25）
+
+HTML 2.0 `HEAD`／`LINK`を再利用するstyle sheet統合案 → IETF HTML WG `STYLE`草案（1995-11-22）→ W3C style草案群（1996年）
+
+HTML 3.2 `STYLE` placeholder
+
+Cougar `STYLE`草案
+
+HTML 4 `STYLE` → 現行HTML `<style>`
+
+HTML 3.0から1995年11月草案、1996年草案群からHTML 3.2／Cougar、HTML 3.2／CougarからHTML 4への要素単位の接続は未確認である。
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
-| 1995 | HTML 3.0 introduction | 失効したInternet-Draftの仕様本文 | HTMLへのpresentation追加を抑え、style sheetsへ分離する要求。 | [一次資料](https://www.w3.org/MarkUp/html3/intro.html) | 2026-08-09 |
-| 1996-01-15 | *HTML3 and Style Sheets* | W3C Working Draft | 新しい`STYLE`要素、document headへのrulesのgrouping、導入理由。 | [一次資料](https://www.w3.org/TR/WD-style-960115) | 2026-08-09 |
-| 1996-01-19 | *HTML3 and Style Sheets* | W3C Working Draft | inline style sheetsと`TYPE`によるlanguage指定。 | [一次資料](https://www.w3.org/TR/WD-style-960119) | 2026-08-09 |
+| 1995-04-25 | HTML 3.0 | 失効したIETF Internet-Draftの仕様本文 | `LINK REL=StyleSheet`と`HEAD`内の`STYLE`を規定する、確認できる最初の出現。 | [IETF Datatracker](https://datatracker.ietf.org/doc/draft-ietf-html-specv3/)・[introduction](https://www.w3.org/MarkUp/html3/intro.html)・[document head](https://www.w3.org/MarkUp/html3/dochead.html) | 2026-08-10 |
+| 1995-11-22 | *HTML and Style Sheets* draft-00 | IETF HTML WG Internet-Draft | HTMLへ新しい`STYLE`要素を追加し、`HEAD`内のrulesとHTML 2.0 `LINK`による外部sheetを一体として定義する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-html-style-00) | 2026-08-10 |
+| 1996-01-23 | *HTML and Style Sheets* draft-01 | IETF HTML WG Internet-Draft | `STYLE`を維持し、style language指定を`TYPE`へ変更する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-html-style-01) | 2026-08-10 |
 | 1996-12-17 | CSS1 §1.1 | W3C Recommendation | HTMLとstyle sheetの四つの結合方式、`STYLE`の使用例。 | [一次資料](https://www.w3.org/TR/REC-CSS1-961217#containment-in-html) | 2026-08-09 |
 | 1997-01-14 | HTML 3.2 | W3C Recommendation | 将来のstyle sheets導入用placeholderとしての`STYLE`。 | [一次資料](https://www.w3.org/TR/REC-html32) | 2026-08-09 |
 | 1997-03-24 | *HTML and Style Sheets* | W3C Working Draft | Cougar向け`STYLE`定義、言語非依存、head内grouping。 | [一次資料](https://www.w3.org/TR/WD-style-970324) | 2026-08-09 |
@@ -53,14 +65,15 @@ presentationをHTMLから分離しdocument-local rulesを`HEAD`へまとめる�
 
 **A−**
 
-W3Cの具体的な先行`STYLE`提案と導入要求は直接確認でき、W3C自身がCougar草案群をHTML 4のbasisとするが、HTML 4への接続は集合単位で個別採録経路が欠けるため。
+具体的なHTML 3.0 `STYLE`と導入要求を確認でき、後発IETF／W3C草案、HTML 3.2、HTML 4まで同じ要素を追跡できるが、HTML 3.0から1995年11月草案、およびCougar／HTML 3.2からHTML 4への要素単位の採録記録が欠けるため。
 
 ## 否定された仮説
 
-CSSが`STYLE`要素を発明してHTMLへ移植したという説明。CSS1は`STYLE`をHTML側の結合機構として参照し、1994年CSS案は`LINK`を示すが`STYLE`要素への採用因果を示さない。DSSSLの特定要素からの派生も確認できない。
+1995年11月22日のIETF style草案が`STYLE`要素を初めて導入したという説明。HTML 3.0草案が同年4月25日にすでに`STYLE`を収録する。CSSが`STYLE`要素を発明してHTMLへ移植したという説明も、CSS1が`STYLE`をHTML側の結合機構として参照し、1994年CSS案が`LINK`しか示さないため採用しない。DSSSLの特定要素からの派生も確認できない。
 
 ## 未解決
 
-- 1996年1月15日草案以前に`STYLE`要素構文を提案した投稿はあるか。
+- 1995年4月25日のHTML 3.0草案以前に`STYLE`要素構文を提案した資料はあるか。
+- HTML 3.0 `STYLE`と1995年11月22日のIETF HTML WG草案を結ぶ採用・継承記録はあるか。
 - HTML 3.2 placeholderへ収録した個別の編集・合意記録はあるか。
 - Cougar草案からHTML 4 `STYLE`へ採録した際の要素単位の変更記録はあるか。

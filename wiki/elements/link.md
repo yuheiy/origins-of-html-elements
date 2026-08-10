@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-1992年のCERN設計ノートは、textへ局所化されたanchorと区別して、文書全体の関係を表す空の`LINK`要素を提案する。1993年1月6日版DTDで同要素を確認できるが、HTML以前の具体的なlink mechanismから採用した因果関係は確認できない。
+1992年のCERN設計ノートは、textへ局所化されたanchorと区別して文書全体の関係を表す空の`LINK`を新DTD向けに提案し、1993年1月6日版DTDに同要素が現れる。個別の採録記録と、HTML以前の具体的なlink mechanismから採用した因果関係は確認できない。
 
 ## 現在の意味
 
@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、文書を他のresourceへ結び付け、`re
 
 ## HTMLへの導入
 
-Berners-Leeの1992年*Future plans for HTML*は、localized anchorとは異なるdocument-wide linkとして`LINK`を提案し、related index、glossary、parent、author、同時印刷・複製などのrelationを用途に挙げる。1993年6月draft収録のRCS id `93/01/06`のDTDは`HEAD`内の空要素`LINK`を宣言し、本文はauthorship、index、glossary、version、tree structureなどを典型用途とする。[Berners-Lee, *Future plans for HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html) [1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)
+Berners-Leeの1992年*Future plans for HTML*は、列挙した改善から新しいDTDが生じるとしたうえで、localized anchorとは異なるdocument-wide linkとして空の`LINK`を提案し、related index、glossary、parent、author、同時印刷・複製などのrelationを用途に挙げる。1993年6月draft収録のRCS id `93/01/06`のDTDは`HEAD`内の空要素`LINK`を宣言し、本文はauthorship、index、glossary、version、tree structureなどを典型用途とする。[Berners-Lee, *Future plans for HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html) [1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)
 
 ## HTML直前の祖先
 
-直前の設計上の祖先は、Berners-Leeが1992年の*Future plans for HTML*で示した同名・同構造の`LINK`提案である。提案から1993年1月6日DTDへの採録を明記するchange recordは未回収である。
+直前の設計上の祖先は、Berners-Leeが新DTD向けの改善として示した同名・同構造の`LINK`提案である。1993年1月6日版DTDは`LINK`をdocument-wide information用wrapperである`HEAD`へ収録するが、改善案から新DTDを作るという説明は一覧全体についてのものであり、`LINK`個別の採録記録は未回収である。
 
 ## さらに上流の由来
 
@@ -32,7 +32,7 @@ Berners-Leeの1992年*Future plans for HTML*は、localized anchorとは異な�
 
 ## 系譜
 
-WWWのdocument-wide typed-link要求 → HTML `LINK`提案（1992）→ HTML DTD `LINK`（1993-01-06）→ 現行HTML `<link>`
+WWWのdocument-wide typed-link要求 → 新DTD向けHTML `LINK`提案（1992）→ HTML DTD `HEAD`内の`LINK`（1993-01-06）→ 現行HTML `<link>`
 
 ## 証拠
 
@@ -47,7 +47,7 @@ WWWのdocument-wide typed-link要求 → HTML `LINK`提案（1992）→ HTML DTD
 
 **A−**
 
-要素単位の同名proposalと直後のDTD実体を確認できるが、提案からDTDへの採録を明記する中間記録が欠けるため。
+要素単位の同名・同構造proposalと結果のDTD実体を確認できるが、改善案からDTDへの接続は一覧全体についての記述にとどまり、`LINK`個別の採録記録が欠けるため。
 
 ## 否定された仮説
 

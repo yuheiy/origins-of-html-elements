@@ -471,3 +471,17 @@ OASIS TRP 9501:1995とTM 9502:1995を保存し、CALS table modelの1990年初�
 初回調査と分離してMicrosoft IE3発表、Netscape manualとHTML reference、1995年HTML-WG mail、W3C frames／scripting草案、WHATWG仕様commit、HTML5 First Public Working Draftへ戻り、より早い出現、競合案、日付、主体、要素名、引用文脈、各矢印を再照合した。Microsoftの提出集合が`IFRAME`を含むとは確認できない一方、W3C草案が`FRAME`と`IMG`からの設計を明示することを確認した。`noscript`のNetscape実装とW3C案の時間順序、Netscape `WBR`からWHATWGへの再採録因果は未解決のまま維持した。HTML5 First Public Working Draftについては、確認できる主張をparserとserializationが`wbr`をempty elementとして扱う範囲へ限定した。
 
 対象3ページについて必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査した。全115要素の確度集計がA 79件、A− 19件、B 14件、C 3件、未評価0件で`wiki/README.md`と一致し、敵対的検証済み115件を維持できることを確認して合格とし、状態を`完成`とした。
+
+## [2026-08-10] research | 初期document wrapper／metadata群
+
+`head`、`body`、`link`、`style`について、1992年6月から12月のwww-talk、CERN設計ノート、初期DTD、HTML 3.0、IETF HTML style草案、HTML 3.2、HTML 4を照合した。1992年12月4日にConnollyがDTDの`HEAD/BODY`対応完了を報告した中間記録と、12月1日に`BODY`でmixed contentを避ける案を実施したと説明した記録を確認した。`STYLE`の初出を1996年から1995年4月25日のHTML 3.0へ訂正し、11月22日のIETF草案が既存`HEAD`／`LINK`をstyle sheet統合へ再利用した設計を確認した。
+
+## [2026-08-10] update | 初期document wrapper／metadata群
+
+4要素の初出、導入経路、直接祖先、系譜、証拠、否定された仮説、未解決点を更新した。`body`は1992年7月DTDが要素宣言とmixed content回避理由を直接示し、後の`DOCUMENT`からの再採録も当事者mailで確認できるためA−からAへ変更した。`head`は`HEADING`から`HEAD`へのtoken変更、`link`は提案からDTDへの個別採録、`style`はHTML 3.0から後続草案とHTML 4への個別経路が欠けるためA−を維持した。確度集計をA 80件、A− 18件、B 14件、C 3件とした。4要素を単一祖先へ束ねる共有系譜は追加しなかった。
+
+## [2026-08-10] lint | 初期document wrapper／metadata群の敵対的検証
+
+初回調査と分離して1992年6月のDTD議論、7月公開DTD、11月の`HEADING`／`DOCUMENT`再編案と採用支持、12月1日・4日の実装説明、1993年1月6日版DTD、HTML 3.0、1995年11月IETF style草案、HTML 3.2、HTML 4 DTDへ戻り、より早い出現、日付、主体、要素名、引用文脈、各矢印を再照合した。`HEADING`から`HEAD`への名称変更、`LINK`個別の採録、HTML 3.0 `STYLE`から後発草案への採用を未確認として維持し、HTML+ `RENDER`、CSS、DSSSL、Waterloo GML、先行hypertext systemを類似だけで接続していないことを確認した。
+
+対象4ページについて必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査した。全115要素の確度集計がA 80件、A− 18件、B 14件、C 3件、未評価0件で`wiki/README.md`と一致し、敵対的検証済み115件を維持できることを確認して合格とし、状態を`完成`とした。
