@@ -14,7 +14,9 @@ WHATWG HTML Living Standardでは、計算結果またはuser actionの結果を
 
 ## HTMLへの導入
 
-Ian Hicksonは2003年12月4日の*Proposed XHTML Module: XForms Basic*で、XFormsの一部機能を既存HTML formsへ最小の影響で加える方針のもと`output`を定義した。`span`に似るがDOM上はform controlで、内容が値となり、scriptで更新でき、form submissionではsuccessful controlにならない設計だった。[2003年案](https://www.hixie.ch/specs/html/forms/xforms-basic-1)
+2003年9月の先行案には`output`がなく、Ian Hicksonは同年12月4日の*Proposed XHTML Module: XForms Basic*で追加した。XFormsの一部機能を既存HTML formsへ最小の影響で加え、その宣言的機能の大半をscriptで扱う設計方針のもと、`output`を`span`に似るがDOM上はform controlで、内容が値となり、scriptで更新でき、form submissionではsuccessful controlにならない要素とした。[先行案](https://www.hixie.ch/specs/html/forms/hfp.html) [2003年12月案](https://www.hixie.ch/specs/html/forms/xforms-basic-1)
+
+同年12月7日のXFormsとの比較議論で、Hicksonは動的なboilerplate textはcontentでありdata modelに属さないと回答し、HTML版`output`のcontentとdata modelの境界を要素単位で示した。DOM値をscriptで更新する位置付けは、宣言的機能をscriptへ移す仕様全体の方針が示す。[編集者回答](https://lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html)
 
 2004年Web Forms 2.0と2005年W3C Member Submissionが`output`を継続し、Web Forms 2.0全体は後にHTML5へ統合された。[Web Forms 2.0](https://www.w3.org/submissions/2005/SUBM-web-forms2-20050411/#the-output) [HTML5差分](https://www.w3.org/TR/2010/WD-html5-diff-20100304/#changes-2009-04-23)
 
@@ -26,11 +28,11 @@ XFormsの`output`を含む機能集合。2003年案はXForms機能をHTML forms�
 
 ### 証拠
 
-2001年のXForms 1.0 Working Draftは、instance dataの値を他のcontent中へ表示し、userが変更できない`output` form controlを定義した。[XForms草案](https://www.w3.org/TR/2001/WD-xforms-20010216/ui.html#id2607759)
+2000年12月19日のXForms 1.0 Working Draftは、data valueを他のcontent中へ表示し、userが変更できない`output` form controlを定義した。[XForms草案](https://www.w3.org/TR/2000/WD-xforms-20001219/ui.html#N1052)
 
 ### 解釈
 
-HTML版はXFormsのinstance-data bindingをそのまま移植せず、内容とDOM valueをscriptで更新する、既存HTML formsに近いcontrolへ簡素化した。
+HTML版はXFormsのinstance-data bindingをそのまま移植せず、動的な表示内容をdata modelではなくcontentとして扱い、DOM valueをscriptで更新する既存HTML formsに近いcontrolへ作り直した。
 
 ## 系譜
 
@@ -42,8 +44,10 @@ XForms `output`を含む機能集合 → 2003年HTML forms案 `output` → Web F
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
-| 2001-02-16 | *XForms 1.0: XForms User Interface* | W3C Working Draft | 非editableなdata value表示用`output` form control | https://www.w3.org/TR/2001/WD-xforms-20010216/ui.html#id2607759 | 2026-08-09 |
-| 2003-12-04 | *Proposed XHTML Module: XForms Basic* | Editor's Working Draft | XForms機能をHTML formsへ加える方針とHTML `output` | https://www.hixie.ch/specs/html/forms/xforms-basic-1 | 2026-08-09 |
+| 2000-12-19 | *XForms 1.0: XForms User Interface* | W3C Working Draft | 非editableなdata value表示用`output` form control | https://www.w3.org/TR/2000/WD-xforms-20001219/ui.html#N1052 | 2026-08-10 |
+| 2003-09 | *XHTML Module: Extensions to Form Controls* | Opera Working Draft | HTML forms拡張の先行版には`output`要素がないこと | https://www.hixie.ch/specs/html/forms/hfp.html | 2026-08-10 |
+| 2003-12-04 | *Proposed XHTML Module: XForms Basic* | Editor's Working Draft | XForms機能をHTML formsへ加える方針とHTML `output` | https://www.hixie.ch/specs/html/forms/xforms-basic-1 | 2026-08-10 |
+| 2003-12-07 | “Re: Proposal for Extensions to HTML4” | www-forms・編集者回答 | 動的boilerplate textをdata modelではなくcontentとして扱う設計判断 | https://lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html | 2026-08-10 |
 | 2005-04-11 | *Web Forms 2.0* | W3C Member Submission | scriptで更新する`output`と計算例 | https://www.w3.org/submissions/2005/SUBM-web-forms2-20050411/#the-output | 2026-08-09 |
 | 2010-03-04 | *HTML5 differences from HTML4* | W3C Working Draft | Web Forms 2.0のHTML5への統合 | https://www.w3.org/TR/2010/WD-html5-diff-20100304/#changes-2009-04-23 | 2026-08-09 |
 | 2026-08-09 | *HTML Living Standard: The output element* | 現行仕様 | `output`の現行定義 | https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element | 2026-08-09 |
@@ -60,5 +64,5 @@ HTML `samp`や一般的なprogram outputから生まれたとは確認できな�
 
 ## 未解決
 
-- `output`単独についてXFormsからの採用を決めたmail、会議、または編集履歴はあるか。
-- XFormsのbindingされたread-only valueからscript更新可能なHTML要素へ変えた詳細な理由は何か。
+- 2003年9月案から12月4日案までのどの議論で`output`追加を決め、XForms `output`との対応を選んだか。
+- XForms bindingを外す理由以外に、`value`、`defaultValue`、resetというHTML固有のDOM modelを選んだ要素単位の判断記録はあるか。

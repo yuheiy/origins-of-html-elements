@@ -517,3 +517,19 @@ HTML+からHTML 3.0、後続のW3C HTML設計への継承は集合単位で直�
 初回調査と分離してHTML+ document amendmentsとDTD、Raggett mail、HTML 3.0 DTD履歴とInternet-Draft、W3C声明、HTML 4 First Public Working Draft、編集者告知、Working Group議事録、Proposed Recommendationへ戻り、より早い出現、日付、主体、要素名、引用文脈、各矢印を再照合した。集合単位の帰属を個別改名や個別採録とせず、HTML+のrevision history限定、Cougarの欠落、`cite`／`datetime`の未確認由来を維持した。
 
 対象2ページと共有系譜について必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査した。`h1-h6.md`を6要素として数え、全115要素の確度集計がA 83件、A− 17件、B 12件、C 3件、未評価0件で`wiki/README.md`と一致し、敵対的検証済み115件を維持できることを確認して合格とし、状態を`完成`とした。
+
+## [2026-08-10] research | `output`のXForms／Web Forms系譜
+
+`output`について、2000年と2001年のXForms草案、2003年9月と12月のHTML forms案、同時代のwww-formsとwww-archive、Web Forms 2.0を照合した。XFormsで確認できる出現を2000年12月19日へ前倒しし、2003年9月のHTML forms案には`output`がなく、12月4日案で追加されたことを確認した。
+
+12月7日の編集者回答は、動的なboilerplate textをdata modelではなくcontentとして扱う境界判断を`output`への批判に答えて示していた。DOM値をscriptで更新する設計は、XFormsの宣言的機能の大半をscriptへ移す仕様全体の方針に位置付けた。9月案から12月案までの要素単位の採用判断と、`value`、`defaultValue`、resetを選んだ個別理由は確認できなかった。
+
+## [2026-08-10] update | `output`の設計変更理由
+
+XFormsで確認できる初期`output`、HTML版の追加時期、contentとdata modelの境界、script中心の設計方針、証拠、未解決点を更新した。XForms機能集合からHTML formsへの因果は確認できるが、`output`単独の採用判断は欠けるため、確度A−と全体集計を維持した。新しい共有系譜とraw資料は追加していない。
+
+## [2026-08-10] lint | `output`の敵対的検証
+
+初回調査と分離して2000年と2001年のXForms草案、2003年9月と12月のHTML forms案、12月5日の批判、7日の編集者回答、8日の再反論、Web Forms 2.0へ戻り、より早い出現、追加時期、主体、要素名、引用文脈、系譜の各矢印を再照合した。動的boilerplate textをcontentとする判断を、XFormsから`output`を採用した判断やHTML固有DOM modelの個別理由へ拡張せず、A−と二つの未解決点を維持した。
+
+対象ページについて必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査した。`h1-h6.md`を6要素として数え、全115要素の確度集計がA 83件、A− 17件、B 12件、C 3件、未評価0件で`wiki/README.md`と一致し、敵対的検証済み115件を維持できることを確認して合格とし、状態を`完成`とした。
