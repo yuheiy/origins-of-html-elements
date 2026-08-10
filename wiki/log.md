@@ -485,3 +485,19 @@ OASIS TRP 9501:1995とTM 9502:1995を保存し、CALS table modelの1990年初�
 初回調査と分離して1992年6月のDTD議論、7月公開DTD、11月の`HEADING`／`DOCUMENT`再編案と採用支持、12月1日・4日の実装説明、1993年1月6日版DTD、HTML 3.0、1995年11月IETF style草案、HTML 3.2、HTML 4 DTDへ戻り、より早い出現、日付、主体、要素名、引用文脈、各矢印を再照合した。`HEADING`から`HEAD`への名称変更、`LINK`個別の採録、HTML 3.0 `STYLE`から後発草案への採用を未確認として維持し、HTML+ `RENDER`、CSS、DSSSL、Waterloo GML、先行hypertext systemを類似だけで接続していないことを確認した。
 
 対象4ページについて必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査した。全115要素の確度集計がA 80件、A− 18件、B 14件、C 3件、未評価0件で`wiki/README.md`と一致し、敵対的検証済み115件を維持できることを確認して合格とし、状態を`完成`とした。
+
+## [2026-08-10] research | Ruby群
+
+`ruby`、`rt`、`rp`について、1997年の属性案、W3C Ruby草案とRecommendation、JISとの協調記録、2007年WHATWG mail、2008年仕様commit、HTML WGによる独立corpus追試、Microsoftの適合性記録を照合した。1998年草案がDürstの`RUBY`属性案に大きく着想を得たこと、2007年に編集者が`ruby`のparserとsemanticsを調査して採録予定だったこと、2008年commitがIEの異常系より既存Webの三要素を含む単純構文との互換性を優先したことを確認した。
+
+commit直後のDMOZ由来13万ページ標本は独立追試であり、編集者が使った元corpusではない。W3C RecommendationをHTML5の採用元として編集者が直接参照した記録、commitが例示した異常入力についてIEが生成した正確なDOM tree、1999年のW3C WG会合の詳細議事録は確認できなかった。
+
+## [2026-08-10] update | Ruby群の上流系譜と確度
+
+三要素の導入経路、HTML直前の実利用、Dürst案からW3C要素modelへの上流、JIS X 4052との協調、IE parserとの採否差分、否定された仮説、未解決点を更新した。既存Webの`ruby`、`rt`、`rp`を含む具体的構文からHTML5への因果を要素単位で確認できたため、三要素をA−からAへ変更し、確度集計をA 83件、A− 15件、B 14件、C 3件とした。W3C／XHTML枝からHTML5への未確認接続は矢印で補っていない。
+
+## [2026-08-10] lint | Ruby群の敵対的検証
+
+初回調査と分離して1997年Internet-Draft、1998年W3C草案、2001年Recommendation、2007年WHATWG mail、2008年仕様commitとparser comment、HTML WGの独立corpus追試、導入直後の反対意見、Microsoftの適合性記録へ戻り、日付、主体、要素名、引用文脈、各矢印を再照合した。独立追試を編集者の元corpusとせず、IE実装を直接祖先ではなく比較対象とし、W3C／XHTML枝からHTML5への直接採用を未確認のまま維持した。
+
+対象3ページについて必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査した。`h1-h6.md`を6要素として数え、全115要素の確度集計がA 83件、A− 15件、B 14件、C 3件、未評価0件で`wiki/README.md`と一致し、敵対的検証済み115件を維持できることを確認して合格とし、状態を`完成`とした。

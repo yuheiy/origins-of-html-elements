@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-ruby非対応user agent向けの括弧を表す要素としてW3Cが提案・規範化し、既存Web利用との互換性を考慮して2008年に`ruby`、`rt`とともにHTML5へ追加された。
+ruby非対応user agent向けの括弧を表す要素としてW3Cが提案・規範化し、既存Web上の`rp`を含む単純なruby markupとの互換性を保つため、2008年に`ruby`、`rt`とともにHTML5へ追加された。
 
 ## 現在の意味
 
@@ -14,48 +14,55 @@ WHATWG HTML Living Standardでは、ruby annotationをsupportしないuser agent
 
 ## HTMLへの導入
 
-2008年5月26日、Ian Hicksonが`ruby`、`rt`、`rp`とparser規則をWHATWG HTMLへ同時追加した。差分は`rp`をlegacy user agent用の括弧構文として定義し、commitはWeb上のruby利用との互換性を採用判断として記す。[仕様commit](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)
+2007年8月12日、Ian Hicksonは`ruby`のparsingとsemantic requirementsを既に調査しており追加予定だと説明した。2008年5月26日、`ruby`、`rt`、`rp`とparser規則をWHATWG HTMLへ同時追加し、`rp`をlegacy user agent用の括弧構文として定義した。commitはIEの異常系まで再現せず、Web上で使われる`rp`入りの単純構文との互換性を優先した。[編集者回答](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html) [仕様commit](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)
 
 ## HTML直前の祖先
 
-W3C Ruby語彙、IE実装、既存Web上の`rp`利用という集合である。HTML5 commitは既存利用を参照するが、そのcorpusや一つの採用元を特定しない。
+既存Web上の`ruby`、`rt`、`rp`による単純なmarkupである。HTML5 commitは`rp`を含む二つの実用構文を列挙し、その利用との互換性を採用判断とし、IE実装は厳密には再現しない比較対象とした。直後のDMOZ由来13万ページによる独立追試でも`rp`の意図的利用が確認されたが、編集者自身が使ったcorpusは特定できない。[独立追試](https://lists.w3.org/Archives/Public/public-html/2008May/0620.html)
 
 ## さらに上流の由来
 
 ### 証拠
 
-1998年W3C草案は`rp`をruby非対応browser用のparenthesisとして提案し、2001年RecommendationがXHTML Ruby moduleの同じfallback機構として規範化した。[1998年草案](https://www.w3.org/TR/1998/WD-ruby-19981221/) [2001年Recommendation](https://www.w3.org/TR/2001/REC-ruby-20010531/)
+1997年のMartin Dürstによる`RUBY`属性案は、rubyをinline表示するときannotationを括弧で囲む実装方法を示した。1998年W3C草案はこの案に大きく着想を得たと明記し、括弧を構造化する`rp`を提案した。2001年Recommendationは`rp`を“ruby parenthesis”と説明し、非対応user agent向けfallbackとして規範化した。[1997年案](https://www.w3.org/International/draft-duerst-ruby-01) [1998年草案](https://www.w3.org/TR/1998/WD-ruby-19981221/) [2001年Recommendation](https://www.w3.org/TR/2001/REC-ruby-20010531/#simple)
+
+RecommendationはJIS X 4052:2000のruby markupと協調して作られたが、JIS側は`rp`を許さないと記す。[謝辞](https://www.w3.org/TR/2001/REC-ruby-20010531/#acks)
 
 ### 解釈
 
-ruby markupを理解しないuser agentでもannotationとの境界を読めるfallbackを、HTML parserへ継承したと解釈できる。
+属性案で示されたinline括弧表示をW3Cが専用fallback要素へ構造化し、同名・同役割の既存Web markupをHTML parserへ統合したと解釈できる。ただしW3C RecommendationからHTML5への直接採用記録はない。
 
 ## 系譜
 
-W3C Ruby `rp`案（1998年） → XHTML Ruby `rp`（2001年）／IE実装・既存Web利用 → HTML5 `rp`追加（2008年） → 現行HTML `rp`
+Dürst `RUBY`属性案のinline括弧表示（1997年） →［大きく着想］W3C Ruby `rp`案（1998年） → XHTML Ruby `rp`（2001年）
 
-個別の直前経路は集合レベルの資料しかなく、一部欠落する。
+既存Webの`rp`利用 → HTML5 `rp`追加（2008年） → 現行HTML `rp`
+
+W3C／XHTML枝からHTML5への接続は未確認である。
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 1997-02-28 | *Ruby in the Hypertext Markup Language* | Internet-Draft | `RUBY`属性案と、非対応表示の先行案であるinline括弧表示。 | [一次資料](https://www.w3.org/International/draft-duerst-ruby-01) | 2026-08-10 |
 | 1998-12-21 | *Ruby* | W3C Working Draft | HTML拡張の`rp`を非対応browser用parenthesisとして提案。 | [一次資料](https://www.w3.org/TR/1998/WD-ruby-19981221/) | 2026-08-09 |
 | 2001-05-31 | *Ruby Annotation* | W3C Recommendation | XHTML moduleの`rp`をfallback括弧として規範化。 | [一次資料](https://www.w3.org/TR/2001/REC-ruby-20010531/) | 2026-08-09 |
-| 2008-05-26 | WHATWG HTML commit `f4efc736` | 仕様commit | `rp`を含むruby三要素とlegacy UA用括弧構文の追加。 | [一次資料](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9) | 2026-08-09 |
+| 2007-08-12 | “My case for Ruby-elements” | WHATWG mail | 編集者が`ruby`のparserとsemanticsを調査済みで追加予定と説明。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html) | 2026-08-10 |
+| 2008-05-26 | WHATWG HTML commit `f4efc736` | 仕様commit | `rp`を含む単純構文の実利用を根拠に、三要素と`rp`開始tagのparser規則を追加。 | [一次資料](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9) | 2026-08-10 |
+| 2008-05-26 | “Current HTML ruby markup usage” | HTML WG mail／corpus追試 | DMOZ由来13万ページ標本で`rp`を含む意図的なruby markupを確認。 | [一次資料](https://lists.w3.org/Archives/Public/public-html/2008May/0620.html) | 2026-08-10 |
 
 ## 確度
 
-**A−**
+**A**
 
-語彙集合とHTML5追加の因果は確認できるが、HTML5 commitが参照した既存利用から`rp`への個別経路が不明なため。
+既存Webの`rp`を含む具体的な単純構文との互換性を理由にHTML5へ追加したことを、要素単位のcommitで確認できるため。W3C／XHTML枝からHTML5への接続と元corpusの来歴は未確認である。
 
 ## 否定された仮説
 
-W3C Recommendationだけから直接採用したという説明。役割は連続するが、HTML5 commitは単一の採用元を明記しない。
+W3C Recommendationだけから直接採用したという説明。役割は連続し、導入後のreviewではRecommendation全体の採用案も出たが、HTML5編集者は採用元として明記しない。JIS X 4052からの直接採用は、同規格が`rp`を許さないため採用しない。
 
 ## 未解決
 
-- 2008年commitが参照した`rp`利用のcorpusは何か。
-- IEの`rp`実装とHTML5 parser規則の差分は何か。
+- 2008年commitが参照した元corpusは何か。commit直後のDMOZ標本は独立追試である。
+- commitが例示した異常入力について、2008年当時のIEが生成した正確なDOM treeは何か。
 - W3C Recommendationを直接参照した編集記録はあるか。

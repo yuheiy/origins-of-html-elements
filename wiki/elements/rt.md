@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-W3Cのruby語彙でannotation textを表す要素として提案・規範化され、既存Web利用との互換性を考慮して2008年に`ruby`、`rp`とともにHTML5へ追加された。
+W3Cのruby語彙でannotation textを表す要素として提案・規範化され、既存Web上の`rt`を含む単純なruby markupとの互換性を保つため、2008年に`ruby`、`rp`とともにHTML5へ追加された。
 
 ## 現在の意味
 
@@ -14,48 +14,53 @@ WHATWG HTML Living Standardでは、ruby annotationのruby text componentを示�
 
 ## HTMLへの導入
 
-2008年5月26日、Ian Hicksonが`ruby`、`rt`、`rp`とparser規則をWHATWG HTMLへ同時追加した。commitはIEとの完全互換ではなく、Web上のruby利用との互換性を採用判断として明記する。[仕様commit](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)
+2007年8月12日、Ian Hicksonは`ruby`のparsingとsemantic requirementsを既に調査しており追加予定だと説明した。2008年5月26日、`ruby`、`rt`、`rp`とparser規則をWHATWG HTMLへ同時追加し、IEの異常系まで再現せずWeb上で使われる`rt`入りの単純構文との互換性を優先した。[編集者回答](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html) [仕様commit](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)
 
 ## HTML直前の祖先
 
-W3C Ruby語彙、IE実装、既存Web上の`rt`利用という集合である。HTML5 commitは既存利用を参照するが、そのcorpusや一つの採用元を特定しない。
+既存Web上の`ruby`、`rt`、`rp`による単純なmarkupである。HTML5 commitは`rt`を含む四つの実用構文を列挙し、その利用との互換性を採用判断とし、IE実装は厳密には再現しない比較対象とした。直後のDMOZ由来13万ページによる独立追試でも`rt`の意図的利用が確認されたが、編集者自身が使ったcorpusは特定できない。[独立追試](https://lists.w3.org/Archives/Public/public-html/2008May/0620.html)
 
 ## さらに上流の由来
 
 ### 証拠
 
-1998年W3C草案は`rt`をruby textとして提案し、2001年RecommendationがXHTML Ruby moduleの同じ役割として規範化した。[1998年草案](https://www.w3.org/TR/1998/WD-ruby-19981221/) [2001年Recommendation](https://www.w3.org/TR/2001/REC-ruby-20010531/)
+1997年のMartin Dürstによる`RUBY`属性案はHTMLで東アジアの発音注記を表すことを提案した。1998年W3C草案はこの案に大きく着想を得たと明記し、専用の`rt`をruby textとして提案した。2001年RecommendationがXHTML Ruby moduleの同じ役割として規範化した。[1997年案](https://www.w3.org/International/draft-duerst-ruby-01) [1998年草案](https://www.w3.org/TR/1998/WD-ruby-19981221/) [2001年Recommendation](https://www.w3.org/TR/2001/REC-ruby-20010531/)
 
 ### 解釈
 
-国際化作業のannotation text用語彙を、既存実装・利用との互換性を考慮してHTML parserへ統合したと解釈できる。
+W3Cのannotation text用語彙と同名・同役割の既存Web markupを、実利用との互換性を優先してHTML parserへ統合したと解釈できる。ただしW3C RecommendationからHTML5への直接採用記録はない。
 
 ## 系譜
 
-W3C Ruby `rt`案（1998年） → XHTML Ruby `rt`（2001年）／IE実装・既存Web利用 → HTML5 `rt`追加（2008年） → 現行HTML `rt`
+Dürst `RUBY`属性案（1997年） →［大きく着想］W3C Ruby要素案（1998年） → XHTML Ruby `rt`（2001年）
 
-個別の直前経路は集合レベルの資料しかなく、一部欠落する。
+既存Webの`rt`利用 → HTML5 `rt`追加（2008年） → 現行HTML `rt`
+
+W3C／XHTML枝からHTML5への接続は未確認である。
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
 |---|---|---|---|---|---|
+| 1997-02-28 | *Ruby in the Hypertext Markup Language* | Internet-Draft | 後の要素modelに先行する`RUBY`属性案。 | [一次資料](https://www.w3.org/International/draft-duerst-ruby-01) | 2026-08-10 |
 | 1998-12-21 | *Ruby* | W3C Working Draft | HTML拡張の`rt`をruby textとして提案。 | [一次資料](https://www.w3.org/TR/1998/WD-ruby-19981221/) | 2026-08-09 |
 | 2001-05-31 | *Ruby Annotation* | W3C Recommendation | XHTML moduleの`rt`をruby textとして規範化。 | [一次資料](https://www.w3.org/TR/2001/REC-ruby-20010531/) | 2026-08-09 |
-| 2008-05-26 | WHATWG HTML commit `f4efc736` | 仕様commit | `rt`を含むruby三要素の追加と既存Web利用を考慮したparser規則。 | [一次資料](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9) | 2026-08-09 |
+| 2007-08-12 | “My case for Ruby-elements” | WHATWG mail | 編集者が`ruby`のparserとsemanticsを調査済みで追加予定と説明。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html) | 2026-08-10 |
+| 2008-05-26 | WHATWG HTML commit `f4efc736` | 仕様commit | `rt`を含む単純構文の実利用を根拠に、三要素と`rt`開始tagのparser規則を追加。 | [一次資料](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9) | 2026-08-10 |
+| 2008-05-26 | “Current HTML ruby markup usage” | HTML WG mail／corpus追試 | DMOZ由来13万ページ標本で`rt`を含む意図的なruby markupを確認。 | [一次資料](https://lists.w3.org/Archives/Public/public-html/2008May/0620.html) | 2026-08-10 |
 
 ## 確度
 
-**A−**
+**A**
 
-語彙集合とHTML5追加の因果は確認できるが、HTML5 commitが参照した既存利用から`rt`への個別経路が不明なため。
+既存Webの`rt`を含む具体的な単純構文との互換性を理由にHTML5へ追加したことを、要素単位のcommitで確認できるため。W3C／XHTML枝からHTML5への接続と元corpusの来歴は未確認である。
 
 ## 否定された仮説
 
-W3C Recommendationだけから直接採用したという説明。役割は連続するが、HTML5 commitは単一の採用元を明記しない。
+W3C Recommendationだけから直接採用したという説明。役割は連続し、導入後のreviewではRecommendation全体の採用案も出たが、HTML5編集者は採用元として明記しない。1997年の属性案からHTML5へ直接接続する説明も採用しない。
 
 ## 未解決
 
-- 2008年commitが参照した`rt`利用のcorpusは何か。
-- IEの`rt`実装とHTML5 parser規則の差分は何か。
+- 2008年commitが参照した元corpusは何か。commit直後のDMOZ標本は独立追試である。
+- commitが例示した異常入力について、2008年当時のIEが生成した正確なDOM treeは何か。
 - W3C Recommendationを直接参照した編集記録はあるか。
