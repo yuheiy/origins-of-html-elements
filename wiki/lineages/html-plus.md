@@ -1,5 +1,23 @@
 # HTML+から現行HTML要素への共有系譜
 
+## Document amendments
+
+HTML+は、法律文書や法案修正で削除部分と追加部分を示す要求に対して`REMOVED`と`ADDED`を定義した。表示慣習としてstrike-throughとunderlineを示すが、この機構をrevision history用ではないと限定する。Dave Raggettも後に、表示用の`S`とlogical useの`ADDED`／`REMOVED`を区別した。[HTML+ Document Amendments](../../raw/html-plus/htmlplus_22.html) [Raggettの説明](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/2.html)
+
+W3CはHTML 3.0がHTML+の先行作業に基づくと記録し、HTML 3.0 DTDの履歴は1995年2月22日に`INS`と`DEL`をlegal documents用に追加したとする。後続のW3C HTML設計もHTML+とHTML 3.0草案からdrawすると明記されるため、HTML+ → HTML 3.0 → HTML 4は集合単位で接続できる。ただし`ADDED`→`INS`、`REMOVED`→`DEL`の個別改名、Cougar中間版、HTML 4への個別採録は未確認である。[HTML 3.0 materials](https://www.w3.org/MarkUp/html3/) [HTML 3.0 DTD](https://www.w3.org/MarkUp/html3/html3.dtd) [W3C声明](https://www.w3.org/press-releases/1996/html-leadership/)
+
+HTML 4 First Public Working Draftは両要素を一般の文書版間差分へ広げ、`cite`と`datetime`を加えた。当初はDTDがinline contentだけを許しながら本文がblock-level contentも許す不整合があったが、1997年10月23日にHTML Working Groupがcontent modelを`%flow`とすることを決議した。[First Public Working Draft](https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4) [Working Group議事録](https://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html) [Proposed Recommendation](https://www.w3.org/TR/PR-html40-971107/struct/text.html#h-9.4)
+
+```text
+[集合単位] HTML+ REMOVED / ADDED
+  → HTML 3.0 DEL / INS
+  → W3C HTML design work
+  → HTML 4 DEL / INS
+  → 現行HTML del / ins
+```
+
+対象: [`del`](../elements/del.md)、[`ins`](../elements/ins.md)
+
 ## Forms
 
 HTML+は`FORM`、`INPUT`、`SELECT`、`OPTION`、`TEXTAREA`を一つのform modelとして定義した。RFC 1866はforms materialがHTML+に基づくと明記するため、この五要素は集合単位でHTML+ formsからHTML 2.0 formsへ接続できる。[HTML+ Forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) [RFC 1866 §8](https://www.rfc-editor.org/rfc/rfc1866.html#section-8)

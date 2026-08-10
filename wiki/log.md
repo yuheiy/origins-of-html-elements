@@ -501,3 +501,19 @@ commit直後のDMOZ由来13万ページ標本は独立追試であり、編集�
 初回調査と分離して1997年Internet-Draft、1998年W3C草案、2001年Recommendation、2007年WHATWG mail、2008年仕様commitとparser comment、HTML WGの独立corpus追試、導入直後の反対意見、Microsoftの適合性記録へ戻り、日付、主体、要素名、引用文脈、各矢印を再照合した。独立追試を編集者の元corpusとせず、IE実装を直接祖先ではなく比較対象とし、W3C／XHTML枝からHTML5への直接採用を未確認のまま維持した。
 
 対象3ページについて必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査した。`h1-h6.md`を6要素として数え、全115要素の確度集計がA 83件、A− 15件、B 14件、C 3件、未評価0件で`wiki/README.md`と一致し、敵対的検証済み115件を維持できることを確認して合格とし、状態を`完成`とした。
+
+## [2026-08-10] research | `ins`／`del`のHTML+ document amendments系譜
+
+`ins`と`del`について、1993年HTML+ `ADDED`／`REMOVED`、1994年のRaggett mail、HTML 3.0 DTD履歴とInternet-Draft、W3CのHTML設計声明、HTML 4草案とWorking Group議事録を照合した。HTML+が法案修正の削除／追加表示に両要素を定義し、Raggettが表示用の`S`とlogical useを区別したこと、1995年2月22日に`INS`／`DEL`をlegal documents用に追加したことを確認した。
+
+HTML+からHTML 3.0、後続のW3C HTML設計への継承は集合単位で直接記録される。`ADDED`→`INS`、`REMOVED`→`DEL`の個別改名、Cougar中間版、HTML 4への個別採録、`cite`／`datetime`の由来は未確認とした。HTML+ `CHANGED`、`S`／`STRIKE`、特定の法律編集標準は、類似だけで系譜へ接続していない。
+
+## [2026-08-10] update | `ins`／`del`の上流系譜と確度
+
+2要素の初出を1995年2月22日のDTD更新へ前倒しし、HTML+ `ADDED`／`REMOVED`からの集合単位の継承、HTML 4で版間差分へ広げたmodel、1997年10月23日の`%flow`決議、否定された仮説、未解決点を反映した。具体的な上流要素と集合単位の採用因果を確認できたため、両要素をBからA−へ変更し、確度集計をA 83件、A− 17件、B 12件、C 3件とした。既存のHTML+共有系譜と横断系譜索引を更新し、共有系譜文書数は7件のままとした。
+
+## [2026-08-10] lint | `ins`／`del`の敵対的検証
+
+初回調査と分離してHTML+ document amendmentsとDTD、Raggett mail、HTML 3.0 DTD履歴とInternet-Draft、W3C声明、HTML 4 First Public Working Draft、編集者告知、Working Group議事録、Proposed Recommendationへ戻り、より早い出現、日付、主体、要素名、引用文脈、各矢印を再照合した。集合単位の帰属を個別改名や個別採録とせず、HTML+のrevision history限定、Cougarの欠落、`cite`／`datetime`の未確認由来を維持した。
+
+対象2ページと共有系譜について必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査した。`h1-h6.md`を6要素として数え、全115要素の確度集計がA 83件、A− 17件、B 12件、C 3件、未評価0件で`wiki/README.md`と一致し、敵対的検証済み115件を維持できることを確認して合格とし、状態を`完成`とした。
