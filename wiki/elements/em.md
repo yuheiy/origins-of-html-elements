@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、内容のstress emphasisを表す。 [HTML Living Standard](../../raw/html-living-standard/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、内容のstress emphasisを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -40,9 +40,9 @@ Texinfo `@emph` → 1993年HTML draft `<em>` → 後続HTML `<em>`
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1992-10-06 | [*Texinfo — The GNU Documentation Format*, Edition 2.16](../../raw/texinfo-2.16/texinfo2.texi)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)） | GNU公式配布物内マニュアル | `@emph` の当時の定義を確認できる。 | 2026-08-09 |
-| 1992-11-19 | “HTML DTD issues”とTim Berners-Leeの応答：[提案](../../raw/items/lists.w3.org/f99c068c486f1ed8-0068.html)・[応答](../../raw/items/lists.w3.org/7661438b0ffab82e-0072.html)（[公開元1](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)・[公開元2](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)） | www-talk標準化議論 | Connollyが`HP1`〜`HP5`の代案として`em`を具体的に提案し、Berners-Leeが番号式highlightingを退ける方向に同意した。 | 2026-08-09 |
-| 1993-06 | [*Hypertext Markup Language (HTML)*, draft-ietf-iiir-html-00](../../raw/draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | `<em>` を含むcharacter highlighting要素名をTexinfo macro names由来と明記する。 | 2026-08-09 |
+| 1992-10-06 | [*Texinfo — The GNU Documentation Format*, Edition 2.16](../../raw/ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z/texinfo-2.16/texinfo2.texi)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)） | GNU公式配布物内マニュアル | `@emph` の当時の定義を確認できる。 | 2026-08-09 |
+| 1992-11-19 | “HTML DTD issues”とTim Berners-Leeの応答：[提案](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)・[応答](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)（[公開元1](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)・[公開元2](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)） | www-talk標準化議論 | Connollyが`HP1`〜`HP5`の代案として`em`を具体的に提案し、Berners-Leeが番号式highlightingを退ける方向に同意した。 | 2026-08-09 |
+| 1993-06 | [*Hypertext Markup Language (HTML)*, draft-ietf-iiir-html-00](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | `<em>` を含むcharacter highlighting要素名をTexinfo macro names由来と明記する。 | 2026-08-09 |
 
 ## 確度
 

@@ -10,7 +10,7 @@ W3C i18n groupのbidi isolation要求と`ubi`属性案を、WHATWGが2010年に�
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、bidirectional text formattingにおいて周囲から分離するtext範囲を表す。`dir`はこの要素では`auto`が既定となり、親から継承しない。[HTML Living Standard](../../raw/html-living-standard/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdi-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、bidirectional text formattingにおいて周囲から分離するtext範囲を表す。`dir`はこの要素では`auto`が既定となり、親から継承しない。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdi-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,8 +38,8 @@ Unicode Bidi Algorithmのisolation要求 → CSS `unicode-bidi:isolate`＋W3C `u
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2010-09-29〜2010-11-11 | [W3C Bug 10807](../../raw/items/www.w3.org/80b585f9e6881aac-show_bu.html)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=10807)） | W3C HTML WG Bugzilla議論／WHATWG check-in記録 | `ubi`属性提案から`bdi`要素を選択し、r5669／r5677へ採録した経路。 | 2026-08-09 |
-| 2015-07-21 | [*Additional Requirements for Bidi in HTML & CSS*](../../raw/rfc2070-html-internationalization/55267771fa471554-html.html)（[公開元](https://www.w3.org/TR/html-bidi/#bidi-isolation)） | W3C Working Group Note | isolation問題、`ubi`提案、実際には`bdi`が採用された歴史を記録。 | 2026-08-09 |
+| 2010-09-29〜2010-11-11 | [W3C Bug 10807](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-80b585f9e6881aac)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=10807)） | W3C HTML WG Bugzilla議論／WHATWG check-in記録 | `ubi`属性提案から`bdi`要素を選択し、r5669／r5677へ採録した経路。 | 2026-08-09 |
+| 2015-07-21 | [*Additional Requirements for Bidi in HTML & CSS*](../../raw/www.w3.org/TR/html-bidi/index.html)（[公開元](https://www.w3.org/TR/html-bidi/#bidi-isolation)） | W3C Working Group Note | isolation問題、`ubi`提案、実際には`bdi`が採用された歴史を記録。 | 2026-08-09 |
 
 ## 確度
 

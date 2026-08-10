@@ -10,7 +10,7 @@ Netscapeが定義しNavigator 2.0 betaへ実装した`SCRIPT`を、W3CのHTML3 S
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、動的script、user agentへのinstructions、data blocksを文書へ含める。利用者向けcontent自体は表さず、`type`でscriptやdata blockの種類を、`src`で外部scriptを指定できる。[HTML Living Standard](../../raw/html-living-standard/scripting.html)（[公開版](https://html.spec.whatwg.org/multipage/scripting.html#the-script-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、動的script、user agentへのinstructions、data blocksを文書へ含める。利用者向けcontent自体は表さず、`type`でscriptやdata blockの種類を、`src`で外部scriptを指定できる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/scripting.html)（[公開版](https://html.spec.whatwg.org/multipage/scripting.html#the-script-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -40,10 +40,10 @@ Netscape Navigator 2.0 beta `SCRIPT` → W3C HTML3 Scripting `SCRIPT`（1996年�
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1996-01-24 | [*HTML3 Scripting*](../../raw/html-scripting-history/006163dd1e8df2ac-WD-script-960124.html)（[公開元](https://www.w3.org/TR/WD-script-960124.html)） | W3C Working Draft | Netscape定義・Navigator 2.0 beta実装の`SCRIPT`をformalizeする因果、導入要求、inline／external script。 | 2026-08-09 |
-| 1997年保存（Navigator 2.0向け文書） | [*JavaScript Authoring Guide: Navigator Scripting*](../../raw/items/web.archive.org/5b4f356eb003d5f7-script.html)（[公開元](https://web.archive.org/web/19970617232458id_/http://home.netscape.com/eng/mozilla/2.0/handbook/javascript/script.html)） | Netscape公式文書の保存版 | `SCRIPT`によるJavaScript埋込み、`LANGUAGE`、inline statements、event handlers。 | 2026-08-09 |
-| 1997-01-14 | [HTML 3.2](../../raw/html-3.2/index.html)（[公開元](https://www.w3.org/TR/REC-html32)） | W3C Recommendation | `SCRIPT`を将来のclient-side scripts導入用placeholderとして収録。 | 2026-08-09 |
-| 1999-12-24 | [HTML 4.01 §18](../../raw/html-4-history/21804f7f2a71af25-scripts.html)（[公開元](https://www.w3.org/TR/html401/interact/scripts.html)） | W3C Recommendation | inline／external scriptと用途を本格的に規定。 | 2026-08-09 |
+| 1996-01-24 | [*HTML3 Scripting*](../../raw/www.w3.org/TR/WD-script-960124.html)（[公開元](https://www.w3.org/TR/WD-script-960124.html)） | W3C Working Draft | Netscape定義・Navigator 2.0 beta実装の`SCRIPT`をformalizeする因果、導入要求、inline／external script。 | 2026-08-09 |
+| 1997年保存（Navigator 2.0向け文書） | [*JavaScript Authoring Guide: Navigator Scripting*](../../raw/web.archive.org/web/19970617232458id_/http%3A/home.netscape.com/eng/mozilla/2.0/handbook/javascript/script.html)（[公開元](https://web.archive.org/web/19970617232458id_/http://home.netscape.com/eng/mozilla/2.0/handbook/javascript/script.html)） | Netscape公式文書の保存版 | `SCRIPT`によるJavaScript埋込み、`LANGUAGE`、inline statements、event handlers。 | 2026-08-09 |
+| 1997-01-14 | [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32)） | W3C Recommendation | `SCRIPT`を将来のclient-side scripts導入用placeholderとして収録。 | 2026-08-09 |
+| 1999-12-24 | [HTML 4.01 §18](../../raw/www.w3.org/TR/html401/interact/scripts.html)（[公開元](https://www.w3.org/TR/html401/interact/scripts.html)） | W3C Recommendation | inline／external scriptと用途を本格的に規定。 | 2026-08-09 |
 
 ## 確度
 

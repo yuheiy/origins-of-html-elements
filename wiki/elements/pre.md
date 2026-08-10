@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、要素ではなくtypographic conventionsによって構造が表現されるpreformatted textのblockを表す。 [HTML Living Standard](../../raw/html-living-standard/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-pre-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、要素ではなくtypographic conventionsによって構造が表現されるpreformatted textのblockを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-pre-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,8 +38,8 @@ preformatted computer output → 初期HTML `PRE` → Unix manual pagesのhypert
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1993-11-08 | [HTML+ §11](../../raw/html-plus/htmlplus_44.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html)） | 一次仕様・提案 | 初期HTML `PRE`のcomputer output用途とUnix manual page要求による拡張史を説明する。 | 2026-08-09 |
-| 1995-11 | [RFC 1866 §5.5.2](../../raw/html-2.0/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html#section-5.5.2)） | 一次仕様・提案 | `PRE`をcharacter cell blockとして標準化する。 | 2026-08-09 |
+| 1993-11-08 | [HTML+ §11](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html)） | 一次仕様・提案 | 初期HTML `PRE`のcomputer output用途とUnix manual page要求による拡張史を説明する。 | 2026-08-09 |
+| 1995-11 | [RFC 1866 §5.5.2](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html#section-5.5.2)） | 一次仕様・提案 | `PRE`をcharacter cell blockとして標準化する。 | 2026-08-09 |
 
 ## 確度
 

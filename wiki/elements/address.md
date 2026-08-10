@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、最も近い`article`または`body` ancestorのcontact informationを表す。ancestorが`body`なら文書全体に適用される。 [HTML Living Standard](../../raw/html-living-standard/sections.html)（[公開版](https://html.spec.whatwg.org/multipage/sections.html#the-address-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、最も近い`article`または`body` ancestorのcontact informationを表す。ancestorが`body`なら文書全体に適用される。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/sections.html)（[公開版](https://html.spec.whatwg.org/multipage/sections.html#the-address-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,12 +38,12 @@ WHATWG HTML Living Standardでは、最も近い`article`または`body` ancesto
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1991-02-01 | [*Features and Bug Fixes*](../../raw/early-www/ed6a885749b43f88-Features.html)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Features.html)） | CERN/W3Cの公式実装履歴 | WorldWideWeb 0.5で`Address` styleをHTML `ADDRESS` tagとして実装したと記録する。 | 2026-08-10 |
-| 1991-03-05 | [*Features added*](../../raw/early-www/168629f215f77f25-Features.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/LineMode/Defaults/Features.html)） | CERN Line Mode Browser change history | `ADDRESS` tagを処理し、textをleft justifyするようになったと記録する。 | 2026-08-10 |
-| 1991-03-21（directory timestamp） | [`default.style`](../../raw/early-www/edd3295feae1b9ad-default..html)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/WorldWideWeb.app/default.style)） | CERN/W3C保存のWorldWideWeb配布ファイル | `Address`をHelvetica Obliqueのparagraph styleとして定義する。 | 2026-08-10 |
-| 1991-09-27（directory timestamp） | [`ParseHTML.h`](../../raw/early-www/2aeabad912317a27-ParseHTML.h)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h)） | CERN/W3C保存のWorldWideWeb source | `ADDRESS`のparseとserializationをstyle sheet上の`Address` paragraph styleへ対応させる。 | 2026-08-10 |
-| 1992-11-13（更新日） | [*Tags used in HTML*](../../raw/early-www/6fba3e9651380c1e-Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)） | CERN公式HTML資料のhistorical snapshot | `ADDRESS`を住所情報、署名などのためのタグとして記録する。 | 2026-08-09 |
-| 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | `ADDRESS`の用途とDTD宣言を記録する。 | 2026-08-09 |
+| 1991-02-01 | [*Features and Bug Fixes*](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/Features.html)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Features.html)） | CERN/W3Cの公式実装履歴 | WorldWideWeb 0.5で`Address` styleをHTML `ADDRESS` tagとして実装したと記録する。 | 2026-08-10 |
+| 1991-03-05 | [*Features added*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/LineMode/Defaults/Features.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/LineMode/Defaults/Features.html)） | CERN Line Mode Browser change history | `ADDRESS` tagを処理し、textをleft justifyするようになったと記録する。 | 2026-08-10 |
+| 1991-03-21（directory timestamp） | [`default.style`](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/WorldWideWeb.app/default.style)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/WorldWideWeb.app/default.style)） | CERN/W3C保存のWorldWideWeb配布ファイル | `Address`をHelvetica Obliqueのparagraph styleとして定義する。 | 2026-08-10 |
+| 1991-09-27（directory timestamp） | [`ParseHTML.h`](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h)） | CERN/W3C保存のWorldWideWeb source | `ADDRESS`のparseとserializationをstyle sheet上の`Address` paragraph styleへ対応させる。 | 2026-08-10 |
+| 1992-11-13（更新日） | [*Tags used in HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)） | CERN公式HTML資料のhistorical snapshot | `ADDRESS`を住所情報、署名などのためのタグとして記録する。 | 2026-08-09 |
+| 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | `ADDRESS`の用途とDTD宣言を記録する。 | 2026-08-09 |
 
 ## 確度
 

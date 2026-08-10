@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、子のtext directionalityを明示的に制御し、`dir=ltr`または`dir=rtl`によってUnicode bidirectional algorithmの方向判定を上書きする。[HTML Living Standard](../../raw/html-living-standard/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdo-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、子のtext directionalityを明示的に制御し、`dir=ltr`または`dir=rtl`によってUnicode bidirectional algorithmの方向判定を上書きする。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdo-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,9 +38,9 @@ Unicode directional override → `draft-ietf-html-i18n-01` `BDO`（1995-09-25）
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1995-09-25 | `draft-ietf-html-i18n-01`：[revision 00](../../raw/rfc2070-html-internationalization/71fd38325e9dec4b-draft-ietf-html-i18n-00.txt)・[revision 01](../../raw/rfc2070-html-internationalization/0a2bbf8ebf02e535-draft-ietf-html-i18n-01.txt)（[公開元1](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00.txt)・[公開元2](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt)） | IETF Internet-Draft | 文脈だけで方向を決めにくい文字列のため、必須`DIR`を持つ新要素`BDO`を導入する。revision 00には`BDO`がない。 | 2026-08-09 |
-| 1997-01 | [RFC 2070](../../raw/rfc2070-html-internationalization/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)） | Standards Track RFC | `BDO`の導入要求とUnicode LRO／RLO／PDFとの要素単位の対応。 | 2026-08-09 |
-| 1999-12-24 | [HTML 4.01](../../raw/html-4-history/8956e5bf2cd33e94-changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.13)） | W3C Recommendation | RFC 2070の国際化勧告を統合し、`BDO`をHTML 4.0のnew elementとして記録。 | 2026-08-09 |
+| 1995-09-25 | `draft-ietf-html-i18n-01`：[revision 00](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00.txt)・[revision 01](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt)（[公開元1](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00.txt)・[公開元2](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt)） | IETF Internet-Draft | 文脈だけで方向を決めにくい文字列のため、必須`DIR`を持つ新要素`BDO`を導入する。revision 00には`BDO`がない。 | 2026-08-09 |
+| 1997-01 | [RFC 2070](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)） | Standards Track RFC | `BDO`の導入要求とUnicode LRO／RLO／PDFとの要素単位の対応。 | 2026-08-09 |
+| 1999-12-24 | [HTML 4.01](../../raw/www.w3.org/TR/html401/appendix/changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.13)） | W3C Recommendation | RFC 2070の国際化勧告を統合し、`BDO`をHTML 4.0のnew elementとして記録。 | 2026-08-09 |
 
 ## 確度
 

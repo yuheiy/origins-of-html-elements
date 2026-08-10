@@ -10,7 +10,7 @@ MathML 1.0で定義済みのMathML名前空間のrootを、2008年にHTMLの`tex
 
 ## 現在の意味
 
-MathML Coreでは、文書内のMathML markupの各instanceを包む唯一のtop-levelまたはroot要素であり、他のすべてのMathML contentは`math`内に置く。[MathML Core](../../raw/mathml/eb5d929103073f63-mathml.html)（[公開版](https://w3c.github.io/mathml-core/#the-top-level-math-element)、2026-08-09確認）
+MathML Coreでは、文書内のMathML markupの各instanceを包む唯一のtop-levelまたはroot要素であり、他のすべてのMathML contentは`math`内に置く。[MathML Core](../../raw/w3c.github.io/mathml-core/index.html)（[公開版](https://w3c.github.io/mathml-core/#the-top-level-math-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,8 +38,8 @@ MathML 1.0 `math` root（1998年） → HTML `text/html` parserで生成され�
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1998-04-07 | [MathML 1.0](../../raw/mathml/a926f6b2dd76b7ff-REC-MathML-199.html)（[公開元](https://www.w3.org/TR/1998/REC-MathML-19980407/)） | W3C Recommendation | MathML XML applicationとtop-level `math`の定義。 | 2026-08-09 |
-| 2008-04-05 | [WHATWG HTML commit `1ff9688a`](../../raw/whatwg-html-history/9f0c24dac338d21c-1ff9688ab0090e646f69d64e57c814ca44f.html)（[公開元](https://github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7)） | 仕様commit | `math` start tagをMathML名前空間rootとして`text/html` parserへ統合。 | 2026-08-09 |
+| 1998-04-07 | [MathML 1.0](../../raw/www.w3.org/TR/1998/REC-MathML-19980407/index.html)（[公開元](https://www.w3.org/TR/1998/REC-MathML-19980407/)） | W3C Recommendation | MathML XML applicationとtop-level `math`の定義。 | 2026-08-09 |
+| 2008-04-05 | [WHATWG HTML commit `1ff9688a`](../../raw/github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7)（[公開元](https://github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7)） | 仕様commit | `math` start tagをMathML名前空間rootとして`text/html` parserへ統合。 | 2026-08-09 |
 
 ## 確度
 

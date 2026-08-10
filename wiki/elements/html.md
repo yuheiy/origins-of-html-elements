@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、HTML文書のrootを表す。 [HTML Living Standard](../../raw/html-living-standard/semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/semantics.html#the-html-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、HTML文書のrootを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/semantics.html#the-html-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,9 +38,9 @@ Connolly DTD `html`（1992-06-02生成）→ 現行HTML `<html>`
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1992-06-06（DTDは1992-06-02生成） | [“MIME as a hypertext architecture”](../../raw/items/lists.w3.org/9a3dad3ef1f95cb6-0020.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0020.html)） | www-talkへの当事者投稿とDTD | `html` document elementを宣言し、DTD化の目的を説明する。 | 2026-08-09 |
-| 1992-11-19 | [“HTML DTD issues”](../../raw/items/lists.w3.org/f99c068c486f1ed8-0068.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)） | www-talkへの当事者投稿 | Connollyが`HTML` top-level tagをSGML parserの推論のため自ら導入したと説明する。 | 2026-08-09 |
-| 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | DTDで`HTML`をdocument elementとして宣言し、そのcontent modelを示す。 | 2026-08-09 |
+| 1992-06-06（DTDは1992-06-02生成） | [“MIME as a hypertext architecture”](../../raw/lists.w3.org/Archives/Public/www-talk/1992MayJun/0020.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0020.html)） | www-talkへの当事者投稿とDTD | `html` document elementを宣言し、DTD化の目的を説明する。 | 2026-08-09 |
+| 1992-11-19 | [“HTML DTD issues”](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)） | www-talkへの当事者投稿 | Connollyが`HTML` top-level tagをSGML parserの推論のため自ら導入したと説明する。 | 2026-08-09 |
+| 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | DTDで`HTML`をdocument elementとして宣言し、そのcontent modelを示す。 | 2026-08-09 |
 
 ## 確度
 

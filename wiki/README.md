@@ -10,18 +10,19 @@ status: 完成
 
 - [要素](elements/)は、現行要素ごとに現在の意味、HTMLへの導入、直前の祖先、上流の由来、証拠、確度、否定された仮説、未解決点をまとめる。
 - [共有系譜](lineages/)は、複数要素に共通する確認済みの採用経路や要求をまとめる。個別要素の結論と確度は要素ページを正本とする。
-- sourceページは複数ページで文脈を再利用する必要があるRaw sourceを要約し、synthesisページは比較や横断分析を扱う。現在、この二種に該当するページはない。
-- [操作Log](log.md)はWikiに対する操作をappend-onlyで記録する。構造と運用の規範は[AGENTS.md](../AGENTS.md)、保存資料の一覧と来歴は[Raw README](../raw/README.md)を参照する。
+- synthesisページは比較や横断分析を扱う。現在、該当するページはない。
+- [Raw resources](raw-index.md)は、保存された全Raw fileへのpath順のindexである。
+- [操作Log](log.md)はWikiに対する操作をappend-onlyで記録する。構造と運用の規範は[AGENTS.md](../AGENTS.md)を参照する。
 
 ## 収録範囲
 
-最終確認日は2026年8月9日である。[WHATWG HTML Living StandardのElements index](../raw/html-living-standard/indices.html)（[公開版](https://html.spec.whatwg.org/multipage/indices.html#elements-3)）にあるHTML名前空間の組み込み要素113件と、HTML構文で使用できる名前付きforeign rootの`math`と`svg`を合わせた115要素を収録する。この一覧は特定日のsnapshotではなく、Living Standardに追従して更新する。
+最終確認日は2026年8月9日である。[WHATWG HTML Living StandardのElements index](../raw/html.spec.whatwg.org/multipage/indices.html)（[公開版](https://html.spec.whatwg.org/multipage/indices.html#elements-3)）にあるHTML名前空間の組み込み要素113件と、HTML構文で使用できる名前付きforeign rootの`math`と`svg`を合わせた115要素を収録する。この一覧は特定日のsnapshotではなく、Living Standardに追従して更新する。
 
 - Elements indexの`h1, h2, h3, h4, h5, h6`は6要素として数え、共通史料と系譜は[`h1-h6.md`](elements/h1-h6.md)へまとめる。
-- HTML syntaxが[foreign elementsと定義する](../raw/html-living-standard/syntax.html)（[公開版](https://html.spec.whatwg.org/multipage/syntax.html#elements-2)）ことに基づき、MathMLの`math`とSVGの`svg`はHTML名前空間要素と分けて数えるが、HTML文書内でforeign contentを開始する名前付きrootなので対象へ含める。
-- [Custom elements](../raw/html-living-standard/custom-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-core-concepts)）に基づき、autonomous custom elementsは名前集合が開いており、customized built-in elementsは既存の組み込み要素名を使うため、どちらも追加の要素名として数えない。
-- [Non-conforming features](../raw/html-living-standard/obsolete.html)（[公開版](https://html.spec.whatwg.org/multipage/obsolete.html#non-conforming-features)）でentirely obsoleteとされる要素は除外し、現行要素の系譜を説明する場合だけ歴史的要素として扱う。
-- [`search`](../raw/html-living-standard/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element)）と[`selectedcontent`](../raw/html-living-standard/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-selectedcontent-element)）は独立したnormative定義を持ち、公式索引に掲載されるため含める。実装状況や外部サイト上の`experimental`表示は収録判断に使わない。
+- HTML syntaxが[foreign elementsと定義する](../raw/html.spec.whatwg.org/multipage/syntax.html)（[公開版](https://html.spec.whatwg.org/multipage/syntax.html#elements-2)）ことに基づき、MathMLの`math`とSVGの`svg`はHTML名前空間要素と分けて数えるが、HTML文書内でforeign contentを開始する名前付きrootなので対象へ含める。
+- [Custom elements](../raw/html.spec.whatwg.org/multipage/custom-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-core-concepts)）に基づき、autonomous custom elementsは名前集合が開いており、customized built-in elementsは既存の組み込み要素名を使うため、どちらも追加の要素名として数えない。
+- [Non-conforming features](../raw/html.spec.whatwg.org/multipage/obsolete.html)（[公開版](https://html.spec.whatwg.org/multipage/obsolete.html#non-conforming-features)）でentirely obsoleteとされる要素は除外し、現行要素の系譜を説明する場合だけ歴史的要素として扱う。
+- [`search`](../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element)）と[`selectedcontent`](../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-selectedcontent-element)）は独立したnormative定義を持ち、公式索引に掲載されるため含める。実装状況や外部サイト上の`experimental`表示は収録判断に使わない。
 
 ## 要素
 

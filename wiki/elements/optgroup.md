@@ -10,7 +10,7 @@ MegaZoneが長い`SELECT`のaccessibilityを改善するため、windowing syste
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、共通labelを持つ`option`要素のgroupを表す。user agentはgroup内の選択肢の関連と他groupとの区別を示し、`disabled`でgroup全体を無効にできる。[HTML Living Standard](../../raw/html-living-standard/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、共通labelを持つ`option`要素のgroupを表す。user agentはgroup内の選択肢の関連と他groupとの区別を示し、`disabled`でgroup全体を無効にできる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -42,12 +42,12 @@ windowing systemのnested list／Netscape bookmarksのsublist
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1997-07-08、1997-09-17 | HTML 4.0 Working Drafts：[7月版](../../raw/html-4-history/3398c72a13f7d7ac-forms.html)・[9月版](../../raw/html-4-history/36a75b6864fb9aaf-forms.html)（[公開元1](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)・[公開元2](https://www.w3.org/TR/WD-html40-970917/interact/forms.html)） | W3C Working Draft | `OPTGROUP`がまだ存在しない比較基準。 | 2026-08-09 |
-| 1997-09-26（提案version 1は09-21、version 2は09-25） | [MegaZone, “FORM SELECT accessibility”](../../raw/items/lists.w3.org/0440c3635b90eb9c-0031.html)（[公開元](https://lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html)） | WAI mailing list・要素提案 | 長い`SELECT`の利用上・accessibility上の問題、topics／subtopicsへのgroup化、windowing systemのnested listとNetscape bookmarks、旧browserを壊さない`OPTGROUP`案。 | 2026-08-09 |
-| 1997-10-23 | [W3C HTML WG minutes](../../raw/items/lists.w3.org/8d89cba28440552d-0160.html)（[公開元](https://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html)） | 標準化会議録 | WAI HC proposalとして`SELECT`へ`OPTGROUP`を追加する案を検討したこと。 | 2026-08-09 |
-| 1997-10-25 | [Dave Raggett, “WAI proposed enhancements”](../../raw/items/lists.w3.org/450e15592b7e5777-0024.html)（[公開元](https://lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0024.html)） | 仕様編集者mail | 10月24日草案の`OPTGROUP`構文、`label`、終了tag、新旧browserでのhierarchy／flat-list表示。 | 2026-08-09 |
-| 1997-11-07 | HTML 4.0 Proposed Recommendation：[forms](../../raw/html-4-history/5f86fa2178bb46cb-forms.html)・[changes](../../raw/html-4-history/e0184020eceffed4-changes.html)（[公開元1](https://www.w3.org/TR/PR-html40-971107/interact/forms.html#edef-OPTGROUP)・[公開元2](https://www.w3.org/TR/PR-html40-971107/appendix/changes.html)） | W3C Proposed Recommendation | `OPTGROUP`の初出、choice hierarchyと非視覚UA上の導入理由。 | 2026-08-09 |
-| 1999-12-24 | [HTML 4.01](../../raw/html-4-history/8956e5bf2cd33e94-changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.9)） | W3C Recommendation | menu optionsのgroup化をform accessibilityへ特に重要と位置付ける。 | 2026-08-09 |
+| 1997-07-08、1997-09-17 | HTML 4.0 Working Drafts：[7月版](../../raw/www.w3.org/TR/WD-html40-970708/interact/forms.html)・[9月版](../../raw/www.w3.org/TR/WD-html40-970917/interact/forms.html)（[公開元1](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)・[公開元2](https://www.w3.org/TR/WD-html40-970917/interact/forms.html)） | W3C Working Draft | `OPTGROUP`がまだ存在しない比較基準。 | 2026-08-09 |
+| 1997-09-26（提案version 1は09-21、version 2は09-25） | [MegaZone, “FORM SELECT accessibility”](../../raw/lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html)（[公開元](https://lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html)） | WAI mailing list・要素提案 | 長い`SELECT`の利用上・accessibility上の問題、topics／subtopicsへのgroup化、windowing systemのnested listとNetscape bookmarks、旧browserを壊さない`OPTGROUP`案。 | 2026-08-09 |
+| 1997-10-23 | [W3C HTML WG minutes](../../raw/lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html)（[公開元](https://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html)） | 標準化会議録 | WAI HC proposalとして`SELECT`へ`OPTGROUP`を追加する案を検討したこと。 | 2026-08-09 |
+| 1997-10-25 | [Dave Raggett, “WAI proposed enhancements”](../../raw/lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0024.html)（[公開元](https://lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0024.html)） | 仕様編集者mail | 10月24日草案の`OPTGROUP`構文、`label`、終了tag、新旧browserでのhierarchy／flat-list表示。 | 2026-08-09 |
+| 1997-11-07 | HTML 4.0 Proposed Recommendation：[forms](../../raw/www.w3.org/TR/PR-html40-971107/interact/forms.html)・[changes](../../raw/www.w3.org/TR/PR-html40-971107/appendix/changes.html)（[公開元1](https://www.w3.org/TR/PR-html40-971107/interact/forms.html#edef-OPTGROUP)・[公開元2](https://www.w3.org/TR/PR-html40-971107/appendix/changes.html)） | W3C Proposed Recommendation | `OPTGROUP`の初出、choice hierarchyと非視覚UA上の導入理由。 | 2026-08-09 |
+| 1999-12-24 | [HTML 4.01](../../raw/www.w3.org/TR/html401/appendix/changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.9)） | W3C Recommendation | menu optionsのgroup化をform accessibilityへ特に重要と位置付ける。 | 2026-08-09 |
 
 ## 確度
 

@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、description list内のterm-description groupにおけるdescription、definition、またはvalue部分を表す。 [HTML Living Standard](../../raw/html-living-standard/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-dd-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、description list内のterm-description groupにおけるdescription、definition、またはvalue部分を表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-dd-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,11 +38,11 @@ CERN-SGML tags →［集合単位、個別対応は不明］WorldWideWeb accepte
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1988-10-18 | [*SCRIPT GML User’s Guide*](../../raw/items/web.archive.org/b82275288ef607cd-script-gmlref-tso.txt)（[公開元](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)） | Waterloo公式文書の保存版 | 先行GMLに`:DD`が存在する。HTMLへの採用因果は示さない。 | 2026-08-09 |
-| 1990-12-07（HTTP Last-Modified） | [WorldWideWeb `backup_of_test.html`](../../raw/early-www/9d5e16b6a4d23c08-backup_of_test.html)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)） | CERN/W3C保存の実装test file | CERN-SGML tagsetから一部をHTMLへ含めたと明記し、accepted tag集合の実例で`DL`、`DT`、`DD`を使う。個別対応は指定しない。 | 2026-08-10 |
-| 1991-10-29 | [“Re: status. Re: X11 BROWSER for WWW”](../../raw/items/lists.w3.org/9688c6552be697ee-0003.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)） | www-talkへの当事者投稿 | `DL`、`DT`、`DD`をHTMLのstyle tagsとして説明する。 | 2026-08-09 |
-| 1992-11-13（更新日） | [*Tags used in HTML*](../../raw/early-www/6fba3e9651380c1e-Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)） | CERN公式HTML資料のhistorical snapshot | `DD`をdefinition listのdefinition開始に用いる構文として記録する。 | 2026-08-09 |
-| 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | `DD`をdefinitionと説明し、empty elementとしてDTD宣言する。 | 2026-08-09 |
+| 1988-10-18 | [*SCRIPT GML User’s Guide*](../../raw/web.archive.org/web/20020504095301/http%3A/www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)（[公開元](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)） | Waterloo公式文書の保存版 | 先行GMLに`:DD`が存在する。HTMLへの採用因果は示さない。 | 2026-08-09 |
+| 1990-12-07（HTTP Last-Modified） | [WorldWideWeb `backup_of_test.html`](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)） | CERN/W3C保存の実装test file | CERN-SGML tagsetから一部をHTMLへ含めたと明記し、accepted tag集合の実例で`DL`、`DT`、`DD`を使う。個別対応は指定しない。 | 2026-08-10 |
+| 1991-10-29 | [“Re: status. Re: X11 BROWSER for WWW”](../../raw/lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)） | www-talkへの当事者投稿 | `DL`、`DT`、`DD`をHTMLのstyle tagsとして説明する。 | 2026-08-09 |
+| 1992-11-13（更新日） | [*Tags used in HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)） | CERN公式HTML資料のhistorical snapshot | `DD`をdefinition listのdefinition開始に用いる構文として記録する。 | 2026-08-09 |
+| 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | `DD`をdefinitionと説明し、empty elementとしてDTD宣言する。 | 2026-08-09 |
 
 ## 確度
 

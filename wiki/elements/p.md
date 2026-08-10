@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、paragraphを表す。 [HTML Living Standard](../../raw/html-living-standard/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-p-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、paragraphを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-p-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,11 +38,11 @@ WHATWG HTML Living Standardでは、paragraphを表す。 [HTML Living Standard]
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1988-10-18 | [*SCRIPT GML User’s Guide*](../../raw/items/web.archive.org/b82275288ef607cd-script-gmlref-tso.txt)（[公開元](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)） | Waterloo公式文書の保存版 | 先行GMLにparagraph用`:P`が存在する。HTMLへの採用因果は示さない。 | 2026-08-09 |
-| 1992-01-09 | [“Re: Is there a paper which describes the www protocol?”](../../raw/items/lists.w3.org/4575ecdf19df5f8b-0000.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html)） | www-talkへの当事者投稿 | `P`を新しいparagraphを示すtagとして記録する。 | 2026-08-09 |
-| 1992（保存snapshot） | [*Design Constraints*](../../raw/early-www/5355c914170fae57-HTMLConstraints.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/HTMLConstraints.html)） | CERN設計ノート | HTMLをstyled paragraph列へ往復できるflat modelとする設計要件を記録する。 | 2026-08-09 |
-| 1992-11-13（更新日） | [*Tags used in HTML*](../../raw/early-www/6fba3e9651380c1e-Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)） | CERN公式HTML資料のhistorical snapshot | `P`を新しいparagraphを示す最小化形式のtagとして記録する。 | 2026-08-09 |
-| 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | `P`をparagraph separatorであるempty elementとして宣言する。 | 2026-08-09 |
+| 1988-10-18 | [*SCRIPT GML User’s Guide*](../../raw/web.archive.org/web/20020504095301/http%3A/www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)（[公開元](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)） | Waterloo公式文書の保存版 | 先行GMLにparagraph用`:P`が存在する。HTMLへの採用因果は示さない。 | 2026-08-09 |
+| 1992-01-09 | [“Re: Is there a paper which describes the www protocol?”](../../raw/lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html)） | www-talkへの当事者投稿 | `P`を新しいparagraphを示すtagとして記録する。 | 2026-08-09 |
+| 1992（保存snapshot） | [*Design Constraints*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/HTMLConstraints.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/HTMLConstraints.html)） | CERN設計ノート | HTMLをstyled paragraph列へ往復できるflat modelとする設計要件を記録する。 | 2026-08-09 |
+| 1992-11-13（更新日） | [*Tags used in HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)） | CERN公式HTML資料のhistorical snapshot | `P`を新しいparagraphを示す最小化形式のtagとして記録する。 | 2026-08-09 |
+| 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | `P`をparagraph separatorであるempty elementとして宣言する。 | 2026-08-09 |
 
 ## 確度
 

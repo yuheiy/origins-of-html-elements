@@ -10,7 +10,7 @@ Microsoft IE3のfloating-frame機能、Microsoftによるframe拡張集合のW3C
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、そのcontent navigableを表す。`src`はそこに含めるpageのURLを、`srcdoc`は埋め込むpageの内容を与え、`sandbox`などによって埋め込み文脈を制限できる。[HTML Living Standard](../../raw/html-living-standard/iframe-embed-object.html)（[公開版](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、そのcontent navigableを表す。`src`はそこに含めるpageのURLを、`srcdoc`は埋め込むpageの内容を与え、`sandbox`などによって埋め込み文脈を制限できる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/iframe-embed-object.html)（[公開版](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -44,12 +44,12 @@ Microsoft IE3 frame拡張集合（1996年、floating framesを含む。W3Cへ集
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1996-04-30 | [Microsoft IE3 preview発表](../../raw/items/news.microsoft.com/43aa1aa1f188917b-microsoft-previews-internet-explorer-3-0-with-in.html)（[公開元](https://news.microsoft.com/source/1996/04/30/microsoft-previews-internet-explorer-3-0-with-innovative-support-for-sharing-of-voice-applications-over-the-world-wide-web/)） | vendor公式製品発表 | IE3のtablesとframes向け新HTML拡張をMicrosoftがW3Cへ提出した。個別要素名はない。 | 2026-08-10 |
-| 1996-05-29 | [Microsoft IE3 beta発表](../../raw/items/news.microsoft.com/4e367035906f87cc-microsoft-internet-explorer-3-0-beta-now-avai.html)（[公開元](https://news.microsoft.com/source/1996/05/29/microsoft-internet-explorer-3-0-beta-now-available/)） | vendor公式製品発表 | IE3がborderless and floating framesをsupport。ただし`IFRAME`名なし。 | 2026-08-10 |
-| 1997-03-31 | [*Implementing HTML Frames*](../../raw/items/www.w3.org/881502cfff6146b3-WD-frames-9.html)（[公開元](https://www.w3.org/TR/WD-frames-970331)） | W3C Working Draft | `IFRAME`をCougar統合候補のnew elementとして提案し、`FRAME`と`IMG`による設計model、`OBJECT`代替案、DTDを記録。 | 2026-08-10 |
-| 1997-07-08 | [HTML 4.0 Working Draft](../../raw/html-4-history/f984f8c61d6ffc09-frames.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/present/frames.html)） | W3C Working Draft | `IFRAME`をHTML 4草案へ収録。 | 2026-08-10 |
-| 1997-12-18 | [HTML 4.0 Recommendation §16.5](../../raw/html-4-history/903363b42964517c-frames.html)（[公開元](https://www.w3.org/TR/REC-html40-971218/present/frames.html#edef-IFRAME)） | W3C Recommendation | inline subwindow、fallback、通常のdocument flow内利用を標準化。 | 2026-08-10 |
-| 1999 copyright | [Microsoft DHTML reference](../../raw/items/documentation.help/d67e992a3576b1eb-documentation.pdf)（[公開元](https://documentation.help/HTMLREF/documentation.pdf)） | vendor文書の保存複製 | `IFRAME`をfloating `FRAME`と呼ぶ一方、HTMLとscriptの双方でIE4から利用可能とする。 | 2026-08-11 |
+| 1996-04-30 | [Microsoft IE3 preview発表](../../raw/news.microsoft.com/source/1996/04/30/microsoft-previews-internet-explorer-3-0-with-innovative-support-for-sharing-of-voice-applications-over-the-world-wide-web/index.html)（[公開元](https://news.microsoft.com/source/1996/04/30/microsoft-previews-internet-explorer-3-0-with-innovative-support-for-sharing-of-voice-applications-over-the-world-wide-web/)） | vendor公式製品発表 | IE3のtablesとframes向け新HTML拡張をMicrosoftがW3Cへ提出した。個別要素名はない。 | 2026-08-10 |
+| 1996-05-29 | [Microsoft IE3 beta発表](../../raw/news.microsoft.com/source/1996/05/29/microsoft-internet-explorer-3-0-beta-now-available/index.html)（[公開元](https://news.microsoft.com/source/1996/05/29/microsoft-internet-explorer-3-0-beta-now-available/)） | vendor公式製品発表 | IE3がborderless and floating framesをsupport。ただし`IFRAME`名なし。 | 2026-08-10 |
+| 1997-03-31 | [*Implementing HTML Frames*](../../raw/www.w3.org/TR/WD-frames-970331)（[公開元](https://www.w3.org/TR/WD-frames-970331)） | W3C Working Draft | `IFRAME`をCougar統合候補のnew elementとして提案し、`FRAME`と`IMG`による設計model、`OBJECT`代替案、DTDを記録。 | 2026-08-10 |
+| 1997-07-08 | [HTML 4.0 Working Draft](../../raw/www.w3.org/TR/WD-html40-970708/present/frames.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/present/frames.html)） | W3C Working Draft | `IFRAME`をHTML 4草案へ収録。 | 2026-08-10 |
+| 1997-12-18 | [HTML 4.0 Recommendation §16.5](../../raw/www.w3.org/TR/REC-html40-971218/present/frames.html)（[公開元](https://www.w3.org/TR/REC-html40-971218/present/frames.html#edef-IFRAME)） | W3C Recommendation | inline subwindow、fallback、通常のdocument flow内利用を標準化。 | 2026-08-10 |
+| 1999 copyright | [Microsoft DHTML reference](../../raw/documentation.help/HTMLREF/documentation.pdf)（[公開元](https://documentation.help/HTMLREF/documentation.pdf)） | vendor文書の保存複製 | `IFRAME`をfloating `FRAME`と呼ぶ一方、HTMLとscriptの双方でIE4から利用可能とする。 | 2026-08-11 |
 
 ## 確度
 

@@ -10,7 +10,7 @@ HTML+ table modelのcaptionからRFC 1942を経て標準化された要素で、
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、親が`table`である場合、そのtableのtitleを表す。 [HTML Living Standard](../../raw/html-living-standard/tables.html)（[公開版](https://html.spec.whatwg.org/multipage/tables.html#the-caption-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、親が`table`である場合、そのtableのtitleを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/tables.html)（[公開版](https://html.spec.whatwg.org/multipage/tables.html#the-caption-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,9 +38,9 @@ HTML+ `CAPTION`（table用途） → RFC 1942 → HTML 3.2 `CAPTION` → 現行H
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1993-11-08 | [HTML+ §9](../../raw/html-plus/htmlplus_39.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)） | Internet-Draft | `CAPTION`を含む単純table modelを定義する。 | 2026-08-09 |
-| 1996-05 | [RFC 1942](../../raw/rfc1942-html-tables/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)） | Experimental RFC | table modelがHTML+とHTML 3 draftから発展したと明記する。 | 2026-08-09 |
-| 1997-01-14 | [HTML 3.2](../../raw/html-3.2/index.html)（[公開元](https://www.w3.org/TR/REC-html32#table)） | W3C Recommendation | 広く実装されたtable subsetとして`CAPTION`を採録する。 | 2026-08-09 |
+| 1993-11-08 | [HTML+ §9](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)） | Internet-Draft | `CAPTION`を含む単純table modelを定義する。 | 2026-08-09 |
+| 1996-05 | [RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)） | Experimental RFC | table modelがHTML+とHTML 3 draftから発展したと明記する。 | 2026-08-09 |
+| 1997-01-14 | [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32#table)） | W3C Recommendation | 広く実装されたtable subsetとして`CAPTION`を採録する。 | 2026-08-09 |
 
 ## 確度
 

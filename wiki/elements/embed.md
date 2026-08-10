@@ -10,7 +10,7 @@ NetscapeがNavigator 2.0のplug-in mechanismのために提案・実装した空
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、外部applicationまたはinteractive contentのintegration pointを提供する。`src`が埋め込むresourceのURLを、`type`がそのMIME typeを与える。[HTML Living Standard](../../raw/html-living-standard/iframe-embed-object.html)（[公開版](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、外部applicationまたはinteractive contentのintegration pointを提供する。`src`が埋め込むresourceのURLを、`type`がそのMIME typeを与える。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/iframe-embed-object.html)（[公開版](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,9 +38,9 @@ Netscape Navigator 2.0 plug-in mechanism＋empty `EMBED`実装（1995年） → 
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1993-06 | [HTML Internet-Draft](../../raw/draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt)（[公開元](https://www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)） | IETF Internet-Draft | 要素ではなくlink relationshipとしての`EMBED`。 | 2026-08-09 |
-| 1995-09-19 | [Netscape, “A Proposed Extension to HTML: Embed”](../../raw/items/lists.w3.org/7de665c2752c916e-0048.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1995Sep/0048.html)） | vendor提案／標準化投稿 | 任意object、plug-in mechanism、`A REL`案よりauthorに容易という理由、Navigator実装。 | 2026-08-09 |
-| 1996（保存file Last-Modified 1996-03-02） | [*Compound Documents in HTML*](../../raw/client-side-image-maps/8b08076c4739d250-draft-ietf-html-cda-00.txt)（[公開元](https://www.ietf.org/archive/id/draft-ietf-html-cda-00.txt)） | IETF Internet-Draft | Netscape初期`EMBED`がempty elementだったことと後続container案との差。 | 2026-08-09 |
+| 1993-06 | [HTML Internet-Draft](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)） | IETF Internet-Draft | 要素ではなくlink relationshipとしての`EMBED`。 | 2026-08-09 |
+| 1995-09-19 | [Netscape, “A Proposed Extension to HTML: Embed”](../../raw/lists.w3.org/Archives/Public/www-html/1995Sep/0048.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1995Sep/0048.html)） | vendor提案／標準化投稿 | 任意object、plug-in mechanism、`A REL`案よりauthorに容易という理由、Navigator実装。 | 2026-08-09 |
+| 1996（保存file Last-Modified 1996-03-02） | [*Compound Documents in HTML*](../../raw/www.ietf.org/archive/id/draft-ietf-html-cda-00.txt)（[公開元](https://www.ietf.org/archive/id/draft-ietf-html-cda-00.txt)） | IETF Internet-Draft | Netscape初期`EMBED`がempty elementだったことと後続container案との差。 | 2026-08-09 |
 
 ## 確度
 

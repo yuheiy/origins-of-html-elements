@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、文書またはアプリケーション内の汎用的なsection、すなわち通常は見出しを伴う主題別の内容群を表す。stylingやscriptingだけの汎用containerではない。[HTML Living Standard](../../raw/html-living-standard/sections.html)（[公開版](https://html.spec.whatwg.org/multipage/sections.html#the-section-element)、2026-08-10確認）
+WHATWG HTML Living Standardでは、文書またはアプリケーション内の汎用的なsection、すなわち通常は見出しを伴う主題別の内容群を表す。stylingやscriptingだけの汎用containerではない。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/sections.html)（[公開版](https://html.spec.whatwg.org/multipage/sections.html#the-section-element)、2026-08-10確認）
 
 ## HTMLへの導入
 
@@ -38,11 +38,11 @@ WHATWG HTML Living Standardでは、文書またはアプリケーション内�
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2004-08-26 | [`<section>` and headings](../../raw/items/lists.whatwg.org/3410681618b3e6ea-001989.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html)） | WHATWG mailing list | WA1で定義済みの`section`と、headingだけからoutlineを復元する問題。 | 2026-08-10 |
-| 2004-09-23 | [Web Applications 1.0](../../raw/whatwg-web-apps-history/4c6dbe73281bd697-current.html)（[公開元](https://web.archive.org/web/20041009144718id_/http://whatwg.org/specs/web-apps/current-work/#section)） | WHATWG保存Working Draft | `section`をchapter等のdocument sectionとして定義した、最古の確認可能な保存草案。 | 2026-08-10 |
-| 2004-11-12 | [Re: `<section>` and headings](../../raw/items/lists.whatwg.org/2787ce0070a2766d-002362.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)） | WHATWG mailing list | 既存markupを`section`で包み、`div class="section"`を`section`へ置換できることを設計要求としたこと。 | 2026-08-10 |
-| 2005-09-01 | [Web Applications 1.0](../../raw/whatwg-web-apps-history/f8bdeadb28b78825-2005-.html)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-section)） | WHATWG保存Early Working Draft | `section`の存在と、見出しを伴うgeneric sectionという意味。 | 2026-08-09 |
-| 2008-01-22 | [HTML 5 differences from HTML 4](../../raw/w3c-html5-history/07e1fb58af5f1133-WD-html5-diff-200.html)（[公開元](https://www.w3.org/TR/2008/WD-html5-diff-20080122/#new-elements)） | W3C Working Draft | `section`をHTML 4にないdocument markupとして列挙。 | 2026-08-09 |
+| 2004-08-26 | [`<section>` and headings](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html)） | WHATWG mailing list | WA1で定義済みの`section`と、headingだけからoutlineを復元する問題。 | 2026-08-10 |
+| 2004-09-23 | [Web Applications 1.0](../../raw/web.archive.org/web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/index.html)（[公開元](https://web.archive.org/web/20041009144718id_/http://whatwg.org/specs/web-apps/current-work/#section)） | WHATWG保存Working Draft | `section`をchapter等のdocument sectionとして定義した、最古の確認可能な保存草案。 | 2026-08-10 |
+| 2004-11-12 | [Re: `<section>` and headings](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)） | WHATWG mailing list | 既存markupを`section`で包み、`div class="section"`を`section`へ置換できることを設計要求としたこと。 | 2026-08-10 |
+| 2005-09-01 | [Web Applications 1.0](../../raw/whatwg.org/specs/web-apps/2005-09-01/index.html)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-section)） | WHATWG保存Early Working Draft | `section`の存在と、見出しを伴うgeneric sectionという意味。 | 2026-08-09 |
+| 2008-01-22 | [HTML 5 differences from HTML 4](../../raw/www.w3.org/TR/2008/WD-html5-diff-20080122/index.html)（[公開元](https://www.w3.org/TR/2008/WD-html5-diff-20080122/#new-elements)） | W3C Working Draft | `section`をHTML 4にないdocument markupとして列挙。 | 2026-08-09 |
 
 ## 確度
 

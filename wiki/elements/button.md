@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、内容によってlabel付けされたbuttonを表す。`type`によりsubmit、reset、通常のbutton等の動作を持つ。[HTML Living Standard](../../raw/html-living-standard/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、内容によってlabel付けされたbuttonを表す。`type`によりsubmit、reset、通常のbutton等の動作を持つ。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,10 +38,10 @@ HTMLの`input type=submit`、`input type=reset`、`input type=button`。提案�
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1997-04-02 | [*Enhancing HTML Forms*](../../raw/cougar-forms/wd-forms-970402.html)（[公開元](https://www.w3.org/TR/WD-forms-970402)） | W3C Working Draft・提案 | `INPUT`のsubmit／resetより豊かで、HTML内容を持つ新`BUTTON` | 2026-08-09 |
-| 1997-07-08 | [*HTML 4.0 Working Draft: Forms*](../../raw/html-4-history/3398c72a13f7d7ac-forms.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)） | W3C Working Draft | `BUTTON`の三種類、`INPUT`相当の動作、内容による豊かなpresentation | 2026-08-09 |
-| 1999-12-24 | [*HTML 4 Changes*](../../raw/html-4-history/8956e5bf2cd33e94-changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1)） | W3C Recommendation付録 | `BUTTON`がHTML 3.2からHTML 4.0で加わった新要素であること | 2026-08-09 |
-| 2026-08-09 | [*HTML Living Standard: The button element*](../../raw/html-living-standard/form-elements.html)（[公開元](https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element)） | 現行仕様 | `button`の現行定義とtype別の動作 | 2026-08-09 |
+| 1997-04-02 | [*Enhancing HTML Forms*](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)） | W3C Working Draft・提案 | `INPUT`のsubmit／resetより豊かで、HTML内容を持つ新`BUTTON` | 2026-08-09 |
+| 1997-07-08 | [*HTML 4.0 Working Draft: Forms*](../../raw/www.w3.org/TR/WD-html40-970708/interact/forms.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)） | W3C Working Draft | `BUTTON`の三種類、`INPUT`相当の動作、内容による豊かなpresentation | 2026-08-09 |
+| 1999-12-24 | [*HTML 4 Changes*](../../raw/www.w3.org/TR/html401/appendix/changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1)） | W3C Recommendation付録 | `BUTTON`がHTML 3.2からHTML 4.0で加わった新要素であること | 2026-08-09 |
+| 2026-08-09 | [*HTML Living Standard: The button element*](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開元](https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element)） | 現行仕様 | `button`の現行定義とtype別の動作 | 2026-08-09 |
 
 ## 確度
 

@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、`Document`のmetadataのcollectionを表す。 [HTML Living Standard](../../raw/html-living-standard/semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/semantics.html#the-head-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、`Document`のmetadataのcollectionを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/semantics.html#the-head-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,12 +38,12 @@ header／body分離案（1992-06-25）→ CERN header wrapper計画 → `HEADING
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1992-06-25（収録mailの日付） | [“Re: HTML DTD”](../../raw/items/lists.w3.org/800e708c34206f03-0063.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0063.html)） | www-talkへの当事者mailを含む返信 | Berners-LeeがHTMLの変更案としてheader partとbody partの分離を挙げる。 | 2026-08-10 |
-| 1992-11-19 | “HTML DTD issues”／“Re: HTML DTD issues”：[提案](../../raw/items/lists.w3.org/f99c068c486f1ed8-0068.html)・[応答](../../raw/items/lists.w3.org/7661438b0ffab82e-0072.html)（[公開元1](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)・[公開元2](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)） | www-talkへの当事者投稿 | Connollyが`HEADING` wrapperを提案し、Berners-LeeがHeader/Body用語を支持する。 | 2026-08-09 |
-| 1992-11-30（更新日） | [*Recommended HTML Usage*](../../raw/early-www/4de8c29af3f60996-recommended.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Connolly/recommended.html)） | 当事者によるimplementors’ guide | `BODY`より前の非要素header partと、その構成要素を記録する。 | 2026-08-09 |
-| 1992-12-02（更新日） | [*Future plans for HTML*](../../raw/early-www/c778b33c842bb160-Future.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)） | CERN設計ノート | header wrapperと、その終端を早期に判定する設計上の利点を記録する。 | 2026-08-09 |
-| 1992-12-04 | [“The spec evolves...”](../../raw/items/lists.w3.org/220abaf24f050298-0155.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html)） | www-talkへの当事者投稿 | ConnollyがDTDを変更して`HEAD/BODY` tagへ対応したと報告する。 | 2026-08-10 |
-| 1993-01-06（DTD RCS id） | [*Hypertext Markup Language (HTML)*収録DTD](../../raw/draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft内のDTD | `HEAD`とそのunordered content modelを宣言する。 | 2026-08-09 |
+| 1992-06-25（収録mailの日付） | [“Re: HTML DTD”](../../raw/lists.w3.org/Archives/Public/www-talk/1992MayJun/0063.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0063.html)） | www-talkへの当事者mailを含む返信 | Berners-LeeがHTMLの変更案としてheader partとbody partの分離を挙げる。 | 2026-08-10 |
+| 1992-11-19 | “HTML DTD issues”／“Re: HTML DTD issues”：[提案](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)・[応答](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)（[公開元1](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)・[公開元2](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)） | www-talkへの当事者投稿 | Connollyが`HEADING` wrapperを提案し、Berners-LeeがHeader/Body用語を支持する。 | 2026-08-09 |
+| 1992-11-30（更新日） | [*Recommended HTML Usage*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Connolly/recommended.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Connolly/recommended.html)） | 当事者によるimplementors’ guide | `BODY`より前の非要素header partと、その構成要素を記録する。 | 2026-08-09 |
+| 1992-12-02（更新日） | [*Future plans for HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)） | CERN設計ノート | header wrapperと、その終端を早期に判定する設計上の利点を記録する。 | 2026-08-09 |
+| 1992-12-04 | [“The spec evolves...”](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html)） | www-talkへの当事者投稿 | ConnollyがDTDを変更して`HEAD/BODY` tagへ対応したと報告する。 | 2026-08-10 |
+| 1993-01-06（DTD RCS id） | [*Hypertext Markup Language (HTML)*収録DTD](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft内のDTD | `HEAD`とそのunordered content modelを宣言する。 | 2026-08-09 |
 
 ## 確度
 

@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、userがtaskを行うか情報を得るために操作する小window、すなわちdialog boxという形の、一時的なapplication部分を表す。`open`属性はdialogがactiveで操作可能なことを示す。[HTML Living Standard](../../raw/html-living-standard/interactive-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、userがtaskを行うか情報を得るために操作する小window、すなわちdialog boxという形の、一時的なapplication部分を表す。`open`属性はdialogがactiveで操作可能なことを示す。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/interactive-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -42,11 +42,11 @@ CSS／JavaScript／WAI-ARIA製modal dialog、JS lightbox、browser blocking prom
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2008-01-22 | [HTML 5 differences from HTML 4](../../raw/w3c-html5-history/07e1fb58af5f1133-WD-html5-diff-200.html)（[公開元](https://www.w3.org/TR/2008/WD-html5-diff-20080122/#new-elements)） | W3C Working Draft | `dt`をspeaker、`dd`をspeechとするconversation用の旧`dialog`。 | 2026-08-09 |
-| 2009-09-15 | [WHATWG HTML commit `9c490f21`](../../raw/whatwg-html-history/065b41ec1fe89a8d-9c490f21ae094de128e5bc6d3111640014a.html)（[公開元](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)） | 仕様commit | conversation用`dialog`を削除し、通常のHTMLによる会話markupへ置換。 | 2026-08-09 |
-| 2011-01-22 | [W3C HTML Issue 162](../../raw/items/lists.w3.org/895c450e3ab5b0fa-0014.html)（[公開元](https://lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html)） | 標準化issue | CSS、JavaScript、WAI-ARIAでrobustなmodal dialogを作る難しさ、既存Web UI実装、native mechanismの提案。 | 2026-08-09 |
-| 2012-04-11 | [WHATWG HTML commit `2fb24fcf`](../../raw/whatwg-html-history/e91f9c5459f254f7-2fb24fcf3f916236e8767e2cb72b23e5c75.html)（[公開元](https://github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9)） | 仕様commit | application UI用`dialog`、modal/non-modal API、関連機構の導入。 | 2026-08-09 |
-| 2012-04-11 | [Ian Hickson, “Dialogs and prompts”](../../raw/items/lists.whatwg.org/c29f9fae0eff2ea8-077688.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html)） | WHATWG mailing list・編集者説明 | 既存use caseと議論に基づく設計、browser promptの問題、JS lightbox-style dialog、非同期`showModal()`の採用理由。 | 2026-08-09 |
+| 2008-01-22 | [HTML 5 differences from HTML 4](../../raw/www.w3.org/TR/2008/WD-html5-diff-20080122/index.html)（[公開元](https://www.w3.org/TR/2008/WD-html5-diff-20080122/#new-elements)） | W3C Working Draft | `dt`をspeaker、`dd`をspeechとするconversation用の旧`dialog`。 | 2026-08-09 |
+| 2009-09-15 | [WHATWG HTML commit `9c490f21`](../../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)（[公開元](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)） | 仕様commit | conversation用`dialog`を削除し、通常のHTMLによる会話markupへ置換。 | 2026-08-09 |
+| 2011-01-22 | [W3C HTML Issue 162](../../raw/lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html)（[公開元](https://lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html)） | 標準化issue | CSS、JavaScript、WAI-ARIAでrobustなmodal dialogを作る難しさ、既存Web UI実装、native mechanismの提案。 | 2026-08-09 |
+| 2012-04-11 | [WHATWG HTML commit `2fb24fcf`](../../raw/github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9)（[公開元](https://github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9)） | 仕様commit | application UI用`dialog`、modal/non-modal API、関連機構の導入。 | 2026-08-09 |
+| 2012-04-11 | [Ian Hickson, “Dialogs and prompts”](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html)） | WHATWG mailing list・編集者説明 | 既存use caseと議論に基づく設計、browser promptの問題、JS lightbox-style dialog、非同期`showModal()`の採用理由。 | 2026-08-09 |
 
 ## 確度
 

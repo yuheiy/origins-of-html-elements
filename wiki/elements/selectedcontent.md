@@ -10,7 +10,7 @@ customizable `select`で選択中の`option`内容を宣言的に表示するOpe
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、`select`で現在選択されている`option`の内容を反映する。`select`の最初の子である`button`内に置き、選択肢の内容を宣言的に表示できる。[HTML Living Standard](../../raw/html-living-standard/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-selectedcontent-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、`select`で現在選択されている`option`の内容を反映する。`select`の最初の子である`button`内に置き、選択肢の内容を宣言的に表示できる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-selectedcontent-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,10 +38,10 @@ Open UI／WHATWG `selectedoption`提案（2024年） → Open UI `selectedconten
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2024-07-25 | [WHATWG HTML issue 10520](../../raw/whatwg-html-history/5be60562ca655338-index.html)（[公開元](https://github.com/whatwg/html/issues/10520)） | 標準化issue | 旧名`selectedoption`のclone modelと更新timing。 | 2026-08-09 |
-| 2024-09-18 | [WHATWG HTML PR 10633](../../raw/whatwg-html-history/76bbdb09bf9169c3-index.html)（[公開元](https://github.com/whatwg/html/pull/10633)） | 仕様PR | 選択中optionの内容をbutton内へ宣言的にcloneする要求。 | 2026-08-09 |
-| 2024-11-05 | [Open UI PR 1124](../../raw/items/github.com/d613eb5d25807360-112.html)（[公開元](https://github.com/openui/open-ui/pull/1124)） | 仕様PR | `selectedoption`から`selectedcontent`への改名。 | 2026-08-09 |
-| 2025-07-21 | [WHATWG HTML commit `172cccf4`](../../raw/whatwg-html-history/8add7f5ec6af3bc1-172cccf47e97bee64f690347e0f303be31b.html)（[公開元](https://github.com/whatwg/html/commit/172cccf47e97bee64f690347e0f303be31b7c67b)） | 仕様commit | customizable `select`と`selectedcontent`のHTML Standard統合。 | 2026-08-09 |
+| 2024-07-25 | [WHATWG HTML issue 10520](../../raw/github.com/whatwg/html/issues/10520)（[公開元](https://github.com/whatwg/html/issues/10520)） | 標準化issue | 旧名`selectedoption`のclone modelと更新timing。 | 2026-08-09 |
+| 2024-09-18 | [WHATWG HTML PR 10633](../../raw/github.com/whatwg/html/pull/10633)（[公開元](https://github.com/whatwg/html/pull/10633)） | 仕様PR | 選択中optionの内容をbutton内へ宣言的にcloneする要求。 | 2026-08-09 |
+| 2024-11-05 | [Open UI PR 1124](../../raw/github.com/openui/open-ui/pull/1124)（[公開元](https://github.com/openui/open-ui/pull/1124)） | 仕様PR | `selectedoption`から`selectedcontent`への改名。 | 2026-08-09 |
+| 2025-07-21 | [WHATWG HTML commit `172cccf4`](../../raw/github.com/whatwg/html/commit/172cccf47e97bee64f690347e0f303be31b7c67b)（[公開元](https://github.com/whatwg/html/commit/172cccf47e97bee64f690347e0f303be31b7c67b)） | 仕様commit | customizable `select`と`selectedcontent`のHTML Standard統合。 | 2026-08-09 |
 
 ## 確度
 

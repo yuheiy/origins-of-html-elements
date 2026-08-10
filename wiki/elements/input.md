@@ -10,7 +10,7 @@ HTML+ formsからHTML 2.0へ導出されたtyped input fieldで、各widget type
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、型を持つdata fieldを表し、通常はユーザーがデータを編集するためのform controlを伴う。 [HTML Living Standard](../../raw/html-living-standard/input.html)（[公開版](https://html.spec.whatwg.org/multipage/input.html#the-input-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、型を持つdata fieldを表し、通常はユーザーがデータを編集するためのform controlを伴う。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/input.html)（[公開版](https://html.spec.whatwg.org/multipage/input.html#the-input-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,8 +38,8 @@ HTML+ `INPUT` → HTML 2.0 `INPUT` → 現行HTML `<input>`
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1993-11-08 | [HTML+ §10](../../raw/html-plus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)） | Internet-Draft | `INPUT`のHTML+ forms上の設計を確認できる。 | 2026-08-09 |
-| 1995-11 | [RFC 1866](../../raw/html-2.0/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html)） | Standards Track RFC | HTML 2.0 formsを定義し、forms materialのHTML+由来を明記する。 | 2026-08-09 |
+| 1993-11-08 | [HTML+ §10](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)） | Internet-Draft | `INPUT`のHTML+ forms上の設計を確認できる。 | 2026-08-09 |
+| 1995-11 | [RFC 1866](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html)） | Standards Track RFC | HTML 2.0 formsを定義し、forms materialのHTML+由来を明記する。 | 2026-08-09 |
 
 ## 確度
 

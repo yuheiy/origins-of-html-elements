@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、別の文脈における関連性を理由に、参照目的でmarkまたはhighlightされた一続きのtextを表す。本文ではuserの現在の行動に関連しそうな箇所、引用では原著者によらず後から注目させた箇所を示す。[HTML Living Standard](../../raw/html-living-standard/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-mark-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、別の文脈における関連性を理由に、参照目的でmarkまたはhighlightされた一続きのtextを表す。本文ではuserの現在の行動に関連しそうな箇所、引用では原著者によらず後から注目させた箇所を示す。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-mark-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,8 +38,8 @@ WHATWG Web Applications 1.0 `m`（2005年） → `mark`への改名と意味の�
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2005-09-01 | [Web Applications 1.0](../../raw/whatwg-web-apps-history/f8bdeadb28b78825-2005-.html)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-m)） | WHATWG保存Early Working Draft | marked/highlighted textを表す`m`と検索結果の用例。 | 2026-08-09 |
-| 2008-02-17 | [WHATWG HTML commit `a1b2ff77`](../../raw/whatwg-html-history/6ad2b6e548ba2e59-a1b2ff77457cf198c77975b98f245985d3b.html)（[公開元](https://github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)） | 仕様commit | `m`から`mark`への改名とrelevance/highlight用例の拡張。 | 2026-08-09 |
+| 2005-09-01 | [Web Applications 1.0](../../raw/whatwg.org/specs/web-apps/2005-09-01/index.html)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-m)） | WHATWG保存Early Working Draft | marked/highlighted textを表す`m`と検索結果の用例。 | 2026-08-09 |
+| 2008-02-17 | [WHATWG HTML commit `a1b2ff77`](../../raw/github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)（[公開元](https://github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)） | 仕様commit | `m`から`mark`への改名とrelevance/highlight用例の拡張。 | 2026-08-09 |
 
 ## 確度
 

@@ -10,7 +10,7 @@ W3C Internationalization Working GroupがHTML拡張として提案した語彙�
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、phrasing contentの一つ以上の範囲へruby annotationを付ける。ruby annotationは主に東アジア組版で発音等を示すため、base textに沿えて表示する短いtextである。[HTML Living Standard](../../raw/html-living-standard/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、phrasing contentの一つ以上の範囲へruby annotationを付ける。ruby annotationは主に東アジア組版で発音等を示すため、base textに沿えて表示する短いtextである。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -46,12 +46,12 @@ W3C／XHTML枝からHTML5への接続は未確認である。
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1997-02-28 | [*Ruby in the Hypertext Markup Language*](../../raw/ruby-markup/93c142fbeff73349-draft-duerst-ru.html)（[公開元](https://www.w3.org/International/draft-duerst-ruby-01)） | Internet-Draft | 東アジアのrubyをHTMLへ表す`RUBY`属性案とJIS X 4051の組版背景。 | 2026-08-10 |
-| 1998-12-21 | [*Ruby*](../../raw/ruby-markup/4f19a1a45ff5e64f-WD-ruby-199.html)（[公開元](https://www.w3.org/TR/1998/WD-ruby-19981221/)） | W3C Working Draft | HTML拡張`ruby`語彙、国際化要求、次版HTMLへ提出する意図。 | 2026-08-09 |
-| 2001-05-31 | [*Ruby Annotation*](../../raw/ruby-markup/af6b6f2bacdb9795-REC-ruby-200.html)（[公開元](https://www.w3.org/TR/2001/REC-ruby-20010531/)） | W3C Recommendation | XHTML moduleの`ruby`を規範化し、JIS X 4052 markupとの協調と差分を記録。 | 2026-08-10 |
-| 2007-08-12 | “My case for Ruby-elements”：[提案](../../raw/items/lists.whatwg.org/3163ee917c00cde8-054625.html)・[回答](../../raw/items/lists.whatwg.org/8c66fe2e60dc7e19-054633.html)（[公開元1](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054625.html)・[公開元2](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html)） | WHATWG mail | Ruby要素のuse casesと、編集者による`ruby`採録予定。 | 2026-08-10 |
-| 2008-05-26 | [WHATWG HTML commit `f4efc736`](../../raw/whatwg-html-history/882743fed9302600-f4efc73617bb37e721828ba03fe3da1642c.html)（[公開元](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)） | 仕様commit | 三要素の追加と、IE厳密互換より既存Webの四つの単純構文を優先したparser規則。 | 2026-08-10 |
-| 2008-05-26 | [“Current HTML ruby markup usage”](../../raw/items/lists.w3.org/8277f91937ac5877-0620.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2008May/0620.html)） | HTML WG mail／corpus追試 | DMOZ由来13万ページ標本で`ruby`、`rt`、`rp`等の意図的利用を確認した独立追試。 | 2026-08-10 |
+| 1997-02-28 | [*Ruby in the Hypertext Markup Language*](../../raw/www.w3.org/International/draft-duerst-ruby-01)（[公開元](https://www.w3.org/International/draft-duerst-ruby-01)） | Internet-Draft | 東アジアのrubyをHTMLへ表す`RUBY`属性案とJIS X 4051の組版背景。 | 2026-08-10 |
+| 1998-12-21 | [*Ruby*](../../raw/www.w3.org/TR/1998/WD-ruby-19981221/index.html)（[公開元](https://www.w3.org/TR/1998/WD-ruby-19981221/)） | W3C Working Draft | HTML拡張`ruby`語彙、国際化要求、次版HTMLへ提出する意図。 | 2026-08-09 |
+| 2001-05-31 | [*Ruby Annotation*](../../raw/www.w3.org/TR/2001/REC-ruby-20010531/index.html)（[公開元](https://www.w3.org/TR/2001/REC-ruby-20010531/)） | W3C Recommendation | XHTML moduleの`ruby`を規範化し、JIS X 4052 markupとの協調と差分を記録。 | 2026-08-10 |
+| 2007-08-12 | “My case for Ruby-elements”：[提案](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054625.html)・[回答](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html)（[公開元1](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054625.html)・[公開元2](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html)） | WHATWG mail | Ruby要素のuse casesと、編集者による`ruby`採録予定。 | 2026-08-10 |
+| 2008-05-26 | [WHATWG HTML commit `f4efc736`](../../raw/github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)（[公開元](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)） | 仕様commit | 三要素の追加と、IE厳密互換より既存Webの四つの単純構文を優先したparser規則。 | 2026-08-10 |
+| 2008-05-26 | [“Current HTML ruby markup usage”](../../raw/lists.w3.org/Archives/Public/public-html/2008May/0620.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2008May/0620.html)） | HTML WG mail／corpus追試 | DMOZ由来13万ページ標本で`ruby`、`rt`、`rp`等の意図的利用を確認した独立追試。 | 2026-08-10 |
 
 ## 確度
 

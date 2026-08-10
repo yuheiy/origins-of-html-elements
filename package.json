@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "type": "module",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^24.12.0",
+      "onFail": "download"
+    }
+  }
+}

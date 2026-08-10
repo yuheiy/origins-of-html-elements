@@ -10,7 +10,7 @@ Tim Berners-Leeは1992年6月にheader／body分離案を示し、Dan Connolly�
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、文書のcontentsを表す。 [HTML Living Standard](../../raw/html-living-standard/sections.html)（[公開版](https://html.spec.whatwg.org/multipage/sections.html#the-body-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、文書のcontentsを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/sections.html)（[公開版](https://html.spec.whatwg.org/multipage/sections.html#the-body-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -40,13 +40,13 @@ HTML `BODY`（1992-07-15公開DTD）→ 内部版DTD `DOCUMENT`（1992-11-19の�
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1988-10-18 | [*SCRIPT GML User’s Guide*](../../raw/items/web.archive.org/b82275288ef607cd-script-gmlref-tso.txt)（[公開元](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)） | Waterloo公式文書の保存版 | 先行GMLに`BODY`／`eBODY`が存在する。HTMLへの採用因果は示さない。 | 2026-08-09 |
-| 1992-06-25（収録mailの日付） | [“Re: HTML DTD”](../../raw/items/lists.w3.org/800e708c34206f03-0063.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0063.html)） | www-talkへの当事者mailを含む返信 | Berners-LeeがHTMLの変更案としてheader partとbody partの分離を挙げる。 | 2026-08-10 |
-| 1992-07-15 | [“HTML DTD enclosed”](../../raw/items/lists.w3.org/51289146bdefa66d-0020.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992JulAug/0020.html)） | www-talkへの当事者投稿とDTD | `BODY`を宣言し、`HTML`のmixed content問題を避けるという必要性をcommentに記す。後の`DOCUMENT`より早い`BODY`の公開例である。 | 2026-08-09 |
-| 1992-11-19 | “HTML DTD issues”／“Re: HTML DTD issues”：[提案](../../raw/items/lists.w3.org/f99c068c486f1ed8-0068.html)・[応答](../../raw/items/lists.w3.org/7661438b0ffab82e-0072.html)（[公開元1](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)・[公開元2](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)） | www-talkへの当事者投稿 | Connollyが当時の内部版の`DOCUMENT`を`BODY`へ戻す案を示し、Berners-LeeがHeader/Body用語を支持する。 | 2026-08-09 |
-| 1992-12-01 | [“HTML providers: please grab sgmls and the DTD”](../../raw/items/lists.w3.org/c24d96bcaf81e776-0143.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0143.html)） | www-talkへの当事者投稿 | Connollyがmixed contentを避ける選択肢を比較し、`BODY`を使う案を実施したと説明する。 | 2026-08-10 |
-| 1992-12-04 | [“The spec evolves...”](../../raw/items/lists.w3.org/220abaf24f050298-0155.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html)） | www-talkへの当事者投稿 | ConnollyがDTDを変更して`HEAD/BODY` tagへ対応したと報告する。 | 2026-08-10 |
-| 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | DTDで`BODY`とそのcontent modelを宣言する。 | 2026-08-09 |
+| 1988-10-18 | [*SCRIPT GML User’s Guide*](../../raw/web.archive.org/web/20020504095301/http%3A/www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)（[公開元](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)） | Waterloo公式文書の保存版 | 先行GMLに`BODY`／`eBODY`が存在する。HTMLへの採用因果は示さない。 | 2026-08-09 |
+| 1992-06-25（収録mailの日付） | [“Re: HTML DTD”](../../raw/lists.w3.org/Archives/Public/www-talk/1992MayJun/0063.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0063.html)） | www-talkへの当事者mailを含む返信 | Berners-LeeがHTMLの変更案としてheader partとbody partの分離を挙げる。 | 2026-08-10 |
+| 1992-07-15 | [“HTML DTD enclosed”](../../raw/lists.w3.org/Archives/Public/www-talk/1992JulAug/0020.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992JulAug/0020.html)） | www-talkへの当事者投稿とDTD | `BODY`を宣言し、`HTML`のmixed content問題を避けるという必要性をcommentに記す。後の`DOCUMENT`より早い`BODY`の公開例である。 | 2026-08-09 |
+| 1992-11-19 | “HTML DTD issues”／“Re: HTML DTD issues”：[提案](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)・[応答](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)（[公開元1](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)・[公開元2](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)） | www-talkへの当事者投稿 | Connollyが当時の内部版の`DOCUMENT`を`BODY`へ戻す案を示し、Berners-LeeがHeader/Body用語を支持する。 | 2026-08-09 |
+| 1992-12-01 | [“HTML providers: please grab sgmls and the DTD”](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0143.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0143.html)） | www-talkへの当事者投稿 | Connollyがmixed contentを避ける選択肢を比較し、`BODY`を使う案を実施したと説明する。 | 2026-08-10 |
+| 1992-12-04 | [“The spec evolves...”](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html)） | www-talkへの当事者投稿 | ConnollyがDTDを変更して`HEAD/BODY` tagへ対応したと報告する。 | 2026-08-10 |
+| 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | DTDで`BODY`とそのcontent modelを宣言する。 | 2026-08-09 |
 
 ## 確度
 

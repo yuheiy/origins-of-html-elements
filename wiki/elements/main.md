@@ -10,7 +10,7 @@ WAI-ARIA `main` landmarkと`div role="main"`、`id=main/content`等の既存Web�
 
 ## 現在の意味
 
-WHATWG HTML Living Standardではdocumentのdominant contentsを表す。`hidden`でない`main`を一つのdocumentに複数置くことはできない。[HTML Living Standard](../../raw/html-living-standard/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element)、2026-08-09確認）
+WHATWG HTML Living Standardではdocumentのdominant contentsを表す。`hidden`でない`main`を一つのdocumentに複数置くことはできない。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,11 +38,11 @@ XHTML Role `main` → WAI-ARIA `main` landmark → `<div role="main">`＋`id`／
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2006-07-25 | [XHTML Role Attribute Module](../../raw/wai-aria/9869d34451822d83-WD-xhtml-role-200.html)（[公開元](https://www.w3.org/TR/2006/WD-xhtml-role-20060725/)） | W3C Working Draft | HTML要素以前の`main` role。 | 2026-08-09 |
-| 2008-08-06 | [WAI-ARIA 1.0 Working Draft](../../raw/wai-aria/d56a81fadde48cc7-WD-wai-aria-200.html)（[公開元](https://www.w3.org/TR/2008/WD-wai-aria-20080806/#main)） | W3C Working Draft | 一つのmain content areaを示すlandmark `main`。 | 2026-08-09 |
-| 2012-09-09、2012-10-17 | Steve Faulknerの提案と使用調査：[提案](../../raw/items/lists.w3.org/f0945b5661ed40f2-0086.html)・[調査](../../raw/items/lists.w3.org/76885e13ba51d269-0109.html)（[公開元1](https://lists.w3.org/Archives/Public/public-html/2012Sep/0086.html)・[公開元2](https://lists.w3.org/Archives/Public/public-html/2012Oct/0109.html)） | W3C public-html投稿 | ARIA analogueと既存`id`／`class`慣習を要素化する提案、その実態調査。 | 2026-08-09 |
-| 2012-12-17 | [*HTML Main Element*](../../raw/w3c-html5-history/93f0ba011fb3526a-WD-html-main-element-201.html)（[公開元](https://www.w3.org/TR/2012/WD-html-main-element-20121217/)） | W3C First Public Working Draft | 名称を`main`として定義し、ARIAと既存Web慣習との採用因果を説明。 | 2026-08-09 |
-| 2013-01-11 | [Robin Berjon, integration announcement](../../raw/items/lists.w3.org/a20af213ee0ed319-0033.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2013Jan/0033.html)） | W3C public-html投稿 | `main`仕様をHTML5 editor's draftへ統合した告知。 | 2026-08-09 |
+| 2006-07-25 | [XHTML Role Attribute Module](../../raw/www.w3.org/TR/2006/WD-xhtml-role-20060725/index.html)（[公開元](https://www.w3.org/TR/2006/WD-xhtml-role-20060725/)） | W3C Working Draft | HTML要素以前の`main` role。 | 2026-08-09 |
+| 2008-08-06 | [WAI-ARIA 1.0 Working Draft](../../raw/www.w3.org/TR/2008/WD-wai-aria-20080806/index.html)（[公開元](https://www.w3.org/TR/2008/WD-wai-aria-20080806/#main)） | W3C Working Draft | 一つのmain content areaを示すlandmark `main`。 | 2026-08-09 |
+| 2012-09-09、2012-10-17 | Steve Faulknerの提案と使用調査：[提案](../../raw/lists.w3.org/Archives/Public/public-html/2012Sep/0086.html)・[調査](../../raw/lists.w3.org/Archives/Public/public-html/2012Oct/0109.html)（[公開元1](https://lists.w3.org/Archives/Public/public-html/2012Sep/0086.html)・[公開元2](https://lists.w3.org/Archives/Public/public-html/2012Oct/0109.html)） | W3C public-html投稿 | ARIA analogueと既存`id`／`class`慣習を要素化する提案、その実態調査。 | 2026-08-09 |
+| 2012-12-17 | [*HTML Main Element*](../../raw/www.w3.org/TR/2012/WD-html-main-element-20121217/index.html)（[公開元](https://www.w3.org/TR/2012/WD-html-main-element-20121217/)） | W3C First Public Working Draft | 名称を`main`として定義し、ARIAと既存Web慣習との採用因果を説明。 | 2026-08-09 |
+| 2013-01-11 | [Robin Berjon, integration announcement](../../raw/lists.w3.org/Archives/Public/public-html/2013Jan/0033.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2013Jan/0033.html)） | W3C public-html投稿 | `main`仕様をHTML5 editor's draftへ統合した告知。 | 2026-08-09 |
 
 ## 確度
 

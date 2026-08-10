@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、内容と、その機械可読な表現である`value`属性を併せて表す。値が日付または時刻に関係する場合は、より具体的な`time`を使える。[HTML Living Standard](../../raw/html-living-standard/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-data-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、内容と、その機械可読な表現である`value`属性を併せて表す。値が日付または時刻に関係する場合は、より具体的な`time`を使える。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-data-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,10 +38,10 @@ HTML WG `data` change proposal（2011–2012年） → HTML WG合意・決定（
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2012（更新日不詳） | [`<data>` element change proposal](../../raw/items/www.w3.org/74dd567eafb851e7-data_el.html)（[公開元](https://www.w3.org/wiki/User:Tantekelik/data_element)） | HTML WG change proposal | 導入理由、代替案、2011年のrough consensusとeditor追加済み定義。 | 2026-08-09 |
-| 2012-04-04 | [ISSUE-184 Call for Consensus](../../raw/items/lists.w3.org/2b6fdcbb7754ab93-0026.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2012Apr/0026.html)） | HTML WG mailing list | 二案が`data`追加で一致し、型systemだけを争点としたこと。 | 2026-08-09 |
-| 2012-07-17 | [ISSUE-184 Working Group Decision](../../raw/items/www.w3.org/9c41385f6de68f08-5005BC08.7040705-40intertwingl.html)（[公開元](https://www.w3.org/mid/5005BC08.7040705%2540intertwingly.net)） | HTML WG decision | 要素追加のconsensusと無型modelの決定。 | 2026-08-09 |
-| 2013-05-28 | [HTML 5.1 `data`](../../raw/w3c-html5-history/3f93f39fb4d3c7a3-text-level-semantics.html)（[公開元](https://www.w3.org/TR/2013/WD-html51-20130528/text-level-semantics.html#the-data-element)） | W3C Working Draft | `value`による機械可読表現と`time`との機能分担。 | 2026-08-09 |
+| 2012（更新日不詳） | [`<data>` element change proposal](../../raw/www.w3.org/wiki/User%3ATantekelik/data_element)（[公開元](https://www.w3.org/wiki/User:Tantekelik/data_element)） | HTML WG change proposal | 導入理由、代替案、2011年のrough consensusとeditor追加済み定義。 | 2026-08-09 |
+| 2012-04-04 | [ISSUE-184 Call for Consensus](../../raw/lists.w3.org/Archives/Public/public-html/2012Apr/0026.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2012Apr/0026.html)） | HTML WG mailing list | 二案が`data`追加で一致し、型systemだけを争点としたこと。 | 2026-08-09 |
+| 2012-07-17 | [ISSUE-184 Working Group Decision](../../raw/www.w3.org/mid/5005BC08.7040705%2540intertwingly.net)（[公開元](https://www.w3.org/mid/5005BC08.7040705%2540intertwingly.net)） | HTML WG decision | 要素追加のconsensusと無型modelの決定。 | 2026-08-09 |
+| 2013-05-28 | [HTML 5.1 `data`](../../raw/www.w3.org/TR/2013/WD-html51-20130528/text-level-semantics.html)（[公開元](https://www.w3.org/TR/2013/WD-html51-20130528/text-level-semantics.html#the-data-element)） | W3C Working Draft | `value`による機械可読表現と`time`との機能分担。 | 2026-08-09 |
 
 ## 確度
 

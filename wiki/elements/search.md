@@ -10,7 +10,7 @@ WAI-ARIA `search` landmarkと`div role="search"`をnative HTMLで表すためWHA
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、検索またはfiltering operationを行うform controlsその他の内容を含むdocument／applicationの一部を表す。検索結果そのものを提示するだけの用途には使わない。[HTML Living Standard](../../raw/html-living-standard/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、検索またはfiltering operationを行うform controlsその他の内容を含むdocument／applicationの一部を表す。検索結果そのものを提示するだけの用途には使わない。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,11 +38,11 @@ XHTML Role `search` → WAI-ARIA `search` landmark → `<div role="search">` →
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2006-07-25 | [XHTML Role Attribute Module](../../raw/wai-aria/9869d34451822d83-WD-xhtml-role-200.html)（[公開元](https://www.w3.org/TR/2006/WD-xhtml-role-20060725/)） | W3C Working Draft | HTML要素以前の`search` role。 | 2026-08-09 |
-| 2008-02-04、2014-03-20 | WAI-ARIA 1.0：[FPWD](../../raw/wai-aria/a24ec93729301cee-WD-wai-aria-200.html)・[Recommendation](../../raw/wai-aria/f5d49f1926104de2-index.html)（[公開元1](https://www.w3.org/TR/2008/WD-wai-aria-20080204/#search)・[公開元2](https://www.w3.org/TR/2014/REC-wai-aria-20140320/roles#search)） | W3C Working Draft／Recommendation | `search`をnavigational landmarkとして継承・標準化。 | 2026-08-09 |
-| 2020-08-12 | [WHATWG issue #5811](../../raw/whatwg-html-history/3a85936dc96af098-581.html)（[公開元](https://github.com/whatwg/html/issues/5811)） | 標準化issue | `search`だけHTML analogueがないことと`div role=search`置換を提案。 | 2026-08-09 |
-| 2021-11-08 | WHATWG PR #7320 / initial commit：[PR](../../raw/whatwg-html-history/c47f1b88db8a8fd3-732.html)・[commit](../../raw/whatwg-html-history/7f205ff1b1096854-303b37ec277946798aef715ff3ade7944f2.html)（[公開元1](https://github.com/whatwg/html/pull/7320)・[公開元2](https://github.com/whatwg/html/commit/303b37ec277946798aef715ff3ade7944f2657c0)） | 標準化PR／仕様commit | `search`の仕様、ARIA semanticsをnativeで表す導入理由、追加機能を持たないこと。 | 2026-08-09 |
-| 2023-03-24 | [WHATWG HTML merge commit](../../raw/whatwg-html-history/aa5a1f42200b1fbc-c598ff023f081dd3f03b2e43177a632fb7d.html)（[公開元](https://github.com/whatwg/html/commit/c598ff023f081dd3f03b2e43177a632fb7dc92ec)） | Living Standard仕様commit | PR #7320をmergeし`search`をLiving Standardへ導入。 | 2026-08-09 |
+| 2006-07-25 | [XHTML Role Attribute Module](../../raw/www.w3.org/TR/2006/WD-xhtml-role-20060725/index.html)（[公開元](https://www.w3.org/TR/2006/WD-xhtml-role-20060725/)） | W3C Working Draft | HTML要素以前の`search` role。 | 2026-08-09 |
+| 2008-02-04、2014-03-20 | WAI-ARIA 1.0：[FPWD](../../raw/www.w3.org/TR/2008/WD-wai-aria-20080204/index.html)・[Recommendation](../../raw/www.w3.org/TR/2014/REC-wai-aria-20140320/roles)（[公開元1](https://www.w3.org/TR/2008/WD-wai-aria-20080204/#search)・[公開元2](https://www.w3.org/TR/2014/REC-wai-aria-20140320/roles#search)） | W3C Working Draft／Recommendation | `search`をnavigational landmarkとして継承・標準化。 | 2026-08-09 |
+| 2020-08-12 | [WHATWG issue #5811](../../raw/github.com/whatwg/html/issues/5811)（[公開元](https://github.com/whatwg/html/issues/5811)） | 標準化issue | `search`だけHTML analogueがないことと`div role=search`置換を提案。 | 2026-08-09 |
+| 2021-11-08 | WHATWG PR #7320 / initial commit：[PR](../../raw/github.com/whatwg/html/pull/7320)・[commit](../../raw/github.com/whatwg/html/commit/303b37ec277946798aef715ff3ade7944f2657c0)（[公開元1](https://github.com/whatwg/html/pull/7320)・[公開元2](https://github.com/whatwg/html/commit/303b37ec277946798aef715ff3ade7944f2657c0)） | 標準化PR／仕様commit | `search`の仕様、ARIA semanticsをnativeで表す導入理由、追加機能を持たないこと。 | 2026-08-09 |
+| 2023-03-24 | [WHATWG HTML merge commit](../../raw/github.com/whatwg/html/commit/c598ff023f081dd3f03b2e43177a632fb7dc92ec)（[公開元](https://github.com/whatwg/html/commit/c598ff023f081dd3f03b2e43177a632fb7dc92ec)） | Living Standard仕様commit | PR #7320をmergeし`search`をLiving Standardへ導入。 | 2026-08-09 |
 
 ## 確度
 

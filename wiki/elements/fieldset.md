@@ -10,21 +10,21 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardではform controlsまたは他の内容を一組にまとめ、任意でcaptionを持つgroupを表す。captionは子である最初の`legend`が与える。[HTML Living Standard](../../raw/html-living-standard/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-fieldset-element)、2026-08-09確認）
+WHATWG HTML Living Standardではform controlsまたは他の内容を一組にまとめ、任意でcaptionを持つgroupを表す。captionは子である最初の`legend`が与える。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-fieldset-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
-1997年2月3日のScott Isaacs著、Dave Raggett編のforms Working Draftが`FIELDSET`／`CAPTION`を定義した。HTMLにはspeech-based user agentが関連fieldsをgroupとして閲覧するmarkupがなかったため、関連fieldsをまとめ、group間を移動できるようにすることが理由だった。4月2日版はこの構造をCougarへの採録候補として継続し、Cougarの公開記録は同草案をHTML 4.0の基礎となったdraftsの一つに挙げる。7月8日のHTML 4.0 First Public Working Draftが`FIELDSET`／`LEGEND`を採録した。[1997年2月草案](../../raw/cougar-forms/wd-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [1997年4月草案](../../raw/cougar-forms/wd-forms-970402.html)（[公開元](https://www.w3.org/TR/WD-forms-970402)） [Cougar概要](../../raw/cougar-forms/project.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） [HTML 4.0 forms](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)
+1997年2月3日のScott Isaacs著、Dave Raggett編のforms Working Draftが`FIELDSET`／`CAPTION`を定義した。HTMLにはspeech-based user agentが関連fieldsをgroupとして閲覧するmarkupがなかったため、関連fieldsをまとめ、group間を移動できるようにすることが理由だった。4月2日版はこの構造をCougarへの採録候補として継続し、Cougarの公開記録は同草案をHTML 4.0の基礎となったdraftsの一つに挙げる。7月8日のHTML 4.0 First Public Working Draftが`FIELDSET`／`LEGEND`を採録した。[1997年2月草案](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [1997年4月草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)） [Cougar概要](../../raw/www.w3.org/MarkUp/Cougar/index.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） [HTML 4.0 forms](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)
 
 ## HTML直前の祖先
 
-Cougar向けforms Working Draft系列の`FIELDSET`／`CAPTION`である。1997年2月版は`FIELDSET`を`DIV`に似るが関連fieldsのgroup化に特化したcontainerとして定義し、4月版とHTML 4 FPWDが要求と説明を継承した。Daniel Dardaillerは、RaggettからRamanとの過去のform作業の多くがCougarへ入ったと聞いたとして、対応を「Grouping → FIELDSET」と記録した。[1997年2月草案](../../raw/cougar-forms/wd-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [Dardaillerの同時代mail](https://www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg)
+Cougar向けforms Working Draft系列の`FIELDSET`／`CAPTION`である。1997年2月版は`FIELDSET`を`DIV`に似るが関連fieldsのgroup化に特化したcontainerとして定義し、4月版とHTML 4 FPWDが要求と説明を継承した。Daniel Dardaillerは、RaggettからRamanとの過去のform作業の多くがCougarへ入ったと聞いたとして、対応を「Grouping → FIELDSET」と記録した。[1997年2月草案](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [Dardaillerの同時代mail](https://www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg)
 
 ## さらに上流の由来
 
 ### 証拠
 
-1996年3月8日のDavid Singer著、Dave Raggett編のforms Working Draftは、related fieldsをgroup化してlabelを与えることをmodern UIの一般的慣習とし、lineまたは3D grooveの左上へlabelをはめ込む外観と、視覚障害者が関連fieldsのcontextを得て効率的に移動する要求を記録する。具体案は`LGROUP`／`IS`だった。[1996年草案](../../raw/cougar-forms/wd-forms-960308.html)（[公開元](https://www.w3.org/TR/WD-forms-960308.html)）
+1996年3月8日のDavid Singer著、Dave Raggett編のforms Working Draftは、related fieldsをgroup化してlabelを与えることをmodern UIの一般的慣習とし、lineまたは3D grooveの左上へlabelをはめ込む外観と、視覚障害者が関連fieldsのcontextを得て効率的に移動する要求を記録する。具体案は`LGROUP`／`IS`だった。[1996年草案](../../raw/www.w3.org/TR/WD-forms-960308.html)（[公開元](https://www.w3.org/TR/WD-forms-960308.html)）
 
 ### 解釈
 
@@ -40,13 +40,13 @@ modern UIのlabelled group慣習＋speech navigation要求 → W3C forms草案 `
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1996-03-08 | [*Design Issues for HTML Forms*](../../raw/cougar-forms/wd-forms-960308.html)（[公開元](https://www.w3.org/TR/WD-forms-960308.html)） | W3C Working Draft | modern UIのlabelled group慣習、speech navigation要求、`LGROUP`／`IS`案。 | 2026-08-10 |
-| 1997-02-03 | [*Design Issues for HTML Forms*](../../raw/cougar-forms/wd-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） | W3C Working Draft | Scott Isaacs著、Dave Raggett編の草案が、`FIELDSET`／`CAPTION`とaccessibility上の理由を定義する。 | 2026-08-10 |
-| 1997-04-02 | [*Enhancing Interactive HTML documents*](../../raw/cougar-forms/wd-forms-970402.html)（[公開元](https://www.w3.org/TR/WD-forms-970402)） | W3C Working Draft | Scott Isaacsを著者とするCougar向けform案が、HTML 3.2のgrouping欠落を理由に`FIELDSET`を提案した。 | 2026-08-10 |
-| 1997-06-12 | [Daniel Dardailler, “Re: forms that work with screen readers”](../../raw/items/www.w3.org/8cf1a19fec0c478d-199706120733.JAA07828-www47.inria.fr-list-w3c-w.html)（[公開元](https://www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg)） | WAI Working Group mail | Raggettから聞いた説明として、Raman／Raggettのform grouping作業がCougarの`FIELDSET`へ入ったと記録する。 | 2026-08-10 |
-| 1997-07-08 | HTML 4.0 First Public Working Draft：[forms](../../raw/html-4-history/3398c72a13f7d7ac-forms.html)・[changes](../../raw/html-4-history/5567476b4aad7a0e-changes.html)（[公開元1](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)・[公開元2](https://www.w3.org/TR/WD-html40-970708/appendix/changes.html)） | W3C Working Draft | related controlsのgroup化とtab／speech navigation、accessibilityという導入理由。 | 2026-08-09 |
-| 1997-08-22時点 | [Project: Cougar](../../raw/cougar-forms/project.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） | W3C project page | Cougar用に開発された`WD-forms`をHTML 4.0の基礎となったdraftsの一つに挙げる。 | 2026-08-10 |
-| 1999-12-24 | [HTML 4.01](../../raw/html-4-history/8956e5bf2cd33e94-changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.9)） | W3C Recommendation | `FIELDSET`／`LEGEND`によるgroup化・命名とspeech／graphic browser上の改善。 | 2026-08-09 |
+| 1996-03-08 | [*Design Issues for HTML Forms*](../../raw/www.w3.org/TR/WD-forms-960308.html)（[公開元](https://www.w3.org/TR/WD-forms-960308.html)） | W3C Working Draft | modern UIのlabelled group慣習、speech navigation要求、`LGROUP`／`IS`案。 | 2026-08-10 |
+| 1997-02-03 | [*Design Issues for HTML Forms*](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） | W3C Working Draft | Scott Isaacs著、Dave Raggett編の草案が、`FIELDSET`／`CAPTION`とaccessibility上の理由を定義する。 | 2026-08-10 |
+| 1997-04-02 | [*Enhancing Interactive HTML documents*](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)） | W3C Working Draft | Scott Isaacsを著者とするCougar向けform案が、HTML 3.2のgrouping欠落を理由に`FIELDSET`を提案した。 | 2026-08-10 |
+| 1997-06-12 | [Daniel Dardailler, “Re: forms that work with screen readers”](../../raw/www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg)（[公開元](https://www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg)） | WAI Working Group mail | Raggettから聞いた説明として、Raman／Raggettのform grouping作業がCougarの`FIELDSET`へ入ったと記録する。 | 2026-08-10 |
+| 1997-07-08 | HTML 4.0 First Public Working Draft：[forms](../../raw/www.w3.org/TR/WD-html40-970708/interact/forms.html)・[changes](../../raw/www.w3.org/TR/WD-html40-970708/appendix/changes.html)（[公開元1](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)・[公開元2](https://www.w3.org/TR/WD-html40-970708/appendix/changes.html)） | W3C Working Draft | related controlsのgroup化とtab／speech navigation、accessibilityという導入理由。 | 2026-08-09 |
+| 1997-08-22時点 | [Project: Cougar](../../raw/www.w3.org/MarkUp/Cougar/index.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） | W3C project page | Cougar用に開発された`WD-forms`をHTML 4.0の基礎となったdraftsの一つに挙げる。 | 2026-08-10 |
+| 1999-12-24 | [HTML 4.01](../../raw/www.w3.org/TR/html401/appendix/changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.9)） | W3C Recommendation | `FIELDSET`／`LEGEND`によるgroup化・命名とspeech／graphic browser上の改善。 | 2026-08-09 |
 
 ## 確度
 

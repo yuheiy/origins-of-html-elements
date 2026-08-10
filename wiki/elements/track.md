@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、media elementの明示的な外部timed text trackを指定する、内容を持たない要素である。`kind`でsubtitles、captions、descriptions、chapters、metadataを区別する。[HTML Living Standard](../../raw/html-living-standard/media.html)（[公開版](https://html.spec.whatwg.org/multipage/media.html#the-track-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、media elementの明示的な外部timed text trackを指定する、内容を持たない要素である。`kind`でsubtitles、captions、descriptions、chapters、metadataを区別する。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/media.html)（[公開版](https://html.spec.whatwg.org/multipage/media.html#the-track-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -42,13 +42,13 @@ Silvia Pfeiffer `itext`提案（2009年）
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2010-04-12 | [“Re: Change Proposals toward Issue-9”](../../raw/items/lists.w3.org/c6e2e1454968d1fc-0349.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2010Apr/0349.html)） | W3C public-html・change proposal議論 | `track`／`trackgroup`案、外部・in-band trackの共通API、当時案のcontent model。 | 2026-08-09 |
-| 2010-05-04 | [WHATWG HTML commit `a183c899`（revision 5067）](../../raw/whatwg-html-history/20d43640195665df-a183c8997eb6f5647f9db27a9d3a52da864.html)（[公開元](https://github.com/whatwg/html/commit/a183c8997eb6f5647f9db27a9d3a52da86476d31)） | 仕様commit | caption対応の第1段階としてemptyな`track`、5種類の`kind`、`HTMLTrackElement`を追加。 | 2026-08-09 |
-| 2010-07-23（引用された`itext`提案は2009-07-31） | [“Timed tracks for `<video>`”](../../raw/items/lists.w3.org/f31975a3a71b149a-0449.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html)） | WHATWG mailing list・編集者説明 | 外部字幕・captionの導入要求、`itext`と`track`の直接関係、`category`→`kind`、`language`→`srclang`など提案項目の採否、SRTを基礎にしたcaption format。 | 2026-08-09 |
-| 2010-10-19 | [*HTML5: The track element*](../../raw/w3c-html5-history/2579a854225b6f5d-video.html)（[公開元](https://www.w3.org/TR/2010/WD-html5-20101019/author/video.html#the-track-element)） | W3C Working Draft | 外部timed trackを指定するempty elementと、5種類の`kind`、初期WebSRTとの関係。 | 2026-08-09 |
-| 2010-12-25 | [WHATWG HTML commit `155b9a55`](../../raw/whatwg-html-history/3b93476d570084f0-155b9a55416464e4e80f848b9daf53bc1b7.html)（[公開元](https://github.com/whatwg/html/commit/155b9a55416464e4e80f848b9daf53bc1b7f41f4)） | 仕様commit | WebSRTをWebVTTへ改名。 | 2026-08-09 |
-| 2011-11-28 | [WHATWG HTML commit `5e99b278`](../../raw/whatwg-html-history/53421a6ee5c18b05-5e99b278578b666141bc487c77b8d5c5666.html)（[公開元](https://github.com/whatwg/html/commit/5e99b278578b666141bc487c77b8d5c56669a30b)） | 仕様commit | WebVTT本文をHTML仕様から除き、独立WebVTT仕様を参照する構成へ変更。 | 2026-08-09 |
-| 2026-08-09 | [WHATWG HTML Living Standard, “The track element”](../../raw/html-living-standard/media.html)（[公開元](https://html.spec.whatwg.org/multipage/media.html#the-track-element)） | 現行仕様 | `track`の現行定義。 | 2026-08-09 |
+| 2010-04-12 | [“Re: Change Proposals toward Issue-9”](../../raw/lists.w3.org/Archives/Public/public-html/2010Apr/0349.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2010Apr/0349.html)） | W3C public-html・change proposal議論 | `track`／`trackgroup`案、外部・in-band trackの共通API、当時案のcontent model。 | 2026-08-09 |
+| 2010-05-04 | [WHATWG HTML commit `a183c899`（revision 5067）](../../raw/github.com/whatwg/html/commit/a183c8997eb6f5647f9db27a9d3a52da86476d31)（[公開元](https://github.com/whatwg/html/commit/a183c8997eb6f5647f9db27a9d3a52da86476d31)） | 仕様commit | caption対応の第1段階としてemptyな`track`、5種類の`kind`、`HTMLTrackElement`を追加。 | 2026-08-09 |
+| 2010-07-23（引用された`itext`提案は2009-07-31） | [“Timed tracks for `<video>`”](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html)） | WHATWG mailing list・編集者説明 | 外部字幕・captionの導入要求、`itext`と`track`の直接関係、`category`→`kind`、`language`→`srclang`など提案項目の採否、SRTを基礎にしたcaption format。 | 2026-08-09 |
+| 2010-10-19 | [*HTML5: The track element*](../../raw/www.w3.org/TR/2010/WD-html5-20101019/author/video.html)（[公開元](https://www.w3.org/TR/2010/WD-html5-20101019/author/video.html#the-track-element)） | W3C Working Draft | 外部timed trackを指定するempty elementと、5種類の`kind`、初期WebSRTとの関係。 | 2026-08-09 |
+| 2010-12-25 | [WHATWG HTML commit `155b9a55`](../../raw/github.com/whatwg/html/commit/155b9a55416464e4e80f848b9daf53bc1b7f41f4)（[公開元](https://github.com/whatwg/html/commit/155b9a55416464e4e80f848b9daf53bc1b7f41f4)） | 仕様commit | WebSRTをWebVTTへ改名。 | 2026-08-09 |
+| 2011-11-28 | [WHATWG HTML commit `5e99b278`](../../raw/github.com/whatwg/html/commit/5e99b278578b666141bc487c77b8d5c56669a30b)（[公開元](https://github.com/whatwg/html/commit/5e99b278578b666141bc487c77b8d5c56669a30b)） | 仕様commit | WebVTT本文をHTML仕様から除き、独立WebVTT仕様を参照する構成へ変更。 | 2026-08-09 |
+| 2026-08-09 | [WHATWG HTML Living Standard, “The track element”](../../raw/html.spec.whatwg.org/multipage/media.html)（[公開元](https://html.spec.whatwg.org/multipage/media.html#the-track-element)） | 現行仕様 | `track`の現行定義。 | 2026-08-09 |
 
 ## 確度
 
