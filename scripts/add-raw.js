@@ -44,6 +44,7 @@ using temporary = mkdtempDisposableSync(path.join(tmpdir(), "add-raw-"));
 const download = path.join(temporary.path, "download");
 const response = await fetch(source);
 if (!response.ok) throw new Error(`fetch failed (${response.status}): ${source}`);
+const retrievedAt = new Date().toISOString();
 // ponytail: one response is buffered; stream it if Raw sources become large.
 writeFileSync(download, Buffer.from(await response.arrayBuffer()));
 
@@ -61,4 +62,7 @@ if (kind !== "file") {
 if (existsSync(target)) throw new Error(`target already exists: raw/${output}`);
 mkdirSync(path.dirname(target), { recursive: true });
 renameSync(candidate, target);
+console.log(`source ${source}`);
+console.log(`final ${response.url}`);
+console.log(`retrieved ${retrievedAt}`);
 console.log(`added raw/${output}`);

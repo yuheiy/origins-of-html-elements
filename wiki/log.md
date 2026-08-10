@@ -667,3 +667,17 @@ local HTTP serverを使ったCLIのfile取得、query hash suffix、重複拒否
 `raw/`をsnapshot専用にするため、CLIを`scripts/add-raw.js`と`scripts/generate-raw-index.js`へ移動し、用途が名前だけで判別できるよう改名した。ES moduleとNode.js 24.12.0以上の実行要件を定義する`package.json`もrepository rootへ移し、各scriptは自身の位置から`raw/`と`wiki/`を解決する構成へ変更した。
 
 URL追加CLIのusageと保存先解決、518 Raw fileの網羅、322 document title、indexの決定論的再生成、Scheme内の現行参照を検査した。Raw snapshotの内容とWikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | AGENTS契約の簡素化
+
+資料選定の権限を、人間が調査対象と重要な判断を選び、LLMがその範囲内で資料と探索経路を選ぶ契約へ統一した。対象Lintの検査閉包と`合格|修正済み|Research必要`の終了条件、`h1-h6.md`を共通の確度と状態で扱える条件、Log本文のappend-only例外を明文化した。Raw取得の来歴として取得元URL、redirect後の最終URL、取得日をLogへ残す契約を追加し、`scripts/add-raw.js`がそれらを出力するようにした。
+
+elementの概要は各elementページだけを正本とし、`wiki/README.md`の110ページ分の要約をlinkだけへ移行した。lineageとsynthesisの一行概要は横断ページの選択に必要なため維持した。Raw配置規則をRaw source maintenanceへ集約し、Ingestの重複した完了条件とValidationのLint規則再掲を削除した。
+
+対象Lintは、必須項目、READMEの110 elementページ（115要素）と7 lineageページの網羅、117知識ページのタイトル一意性、1,645ローカルMarkdown link、518 Raw fileのindex再現性、script構文、whitespaceを`合格`、契約の矛盾とREADMEの重複を`修正済み`、`Research必要`はなしと確認した。Wikiの歴史的結論とRaw snapshotは変更していない。
+
+## [2026-08-11] schema | READMEの人間向け要素概要
+
+`wiki/README.md`の要素概要は、人間が一覧から調査済みの起点、経路、主要な未解決点を判断して読むページを選ぶために必要だという指示を受け、Page contractへ戻した。同期負担とのtrade-offとして、elementページの`概要`を全文複製せず、確認済みの起点または経路と、解釈を左右する未解決点だけを一行に編集する契約とした。主要な結論の変更で概要が不正確になる場合は同じ変更で更新し、Lintでも正確性を確認する。
+
+全110 elementページの現行`概要`を旧README文と突き合わせて再検討し、73件を索引用に書き直し、既に短く役割を満たす37件を維持した。複数文の`概要`をそのまま再掲した項目はない。対象Lintは、110 element概要と7 lineage概要の網羅、115要素の集計、1,645ローカルMarkdown link、518 Raw fileのindex再現性、script構文、whitespaceを`合格`、人間向け概要を失ったREADME契約を`修正済み`、`Research必要`はなしと確認した。Wikiの歴史的結論とRaw snapshotは変更していない。
