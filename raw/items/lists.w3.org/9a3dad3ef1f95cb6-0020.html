@@ -1,0 +1,648 @@
+<!-- received="Sat Jun  6 07:56:12 1992 EDT" -->
+<!-- sent="Sat, 06 Jun 92 00:53:20 CDT" -->
+<!-- name="Dan Connolly" -->
+<!-- email="connolly@pixel.convex.com" -->
+<!-- subject="MIME as a hypertext architecture" -->
+<!-- id="9206060553.AA23369@pixel.convex.com" -->
+<!-- inreplyto="" -->
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head><title>www-talk from May to June 1992: MIME as a hypertext architecture</title></head>
+<body>
+<h1>MIME as a hypertext architecture</h1>
+<strong>Dan Connolly</strong> (<a href="mailto:connolly@pixel.convex.com"><em>connolly@pixel.convex.com</em></a>)<br>
+<em>Sat, 06 Jun 92 00:53:20 CDT</em>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#20">[ date ]</a><a href="thread.html#20">[ thread ]</a><a href="subject.html#20">[ subject ]</a><a href="author.html#20">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0021.html">Dan Connolly: "&lt;ISINDEX&gt; and anchor types"</a>
+<li> <strong>Previous message:</strong> <a href="0019.html">Jean Francois Groff: "Re: HTML and bitmaps"</a>
+<!-- nextthread="start" -->
+</ul>
+<hr>
+<!-- body="start" -->
+<pre>
+Message-Id: &lt;9206060553.AA23369@pixel.convex.com&gt;
+To: www-talk@nxoc01.cern.ch
+Subject: MIME as a hypertext architecture
+Date: Sat, 06 Jun 92 00:53:20 CDT
+From: Dan Connolly &lt;connolly@pixel.convex.com&gt;
+
+NOTE: This message uses existing and proposed MIME structuring
+conventions. Some parts of it may look strange on pre-MIME viewers.
+
+---
+
+The WWW project needs an architecture for interchange of structured
+multimedia hypertext documents. The original architecture, HTML,
+introduced some structuring conventions and a way of specifying
+hypertext links.
+
+The HTML format is under stress from several issues:
+	* We need an SGML DTD so that we can parse HTML using
+	something besides the public implementation of WWW, and so that
+	we can verify documents converted from other authoring
+	systems such as GNU info, Andew's EZ, or FrameMaker.
+
+	* We need to be able to distribute documents and document
+	elements in other formats, including raw 8 bit data streams.
+	The SGML NOTATION feature falls short of providing and
+	adequate mechanism.
+
+	* The UDI syntax doesn't match the SGML attribute syntax.
+	There are problems with quoting out-of-band characters, and
+	the length of complex UDI's may exceed SGML limits and/or
+	line-length limits of transport mechanisms. Also, the
+	terse syntax of UDI's conflicts with the goal that they
+	be human-readable.
+
+This is a proposed architecture for global hypertext, addressing
+the issues raised by the WWW project, but using the MIME architecture.
+
+We define a new subtype of the MIME multipart content type called
+x-HTDOC. The syntax is the same as multipart/mixed, but the semantics
+are that of a WWW client: the first part is displayed, and the rest
+represent links to other documents or other elements of this document.
+
+Then we define a new subtype of the MIME text content type called
+x-HTML. This is an SGML markup language using the default SGML declaration
+(i.e. the reference concrete syntax, default processing limits, etc.)
+and the HTML DTD (included below).
+
+---
+
+&lt;!-- This DTD was produced by DeveGram on Tue Jun  2 18:58:16 1992 --&gt;
+&lt;!-- and hand-edited by connolly@convex.com --&gt;
+
+&lt;!--     Parameter Entities       --&gt;
+
+&lt;!--      Terminal symbols        --&gt;
+
+&lt;!ENTITY % words "#PCDATA" &gt;
+
+&lt;!--    Non-ELEMENT symbols       --&gt;
+
+&lt;!ENTITY % inline	"%words | A" &gt;
+&lt;!ENTITY % text         "%inline | P" &gt;
+&lt;!ENTITY % heading "H1|H2|H3|H4|H5|H6" &gt;
+
+&lt;!ENTITY lt "&lt;"&gt;
+&lt;!ENTITY gt "&gt;"&gt;
+&lt;!ENTITY amp "&amp;"&gt;
+
+&lt;!ENTITY lt. "&lt;"&gt;
+&lt;!ENTITY gt. "&gt;"&gt;
+&lt;!ENTITY amp. "&amp;"&gt;
+
+&lt;!--     Document structure       --&gt;
+
+&lt;!ELEMENT html	O O  (TITLE, NEXTID?, ISINDEX?, section+, ADDRESS?)&gt;
+
+&lt;!ELEMENT TITLE	- -  (%inline)+&gt;
+&lt;!ELEMENT ADDRESS - - (%text)+&gt;
+
+&lt;!ELEMENT NEXTID - O EMPTY &gt;
+&lt;!ATTLIST NEXTID N NUMBER #IMPLIED&gt;
+
+&lt;!ELEMENT ISINDEX - O EMPTY &gt;
+
+
+&lt;!ELEMENT section O O ((%heading)?,
+			(
+			%text |
+			section |
+			MENU |
+			UL |
+			OL |
+			DIR |
+			DL)+)&gt;
+
+&lt;!ELEMENT (H1|H2|H3|H4|H5|H6)	- -  (%inline) &gt;
+
+&lt;!ELEMENT P	- O  EMPTY -- paragraph SEPARATOR --&gt;
+
+
+&lt;!ELEMENT A	- -  (%inline)+&gt;
+&lt;!ATTLIST A
+	NAME CDATA #IMPLIED
+	PART ENTITY #IMPLIED &gt;
+
+&lt;!ELEMENT MENU	- -  (LI+)&gt;
+
+&lt;!ELEMENT UL	- -  (LI+)&gt;
+
+&lt;!ELEMENT OL	- -  (LI+)&gt;
+
+&lt;!ELEMENT DIR	- -  (LI+)&gt;
+
+&lt;!ELEMENT LI	- O  (%text)+&gt;
+
+&lt;!ELEMENT DL	- -  ((DT, DD)+)&gt;
+
+&lt;!ELEMENT DT	- O  (%inline)+&gt;
+
+&lt;!ELEMENT DD	- O  (%text)+&gt;
+
+---
+
+An HTML document would use external entities to reference other parts
+of the multipart message. The system identifier matches the
+Content-Id field of the intended part. The content-type of the indicated
+part could be image, audio, or video for multimedia inclusions; text for
+quotes etc., or message/external-body for references to other documents.
+
+MIME defines access-types for local-file and anon-ftp. We could define
+x-HTTP, x-NEWS, x-WAIS, and the other UDI access types.
+
+Within HTML documents, SGML IDREFs and IDs are used to reference and define
+elements of a document. (I think HYTIME defines a way to reference elements
+without explicit IDs.)
+
+
+The next part of this message is a default.html from the WWW
+distribution adapted to use the conventions here.
+
+It should interoperate with existing MIME systems,
+though they will not be able to do anyting intelligent with HTML.
+
+---
+Content-Type: multipart/x-HTDOC; boundary=cut-here
+
+--cut-here
+Content-Type: text/x-HTML
+
+&lt;!DOCTYPE HTML SYSTEM 
+[
+&lt;!ENTITY part1 SDATA "QuickGuide.html"&gt;
+&lt;!ENTITY part2 SDATA "<a href="http://info.cern.ch/hypertext/WWW/TheProject.html">http://info.cern.ch/hypertext/WWW/TheProject.html</a>"&gt;
+&lt;!ENTITY part3 SDATA "<a href="http://crnvmc.cern.ch./WHO">http://crnvmc.cern.ch./WHO</a>"&gt;
+&lt;!ENTITY part4 SDATA "<a href="http://crnvmc.cern.ch./FIND/yellow?">http://crnvmc.cern.ch./FIND/yellow?</a>"&gt;
+&lt;!ENTITY part5 SDATA "<a href="http://crnvmc.cern.ch./FIND/jaune?">http://crnvmc.cern.ch./FIND/jaune?</a>"&gt;
+&lt;!ENTITY part6 SDATA "<a href="http://crnvmc.cern.ch./FIND">http://crnvmc.cern.ch./FIND</a>"&gt;
+&lt;!ENTITY part7 SDATA "<a href="http://crnvmc.cern.ch/NEWS/?">http://crnvmc.cern.ch/NEWS/?</a>"&gt;
+&lt;!ENTITY part8 SDATA "<a href="http://crnvmc.cern.ch./NEWS/cern">http://crnvmc.cern.ch./NEWS/cern</a>"&gt;
+&lt;!ENTITY part9 SDATA "<a href="http://crnvmc.cern.ch./NEWS/vmnews">http://crnvmc.cern.ch./NEWS/vmnews</a>"&gt;
+&lt;!ENTITY part10 SDATA "<a href="http://crnvmc.cern.ch/NEWS/student">http://crnvmc.cern.ch/NEWS/student</a>"&gt;
+&lt;!ENTITY part11 SDATA "<a href="http://info.cern.ch/hypertext/DataSources/NewsFromVM/Overview.html">http://info.cern.ch/hypertext/DataSources/NewsFromVM/Overview.html</a>"&gt;
+&lt;!ENTITY part12 SDATA "<a href="http://info.cern.ch/hypertext/DataSources/News/Overview.html">http://info.cern.ch/hypertext/DataSources/News/Overview.html</a>"&gt;
+&lt;!ENTITY part13 SDATA "<a href="http://info.cern.ch/hypertext/DataSources/bySubject/Overview.html">http://info.cern.ch/hypertext/DataSources/bySubject/Overview.html</a>"&gt;
+&lt;!ENTITY part14 SDATA "<a href="http://info.cern.ch./hypertext/DataSources/Overview.html">http://info.cern.ch./hypertext/DataSources/Overview.html</a>"&gt;
+&lt;!ENTITY part15 SDATA "<a href="http://slacvm.slac.stanford.edu./FIND/spires">http://slacvm.slac.stanford.edu./FIND/spires</a>"&gt;
+&lt;!ENTITY part16 SDATA "<a href="http://crnvmc.cern.ch/FIND/DESY?">http://crnvmc.cern.ch/FIND/DESY?</a>"&gt;
+&lt;!ENTITY part17 SDATA "<a href="http://info.cern.ch:8001/archive.orst.edu:9000/archie-orst.edu">http://info.cern.ch:8001/archive.orst.edu:9000/archie-orst.edu</a>"&gt;
+&lt;!ENTITY part18 SDATA "<a href="http://iicm.tu-graz.ac.at./jargon">http://iicm.tu-graz.ac.at./jargon</a>"&gt;
+&lt;!ENTITY part19 SDATA "<a href="http://info.cern.ch./hypertext/Products/WAIS/Sources/Overview.html">http://info.cern.ch./hypertext/Products/WAIS/Sources/Overview.html</a>"&gt;
+&lt;!ENTITY part20 SDATA "<a href="http://info.cern.ch/rpc/doc/User/UserGuide.html">http://info.cern.ch/rpc/doc/User/UserGuide.html</a>"&gt;
+&lt;!ENTITY part21 SDATA "<a href="http://otax.tky.hut.fi/tky/default.html">http://otax.tky.hut.fi/tky/default.html</a>"&gt;
+&lt;!ENTITY part22 SDATA "<a href="gopher://gopher.micro.umn.edu:70/11/Other%20Gopher%20and%20Information%20Servers">gopher://gopher.micro.umn.edu:70/11/Other%20Gopher%20and%20Information%20Servers</a>"&gt;
+&lt;!ENTITY part23 SDATA "<a href="http://info.cern.ch./hypertext/WWW/LineMode/Defaults/default.html">http://info.cern.ch./hypertext/WWW/LineMode/Defaults/default.html</a>"&gt;
+]&gt;
+&lt;TITLE&gt;CERN Information&lt;/TITLE&gt;
+&lt;NEXTID N=10&gt;
+&lt;SECTION&gt;&lt;H1&gt;CERN Information - Select by number&lt;/H1&gt;
+&lt;DL&gt;
+&lt;DT&gt;&lt;A PART="part1"&gt;Help&lt;/A&gt;
+&lt;DD&gt;On this program, or the
+&lt;A PART="part2"&gt;World-Wide Web project&lt;/A&gt;.
+&lt;DT&gt;&lt;A PART="part3" NAME=2&gt;Phone book&lt;/A&gt;
+&lt;DD&gt;People, phone numbers, accounts and email addresses.
+See also the analytical
+&lt;A PART="part4" NAME=yellow&gt;Yellow Pages&lt;/A&gt;, or
+the same index in French :
+&lt;A PART="part5" NAME=jaune&gt;Pages Jaunes&lt;/A&gt;.
+&lt;DT&gt;&lt;A PART="part6" NAME=1&gt;"XFIND" index&lt;/A&gt;
+&lt;DD&gt;Index of computer centre documentation, newsletters, news,
+help files, etc...
+&lt;DT&gt;&lt;A PART="part7" NAME=groups&gt;News&lt;/A&gt;
+&lt;DD&gt;A complete list of all public CERN news groups, such as
+&lt;A PART="part8" NAME=3&gt;news from the CERN User's
+Office&lt;/A&gt;,&lt;A PART="part9" NAME=4&gt;
+CERN computer center news&lt;/A&gt;,&lt;A PART="part10"&gt;
+student news&lt;/A&gt;. See also &lt;A PART="part11" NAME=5&gt;private
+groups&lt;/A&gt; and &lt;A PART="part12" NAME=inews&gt;Internet
+news&lt;/A&gt;.
+&lt;/dl&gt;
+&lt;/section&gt;
+&lt;section&gt;
+&lt;SECTION&gt;&lt;H2&gt;From other sites&lt;/h2&gt;
+See online data by
+&lt;A PART="part13" NAME=subject&gt;subject&lt;/A&gt;,
+pointers to
+&lt;A PART="part14"&gt;other forms of online data&lt;/a&gt;, and the following specific databases:
+&lt;DL&gt;
+&lt;DT&gt;&lt;A PART="part15" NAME=spires&gt;SLAC SPIRES&lt;/A&gt;
+&lt;DD&gt;The High Energy Physics preprint index at Stanford Linear Accelerator, California.
+(This is the same information avialable via the QSPIRES facility on BITNET.
+Include the word "FIND" as the first keyword, eg: K FIND AUTHOR FRED.).
+&lt;DT&gt;&lt;A PART="part16" NAME=desy&gt;DESY documents&lt;/a&gt;
+&lt;DD&gt;Documents and help files from the DESY lab in Hamburg.
+&lt;DT&gt;&lt;A PART="part17" NAME=archie&gt;
+Archie&lt;/a&gt;
+&lt;DD&gt;An index of almost everything available by "anonymous FTP".
+&lt;DT&gt;&lt;A PART="part18" NAME=7&gt;Hacker Jargon&lt;/a&gt;
+&lt;DD&gt;An index to a cross-referenced set of hacker terms. A demonstration
+of the WWW gateway to the Graz Technical University Hyper-G database.
+&lt;DT&gt;&lt;A PART="part19" NAME=9&gt;W.A.I.S.&lt;/a&gt;
+&lt;DD&gt;All kinds of information available from "Wide Area Information Servers".
+&lt;DT&gt;&lt;A PART="part20" NAME=6&gt;CERN RPC&lt;/A&gt;
+&lt;DD&gt;The user guide for the RPC system developed in CERN CN division
+(not Sun/RPC). This is an example of documentation (partially) converted
+into hypertext.
+&lt;DT&gt;&lt;A PART="part21" NAME=hut&gt;Helsinki&lt;/a&gt;
+&lt;DD&gt;Helsinki Technical University information service (Mostly Finnish).
+&lt;DT&gt;&lt;A PART="part22" NAME=gopher&gt;Gophers&lt;/a&gt;
+&lt;DD&gt;Campus-wide information systems using "Gopher" software. (Requires www version 1.1 or higher)
+&lt;/DL&gt;
+(This page may be an out of date copy. See the
+&lt;A PART="part23" NAME=latest&gt;latest version&lt;/a&gt;.)
+
+--cut-here
+Content-id: QuickGuide.html
+Content-type: message/external-body
+	;access-type=x-relative
+	;name="QuickGuide.html"
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://info.cern.ch/hypertext/WWW/TheProject.html">http://info.cern.ch/hypertext/WWW/TheProject.html</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=info.cern.ch
+	;name=/hypertext/WWW/TheProject.html
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://crnvmc.cern.ch./WHO">http://crnvmc.cern.ch./WHO</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=crnvmc.cern.ch.
+	;name=/WHO
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://crnvmc.cern.ch./FIND/yellow?">http://crnvmc.cern.ch./FIND/yellow?</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=crnvmc.cern.ch.
+	;name=/FIND/yellow?
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://crnvmc.cern.ch./FIND/jaune?">http://crnvmc.cern.ch./FIND/jaune?</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=crnvmc.cern.ch.
+	;name=/FIND/jaune?
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://crnvmc.cern.ch./FIND">http://crnvmc.cern.ch./FIND</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=crnvmc.cern.ch.
+	;name=/FIND
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://crnvmc.cern.ch/NEWS/?">http://crnvmc.cern.ch/NEWS/?</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=crnvmc.cern.ch
+	;name=/NEWS/?
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://crnvmc.cern.ch./NEWS/cern">http://crnvmc.cern.ch./NEWS/cern</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=crnvmc.cern.ch.
+	;name=/NEWS/cern
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://crnvmc.cern.ch./NEWS/vmnews">http://crnvmc.cern.ch./NEWS/vmnews</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=crnvmc.cern.ch.
+	;name=/NEWS/vmnews
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://crnvmc.cern.ch/NEWS/student">http://crnvmc.cern.ch/NEWS/student</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=crnvmc.cern.ch
+	;name=/NEWS/student
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://info.cern.ch/hypertext/DataSources/NewsFromVM/Overview.html">http://info.cern.ch/hypertext/DataSources/NewsFromVM/Overview.html</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=info.cern.ch
+	;name=/hypertext/DataSources/NewsFromVM/Overview.html
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://info.cern.ch/hypertext/DataSources/News/Overview.html">http://info.cern.ch/hypertext/DataSources/News/Overview.html</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=info.cern.ch
+	;name=/hypertext/DataSources/News/Overview.html
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://info.cern.ch/hypertext/DataSources/bySubject/Overview.html">http://info.cern.ch/hypertext/DataSources/bySubject/Overview.html</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=info.cern.ch
+	;name=/hypertext/DataSources/bySubject/Overview.html
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://info.cern.ch./hypertext/DataSources/Overview.html">http://info.cern.ch./hypertext/DataSources/Overview.html</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=info.cern.ch.
+	;name=/hypertext/DataSources/Overview.html
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://slacvm.slac.stanford.edu./FIND/spires">http://slacvm.slac.stanford.edu./FIND/spires</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=slacvm.slac.stanford.edu.
+	;name=/FIND/spires
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://crnvmc.cern.ch/FIND/DESY?">http://crnvmc.cern.ch/FIND/DESY?</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=crnvmc.cern.ch
+	;name=/FIND/DESY?
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://info.cern.ch:8001/archive.orst.edu:9000/archie-orst.edu">http://info.cern.ch:8001/archive.orst.edu:9000/archie-orst.edu</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=info.cern.ch
+	;port=8001
+	;name=/archive.orst.edu:9000/archie-orst.edu
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://iicm.tu-graz.ac.at./jargon">http://iicm.tu-graz.ac.at./jargon</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=iicm.tu-graz.ac.at.
+	;name=/jargon
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://info.cern.ch./hypertext/Products/WAIS/Sources/Overview.html">http://info.cern.ch./hypertext/Products/WAIS/Sources/Overview.html</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=info.cern.ch.
+	;name=/hypertext/Products/WAIS/Sources/Overview.html
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://info.cern.ch/rpc/doc/User/UserGuide.html">http://info.cern.ch/rpc/doc/User/UserGuide.html</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=info.cern.ch
+	;name=/rpc/doc/User/UserGuide.html
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://otax.tky.hut.fi/tky/default.html">http://otax.tky.hut.fi/tky/default.html</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=otax.tky.hut.fi
+	;name=/tky/default.html
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="gopher://gopher.micro.umn.edu:70/11/Other%20Gopher%20and%20Information%20Servers">gopher://gopher.micro.umn.edu:70/11/Other%20Gopher%20and%20Information%20Servers</a>
+Content-type: message/external-body
+	;access-type=x-gopher
+	;site=gopher.micro.umn.edu
+	;port=70
+	;type=11
+	;selector="Other Gopher and Information Servers"
+
+Content-Type: message
+
+
+--cut-here
+Content-id: <a href="http://info.cern.ch./hypertext/WWW/LineMode/Defaults/default.html">http://info.cern.ch./hypertext/WWW/LineMode/Defaults/default.html</a>
+Content-type: message/external-body
+	;access-type=x-HTTP
+	;site=info.cern.ch.
+	;name=/hypertext/WWW/LineMode/Defaults/default.html
+
+Content-Type: message
+--cut-here--
+
+---
+
+Here's the perl script I used to convert default.html into
+the above message. It's full of gross hacks, but it worked
+this evening.
+
+---
+
+#!/usr/local/bin/perl
+
+print "Content-Type: multipart/x-HTDOC; boundary=cut-here\n\n";
+print "--cut-here\n";
+print "Content-Type: text/x-HTML\n\n";
+print "&lt;!DOCTYPE HTML SYSTEM \n[\n";
+
+$o = 0;
+$/ = "&gt;";
+
+while(&lt;&gt;){
+    s/(&lt;A[^&gt;]*&gt;)/&amp;fix_anchor($1)/ige;
+    s/&lt;NEXTID\s*(\d*)\s*&gt;/&lt;NEXTID N=$1&gt;/g;
+    if(/&lt;H(\d)/){
+	local($n) = $1;
+	if($n&gt;$o) { $rep = "&lt;SECTION&gt;"; }
+	else { $rep = "&lt;/SECTION&gt;&lt;SECTION&gt;"; }
+        s/(&lt;H\d)/$rep$1/g;
+	$o = $n;
+    }
+    $doc .= $_;
+}
+
+@entities = @anchors;
+while(@entities){
+    local($id) = shift(@entities);
+    local($_) = shift(@entities);
+    local($name) = shift(@entities);
+    local($type) = shift(@entities);
+
+    print "&lt;!ENTITY part$id SDATA \"$_\"&gt;\n";
+}
+
+print "]&gt;\n", $doc;
+
+while(@anchors){
+    local($id) = shift(@anchors);
+    local($_) = shift(@anchors);
+    local($name) = shift(@anchors);
+    local($type) = shift(@anchors);
+    local($access_type);
+
+    print "\n\n--cut-here\n";
+    print "Content-id: $_\n";
+    print "Content-type: message/external-body\n";
+
+    $access_type = $1 if s/^(\w+)://;
+    if(s/#([^#]+)$//){
+	print "\t;x-element-id=\"$1\"\n";
+    }
+
+    if($access_type =~ /file/i){
+	print "\t;access-type=LOCAL-FILE\n";
+	print "\t;name=$_\n";
+    }elsif($access_type =~ /http/i){
+	print "\t;access-type=x-HTTP\n";
+	if(s-//([^:/]+)--){
+	    print "\t;site=$1\n";
+	    print "\t;port=$1\n" if s/^:(\d+)//;
+	}
+	&amp;unescape;
+	print "\t;name=$_\n";
+    }elsif($access_type =~ /news/i){
+	print "\t;access-type=x-news\n";
+	&amp;unescape;
+	if(/@/){
+	    print "\t;message-id=$_\n";
+	}else{
+	    print "\t;group=$_\n";
+	}
+    }elsif($access_type =~ /telnet/i){
+	print "\t;access-type=x-telnet\n";
+	&amp;unescape;
+	print "\t;user=$1\n" if s/^(.*)@//;
+	print "\t;port=$1\n" if s/:(.*)$//;
+	print "\t;site=$_\n";
+    }elsif($access_type =~ /gopher/i){
+	print "\t;access-type=x-gopher\n";
+	if(s-^//([^:/]+)--){
+	    print "\t;site=$1\n";
+	    print "\t;port=$1\n" if s/:(\d+)//;
+	}
+	print "\t;type=$1\n" if s-^/(\d+)/--;
+	&amp;unescape;
+	print "\t;selector=\"$_\"\n";
+    }elsif($access_type =~ /wais/i){
+	print "\t;access-type=x-wais\n";
+	if(s-//([^:/]+)--){
+	    print "\t;site=$1\n";
+	    print "\t;port=$1\n" if s/:(\d+)//;
+	}
+	if(m-^/-){
+	    print "\t;type=$1\n" if s-^/(\w+)--;
+	    print "\t;size=$1\n" if s-^/(\d+)--;
+	    &amp;unescape;
+	    print "\t;path=\"$_\"\n";
+	}else{
+	    &amp;unescape;
+	    print "\t;words=\"$1\"\n" if /\?(.*)/;
+	}
+    }elsif($access_type eq ""){
+	print "\t;access-type=x-relative\n";
+	&amp;unescape;
+	print "\t;name=\"$_\"\n";
+    }else{
+	warn "unknown access type: $access_type in $_";
+    }
+
+    print "\nContent-Type: message\n";
+}
+
+print "--cut-here--\n";
+
+sub unescape{
+    s/%(\w\w)/sprintf("%c",hex($1))/ge;
+}
+
+sub fix_anchor{
+    local($_) = @_;
+    local($name, $href, $type);
+    $href = $1 if /HREF\s*=\s*(\S+)/i;
+    return $_ unless $href;
+    $href =~ s/&gt;$//;
+
+    $name = $1 if /NAME\s*=\s*(\S+)/i;
+    $type = $1 if /TYPE\s*=\s*(\S+)/i;
+
+    $content_id{$href} = $content_id++ unless $content_id{$href};
+    push(@anchors, $content_id, $href, $name, $type);
+    local($ret) = "&lt;A PART=\"part$content_id\"";
+    $ret .= " NAME=$name" if $name;
+    $ret .= "&gt;";
+    return $ret;
+}
+
+-----
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#20">[ date ]</a><a href="thread.html#20">[ thread ]</a><a href="subject.html#20">[ subject ]</a><a href="author.html#20">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0021.html">Dan Connolly: "&lt;ISINDEX&gt; and anchor types"</a>
+<li> <strong>Previous message:</strong> <a href="0019.html">Jean Francois Groff: "Re: HTML and bitmaps"</a>
+<!-- nextthread="start" -->
+</ul>
+</body>
+</html>

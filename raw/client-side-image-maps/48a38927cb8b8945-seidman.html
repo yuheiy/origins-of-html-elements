@@ -1,0 +1,138 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/www2/_static/css/banner-styles.css?v=HyR5oymJ" />
+<link rel="stylesheet" type="text/css" href="/www2/_static/css/iconochive.css?v=qtvMKcIJ" />
+
+<title>An HTML Extension to Support Client-Side Image Maps</title>
+</head>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+</head>
+<body>
+
+<h1>An HTML Extension to Support Client-Side Image Maps</h1>
+<em>James L. Seidman<br>Spyglass, Inc.<br>1800 Woodfield Drive<br>Savoy, IL 61874</em><p>
+
+<h2>Abstract</h2>
+The current technique for implementing image maps requires communication with
+an HTTP[1] server to process coordinate information and generate a new URL.  This
+paper proposes extensions to the HTML[2] language which would allow browsers to
+process image maps internally.  These extensions would allow the use of image maps
+in local HTML files or files accessed via alternate transport mechanisms such
+as FTP.  They would also allow image map characteristics to be specified in a format
+that is not specific to the server software.<p>
+
+<h2>Introduction</h2>
+Imagemaps are an important feature of the point-and-click interface which makes the
+World Wide Web so popular.  The most common use of image maps is to allow users to access different
+documents by clicking on different areas in an image.<p>
+
+There are several limitations of the current image map implementation as it applies
+to this use.  First, it
+only works over the HTTP protocol, making it unusable for reading local files or
+files accessed via alternate protocols.  Second, a server transaction is required
+merely to determine where the link is directed.  This can degrade performance
+noticeably when accessing distant sites.  Third, unlike for normal links, there is
+no way for a browser to provide visual feedback to the user showing where a portion
+of an image map leads before the user actually clicks on it.  Lastly, the implementation
+of image maps is server-dependent, compromising portability of documents.<p>
+
+While HTML+[3] contains provisions for "hypertext buttons" on images via use of the <code>FIG</code>
+element, this method is an unworkable short-term solution for several reasons.  First,
+complete support of the <code>FIG</code> element requires significant additional processing
+by the browser.  Second, it cannot degrade gracefully on browsers that do not support it.  Third,
+it requires the map description to be specified when the image appears, which is inappropriate
+for some applications.  The extension to support client-side image maps addresses these issues.
+
+<h2>Syntax</h2>
+Adding a <code>USEMAP</code> attribute to an <code>IMG</code> element indicates that it is a client-side image map.  The
+<code>USEMAP</code> attribute can be used with the <code>ISMAP</code> attribute to indicate
+that the the image can be processed as either a client-side or server-side image map.  The
+argument to <code>USEMAP</code> specifies which map to use with the image, in a format similar
+to the <code>HREF</code> attribute on anchors.  If the argument to <code>USEMAP</code> starts
+with a '#', it is assumed to be in the same document as the <code>IMG</code> tag.
+A few examples would be:<p>
+
+<code>You can only click here if your browser supports client-side image maps:
+&lt;IMG&nbsp;src="pic1.gif" USEMAP="maps.html#map1"&gt;<p>
+This image map will work regardless:  &lt;A&nbsp;href="cgi-bin/image map/pic2"&gt;
+&lt;IMG&nbsp;src="pic2.gif" USEMAP="maps.html#map2" ISMAP&gt;&lt;/A&gt;<p>
+Clicking here will take you to a page with an error message if you don't have client-side
+image map support: &lt;A&nbsp;href="no_csim.html"&gt; &lt;IMG&nbsp;src="/www2/pic3.gif" USEMAP="maps.html#map3"&gt;
+&lt;/A&gt;</code><p>
+
+The different regions of the image are described using a <code>MAP</code> element.  The map
+describes each region in the image and indicates where it links to.
+The basic format for the <code>MAP</code> element is as follows:<p>
+
+<code>&lt;MAP&nbsp;NAME="</code><em>name</em><code>"&gt;<br>
+&lt;AREA [SHAPE="</code><em>shape</em><code>"] COORDS="</code><em>x,y,...</em><code>"
+[href="</code><em>reference</em><code>"] [NOHREF]&gt;<br>
+&lt;/MAP&gt;</code><p>
+
+The <em>name</em> specifies the name of the map so that it can be referenced by an <code>IMG</code> element.
+The <em>shape</em> gives the shape of this area.  Currently the only shape defined is "<code>RECT</code>",
+but the syntax is defined in such a way to allow other region types to be added.
+If the <code>SHAPE</code> tag is omitted, <code>SHAPE="RECT"</code> is assumed.  The <code>COORDS</code>
+tag gives the coordinates of the shape, using image pixels as the units.  For a rectangle, the coordinates
+are given as "<em>left,top,right,bottom</em>".
+The rectangular region defined includes
+the lower-right corner specified, i.e. to specify the the entire area of a 100x100 image, the coordinates would
+be "0,0,99,99".<p>
+
+The <code>NOHREF</code> tag indicates that clicks in this region should
+perform no action.  An <code>HREF</code> tag specifies where a click in that area should lead.  Note that
+a relative anchor specification will be expanded using the URL of the map description as a base, rather
+than using the URL of the document from which the map description is referenced.  If a <code>BASE</code>
+tag is present in the document containing the map description, that URL will be used as the base.<p>
+
+An arbitrary number of <code>AREA</code> tags may be specified.  If two areas intersect, the one
+which appears first in the map definition takes precedence in the overlapping region.
+For example, a button bar in a document might use a 160 pixel by 60 pixel image and appear like this:<p>
+
+<pre>&lt;MAP&nbsp;NAME="buttonbar"&gt;
+&lt;AREA SHAPE="RECT" COORDS="10,10,49,49" href="about_us.html"&gt;
+&lt;AREA SHAPE="RECT" COORDS="60,10,99,49" href="products.html"&gt;
+&lt;AREA SHAPE="RECT" COORDS="110,10,149,49" href="index.html"&gt;
+&lt;AREA SHAPE="RECT" COORDS="0,0,159,59" NOHREF&gt;
+&lt;/MAP&gt;
+&lt;IMG src="img/bar.gif" USEMAP="#buttonbar"&gt;
+</pre>
+
+This example includes a region encompassing the entire image with a <code>NOHREF</code> tag, but
+this is actually redundant.  Any region of the image that is not defined by an <code>AREA</code>
+tag is assumed to be <code>NOHREF</code>.
+
+<h2>Discussion</h2>
+This syntax provides maximum flexibility to the document author for dealing with browsers which do not support
+this extension, since such browsers will ignore the <code>MAP</code> and <code>AREA</code> elements.
+If the document resides on an HTTP server, the server can still provide <code>ISMAP</code>-style support.
+Otherwise, the author can choose to have the image not appear as an anchor at all, or have a click anywhere
+within it lead to a another page, perhaps providing an equivalent textual list of options.<p>
+
+The ability to have the map description reside in an different file provides additional flexibility.
+A common use of image maps is a button bar which appears at the bottom of every document.  The map
+description could be specified in one file, such as the server's home page, and referenced from each
+document.  Thus, the map could be modified by changing a single map description rather than having
+to modify every file on the server.  There is also the possibility of advanced applications with
+servers dynamically generating
+map descriptions, similar to the way that some servers currently dynamically generate image files.<p>
+
+The demand for a non-HTTP based mechanism for image maps will also increase as archives of material
+in HTML format begins to appear on CD-ROM.  The expected increase in pay-per-access servers will
+also lead to users saving copies of documents locally, which they would then expect to function
+identically to those on the original server.  The extensions described here could serve as a basis
+to satisfy these needs.
+
+<h2>References</h2>
+[1] Berners-Lee, Tim, <i>Hypertext Transfer Protocol</i>, Internet Draft.<br>
+[2] Connolly, Daniel W. <i>HTML 2.0 Specification Review Materials</i>, URL:<code>http://www.hal.com/users/connolly/html-spec/</code><br>
+[3] Ragget, Dave, <i>HTML+ Discussion Document</i>, URL:<code>http://info.cern.ch/hypertext/WWW/MarkUp/HTMLPlus/htmlplus_1.html</code><p>
+</body>
+
+</html>

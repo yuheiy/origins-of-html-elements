@@ -10,13 +10,13 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、他のcontrolに対する定義済みoptionの集合を表す。通常は`input`の`list`属性から参照される。[一次定義](https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、他のcontrolに対する定義済みoptionの集合を表す。通常は`input`の`list`属性から参照される。[HTML Living Standard](../../raw/html-living-standard/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
 2004年8月のWeb Forms 2.0 feedbackで、`select`へwritable属性を加えてcomboboxにする案に対し、Ian Hicksonは検討済みだが後方互換性がなく既存pageを壊すため採らないと回答した。同年12月10日のCall for Commentsは、任意値を許したままUAが候補を提示する`input list`を補完する新要素として`datalist`を定義し、候補を`option`で与える役割と非対応UA向けfallback contentを持たせた。[設計議論](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/044441.html) [Web Forms 2.0](http://www.whatwg.org/specs/web-forms/2004-12-10-call-for-comments/#the-datalist)
 
-2008年10月7日のWHATWG revision 2295は、Web Forms 2.0由来であることをcommit messageに明記して、`input.list`、suggestions source、`datalist`の意味、fallback content、`input`との接続をHTML5 sourceへ実装した。[統合commit](https://github.com/whatwg/html/commit/1a0c484ea33295757ab93a05bc8a19a294dec151)
+2008年10月7日のWHATWG revision 2295は、Web Forms 2.0由来であることをcommit messageに明記して、`input.list`、suggestions source、`datalist`の意味、fallback content、`input`との接続をHTML5 sourceへ実装した。[統合commit](https://github.com/whatwg/html/commit/1a0c484e8f2f500dc854107dbdffdaf0b8f8576b)
 
 ## HTML直前の祖先
 
@@ -42,15 +42,15 @@ writable `select`案を採らず`input`と候補集合を分離したことに�
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2003-12-04 | *Proposed XHTML Module: XForms Basic* | Editor's Working Draft | 自由入力と候補選択を組み合わせる`select editable` | https://www.hixie.ch/specs/html/forms/xforms-basic-1#the-select-element | 2026-08-09 |
-| 2004-08-29 | “Web Forms 2.0 Feedback” | WHATWG mailing list・編集者回答 | writable `select`案を検討したが、後方互換性がなく既存pageを壊すため採らなかったこと。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/044441.html) | 2026-08-09 |
-| 2004-12-10 | *Web Forms 2.0* | WHATWG Call for Comments | `input list`を補完する`datalist`、候補値、fallback | http://www.whatwg.org/specs/web-forms/2004-12-10-call-for-comments/#the-datalist | 2026-08-09 |
-| 2005-04-11 | *Web Forms 2.0* | W3C Member Submission | 同じ`input list`と`datalist`の構造 | https://www.w3.org/submissions/2005/SUBM-web-forms2-20050411/#the-datalist | 2026-08-09 |
-| 2008-10-07 | WHATWG HTML commit `1a0c484e`（revision 2295） | 仕様commit | `WF2`由来と明記して`input.list`、suggestions source、`datalist`の意味、fallback content、`input`との接続をHTML5へ統合。 | [一次資料](https://github.com/whatwg/html/commit/1a0c484ea33295757ab93a05bc8a19a294dec151) | 2026-08-09 |
-| 2010-03-04 | *HTML5 differences from HTML4* | W3C Working Draft | 独立仕様Web Forms 2.0がHTML5へ完全統合されたこと | https://www.w3.org/TR/2010/WD-html5-diff-20100304/#changes-2009-04-23 | 2026-08-09 |
-| 2026-08-09 | *HTML Living Standard: The datalist element* | 現行仕様 | `datalist`の現行定義 | https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2003-12-04 | [*Proposed XHTML Module: XForms Basic*](../../raw/web-forms-2/224055341af55b0f-xforms-ba.html)（[公開元](https://www.hixie.ch/specs/html/forms/xforms-basic-1#the-select-element)） | Editor's Working Draft | 自由入力と候補選択を組み合わせる`select editable` | 2026-08-09 |
+| 2004-08-29 | [“Web Forms 2.0 Feedback”](../../raw/items/lists.whatwg.org/0799fcb545c14bc7-044441.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/044441.html)） | WHATWG mailing list・編集者回答 | writable `select`案を検討したが、後方互換性がなく既存pageを壊すため採らなかったこと。 | 2026-08-09 |
+| 2004-12-10 | [*Web Forms 2.0*](../../raw/web-forms-2/fb38ede48ec8a590-2004-12-10-call-for-com.html)（[公開元](http://www.whatwg.org/specs/web-forms/2004-12-10-call-for-comments/#the-datalist)） | WHATWG Call for Comments | `input list`を補完する`datalist`、候補値、fallback | 2026-08-09 |
+| 2005-04-11 | [*Web Forms 2.0*](../../raw/web-forms-2/d0e8dd74a559943e-SUBM-web-forms2-200.html)（[公開元](https://www.w3.org/submissions/2005/SUBM-web-forms2-20050411/#the-datalist)） | W3C Member Submission | 同じ`input list`と`datalist`の構造 | 2026-08-09 |
+| 2008-10-07 | [WHATWG HTML commit `1a0c484e`（revision 2295）](../../raw/whatwg-html-history/047ae0e1315aa433-1a0c484e8f2f500dc854107dbdffdaf0b8f.html)（[公開元](https://github.com/whatwg/html/commit/1a0c484e8f2f500dc854107dbdffdaf0b8f8576b)） | 仕様commit | `WF2`由来と明記して`input.list`、suggestions source、`datalist`の意味、fallback content、`input`との接続をHTML5へ統合。 | 2026-08-11 |
+| 2010-03-04 | [*HTML5 differences from HTML4*](../../raw/w3c-html5-history/26cf49032665c8b9-WD-html5-diff-201.html)（[公開元](https://www.w3.org/TR/2010/WD-html5-diff-20100304/#changes-2009-04-23)） | W3C Working Draft | 独立仕様Web Forms 2.0がHTML5へ完全統合されたこと | 2026-08-09 |
+| 2026-08-09 | [*HTML Living Standard: The datalist element*](../../raw/html-living-standard/form-elements.html)（[公開元](https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element)） | 現行仕様 | `datalist`の現行定義 | 2026-08-09 |
 
 ## 確度
 

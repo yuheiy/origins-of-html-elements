@@ -1,0 +1,2543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en-US"><head>
+  <title>HTML 5</title>
+
+  <style type="text/css">
+   dt, dfn { font-weight: bold; font-style: normal; }
+   img.extra { float: right; }
+   body ins, body del { display: block; }
+   body * ins, body * del { display: inline; }
+   pre, code { color: black; background: transparent; font-size: inherit; font-family: monospace; }
+   pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+   pre em { font-weight: bolder; font-style: normal; }
+   pre.idl :link, pre.idl :visited { color: inherit; background: transparent; }
+   pre.idl { border: solid thin; background: #EEEEEE; color: black; padding: 0.5em; }
+   table { border-collapse: collapse; border-style: hidden hidden none hidden; }
+   table thead { border-bottom: solid; }
+   table tbody th:first-child { border-left: solid; }
+   table td, table th { border-left: solid; border-right: solid; border-bottom: solid thin; vertical-align: top; padding: 0.2em; }
+   ul.toc dfn, h1 dfn, h2 dfn, h3 dfn, h4 dfn, h5 dfn, h6 dfn { font: inherit; }
+   ul.toc li ul { margin-bottom: 0.75em; }
+   ul.toc li ul li ul { margin-bottom: 0.25em; }
+   var sub { vertical-align: bottom; font-size: smaller; position: relative; top: 0.1em; }
+   @media screen { code { color: rgb(255, 69, 0); background: transparent; } }
+   code :link, code :visited { color: inherit; background: transparent; }
+   .example { display: block; color: #222222; background: #FCFCFC; border-left: double; margin-left: 1em; padding-left: 1em; }
+   .issue, .big-issue { color: #E50000; background: white; border: solid red; padding: 0.5em; margin: 1em 0; }
+   .issue > :first-child, .big-issue > :first-child { margin-top: 0; }
+   p .big-issue { line-height: 3em; }
+   .note { color: green; background: transparent; }
+   .note { font-family: sans-serif; }
+   p.note:before { content: 'Note: '; }
+   .warning { color: red; background: transparent; }
+   .warning:before { font-style: normal; }
+   p.warning:before { content: '\26A0 Warning! '; }
+   .note, .warning { font-weight: bolder; font-style: italic; padding: 0.5em 2em; }
+   .copyright { margin: 0.25em 0; }
+   img { max-width: 100%; }
+   h4 + .element { margin-top: -2.5em; padding-top: 2em; }
+   h4 + p + .element { margin-top: -5em; padding-top: 4em; }
+   .element { background: #EEEEFF; color: black; margin: 0 0 1em -1em; padding: 0 1em 0.25em 0.75em; border-left: solid #9999FF 0.25em; }
+   table.matrix, table.matrix td { border: none; text-align: right; }
+   table.matrix { margin-left: 2em; }
+  </style>
+  <link href="https://www.w3.org/StyleSheets/TR/W3C-WD" rel="stylesheet" type="text/css">
+  <!-- ZZZ -->
+
+ <link href="the-root.html" rel="prev" title="3.6 The root element">
+  <link href="Overview.html#contents" rel="index" title="Table of contents">
+  <link href="embedded0.html" rel="next" title="3.12 Embedded content">
+  <div class="head">
+   <p><a href="https://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/Icons/w3c_home" width="72"></a></p>
+
+   <h1 id="html-5">HTML 5</h1>
+
+   <h2 class="no-num no-toc" id="a-vocabulary">A vocabulary and associated APIs
+    for HTML and XHTML</h2>
+
+   </div>
+
+  <div>
+   <a href="the-root.html">&larr; 3.6 The root element</a> &ndash;
+   <a href="Overview.html#contents">Table of contents</a> &ndash;
+   <a href="embedded0.html">3.12 Embedded content &rarr;</a>
+  </div>
+
+  <h3 id="text-level"><span class="secno">3.10 </span>Text-level semantics</h3>
+  <!-- XXX ew, find a better section name -->
+
+  <h4 id="the-a"><span class="secno">3.10.1 </span>The <dfn id="a"><code>a</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dd><a href="semantics.html#interactive1">Interactive content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>, but there must be no <a href="semantics.html#interactive1">interactive content</a> descendant.
+
+   <dt>Element-specific attributes:
+
+   <dd><code title="attr-hyperlink-href"><a href="structured.html#href6">href</a></code>
+
+   <dd><code title="attr-hyperlink-target"><a href="structured.html#target3">target</a></code>
+
+   <dd><code title="attr-hyperlink-ping"><a href="structured.html#ping">ping</a></code>
+
+   <dd><code title="attr-hyperlink-rel"><a href="structured.html#rel3">rel</a></code>
+
+   <dd><code title="attr-hyperlink-media"><a href="structured.html#media12">media</a></code>
+
+   <dd><code title="attr-hyperlink-hreflang"><a href="structured.html#hreflang3">hreflang</a></code>
+
+   <dd><code title="attr-hyperlink-type"><a href="structured.html#type17">type</a></code>
+
+   <dt>DOM interface:
+
+   <dd>
+    <pre class="idl">[Stringifies=href] interface <dfn id="htmlanchorelement">HTMLAnchorElement</dfn> : <a href="dom.html#htmlelement">HTMLElement</a> {
+           attribute DOMString <a href="#href3" title="dom-a-href">href</a>;
+           attribute DOMString <a href="#target1" title="dom-a-target">target</a>;
+           attribute DOMString <a href="#ping0" title="dom-a-ping">ping</a>;
+           attribute DOMString <a href="#rel1" title="dom-a-rel">rel</a>;
+  readonly attribute DOMTokenList <a href="#rellist0" title="dom-a-relList">relList</a>;
+           attribute DOMString <a href="#media4" title="dom-a-media">media</a>;
+           attribute DOMString <a href="#hreflang1" title="dom-a-hreflang">hreflang</a>;
+           attribute DOMString <a href="#type3" title="dom-a-type">type</a>;
+};</pre>
+    <!-- XXX also support the URI decomposition attributes -->
+    <p>The <code title="command-ro"><a href="interactive-elements.html#command2">Command</a></code>
+     interface must also be implemented by this element.</p>
+  </dl>
+
+  <p>If the <code><a href="#a">a</a></code> element has an <code title="attr-hyperlink-href"><a href="structured.html#href6">href</a></code> attribute, then
+   it represents a <a href="structured.html#hyperlinks">hyperlink</a>.
+
+  <p>If the <code><a href="#a">a</a></code> element has no <code title="attr-hyperlink-href"><a href="structured.html#href6">href</a></code> attribute, then
+   the element is a placeholder for where a link might otherwise have been
+   placed, if it had been relevant.
+
+  <p>The <code title="attr-hyperlink-target"><a href="structured.html#target3">target</a></code>, <code title="attr-hyperlink-ping"><a href="structured.html#ping">ping</a></code>, <code title="attr-hyperlink-rel"><a href="structured.html#rel3">rel</a></code>, <code title="attr-hyperlink-media"><a href="structured.html#media12">media</a></code>, <code title="attr-hyperlink-hreflang"><a href="structured.html#hreflang3">hreflang</a></code>, and <code title="attr-hyperlink-type"><a href="structured.html#type17">type</a></code> attributes
+   must be omitted if the <code title="attr-hyperlink-href"><a href="structured.html#href6">href</a></code> attribute is not present.
+
+  </p><div class="example">
+   <p>If a site uses a consistent navigation toolbar on every page, then the
+    link that would normally link to the page itself could be marked up using
+    an <code><a href="#a">a</a></code> element:</p>
+
+   <pre>&lt;nav&gt;
+ &lt;ul&gt;
+  &lt;li&gt; &lt;a href="/"&gt;Home&lt;/a&gt; &lt;/li&gt;
+  &lt;li&gt; &lt;a href="/news"&gt;News&lt;/a&gt; &lt;/li&gt;
+  &lt;li&gt; &lt;a&gt;Examples&lt;/a&gt; &lt;/li&gt;
+  &lt;li&gt; &lt;a href="/legal"&gt;Legal&lt;/a&gt; &lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+  </div>
+
+  <p>Interactive user agents should allow users to <a href="structured.html#following0" title="following hyperlinks">follow hyperlinks</a> created using the
+   <code><a href="#a">a</a></code> element. The <code title="attr-hyperlink-href"><a href="structured.html#href6">href</a></code>, <code title="attr-hyperlink-target"><a href="structured.html#target3">target</a></code> and <code title="attr-hyperlink-ping"><a href="structured.html#ping">ping</a></code> attributes
+   decide how the link is followed. The <code title="attr-hyperlink-rel"><a href="structured.html#rel3">rel</a></code>, <code title="attr-hyperlink-media"><a href="structured.html#media12">media</a></code>, <code title="attr-hyperlink-hreflang"><a href="structured.html#hreflang3">hreflang</a></code>, and <code title="attr-hyperlink-type"><a href="structured.html#type17">type</a></code> attributes may
+   be used to indicate to the user the likely nature of the target resource
+   before the user follows the link.
+
+  <p>The <a href="introduction.html#activation0">activation behavior</a> of <code><a href="#a">a</a></code> elements that represent <span>hyperlinks</span> is
+   to run the following steps:
+
+  <ol>
+   <li>
+    <p>If the <code title="event-DOMActivate">DOMActivate</code> event in
+     question is not <span title="concept-events-trusted">trusted</span> (i.e.
+     a <code title="dom-click"><a href="semantics.html#click">click()</a></code> method call
+     was the reason for the event being dispatched), and the <code><a href="#a">a</a></code> element's <code title="attr-hyperlink-target"><a href="structured.html#target3">target</a></code> attribute is <span class="big-issue">...</span> then raise an <code>INVALID_ACCESS_ERR</code>
+     exception and abort these steps.
+
+   <li>
+    <p>If the target of the <code title="event-DOMActivate">DOMActivate</code>
+     event is an <code><a href="embedded0.html#img">img</a></code> element with an <code title="attr-img-ismap"><a href="embedded0.html#ismap">ismap</a></code> attribute
+     specified, then server-side image map processing must be performed, as
+     follows:</p>
+
+    <ol><!-- http://software.hixie.ch/utilities/js/live-dom-viewer/?%3C%21DOCTYPE%20html%3E%0A...%3Ca%20href%3D%22%23%22%3E%3Cimg%20ismap%20usemap%3D%22%23a%22%20src%3D/resources/images/smallcats%3E%3C/a%3E%0A%3Cmap%20name%3Da%3E%3Carea%20shape%3Drect%20coords%3D0%2C0%2C50%2C50%20href%3Db%3E%3C/map%3E -->
+
+     <li>If the <code title="event-DOMActivate">DOMActivate</code> event was
+      dispatched as the result of a real pointing-device-triggered <code title="event-click">click</code> event on the <code><a href="embedded0.html#img">img</a></code> element, then let <var title="">x</var> be
+      the distance in CSS pixels from the left edge of the image to the
+      location of the click, and let <var title="">y</var> be the distance in
+      CSS pixels from the top edge of the image to the location of the click.
+      Otherwise, let <var title="">x</var> and <var title="">y</var> be zero.
+
+     <li>Let the <dfn id="hyperlink2"><var>hyperlink suffix</var></dfn> be a
+      U+003F QUESTION MARK character, the value of <var title="">x</var>
+      expressed as a base-ten integer using ASCII digits (U+0030 DIGIT ZERO
+      to U+0039 DIGIT NINE), a U+002C COMMA character, and the value of <var title="">y</var> expressed as a base-ten integer using ASCII digits.
+    </ol>
+
+   <li>
+    <p>Finally, the user agent must <a href="structured.html#following0" title="following
+     hyperlinks">follow the hyperlink</a> defined by the <code><a href="#a">a</a></code> element. If the steps above defined a <var><a href="#hyperlink2">hyperlink suffix</a></var>, then take that into
+     account when following the hyperlink.
+  </ol>
+
+  <p class="note">One way that a user agent can enable users to follow
+   hyperlinks is by allowing <code><a href="#a">a</a></code> elements to be
+   clicked, or focussed and activated by the keyboard. This <span title="interactive elements">will cause</span> the aforementioned <a href="introduction.html#activation0">activation behavior</a> to be invoked.
+
+  <p>The DOM attributes <dfn id="href3" title="dom-a-href"><code>href</code></dfn>, <dfn id="ping0" title="dom-a-ping"><code>ping</code></dfn>, <dfn id="target1" title="dom-a-target"><code>target</code></dfn>, <dfn id="rel1" title="dom-a-rel"><code>rel</code></dfn>, <dfn id="media4" title="dom-a-media"><code>media</code></dfn>, <dfn id="hreflang1" title="dom-a-hreflang"><code>hreflang</code></dfn>, and <dfn id="type3" title="dom-a-type"><code>type</code></dfn>, must each <a href="dom.html#reflect">reflect</a> the respective content attributes of the same
+   name.
+
+  <p>The DOM attribute <dfn id="rellist0" title="dom-a-rellist"><code>relList</code></dfn> must <a href="dom.html#reflect">reflect</a> the <code title="attr-hyperlink-rel"><a href="structured.html#rel3">rel</a></code> content attribute.
+
+  <h4 id="the-q"><span class="secno">3.10.2 </span>The <dfn id="q"><code>q</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd><code title="attr-q-cite"><a href="#cite1">cite</a></code>
+
+   <dt>DOM interface:
+
+   <dd> The <code><a href="#q">q</a></code> element uses the <code><a href="the-root.html#htmlquoteelement">HTMLQuoteElement</a></code> interface.
+  </dl>
+
+  <p>The <code><a href="#q">q</a></code> element represents some <a href="semantics.html#phrasing0" title="phrasing content">phrasing content</a> quoted
+   from another source.
+
+  <p>Quotation punctuation (such as quotation marks), if any, must be placed
+   inside the <code><a href="#q">q</a></code> element.
+
+  <p>Content inside a <code><a href="#q">q</a></code> element must be quoted
+   from another source, whose URI, if it has one, should be cited in the <dfn id="cite1" title="attr-q-cite"><code>cite</code></dfn> attribute.
+
+  <p>If the <code title="attr-q-cite"><a href="#cite1">cite</a></code>
+   attribute is present, it must be a URI (or IRI). User agents should allow
+   users to follow such citation links.
+
+  <p>If a <code><a href="#q">q</a></code> element is contained (directly or
+   indirectly) in a <a href="semantics.html#paragraph">paragraph</a> that contains a single
+   <code><a href="#cite2">cite</a></code> element and has no other <code><a href="#q">q</a></code> element descendants, then, the title of the work
+   given by that <code><a href="#cite2">cite</a></code> element gives the
+   source of the quotation contained in the <code><a href="#q">q</a></code>
+   element.
+
+  </p><div class="example">
+   <p>Here is a simple example of the use of the <code><a href="#q">q</a></code> element:</p>
+
+   <pre>&lt;p&gt;The man said &lt;q&gt;"Things that are impossible just take
+longer"&lt;/q&gt;. I disagreed with him.&lt;/p&gt;</pre>
+  </div>
+
+  <div class="example">
+   <p>Here is an example with both an explicit citation link in the <code><a href="#q">q</a></code> element, and an explicit citation outside:</p>
+
+   <pre>&lt;p&gt;The W3C page &lt;cite&gt;About W3C&lt;/cite&gt; says the W3C's
+mission is &lt;q cite="http://www.w3.org/Consortium/"&gt;"To lead the
+World Wide Web to its full potential by developing protocols and
+guidelines that ensure long-term growth for the Web"&lt;/q&gt;. I
+disagree with this mission.&lt;/p&gt;</pre>
+  </div>
+
+  <div class="example">
+   <p>In the following example, the quotation itself contains a quotation:</p>
+
+   <pre>&lt;p&gt;In &lt;cite&gt;Example One&lt;/cite&gt;, he writes &lt;q&gt;"The man
+said &lt;q&gt;'Things that are impossible just take longer'&lt;/q&gt;. I
+disagreed with him"&lt;/q&gt;. Well, I disagree even more!&lt;/p&gt;</pre>
+  </div>
+
+  <div class="example">
+   <p>In the following example, there are no quotation marks:</p>
+
+   <pre>&lt;p&gt;His best argument: &lt;q&gt;I disagree!&lt;/q&gt;&lt;/p&gt;</pre>
+  </div>
+
+  <h4 id="the-cite"><span class="secno">3.10.3 </span>The <dfn id="cite2"><code>cite</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.</dd>
+   <!-- XXX should the cite element have a cite attribute? -->
+  </dl>
+
+  <p>The <code><a href="#cite2">cite</a></code> element represents the title
+   of a work (e.g. a book, a paper, an essay, a poem, a score, a song, a
+   script, a film, a TV show, a game, a sculpture, a painting, a theatre
+   production, a play, an opera, a musical, an exhibition, etc). This can be
+   a work that is being quoted or referenced in detail (i.e. a citation), or
+   it can just be a work that is mentioned in passing.
+
+  <p>A person's name is not the title of a work &mdash; even if people call
+   that person a piece of work &mdash; and the element must therefore not be
+   used to mark up people's names. (In some cases, the <code><a href="#b">b</a></code> element might be appropriate for names; e.g. in a
+   gossip article where the names of famous people are keywords rendered with
+   a different style to draw attention to them. In other cases, if an element
+   is <em>really</em> needed, the <code><a href="#span">span</a></code>
+   element can be used.)
+
+  <p>A ship is similarly not a work, and the element must not be used to mark
+   up ship names (the <code><a href="#i">i</a></code> element can be used for
+   that purpose).
+
+  </p><div class="example">
+   <p>This next example shows a typical use of the <code><a href="#cite2">cite</a></code> element:</p>
+
+   <pre>&lt;p&gt;My favourite book is &lt;cite&gt;The Reality Dysfunction&lt;/cite&gt; by
+Peter F. Hamilton. My favourite comic is &lt;cite&gt;Pearls Before
+Swine&lt;/cite&gt; by Stephan Pastis. My favourite track is &lt;cite&gt;Jive
+Samba&lt;/cite&gt; by the Cannonball Adderley Sextet.&lt;/p&gt;</pre>
+  </div>
+
+  <div class="example">
+   <p>This is correct usage:</p>
+
+   <pre>&lt;p&gt;According to the Wikipedia article &lt;cite&gt;HTML&lt;/cite&gt;, as it
+stood in mid-February 2008, leaving attribute values unquoted is
+unsafe. This is obviously an over-simplification.&lt;/p&gt;</pre>
+
+   <p>The following, however, is incorrect usage, as the <code><a href="#cite2">cite</a></code> element here is containing far more than
+    the title of the work:</p>
+
+   <pre class="bad">&lt;!-- do not copy this example, it is an example of bad usage! --&gt;
+&lt;p&gt;According to &lt;cite&gt;the Wikipedia article on HTML&lt;/cite&gt;, as it
+stood in mid-February 2008, leaving attribute values unquoted is
+unsafe. This is obviously an over-simplification.&lt;/p&gt;</pre>
+  </div>
+
+  <div class="example">
+   <p>The <code><a href="#cite2">cite</a></code> element is obviously a key
+    part of any citation in a bibliography, but it is only used to mark the
+    title:</p>
+
+   <pre>&lt;p&gt;&lt;cite&gt;Universal Declaration of Human Rights&lt;/cite&gt;, United Nations,
+December 1948.  Adopted by General Assembly resolution 217 A (III).&lt;/p&gt;</pre>
+  </div>
+
+  <p class="note">A <em>citation</em> is not a <em>quote</em> (for which the
+   <code><a href="#q">q</a></code> element is appropriate).
+
+  </p><div class="example">
+   <p>This is incorrect usage, because <code><a href="#cite2">cite</a></code>
+    is not for quotes:</p>
+
+   <pre>&lt;p&gt;&lt;cite&gt;This is wrong!&lt;/cite&gt;, said Ian.&lt;/p&gt;</pre>
+
+   <p>This is also incorrect usage, because a person is not a work:</p>
+
+   <pre>&lt;p&gt;&lt;q&gt;This is still wrong!&lt;/q&gt;, said &lt;cite&gt;Ian&lt;/cite&gt;.&lt;/p&gt;</pre>
+
+   <p>The correct usage does not use a <code><a href="#cite2">cite</a></code>
+    element:</p>
+
+   <pre>&lt;p&gt;&lt;q&gt;This is correct&lt;/q&gt;, said Ian.&lt;/p&gt;</pre>
+
+   <p>As mentioned above, the <code><a href="#b">b</a></code> element might
+    be relevant for marking names as being keywords in certain kinds of
+    documents:</p>
+
+   <pre>&lt;p&gt;And then &lt;b&gt;Ian&lt;/b&gt; said &lt;q&gt;this might be right, in a
+gossip column, maybe!&lt;/q&gt;.&lt;/p&gt;</pre>
+  </div>
+
+  <p class="note">The <code><a href="#cite2">cite</a></code> element can apply
+   to <code><a href="the-root.html#blockquote">blockquote</a></code> and <code><a href="#q">q</a></code> elements in certain cases described in the
+   definitions of those elements.
+
+  </p><div class="example">
+   <p>This next example shows the use of <code><a href="#cite2">cite</a></code> alongside <code><a href="the-root.html#blockquote">blockquote</a></code>:</p>
+
+   <pre>&lt;p&gt;His next piece was the aptly named &lt;cite&gt;Sonnet 130&lt;/cite&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;My mistress' eyes are nothing like the sun,&lt;br&gt;
+  Coral is far more red, than her lips red,
+  ...</pre>
+  </div>
+
+  <h4 id="the-em"><span class="secno">3.10.4 </span>The <dfn id="em"><code>em</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#em">em</a></code> element represents stress emphasis
+   of its contents.
+
+  <p>The level of emphasis that a particular piece of content has is given by
+   its number of ancestor <code><a href="#em">em</a></code> elements.
+
+  <p>The placement of emphasis changes the meaning of the sentence. The
+   element thus forms an integral part of the content. The precise way in
+   which emphasis is used in this way depends on the language.
+
+  </p><div class="example">
+   <p>These examples show how changing the emphasis changes the meaning.
+    First, a general statement of fact, with no emphasis:</p>
+
+   <pre>&lt;p&gt;Cats are cute animals.&lt;/p&gt;</pre>
+
+   <p>By emphasizing the first word, the statement implies that the kind of
+    animal under discussion is in question (maybe someone is asserting that
+    dogs are cute):</p>
+
+   <pre>&lt;p&gt;&lt;em&gt;Cats&lt;/em&gt; are cute animals.&lt;/p&gt;</pre>
+
+   <p>Moving the emphasis to the verb, one highlights that the truth of the
+    entire sentence is in question (maybe someone is saying cats are not
+    cute):</p>
+
+   <pre>&lt;p&gt;Cats &lt;em&gt;are&lt;/em&gt; cute animals.&lt;/p&gt;</pre>
+
+   <p>By moving it to the adjective, the exact nature of the cats is
+    reasserted (maybe someone suggested cats were <em>mean</em> animals):</p>
+
+   <pre>&lt;p&gt;Cats are &lt;em&gt;cute&lt;/em&gt; animals.&lt;/p&gt;</pre>
+
+   <p>Similarly, if someone asserted that cats were vegetables, someone
+    correcting this might emphasize the last word:</p>
+
+   <pre>&lt;p&gt;Cats are cute &lt;em&gt;animals&lt;/em&gt;.&lt;/p&gt;</pre>
+
+   <p>By emphasizing the entire sentence, it becomes clear that the speaker
+    is fighting hard to get the point across. This kind of emphasis also
+    typically affects the punctuation, hence the exclamation mark here.</p>
+
+   <pre>&lt;p&gt;&lt;em&gt;Cats are cute animals!&lt;/em&gt;&lt;/p&gt;</pre>
+
+   <p>Anger mixed with emphasizing the cuteness could lead to markup such as:</p>
+
+   <pre>&lt;p&gt;&lt;em&gt;Cats are &lt;em&gt;cute&lt;/em&gt; animals!&lt;/em&gt;&lt;/p&gt;</pre>
+  </div>
+  <!-- XXX should say it is wrong to use as in:
+
+   <p><em>Note</em>: ...</p>
+
+  -->
+
+  <h4 id="the-strong"><span class="secno">3.10.5 </span>The <dfn id="strong"><code>strong</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#strong">strong</a></code> element represents strong
+   importance for its contents.
+
+  <p>The relative level of importance of a piece of content is given by its
+   number of ancestor <code><a href="#strong">strong</a></code> elements;
+   each <code><a href="#strong">strong</a></code> element increases the
+   importance of its contents.
+
+  <p>Changing the importance of a piece of text with the <code><a href="#strong">strong</a></code> element does not change the meaning of
+   the sentence.
+
+  </p><div class="example">
+   <p>Here is an example of a warning notice in a game, with the various
+    parts marked up according to how important they are:</p>
+   <!-- DO NOT REFLOW THIS EXAMPLE it has been carefully balanced -->
+   <pre>&lt;p&gt;&lt;strong&gt;Warning.&lt;/strong&gt; This dungeon is dangerous.
+&lt;strong&gt;Avoid the ducks.&lt;/strong&gt; Take any gold you find.
+&lt;strong&gt;&lt;strong&gt;Do not take any of the diamonds&lt;/strong&gt;,
+they are explosive and &lt;strong&gt;will destroy anything within
+ten meters.&lt;/strong&gt;&lt;/strong&gt; You have been warned.&lt;/p&gt;</pre>
+  </div>
+
+  <h4 id="the-small"><span class="secno">3.10.6 </span>The <dfn id="small"><code>small</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#small">small</a></code> element represents small
+   print (part of a document often describing legal restrictions, such as
+   copyrights or other disadvantages), or other side comments.
+
+  <p class="note">The <code><a href="#small">small</a></code> element does not
+   "de-emphasize" or lower the importance of text emphasised by the <code><a href="#em">em</a></code> element or marked as important with the <code><a href="#strong">strong</a></code> element.
+
+  </p><div class="example">
+   <p>In this example the footer contains contact information and a
+    copyright.</p>
+
+   <pre>&lt;footer&gt;
+ &lt;address&gt;
+  For more details, contact
+  &lt;a href="mailto:js@example.com"&gt;John Smith&lt;/a&gt;.
+ &lt;/address&gt;
+ &lt;p&gt;&lt;small&gt;&copy; copyright 2038 Example Corp.&lt;/small&gt;&lt;/p&gt;
+&lt;/footer&gt;</pre>
+
+   <p>In this second example, the <code><a href="#small">small</a></code>
+    element is used for a side comment.</p>
+
+   <pre>&lt;p&gt;Example Corp today announced record profits for the
+second quarter &lt;small&gt;(Full Disclosure: Foo News is a subsidiary of
+Example Corp)&lt;/small&gt;, leading to speculation about a third quarter
+merger with Demo Group.&lt;/p&gt;</pre>
+
+   <p>In this last example, the <code><a href="#small">small</a></code>
+    element is marked as being <em>important</em> small print.</p>
+
+   <pre>&lt;p&gt;&lt;strong&gt;&lt;small&gt;Continued use of this service will result in a kiss.&lt;/small&gt;&lt;/strong&gt;&lt;/p&gt;</pre>
+  </div>
+
+  <h4 id="the-mark"><span class="secno">3.10.7 </span>The <dfn id="mark"><code>mark</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#mark">mark</a></code> element represents a run of
+   text in one document marked or highlighted for reference purposes, due to
+   its relevance in another context. When used in a quotation or other block
+   of text referred to from the prose, it indicates a highlight that was not
+   originally present but which has been added to bring the reader's
+   attention to a part of the text that might not have been considered
+   important by the original author when the block was originally written,
+   but which is now under previously unexpected scrutiny. When used in the
+   main prose of a document, it indicates a part of the document that has
+   been highlighted due to its likely relevance to the user's current
+   activity.
+
+  <p class="big-issue">The rendering section will eventually suggest that user
+   agents provide a way to let users jump between <code><a href="#mark">mark</a></code> elements. Suggested rendering is a neon
+   yellow background highlight, though UAs maybe should allow this to be
+   toggled.
+
+  </p><div class="example">
+   <p>This example shows how the <code><a href="#mark">mark</a></code>
+    example can be used to bring attention to a particular part of a
+    quotation:</p>
+
+   <pre>&lt;p lang="en-US"&gt;Consider the following quote:&lt;/p&gt;
+&lt;blockquote lang="en-GB"&gt;
+ &lt;p&gt;Look around and you will find, no-one's really
+ &lt;mark&gt;colour&lt;/mark&gt; blind.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p lang="en-US"&gt;As we can tell from the &lt;em&gt;spelling&lt;/em&gt; of the word,
+the person writing this quote is clearly not American.&lt;/p&gt;</pre>
+  </div>
+
+  <div class="example">
+   <p>Another example of the <code><a href="#mark">mark</a></code> element is
+    highlighting parts of a document that are matching some search string. If
+    someone looked at a document, and the server knew that the user was
+    searching for the word "kitten", then the server might return the
+    document with one paragraph modified as follows:</p>
+
+   <pre>&lt;p&gt;I also have some &lt;mark&gt;kitten&lt;/mark&gt;s who are visiting me
+these days. They're really cute. I think they like my garden! Maybe I
+should adopt a &lt;mark&gt;kitten&lt;/mark&gt;.&lt;/p&gt;</pre>
+  </div>
+
+  <div class="example">
+   <p>In the following snippet, a paragraph of text refers to a specific part
+    of a code fragment.</p>
+
+   <pre>&lt;p&gt;The highlighted part below is where the error lies:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var i: Integer;
+begin
+   i := &lt;mark&gt;1.1&lt;/mark&gt;;
+end.&lt;/code&gt;&lt;/pre&gt;</pre>
+  </div>
+
+  <div class="example">
+   <p>This is another example showing the use of <code><a href="#mark">mark</a></code> to highlight a part of quoted text that was
+    originally not emphasised. In this example, common typographic
+    conventions have led the author to explicitly style <code><a href="#mark">mark</a></code> elements in quotes to render in italics.</p>
+
+   <pre>&lt;article&gt;
+ &lt;style&gt;
+  blockquote mark, q mark {
+    font: inherit; font-style: italic;
+    text-decoration: none;
+    background: transparent; color: inherit;
+  }
+  .bubble em {
+    font: inherit; font-size: larger;
+    text-decoration: underline;
+  }
+ &lt;/style&gt;
+ &lt;h1&gt;She knew&lt;/h1&gt;
+ &lt;p&gt;Did you notice the subtle joke in the joke on panel 4?&lt;/p&gt;
+ &lt;blockquote&gt;
+  &lt;p class="bubble"&gt;I didn't &lt;em&gt;want&lt;/em&gt; to believe. &lt;mark&gt;Of course
+  on some level I realized it was a known-plaintext attack.&lt;/mark&gt; But I
+  couldn't admit it until I saw for myself.&lt;/p&gt;
+ &lt;/blockquote&gt;
+ &lt;p&gt;(Emphasis mine.) I thought that was great. It's so pedantic, yet it
+ explains everything neatly.&lt;/p&gt;
+&lt;/article&gt;</pre>
+
+   <p>Note, incidentally, the distinction between the <code><a href="#em">em</a></code> element in this example, which is part of the
+    original text being quoted, and the <code><a href="#mark">mark</a></code>
+    element, which is highlighting a part for comment.</p>
+  </div>
+
+  <div class="example">
+   <p>The following example shows the difference between denoting the
+    <em>importance</em> of a span of text (<code><a href="#strong">strong</a></code>) as opposed to denoting the
+    <em>relevance</em> of a span of text (<code><a href="#mark">mark</a></code>). It is an extract from a textbook, where
+    the extract has had the parts relevant to the exam highlighted. The
+    safety warnings, important though they may be, are apparently not
+    relevant to the exam.</p>
+
+   <pre>&lt;h3&gt;Wormhole Physics Introduction&lt;/h3&gt;
+
+&lt;p&gt;&lt;mark&gt;A wormhole in normal conditions can be held open for a
+maximum of just under 39 minutes.&lt;/mark&gt; Conditions that can increase
+the time include a powerful energy source coupled to one or both of
+the gates connecting the wormhole, and a large gravity well (such as a
+black hole).&lt;/p&gt;
+
+&lt;p&gt;&lt;mark&gt;Momentum is preserved across the wormhole. Electromagnetic
+radiation can travel in both directions through a wormhole,
+but matter cannot.&lt;/mark&gt;&lt;/p&gt;
+
+&lt;p&gt;When a wormhole is created, a vortex normally forms.
+&lt;strong&gt;Warning: The vortex caused by the wormhole opening will
+annihilate anything in its path.&lt;/strong&gt; Vortexes can be avoided when
+using sufficiently advanced dialing technology.&lt;/p&gt;
+
+&lt;p&gt;&lt;mark&gt;An obstruction in a gate will prevent it from accepting a
+wormhole connection.&lt;/mark&gt;&lt;/p&gt;</pre>
+  </div>
+
+  <h4 id="the-dfn"><span class="secno">3.10.8 </span>The <dfn id="dfn"><code>dfn</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>, but there must be no
+    descendant <code><a href="#dfn">dfn</a></code> elements.
+
+   <dt>Element-specific attributes:
+
+   <dd>None, but the <code title="attr-dfn-title"><a href="#title4">title</a></code> attribute has special semantics on this
+    element.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#dfn">dfn</a></code> element represents the defining
+   instance of a term. The <a href="semantics.html#paragraph" title="paragraph">paragraph</a>, <a href="the-root.html#dl" title="dl">description list
+   group</a>, or <a href="semantics.html#sectioning0" title="sectioning
+   content">section</a> that is the nearest ancestor of the <code><a href="#dfn">dfn</a></code> element must also contain the definition(s) for
+   the <a href="#defining" title="defining term">term</a> given by the
+   <code><a href="#dfn">dfn</a></code> element.
+
+  <p><dfn id="defining">Defining term</dfn>: If the <code><a href="#dfn">dfn</a></code> element has a <dfn id="title4" title="attr-dfn-title"><code>title</code></dfn> attribute, then the exact
+   value of that attribute is the term being defined. Otherwise, if it
+   contains exactly one element child node and no child <a href="introduction.html#text-node" title="text node">text nodes</a>, and that child element is an <code><a href="#abbr">abbr</a></code> element with a <code title="attr-abbr-title"><a href="#title5">title</a></code> attribute, then the exact value of
+   <em>that</em> attribute is the term being defined. Otherwise, it is the
+   exact <code><a href="introduction.html#textcontent">textContent</a></code> of the <code><a href="#dfn">dfn</a></code> element that gives the term being defined.</p>
+  <!-- XXX that means <dfn>x \n x</dfn> won't match <span>x x</span> -->
+
+  <p>If the <code title="attr-dfn-title"><a href="#title4">title</a></code>
+   attribute of the <code><a href="#dfn">dfn</a></code> element is present,
+   then it must contain only the term being defined.
+
+  <p class="note">The <code title="attr-title"><a href="semantics.html#title">title</a></code>
+   attribute of ancestor elements does not affect <code><a href="#dfn">dfn</a></code> elements.
+
+  <p>An <code><a href="#a">a</a></code> element that links to a <code><a href="#dfn">dfn</a></code> element represents an instance of the term
+   defined by the <code><a href="#dfn">dfn</a></code> element.
+
+  </p><div class="example">
+   <p>In the following fragment, the term "GDO" is first defined in the first
+    paragraph, then used in the second.</p>
+
+   <pre>&lt;p&gt;The &lt;dfn&gt;&lt;abbr title="Garage Door Opener"&gt;GDO&lt;/abbr&gt;&lt;/dfn&gt;
+is a device that allows off-world teams to open the iris.&lt;/p&gt;
+&lt;!-- ... later in the document: --&gt;
+&lt;p&gt;Teal'c activated his &lt;abbr title="Garage Door Opener"&gt;GDO&lt;/abbr&gt;
+and so Hammond ordered the iris to be opened.&lt;/p&gt;</pre>
+
+   <p>With the addition of an <code><a href="#a">a</a></code> element, the
+    reference can be made explicit:</p>
+
+   <pre>&lt;p&gt;The &lt;dfn id=gdo&gt;&lt;abbr title="Garage Door Opener"&gt;GDO&lt;/abbr&gt;&lt;/dfn&gt;
+is a device that allows off-world teams to open the iris.&lt;/p&gt;
+&lt;!-- ... later in the document: --&gt;
+&lt;p&gt;Teal'c activated his &lt;a href=#gdo&gt;&lt;abbr title="Garage Door Opener"&gt;GDO&lt;/abbr&gt;&lt;/a&gt;
+and so Hammond ordered the iris to be opened.&lt;/p&gt;</pre>
+  </div>
+  <!--XXX
+> One useful line of retreat would be to specify that in the following
+> code, "the state of being happy" is unambiguously a definition of
+> "happiness" and not of any other subset of the <dt>.
+>
+>     <dl>
+>       <dt><dfn>happiness</dfn> /'h&aelig; p. nes/ <i><abbr>n.</abbr></i></dt>
+>       <dd>the state of being happy</dd>
+>     </dl>
+>
+> This could be encouraged by "dt dfn {font-weight: bold; font-style:
+> normal;}" in browsers' default style sheets, which would be quite
+> backward-compatible because of the rarity of <dt><dfn> up to now.
+- mpt
+-->
+
+  <h4 id="the-abbr"><span class="secno">3.10.9 </span>The <dfn id="abbr"><code>abbr</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd>None, but the <code title="attr-abbr-title"><a href="#title5">title</a></code> attribute has special semantics on this
+    element.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#abbr">abbr</a></code> element represents an
+   abbreviation or acronym, optionally with its expansion. The <dfn id="title5" title="attr-abbr-title"><code>title</code></dfn> attribute may be used to
+   provide an expansion of the abbreviation. The attribute, if specified,
+   must contain an expansion of the abbreviation, and nothing else.
+
+  </p><div class="example">
+   <p>The paragraph below contains an abbreviation marked up with the
+    <code><a href="#abbr">abbr</a></code> element. This paragraph <a href="#defining" title="defining term">defines the term</a> "Web
+    Hypertext Application Technology Working Group".</p>
+
+   <pre>&lt;p&gt;The &lt;dfn id=whatwg&gt;&lt;abbr title="Web Hypertext Application
+Technology Working Group"&gt;WHATWG&lt;/abbr&gt;&lt;/dfn&gt; is a loose
+unofficial collaboration of Web browser manufacturers and interested
+parties who wish to develop new technologies designed to allow authors
+to write and deploy Applications over the World Wide Web.&lt;/p&gt;</pre>
+  </div>
+
+  <div class="example">
+   <p>This paragraph has two abbreviations. Notice how only one is defined;
+    the other, with no expansion associated with it, does not use the
+    <code><a href="#abbr">abbr</a></code> element.</p>
+
+   <pre>&lt;p&gt;The &lt;abbr title="Web Hypertext Application Technology Working
+Group"&gt;WHATWG&lt;/abbr&gt; started working on HTML5 in 2004.&lt;/p&gt;</pre>
+  </div>
+
+  <div class="example">
+   <p>This paragraph links an abbreviation to its definition.</p>
+
+   <pre>&lt;p&gt;The &lt;a href="#whatwg"&gt;&lt;abbr title="Web Hypertext Application
+Technology Working Group"&gt;WHATWG&lt;/abbr&gt;&lt;/a&gt; community does not
+have much representation from Asia.&lt;/p&gt;</pre>
+  </div>
+
+  <div class="example">
+   <p>This paragraph marks up an abbreviation without giving an expansion,
+    possibly as a hook to apply styles for abbreviations (e.g. smallcaps).</p>
+
+   <pre>&lt;p&gt;Philip` and Dashiva both denied that they were going to
+get the issue counts from past revisions of the specification to
+backfill the &lt;abbr&gt;WHATWG&lt;/abbr&gt; issue graph.&lt;/p&gt;</pre>
+  </div>
+
+  <p>If an abbreviation is pluralized, the expansion's grammatical number
+   (plural vs singular) must match the grammatical number of the contents of
+   the element.
+
+  </p><div class="example">
+   <p>Here the plural is outside the element, so the expansion is in the
+    singular:</p>
+
+   <pre>&lt;p&gt;Two &lt;abbr title="Working Group"&gt;WG&lt;/abbr&gt;s worked on
+this specification: the &lt;abbr&gt;WHATWG&lt;/abbr&gt; and the
+&lt;abbr&gt;HTMLWG&lt;/abbr&gt;.&lt;/p&gt;</pre>
+
+   <p>Here the plural is inside the element, so the expansion is in the
+    plural:</p>
+
+   <pre>&lt;p&gt;Two &lt;abbr title="Working Groups"&gt;WGs&lt;/abbr&gt; worked on
+this specification: the &lt;abbr&gt;WHATWG&lt;/abbr&gt; and the
+&lt;abbr&gt;HTMLWG&lt;/abbr&gt;.&lt;/p&gt;</pre>
+  </div>
+
+  <h4 id="the-time"><span class="secno">3.10.10 </span>The <dfn id="time"><code>time</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd><code title="attr-time-datetime"><a href="#datetime">datetime</a></code>
+
+   <dt>DOM interface:
+
+   <dd>
+    <pre class="idl">interface <dfn id="htmltimeelement">HTMLTimeElement</dfn> : <a href="dom.html#htmlelement">HTMLElement</a> {
+           attribute DOMString <a href="#datetime0" title="dom-time-datetime">dateTime</a>;
+  readonly attribute <a href="introduction.html#domtimestamp">DOMTimeStamp</a> <a href="#date0" title="dom-time-date">date</a>;
+  readonly attribute <a href="introduction.html#domtimestamp">DOMTimeStamp</a> <a href="#time1" title="dom-time-time">time</a>;
+  readonly attribute <a href="introduction.html#domtimestamp">DOMTimeStamp</a> <a href="#timezone0" title="dom-time-timezone">timezone</a>;
+};</pre>
+  </dl>
+
+  <p>The <code><a href="#time">time</a></code> element represents a date
+   and/or a time.
+
+  <p>The <dfn id="datetime" title="attr-time-datetime"><code>datetime</code></dfn> attribute, if
+   present, must contain a <a href="semantics.html#date-or">date or time string</a> that
+   identifies the date or time being specified.
+
+  <p>If the <code title="attr-time-datetime"><a href="#datetime">datetime</a></code> attribute is not present, then the
+   date or time must be specified in the content of the element, such that
+   parsing the element's <code><a href="introduction.html#textcontent">textContent</a></code>
+   according to the rules for parsing <a href="semantics.html#date-or0" title="date or time
+   string in content">date or time strings in content</a> successfully
+   extracts a date or time.
+
+  <p>The <dfn id="datetime0" title="dom-time-datetime"><code>dateTime</code></dfn> DOM attribute must <a href="dom.html#reflect">reflect</a> the <code title="attr-time-datetime"><a href="#datetime">datetime</a></code> content attribute.
+
+  <p>User agents, to obtain the <dfn id="date" title="concept-time-date">date</dfn>, <dfn id="time0" title="concept-time-time">time</dfn>, and <dfn id="timezone" title="concept-time-timezone">timezone</dfn> represented by a <code><a href="#time">time</a></code> element, must follow these steps:
+
+  <ol>
+   <li>If the <code title="attr-time-datetime"><a href="#datetime">datetime</a></code> attribute is present, then parse it
+    according to the rules for parsing <a href="semantics.html#date-or1" title="date or
+    time string in attributes">date or time strings in attributes</a>, and
+    let the result be <var title="">result</var>.
+
+   <li>Otherwise, parse the element's <code><a href="introduction.html#textcontent">textContent</a></code> according to the rules for
+    parsing <a href="semantics.html#date-or1" title="date or time string in
+    attributes">date or time strings in content</a>, and let the result be
+    <var title="">result</var>.
+
+   <li>If <var title="">result</var> is empty (because the parsing failed),
+    then the <a href="#date" title="concept-time-date">date</a> is unknown, the
+    <a href="#time0" title="concept-time-time">time</a> is unknown, and the <a href="#timezone" title="concept-time-timezone">timezone</a> is unknown.
+
+   <li>Otherwise: if <var title="">result</var> contains a date, then that is
+    the <a href="#date" title="concept-time-date">date</a>; if <var title="">result</var> contains a time, then that is the <a href="#time0" title="concept-time-time">time</a>; and if <var title="">result</var>
+    contains a timezone, then the timezone is the element's <a href="#timezone" title="concept-time-timezone">timezone</a>. (A timezone
+    can only be present if both a date and a time are also present.)
+  </ol>
+
+  <p>The <dfn id="date0" title="dom-time-date"><code>date</code></dfn> DOM
+   attribute must return null if the <a href="#date" title="concept-time-date">date</a> is unknown, and otherwise must return the
+   time corresponding to midnight UTC (i.e. the first second) of the given <a href="#date" title="concept-time-date">date</a>.
+
+  <p>The <dfn id="time1" title="dom-time-time"><code>time</code></dfn> DOM
+   attribute must return null if the <a href="#time0" title="concept-time-time">time</a> is unknown, and otherwise must return the
+   time corresponding to the given <a href="#time0" title="concept-time-time">time</a> of 1970-01-01, with the timezone UTC.
+
+  <p>The <dfn id="timezone0" title="dom-time-timezone"><code>timezone</code></dfn> DOM attribute must
+   return null if the <a href="#timezone" title="concept-time-timezone">timezone</a> is unknown, and otherwise must
+   return the time corresponding to 1970-01-01 00:00 UTC in the given <a href="#timezone" title="concept-time-timezone">timezone</a>, with the
+   timezone set to UTC (i.e. the time corresponding to 1970-01-01 at 00:00
+   UTC plus the offset corresponding to the timezone).
+
+  </p><div class="example">
+   <p>In the following snippet:</p>
+
+   <pre>&lt;p&gt;Our first date was &lt;time datetime="2006-09-23"&gt;a Saturday&lt;/time&gt;.&lt;/p&gt;</pre>
+
+   <p>...the <code><a href="#time">time</a></code> element's <code title="dom-time-date"><a href="#date0">date</a></code> attribute would have
+    the value 1,158,969,600,000ms, and the <code title="dom-time-time"><a href="#time1">time</a></code> and <code title="dom-time-timezone"><a href="#timezone0">timezone</a></code> attributes would return null.</p>
+
+   <p>In the following snippet:</p>
+
+   <pre>&lt;p&gt;We stopped talking at &lt;time datetime="2006-09-24 05:00 -7"&gt;5am the next morning&lt;/time&gt;.&lt;/p&gt;</pre>
+
+   <p>...the <code><a href="#time">time</a></code> element's <code title="dom-time-date"><a href="#date0">date</a></code> attribute would have
+    the value 1,159,056,000,000ms, the <code title="dom-time-time"><a href="#time1">time</a></code> attribute would have the value
+    18,000,000ms, and the <code title="dom-time-timezone"><a href="#timezone0">timezone</a></code> attribute would return
+    &minus;25,200,000ms. To obtain the actual time, the three attributes can
+    be added together, obtaining 1,159,048,800,000, which is the specified
+    date and time in UTC.</p>
+
+   <p>Finally, in the following snippet:</p>
+
+   <pre>&lt;p&gt;Many people get up at &lt;time&gt;08:00&lt;/time&gt;.&lt;/p&gt;</pre>
+
+   <p>...the <code><a href="#time">time</a></code> element's <code title="dom-time-date"><a href="#date0">date</a></code> attribute would have
+    the value null, the <code title="dom-time-time"><a href="#time1">time</a></code> attribute would have the value
+    28,800,000ms, and the <code title="dom-time-timezone"><a href="#timezone0">timezone</a></code> attribute would return null.</p>
+  </div>
+
+  <p class="big-issue">These APIs may be suboptimal. Comments on making them
+   more useful to JS authors are welcome. The primary use cases for these
+   elements are for marking up publication dates e.g. in blog entries, and
+   for marking event dates in hCalendar markup. Thus the DOM APIs are likely
+   to be used as ways to generate interactive calendar widgets or some such.
+
+  <h4 id="the-progress"><span class="secno">3.10.11 </span>The <dfn id="progress"><code>progress</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd><code title="attr-progress-value"><a href="#value1">value</a></code>
+
+   <dd><code title="attr-progress-max"><a href="#max">max</a></code>
+
+   <dt>DOM interface:
+
+   <dd>
+    <pre class="idl">interface <dfn id="htmlprogresselement">HTMLProgressElement</dfn> : <a href="dom.html#htmlelement">HTMLElement</a> {
+           attribute float <a href="#value2" title="dom-progress-value">value</a>;
+           attribute float <a href="#max0" title="dom-progress-max">max</a>;
+  readonly attribute float <a href="#position" title="dom-progress-position">position</a>;
+};</pre>
+  </dl>
+
+  <p>The <code><a href="#progress">progress</a></code> element represents the
+   completion progress of a task. The progress is either indeterminate,
+   indicating that progress is being made but that it is not clear how much
+   more work remains to be done before the task is complete (e.g. because the
+   task is waiting for a remote host to respond), or the progress is a number
+   in the range zero to a maximum, giving the fraction of work that has so
+   far been completed.
+
+  <p>There are two attributes that determine the current task completion
+   represented by the element.
+
+  <p>The <dfn id="value1" title="attr-progress-value"><code>value</code></dfn>
+   attribute specifies how much of the task has been completed, and the <dfn id="max" title="attr-progress-max"><code>max</code></dfn> attribute specifies
+   how much work the task requires in total. The units are arbitrary and not
+   specified.
+
+  <p>Instead of using the attributes, authors are recommended to include the
+   current value and the maximum value inline as text inside the element.
+
+  </p><div class="example">
+   <p>Here is a snippet of a Web application that shows the progress of some
+    automated task:</p>
+
+   <pre>&lt;section&gt;
+ &lt;h2&gt;Task Progress&lt;/h2&gt;
+ &lt;p&gt;Progress: &lt;progress&gt;&lt;span id="p"&gt;0&lt;/span&gt;%&lt;/progress&gt;&lt;/p&gt;
+ &lt;script&gt;
+  var progressBar = document.getElementById('p');
+  function updateProgress(newValue) {
+    progressBar.textContent = newValue;
+  }
+ &lt;/script&gt;
+&lt;/section&gt;</pre>
+
+   <p>(The <code>updateProgress()</code> method in this example would be
+    called by some other code on the page to update the actual progress bar
+    as the task progressed.)</p>
+  </div>
+
+  <p><strong>Author requirements</strong>: The <code title="attr-progress-max"><a href="#max">max</a></code> and <code title="attr-progress-value"><a href="#value1">value</a></code> attributes,
+   when present, must have values that are <a href="semantics.html#valid1" title="valid
+   floating point number">valid floating point numbers</a>. The <code title="attr-progress-max"><a href="#max">max</a></code> attribute, if
+   present, must have a value greater than zero. The <code title="attr-progress-value"><a href="#value1">value</a></code> attribute, if
+   present, must have a value equal to or greater than zero, and less than or
+   equal to the value of the <code title="attr-progress-max"><a href="#max">max</a></code> attribute, if present.
+
+  <p class="note">The <code><a href="#progress">progress</a></code> element is
+   the wrong element to use for something that is just a gauge, as opposed to
+   task progress. For instance, indicating disk space usage using <code><a href="#progress">progress</a></code> would be inappropriate. Instead, the
+   <code><a href="#meter">meter</a></code> element is available for such use
+   cases.
+
+  <p><strong>User agent requirements</strong>: User agents must parse the
+   <code title="attr-progress-max"><a href="#max">max</a></code> and <code title="attr-progress-value"><a href="#value1">value</a></code> attributes'
+   values according to the <a href="semantics.html#rules1">rules for parsing floating point
+   number values</a>.
+
+  <p>If the <code title="attr-progress-value"><a href="#value1">value</a></code> attribute is omitted, then user agents
+   must also parse the <code><a href="introduction.html#textcontent">textContent</a></code> of
+   the <code><a href="#progress">progress</a></code> element in question
+   using the <a href="semantics.html#steps">steps for finding one or two numbers of a ratio
+   in a string</a>. These steps will return nothing, one number, one number
+   with a denominator punctuation character, or two numbers.
+
+  <p>Using the results of this processing, user agents must determine whether
+   the progress bar is an indeterminate progress bar, or whether it is a
+   determinate progress bar, and in the latter case, what its current and
+   maximum values are, all as follows:
+
+  <ol>
+   <li>If the <code title="attr-progress-max"><a href="#max">max</a></code>
+    attribute is omitted, and the <code title="attr-progress-value"><a href="#value1">value</a></code> is omitted, and the results of parsing
+    the <code><a href="introduction.html#textcontent">textContent</a></code> was nothing, then
+    the progress bar is an indeterminate progress bar. Abort these steps.
+
+   <li>Otherwise, it is a determinate progress bar.
+
+   <li>If the <code title="attr-progress-max"><a href="#max">max</a></code>
+    attribute is included, then, if a value could be parsed out of it, then
+    the maximum value is that value.
+
+   <li>Otherwise, if the <code title="attr-progress-max"><a href="#max">max</a></code> attribute is absent but the <code title="attr-progress-value"><a href="#value1">value</a></code> attribute is
+    present, or, if the <code title="attr-progress-max"><a href="#max">max</a></code> attribute is present but no value could be
+    parsed from it, then the maximum is 1.
+
+   <li>Otherwise, if neither attribute is included, then, if the <code><a href="introduction.html#textcontent">textContent</a></code> contained one number with an
+    associated denominator punctuation character, then the maximum value is
+    the <span>value associated with that denominator punctuation
+    character</span>; otherwise, if the <code><a href="introduction.html#textcontent">textContent</a></code> contained two numbers, the
+    maximum value is the higher of the two values; otherwise, the maximum
+    value is 1.
+
+   <li>If the <code title="attr-progress-value"><a href="#value1">value</a></code> attribute is present on the element and a
+    value could be parsed out of it, that value is the current value of the
+    progress bar. Otherwise, if the attribute is present but no value could
+    be parsed from it, the current value is zero.
+
+   <li>Otherwise if the <code title="attr-progress-value"><a href="#value1">value</a></code> attribute is absent and the <code title="attr-progress-max"><a href="#max">max</a></code> attribute is
+    present, then, if the <code><a href="introduction.html#textcontent">textContent</a></code>
+    was parsed and found to contain just one number, with no associated
+    denominator punctuation character, then the current value is that number.
+    Otherwise, if the <code title="attr-progress-value"><a href="#value1">value</a></code> attribute is absent and the <code title="attr-progress-max"><a href="#max">max</a></code> attribute is
+    present then the current value is zero.
+
+   <li>Otherwise, if neither attribute is present, then the current value is
+    the lower of the one or two numbers that were found in the <code><a href="introduction.html#textcontent">textContent</a></code> of the element.
+
+   <li>If the maximum value is less than or equal to zero, then it is reset
+    to 1.
+
+   <li>If the current value is less than zero, then it is reset to zero.
+
+   <li>Finally, if the current value is greater than the maximum value, then
+    the current value is reset to the maximum value.
+  </ol>
+
+  <p><strong>UA requirements for showing the progress bar</strong>: When
+   representing a <code><a href="#progress">progress</a></code> element to
+   the user, the UA should indicate whether it is a determinate or
+   indeterminate progress bar, and in the former case, should indicate the
+   relative position of the current value relative to the maximum value.
+
+  <p>The <dfn id="max0" title="dom-progress-max"><code>max</code></dfn> and <dfn id="value2" title="dom-progress-value"><code>value</code></dfn> DOM attributes
+   must <a href="dom.html#reflect">reflect</a> the elements' content attributes of
+   the same name. When the relevant content attributes are absent, the DOM
+   attributes must return zero. The value parsed from the <code><a href="introduction.html#textcontent">textContent</a></code> never affects the DOM values.
+
+  <p class="big-issue">Would be cool to have the <code title="dom-progress-value"><a href="#value2">value</a></code> DOM attribute
+   update the <code><a href="introduction.html#textcontent">textContent</a></code> in-line...
+
+  <p>If the progress bar is an indeterminate progress bar, then the <dfn id="position" title="dom-progress-position"><code>position</code></dfn> DOM
+   attribute must return &minus;1. Otherwise, it must return the result of
+   dividing the current value by the maximum value.
+
+  <h4 id="the-meter"><span class="secno">3.10.12 </span>The <dfn id="meter"><code>meter</code></dfn> element</h4>
+  <!-- Keep this after <progress> and NOT close to <time> -->
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd><code title="attr-meter-value"><a href="#value3">value</a></code>
+
+   <dd><code title="attr-meter-min"><a href="#min">min</a></code>
+
+   <dd><code title="attr-meter-low"><a href="#low">low</a></code>
+
+   <dd><code title="attr-meter-high"><a href="#high">high</a></code>
+
+   <dd><code title="attr-meter-max"><a href="#max1">max</a></code>
+
+   <dd><code title="attr-meter-optimum"><a href="#optimum">optimum</a></code>
+
+   <dt>DOM interface:
+
+   <dd>
+    <pre class="idl">interface <dfn id="htmlmeterelement">HTMLMeterElement</dfn> : <a href="dom.html#htmlelement">HTMLElement</a> {
+           attribute float <a href="#value4" title="dom-meter-value">value</a>;
+           attribute float <a href="#min0" title="dom-meter-min">min</a>;
+           attribute float <a href="#max2" title="dom-meter-max">max</a>;
+           attribute float <a href="#low0" title="dom-meter-low">low</a>;
+           attribute float <a href="#high0" title="dom-meter-high">high</a>;
+           attribute float <a href="#optimum0" title="dom-meter-optimum">optimum</a>;
+};</pre>
+  </dl>
+
+  <p>The <code><a href="#meter">meter</a></code> element represents a scalar
+   measurement within a known range, or a fractional value; for example disk
+   usage, the relevance of a query result, or the fraction of a voting
+   population to have selected a particular candidate.
+
+  <p>This is also known as a gauge.
+
+  <p class="note">The <code><a href="#meter">meter</a></code> element should
+   not be used to indicate progress (as in a progress bar). For that role,
+   HTML provides a separate <code><a href="#progress">progress</a></code>
+   element.
+
+  <p class="note">The <code><a href="#meter">meter</a></code> element also does
+   not represent a scalar value of arbitrary range &mdash; for example, it
+   would be wrong to use this to report a weight, or height, unless there is
+   a known maximum value.
+
+  <p>There are six attributes that determine the semantics of the gauge
+   represented by the element.
+
+  <p>The <dfn id="min" title="attr-meter-min"><code>min</code></dfn> attribute
+   specifies the lower bound of the range, and the <dfn id="max1" title="attr-meter-max"><code>max</code></dfn> attribute specifies the upper
+   bound. The <dfn id="value3" title="attr-meter-value"><code>value</code></dfn>
+   attribute specifies the value to have the gauge indicate as the "measured"
+   value.
+
+  <p>The other three attributes can be used to segment the gauge's range into
+   "low", "medium", and "high" parts, and to indicate which part of the gauge
+   is the "optimum" part. The <dfn id="low" title="attr-meter-low"><code>low</code></dfn> attribute specifies the range
+   that is considered to be the "low" part, and the <dfn id="high" title="attr-meter-high"><code>high</code></dfn> attribute specifies the
+   range that is considered to be the "high" part. The <dfn id="optimum" title="attr-meter-optimum"><code>optimum</code></dfn> attribute gives the
+   position that is "optimum"; if that is higher than the "high" value then
+   this indicates that the higher the value, the better; if it's lower than
+   the "low" mark then it indicates that lower values are better, and
+   naturally if it is in between then it indicates that neither high nor low
+   values are good.
+
+  <p><strong>Authoring requirements</strong>: The recommended way of giving
+   the value is to include it as contents of the element, either as two
+   numbers (the higher number represents the maximum, the other number the
+   current value, and the minimum is assumed to be zero), or as a percentage
+   or similar (using one of the characters such as "%"), or as a fraction.
+
+  <p>The <code title="attr-meter-value"><a href="#value3">value</a></code>,
+   <code title="attr-meter-min"><a href="#min">min</a></code>, <code title="attr-meter-low"><a href="#low">low</a></code>, <code title="attr-meter-high"><a href="#high">high</a></code>, <code title="attr-meter-max"><a href="#max1">max</a></code>, and <code title="attr-meter-optimum"><a href="#optimum">optimum</a></code> attributes
+   are all optional. When present, they must have values that are <a href="semantics.html#valid1" title="valid floating point number">valid floating point
+   numbers</a>, and their values must satisfy the following inequalities:
+
+  <ul class="brief">
+   <li><code title="attr-meter-min"><a href="#min">min</a></code> &le; <code title="attr-meter-value"><a href="#value3">value</a></code> &le; <code title="attr-meter-max"><a href="#max1">max</a></code>
+
+   <li><code title="attr-meter-min"><a href="#min">min</a></code> &le; <code title="attr-meter-low"><a href="#low">low</a></code> &le; <code title="attr-meter-high"><a href="#high">high</a></code> &le; <code title="attr-meter-max"><a href="#max1">max</a></code>
+
+   <li><code title="attr-meter-min"><a href="#min">min</a></code> &le; <code title="attr-meter-optimum"><a href="#optimum">optimum</a></code> &le; <code title="attr-meter-max"><a href="#max1">max</a></code>
+  </ul>
+
+  <div class="example">
+   <p>The following examples all represent a measurement of three quarters
+    (of the maximum of whatever is being measured):</p>
+
+   <pre>&lt;meter&gt;75%&lt;/meter&gt;
+&lt;meter&gt;750&permil;&lt;/meter&gt;
+&lt;meter&gt;3/4&lt;/meter&gt;
+&lt;meter&gt;6 blocks used (out of 8 total)&lt;/meter&gt;
+&lt;meter&gt;max: 100; current: 75&lt;/meter&gt;
+&lt;meter&gt;&lt;object data="graph75.png"&gt;0.75&lt;/object&gt;&lt;/meter&gt;
+&lt;meter min="0" max="100" value="75"&gt;&lt;/meter&gt;</pre>
+
+   <p>The following example is incorrect use of the element, because it
+    doesn't give a range (and since the default maximum is 1, both of the
+    gauges would end up looking maxed out):</p>
+
+   <pre class="bad">&lt;p&gt;The grapefruit pie had a radius of &lt;meter&gt;12cm&lt;/meter&gt;
+and a height of &lt;meter&gt;2cm&lt;/meter&gt;.&lt;/p&gt; &lt;!-- <strong>BAD!</strong> --&gt;</pre>
+
+   <p>Instead, one would either not include the meter element, or use the
+    meter element with a defined range to give the dimensions in context
+    compared to other pies:</p>
+
+   <pre>&lt;p&gt;The grapefruit pie had a radius of 12cm and a height of
+2cm.&lt;/p&gt;
+&lt;dl&gt;
+ &lt;dt&gt;Radius: &lt;dd&gt; &lt;meter min=0 max=20 value=12&gt;12cm&lt;/meter&gt;
+ &lt;dt&gt;Height: &lt;dd&gt; &lt;meter min=0 max=10 value=2&gt;2cm&lt;/meter&gt;
+&lt;/dl&gt;</pre>
+  </div>
+
+  <p>There is no explicit way to specify units in the <code><a href="#meter">meter</a></code> element, but the units may be specified in
+   the <code title="attr-title"><a href="semantics.html#title">title</a></code> attribute in
+   free-form text.
+
+  </p><div class="example">
+   <p>The example above could be extended to mention the units:</p>
+
+   <pre>&lt;dl&gt;
+ &lt;dt&gt;Radius: &lt;dd&gt; &lt;meter min=0 max=20 value=12 title="centimeters"&gt;12cm&lt;/meter&gt;
+ &lt;dt&gt;Height: &lt;dd&gt; &lt;meter min=0 max=10 value=2 title="centimeters"&gt;2cm&lt;/meter&gt;
+&lt;/dl&gt;</pre>
+  </div>
+
+  <p><strong>User agent requirements</strong>: User agents must parse the
+   <code title="attr-meter-min"><a href="#min">min</a></code>, <code title="attr-meter-max"><a href="#max1">max</a></code>, <code title="attr-meter-value"><a href="#value3">value</a></code>, <code title="attr-meter-low"><a href="#low">low</a></code>, <code title="attr-meter-high"><a href="#high">high</a></code>, and <code title="attr-meter-optimum"><a href="#optimum">optimum</a></code> attributes
+   using the <a href="semantics.html#rules1">rules for parsing floating point number
+   values</a>.
+
+  <p>If the <code title="attr-meter-value"><a href="#value3">value</a></code>
+   attribute has been omitted, the user agent must also process the <code><a href="introduction.html#textcontent">textContent</a></code> of the element according to the
+   <a href="semantics.html#steps">steps for finding one or two numbers of a ratio in a
+   string</a>. These steps will return nothing, one number, one number with a
+   denominator punctuation character, or two numbers.
+
+  <p>User agents must then use all these numbers to obtain values for six
+   points on the gauge, as follows. (The order in which these are evaluated
+   is important, as some of the values refer to earlier ones.)
+
+  <dl>
+   <dt>The minimum value
+
+   <dd>
+    <p>If the <code title="attr-meter-min"><a href="#min">min</a></code>
+     attribute is specified and a value could be parsed out of it, then the
+     minimum value is that value. Otherwise, the minimum value is zero.</p>
+
+   <dt>The maximum value
+
+   <dd>
+    <p>If the <code title="attr-meter-max"><a href="#max1">max</a></code>
+     attribute is specified and a value could be parsed out of it, the
+     maximum value is that value.</p>
+
+    <p>Otherwise, if the <code title="attr-meter-max"><a href="#max1">max</a></code> attribute is specified but no value could be
+     parsed out of it, or if it was not specified, but either or both of the
+     <code title="attr-meter-min"><a href="#min">min</a></code> or <code title="attr-meter-value"><a href="#value3">value</a></code> attributes
+     <em>were</em> specified, then the maximum value is 1.</p>
+
+    <p>Otherwise, none of the <code title="attr-meter-max"><a href="#max1">max</a></code>, <code title="attr-meter-min"><a href="#min">min</a></code>, and <code title="attr-meter-value"><a href="#value3">value</a></code> attributes were specified. If the result
+     of processing the <code><a href="introduction.html#textcontent">textContent</a></code> of
+     the element was either nothing or just one number with no denominator
+     punctuation character, then the maximum value is 1; if the result was
+     one number but it had an associated denominator punctuation character,
+     then the maximum value is the <a href="semantics.html#a-value" title="values
+     associated with denominator punctuation characters">value associated
+     with that denominator punctuation character</a>; and finally, if there
+     were two numbers parsed out of the <code><a href="introduction.html#textcontent">textContent</a></code>, then the maximum is the
+     higher of those two numbers.</p>
+
+    <p>If the above machinations result in a maximum value less than the
+     minimum value, then the maximum value is actually the same as the
+     minimum value.</p>
+
+   <dt>The actual value
+
+   <dd>
+    <p>If the <code title="attr-meter-value"><a href="#value3">value</a></code>
+     attribute is specified and a value could be parsed out of it, then that
+     value is the actual value.</p>
+
+    <p>If the <code title="attr-meter-value"><a href="#value3">value</a></code>
+     attribute is not specified but the <code title="attr-meter-max"><a href="#max1">max</a></code> attribute <em>is</em> specified and the
+     result of processing the <code><a href="introduction.html#textcontent">textContent</a></code> of the element was one number
+     with no associated denominator punctuation character, then that number
+     is the actual value.</p>
+
+    <p>If neither of the <code title="attr-meter-value"><a href="#value3">value</a></code> and <code title="attr-meter-max"><a href="#max1">max</a></code> attributes are specified, then, if the
+     result of processing the <code><a href="introduction.html#textcontent">textContent</a></code> of the element was one number
+     (with or without an associated denominator punctuation character), then
+     that is the actual value, and if the result of processing the <code><a href="introduction.html#textcontent">textContent</a></code> of the element was two
+     numbers, then the actual value is the lower of the two numbers found.</p>
+
+    <p>Otherwise, if none of the above apply, the actual value is zero.</p>
+
+    <p>If the above procedure results in an actual value less than the
+     minimum value, then the actual value is actually the same as the minimum
+     value.</p>
+
+    <p>If, on the other hand, the result is an actual value greater than the
+     maximum value, then the actual value is the maximum value.</p>
+
+   <dt>The low boundary
+
+   <dd>
+    <p>If the <code title="attr-meter-low"><a href="#low">low</a></code>
+     attribute is specified and a value could be parsed out of it, then the
+     low boundary is that value. Otherwise, the low boundary is the same as
+     the minimum value.</p>
+
+    <p>If the above results in a low boundary that is less than the minimum
+     value, the low boundary is the minimum value.</p>
+
+   <dt>The high boundary
+
+   <dd>
+    <p>If the <code title="attr-meter-high"><a href="#high">high</a></code>
+     attribute is specified and a value could be parsed out of it, then the
+     high boundary is that value. Otherwise, the high boundary is the same as
+     the maximum value.</p>
+
+    <p>If the above results in a high boundary that is higher than the
+     maximum value, the high boundary is the maximum value.</p>
+
+   <dt>The optimum point
+
+   <dd>
+    <p>If the <code title="attr-meter-optimum"><a href="#optimum">optimum</a></code> attribute is specified and a value
+     could be parsed out of it, then the optimum point is that value.
+     Otherwise, the optimum point is the midpoint between the minimum value
+     and the maximum value.</p>
+
+    <p>If the optimum point is then less than the minimum value, then the
+     optimum point is actually the same as the minimum value. Similarly, if
+     the optimum point is greater than the maximum value, then it is actually
+     the maximum value instead.</p>
+  </dl>
+
+  <p>All of which should result in the following inequalities all being true:
+
+  <ul class="brief">
+   <li>minimum value &le; actual value &le; maximum value
+
+   <li>minimum value &le; low boundary &le; high boundary &le; maximum value
+
+   <li>minimum value &le; optimum point &le; maximum value
+  </ul>
+
+  <p><strong>UA requirements for regions of the gauge</strong>: If the
+   optimum point is equal to the low boundary or the high boundary, or
+   anywhere in between them, then the region between the low and high
+   boundaries of the gauge must be treated as the optimum region, and the low
+   and high parts, if any, must be treated as suboptimal. Otherwise, if the
+   optimum point is less than the low boundary, then the region between the
+   minimum value and the low boundary must be treated as the optimum region,
+   the region between the low boundary and the high boundary must be treated
+   as a suboptimal region, and the region between the high boundary and the
+   maximum value must be treated as an even less good region. Finally, if the
+   optimum point is higher than the high boundary, then the situation is
+   reversed; the region between the high boundary and the maximum value must
+   be treated as the optimum region, the region between the high boundary and
+   the low boundary must be treated as a suboptimal region, and the remaining
+   region between the low boundary and the minimum value must be treated as
+   an even less good region.
+
+  <p><strong>UA requirements for showing the gauge</strong>: When
+   representing a <code><a href="#meter">meter</a></code> element to the
+   user, the UA should indicate the relative position of the actual value to
+   the minimum and maximum values, and the relationship between the actual
+   value and the three regions of the gauge.
+
+  </p><div class="example">
+   <p>The following markup:</p>
+
+   <pre>&lt;h3&gt;Suggested groups&lt;/h3&gt;
+&lt;menu type="toolbar"&gt;
+ &lt;a href="?cmd=hsg" onclick="hideSuggestedGroups()"&gt;Hide suggested groups&lt;/a&gt;
+&lt;/menu&gt;
+&lt;ul&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="/group/comp.infosystems.www.authoring.stylesheets/view"&gt;comp.infosystems.www.authoring.stylesheets&lt;/a&gt; -
+     &lt;a href="/group/comp.infosystems.www.authoring.stylesheets/subscribe"&gt;join&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;Group description: &lt;strong&gt;Layout/presentation on the WWW.&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;<strong>&lt;meter value="0.5"&gt;Moderate activity,&lt;/meter&gt;</strong> Usenet, 618 subscribers&lt;/p&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="/group/netscape.public.mozilla.xpinstall/view"&gt;netscape.public.mozilla.xpinstall&lt;/a&gt; -
+     &lt;a href="/group/netscape.public.mozilla.xpinstall/subscribe"&gt;join&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;Group description: &lt;strong&gt;Mozilla XPInstall discussion.&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;<strong>&lt;meter value="0.25"&gt;Low activity,&lt;/meter&gt;</strong> Usenet, 22 subscribers&lt;/p&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="/group/mozilla.dev.general/view"&gt;mozilla.dev.general&lt;/a&gt; -
+     &lt;a href="/group/mozilla.dev.general/subscribe"&gt;join&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;<strong>&lt;meter value="0.25"&gt;Low activity,&lt;/meter&gt;</strong> Usenet, 66 subscribers&lt;/p&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+   <p>Might be rendered as follows:</p>
+
+   <p><img alt="With the <meter> elements rendered as inline green bars of
+    varying lengths." src="images/sample-meter.png"></p>
+  </div>
+
+  <p>User agents may combine the value of the <code title="attr-title"><a href="semantics.html#title">title</a></code> attribute and the other attributes to
+   provide context-sensitive help or inline text detailing the actual values.
+
+  </p><div class="example">
+   <p>For example, the following snippet:</p>
+
+   <pre>&lt;meter min=0 max=60 value=23.2 title=seconds&gt;&lt;/meter&gt;</pre>
+
+   <p>...might cause the user agent to display a gauge with a tooltip saying
+    "Value: 23.2 out of 60." on one line and "seconds" on a second line.</p>
+  </div>
+
+  <p>The <dfn id="min0" title="dom-meter-min"><code>min</code></dfn>, <dfn id="max2" title="dom-meter-max"><code>max</code></dfn>, <dfn id="value4" title="dom-meter-value"><code>value</code></dfn>, <dfn id="low0" title="dom-meter-low"><code>low</code></dfn>, <dfn id="high0" title="dom-meter-high"><code>high</code></dfn>, and <dfn id="optimum0" title="dom-meter-optimum"><code>optimum</code></dfn> DOM attributes must <a href="dom.html#reflect">reflect</a> the elements' content attributes of the same
+   name. When the relevant content attributes are absent, the DOM attributes
+   must return zero. The value parsed from the <code><a href="introduction.html#textcontent">textContent</a></code> never affects the DOM values.
+
+  <p class="big-issue">Would be cool to have the <code title="dom-meter-value"><a href="#value4">value</a></code> DOM attribute update the <code><a href="introduction.html#textcontent">textContent</a></code> in-line...</p>
+  <!-- XXX
+should we also look inside the title="" attribute?
+   Disk usage: &lt;meter title="985MB of 986MB total" high="980">Full!&lt;/meter>
+should we make the contents accessible in some way, e.g. as a tooltip?
+-->
+
+  <h4 id="the-code"><span class="secno">3.10.13 </span>The <dfn id="code"><code>code</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#code">code</a></code> element represents a fragment
+   of computer code. This could be an XML element name, a filename, a
+   computer program, or any other string that a computer would recognize.
+
+  <p>Although there is no formal way to indicate the language of computer
+   code being marked up, authors who wish to mark <code><a href="#code">code</a></code> elements with the language used, e.g. so that
+   syntax highlighting scripts can use the right rules, may do so by adding a
+   class prefixed with "<code title="">language-</code>" to the element.
+
+  </p><div class="example">
+   <p>The following example shows how the element can be used in a paragraph
+    to mark up element names and computer code, including punctuation.</p>
+
+   <pre>&lt;p&gt;The &lt;code&gt;code&lt;/code&gt; element represents a fragment of computer
+code.&lt;/p&gt;
+
+&lt;p&gt;When you call the &lt;code&gt;activate()&lt;/code&gt; method on the
+&lt;code&gt;robotSnowman&lt;/code&gt; object, the eyes glow.&lt;/p&gt;
+
+&lt;p&gt;The example below uses the &lt;code&gt;begin&lt;/code&gt; keyword to indicate
+the start of a statement block. It is paired with an &lt;code&gt;end&lt;/code&gt;
+keyword, which is followed by the &lt;code&gt;.&lt;/code&gt; punctuation character
+(full stop) to indicate the end of the program.&lt;/p&gt;</pre>
+  </div>
+
+  <div class="example">
+   <p>The following example shows how a block of code could be marked up
+    using the <code><a href="the-root.html#pre">pre</a></code> and <code><a href="#code">code</a></code> elements.</p>
+
+   <pre>&lt;pre&gt;&lt;code class="language-pascal"&gt;var i: Integer;
+begin
+   i := 1;
+end.&lt;/code&gt;&lt;/pre&gt;</pre>
+
+   <p>A class is used in that example to indicate the language used.</p>
+  </div>
+
+  <p class="note">See the <code><a href="the-root.html#pre">pre</a></code> element for more
+   details.
+
+  <h4 id="the-var"><span class="secno">3.10.14 </span>The <dfn id="var"><code>var</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#var">var</a></code> element represents a variable.
+   This could be an actual variable in a mathematical expression or
+   programming context, or it could just be a term used as a placeholder in
+   prose.
+
+  </p><div class="example">
+   <p>In the paragraph below, the letter "n" is being used as a variable in
+    prose:</p>
+
+   <pre>&lt;p&gt;If there are &lt;var&gt;n&lt;/var&gt; pipes leading to the ice
+cream factory then I expect at &lt;em&gt;least&lt;/em&gt; &lt;var&gt;n&lt;/var&gt;
+flavours of ice cream to be available for purchase!&lt;/p&gt;</pre>
+  </div>
+
+  <h4 id="the-samp"><span class="secno">3.10.15 </span>The <dfn id="samp"><code>samp</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#samp">samp</a></code> element represents (sample)
+   output from a program or computing system.
+
+  <p class="note">See the <code><a href="the-root.html#pre">pre</a></code> and <code><a href="#kbd">kbd</a></code> elements for more details.
+
+  </p><div class="example">
+   <p>This example shows the <code><a href="#samp">samp</a></code> element
+    being used inline:</p>
+
+   <pre>&lt;p&gt;The computer said &lt;samp&gt;Too much cheese in tray
+two&lt;/samp&gt; but I didn't know what that meant.&lt;/p&gt;</pre>
+
+   <p>This second example shows a block of sample output. Nested <code><a href="#samp">samp</a></code> and <code><a href="#kbd">kbd</a></code>
+    elements allow for the styling of specific elements of the sample output
+    using a style sheet.</p>
+   <!-- XXX should those nested SAMPs be SPANs? -->
+   <pre>&lt;pre&gt;&lt;samp&gt;&lt;samp class="prompt"&gt;jdoe@mowmow:~$&lt;/samp&gt; &lt;kbd&gt;ssh demo.example.com&lt;/kbd&gt;
+Last login: Tue Apr 12 09:10:17 2005 from mowmow.example.com on pts/1
+Linux demo 2.6.10-grsec+gg3+e+fhs6b+nfs+gr0501+++p3+c4a+gr2b-reslog-v6.189 #1 SMP Tue Feb 1 11:22:36 PST 2005 i686 unknown
+
+&lt;samp class="prompt"&gt;jdoe@demo:~$&lt;/samp&gt; &lt;samp class="cursor"&gt;_&lt;/samp&gt;&lt;/samp&gt;&lt;/pre&gt;</pre>
+  </div>
+
+  <h4 id="the-kbd"><span class="secno">3.10.16 </span>The <dfn id="kbd"><code>kbd</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#kbd">kbd</a></code> element represents user input
+   (typically keyboard input, although it may also be used to represent other
+   input, such as voice commands).
+
+  <p>When the <code><a href="#kbd">kbd</a></code> element is nested inside a
+   <code><a href="#samp">samp</a></code> element, it represents the input as
+   it was echoed by the system.
+
+  <p>When the <code><a href="#kbd">kbd</a></code> element <em>contains</em> a
+   <code><a href="#samp">samp</a></code> element, it represents input based
+   on system output, for example invoking a menu item.
+
+  <p>When the <code><a href="#kbd">kbd</a></code> element is nested inside
+   another <code><a href="#kbd">kbd</a></code> element, it represents an
+   actual key or other single unit of input as appropriate for the input
+   mechanism.
+
+  </p><div class="example">
+   <p>Here the <code><a href="#kbd">kbd</a></code> element is used to
+    indicate keys to press:</p>
+
+   <pre>&lt;p&gt;To make George eat an apple, press &lt;kbd&gt;&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;F3&lt;/kbd&gt;&lt;/kbd&gt;&lt;/p&gt;</pre>
+
+   <p>In this second example, the user is told to pick a particular menu
+    item. The outer <code><a href="#kbd">kbd</a></code> element marks up a
+    block of input, with the inner <code><a href="#kbd">kbd</a></code>
+    elements representing each individual step of the input, and the <code><a href="#samp">samp</a></code> elements inside them indicating that the
+    steps are input based on something being displayed by the system, in this
+    case menu labels:</p>
+
+   <pre>&lt;p&gt;To make George eat an apple, select
+    &lt;kbd&gt;&lt;kbd&gt;&lt;samp&gt;File&lt;/samp&gt;&lt;/kbd&gt;|&lt;kbd&gt;&lt;samp&gt;Eat Apple...&lt;/samp&gt;&lt;/kbd&gt;&lt;/kbd&gt;
+&lt;/p&gt;</pre>
+  </div>
+
+  <h4 id="the-sub"><span class="secno">3.10.17 </span>The <dfn id="sub"><code>sub</code></dfn> and <dfn id="sup"><code>sup</code></dfn>
+   elements</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which these elements may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#sup">sup</a></code> element represents a superscript
+   and the <code><a href="#sub">sub</a></code> element represents a
+   subscript.
+
+  <p>These elements must be used only to mark up typographical conventions
+   with specific meanings, not for typographical presentation for
+   presentation's sake. For example, it would be inappropriate for the
+   <code><a href="#sub">sub</a></code> and <code><a href="#sup">sup</a></code> elements to be used in the name of the LaTeX
+   document preparation system. In general, authors should use these elements
+   only if the <em>absence</em> of those elements would change the meaning of
+   the content.
+
+  <p>When the <code><a href="#sub">sub</a></code> element is used inside a
+   <code><a href="#var">var</a></code> element, it represents the subscript
+   that identifies the variable in a family of variables.
+
+  </p><div class="example">
+   <pre>&lt;p&gt;The coordinate of the &lt;var&gt;i&lt;/var&gt;th point is
+(&lt;var&gt;x&lt;sub&gt;&lt;var&gt;i&lt;/var&gt;&lt;/sub&gt;&lt;/var&gt;, &lt;var&gt;y&lt;sub&gt;&lt;var&gt;i&lt;/var&gt;&lt;/sub&gt;&lt;/var&gt;).
+For example, the 10th point has coordinate
+(&lt;var&gt;x&lt;sub&gt;10&lt;/sub&gt;&lt;/var&gt;, &lt;var&gt;y&lt;sub&gt;10&lt;/sub&gt;&lt;/var&gt;).&lt;/p&gt;</pre>
+  </div>
+
+  <p>In certain languages, superscripts are part of the typographical
+   conventions for some abbreviations.
+
+  </p><div class="example">
+   <pre>&lt;p&gt;The most beautiful women are
+&lt;span lang="fr"&gt;&lt;abbr&gt;M&lt;sup&gt;lle&lt;/sup&gt;&lt;/abbr&gt; Gwendoline&lt;/span&gt; and 
+&lt;span lang="fr"&gt;&lt;abbr&gt;M&lt;sup&gt;me&lt;/sup&gt;&lt;/abbr&gt; Denise&lt;/span&gt;.&lt;/p&gt;</pre>
+  </div>
+
+  <p>Mathematical expressions often use subscripts and superscripts. Authors
+   are encouraged to use MathML for marking up mathematics, but authors may
+   opt to use <code><a href="#sub">sub</a></code> and <code><a href="#sup">sup</a></code> if detailed mathematical markup is not desired.
+   <a href="references.html#references">[MathML]</a>
+
+  </p><div class="example">
+   <pre>&lt;var&gt;E&lt;/var&gt;=&lt;var&gt;m&lt;/var&gt;&lt;var&gt;c&lt;/var&gt;&lt;sup&gt;2&lt;/sup&gt;</pre>
+
+   <pre>f(&lt;var&gt;x&lt;/var&gt;, &lt;var&gt;n&lt;/var&gt;) = log&lt;sub&gt;4&lt;/sub&gt;&lt;var&gt;x&lt;/var&gt;&lt;sup&gt;&lt;var&gt;n&lt;/var&gt;&lt;/sup&gt;</pre>
+  </div>
+
+  <h4 id="the-span"><span class="secno">3.10.18 </span>The <dfn id="span"><code>span</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><!--XXXSPAN Either: --><a href="semantics.html#phrasing0">Phrasing content</a>.</dd>
+   <!--XXXSPAN   <dd>Or: A single <code>ol</code> or <code>ul</code> element.</dd>-->
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#span">span</a></code> element doesn't mean anything
+   on its own, but can be useful when used together with other attributes,
+   e.g. <code title="attr-class"><a href="semantics.html#class">class</a></code>, <code title="attr-lang"><a href="semantics.html#lang">lang</a></code>, or <code title="attr-dir"><a href="semantics.html#dir">dir</a></code>.</p>
+  <!--XXXSPAN
+  <p>The <code>span</code> element may be used to include a list
+  inline in a paragraph. (When used in this way, the list can only
+  itself contain <span>phrasing content</span>.)</p>
+
+  <div class="example">
+
+   <p>In this example, the list is part of the paragraph:</p>
+
+   ...
+
+  </div>
+-->
+
+  <h4 id="the-i"><span class="secno">3.10.19 </span>The <dfn id="i"><code>i</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#i">i</a></code> element represents a span of text in
+   an alternate voice or mood, or otherwise offset from the normal prose,
+   such as a taxonomic designation, a technical term, an idiomatic phrase
+   from another language, a thought, a ship name, or some other prose whose
+   typical typographic presentation is italicized.
+
+  <p>Terms in languages different from the main text should be annotated with
+   <code title="attr-lang"><a href="semantics.html#lang">lang</a></code> attributes (<code title="attr-xml-lang"><a href="semantics.html#xmllang">xml:lang</a></code> in XML).
+
+  </p><div class="example">
+   <p>The examples below show uses of the <code><a href="#i">i</a></code>
+    element:</p>
+
+   <pre>&lt;p&gt;The &lt;i class="taxonomy"&gt;Felis silvestris catus&lt;/i&gt; is cute.&lt;/p&gt;
+&lt;p&gt;The term &lt;i&gt;prose content&lt;/i&gt; is defined above.&lt;/p&gt;
+&lt;p&gt;There is a certain &lt;i lang="fr"&gt;je ne sais quoi&lt;/i&gt; in the air.&lt;/p&gt;</pre>
+
+   <p>In the following example, a dream sequence is marked up using <code><a href="#i">i</a></code> elements.</p>
+
+   <pre>&lt;p&gt;Raymond tried to sleep.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;The ship sailed away on Thursday&lt;/i&gt;, he
+dreamt. &lt;i&gt;The ship had many people aboard, including a beautiful
+princess called Carey. He watched her, day-in, day-out, hoping she
+would notice him, but she never did.&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Finally one night he picked up the courage to speak with
+her&mdash;&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;Raymond woke with a start as the fire alarm rang out.&lt;/p&gt;</pre>
+  </div>
+
+  <p>The <code><a href="#i">i</a></code> element should be used as a last
+   resort when no other element is more appropriate. In particular, citations
+   should use the <code><a href="#cite2">cite</a></code> element, defining
+   instances of terms should use the <code><a href="#dfn">dfn</a></code>
+   element, stress emphasis should use the <code><a href="#em">em</a></code>
+   element, importance should be denoted with the <code><a href="#strong">strong</a></code> element, quotes should be marked up with
+   the <code><a href="#q">q</a></code> element, and small print should use
+   the <code><a href="#small">small</a></code> element.
+
+  <p>Authors are encouraged to use the <code title="attr-class"><a href="semantics.html#class">class</a></code> attribute on the <code><a href="#i">i</a></code> element to identify why the element is being used,
+   so that if the style of a particular use (e.g. dream sequences as opposed
+   to taxonomic terms) is to be changed at a later date, the author doesn't
+   have to go through the entire document (or series of related documents)
+   annotating each use.
+
+  <p class="note">Style sheets can be used to format <code><a href="#i">i</a></code> elements, just like any other element can be
+   restyled. Thus, it is not the case that content in <code><a href="#i">i</a></code> elements will necessarily be italicized.
+
+  <h4 id="the-b"><span class="secno">3.10.20 </span>The <dfn id="b"><code>b</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#b">b</a></code> element represents a span of text to
+   be stylistically offset from the normal prose without conveying any extra
+   importance, such as key words in a document abstract, product names in a
+   review, or other spans of text whose typical typographic presentation is
+   boldened.
+
+  </p><div class="example">
+   <p>The following example shows a use of the <code><a href="#b">b</a></code> element to highlight key words without marking
+    them up as important:</p>
+
+   <pre>&lt;p&gt;The &lt;b&gt;frobonitor&lt;/b&gt; and &lt;b&gt;barbinator&lt;/b&gt; components are fried.&lt;/p&gt;</pre>
+  </div>
+
+  <div class="example">
+   <p>In the following example, objects in a text adventure are highlighted
+    as being special by use of the <code><a href="#b">b</a></code> element.</p>
+
+   <pre>&lt;p&gt;You enter a small room. Your &lt;b&gt;sword&lt;/b&gt; glows
+brighter. A &lt;b&gt;rat&lt;/b&gt; scurries past the corner wall.&lt;/p&gt;</pre>
+  </div>
+
+  <div class="example">
+   <p>Another case where the <code><a href="#b">b</a></code> element is
+    appropriate is in marking up the lede (or lead) sentence or paragraph.
+    The following example shows how a <a href="http://news.bbc.co.uk/2/hi/uk_news/scotland/north_east/7101506.stm">BBC
+    article about kittens adopting a rabbit as their own</a> could be marked
+    up using HTML5 elements:</p>
+
+   <pre>&lt;article&gt;
+ &lt;h2&gt;Kittens 'adopted' by pet rabbit&lt;/h2&gt;
+ &lt;p&gt;&lt;b&gt;Six abandoned kittens have found an unexpected new
+ mother figure &mdash; a pet rabbit.&lt;/b&gt;&lt;/p&gt;
+ &lt;p&gt;Veterinary nurse Melanie Humble took the three-week-old
+ kittens to her Aberdeen home.&lt;/p&gt;
+<i>[...]</i></pre>
+  </div>
+
+  <p>The <code><a href="#b">b</a></code> element should be used as a last
+   resort when no other element is more appropriate. In particular, headers
+   should use the <code><a href="the-root.html#h1">h1</a></code> to <code><a href="the-root.html#h6">h6</a></code> elements, stress emphasis should use the <code><a href="#em">em</a></code> element, importance should be denoted with the
+   <code><a href="#strong">strong</a></code> element, and text marked or
+   highlighted should use the <code><a href="#mark">mark</a></code> element.
+
+  </p><div class="example">
+   <p>The following would be <em>incorrect</em> usage:</p>
+
+   <pre>&lt;p&gt;&lt;b&gt;WARNING!&lt;/b&gt; Do not frob the barbinator!&lt;/p&gt;</pre>
+
+   <p>In the previous example, the correct element to use would have been
+    <code><a href="#strong">strong</a></code>, not <code><a href="#b">b</a></code>.</p>
+  </div>
+
+  <p class="note">Style sheets can be used to format <code><a href="#b">b</a></code> elements, just like any other element can be
+   restyled. Thus, it is not the case that content in <code><a href="#b">b</a></code> elements will necessarily be boldened.
+
+  <h4 id="the-bdo"><span class="secno">3.10.21 </span>The <dfn id="bdo"><code>bdo</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd>None, but the <code title="attr-dir"><a href="semantics.html#dir">dir</a></code>
+    global attribute has special requirements on this element.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#bdo">bdo</a></code> element allows authors to
+   override the Unicode bidi algorithm by explicitly specifying a direction
+   override. <a href="references.html#references">[BIDI]</a>
+
+  <p>Authors must specify the <code title="attr-dir"><a href="semantics.html#dir">dir</a></code> attribute on this element, with the value
+   <code>ltr</code> to specify a left-to-right override and with the value
+   <code>rtl</code> to specify a right-to-left override.
+
+  <p>If the element has the <code title="attr-dir"><a href="semantics.html#dir">dir</a></code> attribute set to the exact value
+   <code>ltr</code>, then for the purposes of the bidi algorithm, the user
+   agent must act as if there was a U+202D LEFT-TO-RIGHT OVERRIDE character
+   at the start of the element, and a U+202C POP DIRECTIONAL FORMATTING at
+   the end of the element.
+
+  <p>If the element has the <code title="attr-dir"><a href="semantics.html#dir">dir</a></code> attribute set to the exact value
+   <code>rtl</code>, then for the purposes of the bidi algorithm, the user
+   agent must act as if there was a U+202E RIGHT-TO-LEFT OVERRIDE character
+   at the start of the element, and a U+202C POP DIRECTIONAL FORMATTING at
+   the end of the element.
+
+  <p>The requirements on handling the <code><a href="#bdo">bdo</a></code>
+   element for the bidi algorithm may be implemented indirectly through the
+   style layer. For example, an HTML+CSS user agent should implement these
+   requirements by implementing the CSS <code>unicode-bidi</code> property.
+   <a href="references.html#references">[CSS21]</a></p>
+  <!-- XXX need examples -->
+
+  <h4 id="the-ruby"><span class="secno">3.10.22 </span>The <dfn id="ruby"><code>ruby</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>Where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dt>Content model:
+
+   <dd>One or more groups of: <a href="semantics.html#phrasing0">phrasing content</a>
+    followed either by a single <code><a href="#rt">rt</a></code> element, or
+    an <code><a href="#rp">rp</a></code> element, an <code><a href="#rt">rt</a></code> element, and another <code><a href="#rp">rp</a></code> element.
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#ruby">ruby</a></code> element allows one or more
+   spans of phrasing content to be marked with ruby annotations.
+
+  <p>A <code><a href="#ruby">ruby</a></code> element represents the spans of
+   phrasing content it contains, ignoring all the child <code><a href="#rt">rt</a></code> and <code><a href="#rp">rp</a></code> elements
+   and their descendants. Those spans of phrasing content have associated
+   annotations created using the <code><a href="#rt">rt</a></code> element.
+
+  </p><div class="example">
+   <p>In this example, each ideograph in the text <span lang="ja">&#25998;&#34276;&#20449;&#30007;</span> is annotated with its
+    reading.</p>
+
+   <pre lang="ja">... &lt;ruby&gt;
+ &#25998; &lt;rt&gt; &#12373;&#12356; &lt;/rt&gt;
+ &#34276; &lt;rt&gt; &#12392;&#12358; &lt;/rt&gt;
+ &#20449; &lt;rt&gt; &#12398;&#12406; &lt;/rt&gt;
+ &#30007; &lt;rt&gt; &#12362;         &lt;/rt&gt;
+&lt;/ruby&gt; ...</pre>
+
+   <p>This might be rendered as:</p>
+
+   <p><img alt="The four main ideographs, each with its reading annotation
+    rendered in a smaller font above it." src="images/sample-ruby.png"></p>
+  </div>
+
+  <h4 id="the-rt"><span class="secno">3.10.23 </span>The <dfn id="rt"><code>rt</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd>None.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>As a child of a <code><a href="#ruby">ruby</a></code> element.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#phrasing0">Phrasing content</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#rt">rt</a></code> element marks the ruby text
+   component of a ruby annotation.
+
+  <p>An <code><a href="#rt">rt</a></code> element that is a child of a
+   <code><a href="#ruby">ruby</a></code> element represents an annotation
+   (given by its children) for the zero or more nodes of phrasing content
+   that immediately precedes it in the <code><a href="#ruby">ruby</a></code>
+   element, ignoring <code><a href="#rp">rp</a></code> elements.
+
+  <p>An <code><a href="#rt">rt</a></code> element that is not a child of a
+   <code><a href="#ruby">ruby</a></code> element represents the same thing as
+   its children.
+
+  <h4 id="the-rp"><span class="secno">3.10.24 </span>The <dfn id="rp"><code>rp</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd>None.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>As a child of a <code><a href="#ruby">ruby</a></code> element, either
+    immediately before or immediately after an <code><a href="#rt">rt</a></code> element.
+
+   <dt>Content model:
+
+   <dd>If the <code><a href="#rp">rp</a></code> element is immediately after
+    an <code><a href="#rt">rt</a></code> element that is immediately preceded
+    by another <code><a href="#rp">rp</a></code> element: a single character
+    from Unicode character class Pe.
+
+   <dd>Otherwise: a single character from Unicode character class Ps.
+
+   <dt>Element-specific attributes:
+
+   <dd>None.
+
+   <dt>DOM interface:
+
+   <dd>Uses <code><a href="dom.html#htmlelement">HTMLElement</a></code>.
+  </dl>
+
+  <p>The <code><a href="#rp">rp</a></code> element can be used to provide
+   parentheses around a ruby text component of a ruby annotation, to be shown
+   by user agents that don't support ruby annotations.
+
+  <p>An <code><a href="#rp">rp</a></code> element that is a child of a
+   <code><a href="#ruby">ruby</a></code> element represents nothing and it
+   and its contents must be ignored. An <code><a href="#rp">rp</a></code>
+   element whose parent element is not a <code><a href="#ruby">ruby</a></code> element represents the same thing as its
+   children.
+
+  </p><div class="example">
+   <p>The example above, in which each ideograph in the text <span lang="ja">&#25998;&#34276;&#20449;&#30007;</span> is annotated with its
+    reading, could be expanded to use <code><a href="#rp">rp</a></code> so
+    that in legacy user agentthe readings are in parentheses:</p>
+
+   <pre lang="ja">... &lt;ruby&gt;
+ &#25998; &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;&#12373;&#12356;&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+ &#34276; &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;&#12392;&#12358;&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+ &#20449; &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;&#12398;&#12406;&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+ &#30007; &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;&#12362;&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt; ...</pre>
+
+   <p>In conforming user agents the rendering would be as above, but in user
+    agents that do not support ruby, the rendering would be:</p>
+
+   <pre lang="ja">... &#25998; (&#12373;&#12356;) &#34276; (&#12392;&#12358;) &#20449; (&#12398;&#12406;) &#30007; (&#12362;) ...</pre>
+  </div>
+
+  <h4 id="usage"><span class="secno">3.10.25 </span>Usage summary</h4>
+
+  <p class="big-issue">We need to summarize the various elements, in particular
+   to distinguish b/i/em/strong/var/q/mark/cite.</p>
+  <!-- XXX when you do this, also reorder the elements in this section
+  to bring the related ones closer together. -->
+
+  <h4 id="footnotes"><span class="secno">3.10.26 </span>Footnotes</h4>
+
+  <p>HTML does not have a dedicated mechanism for marking up footnotes. Here
+   are the recommended alternatives.
+
+  <p>For short inline annotations, the <code title="attr-title"><a href="semantics.html#title">title</a></code> attribute should be used.
+
+  </p><div class="example">
+   <p>In this example, two parts of a dialog are annotated.</p>
+
+   <pre>&lt;dialog&gt;
+ &lt;dt&gt;Customer
+ &lt;dd&gt;Hello! I wish to register a complaint. Hello. Miss?
+ &lt;dt&gt;Shopkeeper
+ &lt;dd&gt;&lt;span title="Colloquial pronunciation of 'What do you'"
+ &gt;Watcha&lt;/span&gt; mean, miss?
+ &lt;dt&gt;Customer
+ &lt;dd&gt;Uh, I'm sorry, I have a cold. I wish to make a complaint.
+ &lt;dt&gt;Shopkeeper
+ &lt;dd&gt;Sorry, &lt;span title="This is, of course, a lie."&gt;we're
+ closing for lunch&lt;/span&gt;.
+&lt;/dialog&gt;</pre>
+  </div>
+
+  <p>For longer annotations, the <code><a href="#a">a</a></code> element
+   should be used, pointing to an element later in the document. The
+   convention is that the contents of the link be a number in square
+   brackets.
+
+  </p><div class="example">
+   <p>In this example, a footnote in the dialog links to a paragraph below
+    the dialog. The paragraph then reciprocally links back to the dialog,
+    allowing the user to return to the location of the footnote.</p>
+
+   <pre>&lt;dialog&gt;
+ &lt;dt&gt;Announcer
+ &lt;dd&gt;Number 16: The &lt;i&gt;hand&lt;/i&gt;.
+ &lt;dt&gt;Interviewer
+ &lt;dd&gt;Good evening. I have with me in the studio tonight Mr
+ Norman St John Polevaulter, who for the past few years has
+ been contradicting people. Mr Polevaulter, why &lt;em&gt;do&lt;/em&gt;
+ you contradict people?
+ &lt;dt&gt;Norman
+ &lt;dd&gt;I don't. &lt;a href="#fn1" id="r1"&gt;[1]&lt;/a&gt;
+ &lt;dt&gt;Interviewer
+ &lt;dd&gt;You told me you did!
+&lt;/dialog&gt;
+&lt;section&gt;
+ &lt;p id="fn1"&gt;&lt;a href="#r1"&gt;[1]&lt;/a&gt; This is, naturally, a lie,
+ but paradoxically if it were true he could not say so without
+ contradicting the interviewer and thus making it false.&lt;/p&gt;
+&lt;/section&gt;</pre>
+  </div>
+
+  <p>For side notes, longer annotations that apply to entire sections of the
+   text rather than just specific words or sentences, the <code><a href="the-root.html#aside">aside</a></code> element should be used.
+
+  </p><div class="example">
+   <p>In this example, a sidebar is given after a dialog, giving some context
+    to the dialog.</p>
+
+   <pre>&lt;dialog&gt;
+ &lt;dt&gt;Customer
+ &lt;dd&gt;I will not buy this record, it is scratched.
+ &lt;dt&gt;Shopkeeper
+ &lt;dd&gt;I'm sorry?
+ &lt;dt&gt;Customer
+ &lt;dd&gt;I will not buy this record, it is scratched.
+ &lt;dt&gt;Shopkeeper
+ &lt;dd&gt;No no no, this's'a tobacconist's.
+&lt;/dialog&gt;
+&lt;aside&gt;
+ &lt;p&gt;In 1970, the British Empire lay in ruins, and foreign
+ nationalists frequented the streets &mdash; many of them Hungarians
+ (not the streets &mdash; the foreign nationals). Sadly, Alexander
+ Yalt has been publishing incompetently-written phrase books.
+&lt;/aside&gt;</pre>
+  </div>
+
+  <h3 id="edits"><span class="secno">3.11 </span>Edits</h3>
+
+  <p>The <code><a href="#ins">ins</a></code> and <code><a href="#del">del</a></code> elements represent edits to the document.
+
+  <h4 id="the-ins"><span class="secno">3.11.1 </span>The <dfn id="ins"><code>ins</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd>When the element only contains <a href="semantics.html#phrasing0">phrasing
+    content</a>: <a href="semantics.html#phrasing0">phrasing content</a>.
+
+   <dd>Otherwise: <a href="semantics.html#flow-content0">flow content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>When the element only contains <a href="semantics.html#phrasing0">phrasing
+    content</a>: where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dd>Otherwise: where <a href="semantics.html#flow-content0">flow content</a> is
+    expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#transparent0">Transparent</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd><code title="attr-mod-cite"><a href="#cite3">cite</a></code>
+
+   <dd><code title="attr-mod-datetime"><a href="#datetime1">datetime</a></code>
+
+   <dt>DOM interface:
+
+   <dd>Uses the <code><a href="#htmlmodelement">HTMLModElement</a></code>
+    interface.
+  </dl>
+
+  <p>The <code><a href="#ins">ins</a></code> element represents an addition
+   to the document.
+
+  </p><div class="example">
+   <p>The following represents the addition of a single paragraph:</p>
+
+   <pre>&lt;aside&gt;
+ &lt;ins&gt;
+  &lt;p&gt; I like fruit. &lt;/p&gt;
+ &lt;/ins&gt;
+&lt;/aside&gt;</pre>
+
+   <p>As does this, because everything in the <code><a href="the-root.html#aside">aside</a></code> element here counts as <a href="semantics.html#phrasing0">phrasing content</a> and therefore there is just one <a href="semantics.html#paragraph">paragraph</a>:</p>
+
+   <pre>&lt;aside&gt;
+ &lt;ins&gt;
+  Apples are &lt;em&gt;tasty&lt;/em&gt;.
+ &lt;/ins&gt;
+ &lt;ins&gt;
+  So are pears.
+ &lt;/ins&gt;
+&lt;/aside&gt;</pre>
+  </div>
+
+  <p><code><a href="#ins">ins</a></code> elements should not cross <a href="semantics.html#paragraph" title="paragraph">implied paragraph</a> boundaries.
+
+  </p><div class="example">
+   <p>The following example represents the addition of two paragraphs, the
+    second of which was inserted in two parts. The first <code><a href="#ins">ins</a></code> element in this example thus crosses a
+    paragraph boundary, which is considered poor form.</p>
+
+   <pre>&lt;aside&gt;
+ &lt;ins datetime="2005-03-16T00:00Z"&gt;
+  &lt;p&gt; I like fruit. &lt;/p&gt;
+  Apples are &lt;em&gt;tasty&lt;/em&gt;.
+ &lt;/ins&gt;
+ &lt;ins datetime="2007-12-19T00:00Z"&gt;
+  So are pears.
+ &lt;/ins&gt;
+&lt;/aside&gt;</pre>
+
+   <p>Here is a better way of marking this up. It uses more elements, but
+    none of the elements cross implied paragraph boundaries.</p>
+
+   <pre>&lt;aside&gt;
+ &lt;ins datetime="2005-03-16T00:00Z"&gt;
+  &lt;p&gt; I like fruit. &lt;/p&gt;
+ &lt;/ins&gt;
+ &lt;ins datetime="2005-03-16T00:00Z"&gt;
+  Apples are &lt;em&gt;tasty&lt;/em&gt;.
+ &lt;/ins&gt;
+ &lt;ins datetime="2007-12-19T00:00Z"&gt;
+  So are pears.
+ &lt;/ins&gt;
+&lt;/aside&gt;</pre>
+   <!-- Those date's aren't random. They're the start and end of
+   something. Can you guess what? -->
+   </div>
+
+  <h4 id="the-del"><span class="secno">3.11.2 </span>The <dfn id="del"><code>del</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt>Categories
+
+   <dd>When the element only contains <a href="semantics.html#phrasing0">phrasing
+    content</a>: <a href="semantics.html#phrasing0">phrasing content</a>.
+
+   <dd>Otherwise: <a href="semantics.html#flow-content0">flow content</a>.
+
+   <dt>Contexts in which this element may be used:
+
+   <dd>When the element only contains <a href="semantics.html#phrasing0">phrasing
+    content</a>: where <a href="semantics.html#phrasing0">phrasing content</a> is expected.
+
+   <dd>Otherwise: where <a href="semantics.html#flow-content0">flow content</a> is
+    expected.
+
+   <dt>Content model:
+
+   <dd><a href="semantics.html#transparent0">Transparent</a>.
+
+   <dt>Element-specific attributes:
+
+   <dd><code title="attr-mod-cite"><a href="#cite3">cite</a></code>
+
+   <dd><code title="attr-mod-datetime"><a href="#datetime1">datetime</a></code>
+
+   <dt>DOM interface:
+
+   <dd>Uses the <code><a href="#htmlmodelement">HTMLModElement</a></code>
+    interface.
+  </dl>
+
+  <p>The <code><a href="#del">del</a></code> element represents a removal
+   from the document.
+
+  <p><code><a href="#del">del</a></code> elements should not cross <a href="semantics.html#paragraph" title="paragraph">implied paragraph</a> boundaries.
+
+  <h4 id="attributes"><span class="secno">3.11.3 </span>Attributes common to
+   <code><a href="#ins">ins</a></code> and <code><a href="#del">del</a></code> elements</h4>
+
+  <p>The <dfn id="cite3" title="attr-mod-cite"><code>cite</code></dfn> attribute
+   may be used to specify a URI that explains the change. When that document
+   is long, for instance the minutes of a meeting, authors are encouraged to
+   include a fragment identifier pointing to the specific part of that
+   document that discusses the change.
+
+  <p>If the <code title="attr-mod-cite"><a href="#cite3">cite</a></code>
+   attribute is present, it must be a URI (or IRI) that explains the change.
+   User agents should allow users to follow such citation links.
+
+  <p>The <dfn id="datetime1" title="attr-mod-datetime"><code>datetime</code></dfn> attribute may be used
+   to specify the time and date of the change.
+
+  <p>If present, the <code title="attr-mod-datetime"><a href="#datetime1">datetime</a></code> attribute must be a <a href="semantics.html#valid5">valid datetime</a> value.
+
+  <p>User agents must parse the <code title="attr-mod-datetime"><a href="#datetime1">datetime</a></code> attribute according to the <a href="semantics.html#datetime-parser">parse a string as a datetime value</a> algorithm.
+   If that doesn't return a time, then the modification has no associated
+   timestamp (the value is non-conforming; it is not a <a href="semantics.html#valid5">valid datetime</a>). Otherwise, the modification is marked
+   as having been made at the given datetime. User agents should use the
+   associated timezone information to determine which timezone to present the
+   given datetime in.
+
+  <p>The <code><a href="#ins">ins</a></code> and <code><a href="#del">del</a></code> elements must implement the <code><a href="#htmlmodelement">HTMLModElement</a></code> interface:
+
+  <pre class="idl">interface <dfn id="htmlmodelement">HTMLModElement</dfn> : <a href="dom.html#htmlelement">HTMLElement</a> {
+           attribute DOMString <a href="#cite4" title="dom-mod-cite">cite</a>;
+           attribute DOMString <a href="#datetime2" title="dom-mod-datetime">dateTime</a>;
+};</pre>
+
+  <p>The <dfn id="cite4" title="dom-mod-cite"><code>cite</code></dfn> DOM
+   attribute must <a href="dom.html#reflect">reflect</a> the element's <code title="attr-mod-cite"><a href="#cite3">cite</a></code> content attribute.
+   The <dfn id="datetime2" title="dom-mod-datetime"><code>dateTime</code></dfn>
+   DOM attribute must <a href="dom.html#reflect">reflect</a> the element's <code title="">datetime</code> content attribute.
+
+  <h4 id="edits0"><span class="secno">3.11.4 </span>Edits and paragraphs</h4>
+
+  <p>Since the <code><a href="#ins">ins</a></code> and <code><a href="#del">del</a></code> elements do not affect <a href="semantics.html#paragraph" title="paragraph">paragraphing</a>, it is possible, in some cases where
+   paragraphs are <a href="semantics.html#paragraph" title="paragraph">implied</a> (without
+   explicit <code><a href="the-root.html#p">p</a></code> elements), for an <code><a href="#ins">ins</a></code> or <code><a href="#del">del</a></code> element
+   to span both an entire paragraph or other non-<a href="semantics.html#phrasing0">phrasing content</a> elements and part of another
+   paragraph.
+
+  <p>For example:
+
+  <pre>&lt;section&gt;
+ &lt;ins&gt;
+  &lt;p&gt;
+   This is a paragraph that was inserted.
+  &lt;/p&gt;
+  This is another paragraph whose first sentence was inserted
+  at the same time as the paragraph above.
+ &lt;/ins&gt;
+ This is a second sentence, which was there all along.
+&lt;/section&gt;</pre>
+
+  <p>By only wrapping some paragraphs in <code><a href="the-root.html#p">p</a></code>
+   elements, one can even get the end of one paragraph, a whole second
+   paragraph, and the start of a third paragraph to be covered by the same
+   <code><a href="#ins">ins</a></code> or <code><a href="#del">del</a></code>
+   element (though this is very confusing, and not considered good practice):
+
+  <pre>&lt;section&gt;
+ This is the first paragraph. &lt;ins&gt;This sentence was
+ inserted.
+ &lt;p&gt;This second paragraph was inserted.&lt;/p&gt;
+ This sentence was inserted too.&lt;/ins&gt; This is the
+ third paragraph in this example.
+&lt;/section&gt;</pre>
+
+  <p>However, due to the way <a href="semantics.html#paragraph" title="paragraph">implied
+   paragraphs</a> are defined, it is not possible to mark up the end of one
+   paragraph and the start of the very next one using the same <code><a href="#ins">ins</a></code> or <code><a href="#del">del</a></code> element.
+   You instead have to use one (or two) <code><a href="the-root.html#p">p</a></code>
+   element(s) and two <code><a href="#ins">ins</a></code> or <code><a href="#del">del</a></code> elements:
+
+  <p>For example:
+
+  <pre>&lt;section&gt;
+ &lt;p&gt;This is the first paragraph. &lt;del&gt;This sentence was
+ deleted.&lt;/del&gt;&lt;/p&gt;
+ &lt;p&gt;&lt;del&gt;This sentence was deleted too.&lt;/del&gt; That
+ sentence needed a separate &amp;lt;del&amp;gt; element.&lt;/p&gt;
+&lt;/section&gt;</pre>
+
+  <p>Partly because of the confusion described above, authors are strongly
+   recommended to always mark up all paragraphs with the <code><a href="the-root.html#p">p</a></code> element, and to not have any <code><a href="#ins">ins</a></code> or <code><a href="#del">del</a></code> elements
+   that cross across any <a href="semantics.html#paragraph" title="paragraph">implied
+   paragraphs</a>.
+
+  <h4 id="edits1"><span class="secno">3.11.5 </span>Edits and lists</h4>
+
+  <p>The content models of the <code><a href="the-root.html#ol">ol</a></code> and <code><a href="the-root.html#ul">ul</a></code> elements do not allow <code><a href="#ins">ins</a></code> and <code><a href="#del">del</a></code>
+   elements as children. Lists always represent all their items, including
+   items that would otherwise have been marked as deleted.
+
+  <p>To indicate that an item is inserted or deleted, an <code><a href="#ins">ins</a></code> or <code><a href="#del">del</a></code> element
+   can be wrapped around the contents of the <code><a href="the-root.html#li">li</a></code> element. To indicate that an item has been
+   replaced by another, a single <code><a href="the-root.html#li">li</a></code> element
+   can have one or more <code><a href="#del">del</a></code> elements followed
+   by one or more <code><a href="#ins">ins</a></code> elements.
+
+  </p><div class="example">
+   <p>In the following example, a list that started empty had items added and
+    removed from it over time. The bits in the example that have been
+    emphasised show the parts that are the "current" state of the list. The
+    list item numbers don't take into account the edits, though.</p>
+
+   <pre>&lt;h1&gt;Stop-ship bugs&lt;/h1&gt;
+&lt;ol&gt;
+ &lt;li&gt;&lt;ins datetime="2008-02-12 15:20 Z"&gt;<em>Bug 225: Rain detector
+ doesn't work in snow</em>&lt;/ins&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;del datetime="2008-03-01 20:22 Z"&gt;&lt;ins datetime="2008-02-14 
+ 12:02 Z"&gt;Bug 228: Water buffer overflows in April&lt;/ins&gt;&lt;/del&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;ins datetime="2008-02-16 13:50 Z"&gt;<em>Bug 230: Water heater
+ doesn't use renewable fuels</em>&lt;/ins&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;del datetime="2008-02-20 21:15 Z"&gt;&lt;ins datetime="2008-02-16
+ 14:25 Z"&gt;Bug 232: Carbon dioxide emissions detected after
+ startup&lt;/ins&gt;&lt;/del&gt;&lt;/li&gt;
+&lt;/ol&gt;</pre>
+  </div>
+
+  <div class="example">
+   <p>In the following example, a list that started with just fruit was
+    replaced by a list with just colors.</p>
+
+   <pre>&lt;h1&gt;List of &lt;del&gt;fruits&lt;/del&gt;&lt;ins&gt;colors&lt;/ins&gt;&lt;/h1&gt;
+&lt;ul&gt;
+ &lt;li&gt;&lt;del&gt;Lime&lt;/del&gt;&lt;ins&gt;Green&lt;/ins&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;del&gt;Apple&lt;/del&gt;&lt;/li&gt;
+ &lt;li&gt;Orange&lt;/li&gt;
+ &lt;li&gt;&lt;del&gt;Pear&lt;/del&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;ins&gt;Teal&lt;/ins&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;del&gt;Lemon&lt;/del&gt;&lt;ins&gt;Yellow&lt;/ins&gt;&lt;/li&gt;
+ &lt;li&gt;Olive&lt;/li&gt;
+ &lt;li&gt;&lt;ins&gt;Purple&lt;/ins&gt;
+&lt;/ul&gt;</pre>
+  </div>
+
+  

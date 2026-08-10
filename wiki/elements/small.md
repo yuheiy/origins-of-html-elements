@@ -10,7 +10,7 @@ HTML 3.0草案でsmall printを小さいfontで表示する新要素として確
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、small printのような短いside commentを表す。典型例は免責、注意、法的制限、著作権、帰属、license要件であり、単なる文字縮小やde-emphasis、複数段落に及ぶ本文には使わない。[一次定義](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-small-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、small printのような短いside commentを表す。典型例は免責、注意、法的制限、著作権、帰属、license要件であり、単なる文字縮小やde-emphasis、複数段落に及ぶ本文には使わない。[HTML Living Standard](../../raw/html-living-standard/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-small-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -44,17 +44,17 @@ HTML 3.0 `SMALL`（1995年） → HTML 3.2 `SMALL` → HTML 4 `SMALL`
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1993-11-08 | HTML+ DTD | W3C保存仕様草案 | 要素集合に`SMALL`がない | [一次資料](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html) | 2026-08-10 |
-| 1995-03 | HTML 3.0 draft “Font Style Elements” | W3C保存仕様草案 | `SMALL`をsmall printを小さいfontで表示する要素として定義。 | [一次資料](https://www.w3.org/MarkUp/html3/emphasis.html) | 2026-08-09 |
-| 1997-01-14 | HTML 3.2 | W3C Recommendation | `SMALL`をsmall font用のfont-style elementとして収録。 | [一次資料](https://www.w3.org/TR/REC-html32#font-style) | 2026-08-09 |
-| 日付未確定（1997-06-13保存） | *Extensions to HTML 3.0* | Netscape公式資料の保存版 | Navigator 2.0文脈の`SMALL`定義。HTML 3.0との採用方向は確定できない。 | [保存版](https://web.archive.org/web/19970613212205id_/http://home.netscape.com:80/assist/net_sites/html_extensions_3.html) | 2026-08-09 |
-| 1997-12-18 | HTML 4.0 | W3C Recommendation | `SMALL`をfont style elementとして継承 | [一次資料](https://www.w3.org/TR/REC-html40/present/graphics.html#h-15.2.1) | 2026-08-10 |
-| 2005-04-06（保存日） | WHATWG, *Web Applications 1.0* | 同時代保存草案 | `small`の要素定義節がまだないことを確認できる変更時期の下限 | [保存版](https://web.archive.org/web/20050406023711id_/http://whatwg.org/specs/web-apps/current-work/) | 2026-08-10 |
-| 2005-04-12 | Henrik Lied, “HTML5: Deprecate the SMALL element” | WHATWG mailing-list proposal | `SMALL`の実利用をcopyright notice／legal descriptionとし、改名を提案 | [一次資料](https://lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0187.html) | 2026-08-10 |
-| 2005-04-12 | Ian Hicksonの回答 | WHATWG mailing-list・編集者説明 | Small printという表示非依存の意味、既存名によるlegacy browser互換性、名称維持の判断 | [一次資料](https://lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0190.html) | 2026-08-10 |
-| 2005-04-13（保存日） | WHATWG, *Web Applications 1.0* | 同時代保存草案 | Legal restrictions等のsmall printまたはother side commentsという定義 | [保存版](https://web.archive.org/web/20050413075549id_/http://www.whatwg.org/specs/web-apps/current-work/) | 2026-08-10 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1993-11-08 | [HTML+ DTD](../../raw/html-plus/htmlplus_58.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html)） | W3C保存仕様草案 | 要素集合に`SMALL`がない | 2026-08-10 |
+| 1995-03 | [HTML 3.0 draft “Font Style Elements”](../../raw/html-3.0/emphasis.html)（[公開元](https://www.w3.org/MarkUp/html3/emphasis.html)） | W3C保存仕様草案 | `SMALL`をsmall printを小さいfontで表示する要素として定義。 | 2026-08-09 |
+| 1997-01-14 | [HTML 3.2](../../raw/html-3.2/index.html)（[公開元](https://www.w3.org/TR/REC-html32#font-style)） | W3C Recommendation | `SMALL`をsmall font用のfont-style elementとして収録。 | 2026-08-09 |
+| 日付未確定（1997-06-13保存） | [*Extensions to HTML 3.0*](../../raw/items/web.archive.org/6c3a78e318a0f99b-html_extensions_3.html)（[公開元](https://web.archive.org/web/19970613212205id_/http://home.netscape.com:80/assist/net_sites/html_extensions_3.html)） | Netscape公式資料の保存版 | Navigator 2.0文脈の`SMALL`定義。HTML 3.0との採用方向は確定できない。 | 2026-08-09 |
+| 1997-12-18 | [HTML 4.0](../../raw/html-4-history/9a136057140feaf8-graphics.html)（[公開元](https://www.w3.org/TR/REC-html40/present/graphics.html#h-15.2.1)） | W3C Recommendation | `SMALL`をfont style elementとして継承 | 2026-08-10 |
+| 2005-04-06（保存日） | [WHATWG, *Web Applications 1.0*](../../raw/whatwg-web-apps-history/c1b8f83c99f56e89-current.html)（[公開元](https://web.archive.org/web/20050406023711id_/http://whatwg.org/specs/web-apps/current-work/)） | 同時代保存草案 | `small`の要素定義節がまだないことを確認できる変更時期の下限 | 2026-08-10 |
+| 2005-04-12 | [Henrik Lied, “HTML5: Deprecate the SMALL element”](../../raw/items/lists.w3.org/b65a3d6f43d32ba6-0187.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0187.html)） | WHATWG mailing-list proposal | `SMALL`の実利用をcopyright notice／legal descriptionとし、改名を提案 | 2026-08-10 |
+| 2005-04-12 | [Ian Hicksonの回答](../../raw/items/lists.w3.org/e336ba21874ee9de-0190.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0190.html)） | WHATWG mailing-list・編集者説明 | Small printという表示非依存の意味、既存名によるlegacy browser互換性、名称維持の判断 | 2026-08-10 |
+| 2005-04-13（保存日） | [WHATWG, *Web Applications 1.0*](../../raw/whatwg-web-apps-history/b0c56785a604e19a-current.html)（[公開元](https://web.archive.org/web/20050413075549id_/http://www.whatwg.org/specs/web-apps/current-work/)） | 同時代保存草案 | Legal restrictions等のsmall printまたはother side commentsという定義 | 2026-08-10 |
 
 ## 確度
 

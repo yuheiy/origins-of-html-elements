@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、`picture`では複数の画像source set、`audio`／`video`では複数の代替media resourceを指定する、内容を持たず単独では何も表さない要素である。[一次定義](https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、`picture`では複数の画像source set、`audio`／`video`では複数の代替media resourceを指定する、内容を持たず単独では何も表さない要素である。[HTML Living Standard](../../raw/html-living-standard/embedded-content.html)（[公開版](https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,14 +36,14 @@ WHATWG `video`の単一`src`方式（2007年3月16日） → codec negotiation�
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2007-03-16 | WHATWG HTML commit `753f385d`（revision 678） | 仕様commit | `video`本格導入時の単一`src`方式。 | [一次資料](https://github.com/whatwg/html/commit/753f385d6eb176f4cc7075ba9f41ed3190848b10) | 2026-08-09 |
-| 2007-03-23 | WHATWG HTML commit `61af426a`（revision 687） | 仕様commit | codec negotiation用`source`、複数resource selection、`src`、`type`、`media`の追加。 | [一次資料](https://github.com/whatwg/html/commit/61af426a3ae6d68ffa00505b6883cbf870481b52) | 2026-08-09 |
-| 2007-04-30 | *Web Applications 1.0*, revision 791 | WHATWG保存仕様 | 複数media resourceを指定する`source`と`src`、`type`、`media`属性。 | [一次資料](https://platform.html5.org/history/webapps/r791.html#the-source) | 2026-08-09 |
-| 2010-10-19 | *HTML5: The source element* | W3C Working Draft | `audio`／`video`の代替media resourceと取得前のtype判定。 | [一次資料](https://www.w3.org/TR/2010/WD-html5-20101019/author/video.html#the-source-element) | 2026-08-09 |
-| 2014-06-17 | WHATWG HTML commit `a7716b7a` | 仕様commit | `picture`と画像用`source`の後代統合。 | [一次資料](https://github.com/whatwg/html/commit/a7716b7a2463323c7f25176f4b3768008d170204) | 2026-08-09 |
-| 2026-08-09 | WHATWG HTML Living Standard, “The source element” | 現行仕様 | `source`の現行定義。 | [一次資料](https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2007-03-16 | [WHATWG HTML commit `753f385d`（revision 678）](../../raw/whatwg-html-history/acbb97e2a5b4e3e4-753f385d6eb176f4cc7075ba9f41ed31908.html)（[公開元](https://github.com/whatwg/html/commit/753f385d6eb176f4cc7075ba9f41ed3190848b10)） | 仕様commit | `video`本格導入時の単一`src`方式。 | 2026-08-09 |
+| 2007-03-23 | [WHATWG HTML commit `61af426a`（revision 687）](../../raw/whatwg-html-history/2569357f56116a5d-61af426a3ae6d68ffa00505b6883cbf8704.html)（[公開元](https://github.com/whatwg/html/commit/61af426a3ae6d68ffa00505b6883cbf870481b52)） | 仕様commit | codec negotiation用`source`、複数resource selection、`src`、`type`、`media`の追加。 | 2026-08-09 |
+| 2007-04-30 | [*Web Applications 1.0*, revision 791](../../raw/whatwg-web-apps-history/29f4a95bcaf32836-r791.html)（[公開元](https://platform.html5.org/history/webapps/r791.html#the-source)） | WHATWG保存仕様 | 複数media resourceを指定する`source`と`src`、`type`、`media`属性。 | 2026-08-09 |
+| 2010-10-19 | [*HTML5: The source element*](../../raw/w3c-html5-history/2579a854225b6f5d-video.html)（[公開元](https://www.w3.org/TR/2010/WD-html5-20101019/author/video.html#the-source-element)） | W3C Working Draft | `audio`／`video`の代替media resourceと取得前のtype判定。 | 2026-08-09 |
+| 2014-06-17 | [WHATWG HTML commit `a7716b7a`](../../raw/whatwg-html-history/66ad8afeef30633b-a7716b7a2463323c7f25176f4b3768008d1.html)（[公開元](https://github.com/whatwg/html/commit/a7716b7a2463323c7f25176f4b3768008d170204)） | 仕様commit | `picture`と画像用`source`の後代統合。 | 2026-08-09 |
+| 2026-08-09 | [WHATWG HTML Living Standard, “The source element”](../../raw/html-living-standard/embedded-content.html)（[公開元](https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element)） | 現行仕様 | `source`の現行定義。 | 2026-08-09 |
 
 ## 確度
 

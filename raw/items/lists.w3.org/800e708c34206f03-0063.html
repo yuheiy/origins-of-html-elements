@@ -1,0 +1,186 @@
+<!-- received="Fri Jun 26 15:35:05 1992 EDT" -->
+<!-- sent="Fri, 26 Jun 92 15:35:05 MET DST" -->
+<!-- name="Tim Berners-Lee" -->
+<!-- email="timbl" -->
+<!-- subject="Re: HTML DTD" -->
+<!-- id="9206261335.AA04694@ nxoc01.cern.ch " -->
+<!-- inreplyto="HTML DTD" -->
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head><title>www-talk from May to June 1992: Re: HTML DTD</title></head>
+<body>
+<h1>Re: HTML DTD</h1>
+<strong>Tim Berners-Lee</strong> (<a href="mailto:timbl"><em>timbl</em></a>)<br>
+<em>Fri, 26 Jun 92 15:35:05 MET DST</em>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#63">[ date ]</a><a href="thread.html#63">[ thread ]</a><a href="subject.html#63">[ subject ]</a><a href="author.html#63">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0064.html">Tim Berners-Lee: "Re: HTML -&gt; Postscript? Text?"</a>
+<li> <strong>Previous message:</strong> <a href="0062.html">Tim Berners-Lee: "Re: Links that refer to a range of text, not just a point."</a>
+<!-- nextthread="start" -->
+</ul>
+<hr>
+<!-- body="start" -->
+<pre>
+Date: Fri, 26 Jun 92 15:35:05 MET DST
+From: timbl (Tim Berners-Lee)
+Message-Id: &lt;9206261335.AA04694@ nxoc01.cern.ch &gt;
+To: connolly@pixel.convex.com, timbl@nxoc01.cern.ch
+Subject: Re: HTML DTD
+Cc: www-talk@nxoc01.cern.ch
+
+Dan, you say
+
+&lt;&lt;
+I suppose you could come up with a DTD that describes something
+close to the current HTML, but I'm not sure of the value of it.
+HTML allows tags to be pretty much sprinkled wherever you feel
+like putting them. Any DTD that allows that much leeway just
+looks like this:
+
+        &lt;!ENTITY % alltags "TITLE|H1|H2|H3|MENU|OL|UL"&gt;
+        &lt;!ELEMENT %alltags (%alltags)*&gt;
+
+i.e. every element is just a repeatable or-group of all the elements.
+Then the SGML parser can't do any minimization cuz nothing's required. &gt;&gt;
+
+Yes, current SGML currently is just a linear sequence of
+elements. (Sorry, current HTML -- I'm typing this in serially
+and can't edit!).  There is a reason for this:  it is very
+convenient for HTML to map onto a series of styles -- for two
+reasons.
+
+Firstly, a lot of rich text objects can hold styles but can't hold
+structure.  You can deduce structure from the styles -- like
+Word deucing outlining from Heading styles, and WWW deducing
+a list &lt;UL&gt; from a lot of &lt;LI&gt; paragraphs. But you can't go
+very far.  If you want to make a HT editor out of such a
+text object, you ahve to regenerate the elements from the
+styles.
+
+Secondly, it may be that the wysiwyg editors have a linear style
+structure because that is intuitive to people. I don't know
+a lot of people who use author/editor (which maintains
+structure). Maybe real people actually think in terms of styles
+and fix the document to look right, then they are happy to have the
+structure deduced.
+
+So if we went for a nestable HTML which would be cleaner for
+those who apreciate recursion, we would have to have a hypertext
+editor which made the structure visible.  I don't have experience
+enough to know whether real information providers (group secretaries,
+for example) would be into generating nested elements -- maybe
+the styles are useful to keep as the current `user interface metaphor'
+of word processors.
+
+(It also makes making the editor easier!)
+
+Or maybe we should have two levels of DTD -- one basically linear
+and mandatory (and precompiled for fast access) and one more
+sophisticated for larger documents.
+
+Of course, when you are writing hypertext the large documents are
+normally broken down into small bits to make traveing them quick.
+So whereas each hypertext node may contain only H1 and H2 headings,
+when a book is generated a la the_www_book.ps you get 5 levels
+of heading from the whole tree.
+
+So that is why the HTML strcuture is so simple. I am open to
+a more sophisticated alternative.
+
+Tim
+____________________________
+&gt;From connolly@pixel.convex.com Fri Jun 26 00:00:33 1992
+Return-Path: &lt;connolly@pixel.convex.com&gt;
+Received: from dxmint.cern.ch by  nxoc01.cern.ch  (NeXT-1.0 (From Sendmail 5.52)/NeXT-2.0)
+	id AA02722; Fri, 26 Jun 92 00:00:27 MET DST
+Received: by dxmint.cern.ch (dxcern) (5.57/3.14)
+	id AA25540; Fri, 26 Jun 92 00:00:11 +0200
+Received: from pixel.convex.com by convex.convex.com (5.64/1.35)
+	id AA10700; Thu, 25 Jun 92 17:00:01 -0500
+Received: from localhost by pixel.convex.com (5.64/1.28)
+	id AA05209; Thu, 25 Jun 92 17:00:00 -0500
+Message-Id: &lt;9206252200.AA05209@pixel.convex.com&gt;
+To: timbl@nxoc01.cern.ch (Tim Berners-Lee)
+Subject: Re: HTML DTD 
+In-Reply-To: Your message of "Thu, 25 Jun 92 23:07:25 +0700."
+             &lt;9206252107.AA02534@ nxoc01.cern.ch &gt; 
+Date: Thu, 25 Jun 92 16:59:59 CDT
+From: Dan Connolly &lt;connolly@pixel.convex.com&gt;
+Status: R
+
+
+&gt;thanks for that contribution.   Not being as hot on SGML
+&gt;as I ought to be, I don't see why the HREF has to refer to
+&gt;and entity declared separately rather than directly having
+&gt;a string argument.
+&gt;
+That's actually left over from when I was trying to point
+HREF attributes to MIME attachments. It's not really
+necessary to move the UDIs into entities as long as you're
+careful that the UDI syntax is a subset of the SGML
+attribute literal syntax.
+
+Beware, for example, that an
+SGML parser will expand entity references in an attribute literal
+to produce the CDATA for the attribute value. So that
+&lt;A HREF="A&amp;P"&gt; might be OK for the linemode browser,
+but an SGML parser will try to resolve &amp;P.
+
+Also, SGML attribute values have a maximum length specified
+in the SGML declaration. The default value is 960 or something
+around there.
+
+&gt;The title is in fact optional currently, by the way ...
+&gt;we could keep it so though it "ought" always to have one.
+&gt;
+&gt;I'd like a DTD which as closely reflects the current HTML as
+&gt;possible.
+
+I suppose you could come up with a DTD that describes something
+close to the current HTML, but I'm not sure of the value of it.
+HTML allows tags to be pretty much sprinkled wherever you feel
+like putting them. Any DTD that allows that much leeway just
+looks like this:
+
+	&lt;!ENTITY % alltags "TITLE|H1|H2|H3|MENU|OL|UL"&gt;
+	&lt;!ELEMENT %alltags (%alltags)*&gt;
+
+i.e. every element is just a repeatable or-group of all the elements.
+Then the SGML parser can't do any minimization cuz nothing's required.
+
+&gt; Then, if we change HTML to HTML2, I would
+&gt;change it in a number of ways, in particular to include
+&gt;separate header and body parts.  I have come across the
+&gt;"Davenport" group of publishers who are defineing DTDs for
+&gt;technical documentation.  They include Steve Newcombe who
+&gt;is the HyTime guy (or one of the two I should say).
+&gt;I would like to get some input from them.
+&gt;
+
+Certainly we should keep tabs on things like the Davenport
+group and HyTime.
+
+But my immediate concern is these little sytactic differences
+that render HTML documents worthless to an SGML parser. The
+current HTML and UDI syntax make a good proof of concept, but
+we need to move toward formal definitions so that we can
+have confidence that correct implementations will interoperate.
+
+More later...
+
+Dan
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#63">[ date ]</a><a href="thread.html#63">[ thread ]</a><a href="subject.html#63">[ subject ]</a><a href="author.html#63">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0064.html">Tim Berners-Lee: "Re: HTML -&gt; Postscript? Text?"</a>
+<li> <strong>Previous message:</strong> <a href="0062.html">Tim Berners-Lee: "Re: Links that refer to a range of text, not just a point."</a>
+<!-- nextthread="start" -->
+</ul>
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Change Proposal: figure and details - WHATWG Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"8814770075ba2647087eb300","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Change_Proposal:_figure_and_details","wgTitle":"Change Proposal: figure and details","wgCurRevisionId":4382,"wgRevisionId":4382,"wgArticleId":1905,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Change_Proposal:_figure_and_details","wgRelevantArticleId":1905,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],
+"wgVector2022PreviewPages":[]};RLSTATE={"ext.gadget.WatchlistChangesBold":"ready","ext.gadget.widensearch":"ready","site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","mediawiki.action.styles":"ready","mediawiki.interface.helpers.styles":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.gadget.exlinks","ext.gadget.charinsert","ext.gadget.edittop","ext.gadget.PrettyLog"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=mediawiki.action.styles%7Cmediawiki.interface.helpers.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=ext.gadget.WatchlistChangesBold%2Cwidensearch&amp;only=styles&amp;skin=vector"/>
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.39.3"/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="width=1000"/>
+<link rel="apple-touch-icon" href="https://resources.whatwg.org/logo.png"/>
+<link rel="icon" href="https://resources.whatwg.org/logo.svg"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="WHATWG Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.whatwg.org/api.php?action=rsd"/>
+<link rel="license" href="/wiki/WHATWG_Wiki:Copyrights"/>
+<link rel="alternate" type="application/atom+xml" title="WHATWG Wiki Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Change_Proposal_figure_and_details rootpage-Change_Proposal_figure_and_details skin-vector action-view skin-vector-legacy vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"><div id="localNotice"><div class="anonnotice" lang="en" dir="ltr"><div id="anonNotice">
+<div style="margin: 0.5em auto; border: 1px solid #333333; background-color: #EEEEEE; padding: 0.5em; font-size: larger; text-align: center;">
+<p>A user account is required in order to edit this wiki, but we've had to disable public user registrations due to spam.
+</p><p>To request an account, ask an autoconfirmed user on <a rel="nofollow" class="external text" href="https://whatwg.org/chat">Chat</a> (such as one of <span class="plainlinks"><a rel="nofollow" class="external text" href="https://wiki.whatwg.org/index.php?title=Special:ListUsers&amp;group=autoconfirmed">these permanent autoconfirmed members</a></span>).
+</p>
+</div>
+</div></div></div></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Change Proposal: figure and details</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From WHATWG Wiki</div>
+		<div id="contentSub"><div class="mw-message-box-warning mw-revision mw-message-box"><div id="mw-revision-info">Revision as of 01:31, 12 January 2010 by <a href="/index.php?title=User:Mjs&amp;action=edit&amp;redlink=1" class="new mw-userlink" title="User:Mjs (page does not exist)"><bdi>Mjs</bdi></a> <span class="mw-usertoollinks">(<a href="/index.php?title=User_talk:Mjs&amp;action=edit&amp;redlink=1" class="new mw-usertoollinks-talk" title="User talk:Mjs (page does not exist)">talk</a> | <a href="/wiki/Special:Contributions/Mjs" class="mw-usertoollinks-contribs" title="Special:Contributions/Mjs">contribs</a>)</span> <span class="comment">(<span dir="auto"><span class="autocomment"><a href="#Proposal_Details">→‎Proposal Details</a></span></span>)</span></div><div id="mw-revision-nav">(<a href="/index.php?title=Change_Proposal:_figure_and_details&amp;diff=prev&amp;oldid=4382" title="Change Proposal: figure and details">diff</a>) <a href="/index.php?title=Change_Proposal:_figure_and_details&amp;direction=prev&amp;oldid=4382" title="Change Proposal: figure and details">← Older revision</a> | Latest revision (diff) | Newer revision → (diff)</div></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Summary"><span class="tocnumber">1</span> <span class="toctext">Summary</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Rationale_Against_Using_dt/dd_for_figure_and_details_Elements"><span class="tocnumber">2</span> <span class="toctext">Rationale Against Using dt/dd for figure and details Elements</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Backwards_Compatibility"><span class="tocnumber">2.1</span> <span class="toctext">Backwards Compatibility</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Legacy_Cruft"><span class="tocnumber">2.2</span> <span class="toctext">Legacy Cruft</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Styling_Clashes"><span class="tocnumber">2.3</span> <span class="toctext">Styling Clashes</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Default_Styles"><span class="tocnumber">2.4</span> <span class="toctext">Default Styles</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Structural_Differences"><span class="tocnumber">2.5</span> <span class="toctext">Structural Differences</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Semantic_Differences"><span class="tocnumber">2.6</span> <span class="toctext">Semantic Differences</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Unnecessary_Elements"><span class="tocnumber">2.7</span> <span class="toctext">Unnecessary Elements</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Aesthetics"><span class="tocnumber">2.8</span> <span class="toctext">Aesthetics</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Proposal_1_(&lt;figure&gt;&lt;legend&gt;...&lt;/legend&gt;...&lt;/figure&gt;;_&lt;details&gt;&lt;legend&gt;...&lt;/legend&gt;...&lt;/details&gt;)"><span class="tocnumber">3</span> <span class="toctext">Proposal 1 (&lt;figure&gt;&lt;legend&gt;...&lt;/legend&gt;...&lt;/figure&gt;; &lt;details&gt;&lt;legend&gt;...&lt;/legend&gt;...&lt;/details&gt;)</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Proposal_2_(&lt;figure&gt;&lt;c&gt;...&lt;/c&gt;...&lt;/figure&gt;;_&lt;details&gt;&lt;c&gt;...&lt;/c&gt;...&lt;/details&gt;)"><span class="tocnumber">4</span> <span class="toctext">Proposal 2 (&lt;figure&gt;&lt;c&gt;...&lt;/c&gt;...&lt;/figure&gt;; &lt;details&gt;&lt;c&gt;...&lt;/c&gt;...&lt;/details&gt;)</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Proposal_3_(&lt;figure&gt;&lt;fcaption&gt;...&lt;/fcaption&gt;...&lt;/figure&gt;;_&lt;details&gt;&lt;dlabel&gt;...&lt;/dlabel&gt;...&lt;/details&gt;)"><span class="tocnumber">5</span> <span class="toctext">Proposal 3 (&lt;figure&gt;&lt;fcaption&gt;...&lt;/fcaption&gt;...&lt;/figure&gt;; &lt;details&gt;&lt;dlabel&gt;...&lt;/dlabel&gt;...&lt;/details&gt;)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Summary_2"><span class="tocnumber">5.1</span> <span class="toctext">Summary</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Additional_Rationale"><span class="tocnumber">5.2</span> <span class="toctext">Additional Rationale</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#Follows_HTML_Precedent_for_Structured_Elements"><span class="tocnumber">5.2.1</span> <span class="toctext">Follows HTML Precedent for Structured Elements</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Avoids_Clunky_or_Inappropriate_Names"><span class="tocnumber">5.2.2</span> <span class="toctext">Avoids Clunky or Inappropriate Names</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Does_Not_Introduce_Compatibility_Problems"><span class="tocnumber">5.2.3</span> <span class="toctext">Does Not Introduce Compatibility Problems</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Does_Not_Introduce_Redundant_Elements_for_the_Content"><span class="tocnumber">5.2.4</span> <span class="toctext">Does Not Introduce Redundant Elements for the Content</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-20"><a href="#Details"><span class="tocnumber">5.3</span> <span class="toctext">Details</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Impact"><span class="tocnumber">5.4</span> <span class="toctext">Impact</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#Proposal_3b_(&lt;figure&gt;&lt;figcaption&gt;...&lt;/figcaption&gt;...&lt;/figure&gt;;_&lt;details&gt;&lt;dsummary&gt;...&lt;/dsummary&gt;...&lt;/details&gt;)"><span class="tocnumber">6</span> <span class="toctext">Proposal 3b (&lt;figure&gt;&lt;figcaption&gt;...&lt;/figcaption&gt;...&lt;/figure&gt;; &lt;details&gt;&lt;dsummary&gt;...&lt;/dsummary&gt;...&lt;/details&gt;)</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Proposal_4_(&lt;figure&gt;&lt;caption&gt;...&lt;/caption&gt;...&lt;/figure&gt;;_&lt;details&gt;&lt;label&gt;...&lt;/label&gt;...&lt;/details&gt;)"><span class="tocnumber">7</span> <span class="toctext">Proposal 4 (&lt;figure&gt;&lt;caption&gt;...&lt;/caption&gt;...&lt;/figure&gt;; &lt;details&gt;&lt;label&gt;...&lt;/label&gt;...&lt;/details&gt;)</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Proposal_5_(&lt;figure&gt;&lt;h1&gt;...&lt;/h1&gt;...&lt;/figure&gt;;_&lt;details&gt;&lt;h1&gt;...&lt;/h1&gt;...&lt;/details&gt;)"><span class="tocnumber">8</span> <span class="toctext">Proposal 5 (&lt;figure&gt;&lt;h1&gt;...&lt;/h1&gt;...&lt;/figure&gt;; &lt;details&gt;&lt;h1&gt;...&lt;/h1&gt;...&lt;/details&gt;)</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#Proposal_6_(&lt;figure&gt;&lt;p_caption&gt;......&lt;/figure&gt;)"><span class="tocnumber">9</span> <span class="toctext">Proposal 6 (&lt;figure&gt;&lt;p caption&gt;......&lt;/figure&gt;)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="#Summary_3"><span class="tocnumber">9.1</span> <span class="toctext">Summary</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Rationale"><span class="tocnumber">9.2</span> <span class="toctext">Rationale</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Details_2"><span class="tocnumber">9.3</span> <span class="toctext">Details</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Impact_2"><span class="tocnumber">9.4</span> <span class="toctext">Impact</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-30"><a href="#Proposal_7_(&lt;figure&gt;&lt;fcaption&gt;...&lt;/fcaption&gt;...&lt;/figure&gt;;_&lt;details&gt;&lt;dlabel&gt;...&lt;/dlabel&gt;...&lt;/details&gt;_or_&lt;figure&gt;&lt;fcaption&gt;...&lt;/fcaption&gt;&lt;fbody&gt;...&lt;/fbody&gt;&lt;/figure&gt;;_&lt;details&gt;&lt;dlabel&gt;...&lt;/dlabel&gt;&lt;dbody&gt;...&lt;/dbody&gt;&lt;/details&gt;)"><span class="tocnumber">10</span> <span class="toctext">Proposal 7 (&lt;figure&gt;&lt;fcaption&gt;...&lt;/fcaption&gt;...&lt;/figure&gt;; &lt;details&gt;&lt;dlabel&gt;...&lt;/dlabel&gt;...&lt;/details&gt; or &lt;figure&gt;&lt;fcaption&gt;...&lt;/fcaption&gt;&lt;fbody&gt;...&lt;/fbody&gt;&lt;/figure&gt;; &lt;details&gt;&lt;dlabel&gt;...&lt;/dlabel&gt;&lt;dbody&gt;...&lt;/dbody&gt;&lt;/details&gt;)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-31"><a href="#Summary_4"><span class="tocnumber">10.1</span> <span class="toctext">Summary</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Summary">Summary</span></h2>
+<p>The current HTML5 draft uses the dt and dd elements to markup the captions and content of the figure and details elements.  This change proposal explains why the dt and dd elements are a poor choice for these purposes and proposes an alternative.
+</p>
+<hr />
+<h2><span id="Rationale_Against_Using_dt.2Fdd_for_figure_and_details_Elements"></span><span class="mw-headline" id="Rationale_Against_Using_dt/dd_for_figure_and_details_Elements">Rationale Against Using dt/dd for figure and details Elements</span></h2>
+<h3><span class="mw-headline" id="Backwards_Compatibility">Backwards Compatibility</span></h3>
+<p>Due to IE's legacy parsing issues, the dt and dd elements create problems for authors attempting to use and style these elements. The simplest workaround (wrapping both figure and details in an extra div) that authors would need to apply to avoid these issues is not intuitive, as clearly demonstrated by the wide range of alternative solutions that were attempted prior to its discovery.
+</p>
+<h3><span class="mw-headline" id="Legacy_Cruft">Legacy Cruft</span></h3>
+<p>The use of extra div elements may lead to a lot of confusion among authors, at least initially, and ultimately end up becoming extraneous markup that authors just include without really understanding why, even after the current generation of browsers are long since dead.
+</p><p>We've seen this kind of problem before with authors, for example, frequently wrapping scripts with pseudo-HTML-comments initially intended to hide the script from what are now very ancient browsers, none of which have been in use for over a decade.
+</p>
+<h3><span class="mw-headline" id="Styling_Clashes">Styling Clashes</span></h3>
+<p>In addition to the aforementioned styling bug in IE, many existing stylesheets already include styles for the dt and dd elements, used in description lists (dl elements).  Authors attempting to incorporate figure or details into their existing pages would have to take care to avoid unintended styling clashes caused by selectors that aren't specific enough.  i.e.  It's common for authors to simply use the selector as "dt" or "dd", rather than "dl&gt;dt" and "dl&gt;dd", as that is currently unnecessary.  Authors will then have to adjust their styles, which could potentially cause unintended side affects to to the change in specificity of the selectors.
+</p>
+<h3><span class="mw-headline" id="Default_Styles">Default Styles</span></h3>
+<p>The default styles for dt and dd elements is not ideal for figures.  As the dd element is usually indented with margin and/or padding, authors will usually be required to remove this with their own stylesheets, rather than being able to rely on more sensible defaults. It is true that eventually UA stylesheets may have special rules for "figure &gt; dt" and the like, but during the transition period it will be extra work to remove inappropriate default styles.
+</p>
+<h3><span class="mw-headline" id="Structural_Differences">Structural Differences</span></h3>
+<p>Since authors are already familiar with the meanings and structure of dt and dd when used within dl, their very distinct meanings and structure when used within the figure and details may be confusing to authors.
+</p><p>The dl element may contain multiple groups of dt and dd elements, wheres within figure and details, each element may only be used once.
+</p><p>Within dl, a group must have one or more dt elements followed by one or more dd elements, whereas within figure, the elements may appear in any order.
+</p>
+<h3><span class="mw-headline" id="Semantic_Differences">Semantic Differences</span></h3>
+<p>For the figure element, it's not very intuitive to determine which of either dt or dd represents the caption and which represents the content such as an image.  Some authors may interpret dd as being the description, which is what it means within dl, and thus assume that dd is meant for the caption, and the dt meant for the image or other content.  However, the spec defines these with the opposite meanings, with the understanding the dt, or title, is a synonym for caption.  Both alternatives points of view make some sense, but neither stands out as being obviously correct.  This will likely lead to a lot of authors using these elements in reverse.
+</p>
+<h3><span class="mw-headline" id="Unnecessary_Elements">Unnecessary Elements</span></h3>
+<p>The dd element is completely unnecessary to distinguish it from the caption, which has its own element.  This combined with the extraneous div required for IE compatibility adds two extra elements that are not logically needed.  A previous iteration of the spec used the legend element for the caption, without any special wrapper just for the content.  This model seems much more intuitive and required less markup to use, and thus easier to get right.  Authors who do wish to have an extra wrapper around the content may use div if they choose, but should not be required to use it.
+</p><p>When there is no caption, using figure then requires authors to use 3 extra elements, where they should only need one:
+</p>
+<pre>&lt;div&gt; &lt;!-- IE legacy workaround --&gt;
+  &lt;figure&gt;
+    &lt;dd&gt;&lt;img src=&quot;image&quot; alt=&quot;...&quot;&gt;&lt;/dd&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+</pre>
+<p>This will be unappealing to authors who may, as a result of the complexity, opt not to use the figure element.
+</p>
+<h3><span class="mw-headline" id="Aesthetics">Aesthetics</span></h3>
+<p>Aesthetics is not necessarily the sole or most important concern. However, many authors seem to find the novel use of dt and dd unpleasant to read. dt and dd are relatively obscure elements, they are very short abbreviations, and their meaning in context is unclear, especially in figure. In particular, the following markup seems mysterious and strikes many as ugly and unintuitive:
+</p>
+<pre> &lt;figure&gt;
+   &lt;dd&gt;&lt;img src=&quot;image&quot; alt=&quot;...&quot;&gt;&lt;/dd&gt;
+   &lt;dt&gt;A Pair of Cats&lt;/dd&gt;
+ &lt;/figure&gt;
+</pre>
+<p>This seems to trigger a "yuck factor", and it would be wise to avoid that. Aesthetics may seem like a relatively unimportant factor; however, the desire to avoid introducing new elements that led to dt/dd being used is itself largely an aesthetic concern.
+</p>
+<hr />
+<h2><span id="Proposal_1_.28.3Cfigure.3E.3Clegend.3E....3C.2Flegend.3E....3C.2Ffigure.3E.3B_.3Cdetails.3E.3Clegend.3E....3C.2Flegend.3E....3C.2Fdetails.3E.29"></span><span class="mw-headline" id="Proposal_1_(&lt;figure&gt;&lt;legend&gt;...&lt;/legend&gt;...&lt;/figure&gt;;_&lt;details&gt;&lt;legend&gt;...&lt;/legend&gt;...&lt;/details&gt;)">Proposal 1 (<code>&lt;figure&gt;&lt;legend&gt;...&lt;/legend&gt;...&lt;/figure&gt;; &lt;details&gt;&lt;legend&gt;...&lt;/legend&gt;...&lt;/details&gt;</code>)</span></h2>
+<p>The proposal is to restore the use of the legend element for marking up the captions within both figure and details elements.
+</p>
+<h2><span id="Proposal_2_.28.3Cfigure.3E.3Cc.3E....3C.2Fc.3E....3C.2Ffigure.3E.3B_.3Cdetails.3E.3Cc.3E....3C.2Fc.3E....3C.2Fdetails.3E.29"></span><span class="mw-headline" id="Proposal_2_(&lt;figure&gt;&lt;c&gt;...&lt;/c&gt;...&lt;/figure&gt;;_&lt;details&gt;&lt;c&gt;...&lt;/c&gt;...&lt;/details&gt;)">Proposal 2 (<code>&lt;figure&gt;&lt;c&gt;...&lt;/c&gt;...&lt;/figure&gt;; &lt;details&gt;&lt;c&gt;...&lt;/c&gt;...&lt;/details&gt;</code>)</span></h2>
+<p>The proposal is to introduce a new c element for marking up the captions within both figure and details elements.
+</p>
+<h2><span id="Proposal_3_.28.3Cfigure.3E.3Cfcaption.3E....3C.2Ffcaption.3E....3C.2Ffigure.3E.3B_.3Cdetails.3E.3Cdlabel.3E....3C.2Fdlabel.3E....3C.2Fdetails.3E.29"></span><span class="mw-headline" id="Proposal_3_(&lt;figure&gt;&lt;fcaption&gt;...&lt;/fcaption&gt;...&lt;/figure&gt;;_&lt;details&gt;&lt;dlabel&gt;...&lt;/dlabel&gt;...&lt;/details&gt;)">Proposal 3 (<code>&lt;figure&gt;&lt;fcaption&gt;...&lt;/fcaption&gt;...&lt;/figure&gt;; &lt;details&gt;&lt;dlabel&gt;...&lt;/dlabel&gt;...&lt;/details&gt;</code>)</span></h2>
+<h3><span class="mw-headline" id="Summary_2">Summary</span></h3>
+<p>The current HTML5 draft uses the dt and dd elements to markup the captions and content of the figure and details elements. This change proposal explains why the dt and dd elements are a poor choice for these purposes and proposes an alternative. Specifically, the proposal is to introduce a new fcaption element for marking up the caption within figure, and a dlabel element for use within details. The content portions of these elements (as opposed to the caption or label) would not have any special markup, they would be nested directly inside the figure or details element.
+</p>
+<h3><span class="mw-headline" id="Additional_Rationale">Additional Rationale</span></h3>
+<p>In addition to the rationale relative to the status quo in the spec, this proposal is better than some of the proposed alternatives.
+</p>
+<h4><span class="mw-headline" id="Follows_HTML_Precedent_for_Structured_Elements">Follows HTML Precedent for Structured Elements</span></h4>
+<p>Some HTML elements have relatively free content models, while others are "structured" - there are some or all child elements that have special meaning. Structured elements typically have helper elements that are specific to one element, or to a small family of related elements, to express their internal structure. Examples, from past versions of HTML, new in HTML5, and proposed for future versions of HTML:
+</p>
+<ul><li>table has thead, tfoot, tbody, td, th, tr, caption, col and colgroup.</li>
+<li>ul, ol and menu have li.</li>
+<li>fieldset has legend.</li>
+<li>applet and object have param.</li>
+<li>video and audio have source.</li>
+<li>dl has dt and dd.</li>
+<li>select and datalist have option and optgroup.</li>
+<li>ruby has rp and rt.</li>
+<li>datagrid was proposed to have a number of specialized child elements.</li></ul>
+<p>In some cases (such as table or the list elements), the structured element can <i>only</i> have its specialized children. In other cases (fieldset, applet/object, or audio/video), the structured element can have relatively free content in addition to its specialized children.
+</p><p>Thus, when introducing new structured elements such as figure and details, the normal design pattern for HTML is to introduce new specialized child elements to represent their structure. It is not the norm to reuse a very common element such as "h1" to represent specialized structure in a certain context. It is not the norm to reuse specialized child elements in a way that differs from their established content and meaning, as with dt/dd or legend. And it is unprecedented to use an attribute that can occur on any element to represent specialized structure, as with the proposed caption attribute. Furthermore, details and figure are not particularly closely related in purpose. One is a UI control, the other is a representation of the structure of prose documents. So it does not make sense for them to share a specialized child element. 
+</p><p>Applying a different design pattern for internal element structure to figure and details is likely to be confusing. The confusion of deviating from the usual HTML design pattern for this is likely to be greater than the cognitive cost of introducing no or fewer new elements.
+</p>
+<h4><span class="mw-headline" id="Avoids_Clunky_or_Inappropriate_Names">Avoids Clunky or Inappropriate Names</span></h4>
+<p>The new element fltcap, suggested by another Change Proposal, appears confusing and mysterious. No one seems to get what it means on first reading. The expansion as "floating caption" seems confusing and semantically wrong. First, "floating caption" is not a very common term of art in publishing, but whenever it is used, it seems to refer to <a rel="nofollow" class="external text" href="http://www.google.com/search?client=safari&amp;rls=en&amp;q=floating+caption&amp;ie=UTF-8&amp;oe=UTF-8">captions overlayed on top of the image</a>, not figure captions in general. Furthermore, a details control does not in general have a "caption", floating or otherwise, rather it is a UI control and therefore is normally considered to have a "label".
+</p><p>The new element c is an extremely short and mysterious name. There is a limit to how many one-letter identifiers one can have in a language without rendering it unreadable or confusing, and they should be reserved for extremely common elements. Captions do not make the cut.
+</p><p>Reusing legend does not seem like a good semantic fit for either figure or details. While a figure's caption is sometimes called a legend, the term "legend" in this context more often refers to the key next to a map or chart explaining how to read various visual elements. A details element is a UI element and those aren't ordinarily referred to as having a legend.
+</p><p>h1 connotes "header", which is not quite right for either figure or details.
+</p><p>The caption attribute is good for figure, but not details. However, that proposal retains the dt/dd names for details. And those names remain clunky and non-obvious in the context of details (hard to remember which is which) and retain all of the general problems of using dt/dd for both elements. 
+</p><p>"caption" and "label", or variations thereof, are the most semantically appropriate names for the caption and label respectively on figure and details.
+</p>
+<h4><span class="mw-headline" id="Does_Not_Introduce_Compatibility_Problems">Does Not Introduce Compatibility Problems</span></h4>
+<p>Reuse of almost any existing element in an unrelated context introduces compatibility problems, whether "hard" problems with parsing or behavior, or "soft" problems with pre-existing author styles. This Change Proposal uses brand new elements and thus avoids all these problems, unlike the use of dt/dd, legend, label, caption, or h1. All of those are known to have some lesser or greater technical issues.
+</p>
+<h4><span class="mw-headline" id="Does_Not_Introduce_Redundant_Elements_for_the_Content">Does Not Introduce Redundant Elements for the Content</span></h4><p>
+Semantically, and for purposes of UA behavior, we only really need to distinguish the caption part of the element. There is no need to wrap the remaining body part with a special element. True, they can be handy as a styling hook, but authors who need that styling hook can always use </p><div>.
+<h3><span class="mw-headline" id="Details">Details</span></h3>
+<p>This proposal includes the following specific changes:
+</p><p>1) Define a new element fcaption. Details would be approximately as follows:
+</p><p>Categories: none
+Contexts in which the element may be used: As the first or last child of a figure element.
+Content model: flow content
+Content attributes: global attributes
+DOM interface: HTMLElement
+Semantics: The fcaption element represents the caption of the figure that is its parent, if it has a parent that is a figure element.
+</p><p>2) Define a new element dlabel. Details would be as above, but replacing mentions of "figure" with "details".
+</p><p>3) Change figure as follows:
+New content model: "Flow content, optionally either preceded by or followed by an fcaption element."
+New caption definition: "The first fcaption element child of the element, if any, represents the caption of the figure element's contents. If there is no child fcaption element, then there is no caption."
+New content definition: "All child elements other than the first fcaption element, if there are any, represent the element's contents. If there are no child elements besides the first fcaption, then there are no contents.
+Update the examples appropriately.
+Update the suggested UA stylesheet in the Rendering section as appropriate.
+</p><p>4) Change details as follows:
+</p>
+<pre> New content model: "One dlabel element, followed by Flow content."
+ New summary definition: "The first dlabel element child of the element, if any, represents the summary of the details. If there is no child dlabel element, the user agent should provide its own label (e.g. "Details")."
+ New details definition: "All child elements other than the first dlabel element, if there are any, represent the details. If there are no child elements besides the first dlabel, then there are no details.
+ Update the examples appropriately.
+ Update the suggested UA stylesheet in the Rendering section as appropriate.
+</pre>
+<h3><span class="mw-headline" id="Impact">Impact</span></h3>
+<p>This proposal would have a potential negative impact on authors: it would introduce two new elements relative to the current spec.
+</p><p>However, the positive impact is arguably greater. The new elements would be more readable, more intuitive, and more in line with the standard HTML design pattern for structured elements. Thus, despite the addition of more elements, the overall increase in cognitive load will be less. In addition, there is no need to use &lt;div&gt; or any other wonky workarounds to get it to work in legacy UAs.
+</p><p>The impact on implementations is trivial. fcaption and dlabel are trivial to implement, and the appearance and behavior can be mostly defined via stylesheet. This is not significantly more work than altering the rendering of dt and dd inside figure and details; in fact it may be less work in some implementations.
+</p><p>The impact on conformance checkers and authoring tools is also trivial; neither approach is easier or harder to validate or generate.
+</p><p>There is no direct impact on users either way.
+</p>
+<h2><span id="Proposal_3b_.28.3Cfigure.3E.3Cfigcaption.3E....3C.2Ffigcaption.3E....3C.2Ffigure.3E.3B_.3Cdetails.3E.3Cdsummary.3E....3C.2Fdsummary.3E....3C.2Fdetails.3E.29"></span><span class="mw-headline" id="Proposal_3b_(&lt;figure&gt;&lt;figcaption&gt;...&lt;/figcaption&gt;...&lt;/figure&gt;;_&lt;details&gt;&lt;dsummary&gt;...&lt;/dsummary&gt;...&lt;/details&gt;)">Proposal 3b (<code>&lt;figure&gt;&lt;figcaption&gt;...&lt;/figcaption&gt;...&lt;/figure&gt;; &lt;details&gt;&lt;dsummary&gt;...&lt;/dsummary&gt;...&lt;/details&gt;</code>)</span></h2>
+<p>Same as proposal 3, but with the element names "figcaption" and "dsummary" respectively.
+</p><p>Reasoning: "figcaption" is more memorable. "dsummary" more accurately describes what the "label" of a &lt;details&gt; element is.
+</p><p><br />
+</p>
+<h2><span id="Proposal_4_.28.3Cfigure.3E.3Ccaption.3E....3C.2Fcaption.3E....3C.2Ffigure.3E.3B_.3Cdetails.3E.3Clabel.3E....3C.2Flabel.3E....3C.2Fdetails.3E.29"></span><span class="mw-headline" id="Proposal_4_(&lt;figure&gt;&lt;caption&gt;...&lt;/caption&gt;...&lt;/figure&gt;;_&lt;details&gt;&lt;label&gt;...&lt;/label&gt;...&lt;/details&gt;)">Proposal 4 (<code>&lt;figure&gt;&lt;caption&gt;...&lt;/caption&gt;...&lt;/figure&gt;; &lt;details&gt;&lt;label&gt;...&lt;/label&gt;...&lt;/details&gt;</code>)</span></h2>
+<p>The proposal is to use the caption element within figure and the label element within details for marking up the captions.
+</p><p>CON: "caption" has significant unsolved parsing problems.
+</p><p>CON: "label" use in &lt;details&gt; would prevent the summary of a &lt;details&gt; from containing a labeled &lt;progress&gt; element, which is common, and would make the content model ambiguous (since the contents of a &lt;details&gt; can itself contain labels).
+</p>
+<h2><span id="Proposal_5_.28.3Cfigure.3E.3Ch1.3E....3C.2Fh1.3E....3C.2Ffigure.3E.3B_.3Cdetails.3E.3Ch1.3E....3C.2Fh1.3E....3C.2Fdetails.3E.29"></span><span class="mw-headline" id="Proposal_5_(&lt;figure&gt;&lt;h1&gt;...&lt;/h1&gt;...&lt;/figure&gt;;_&lt;details&gt;&lt;h1&gt;...&lt;/h1&gt;...&lt;/details&gt;)">Proposal 5 (<code>&lt;figure&gt;&lt;h1&gt;...&lt;/h1&gt;...&lt;/figure&gt;; &lt;details&gt;&lt;h1&gt;...&lt;/h1&gt;...&lt;/details&gt;</code>)</span></h2>
+<p>The proposal is to repurpose the h1 element for marking up the captions within both figure and details elements.
+</p><p>CON: Styling issues in legacy UAs.
+</p><p>CON: Content model would be ambiguous.
+</p>
+<h2><span id="Proposal_6_.28.3Cfigure.3E.3Cp_caption.3E.......3C.2Ffigure.3E.29"></span><span class="mw-headline" id="Proposal_6_(&lt;figure&gt;&lt;p_caption&gt;......&lt;/figure&gt;)">Proposal 6 (<code>&lt;figure&gt;&lt;p caption&gt;...<p class="mw-empty-elt"></p>...&lt;/figure&gt;</code>)</span></h2>
+<h3><span class="mw-headline" id="Summary_3">Summary</span></h3>
+<p>The proposal is to introduce a caption attribute that may be used on an element within figure to denote the contents of that element as being the caption. This proposal does not address the details element.
+</p>
+<h3><span class="mw-headline" id="Rationale">Rationale</span></h3>
+<ul><li>This allows the most intuitive name to be used, without the problems caused by actually using &lt;caption&gt; as an element name.</li>
+<li>It roughly parallels the existing uses of attributes to tie together an element and some containing element with additional semantics, as seen in <time>.</time></li>
+<li>It does not alter the existing semantics of the element it is applied to; a &lt;ul caption&gt; is still a &lt;ul&gt;, a &lt;time caption&gt; is still a &lt;time&gt;, etc.</li>
+<li>It forgoes the need for a 'wrapper' element when you just want to immediately apply a special element.  For example, if you are putting photographs in a figure, with the only caption being the time it was taken, it would be best if you could simply put in the &lt;time&gt; without a wrapper.  That is, &lt;figure&gt;&lt;img src=foo&gt;&lt;time caption datetime=2010-01-11&gt;January 11th, 2010&lt;/time&gt;&lt;/figure&gt; is preferable to &lt;figure&gt;&lt;img src=foo&gt;&lt;caption&gt;&lt;time datetime=2010-01-11&gt;January 11th, 2010&lt;/time&gt;&lt;/caption&gt;&lt;/figure&gt;</li></ul>
+<h3><span class="mw-headline" id="Details_2">Details</span></h3>
+<ul><li>Figure content model should be changed to "Flow Content".</li>
+<li>The third paragraph in the prose (explaining the use of the &lt;dt&gt; element) should be changed to roughly: "The first child element with the caption attribute, if any, represents the caption of the figure element's contents. If there is no child element with the caption attribute, then there is no caption."</li>
+<li>The fourth paragraph in the prose (explaining the use of the &lt;dd&gt; element) should be changed to roughly: "Any additional contents of the element beyond the caption (defined above), if any, represents the element's contents. If there are no additional contents, then there are no contents."</li>
+<li>"caption" added to the list of global attributes in the "Global Attributes" section.  In its section it should contain roughly: "All HTML elements in the Flow Content category may have the caption content attribute set. The caption attribute is a boolean attribute.  When caption is set on an element that is a child of a figure element, the first such element defines the caption for that figure element.  It is invalid for a figure to have multiple child elements with the caption attribute set; in such a case, the first such element is the caption for the figure and the caption attribute is invalid and has no effect on subsequent elements.  The caption attribute is invalid and has no effect on any element that is not a direct child of a figure element."</li></ul>
+<h3><span class="mw-headline" id="Impact_2">Impact</span></h3>
+<p>Easy denotation of figure captions, without any compatibility hacks that may persist long into the future.
+</p>
+<h2><span id="Proposal_7_.28.3Cfigure.3E.3Cfcaption.3E....3C.2Ffcaption.3E....3C.2Ffigure.3E.3B_.3Cdetails.3E.3Cdlabel.3E....3C.2Fdlabel.3E....3C.2Fdetails.3E_or_.3Cfigure.3E.3Cfcaption.3E....3C.2Ffcaption.3E.3Cfbody.3E....3C.2Ffbody.3E.3C.2Ffigure.3E.3B_.3Cdetails.3E.3Cdlabel.3E....3C.2Fdlabel.3E.3Cdbody.3E....3C.2Fdbody.3E.3C.2Fdetails.3E.29"></span><span class="mw-headline" id="Proposal_7_(&lt;figure&gt;&lt;fcaption&gt;...&lt;/fcaption&gt;...&lt;/figure&gt;;_&lt;details&gt;&lt;dlabel&gt;...&lt;/dlabel&gt;...&lt;/details&gt;_or_&lt;figure&gt;&lt;fcaption&gt;...&lt;/fcaption&gt;&lt;fbody&gt;...&lt;/fbody&gt;&lt;/figure&gt;;_&lt;details&gt;&lt;dlabel&gt;...&lt;/dlabel&gt;&lt;dbody&gt;...&lt;/dbody&gt;&lt;/details&gt;)">Proposal 7 (<code>&lt;figure&gt;&lt;fcaption&gt;...&lt;/fcaption&gt;...&lt;/figure&gt;; &lt;details&gt;&lt;dlabel&gt;...&lt;/dlabel&gt;...&lt;/details&gt;</code> or <code>&lt;figure&gt;&lt;fcaption&gt;...&lt;/fcaption&gt;&lt;fbody&gt;...&lt;/fbody&gt;&lt;/figure&gt;; &lt;details&gt;&lt;dlabel&gt;...&lt;/dlabel&gt;&lt;dbody&gt;...&lt;/dbody&gt;&lt;/details&gt;</code>)</span></h2>
+<h3><span class="mw-headline" id="Summary_4">Summary</span></h3>
+<p>The current HTML5 draft uses the dt and dd elements to markup the captions and content of the figure and details elements. This change proposal explains why the dt and dd elements are a poor choice for these purposes and proposes an alternative. Specifically, the proposal is to introduce a new fcaption element for marking up the caption within figure, and a dlabel element for use within details to replace dt. In addition, it proposes an optional fbody element for use inside figure, and an optional dbody element for use inside details, to mark up the content/body and replace dd.
+</p></div>
+<!-- 
+NewPP limit report
+Cached time: 20260809185740
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.020 seconds
+Real time usage: 0.013 seconds
+Preprocessor visited node count: 93/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:1905-0!canonical and timestamp 20260809185740 and revision id 4382.
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.whatwg.org/index.php?title=Change_Proposal:_figure_and_details&amp;oldid=4382">https://wiki.whatwg.org/index.php?title=Change_Proposal:_figure_and_details&amp;oldid=4382</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+
+<nav id="p-personal" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" aria-labelledby="p-personal-label" role="navigation"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-login" class="mw-list-item"><a href="/index.php?title=Special:UserLogin&amp;returnto=Change+Proposal%3A+figure+and+details&amp;returntoquery=oldid%3D4382" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+
+<nav id="p-namespaces" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" aria-labelledby="p-namespaces-label" role="navigation"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="/wiki/Change_Proposal:_figure_and_details" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="/index.php?title=Talk:Change_Proposal:_figure_and_details&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+
+<nav id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	/>
+	<label
+		id="p-variants-label"
+		 aria-label="Change language variant"
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+
+<nav id="p-views" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" aria-labelledby="p-views-label" role="navigation"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="/wiki/Change_Proposal:_figure_and_details"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="/index.php?title=Change_Proposal:_figure_and_details&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="/index.php?title=Change_Proposal:_figure_and_details&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+
+<nav id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	/>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search WHATWG Wiki" aria-label="Search WHATWG Wiki" autocapitalize="sentences" title="Search WHATWG Wiki [f]" accesskey="f" id="searchInput"
+				>
+				<input type="hidden" name="title" value="Special:Search">
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="/"
+			title="Visit the main page"></a>
+	</div>
+	
+
+<nav id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-mainpage" class="mw-list-item"><a href="/" title="Visit the main page [z]" accesskey="z"><span>Main Page</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+
+<nav id="p-WHATWG" class="vector-menu mw-portlet mw-portlet-WHATWG vector-menu-portal portal" aria-labelledby="p-WHATWG-label" role="navigation"  >
+	<h3
+		id="p-WHATWG-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">WHATWG</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Standards" class="mw-list-item"><a href="https://spec.whatwg.org/" rel="nofollow"><span>Standards</span></a></li><li id="n-FAQ" class="mw-list-item"><a href="https://whatwg.org/faq" rel="nofollow"><span>FAQ</span></a></li><li id="n-Chat" class="mw-list-item"><a href="https://whatwg.org/chat" rel="nofollow"><span>Chat</span></a></li><li id="n-Code-of-Conduct" class="mw-list-item"><a href="https://whatwg.org/code-of-conduct" rel="nofollow"><span>Code of Conduct</span></a></li><li id="n-GitHub" class="mw-list-item"><a href="https://github.com/whatwg" rel="nofollow"><span>GitHub</span></a></li><li id="n-What-you-can-do" class="mw-list-item"><a href="/wiki/What_you_can_do"><span>What you can do</span></a></li><li id="n-To-do-list" class="mw-list-item"><a href="/wiki/Specs_todo"><span>To-do list</span></a></li></ul>
+		
+	</div>
+</nav>
+
+
+<nav id="p-Registries" class="vector-menu mw-portlet mw-portlet-Registries vector-menu-portal portal" aria-labelledby="p-Registries-label" role="navigation"  >
+	<h3
+		id="p-Registries-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Registries</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-&lt;meta-name&gt;" class="mw-list-item"><a href="/wiki/MetaExtensions"><span>&lt;meta name&gt;</span></a></li><li id="n-rel=&quot;&quot;" class="mw-list-item"><a href="http://microformats.org/wiki/existing-rel-values" rel="nofollow"><span>rel=&quot;&quot;</span></a></li></ul>
+		
+	</div>
+</nav>
+
+
+<nav id="p-tb" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Change_Proposal:_figure_and_details" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Change_Proposal:_figure_and_details" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/index.php?title=Change_Proposal:_figure_and_details&amp;oldid=4382" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/index.php?title=Change_Proposal:_figure_and_details&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 12 January 2010, at 01:31.</li>
+	<li id="footer-info-copyright">Content is available under <a href="/wiki/WHATWG_Wiki:Copyrights" title="WHATWG Wiki:Copyrights">a CC0 Universal Public Domain Declaration, with some restrictions</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-about"><a href="/wiki/WHATWG_Wiki:About">About WHATWG Wiki</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.020","walltime":"0.013","ppvisitednodes":{"value":93,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260809185740","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":274});});</script>
+</body>
+</html>

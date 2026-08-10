@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from www.w3.org/html/wg/wiki/ChangeProposals/DdDtFcaptionDlabel by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Jan 2024 22:14:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>ChangeProposals/DdDtFcaptionDlabel - HTML WG Wiki</title>
+
+<link rel="stylesheet" href="../load5f72.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=vector"/>
+<link rel="stylesheet" href="../load3fc3.css?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-ChangeProposals_DdDtFcaptionDlabel rootpage-ChangeProposals skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><div id="localNotice" lang="en" dir="ltr"><p style="text-align: left; border: thin orange solid; border-radius: 1em; padding: 1em;">
+    <strong>Warning:</strong><br />
+    This wiki has been archived and is now read-only.
+</p>
+</div></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">ChangeProposals/DdDtFcaptionDlabel</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From HTML WG Wiki</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="../ChangeProposals.html" title="ChangeProposals">ChangeProposals</a></span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><h1><span class="mw-headline" id="Change_Proposal:_.3Cfcaption.3E_and_.3Cdlabel.3E">Change Proposal: &lt;fcaption&gt; and &lt;dlabel&gt;</span></h1>
+<h2><span class="mw-headline" id="Summary">Summary</span></h2>
+<p>The current HTML5 draft uses the dt and dd elements to markup the captions and content of the figure and details elements. This change proposal explains why the dt and dd elements are a poor choice for these purposes and proposes an alternative. Specifically, the proposal is to introduce a new fcaption element for marking up the caption within figure, and a dlabel element for use within details. The content portions of these elements (as opposed to the caption or label) would not have any special markup, they would be nested directly inside the figure or details element.
+</p><p>Note: Besides "fcaption", I think an arguably equally good suggested name is "figcaption". For "dlabel", I think either "dsummary" or "summary" could be a good alternative. I'm willing to update this Change Proposal to go with those or other reasonably similar alternatives based on whatever is most popular, or just leave it to editor's discretion to choose among plausibly similar names.
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Change_Proposal:_.3Cfcaption.3E_and_.3Cdlabel.3E"><span class="tocnumber">1</span> <span class="toctext">Change Proposal: &lt;fcaption&gt; and &lt;dlabel&gt;</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Summary"><span class="tocnumber">1.1</span> <span class="toctext">Summary</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Rationale"><span class="tocnumber">1.2</span> <span class="toctext">Rationale</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Problems_with_Using_dt.2Fdd_for_figure_and_details_Elements"><span class="tocnumber">1.2.1</span> <span class="toctext">Problems with Using dt/dd for figure and details Elements</span></a>
+<ul>
+<li class="toclevel-4 tocsection-5"><a href="#Backwards_Compatibility"><span class="tocnumber">1.2.1.1</span> <span class="toctext">Backwards Compatibility</span></a></li>
+<li class="toclevel-4 tocsection-6"><a href="#Legacy_Cruft"><span class="tocnumber">1.2.1.2</span> <span class="toctext">Legacy Cruft</span></a></li>
+<li class="toclevel-4 tocsection-7"><a href="#Styling_Clashes"><span class="tocnumber">1.2.1.3</span> <span class="toctext">Styling Clashes</span></a></li>
+<li class="toclevel-4 tocsection-8"><a href="#Default_Styles"><span class="tocnumber">1.2.1.4</span> <span class="toctext">Default Styles</span></a></li>
+<li class="toclevel-4 tocsection-9"><a href="#Structural_Differences"><span class="tocnumber">1.2.1.5</span> <span class="toctext">Structural Differences</span></a></li>
+<li class="toclevel-4 tocsection-10"><a href="#Semantic_Differences"><span class="tocnumber">1.2.1.6</span> <span class="toctext">Semantic Differences</span></a></li>
+<li class="toclevel-4 tocsection-11"><a href="#Unnecessary_Elements"><span class="tocnumber">1.2.1.7</span> <span class="toctext">Unnecessary Elements</span></a></li>
+<li class="toclevel-4 tocsection-12"><a href="#Aesthetics"><span class="tocnumber">1.2.1.8</span> <span class="toctext">Aesthetics</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-13"><a href="#Why_This_Proposal_is_the_Best_Solution"><span class="tocnumber">1.2.2</span> <span class="toctext">Why This Proposal is the Best Solution</span></a>
+<ul>
+<li class="toclevel-4 tocsection-14"><a href="#Follows_HTML_Precedent_for_Structured_Elements"><span class="tocnumber">1.2.2.1</span> <span class="toctext">Follows HTML Precedent for Structured Elements</span></a></li>
+<li class="toclevel-4 tocsection-15"><a href="#Avoids_Clunky_or_Inappropriate_Names"><span class="tocnumber">1.2.2.2</span> <span class="toctext">Avoids Clunky or Inappropriate Names</span></a></li>
+<li class="toclevel-4 tocsection-16"><a href="#Does_Not_Introduce_Compatibility_Problems"><span class="tocnumber">1.2.2.3</span> <span class="toctext">Does Not Introduce Compatibility Problems</span></a></li>
+<li class="toclevel-4 tocsection-17"><a href="#Does_Not_Introduce_Redundant_Elements_for_the_Content"><span class="tocnumber">1.2.2.4</span> <span class="toctext">Does Not Introduce Redundant Elements for the Content</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="#Details"><span class="tocnumber">1.3</span> <span class="toctext">Details</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Impact"><span class="tocnumber">1.4</span> <span class="toctext">Impact</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Rationale">Rationale</span></h2>
+<h3><span class="mw-headline" id="Problems_with_Using_dt.2Fdd_for_figure_and_details_Elements">Problems with Using dt/dd for figure and details Elements</span></h3>
+<p>These considerations are also relevant for many other proposals for resolving this issue.
+</p>
+<h4><span class="mw-headline" id="Backwards_Compatibility">Backwards Compatibility</span></h4>
+<p>Due to IE's legacy parsing issues, the dt and dd elements create problems for authors attempting to use and style these elements. The simplest workaround (wrapping both figure and details in an extra div) that authors would need to apply to avoid these issues is not intuitive, as clearly demonstrated by the wide range of alternative solutions that were attempted prior to its discovery.
+</p>
+<h4><span class="mw-headline" id="Legacy_Cruft">Legacy Cruft</span></h4>
+<p>The use of extra div elements may lead to a lot of confusion among authors, at least initially, and ultimately end up becoming extraneous markup that authors just include without really understanding why, even after the current generation of browsers are long since dead.
+</p><p>We've seen this kind of problem before with authors, for example, frequently wrapping scripts with pseudo-HTML-comments initially intended to hide the script from what are now very ancient browsers, none of which have been in use for over a decade.
+</p>
+<h4><span class="mw-headline" id="Styling_Clashes">Styling Clashes</span></h4>
+<p>In addition to the aforementioned styling bug in IE, many existing stylesheets already include styles for the dt and dd elements, used in description lists (dl elements).  Authors attempting to incorporate figure or details into their existing pages would have to take care to avoid unintended styling clashes caused by selectors that aren't specific enough.  i.e.  It's common for authors to simply use the selector as "dt" or "dd", rather than "dl&gt;dt" and "dl&gt;dd", as that is currently unnecessary.  Authors will then have to adjust their styles, which could potentially cause unintended side affects to to the change in specificity of the selectors.
+</p>
+<h4><span class="mw-headline" id="Default_Styles">Default Styles</span></h4>
+<p>The default styles for dt and dd elements is not ideal for figures.  As the dd element is usually indented with margin and/or padding, authors will usually be required to remove this with their own stylesheets, rather than being able to rely on more sensible defaults. It is true that eventually UA stylesheets may have special rules for "figure &gt; dt" and the like, but during the transition period it will be extra work to remove inappropriate default styles.
+</p>
+<h4><span class="mw-headline" id="Structural_Differences">Structural Differences</span></h4>
+<p>Since authors are already familiar with the meanings and structure of dt and dd when used within dl, their very distinct meanings and structure when used within the figure and details may be confusing to authors.
+</p><p>The dl element may contain multiple groups of dt and dd elements, wheres within figure and details, each element may only be used once.
+</p><p>Within dl, a group must have one or more dt elements followed by one or more dd elements, whereas within figure, the elements may appear in any order.
+</p>
+<h4><span class="mw-headline" id="Semantic_Differences">Semantic Differences</span></h4>
+<p>For the figure element, it's not very intuitive to determine which of either dt or dd represents the caption and which represents the content such as an image.  Some authors may interpret dd as being the description, which is what it means within dl, and thus assume that dd is meant for the caption, and the dt meant for the image or other content.  However, the spec defines these with the opposite meanings, with the understanding the dt, or title, is a synonym for caption.  Both alternatives points of view make some sense, but neither stands out as being obviously correct.  This will likely lead to a lot of authors using these elements in reverse.
+</p>
+<h4><span class="mw-headline" id="Unnecessary_Elements">Unnecessary Elements</span></h4>
+<p>The dd element is completely unnecessary to distinguish it from the caption, which has its own element.  This combined with the extraneous div required for IE compatibility adds two extra elements that are not logically needed.  A previous iteration of the spec used the legend element for the caption, without any special wrapper just for the content.  This model seems much more intuitive and required less markup to use, and thus easier to get right.  Authors who do wish to have an extra wrapper around the content may use div if they choose, but should not be required to use it.
+</p><p>When there is no caption, using figure then requires authors to use 3 extra elements, where they should only need one:
+</p>
+<pre>&lt;div&gt; &lt;!-- IE legacy workaround --&gt;
+  &lt;figure&gt;
+    &lt;dd&gt;&lt;img src=&quot;image&quot; alt=&quot;...&quot;&gt;&lt;/dd&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+</pre>
+<p>This will be unappealing to authors who may, as a result of the complexity, opt not to use the figure element.
+</p>
+<h4><span class="mw-headline" id="Aesthetics">Aesthetics</span></h4>
+<p>Aesthetics is not necessarily the sole or most important concern. However, many authors seem to find the novel use of dt and dd unpleasant to read. dt and dd are relatively obscure elements, they are very short abbreviations, and their meaning in context is unclear, especially in figure. In particular, the following markup seems mysterious and strikes many as ugly and unintuitive:
+</p>
+<pre> &lt;figure&gt;
+   &lt;dd&gt;&lt;img src=&quot;image&quot; alt=&quot;...&quot;&gt;&lt;/dd&gt;
+   &lt;dt&gt;A Pair of Cats&lt;/dd&gt;
+ &lt;/figure&gt;
+</pre>
+<p>This seems to trigger a "yuck factor", and it would be wise to avoid that. Aesthetics may seem like a relatively unimportant factor; however, the desire to avoid introducing new elements that led to dt/dd being used is itself largely an aesthetic concern.
+</p>
+<h3><span class="mw-headline" id="Why_This_Proposal_is_the_Best_Solution">Why This Proposal is the Best Solution</span></h3>
+<p>In addition to the rationale relative to the status quo in the spec, this proposal is better than some of the proposed alternatives.
+</p>
+<h4><span class="mw-headline" id="Follows_HTML_Precedent_for_Structured_Elements">Follows HTML Precedent for Structured Elements</span></h4>
+<p>Some HTML elements have relatively free content models, while others are "structured" - there are some or all child elements that have special meaning. Structured elements typically have helper elements that are specific to one element, or to a small family of related elements, to express their internal structure. Examples, from past versions of HTML, new in HTML5, and proposed for future versions of HTML:
+</p>
+<ul><li> table has thead, tfoot, tbody, td, th, tr, caption, col and colgroup.</li>
+<li> ul, ol and menu have li.</li>
+<li> fieldset has legend.</li>
+<li> applet and object have param.</li>
+<li> video and audio have source.</li>
+<li> dl has dt and dd.</li>
+<li> select and datalist have option and optgroup.</li>
+<li> ruby has rp and rt.</li>
+<li> datagrid was proposed to have a number of specialized child elements.</li></ul>
+<p>In some cases (such as table or the list elements), the structured element can <i>only</i> have its specialized children. In other cases (fieldset, applet/object, or audio/video), the structured element can have relatively free content in addition to its specialized children.
+</p><p>Thus, when introducing new structured elements such as figure and details, the normal design pattern for HTML is to introduce new specialized child elements to represent their structure. It is not the norm to reuse a very common element such as "h1" to represent specialized structure in a certain context. It is not the norm to reuse specialized child elements in a way that differs from their established content and meaning, as with dt/dd or legend. And it is unprecedented to use an attribute that can occur on any element to represent specialized structure, as with the proposed caption attribute. Furthermore, details and figure are not particularly closely related in purpose. One is a UI control, the other is a representation of the structure of prose documents. So it does not make sense for them to share a specialized child element. 
+</p><p>Applying a different design pattern for internal element structure to figure and details is likely to be confusing. The confusion of deviating from the usual HTML design pattern for this is likely to be greater than the cognitive cost of introducing no or fewer new elements.
+</p>
+<h4><span class="mw-headline" id="Avoids_Clunky_or_Inappropriate_Names">Avoids Clunky or Inappropriate Names</span></h4>
+<p>The new element fltcap, suggested by another Change Proposal, appears confusing and mysterious. No one seems to get what it means on first reading. The expansion as "floating caption" seems confusing and semantically wrong. First, "floating caption" is not a very common term of art in publishing, but whenever it is used, it seems to refer to <a rel="nofollow" class="external text" href="https://www.google.com/search?client=safari&amp;rls=en&amp;q=floating+caption&amp;ie=UTF-8&amp;oe=UTF-8">captions overlayed on top of the image</a>, not figure captions in general. Furthermore, a details control does not in general have a "caption", floating or otherwise, rather it is a UI control and therefore is normally considered to have a "label". Alternately you could say "summary" based on the spec term for the short text of a details element.
+</p><p>The new element c is an extremely short and mysterious name. There is a limit to how many one-letter identifiers one can have in a language without rendering it unreadable or confusing, and they should be reserved for extremely common elements. Captions do not make the cut.
+</p><p>Reusing legend does not seem like a good semantic fit for either figure or details. While a figure's caption is sometimes called a legend, the term "legend" in this context more often refers to the key next to a map or chart explaining how to read various visual elements. A details element is a UI element and those aren't ordinarily referred to as having a legend.
+</p><p>h1 connotes "header", which is not quite right for either figure or details.
+</p><p>The caption attribute is good for figure, but not details. However, that proposal retains the dt/dd names for details. And those names remain clunky and non-obvious in the context of details (hard to remember which is which) and retain all of the general problems of using dt/dd for both elements. 
+</p><p>"caption" and "label" (or "summary"), or variations thereof, are the most semantically appropriate names for the caption and label respectively on figure and details.
+</p>
+<h4><span class="mw-headline" id="Does_Not_Introduce_Compatibility_Problems">Does Not Introduce Compatibility Problems</span></h4>
+<p>Reuse of almost any existing element in an unrelated context introduces compatibility problems, whether "hard" problems with parsing or behavior, or "soft" problems with pre-existing author styles. This Change Proposal uses brand new elements and thus avoids all these problems, unlike the use of dt/dd, legend, label, caption, or h1. All of those are known to have some lesser or greater technical issues.
+</p>
+<h4><span class="mw-headline" id="Does_Not_Introduce_Redundant_Elements_for_the_Content">Does Not Introduce Redundant Elements for the Content</span></h4>
+Semantically, and for purposes of UA behavior, we only really need to distinguish the caption part of the element. There is no need to wrap the remaining body part with a special element. True, they can be handy as a styling hook, but authors who need that styling hook can always use <div>.
+<h2><span class="mw-headline" id="Details">Details</span></h2>
+<p>This proposal includes the following specific changes:
+</p>
+<ol><li> Define a new element fcaption. Details would be approximately as follows:
+<ul><li> Categories: none</li>
+<li> Contexts in which the element may be used: As the first or last child of a figure element.</li>
+<li> Content model: flow content</li>
+<li> Content attributes: global attributes</li>
+<li> DOM interface: HTMLElement</li>
+<li> Semantics: The fcaption element represents the caption of the figure that is its parent, if it has a parent that is a figure element.</li></ul></li>
+<li> Define a new element dlabel. Details would be as above, but replacing mentions of "figure" with "details".</li>
+<li> Change figure as follows:
+<ul><li> New content model: "Flow content, optionally either preceded by or followed by an fcaption element."</li>
+<li> New caption definition: "The first fcaption element child of the element, if any, represents the caption of the figure element's contents. If there is no child fcaption element, then there is no caption."</li>
+<li> New content definition: "All child elements other than the first fcaption element, if there are any, represent the element's contents. If there are no child elements besides the first fcaption, then there are no contents.</li>
+<li> Update the examples appropriately.</li>
+<li> Update the suggested UA stylesheet in the Rendering section as appropriate.</li></ul></li>
+<li> Change details as follows:
+<ul><li> New content model: "One dlabel element, followed by Flow content."</li>
+<li> New summary definition: "The first dlabel element child of the element, if any, represents the summary of the details. If there is no child dlabel element, the user agent should provide its own label (e.g. "Details")."</li>
+<li> New details definition: "All child elements other than the first dlabel element, if there are any, represent the details. If there are no child elements besides the first dlabel, then there are no details.</li>
+<li> Update the examples appropriately.</li>
+<li> Update the suggested UA stylesheet in the Rendering section as appropriate.</li></ul></li></ol>
+<h2><span class="mw-headline" id="Impact">Impact</span></h2>
+<p>This proposal would have a potential negative impact on authors: it would introduce two new elements relative to the current spec.
+</p><p>However, the positive impact is arguably greater. The new elements would be more readable, more intuitive, and more in line with the standard HTML design pattern for structured elements. Thus, despite the addition of more elements, the overall increase in cognitive load will be less. In addition, there is no need to use &lt;div&gt; or any other wonky workarounds to get it to work in legacy UAs.
+</p><p>The impact on implementations is trivial. fcaption and dlabel are trivial to implement, and the appearance and behavior can be mostly defined via stylesheet. This is not significantly more work than altering the rendering of dt and dd inside figure and details; in fact it may be less work in some implementations.
+</p><p>The impact on conformance checkers and authoring tools is also trivial; neither approach is easier or harder to validate or generate.
+</p>
+There is no direct impact on users either way.</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20240131220637
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0 seconds
+CPU time usage: 0.007 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 75/1000000
+Preprocessor generated node count: 80/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 - -total
+-->
+
+<!-- Saved in parser cache with key wikidb-htmlwg_:pcache:idhash:40-0!*!*!!en!*!* and timestamp 20240131220637 and revision id 4746
+ -->
+</div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://www.w3.org/html/wg/wiki/index.php?title=ChangeProposals/DdDtFcaptionDlabel&amp;oldid=4746">https://www.w3.org/html/wg/wiki/index.php?title=ChangeProposals/DdDtFcaptionDlabel&amp;oldid=4746</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../Special_Categories.html" title="Special:Categories">Categories</a>: <ul><li><a href="../Category_ChangeProposal.html?redlink=1" class="new" title="Category:ChangeProposal (page does not exist)">ChangeProposal</a></li><li><a href="../Category_Label.html?redlink=1" class="new" title="Category:Label (page does not exist)">Label</a></li><li><a href="../Category_Caption.html?redlink=1" class="new" title="Category:Caption (page does not exist)">Caption</a></li><li><a href="../Category_Summary.html?redlink=1" class="new" title="Category:Summary (page does not exist)">Summary</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class=" emptyPortlet" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+													</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="DdDtFcaptionDlabel.html"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+															<li  id="ca-talk" class="new"><span><a href="https://www.w3.org/html/wg/wiki/Talk:ChangeProposals/DdDtFcaptionDlabel_source?redlink=1"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Discussion</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="DdDtFcaptionDlabel.html" >Read</a></span></li>
+															<li id="ca-viewsource"><span><a href="DdDtFcaptionDlabel_source.html"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="../Main_Page.html"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-specialpages"><a href="../Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>					</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 19 February 2010, at 19:58.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://www.w3.org/html/wg/wiki/HTML_WG_Wiki:Privacy_policy" title="HTML WG Wiki:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="../HTML_WG_Wiki_About.html" title="HTML WG Wiki:About">About HTML WG Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="https://www.w3.org/html/wg/wiki/HTML_WG_Wiki:General_disclaimer" title="HTML WG Wiki:General disclaimer">Disclaimers</a></li>
+									</ul>
+									<div style="clear:both"></div>
+		</div>
+		
+	</body>
+
+<!-- Mirrored from www.w3.org/html/wg/wiki/ChangeProposals/DdDtFcaptionDlabel by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Jan 2024 22:14:33 GMT -->
+</html>

@@ -543,3 +543,33 @@ Rawリソースの取得スクリプトとマニフェストを`raw/`直下へ�
 `AGENTS.md`をRaw sources、Wiki、Schemeの三層とIngest、Query、Research、Lintの基本操作で再構成した。証拠区分、確度、状態、要素ページ契約、敵対的検証をドメイン固有の制約として維持し、4操作のshortcutを`.agents/skills/`へ追加した。生成Indexの契約と標準ライブラリだけの生成器も追加した。
 
 既存Wikiには移行が必要である。Rawのappend-only化と全根拠資料の収録、任意のsourceページとsynthesis体系、frontmatterの`summary`、`wiki/index.md`への切り替え、`wiki/README.md`の廃止、Scheme適用後の一操作一Log項目への移行は、この変更では実施していない。過去のLogはappend-onlyの履歴として維持する。
+
+## [2026-08-11] lint | 新SchemeへのWiki移行
+
+全110 elementページ、7 lineageページ、収録範囲を新Schemeへ移行した。全ページへ一行summaryと状態を設定し、elementの証拠表を7列へ統一して、現在定義と歴史的根拠の全行へローカルRawと公開一次資料を併記した。収録範囲の正本を`scope.md`へ移し、旧`wiki/README.md`を廃止して生成物`wiki/index.md`へ切り替えた。再利用上の追加解釈を必要とする資料がなかったため、任意のsourceページは作成していない。
+
+Raw manifestを取得種別、保存先、取得元URL、取得日、SHA-256の316件へ移行し、268件のsnapshotを含む全保存対象をmanifestへ対応付けた。既存Rawを置換しない`fetch.sh`へ変更し、保存済みfileのdigestと三つの配布archiveのdigest・展開内容を検証した。壊れていた`datalist` commit、HTML+ DTD／論文、Microsoft DHTML referenceの参照先を回収または訂正した。敵対的検証ではMicrosoft referenceの`IFRAME`がHTML・scriptともIE4からとする記述を確認し、IE3のfloating-frame機能との要素単位の接続を未確認として維持した。
+
+全110 elementページの必須見出し順、空でない7列証拠表、現在定義のRaw・公開定義・確認日、各証拠行のRaw・外部URL・閲覧日、frontmatter、相対リンク、重複title、generic placeholder、孤立snapshot、manifest重複、Index再現性、状態、集計を検査した。取得途中の失敗でRawへ一部だけ追加されないことを回帰テストで確認した。全118ページと115要素を`完成`とし、確度A 83件、A− 17件、B 12件、C 3件、未評価0件が独立集計と生成Indexで一致することを確認した。
+
+## [2026-08-11] schema | 生成Indexの廃止
+
+Wikiの規模とディレクトリ構造では生成Indexが探索のための独立した価値を持たないとの判断に基づき、`wiki/index.md`、生成器、生成器テストを削除した。Indexの表示にだけ使っていた`summary`を全WikiページのfrontmatterとSchemeから削除し、各操作はWiki内検索から関連ページを選ぶ形へ戻した。検証状態を管理する`status`はIndexと独立した既存契約のため維持した。全118ページのstatus、summaryの不在、相対リンクを検査し、Raw検証と残存テストに合格した。
+
+## [2026-08-11] schema | Scope、Raw配置、資料リンク
+
+収録範囲は横断分析ではなくWiki全体の境界を定める正本であるため、`wiki/syntheses/scope.md`から`wiki/scope.md`へ移した。旧`raw/snapshots/`の268資料を個別に見直し、同じ仕様系列、配布物、repository、または保存corpusとして文脈を共有する153件を20の名前付きcollectionへ、単独で成立する115件を`raw/items/{取得元host}/`へ移した。collectionはWHATWG HTML履歴42件、HTML 4履歴18件、初期WWW 15件、WHATWG Web Applications履歴10件、W3C HTML5履歴10件、HTML 3.0 8件、RFC 1942系列6件、client-side image maps 5件、RFC 2070系列5件、HTML style履歴4件、WAI-ARIA 4件、HTML scripting履歴4件、Web Forms 2.0 4件、AAP Book DTD 3件、ruby markup 3件、HTML+ 3件、HTML object履歴3件、MathML 2件、SVG 2件、XForms 2件とした。取得元hostや話題が同じだけの資料はまとめず、配置が採用因果や証拠上の優劣を意味しない境界をSchemeとRaw READMEへ明記した。
+
+全110 elementページの証拠表を`年月日`、`資料`、`種別`、`この資料から確認できる内容`、`閲覧日`の5列へ変更した。ローカルRawを固定された検証対象として資料名へ直接リンクし、その直後に`公開元`を置く表記へ、現在定義は同じ形の`公開版`表記へ統一した。複数資料は保存資料ごとのlink labelと公開元を対応させ、同一配布物の複数ファイルだけは公開元を共有できる契約とした。
+
+全118正本ページ、554証拠行、316 manifest項目、Raw参照、内部相対リンク、frontmatter、必須見出し順、115要素の確度集計を検査した。`raw/fetch.sh`による全digest検証と取得失敗時の原子性テストに合格し、Rawの内容は変更していない。
+
+## [2026-08-11] schema | Wiki README
+
+`wiki/README.md`をWikiの入口と収録範囲の正本として作成し、`wiki/scope.md`の抽出規則、境界事例、確認日、根拠を統合して同ページを削除した。READMEにはWikiの目的と読み方、全110 elementページ、7 lineageページ、Logへの案内を収録し、elementの概要は各ページの`概要`を再利用した。sourceとsynthesisは現存しないことを明記した。
+
+README用のfrontmatter summaryや生成器は追加せず、ページの追加、削除、改名、主要結論の変更時に対応する一行概要を更新する契約とした。全110 elementページ、7 lineageページ、554証拠行、READMEのページ網羅性と概要、必須見出し順、frontmatter、Raw参照、内部相対リンク、重複title、115要素の確度集計を検査した。Raw digest検証と取得失敗時の原子性テストに合格し、Researchへ送る新しい問題はなかった。
+
+## [2026-08-11] lint | READMEの見出し
+
+READMEの一覧見出しを`要素ページ`と`共有系譜ページ`から`要素`と`共有系譜`へ変更し、案内リンクのlabelも`要素`へ揃えた。ページ網羅数、相対リンク、Markdown whitespaceを検査し、内容と構造に影響がないことを確認した。

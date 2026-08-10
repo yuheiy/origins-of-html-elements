@@ -1,0 +1,1658 @@
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html data-bs-theme="auto" lang="en">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+            
+                draft-ietf-html-style-01
+            
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://static.ietf.org/fonts/inter/import.css" rel="stylesheet">
+        <link href="https://static.ietf.org/fonts/noto-sans-mono/import.css" rel="stylesheet">
+        
+            <link rel="stylesheet" href="https://static.ietf.org/dt/12.70.0/ietf/css/document_html_referenced.css">
+            
+            <script type="module" crossorigin="" src="https://static.ietf.org/dt/12.70.0/assets/embedded-2377a63b.js"></script>
+<link href="https://static.ietf.org/dt/12.70.0/assets/create-pinia-singleton-510f8001.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+<link href="https://static.ietf.org/dt/12.70.0/assets/Scrollbar-c6614013.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+            <script src="https://static.ietf.org/dt/12.70.0/ietf/js/document_html.js"></script>
+            <script src="https://static.ietf.org/dt/12.70.0/ietf/js/theme.js"></script>
+        
+        <link rel="alternate" type="application/atom+xml" title="Document changes" href="/feed/document-changes/draft-ietf-html-style/">
+        <meta name="description"
+            
+                content="HTML and Style Sheets (Internet-Draft, 1996)"
+            >
+        
+
+<link rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor-180.png">
+<link rel="icon"
+      sizes="32x32"
+      href="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor-32.png">
+<link rel="icon"
+      sizes="16x16"
+      href="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor-16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon"
+      href="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor-mask.svg"
+      color="#ffffff">
+<meta name="msapplication-TileColor"
+      content="#ffffff">
+<meta name="theme-color"
+      content="#ffffff">
+        
+
+
+
+
+<meta property="og:title" content="HTML and Style Sheets">
+<meta property="og:url" content="https://datatracker.ietf.org/doc/html/draft-ietf-html-style-01">
+<link rel="canonical" href="https://datatracker.ietf.org/doc/html/draft-ietf-html-style-01">
+<meta property="og:site_name" content="IETF Datatracker">
+<meta property="og:description" content="The HyperText Markup Language (HTML) is a simple markup language used to create hypertext documents that are portable from one platform to another. HTML documents are SGML documents with generic semantics that are appropriate for representing information from a wide range of applications. This specification extends HTML to provide support for style rules expressed in separately specified notations. It is no longer necessary to extend HTML when new style are needed. Style rules can be (a) included with individual HTML elements to which they apply, (b) grouped together in the document head, or (c) placed in associated style sheets. This specification does not specify particular style sheet notations, leaving that to other specifications.">
+<meta property="og:type" content="article">
+
+<meta property="og:image" content="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-card.png">
+<meta property="og:image:alt" content="Logo of the IETF">
+<meta property="article:section" content="IETF - Internet Engineering Task Force">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta property="article:author" content="Dr. Dave Raggett">
+<meta property="article:author" content="Bert Bos">
+<meta property="article:author" content="Hekon Lie">
+
+
+
+        
+        <style>
+            
+            .diff-form .select2-selection__rendered {
+                direction: rtl;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <noscript><iframe class="status" title="Site status" src="/status/latest"></iframe></noscript>
+<div class="vue-embed" data-component="Status"></div>
+        <div class="btn-toolbar sidebar-toolbar position-fixed top-0 end-0 m-2 m-lg-3 d-print-none">
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary btn-sm me-1 dropdown-toggle d-flex align-items-center"
+                    id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                    aria-label="Toggle theme">
+                        <i class="theme-icon-active bi bi-circle-half"></i>
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="bd-theme">
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center"
+                            data-bs-theme-value="light" aria-pressed="false">
+                            <i class="me-2 opacity-50 theme-icon bi bi-sun-fill"></i>
+                            Light<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center"
+                            data-bs-theme-value="dark" aria-pressed="false">
+                            <i class="me-2 opacity-50 theme-icon bi bi-moon-stars-fill"></i>
+                            Dark<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center active"
+                            data-bs-theme-value="auto" aria-pressed="true">
+                            <i class="me-2 opacity-50 theme-icon bi bi-circle-half"></i>
+                            Auto<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn btn-outline-secondary btn-sm sidebar-toggle"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar"
+                    aria-expanded="true"
+                    aria-controls="sidebar"
+                    aria-label="Toggle metadata sidebar"
+                    title="Toggle metadata sidebar">
+            <i class="bi bi-arrow-bar-left sidebar-shown"></i>
+            <i class="bi bi-arrow-bar-right sidebar-collapsed"></i>
+            </button>
+        </div>
+        <nav class="navbar bg-light-subtle px-1 fixed-top d-print-none d-md-none">
+            <a class="nav-link ps-1"
+               href="/doc/draft-ietf-html-style/">
+                 
+                    draft-ietf-html-style-01
+                
+                <br class="d-sm-none">
+
+                <span class="ms-sm-3 badge rounded-pill badge-draft">
+                    
+                        None
+                    
+                </span>
+            </a>
+            <button class="navbar-toggler p-1"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#docinfo-collapse"
+                    aria-controls="docinfo-collapse"
+                    aria-expanded="false"
+                    aria-label="Show document information">
+                <span class="navbar-toggler-icon small"></span>
+            </button>
+            <div class="navbar-nav navbar-nav-scroll overscroll-none collapse pt-1" id="docinfo-collapse">
+                <div class="bg-light-subtle p-0">
+                    <table class="table table-sm table-borderless small">
+                        <tbody class="meta align-top">
+                            <tr>
+                                <th scope="row"></th>
+                                <th scope="row">Title</th>
+                                <td class="edit"></td>
+                                <td>HTML and Style Sheets</td>
+                            </tr>
+                        </tbody>
+                        
+
+
+
+
+
+
+
+<tbody class="meta align-top ">
+    <tr>
+        <th scope="row">Document</th>
+        <th scope="row">Document type</th>
+        <td class="edit"></td>
+        <td>
+            
+
+
+
+
+
+
+
+    <span class="text-danger">Expired Internet-Draft</span>
+    (<a href="/wg/html/about/">html WG</a>)
+    
+
+            
+            
+                <div class="badge rounded-pill text-bg-warning">
+                    Expired &amp; archived
+                </div>
+            
+            
+                
+
+
+
+
+    
+
+
+            
+        </td>
+    </tr>
+    
+        <tr>
+            <td></td>
+            <th scope="row">Select version</th>
+            <td class="edit"></td>
+            <td>
+                
+
+
+
+    <ul class="revision-list pagination pagination-sm text-center flex-wrap my-0">
+        
+            
+                 
+                    <li class="page-item ">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-style-00"
+                        >
+                            00
+                        </a>
+                    </li>
+                
+            
+                 
+                    <li class="page-item active">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-style-01"
+                        >
+                            01
+                        </a>
+                    </li>
+                
+            
+            
+        
+    </ul>
+
+            </td>
+        </tr>
+        
+            <tr>
+                <td></td>
+                <th scope="row">Compare versions</th>
+                <td class="edit"></td>
+                <td>
+                    
+
+
+
+<form class="form-horizontal diff-form"
+      action="https://author-tools.ietf.org/iddiff"
+      method="get"
+      target="_blank">
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="From revision"
+                    name="url1">
+                
+                    <option value="draft-ietf-html-style-01">
+                        draft-ietf-html-style-01
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-style-00" selected>
+                        draft-ietf-html-style-00
+                        
+                    </option>
+                
+                
+            </select>
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="To revision"
+                    name="url2">
+                
+                    <option value="draft-ietf-html-style-01" selected>
+                        draft-ietf-html-style-01
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-style-00">
+                        draft-ietf-html-style-00
+                        
+                    </option>
+                
+                
+            </select>
+
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--html"
+                    name="difftype">
+                Side-by-side
+            </button>
+            
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--hwdiff"
+                    name="difftype">
+                Inline
+            </button>
+
+</form>
+                </td>
+            </tr>
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">Authors</th>
+        <td class="edit">
+            
+        </td>
+        <td>
+            
+            
+                <span ><a 
+           title="Datatracker profile of Dr. Dave Raggett"
+            href="/person/dsr@w3.org" >Dr. Dave Raggett</a> <a 
+               href="mailto:dsr%40w3.org"
+               aria-label="Compose email to dsr@w3.org"
+               title="Compose email to dsr@w3.org">
+                <i class="bi bi-envelope"></i></a></span>,
+            
+                <span ><a 
+           title="Datatracker profile of Bert Bos"
+            href="/person/bert@w3.org" >Bert Bos</a> <a 
+               href="mailto:bert%40w3.org"
+               aria-label="Compose email to bert@w3.org"
+               title="Compose email to bert@w3.org">
+                <i class="bi bi-envelope"></i></a></span>,
+            
+                <span ><a 
+           title="Datatracker profile of Hekon Lie"
+            href="/person/howcome@w3.org" >Hekon Lie</a> <a 
+               href="mailto:howcome%40w3.org"
+               aria-label="Compose email to howcome@w3.org"
+               title="Compose email to howcome@w3.org">
+                <i class="bi bi-envelope"></i></a></span>
+            
+            
+                <br>
+                <a class="btn btn-primary btn-sm mt-1" href="mailto:draft-ietf-html-style@ietf.org?subject=draft-ietf-html-style" title="Send email to the document authors">Email authors</a>
+            
+        </td>
+    </tr>
+    
+    
+        
+        
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            RFC stream
+        </th>
+        <td class="edit">
+            
+        </td>
+        <td >
+            
+                
+                
+                    
+                        
+
+
+
+<img alt="IETF Logo"
+     class="d-lm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor-white.svg"
+        
+     
+     >
+
+<img alt="IETF Logo"
+     class="d-dm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor.svg"
+        
+     
+     >
+                    
+                
+                
+            
+        </td>
+    </tr>
+    
+        <tr>
+            <td></td>
+            <th scope="row">
+                Intended RFC status
+            </th>
+            <td class="edit">
+                
+            </td>
+            <td>
+                
+                    <span class="text-body-secondary">
+                        (None)
+                    </span>
+                
+            </td>
+        </tr>
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            Other formats
+        </th>
+        <td class="edit">
+        </td>
+        <td>
+            
+                
+    <div class="buttonlist">
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.ietf.org/archive/id/draft-ietf-html-style-01.txt">
+            
+                <i class="bi bi-file-text"></i> txt
+            
+        </a>
+        
+    
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/draft-ietf-html-style/01/bibtex/">
+            
+                <i class="bi bi-file-ruled"></i> bibtex
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/bibxml3/draft-ietf-html-style-01.xml">
+            
+                <i class="bi bi-file-code"></i> bibxml
+            
+        </a>
+        
+    
+</div>
+
+            
+        </td>
+    </tr>
+    
+    
+        
+            <tr>
+                <td>
+                </td>
+                <th scope="row">
+                    Additional resources
+                </th>
+                <td class="edit">
+                    
+                </td>
+                <td>
+                    
+                        
+                        
+                            
+                                <a href="http://www.ics.uci.edu/pub/ietf/html/">
+                                    Mailing list discussion
+                                </a>
+                            
+                        
+                    
+                </td>
+            </tr>
+        
+    
+</tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <th scope="row"></th>
+                            <td class="edit"></td>
+                            <td>
+                                <a class="btn btn-sm btn-warning mb-3"
+                                target="_blank"
+                                href="https://github.com/ietf-tools/datatracker/issues/new/choose">
+                                    Report a bug
+                                    <i class="bi bi-bug"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </nav>
+        <div class="row g-0">
+            <div class="col-md-9 d-flex justify-content-center lh-sm"
+                 data-bs-spy="scroll"
+                 data-bs-target="#toc-nav"
+                 data-bs-smooth-scroll="true"
+                 tabindex="0"
+                 id="content">
+                
+                    <div class="rfcmarkup">
+                        <br class="noprint">
+                        <!-- [html-validate-disable-block attr-quotes, void-style, element-permitted-content, heading-level -- FIXME: rfcmarkup/rfc2html generates HTML with issues] -->
+                        <div class="rfcmarkup"><pre>HTML and Style Sheets                                                23 Jan 96
+
+   INTERNET DRAFT                                 Bos, Raggett &amp; Lie,
+   Expires in six months                          World Wide Web Consortium
+
+                            HTML and Style Sheets
+
+                        &lt;<a href="/doc/html/draft-ietf-html-style-01.txt">draft-ietf-html-style-01.txt</a>&gt;
+
+Status of this Memo
+
+   This document is an Internet draft. Internet drafts are working
+   documents of the Internet Engineering Task Force (IETF), its areas
+   and its working groups. Note that other groups may also distribute
+   working information as Internet drafts.
+
+   Internet Drafts are draft documents valid for a maximum of six
+   months and can be updated, replaced or obsoleted by other documents
+   at any time. It is inappropriate to use Internet drafts as reference
+   material or to cite them as other than as &quot;work in progress&quot;.
+
+   To learn the current status of any Internet draft please check the
+   &quot;lid-abstracts.txt&quot; listing contained in the Internet drafts shadow
+   directories on ftp.is.co.za (Africa), nic.nordu.net (Europe),
+   munnari.oz.au (Pacific Rim), ds.internic.net (US East coast) or
+   ftp.isi.edu (US West coast). Further information about the IETF can
+   be found at URL: <a href="http://www.ietf.org/">http://www.ietf.org/</a>
+
+   Distribution of this document is unlimited. Please send comments to
+   the HTML working group (HTML-WG) of the Internet Engineering Task
+   Force (IETF) at &lt;html-wg@w3.org&gt;. Discussions of this group are
+   archived at URL:  <a href="http://www.acl.lanl.gov/HTML-WG/archives.html">http://www.acl.lanl.gov/HTML-WG/archives.html</a>.
+
+   This specification is also available via the Web in hypertext form
+   as a Working Draft of the World Wide Web Consortium, see:
+   <a href="http://www.w3.org/pub/WWW/TR">http://www.w3.org/pub/WWW/TR</a>
+
+   Authors:
+       Bert Bos &lt;bert@w3.org&gt;,
+       Dave Raggett &lt;dsr@w3.org&gt;,
+       Hakon Lie &lt;howcome@w3.org&gt;
+
+------------------------------------------------------------------------------
+Abstract
+
+   The HyperText Markup Language (HTML) is a simple markup language
+   used to create hypertext documents that are portable from one
+   platform to another. HTML documents are SGML documents with generic
+   semantics that are appropriate for representing information from a
+   wide range of applications. This specification extends HTML to
+   provide support for style rules expressed in separately specified
+   notations. It is no longer necessary to extend HTML when new styles
+   are needed. Style rules can be (a) included with individual HTML
+   elements to which they apply, (b) grouped together in the document
+   head, or (c) placed in associated style sheets. This specification
+
+Bos, Raggett &amp; Lie                                                      Page 1
+
+
+
+HTML and Style Sheets                                                23 Jan 96
+
+   does not specify particular style sheet notations, leaving that to
+   other specifications.
+
+Contents
+
+   *   Associating HTML documents with style sheets  ...................... <a href="#page-2">2</a>
+
+   *   Media dependencies  ................................................ <a href="#page-3">3</a>
+
+   *   The LINK element  .................................................. <a href="#page-3">3</a>
+
+   *   The STYLE element  ................................................. <a href="#page-4">4</a>
+
+   *   Common attributes  ................................................. <a href="#page-5">5</a>
+
+   *   The SPAN element  .................................................. <a href="#page-7">7</a>
+
+   *   The DIV element  ................................................... <a href="#page-7">7</a>
+
+   *   User interface and user supplied style sheets
+
+   *   Performance issues  ................................................ <a href="#page-9">9</a>
+
+   *   Limitations of this specification  ................................. <a href="#page-9">9</a>
+
+   *   References  ....................................................... <a href="#page-10">10</a>
+
+Associating HTML documents with Style Sheets
+
+   There are several approaches for associating HTML documents with
+   separate style sheets:
+
+   User applied style sheets
+       The user agent may provide the means for users to select and
+       apply style sheets.
+
+
+
+   Implicit associations
+       The appropriate style sheet may be implied by the URL or other
+       information describing the resource. This approach allows style
+       sheets to be retrieved in advance of, or at the same time as,
+       the HTML document itself. Implicit associations are not defined
+       in this report.
+
+
+
+   Explicit associations
+       The author can specify one or more alternative style sheets for
+       an HTML document using one of the methods described below.
+
+
+
+
+Bos, Raggett &amp; Lie                                                      Page 2
+
+
+
+HTML and Style Sheets                                                23 Jan 96
+
+   In HTML it is also possible to put style sheets in-line in the
+   document. HTML is extended with a new element and a new attribute
+   (both called STYLE), as described below. No matter how style is
+   associated with HTML, the user should be made aware that a
+   particular style has been applied and should have the option of
+   turning it off.
+
+   To make it easier to apply a style to parts of a document, two new
+   elements for use in the body of an HTML document are defined: DIV
+   and SPAN. The first is to enclose a division (chapter, section,
+   etc.) of a document, making it possible to give a whole section a
+   distinctive style. The latter is used within paragraphs, similarly
+   to EM, but in cases where none of the other HTML elements (EM,
+   STRONG, VAR, CODE, etc.) apply.
+
+Media dependencies
+
+   Styles may often be designed for a restricted range of media, e.g.
+   for graphical user interfaces with scalable fonts and millions of
+   colors; for A4 paper media; for speech output; or for simple
+   terminals with one monospace font. This proposal doesn&#x27;t provide an
+   explicit means to state the conditions under which a given style
+   sheet is applicable.
+
+   Style sheet notations may themselves provide support for media
+   dependencies. Another approach is to use a generic URL to reference
+   a style sheet, and to make the binding to a specific URL according
+   to the media required. This will be described in a separate working
+   draft.
+
+The LINK element
+
+   In HTML, the LINK element is used to create a typed hyperlink
+   between the document and some other resource. The REL attribute
+   defines the type of the link. With REL=stylesheet, the LINK element
+   can also be used to link to a style sheet.
+
+   Authors can use LINK elements to offer readers a choice of style
+   sheets, e.g:
+
+       &lt;LINK TITLE=&quot;Old&quot; REL=stylesheet HREF=&quot;old.style&quot; TYPE=&quot;application/dsssl&quot;&gt;
+       &lt;LINK TITLE=&quot;New&quot; REL=stylesheet HREF=&quot;new.style&quot; TYPE=&quot;application/rtf&quot;&gt;
+       &lt;LINK TITLE=&quot;Wacky&quot; REL=stylesheet HREF=&quot;wacky.style&quot; TYPE=&quot;text/css&quot;&gt;
+       &lt;TITLE&gt;ACME Widgets Corp&lt;/TITLE&gt;
+
+       &lt;H1&gt;ACME Widgets Corp&lt;/H1&gt;
+       &lt;P&gt;If your browser supports style sheets, try our new look
+       in old, new and wacky styles.
+
+       ...
+
+   This specification builds upon the definition of the LINK element in
+   HTML 2.0 (<a href="/doc/html/rfc1866">RFC 1866</a>) in the following respects:
+
+Bos, Raggett &amp; Lie                                                      Page 3
+
+
+
+HTML and Style Sheets                                                23 Jan 96
+
+       &lt;!ELEMENT LINK - O EMPTY&gt;
+       &lt;!ATTLIST LINK
+           href    CDATA     #REQUIRED  -- Uniform Resource Locator --
+           title   CDATA     #IMPLIED   -- advisory title string --
+           rel     CDATA     #IMPLIED   -- forward link type --
+           rev     CDATA     #IMPLIED   -- reverse link type --
+           type    CDATA     #IMPLIED   -- advisory Internet media type --
+           &gt;
+
+   *   The forward link type &quot;stylesheet&quot; is hereby defined to signify
+       that the associated LINK element specifies a link to a style
+       sheet that may be applied to the HTML document containing the
+       LINK element. The HREF attribute specifies the network address
+       of the linked style sheet.
+
+   *   If there are several such links, then these are considered as
+       providing a choice of alternative style sheets. The character
+       string supplied with the TITLE attribute is recommended for use
+       in building a menu of alternative styles. Note that the order of
+       such LINK elements in the document markup does not signify
+       preference order.
+
+   *   The TYPE attribute may be used to specify the Internet Media
+       type and associated parameters for the linked style sheet. This
+       allows the user agent to disregard style sheets in unsupported
+       notations, without the need to first make a remote query across
+       the network.
+
+The STYLE element
+
+   A single STYLE element may be included in the document head. It
+   allows authors to include style rules within the HTML document, e.g.
+
+       &lt;HEAD&gt;
+       &lt;TITLE&gt;Title&lt;/TITLE&gt;
+       &lt;STYLE TYPE=&quot;text/css&quot;&gt;
+         H1 { color: brown }
+         P  { color: blue  }
+       &lt;/STYLE&gt;
+       &lt;/HEAD&gt;
+
+   The STYLE element is formally defined by:
+
+       &lt;!ELEMENT style - O (#PCDATA)&gt;
+       &lt;!ATTLIST style
+           type     CDATA    #REQUIRED -- Internet media type for style --
+           title    CDATA    #IMPLIED  -- advisory title for this style --
+           &gt;
+
+   The attributes are defined as follows:
+
+
+
+
+Bos, Raggett &amp; Lie                                                      Page 4
+
+
+
+HTML and Style Sheets                                                23 Jan 96
+
+   TYPE
+       This required attribute defines the style notation as an
+       Internet Media type including associated parameters. It is used
+       in the same way as with LINK elements. The type applies to style
+       rules in the STYLE element as well as those attached with the
+       STYLE attribute.
+
+
+
+   TITLE
+       The user agent is recommended to use the title string when
+       building a menu of alternative style sheets. This will only
+       happen if the STYLE element occurs together with linked style
+       sheets as specified by one or more LINK elements. In the absence
+       of such LINK elements, the TITLE attribute may be used to
+       describe the style sheet for the purpose of allowing the user to
+       turn style sheets on and off.
+
+
+
+   The content model for the STYLE element precludes SGML tags, and the
+   end tag of a STYLE element can usually be omitted, e.g. when the
+   STYLE element is followed by another element. Some characters may
+   require escaping with their SGML entity names: &quot;&amp;&quot; followed by a
+   letter or &quot;#&quot; character should be represented by &quot;&amp;&quot; while &quot;&lt;&quot;
+   followed by a letter, &quot;!&quot; or &quot;?&quot; character should be represented by
+   &quot;&lt;&quot;.
+
+   When the STYLE element occurs together with one or more LINK
+   elements that specify linked style sheets, the user agent should
+   consider the STYLE element in preference to the LINK elements. The
+   rendering implied by the STYLE element is independent of such LINK
+   elements, i.e. it is not cascaded with style sheets specified by
+   LINK elements.
+
+Common attributes
+
+   To support effective use of style sheets with HTML documents a
+   number of common attributes are proposed. These can be used with
+   most HTML elements. In general, all attribute names and values in
+   this specification are case insensitive, except where noted
+   otherwise.
+
+
+   &lt;!ENTITY % attrs
+          &quot;id      ID       #IMPLIED  -- element identifier --
+           class   NAMES    #IMPLIED  -- for subclassing elements --
+           style   CDATA    #IMPLIED  -- rendering annotation --
+           lang    NAME     #IMPLIED  -- as per <a href="/doc/html/rfc1766">RFC 1766</a> --
+           dir   (ltr|rtl)  #IMPLIED  -- I18N text direction --&quot;&gt;
+
+
+
+
+Bos, Raggett &amp; Lie                                                      Page 5
+
+
+
+HTML and Style Sheets                                                23 Jan 96
+
+   ID
+       Used to define a document-wide identifier. This can be used for
+       naming positions within documents as the destination of a
+       hypertext link. It may also be used by style sheets for
+       rendering an element in a unique style. An ID attribute value is
+       an SGML NAME token. NAME tokens are formed by an initial letter
+       followed by letters, digits, &quot;-&quot; and &quot;.&quot; characters. The letters
+       are restricted to A-Z and a-z.
+
+   CLASS
+       A space separated list of SGML NAME tokens. CLASS names specify
+       that the element belongs to the corresponding named classes.
+       These may be used by style sheets to provide class dependent
+       renderings.
+
+   STYLE
+       A text string providing rendering information specific to this
+       element. The notation is specified with the STYLE element in the
+       document head.
+
+       For example:
+
+           &lt;TITLE&gt;Test Document&lt;/TITLE&gt;
+           &lt;STYLE TYPE=&quot;text/css&quot;&gt;
+           &lt;P STYLE=&quot;color: red; font-style: small-caps&quot;&gt;This text should
+            be in small capitals and colored red!
+
+       The end tag for the STYLE element has been omitted here since
+       the element is unambiguously ended by the &lt;P&gt; start tag.
+
+
+
+   LANG
+       A LANG attribute identifies the natural language used by the
+       content of the associated element.The syntax and registry of
+       language values are defined by <a href="/doc/html/rfc1766">RFC 1766</a>. In summary the language
+       is given as a primary tag followed by zero or more subtags,
+       separated by &quot;-&quot;. White space is not allowed and all tags are
+       case insensitive. The name space of tags is administered by
+       IANA. The two letter primary tag is an ISO 639 language
+       abbreviation, while the initial subtag is a two letter ISO 3166
+       country code. Example values for LANG include:
+
+             en, en-US, en-uk, i-cherokee, x-pig-latin.
+
+   DIR
+       Human writing systems are grouped into scripts, which determine
+       amongst other things, the direction the characters are written.
+       Elements of the Latin script are nominally left to right, while
+       those of the Arabic script are nominally right to left. These
+       characters have what is called strong directionality. Other
+       characters can be directionally neutral (spaces) or weak
+       (punctuation).
+
+Bos, Raggett &amp; Lie                                                      Page 6
+
+
+
+HTML and Style Sheets                                                23 Jan 96
+
+       The DIR attribute specifies an encapsulation boundary which
+       governs the interpretation of neutral and weakly directional
+       characters. It does not override the directionality of strongly
+       directional characters. The DIR attribute value is one of LTR
+       for left to right, or RTL for right to left, e.g. DIR=RTL.
+
+The SPAN element
+
+       &lt;!ELEMENT span O O (%text)*&gt;
+       &lt;!ATTLIST span
+               %attrs;     -- id, class, style, lang and dir --
+               &gt;
+
+   Sometimes it is desirable to apply a style to some text which
+   doesn&#x27;t have a structural role or established rendering convention.
+   For instance, the first few words of an article may be rendered as
+   small capital letters (&quot;small-caps&quot;). In such situations it is
+   inappropriate to use an existing tag such as EM: on existing user
+   agents the first few words would be mysteriously italicized. The new
+   SPAN tag is recommended instead, as it has no effect on existing
+   user agents.
+
+   An example based on CSS:
+
+       &lt;TITLE&gt;Title&lt;/TITLE&gt;
+       &lt;STYLE TYPE=&quot;text/css&quot;&gt;
+       SPAN { font-style: small-caps }
+       &lt;/STYLE&gt;
+       &lt;P&gt;&lt;SPAN&gt;The first&lt;/SPAN&gt; few words of this
+       article is in small-caps.
+
+   This would be formatted to look something like:
+
+       THE FIRST few words of this
+       article is in small-caps.
+
+   While on an existing user agent it would look like:
+
+       The first few words of this
+       article is small-caps.
+
+
+   The SPAN element can be used anywhere that the HTML EM element is
+   allowed.
+
+The DIV element
+
+       &lt;!ELEMENT div - - (%body.content)*&gt;
+       &lt;!ATTLIST div
+               %attrs;     -- id, class, style, lang and dir --
+               align    (left|center|right|justify)  #IMPLIED
+               &gt;
+
+
+Bos, Raggett &amp; Lie                                                      Page 7
+
+
+
+HTML and Style Sheets                                                23 Jan 96
+
+   The DIV element is used with the CLASS attribute to represent
+   different kinds of containers, e.g. chapter, section, abstract, or
+   appendix. DIV allows the enclosed group of elements to be given a
+   distinctive style. For example:
+
+       &lt;DIV CLASS=Abstract&gt;
+       &lt;P&gt;The Chieftain product range is the white-hot hope for the
+       coming year. This report sets out how to position Chieftain
+       against competing products.
+
+       &lt;P&gt;Chieftain replaces the Commander range, which will
+       remain on the price list until further notice.
+       &lt;/DIV&gt;
+
+   The DIV element can be used anywhere that the HTML P element is
+   allowed. The content model for DIV allows headers, lists, paragraphs
+   as well as other DIV elements etc. This allows DIVs to be nested, to
+   form hierarchies of chapters, sections, and subsections etc.
+
+   DIV can be used with an ALIGN attribute to specify the default
+   horizontal alignment for the contents of the DIV element. This is
+   needed for compatibility with deployed browsers and may be overriden
+   by style sheets.
+
+   ALIGN=LEFT
+       Lines are aligned flush left
+
+   ALIGN=CENTER
+       Lines are centered.
+
+   ALIGN=RIGHT
+       Lines are aligned flush right
+
+   ALIGN=JUSTIFY
+       Lines are justified where practical, otherwise this has the same
+       effect as ALIGN=LEFT
+
+User interface and user supplied style sheets
+
+   In an interactive user agent, the user should be made aware that a
+   particular style sheet has been applied, and be given the option of
+   turning it off or selecting a different style. A flag in the corner
+   of the window and a toggle in a menubar can be sufficient.
+
+   It may be possible for the user to combine several of the available
+   style sheets. It should be possible for the user to choose a
+   personal style instead of, or in combination with, style sheets
+   supplied by the author.
+
+   When a user agent applies a style sheet to a document while the
+   author of that document has indicated a preference for a different
+   style sheet, the user agent may have to alert the user to that fact.
+   Exactly how and when that is done is outside the scope of this
+
+Bos, Raggett &amp; Lie                                                      Page 8
+
+
+
+HTML and Style Sheets                                                23 Jan 96
+
+   report. E.g., the CSS style sheet language gives rules for the
+   conditions under which a user is allowed to override the author&#x27;s choices.
+
+Performance issues
+
+   Some people have voiced concerns over performance issues for style
+   sheets. For instance, fetching a LINKed style sheet may delay the
+   full presentation for the user. A similar situation arises if the
+   document head includes a lengthy set of style rules.
+
+   The current proposal sidesteps these issues by allowing authors to
+   include rendering instructions within each HTML element. The
+   rendering information is then always available by the time the user
+   agent wants to render each element.
+
+   In many cases, authors will take advantage of a common style sheet
+   for a group of documents. In this case, distributing style rules
+   throughout the document will actually lead to worse performance than
+   using a linked style sheet, since for most documents, the style
+   sheet will already be present in the local cache. The public
+   availability of good style sheets will encourage this effect.
+
+Limitations of this specification
+
+   This specification limits the number of STYLE elements to one per
+   document. If later revisions allow multiple STYLE elements in the
+   document head (e.g. to cater for alternative styles) one will need a
+   different way of specifying the style notation for STYLE attributes
+   on the elements in the document body. The suggested choice is an
+   attribute on the BODY element, e.g. &quot;styletype&quot;, with the same
+   definition as the &quot;type&quot; attribute for the STYLE element.
+
+   Also, there is no way to specify that two or more style sheet are to
+   be merged. A common case is where the style of a document is based
+   on an organization-wide style sheet (which is likely to be cached),
+   but needs document-specific overrides. This functionality may be
+   added in the future, but can also be provided by the style sheet
+   notation itself, e.g. in CSS one can specify:
+
+       &lt;HEAD&gt;
+       &lt;TITLE&gt;Title&lt;/TITLE&gt;
+       &lt;STYLE TYPE=&quot;text/css&quot;&gt;
+         @import &quot;house-style.css&quot;
+         @import &quot;<a href="/doc/html/draft-report">draft-report</a>.css&quot;
+         H1 { color: red }     /* override cascaded style sheets */
+       &lt;/STYLE&gt;
+       &lt;/HEAD&gt;
+
+
+
+
+
+
+
+Bos, Raggett &amp; Lie                                                      Page 9
+
+
+
+HTML and Style Sheets                                                23 Jan 96
+
+References
+
+   <a href="/doc/html/rfc1866">RFC 1866</a>
+       &quot;Hypertext Markup Language - 2.0&quot; by T. Berners-Lee &amp; D.
+       Connolly, November 1995. This document can be downloaded from
+       <a href="ftp://ds.internic.net/rfc/rfc1866.txt">ftp://ds.internic.net/rfc/rfc1866.txt</a>.
+
+   <a href="/doc/html/rfc1766">RFC 1766</a>
+       &quot;Tags for the Identification of Languages&quot;, by H. Alvestrand,
+       UNINETT, March 1995. This document can be downloaded from
+       <a href="ftp://ds.internic.net/rfc/rfc1766.txt">ftp://ds.internic.net/rfc/rfc1766.txt</a>.
+
+   CSS
+       &quot;Cascading style sheets&quot; by Hakon Lie &amp; Bert Bos, December 1995.
+       The latest version of this document can be downloaded from
+       <a href="http://www.w3.org/pub/WWW/TR/WD-css1.html">http://www.w3.org/pub/WWW/TR/WD-css1.html</a>
+
+------------------------------------------------------------------------------
+    The World Wide Web Consortium: <a href="http://www.w3.org/">http://www.w3.org/</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bos, Raggett &amp; Lie                                                     Page 10
+</pre></div>
+                    </div>
+                
+            </div>
+            <div class="d-print-none col-md-3 bg-light-subtle collapse show" id="sidebar">
+                <div class="position-fixed border-start sidebar overflow-scroll overscroll-none no-scrollbar">
+                    <div class="d-flex flex-column vh-100 pt-2 pt-lg-3 ps-3 pl-md-2 pl-lg-3">
+                        <div>
+                            <a class="btn btn-primary btn-sm" href="/doc/draft-ietf-html-style/">Datatracker</a>
+                            <p class="fw-bold pt-2">
+                                
+                                    draft-ietf-html-style-01
+                                
+                                <br>
+                                
+
+
+
+
+
+
+
+    <span class="text-danger">Expired Internet-Draft</span>
+    (<a href="/wg/html/about/">html WG</a>)
+    
+
+                            </p>
+                        </div>
+                        
+                        <ul class="nav nav-tabs nav-fill small me-2" role="tablist">
+                            <li class="nav-item" role="presentation" title="Document information">
+                                <button class="nav-link px-2"
+                                        id="docinfo-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#docinfo-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="docinfo-tab-pane"
+                                        aria-selected="true">
+                                    <i class="bi bi-info-circle"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Info</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation" title="Table of contents">
+                                <button class="nav-link px-2"
+                                        id="toc-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#toc-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="toc-tab-pane"
+                                        aria-selected="false">
+                                    <i class="bi bi-list-ol"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Contents</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation" title="Preferences">
+                                <button class="nav-link px-2"
+                                        id="pref-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#pref-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="pref-tab-pane"
+                                        aria-selected="false">
+                                    <i class="bi bi-gear"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Prefs</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="overflow-auto tab-content pt-2 me-2">
+                            <div class="tab-pane"
+                                 id="docinfo-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="docinfo-tab"
+                                 tabindex="0">
+                                <table class="table table-sm table-borderless">
+                                    
+
+
+
+
+
+
+
+<tbody class="meta align-top ">
+    <tr>
+        <th scope="row">Document</th>
+        <th scope="row">Document type</th>
+        <td class="edit"></td>
+        <td>
+            
+
+
+
+
+
+
+
+    <span class="text-danger">Expired Internet-Draft</span>
+    (<a href="/wg/html/about/">html WG</a>)
+    
+
+            
+            
+                <div class="badge rounded-pill text-bg-warning">
+                    Expired &amp; archived
+                </div>
+            
+            
+                
+
+
+
+
+    
+
+
+            
+        </td>
+    </tr>
+    
+        <tr>
+            <td></td>
+            <th scope="row">Select version</th>
+            <td class="edit"></td>
+            <td>
+                
+
+
+
+    <ul class="revision-list pagination pagination-sm text-center flex-wrap my-0">
+        
+            
+                 
+                    <li class="page-item ">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-style-00"
+                        >
+                            00
+                        </a>
+                    </li>
+                
+            
+                 
+                    <li class="page-item active">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-style-01"
+                        >
+                            01
+                        </a>
+                    </li>
+                
+            
+            
+        
+    </ul>
+
+            </td>
+        </tr>
+        
+            <tr>
+                <td></td>
+                <th scope="row">Compare versions</th>
+                <td class="edit"></td>
+                <td>
+                    
+
+
+
+<form class="form-horizontal diff-form"
+      action="https://author-tools.ietf.org/iddiff"
+      method="get"
+      target="_blank">
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="From revision"
+                    name="url1">
+                
+                    <option value="draft-ietf-html-style-01">
+                        draft-ietf-html-style-01
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-style-00" selected>
+                        draft-ietf-html-style-00
+                        
+                    </option>
+                
+                
+            </select>
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="To revision"
+                    name="url2">
+                
+                    <option value="draft-ietf-html-style-01" selected>
+                        draft-ietf-html-style-01
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-style-00">
+                        draft-ietf-html-style-00
+                        
+                    </option>
+                
+                
+            </select>
+
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--html"
+                    name="difftype">
+                Side-by-side
+            </button>
+            
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--hwdiff"
+                    name="difftype">
+                Inline
+            </button>
+
+</form>
+                </td>
+            </tr>
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">Authors</th>
+        <td class="edit">
+            
+        </td>
+        <td>
+            
+            
+                <span ><a 
+           title="Datatracker profile of Dr. Dave Raggett"
+            href="/person/dsr@w3.org" >Dr. Dave Raggett</a> <a 
+               href="mailto:dsr%40w3.org"
+               aria-label="Compose email to dsr@w3.org"
+               title="Compose email to dsr@w3.org">
+                <i class="bi bi-envelope"></i></a></span>,
+            
+                <span ><a 
+           title="Datatracker profile of Bert Bos"
+            href="/person/bert@w3.org" >Bert Bos</a> <a 
+               href="mailto:bert%40w3.org"
+               aria-label="Compose email to bert@w3.org"
+               title="Compose email to bert@w3.org">
+                <i class="bi bi-envelope"></i></a></span>,
+            
+                <span ><a 
+           title="Datatracker profile of Hekon Lie"
+            href="/person/howcome@w3.org" >Hekon Lie</a> <a 
+               href="mailto:howcome%40w3.org"
+               aria-label="Compose email to howcome@w3.org"
+               title="Compose email to howcome@w3.org">
+                <i class="bi bi-envelope"></i></a></span>
+            
+            
+                <br>
+                <a class="btn btn-primary btn-sm mt-1" href="mailto:draft-ietf-html-style@ietf.org?subject=draft-ietf-html-style" title="Send email to the document authors">Email authors</a>
+            
+        </td>
+    </tr>
+    
+    
+        
+        
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            RFC stream
+        </th>
+        <td class="edit">
+            
+        </td>
+        <td >
+            
+                
+                
+                    
+                        
+
+
+
+<img alt="IETF Logo"
+     class="d-lm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor-white.svg"
+        
+     
+     >
+
+<img alt="IETF Logo"
+     class="d-dm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor.svg"
+        
+     
+     >
+                    
+                
+                
+            
+        </td>
+    </tr>
+    
+        <tr>
+            <td></td>
+            <th scope="row">
+                Intended RFC status
+            </th>
+            <td class="edit">
+                
+            </td>
+            <td>
+                
+                    <span class="text-body-secondary">
+                        (None)
+                    </span>
+                
+            </td>
+        </tr>
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            Other formats
+        </th>
+        <td class="edit">
+        </td>
+        <td>
+            
+                
+    <div class="buttonlist">
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.ietf.org/archive/id/draft-ietf-html-style-01.txt">
+            
+                <i class="bi bi-file-text"></i> txt
+            
+        </a>
+        
+    
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/draft-ietf-html-style/01/bibtex/">
+            
+                <i class="bi bi-file-ruled"></i> bibtex
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/bibxml3/draft-ietf-html-style-01.xml">
+            
+                <i class="bi bi-file-code"></i> bibxml
+            
+        </a>
+        
+    
+</div>
+
+            
+        </td>
+    </tr>
+    
+    
+        
+            <tr>
+                <td>
+                </td>
+                <th scope="row">
+                    Additional resources
+                </th>
+                <td class="edit">
+                    
+                </td>
+                <td>
+                    
+                        
+                        
+                            
+                                <a href="http://www.ics.uci.edu/pub/ietf/html/">
+                                    Mailing list discussion
+                                </a>
+                            
+                        
+                    
+                </td>
+            </tr>
+        
+    
+</tbody>
+                                </table>
+                                <a class="btn btn-sm btn-warning mb-3"
+                                target="_blank"
+                                href="https://github.com/ietf-tools/datatracker/issues/new/choose">
+                                    Report a datatracker bug
+                                    <i class="bi bi-bug"></i>
+                                </a>
+                            </div>
+                            <div class="tab-pane mb-5"
+                                 id="toc-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="toc-tab"
+                                 tabindex="0">
+                                <nav class="nav nav-pills flex-column small" id="toc-nav">
+                                </nav>
+                            </div>
+                            <div class="tab-pane mb-5 small"
+                                 id="pref-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="pref-tab"
+                                 tabindex="0">
+                                <label class="form-label fw-bold mb-2">Show sidebar by default</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="sidebar" id="on-radio">
+                                    <label class="btn btn-outline-primary" for="on-radio">Yes</label>
+                                    <input type="radio" class="btn-check" name="sidebar" id="off-radio">
+                                    <label class="btn btn-outline-primary" for="off-radio">No</label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">Tab to show by default</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="deftab" id="docinfo-radio">
+                                    <label class="btn btn-outline-primary" for="docinfo-radio">
+                                        <i class="bi bi-info-circle me-1"></i>Info
+                                    </label>
+                                    <input type="radio" class="btn-check" name="deftab" id="toc-radio">
+                                    <label class="btn btn-outline-primary" for="toc-radio">
+                                        <i class="bi bi-list-ol me-1"></i>Contents
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">HTMLization configuration</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="htmlconf" id="txt-radio">
+                                    <label class="btn btn-outline-primary" for="txt-radio" title="This is the traditional HTMLization method.">
+                                        <i class="bi bi-badge-sd me-1"></i>HTMLize the plaintext
+                                    </label>
+                                    <input type="radio" class="btn-check" name="htmlconf" id="html-radio">
+                                    <label class="btn btn-outline-primary" for="html-radio" title="This is the modern HTMLization method.">
+                                        <i class="bi bi-badge-hd me-1"></i>Plaintextify the HTML
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2" for="ptsize">Maximum font size</label>
+                                <input type="range" class="form-range" min="7" max="16" id="ptsize" oninput="ptdemo.value = ptsize.value">
+                                <label class="form-label fw-bold mt-4 mb-2">Page dependencies</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="pagedeps" id="inline-radio">
+                                    <label class="btn btn-outline-primary" for="inline-radio" title="Generate larger, standalone web pages that do not require network access to render.">
+                                        <i class="bi bi-box me-1"></i>Inline
+                                    </label>
+                                    <input type="radio" class="btn-check" name="pagedeps" id="reference-radio">
+                                    <label class="btn btn-outline-primary" for="reference-radio" title="Generate regular web pages that require network access to render.">
+                                        <i class="bi bi-link-45deg me-1"></i>Reference
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">Citation links</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="reflinks" id="refsection-radio">
+                                    <label class="btn btn-outline-primary" for="refsection-radio" title="Citation links go to the reference section.">
+                                        <i class="bi bi-arrow-clockwise"></i> Go to reference section
+                                    </label>
+                                    <input type="radio" class="btn-check" name="reflinks" id="citation-radio">
+                                    <label class="btn btn-outline-primary" for="citation-radio" title="Citation links go directly to the cited document.">
+                                        <i class="bi bi-link-45deg me-1"></i>Go to linked document
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<script>
+  var _paq = window._paq || [];
+  
+  _paq.push(['disableCookies']);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.ietf.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', 7]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.ietf.org/matomo.php?idsite=7" style="border:0;" alt="" /></p></noscript>
+
+    <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2912a8688c53f22',t:'MTc4NjM4NzYxNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

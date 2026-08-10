@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、taskのcompletion progressを表す。`value`がない場合はindeterminate、ある場合は`max`に対する完了量を示す。[一次定義](https://html.spec.whatwg.org/multipage/form-elements.html#the-progress-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、taskのcompletion progressを表す。`value`がない場合はindeterminate、ある場合は`max`に対する完了量を示す。[HTML Living Standard](../../raw/html-living-standard/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-progress-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -42,20 +42,20 @@ placeholderより前の接続は未確認のため矢印で補わない。
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2003-10-14 | XForms 1.0 | W3C Recommendation | 定義するform controlsにprogress controlがない | https://www.w3.org/TR/2003/REC-xforms-20031014/slice8.html | 2026-08-10 |
-| 2004-12-08（2004-12-10保存） | *Web Applications 1.0*, “Progress meters” | WHATWG草案の同時代保存版 | `gauge`に似るprogress barと、numerator欠落時のindeterminate状態を記したplaceholder。同草案はXUL／XAML等からの独立性も明記 | https://web.archive.org/web/20041210054847id_/http://www.whatwg.org/specs/web-apps/current-work/ | 2026-08-10 |
-| 2004-12-14 | Christopher Cook, “Web Forms 2.0 - File Upload Progress?” | WHATWG mailing-list proposal | DOM-accessibleなupload progressをpageへ提供する要求。placeholderより後発 | https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-December/044982.html | 2026-08-10 |
-| 2004-12-16 PST（17日UTC） | Ian Hicksonの回答 | WHATWG mailing-list・編集者回答 | Upload feedbackはpageでなくUAが提供すべきとして提案経路を退けた | https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-December/045003.html | 2026-08-10 |
-| 2005-09-01 | Ian Hickson, “Status update” | WHATWG mailing-list | 今後仕様化する新要素として`progress`を列挙 | https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-September/004660.html | 2026-08-10 |
-| 2006-01-01 | *Web Applications 1.0* | WHATWG公式snapshot | 2004年と同じProgress meters placeholderが正式要素化直前まで継続 | https://www.whatwg.org/specs/web-apps/2006-01-01/ | 2026-08-10 |
-| 2006-03-02 | WHATWG HTML commit `c3550d90` | 仕様source・初回Git収録 | WIP `progress`、task completion、indeterminate状態の初期設計 | https://github.com/whatwg/html/commit/c3550d90867392905edbd91c94fec8c89fbfe648 | 2026-08-09 |
-| 2006-03-28 | *Web Applications 1.0*, revision 15 | WHATWG保存仕様 | task completion用`progress`と`meter`との役割分離 | https://platform.html5.org/history/webapps/r15.html#the-progress | 2026-08-09 |
-| 2006-03-29 | WHATWG HTML commit `f8514de7`（revision 15） | 仕様commit | `value`, `max`, DOM interface、二状態の処理model、script更新例 | https://github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00 | 2026-08-09 |
-| 2008-06-10 | *HTML 5: The progress element* | W3C Working Draft | HTML5で継承されたtask progress、二状態、script更新例 | https://www.w3.org/TR/2008/WD-html5-20080610/text-level.html#the-progress | 2026-08-09 |
-| 2009-08-12 | Ian Hickson, “Spec comments, sections 3.1-4.7” | WHATWG mailing-list・編集者説明 | 画像等による非アクセシブルなprogress barを置換し、platform-native表示を得るという目的 | https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-August/064204.html | 2026-08-10 |
-| 2026-08-09 | *HTML Living Standard: The progress element* | 現行仕様 | `progress`の現行定義 | https://html.spec.whatwg.org/multipage/form-elements.html#the-progress-element | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2003-10-14 | [XForms 1.0](../../raw/xforms/e433f184df7eeea4-slice8.html)（[公開元](https://www.w3.org/TR/2003/REC-xforms-20031014/slice8.html)） | W3C Recommendation | 定義するform controlsにprogress controlがない | 2026-08-10 |
+| 2004-12-08（2004-12-10保存） | [*Web Applications 1.0*, “Progress meters”](../../raw/whatwg-web-apps-history/47bdd5e05dea69cc-current.html)（[公開元](https://web.archive.org/web/20041210054847id_/http://www.whatwg.org/specs/web-apps/current-work/)） | WHATWG草案の同時代保存版 | `gauge`に似るprogress barと、numerator欠落時のindeterminate状態を記したplaceholder。同草案はXUL／XAML等からの独立性も明記 | 2026-08-10 |
+| 2004-12-14 | [Christopher Cook, “Web Forms 2.0 - File Upload Progress?”](../../raw/items/lists.whatwg.org/049ae403edffc911-044982.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-December/044982.html)） | WHATWG mailing-list proposal | DOM-accessibleなupload progressをpageへ提供する要求。placeholderより後発 | 2026-08-10 |
+| 2004-12-16 PST（17日UTC） | [Ian Hicksonの回答](../../raw/items/lists.whatwg.org/cb120ff424b50ef8-045003.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-December/045003.html)） | WHATWG mailing-list・編集者回答 | Upload feedbackはpageでなくUAが提供すべきとして提案経路を退けた | 2026-08-10 |
+| 2005-09-01 | [Ian Hickson, “Status update”](../../raw/items/lists.whatwg.org/c5e4f0df82764589-004660.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-September/004660.html)） | WHATWG mailing-list | 今後仕様化する新要素として`progress`を列挙 | 2026-08-10 |
+| 2006-01-01 | [*Web Applications 1.0*](../../raw/whatwg-web-apps-history/c01c13a7b8b0959b-2006-.html)（[公開元](https://www.whatwg.org/specs/web-apps/2006-01-01/)） | WHATWG公式snapshot | 2004年と同じProgress meters placeholderが正式要素化直前まで継続 | 2026-08-10 |
+| 2006-03-02 | [WHATWG HTML commit `c3550d90`](../../raw/whatwg-html-history/9259f7a86e29d984-c3550d90867392905edbd91c94fec8c89fb.html)（[公開元](https://github.com/whatwg/html/commit/c3550d90867392905edbd91c94fec8c89fbfe648)） | 仕様source・初回Git収録 | WIP `progress`、task completion、indeterminate状態の初期設計 | 2026-08-09 |
+| 2006-03-28 | [*Web Applications 1.0*, revision 15](../../raw/whatwg-web-apps-history/570e99ba0021019b-r15.html)（[公開元](https://platform.html5.org/history/webapps/r15.html#the-progress)） | WHATWG保存仕様 | task completion用`progress`と`meter`との役割分離 | 2026-08-09 |
+| 2006-03-29 | [WHATWG HTML commit `f8514de7`（revision 15）](../../raw/whatwg-html-history/139e75f85d07a740-f8514de7d2d2f408e0f695dd1af3dc110f5.html)（[公開元](https://github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00)） | 仕様commit | `value`, `max`, DOM interface、二状態の処理model、script更新例 | 2026-08-09 |
+| 2008-06-10 | [*HTML 5: The progress element*](../../raw/w3c-html5-history/22ddf3f48b87feae-text-level.html)（[公開元](https://www.w3.org/TR/2008/WD-html5-20080610/text-level.html#the-progress)） | W3C Working Draft | HTML5で継承されたtask progress、二状態、script更新例 | 2026-08-09 |
+| 2009-08-12 | [Ian Hickson, “Spec comments, sections 3.1-4.7”](../../raw/items/lists.whatwg.org/e4b794fe097593b0-064204.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-August/064204.html)） | WHATWG mailing-list・編集者説明 | 画像等による非アクセシブルなprogress barを置換し、platform-native表示を得るという目的 | 2026-08-10 |
+| 2026-08-09 | [*HTML Living Standard: The progress element*](../../raw/html-living-standard/form-elements.html)（[公開元](https://html.spec.whatwg.org/multipage/form-elements.html#the-progress-element)） | 現行仕様 | `progress`の現行定義 | 2026-08-09 |
 
 ## 確度
 

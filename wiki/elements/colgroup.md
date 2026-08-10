@@ -10,7 +10,7 @@ tableの一つ以上のcolumnsをgroupingする要素である。1995年10月27�
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、親`table`内の一つ以上のcolumnsからなるgroupを表す。`span`属性がある場合はその数のcolumnsを表し、ない場合は子`col`要素によってcolumnsを指定する。[一次定義](https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、親`table`内の一つ以上のcolumnsからなるgroupを表す。`span`属性がある場合はその数のcolumnsを表し、ない場合は子`col`要素によってcolumnsを指定する。[HTML Living Standard](../../raw/html-living-standard/tables.html)（[公開版](https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,11 +36,11 @@ HTML直前の設計上の祖先はrevision 02までの`COL`によるcolumn group
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1995-10-27 | `draft-ietf-html-tables-03` | IETF Internet-Draft | revision 02までの`COL` groupではgroup内を異なるwidthにできない制約を示し、異なるwidthとalignment propertiesを与えられる新要素`COLGROUP`を導入する。 | [revision 02](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt)・[revision 03](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt) | 2026-08-09 |
-| 1996-05 | RFC 1942, *HTML Tables* | Experimental RFC | `COLGROUP`を異なるwidthとalignment propertiesを持つcolumn集合のための新要素として導入し、DTDとproperty inheritanceを定義する。 | [一次資料](https://www.rfc-editor.org/rfc/rfc1942.html) | 2026-08-09 |
-| 1997-12-18 | HTML 4.0 | W3C Recommendation | `COLGROUP`をHTML 3.2以後の新要素として採録し、異なるwidthとalignment propertiesを一つ以上の`COL`で指定できるcolumn groupのため導入したと変更付録が記録する。5要素を含むtable DTD blockはRFC 1942のIETF table standardへ帰属する。 | [HTML 4.01 DTD](../../raw/html-4.01/strict.dtd)・[changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.7) | 2026-08-10 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1995-10-27 | `draft-ietf-html-tables-03`：[revision 02](../../raw/rfc1942-html-tables/16465c2ebb4f300b-draft-ietf-html-tables-02.txt)・[revision 03](../../raw/rfc1942-html-tables/6c52ec9b048511a7-draft-ietf-html-tables-03.txt)（[公開元1](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt)・[公開元2](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)） | IETF Internet-Draft | revision 02までの`COL` groupではgroup内を異なるwidthにできない制約を示し、異なるwidthとalignment propertiesを与えられる新要素`COLGROUP`を導入する。 | 2026-08-09 |
+| 1996-05 | [RFC 1942, *HTML Tables*](../../raw/rfc1942-html-tables/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)） | Experimental RFC | `COLGROUP`を異なるwidthとalignment propertiesを持つcolumn集合のための新要素として導入し、DTDとproperty inheritanceを定義する。 | 2026-08-09 |
+| 1997-12-18 | [HTML 4.0](../../raw/html-4-history/8956e5bf2cd33e94-changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.7)） | W3C Recommendation | `COLGROUP`をHTML 3.2以後の新要素として採録し、異なるwidthとalignment propertiesを一つ以上の`COL`で指定できるcolumn groupのため導入したと変更付録が記録する。5要素を含むtable DTD blockはRFC 1942のIETF table standardへ帰属する。 | 2026-08-10 |
 
 ## 確度
 

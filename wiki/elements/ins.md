@@ -10,11 +10,11 @@ HTML+は1993年に法案修正の追加部分を表す`ADDED`を定義し、Dave
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、文書へのadditionを表す。`cite`で変更の説明先、`datetime`で変更日時を指定できる。[一次定義](https://html.spec.whatwg.org/multipage/edits.html#the-ins-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、文書へのadditionを表す。`cite`で変更の説明先、`datetime`で変更日時を指定できる。[HTML Living Standard](../../raw/html-living-standard/edits.html)（[公開版](https://html.spec.whatwg.org/multipage/edits.html#the-ins-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
-HTML+は1993年11月8日に、法律文書や法案修正で追加部分を示すための`ADDED`を定義した。Raggettは1994年にこれを表示用の`S`と区別したlogical useと説明し、HTML 3.0 DTDの履歴は1995年2月22日に`INS`と`DEL`をlegal documents用に追加したと記録する。3月28日の公開草案は`INS`をinserted text用の“New in 3.0”要素とした。[HTML+](../../raw/html-plus/htmlplus_22.html) [Raggettの説明](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/2.html) [HTML 3.0 DTD](https://www.w3.org/MarkUp/html3/html3.dtd) [HTML 3.0 Internet-Draft](https://www.w3.org/MarkUp/html3/html3.txt)
+HTML+は1993年11月8日に、法律文書や法案修正で追加部分を示すための`ADDED`を定義した。Raggettは1994年にこれを表示用の`S`と区別したlogical useと説明し、HTML 3.0 DTDの履歴は1995年2月22日に`INS`と`DEL`をlegal documents用に追加したと記録する。3月28日の公開草案は`INS`をinserted text用の“New in 3.0”要素とした。[HTML+](../../raw/html-plus/htmlplus_22.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)） [Raggettの説明](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/2.html) [HTML 3.0 DTD](https://www.w3.org/MarkUp/html3/html3.dtd) [HTML 3.0 Internet-Draft](https://www.w3.org/MarkUp/html3/html3.txt)
 
 1997年7月8日のHTML 4.0 First Public Working Draftは、別版に対して挿入されたsectionをmark upする`INS`、変更理由を指す`cite`、変更日時の`datetime`を定義した。この版はDTDでinline contentだけを許しながら本文でblock-level contentも許す不整合があったが、10月23日にHTML Working Groupが`INS`と`DEL`のcontent modelを`%flow`とすることを決議し、11月7日のProposed Recommendationが反映した。[First Public Working Draft](https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4) [Working Group議事録](https://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html) [Proposed Recommendation](https://www.w3.org/TR/PR-html40-971107/struct/text.html#h-9.4)
 
@@ -28,7 +28,7 @@ HTML 4の直前に確認できる先行要素はHTML 3.0 `INS`である。W3Cは
 
 ### 証拠
 
-HTML+の`ADDED`は法案修正で追加されたtextを示し、HTML 3.0保存ページは同仕様がHTML+の先行作業に基づくと記録する。HTML+はこの機構をrevision history用ではないとするが、HTML 4は異なる文書版に対する変更理由と日時まで表すmodelへ広げた。[HTML+](../../raw/html-plus/htmlplus_22.html) [HTML 3.0 materials](https://www.w3.org/MarkUp/html3/) [HTML 4.0 Working Draft](https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4)
+HTML+の`ADDED`は法案修正で追加されたtextを示し、HTML 3.0保存ページは同仕様がHTML+の先行作業に基づくと記録する。HTML+はこの機構をrevision history用ではないとするが、HTML 4は異なる文書版に対する変更理由と日時まで表すmodelへ広げた。[HTML+](../../raw/html-plus/htmlplus_22.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)） [HTML 3.0 materials](https://www.w3.org/MarkUp/html3/) [HTML 4.0 Working Draft](https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4)
 
 ### 解釈
 
@@ -46,19 +46,19 @@ HTML 3.0 `INS`（1995年） →［先行作業からHTML 4への集合単位の�
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1993-11-08 | HTML+ §5.10 Change Bars and Document Amendments | HTML拡張提案 | 法案修正の追加部分用に`ADDED`を定義し、revision history用ではないと限定する。 | [一次資料](../../raw/html-plus/htmlplus_22.html) | 2026-08-10 |
-| 1994-06-06 | Dave Raggett, “Re: HTML 2.0 Call for Review” | 設計者mail | 表示用の`S`とlogical useの`ADDED`／`REMOVED`を区別する。 | [一次資料](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/2.html) | 2026-08-10 |
-| 1995-02-22 | HTML 3.0 DTD history | W3C仕様草案 | Raggettが`INS`と`DEL`をlegal documents用に追加した日と要求を記録する。 | [一次資料](https://www.w3.org/MarkUp/html3/html3.dtd) | 2026-08-10 |
-| 1995-03-28 | HTML 3.0 Internet-Draft | IETF仕様草案 | `INS`をinserted text用、legal documentsを例とする“New in 3.0”の要素として定義する。 | [一次資料](https://www.w3.org/MarkUp/html3/html3.txt) | 2026-08-10 |
-| 1996-03-04 | The W3 Consortium Takes Leadership Role in the Development of HTML | W3C声明 | 後続のHTML設計がHTML+とHTML 3.0草案からdrawすると記録する。 | [一次資料](https://www.w3.org/press-releases/1996/html-leadership/) | 2026-08-10 |
-| 1996-12-09（HTTP更新） | HTML 3.0 Draft Materials | W3C保存ページ | HTML 3.0がHTML+の先行作業に基づくと明記する。 | [一次資料](https://www.w3.org/MarkUp/html3/) | 2026-08-10 |
-| 1997-07-08 | Dave Raggett, “HTML 4.0 draft available” | 編集者告知の引用保存 | First Public Working DraftをCougar草案からrewriteし、HTML Working Groupの作業とwww-html議論の結果と説明する。 | [一次資料](https://lists.w3.org/Archives/Public/www-html/1997Jul/0079.html) | 2026-08-10 |
-| 1997-07-08 | HTML 4.0 Working Draft | W3C仕様草案 | `INS`、`cite`、`datetime`、版間の挿入、draft legislation例。 | [一次資料](https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4) | 2026-08-09 |
-| 1997-10-23 | W3C HTML Working Group minutes | 標準化議事録 | `INS`／`DEL`のcontent modelをinlineまたはblockの`%flow`とすることを決議する。 | [一次資料](https://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html) | 2026-08-10 |
-| 1997-12-18 | HTML 4.0 Specification | W3C Recommendation | `INS`をHTML 3.2からのnew elementとし、文書変更markupの目的を記録。 | [一次資料](https://www.w3.org/TR/REC-html40-971218/appendix/changes.html#h-A.1.1) | 2026-08-09 |
-| 1999-12-24 | HTML 4.01 §9.4 | W3C Recommendation | `INS`の定義、attributes、法案例。 | [一次資料](https://www.w3.org/TR/html401/struct/text.html#h-9.4) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1993-11-08 | [HTML+ §5.10 Change Bars and Document Amendments](../../raw/html-plus/htmlplus_22.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)） | HTML拡張提案 | 法案修正の追加部分用に`ADDED`を定義し、revision history用ではないと限定する。 | 2026-08-10 |
+| 1994-06-06 | [Dave Raggett, “Re: HTML 2.0 Call for Review”](../../raw/items/ksi.cpsc.ucalgary.ca/9673dbebdf64db0a-2.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/2.html)） | 設計者mail | 表示用の`S`とlogical useの`ADDED`／`REMOVED`を区別する。 | 2026-08-10 |
+| 1995-02-22 | [HTML 3.0 DTD history](../../raw/html-3.0/a9898abadede1db1-html3.dtd)（[公開元](https://www.w3.org/MarkUp/html3/html3.dtd)） | W3C仕様草案 | Raggettが`INS`と`DEL`をlegal documents用に追加した日と要求を記録する。 | 2026-08-10 |
+| 1995-03-28 | [HTML 3.0 Internet-Draft](../../raw/html-3.0/a08dc01908e0d810-html3.txt)（[公開元](https://www.w3.org/MarkUp/html3/html3.txt)） | IETF仕様草案 | `INS`をinserted text用、legal documentsを例とする“New in 3.0”の要素として定義する。 | 2026-08-10 |
+| 1996-03-04 | [The W3 Consortium Takes Leadership Role in the Development of HTML](../../raw/items/www.w3.org/80854d717af8c285-html-leade.html)（[公開元](https://www.w3.org/press-releases/1996/html-leadership/)） | W3C声明 | 後続のHTML設計がHTML+とHTML 3.0草案からdrawすると記録する。 | 2026-08-10 |
+| 1996-12-09（HTTP更新） | [HTML 3.0 Draft Materials](../../raw/html-3.0/4a6968e90aeab1a2-index.html)（[公開元](https://www.w3.org/MarkUp/html3/)） | W3C保存ページ | HTML 3.0がHTML+の先行作業に基づくと明記する。 | 2026-08-10 |
+| 1997-07-08 | [Dave Raggett, “HTML 4.0 draft available”](../../raw/items/lists.w3.org/3d9620b22e590fa2-0079.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1997Jul/0079.html)） | 編集者告知の引用保存 | First Public Working DraftをCougar草案からrewriteし、HTML Working Groupの作業とwww-html議論の結果と説明する。 | 2026-08-10 |
+| 1997-07-08 | [HTML 4.0 Working Draft](../../raw/html-4-history/c3c6bbf7e288b57e-text.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4)） | W3C仕様草案 | `INS`、`cite`、`datetime`、版間の挿入、draft legislation例。 | 2026-08-09 |
+| 1997-10-23 | [W3C HTML Working Group minutes](../../raw/items/lists.w3.org/8d89cba28440552d-0160.html)（[公開元](https://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html)） | 標準化議事録 | `INS`／`DEL`のcontent modelをinlineまたはblockの`%flow`とすることを決議する。 | 2026-08-10 |
+| 1997-12-18 | [HTML 4.0 Specification](../../raw/html-4-history/0f6b1591bd470d68-changes.html)（[公開元](https://www.w3.org/TR/REC-html40-971218/appendix/changes.html#h-A.1.1)） | W3C Recommendation | `INS`をHTML 3.2からのnew elementとし、文書変更markupの目的を記録。 | 2026-08-09 |
+| 1999-12-24 | [HTML 4.01 §9.4](../../raw/html-4-history/9d011cd666ad1cb6-text.html)（[公開元](https://www.w3.org/TR/html401/struct/text.html#h-9.4)） | W3C Recommendation | `INS`の定義、attributes、法案例。 | 2026-08-09 |
 
 ## 確度
 

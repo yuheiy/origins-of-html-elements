@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、alternate voiceやmood、または通常のproseと異なる性質を示すために区別されたtext spanを表す。 [一次定義](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、alternate voiceやmood、または通常のproseと異なる性質を示すために区別されたtext spanを表す。 [HTML Living Standard](../../raw/html-living-standard/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,10 +36,10 @@ Texinfo `@i` → 1993年HTML draft `<i>` → 後続HTML `<i>`
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1992-10-06 | *Texinfo — The GNU Documentation Format*, Edition 2.16 | GNU公式配布物内マニュアル | `@i` の当時の定義を確認できる。 | [GNU archive](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z) | 2026-08-09 |
-| 1993-01-06（埋込みDTDのRCS識別子）、1993-06（draft） | *Hypertext Markup Language (HTML)*, draft-ietf-iiir-html-00 | IETF Internet-Draft／埋込みDTD | `html.dtd,v 1.3 93/01/06`の`inline` entityに`I`があり、本文は`<i>`を含むcharacter highlighting要素名をTexinfo macro names由来と明記する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1992-10-06 | [*Texinfo — The GNU Documentation Format*, Edition 2.16](../../raw/texinfo-2.16/texinfo2.texi)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)） | GNU公式配布物内マニュアル | `@i` の当時の定義を確認できる。 | 2026-08-09 |
+| 1993-01-06（埋込みDTDのRCS識別子）、1993-06（draft） | [*Hypertext Markup Language (HTML)*, draft-ietf-iiir-html-00](../../raw/draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft／埋込みDTD | `html.dtd,v 1.3 93/01/06`の`inline` entityに`I`があり、本文は`<i>`を含むcharacter highlighting要素名をTexinfo macro names由来と明記する。 | 2026-08-09 |
 
 ## 確度
 

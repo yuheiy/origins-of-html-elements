@@ -10,7 +10,7 @@ Richard WilliamsonがDashboard向けにWebKitへ`CANVAS`を初めて実装し、
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、scriptがgraph、game graphics、artなどを動的に描画できるresolution-dependent bitmap canvasを提供する。より適切な要素がある場合の代用にはせず、bitmapと同じ機能または目的を伝えるfallback contentを用意する必要がある。[一次定義](https://html.spec.whatwg.org/multipage/canvas.html#the-canvas-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、scriptがgraph、game graphics、artなどを動的に描画できるresolution-dependent bitmap canvasを提供する。より適切な要素がある場合の代用にはせず、bitmapと同じ機能または目的を伝えるfallback contentを用意する必要がある。[HTML Living Standard](../../raw/html-living-standard/canvas.html)（[公開版](https://html.spec.whatwg.org/multipage/canvas.html#the-canvas-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -48,17 +48,17 @@ AppleからWHATWGへの提案本文、提出日、採録時の編集記録は未
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2004-05-25 | WebKit changeset 6685 / “Part 1 of the new `<CANVAS>` tag implementation” | 公式実装履歴・ソースコード | Richard Williamsonが`CANVAS`要素、parser、renderer、`getContext`の土台を追加。Dave Hyattがreview。 | [一次資料](https://github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c) | 2026-08-09 |
-| 2004-05-26 | WebKit changeset 6693 / “Part 2 of the new `<CANVAS>` tag implementation” | 公式実装履歴・ソースコード | Williamsonが2D contextとdrawing operationsを実装。bitmap `CGContextRef`を作成し、JavaScriptのdrawing operationsからQuartz 2Dの`CGContext`関数を直接呼ぶ。 | [一次資料](https://github.com/WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb) | 2026-08-09 |
-| 2004-07-05 | Dave Hyatt, “Introducing the Canvas” | 当事者による同時代説明 | Appleが`canvas`を追加し、Dashboard時計の針を描くために使用。 | [保存版](https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913) | 2026-08-09 |
-| 2004-07-07 | Dave Hyatt, “On Extending HTML” | 当事者による同時代説明 | Dashboardの要求、SVG/XHTMLを採らなかった実装上の理由、WHATWGへの提出というApple側の認識。 | [保存版](https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005928) | 2026-08-09 |
-| 2004-08-13 | Ian Hickson, “[whatwg] Canvas tag” | 標準化メーリングリスト | `canvas`提案は未提出で、Hyattらが準備中と回答。Hyattの説明と提出時点が矛盾。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/043985.html) | 2026-08-09 |
-| 2004-11-02 | Apple, *Safari JavaScript Programming Topics*初版 | 公式実装文書 | WebKit canvas、Dashboard World Clock、Quartzに似たdrawing features。 | [一次資料](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Canvas.html) | 2026-08-09 |
-| 2005-09-01 | WHATWG, *Web Applications 1.0* | 仕様snapshot | bitmap canvas、drawing context、fallback contentを仕様化。 | [保存版](https://web.archive.org/web/20050901000000/http://www.whatwg.org/specs/web-apps/2005-09-01/) | 2026-08-09 |
-| 2006-03-02（WHATWG source初回check-in） | WHATWG, *Web Applications 1.0*謝辞 | 仕様source | Richard WilliamsonによるSafari最初の`canvas`実装からcanvas機能を設計したと明記。 | [一次資料](https://github.com/whatwg/html/blob/c3550d90867392905edbd91c94fec8c89fbfe648/source#L19425-L19427) | 2026-08-09 |
-| 2007-03-14（書簡が参照する仕様日は2005-03-24） | Apple Senior Patent Counsel書簡 | 当事者の公式書簡 | AppleがWHATWG draftのbitmap canvas節に関係するIP rightsを持つと表明。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/010129.html) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2004-05-25 | [WebKit changeset 6685 / “Part 1 of the new `<CANVAS>` tag implementation”](../../raw/items/github.com/82d74a7e8f26ae13-048bd7c65c2595ed5c905c4e35431aec5d8.html)（[公開元](https://github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c)） | 公式実装履歴・ソースコード | Richard Williamsonが`CANVAS`要素、parser、renderer、`getContext`の土台を追加。Dave Hyattがreview。 | 2026-08-09 |
+| 2004-05-26 | [WebKit changeset 6693 / “Part 2 of the new `<CANVAS>` tag implementation”](../../raw/items/github.com/b01423a30b4c45b0-368b12910aa7b71c5f96fd2053b88132fa7.html)（[公開元](https://github.com/WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb)） | 公式実装履歴・ソースコード | Williamsonが2D contextとdrawing operationsを実装。bitmap `CGContextRef`を作成し、JavaScriptのdrawing operationsからQuartz 2Dの`CGContext`関数を直接呼ぶ。 | 2026-08-09 |
+| 2004-07-05 | [Dave Hyatt, “Introducing the Canvas”](../../raw/items/web.archive.org/68e6de130de36450-2004_07.html)（[公開元](https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913)） | 当事者による同時代説明 | Appleが`canvas`を追加し、Dashboard時計の針を描くために使用。 | 2026-08-09 |
+| 2004-07-07 | [Dave Hyatt, “On Extending HTML”](../../raw/items/web.archive.org/68e6de130de36450-2004_07.html)（[公開元](https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005928)） | 当事者による同時代説明 | Dashboardの要求、SVG/XHTMLを採らなかった実装上の理由、WHATWGへの提出というApple側の認識。 | 2026-08-09 |
+| 2004-08-13 | [Ian Hickson, “\[whatwg\] Canvas tag”](../../raw/items/lists.whatwg.org/d411fc872aa7020a-043985.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/043985.html)） | 標準化メーリングリスト | `canvas`提案は未提出で、Hyattらが準備中と回答。Hyattの説明と提出時点が矛盾。 | 2026-08-09 |
+| 2004-11-02 | [Apple, *Safari JavaScript Programming Topics*初版](../../raw/items/developer.apple.com/a478bffb30aaf2f9-Canvas.html)（[公開元](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Canvas.html)） | 公式実装文書 | WebKit canvas、Dashboard World Clock、Quartzに似たdrawing features。 | 2026-08-09 |
+| 2005-09-01 | [WHATWG, *Web Applications 1.0*](../../raw/whatwg-web-apps-history/56b94ec3daa2b5a6-2005-.html)（[公開元](https://web.archive.org/web/20050901000000/http://www.whatwg.org/specs/web-apps/2005-09-01/)） | 仕様snapshot | bitmap canvas、drawing context、fallback contentを仕様化。 | 2026-08-09 |
+| 2006-03-02（WHATWG source初回check-in） | [WHATWG, *Web Applications 1.0*謝辞](../../raw/whatwg-html-history/d2894e5be38ca05a-s.html)（[公開元](https://github.com/whatwg/html/blob/c3550d90867392905edbd91c94fec8c89fbfe648/source#L19425-L19427)） | 仕様source | Richard WilliamsonによるSafari最初の`canvas`実装からcanvas機能を設計したと明記。 | 2026-08-09 |
+| 2007-03-14（書簡が参照する仕様日は2005-03-24） | [Apple Senior Patent Counsel書簡](../../raw/items/lists.whatwg.org/8b74849d0206e277-010129.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/010129.html)） | 当事者の公式書簡 | AppleがWHATWG draftのbitmap canvas節に関係するIP rightsを持つと表明。 | 2026-08-09 |
 
 ## 確度
 

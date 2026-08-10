@@ -10,7 +10,7 @@ Responsive Images Community Groupの提案とPicturefillを、HTML Working Group
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、子の`img`が使う画像resourceを、pixel density、viewport size、画像format等に応じて選べるよう複数のsourceを提供するcontainerである。`picture`自体は表示されず、子要素を表す。[一次定義](https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、子の`img`が使う画像resourceを、pixel density、viewport size、画像format等に応じて選べるよう複数のsourceを提供するcontainerである。`picture`自体は表示されず、子要素を表す。[HTML Living Standard](../../raw/html-living-standard/embedded-content.html)（[公開版](https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,12 +38,12 @@ RICG `picture`提案／Picturefill（2012年） → HTML WG `picture` extension�
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2012-02-21 | A sample picture implementation | Community Group実装資料 | 提案中の`picture` markup、media query、`img` fallbackを実行するPicturefill。 | [一次資料](https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/) | 2026-08-09 |
-| 2013-02-26 | *The picture element* | W3C First Public Working Draft | RICGとの共同開発と`picture`の構文・意味。 | [一次資料](https://www.w3.org/TR/2013/WD-html-picture-element-20130226/) | 2026-08-09 |
-| 2013-02-26 | Responsive Images Use Cases | W3C First Public Working Draft | workaroundの欠点とresponsive imagesの標準化要求。 | [一次資料](https://www.w3.org/TR/2013/WD-respimg-usecases-20130226/) | 2026-08-09 |
-| 2014-06-17 | WHATWG HTML commit `a7716b7a` | 仕様commit | upstream `picture`更新のHTML Living Standardへの統合。 | [一次資料](https://github.com/whatwg/html/commit/a7716b7a2463323c7f25176f4b3768008d170204) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2012-02-21 | [A sample picture implementation](../../raw/items/www.w3.org/6c497960b615f61f-a-sample-picture-implement.html)（[公開元](https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/)） | Community Group実装資料 | 提案中の`picture` markup、media query、`img` fallbackを実行するPicturefill。 | 2026-08-09 |
+| 2013-02-26 | [*The picture element*](../../raw/w3c-html5-history/07cc38dfce7715c8-WD-html-picture-element-201.html)（[公開元](https://www.w3.org/TR/2013/WD-html-picture-element-20130226/)） | W3C First Public Working Draft | RICGとの共同開発と`picture`の構文・意味。 | 2026-08-09 |
+| 2013-02-26 | [Responsive Images Use Cases](../../raw/w3c-html5-history/24ae26ed81a389ee-WD-respimg-usecases-201.html)（[公開元](https://www.w3.org/TR/2013/WD-respimg-usecases-20130226/)） | W3C First Public Working Draft | workaroundの欠点とresponsive imagesの標準化要求。 | 2026-08-09 |
+| 2014-06-17 | [WHATWG HTML commit `a7716b7a`](../../raw/whatwg-html-history/66ad8afeef30633b-a7716b7a2463323c7f25176f4b3768008d1.html)（[公開元](https://github.com/whatwg/html/commit/a7716b7a2463323c7f25176f4b3768008d170204)） | 仕様commit | upstream `picture`更新のHTML Living Standardへの統合。 | 2026-08-09 |
 
 ## 確度
 

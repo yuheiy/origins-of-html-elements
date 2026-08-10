@@ -10,7 +10,7 @@ dynamic pageが利用前のHTML fragmentを保持する要求に対し、inert D
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、scriptでcloneしてdocumentへ挿入できるHTML fragmentを宣言する。rendering上は何も表さない。[一次定義](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、scriptでcloneしてdocumentへ挿入できるHTML fragmentを宣言する。rendering上は何も表さない。[HTML Living Standard](../../raw/html-living-standard/scripting.html)（[公開版](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,15 +38,15 @@ WHATWG `template`提案（2011年）→ W3C WebAppsWG仕様化作業／HTML Temp
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2011-11-17 | “Declarative Inert DOM” | WHATWG mailing-list提案 | dynamic pageのinert DOM fragment要求、既存回避策の問題、`template`構文の提案。 | [一次資料](https://lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html) | 2026-08-09 |
-| 2012-01-09 | W3C Bugzilla 15476 | 仕様bug | `template`要素と関連処理を仕様化する作業。 | [一次資料](https://www.w3.org/Bugs/Public/show_bug.cgi?ctype=xml&id=15476) | 2026-08-09 |
-| 2013-02-14 | *HTML Templates* | W3C First Public Working Draft | inert subtreeとDocumentFragment複製という導入要求と設計。 | [一次資料](https://www.w3.org/TR/2013/WD-html-templates-20130214/) | 2026-08-09 |
-| 2013-06-28 | W3C Bug 17930 comments 18–21 | WHATWG editorの統合記録 | Tony RossとRafael Weinsteinの文書を基に、WHATWG仕様へ手作業で統合したこと。 | [一次資料](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930#c18) | 2026-08-09 |
-| 2013-06-28 | W3C Bug 17930 comments 21–22 | WHATWG editorの統合記録／check-in記録 | `template`をWHATWG仕様へmergeし、revision r8000で“Integrate &lt;template&gt; into HTML”としてcheck-inしたこと。 | [一次資料](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930#c21) | 2026-08-09 |
-| 2013-06-28 | WHATWG HTML commit `685a5e0b` | WHATWG公式Git履歴 | `git-svn-id`が`webapps@8000`を保持し、要素、DOM API、parser、fragment parsing、renderingをHTMLへ統合したこと。 | [一次資料](https://github.com/whatwg/html/commit/685a5e0b27e963f6b0a62a21cb95078171076e3b) | 2026-08-09 |
-| 2013-06-28 | “HTML 8000” | WHATWG editorによる同時代の記録 | r8000がRossとWeinsteinの提案に基づく`template`統合だったこと。 | [一次資料](https://ln.hixie.ch/?count=1&start=1372461305) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2011-11-17 | [“Declarative Inert DOM”](../../raw/items/lists.w3.org/63eb50236a88760e-0140.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html)） | WHATWG mailing-list提案 | dynamic pageのinert DOM fragment要求、既存回避策の問題、`template`構文の提案。 | 2026-08-09 |
+| 2012-01-09 | [W3C Bugzilla 15476](../../raw/items/www.w3.org/097b3e23f1d63c4f-show_bu.html)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?ctype=xml&id=15476)） | 仕様bug | `template`要素と関連処理を仕様化する作業。 | 2026-08-09 |
+| 2013-02-14 | [*HTML Templates*](../../raw/w3c-html5-history/307fb99de1478ea8-WD-html-templates-201.html)（[公開元](https://www.w3.org/TR/2013/WD-html-templates-20130214/)） | W3C First Public Working Draft | inert subtreeとDocumentFragment複製という導入要求と設計。 | 2026-08-09 |
+| 2013-06-28 | [W3C Bug 17930 comments 18–21](../../raw/items/www.w3.org/0c92d5382e78f0b4-show_bu.html)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930#c18)） | WHATWG editorの統合記録 | Tony RossとRafael Weinsteinの文書を基に、WHATWG仕様へ手作業で統合したこと。 | 2026-08-09 |
+| 2013-06-28 | [W3C Bug 17930 comments 21–22](../../raw/items/www.w3.org/0c92d5382e78f0b4-show_bu.html)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930#c21)） | WHATWG editorの統合記録／check-in記録 | `template`をWHATWG仕様へmergeし、revision r8000で“Integrate &lt;template&gt; into HTML”としてcheck-inしたこと。 | 2026-08-09 |
+| 2013-06-28 | [WHATWG HTML commit `685a5e0b`](../../raw/whatwg-html-history/8380da64fe429958-685a5e0b27e963f6b0a62a21cb950781710.html)（[公開元](https://github.com/whatwg/html/commit/685a5e0b27e963f6b0a62a21cb95078171076e3b)） | WHATWG公式Git履歴 | `git-svn-id`が`webapps@8000`を保持し、要素、DOM API、parser、fragment parsing、renderingをHTMLへ統合したこと。 | 2026-08-09 |
+| 2013-06-28 | [“HTML 8000”](../../raw/items/ln.hixie.ch/f3b5cae56f01b5e4-index.html)（[公開元](https://ln.hixie.ch/?count=1&start=1372461305)） | WHATWG editorによる同時代の記録 | r8000がRossとWeinsteinの提案に基づく`template`統合だったこと。 | 2026-08-09 |
 
 ## 確度
 

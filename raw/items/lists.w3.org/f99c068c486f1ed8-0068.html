@@ -1,0 +1,99 @@
+<!-- received="Thu Nov 19 11:25:10 1992 EDT" -->
+<!-- sent="Thu, 19 Nov 92 04:37:23 CST" -->
+<!-- name="Dan Connolly" -->
+<!-- email="connolly@pixel.convex.com" -->
+<!-- subject="HTML DTD issues" -->
+<!-- id="9211191037.AA16353@pixel.convex.com" -->
+<!-- inreplyto="" -->
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head><title>www-talk from November to December 1992: HTML DTD issues</title></head>
+<body>
+<h1>HTML DTD issues</h1>
+<strong>Dan Connolly</strong> (<a href="mailto:connolly@pixel.convex.com"><em>connolly@pixel.convex.com</em></a>)<br>
+<em>Thu, 19 Nov 92 04:37:23 CST</em>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#68">[ date ]</a><a href="thread.html#68">[ thread ]</a><a href="subject.html#68">[ subject ]</a><a href="author.html#68">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0069.html">Tim Berners-Lee: "Re: a Gateway to the U Mich Geography server"</a>
+<li> <strong>Previous message:</strong> <a href="0067.html">Kevin Hoadley: "Re: hangs/multiple servers"</a>
+<!-- nextthread="start" -->
+<li> <strong>Next in thread:</strong> <a href="0072.html">Tim Berners-Lee: "Re: HTML DTD issues"</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<pre>
+Message-Id: &lt;9211191037.AA16353@pixel.convex.com&gt;
+To: www-talk@nxoc01.cern.ch
+Subject: HTML DTD issues
+Date: Thu, 19 Nov 92 04:37:23 CST
+From: Dan Connolly &lt;connolly@pixel.convex.com&gt;
+
+
+The thrust to register HTML with the authorities has
+spurred me to look over the DTD again. I've found
+some problems.
+
+1. Currently the NAME attribute of an anchor is declared
+as CDATA, i.e. just about anything. There's an SGML thingy
+called an ID. SGML parsers enforce uniqueness among the IDs
+of a document. Seems like that's what we want for ID names.
+
+But an SGML ID has to start with a letter. So all the
+HTML files that use numbers as anchor names will break.
+
+2. I introduced two tag names when I drafted the DTD:
+	HTML contains the whole document. I defined it
+so you can omit both the start and the end tags, so it's
+inferred by SGML parsers. I don't think I can avoid some
+top-level tag.
+	DOCUMENT contains most of the "body" -- all the
+headings and paragraphs. I did this to avoid something
+called mixed content, which causes complications.
+I could rename this element as BODY, and introduce a
+omitable HEADING tag to surround the TITLE, NEXTID,
+and ISINDEX tags.
+
+3. I stuck anchors in as an inclusion, meaning they
+could be used just about anywhere. I thought stuff
+like
+&lt;a name=foo&gt;&lt;h1&gt;Foo&lt;/h1&gt;&lt;/a&gt;
+was legal, but neither linemode nor the midas browser
+groks.
+
+I'm editing the DTD to restrict the usage of anchors
+to only contain text strings.
+
+4. The OL tag is disappearing. It's no longer documented
+in the web, and it's not supported by MidasWWW. Should
+I delete it from the DTD?
+
+5. What about &lt;HP1&gt; thru &lt;HP5&gt;... should we include them?
+I'd prefer &lt;em&gt;, &lt;tt&gt;, &lt;cite&gt;, ala TeX. Or we could
+go with the O'Reilly/Hal DocBook tags:
+&lt;Emphasis&gt;, &lt;OopsChar&gt;, &lt;wordasword&gt;,&lt;CiteBook&gt;,&lt;Subscript&gt;,
+&lt;Superscript&gt;.
+
+6. Any more thoughts on the BaseAddress tag?
+
+7. The HTML tags documentation says Listing sections can contain
+any ISO Latin 1 characters. The SGML standard mentions ISO 646,
+i.e. ascii, as the default, but the sgmls parser, the linemode
+browser, and MidasWWW all seem to grok Latin1 just fine.
+
+Dan
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#68">[ date ]</a><a href="thread.html#68">[ thread ]</a><a href="subject.html#68">[ subject ]</a><a href="author.html#68">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0069.html">Tim Berners-Lee: "Re: a Gateway to the U Mich Geography server"</a>
+<li> <strong>Previous message:</strong> <a href="0067.html">Kevin Hoadley: "Re: hangs/multiple servers"</a>
+<!-- nextthread="start" -->
+<li> <strong>Next in thread:</strong> <a href="0072.html">Tim Berners-Lee: "Re: HTML DTD issues"</a>
+</ul>
+</body>
+</html>

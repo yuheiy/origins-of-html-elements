@@ -10,7 +10,7 @@ WHATWG草案の`<t>`を2006年に`<time>`へ改名した要素である。2011�
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、内容とそのmachine-readable formを`datetime`属性で表す。対象は仕様が定める形式の日付、時刻、time-zone offset、durationに限られる。[一次定義](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、内容とそのmachine-readable formを`datetime`属性で表す。対象は仕様が定める形式の日付、時刻、time-zone offset、durationに限られる。[HTML Living Standard](../../raw/html-living-standard/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -40,13 +40,13 @@ WHATWG `<t>`（2006年） → `<time>`への改名 → `data`へ一時置換（2
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2006-03-29 | WHATWG commit `f8514de7` | 仕様source commit | `<t>`を作業対象とし、date/time elementの初期記述を含む。 | [一次資料](https://github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00) | 2026-08-09 |
-| 2006-10-26 | WHATWG commit `6bdcd9dc` | 仕様source commit | `<t>`初稿として意味、`datetime`、DOM、例を具体化。 | [一次資料](https://github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583) | 2026-08-09 |
-| 2006-11-23 | WHATWG commit `fdfe6548` | 仕様source commit | `<t>`から`time`への明示的改名。 | [一次資料](https://github.com/whatwg/html/commit/fdfe6548265125712520f3e1b72812235e9a8123) | 2026-08-09 |
-| 2011-10-29 | WHATWG commit `70b0ce45` | 仕様source commit | `time`を削除し`data`へ置換。 | [一次資料](https://github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d) | 2026-08-09 |
-| 2011-11-18 | WHATWG commit `92baa833` | 仕様source commit | `time`をmachine-readable date/time/duration要素として再導入。 | [一次資料](https://github.com/whatwg/html/commit/92baa8333203ea5b97316bb1775331b216d55dab) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2006-03-29 | [WHATWG commit `f8514de7`](../../raw/whatwg-html-history/139e75f85d07a740-f8514de7d2d2f408e0f695dd1af3dc110f5.html)（[公開元](https://github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00)） | 仕様source commit | `<t>`を作業対象とし、date/time elementの初期記述を含む。 | 2026-08-09 |
+| 2006-10-26 | [WHATWG commit `6bdcd9dc`](../../raw/whatwg-html-history/e3a5503173cded5e-6bdcd9dc9da3f21cb61f0f8c123ed2d252c.html)（[公開元](https://github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583)） | 仕様source commit | `<t>`初稿として意味、`datetime`、DOM、例を具体化。 | 2026-08-09 |
+| 2006-11-23 | [WHATWG commit `fdfe6548`](../../raw/whatwg-html-history/a57454266000a01f-fdfe6548265125712520f3e1b72812235e9.html)（[公開元](https://github.com/whatwg/html/commit/fdfe6548265125712520f3e1b72812235e9a8123)） | 仕様source commit | `<t>`から`time`への明示的改名。 | 2026-08-09 |
+| 2011-10-29 | [WHATWG commit `70b0ce45`](../../raw/whatwg-html-history/d0424350d05c22ec-70b0ce45a26937a3f26eeb72b146261ff62.html)（[公開元](https://github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d)） | 仕様source commit | `time`を削除し`data`へ置換。 | 2026-08-09 |
+| 2011-11-18 | [WHATWG commit `92baa833`](../../raw/whatwg-html-history/7119347824c33ec2-92baa8333203ea5b97316bb1775331b216d.html)（[公開元](https://github.com/whatwg/html/commit/92baa8333203ea5b97316bb1775331b216d55dab)） | 仕様source commit | `time`をmachine-readable date/time/duration要素として再導入。 | 2026-08-09 |
 
 ## 確度
 

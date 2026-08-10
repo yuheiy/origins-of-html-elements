@@ -10,7 +10,7 @@ Roy Fieldingが1994年6月、専用HTML要素で定義されないname/value型�
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、`title`、`base`、`link`、`style`、`script`では表せない各種metadataを表す。`name`によるdocument-level metadata、`http-equiv`によるpragma directive、`charset`によるcharacter encoding declarationを扱う。 [一次定義](https://html.spec.whatwg.org/multipage/semantics.html#the-meta-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、`title`、`base`、`link`、`style`、`script`では表せない各種metadataを表す。`name`によるdocument-level metadata、`http-equiv`によるpragma directive、`charset`によるcharacter encoding declarationを扱う。 [HTML Living Standard](../../raw/html-living-standard/semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/semantics.html#the-meta-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,13 +36,13 @@ Fieldingの`META`提案（1994-06-01）→ HTML 2.0仕様patch（1994-06-12）�
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1993-07-23（登録日） | *Hypertext Markup Language (HTML)* version 1.2 | IETF Internet-Draft | DTDに`META`がなく、Fielding提案前の比較点となる。 | [W3C保存text](https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt) | 2026-08-09 |
-| 1993-11-08 | HTML+ DTD | 提案DTD | DTDに`META`がなく、1993年HTML+語彙には未収録だったことを確認できる。 | [W3C HTML+](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html) | 2026-08-09 |
-| 1994-06-01 | “Re: meta information” | www-htmlへの提案mail | Fieldingが一般metadataと選択的HTTP header生成のため`META`、属性、具体例を提案する。 | [W3C Mail Archive](https://lists.w3.org/Archives/Public/www-html/1994Jun/0002.html) | 2026-08-09 |
-| 1994-06-12 | “Re: HTML 2.0 spec and the META element” | HTML 2.0仕様patch mail | `HTTP-EQUIV`／`NAME`／`CONTENT`を持つ`META`をHTML 2.0へ追加する具体的patchを提示する。 | [W3C Mail Archive](https://lists.w3.org/Archives/Public/www-html/1994Jun/0041.html) | 2026-08-09 |
-| 1995-11 | RFC 1866: *Hypertext Markup Language - 2.0* | IETF Standards Track RFC | specialized document metadataとHTTP header生成をFielding案と同じ属性modelで標準化する。 | [RFC Editor](https://www.rfc-editor.org/rfc/rfc1866#section-5.2.5) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1993-07-23（登録日） | [*Hypertext Markup Language (HTML)* version 1.2](../../raw/items/www.w3.org/afa66c4ab9d857d4-draft-ietf-iiir-html-01.txt)（[公開元](https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)） | IETF Internet-Draft | DTDに`META`がなく、Fielding提案前の比較点となる。 | 2026-08-09 |
+| 1993-11-08 | [HTML+ DTD](../../raw/html-plus/htmlplus_58.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html)） | 提案DTD | DTDに`META`がなく、1993年HTML+語彙には未収録だったことを確認できる。 | 2026-08-09 |
+| 1994-06-01 | [“Re: meta information”](../../raw/items/lists.w3.org/809a2940eafa2317-0002.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1994Jun/0002.html)） | www-htmlへの提案mail | Fieldingが一般metadataと選択的HTTP header生成のため`META`、属性、具体例を提案する。 | 2026-08-09 |
+| 1994-06-12 | [“Re: HTML 2.0 spec and the META element”](../../raw/items/lists.w3.org/48ac3de6454a040d-0041.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1994Jun/0041.html)） | HTML 2.0仕様patch mail | `HTTP-EQUIV`／`NAME`／`CONTENT`を持つ`META`をHTML 2.0へ追加する具体的patchを提示する。 | 2026-08-09 |
+| 1995-11 | [RFC 1866: *Hypertext Markup Language - 2.0*](../../raw/html-2.0/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866#section-5.2.5)） | IETF Standards Track RFC | specialized document metadataとHTTP header生成をFielding案と同じ属性modelで標準化する。 | 2026-08-09 |
 
 ## 確度
 

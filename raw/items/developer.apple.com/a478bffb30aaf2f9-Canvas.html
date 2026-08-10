@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <title>WebKit DOM Programming Topics: Drawing Content</title>
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/style-1.6.3.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../Resources/1282/CSS/feedback-1.6.3.css" />
+  <meta charset='utf-8'> 
+<meta id="j-version" name="j-version" content="" />
+<meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42" />
+<meta id="document-version" name="document-version" content="8.4.2" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Technologies/Core Services Layer/WebKit}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40001483" />
+<meta id="chapterId" name="chapterId" content="30001236">
+<meta id="book-title" name="book-title" content="WebKit DOM Programming Topics" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2017-09-19" />
+<meta id="description" name="description" content="Describes how to use JavaScript in web content and WebKit-based applications." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+<meta id="resources-uri" name="resources-uri" content="../../../../Resources/1282">
+<link id="book-index-page" rel="Start" title="" type="text/html" href="./index.html">
+<!-- , next_chapter: next_chapter, previous_chapter: previous_chapter -->
+<link id="next-page" rel="Next" type="text/html" href="">
+<link id="previous-page" rel="Prev" type="text/html" href="">
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta id="platforms" name="platforms" content="OS X,iOS,Safari,Safari (Mobile)">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/">Documentation Archive
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1282/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">WebKit DOM Programming Topics</span>
+    </p>
+    <form id="search" class="hideInXcode" method="get" action="/search/index.php" accept-charset="utf-8" autocomplete="off">
+  <input type="search" id="ssi_SearchField" placeholder="Search Documentation Archive" name="q" autocomplete="off" tabindex="2" />
+</form>
+
+      
+   
+   
+
+
+
+    <img id="shortstack" src="../../../../Resources/1282/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40001483-CH25-SW1"
+            class="part-name">
+            <a href="index.html#//apple_ref/doc/uid/30001231-BAJGJJAH" data-renderer-version="2" data-id="//apple_ref/doc/uid/30001231-BAJGJJAH">JavaScript and DOM Integration</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="index.html#//apple_ref/doc/uid/30001231-BAJGJJAH" data-renderer-version="2" data-id="//apple_ref/doc/uid/30001231-BAJGJJAH">About JavaScript and the DOM</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DOM.html#//apple_ref/doc/uid/30001237-BAJGJJAH" data-renderer-version="2" data-id="//apple_ref/doc/uid/30001237-BAJGJJAH">Using the Document Object Model</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40001483-CH26-SW1"
+            class="part-name nav-part-active open-part">
+            <a href="#//apple_ref/doc/uid/30001236-BAJGJJAH" data-renderer-version="2" data-id="//apple_ref/doc/uid/30001236-BAJGJJAH">Performing Common Operations from JavaScript</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="#//apple_ref/doc/uid/30001236-BAJGJJAH" data-renderer-version="2" data-id="//apple_ref/doc/uid/30001236-BAJGJJAH">Drawing Content</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="CopyAndPaste.html#//apple_ref/doc/uid/30001234-BAJGJJAH" data-renderer-version="2" data-id="//apple_ref/doc/uid/30001234-BAJGJJAH">Cutting, Copying, and Pasting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="DragAndDrop.html#//apple_ref/doc/uid/30001233-BAJGJJAH" data-renderer-version="2" data-id="//apple_ref/doc/uid/30001233-BAJGJJAH">Dragging and Dropping</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="RespondingtoForceTouchEventsfromJavaScript.html#//apple_ref/doc/uid/TP40016162-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40016162-SW1">Responding to Force Touch Events</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="//apple_ref/doc/uid/TP40001483-CH27-SW1"
+            class="part-name">
+            <a href="XHR.html#//apple_ref/doc/uid/TP40006227-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40006227-SW1">Messaging and Fetching Data from JavaScript</a>
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="XHR.html#//apple_ref/doc/uid/TP40006227-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40006227-SW1">Fetching with XMLHttpRequest</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="SendingNotifications.html#//apple_ref/doc/uid/TP40012932-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40012932-SW1">Sending Notifications</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Cross-documentmessaging.html#//apple_ref/doc/uid/TP40008175-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP40008175-SW1">Cross-Document Messaging</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="ObjCFromJavaScript.html#//apple_ref/doc/uid/30001215-BBCBFJCD" data-renderer-version="2" data-id="//apple_ref/doc/uid/30001215-BBCBFJCD">Calling Objective-C Methods</a>
+              </li>
+          </ul>
+        </li>
+        <li data-id="revision-history"
+            class="part-name">
+          <a href="RevisionHistory.html#//apple_ref/doc/uid/TP30001273-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP30001273-SW1">Revision History</a>
+          <ul class="nav-chapters">
+            <li class="nav-chapter">
+              <a href="RevisionHistory.html#//apple_ref/doc/uid/TP30001273-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP30001273-SW1">Document Revision History</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+</nav>
+
+      <menu id="bashful" type="toolbar">
+  <div class="shield"></div>
+  <menuitem id="jump_to" class="menu-bar-item closed">
+  <span>On This Page</span>
+  <div class="chevron">
+    <div class="chevy chevron-left"></div>
+    <div class="chevy chevron-right"></div>
+  </div>
+  <menu type="list" class="details">
+      <ul class="list-bullet">
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/30001236-177749">About the Canvas</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/30001236-185532">Defining the Canvas</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/30001236-185620">Drawing on a Canvas</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/30001236-SW1">Accessing and Manipulating Canvas Data</a>
+          </li>
+          <li class="item">
+            <a href="#//apple_ref/doc/uid/30001236-SW2">Other Resources</a>
+          </li>
+      </ul>
+  </menu>
+</menuitem>
+
+</menu>
+<div class="pixel-line"></div>
+<div class="rubber-band-gap"></div>
+<article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40001483-CH30"></a><a name="//apple_ref/doc/uid/30001236"></a><a name="//apple_ref/doc/uid/30001236-BAJGJJAH"></a>
+      <a name="//apple_ref/doc/uid/TP40001483-CH26"></a><a name="//apple_ref/doc/uid/TP40001483-CH26-SW1"></a>
+
+  <h2 class='chapter-name'>Drawing Content</h2>
+
+
+  
+  	<section class="section">
+  		<p class="para">
+  Safari, Dashboard, and WebKit-based applications support the JavaScript <em>canvas</em> object. The canvas allows you to easily draw arbitrary content within your HTML content.
+</p>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/30001236-177749"></a>
+  <h3 class="section-name" tabindex="0">About the Canvas</h3>
+  <p class="para">
+  A canvas is an HTML tag that defines a custom drawing region within your web content. You can then access the canvas as a JavaScript object and draw upon it using features similar to Quartz’s drawing system. The World Clock Dashboard widget shows a good example, although using a canvas is by no means exclusive to Dashboard.
+</p><p class="para">
+  There are two steps to using a canvas in your webpage: defining a content area, and drawing to the canvas object in the script section of your HTML.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/30001236-185532"></a>
+  <h3 class="section-name" tabindex="0">Defining the Canvas</h3>
+  <p class="para">
+  To use a canvas in your webpage, you first set up the drawing region. The World Clock Dashboard widget designates this region with the following code:
+</p><section class="code-listing">
+  
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">&lt;canvas id=&quot;myCanvas&quot; width=&#39;172&#39; height=&#39;172&#39;&gt;&lt;/canvas&gt;</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  In this context, the attributes of <code class="code-voice">&lt;canvas&gt;</code> worth noting are <code class="code-voice">id</code>, <code class="code-voice">width</code>, and <code class="code-voice">height</code>.
+</p><p class="para">
+  The <code class="code-voice">id</code> attribute is a custom identifier used to target a particular canvas object when drawing. The <code class="code-voice">width</code> and <code class="code-voice">height</code> attributes specify the size of the canvas region.
+</p><p class="para">
+  Within the World Clock widget, this area is defined to be the canvas.
+</p><figure class="figure">
+  <a name="//apple_ref/doc/uid/30001236-185601"></a>
+  <span class="caption"><strong class="caption-number">Figure 2-1</strong>The World Clock canvas region</span>
+  <img src="art/worldclock_gray.jpg" alt="image: ../art/worldclock_gray.eps" width="176" height="176" />
+</figure><p class="para">
+  Now that the canvas region has been defined, it is ready to be filled.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/30001236-185620"></a>
+  <h3 class="section-name" tabindex="0">Drawing on a Canvas</h3>
+  <p class="para">
+  Once you have defined the canvas area, you can write code to draw your content. Before you can do this, you need to obtain the canvas and its drawing context. The context handles the actual rendering of your content. The World Clock widget does this in its <code class="code-voice">drawHands()</code> function:
+</p><section class="code-listing">
+  
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">function drawHands (hoursAngle, minutesAngle, secondsAngle)</code></li>
+            <li><code class="code-voice">{</code></li>
+            <li><code class="code-voice">    var canvas = document.getElementById(&quot;myCanvas&quot;);</code></li>
+            <li><code class="code-voice">    var context = canvas.getContext(&quot;2d&quot;);</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  This function draws the hour, minute, and second hands on the face of the World Clock. As parameters, it takes the angles at which the three hands should be rotated as passed in by its caller.
+</p><p class="para">
+  You first query the JavaScript environment for the previously defined canvas, using its unique identifier: the <code class="code-voice">id</code> attribute in the <code class="code-voice">&lt;canvas&gt;</code> tag.
+</p><p class="para">
+  Once your script has acquired the canvas, you need to obtain its context. Using the <code class="code-voice">getContext(&quot;2d&quot;)</code> method, assign the canvas’ draw context it to the <code class="code-voice">context</code> variable. From this point on, you call all operations intended for the canvas on <code class="code-voice">context</code>. 
+</p><p class="para">
+  The first operation you perform empties the canvas. As the <code class="code-voice">drawHands()</code> function is called every second, it is important to empty it each time, so that the previously drawn configuration doesn’t simply draw on top of the new configuration. The entire region, as defined by standard coordinates in the <code class="code-voice">&lt;canvas&gt;</code> tag, is cleared:
+</p><section class="code-listing">
+  
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">    context.clearRect(0, 0, 172, 172);</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  Next, you save the state of the original context space so that you can restore later. In the original context, the origin (the 0,0 coordinate) of the canvas is in the top left corner. Upon completion of the upcoming drawing code, you want to return to this context. Use the context’s save method to do so:
+</p><section class="code-listing">
+  
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">    context.save();</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  Since you want the hands of the clock to rotate around the center of the clock, translate the origin of the context space to the center of the canvas:
+</p><section class="code-listing">
+  
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">    context.translate(172/2, 172/2);</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  Then draw the hour hand on the face of the clock. You copy the current context (with the origin at the center of the clock face), so that it can restored later. Then, you rotate the entire context, so that the y-axis aligns itself with the angle that the hour hand should point towards. Next, you draw the hour hand image (created in the code as a JavaScript <code class="code-voice">Image</code> object). The method <code class="code-voice">drawImage()</code> has five parameters: the image to be drawn, the x and y coordinate for the bottom left hand corner of the image, and the width and height of the image. Remember that while you draw the image as going straight up within the graphics context, you rotated the context to be at the correct angle for the hour hand:
+</p><section class="code-listing">
+  
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">    context.save();</code></li>
+            <li><code class="code-voice">    context.rotate(hoursAngle);</code></li>
+            <li><code class="code-voice">    context.drawImage(hourhand, -4, -28, 9, 25);</code></li>
+            <li><code class="code-voice">    context.restore();</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  Once you draw the hand, you restore the last saved context. This means that the context that you saved four lines prior, with its origin at the center of the canvas but not yet rotated, will be the active context again.
+</p><p class="para">
+  Use a similar procedure to draw the minute hand on the face of the clock. The differences this time are in the angle you rotate the context to and the size of the minute hand. Note that you save and rotate the context again, and then you restore it to its previous state, so that you can draw the next element independent of the rotation needed for the minute hand:
+</p><section class="code-listing">
+  
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">    context.save();</code></li>
+            <li><code class="code-voice">    context.rotate (minutesAngle);</code></li>
+            <li><code class="code-voice">    context.drawImage (minhand, -8, -44, 18, 53);</code></li>
+            <li><code class="code-voice">    context.restore();</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  Finally, draw the second hand. Note that this time, the context should not be saved and restored. Since this is the last time anything will be drawn in this particular context (with the origin at the center of the canvas), it is not necessary for you to save and restore again:
+</p><section class="code-listing">
+  
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">    context.rotate (secondsAngle);</code></li>
+            <li><code class="code-voice">    context.drawImage (sechand, -4, -52, 8, 57);</code></li>
+            <li><code class="code-voice">    context.restore();</code></li>
+            <li><code class="code-voice">}</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  Now that the clock face has been drawn, you should restore the context to its original state, as saved before any drawing occurred. This prepares the canvas for any future drawing that will occur, and gives you a consistent origin (the top-left corner of the canvas) to work from.
+</p><p class="para">
+  Remember, all of these techniques can be applied to a canvas object within any WebKit-based application. For more information on the canvas, see <em class="u-book"><a href="https://developer.apple.com/documentation/webkitjs/htmlcanvaselement" class="urlLink" target="_self">HTMLCanvasElement Class Reference</a></em>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/30001236-SW1"></a>
+  <h3 class="section-name" tabindex="0">Accessing and Manipulating Canvas Data</h3>
+  <p class="para">
+  Safari supports direct manipulation of the pixels of a canvas. You can obtain the raw pixel data of a canvas with the <code class="code-voice">getImageData()</code> function, and create a new buffer for manipulated pixels with the <code class="code-voice">createImageData()</code> function:
+</p><section class="code-listing">
+  
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">var canvas = document.getElementById(&quot;myCanvas&quot;);</code></li>
+            <li><code class="code-voice">var context = canvas.getContext(&quot;2d&quot;);</code></li>
+            <li><code class="code-voice">var currentPixels = context.getImageData(0, 0, canvas.width, canvas.height);</code></li>
+            <li><code class="code-voice">var newPixels = context.createImageData(canvas.width, canvas.height);</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  The <code class="code-voice">getImageData()</code> and <code class="code-voice">createImageData()</code> functions both return an <code class="code-voice">ImageData</code> object that contains pixel information in its <code class="code-voice">data</code> property. The <code class="code-voice">data</code> property is an array that contains four values between <code class="code-voice">0</code> and <code class="code-voice">255</code> for every pixel in the canvas. These values correspond to the red, green, blue, and alpha components of the pixel.
+</p><p class="para">
+  The following example loops through the <code class="code-voice">data</code> array of the <code class="code-voice">currentPixels</code> variable. For each pixel, it subtracts each color component’s value from <code class="code-voice">255</code> and assigns the result to the corresponding cell in the <code class="code-voice">data</code> array of the <code class="code-voice">newPixels</code> variable, thus creating an inverted copy of the image. The alpha value of every pixel is copied over without any manipulation. Finally, the <code class="code-voice">newPixels</code> variable is passed to the <code class="code-voice">putImageData()</code> function, which applies the new pixel values to the canvas.
+</p><section class="code-listing">
+  
+  <div class="code-sample">
+      <div class="">
+        <ol class="code-lines">
+            <li><code class="code-voice">for (var y = 0; y &lt; newPixels.height; y += 1) {</code></li>
+            <li><code class="code-voice">    for (var x = 0; x &lt; newPixels.width; x += 1) {</code></li>
+            <li><code class="code-voice">        for (var c = 0; c &lt; 3; c += 1) {</code></li>
+            <li><code class="code-voice">            var i = (y*newPixels.width + x)*4 + c;</code></li>
+            <li><code class="code-voice">            newPixels.data[i] = 255 - currentPixels.data[i];</code></li>
+            <li><code class="code-voice">        }</code></li>
+            <li><code class="code-voice">        var alphaIndex = (y*newPixels.width + x)*4 + 3;</code></li>
+            <li><code class="code-voice">        newPixels.data[alphaIndex] = currentPixels.data[alphaIndex];</code></li>
+            <li><code class="code-voice">    }</code></li>
+            <li><code class="code-voice">}</code></li>
+            <li><code class="code-voice">context.putImageData(newPixels, 0, 0);</code></li>
+        </ol>
+      </div>
+  </div>
+</section><p class="para">
+  You can also obtain a data URL representation of the image of a canvas with the <code class="code-voice">toDataURL()</code> function. This function returns a PNG encoding of the image when no parameters are passed. You can obtain other image formats by passing in a string indicating the desired format, such as <code class="code-voice">image/jpg</code> or <code class="code-voice">image/gif</code>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/30001236-SW2"></a>
+  <h3 class="section-name" tabindex="0">Other Resources</h3>
+  <p class="para">
+  For more detailed information about canvas, including how to optimize your canvas for the Retina display, read <em class="u-book"><a href="../../../AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010542" data-renderer-version="1" target="_self">Safari HTML5 Canvas Guide</a></em>.
+</p>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="DOM.html#//apple_ref/doc/uid/30001237-BAJGJJAH" data-renderer-version="2" data-id="//apple_ref/doc/uid/30001237-BAJGJJAH">Using the Document Object Model</a></p>
+  			<p class="next-link"><a href="CopyAndPaste.html#//apple_ref/doc/uid/30001234-BAJGJJAH" data-renderer-version="2" data-id="//apple_ref/doc/uid/30001234-BAJGJJAH">Cutting, Copying, and Pasting</a></p>
+
+    <p class="copyright">Copyright &#x00a9; 2018 Apple Inc. All rights reserved. 
+  <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a> | 
+  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a> | 
+  <a href="RevisionHistory.html#//apple_ref/doc/uid/TP30001273-SW1" data-renderer-version="2" data-id="//apple_ref/doc/uid/TP30001273-SW1">Updated: 2017-09-19</a>
+</p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <script src="../../../../Resources/1282/JavaScript/devpubs-1.6.3.js" type="text/javascript" charset="utf-8"></script>
+  <div id="_omniture_top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="awdappledeveloper"
+</script>
+
+<script type="text/javascript" src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+<script type="text/javascript">
+s.channel="www.documentationarchive.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+</footer>
+
+    
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+</div>
+</html>

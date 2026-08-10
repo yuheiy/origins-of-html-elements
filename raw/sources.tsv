@@ -1,49 +1,317 @@
-# kind	output	source URL
-file	html-living-standard/canvas.html	https://html.spec.whatwg.org/multipage/canvas.html
-file	html-living-standard/custom-elements.html	https://html.spec.whatwg.org/multipage/custom-elements.html
-file	html-living-standard/edits.html	https://html.spec.whatwg.org/multipage/edits.html
-file	html-living-standard/embedded-content.html	https://html.spec.whatwg.org/multipage/embedded-content.html
-file	html-living-standard/form-elements.html	https://html.spec.whatwg.org/multipage/form-elements.html
-file	html-living-standard/forms.html	https://html.spec.whatwg.org/multipage/forms.html
-file	html-living-standard/grouping-content.html	https://html.spec.whatwg.org/multipage/grouping-content.html
-file	html-living-standard/iframe-embed-object.html	https://html.spec.whatwg.org/multipage/iframe-embed-object.html
-file	html-living-standard/image-maps.html	https://html.spec.whatwg.org/multipage/image-maps.html
-file	html-living-standard/index.html	https://html.spec.whatwg.org/multipage/
-file	html-living-standard/indices.html	https://html.spec.whatwg.org/multipage/indices.html
-file	html-living-standard/input.html	https://html.spec.whatwg.org/multipage/input.html
-file	html-living-standard/interactive-elements.html	https://html.spec.whatwg.org/multipage/interactive-elements.html
-file	html-living-standard/media.html	https://html.spec.whatwg.org/multipage/media.html
-file	html-living-standard/obsolete.html	https://html.spec.whatwg.org/multipage/obsolete.html
-file	html-living-standard/scripting.html	https://html.spec.whatwg.org/multipage/scripting.html
-file	html-living-standard/sections.html	https://html.spec.whatwg.org/multipage/sections.html
-file	html-living-standard/semantics.html	https://html.spec.whatwg.org/multipage/semantics.html
-file	html-living-standard/syntax.html	https://html.spec.whatwg.org/multipage/syntax.html
-file	html-living-standard/tables.html	https://html.spec.whatwg.org/multipage/tables.html
-file	html-living-standard/text-level-semantics.html	https://html.spec.whatwg.org/multipage/text-level-semantics.html
-file	draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt	https://www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt
-file	html-2.0/html-spec.html	https://www.w3.org/MarkUp/1995-archive/html-spec.html
-file	html-2.0/rfc1866.txt	https://www.rfc-editor.org/rfc/rfc1866.txt
-file	html-3.0/emphasis.html	https://www.w3.org/MarkUp/html3/emphasis.html
-file	html-3.0/logical.html	https://www.w3.org/MarkUp/html3/logical.html
-file	html-3.2/index.html	https://www.w3.org/TR/REC-html32
-file	cougar-forms/project.html	https://www.w3.org/MarkUp/Cougar/
-file	cougar-forms/wd-forms-960308.html	https://www.w3.org/TR/WD-forms-960308.html
-file	cougar-forms/wd-forms-970203.html	https://www.w3.org/TR/WD-forms-970203.html
-file	cougar-forms/wd-forms-970402.html	https://www.w3.org/TR/WD-forms-970402
-file	html-plus/htmlplus_paper.html	https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html
-file	html-plus/htmlplus_1.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_1.html
-file	html-plus/htmlplus_16.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_16.html
-file	html-plus/htmlplus_18.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html
-file	html-plus/htmlplus_22.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html
-file	html-plus/htmlplus_39.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html
-file	html-plus/htmlplus_41.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html
-file	html-plus/htmlplus_44.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html
-file	html-plus/htmlplus_45.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html
-file	html-plus/htmlplus_58.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html
-file	rfc1942-html-tables/rfc1942.txt	https://www.rfc-editor.org/rfc/rfc1942.txt
-file	cals-table-model/tr9501.html	https://www.oasis-open.org/specs/a501.htm
-file	cals-table-model/tm9502.html	https://www.oasis-open.org/specs/a502.htm
-file	rfc2070-html-internationalization/rfc2070.txt	https://www.rfc-editor.org/rfc/rfc2070.txt
-zip	html-4.01	https://www.w3.org/TR/html401/html40.zip
-tar	texinfo-2.16	https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z
-tar	texinfo-3.7	https://ftp.gnu.org/gnu/texinfo/texinfo37.tar-gz
+# kind	output	source URL	acquired date	content identifier
+file	html-living-standard/canvas.html	https://html.spec.whatwg.org/multipage/canvas.html	2026-08-09	sha256:77a69026744c801cc8b521e490231c0075a0323e713dc50f7f3c54ca53a5e71e
+file	html-living-standard/custom-elements.html	https://html.spec.whatwg.org/multipage/custom-elements.html	2026-08-09	sha256:8e64b9a1ad0b398e0895f2499692ee4bf677c7191d5d3dde4c5a0aecb0f01c2f
+file	html-living-standard/edits.html	https://html.spec.whatwg.org/multipage/edits.html	2026-08-09	sha256:d753512f7ff2e87bde2304fc10ead7a3ce78ebab6e221c7536059f459513c5bb
+file	html-living-standard/embedded-content.html	https://html.spec.whatwg.org/multipage/embedded-content.html	2026-08-09	sha256:db7997bc827a173b91f10903f569a9267188ff6628aabff970e8a83dcbffb5ef
+file	html-living-standard/form-elements.html	https://html.spec.whatwg.org/multipage/form-elements.html	2026-08-09	sha256:a1096ce7a83442cec8139744e190328c74ec1121c477880e7f98e974235e873c
+file	html-living-standard/forms.html	https://html.spec.whatwg.org/multipage/forms.html	2026-08-09	sha256:aacec30a9ed3b8c8c3c732cd0245d94b850337a871b483c78d8d7de722cc9167
+file	html-living-standard/grouping-content.html	https://html.spec.whatwg.org/multipage/grouping-content.html	2026-08-09	sha256:4e0627672499c1cfdcd9525e54080baafee74ab80e97b8b446737bfe97d146a5
+file	html-living-standard/iframe-embed-object.html	https://html.spec.whatwg.org/multipage/iframe-embed-object.html	2026-08-09	sha256:f75603cb0fede73379db3c3538c23d64cb2f28ca5550754a0bdaea3350716c25
+file	html-living-standard/image-maps.html	https://html.spec.whatwg.org/multipage/image-maps.html	2026-08-09	sha256:0a711b96ad6a15599793c949f1bfbbcc7883e5aaace2106c90fe3472eda45058
+file	html-living-standard/index.html	https://html.spec.whatwg.org/multipage/	2026-08-09	sha256:f9f0469af1e3df3934d5b3be5eda7f00c6523204c6a3b7c33b6b51e81a4acce9
+file	html-living-standard/indices.html	https://html.spec.whatwg.org/multipage/indices.html	2026-08-09	sha256:96f70aa6a8461b19c8ae25e80370cce01523255a447dec1d583967a442237b87
+file	html-living-standard/input.html	https://html.spec.whatwg.org/multipage/input.html	2026-08-09	sha256:f7c2076155c6e15ce3b8414a22a30dfe61a9aab10a370655e9d5fd6fa14c6dfb
+file	html-living-standard/interactive-elements.html	https://html.spec.whatwg.org/multipage/interactive-elements.html	2026-08-09	sha256:749089c250e3ab88de0ec0eb7114fc29ab3bbd880de12c20f940a53de7c0466b
+file	html-living-standard/media.html	https://html.spec.whatwg.org/multipage/media.html	2026-08-09	sha256:733f3d3ab4b7f469e256b38655362fcc00f93d763897dbbd2c3fbf2f207f07af
+file	html-living-standard/obsolete.html	https://html.spec.whatwg.org/multipage/obsolete.html	2026-08-09	sha256:152ca7e03347402708e502813e4e04065258dfd80c0026c57f45c12b5959b39e
+file	html-living-standard/scripting.html	https://html.spec.whatwg.org/multipage/scripting.html	2026-08-09	sha256:da72f928b1dd6b3a25d825fedf4e35aea25e0e0e3d98703c972cb47cf033692d
+file	html-living-standard/sections.html	https://html.spec.whatwg.org/multipage/sections.html	2026-08-09	sha256:cfd126e3b971918ee24c5244457dba55bbde269c92fb879da1ab97dd6fbb89c6
+file	html-living-standard/semantics.html	https://html.spec.whatwg.org/multipage/semantics.html	2026-08-09	sha256:b7feb31204dd46467c96ec9e7b2bc4c1cb0e17fbe0e4d9db0a18d26ca3d4c48f
+file	html-living-standard/syntax.html	https://html.spec.whatwg.org/multipage/syntax.html	2026-08-09	sha256:10584fddd2bd865650526a397b27200444d9b07b38f9f858166baf8b6e41d38d
+file	html-living-standard/tables.html	https://html.spec.whatwg.org/multipage/tables.html	2026-08-09	sha256:1e4082e281583eaed81a98a10ef718dbaa5815f5bc266341ac169065289104f2
+file	html-living-standard/text-level-semantics.html	https://html.spec.whatwg.org/multipage/text-level-semantics.html	2026-08-09	sha256:5941b7592a47028bfed2aa5678486abd53545d1625a73ccf796a9abc04c9a341
+file	draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt	https://www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt	2026-08-09	sha256:036da534f856685c772b73dfaeb152bc52186962393876113c910b366a08409a
+file	html-2.0/html-spec.html	https://www.w3.org/MarkUp/1995-archive/html-spec.html	2026-08-09	sha256:b1949beb67f909fbbc656c4af2d4759dd8dd5757499150ab03d4bb3563d162d7
+file	html-2.0/rfc1866.txt	https://www.rfc-editor.org/rfc/rfc1866.txt	2026-08-09	sha256:fb868a2d946c25b621ee8afaa1cbf0e4d609ffc26f88bcd188f9684e9be7152c
+file	html-3.0/emphasis.html	https://www.w3.org/MarkUp/html3/emphasis.html	2026-08-09	sha256:236dc3da8e7ab28003b2094285879a8429c743fa9dd5462a494776404963aff3
+file	html-3.0/logical.html	https://www.w3.org/MarkUp/html3/logical.html	2026-08-09	sha256:8f2e9189b2942e5957b9e014299ef4fb13e51ee630c4cafba2f1a0addfa9bbc8
+file	html-3.2/index.html	https://www.w3.org/TR/REC-html32	2026-08-09	sha256:61e75644c6351f93fd5f8b0d4e92fbcd93686b8cdf5b3a5fe70a44155b9ff27d
+file	cougar-forms/project.html	https://www.w3.org/MarkUp/Cougar/	2026-08-10	sha256:7b6064fc0d058da24454444fb0e1e79899c8405b4c286015ed592002b5f53809
+file	cougar-forms/wd-forms-960308.html	https://www.w3.org/TR/WD-forms-960308.html	2026-08-10	sha256:0a61460f5cd68c19c11a3231cc4705c3ef77f7535c4b9bfdc66ec3169c412f92
+file	cougar-forms/wd-forms-970203.html	https://www.w3.org/TR/WD-forms-970203.html	2026-08-10	sha256:3c0e42f79a6cdca216da4c117f8c91b9649949886d0383458a8e7abf555b6a00
+file	cougar-forms/wd-forms-970402.html	https://www.w3.org/TR/WD-forms-970402	2026-08-10	sha256:07f42c1bf8e3c8a9f617044097cede0fd7d286e3079d8ba6832c843f596a7bbf
+file	html-plus/htmlplus_paper.html	https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html	2026-08-09	sha256:55c55c0568abcbbcfedde3ce64a68172f23aa09a7f7d978fca43987a6bc8aa63
+file	html-plus/htmlplus_1.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_1.html	2026-08-09	sha256:bb25749f4c666e3418856c876fe475d79b7848e5c1f8065abc1295a45fdb8c87
+file	html-plus/htmlplus_16.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_16.html	2026-08-09	sha256:f71d95874e306695bf095aea938afeaf20e33b7c638154d04b5ad75dc8f17baa
+file	html-plus/htmlplus_18.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html	2026-08-09	sha256:7630fb8cadb19ac9304d5f4b22a88ed0f8c54a45e020d216c4bb41d8bcde70ad
+file	html-plus/htmlplus_22.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html	2026-08-09	sha256:05253e1b55f973e176460b011ddf0edc3e77da4346b4e06008e2e2387b60c310
+file	html-plus/htmlplus_39.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html	2026-08-09	sha256:1b53bcbee54287554cf31829d899cb9c0d908139dc40d8a99e746889c4a4d9d8
+file	html-plus/htmlplus_41.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html	2026-08-09	sha256:229b64fa40d4f3f436d88a6d1392de1825acf3fdbce5ccfa2e4c8087dfc1b5d1
+file	html-plus/htmlplus_44.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html	2026-08-09	sha256:ddd7cc27265d7eda8e4b0c935fbdba83cba24b89d9e84357fb772ade9dff7ccb
+file	html-plus/htmlplus_45.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html	2026-08-09	sha256:73357d52c0f7f7afa3e5499964b854470f69823c2e772bd53b904d758082f46d
+file	html-plus/htmlplus_58.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html	2026-08-09	sha256:9a16a933d56d4cdf01e66ba1e649b333597168a5ba9e3003746b6571c4239054
+file	rfc1942-html-tables/rfc1942.txt	https://www.rfc-editor.org/rfc/rfc1942.txt	2026-08-09	sha256:5479e9b62cd4243e36398d6d0d083a78d4f6b74aa915ed06109eed4f64e5a18b
+file	cals-table-model/tr9501.html	https://www.oasis-open.org/specs/a501.htm	2026-08-10	sha256:4588dba960ea478ce13ddcd093171f740abc0ec626ee9188eb9e72bb97bd5a51
+file	cals-table-model/tm9502.html	https://www.oasis-open.org/specs/a502.htm	2026-08-10	sha256:5d9b6613f909f7189e8a765203ad123b115113ceffbd938860a18a50a42d8ebd
+file	rfc2070-html-internationalization/rfc2070.txt	https://www.rfc-editor.org/rfc/rfc2070.txt	2026-08-09	sha256:fd30882cc9e84e374bf9fe5ef188fd739c66e9722011cf3eca1bea4980bc5648
+zip	html-4.01	https://www.w3.org/TR/html401/html40.zip	2026-08-09	sha256:e56cf10a36b6c5ecc095f81a7b891e315145ae18474bf24fec3192db75002c03
+tar	texinfo-2.16	https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z	2026-08-09	sha256:bbeae41db9fa78a532fd77dc79ad97187011bc9cf64046685edfe52b5b8003b3
+tar	texinfo-3.7	https://ftp.gnu.org/gnu/texinfo/texinfo37.tar-gz	2026-08-09	sha256:b9997c35937209479df77ced015e3e65b6e9817fe77540e4fdc266eb19031273
+file	client-side-image-maps/48a38927cb8b8945-seidman.html	https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html	2026-08-11	sha256:00474e97f2612fd994dc958bea8fa4dceaae2ca9fcb4c9a5c8e2f93bdb569137
+file	html-3.0/de9f8bbf5edb73af-draft-ietf-html-s.html	https://datatracker.ietf.org/doc/draft-ietf-html-specv3/	2026-08-11	sha256:7831651b3fd9bf0f0e329f589c3eb795743789486884fa5a2a1506aab1721caf
+file	rfc2070-html-internationalization/3ad976ec3bfa28e6-draft-ietf-html-i1.html	https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00	2026-08-11	sha256:1048e13653276799c8c1e02c8978f3c98895c40e9a26d8730bcc97d1ec296122
+file	rfc2070-html-internationalization/71fd38325e9dec4b-draft-ietf-html-i18n-00.txt	https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00.txt	2026-08-11	sha256:d280246d88cd34612d1cf6c7c9611e3076a1f9be708ee7b8209016080b2a7087
+file	rfc2070-html-internationalization/c9a35dcf095ac764-draft-ietf-html-i1.html	https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01	2026-08-11	sha256:0d10e4b6fb1fc7aa663efedd35e0735e0aad540e09f9ee16fc3f5b3dfe491a82
+file	rfc2070-html-internationalization/0a2bbf8ebf02e535-draft-ietf-html-i18n-01.txt	https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt	2026-08-11	sha256:071dda94d1937d628c404de049b399a1f24128757a95b393d74429e87639aafe
+file	html-style-history/465317f3db1bb622-draft-ietf-html-sty.html	https://datatracker.ietf.org/doc/html/draft-ietf-html-style-00	2026-08-11	sha256:6253558822ee97d52a308f805b151af93c73d77f019969a38c4e25e1e52a25c9
+file	html-style-history/8ae5b93c8685b357-draft-ietf-html-sty.html	https://datatracker.ietf.org/doc/html/draft-ietf-html-style-01	2026-08-11	sha256:02d4ce9c8f252fc9393ea5c7981191a8516e32e4128f6c9284cea2f69a37c7cd
+file	rfc1942-html-tables/21729a3a6f491e3d-draft-ietf-html-tables-00.txt	https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt	2026-08-11	sha256:8038eac57d94bc07584ca67d1808af24da0944ee1f25784e567f6411c50d7de1
+file	rfc1942-html-tables/16465c2ebb4f300b-draft-ietf-html-tables-02.txt	https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt	2026-08-11	sha256:3ca7a81727d4aaa77af934e71617acd0fb61b456f82f662dc84e268b0edb8a81
+file	rfc1942-html-tables/6c52ec9b048511a7-draft-ietf-html-tables-03.txt	https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt	2026-08-11	sha256:f0c07048ee19432c27d576cab96e7cb407a554b8e0d2f18885ccfd66b55c7587
+file	items/developer.apple.com/a478bffb30aaf2f9-Canvas.html	https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Canvas.html	2026-08-11	sha256:94804a05f6dcd229af768e3c9f2342785e3a4966236500b88caf97fbc15e088c
+file	aap-book-dtd/ecd2827652077e0a-R.html	https://ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/README	2026-08-11	sha256:a93b322ac8575347568eb253097db6cf4852101c7f8e32102d6614904baf39ec
+file	aap-book-dtd/01d365199f67e109-README..html	https://ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/README.first	2026-08-11	sha256:bf8b731c4216ac93450d639fd16e6fd0fc5125ef7d9786a5fcee8bea1202c191
+file	aap-book-dtd/7d794cf2de63d8cd-aapbook.dtd	https://ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd	2026-08-11	sha256:9681df8286333f35f2c1d49d77790751956d6373bc2f96fc8760b94bb31157a2
+file	items/github.com/f5bde61e579f6c4a-index.html	https://github.com/WICG/webcomponents/issues/92	2026-08-11	sha256:7c3ac790cb3b8001f6172276b29036aa67e8e2f14a7767a83ef23d8996854042
+file	items/github.com/82d74a7e8f26ae13-048bd7c65c2595ed5c905c4e35431aec5d8.html	https://github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c	2026-08-11	sha256:39cbef945185a22f0e79360d442480d61a80b2adedf91b555b9e891b21875b8a
+file	items/github.com/b01423a30b4c45b0-368b12910aa7b71c5f96fd2053b88132fa7.html	https://github.com/WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb	2026-08-11	sha256:443541540f5aea4a70af5b28f69e190188bead088309b126a6cedac4383df65e
+file	items/github.com/15de36fc052e2cf2-CH.html	https://github.com/alandipert/ncsa-mosaic/blob/master/CHANGES	2026-08-11	sha256:53b6d4c99e3c66924c3f51606bdb429209e7331a156d69d8c7a59029389d8f6a
+file	items/github.com/d613eb5d25807360-112.html	https://github.com/openui/open-ui/pull/1124	2026-08-11	sha256:3254a2370a94eb59f8b464709aac6b7d750ad3e50558c006bb5b96aa42e301c3
+file	items/github.com/f810e6cd78f27d71-a2b04df51b4342d7617c128e80e5aa89288.html	https://github.com/whatwg/dom/commit/a2b04df51b4342d7617c128e80e5aa892889d2e0	2026-08-11	sha256:b69217de5864bfc168e9e9643aff7fa3d091f89f75fcfb2502c1abdf11d3a988
+file	whatwg-html-history/d2894e5be38ca05a-s.html	https://github.com/whatwg/html/blob/c3550d90867392905edbd91c94fec8c89fbfe648/source	2026-08-11	sha256:9559029c9145cae1055b6de702f7c52cd6985b9c76f4bca4298a89aeafcf2e2d
+file	whatwg-html-history/3b93476d570084f0-155b9a55416464e4e80f848b9daf53bc1b7.html	https://github.com/whatwg/html/commit/155b9a55416464e4e80f848b9daf53bc1b7f41f4	2026-08-11	sha256:093446620461a9e57aa261a858571de804df48c4a5a0fb3cd3e272c3e7f75e98
+file	whatwg-html-history/8add7f5ec6af3bc1-172cccf47e97bee64f690347e0f303be31b.html	https://github.com/whatwg/html/commit/172cccf47e97bee64f690347e0f303be31b7c67b	2026-08-11	sha256:bbab8d985fef0b5310692c647a88d86c17b77fe721876dd5e266113250ae3b09
+file	whatwg-html-history/9f0c24dac338d21c-1ff9688ab0090e646f69d64e57c814ca44f.html	https://github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7	2026-08-11	sha256:4afc1d897634c041d318af2638993b80f3711c4480a686653d70f25efdd28c08
+file	whatwg-html-history/e91f9c5459f254f7-2fb24fcf3f916236e8767e2cb72b23e5c75.html	https://github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9	2026-08-11	sha256:3a45cabc0245711157839ecbbb18ff64921e8212a5dd2803d8177bb5eb43fff8
+file	whatwg-html-history/7f205ff1b1096854-303b37ec277946798aef715ff3ade7944f2.html	https://github.com/whatwg/html/commit/303b37ec277946798aef715ff3ade7944f2657c0	2026-08-11	sha256:95eecbe539dd10b3b29a39a98467aac3cc489bb7b70014e834ba6c7d17945188
+file	whatwg-html-history/f2b5615330c8656e-32bff0ac1cc9a040ec4d45fdea206b4e9ce.html	https://github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059	2026-08-11	sha256:c3c3d98184b9fbaca98acfc3ebfb04832753b4b099a8ace33754bd70fb3ba61a
+file	whatwg-html-history/2cbafc204365f408-37bbc4fa05ac4f5a9401e8f2bc7b7e4b7a2.html	https://github.com/whatwg/html/commit/37bbc4fa05ac4f5a9401e8f2bc7b7e4b7a2fd08c	2026-08-11	sha256:f86b8f6e0bd2ab0042dbf6126141313e6411bf10bb86db2332ada1d6978f57eb
+file	whatwg-html-history/2f7b0183c89d8fc0-3c157377135d05fbdd74f8c69199b47408b.html	https://github.com/whatwg/html/commit/3c157377135d05fbdd74f8c69199b47408bc6a9a	2026-08-11	sha256:42663d06ca3ea74908772341b0517d54f16f4785356bc492790db3d450f6fb3b
+file	whatwg-html-history/c1aef023bd3007ec-40c807c2c3525301b13ac46ae2f2e77572e.html	https://github.com/whatwg/html/commit/40c807c2c3525301b13ac46ae2f2e77572efe486	2026-08-11	sha256:43169a53cf38a65894e408e604359570d100057ce45d6bf5c06610a2c326a458
+file	whatwg-html-history/53421a6ee5c18b05-5e99b278578b666141bc487c77b8d5c5666.html	https://github.com/whatwg/html/commit/5e99b278578b666141bc487c77b8d5c56669a30b	2026-08-11	sha256:ea4c72f525c0ffd9c97483fcd24530d77e6ed81f4142f97822b55f3b92070bef
+file	whatwg-html-history/2569357f56116a5d-61af426a3ae6d68ffa00505b6883cbf8704.html	https://github.com/whatwg/html/commit/61af426a3ae6d68ffa00505b6883cbf870481b52	2026-08-11	sha256:5dde82a7805d212340fb9446e85e35df6e1a7fa5748d88360936d02cf44575be
+file	whatwg-html-history/8380da64fe429958-685a5e0b27e963f6b0a62a21cb950781710.html	https://github.com/whatwg/html/commit/685a5e0b27e963f6b0a62a21cb95078171076e3b	2026-08-11	sha256:3f735d575caf10db393be945e9af4b156810d207688da45a29dcfcde8cc10568
+file	whatwg-html-history/e3a5503173cded5e-6bdcd9dc9da3f21cb61f0f8c123ed2d252c.html	https://github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583	2026-08-11	sha256:cd6ca88c553966d771f5119373ba1d206e32574ceda5c4dd590f8087b8998ec4
+file	whatwg-html-history/d0424350d05c22ec-70b0ce45a26937a3f26eeb72b146261ff62.html	https://github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d	2026-08-11	sha256:b46d0baac25dc0f4fa51a4ff905c2b7c130ad988d6bf3cafe5a3d24c5d9f46d6
+file	whatwg-html-history/58b3c239b4d2e7d8-7387156d67e9087106a62157bb4b6d3e477.html	https://github.com/whatwg/html/commit/7387156d67e9087106a62157bb4b6d3e47739fb2	2026-08-11	sha256:239f7d23f6b288a37015706aeb63606c2a05c72dad25d71b17db24df3cee32f2
+file	whatwg-html-history/acbb97e2a5b4e3e4-753f385d6eb176f4cc7075ba9f41ed31908.html	https://github.com/whatwg/html/commit/753f385d6eb176f4cc7075ba9f41ed3190848b10	2026-08-11	sha256:ff80e579c2f12b41dbcaa918d2dbc709a2dea9c283bf94d1dd44f2892dd8d7a5
+file	whatwg-html-history/b62a3ab44edd3b99-77883ac94547e66273da7450487ac298b6b.html	https://github.com/whatwg/html/commit/77883ac94547e66273da7450487ac298b6bb625d	2026-08-11	sha256:cae649592e47a1fe7277d9a2a53d398b43f09f40c01de2ba11e258ef88bc6347
+file	whatwg-html-history/933959a72fa58dd2-78910a0464b60b2d2b3a1864970f66a8bdb.html	https://github.com/whatwg/html/commit/78910a0464b60b2d2b3a1864970f66a8bdb774f3	2026-08-11	sha256:ccfc239708f964adf81f1ae6707f1d0b70082fe4ba157b726e882a43adc3dcb8
+file	whatwg-html-history/31b33dcfb6d09e2a-7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae.html	https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4	2026-08-11	sha256:f6db0c7add234636ccd82285bdc81f490400cdafb7a0444c5903060d95ae44dd
+file	whatwg-html-history/b6a9db9141408750-8211497160124b53938eab1f94725a80b28.html	https://github.com/whatwg/html/commit/8211497160124b53938eab1f94725a80b28a305f	2026-08-11	sha256:776387544058cec690ca7492a5431bbd4a5dc762f051153d39d18d0b7c53cd80
+file	whatwg-html-history/5bacf6bb4f5c0aae-845c40c8035ddccb20301433b2f1225a120.html	https://github.com/whatwg/html/commit/845c40c8035ddccb20301433b2f1225a1203e4de	2026-08-11	sha256:4678d0367f48f8818aba99688fc09a028da9919f970d61b1fe21d9cce97b9d5f
+file	whatwg-html-history/7119347824c33ec2-92baa8333203ea5b97316bb1775331b216d.html	https://github.com/whatwg/html/commit/92baa8333203ea5b97316bb1775331b216d55dab	2026-08-11	sha256:b422c30d71884448f3f04115507a56c99bc0c446b4421a40b79b2543e91312b9
+file	whatwg-html-history/065b41ec1fe89a8d-9c490f21ae094de128e5bc6d3111640014a.html	https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7	2026-08-11	sha256:c1b7057012171d365f8db774dbe76850db7c78e9c8fc101682be815c5584c84b
+file	whatwg-html-history/20d43640195665df-a183c8997eb6f5647f9db27a9d3a52da864.html	https://github.com/whatwg/html/commit/a183c8997eb6f5647f9db27a9d3a52da86476d31	2026-08-11	sha256:8a46dbf7693889d448360468f842b5c8ec0bb76b9e93d5bf1ab0f039edad8198
+file	whatwg-html-history/6ad2b6e548ba2e59-a1b2ff77457cf198c77975b98f245985d3b.html	https://github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635	2026-08-11	sha256:d49c470ef95c73b7e7f47d2bc8805bdb92564284ab165879ef69f19341ab07f2
+file	whatwg-html-history/573c473dbc995ebf-a729fd0c57b9a8cc7ed783a03e72cfc7454.html	https://github.com/whatwg/html/commit/a729fd0c57b9a8cc7ed783a03e72cfc74549c9db	2026-08-11	sha256:5a9990926f168d45569b52d6f5f050b22bc9f50d92dbaa000c550b7c86472cc7
+file	whatwg-html-history/66ad8afeef30633b-a7716b7a2463323c7f25176f4b3768008d1.html	https://github.com/whatwg/html/commit/a7716b7a2463323c7f25176f4b3768008d170204	2026-08-11	sha256:af085905399061b3868194ebd8740e66c6e3f9c3dac892e3ca291a004aaba0b2
+file	whatwg-html-history/28dab1bae670b297-b3e77f6f1a15c5cc7fedc9e16b4a480426b.html	https://github.com/whatwg/html/commit/b3e77f6f1a15c5cc7fedc9e16b4a480426b2e07e	2026-08-11	sha256:1a573dcaf2550ebf7d944d1eed2527818630ec755528680ec7837036789002ac
+file	whatwg-html-history/6a9a950f55eeaf02-c397495115b089ec52dbec4502115905113.html	https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f	2026-08-11	sha256:ff7f1715cee1f2f1f7b17aa6e981a5158e618cf08515793e3e0643c3aeda519b
+file	whatwg-html-history/aa5a1f42200b1fbc-c598ff023f081dd3f03b2e43177a632fb7d.html	https://github.com/whatwg/html/commit/c598ff023f081dd3f03b2e43177a632fb7dc92ec	2026-08-11	sha256:a3b1f18874c3dccf1aa58d5859cbe4bcb8750567fa0b55e859141f10b95a077d
+file	whatwg-html-history/882743fed9302600-f4efc73617bb37e721828ba03fe3da1642c.html	https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9	2026-08-11	sha256:f383d1eb576ec6983d4766f89704940370512df3c9fbca43c678a6fd77166ffb
+file	whatwg-html-history/14a5ccb2b3b61555-f6a4d7fed33cd6ebcd2f2188302ed00b7aa.html	https://github.com/whatwg/html/commit/f6a4d7fed33cd6ebcd2f2188302ed00b7aac1465	2026-08-11	sha256:992efbe3943a24dc27a682da100c55d05bef2c6aec2f3016c3ef840b3bdad331
+file	whatwg-html-history/139e75f85d07a740-f8514de7d2d2f408e0f695dd1af3dc110f5.html	https://github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00	2026-08-11	sha256:bf70769d92c26a8a0cb10327aca5707aad51842f51dad63114d43b98f63f2a11
+file	whatwg-html-history/5c8dee4c528d1948-f98736ae6caf9250ffaed0df557e214f0bf.html	https://github.com/whatwg/html/commit/f98736ae6caf9250ffaed0df557e214f0bf5aebd	2026-08-11	sha256:8b9dac608608a5a23b5c0309d141d0adb9f60d68285f99ab708a7ee33cd52cee
+file	whatwg-html-history/a57454266000a01f-fdfe6548265125712520f3e1b72812235e9.html	https://github.com/whatwg/html/commit/fdfe6548265125712520f3e1b72812235e9a8123	2026-08-11	sha256:2fa4e6ccdbbbf7b98eb5e9b06ade112465f7051833a938b8841fc14c91188c9e
+file	whatwg-html-history/5be60562ca655338-index.html	https://github.com/whatwg/html/issues/10520	2026-08-11	sha256:d7b7dbddb7a7c87e3056dda4237f6ac684b8808b53f40ccb2fabdeac8e122f07
+file	whatwg-html-history/3a85936dc96af098-581.html	https://github.com/whatwg/html/issues/5811	2026-08-11	sha256:322681f7d1ea79f3b78b7364a055a53986bb7462c159752af7d408187e595b66
+file	whatwg-html-history/76bbdb09bf9169c3-index.html	https://github.com/whatwg/html/pull/10633	2026-08-11	sha256:ad1d49ce76347cf10c6935172072bb5fd48a43eafbc7feef23e3b7f139112894
+file	whatwg-html-history/c47f1b88db8a8fd3-732.html	https://github.com/whatwg/html/pull/7320	2026-08-11	sha256:33ba1122649d6c561d4ec324b12c82758f118e54703128058f5ee356dd6a2b48
+file	items/ksi.cpsc.ucalgary.ca/9673dbebdf64db0a-2.html	https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/2.html	2026-08-11	sha256:725d4348053bba3ac2f8f7e0e0fc3e7a231fa116c57958501a0ece531096e908
+file	items/ksi.cpsc.ucalgary.ca/c7b8d712c333da86-340.html	https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/340.html	2026-08-11	sha256:0e2777cc43bd902e23991173822d071cbe0b03a1d0a72cfd45f27ef5f9423e97
+file	items/ksi.cpsc.ucalgary.ca/d5cc8c2805e835e8-361.html	https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html	2026-08-11	sha256:67c091fdccfff371e2d367d88e0f52086e5d4078a528bc26a3b5f6fed26381a3
+file	items/ksi.cpsc.ucalgary.ca/edb672a0803a0240-0278.html	https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0278.html	2026-08-11	sha256:149741547a816795cc2ef0ca177df785203dd0d23d57bae8dc8750ba843e80f0
+file	items/ksi.cpsc.ucalgary.ca/308cf1ec4acceecc-0432.html	https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html	2026-08-11	sha256:75d0bcc749bf8edd6678a9a84fab181968bbd934f32a29a2c47d13f7bb11604b
+file	items/ksi.cpsc.ucalgary.ca/18a4b358800e7bf3-821.html	https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html	2026-08-11	sha256:aa322346db4258b1444d83075bcc7bcb3a1f4a36218f61ef07993811f1527d69
+file	items/lib.ru/0307b8a2f9c24f0e-tags.txt	https://lib.ru/WEBMASTER/tags.txt	2026-08-11	sha256:ae4bf01a7caa30a68c9f09a4488900447f5ce37e5cc754ac767852c8bd64939d
+file	items/lists.w3.org/895c450e3ab5b0fa-0014.html	https://lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html	2026-08-11	sha256:f11cc32e4c56f6e0295fb6531c831b52e53fdcbad30494216d4733482e128d74
+file	items/lists.w3.org/8277f91937ac5877-0620.html	https://lists.w3.org/Archives/Public/public-html/2008May/0620.html	2026-08-11	sha256:0d6e1efcb666da4425e403714d0faa24eb0bb7a5c6ddcec9cbf7de5da002c816
+file	items/lists.w3.org/7c30281fc1dd727c-0566.html	https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html	2026-08-11	sha256:fcee58c7167eca3cac90b3226144e965a033c555b153eb1b775397a8a1af62b4
+file	items/lists.w3.org/c6e2e1454968d1fc-0349.html	https://lists.w3.org/Archives/Public/public-html/2010Apr/0349.html	2026-08-11	sha256:aaf1ad2715847b5d8a3874e3bd06f00a9b38af5c2cffc1d8f8378c9e6afd3ded
+file	items/lists.w3.org/ea59b9e4ec4be9fa-0212.html	https://lists.w3.org/Archives/Public/public-html/2011Apr/0212.html	2026-08-11	sha256:d77b3d4d89c78ead6273171471636b394fed2abf9ca9afd80ca86400ae8ac43e
+file	items/lists.w3.org/2b6fdcbb7754ab93-0026.html	https://lists.w3.org/Archives/Public/public-html/2012Apr/0026.html	2026-08-11	sha256:9e0b4692533f0e48814f4e5f5bbd05da7187370199828f8595503cf1d4cf36d5
+file	items/lists.w3.org/76885e13ba51d269-0109.html	https://lists.w3.org/Archives/Public/public-html/2012Oct/0109.html	2026-08-11	sha256:63d75729da67e0187155190e03e49c7cb2cfced7d69b77424337cc402e19d1e7
+file	items/lists.w3.org/f0945b5661ed40f2-0086.html	https://lists.w3.org/Archives/Public/public-html/2012Sep/0086.html	2026-08-11	sha256:1d86b7888663afc1845d1b3956a1e84ab93e0d6a642c30942ded55bef043081f
+file	items/lists.w3.org/a20af213ee0ed319-0033.html	https://lists.w3.org/Archives/Public/public-html/2013Jan/0033.html	2026-08-11	sha256:8a00302f760524995403037e2b763e3ad2f7dc66128ae61c9a0270f21aedcc91
+file	items/lists.w3.org/b65a3d6f43d32ba6-0187.html	https://lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0187.html	2026-08-11	sha256:ecda2114f258f96dddeac04336683be92defefa7a40ae7f34828dce48ac7626f
+file	items/lists.w3.org/e336ba21874ee9de-0190.html	https://lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0190.html	2026-08-11	sha256:8b4f8c4438cc7987074f1fc898eaeb1d8cab5ad1833fb11a2fb8ee3de70b0d0e
+file	items/lists.w3.org/bd3f1acb57adfc0d-0109.html	https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html	2026-08-11	sha256:76c6ad0255f235c426246a79b0f7857210d74c08c77edbd62e6dd567bc0d3f25
+file	items/lists.w3.org/dd2e34fb94a3296c-0002.html	https://lists.w3.org/Archives/Public/public-whatwg-archive/2006May/0002.html	2026-08-11	sha256:dede58f625ae7364c7eafb030d8f95323e84cf437413f7b34190d4ea1a4f1791
+file	items/lists.w3.org/f71bb62fd030e0be-0422.html	https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html	2026-08-11	sha256:6b7856c841cf8744455ea53eec16fd97a0d51923ab4f42320b2cf104362bb805
+file	items/lists.w3.org/494602bb535fc180-0423.html	https://lists.w3.org/Archives/Public/public-whatwg-archive/2009Apr/0423.html	2026-08-11	sha256:2797d81e7701404fabaddfc3651836a8fce8b0c283ee84c7baebcd28acab6e79
+file	items/lists.w3.org/f31975a3a71b149a-0449.html	https://lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html	2026-08-11	sha256:d7e490ccff9b53192d2d785a1c06b2634dba94baacb7b3f150208238a3becc4c
+file	items/lists.w3.org/63eb50236a88760e-0140.html	https://lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html	2026-08-11	sha256:cd9a2970934f324120d74539bdb1a1e4a36e147e32f469aa59f94c8ab10887bf
+file	items/lists.w3.org/8d89cba28440552d-0160.html	https://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html	2026-08-11	sha256:2b87390422106645b03c92c3806bc30a077d6f09cc964d50906057699f5463ca
+file	items/lists.w3.org/0440c3635b90eb9c-0031.html	https://lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html	2026-08-11	sha256:35c22a0086d234d9ceb4a6ed27c8d980de883d3f1f958e33085333441d1df5f9
+file	items/lists.w3.org/450e15592b7e5777-0024.html	https://lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0024.html	2026-08-11	sha256:dbdab5c0fc0b533d4332211decea0f197c30f259f9466751e2514c1de1c2ea71
+file	items/lists.w3.org/809a2940eafa2317-0002.html	https://lists.w3.org/Archives/Public/www-html/1994Jun/0002.html	2026-08-11	sha256:b608d92048b1d907ac4f56e780c595e19cecbd098be80af3a0017e10149fafff
+file	items/lists.w3.org/48ac3de6454a040d-0041.html	https://lists.w3.org/Archives/Public/www-html/1994Jun/0041.html	2026-08-11	sha256:e361b5d6f2c0612669e9f61953fba45474cfb748bc15ea073cd3ddafffd32035
+file	items/lists.w3.org/7de665c2752c916e-0048.html	https://lists.w3.org/Archives/Public/www-html/1995Sep/0048.html	2026-08-11	sha256:ec6eb5b4e857e57ac8acf069a7ac039a8ebf70b8c23a8585e6ad5bacaada6d4f
+file	items/lists.w3.org/3d9620b22e590fa2-0079.html	https://lists.w3.org/Archives/Public/www-html/1997Jul/0079.html	2026-08-11	sha256:9112d0ce5d6462ecbe7c63ebb70fa468dc2771b9763b2425f700a8cd4c5b6d3f
+file	items/lists.w3.org/651c79e45b50fefb-0385.html	https://lists.w3.org/Archives/Public/www-html/1997Sep/0385.html	2026-08-11	sha256:00f0fce849f0220ed27124efc18c513d9abbc81c3147d8dedd754f76db3a6a46
+file	items/lists.w3.org/a7f77865805ac3ba-0039.html	https://lists.w3.org/Archives/Public/www-style/1995Dec/0039.html	2026-08-11	sha256:8d2cb7423708ea33d63bc421bf4788273c4e7c40b871616ab4d334ccce095ca5
+file	items/lists.w3.org/9688c6552be697ee-0003.html	https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html	2026-08-11	sha256:137d4991ac3464fdca641387c7e4f10fac46d7c6af88dc80c5953fdf04b0d49a
+file	items/lists.w3.org/4575ecdf19df5f8b-0000.html	https://lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html	2026-08-11	sha256:2251583e3088ae7fc9b3c9dfa9275fc926f8417b1cd1e0348d2275da12e1b7f2
+file	items/lists.w3.org/51289146bdefa66d-0020.html	https://lists.w3.org/Archives/Public/www-talk/1992JulAug/0020.html	2026-08-11	sha256:b9e0090d80cb7f083460d4701f5abc2464214ae78502fbe4a9cb6848e0d5356f
+file	items/lists.w3.org/5e2482bc74c7e133-0009.html	https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0009.html	2026-08-11	sha256:239bc50628811bcdad1398dca82b4b00947d8952d001ccd09069179a9dd19335
+file	items/lists.w3.org/b09f91fa104dab0a-0012.html	https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0012.html	2026-08-11	sha256:21922ec68cc942633b175c479d7a12c0853471b45f1ef462e67b5bbfcc6b6cf2
+file	items/lists.w3.org/9a3dad3ef1f95cb6-0020.html	https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0020.html	2026-08-11	sha256:6594e9cc85774f275efebcdf5d9f88433b848275433115d4053d6bf16bd03b4b
+file	items/lists.w3.org/800e708c34206f03-0063.html	https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0063.html	2026-08-11	sha256:dcbfeddcf3a18ebd0858b1e9c5fad38ac2cf68464ed621cd3762e4da7c9f4fe2
+file	items/lists.w3.org/f99c068c486f1ed8-0068.html	https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html	2026-08-11	sha256:42c6b6fbfefa18d2a032210d28289f18b862cd488d605340751161c3208e09d8
+file	items/lists.w3.org/7661438b0ffab82e-0072.html	https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html	2026-08-11	sha256:bba3f75f8cd8245ed32e9881ee29d4ad5a4da39c83d3649e6eace7ab52b7c99d
+file	items/lists.w3.org/c24d96bcaf81e776-0143.html	https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0143.html	2026-08-11	sha256:45c9edc58c91c5337d4de8d455798506bfa627ab6718bb82e4b1c781c491550e
+file	items/lists.w3.org/220abaf24f050298-0155.html	https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html	2026-08-11	sha256:e4b2b9ae47d697a8c8866389aa2a23f19648a9b9b86a96e5a2728eae07ca1538
+file	items/lists.w3.org/d9a46aa502f7704d-0159.html	https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html	2026-08-11	sha256:633660af00e1601da11bf385d521e91a43107983dcae07600d5691ba2ab6b654
+file	items/lists.whatwg.org/3410681618b3e6ea-001989.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html	2026-08-11	sha256:ee1c18fdafee5277fd1dd09302ffba28e1896a63d73bf44bf8ab71fdf59c4f73
+file	items/lists.whatwg.org/15a13e1b313b3b1f-002134.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html	2026-08-11	sha256:d0aca6c40bd883c6283f0cca0d831a1bb0e4e80d007643d40ecf6c0f65ed033d
+file	items/lists.whatwg.org/503a7371f11c48ae-002181.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002181.html	2026-08-11	sha256:5071fb15a96c7a4693e08a3f8f826973b092991b2cf36ba2aaf4e3eb849eefb1
+file	items/lists.whatwg.org/d411fc872aa7020a-043985.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/043985.html	2026-08-11	sha256:ed1643fe50a161dbfa97cebe666691234e4fffda3bd4e891321345d9367269f7
+file	items/lists.whatwg.org/0799fcb545c14bc7-044441.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/044441.html	2026-08-11	sha256:30bd67a6cf466d974dc2c19baf2d60d1d60cc1292c34a3c69a266f20f0f5a51a
+file	items/lists.whatwg.org/2787ce0070a2766d-002362.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html	2026-08-11	sha256:7e8b1db4d6ea89501dc584a040cd48222de79662ed00890e049e1a7473c2d224
+file	items/lists.whatwg.org/eb4cab367a6e3897-002363.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002363.html	2026-08-11	sha256:80a8eb33263bbb966308fa6aa252b703acd2581c1c234837148944bdb0934dba
+file	items/lists.whatwg.org/6da4e046dc1ff3f5-date.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/date.html	2026-08-11	sha256:8029a3b06b989892d01f31b9f99b5fd68ce9a33b86363967c0933110835b3b49
+file	items/lists.whatwg.org/55c518e04004c276-045650.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html	2026-08-11	sha256:7be73e2271515d836460e7c03e52e1fed9389c831d623958acdf5a832607dc38
+file	items/lists.whatwg.org/3163ee917c00cde8-054625.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054625.html	2026-08-11	sha256:061e1bd4d0b277517fcce922fce11d546230e0c225895b599a56a246aac2782a
+file	items/lists.whatwg.org/8c66fe2e60dc7e19-054633.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html	2026-08-11	sha256:bdaf55a63b0e03996b20398a362b5166eab60ee9ca9b04c2a2c10f2b445cf774
+file	items/lists.whatwg.org/eaecfc764972e14d-009702.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-February/009702.html	2026-08-11	sha256:8cc2d7fb9b50c8761b87792e9c6777d2fe168507bcd92c6a687fa3aa8f9d18de
+file	items/lists.whatwg.org/8b74849d0206e277-010129.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/010129.html	2026-08-11	sha256:c0495344d36085c4823270bcdd25f3daed7490e27f9785462edcd8b2c507a767
+file	items/lists.whatwg.org/c974dc225232cb7c-052433.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/052433.html	2026-08-11	sha256:1f22ac8370981a9cb970f4eb5b2d6199acca7d577aefef560b4968ef489e9ec3
+file	items/lists.whatwg.org/4e07f82b80b4310d-017596.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-November/017596.html	2026-08-11	sha256:8e0733d7bc55b7a64be8bb83abb45ad45a08a17cd9e11c928951a44528f07d22
+file	items/lists.whatwg.org/e72589190a369dd6-061491.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-April/061491.html	2026-08-11	sha256:ed6c249b1645b9cb78b295a6ee6fe6d3df7031ec7cbb79d3022be4091f26981f
+file	items/lists.whatwg.org/c29f9fae0eff2ea8-077688.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html	2026-08-11	sha256:a39cf01193d8ef26fdafb5a6d6f99028c22d7c4b2ff25cd38794a7e6a20720d7
+file	items/ln.hixie.ch/f3b5cae56f01b5e4-index.html	https://ln.hixie.ch/?count=1&start=1372461305	2026-08-11	sha256:33d64688d127c2a1be207ec67522a9418d27f4c5a5ad52dbf383d20522f1e209
+file	items/marc.merlins.org/b81660be66cf4d5d-html_extensions.html	https://marc.merlins.org/htmlearn/netscape/html_extensions.html	2026-08-11	sha256:b5e1da5d10a51646b4c826dfefee1f12d5fe8222923a20e701d9f29cd6b559da
+file	items/news.microsoft.com/43aa1aa1f188917b-microsoft-previews-internet-explorer-3-0-with-in.html	https://news.microsoft.com/source/1996/04/30/microsoft-previews-internet-explorer-3-0-with-innovative-support-for-sharing-of-voice-applications-over-the-world-wide-web/	2026-08-11	sha256:6c80a0524118b08c16d72e62b6380978fb072529b1cbb4435b5198ca0324ce43
+file	items/news.microsoft.com/4e367035906f87cc-microsoft-internet-explorer-3-0-beta-now-avai.html	https://news.microsoft.com/source/1996/05/29/microsoft-internet-explorer-3-0-beta-now-available/	2026-08-11	sha256:31191bde1cedd8472383b6bc17d35c2342e31a356ce7d46f471770e01474b021
+file	whatwg-web-apps-history/167cb993a954cee1-r699.html	https://platform.html5.org/history/webapps/r699.html	2026-08-11	sha256:0afb2df72ca46a35dc9be0139144b609532896c884f02572bd12c0a25ec6e3b0
+file	whatwg-web-apps-history/29f4a95bcaf32836-r791.html	https://platform.html5.org/history/webapps/r791.html	2026-08-11	sha256:689422ec94ec0e5d0e472777833d0c4a41fd1b838c796a349f51582c0a0cf71f
+file	items/tdg.docbook.org/75998306d7b9dbac-f.html	https://tdg.docbook.org/tdg/4.5/figure	2026-08-11	sha256:2813696f4e453ad3b1c943c2f9f7f852b35c2b73682cb14b6f44db0dbca2a85c
+file	mathml/eb5d929103073f63-mathml.html	https://w3c.github.io/mathml-core/	2026-08-11	sha256:3c13d82c88987ccf0de34f8d0e3a79176bb9ff318355479b1469eb44d42789c6
+file	svg/43c3533a2509a23d-struct.html	https://w3c.github.io/svgwg/svg2-draft/struct.html	2026-08-11	sha256:40f6e9119208e83080aa623f218dd082d40731a8d158ef8bd8baeacd1ee29d96
+file	items/web.archive.org/6c3a78e318a0f99b-html_extensions_3.html	https://web.archive.org/web/19970613212205id_/http://home.netscape.com:80/assist/net_sites/html_extensions_3.html	2026-08-11	sha256:2f352c025fae94246ec44b393a05973944443254aba13f609f462183cd624018
+file	items/web.archive.org/5b4f356eb003d5f7-script.html	https://web.archive.org/web/19970617232458id_/http://home.netscape.com/eng/mozilla/2.0/handbook/javascript/script.html	2026-08-11	sha256:1a8a3fe11424e4564a3cdf22344cc11aa509fb8eab7ef5b665d6bbc61ce9369d
+file	items/web.archive.org/b82275288ef607cd-script-gmlref-tso.txt	https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt	2026-08-11	sha256:648be96f15a2a53185613f07caad13d5dc2fe0402b1ec17129614b0bbdd29420
+file	items/web.archive.org/68e6de130de36450-2004_07.html	https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html	2026-08-11	sha256:3053c9658ffa10ec294b0849ce4984926f83ba7e73a5d586fac4f9c33536e481
+file	whatwg-web-apps-history/4c6dbe73281bd697-current.html	https://web.archive.org/web/20041009144718id_/http://whatwg.org/specs/web-apps/current-work/	2026-08-11	sha256:60b27a4424ff0b1911d54ead6f3cd43b95209eca2bd536a338cb1da3c4ef7f75
+file	whatwg-web-apps-history/47bdd5e05dea69cc-current.html	https://web.archive.org/web/20041210054847id_/http://www.whatwg.org/specs/web-apps/current-work/	2026-08-11	sha256:1fc175abe4f004b2053140bc2d51aaee91abf454c709a6bd6135a65ede364f69
+file	whatwg-web-apps-history/56b94ec3daa2b5a6-2005-.html	https://web.archive.org/web/20050901000000/http://www.whatwg.org/specs/web-apps/2005-09-01/	2026-08-11	sha256:e759bfec1f51a900eb31501b33ad532a4a6f6f0f3229b8d1476cd5ba7119df70
+file	items/web.archive.org/88fd2ea9e5c46f6b-classes.html	https://web.archive.org/web/20060101000000id_/http://code.google.com/webstats/2005-12/classes.html	2026-08-11	sha256:49d416fb82f029ff0271305d78665c777f18961940bf9baa5dac93bbd469544c
+file	items/web.archive.org/e1f197ddf1bab4cd-chapter_18_section_7.html	https://web.archive.org/web/20060701000000id_/http://developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html	2026-08-11	sha256:9841fd7a0b51b397cbd4b2ed82bb1441d544d4a6c4d877052f6fabda87c8d016
+file	items/web.archive.org/1fbdc3e8a451f935-msg00015.html	https://web.archive.org/web/20060701000000id_/http://mail.gnome.org/archives/usability/2006-June/msg00015.html	2026-08-11	sha256:8509ea5ecf36ef528bf8e862d27ecd5453ec14a9db5952acc0aede3e5a6e9ada
+file	whatwg-web-apps-history/f8bdeadb28b78825-2005-.html	https://whatwg.org/specs/web-apps/2005-09-01/	2026-08-11	sha256:e634f0a038dbd4212bb5796c3a59523edb023d38ead80efe3836c4ce9f03867c
+file	items/wiki.whatwg.org/ab175fe94c92f193-inde.html	https://wiki.whatwg.org/index.php?title=Change_Proposal:_figure_and_details&oldid=4382	2026-08-11	sha256:36273273286653c0b30d51a7b232f7482b45075468e1bef25e95eb898a5a4419
+file	client-side-image-maps/8b08076c4739d250-draft-ietf-html-cda-00.txt	https://www.ietf.org/archive/id/draft-ietf-html-cda-00.txt	2026-08-11	sha256:54849d7e9cd273bafc2b7b7a2e6364edb18532e10c93cc78fe69099420476b4f
+file	client-side-image-maps/a47f86788ae0e1a8-draft-ietf-html-clientsideimagemap-00.txt	https://www.ietf.org/archive/id/draft-ietf-html-clientsideimagemap-00.txt	2026-08-11	sha256:384a418a2e037311c1c00daf46b8e3c7cb54c03284e5e65c11451c1cf01bf3b4
+file	client-side-image-maps/4e701516260dab77-rfc1980.txt	https://www.rfc-editor.org/rfc/rfc1980.txt	2026-08-11	sha256:53aa9ee7f50b4ed2121f50b4cbe5753996d76c54fa4d2da0425e59e388476aa9
+file	items/www.uv.es/a0f25b6dd55192d1-jsguide.pdf	https://www.uv.es/jordi/v3/js/jsguide/jsguide.pdf	2026-08-11	sha256:43971bf56660a743b558bc3e6bf81aae091c10e672e88ef78446833f8c170523
+file	items/www.w3.org/097b3e23f1d63c4f-show_bu.html	https://www.w3.org/Bugs/Public/show_bug.cgi?ctype=xml&id=15476	2026-08-11	sha256:c9f0b15677f8c13a498286ae07d4755d3c0e7b9cd446904d0a122f25ba406c80
+file	items/www.w3.org/80b585f9e6881aac-show_bu.html	https://www.w3.org/Bugs/Public/show_bug.cgi?id=10807	2026-08-11	sha256:c1b774479ccd43b6882f55771ce289f705a2ecc7b816ffaf1191006bea159cdb
+file	items/www.w3.org/0c92d5382e78f0b4-show_bu.html	https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930	2026-08-11	sha256:70768a327725e66e7f7d4d9b8b69812a9f0d42ec1f72709e77d7af90309db211
+file	items/www.w3.org/2867df8a72c94218-show_bu.html	https://www.w3.org/Bugs/Public/show_bug.cgi?id=7657	2026-08-11	sha256:e64f03afcbf37c1fbbd144c8ff8d11f7def8cf3a392a33dd155cfd0e90ee75c3
+file	items/www.w3.org/e603fef40f4a1959-show_bu.html	https://www.w3.org/Bugs/Public/show_bug.cgi?id=7669	2026-08-11	sha256:ae848fe271aeba001f0dd19b9ca1559e35938b96ae6cd64283d2b227e1f970b8
+file	items/www.w3.org/fbca4c889bfb6216-show_bu.html	https://www.w3.org/Bugs/Public/show_bug.cgi?id=9429	2026-08-11	sha256:cc660754beb89a4ed0cf3d828ad654ebbe74e0ea4f705d6c008b7dd81cbf1df9
+file	early-www/c5f9abb01d08f4b7-proposal.html	https://www.w3.org/History/1989/proposal.html	2026-08-11	sha256:d74149d3e170535ab9f33d35c94a9f92812e4b31bf89b4611bc75bcf730c64ac
+file	early-www/ef15024394fe53d0-Anchor.h	https://www.w3.org/History/1991-WWW-NeXT/Implementation/Anchor.h	2026-08-11	sha256:48e00b4389be18b5437382d75f02f62633f9b805fd22d0a07207271c04564ffd
+file	early-www/ed6a885749b43f88-Features.html	https://www.w3.org/History/1991-WWW-NeXT/Implementation/Features.html	2026-08-11	sha256:09c251b1949f2b780878360bfebc5e2b1ca8ea2401f2770878d03730112bf2dd
+file	early-www/2aeabad912317a27-ParseHTML.h	https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h	2026-08-11	sha256:e7f4df2e38f0ea1e01d2c4a651cb4fb792f87ea001f027199685b100741d8873
+file	early-www/9d5e16b6a4d23c08-backup_of_test.html	https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html	2026-08-11	sha256:bbc29c58a217e8587dcbff78509aecd5559966a80dacccf07f98da313dd0880a
+file	early-www/edd3295feae1b9ad-default..html	https://www.w3.org/History/1991-WWW-NeXT/Implementation/WorldWideWeb.app/default.style	2026-08-11	sha256:9225a30f6e8958cf66bc06ddd7bf05b15b5f4c6b075661ea6e9ca369256f726f
+file	early-www/176c770282bdd8c9-LinkTypes.html	https://www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/LinkTypes.html	2026-08-11	sha256:49fefc8a7b6d347c6394a5fe462a6ce3a8e19e452944ac7c700e892d2688de5d
+file	early-www/168629f215f77f25-Features.html	https://www.w3.org/History/19921103-hypertext/hypertext/WWW/LineMode/Defaults/Features.html	2026-08-11	sha256:b2cd4c89b0c90b71435d74c8eb7de41c76032af3bd6732a4c72be144ad19c4f7
+file	early-www/4de8c29af3f60996-recommended.html	https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Connolly/recommended.html	2026-08-11	sha256:93784361d6c9d37d3665aa2f0dc06d1cbeaf6c2973bbfd0907a835ec05ebdd53
+file	early-www/c778b33c842bb160-Future.html	https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html	2026-08-11	sha256:f9910fd9a7a849abc4fba246d07febff9441e1a2f3c9aef3fa26edbe908298e5
+file	early-www/5355c914170fae57-HTMLConstraints.html	https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/HTMLConstraints.html	2026-08-11	sha256:079b855898bc4ad0518967b99e3a0aabfe9c2a0528a76933fe3ac6f00ef85772
+file	early-www/6fba3e9651380c1e-Tags.html	https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html	2026-08-11	sha256:ce9352bd57bd1d3fb23dcc19435e8d67d3c6155025fc8b8f5005e47bf20db5a4
+file	early-www/8c0a96e310f208d1-Features.html	https://www.w3.org/History/19921103-hypertext/hypertext/WWW/NeXT/Implementation/Features.html	2026-08-11	sha256:7ab2e1452a4ebc6fc59ec816530d65a4b37be67fbb342b3f749c8e6e6b9b66a1
+file	ruby-markup/93c142fbeff73349-draft-duerst-ru.html	https://www.w3.org/International/draft-duerst-ruby-01	2026-08-11	sha256:cc3126314ea4f94e623fee3f1ae25ffeeb166fc99ccc0c850a32130922664dd2
+file	html-plus/1aa3cc659a506df4-htmlplus_35.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html	2026-08-11	sha256:0f92c69eea56bf17b34ddf7daf311766ce08877bc289f6d8c69ecf5f4b824cd6
+file	html-plus/7be80adace115156-htmlplus_36.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_36.html	2026-08-11	sha256:2585c0494f3f41a47b258e4fcfc48444657bb83c0c260941f12bcdc2d9253e8a
+file	html-plus/7fbc940083a76f2e-htmlplus_37.html	https://www.w3.org/MarkUp/HTMLPlus/htmlplus_37.html	2026-08-11	sha256:9613b703a47d1387263f53e293d8903f65e214e5d4ee5380b7a742ae29dab02f
+file	items/www.w3.org/afa66c4ab9d857d4-draft-ietf-iiir-html-01.txt	https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt	2026-08-11	sha256:77e9ffd0d0433da9e4f7c525c6ed7f204ad804d877063e3c8eceaca09d1c8908
+file	html-3.0/4a6968e90aeab1a2-index.html	https://www.w3.org/MarkUp/html3/	2026-08-11	sha256:e4a09d87b6f9df4b5e95d24d7d7fa632629bf59f11f9cf710f7507793d1d1702
+file	html-3.0/4e9432f8d112def4-divisions.html	https://www.w3.org/MarkUp/html3/divisions.html	2026-08-11	sha256:bd25b3394a9f8368b137647e31dceacdf4dfeb8104e6ed9e6ef39658240f2c55
+file	html-3.0/3b4ce0f276251727-dochead.html	https://www.w3.org/MarkUp/html3/dochead.html	2026-08-11	sha256:a44ff75ef8613f02edc294aba4c566bf0683e164a248b3d82650fea7609c2540
+file	html-3.0/a9898abadede1db1-html3.dtd	https://www.w3.org/MarkUp/html3/html3.dtd	2026-08-11	sha256:d1d8f7c57a5fbd3b92f0feea087bf23ddf9f5c47915204f7b64de73526204dd1
+file	html-3.0/a08dc01908e0d810-html3.txt	https://www.w3.org/MarkUp/html3/html3.txt	2026-08-11	sha256:f9aa294d01472966502261c48a119b4d8644a6675c4f68eda509033537aca452
+file	html-3.0/73fe854480c27682-intro.html	https://www.w3.org/MarkUp/html3/intro.html	2026-08-11	sha256:01ed4750077d5e3dcf6953a892ba0a599fe5236d545b892b76515e4f4916ab2a
+file	html-3.0/2332ea66b0fd9bd3-tables.html	https://www.w3.org/MarkUp/html3/tables.html	2026-08-11	sha256:8ebc85fe171df254941500d728aa1450d43cb3430ca9937a778fe294660a6abd
+file	mathml/a926f6b2dd76b7ff-REC-MathML-199.html	https://www.w3.org/TR/1998/REC-MathML-19980407/	2026-08-11	sha256:1bb3216a2957ae99ce3fdb68d4d29449567b21c42e40b0c10f3b0ac716701ff7
+file	ruby-markup/4f19a1a45ff5e64f-WD-ruby-199.html	https://www.w3.org/TR/1998/WD-ruby-19981221/	2026-08-11	sha256:8df971fddb8cac98c39225fe2ef7d5b518afa6ae6a1f6dc3be1129288e3fa657
+file	svg/7f927b84054b7c83-REC-SVG-200.html	https://www.w3.org/TR/2001/REC-SVG-20010904/	2026-08-11	sha256:7d6179a2482b5dfbb127698d6758740dd0f2309f6a4a53b772c6c7ea131c5164
+file	ruby-markup/af6b6f2bacdb9795-REC-ruby-200.html	https://www.w3.org/TR/2001/REC-ruby-20010531/	2026-08-11	sha256:7b08dedfe56402c33e92891517403fc7faeecec4a1ce7f77fbd8f5e3758bf318
+file	wai-aria/9869d34451822d83-WD-xhtml-role-200.html	https://www.w3.org/TR/2006/WD-xhtml-role-20060725/	2026-08-11	sha256:d61bc131a1f58beec9d1a44882d35725c29e44f8bd7e174f0c112e040569cbfd
+file	items/www.w3.org/b9b44d67061f6935-mod-object.html	https://www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html	2026-08-11	sha256:541b5ab577e445fe2c0f7bb88290491158ba5eeda5a8b69d1e7ac4b362c85358
+file	w3c-html5-history/350abfff68eb16a3-WD-html5-200.html	https://www.w3.org/TR/2008/WD-html5-20080122/	2026-08-11	sha256:7cef72c80088653a4d6aba49d03e0db0125a6cc499ee4b13152ef880ffb15452
+file	w3c-html5-history/07e1fb58af5f1133-WD-html5-diff-200.html	https://www.w3.org/TR/2008/WD-html5-diff-20080122/	2026-08-11	sha256:ef16766a3325dc50e0f225ecac76e7af54f483ba36e0d25d72182c21af77d1bf
+file	wai-aria/a24ec93729301cee-WD-wai-aria-200.html	https://www.w3.org/TR/2008/WD-wai-aria-20080204/	2026-08-11	sha256:67feb10c67df81a68ec9c29d955cd05bebd7416d4211d0c3556cbc1784471d88
+file	wai-aria/d56a81fadde48cc7-WD-wai-aria-200.html	https://www.w3.org/TR/2008/WD-wai-aria-20080806/	2026-08-11	sha256:a9286a4e017d23f46163d50da547544e4f0ddcb869babcb81e3101d6b2a1c83f
+file	w3c-html5-history/2579a854225b6f5d-video.html	https://www.w3.org/TR/2010/WD-html5-20101019/author/video.html	2026-08-11	sha256:6d1ee8aa9dfb9925b83ee2b7707d2492d08d0ad56a204ac5d237be1f96b49da6
+file	w3c-html5-history/93f0ba011fb3526a-WD-html-main-element-201.html	https://www.w3.org/TR/2012/WD-html-main-element-20121217/	2026-08-11	sha256:20cb325263a16679bbbfcef868b58cab1c0ea6a6896c892bf97bebb9f176f852
+file	items/www.w3.org/b5fdf63eab96d02a-WD-shadow-dom-201.html	https://www.w3.org/TR/2012/WD-shadow-dom-20120522/	2026-08-11	sha256:e0857b082dcfe22d18005a887feed6f8c22bfcfb7d49b6519b10a977890ff6f5
+file	w3c-html5-history/07cc38dfce7715c8-WD-html-picture-element-201.html	https://www.w3.org/TR/2013/WD-html-picture-element-20130226/	2026-08-11	sha256:cee530000a5df5d9f0a51f8f4d8a4ac967aff57a3fe4b253bc9a270166001b06
+file	w3c-html5-history/307fb99de1478ea8-WD-html-templates-201.html	https://www.w3.org/TR/2013/WD-html-templates-20130214/	2026-08-11	sha256:83dc6f041280d9d61c9a63199d24e26792b88aeeac7c55e6c2d1b44b750f9a77
+file	w3c-html5-history/3f93f39fb4d3c7a3-text-level-semantics.html	https://www.w3.org/TR/2013/WD-html51-20130528/text-level-semantics.html	2026-08-11	sha256:d82fce596e705d0aef30788ccc35602baaa302d917a09b669ea64caab94a588f
+file	w3c-html5-history/24ae26ed81a389ee-WD-respimg-usecases-201.html	https://www.w3.org/TR/2013/WD-respimg-usecases-20130226/	2026-08-11	sha256:c7e0225764cc93b8cae36009105791bb27f97246d6ceef0309dbb1058151c187
+file	wai-aria/f5d49f1926104de2-index.html	https://www.w3.org/TR/2014/REC-wai-aria-20140320/roles	2026-08-11	sha256:61e04662646c992a20897fa7cd375f3bb5b6b059e7e24b3316c05908986cb2c8
+file	html-4-history/e0184020eceffed4-changes.html	https://www.w3.org/TR/PR-html40-971107/appendix/changes.html	2026-08-11	sha256:c3931fe9bb30a067b6d359de38cd1ed79831beb2bebbf6797ec2612e15fcdda3
+file	html-4-history/5f86fa2178bb46cb-forms.html	https://www.w3.org/TR/PR-html40-971107/interact/forms.html	2026-08-11	sha256:9658aa1231ced2f4367e987724e02ab1c3bff76ca9298ee21da35ab09ee46a01
+file	html-4-history/04286e6da58132b5-text.html	https://www.w3.org/TR/PR-html40-971107/struct/text.html	2026-08-11	sha256:d70254b3b57adb053b51e8a086e163ee2d1054a946ad1ee32ee6758382091b7b
+file	items/www.w3.org/2a8695b5bdcffdd5-REC-CSS1-9.html	https://www.w3.org/TR/REC-CSS1-961217	2026-08-11	sha256:836cf8a9e868666b09e04371c9592c0e3e3d61c3214d6b22cd148bd9a6bb982a
+file	html-4-history/0f6b1591bd470d68-changes.html	https://www.w3.org/TR/REC-html40-971218/appendix/changes.html	2026-08-11	sha256:3a9ee255edb50a52e7941c22b4f4f7e820f47c31b7f65ab6b54a66da197de0ff
+file	html-4-history/903363b42964517c-frames.html	https://www.w3.org/TR/REC-html40-971218/present/frames.html	2026-08-11	sha256:bf1bd5987b1f67e06b432bb25fdce72588a70c0c54a1ada4e3f6444a1a853c1c
+file	html-4-history/9a136057140feaf8-graphics.html	https://www.w3.org/TR/REC-html40/present/graphics.html	2026-08-11	sha256:885b6d0edbffe9bbc1f5fb3189fc2906238dc3b66a9d00f6a280bf0cbd7577b1
+file	html-4-history/451f824c2f95b280-text.html	https://www.w3.org/TR/REC-html40/struct/text.html	2026-08-11	sha256:551aec596df953a43d31bb6c9217e37f1552724308a9ba961469b69b331f4277
+file	items/www.w3.org/881502cfff6146b3-WD-frames-9.html	https://www.w3.org/TR/WD-frames-970331	2026-08-11	sha256:d86b5037c955e6359ec3d939d5d143d59615b68a172b68ae7693a9bc4a0e665f
+file	html-4-history/5567476b4aad7a0e-changes.html	https://www.w3.org/TR/WD-html40-970708/appendix/changes.html	2026-08-11	sha256:2161cf0589a841a5828be812b47919f829ff5fd218d1b7c45b3d89a8cab02182
+file	html-4-history/3398c72a13f7d7ac-forms.html	https://www.w3.org/TR/WD-html40-970708/interact/forms.html	2026-08-11	sha256:729f70bc34fc477008ff8fc3ab96f734f67e9722905eae51ac81ffc2c6652ffe
+file	html-4-history/f984f8c61d6ffc09-frames.html	https://www.w3.org/TR/WD-html40-970708/present/frames.html	2026-08-11	sha256:661f1e937487eaf248792eb589aaf64f4a75a4d9d587e31449aa2f3fc210bc5d
+file	html-4-history/c3c6bbf7e288b57e-text.html	https://www.w3.org/TR/WD-html40-970708/struct/text.html	2026-08-11	sha256:ad7cad3a65e21f72264afd84501fd5d3bc0e79c785806d0374133c4ddfaefd11
+file	html-4-history/36a75b6864fb9aaf-forms.html	https://www.w3.org/TR/WD-html40-970917/interact/forms.html	2026-08-11	sha256:6820ea148a614e3ec620e9e366178a0cb4a93fd10264838e8d6c1196ffb10b74
+file	html-4-history/beae6d761bb720e9-text.html	https://www.w3.org/TR/WD-html40-970917/struct/text.html	2026-08-11	sha256:d62a191a6fc56d7b7d456c55b9ff6e567d72c351f9a4e1111d43edb36f95d783
+file	html-object-history/056e7b0bef67b886-WD-insert-951220.html	https://www.w3.org/TR/WD-insert-951220.html	2026-08-11	sha256:f1d8ffb83ecfcf22e90c8c2d842004672355b87284e27e423027856b8a3b682e
+file	html-object-history/9415fba4a10bdab3-WD-object-960308.html	https://www.w3.org/TR/WD-object-960308.html	2026-08-11	sha256:f9a8bd19451d8003527c58636f989c0016204810a05106aef0c7510c28f6f6d0
+file	html-object-history/3e18e0ba5ed25be9-WD-object-9.html	https://www.w3.org/TR/WD-object-960422	2026-08-11	sha256:23301dcfe551fd6132f9194f308ffec5072c2c44ca20fa1c57e0dc1fd69ef815
+file	html-scripting-history/006163dd1e8df2ac-WD-script-960124.html	https://www.w3.org/TR/WD-script-960124.html	2026-08-11	sha256:819dbe4fec2cf12cc6b4c125ad5215f9baa7f25a180b3887747993dc5fb512bd
+file	html-scripting-history/9a8ac276fe4f564a-WD-script-960627.html	https://www.w3.org/TR/WD-script-960627.html	2026-08-11	sha256:790af4eee2a02b893e0a28c964bdfd7506b5aa1b24cd71138013a92f7edd96be
+file	html-scripting-history/2e0fbc67539c5b34-WD-script-960709.html	https://www.w3.org/TR/WD-script-960709.html	2026-08-11	sha256:e0b28520c63400f1a32fd292973bb431e5f2e466349cffb30eb7ad0c6b1252ad
+file	html-scripting-history/7c94d3f2cd89eaf3-WD-script-9.html	https://www.w3.org/TR/WD-script-970314	2026-08-11	sha256:0981e6fcdff87797d938dd8cbc7c008e400767d32241f270a36346b9712d70a0
+file	html-style-history/d1ca486844ace104-WD-style-9.html	https://www.w3.org/TR/WD-style-960115	2026-08-11	sha256:30dfcf3daab0062750e75099b0b90cdea16d56e603e956a7eeedb1baeb8ba0cc
+file	html-style-history/6239a9dc9b0f453d-WD-style-9.html	https://www.w3.org/TR/WD-style-970324	2026-08-11	sha256:315943a3b3c4906827df6932878e046c37a35a64e84a9122f1b69594d267b0f4
+file	rfc1942-html-tables/159ecce48597babf-WD-tables-950925.html	https://www.w3.org/TR/WD-tables-950925.html	2026-08-11	sha256:bc050de3ed85f4dc3bb344de3e712d0b4a5cdc42cbc7721faabc2c3da1f861d1
+file	rfc2070-html-internationalization/55267771fa471554-html.html	https://www.w3.org/TR/html-bidi/	2026-08-11	sha256:59460c3a033383643eebccee37d54d90b4e95226e91c2dc13970abbd6cd7c795
+file	html-4-history/8956e5bf2cd33e94-changes.html	https://www.w3.org/TR/html401/appendix/changes.html	2026-08-11	sha256:57fbe7626f683b458d93c602c5bb5825a7688f60dd368fc3a79e44c2b9c84d22
+file	html-4-history/21804f7f2a71af25-scripts.html	https://www.w3.org/TR/html401/interact/scripts.html	2026-08-11	sha256:27bd9c37a756e9b20ee27c481dba90d70f85c76e27a439fa17a12abff2fc5866
+file	html-4-history/1831808ec4abf9e9-styles.html	https://www.w3.org/TR/html401/present/styles.html	2026-08-11	sha256:2b7d5cecfeb9c7f04b3725852cd7ffac18e85a2a7d00e7ba2ff1c3dd38222784
+file	html-4-history/c3ef4c6435fbc246-objects.html	https://www.w3.org/TR/html401/struct/objects.html	2026-08-11	sha256:33176f59de9d8548310c9153c8e21fd3ca74de57b1c046d4b8c0ab17a85365f6
+file	html-4-history/9d011cd666ad1cb6-text.html	https://www.w3.org/TR/html401/struct/text.html	2026-08-11	sha256:551aec596df953a43d31bb6c9217e37f1552724308a9ba961469b69b331f4277
+file	early-www/468fe714e01f12b0-test_source.txt	https://www.w3.org/Test/test_source.txt	2026-08-11	sha256:083a5506c2783c1246ac22a3ff9bb50661d75eb20b9add2f981a9ecfba97aa40
+file	items/www.w3.org/6c497960b615f61f-a-sample-picture-implement.html	https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/	2026-08-11	sha256:b235a5031188f04782e94168ce6d0d0af8a11e34b0bdebf1b54654880bf3f294
+file	items/www.w3.org/d36dd46b0073231c-index.html	https://www.w3.org/html/wg/tracker/issues/83	2026-08-11	sha256:6ffc718b59730d0b06e32757682c38a94966e63405a2a2f7383f88f83388872a
+file	items/www.w3.org/bb03d801bcd5553b-DdDtFcaptionD.html	https://www.w3.org/html/wg/wiki/ChangeProposals/DdDtFcaptionDlabel	2026-08-11	sha256:cd39fe354f69056ef65d0462571739adec9b8152a2ff60619289a9d5e6cc7cc7
+file	items/www.w3.org/380bdd817d9c1435-199607311834.OAA09274-ebt-inc.ebt.com-list-www.html	https://www.w3.org/mid/199607311834.OAA09274@ebt-inc.ebt.com;list=www-html	2026-08-11	sha256:4df8e9d43076577bd0be5259068b8df618cf07497333a69a0c46d1643a8361b6
+file	items/www.w3.org/eb5b752e2a2a6fee-199706102148.OAA08302-labrador-list-w3c-w.html	https://www.w3.org/mid/199706102148.OAA08302@labrador;list=w3c-wai-wg	2026-08-11	sha256:33e7b1eaa69426f9af3019569bbd83f0fffbba1b8c12533d980c59cea0366d43
+file	items/www.w3.org/8cf1a19fec0c478d-199706120733.JAA07828-www47.inria.fr-list-w3c-w.html	https://www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg	2026-08-11	sha256:71e1f961b8135b6a5b710573f53148bf5d23ec315fae9ef1977db18f3e1e15d0
+file	items/www.w3.org/9c41385f6de68f08-5005BC08.7040705-40intertwingl.html	https://www.w3.org/mid/5005BC08.7040705%2540intertwingly.net	2026-08-11	sha256:7654c809e2c5e19891e6a7eb31b77e82df16520c63b4a2304455fefb2ae3aefe
+file	items/www.w3.org/80854d717af8c285-html-leade.html	https://www.w3.org/press-releases/1996/html-leadership/	2026-08-11	sha256:64b1dff1f0196fabe350fb6d3a3e37625d77803f9db709d420be974da4f33d55
+file	items/www.w3.org/74dd567eafb851e7-data_el.html	https://www.w3.org/wiki/User:Tantekelik/data_element	2026-08-11	sha256:043706341af06bccfffaee191908ce4deb672d5c6d5fcab5d922c36c22268a31
+file	items/1997.webhistory.org/4f0af7b3a30ede56-0182.html	http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html	2026-08-11	sha256:304663c4614c3ab87843c143a1a014140ac82944299304017b07dee8b8cce19d
+file	items/1997.webhistory.org/cffff23d5a46c766-0197.html	http://1997.webhistory.org/www.lists/www-talk.1993q1/0197.html	2026-08-11	sha256:52f4638910955e6255295a6fdcc808b9bde35050fc8bbc2a41d4c367b651b58d
+file	items/1997.webhistory.org/86a6b96f496f2ee0-0257.html	http://1997.webhistory.org/www.lists/www-talk.1993q1/0257.html	2026-08-11	sha256:f86057947eee637076fbbdc20da38423c7851b84bd49046aa79f0e8fb527877b
+file	items/1997.webhistory.org/d6f43c4937dca8f8-0262.html	http://1997.webhistory.org/www.lists/www-talk.1993q1/0262.html	2026-08-11	sha256:dfdcfb1328d04d569ed3331a829296fcefc414f166bf0eb3e5d582dd29639d51
+file	items/1997.webhistory.org/6489d65e200ad564-0143.html	http://1997.webhistory.org/www.lists/www-talk.1993q3/0143.html	2026-08-11	sha256:83c7ca1caa4d55a2cf0bc00407e5d13f28c1b5c8097c61dc6502f2994108c4a2
+file	items/1997.webhistory.org/3e7f4eae30ac3d68-0883.html	http://1997.webhistory.org/www.lists/www-talk.1993q3/0883.html	2026-08-11	sha256:37e58f724b28654ab2ce45f891084c25bc832d3e11b4921717178523a19d8836
+file	whatwg-web-apps-history/c1b8f83c99f56e89-current.html	https://web.archive.org/web/20050406023711id_/http://whatwg.org/specs/web-apps/current-work/	2026-08-11	sha256:3a389fd7633ca184873885f2a92c7acbd38615826d678cb9ec0da4fb85bde2f3
+file	whatwg-web-apps-history/b0c56785a604e19a-current.html	https://web.archive.org/web/20050413075549id_/http://www.whatwg.org/specs/web-apps/current-work/	2026-08-11	sha256:a741d23434e7ea378bba0c5f3ea729b98ce5368f0cd1c0ecbb13e4dc9c01625b
+file	web-forms-2/fb38ede48ec8a590-2004-12-10-call-for-com.html	http://www.whatwg.org/specs/web-forms/2004-12-10-call-for-comments/	2026-08-11	sha256:653370b884f20f236d7d2c40e893ebf23692e5301658daaf395725750c3f2ed3
+file	whatwg-html-history/9259f7a86e29d984-c3550d90867392905edbd91c94fec8c89fb.html	https://github.com/whatwg/html/commit/c3550d90867392905edbd91c94fec8c89fbfe648	2026-08-11	sha256:7d491fd268b99529d9017b1ee6e18adaf0ff2f6de0ab3c00214e77b9ef9a2a48
+file	items/lists.w3.org/66dd601786c39e22-0010.html	https://lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html	2026-08-11	sha256:10a119f5aef8f6b492c40cfa4e41b04b1129312a07b3a08966b9c09c87090105
+file	items/lists.whatwg.org/049ae403edffc911-044982.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-December/044982.html	2026-08-11	sha256:d086955d3f294d5fa97686564f66b4b9f6816f096021abcf375303bdd09087c5
+file	items/lists.whatwg.org/cb120ff424b50ef8-045003.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-December/045003.html	2026-08-11	sha256:b9b235b396b1a5e56efd12ceb0794cd469d10b484f5d9fa54b242760235762c6
+file	items/lists.whatwg.org/c5e4f0df82764589-004660.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-September/004660.html	2026-08-11	sha256:8653f0393479d3df07c43d1a51b6c4d2313d85ab1bc99d14eceb92e5546bd6e6
+file	items/lists.whatwg.org/e4b794fe097593b0-064204.html	https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-August/064204.html	2026-08-11	sha256:201162131eb3c05f9b8067a357df7c7ed4d41e3b209eedd7d018e7129a1839a1
+file	whatwg-web-apps-history/570e99ba0021019b-r15.html	https://platform.html5.org/history/webapps/r15.html	2026-08-11	sha256:853f5ca25c6dee1e9b2b973e0a13f9899be358dfd11852c047aad5ced8d9bf88
+file	web-forms-2/82571977abb19a62-hfp.html	https://www.hixie.ch/specs/html/forms/hfp.html	2026-08-11	sha256:eface2a4e7afa7420ecba3abc939ea732b30e411a4666faff7d08344605155d9
+file	web-forms-2/224055341af55b0f-xforms-ba.html	https://www.hixie.ch/specs/html/forms/xforms-basic-1	2026-08-11	sha256:a1db74526213c336c55e860083c72a959cb1ce629137bad005977e6af7645762
+file	xforms/4868c303683d37e8-ui.html	https://www.w3.org/TR/2000/WD-xforms-20001219/ui.html	2026-08-11	sha256:70f1fe3848c9903731dce6666acda3c1e5e319ef707980cacb48d6fc9b29ccb7
+file	xforms/e433f184df7eeea4-slice8.html	https://www.w3.org/TR/2003/REC-xforms-20031014/slice8.html	2026-08-11	sha256:2ab55f66ff2e675f33a95b12057a34c9c8f19aeed3d3f81d151a5741230f9e8f
+file	w3c-html5-history/22ddf3f48b87feae-text-level.html	https://www.w3.org/TR/2008/WD-html5-20080610/text-level.html	2026-08-11	sha256:328185b1f9b6957c8f41a23f8a535e62e5af37a0346bd785bae362285835a758
+file	w3c-html5-history/26cf49032665c8b9-WD-html5-diff-201.html	https://www.w3.org/TR/2010/WD-html5-diff-20100304/	2026-08-11	sha256:44f24b1276df7845e6f8857a349c98fb135c36a7cd1f7ec1c32d99287b7b08ba
+file	web-forms-2/d0e8dd74a559943e-SUBM-web-forms2-200.html	https://www.w3.org/submissions/2005/SUBM-web-forms2-20050411/	2026-08-11	sha256:12619ebf7abf9250342eeb567e3a2e6c772184dc9f8228e593bd4c6919d5f77a
+file	whatwg-web-apps-history/c01c13a7b8b0959b-2006-.html	https://www.whatwg.org/specs/web-apps/2006-01-01/	2026-08-11	sha256:b56bd59d55a13a694776f5fe57714e5b0b5cbdabcd0f45c1129c0d9585fd3d0f
+file	items/documentation.help/d67e992a3576b1eb-documentation.pdf	https://documentation.help/HTMLREF/documentation.pdf	2026-08-11	sha256:eb36b35497da9fb30554cab0c0f0523fd20c47f5b72e0c28d815c37a480cd06f
+file	whatwg-html-history/047ae0e1315aa433-1a0c484e8f2f500dc854107dbdffdaf0b8f.html	https://github.com/whatwg/html/commit/1a0c484e8f2f500dc854107dbdffdaf0b8f8576b	2026-08-11	sha256:87e20cb3c4579ba75f7a55ec93d6be91e2d549cbf1822e8e4e65fce163906549
+file	rfc1942-html-tables/006ff72aa6562ac4-draft-ietf-html-tabl.html	https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00	2026-08-11	sha256:0726c26af56f00518d4195c0e9609faffc260cef406db41f113d6cd12b2cda02
+file	rfc1942-html-tables/37a80f3b0c4bd4c2-draft-ietf-html-tabl.html	https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03	2026-08-11	sha256:198261e982788175c73eb13a9053fdb0449354cc4d0e15d5cd0bd82c90037b56
+file	client-side-image-maps/3e769d06d7637c6d-rfc1980.html	https://www.rfc-editor.org/rfc/rfc1980.html	2026-08-11	sha256:861aca46e8641d34fb662e4c41e2b79cd39a68f0d7e7d85c588cb68694eeb940
+file	early-www/ad332af2e45717c3-test.html	https://www.w3.org/History/1991-WWW-NeXT/Implementation/test.html	2026-08-11	sha256:7e811608971dd6ccc820f40157a035b3abe8d10ec45a821a13e94ec09cedc5dd

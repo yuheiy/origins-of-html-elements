@@ -1,0 +1,4242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en-GB-hixie">
+ <head>
+  <title>Proposed XHTML Module: XForms Basic</title>
+
+  <link href="http://www.hixie.ch/resources/style/specification.en"
+   rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+   table { border-collapse: collapse; border-style: hidden hidden none hidden; }
+   td, th { border: solid thin; padding: 0.2em; }
+   dt { margin: 0.25em 0 0 0; }
+   pre em { font-weight: bolder; font-style: normal; }
+   p + * > li, dd li { margin: 1em 0; }
+
+   .idl { margin: 1em 0 1em 2em; padding: 0 0 0 1em; border: solid thin; background: #EEEEEE; color: black; }
+   .critical { margin: 1em; border: double thick red; padding: 1em; background: #FFFFCC; }
+   .critical > :first-child { margin-top: 0; }
+
+   .applies td { text-align: center; }
+   .applies .yes { background: yellow; }
+   .applies .deprecated { background: #EEEEEE; }
+   .applies .deprecated .yes { background: #DDDD99; }
+
+   img[src="datetime.png"] { vertical-align: -8px; }
+  </style>
+
+ <body class="draft">
+  <div class="head">
+   <p> <a class="logo" href="http://www.opera.com/" rel="home"><img
+    alt="Opera Software"
+    src="http://www.opera.com/graphics/logos/opera.png"></a>
+    <!-- <a rel="home" href="http://www.w3.org/" class="logo"><img alt="W3C" src="http://www.w3.org/Icons/w3c_home"></a> -->
+    </p>
+
+   <h1 id="proposed">Proposed XHTML Module: XForms Basic</h1>
+
+   <h2 class="no-num no-toc" id="working">Working Draft 4 December 2003</h2>
+
+   <dl>
+    <dt>This version:
+
+    <dd><a
+     href="http://www.hixie.ch/specs/html/forms/xforms-basic-1">http://www.hixie.ch/specs/html/forms/xforms-basic-1</a>
+
+    <dt>Latest version:
+
+    <dd><a
+     href="http://www.hixie.ch/specs/html/forms/xforms-basic">http://www.hixie.ch/specs/html/forms/xforms-basic</a>
+
+    <dt>Previous version:
+
+    <dd><a
+     href="http://lists.w3.org/Archives/Member/w3c-archive/2003Sep/att-0014/hfp.html">http://lists.w3.org/Archives/Member/w3c-archive/2003Sep/att-0014/hfp.html</a>
+
+    <dt>Editor:
+
+    <dd>Ian Hickson, Opera Software, ian@hixie.ch
+   </dl>
+
+   <p class="copyright">&copy; Copyright 2003 Opera Software.</p>
+  </div>
+
+  <hr>
+
+  <h2 class="no-num no-toc" id="abstract">Abstract</h2>
+
+  <p>The HTML4 form semantics are extended with new types, new attributes for
+   defining constraints, new DOM interfaces for validation, and new events
+   for dependency tracking. A repeating model is introduced for declarative
+   repeating of form sections. Mechanisms for XML submission and
+   initialization of forms are added to the form submission model. HTML4,
+   XHTML1.1 and the DOM are thus extended in a manner which has a clear
+   migration path from existing HTML forms, leveraging the knowledge authors
+   have built up with their experience with HTML so far.
+
+  <div class="critical">
+   <h2 class="no-num no-toc" id="status">Status of this document</h2>
+
+   <p><strong>This is a work in progress!</strong> This document is changing
+    on a daily if not hourly basis in response to comments and as a general
+    part of its development process. Comments are very welcome, please send
+    them to <a
+    href="mailto:htmlforms@damowmow.com">htmlforms@damowmow.com</a> and cc
+    www-archive@w3.org. Thank you.</p>
+
+   <p>It is very wrong to cite this as anything other than a work in
+    progress. Do not implement this in a production product. It is not ready
+    yet! At all!</p>
+  </div>
+
+  <p>This document currently has no official standing within the W3C at all.
+   It is the result of loose collaboration between interested parties over
+   dinner, in various mailing lists, on IRC, and in private e-mail. To become
+   involved in the development of this document, please send comments to the
+   address given above. <strong>Your input will be taken into
+   consideration.</strong>
+
+  <p>This is a working draft and may therefore be updated, replaced or
+   rendered obsolete by other documents at any time. It is inappropriate to
+   use Working Drafts as reference material or to cite them as other than
+   "work in progress".
+
+  <p>To find the latest version of this working draft, please follow the
+   "Latest version" link above.
+
+  <h2 class="no-num no-toc" id="contents">Table of contents</h2>
+  <!--begin-toc-->
+
+  <ul class="toc">
+   <li><a href="#introduction"><span class="secno">1. </span>Introduction</a>
+    
+    <ul class="toc">
+     <li><a href="#relationship"><span class="secno">1.1. </span>Relationship
+      to HTML</a>
+
+     <li><a href="#relationship0"><span class="secno">1.2.
+      </span>Relationship to XForms</a>
+
+     <li><a href="#conformance"><span class="secno">1.3. </span>Conformance
+      requirements</a>
+
+     <li><a href="#terminology"><span class="secno">1.4.
+      </span>Terminology</a>
+    </ul>
+
+   <li><a href="#extensions"><span class="secno">2. </span>Extensions to form
+    control elements</a>
+    <ul class="toc">
+     <li><a href="#extensions0"><span class="secno">2.1. </span>Extensions to
+      the <code>input</code> element</a>
+
+     <li><a href="#extensions1"><span class="secno">2.2. </span>Extensions to
+      the <code>select</code> element</a>
+
+     <li><a href="#extensions2"><span class="secno">2.3. </span>Extensions to
+      the <code>textarea</code> element</a>
+
+     <li><a href="#extensions3"><span class="secno">2.4. </span>Extensions to
+      existing attributes</a>
+
+     <li><a href="#the-pattern"><span class="secno">2.5. </span>The
+      <code>pattern</code> attribute</a>
+
+     <li><a href="#the-required"><span class="secno">2.6. </span>The
+      <code>required</code> attribute</a>
+
+     <li><a href="#formAttribute"><span class="secno">2.7. </span>The
+      <code>form</code> attribute</a>
+
+     <li><a href="#the-autocomplete"><span class="secno">2.8. </span>The
+      <code>autocomplete</code> attribute</a>
+
+     <li><a href="#the-inputmode"><span class="secno">2.9. </span>The
+      <code>inputmode</code> attribute</a>
+
+     <li><a href="#the-help"><span class="secno">2.10. </span> The
+      <code>help</code> attribute</a>
+
+     <li><a href="#the-output"><span class="secno">2.11. </span> The
+      <code>output</code> element</a>
+
+     <li><a href="#impliedForm"><span class="secno">2.12. </span>The implied
+      form for form controls with no form element</a>
+
+     <li><a href="#handling"><span class="secno">2.13. </span>Handling
+      unexpected elements</a>
+    </ul>
+
+   <li><a href="#repeating"><span class="secno">3. </span>Repeating form
+    controls</a>
+    <ul class="toc">
+     <li><a href="#definitions"><span class="secno">3.1.
+      </span>Definitions</a>
+      <ul class="toc">
+       <li><a href="#repetition"><span class="secno">3.1.1. </span>Repetition
+        templates</a>
+
+       <li><a href="#repetition0"><span class="secno">3.1.2.
+        </span>Repetition blocks</a>
+      </ul>
+
+     <li><a href="#new-form"><span class="secno">3.2. </span>New form
+      controls</a>
+
+     <li><a href="#repetitionModel"><span class="secno">3.3. </span>The
+      repetition model</a>
+      <ul class="toc">
+       <li><a href="#addition"><span class="secno">3.3.1. </span>Addition</a>
+        
+
+       <li><a href="#removal"><span class="secno">3.3.2. </span>Removal</a>
+
+       <li><a href="#movement"><span class="secno">3.3.3. </span>Movement of
+        repetition blocks</a>
+      </ul>
+
+     <li><a href="#repeatExample"><span class="secno">3.4. </span>Example</a>
+      
+    </ul>
+
+   <li><a href="#the-forms"><span class="secno">4. </span>The forms event
+    model</a>
+    <ul class="toc">
+     <li><a href="#crazyBubbling"><span class="secno">4.1. </span>Bubbling
+      semantics</a>
+
+     <li><a href="#scopeResolution"><span class="secno">4.2. </span>Scope
+      resolution for ECMAScript in HTML event handler attributes</a>
+
+     <li><a href="#change"><span class="secno">4.3. </span>Change events and
+      input events</a>
+
+     <li><a href="#events"><span class="secno">4.4. </span>Events to enable
+      simpler dependency tracking</a>
+      <ul class="toc">
+       <li><a href="#declarative"><span class="secno">4.4.1.
+        </span>Declarative dependency tracking</a>
+      </ul>
+
+     <li><a href="#form-validation"><span class="secno">4.5. </span>Form
+      validation</a>
+    </ul>
+
+   <li><a href="#form-submission"><span class="secno">5. </span>Form
+    submission</a>
+    <ul class="toc">
+     <li><a href="#unacceptableCharacters"><span class="secno">5.1.
+      </span>Handling characters outside the submission character set</a>
+
+     <li><a href="#x-www-form-urlencoded"><span class="secno">5.2.
+      </span><code>application/x-www-form-urlencoded</code></a>
+
+     <li><a href="#x-www-form-xml"><span class="secno">5.3.
+      </span><code>application/x-www-form+xml</code>: XML submission</a>
+    </ul>
+
+   <li><a href="#seeding"><span class="secno">6. </span>Seeding a form with
+    initial values</a>
+
+   <li><a href="#extensions4"><span class="secno">7. </span>Extensions to the
+    HTML Level 2 DOM interfaces</a>
+    <ul class="toc">
+     <li><a href="#additions"><span class="secno">7.1. </span>Additions
+      specific to the <code>HTMLFormElement</code> interface</a>
+
+     <li><a href="#additions0"><span class="secno">7.2. </span>Additions
+      specific to the <code>HTMLSelectElement</code> interface</a>
+
+     <li><a href="#the-htmloutputelement"><span class="secno">7.3. </span>The
+      <code>HTMLOutputElement</code> interface</a>
+
+     <li><a href="#validation"><span class="secno">7.4. </span>Validation
+      APIs</a>
+
+     <li><a href="#new-dom"><span class="secno">7.5. </span>New DOM
+      attributes for new content attributes</a>
+
+     <li><a href="#resetting"><span class="secno">7.6. </span>Resetting form
+      controls</a>
+
+     <li><a href="#repetition1"><span class="secno">7.7. </span>Repetition
+      interfaces</a>
+
+     <li><a href="#loading"><span class="secno">7.8. </span>Loading remote
+      documents</a>
+    </ul>
+
+   <li><a href="#styling"><span class="secno">8. </span>Styling form
+    controls</a>
+    <ul class="toc">
+     <li><a href="#relation"><span class="secno">8.1. </span>Relation to the
+      CSS3 User Interface module</a>
+    </ul>
+
+   <li><a href="#xhtml-module-def">A. XHTML module definition</a>
+
+   <li><a href="#summary">B. Attribute summary</a>
+
+   <li><a href="#references">References</a>
+
+   <li><a href="#acknowledgements">Acknowledgements</a>
+  </ul>
+  <!--end-toc-->
+
+  <hr>
+
+  <h2 id="introduction"><span class="secno">1. </span>Introduction</h2>
+
+  <p>The following features are considered requirements for this
+   specification:
+
+  <ul>
+   <li>Backwards compatibility (where possible).
+
+   <li>Ease of authoring for authors with limited knowledge about XML, data
+    models, etc, but familiar with commonly used languages such as HTML and
+    ECMAScript.
+
+   <li>Basic data typing, providing new controls for commonly used types.
+
+   <li>Validation on the client side (while recognizing that server side
+    validation will still be required).
+
+   <li>Dynamically adding more fields (repeating structures) on the client
+    side.
+
+   <li>XML submission.
+
+   <li>The ability to initialize forms from external data sources.
+  </ul>
+
+  <p>This specification is <em>not</em> a subset of XForms 1.0.
+
+  <h3 id="relationship"><span class="secno">1.1. </span>Relationship to HTML</h3>
+
+  <p>This specification is an extension to <a
+   href="#refsXHTML1">[XHTML1]</a>. It clarifies and extends the semantics
+   put forth in <a href="#refsHTML4">[HTML4]</a> for form controls and form
+   submission. It is expected to be implemented in ordinary HTML user agents
+   alongside existing forms technology, and indeed, some of the features
+   described in this draft have been implemented by user agents as ad-hoc,
+   non-standard extensions for many years due to strong market need.
+
+  <h3 id="relationship0"><span class="secno">1.2. </span>Relationship to
+   XForms</h3>
+
+  <p>In general, <a href="#refsXForms">[XForms]</a> and this specification
+   have different target audiences. XForms is aimed at the specialist form
+   authoring world, for products that will not typically be sent over, or
+   used as part of, the World Wide Web. On the other hand, this specification
+   is expected to be implemented by general Web browsers, and used by Web
+   authors targeting users that use those browsers. In addition, it is
+   expected that this specification could be used to implement XForms 1.0 by
+   transforming XForms documents into XHTML using this specification's
+   features.
+
+  <p>This specification attempts to add some of the functionality of XForms
+   with a minimum impact on the existing, widely implemented forms model.
+   Where appropriate, backwards compatibility, ease of authoring, and ease of
+   implementation have been given priority over theoretical purity.
+
+  <p>The following features of XForms have not been addressed:
+
+  <ul>
+   <li>The separation of the instance data model, data typing, field
+    interdependencies, and submission information from the content model and
+    interface elements.
+
+   <li>The ability to create arbitrary XML fragments to be filled in before
+    submission (although this may be possible by dynamically modifying the
+    submission XML as the form is submitted).
+
+   <li>The option for field relationships, event handling, and other features
+    to be implemented in a declarative fashion.
+
+   <li>The ability to edit local XML files directly. (While technically not
+    defined by the XForms 1.0 specification, UAs have generally implemented
+    such a feature since it is easy to extend the XForms model in that way.)
+  </ul>
+
+  <p>The majority of the features that XForms supports using declarative
+   syntax are, in this specification, handled by using scripting. Some new
+   interfaces are introduced to simplify some of the more tedious tasks.
+
+  <h3 id="conformance"><span class="secno">1.3. </span>Conformance
+   requirements</h3>
+
+  <p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+   document are to be interpreted as described in <a
+   href="#refsRFC2119">[RFC2119]</a>.
+
+  <p>Diagrams, examples, and notes are non-normative. All other content in
+   this specification is intended to be normative.
+
+  <p>This specification includes by reference the form-related parts of the
+   HTML4, XHTML1.1, DOM2 HTML, DOM3 Core, and DOM3 Events specifications (<a
+   href="#refsHTML4">[HTML4]</a>, <a href="#refsXHTML1">[XHTML1]</a>, <a
+   href="#refsDOM2HTML">[DOM2HTML]</a>, <a
+   href="#refsDOM3CORE">[DOM3CORE]</a>, <a
+   href="#refsDOM3EVENTS">[DOM3EVENTS]</a>). Compliant UAs must implement all
+   the semantics of those specifications to claim compliance to this one.
+
+  <h3 id="terminology"><span class="secno">1.4. </span>Terminology</h3>
+
+  <p>This specification refers to both HTML and XML attributes and DOM
+   attributes, often in the same context. When it is not clear which is being
+   referred to, they are referred to as <dfn id="content">content
+   attributes</dfn> for HTML and XML attributes, and <dfn
+   id="dom-attributes">DOM attributes</dfn> for those from the DOM. CSS
+   properties are just referred to as properties.
+
+  <h2 id="extensions"><span class="secno">2. </span>Extensions to form
+   control elements</h2>
+
+  <p>HTML <code>input</code> elements use the <code>type</code> attribute to
+   specify the data type. In <a href="#refsHTML4">[HTML4]</a>, the types are:
+
+  <dl>
+   <dt><code>text</code>
+
+   <dd>A free-form text input, nominally free of line breaks.
+
+   <dt><code>password</code>
+
+   <dd>A free-form text input for sensitive information, nominally free of
+    line breaks.
+
+   <dt><code>checkbox</code>
+
+   <dd>A set of zero or more values from a predefined list (in the limiting
+    case of the list only containing one value, this is equivalent to a
+    boolean).
+
+   <dt><code>radio</code>
+
+   <dd>An enumerated value.
+
+   <dt><code>submit</code>
+
+   <dd>An enumerated value, with the extra semantic that it must be the last
+    value selected and initiates form submission.
+
+   <dt><code>file</code>
+
+   <dd>An arbitrary file with a MIME type and optionally a file name.
+
+   <dt><code>image</code>
+
+   <dd>A coordinate, relative to a particular image's size.
+  </dl>
+
+  <p>Three other types, <code>reset</code>, <code>hidden</code>, and
+   <code>button</code>, are also available, but are either not real data
+   types, or not modifiable by the user, and so are not considered here.
+
+  <p>In addition, HTML also provides a few alternate elements that convey
+   typing semantics similar to the above types, but use different data
+   models:
+
+  <dl>
+   <dt><code>select</code>
+
+   <dd>An enumerated value, much like the <code>radio</code> type.
+
+   <dt><code>select multiple</code>
+
+   <dd>A set of zero or more values from a predefined list, much like the
+    <code>checkbox</code> type.
+
+   <dt><code>textarea</code>
+
+   <dd>A free-form text input, nominally with no line break restrictions.
+
+   <dt><code>button</code>
+
+   <dd>A submit button with a richer content model than an <code>input</code>
+    element button. (Can also be used for <code>reset</code> and
+    <code>button</code> buttons.)
+  </dl>
+
+  <p>This specification includes these types, their semantics, and their
+   processing rules, by reference. Compliant UAs must follow all the
+   guidelines given in the HTML4 specification except those modified by this
+   specification.
+
+  <p>These types are useful, but limited. This section expands the list to
+   cover more specific data types, and introduces attributes that are
+   designed to constrain data entry or other aspects of the UA's behaviour.
+
+  <p id="emptyElements">In addition to the attributes described below, some
+   changes are made to the content model of HTML form elements to take into
+   account scripting needs. Specifically, the <code
+   id="emptyForm">form</code>, <code>legend</code>, <code>select</code>, and
+   <code>optgroup</code> elements may now be empty (in HTML4, those elements
+   always required at least one element child, or, in the case of
+   <code>legend</code>, at least one character of text).
+
+  <p>Similarly, as <a href="#formAttribute">controls no longer need to be
+   contained within their <code>form</code> element</a> to be associated with
+   it, it is possible that authors would prefer to declare the page's forms
+   in advance, in the <code>head</code> element of XHTML documents. This is
+   therefore allowed, although only when the <code>form</code> element is
+   empty.
+
+  <p class="note">The <code>form</code> element's <code>action</code>
+   attribute <a href="#optionalAction">is no longer required</a>, and <a
+   href="#impliedForm">there is now an implied form for orphaned form
+   controls</a>. These changes are described in other parts of this
+   specification.
+
+  <h3 id="extensions0"><span class="secno">2.1. </span>Extensions to the
+   <code>input</code> element</h3>
+
+  <p>Several new types are introduced for the <code>type</code> attribute. As
+   with the older types, UAs are encouraged to show specialized widgets for
+   these types, instead of requiring that the user enter the data into a text
+   field.
+
+  <p>The formats described below are those that UAs must use when submitting
+   the data. They do not necessarily represent what the user is expected to
+   type. It is the UA's responsibility to convert the user's input into the
+   specified format.
+
+  <dl>
+   <dt><code>datetime</code>
+
+   <dd>A date and time encoded according to <a
+    href="#refsISO8601">[ISO8601]</a> with the time zone set to UTC, e.g.:
+    <samp>1995-12-31T23:59:59Z</samp>. User agents are expected to show an
+    appropriate widget.
+    <p class="note">This specification does not specify how the widget should
+     appear. It could be something like this: <img alt="a text field with
+     editable sections for each value, with a button to pop up a dialog
+     showing a calendar or clock." src="datetime.png"></p>
+
+    <p>UAs may display the time in whatever time zone is appropriate for the
+     user, but should be clear to the user that the time is globally defined,
+     not time-zone dependent. The submitted date and time must be in the UTC
+     timezone.
+
+   <dt><code>date</code>
+
+   <dd>A date encoded according to <a href="#refsISO8601">[ISO8601]</a>,
+    e.g.: <samp>1995-12-31</samp>. User agents are expected to show an
+    appropriate widget, such as a calendar.
+
+   <dt><code>expdate</code>
+
+   <dd>A date consisting of a year and a month encoded according to <a
+    href="#refsISO8601">[ISO8601]</a>, e.g.: <samp>1995-12</samp>. This type
+    is used most frequently for credit card expiry dates.
+
+   <dt><code>time</code>
+
+   <dd>A time encoded according to <a href="#refsISO8601">[ISO8601]</a> with
+    no time zone, e.g.: <samp>23:59:59</samp>. User agents are expected to
+    show an appropriate widget, such as a clock. UAs should make it clear to
+    the user that the time does not carry any time zone information.
+
+   <dt><code>number</code>
+
+   <dd>An arbitrary precision real number, written out with an optional minus
+    sign ("-"), a decimal integer, a decimal point (".") and a decimal
+    fractional part, together forming a number representing the base,
+    followed optionally by the lowercase literal letter "e", another optional
+    minus sign, and a decimal integer exponent representing the index of a
+    power of ten with which to multiply the base to get the resulting number.
+    For example, negative-root-two, to 32 significant figures, would be
+    <samp>-1.4142135623730950488016887242097e0</samp>, while the radius of
+    the earth given in furlongs would be <samp>3.17053408e4</samp>. This
+    format is designed to be compatible with <code>scanf(3)</code>'s
+    <code>%f</code> format and similar parsers while being easier to parse
+    than required by some other floating point syntaxes. If the exponent part
+    is omitted it is assumed to be zero. Note that <code>+0</code>,
+    <code>0e+0</code>, <code>+0e0</code> are invalid numbers (the minus sign
+    cannot be replaced by a plus sign for positive numbers, it must simply be
+    dropped) and UAs must therefore not serialize numbers in those formats.
+
+   <dt><code>integer</code>
+
+   <dd>An integer, written as a series of decimal digits optionally prefixed
+    by a minus sign ("-").
+
+   <dt><code>email</code>
+
+   <dd>An e-mail address, as defined by <a href="#refsRFC822">[RFC822]</a>
+    (the <code>mailbox</code> token, defined in RFC822 section 6.1).
+
+   <dt><code>uri</code>
+
+   <dd>A URI, as defined by <a href="#refsRFC2396">[RFC2396]</a> (the
+    <code>absoluteURI</code> token, defined in RFC2396 section 3).
+  </dl>
+
+  <p>To limit the range of values allowed by the above types, two new
+   attributes are introduced, which apply to the date-related, time-related,
+   and numeric types:
+
+  <dl>
+   <dt><code>min</code>
+
+   <dd>Gives the minimum value (inclusive) of the field, in the format
+    specified for the relevant type. If absent, or if the value is not in the
+    expected format, this should be treated as negative infinity (or the
+    equivalent for the relevant type).
+
+   <dt><code>max</code>
+
+   <dd>Gives the maximum value (inclusive) of the field, in the format
+    specified for the relevant type. If absent, or if the value is not in the
+    expected format, this should be treated as positive infinity (or the
+    equivalent for the relevant type).
+  </dl>
+
+  <p>UAs must not submit forms that contain fields whose values do not match
+   their types (<a href="#ERROR_TYPE_MISMATCH">ERROR_TYPE_MISMATCH</a>) or
+   whose values are outside the allowed range (<a
+   href="#ERROR_RANGE_UNDERFLOW">ERROR_RANGE_UNDERFLOW</a>, <a
+   href="#ERROR_RANGE_OVERFLOW">ERROR_RANGE_OVERFLOW</a>).
+
+  <p class="issue">Need to define the numeric conversions for decimal to
+   binary so that min/max can be done interoperably at difficult
+   decimal-to-binary cases. Brendan suggested referencing ECMA262, but I
+   don't know which section exactly.
+  <!-- XXX -->
+
+  <p>Note that a field with a <code>max</code> less than its <code>min</code>
+   can never be satisfied and thus would block a form from being submitted.
+   This is not considered an error condition.
+
+  <p>Note that fields may have no value, in which case they aren't
+   "successful", do not take part in submission, and therefore do not need to
+   have their values match their types (unless they are <a
+   href="#required">required</a> fields).
+
+  <p class="note">For more details on the meaning and relevance of the term
+   "successful", see <a
+   href="http://www.w3.org/TR/html4/interact/forms.html#h-17.13.2">HTML4
+   section 17.3.2</a>.
+
+  <div class="example">
+   <p>The following form uses some of the types described above:</p>
+
+   <pre>
+&lt;form action="..." method="post" onsubmit="verify(event)"&gt;
+ &lt;p&gt;
+  &lt;label&gt;
+   Quantity:
+   &lt;input name="count" type="integer" min="0" max="99" value="1" /&gt;
+  &lt;/label&gt;
+ &lt;/p&gt;
+ &lt;p&gt;
+  &lt;label for="time1"&gt; Preferred delivery time: &lt;/label&gt;
+  &lt;input id="time1" name="time1" type="time" min="08:00:00" max="17:00:00" value="08:00:00" /&gt; &mdash;
+  &lt;input id="time2" name="time2" type="time" min="08:00:00" max="17:00:00" value="17:00:00" /&gt;
+ &lt;/p&gt;
+ &lt;script type="text/javascript"&gt;
+  function verify(event) {
+    // check that time1 is smaller than time2, otherwise, swap them
+    if (event.target.time1 &amp;gt;= event.target.time2) { // ISO8601 times are string-comparison safe.
+      var time2 = event.target.time2;
+      event.target.time2 = event.target.time1;
+      event.target.time1 = time2;
+    }
+  }
+ &lt;/script&gt;
+&lt;/form&gt;
+</pre>
+  </div>
+
+  <p class="note">Servers should still perform type checking on submitted
+   data, as malicious users or rogue user agents might submit data intended
+   to bypass this client-side type checking.
+
+  <p>The <code>size</code> attribute of the <code>input</code> element is
+   deprecated in favor of using CSS to specify the layout of the form.
+
+  <h3 id="extensions1"><span class="secno">2.2. </span>Extensions to the
+   <code>select</code> element</h3>
+
+  <p>In addition to the new types above, the <code>select</code> element is
+   extended to allow for a free-form input control which has author-specified
+   auto-completion values.
+
+  <dl>
+   <dt><code>editable</code>
+
+   <dd>This attribute specifies that the <code>select</code> element's value
+    can be one other than those specified in the list of <code>option</code>
+    elements.
+    <p class="issue">The <code>editable="editable"</code> syntax, which is
+     the result of 1998's XML removing some features from 1986's SGML, is a
+     bit ugly. What can we do about it?</p>
+    <!-- XXX -->
+  </dl>
+
+  <p>For example, a Web page may wish to ask a user to enter a filename,
+   offering some suggested names but allowing the user to enter other names
+   as well:
+
+  <pre class="example">&lt;select name="filename" editable="editable"&gt;
+  &lt;option&gt;My First Holiday&lt;/option&gt;
+  &lt;option&gt;untitled1.txt&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+  <p>When this attribute is specified, the DOM <code>type</code> attribute
+   (<a href="#refsDOM2HTML">[DOM2HTML]</a>) has the value "edit-one".
+
+  <p>If both <code>editable</code> and <code>multiple</code> are specified,
+   the UA must allow the user to enter multiple free-form values. This kind
+   of interface is sometimes seen in mail user agents for their "To:" fields,
+   for instance.
+
+  <p><img alt="" src="multiple-editable.png">
+
+  <p>When both these attributes are specified, the DOM <code>type</code>
+   attribute has the value "edit-multiple". The DOM
+   <code>HTMLSelectElement</code> interface is extended to have a new
+   attribute <code>values</code> of type <a
+   href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#DOMStringList"><code>DOMStringList</code></a>
+   (<a href="#refsDOM3CORE">[DOM3Core]</a>) that represents the currently
+   selected or entered values.
+
+  <p>In documents conforming to this specification, <code>select</code>
+   elements need not have any <code>option</code> elements.
+
+  <h3 id="extensions2"><span class="secno">2.3. </span>Extensions to the
+   <code>textarea</code> element</h3>
+
+  <p>The <code>rows</code> and <code>cols</code> attributes of the
+   <code>textarea</code> element are no longer required attributes. When
+   unspecified, CSS-compliant browsers should lay the element out as
+   specified by CSS, and non-CSS UAs may use UA-specific defaults, such as,
+   for visual UAs, using the width of the display device and a height
+   suitable for the device.
+
+  <p>The <code>textarea</code> element may have a <code>wrap</code> attribute
+   specified. This attribute controls the wrapping behaviour of submitted
+   text.
+
+  <dl>
+   <dt><code>soft</code>
+
+   <dd>This is the default value. The text is submitted without line breaks
+    other than explicitly entered line breaks. (In other words, the submitted
+    text is exactly as found in the DOM.)
+
+   <dt><code>hard</code>
+
+   <dd>The text is submitted with explicit line breaks, and in addition, line
+    breaks added to wrap the text at the width given by the <code>cols</code>
+    attribute. (These additional line breaks can't be seen in the DOM.)
+  </dl>
+
+  <p>Authors should always specify a <code>cols</code> attribute when the
+   <code>wrap</code> attribute is set to <code>hard</code>. When
+   <code>wrap="hard"</code> is specified without a <code>cols</code>
+   attribute, user agents should use the display width when wrapping the text
+   for submission. This will typically mean that different users submit text
+   at different wrapping widths, defeating much of the purpose of client-side
+   wrapping.
+
+  <p>CSS UAs should <em>render</em> <code>textarea</code> elements as
+   specified by the <code>'white-space'</code> property, although UAs may
+   have rules in their UA stylesheet that key the default 'white-space'
+   property values based on the <code>wrap</code> element for
+   <code>textarea</code> elements.
+
+  <h3 id="extensions3"><span class="secno">2.4. </span>Extensions to existing
+   attributes</h3>
+
+  <p>In addition to the new attributes given in this section, some existing
+   attributes from <a href="#refsHTML4">[HTML4]</a> are clarified below.
+   These, and other attributes from HTML4, continue having the same semantics
+   as described in HTML4 unless specified otherwise.
+
+  <dl>
+   <dt><code>accept</code>
+
+   <dd>The file upload control (<code>&lt;input type="file"&gt;</code>) uses
+    the <code>accept</code> attribute to specify a comma-separated list of
+    content types that a server processing the form will handle correctly. In
+    this specification, this attribute is extended as follows:
+    <ul>
+     <li> MIME types may have a subtype of <code>*</code>, for example:
+      <pre
+       class="example">&lt;input type="file" name="avatar" accept="<em>image/*</em>"/&gt;</pre>
+      In this way, the <code>accept</code> attribute may be used to specify
+      that the server is expecting an image, a sound clip, a video, etc,
+      without specifying the exact list of types.
+
+     <li>UAs should use the list of acceptable types in constructing a filter
+      for a file picker, if one is provided to the user.
+
+     <li>If the UA wishes to let the user create the file prior to upload, it
+      should use the <code>accept</code> attribute's MIME type list to
+      determine which application to use.
+      <div class="example">
+       <p>One recent use for sound file upload has been the concept of
+        <em>audio blogging</em>. This is similar to straight-forward Web
+        logging, or diary writing, but instead of submitting textual entries,
+        one submits sound bites.</p>
+
+       <p>The submission interface to such a system could be written as
+        follows:</p>
+
+       <pre>
+&lt;form action="/weblog/submit" method="post"&gt;
+ &lt;label&gt;
+  Attach your audio-blog sound file:
+  &lt;input type="file" name="blog" accept="audio/*"/&gt;
+ &lt;/label&gt;
+ &lt;input type="submit" value="Blog!"/&gt;
+&lt;/form&gt;
+</pre>
+
+       <p>A compliant UA could, upon encountering this form, provide a
+        "Record" button instead of, or in addition to, the more usual
+        "Browse" button. Selecting this button could then bring up a sound
+        recording application.</p>
+      </div>
+
+      <p>This is expected to be most useful on small devices that do not have
+       file systems and for which the only way of handling file upload is to
+       generate the content on the fly.</p>
+
+     <li>UAs must not submit files that do not have a MIME type conforming to
+      one of the MIME types listed as acceptable (<a
+      href="#ERROR_TYPE_MISMATCH">ERROR_TYPE_MISMATCH</a>). (UAs may,
+      however, allow the user to override the MIME type to be one of the
+      allowable types, e.g. if the file is originally incorrectly labeled.)
+
+     <li>If an <code>accept</code> attribute is set on a <code>form</code>
+      element, it sets the default for any file upload controls in that form.
+      (This is done by the file upload controls first checking their
+      attribute, and if they don't have one, checking their form's.)
+    </ul>
+
+   <dt id="optionalAction"><code>action</code>
+
+   <dd>The <code>form</code> element's <code>action</code> attribute is no
+    longer a required attribute. If omitted, the default value is the empty
+    string, which is a relative URI pointing at the current document.
+
+   <dt><code>disabled</code>
+
+   <dd>The <code>disabled</code> attribute applies to all control types,
+    including <code>fieldset</code> (in HTML4 the <code>disabled</code>
+    attribute did not apply to the <code>fieldset</code> element), except the
+    <code>output</code> element.
+
+   <dt><code>maxlength</code>
+
+   <dd>
+    <p>This attribute applies to <code>text</code>, <code>password</code> and
+     <code>file</code> input types. In particular, it does not apply to the
+     date-related, time-related, and numeric field types, or to the
+     <code>email</code> or <code>uri</code> types. <span class="note">In
+     HTML4, this attribute only applied to the <code>text</code> and
+     <code>password</code> types.</span></p>
+
+    <p>When this attribute is specified on <code>text</code> or
+     <code>password</code> controls, the server must not submit a form with
+     the control having more than the specified number of characters (<a
+     href="#ERROR_TOO_LONG">ERROR_TOO_LONG</a>). For details on counting
+     string lengths, see <a href="#refsCHARMOD">[CHARMOD]</a>.</p>
+
+    <p>When specified on a file upload control, it specifies the maximum size
+     in bytes of the content. UAs must not submit files bigger than this size
+     (<a href="#ERROR_TOO_LONG">ERROR_TOO_LONG</a>).</p>
+
+    <p class="note">Servers must still expect to receive, and must be able to
+     cope with, content larger than allowed by the maxlength attribute, in
+     order to deal with malicious or non-conforming clients.</p>
+
+   <dt><code>name</code>
+
+   <dd>Some names in this version of HTML forms have predefined meanings,
+    allowing UAs to fill in the form fields automatically. These names, and
+    their semantics, are described in <a href="#refsRFC3106">[RFC3106]</a>.
+
+   <dt><code>readonly</code>
+
+   <dd>This attribute applies only to <code>text</code>,
+    <code>password</code>, <code>email</code>, <code>uri</code>,
+    date-related, time-related, and numeric input types, as well as the
+    <code>textarea</code> element. Specifically, it does not apply to radio
+    buttons, check boxes, file upload fields, <code>select</code> elements
+    (editable or not), or any of the button types; the interface concept of
+    "readonly" values does not apply to button-like interfaces. (The DOM
+    <code>readonly</code> attribute (<a href="#refsDOM2HTML">[DOM2HTML]</a>)
+    obviously applies to the same set of types as the HTML attribute.)
+  </dl>
+
+  <p>Other attributes not listed here retain the same semantics as in <a
+   href="#refsHTML4">[HTML4]</a>.
+
+  <h3 id="the-pattern"><span class="secno">2.5. </span>The
+   <code>pattern</code> attribute</h3>
+
+  <p>For the <code>text</code>, <code>email</code> and <code>uri</code> types
+   of the <code>input</code> element, the <code>select</code> element when it
+   has the new <code>editable</code> attribute set, and the
+   <code>textarea</code> element, a new attribute, <code>pattern</code>, is
+   introduced to specify patterns that the strings must match.
+
+  <p>When specified, the <code>pattern</code> attribute contains a regular
+   expression that the field's value must match before the form may be
+   submitted (<a href="#ERROR_PATTERN_MISMATCH">ERROR_PATTERN_MISMATCH</a>).
+
+  <pre class="example">
+&lt;label&gt; Credit Card Number:
+ &lt;input type="text" pattern="^[0-9]{10}$" name="cc" /&gt;
+&lt;/label&gt;
+</pre>
+
+  <p>The regular expression language used for this attribute is the same as
+   that defined in <a href="#refsECMA262">[ECMA262]</a>.
+
+  <p>UAs must refuse to submit forms that contain fields whose values do not
+   match their patterns.
+
+  <p>In the case of the <code>email</code> and <code>uri</code>, the
+   <code>pattern</code> attribute specifies a pattern that must be matched
+   <em>in addition</em> to the value matching the generic pattern relevant
+   for the field. If the pattern given by the attribute specifies a pattern
+   that is incompatible with the grammar of the field type, as in the example
+   below, then the field could never be satisfied. (A document containing
+   such a situation is not technically invalid, but it is of dubious semantic
+   use.)
+
+  <pre class="example">
+&lt;form&gt;
+ &lt;p&gt;
+  This form could never be submitted, as the following required field
+  can never be satisfied:
+  &lt;input type="uri" pattern="^[^:]+$" required="required" name="test"/&gt;
+ &lt;/p&gt;
+&lt;/form&gt;
+</pre>
+
+  <p>When the value doesn't match the field's type, a <a
+   href="#ERROR_TYPE_MISMATCH">ERROR_TYPE_MISMATCH</a> error occurs; when the
+   value doesn't match the pattern, a <a
+   href="#ERROR_PATTERN_MISMATCH">ERROR_PATTERN_MISMATCH</a> error occurs.
+
+  <h3 id="the-required"><span class="secno">2.6. </span>The <code
+   id="required">required</code> attribute</h3>
+
+  <p>Form controls can have the <code>required</code> attribute specified, to
+   indicate that the user must enter a value into the form control before
+   submitting the form.
+
+  <p>The <code>required</code> attribute applies to all form controls except
+   check boxes, those with the type <code>hidden</code>, image inputs,
+   buttons, <code>fieldset</code>s, and <code>output</code> elements. It
+   <em>can</em> be used on controls with the <code>readonly</code> attribute
+   set; this may be useful in scripted environments. For disabled controls,
+   the attribute has no effect.
+
+  <p>User agents must not submit forms that have form controls marked as
+   required that do not have values (<a
+   href="#ERROR_REQUIRED">ERROR_REQUIRED</a>). For radio buttons, exactly one
+   radio button from each set must be checked.
+
+  <div class="example">
+   <p>Here is a form fragment showing two required fields and one optional
+    field. A user agent would not allow the user to submit the form until the
+    "name" and "team" fields were filled in.</p>
+
+   <pre>
+&lt;ul&gt;
+  &lt;li&gt;Name: &lt;input type="text" name="name" required="required" /&gt;&lt;/li&gt;
+  &lt;li&gt;Team:
+    &lt;select name="team" required="required"&gt;
+      &lt;option value="foxes"&gt;The Foxes&lt;/option&gt;
+      &lt;option value="ferrets"&gt;The Ferrets&lt;/option&gt;
+      &lt;option value="kittens"&gt;The Kittens&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;li&gt;Comment: &lt;input type="text" name="comment" /&gt;&lt;/li&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+  </div>
+
+  <h3 id="formAttribute"><span class="secno">2.7. </span>The
+   <code>form</code> attribute</h3>
+
+  <p>All form controls can have the <code>form</code> attribute specified.
+   The <code>form</code> attribute gives the ID of the <code>form</code>
+   element the form control should be associated with, and overrides the
+   relationship between the form control and any ancestor <code>form</code>
+   element.
+
+  <p>Setting an element's <code>form</code> attribute either to a
+   non-existent ID or to one that identifies an element that is not an HTML
+   <code>form</code> element disassociates the form control from its form,
+   leaving it unassociated with any form. On the other hand, an element whose
+   <code>form</code> attribute is the empty string (as in
+   <code>form=""</code>) is treated <a href="#impliedForm">like an element
+   with no <code>form</code> element ancestor</a> (even if it has such an
+   ancestor).
+
+  <p>When set on a <code>fieldset</code> element, this also changes the
+   association of any descendant form controls, unless they have
+   <code>form</code> attributes of their own, or are contained inside forms
+   that are themselves descendants of the <code>fieldset</code> element.
+
+  <p>When forms are submitted, reset, or have their form controls enumerated
+   through the DOM, only those controls associated with the form are taken
+   into account. A control can be associated only with one form at a time.
+
+  <p>A <code>form</code> attribute that specifies an ID that occurs multiple
+   times in a document should select the same form as would be selected by
+   the <code>getElementById()</code> method for that ID (<a
+   href="#refsDOM3CORE">[DOM3CORE]</a>).
+
+  <div class="example">
+   <p>In this example, each row contains one form, even though without this
+    attribute it would not be possible to have more than one form per table
+    if any of them span cells.</p>
+
+   <pre>
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th&gt;Name&lt;/th&gt;
+   &lt;th&gt;Value&lt;/th&gt;
+   &lt;th&gt;Action&lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td&gt;
+    &lt;form id="edit1" action="/edit" method="post"&gt;
+     &lt;input type="hidden" name="id" value="1"/&gt;
+     &lt;input type="text" name="name" value="First Row"/&gt;
+    &lt;/form&gt;
+   &lt;/td&gt;
+   &lt;td&gt;
+    &lt;input form="edit1" type="text" name="value"/&gt;
+   &lt;/td&gt;
+   &lt;td&gt;
+    &lt;input form="edit1" type="submit" name="Edit"/&gt;
+   &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;
+    &lt;form id="edit2" action="/edit" method="post"&gt;
+     &lt;input type="hidden" name="id" value="2"/&gt;
+     &lt;input type="text" name="name" value="Second Row"/&gt;
+    &lt;/form&gt;
+   &lt;/td&gt;
+   &lt;td&gt;
+    &lt;input form="edit2" type="text" name="value"/&gt;
+   &lt;/td&gt;
+   &lt;td&gt;
+    &lt;input form="edit2" type="submit" name="Edit"/&gt;
+   &lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+  </div>
+
+  <h3 id="the-autocomplete"><span class="secno">2.8. </span>The
+   <code>autocomplete</code> attribute</h3>
+
+  <p>All form controls except the various push button controls and
+   <code>hidden</code> and <code>output</code> controls, can have the
+   <code>autocomplete</code> attribute set. The attribute takes two values,
+   <code>true</code> and <code>false</code>. The default, when the attribute
+   is not specified, is <code>true</code>.
+
+  <p>A true value means the UA is allowed to store the value entered by the
+   user so that if the user returns to the page, the UA can pre-fill the
+   form. A false value means that the UA must not remember that field's
+   value.
+
+  <div class="example">
+   <p>Banks frequently do not want UAs to pre-fill login information:</p>
+
+   <pre>
+&lt;p&gt;Account: &lt;input type="text" name="ac" autocomplete="false" /&gt;&lt;/li&gt;
+&lt;p&gt;PIN: &lt;input type="text" name="pin" autocomplete="false" /&gt;&lt;/li&gt;
+</pre>
+  </div>
+
+  <p class="note">In practice, this attribute is required by many banking
+   institutions, who insist that UAs implement it before supporting them on
+   their Web sites. For this reason, it is implemented by most major Web
+   browsers already, and has been for many years.
+
+  <h3 id="the-inputmode"><span class="secno">2.9. </span>The
+   <code>inputmode</code> attribute</h3>
+
+  <p>The <code>inputmode</code> attribute applies to the <code>input</code>
+   element when it has a <code>type</code> attribute of <code>text</code>,
+   <code>password</code>, <code>email</code>, or <code>uri</code>, to the
+   <code>select</code> element when it has a the <code>editable</code>
+   attribute set, and to the <code>textarea</code> element.
+
+  <p>This attribute is defined to be exactly equivalent to the
+   <code>inputmode</code> attribute <a
+   href="http://www.w3.org/TR/xforms/sliceE.html">defined in the XForms 1.0
+   specification</a> (sections E1 through E3.2) <a
+   href="#refsXForms">[XForms]</a>.
+
+  <h3 id="the-help"><span class="secno">2.10. </span> The <code>help</code>
+   attribute</h3>
+
+  <p>Any form control can have a <code>help</code> attribute specified. This
+   attribute contains a URI that the UA may use to provide help information
+   regarding the active field.
+
+  <p>This specification does not specify how help information should be used,
+   but for example, the UA could show a small pop-up window if the user
+   focuses such a control and pressed the <kbd>F1</kbd> key, or could show
+   the help information in a side-bar while the relevant control is focused.
+  <!-- <p>The <code>help</code> attribute does not have a dedicated
+  DOM attribute.</p> -->
+
+  <p class="note">This attribute is added mainly because XForms has it, to
+   show that it would be trivial to add to HTML as well. However, there is
+   some doubt that it is actually a useful feature. The XForms
+   <code>hint</code> element is already supported in HTML, as the
+   <code>title</code> attribute.
+
+  <h3 id="the-output"><span class="secno">2.11. </span> The
+   <code>output</code> element</h3>
+
+  <p>The <code>output</code> element acts very much like a <code>span</code>
+   element, except that it is considered to be a form control for the
+   purposes of the DOM. It has no attributes beyond the common attributes and
+   the <code>form</code> attribute. Its value is given by its contents, which
+   must be only text (like the <code>textarea</code> element). Its value can
+   be set dynamically via the <code>value</code> DOM attribute, thus
+   replacing the contents of the element.
+
+  <p>The <em>initial value</em> of the <code>output</code> control is stored
+   in a mutable <code>defaultValue</code> DOM attribute of type
+   <code>DOMString</code>. This is similar to the way <code>textarea</code>
+   elements work, except that the contents of an element for
+   <code>output</code> controls reflects the <em>current value</em> not the
+   initial, or default, value. See <a href="#refsHTML4">[HTML4]</a> section
+   17.2 for <a
+   href="http://www.w3.org/TR/1999/REC-html401-19991224/interact/forms.html#initial-value">the
+   definiton of the term "initial value"</a>.
+
+  <p>The <code>output</code> element is never successful for form submission.
+   Resetting a form does reset its <code>output</code> elements.
+
+  <div class="example">
+   <p>The following example shows two input fields. Changing either field
+    updates an <code>output</code> element containing the product of both
+    fields.</p>
+
+   <pre>
+&lt;form&gt;
+ &lt;p&gt;
+  &lt;input name="a" type="number" value="0"&gt; *
+  &lt;input name="b" type="number" value="0"&gt; =
+  &lt;output name="result" onforminput="value = a.value * b.value"&gt;0&lt;/output&gt;
+ &lt;/p&gt;
+&lt;/form&gt;
+</pre>
+
+   <p>This would work something like the following:</p>
+
+   <form action=""><script type="text/javascript">
+     function outputExampleUpdate(event) {
+      with (event.target.form)
+        document.getElementById('outputExampleResult').firstChild.data = a.value * b.value;
+     }
+    </script>
+    <p> <input name="a" onchange="outputExampleUpdate(event)" value="0"> *
+     <input name="b" onchange="outputExampleUpdate(event)" value="0"> = <span
+     id="outputExampleResult">0</span>
+   </form>
+
+   <p class="note">The <code><a href="#forminput">forminput</a></code> event
+    is defined in the section on new events.</p>
+  </div>
+
+  <h3 id="impliedForm"><span class="secno">2.12. </span>The implied form for
+   form controls with no form element</h3>
+
+  <p>When a form control has no form element ancestor and no form attribute,
+   or when the form attribute is set to the empty string, it is called an
+   <dfn id="orphan">orphan form control</dfn>. Orphan controls are bound to
+   an anonymous <code>HTMLFormElement</code> DOM node that is associated with
+   the document and <span id="impliedFormParent">has its
+   <code>parentNode</code> set to the document node</span>, but does not
+   (initially) appear in the document. If it is inserted into the document by
+   some evil QA engineer, or otherwise manipulated, it does not lose its role
+   as guardian of the orphan form controls, although if then removed from the
+   document again, its <code>parentNode</code> does not revert to the
+   document node.
+
+  <p class="issue">Implementors: Please let me know if that is a good way of
+   defining it. If you'd rather it did revert to the document node, or would
+   rather never have it associated with the document node, or whatever, let
+   me know. The idea is to make events bubble through this element and then
+   up to the document, the bit about inserting into the document is just
+   there to define it. I just want this easy to implement. I don't really
+   care either way as far as the edge cases go here so long as they are
+   defined, so let me know what you prefer, even if it is the status quo.
+  <!-- XXX -->
+
+  <p>The implied form is only created when it is required. When created, it
+   is added to the document's DOM's <code>forms</code> collection.
+
+  <p>This form can be submitted like any other form; it partakes in all the
+   normal event handling and so forth. Since by default forms have
+   <code>action</code> attributes that point to the base URI (typically the
+   document itself), and by default use the GET URI scheme, the obsolete
+   <code>isindex</code> element can be replaced with the following more
+   styleable alternative:
+
+  <pre>
+&lt;p&gt;Keywords: &lt;input name="keywords"&gt; &lt;input type="submit"&gt;&lt;/p&gt;
+</pre>
+
+  <p>The only difference is that this would be submitted using
+   <code>application/x-www-form-urlencoded</code> instead of simply causing
+   the keywords to be appended as one query string.
+
+  <h3 id="handling"><span class="secno">2.13. </span>Handling unexpected
+   elements</h3>
+
+  <p>There are several elements that are defined as expecting particular
+   elements as children. Using the DOM, or in XML, it is possible for authors
+   to violate these expectations and place elements in unexpected places.
+
+  <p>Authors must not do this. User agent implementors may curse authors who
+   violate these rules, and may persecute them to the full extent allowed by
+   applicable international law.
+
+  <p>Upon encountering such an invalid construct, UAs must proceed as
+   follows:
+
+  <dl>
+   <dt>For non-empty <code>input</code> elements
+
+   <dd>By default, the form control must replace the contents of the element
+    in the rendering with the form control widget. Using CSS3 Generated
+    Content <a href="#refsCSS3CONTENT">[CSS3CONTENT]</a> or XBL <a
+    href="#refsXBL">[XBL]</a>, however, it is possible for the author to
+    override this behaviour.
+
+   <dt>For <code>output</code> elements containing elements
+
+   <dd>The <code>defaultValue</code> DOM attribute is initialized from the
+    DOM3 Core <code>textContent</code> attribute (<a
+    href="#refsDOM3CORE">[DOM3CORE]</a>). Setting the element's
+    <code>value</code> attribute is defined to be identical to setting the
+    DOM3 Core <code>textContent</code> attribute. While the element contains
+    elements, they are rendered according to the CSS rules.
+
+   <dt>For <code>textarea</code> elements containing elements
+
+   <dd>The <code>defaultValue</code> DOM attribute is identical to the
+    <code>textContent</code> DOM attribute both for reading and writing, and
+    is used to set the initial <code>value</code>. The rendering is based on
+    the <code>value</code> DOM attribute, not the contents of the element,
+    unless CSS is used to override this somehow.
+    <p class="issue">We could take the child text nodes instead. Or make it
+     equivalent to editing the first text node. But doing it as textContent
+     is the simplest from a specification point of view. Opinions?</p>
+    <!-- XXX -->
+
+   <dt>For <code>select</code> elements containing nodes other than
+    <code>option</code> and <code>optgroup</code> elements, and for
+    <code>optgroup</code> elements containing nodes other than
+    <code>option</code> elements
+
+   <dd>Only the <code>option</code> and <code>optgroup</code> elements take
+    part in the <code>select</code> semantics. Unless otherwise forced to
+    appear by a stylesheet, other child nodes are never visible.
+
+   <dt>For <code>option</code> elements containing nodes other than text
+    nodes
+
+   <dd>The value of the control, if not specified explicitly, is initialized
+    using the <code>textContent</code> DOM attribute's value.
+    <p>As far as rendering goes, it is left largely up to the UA. Two
+     possibilities are sensible: rendering the content normally, just as it
+     would have been outside the form control; and rendering the initial
+     value only, with the rest of the content not displayed (unless forced to
+     appear through some CSS).</p>
+
+    <p class="note">It should be noted that while <a
+     href="data:application/xhtml+xml;base64,PGh0bWwgbGFuZz0iZW4iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIj4NCiA8aGVhZD4NCiAgPHRpdGxlPkEgZm9ybSBuZXN0ZWQgaW4gYSBzZWxlY3QgZWxlbWVudDwvdGl0bGU%2BDQogPC9oZWFkPg0KIDxib2R5Pg0KICA8cD4NCiAgIDxzZWxlY3Q%2BDQogICAgPG9wdGlvbj4NCiAgICAgUGl6emENCiAgICAgPGZvcm0gYWN0aW9uPSJodHRwOi8vc29mdHdhcmUuaGl4aWUuY2gvdXRpbGl0aWVzL2NnaS90ZXN0LXRvb2xzL2VjaG8iPg0KICAgICAgPGxhYmVsPiBUb3BwaW5nOg0KICAgICAgIDxzZWxlY3Q%2BDQogICAgICAgIDxvcHRpb24%2BIENoZWVzZSA8L29wdGlvbj4NCiAgICAgICAgPG9wdGlvbj4gU2FsYW1pIDwvb3B0aW9uPg0KICAgICAgIDwvc2VsZWN0Pg0KICAgICAgPC9sYWJlbD4NCiAgICAgIDxpbnB1dCB0eXBlPSJzdWJtaXQiLz4NCiAgICAgPC9mb3JtPg0KICAgIDwvb3B0aW9uPg0KICAgIDxvcHRpb24%2BIEJyZWFkIDwvb3B0aW9uPg0KICAgIDxvcHRpb24%2BIFdpbmUgPC9vcHRpb24%2BDQogICA8L3NlbGVjdD4NCiAgPC9wPg0KIDwvYm9keT4NCjwvaHRtbD4%3D">nesting
+     a form inside a <code>select</code> control</a> may look cool, it is
+     extremely poor UI and must not be encouraged.</p>
+
+   <dt>For <code>option</code> and <code>optgroup</code> elements that are
+    not inside <code>select</code> elements
+
+   <dd>The elements should be treated much like <code>span</code> elements as
+    far as rendering goes.
+  </dl>
+
+  <p>Other invalid cases should be handled analogously.
+
+  <h2 id="repeating"><span class="secno">3. </span>Repeating form controls</h2>
+
+  <p>Occasionally forms contain repeating sections, for example an order form
+   could have one row per item, with product, quantity, and subtotal fields.
+   The <dfn id="repeating0">repeating form controls model</dfn> defines how
+   such a form can be described without resorting to scripting.
+
+  <p class="note">The entire model can be emulated purely using JavaScript
+   and the DOM. With such a library, this model could be used and down-level
+   clients could be supported before user agents implemented it ubiquitously.
+   Creating such a library is left as an exercise to the reader.
+
+  <h3 id="definitions"><span class="secno">3.1. </span>Definitions</h3>
+
+  <p class="note">In this section, a number of references are made to
+   namespaces. For authors who are only using HTML or XHTML, the definitions
+   below ensure that no namespaces need appear in the document (except the
+   namespace on the root element). Thus, such a reader can simply gloss over
+   the parts that mention namespaces.
+
+  <p>In order to implement such a form declaratively, a new global attribute
+   is introduced: the <dfn id="repeat"><code>repeat</code></dfn> attribute.
+   When placed on elements in the <code>http://www.w3.org/1999/xhtml</code>
+   namespace, it must be a namespace-free attribute, and when placed on other
+   elements, it must be an attribute in the
+   <code>http://www.w3.org/1999/xhtml</code> namespace.
+
+  <p>The effect of this attribute depends on its value, which is a
+   space-separated list of tokens with no leading spaces. The first token is
+   mandatory and must be either <code>template</code> or
+   <code>repeated</code>. If the attribute is present but either is empty, or
+   starts with whitespace, or has a first token that is neither of these two
+   values, it has no effect.
+
+  <p>The second token is optional, if present it must be an integer. If the
+   second token is not an integer, it is ignored. The third token, and any
+   subsequent tokens, if any are present, are always ignored.
+
+  <h4 id="repetition"><span class="secno">3.1.1. </span>Repetition templates</h4>
+
+  <p>An element in the <code>http://www.w3.org/1999/xhtml</code> namespace
+   with the <code><a href="#repeat">repeat</a></code> attribute in no
+   namespace, or an element in any other namespace with the <code><a
+   href="#repeat">repeat</a></code> attribute in the
+   <code>http://www.w3.org/1999/xhtml</code> namespace, with the first token
+   of the attribute's value equal to <code>template</code>, is a <dfn
+   id="repetition2">repetition template</dfn>.
+
+  <p>Repetition templates may occur anywhere. They are not specifically
+   associated with any form.
+
+  <p>Every template has an index associated with it. By default, the index
+   has the value 0. However, if the aforementioned <code><a
+   href="#repeat">repeat</a></code> attribute has a second token, and that
+   token is an integer (one or more digits in the range 0-9, optionally with
+   a leading minus sign), then the index is set to that value.
+
+  <p>Unrecognized tokens must be ignored.
+
+  <pre class="example">
+&lt;div repeat="template 1 "/&gt; &lt;!-- A template, index set to 1. --&gt;
+
+&lt;div repeat="template +1 3"/&gt; &lt;!-- A template, index set to 0
+                                  (second and third tokens ignored). --&gt;
+
+&lt;div repeat="template 2 3"/&gt; &lt;!-- A template, index set to 2
+                                 (third token ignored). --&gt;
+
+&lt;div repeat="invalid template "/&gt; &lt;!-- Not a template. --&gt;
+
+&lt;div repeat=" template "/&gt; &lt;!-- Not a template (leading whitespace). --&gt;
+</pre>
+
+  <h4 id="repetition0"><span class="secno">3.1.2. </span>Repetition blocks</h4>
+
+  <p>An element in the <code>http://www.w3.org/1999/xhtml</code> namespace
+   with the <code><a href="#repeat">repeat</a></code> attribute in no
+   namespace, or an element in any other namespace with the <code><a
+   href="#repeat">repeat</a></code> attribute in the
+   <code>http://www.w3.org/1999/xhtml</code> namespace, with the first token
+   of the attribute's value equal to <code>repeated</code>, is a <dfn
+   id="repetition3">repetition block</dfn>.
+
+  <p>Repetition blocks should only occur as following siblings of repetition
+   templates. If an element is declared as a repetition block but does not
+   have a previous sibling that is a repetition template, then it can only
+   take part in certain aspects of the repetition model (namely deletion and
+   movement, and not addition). Such elements are termed <dfn
+   id="orphan0">orphan repetition blocks</dfn>.
+
+  <p>Every repetition block has an index associated with it. By default, the
+   index is equal to the number of repetition blocks present in the DOM tree
+   between the repetition block and its template (so the first block's index
+   defaults to 0, the second to 1, and so forth). The index of orphan
+   repetition blocks defaults to 0. However, if the repetition block's
+   <code><a href="#repeat">repeat</a></code> attribute has a second token,
+   and that token is an integer (one or more digits in the range 0-9,
+   optionally with a leading minus sign), then the index is set to that
+   value.
+
+  <pre class="example">
+&lt;div&gt;
+ &lt;div repeat="template"/&gt; &lt;!-- The template for the next few elements. --&gt;
+ &lt;div repeat="repeated"/&gt; &lt;!-- A simple repetition block, index 0. --&gt;
+ &lt;div repeat="repeated -5"/&gt; &lt;!-- Another, index -5 --&gt;
+ &lt;div repeat="repeated"/&gt; &lt;!-- A simple repetition block, index 2. --&gt;
+ &lt;div repeat="nothing"/&gt; &lt;!-- Just a normal element. --&gt;
+ &lt;div repeat="repeated"/&gt; &lt;!-- A simple repetition block, index 3. --&gt;
+&lt;/div&gt;
+&lt;div repeat="repeated"/&gt; &lt;!-- Orphan repetition block, index 0. --&gt;
+</pre>
+
+  <h3 id="new-form"><span class="secno">3.2. </span>New form controls</h3>
+
+  <p>Several new button types are introduced to support the repetition model.
+   These values are valid types for both the <code>input</code> element and
+   the <code>button</code> element.
+
+  <dl>
+   <dt><dfn id="add"><code>add</code></dfn>
+
+   <dd>Adds a new repetition block.
+
+   <dt><dfn id="remove"><code>remove</code></dfn>
+
+   <dd>Removes the nearest ancestor repetition block.
+
+   <dt><dfn id="move-up"><code>move-up</code></dfn>
+
+   <dd>Moves the nearest ancestor repetition block up one.
+
+   <dt><dfn id="move-down"><code>move-down</code></dfn>
+
+   <dd>Moves the nearest ancestor repetition block down one.
+  </dl>
+
+  <p>These control types can never be successful.
+
+  <p>In addition, to support the <code><a href="#add">add</a></code> type, a
+   new attribute is introduced to the <code>input</code> and
+   <code>button</code> elements: <code>template</code>.
+
+  <dl>
+   <dt><code>template</code>
+
+   <dd>Specifies the repetition template to use.
+  </dl>
+
+  <p>These are described in more detail in the next section.
+
+  <h3 id="repetitionModel"><span class="secno">3.3. </span>The repetition
+   model</h3>
+
+  <p>A <span><a href="#repetition2">repetition template</a></span> should not
+   be displayed. In CSS-aware user agents, this should be achieved by
+   including the following rules, or their equivalent, in the UA's user agent
+   stylesheet:
+
+  <pre>
+@namespace html url(http://www.w3.org/1999/xhtml);
+:not(html|*)[html|repeat="template"],
+:not(html|*)[html|repeat^="template "],
+html|*[|repeat="template"],
+html|*[|repeat^="template "] { display: none; }
+</pre>
+
+  <p>Any form controls inside a <span><a href="#repetition2">repetition
+   template</a></span> are associated with their form's
+   <code>templateElements</code> DOM attribute, and are <em>not</em> present
+   in the form's <code>elements</code> DOM attribute, unless the relevant
+   form is inside the template itself. Since only controls in the
+   <code>elements</code> attribute can be successful, controls inside
+   repetition templates that would be part of forms outside the template can
+   never be successful and cannot be pre-filled directly when the form is
+   pre-seeded. However, see the section on <span>seeding a form with initial
+   values</span> for details on how repeating blocks can be pre-filled.
+
+  <h4 id="addition"><span class="secno">3.3.1. </span>Addition</h4>
+
+  <p>If an <code><a href="#add">add</a></code> button is activated, and it
+   has a <code>template</code> attribute, and the element, in the same
+   document, with the ID given by the <code>template</code> attribute in
+   question, is a <span><a href="#repetition2">repetition template</a></span>
+   as defined above, then that element's template replication behaviour is
+   invoked. (Specifically, in scripting-aware environments, the element's
+   <code><a href="#addrepetitionblock">addRepetitionBlock()</a></code> method
+   is called with a null argument.)
+
+  <p>If an <code><a href="#add">add</a></code> button is activated, and it
+   has no <code>template</code> attribute, but the element has an ancestor
+   that is a <span><a href="#repetition3">repetition block</a></span> that is
+   not an <span>orphan repetition block</span>, then the <span><a
+   href="#repetition2">repetition template</a></span> associated with that
+   repetition block has its template replication behaviour invoked with the
+   respective repetition block as its argument. (Specifically, in
+   scripting-aware environments, the element's <code><a
+   href="#addrepetitionblock">addRepetitionBlock()</a></code> method is
+   called with a reference to the DOM Element node that represents the
+   repetition block.)
+
+  <p>When a template's replication behaviour is invoked (specifically, when
+   either its <dfn
+   id="addrepetitionblock"><code>addRepetitionBlock()</code></dfn> method is
+   called or its <dfn
+   id="addrepetitionblockbyindex"><code>addRepetitionBlockByIndex()</code></dfn>
+   method is called) the following is performed:
+
+  <ol>
+   <li>The template examines its following siblings, up to the next <span><a
+    href="#repetition2">repetition template</a></span> or the end of the
+    block, whichever comes first. For each sibling that is a <span><a
+    href="#repetition3">repetition block</a></span> (as defined above), if
+    the repetition block's index is greater than or equal to the template's
+    index, then the template's index is increased to the repetition block's
+    index plus one. The last repetition block examined will be used in a
+    later step.
+
+   <li>If this algorithm was invoked via the <code><a
+    href="#addrepetitionblockbyindex">addRepetitionBlockByIndex()</a></code>
+    method, and the value of the method's index argument is greater than the
+    template's index, then the template's index is set to the value of index
+    argument.
+
+   <li>A clone of the template is made. The resulting element is the new
+    repetition block element.
+
+   <li>If the new repetition block element is in the
+    <code>http://www.w3.org/1999/xhtml</code> namespace, then the <code><a
+    href="#repeat">repeat</a></code> attribute in no namespace on the cloned
+    element has its value changed to <code>repeated</code>. Otherwise, the
+    <code><a href="#repeat">repeat</a></code> attribute in the
+    <code>http://www.w3.org/1999/xhtml</code> namespace has its value changed
+    to <code>repeated</code>.
+
+   <li>If this algorithm was invoked via the <code><a
+    href="#addrepetitionblockbyindex">addRepetitionBlockByIndex()</a></code>
+    method, the new repetition block element's index is set to the method's
+    index argument. Otherwise, the new repetition block element's index is
+    set to the template's index.
+
+   <li>If the new repetition block has an ID attribute (that is, an attribute
+    specifying an ID, regardless of the attribute's namespace or name), then
+    that attribute's value is used as the template name in the following
+    steps. Otherwise, the template has no name. (If there is more than one ID
+    attribute, the "first" one in terms of <a
+    href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#DocumentPosition">node
+    order</a> is used. <a href="#refsDOM3CORE">[DOM3CORE]</a>)
+
+   <li>If the template has a name, then, for every attribute on the new
+    element, and for every attribute in every descendant of the new element,
+    any occurrences of a string consisting of an underscore, the template's
+    name, and another underscore, is replaced by the new repetition block's
+    index. (For example if the template is called "order", and the new
+    repetition block's index has the value 2, and one of the attributes of
+    one of the descendents of the new repetition block is
+    "comment._order_._comment_", then the attribute's value is changed to
+    "comment.2._comment_".) This is performed without paying attention to the
+    types of attributes, and is done to <em>all</em> descendants, even those
+    inside nested forms, nested repetition templates, and so forth.
+
+   <li>The attribute from which the template's name was derived, if any, is
+    removed from the new repetition block element.
+
+   <li>If the first argument to the method was null, or if the argument to
+    the function does not designate a <span><a href="#repetition3">repetition
+    block</a></span> belonging to this <span><a
+    href="#repetition2">repetition template</a></span>, then the new element
+    is inserted into the parent of the template, immediately after the last
+    repetition block found in the first step above, or after the template
+    itself if there were no such repetition blocks.
+
+   <li>Otherwise, the new element is inserted into the parent of the
+    template, immediately <em>before</em> the node passed as the method's
+    argument.
+
+   <li>The template's index is increased by one.
+  </ol>
+
+  <p>For an example, see the <a href="#repeatExample">example section</a>
+   below.
+
+  <h4 id="removal"><span class="secno">3.3.2. </span>Removal</h4>
+
+  <p>If a <code><a href="#remove">remove</a></code> button is activated, and
+   the element has an ancestor that is a <span><a
+   href="#repetition3">repetition block</a></span> as defined above, then the
+   nearest such ancestor's template deletion behaviour is invoked.
+   (Specifically, in scripting-aware environments, the element's <code><a
+   href="#removerepetitionblock">removeRepetitionBlock()</a></code> method is
+   invoked.)
+
+  <p>When a repetition block's deletion behaviour is invoked (specifically,
+   when its <dfn
+   id="removerepetitionblock"><code>removeRepetitionBlock()</code></dfn>
+   method is called) the following is performed:
+
+  <ol>
+   <li>The node is removed from its parent, if it has one.
+  </ol>
+
+  <p>This occurs even if the repetition block is an <span>orphan repetition
+   block</span>.
+
+  <p>For an example, see the <a href="#repeatExample">example section</a>
+   below.
+
+  <h4 id="movement"><span class="secno">3.3.3. </span>Movement of repetition
+   blocks</h4>
+
+  <p>The two remaining button types, <code><a
+   href="#move-up">move-up</a></code> and <code><a
+   href="#move-down">move-down</a></code>, are used to move the current
+   repetition block up or down the sibling repetition blocks.
+
+  <p>If a <code><a href="#move-up">move-up</a></code> or <code><a
+   href="#move-down">move-down</a></code> button is activated, and the
+   element has an ancestor that is a <span><a href="#repetition3">repetition
+   block</a></span> as defined above, then the nearest such ancestor's
+   template movement behaviour is invoked in the relevant direction.
+   (Specifically, in scripting-aware environments, the element's <code><a
+   href="#moverepetitionblock">moveRepetitionBlock()</a></code> method is
+   called; for <code><a href="#move-up">move-up</a></code> buttons the
+   argument is -1 and for <code><a href="#move-down">move-down</a></code>
+   buttons the argument is 1).
+
+  <p>When a repetition block's movement behaviour is invoked (specifically,
+   when its <dfn
+   id="moverepetitionblock"><code>moveRepetitionBlock()</code></dfn> method
+   is called) the following is performed, where <var>distance</var> is an
+   integer representing how far and in what direction to move the block (the
+   argument to the method):
+
+  <ol>
+   <li>If <var>distance</var> is 0, or if the repetition block has no parent,
+    nothing happens and the algorithm ends here.
+
+   <li>Set <var>target</var>, a reference to a DOM Node, to the repetition
+    block being moved.
+
+   <li>If <var>distance</var> is negative: While <var>distance</var> is not
+    zero and <var>target</var>'s <code>previousSibling</code> is defined and
+    is not a <span><a href="#repetition2">repetition template</a></span>, set
+    <var>target</var> to this <code>previousSibling</code> and, if it is a
+    <span><a href="#repetition3">repetition block</a></span>, increase
+    <var>distance</var> by one (make it less negative by one).
+
+   <li>Otherwise, <var>distance</var> is positive: While <var>distance</var>
+    is not zero and <var>target</var>'s <code>nextSibling</code> is defined
+    and is not a <span><a href="#repetition2">repetition template</a></span>,
+    set <var>target</var> to this <code>nextSibling</code> and, if it is a
+    <span><a href="#repetition3">repetition block</a></span>, decrease
+    <var>distance</var> by one. After the loop, set <var>target</var> to
+    <var>target</var>'s <code>nextSibling</code> (which may be null).
+
+   <li>Call the repetition block's parent node's <code>insertBefore()</code>
+    method with the <code>newChild</code> argument being the repetition block
+    and the <code>refChild</code> argument being <var>target</var> (which may
+    be null by this point).
+  </ol>
+
+  <p>This occurs even if the repetition block is an <span>orphan repetition
+   block</span>.
+
+  <p>Moving repetition blocks does not change the index of the repetition
+   blocks.
+
+  <p>In addition, user agents must automatically disable <code><a
+   href="#move-up">move-up</a></code> buttons (irrespective of the value of
+   the <code>disabled</code> DOM attribute) when their repetition block could
+   not be moved any higher according to the algorithm above, and when the
+   buttons are not in a repetition block. Similarly, user agents must
+   automatically disable <code><a href="#move-down">move-down</a></code>
+   buttons when their repetition block could not be moved any lower according
+   to the algorithm above, and when the buttons are not in a repetition
+   block. This automatic disabling does not affect the DOM
+   <code>disabled</code> property.
+
+  <h3 id="repeatExample"><span class="secno">3.4. </span>Example</h3>
+
+  <p>The following example shows how to use repetition templates to
+   dynamically add more rows to a form in a table.
+
+  <pre>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Form Repeat Demo&lt;/title&gt;
+  &lt;/head&gt;
+ &lt;body&gt;
+  &lt;form action="http://software.hixie.ch/utilities/cgi/test-tools/echo" method="post" enctype="multipart/form-data"&gt;
+   &lt;table&gt;
+    &lt;thead&gt;
+     &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Count&lt;/th&gt;
+      &lt;th&gt;&lt;/th&gt;
+     &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+     &lt;tr repeat="template" id="row"&gt;
+      &lt;td&gt;&lt;input type="text" name="name__row_" value=""&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;input type="text" name="count__row_" value="1"&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;input type="remove" value="Delete Row"&gt;&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr repeat="repeated"&gt;
+      &lt;td&gt;&lt;input type="text" name="name_0" value="John Smith"&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;input type="text" name="count_0" value="1"&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;input type="remove" value="Delete Row"&gt;&lt;/td&gt;
+     &lt;/tr&gt;
+    &lt;/tbody&gt;
+   &lt;/table&gt;
+   &lt;p&gt;
+    &lt;input type="add" value="Add Row" template="row"&gt;
+   &lt;/p&gt;
+  &lt;/form&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+  <p>Initially, one row would be visible, with two text input fields, one
+   having the value "John Smith" and the other having the value "1".
+
+  <p>If the "Add Row" button is pressed, a new row is added. The first such
+   row would have the index 1 and so the controls would be named "name_1" and
+   "count_1" respectively.
+
+  <p>If the "Delete Row" button above is pressed, the row would be removed.
+
+  <p>This example does not demonstrate nested repeat blocks, reordering
+   repetition blocks, and inserting new repetition blocks in the middle of
+   the existing sequence, all of which are possible using the facilities
+   described above.
+
+  <h2 id="the-forms"><span class="secno">4. </span>The forms event model</h2>
+
+  <p id="formEvents">The following events are considered form events:
+
+  <ul>
+   <li>{"http://www.w3.org/2001/xml-events", "change"}
+
+   <li>{"http://www.w3.org/2001/xml-events", "formchange"}
+
+   <li>{"http://www.w3.org/2001/xml-events", "input"}
+
+   <li>{"http://www.w3.org/2001/xml-events", "forminput"}
+
+   <li>{"http://www.w3.org/2001/xml-events", "formerror"}
+
+   <li>{"http://www.w3.org/2001/xml-events", "submit"}
+
+   <li>{"http://www.w3.org/2001/xml-events", "reset"}
+  </ul>
+
+  <p>Some of the above are mainly described in <a
+   href="#refsDOM3EVENTS">[DOM3EVENTS]</a> and <a
+   href="#refsHTML4">[HTML4]</a>. This section introduces the new events and
+   new semantics for the existing events.
+
+  <h3 id="crazyBubbling"><span class="secno">4.1. </span>Bubbling semantics</h3>
+
+  <p>Since form controls no longer need to be descendants of their form
+   elements, the semantics of form events bubbling are changed slightly.
+
+  <p>If a bubbling <a href="#formEvents">form-related event</a> is targeted
+   at, or bubbles into, a form control with a <code>form</code> attribute
+   pointing to a valid form (which, if the attribute is the empty string,
+   would be the <a href="#impliedForm">implied form</a>), it continues
+   bubbling not at the node's parent, but at the specified form element.
+
+  <p>For example, in the following document:
+
+  <pre>
+&lt;application&gt;
+ &lt;fieldset xmlns="http://www.w3.org/1999/xhtml" form=""&gt;
+  &lt;button&gt; Test &lt;/button&gt;
+ &lt;/fieldset&gt;
+&lt;/application&gt;
+</pre>
+
+  <p>...clicking the button generates an event that is targeted on the
+   button, bubbles up to the fieldset, is redirected straight to the
+   anonymous implied form, and from there bubbles to the document (recall
+   that the anonymous form node is <a href="#impliedFormParent">parented to
+   the document node</a> by default). The root element never sees the event
+   during the bubbling phase.
+
+  <p>If a bubbling form-related event bubbles into the document node without
+   passing through a <code>form</code> element, it is similarly redirected so
+   that it continues bubbling at the implied form. (In the esoteric case
+   where the implied form has been inserted into the document, this will
+   cause the event to bubble into the document node twice.)
+
+  <h3 id="scopeResolution"><span class="secno">4.2. </span>Scope resolution
+   for ECMAScript in HTML event handler attributes</h3>
+
+  <p>The scope chain for ECMAScript executed in HTML event handler attributes
+   links from the activation object for the handler, to its <code>this</code>
+   parameter (the event target), to the form, to the document, to the default
+   view (the window).
+
+  <p>The event handler is passed one argument, <var>event</var>,
+   corresponding to the event object.
+
+  <p class="note">This definition is intentionally backwards compatible with
+   DOM Level 0. See also ECMA-262 Edition 3, sections 10.1.6 and 10.2.3, for
+   more details on activation objects. <a href="#refsECMA262">[ECMA262]</a>
+
+  <h3 id="change"><span class="secno">4.3. </span>Change events and input
+   events</h3>
+
+  <p>In <a href="#refsDOM3EVENTS">[DOM3EVENTS]</a> and <a
+   href="#refsHTML4">[HTML4]</a>, the <code>change</code> event is fired on a
+   form control element when the control loses the input focus and its value
+   has been modified since gaining focus.
+
+  <p>To address the need for more immediate feedback mechanisms, this
+   specification introduces the <dfn id="input"><code>input</code>
+   event</dfn>. This event is fired on a control whenever the value of the
+   control changes due to input from the user, and is otherwise identical to
+   the <code>change</code> event. (For example, it bubbles, is not
+   cancelable, and has no context information.)
+
+  <h3 id="events"><span class="secno">4.4. </span>Events to enable simpler
+   dependency tracking</h3>
+
+  <p>Sometimes form controls are inter-dependent. In these cases, it is more
+   intuitive to specify the dependencies on the control whose value or
+   attributes depend on another's, rather than specify which controls should
+   be affected by a change on the element that changes. For this reason, two
+   new events are introduced, <dfn
+   id="formchange"><code>formchange</code></dfn> and <dfn
+   id="forminput"><code>forminput</code></dfn>.
+
+  <p>These events are in the same namespace as the other form events, do not
+   bubble, cannot be canceled, have no context information, and have no
+   default action.
+
+  <p>The default action of a <code>change</code> event is to fire a <code><a
+   href="#formchange">formchange</a></code> event at each element in the
+   form's <code>elements</code> and <code>templateElements</code> lists, in
+   document order, with the <code>elements</code> list processed first. Note
+   that template controls <em>are</em> affected. This is important as it
+   enables templates to be kept up to date so that when they are cloned, they
+   already reflect the form's state.
+
+  <p>The <code>input</code> element analogously invokes the <code><a
+   href="#forminput">forminput</a></code> event on all the form's controls as
+   its default action.
+
+  <h4 id="declarative"><span class="secno">4.4.1. </span>Declarative
+   dependency tracking</h4>
+
+  <p>Due to the way in which <a href="#scopeResolution">scope resolution</a>
+   is defined, a subset of ECMAScript that is completely declarative can be
+   specified for dependencies. Doing so is left as an exercise to the reader.
+
+  <p class="issue">Should I specify one?
+  <!-- XXX -->
+
+  <div class="example">
+   <p>In the following example, the text field is only enabled if the
+    checkbox is checked.</p>
+
+   <pre>
+&lt;p&gt;
+ &lt;label&gt;
+  &lt;input type="checkbox" name="subscribe"&gt;
+  Subscribe to daily newsletter
+ &lt;/label&gt;
+&lt;/p&gt;
+&lt;p&gt;
+ &lt;label&gt;
+  E-mail:
+  &lt;input type="email" name="email" disabled="disabled"
+            onformchange="disabled = !subscribe.checked"&gt;
+ &lt;/label&gt;
+&lt;/p&gt;
+</pre>
+  </div>
+
+  <h3 id="form-validation"><span class="secno">4.5. </span>Form validation</h3>
+
+  <p>With the introduction of the various type checking mechanisms, some way
+   for scripting authors to hook into the type checking process is required.
+   This is provided by the <dfn id="formerror"><code>formerror</code></dfn>
+   event (in the <code>http://www.w3.org/2001/xml-events</code> namespace).
+
+  <p class="issue">Can we put that event into that namespace?
+  <!-- XXX -->
+
+  <p>When a form is submitted, each control in that form, in document order,
+   is checked for validity. For each control that fails to comply with its
+   constraints (i.e. each control whose <code>validity</code> attribute is
+   non-zero), a <code><a href="#formerror">formerror</a></code> event must be
+   fired on the control.
+
+  <p>The <code>onformerror</code> attribute (on <code>input</code>,
+   <code>textarea</code> and <code>select</code> elements) can be used to
+   write handlers for this event.
+
+  <p>The <code><a href="#formerror">formerror</a></code> event bubbles, as
+   described in <a href="#crazyBubbling">an earlier section</a>.
+
+  <p>This event is cancelable. The default action depends on when the event
+   was fired. If it was fired during form submission, then the default action
+   is UA-specific, but is expected to consist of focusing the element,
+   alerting the user that the entered value is unacceptable in the user's
+   native language along with explanatory text saying <em>why</em> the value
+   is currently invalid, and aborting the form submission. UAs would
+   typically only do this for the first form control found to be invalid;
+   while the event is dispatched to all invalid controls, it is simpler for
+   the user to deal with one error at a time. When fired by script calling
+   the <code>validate()</code> method (i.e. not during form submission), the
+   event has no default action.
+
+  <div class="example">
+   <p>The following example shows one way to use this event.</p>
+
+   <pre>
+&lt;form action="..." method="post"&gt;
+ &lt;p&gt;
+  &lt;label&gt;
+   Byte 1:
+   &lt;input name="byte" type="integer" min="0" max="255" required="required"
+          onformerror="failed(event)" /&gt;
+  &lt;/label&gt;
+  &lt;output name="error"/&gt;
+ &lt;/p&gt;
+ &lt;script type="text/javascript"&gt;
+  function failed(event) {
+    // a control can fail for more than one reason; only report one of them.
+    form.error.value = 'The value is wrong for a reason I did not expect.';
+    if (event.target.validity & event.target.form.ERROR_TYPE_MISMATCH)
+      form.error.value = 'That is not an integer.';
+    else if (event.target.validity & event.target.form.ERROR_RANGE_UNDERFLOW)
+      form.error.value = 'That integer is less than 0.';
+    else if (event.target.validity & event.target.form.ERROR_RANGE_OVERFLOW)
+      form.error.value = 'That integer is more than 255.';
+    else if (event.target.validity & event.target.form.ERROR_RANGE_REQUIRED)
+      form.error.value = 'You did not enter a value.';
+  }
+ &lt;/script&gt;
+&lt;/form&gt;
+</pre>
+  </div>
+
+  <h2 id="form-submission"><span class="secno">5. </span>Form submission</h2>
+
+  <p class="issue">This description is really bad. It's the algorithm I want
+   but it needs to be rewritten. Anyone able to write it up better?
+  <!-- XXX -->
+
+  <p>Processors conforming to this specification must use a slightly
+   different algorithm than the <a href="#refsHTML4">[HTML4]</a> form
+   submission algorithm (HTML4 section 17.13.3), as described in this
+   section.
+
+  <p>When the user agent submits a form (e.g., in response to the user
+   activating a submit button), it must perform the following steps.
+
+  <ol>
+   <li> <strong>Step one: Identify all form controls</strong>
+    <p>All the controls that apply to the form, whether successful or not,
+     should be taken, in document order. These controls are those listed in
+     the form's <code>elements</code> DOM attribute, and excludes certain
+     controls as specified in the section describing <span>the repetition
+     model</span>.</p>
+
+    <p class="note">The original list of ways in which a control can be
+     successful is defined in <a
+     href="http://www.w3.org/TR/html4/interact/forms.html#h-17.13.2">HTML4
+     section 17.3.2</a>. This specification extends this list in places, for
+     example <code>output</code> elements are defined to never be successful.</p>
+    "}
+
+   <li> <strong>Step two: Build a form data set</strong>
+    <p>A <dfn id="form-data">form data set</dfn> is a sequence of
+     <em><span>control-name</span>, index, <span>current-value</span></em>
+     triples constructed from the controls identified in the first step.</p>
+
+    <p>It is constructed by iterating over the form controls listed in step
+     one, taking note of the form control names as they are seen. With each
+     control, if it is the first time that control's name has been seen, then
+     the control is assigned an index of 0. Otherwise, if the control name
+     was associated with an earlier control, then the index assigned is
+     exactly one more than the last control with that name. Even unsuccessful
+     controls are so numbered. However, only <em>successful controls</em> are
+     added to the form data set. A successful control with more than one
+     value is added multiple times, one for each value (each time with the
+     same form control name and form control index).</p>
+
+    <div class="example">
+     <p>For example, the following form:</p>
+
+     <pre>
+&lt;form&gt;
+ &lt;p&gt; &lt;label&gt; Name: &lt;input type="text" name="username"/&gt; &lt;/label&gt; &lt;/p&gt;
+ &lt;p&gt; Lottery numbers:
+     &lt;input type="integer" name="number" min="1" max="49"/&gt;
+     &lt;input type="integer" name="number" min="1" max="49"/&gt;
+     &lt;input type="integer" name="number" min="1" max="49"/&gt;
+     &lt;input type="integer" name="number" min="1" max="49"/&gt;
+     &lt;input type="integer" name="number" min="1" max="49"/&gt;
+ &lt;/p&gt;
+ &lt;p&gt;
+  &lt;label&gt;
+   Games:
+   &lt;select name="type" multiple="multiple"&gt;
+    &lt;option value="Thunderbolt"&gt; Thunderbolt &lt;/option&gt;
+    &lt;option value="Lightning"&gt; Lightning &lt;/option&gt;
+   &lt;/select&gt;
+  &lt;/label&gt;
+ &lt;/p&gt;
+ &lt;p&gt;
+  &lt;input type="submit" value="Send"&gt;
+ &lt;/p&gt;
+&lt;/form&gt;
+</pre>
+
+     <p>...if filled in with the name "Erwin" and the numbers 20, 30 and 40
+      with the first and last number fields left blank, and all the values in
+      the select list selected, would generate the following form data set:</p>
+
+     <ol>
+      <li>username, 0, "Erwin"
+
+      <li>number, 1, "20"
+
+      <li>number, 2, "30"
+
+      <li>number, 3, "40"
+
+      <li>type, 0, "Thunderbolt"
+
+      <li>type, 0, "Lightning"
+     </ol>
+    </div>
+
+    <p>The form data set also includes a list of which <span><a
+     href="#repetition3">repetition block</a></span>s are involved in the
+     submission.</p>
+
+    <p>For each control in the form data set, the control and the control's
+     ancestors are examined, up to but not including the first node that is a
+     common ancestor of the control and the form, or is the form itself. For
+     each element so examined, if it is a <span><a
+     href="#repetition3">repetition block</a></span> that is not an
+     <span>orphan repetition block</span> and whose template does have an ID,
+     and that repetition block has not yet been added to the list of
+     repetition blocks, it is added.</p>
+
+   <li> <strong>Step three: Encode the form data set</strong>
+    <p>The form data set is then encoded according to the content type
+     specified by the <code>method</code> and <code>enctype</code> attribute
+     of the <code>form</code> element. If <code>method</code> is
+     <code>get</code>, then <code>enctype</code> is treated as if it had the
+     value <code>application/x-www-form-urlencoded</code>, whatever its real
+     value. The possible values of <code>enctype</code> defined by this
+     specification are:</p>
+
+    <dl>
+     <dt><code>application/x-www-form-urlencoded</code>
+
+     <dd>Described <a href="#x-www-form-urlencoded">below</a>.
+
+     <dt><code>multipart/form-data</code>
+
+     <dd>Described in <a href="#refsHTML4">[HTML4]</a>, <a
+      href="http://www.w3.org/TR/html4/interact/forms.html#h-17.13.4.2">section
+      17.13.4</a>. Note that this submission method discards the index and
+      repetition block parts of the form data set.
+
+     <dt><code>application/x-www-form+xml</code>
+
+     <dd>Described <a href="#x-www-form-xml">below</a>.
+    </dl>
+
+    <p>Other values may be defined by other specifications.</p>
+
+    <p>During this step, the form data set is <a
+     href="#unacceptableCharacters">examined to ensure all the characters are
+     representable</a> in the submission character encoding.</p>
+
+   <li> <strong>Step four: Dispatch <code>submit</code> events.</strong>
+    <p>The <code>submit</code> event is then submitted as described in <a
+     href="#refsHTML4">[HTML4]</a>. If it is canceled, then the submission
+     processing stops at this point.</p>
+
+   <li> <strong>Step five: Submit the encoded form data set</strong>
+    <p>Finally, the encoded data is sent to the processing agent designated
+     by the <code>action</code> attribute using the protocol method specified
+     by the <code>method</code> attribute.</p>
+
+    <p>For HTTP GET submissions, the encoded form data is used as the query
+     value. For HTTP POST submissions, the encoded data is used as the entity
+     body.</p>
+
+    <p>User agents should handle responses to the submission. For example if
+     the <code>action</code> denotes an HTTP resource, and the
+     <code>method</code> is <code>post</code> and the remote server replies
+     with a <code>200 OK</code> response, then the returned document should
+     be displayed to the user as if the user had navigated to that document
+     by following a link to it.</p>
+  </ol>
+
+  <h3 id="unacceptableCharacters"><span class="secno">5.1. </span>Handling
+   characters outside the submission character set</h3>
+
+  <p>The different form data set encoding types each define how to find the
+   character encoding to use to submit the data.
+
+  <p>Sometimes, the form submission character set used is not able to
+   represent all the character present in the form submission.
+
+  <p>If the form data set contains characters that are outside the submission
+   character set, the user agent should inform the user that his submission
+   will be changed, for example using a dialog in the form:
+
+  <pre>
+ ____________________________________________________
+|| Warning |||||||||||||||||||||||||||||||||||||||||||
+|                                                    |
+| This form cannot handle some of the characters you |
+| have entered. The data will be sent as "D?rst".    |
+|                                                    |
+|              (( Send anyway ))  ( Return to form ) |
+`----------------------------------------------------'
+</pre>
+
+  <p>If the submission is not canceled, the user agent MUST replace each
+   character that is not in the submission character set with one or more
+   replacement characters.
+
+  <p>For each such missing character, UAs must either transliterate the
+   character to a UA-defined human-recognizable representation (for example
+   transliterating U+263A to the three-character string ":-)" in US-ASCII, or
+   U+2126 to the byte 0xD9 in ISO-8859-7), or, for characters where a
+   dedicated transliteration is not known to the UA, replace the character
+   with either U+FFFD, "?", or some other single character representing the
+   same semantic as U+FFFD.
+
+  <p>Note that a string containing the codepoint's value itself (for example
+   the six-character string "U+263A" or the seven-character string
+   "&amp;#9786;") is not considered to be human readable and must not be used
+   as a transliteration. (This is to discourage servers from attempting to
+   mechanically convert such codepoints back into Unicode characters, as
+   there is no way to distinguish such characters from identical literal
+   strings entered by the user.)
+
+  <h3 id="x-www-form-urlencoded"><span class="secno">5.2.
+   </span><code>application/x-www-form-urlencoded</code></h3>
+
+  <p>This is the default content type. Forms submitted with this content type
+   must be encoded as follows:
+
+  <ol>
+   <li>The submission character encoding is selected from the form's
+    <code>accept-charset</code> attribute. If the attribute is not specified,
+    then the client should use either the page's character encoding, or
+    UTF-8. Character encodings that are not supersets of US-ASCII must not be
+    used (this includes UTF-16 and EBCDIC).
+
+   <li>If the form contains an input control of type <code>hidden</code> with
+    the name <code>_charset_</code>, it is forced to appear in the form data
+    set, with the value equal to the name of the submission character
+    encoding used.
+
+   <li> Control names and values are escaped. Space characters are replaced
+    by `+', and then non-alphanumeric characters are encoded in the
+    submission character encoding and each resulting byte is replaced by
+    `%HH', a percent sign and two hexadecimal digits representing the value
+    of the byte.
+
+   <li> The control names/values are listed in the order they appear in the
+    form data set. The name is separated from the value by `=' and name/value
+    pairs are separated from each other by `&amp;'.
+  </ol>
+
+  <p> Note that the index and repetition block parts of the form data set are
+   not used.
+
+  <h3 id="x-www-form-xml"><span class="secno">5.3.
+   </span><code>application/x-www-form+xml</code>: XML submission</h3>
+
+  <p>This section defines the expected behaviour for step 3, "Step three:
+   Encode the form data set", of the submission algorithm described above,
+   for the form content type <code>application/x-www-form+xml</code>. The
+   rest of the form submission process progresses as described above.
+
+  <p>The message entity is an XML 1.1 document, encoded as UTF-8, which has a
+   root element named "submission", with no prefix, defining a default
+   namespace <code>data:,formData</code>. UA may include an XML declaration
+   but this is not necessary as it would be redundant (the MIME type and
+   version must not be changed from the above values, and submission
+   documents have no document type and therefore are always standalone.).
+
+  <p>Note that the form's <code>accept-charset</code> attribute is ignored
+   for this encoding type.
+
+  <p>First, for each repetition block in the form data set, an element
+   <code><a href="#repeat">repeat</a></code> is inserted, with an attribute
+   <code>template</code> equal to the ID of the template, and an attribute
+   <code>index</code> equal to the index of the repetition block. The element
+   is empty.
+
+  <p>Servers are generally expected to ignore <code><a
+   href="#repeat">repeat</a></code> elements; they are primarily included so
+   that form data can be round-tripped using the <code>data</code> attribute
+   on the form element.
+
+  <p>Then, for each successful control that is not a file upload control, in
+   the order that the controls are to be found in the original document, an
+   element <code>field</code> is inserted, with an attribute
+   <code>name</code> having the name of the form control, an attribute
+   <code>index</code> having the index described above in the definition of
+   the <span><a href="#form-data">form data set</a></span>, and with the
+   element content being the <span>current value</span> of the form control.
+   Form controls with multiple values result in multiple <code>field</code>
+   elements being inserted into the output, one for each value, all with the
+   same index.
+
+  <p>File controls are submitted using a <code>file</code> element instead of
+   a <code>field</code> element. The <code>file</code> element has four
+   attributes, <code>name</code>, <code>index</code>, <code>filename</code>,
+   and <code>type</code>. The <code>name</code> attribute contains the name
+   of the file control. The <code>index</code> attribute contains the index
+   in the control's entry in the form data set. The <code>filename</code>
+   attribute is optional and may contain the name of the file. The
+   <code>type</code> attribute is not optional and must contain the MIME type
+   of the file. The contents of the file are base64 encoded and then included
+   literally as content directly inside the <code>file</code> element. As
+   base64 data is whitespace-clean, UAs may introduce whitespace into the
+   <code>file</code> element to ensure the submitted data has reasonable line
+   lengths. This is, however, completely optional. (It is primarily intended
+   to make it possible to write readable examples of submission output.)
+
+  <p>UAs may use either CDATA blocks, entities, or both in escaping the
+   contents of attributes and elements, as appropriate. The resulting XML
+   must be a well-formed XML instance. The only mention of namespaces in the
+   submission document must be the declaration of the default namespace on
+   the root element.
+
+  <p>Whitespace may be inserted around elements that are children of the
+   <code>submission</code> element in order to make the submitted data easier
+   to scan by eye. However, this is optional. Processors should not be
+   affected by such whitespace, or whitespace inside <code>file</code>
+   elements, when reading the submitted data back from the XML instance.
+   (Whitespace inside <code>field</code> elements is significant, however.)
+
+  <div class="example">
+   <p>The following example illustrates
+    <code>application/x-www-form+xml</code> encoding. Suppose we have the
+    following form:</p>
+
+   <pre>
+&lt;form action="http://example.com/cgi/handle"
+      enctype="application/x-www-form+xml"
+      method="post"&gt;
+ &lt;p&gt;
+  &lt;label&gt; What is your name? &lt;input type="text" name="submit-name"/&gt; &lt;/label&gt;
+  &lt;label&gt; What files are you sending? &lt;input type="file" name="files"/&gt; &lt;/label&gt;
+  &lt;label&gt; When were they written? &lt;input type="date" name="stamp"/&gt; &lt;/label&gt;
+  &lt;input type="submit" value="Send"&gt;
+ &lt;/p&gt;
+&lt;/form&gt;
+</pre>
+
+   <p>If the user enters "Larry" in the text input, selects the text file
+    "file1.txt", and picks an arbitrary date, the user agent might send back
+    the following data:
+
+   <pre>
+Content-Type: application/x-www-form+xml
+
+&lt;submission xmlns="data:,formData"&gt;
+ &lt;field name="submit-name" index="0"&gt;Larry&lt;/field&gt;
+ &lt;file name="files" index="0" filename="file1.txt" type="text/plain;charset=iso-8859-1"&gt;
+  Y29udGVudHMgb2YgZmlsZTEudHh0
+ &lt;/file&gt;
+ &lt;field name="stamp" index="0"&gt;1979-04-13&lt;/field&gt;
+&lt;/submission&gt;
+</pre>
+
+   <p>If the user selected a second (image) file "file2.png", and changes the
+    date, the user agent might construct the entity as follows:</p>
+
+   <pre>
+Content-Type: application/x-www-form+xml
+
+&lt;submission xmlns="data:,formData"&gt;
+ &lt;field name="submit-name" index="0"&gt;Larry&lt;/field&gt;
+ &lt;file name="files" index="0" filename="file1.txt" type="text/plain;charset=iso-8859-1"&gt;
+  Y29udGVudHMgb2YgZmlsZTEudHh0
+ &lt;/file&gt;
+ &lt;file name="files" index="0" filename="file2.png" type="image/png"&gt;
+  iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAABGdBTUEAAK
+  /INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwA
+  AAAGUExURQD/AAAAAG8DfkMAAAAMSURBVHjaYmAACDAAAAIAAU9tWeEAAA
+  AASUVORK5CYII=
+ &lt;/file&gt;
+ &lt;field name="stamp" index="0"&gt;1979-12-27&lt;/field&gt;
+&lt;/submission&gt;
+</pre>
+
+   <p>Note how the content of the plain text attached file is base64-encoded,
+    despite being a plain text file. This preserves the integrity of the file
+    in cases where the MIME type is incorrect. It also means that files with
+    malformed content, for example a file encoded as UTF-8 with stray
+    continuation bytes, will be transmitted faithfully instead of being
+    re-encoded by the UA.</p>
+  </div>
+
+  <div class="example">
+   <p>This example illustrates this encoding for the case with two form
+    controls with the same name. Suppose we have the following form:</p>
+
+   <pre>
+&lt;form enctype="application/x-www-form+xml" method="post"&gt;
+ &lt;p&gt;
+  Enter your new password twice:
+  &lt;input type="password" name="password"/&gt;
+  &lt;input type="password" name="password"/&gt;
+  &lt;input type="submit" value="Send"&gt;
+ &lt;/p&gt;
+&lt;/form&gt;
+</pre>
+
+   <p>If the user enters "perfect" and "prefect", the user agent might send
+    back the following data:
+
+   <pre>
+Content-Type: application/x-www-form+xml
+
+&lt;submission xmlns="data:,formData"&gt;
+ &lt;field name="password" index="0"&gt;perfect&lt;/field&gt;
+ &lt;field name="password" index="1"&gt;prefect&lt;/field&gt;
+&lt;/submission&gt;
+</pre>
+  </div>
+
+  <div class="example">
+   <p>Recall the <a href="#repeatExample">example for repetition blocks</a>.
+    If it was immediately submitted, the output would be an XML file
+    equivalent to:</p>
+
+   <pre>
+Content-Type: application/x-www-form+xml
+
+&lt;submission xmlns="data:,formData"&gt;
+ &lt;repeat template="row" index="0"/&gt;
+ &lt;field name="name_0" index="0"&gt;John Smith&lt;/field&gt;
+ &lt;field name="count_0" index="0"&gt;1&lt;/field&gt;
+&lt;/submission&gt;
+</pre>
+  </div>
+  <!-- XXX for a future version:
+  <p>[after the document has been created, an onXMLSubmit event is
+  fired on the form with a mutable version of the document node of the
+  submission document as its context information. this could be passed
+  to an XSLT processor to turn the submission XML into a new
+  format.]</p> -->
+
+  <h2 id="seeding"><span class="secno">6. </span>Seeding a form with initial
+   values</h2>
+
+  <p>If a <code>form</code> has a <code>data</code> attribute, it must be a
+   URI that points to a well-formed XML file containing a
+   <code>formdata</code> element in the <code>data:,formData</code>
+   namespace.
+
+  <p>UAs must process this file if it has an XML MIME type, if it is a
+   well-formed XML file, and if the root element is the right root element in
+   the right namespace. If any of these conditions are not met, UAs must act
+   as if the attribute was not specified, although they may report the error
+   to the user. UAs are expected to correctly handle namespaces, so the file
+   may use prefixes, etc.
+
+  <p>If the UA processes the file, it must use the following algorithm to
+   fill the form.
+
+  <ol>
+   <li>The form must be reset to its initial values as specified in the
+    markup.
+
+   <li>Child text nodes, CDATA blocks, comments, and PIs of the root element
+    of the specified file must be ignored.
+
+   <li><code><a href="#repeat">repeat</a></code> elements in the
+    <code>data:,formData</code> namespace that are children of the root
+    element, have a non-empty <code>template</code> attribute and an
+    <code>index</code> attribute that contains only one or more digits in the
+    range 0-9 with an optional leading minus sign, have no other
+    non-namespaced attributes, and have no content, must be processed as
+    follows:
+    <p>If the <code>template</code> attribute specifies an element that is
+     not a <span><a href="#repetition2">repetition template</a></span>, then
+     the element is ignored.</p>
+
+    <p>If the <code>template</code> attribute specifies a <span><a
+     href="#repetition2">repetition template</a></span> and that template
+     already has a <span><a href="#repetition3">repetition block</a></span>
+     with the index specified by the <code>index</code> attribute, then the
+     element is ignored.</p>
+
+    <p>Otherwise, the specified template's <code><a
+     href="#addrepetitionblockbyindex">addRepetitionBlockByIndex()</a></code>
+     method is called, with a null first argument and the index specified by
+     the <code><a href="#repeat">repeat</a></code> element's
+     <code>index</code> attribute as the second.</p>
+
+   <li><code>field</code> elements in the <code>data:,formData</code>
+    namespace that are children of the root element, have a non-empty
+    <code>name</code> attribute and an <code>index</code> attribute that
+    contains only one or more digits in the range 0-9, have no other
+    non-namespaced attributes, and have either nothing or only text and CDATA
+    nodes as children, must be used to initialize fields, as follows.
+    <p>First, the form control that the field references must be identified.
+     This is done by walking the list of form controls associated with the
+     form until one is found that has a name exactly equal to the name given
+     in the <code>field</code> element's <code>name</code> attribute,
+     skipping as many such matches as is specified in the <code>index</code>
+     attribute.</p>
+
+    <p> If the identified form control is a file upload control, a push
+     button control, or an image control, then the <code>field</code> element
+     is now skipped.</p>
+
+    <p>Next, if the identified form control is not a multiple-valued control
+     (a multiple-valued control is one that can generate more than one value
+     on submission, such as a <code>&lt;select
+     multiple="multiple"&gt;</code>), or if it is a multiple-valued control
+     but it is the first time the control has been identified by a
+     <code>field</code> element in this data file that was not ignored, then
+     it is set to the given value (the contents of the <code>field</code>
+     element), removing any previous values (even if these values were the
+     result of processing previous <code>field</code> elements in the same
+     data file). Otherwise, this is a
+     subsequent<!-- by which i mean "not first" --> value for a
+     multiple-valued control, and the given value (the contents of the
+     <code>field</code> element) should be <em>added</em> to the list of
+     values that the element has selected.</p>
+
+    <p>If the element cannot be given the value specified, the
+     <code>field</code> element is ignored and the control's value is left
+     unchanged.</p>
+
+    <p>If the element is a multiple-valued control and the control already
+     has the given value selected, but it can be given the value again, then
+     that occurs. For example, in the following case:</p>
+
+    <pre>
+&lt;select name="select" multiple="multiple"&gt;
+ &lt;option&gt;test&lt;/option&gt;
+ &lt;option&gt;test&lt;/option&gt;
+ &lt;option&gt;test&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+    <p>...if the data file contained two instances of:</p>
+
+    <pre>&lt;field name="select" index="0"&gt;test&lt;/select&gt;</pre>
+
+    <p>...then the first two <code>option</code> elements would end up
+     selected, and the last would not. This would be the case irrespective of
+     which <code>option</code> elements had their <code>selected</code>
+     attribute set in the markup.</p>
+
+    <p class="note">The <code>option</code> elements are never directly
+     matched by <code>field</code> elements; it is the <code>select</code>
+     element in this case that is matched (twice). This is why the two
+     <code>field</code> elements select subsequent values in the control.</p>
+
+    <p>If the element is a multiple-valued control and the control already
+     has the given value selected and it <em>cannot</em> be given the value
+     again, then the field is ignored.</p>
+
+   <li>All other elements in the file must be ignored.
+
+   <li>A <code><a href="#formchange">formchange</a></code> event is then
+    fired on all the form controls of the form.
+  </ol>
+
+  <p class="note">Note that file upload controls cannot be repopulated.
+   However, <code>output</code> control <em>can</em> be populated. This can
+   be used, for example, for localizing a form by including the structure in
+   one file and the strings in another. (The semantics of this practice are
+   somewhat dubious, however. It is only mentioned because XForms advocates
+   claim this as a feature.)
+  <!--
+   Take:
+   <select name="a" multiple="multiple">
+     <option value="a" selected="selected"/>
+     <option value="b" selected="selected"/>
+   </select>
+   <select name="a">
+     <option value="a" selected="selected"/>
+     <option value="b" selected="selected"/>
+   </select>
+   <input type="text" name="a" value="a">
+   <input type="text" name="a" value="b">
+
+   If the user sets
+     the first to be blank
+     the second to have only "b" selected
+     the third to say "a"
+     the fourth to say "a".
+
+  -->
+
+  <h2 id="extensions4"><span class="secno">7. </span>Extensions to the HTML
+   Level 2 DOM interfaces</h2>
+
+  <p>Unless otherwise specified, these interfaces have the same semantics as
+   defined in <a href="#refsDOM2HTML">[DOM2HTML]</a>.
+
+  <pre class="idl">
+interface HTMLFormElement : HTMLElement {
+  readonly attribute HTMLCollection  elements;
+  readonly attribute long            length;
+           attribute DOMString       name;
+           attribute DOMString       acceptCharset;
+           attribute DOMString       action;
+           attribute DOMString       enctype;
+           attribute DOMString       method;
+           attribute DOMString       target;
+  void               submit();
+  void               reset();
+
+  // new in this specification:
+  const    unsigned short            ERROR_TYPE_MISMATCH     = 1;
+  const    unsigned short            ERROR_RANGE_UNDERFLOW   = 2;
+  const    unsigned short            ERROR_RANGE_OVERFLOW    = 4;
+  const    unsigned short            ERROR_TOO_LONG          = 8;
+  const    unsigned short            ERROR_PATTERN_MISMATCH  = 16;
+  const    unsigned short            ERROR_REQUIRED          = 32;
+  const    unsigned short            ERROR_USER_DEFINED      = 32768;
+
+           attribute DOMString       accept;
+  readonly attribute HTMLCollection  templateElements;
+  void               validate();
+};
+
+interface HTMLSelectElement : HTMLElement {
+  readonly attribute DOMString       type;
+           attribute long            selectedIndex;
+           attribute DOMString       value;
+           attribute unsigned long   length;
+                                        // raises(DOMException) on setting
+
+  readonly attribute HTMLFormElement form;
+  readonly attribute HTMLOptionsCollection options;
+           attribute boolean         disabled;
+           attribute boolean         multiple;
+           attribute DOMString       name;
+           attribute long            size;
+           attribute long            tabIndex;
+  void               add(in HTMLElement element, 
+                         in HTMLElement before)
+                                        raises(DOMException);
+  void               remove(in long index);
+  void               blur();
+  void               focus();
+
+  // new in this specification:
+           attribute boolean         editable;
+           attribute DOMString       pattern;
+           attribute boolean         required;
+           attribute boolean         autocomplete;
+           attribute DOMString       inputmode;
+           attribute HTMLCollection  selectedOptions;
+  void               reset();
+
+  readonly attribute long            validity;
+  void               validate();
+  void               markValid();
+  void               markInvalid();
+};
+
+interface HTMLOptGroupElement : HTMLElement {
+           attribute boolean         disabled;
+           attribute DOMString       label;
+};
+
+interface HTMLOptionElement : HTMLElement {
+  readonly attribute HTMLFormElement form;
+           attribute boolean         defaultSelected;
+  readonly attribute DOMString       text;
+  readonly attribute long            index;
+           attribute boolean         disabled;
+           attribute DOMString       label;
+           attribute boolean         selected;
+           attribute DOMString       value;
+};
+
+interface HTMLInputElement : HTMLElement {
+           attribute DOMString       defaultValue;
+           attribute boolean         defaultChecked;
+  readonly attribute HTMLFormElement form;
+           attribute DOMString       accept;
+           attribute DOMString       accessKey;
+           attribute DOMString       align;
+           attribute DOMString       alt;
+           attribute boolean         checked;
+           attribute boolean         disabled;
+           attribute long            maxLength;
+           attribute DOMString       name;
+           attribute boolean         readOnly;
+           attribute unsigned long   size;
+           attribute DOMString       src;
+           attribute long            tabIndex;
+           attribute DOMString       type;
+           attribute DOMString       useMap;
+           attribute DOMString       value;
+  void               blur();
+  void               focus();
+  void               select();
+  void               click();
+
+  // new in this specification:
+           attribute long            min;
+           attribute long            max;
+           attribute DOMString       pattern;
+           attribute boolean         required;
+           attribute boolean         autocomplete;
+           attribute DOMString       inputmode;
+  readonly attribute RepetitionElement template;
+  void               reset();
+
+  readonly attribute long            validity;
+  void               validate();
+  void               markValid();
+  void               markInvalid();
+};
+
+interface HTMLTextAreaElement : HTMLElement {
+           attribute DOMString       defaultValue;
+  readonly attribute HTMLFormElement form;
+           attribute DOMString       accessKey;
+           attribute long            cols;
+           attribute boolean         disabled;
+           attribute DOMString       name;
+           attribute boolean         readOnly;
+           attribute long            rows;
+           attribute long            tabIndex;
+  readonly attribute DOMString       type;
+           attribute DOMString       value;
+  void               blur();
+  void               focus();
+  void               select();
+
+  // new in this specification:
+           attribute DOMString       wrap;
+           attribute DOMString       pattern;
+           attribute boolean         required;
+           attribute boolean         autocomplete;
+           attribute DOMString       inputmode;
+  void               reset();
+
+  readonly attribute long            validity;
+  void               validate();
+  void               markValid();
+  void               markInvalid();
+};
+
+interface HTMLButtonElement : HTMLElement {
+  readonly attribute HTMLFormElement form;
+           attribute DOMString       accessKey;
+           attribute boolean         disabled;
+           attribute DOMString       name;
+           attribute long            tabIndex;
+  readonly attribute DOMString       type;
+           attribute DOMString       value;
+
+  // new in this specification:
+  readonly attribute RepetitionElement template;
+};
+
+interface HTMLLabelElement : HTMLElement {
+  readonly attribute HTMLFormElement form;
+           attribute DOMString       accessKey;
+           attribute DOMString       htmlFor;
+};
+
+interface HTMLFieldSetElement : HTMLElement {
+  readonly attribute HTMLFormElement form;
+
+  // new in this specification
+           attribute boolean         disabled;
+};
+
+interface HTMLLegendElement : HTMLElement {
+  readonly attribute HTMLFormElement form;
+           attribute DOMString       accessKey;
+           attribute DOMString       align;
+};
+
+// new in this specification
+interface HTMLOutputElement : HTMLElement {
+           attribute DOMString       defaultValue;
+  readonly attribute HTMLFormElement form;
+           attribute DOMString       name;
+           attribute DOMString       value;
+  void               reset();
+};
+
+// new in this specification
+interface RepetitionElement {
+  const              unsigned short  REPETITION_NONE = 0;
+  const              unsigned short  REPETITION_TEMPLATE = 1;
+  const              unsigned short  REPETITION_BLOCK = 2;
+
+           attribute unsigned short  repetitionType;
+           attribute long            repetitionIndex;
+  readonly attribute Element         repetitionTemplate;
+  readonly attribute HTMLCollection  repetitionBlocks;
+  void               addRepetitionBlock(in Node refNode);
+  void               addRepetitionBlockByIndex(in Node refNode, in long index);
+  void               moveRepetitionBlock(in long distance);
+  void               removeRepetitionBlock();
+}
+
+// new in this specification
+interface FormDocument {
+  Document           load(in DOMString action, in DOMString method,
+                          in DOMString enctype, in DOMString content);
+}
+</pre>
+
+  <h3 id="additions"><span class="secno">7.1. </span>Additions specific to
+   the <code>HTMLFormElement</code> interface</h3>
+
+  <p>The new <code>accept</code> attribute reflects the <code>form</code>
+   element's <code>accept</code> attribute and its addition here merely
+   address an oversight in DOM2.
+
+  <p>The <code>templateElements</code> attribute contains the list of form
+   controls associated with this form that form part of repetition templates
+   that the form itself is not also a part of. It is defined in more detail
+   in the section on the <a href="#repetitionModel">repetition model</a>.
+
+  <p>The <code>validate()</code> method invokes the <code>validate()</code>
+   method of all the elements in the form's <code>elements</code> list whose
+   interfaces have a <code>validate()</code> method defined.
+
+  <h3 id="additions0"><span class="secno">7.2. </span>Additions specific to
+   the <code>HTMLSelectElement</code> interface</h3>
+
+  <p>The <code>editable</code> DOM attribute reflects the
+   <code>editable</code> content attribute in the same way as the
+   <code>multiple</code> DOM attribute reflects the <code>multiple</code>
+   content attribute.
+
+  <p>The <code>selectedOptions</code> attribute provides a readonly list of
+   the descendant <code>HTMLOptionElement</code> nodes that currently have
+   their <code>selected</code> attribute set to a true value (a subset of the
+   controls listed in the <code>options</code> attribute). The list is
+   returned live, so changing the options selected (by the user or by script)
+   will change the list. The order of the list should be consistent with the
+   order of the <code>options</code> list.
+
+  <h3 id="the-htmloutputelement"><span class="secno">7.3. </span>The
+   <code>HTMLOutputElement</code> interface</h3>
+
+  <p>This interface is added for the new <code>output</code> element. Its
+   attributes work analogously to those on other controls. The semantics of
+   the <code>value</code> and <code>defaultValue</code> DOM attributes are
+   described in the section describing the <code>output</code> element.
+
+  <h3 id="validation"><span class="secno">7.4. </span>Validation APIs</h3>
+
+  <p>The <code>validity</code> attribute returns whether the form control is
+   currently valid. Its value is a bit field giving the errors that currently
+   apply ot the control, the sum of the relevant <code>ERROR_*</code>
+   constants defined on the <code>HTMLFormElement</code> interface. These
+   have the following meanings:
+
+  <dl>
+   <dt id="ERROR_TYPE_MISMATCH"> ERROR_TYPE_MISMATCH
+
+   <dd> The data entered does not match the type of the control. For example,
+    if the UA allows uninterpreted arbitrary text entry for
+    <code>expdate</code> fields, and the user has entered <kbd>SEP02</kbd>,
+    then this error code would be used. This code is also used when the
+    selected file in a file upload control does not have an appropriate MIME
+    type.
+
+   <dt id="ERROR_RANGE_UNDERFLOW"> ERROR_RANGE_UNDERFLOW
+
+   <dd> The numeric, date, or time value of a field with a <code>min</code>
+    attribute is lower than the min.
+
+   <dt id="ERROR_RANGE_OVERFLOW"> ERROR_RANGE_OVERFLOW
+
+   <dd> The numeric, date, or time value of a field with a <code>max</code>
+    attribute is higher than the max.
+
+   <dt id="ERROR_TOO_LONG"> ERROR_TOO_LONG
+
+   <dd> The value of a field with a <code>maxlength</code> attribute is
+    longer than the attribute allows.
+
+   <dt id="ERROR_PATTERN_MISMATCH"> ERROR_PATTERN_MISMATCH
+
+   <dd> The value of the field with a <code>pattern</code> attribute doesn't
+    match the pattern.
+
+   <dt id="ERROR_REQUIRED"> ERROR_REQUIRED
+
+   <dd> The field has the <code>required</code> attribute set but has no
+    value.
+
+   <dt id="ERROR_USER_DEFINED"> ERROR_USER_DEFINED
+
+   <dd> The field was marked invalid from script. See the definitions of the
+    <a href="#markValid"><code>markValid()</code> and
+    <code>markInvalid()</code> methods</a>.
+  </dl>
+
+  <p>When the definitions above refer to elements that have an attribute set
+   on them, they do not refer to elements on which that attribute is defined
+   not to apply. For example, the <code>ERROR_REQUIRED</code> code cannot be
+   set on an <code>&lt;input type="checkbox"&gt;</code> element, even if that
+   element has the <code>required</code> attribute set, since
+   <code>required</code> doesn't apply to check boxes.
+
+  <p>The <code>validate()</code> method, present on several of the form
+   control interfaces, causes an <code><a
+   href="#formerror">formerror</a></code> event to be fired on that control,
+   unless the <code>validity</code> of the control is zero. <span
+   class="note">Recall that this is automatically done during form
+   submission.</span>
+
+  <p id="markValid">The <code>markValid()</code> and
+   <code>markInvalid()</code> methods set and reset (respectively) the
+   <code>ERROR_USER_DEFINED</code> bit on the <code>validity</code>
+   attribute. Even attributes that are empty and not required can be marked
+   invalid like this, and would abort form submission if so marked.
+
+  <h3 id="new-dom"><span class="secno">7.5. </span>New DOM attributes for new
+   content attributes</h3>
+
+  <p>The new <code>pattern</code>, <code>required</code>,
+   <code>autocomplete</code>, <code>inputmode</code>, <code>min</code>,
+   <code>max</code>, <code>wrap</code>, and <code>disabled</code> attributes
+   simply reflect the current value of their relevant attribute.
+
+  <h3 id="resetting"><span class="secno">7.6. </span>Resetting form controls</h3>
+
+  <p>In addition to the <code>reset()</code> method on the form interface,
+   this specification introduces the <code>reset()</code> method on the form
+   conrol interfaces to reset just the relevant control to its initial value.
+
+  <h3 id="repetition1"><span class="secno">7.7. </span>Repetition interfaces</h3>
+
+  <p>The <code>RepetitionElement</code> interface should be implemented by
+   all elements.
+
+  <p>If the element is a <span><a href="#repetition2">repetition
+   template</a></span>, its <dfn
+   id="repetitiontype"><code>repetitionType</code></dfn> DOM attribute must
+   return <code><a href="#repetitiontemplate">REPETITION_TEMPLATE</a></code>.
+   Otherwise, if the element is a <span><a href="#repetition3">repetition
+   block</a></span>, it must return <code>REPETITION_BLOCK</code>. Otherwise,
+   it is a normal element, and that attribute should return
+   <code>REPETITION_NONE</code>.
+
+  <p>The <dfn id="repetitionindex"><code>repetitionIndex</code></dfn>
+   attribute must return the current value of the index of the repetition
+   template or block. If the element is a normal element, it must return
+   zero. Setting this attribute must not affect the <code><a
+   href="#repeat">repeat</a></code> content attribute.
+
+  <p>The <dfn id="repetitiontemplate"><code>repetitionTemplate</code></dfn>
+   attribute is null unless the element is a repetition block, in which case
+   it points to the block's template. If the block is an <span>orphan
+   repetition black</span> then it returns null.
+
+  <p>The <dfn id="repetitionblocks"><code>repetitionBlocks</code></dfn>
+   attribute is null unless the element is a repetition template, in which
+   case it points to a list of elements (an <code>HTMLCollection</code>,
+   although the name of that interface is a misnomer since there is nothing
+   HTML-specific about it). The list consists of all the <span>repetition
+   blocks</span> that have this element as their template. The list is live.
+
+  <p>The <code><a href="#addrepetitionblock">addRepetitionBlock()</a></code>,
+   <code><a
+   href="#addrepetitionblockbyindex">addRepetitionBlockByIndex()</a></code>,
+   <code><a href="#moverepetitionblock">moveRepetitionBlock()</a></code> and
+   <code><a href="#removerepetitionblock">removeRepetitionBlock()</a></code>
+   methods are defined in the section on <a href="#repetitionModel">the
+   repetition model</a>.
+
+  <p>The <code>template</code> DOM attribute on the
+   <code>HTMLInputElement</code> and <code>HTMLButtonElement</code>
+   interfaces represents the repetition template that the
+   <code>template</code> content attribute refers to. If the content
+   attribute points to a non-existent element or an element that is not a
+   repetition template, the DOM attribute returns null. This DOM attribute is
+   readonly in this version of this specification.
+
+  <h3 id="loading"><span class="secno">7.8. </span>Loading remote documents</h3>
+
+  <p>The <code>FormDocument</code> interface can be obtained using
+   binding-specific casting methods on the <code>document</code> object.
+
+  <p>The <code>load</code> method on the <code>FormDocument</code> interface
+   returns a <code>Document</code> interface, and then queues the specified
+   resource to be loaded into that document. When the document has finished
+   loading, a <code>load</code> event fires on the object. If a failure
+   occurs during loading, an <code>error</code> event fires instead.
+
+  <p class="issue">Maybe this should be on the DOMImplementation object.
+  <!-- XXX -->
+
+  <p>This method has four arguments:
+
+  <dl>
+   <dt>action
+
+   <dd>The URI to lead.
+
+   <dt>method
+
+   <dd>The method (e.g. for HTTP actions, 'GET', 'POST') used to load the
+    URI.
+
+   <dt>enctype
+
+   <dd>The Content-Type of the content, if any. For HTTP requests with entity
+    bodies, this is the value of the submitted Content-Type header.
+
+   <dt>content
+
+   <dd>The entity body of submission requests, if required.
+  </dl>
+
+  <p>Implementations may limit which hosts, ports, and schemes can be
+   accessed using this method. For example, it is highly recommended that the
+   SMTP port not be allowed, since otherwise it can be used to relay spam on
+   the behalf of the unwitting user. Similarly, cross-domain scripting
+   restrictions are fully expected to apply.
+
+  <p>The <code>load</code> method is asynchronous, and is guarenteed to not
+   finish loading the document or signal an error before the running script
+   either completes or yields to the user (e.g. by calling
+   <code>window.alert()</code>). Thus, the following code is guarenteed to
+   hook in the event handlers before the document has either finished loading
+   or signalled an error:
+
+  <pre class="example">
+var d = document.load('http://example.org/search', 'post',
+                      'application/xml', '<search keywords="test search">');
+d.addEventListenerNS('http://www.w3.org/2001/xml-events', 'load',
+                      function () { alert('loaded!'); },
+                      false, null);
+d.addEventListenerNS('http://www.w3.org/2001/xml-events', 'error',
+                      function () { alert('loaded!'); },
+                      false, null);
+</search></pre>
+
+  <p>For more control over loading remote documents, see DOM3 Load and Save
+   <a href="#refsDOM3LS">[DOM3LS]</a>.
+
+  <h2 id="styling"><span class="secno">8. </span>Styling form controls</h2>
+
+  <p>The CSS working group is expected to develop a language designed,
+   amongst other things, for the advanced styling of form controls. In the
+   meantime, technologies such as <a href="#refsHTC">[HTC]</a> and <a
+   href="#refsXBL">[XBL]</a> can be used as guides for what is expected.
+
+  <p>UAs, in the absence of such advanced styling information, may render
+   form controls described in this draft as they wish. It is recommended that
+   form controls remain faithful to the look and feel of the system's global
+   user interface, though.
+
+  <p>Note that <a href="#refsCSS21">[CSS21]</a> explicitly does not define
+   how CSS applies to form controls.
+
+  <h3 id="relation"><span class="secno">8.1. </span>Relation to the CSS3 User
+   Interface module</h3>
+
+  <p><a href="#refsCSS3UI">[CSS3UI]</a> introduces a number of pseudo-classes
+   for form controls. Their relationship to the form controls described in
+   this specification is described here.
+
+  <dl>
+   <dt>:enabled
+
+   <dd>Matches form control elements that do not have the
+    <code>disabled</code> attribute set.
+
+   <dt>:disabled
+
+   <dd>Matches form control elements that do have the <code>disabled</code>
+    attribute set.
+
+   <dt>:checked
+
+   <dd>Matches radio and check box form control elements that are
+    <code>checked</code>.
+
+   <dt>:indeterminate
+
+   <dd>Matches no HTML form control elements.
+
+   <dt>:default
+
+   <dd>Matches the button (if any) that will be selected if the user presses
+    the enter key (or some equivalent behaviour on less typical systems).
+
+   <dt>:valid
+
+   <dd>Matches form control elements that would not have the <code><a
+    href="#formerror">formerror</a></code> event fired at them if the form
+    was submitted.
+
+   <dt>:invalid
+
+   <dd>Matches form control elements that would have the <code><a
+    href="#formerror">formerror</a></code> event fired at them if the form
+    was submitted.
+
+   <dt>:in-range
+
+   <dd>Matches numeric, date-related, or time-related form control elements
+    when the current value is type-correct, greater than or equal to the
+    minimum (if any), and less than or equal to the maximum (if any).
+
+   <dt>:out-of-range
+
+   <dd>Matches numeric, date-related, or time-related form control elements
+    when the current value is type-correct, but either less than the minimum
+    or greater than the maximum.
+
+   <dt>:required
+
+   <dd>Matches form control elements that have the <code>required</code>
+    attribute set.
+
+   <dt>:optional
+
+   <dd>Matches form control elements that do not have the
+    <code>required</code> attribute set.
+
+   <dt>:read-only
+
+   <dd>Matches form control elements that have the <code>readonly</code>
+    attribute set.
+
+   <dt>:read-write
+
+   <dd>Matches form control elements that do not have the
+    <code>readonly</code> attribute set (including <code>password</code>
+    fields, although technically they should be called "writeonly").
+  </dl>
+
+  <p>When the definitions above refer to elements that have an attribute set
+   on them, they do not refer to elements on which that attribute is defined
+   not to apply. For example, the <code>:read-only</code> attribute cannot
+   apply to a <code>&lt;input type="radio"&gt;</code> element, even if that
+   element has the <code>readonly</code> attribute set, since
+   <code>readonly</code> doesn't apply to radio buttons.
+
+  <h2 class="no-num" id="xhtml-module-def">A. XHTML module definition</h2>
+
+  <p>The Forms Extensions Module provides all of the forms features found in
+   HTML 4.0, plus the extensions described above. Specifically, the Forms
+   Extensions Module supports:
+
+  <table class="moduledef" summary="Elements and Attributes for Forms
+   Extensions Module">
+   <thead>
+    <tr>
+     <th>Elements
+
+     <th>Attributes
+
+     <th>Minimal Content Model
+
+   <tbody>
+    <tr>
+     <td>form
+
+     <td> <span class="collection"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      accept (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_ContentTypes">ContentTypes</a></span>),
+      accept-charset (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Charsets">Charsets</a></span>),
+      action (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI">URI</a></span>),
+      method ("get"* | "post"), enctype (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_ContentType">ContentType</a></span>)
+      
+
+     <td>(Heading | List | Block - form)*
+
+    <tr>
+     <td>input
+
+     <td> <span class="collection"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      accept (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_ContentTypes">ContentTypes</a></span>),
+      accesskey (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Character">Character</a></span>),
+      alt (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Text">Text</a></span>),
+      autocomplete ("true"* | "false"), checked ("checked"), disabled
+      ("disabled"), form (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF">IDREF</a></span>),
+      help (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI">URI</a></span>),
+      inputmode (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      maxlength (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      min (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      max (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      name (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      pattern (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      readonly ("readonly"), required ("required"), size (<span
+      class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      src (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI">URI</a></span>),
+      tabindex (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      template (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF">IDREF</a></span>),
+      type ("text"* | "password" | "checkbox" | "radio" | "button" | "submit"
+      | "reset" | "add" | "remove" | "file" | "hidden" | "image" | "datetime"
+      | "date" | "expdate" | "time" | "number" | "integer" | "email" |
+      "uri"), value (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      
+
+     <td>EMPTY
+
+    <tr>
+     <td>select
+
+     <td> <span class="collection"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      autocomplete ("true"* | "false"), disabled ("disabled"), editable
+      ("editable"), form (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF">IDREF</a></span>),
+      help (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI">URI</a></span>),
+      inputmode (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      multiple ("multiple"), name (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      pattern (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      required ("required"), size (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      tabindex (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>)
+      
+
+     <td>(optgroup | option)*
+
+    <tr>
+     <td>optgroup
+
+     <td> <span class="collection"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      disabled ("disabled"), label* (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Text">Text</a></span>)
+      
+
+     <td>option*
+
+    <tr>
+     <td>option
+
+     <td> <span class="collection"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      disabled ("disabled"), label (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Text">Text</a></span>),
+      selected ("selected"), value (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>)
+      
+
+     <td>PCDATA
+
+    <tr>
+     <td>textarea
+
+     <td> <span class="collection"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      accesskey (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Character">Character</a></span>),
+      autocomplete ("true"* | "false"), cols (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      disabled ("disabled"), form (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF">IDREF</a></span>),
+      help (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI">URI</a></span>),
+      inputmode (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      name (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      readonly ("readonly"), required ("required"), rows (<span
+      class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      tabindex (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      wrap ("soft"* | "hard")
+
+     <td>PCDATA
+
+    <tr>
+     <td>output
+
+     <td> <span class="collection"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      form (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF">IDREF</a></span>),
+      name (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>)
+      
+
+     <td>PCDATA
+
+    <tr>
+     <td>button
+
+     <td> <span class="collection"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      accesskey (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Character">Character</a></span>),
+      disabled ("disabled"), form (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF">IDREF</a></span>),
+      help (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI">URI</a></span>),
+      name (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      tabindex (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      template (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF">IDREF</a></span>),
+      type ("button" | "submit"* | "reset" | "add" | "remove"), value (<span
+      class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>)
+      
+
+     <td>(PCDATA | Heading | List | Block - Form | Inline - Formctrl)*
+
+    <tr>
+     <td>fieldset
+
+     <td> <span class="collection"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      disabled ("disabled"), form (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF">IDREF</a></span>),
+      help (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI">URI</a></span>),
+      
+
+     <td>(PCDATA | legend | Flow)*
+
+    <tr>
+     <td>legend
+
+     <td> <span class="collection"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      accesskey (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Character">Character</a></span>)
+      
+
+     <td>(PCDATA | Inline)*
+
+    <tr>
+     <td>label
+
+     <td> <span class="collection"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      accesskey (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Character">Character</a></span>),
+      for (<span class="datatype"><a
+      href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF">IDREF</a></span>)
+      
+
+     <td>(PCDATA | Inline - label)*
+  </table>
+
+  <p>This module defines two content sets:
+
+  <dl>
+   <dt>Form
+
+   <dd><span class="content">form | fieldset</span>
+
+   <dt>Formctrl
+
+   <dd><span class="content">input | select | textarea | output | button |
+    label</span>
+  </dl>
+
+  <p>When this module is used, it adds the <code>Form</code> content set to
+   the <code>Block</code> content set and it adds the <code>Formctrl</code>
+   content set to the <code>Inline</code> content set as these are defined in
+   the Text Module.
+
+  <p>All XHTML elements (all elements in the
+   <code>http://www.w3.org/1999/xhtml</code> namespace) may have the <code><a
+   href="#repeat">repeat</a></code> attribute specified. Similarly, the
+   global attribute <code><a href="#repeat">repeat</a></code> in the
+   <code>http://www.w3.org/1999/xhtml</code> namespace may be specified on
+   any non XHTML element.
+
+  <p>The <code>form</code> element may be placed inside XHTML
+   <code>head</code> elements when it is empty.
+
+  <p>The <code>oninput</code> attribute is added to all the elements that
+   have an <code>onchange</code> attribute in the XHTML Intrinsic Events
+   module. The <code>onformchange</code>, <code>onforminput</code> and
+   <code>onformerror</code> attributes are added to all form control elements
+   (including <code>fieldset</code>).
+
+  <p>The Forms Extensions Module is a superset of the Forms and Basic Forms
+   modules. These modules may not be used together in a single document type.
+   Note that the content models in this module differ from those of the
+   XHTML1 Forms module in some subtle ways (for example, the
+   <code>select</code> element may be empty).
+
+  <h2 class="no-num" id="summary">B. Attribute summary</h2>
+
+  <p>The <code>input</code> element takes a large number of attributes that
+   do not always apply. The following table summarizes which attributes apply
+   to which input types.
+
+  <table class="applies">
+   <thead>
+    <tr>
+     <th>type
+
+     <th>text
+
+     <th>password
+
+     <th>checkbox
+
+     <th>radio
+
+     <th>button
+
+     <th>submit
+
+     <th>reset
+
+     <th>add
+
+     <th>remove move-up move-down
+
+     <th>file
+
+     <th>hidden
+
+     <th>image
+
+     <th>datetime date expdate time
+
+     <th>number integer
+
+     <th>email uri
+
+   <tbody>
+    <tr>
+     <th>accept
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+    <tr>
+     <th>accesskey
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+    <tr>
+     <th>alt
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+    <tr>
+     <th>autocomplete
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+    <tr>
+     <th>checked
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+    <tr>
+     <th>disabled
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+    <tr>
+     <th>form
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+    <tr>
+     <th>help
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+    <tr>
+     <th>inputmode
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+    <tr>
+     <th>maxlength
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+    <tr>
+     <th>min
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+    <tr>
+     <th>max
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+    <tr>
+     <th>name
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+    <tr>
+     <th>pattern
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+    <tr>
+     <th>readonly
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+    <tr>
+     <th>required
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+    <tr class="deprecated">
+     <th>size
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+    <tr>
+     <th>src
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+    <tr>
+     <th>tabindex
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+    <tr>
+     <th>template
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+     <td class="no">-
+
+    <tr>
+     <th>value
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="no">-
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+
+     <td class="yes">Yes
+  </table>
+
+  <h2 class="no-num" id="references">References</h2>
+
+  <dl>
+   <dt id="refsCHARMOD">[CHARMOD]
+
+   <dd><cite><a
+    href="http://www.w3.org/TR/2003/WD-charmod-20030822/">Character Model for
+    the World Wide Web 1.0</a></cite>, M. Dürst, F. Yergeau, R. Ishida, M.
+    Wolf, T. Texin. W3C, August 2003. The latest version of the Character
+    Model specification is available at <a
+    href="http://www.w3.org/TR/charmod/">http://www.w3.org/TR/charmod/</a>
+
+   <dt id="refsCSS21">[CSS21]
+
+   <dd><cite><a href="http://www.w3.org/TR/2003/WD-CSS21-20030915">CSS 2.1
+    Specification</a></cite>, B. Bos, T. &Ccedil;elik, I. Hickson, H. Lie.
+    W3C, September 2003. The latest version of the CSS 2.1 specification is
+    available at <a
+    href="http://www.w3.org/TR/CSS21">http://www.w3.org/TR/CSS21</a>
+
+   <dt id="refsCSS3UI">[CSS3UI]
+
+   <dd><cite><a href="http://www.w3.org/TR/2003/WD-css3-ui-20030703">CSS3
+    Basic User Interface Module</a></cite>, T. &Ccedil;elik. W3C, July 2003.
+    The latest version of the CSS3 UI module is available at <a
+    href="http://www.w3.org/TR/css3-ui">http://www.w3.org/TR/css3-ui</a>
+
+   <dt id="refsCSS3CONTENT">[CSS3CONTENT]
+
+   <dd><cite><a
+    href="http://www.w3.org/TR/2003/WD-css3-content-20030514">CSS3 Generated
+    and Replaced Content Module</a></cite>, I. Hickson. W3C, May 2003. The
+    latest version of the CSS3 Generated and Replaced Content module is
+    available at <a
+    href="http://www.w3.org/TR/css3-content">http://www.w3.org/TR/css3-content</a>
+
+   <dt id="refsDOM3CORE">[DOM3CORE]
+
+   <dd><cite><a
+    href="http://www.w3.org/TR/2003/CR-DOM-Level-3-Core-20031107">Document
+    Object Model (DOM) Level 3 Core Specification</a></cite>, A. Le Hors, P.
+    Le H&eacute;garet, L. Wood, G. Nicol, J. Robie, M. Champion, S. Byrne.
+    W3C, November 2003. The latest version of the DOM Level 3 Core
+    specification is available at <a
+    href="http://www.w3.org/TR/DOM-Level-3-Core/">http://www.w3.org/TR/DOM-Level-3-Core/</a>
+
+   <dt id="refsDOM3EVENTS">[DOM3EVENTS]
+
+   <dd><cite><a
+    href="http://www.w3.org/TR/2003/NOTE-DOM-Level-3-Events-20031107">Document
+    Object Model (DOM) Level 3 Events Specification</a></cite>, P. Le
+    H&eacute;garet, T. Pixley. W3C, November 2003. The latest version of the
+    DOM Level 3 Events specification is available at <a
+    href="http://www.w3.org/TR/DOM-Level-3-Events/">http://www.w3.org/TR/DOM-Level-3-Events/</a>
+
+   <dt id="refsDOM2HTML">[DOM2HTML]
+
+   <dd><cite><a
+    href="http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109">Document
+    Object Model (DOM) Level 2 HTML Specification</a></cite>, J. Stenback, P.
+    Le H&eacute;garet, A. Le Hors. W3C, January 2003. The latest version of
+    the DOM Level 2 HTML specification is available at <a
+    href="http://www.w3.org/TR/DOM-Level-2-HTML/">http://www.w3.org/TR/DOM-Level-2-HTML/</a>
+
+   <dt id="refsDOM3LS">[DOM3LS]
+
+   <dd><cite><a
+    href="http://www.w3.org/TR/2003/CR-DOM-Level-3-LS-20031107">Document
+    Object Model (DOM) Level 3 Load and Save Specification</a></cite>, J.
+    Stenback, A. Heninger. W3C, November 2003. The latest version of the DOM
+    Level 3 Load and Save specification is available at <a
+    href="http://www.w3.org/TR/DOM-Level-3-LS/">http://www.w3.org/TR/DOM-Level-3-LS/</a>
+
+   <dt id="refsECMA262">[ECMA262]
+
+   <dd><cite><a href="http://www.ecma.ch/ecma1/STAND/ECMA-262.HTM">ECMAScript
+    Language Specification</a></cite>, Third Edition. ECMA, December 1999.
+    This version of the ECMAScript Language is available at
+    http://www.ecma.ch/ecma1/STAND/ECMA-262.HTM
+
+   <dt id="refsHTC">[HTC]
+
+   <dd><cite><a
+    href="http://www.w3.org/TR/1998/NOTE-HTMLComponents-19981023">HTML
+    Components</a></cite>, Chris Wilson. Microsoft, September 1998. The HTML
+    Components submission is available at
+    http://www.w3.org/TR/1998/NOTE-HTMLComponents-19981023
+
+   <dt id="refsHTML4">[HTML4]
+
+   <dd><cite><a href="http://www.w3.org/TR/1999/REC-html401-19991224">HTML
+    4.01 Specification</a></cite>, D. Raggett, A. Le Hors, I. Jacobs. W3C,
+    December 1999. The latest version of the HTML4 specification is available
+    at <a href="http://www.w3.org/TR/html4">http://www.w3.org/TR/html4</a>
+
+   <dt id="refsISO8601">[ISO8601]
+
+   <dd><cite><a
+    href="http://www.iso.ch/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=26780&amp;ICS1=1&amp;ICS2=140&amp;ICS3=30">ISO8602:2000
+    Data elements and interchange formats -- Information interchange --
+    Representation of dates and times</a></cite>. ISO, December 2000. ISO8601
+    is available for purchase at <a
+    href="http://www.iso.ch/">http://www.iso.ch/</a>
+
+   <dt id="refsRFC2119">[RFC2119]
+
+   <dd><cite><a href="http://www.ietf.org/rfc/rfc2119">Key words for use in
+    RFCs to Indicate Requirement Levels</a></cite>, S. Bradner. IETF, March
+    1997. RFC2119 is available at http://www.ietf.org/rfc/rfc2119
+
+   <dt id="refsRFC2396">[RFC2396]
+
+   <dd><cite><a href="http://www.ietf.org/rfc/rfc2396">Uniform Resource
+    Identifiers (URI): Generic Syntax</a></cite>, T. Berners-Lee, R.
+    Fielding, L. Masinter. IETF, August 1998. RFC2396 is available at
+    http://www.ietf.org/rfc/rfc2396
+
+   <dt id="refsRFC3106">[RFC3106]
+
+   <dd><cite><a href="http://www.ietf.org/rfc/rfc3106">ECML v1.1: Field
+    Specifications for E-Commerce</a></cite>, D. Eastlake, T Goldstein. IETF,
+    April 2001. RFC 3106 is available at http://www.ietf.org/rfc/rfc3106
+
+   <dt id="refsRFC822">[RFC822]
+
+   <dd><cite><a href="http://www.ietf.org/rfc/rfc822">Standard for the Format
+    of ARPA Internet Text Messages</a></cite>, David H. Crocker. IETF, August
+    1982. RFC822 is available at http://www.ietf.org/rfc/rfc822
+
+   <dt id="refsXBL">[XBL]
+
+   <dd><cite><a href="http://www.w3.org/TR/2001/NOTE-xbl-20010223/">XML
+    Binding Language</a></cite>, David Hyatt. Mozilla, February 2001. The XBL
+    submission is available at http://www.w3.org/TR/2001/NOTE-xbl-20010223/
+
+   <dt id="refsXML">[XML]
+
+   <dd><cite><a href="http://www.w3.org/TR/2000/REC-xml-20001006">Extensible
+    Markup Language (XML) 1.0 (Second Edition)</a></cite>, T Bray, J Paoli,
+    C. M. Sperberg-McQueen, E. Maler. W3C, October 2000. The latest version
+    of the XML specification is available at <a
+    href="http://www.w3.org/TR/REC-xml/">http://www.w3.org/TR/REC-xml/</a>
+
+   <dt id="refsXHTML1">[XHTML1]
+
+   <dd><cite><a href="http://www.w3.org/TR/xhtml11/">XHTML&trade; 1.1 -
+    Module-based XHTML</a></cite>, M. Altheim, S. McCarron. W3C, May 2001.
+    The latest version of the XHTML 1.1 specification is available at <a
+    href="http://www.w3.org/TR/xhtml11">http://www.w3.org/TR/xhtml11</a>
+
+   <dt id="refsXForms">[XForms]
+
+   <dd><cite><a href="http://www.w3.org/TR/2003/REC-xforms-20031014/">XForms
+    1.0</a></cite>, M. Dubinko, L. Klotz, R. Merrick, T. Raman. W3C, October
+    2003. The latest version of the XForms specification is available at <a
+    href="http://www.w3.org/TR/xforms">http://www.w3.org/TR/xforms</a>
+  </dl>
+
+  <h2 class="no-num" id="acknowledgements">Acknowledgements</h2>
+
+  <p>Thanks to H&aring;kon Wium Lie, Maciej Stachowiak, David Hyatt, Peter N
+   Stark, Jason Kersey, Neil Rashbrook, Brendan Eich, Bert Bos, and John
+   Keiser for their substantial comments.
+
+  <p>Thanks also to Anne van Kesteren, Michael Daskalov and Rigo Wenning for
+   their comments, and to the #mozilla crew, the #elektra crew, and the #mrt
+   crew for their ideas and support.
+
+  <p>Thanks to the XForms working group for unintentionally giving the
+   incentive to develop this specification.
+  <!-- XXX For future versions:
+
+signatures: how to sign the form; how to sign the submission; how to require a signature
+
+  <p>The following schemes are explicitly defined by this specification:</p>
+  ftp: - GET, PUT, DELETE
+  http: - see HTTP spec
+  file: - GET, PUT, DELETE, POST (run executable with stdin as content)
+  data: - GET
+
+  <p>[session history interface]</p>
+
+
+-->

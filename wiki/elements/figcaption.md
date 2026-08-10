@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、親が`figure`である場合に、その残りの内容のcaptionまたはlegendを表す。[一次定義](https://html.spec.whatwg.org/multipage/grouping-content.html#the-figcaption-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、親が`figure`である場合に、その残りの内容のcaptionまたはlegendを表す。[HTML Living Standard](../../raw/html-living-standard/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-figcaption-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -40,16 +40,16 @@ HTML+ `FIG`＋`CAPTION` → WHATWG HTML `figure`＋`legend` → `figure`＋`dt`�
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1993-11-08 | HTML+ “Figures” | 失効したInternet-Draft | `FIG`の子`CAPTION`という先行存在。WHATWGへの採用因果は示さない。 | [一次資料](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html) | 2026-08-09 |
-| 2006-04-22 | Simon Pieters, image caption proposal | WHATWG mailing list | HTML+ `FIG`／`CAPTION`を明示し、HTML5向けの再利用案を提示した。 | [一次資料](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html) | 2026-08-10 |
-| 2006-11-28 | “many messages regarding image captions” | WHATWG feedback総括／W3C保存mail | HicksonがHTML+案への同意、二つの構文変更、仕様への追加を説明した。 | [一次資料](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html) | 2026-08-10 |
-| 2009-09-15 | “Re: `<details>`” | W3C public-html mailing list | `details`向け`dt`／`dd`案を`figure`にも適用した経緯。 | [一次資料](https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html) | 2026-08-10 |
-| 2009-09-17–2010-03-30 | W3C Bug 7657／7669 | Bugzilla | `dt`／`dd`再利用の意味・構造・互換性問題と、専用caption要素および直接のcontentを求める要求。 | [Bug 7657](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7657) [Bug 7669](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7669) | 2026-08-10 |
-| 2009-09-29–2010-02-12 | HTML WG ISSUE-83 | issue tracker | 代替案の審議と仕様編集後のamicable resolution。 | [一次資料](https://www.w3.org/html/wg/tracker/issues/83) | 2026-08-10 |
-| 2010-01-13 | “Change Proposal: `<fcaption>` and `<dlabel>`” | HTML WG変更提案 | `fcaption`の代案として`figcaption`を明示し、専用caption要素と直接のcontentを提案した。 | [一次資料](https://www.w3.org/html/wg/wiki/ChangeProposals/DdDtFcaptionDlabel) | 2026-08-10 |
-| 2010-01-30 | WHATWG HTML commit `c3974951` | 仕様commit | `dt`／`dd`を専用`figcaption`と直接のflow contentへ変更。 | [一次資料](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f) | 2026-08-10 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1993-11-08 | [HTML+ “Figures”](../../raw/html-plus/1aa3cc659a506df4-htmlplus_35.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html)） | 失効したInternet-Draft | `FIG`の子`CAPTION`という先行存在。WHATWGへの採用因果は示さない。 | 2026-08-09 |
+| 2006-04-22 | [Simon Pieters, image caption proposal](../../raw/items/lists.w3.org/bd3f1acb57adfc0d-0109.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html)） | WHATWG mailing list | HTML+ `FIG`／`CAPTION`を明示し、HTML5向けの再利用案を提示した。 | 2026-08-10 |
+| 2006-11-28 | [“many messages regarding image captions”](../../raw/items/lists.w3.org/f71bb62fd030e0be-0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)） | WHATWG feedback総括／W3C保存mail | HicksonがHTML+案への同意、二つの構文変更、仕様への追加を説明した。 | 2026-08-10 |
+| 2009-09-15 | [“Re: `<details>`”](../../raw/items/lists.w3.org/7c30281fc1dd727c-0566.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html)） | W3C public-html mailing list | `details`向け`dt`／`dd`案を`figure`にも適用した経緯。 | 2026-08-10 |
+| 2009-09-17–2010-03-30 | W3C Bug 7657／7669：[Bug 7657](../../raw/items/www.w3.org/2867df8a72c94218-show_bu.html)・[Bug 7669](../../raw/items/www.w3.org/e603fef40f4a1959-show_bu.html)（[公開元1](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7657)・[公開元2](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7669)） | Bugzilla | `dt`／`dd`再利用の意味・構造・互換性問題と、専用caption要素および直接のcontentを求める要求。 | 2026-08-10 |
+| 2009-09-29–2010-02-12 | [HTML WG ISSUE-83](../../raw/items/www.w3.org/d36dd46b0073231c-index.html)（[公開元](https://www.w3.org/html/wg/tracker/issues/83)） | issue tracker | 代替案の審議と仕様編集後のamicable resolution。 | 2026-08-10 |
+| 2010-01-13 | [“Change Proposal: `<fcaption>` and `<dlabel>`”](../../raw/items/www.w3.org/bb03d801bcd5553b-DdDtFcaptionD.html)（[公開元](https://www.w3.org/html/wg/wiki/ChangeProposals/DdDtFcaptionDlabel)） | HTML WG変更提案 | `fcaption`の代案として`figcaption`を明示し、専用caption要素と直接のcontentを提案した。 | 2026-08-10 |
+| 2010-01-30 | [WHATWG HTML commit `c3974951`](../../raw/whatwg-html-history/6a9a950f55eeaf02-c397495115b089ec52dbec4502115905113.html)（[公開元](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)） | 仕様commit | `dt`／`dd`を専用`figcaption`と直接のflow contentへ変更。 | 2026-08-10 |
 
 ## 確度
 

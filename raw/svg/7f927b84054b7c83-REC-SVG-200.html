@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+"http://www.w3.org/TR/REC-html40/loose.dtd">
+
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" >
+
+    <title>Scalable Vector Graphics (SVG) 1.0 Specification</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="style/svg-style.css" >
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.w3.org/StyleSheets/TR/W3C-REC">
+
+    <link rel="next" href="expanded-toc.html" >
+    <link rel="contents" href="index.html#minitoc" >
+    <link rel="element" href="eltindex.html" title="elements" >
+    <link rel="attributes" href="attindex.html" title="attributes" >
+    <link rel="CSS-properties" href="propidx.html" title="properties" >
+    <link rel="index" href="indexlist.html" title="index" >
+  </head>
+
+  <body>
+    <div class="navlinks">
+      <p><!-- a href="expanded-toc.html"-->previous<!-- /a --> 
+      &nbsp; <a href="expanded-toc.html">next</a> 
+      &nbsp; <a href="index.html#minitoc">contents</a>
+      &nbsp; <a href="eltindex.html">elements</a>
+      &nbsp; <a href="attindex.html">attributes</a>
+      &nbsp; <a href="propidx.html">properties</a>
+      &nbsp; <a href="indexlist.html">index</a> &nbsp;</p>
+    </div>
+    <hr class="navbar" />
+
+    <div class="head">
+      <p><a href="https://www.w3.org/">
+          <img height="48" width="72" alt="W3C" src="https://www.w3.org/Icons/w3c_home" /></a></p>
+
+      <h1 id="pagetitle">Scalable Vector Graphics (SVG) 1.0 Specification</h1>
+
+      <h2 id="pagesubtitle">W3C Recommendation <em>04 September 2001</em></h2>
+
+    <dl>
+      <dt>This version:</dt>
+      <dd> <a href="https://www.w3.org/TR/2001/REC-SVG-20010904/">http://www.w3.org/TR/2001/REC-SVG-20010904/</a>
+      <dd>(Available as:
+               <a href="https://www.w3.org/TR/2001/REC-SVG-20010904/REC-SVG-20010904.pdf">PDF</a>,
+               <a href="https://www.w3.org/TR/2001/REC-SVG-20010904/REC-SVG-20010904.zip">zip archive of HTML</a>)
+      </dd>
+      <dt>Latest version: </dt>
+      <dd><a href="https://www.w3.org/TR/SVG/"> http://www.w3.org/TR/SVG/</a></dd>
+      <dt>Previous version: </dt>
+      <dd><a href="https://www.w3.org/TR/2001/PR-SVG-20010719/">http://www.w3.org/TR/2001/PR-SVG-20010719/</a></dd>
+
+      <dt>Editor: </dt>
+      <dd>Jon Ferraiolo &lt;<a href="mailto:jferraio@adobe.com">jferraio@adobe.com</a>&gt; </dd>
+      <dt>Authors: </dt>
+      <dd>See <a href="#AuthorList">author list</a></dd>
+    </dl>
+    
+<p class="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice-20000612#Copyright "> Copyright</a> 
+&copy;1998, 1999, 2000, 2001 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>&reg;</sup> (<a
+          href="http://www.lcs.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a
+          href="http://www.inria.fr/"><abbr lang="fr" title="Institut National de Recherche en Informatique et
+          Automatique">INRIA</abbr></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice-20000612#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice-20000612#W3C_Trademarks">trademark</a>, <a href="https://www.w3.org/Consortium/Legal/copyright-documents-19990405">document use</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-software-19980720">software licensing</a> rules apply.</p>
+
+<hr title="Separator from Header" />
+
+    </div>
+    <a id="Abstract" name="Abstract"></a> 
+
+    <h2 id="specabstract">Abstract</h2>
+
+    <p>This specification defines the features and syntax for Scalable Vector
+    Graphics (SVG), a language for describing two-dimensional vector and
+    mixed vector/raster graphics in XML.</p>
+    <a id="StatusOfThisDocument" name="StatusOfThisDocument"></a> 
+
+    <h2><a id="status" name="status">Status of this document</a></h2>
+
+<P><I>This section describes the status of this document at the time of its 
+publication. Other documents may supersede this document. The latest status of 
+this document series is maintained at the W3C. </I></P>
+
+<P>This document has been reviewed by W3C Members and other interested parties and 
+has been endorsed by the Director as a W3C Recommendation. 
+It is a stable document and may be used as reference material or 
+cited as a normative reference from another document. 
+W3C's role in making the Recommendation is to draw attention to the specification and 
+to promote its widespread deployment. This enhances the functionality and interoperability of the Web. 
+</P>
+
+<P>This document has been produced by the <A href="https://www.w3.org/Graphics/SVG/">W3C 
+SVG Working Group</A> as part of the activity of the 
+    <a href="https://www.w3.org/Graphics/Activity">Graphics Activity</a> within the
+<A href="https://www.w3.org/DF/">W3C Document Formats Domain</A>. The goals of the W3C 
+SVG 1.0 Working Group are discussed in the 
+<A href="https://www.w3.org/Graphics/SVG/Group/SVGcharter">W3C SVG WG Charter</A> 
+(11 November 2000 - members only).  The W3C SVG Working Group has maintained a public Web 
+page <A href="https://www.w3.org/Graphics/SVG/">http://www.w3.org/Graphics/SVG/</A> which 
+contains further background information.   
+</P>
+
+<P>The SVG Working Group believes that all features in the SVG 1.0 Recommendation
+are implementable due to substantial implementation experience with generators, viewers and
+transcoders based on the SVG specification, the amount of SVG content that has been developed to date,
+and interoperability results against the 
+<A href="https://www.w3.org/Graphics/SVG/Test/">SVG conformance test suite</A>. 
+A report on 
+<A href="https://www.w3.org/Graphics/SVG/Test/BE-ImpStatus-20010127">implementation status</A> 
+was made at the end of the Candidate 
+Recommendation review period. 
+The implementation results are publicly released and are intended solely to be used 
+as proof of SVG 1.0 implementability. It is only a snap shot of the actual implementation 
+behaviors at one moment of time, as these implementations may not be immediately available to the public. 
+The interoperability data is not intended to be used for assessing or grading the performance of any individual implementation. 
+It is intended that this report will be updated from time 
+to time by the follow-on activity that oversees the SVG Recommendation.</P>
+
+<p>There are patent disclosures and license commitments associated with the
+SVG 1.0 specification. These may be found on the <a href="https://www.w3.org/2001/07/SVG10-IPR-statements.html">SVG 1.0 Patent Statements</a> in
+conformance with <a href="https://www.w3.org/Consortium/Process/#ipr">W3C
+policy</a>.</p>
+
+<P>This version of this document incorporates some editorial changes from earlier versions.
+A list of <a href="changes.html">changes</a>
+since the  
+Proposed Recommendation specification of 19 July, 2001 is available.
+</P>
+
+<P>Public discussion of issues related to vector graphics on the Web and
+SVG in particular takes place on 
+the <A href="mailto:www-svg@w3.org">www-svg@w3.org</A> (public mailing list of the SVG Working Group -
+<A href="http://lists.w3.org/Archives/Public/www-svg/">list archives</A>). To
+subscribe send an email to <CODE>www-svg-request@w3.org</CODE> with the word
+<CODE>subscribe</CODE> in the subject line.</P>
+
+<P>The authors of this document are the SVG Working Group members (see <a href="#AuthorList">author list</a>). The editor is <a href="mailto:jferraio@adobe.com">Jon
+Ferraiolo</a>.  
+The W3C staff contact for work on SVG is <a href="mailto:dean@w3.org">Dean Jackson</a>. 
+</P>
+
+<P>Please report errors in this document to 
+<a href="mailto:www-svg@w3.org">www-svg@w3.org</a>.
+The list of known errors in this specification is available at <a href="https://www.w3.org/2001/09/REC-SVG-20010904-errata">http://www.w3.org/2001/09/REC-SVG-20010904-errata</a>. 
+</P>
+
+<P>A list of current W3C Recommendations and other technical documents can be found at <a href="https://www.w3.org/TR">http://www.w3.org/TR</a>. 
+</P>
+
+    <h3 id="AvailableLanguages">Available languages</h3>
+
+    <p>The English version of this specification is the only normative version.
+    However, for translations in other languages see <a href="https://www.w3.org/Graphics/SVG/svg-updates/translations.html">http://www.w3.org/Graphics/SVG/svg-updates/translations.html</a>.</p>
+<!--NewPage--><!-- this is for html2ps -->
+
+    <div class="toc">
+      <h2><a id="minitoc" name="minitoc">Table of Contents</a></h2>
+
+      <ul class="toc">
+        <li class="tocline1"><a href="expanded-toc.html" class="tocxref">Expanded Table of Contents</a></li>
+        <li class="tocline1"><a href="copyright-notice.html" class="tocxref">Copyright notice</a></li>
+      </ul>
+      <ul class='toc'>
+        <li class="tocline1"><a href="intro.html" class="tocxref">1 Introduction</a></li>
+
+        <li class="tocline1"><a href="concepts.html" class="tocxref">2 Concepts</a></li>
+
+        <li class="tocline1"><a href="render.html" class="tocxref">3 Rendering Model</a></li>
+
+        <li class="tocline1"><a href="types.html" class="tocxref">4 Basic Data Types and Interfaces</a></li>
+
+        <li class="tocline1"><a href="struct.html" class="tocxref">5 Document Structure</a></li>
+
+        <li class="tocline1"><a href="styling.html" class="tocxref">6 Styling</a></li>
+
+        <li class="tocline1"><a href="coords.html" class="tocxref">7 Coordinate Systems, Transformations and Units</a></li>
+
+        <li class="tocline1"><a href="paths.html" class="tocxref">8 Paths</a></li>
+
+        <li class="tocline1"><a href="shapes.html" class="tocxref">9 Basic Shapes</a></li>
+
+        <li class="tocline1"><a href="text.html" class="tocxref">10 Text</a></li>
+
+        <li class="tocline1"><a href="painting.html" class="tocxref">11 Painting: Filling, Stroking and Marker Symbols</a></li>
+
+        <li class="tocline1"><a href="color.html" class="tocxref">12 Color</a></li>
+
+        <li class="tocline1"><a href="pservers.html" class="tocxref">13 Gradients and Patterns</a></li>
+
+        <li class="tocline1"><a href="masking.html" class="tocxref">14 Clipping, Masking and Compositing</a></li>
+
+        <li class="tocline1"><a href="filters.html" class="tocxref">15 Filter Effects</a></li>
+
+        <li class="tocline1"><a href="interact.html" class="tocxref">16 Interactivity</a></li>
+
+        <li class="tocline1"><a href="linking.html" class="tocxref">17 Linking</a></li>
+
+        <li class="tocline1"><a href="script.html" class="tocxref">18 Scripting</a></li>
+
+        <li class="tocline1"><a href="animate.html" class="tocxref">19 Animation</a></li>
+
+        <li class="tocline1"><a href="fonts.html" class="tocxref">20 Fonts</a></li>
+
+        <li class="tocline1"><a href="metadata.html" class="tocxref">21 Metadata</a></li>
+
+        <li class="tocline1"><a href="backward.html" class="tocxref">22 Backwards Compatibility</a></li>
+
+        <li class="tocline1"><a href="extend.html" class="tocxref">23 Extensibility</a></li>
+
+      </ul>
+      <ul class='toc'>
+
+        <li class="tocline1"><a href="svgdtd.html" class="tocxref">Appendix A: DTD</a></li>
+
+        <li class="tocline1"><a href="svgdom.html" class="tocxref">Appendix B: SVG Document Object Model (DOM)</a></li>
+
+        <li class="tocline1"><a href="idl.html" class="tocxref">Appendix C: IDL Definitions</a></li>
+
+        <li class="tocline1"><a href="java.html" class="tocxref">Appendix D: Java Language Binding</a></li>
+
+        <li class="tocline1"><a href="escript.html" class="tocxref">Appendix E: ECMAScript Language Binding</a></li>
+
+        <li class="tocline1"><a href="implnote.html" class="tocxref">Appendix F: Implementation Requirements</a></li>
+
+        <li class="tocline1"><a href="conform.html" class="tocxref">Appendix G: Conformance Criteria</a></li>
+
+        <li class="tocline1"><a href="access.html" class="tocxref">Appendix H: Accessibility Support</a></li>
+
+        <li class="tocline1"><a href="i18n.html" class="tocxref">Appendix I: Internationalization Support</a></li>
+
+        <li class="tocline1"><a href="minimize.html" class="tocxref">Appendix J: Minimizing SVG File Sizes</a></li>
+
+        <li class="tocline1"><a href="refs.html" class="tocxref">Appendix K: References</a></li>
+
+        <li class="tocline1"><a href="eltindex.html" class="tocxref">Appendix L: Element Index</a></li>
+
+        <li class="tocline1"><a href="attindex.html" class="tocxref">Appendix M: Attribute Index</a></li>
+
+        <li class="tocline1"><a href="propidx.html" class="tocxref">Appendix N: Property Index</a></li>
+
+        <li class="tocline1"><a href="indexlist.html" class="tocxref">Appendix O: Index</a></li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <p><a name="AuthorList" id="AuthorList">The authors</a> of the SVG 1.0 specification are the people who participated in the SVG 1.0 Working Group as members or alternates.</p>
+
+    <dl>
+      <dt>Authors:</dt>
+          <dd>John Bowler, Microsoft Corporation &lt;<a href="mailto:johnbo@microsoft.com">johnbo@microsoft.com</a>&gt;</dd>
+          <dd>Craig Brown, Canon &lt;<a href="mailto:cmb@research.canon.com.au">cmb@research.canon.com.au</a>&gt;</dd>
+          <dd>Milt Capsimalis, Autodesk Inc. &lt;<a href="mailto:milt@autodesk.com">milt@autodesk.com</a>&gt;</dd>
+          <dd>Richard Cohn, Adobe Systems Incorporated &lt;<a href="mailto:richard@covero.com">richard@covero.com</a>&gt;</dd>
+          <dd>Lee Cole, Quark &lt;<a href="mailto:lcole@quark.com">lcole@quark.com</a>&gt;</dd>
+          <dd>Thomas E Deweese, Kodak &lt;<a href="mailto:thomas.deweese@kodak.com">thomas.deweese@kodak.com</a>&gt;</dd>
+          <dd>David Dodds, Lexica &lt;<a href="mailto:ddodds@lexica.net">ddodds@lexica.net</a>&gt;</dd>
+          <dd>Andrew Donoho, IBM &lt;<a href="mailto:awd@us.ibm.com">awd@us.ibm.com</a>&gt;</dd>
+          <dd>David Duce, Oxford Brookes University &lt;<a href="mailto:daduce@brookes.ac.uk">daduce@brookes.ac.uk</a>&gt;</dd>
+          <dd>Jerry Evans, Sun Microsystems &lt;<a href="mailto:jerry.evans@Eng.sun.com">jerry.evans@Eng.sun.com</a>&gt;</dd>
+          <dd>Jon Ferraiolo, Adobe Systems Incorporated &lt;<a href="mailto:jferraio@adobe.com">jferraio@adobe.com</a>&gt;</dd>
+          <dd>Jun Fujisawa, Canon &lt;<a href="mailto:fujisawa.jun@canon.co.jp">fujisawa.jun@canon.co.jp</a>&gt;</dd>
+          <dd>Scott Furman, Netscape Communications Corporation &lt;<a href="mailto:fur@netscape.com">fur@netscape.com</a>&gt;</dd>
+          <dd>Brent Getlin, Macromedia &lt;<a href="mailto:bgetlin@macromedia.com">bgetlin@macromedia.com</a>&gt;</dd>
+          <dd>Peter Graffagnino, Apple &lt;<a href="mailto:pgraff@apple.com">pgraff@apple.com</a>&gt;</dd>
+          <dd>Rick Graham, BitFlash Inc. &lt;<a href="mailto:rick@bitflash.com">rick@bitflash.com</a>&gt;</dd>
+          <dd>Vincent Hardy, Sun Microsystems, &lt;<a href="mailto:vincent.hardy@sun.com">vincent.hardy@sun.com</a>&gt;</dd>
+          <dd>Lofton Henderson, OASIS, &lt;<a href="mailto:lofton@rockynet.com">lofton@rockynet.com</a>&gt;</dd>
+          <dd>Jan Christian Herlitz , Excosoft, &lt;<a href="mailto:J-C.Herlitz@excosoft.se">J-C.Herlitz@excosoft.se</a>&gt;</dd>
+          <dd>Alan Hester, Xerox Corporation &lt;<a href="mailto:Alan.Hester@usa.xerox.com">Alan.Hester@usa.xerox.com</a>&gt;</dd>
+          <dd>Bob Hopgood, RAL (CCLRC) &lt;<a href="mailto:frah@inf.rl.ac.uk">frah@inf.rl.ac.uk</a>&gt;</dd>
+          <dd>Dean Jackson, CSIRO &lt;<a href="mailto:dean@w3.org">dean@w3.org</a>&gt;</dd>
+          <dd>Christophe Jolif, ILOG &lt;<a href="mailto:jolif@ilog.fr">jolif@ilog.fr</a>&gt;</dd>
+          <dd>Kelvin Lawrence, IBM &lt;<a href="mailto:klawrenc@us.ibm.com">klawrenc@us.ibm.com</a>&gt;</dd>
+          <dd>Håkon Lie, Opera &lt;<a href="mailto:howcome@operasoftware.com">howcome@operasoftware.com </a>&gt;</dd>
+          <dd>Chris Lilley, W3C &lt;<a href="mailto:chris@w3.org">chris@w3.org</a>&gt;</dd>
+          <dd>Philip Mansfield, IntraNet Solutions, Inc. &lt;<a href="mailto:philipm@schemasoft.com">philipm@schemasoft.com</a>&gt;</dd>
+          <dd>Kevin McCluskey, Netscape Communications Corporation &lt;<a href="mailto:kmcclusk@netscape.com">kmcclusk@netscape.com</a>&gt;</dd>
+          <dd>Tuan Nguyen, Microsoft Corporation &lt;<a href="mailto:tuann@microsoft.com">tuann@microsoft.com</a>&gt;</dd>
+          <dd>Troy Sandal, Visio Corporation &lt;<a href="mailto:TroyS@visio.com">TroyS@visio.com</a>&gt;</dd>
+          <dd>Peter Santangeli, Macromedia &lt;<a href="mailto:psantangeli@macromedia.com">psantangeli@macromedia.com</a>&gt;</dd>
+          <dd>Haroon Sheikh, Corel Corporation &lt;<a href="mailto:haroons@corel.ca">haroons@corel.ca</a>&gt;</dd>
+          <dd>Gavriel State, Corel Corporation &lt;<a href="mailto:gavriels@COREL.CA">gavriels@COREL.CA</a>&gt;</dd>
+          <dd>Robert Stevahn, Hewlett-Packard Company &lt;<a href="mailto:rstevahn@boi.hp.com">rstevahn@boi.hp.com</a>&gt;</dd>
+          <dd>Timothy Thompson, Kodak &lt;<a href="mailto:timothy.thompson@kodak.com">timothy.thompson@kodak.com</a>&gt;</dd>
+          <dd>Rick Yardumian, Canon &lt;<a href="mailto:richard.yardumian@cis.canon.com">richard.yardumian@cis.canon.com</a>&gt;</dd>
+          <dd>Shenxue Zhou, Quark &lt;<a href="mailto:szhou@quark.com">szhou@quark.com</a>&gt;</dd>
+    </dl>
+
+    <h3 id="Acknowledgments">Acknowledgments</h3>
+
+    <p>
+    The SVG Working Group would like to acknowledge the great many people outside 
+    of the SVG 1.0 Working Group who helped with the process of developing the 
+    SVG 1.0 specification. These people are too numerous to list individually. 
+    They include but are not limited to the early implementers of the SVG 1.0 language 
+    (including viewers, authoring tools, and server-side transcoders), 
+    developers of SVG content, 
+    people who have contributed on the www-svg@w3.org and svg-developers@yahoogroups.com email lists, 
+    other Working Groups at the W3C, 
+    and the W3C team. 
+    SVG 1.0 was truly a cooperative effort between the SVG Working Group, 
+    the rest of the W3C, 
+    and the public 
+    and benefited greatly from the pioneering work of early implementers and content developers, 
+    feedback from the public, 
+    and help from the W3C team.
+    </p>
+
+      <hr class="navbar" />
+
+      <div class="navlinks">
+        <p><!-- a href="expanded-toc.html"-->previous<!-- /a --> 
+      &nbsp; <a href="expanded-toc.html">next</a>
+      &nbsp; <a href="index.html#minitoc">contents</a>
+      &nbsp; <a href="eltindex.html">elements</a>
+      &nbsp; <a href="attindex.html">attributes</a>
+      &nbsp; <a href="propidx.html">properties</a>
+      &nbsp; <a href="indexlist.html">index</a> &nbsp;</p>
+      </div>
+      <hr />
+
+      <p><a href="http://validator.w3.org/"><img border="0" 
+      src="http://validator.w3.org/images/vh40.png" alt="Valid HTML 4.0!" height="31" width="88" /></a> 
+      <a href="http://jigsaw.w3.org/css-validator"><img border="0" 
+      src="http://jigsaw.w3.org/css-validator/images/vcss.png" alt="Valid CSS!" height="31" width="88" /></a></p>
+  <script src="https://www.w3.org/scripts/TR/fixup.js"></script></body>
+</html>

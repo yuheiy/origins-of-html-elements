@@ -10,7 +10,7 @@ HTML+とHTML 3.0に同名のinline short quotationがあり、HTML 3.0全体がH
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、別の出典から引用したphrasing contentを表す。 [一次定義](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-q-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、別の出典から引用したphrasing contentを表す。 [HTML Living Standard](../../raw/html-living-standard/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-q-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -44,12 +44,12 @@ RFC 2070 `Q`からHTML 4 `Q`への個別採用因果は未確認。
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1993-11-08 | HTML+ §5.6 | 一次仕様・提案 | `Q`をinline short quotationとして定義する。 | [一次資料](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html) | 2026-08-09 |
-| 1995-03 | HTML 3.0 Draft materials／Information Type Elements | W3C仕様草案・保存解説 | HTML 3.0全体をHTML+に基づくと説明し、`Q`を“New in 3.0”のshort quotationとして定義するが、個別採用は述べない。 | [保存ページ](https://www.w3.org/MarkUp/html3/)／[要素定義](https://www.w3.org/MarkUp/html3/logical.html) | 2026-08-09 |
-| 1995-08-15 | `draft-ietf-html-i18n-00` | IETF Internet-Draft | 言語・platformごとに異なるquotation markの適切なrenderingのため`Q`を導入し、DTDへ追加する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00) | 2026-08-10 |
-| 1997-01 | RFC 2070 §4.2.2 | 一次仕様・提案 | language-sensitiveなshort quotation要素として追加する。 | [一次資料](https://www.rfc-editor.org/rfc/rfc2070.html) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1993-11-08 | [HTML+ §5.6](../../raw/html-plus/htmlplus_18.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)） | 一次仕様・提案 | `Q`をinline short quotationとして定義する。 | 2026-08-09 |
+| 1995-03 | HTML 3.0 Draft materials／Information Type Elements：[保存ページ](../../raw/html-3.0/4a6968e90aeab1a2-index.html)・[要素定義](../../raw/html-3.0/logical.html)（[公開元1](https://www.w3.org/MarkUp/html3/)・[公開元2](https://www.w3.org/MarkUp/html3/logical.html)） | W3C仕様草案・保存解説 | HTML 3.0全体をHTML+に基づくと説明し、`Q`を“New in 3.0”のshort quotationとして定義するが、個別採用は述べない。 | 2026-08-09 |
+| 1995-08-15 | [`draft-ietf-html-i18n-00`](../../raw/rfc2070-html-internationalization/3ad976ec3bfa28e6-draft-ietf-html-i1.html)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00)） | IETF Internet-Draft | 言語・platformごとに異なるquotation markの適切なrenderingのため`Q`を導入し、DTDへ追加する。 | 2026-08-10 |
+| 1997-01 | [RFC 2070 §4.2.2](../../raw/rfc2070-html-internationalization/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)） | 一次仕様・提案 | language-sensitiveなshort quotation要素として追加する。 | 2026-08-09 |
 
 ## 確度
 

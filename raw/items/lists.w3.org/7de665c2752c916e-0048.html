@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="iso-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="hypermail 3.0.0, see https://github.com/hypermail-project/hypermail/" />
+<title>A proposal for addition to HTML 3.0: EMBED from Alex Edelstein on 1995-09-20 (www-html@w3.org from September 1995)</title>
+<meta name="Author" content="Alex Edelstein (alexed&#x40;&#0110;&#0101;&#0116;&#0115;&#0099;&#0097;&#0112;&#0101;&#0046;&#0099;&#0111;&#0109;)" />
+<meta name="Subject" content="A proposal for addition to HTML 3.0: EMBED" />
+<meta name="Date" content="1995-09-20" />
+<link rel="stylesheet" title="Normal view" href="/assets/styles/public.css" />
+<link rel="help" href="/Help/" />
+<link rel="start" href="../" title="www-html@w3.org archives" />
+<script defer="defer" src="/assets/js/archives.js"></script>
+</head>
+<body class="message">
+<header class="head">
+<nav class="breadcrumb" id="upper">
+  <ul>
+    <li><a href="https://www.w3.org/">W3C home</a></li>
+    <li><a href="/">Mailing lists</a></li>
+    <li><a href="../../">Public</a></li>
+    <li><a href="../" rel="start">www-html@w3.org</a></li>
+    <li><a href="./" rel="contents">September 1995</a></li>
+  </ul>
+</nav>
+<h1>A proposal for addition to HTML 3.0: EMBED</h1>
+<!-- received="Tue Sep 19 23:09:21 1995" -->
+<!-- isoreceived="19950919230921" -->
+<!-- sent="Tue, 19 Sep 1995 20:03:45 -0700" -->
+<!-- isosent="19950920030345" -->
+<!-- name="Alex Edelstein" -->
+<!-- email="alexed&#x40;&#0110;&#0101;&#0116;&#0115;&#0099;&#0097;&#0112;&#0101;&#0046;&#0099;&#0111;&#0109;" -->
+<!-- subject="A proposal for addition to HTML 3.0: EMBED" -->
+<!-- id="305F8491.4300@netscape.com" -->
+<!-- charset="iso-8859-1" -->
+<!-- expires="-1" -->
+<nav id="navbar">
+<ul class="links hmenu_container">
+<li>
+<span class="heading">This message</span>: <ul class="hmenu"><li><a href="#start" id="options1">Message body</a></li>
+<li><a href="mailto:www-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20A%20proposal%20for%20addition%20to%20HTML%203.0%3A%20EMBED&amp;In-Reply-To=%3C305F8491.4300%40netscape.com%3E&amp;References=%3C305F8491.4300%40netscape.com%3E">Respond</a></li>
+<li><a href="#options3">More options</a></li>
+</ul></li>
+<li>
+<span class="heading">Related messages</span>: <ul class="hmenu">
+<!-- unext="start" -->
+<li><a href="0049.html">Next message</a></li>
+<li><a href="0047.html">Previous message</a></li>
+<!-- unextthread="start" -->
+<!-- ureply="end" -->
+</ul></li>
+</ul>
+</nav>
+</header>
+<!-- body="start" -->
+<main class="mail">
+<ul class="headers" aria-label="message headers">
+<li><span class="from">
+<span class="heading">From</span>: Alex Edelstein &lt;<a href="mailto:alexed&#x40;&#0110;&#0101;&#0116;&#0115;&#0099;&#0097;&#0112;&#0101;&#0046;&#0099;&#0111;&#0109;?Subject=Re%3A%20A%20proposal%20for%20addition%20to%20HTML%203.0%3A%20EMBED&amp;In-Reply-To=%3C305F8491.4300%40netscape.com%3E&amp;References=%3C305F8491.4300%40netscape.com%3E">alexed&#x40;&#0110;&#0101;&#0116;&#0115;&#0099;&#0097;&#0112;&#0101;&#0046;&#0099;&#0111;&#0109;</a>&gt;
+</span></li>
+<li><span class="date"><span class="heading">Date</span>: Tue, 19 Sep 1995 20:03:45 -0700</span></li>
+<li><span class="to"><span class="heading">To</span>: <a href="mailto:www-html&#x40;&#0119;&#0119;&#0119;&#0048;&#0046;&#0099;&#0101;&#0114;&#0110;&#0046;&#0099;&#0104;?Subject=Re%3A%20A%20proposal%20for%20addition%20to%20HTML%203.0%3A%20EMBED&amp;In-Reply-To=%3C305F8491.4300%40netscape.com%3E&amp;References=%3C305F8491.4300%40netscape.com%3E">www-html&#x40;&#0119;&#0119;&#0119;&#0048;&#0046;&#0099;&#0101;&#0114;&#0110;&#0046;&#0099;&#0104;</a>, <a href="mailto:html-wg&#x40;&#0111;&#0099;&#0108;&#0099;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20A%20proposal%20for%20addition%20to%20HTML%203.0%3A%20EMBED&amp;In-Reply-To=%3C305F8491.4300%40netscape.com%3E&amp;References=%3C305F8491.4300%40netscape.com%3E">html-wg&#x40;&#0111;&#0099;&#0108;&#0099;&#0046;&#0111;&#0114;&#0103;</a>, <a href="mailto:marca&#x40;&#0110;&#0101;&#0111;&#0110;&#0046;&#0110;&#0101;&#0116;&#0115;&#0099;&#0097;&#0112;&#0101;&#0046;&#0099;&#0111;&#0109;?Subject=Re%3A%20A%20proposal%20for%20addition%20to%20HTML%203.0%3A%20EMBED&amp;In-Reply-To=%3C305F8491.4300%40netscape.com%3E&amp;References=%3C305F8491.4300%40netscape.com%3E">marca&#x40;&#0110;&#0101;&#0111;&#0110;&#0046;&#0110;&#0101;&#0116;&#0115;&#0099;&#0097;&#0112;&#0101;&#0046;&#0099;&#0111;&#0109;</a>, <a href="mailto:jg&#x40;&#0110;&#0101;&#0111;&#0110;&#0046;&#0110;&#0101;&#0116;&#0115;&#0099;&#0097;&#0112;&#0101;&#0046;&#0099;&#0111;&#0109;?Subject=Re%3A%20A%20proposal%20for%20addition%20to%20HTML%203.0%3A%20EMBED&amp;In-Reply-To=%3C305F8491.4300%40netscape.com%3E&amp;References=%3C305F8491.4300%40netscape.com%3E">jg&#x40;&#0110;&#0101;&#0111;&#0110;&#0046;&#0110;&#0101;&#0116;&#0115;&#0099;&#0097;&#0112;&#0101;&#0046;&#0099;&#0111;&#0109;</a>, <a href="mailto:ebina&#x40;&#0110;&#0101;&#0111;&#0110;&#0046;&#0110;&#0101;&#0116;&#0115;&#0099;&#0097;&#0112;&#0101;&#0046;&#0099;&#0111;&#0109;?Subject=Re%3A%20A%20proposal%20for%20addition%20to%20HTML%203.0%3A%20EMBED&amp;In-Reply-To=%3C305F8491.4300%40netscape.com%3E&amp;References=%3C305F8491.4300%40netscape.com%3E">ebina&#x40;&#0110;&#0101;&#0111;&#0110;&#0046;&#0110;&#0101;&#0116;&#0115;&#0099;&#0097;&#0112;&#0101;&#0046;&#0099;&#0111;&#0109;</a>
+</span></li>
+<li><span class="message-id"><span class="heading">Message-Id</span>: &lt;305F8491.4300&#x40;&#0110;&#0101;&#0116;&#0115;&#0099;&#0097;&#0112;&#0101;&#0046;&#0099;&#0111;&#0109;&gt;
+</span></li>
+</ul>
+<pre id="start" class="body">
+This is the second in a set of proposals that Netscape is submitting for 
+consideration by IETF and W3.
+
+Note: We are holding off on submitting officially to the RFC Editor until we can 
+work up some adequate DTD ATTLIST and ELEMENT definitions. Actually, we're 
+looking around a bit for DTD experts...
+
+To respond at an admittedly superficial level to several issues recently raised 
+about Netscape's support for EMBED:
+
+We believe that there is some justification in increasing the size and 
+redundancy of the specification if the result will be specific enhanced 
+usability. To this end, we think that EMBED is more straightforward and more 
+easily understood and implemented by the &lt;em&gt;average&lt;/em&gt; content developer than 
+the proposed alternative to provide REL support for A tags. We're not holding 
+ourselves up to be some grand altruistic bunch of usability-zealots. We merely 
+believe that in this particular case, the proposal here is appropriate.
+
+Additional marketing-oriented material that shows a specific implementation of 
+EMBED is available at: 
+<a href="http://home.mcom.com/comprod/products/navigator/version_2.0/plugins/index.html">http://home.mcom.com/comprod/products/navigator/version_2.0/plugins/index.html</a>
+
+Thanks,
+Alex Edelstein
+
+
+
+-------------------------------------------
+INTERNET-DRAFT                      John Giannandrea
+                                    Netscape Communications Corp.
+Expires SIX MONTHS FROM---&gt;         September 19, 1995
+
+      A Proposed Extension to HTML: Embed
+
+Status of this Memo
+
+   This document is an Internet-Draft. Internet-Drafts are working
+   documents of the Internet Engineering Task Force (IETF), its
+   areas,   and its working groups. Note that other groups may also
+   distribute   working documents as Internet-Drafts.
+
+   Internet-Drafts are draft documents valid for a maximum of six
+   months and may be updated, replaced, or obsoleted by other
+   documents at any time. It is inappropriate to use Internet-
+   Drafts as reference material or to cite them other than as
+   &quot;work in progress.&quot;
+
+   To learn the current status of any Internet-Draft, please check
+   the &quot;1id-abstracts.txt&quot; listing contained in the Internet-
+   Drafts Shadow Directories on ds.internic.net (US East Coast),
+   nic.nordu.net (Europe), ftp.isi.edu (US West Coast), or
+   munnari.oz.au (Pacific Rim).
+
+   Distribution of this document is unlimited.  Please send
+   comments to the HTML working group (HTML-WG) of the
+   Internet Engineering Task Force (IETF) at &lt;<a href="mailto:html-wg&#x40;&#0111;&#0099;&#0108;&#0099;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20A%20proposal%20for%20addition%20to%20HTML%203.0%3A%20EMBED&amp;In-Reply-To=%3C305F8491.4300%40netscape.com%3E&amp;References=%3C305F8491.4300%40netscape.com%3E">html-wg&#x40;&#0111;&#0099;&#0108;&#0099;&#0046;&#0111;&#0114;&#0103;</a>&gt;.
+   Discussions of the group are archived at
+   URL: <a href="http://www.acl.lanl.gov/HTML_WG/archives.html">http://www.acl.lanl.gov/HTML_WG/archives.html</a>
+
+
+Abstract
+
+EMBED allows for the embedding of arbitary objects.
+    
+
+
+Description
+
+The EMBED tag allows the insertion of arbitrary objects directly into
+an HTML page. Embedded objects are supported by application-specific plug-ins.
+EMBED can take arbitrary attributes.
+
+The following general attributes are defined on EMBED:
+SRC (required) - Specifies source URL.
+
+HEIGHT - The object's image will be scaled to fit the specified height
+and width.
+
+WIDTH - The object's image will be scaled to fit the specified height
+and width.
+
+
+
+
+Authors Address
+HTML Authorship Effort
+C/O Alex Edelstein, Product Manager - Non-Stinky Cheese Products
+Netscape Communications Corp.
+501 E. Middlefield Rd.
+Mountain View, CA 94301
+
+<a href="mailto:alexed&#x40;&#0110;&#0101;&#0116;&#0115;&#0099;&#0097;&#0112;&#0101;&#0046;&#0099;&#0111;&#0109;?Subject=Re%3A%20A%20proposal%20for%20addition%20to%20HTML%203.0%3A%20EMBED&amp;In-Reply-To=%3C305F8491.4300%40netscape.com%3E&amp;References=%3C305F8491.4300%40netscape.com%3E">alexed&#x40;&#0110;&#0101;&#0116;&#0115;&#0099;&#0097;&#0112;&#0101;&#0046;&#0099;&#0111;&#0109;</a>
+
+
+-- 
+**********
+Alex Edelstein
+Sr. Product Manager, Netscape Navigator
+Netscape Communications Corp.
+
+
+Viva Cheddar
+</pre>
+<p class="received"><span class="heading">Received on</span> Tuesday, 19 September 1995 23:09:21 UTC</p>
+</main>
+<!-- body="end" -->
+<footer class="foot">
+<nav id="navbarfoot">
+<ul class="links hmenu_container">
+<li><span class="heading">This message</span>: <span class="message_body"><a href="#start">Message body</a></span></li>
+<!-- lnext="start" -->
+<li><span class="heading">Next message</span>: <a href="0049.html">Alex Edelstein: "The REAL proposal for addition to HTML 3.0: EMBED"</a></li>
+<li><span class="heading">Previous message</span>: <a href="0047.html">Paul DeSantis: "Re: Hi..."</a></li>
+<!-- lnextthread="start" -->
+<!-- lreply="end" -->
+</ul>
+<ul class="links hmenu_container">
+<li id="options3"><span class="heading">Mail actions</span>: <ul class="hmenu"><li><a href="mailto:www-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20A%20proposal%20for%20addition%20to%20HTML%203.0%3A%20EMBED&amp;In-Reply-To=%3C305F8491.4300%40netscape.com%3E&amp;References=%3C305F8491.4300%40netscape.com%3E">respond to this message</a></li>
+<li><a href="mailto:www-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;">mail a new topic</a></li></ul></li>
+<li><span class="heading">Contemporary messages sorted</span>: <ul class="hmenu"><li><a href="index.html#msg48">by date</a></li>
+<li><a href="thread.html#msg48">by thread</a></li>
+<li><a href="subject.html#msg48">by subject</a></li>
+<li><a href="author.html#msg48">by author</a></li>
+</ul></li>
+<li><span class="heading">Help</span>: <ul class="hmenu">
+    <li><a href="/Help/" rel="help">how to use the archives</a></li>
+    <li><a href="https://www.w3.org/Search/Mail/Public/search?type-index=www-html&amp;index-type=t">search the archives</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<!-- trailer="footer" -->
+<p class="colophon">
+This archive was generated by <a href="https://github.com/hypermail-project/hypermail/">hypermail 3.0.0</a>: Thursday, 13 July 2023 18:04:06 UTC
+</p>
+</footer>
+</body>
+</html>

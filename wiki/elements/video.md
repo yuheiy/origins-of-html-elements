@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、videoまたはmovie、およびcaption付きaudio fileの再生に使うmedia elementである。内容は非対応browser向けfallbackであり、accessibility用代替には`track`や近接するtranscript等を使う。[一次定義](https://html.spec.whatwg.org/multipage/media.html#the-video-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、videoまたはmovie、およびcaption付きaudio fileの再生に使うmedia elementである。内容は非対応browser向けfallbackであり、accessibility用代替には`track`や近接するtranscript等を使う。[HTML Living Standard](../../raw/html-living-standard/media.html)（[公開版](https://html.spec.whatwg.org/multipage/media.html#the-video-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,14 +36,14 @@ Operaの実験的`video`要素・提案（2007年） → WHATWG Web Applications
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2007-02-28 | “`<video>` element proposal” | WHATWG mailing list・実装提案 | Operaの内部実験実装、`Audio()`に似たAPI、`object`型の埋め込みとvideo固有semanticsを組み合わせた提案。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-February/009702.html) | 2026-08-09 |
-| 2007-03-09 | WHATWG HTML commit `845c40c8`（revision 674） | 仕様commit | 未完成の`video`要素節の初回追加。 | [一次資料](https://github.com/whatwg/html/commit/845c40c8035ddccb20301433b2f1225a1203e4de) | 2026-08-09 |
-| 2007-03-15 | “Video proposals” | WHATWG mailing list・編集者回答 | Operaの提案と実装経験を受けた仕様追加、固有semantics、共通API、`object`実装上の問題、SMILとの差。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/052433.html) | 2026-08-09 |
-| 2007-03-16 | WHATWG HTML commit `753f385d`（revision 678） | 仕様commit | `video`本体と共通media APIの本格導入。 | [一次資料](https://github.com/whatwg/html/commit/753f385d6eb176f4cc7075ba9f41ed3190848b10) | 2026-08-09 |
-| 2007-03-29 | *Web Applications 1.0*, revision 699 | WHATWG保存仕様 | videoまたはmovieを表すmedia element、fallback、共通media API、当時の主用途。 | [一次資料](https://platform.html5.org/history/webapps/r699.html#video) | 2026-08-09 |
-| 2026-08-09 | WHATWG HTML Living Standard, “The video element” | 現行仕様 | `video`の現行定義。 | [一次資料](https://html.spec.whatwg.org/multipage/media.html#the-video-element) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2007-02-28 | [“`<video>` element proposal”](../../raw/items/lists.whatwg.org/eaecfc764972e14d-009702.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-February/009702.html)） | WHATWG mailing list・実装提案 | Operaの内部実験実装、`Audio()`に似たAPI、`object`型の埋め込みとvideo固有semanticsを組み合わせた提案。 | 2026-08-09 |
+| 2007-03-09 | [WHATWG HTML commit `845c40c8`（revision 674）](../../raw/whatwg-html-history/5bacf6bb4f5c0aae-845c40c8035ddccb20301433b2f1225a120.html)（[公開元](https://github.com/whatwg/html/commit/845c40c8035ddccb20301433b2f1225a1203e4de)） | 仕様commit | 未完成の`video`要素節の初回追加。 | 2026-08-09 |
+| 2007-03-15 | [“Video proposals”](../../raw/items/lists.whatwg.org/c974dc225232cb7c-052433.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/052433.html)） | WHATWG mailing list・編集者回答 | Operaの提案と実装経験を受けた仕様追加、固有semantics、共通API、`object`実装上の問題、SMILとの差。 | 2026-08-09 |
+| 2007-03-16 | [WHATWG HTML commit `753f385d`（revision 678）](../../raw/whatwg-html-history/acbb97e2a5b4e3e4-753f385d6eb176f4cc7075ba9f41ed31908.html)（[公開元](https://github.com/whatwg/html/commit/753f385d6eb176f4cc7075ba9f41ed3190848b10)） | 仕様commit | `video`本体と共通media APIの本格導入。 | 2026-08-09 |
+| 2007-03-29 | [*Web Applications 1.0*, revision 699](../../raw/whatwg-web-apps-history/167cb993a954cee1-r699.html)（[公開元](https://platform.html5.org/history/webapps/r699.html#video)） | WHATWG保存仕様 | videoまたはmovieを表すmedia element、fallback、共通media API、当時の主用途。 | 2026-08-09 |
+| 2026-08-09 | [WHATWG HTML Living Standard, “The video element”](../../raw/html-living-standard/media.html)（[公開元](https://html.spec.whatwg.org/multipage/media.html#the-video-element)） | 現行仕様 | `video`の現行定義。 | 2026-08-09 |
 
 ## 確度
 

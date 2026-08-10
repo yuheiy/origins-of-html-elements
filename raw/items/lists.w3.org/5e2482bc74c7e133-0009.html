@@ -1,0 +1,79 @@
+<!-- received="Mon May 25 16:40:01 1992 EDT" -->
+<!-- sent="Mon, 25 May 92 16:40:01 GMT+0200" -->
+<!-- name="Tim Berners-Lee" -->
+<!-- email="timbl" -->
+<!-- subject="Re: search engines &amp; views" -->
+<!-- id="9205251440.AA18996@ nxoc01.cern.ch " -->
+<!-- inreplyto="search engines &amp; views" -->
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head><title>www-talk from May to June 1992: Re: search engines &amp; views</title></head>
+<body>
+<h1>Re: search engines &amp; views</h1>
+<strong>Tim Berners-Lee</strong> (<a href="mailto:timbl"><em>timbl</em></a>)<br>
+<em>Mon, 25 May 92 16:40:01 GMT+0200</em>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#9">[ date ]</a><a href="thread.html#9">[ thread ]</a><a href="subject.html#9">[ subject ]</a><a href="author.html#9">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0010.html">Su-Hee Kim: "Installation of viola"</a>
+<li> <strong>Previous message:</strong> <a href="0008.html">Edward Vielmetti: "Re: Program Links in WWW"</a>
+<!-- nextthread="start" -->
+</ul>
+<hr>
+<!-- body="start" -->
+<pre>
+Date: Mon, 25 May 92 16:40:01 GMT+0200
+From: timbl (Tim Berners-Lee)
+Message-Id: &lt;9205251440.AA18996@ nxoc01.cern.ch &gt;
+To: pflynn@curia.ucc.ie (Peter Flynn)
+Subject: Re: search engines &amp; views
+Cc: www-talk@nxoc01.cern.ch
+
+&gt;        All you do is map the parameters of the virtual search engine
+&gt;        onto a document name -- like
+&gt;
+&gt;        /INDEX/full-text/tryhard/depth=5/boolean
+&gt;
+&gt; Does this mean (at a primitive level) you could code a grep command
+&gt; as a document name?
+&gt;
+	Yes -- sure.  Its a question of writing down the
+	algorithm. In perl, I'm sure its a cinch ... you could
+	also do it with sh and sed :-( but basically for example
+	you need to take say
+
+	/grep/mydir/i?joe+bloggs
+
+	and turn that into
+
+	grep -l -i "(joe)|(bloggs)" | awk -f ls2html.awk
+
+where ls2html.awk looks something like:
+
+	BEGIN {  print "Select one of:\n&lt;MENU&gt;" }
+	{ printf "&lt;LI&gt;&lt;A HREF=./%s&gt;   %s&lt;/A&gt;\n", $1, $1 }
+	END { print "&lt;/MENU&gt;" }
+
+The awk generates the HTML for a menu.  I guess you could use awk in fact to  
+generate the grep command too.  But these are just ideas.  or are you using VMS?  
+Yes, you could probably do it with DCL and SEARCH.
+
+Of course if you can handle C, then hack the sample httpd.
+
+&gt; ///Peter
+
+	Tim
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#9">[ date ]</a><a href="thread.html#9">[ thread ]</a><a href="subject.html#9">[ subject ]</a><a href="author.html#9">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0010.html">Su-Hee Kim: "Installation of viola"</a>
+<li> <strong>Previous message:</strong> <a href="0008.html">Edward Vielmetti: "Re: Program Links in WWW"</a>
+<!-- nextthread="start" -->
+</ul>
+</body>
+</html>

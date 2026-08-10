@@ -10,7 +10,7 @@ Marc AndreessenがNCSA X Mosaicへ実装し、1993年に提案したinline image
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは画像を表す。`src`、`srcset`、親が`picture`なら先行する`source`の候補から選ばれた画像が埋め込み内容となり、`alt`は画像を処理できない場合の等価な内容を与える。[一次定義](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは画像を表す。`src`、`srcset`、親が`picture`なら先行する`source`の候補から選ばれた画像が埋め込み内容となり、`alt`は画像を処理できない場合の等価な内容を与える。[HTML Living Standard](../../raw/html-living-standard/embedded-content.html)（[公開版](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,12 +36,12 @@ NCSA X Mosaic `IMG`実装／Andreessenの`IMG`提案（1993年2月） → HTML I
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1993-02-25 | Marc Andreessen, “proposed new tag: IMG” | 当事者の同時代投稿 | `IMG SRC`、inline画像、anchor内利用、X Mosaicで実装済みという提案。 | [一次資料](http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html) | 2026-08-09 |
-| 1993-02-26、1993-03-12 | Marc Andreessen replies | 当事者の同時代投稿 | 構文統一の必要と、一般化した`EMBED`や`ICON`を採らなかった理由。 | [2月26日](http://1997.webhistory.org/www.lists/www-talk.1993q1/0197.html) / [3月12日](http://1997.webhistory.org/www.lists/www-talk.1993q1/0257.html) | 2026-08-09 |
-| 1993-03-14 | NCSA Mosaic for X 0.10 release | 公式実装公開告知 | `IMG`、GIF/XBM inline画像、URL取得、anchor内利用を実装。 | [一次資料](http://1997.webhistory.org/www.lists/www-talk.1993q1/0262.html) | 2026-08-09 |
-| 1993-06 | HTML Internet-Draft | IETF Internet-Draft | `IMG`をHTML語彙とDTDへ収録。 | [一次資料](https://www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1993-02-25 | [Marc Andreessen, “proposed new tag: IMG”](../../raw/items/1997.webhistory.org/4f0af7b3a30ede56-0182.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html)） | 当事者の同時代投稿 | `IMG SRC`、inline画像、anchor内利用、X Mosaicで実装済みという提案。 | 2026-08-09 |
+| 1993-02-26、1993-03-12 | Marc Andreessen replies：[2月26日](../../raw/items/1997.webhistory.org/cffff23d5a46c766-0197.html)・[3月12日](../../raw/items/1997.webhistory.org/86a6b96f496f2ee0-0257.html)（[公開元1](http://1997.webhistory.org/www.lists/www-talk.1993q1/0197.html)・[公開元2](http://1997.webhistory.org/www.lists/www-talk.1993q1/0257.html)） | 当事者の同時代投稿 | 構文統一の必要と、一般化した`EMBED`や`ICON`を採らなかった理由。 | 2026-08-09 |
+| 1993-03-14 | [NCSA Mosaic for X 0.10 release](../../raw/items/1997.webhistory.org/d6f43c4937dca8f8-0262.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q1/0262.html)） | 公式実装公開告知 | `IMG`、GIF/XBM inline画像、URL取得、anchor内利用を実装。 | 2026-08-09 |
+| 1993-06 | [HTML Internet-Draft](../../raw/draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt)（[公開元](https://www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)） | IETF Internet-Draft | `IMG`をHTML語彙とDTDへ収録。 | 2026-08-09 |
 
 ## 確度
 

@@ -1,0 +1,124 @@
+<!-- received="Fri Dec  4 19:58:25 1992 EDT" -->
+<!-- sent="Fri, 04 Dec 92 13:11:32 CST" -->
+<!-- name="Dan Connolly" -->
+<!-- email="connolly@pixel.convex.com" -->
+<!-- subject="The spec evolves..." -->
+<!-- id="9212041911.AA23347@pixel.convex.com" -->
+<!-- inreplyto="" -->
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head><title>www-talk from November to December 1992: The spec evolves...</title></head>
+<body>
+<h1>The spec evolves...</h1>
+<strong>Dan Connolly</strong> (<a href="mailto:connolly@pixel.convex.com"><em>connolly@pixel.convex.com</em></a>)<br>
+<em>Fri, 04 Dec 92 13:11:32 CST</em>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#155">[ date ]</a><a href="thread.html#155">[ thread ]</a><a href="subject.html#155">[ subject ]</a><a href="author.html#155">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0156.html">Edward Vielmetti: "Re: The spec evolves..."</a>
+<li> <strong>Previous message:</strong> <a href="0154.html">mcclanah@dlgeo.cr.usgs.gov: "Re: Bug fix for MidasWWW-1.0"</a>
+<!-- nextthread="start" -->
+<li> <strong>Next in thread:</strong> <a href="0156.html">Edward Vielmetti: "Re: The spec evolves..."</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<pre>
+Message-Id: &lt;9212041911.AA23347@pixel.convex.com&gt;
+To: www-talk@nxoc01.cern.ch
+Subject: The spec evolves...
+Date: Fri, 04 Dec 92 13:11:32 CST
+From: Dan Connolly &lt;connolly@pixel.convex.com&gt;
+
+
+I just uploaded to <a href="ftp://info.cern.ch/pub/incoming:">ftp://info.cern.ch/pub/incoming:</a>
+
+libHTML-921202.tar.Z -- HTML parsing library with demo
+	program. (includes current DTD)
+
+html_spec-921202.tar.Z -- HTML.html and related files,
+	moving toward a spec.
+
+
+I've made some significant changes to the DTD.
+
+1. I put SHORTTAG NO in the SGML declaraion. This
+means a) _all_ attributes have to be quoted (numbers,
+names, ids, CDATA -- everything), but b) it makes
+parsing cleaner: minimization isn't allowed. The NET
+feature is disabled (that's for doing
+
+	&lt;bold/foo bar/   in stead of
+	&lt;bold&gt;foo bar&lt;/bold&gt;
+
+tricky to parse.)
+
+2. I figured out a way to support HEAD/BODY tags
+without breaking things. We lose some structure, but
+we gain some too. And this time I stuck by the
+mixed content rule-of-thumb.
+
+3. I got rid of the TYPE attribute on anchor tags.
+What's that thing for anyway. Does anybody use it?
+
+4. I changed TYPEWRITER to PRE. My new motto is:
+just describe it; don't prescribe it.
+
+4. I added a TEXT attribute to anchor tags. The idea
+is that all &lt;A HREF=...&gt; point to MIME text/* objects. The
+TEXT parameter tells you the subtype, so you don't have
+to zen it from the filename (or so you can override the
+filename.) For example:
+
+	&lt;A HREF="TheProject.html" TEXT=PLAIN&gt;This is
+		a link to that file treated as a plain text
+		file.&lt;/A&gt;
+
+	&lt;A HREF="abcdef" TEXT=HTML&gt;abcdef is an HTML entity,
+	even though it doesn't have and extension.&lt;/A&gt;
+
+It's a little prescriptive, but those semantics are
+mostly implemented already.
+
+5. I changed anchor names from SGML Id's to NMTOKENS, so you
+can use numbers or whatever you want. Since we don't have any
+IDREFs pointing to them, there's no reason to use ID's.
+In other words, I've moved this feature into the realm of
+application conventions rather than SGML features.
+
+6. I changed XMP and LISTING back to RCDATA. I was messing with
+the MidasWWW browser, and I couln't figure out how, when I'm
+dumping the SGML out of the data structures into a file, to
+tell whether I should change '&lt;'s to "&amp;lt;" or not. If we avoid
+CDATA, we can use entities everywhere, and processing is simpler.
+How's that sound?
+
+Now some ideas to kick around...
+
+* Somebody mentioned a &lt;VAR&gt;...&lt;/VAR&gt; tag for stuff that shouldn't be
+cached. I'm thinking it should be a node-wide empty tag, like
+ISINDEX. Maybe &lt;VOLATILE&gt; is a good word.
+
+Then I think to myself, why not make it an attribute on the HEAD
+element:
+
+&lt;!ATTLIST HEAD     STATUS (OK, ERROR, VOLATILE) OK&gt;
+
+
+More later...
+
+Dan
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#155">[ date ]</a><a href="thread.html#155">[ thread ]</a><a href="subject.html#155">[ subject ]</a><a href="author.html#155">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0156.html">Edward Vielmetti: "Re: The spec evolves..."</a>
+<li> <strong>Previous message:</strong> <a href="0154.html">mcclanah@dlgeo.cr.usgs.gov: "Re: Bug fix for MidasWWW-1.0"</a>
+<!-- nextthread="start" -->
+<li> <strong>Next in thread:</strong> <a href="0156.html">Edward Vielmetti: "Re: The spec evolves..."</a>
+</ul>
+</body>
+</html>

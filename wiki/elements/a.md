@@ -10,7 +10,7 @@ NeXT WorldWideWebの1991年1月の実装履歴と1992年のCERNタグ一覧で�
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、`href`属性がある場合は内容をlabelとするhyperlink（hypertext anchor）を表し、ない場合はlinkが置かれ得た位置のplaceholderを表す。 [一次定義](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、`href`属性がある場合は内容をlabelとするhyperlink（hypertext anchor）を表し、ない場合はlinkが置かれ得た位置のplaceholderを表す。 [HTML Living Standard](../../raw/html-living-standard/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,13 +36,13 @@ WWWのnode／link設計（1989–1990）→ NeXT WorldWideWebのAnchor objectと
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1989-03 | *Information Management: A Proposal* | CERNでのWWW提案 | 情報をnodeとlinkからなるhypertextとして扱うWWWの設計要求を記録する。 | [W3C History](https://www.w3.org/History/1989/proposal.html) | 2026-08-09 |
-| 1991-01-30 | *Features and Bug Fixes* | CERN/W3Cの公式実装履歴 | NeXT WorldWideWeb 0.4でanchor作成を実装済みだったことを記録する。 | [W3C History](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/NeXT/Implementation/Features.html) | 2026-08-09 |
-| 1991-09-04／09-27（HTTP Last-Modified） | *Anchor.h*／*ParseHTML.h* | W3C保存のWorldWideWeb実装source | node内のAnchor objectとHTML `A`の`HREF`／`NAME`を相互に写像する。 | [Anchor object](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Anchor.h)・[HTML parser／serializer](https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h) | 2026-08-09 |
-| 1992-11-13（更新日） | *HTML Tags* | CERN公式HTML資料のhistorical snapshot | `A`の`HREF`と`NAME`によりlinkの始点・終点を表す初期HTMLの機能を定義する。 | [W3C History](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) | 2026-08-09 |
-| 1993-06 | *Hypertext Markup Language (HTML)* | IETF Internet-Draft | anchorをlinkの始点・終点として定義し、`A`と属性をDTDへ収録する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1989-03 | [*Information Management: A Proposal*](../../raw/early-www/c5f9abb01d08f4b7-proposal.html)（[公開元](https://www.w3.org/History/1989/proposal.html)） | CERNでのWWW提案 | 情報をnodeとlinkからなるhypertextとして扱うWWWの設計要求を記録する。 | 2026-08-09 |
+| 1991-01-30 | [*Features and Bug Fixes*](../../raw/early-www/8c0a96e310f208d1-Features.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/NeXT/Implementation/Features.html)） | CERN/W3Cの公式実装履歴 | NeXT WorldWideWeb 0.4でanchor作成を実装済みだったことを記録する。 | 2026-08-09 |
+| 1991-09-04／09-27（HTTP Last-Modified） | *Anchor.h*／*ParseHTML.h*：[Anchor object](../../raw/early-www/ef15024394fe53d0-Anchor.h)・[HTML parser／serializer](../../raw/early-www/2aeabad912317a27-ParseHTML.h)（[公開元1](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Anchor.h)・[公開元2](https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h)） | W3C保存のWorldWideWeb実装source | node内のAnchor objectとHTML `A`の`HREF`／`NAME`を相互に写像する。 | 2026-08-09 |
+| 1992-11-13（更新日） | [*HTML Tags*](../../raw/early-www/6fba3e9651380c1e-Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)） | CERN公式HTML資料のhistorical snapshot | `A`の`HREF`と`NAME`によりlinkの始点・終点を表す初期HTMLの機能を定義する。 | 2026-08-09 |
+| 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | anchorをlinkの始点・終点として定義し、`A`と属性をDTDへ収録する。 | 2026-08-09 |
 
 ## 確度
 

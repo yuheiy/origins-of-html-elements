@@ -1,0 +1,1864 @@
+<!DOCTYPE html public '-//W3C//DTD HTML 4.01//EN'
+  'http://www.w3.org/TR/html4/strict.dtd'>
+<html lang="en">
+ <head>
+  <title>XHTML Module: Extensions to Form Controls</title>
+  <link rel="stylesheet" type="text/css" href="http://www.hixie.ch/resources/style/specification.en">
+  <style type="text/css">
+   table { border-collapse: collapse; border-style: hidden hidden none hidden; }
+   td, th { border: solid thin; padding: 0.2em; }
+   dt { margin: 0.25em 0 0 0; }
+   pre em { font-weight: bolder; font-style: normal; }
+   p + * > li, dd li { margin: 1em 0; }
+
+   .idl { margin: 1em 0 1em 2em; padding: 0 0 0 1em; border: solid thin; background: #EEEEEE; color: black; }
+   .critical { margin: 1em; border: double thick red; padding: 1em; background: #FFFFCC; }
+   .critical > :first-child { margin-top: 0; }
+
+   .applies td { text-align: center; }
+   .applies .yes { background: yellow; }
+   .applies .deprecated { background: #EEEEEE; }
+   .applies .deprecated .yes { background: #DDDD99; }
+  </style>
+ </head>
+ <body class="draft">
+
+  <div class="head">
+   <p><a rel="home" href="http://www.opera.com/" class="logo"><img alt="Opera Software" src="http://www.opera.com/graphics/logos/opera.png"></a></p>
+   <h1>XHTML Module: Extensions to Form Controls</h1>
+   <h2 class="no-num no-toc">Opera Working Draft, September 2003</h2>
+   <dl>
+    <!--
+    <dt>This version:</dt>
+    <dd><a href="./">./</a></dd>
+    <dt>Latest version:</dt>
+    <dd><a href="./">./</a></dd>
+    <dt>Previous version:</dt>
+    <dd><a href="./">./</a></dd>
+    -->
+    <dt>Editor:</dt>
+    <dd>Ian Hickson, Opera Software, ian@hixie.ch</dd>
+   </dl>
+   <p class="copyright">&copy; Copyright 2003 Opera Software.</p>
+  </div>
+
+  <hr>
+
+  <h2 class="no-num no-toc" id="abstract">Abstract</h2>
+
+  <p>[abstract]</p>
+
+  <div class="critical">
+  <h2 class="no-num no-toc" id="status">Status of this Document</h2>
+
+  <p><strong>This is a work in progress!</strong> This document is
+  changing on a daily if not hourly basis in response to comments and
+  as a general part of its development process. Comments are very
+  welcome, please send them to <a
+  href="mailto:htmlforms@damowmow.com">htmlforms@damowmow.com</a> and
+  cc w3c-archive@w3.org. Thank you.</p>
+
+  <p>It is very wrong to cite this as anything other than a work in
+  progress. Do not implement this in a production product. It is not
+  ready yet! At all!</p>
+  </div>
+
+  <h2><a name="TOC">Table of Contents</a></h2>
+  <ul>
+   <li><a href="#TOC1">1. Introduction</a>
+    <ul>
+     <li><a href="#TOC11">1.1. Relationship to XForms</a></li>
+     <li><a href="#TOC12">1.2. Conformance Requirements</a></li>
+    </ul>
+   </li>
+   <li><a href="#TOC2">2. Extensions to Form Control Elements</a>
+    <ul>
+     <li><a href="#TOC21">2.1. Extensions to the <code>input</code> element</a></li>
+     <li><a href="#TOC22">2.2. Extensions to the <code>select</code> element</a></li>
+     <li><a href="#TOC23">2.3. Extensions to the <code>textarea</code> element</a></li>
+     <li><a href="#TOC24">2.4. Extensions to existing attributes</a></li>
+     <li><a href="#TOC25">2.5. The <code>pattern</code> attribute</a></li>
+     <li><a href="#TOC26">2.6. The <code>required</code> attribute</a></li>
+     <li><a href="#TOC27">2.7. The <code>form</code> attribute</a></li>
+     <li><a href="#TOC28">2.8. The <code>autocomplete</code> attribute</a></li>
+     <li><a href="#TOC29">2.9. The <code>inputmode</code> attribute</a></li>
+     <li><a href="#TOC2A">2.10. The <code>help</code> attribute</a></li>
+    </ul>
+   </li>
+   <li><a href="#TOC3">3. Form Validation</a></li>
+   <li><a href="#TOC4">4. XML Submission</a></li>
+   <li><a href="#TOC5">5. Dynamic Form Manipulation</a>
+    <ul>
+     <li><a href="#TOC51">5.1. Repeating a block of form controls</a></li>
+     <li><a href="#TOC52">5.2. Displaying alternative sections dynamically</a></li>
+     <li><a href="#TOC53">5.3. Keeping form controls synchronised</a></li>
+    </ul>
+   </li>
+   <li><a href="#TOC6">6. Extensions to the HTML Level 2 DOM interfaces</a></li>
+   <li><a href="#TOCA">A. XHTML Module Definition</a></li>
+   <li><a href="#TOCB">B. Attribute Summary</a></li>
+   <li><a href="#TOCC">C. Relation to the CSS3 User Interface module</a></li>
+   <li><a href="#TOCD">D. References</a></li>
+   <li><a href="#TOCE">E. Acknowledgements</a></li>
+  </ul>
+
+  <hr>
+
+  <h2 id="TOC1">1. Introduction</h2>
+
+  <p>The following features are considered requirements for this
+  proposal<!-- XXX note XXX specification -->:</p>
+
+  <ul>
+   <li>Backwards compatability (where possible).</p>
+   <li>Ease of authoring for authors with limited knowledge about XML, data models, etc, but familiar with commonly used languages such as HTML and ECMAScript.</p>
+   <li>Basic data typing.</li>
+   <li>XML submission.</li>
+   <li>Dynamically adding more fields (repeating structures) on the client side.</li>
+   <li>Validation on the client side (while recognising that server side validation will still be required).</li>
+  </ul>
+
+  <h3 id="TOC11">1.1. Relationship to XForms</h3>
+
+  <p>XForms is a large and unwieldy specification that is not
+  backwards compatible with existing, widely deployed, HTML forms user
+  agents. By splitting traditional HTML forms into three parts &mdash;
+  XForms model, instance data, and user interface &mdash; it separates
+  logically related parts, complicates reuse, allows external data
+  typing &mdash; increasing the number of round-trips to the server
+  &mdash; as well as increasing the device requirements and reducing
+  the ability for authors familiar with scripting to reuse their
+  knowledge.</p>
+
+  <p>XForms is not a free-standing document type, but nonetheless
+  introduces yet another namespace into the W3C fold, further
+  increasing its the complexity for authors.</p>
+
+  <p>This proposal <!-- XXX note XXX specification --> attempts to add
+  the functionality of XForms with a minimum impact on the existing,
+  widely implemented model. Where appropriate, backwards compatiblity,
+  ease of authoring, and ease of implementation have been given
+  priority over theoretical purity.</p>
+
+  <p>The following features of XForms have not been addressed:</p>
+
+  <ul>
+   <li>The separation of the instance data model, data typing, field interdependencies, and submission information from the content model and interface elements.</li>
+   <li>The ability to create arbitrary XML fragments to be filled in before submission.</li>
+   <li>The option for field relationships, event handling, and other features to be implemented without an active scripting environment.</li>
+  </ul>
+
+  <p>The majority of the features that XForms supports using
+  declarative syntax are, in this proposal<!-- XXX note XXX
+  specification -->, handled by using scripting. Some new interfaces
+  are introduced to simplify some of the more tedious tasks.</p>
+
+  <h3 id="TOC12">1.2. Conformance Requirements</h3>
+
+  <p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
+  NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL"
+  in this document are to be interpreted as described in <a
+  href="#refsRFC2119">[RFC2119]</a>.</p>
+
+  <p>Diagrams, examples, and notes are non-normative. All other
+  content in this specification is intended to be normative.</p>
+
+  <h2 id="TOC2">2. Extensions to Form Control Elements</h2>
+
+  <p>HTML <code>input</code> elements use the <code>type</code>
+  attribute to specify the data type. In HTML4, the types are:</p>
+
+  <dl>
+   <dt><code>text</code></dt>
+   <dd>A freeform text input, nominally free of line breaks.</dd>
+   <dt><code>password</code></dt>
+   <dd>A freeform text input for sensitive information, nominally free of line breaks.</dd>
+   <dt><code>checkbox</code></dt>
+   <dd>A set of zero or more values from a predefined list (in the limiting case of the list only containing one value, this is equivalent to a boolean).</dd>
+   <dt><code>radio</code></dt>
+   <dd>An enumerated value.</dd>
+   <dt><code>submit</code></dt>
+   <dd>An enumerated value, with the extra semantic that it must be the last value selected and initiates form submission.</dd>
+   <dt><code>file</code></dt>
+   <dd>An arbitrary file with a MIME type and optionally a file name.</dd>
+   <dt><code>image</code></dt>
+   <dd>A coordinate, relative to a particular image's size.</dd>
+  </dl>
+
+  <p>Three other types, <code>reset</code>, <code>hidden</code>, and
+  <code>button</code>, are also available, but are either not real
+  data types, or not modifiable by the user, and so are not considered
+  here.</p>
+
+  <p>In addition, HTML also provides a few alternate elements that
+  convey typing semantics similar to the above types, but use
+  different data models:</p>
+
+  <dl>
+   <dt><code>select</code></dt>
+   <dd>An enumerated value, much like the <code>radio</code> type.</dd>
+   <dt><code>select multiple</code></dt>
+   <dd>A set of zero or more values from a predefined list, much like the <code>checkbox</code> type.</dd>
+   <dt><code>textarea</code></dt>
+   <dd>A freeform text input, nominally with no line break restrictions.</dd>
+  </dl>
+
+  <p>These types are useful, but limited. This section expands the
+  list to cover more specific data types, and introduces attributes
+  that are designed to constrain data entry or other aspects of the
+  UA's behaviour.</p>
+
+  <p>In addition to the attributes described below, some changes are
+  made to the content model of HTML form elements to take into account
+  scripting needs. Specifically, the <code>form</code>,
+  <code>legend</code>, <code>select</code>, and <code>optgroup</code>
+  elements may now be empty (in HTML4, those elements always required
+  at least one element child, or, in the case of <code>legend</code>,
+  at least one character of text).</p>
+
+  <h3 id="TOC21">2.1. Extensions to the <code>input</code> element</h3>
+
+  <p>Several new types are introduced for the <code>type</code>
+  attribute. Like as with the older types, UAs are encouraged to show
+  specialised widgets for these types, instead of requiring that the
+  user enter the data into a text field.</p>
+
+  <dl>
+   <dt><code>datetime</code></dt>
+
+   <dd>A date and time encoded according to <a href="#refsISO8601">[ISO8601]</a> with the time zone
+   set to UTC, e.g.: <samp>1995-12-31T23:59:59Z</samp>. User agents
+   are expected to show an appropriate widget.
+    <p><img alt="For example, a UA could show a text field with editable sections for each value, with a button to pop up a dialog showing a calendar or clock." src="http://www.damowmow.com/temp/datetime.png"></p>
+   UAs may display the time in whatever time zone is appropriate for
+   the user, but should be clear that the time is globally defined,
+   not time-zone dependent.</dd>
+
+   <dt><code>date</code></dt>
+
+   <dd>A date encoded according to <a href="#refsISO8601">[ISO8601]</a>, e.g.:
+   <samp>1995-12-31</samp>. User agents are expected to show an
+   appropriate widget, such as a calendar.</dd>
+
+   <dt><code>expdate</code></dt>
+
+   <dd>A date consisting of a year and a month encoded according to
+   <a href="#refsISO8601">[ISO8601]</a>, e.g.: <samp>2003-08</samp>. This type is used most
+   frequently for credit card expiry dates.</dd>
+
+   <dt><code>time</code></dt>
+
+   <dd>A time encoded according to <a href="#refsISO8601">[ISO8601]</a> with no time zone, e.g.:
+   <samp>23:59:59</samp>. User agents are expected to show an
+   appropriate widget, such as a clock. UAs should make it clear to
+   the user that the time does not carry any time zone
+   information.</dd>
+
+   <dt><code>number</code></dt>
+   <dd>An arbitrary precision real number, written out with an
+   optional minus sign ("-"), a decimal integer, a decimal point (".")
+   and a decimal fractional part, together forming a number
+   representing the base, followed by the lowercase literal letter
+   "e", another optional minus sign, and a decimal integer exponent
+   representing the index of a power of ten with which to multiply the
+   base to get the resulting number. For example, negative-root-two,
+   to 32 significant figures, would be
+   <samp>-1.4142135623730950488016887242097e0</samp>, while the radius
+   of the earth given in furlongs would be <samp>3.17053408e4</samp>.
+   This format is designed to be compatible with
+   <code>scanf(3)</code>'s <code>%f</code> format and similar
+   parsers while being easier to parse than required by some other
+   floating point syntaxes. Note that <code>0</code>,
+   <code>0e+0</code>, <code>+0e0</code> are invalid numbers (the
+   exponent is not optional, and the minus sign cannot be replaced by
+   a plus sign for positive numbers, it must simply be dropped) and
+   UAs must therefore not serialize numbers in those formats.</dd>
+
+   <dt><code>integer</code></dt>
+   <dd>An integer, written as a series of decimal digits optionally
+   prefixed by a minus sign ("-").</dd>
+
+   <dt><code>email</code></dt>
+   <dd>An e-mail address, as defined by <a
+   href="#refsRFC822">[RFC822]</a> (the <code>mailbox</code> token,
+   defined in section RFC822 6.1).</dd>
+<!--
+   <dt><code>output</code></dt>
+
+   <dd>This special type may be used with scripting to show the
+   results of a calculation, and does not take part in any form
+   submission. UAs should treat an <code>input</code> element with
+   type <code>output</code> in much the same way as a normal
+   <code>span</code> element, except that the rendered content of the
+   <code>&lt;input type="output"&gt;</code> element is the value of
+   its <code>value</code> attribute.
+
+   <div class="note">
+    <p>In a CSS3 UA, this could be implemented simply as:</p>
+    <pre>input[type="output"] { content: attr(value); }</pre>
+   </div>
+
+   Resetting a form must not reset the value of
+   <code>type="output"</code> form controls.
+
+   </dd>
+-->
+  </dl>
+
+  <p>To limit the range of values allowed by the above types, two new
+  attributes are introduced, which apply to the date-related,
+  time-related, and numeric types:</p>
+
+  <dl>
+   <dt><code>minimum</code></dt>
+   <dd>Gives the minimum value (inclusive) of the field, in the format
+   specified for the relevant type. If absent, or if the value is not
+   in the expected format, this should be treated as negative infinity
+   (or the equivalent for the relevant type).</dd>
+   <dt><code>maximum</code></dt>
+   <dd>Gives the maximum value (inclusive) of the field, in the format
+   specified for the relevant type. If absent, or if the value is not
+   in the expected format, this should be treated as positive infinity
+   (or the equivalent for the relevant type).</dd>
+  </dl>
+
+  <p>UAs must not submit forms that contain fields whose values do not
+  match their types (<a
+  href="#ERROR_TYPE_MISMATCH">ERROR_TYPE_MISMATCH</a>) or whose values
+  are outside the allowed range (<a
+  href="#ERROR_RANGE_UNDERFLOW">ERROR_RANGE_UNDERFLOW</a>, <a
+  href="#ERROR_RANGE_OVERFLOW">ERROR_RANGE_OVERFLOW</a>).</p>
+
+  <p>Note that fields may have no value, in which case they aren't
+  "successful", do not take part in submission, and therefore do not
+  need to have their values match their types (unless they are <a
+  href="#required">required</a> fields).</p>
+
+  <div class="example">
+
+   <p>The following form uses some of the types described above:</p>
+
+   <pre>
+&lt;form action="..." method="post" onsubmit="verify(event)"&gt;
+ &lt;p&gt;
+  &lt;label&gt;
+   Quantity:
+   &lt;input name="count" type="integer" minimum="0" maximum="99" value="1" /&gt;
+  &lt;/label&gt;
+ &lt;/p&gt;
+ &lt;p&gt;
+  &lt;label for="time1"&gt; Preferred delivery time: &lt;/label&gt;
+  &lt;input id="time1" name="time1" type="time" minimum="08:00:00" maximum="17:00:00" value="08:00:00" /&gt; &mdash;
+  &lt;input id="time2" name="time2" type="time" minimum="08:00:00" maximum="17:00:00" value="17:00:00" /&gt;
+ &lt;/p&gt;
+ &lt;script type="text/javascript"&gt;
+  function verify(event) {
+    // check that time1 is smaller than time2, otherwise, swap them
+    if (event.target.time1 &amp;gt;= event.target.time2) { // ISO8601 times are string-comparison safe.
+      var time2 = event.target.time2;
+      event.target.time2 = event.target.time1;
+      event.target.time1 = time2;
+    }
+  }
+ &lt;/script&gt;
+&lt;/form&gt;
+</pre>
+
+  </div>
+
+  <p class="note">Servers should still perform type checking on
+  submitted data, as malicious users or rogue user agents might submit
+  data intended to bypass this client-side type checking.</p>
+
+  <p>The <code>size</code> attribute of the <code>input</code>
+  element is deprecated in favour of using CSS to specify the layout
+  of the form.</p>
+
+  <h4 id="TOC22">2.2. Extensions to the <code>select</code> element</h4>
+
+  <p>In addition to the new types above, the <code>select</code>
+  element is extended to allow for a free-form input control which has
+  author-specified auto-completion values.</p>
+
+  <dl>
+   <dt><code>editable</code></dt>
+   <dd>This attribute specifies that the <code>select</code> element's
+   value can be one other than those specified in the list of
+   <code>option</code> elements.</dd>
+  </dl>
+
+  <p>For example, a Web page may wish to ask a user to enter a
+  filename, offering some suggested names but allowing the user to
+  enter other names as well:</p>
+
+  <pre class="example">&lt;select name="filename" editable="editable"&gt;
+  &lt;option&gt;My First Holiday&lt;/option&gt;
+  &lt;option&gt;untitled1.txt&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+  <p>When this attribute is specified, the DOM <code
+  type="dom">type</code> attribute has the value "edit-one".</p>
+
+  <p>If both <code>editable</code> and <code>multiple</code> are
+  specified, the UA must allow the user to enter multiple free-form
+  values. This kind of interface is sometimes seen in mail user agents
+  for their "To:" fields, for instance.</p>
+
+  <p><img alt="" src="http://www.damowmow.com/temp/multiple-editable.png"></p>
+
+  <p>When both these attributes are specified, the DOM <code
+  type="dom">type</code> attribute has the value "edit-multiple". The
+  DOM <code>HTMLSelectElement</code> interface is extended to have a
+  new attribute <code>values</code> of type <a
+  href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#DOMStringList"><code>DOMStringList</code></a>
+  that represents the currently selected or entered values.</p>
+
+  <p>In documents conforming to this module, <code>select</code>
+  elements need not have any <code>option</code> elements.</p>
+
+  <h3 id="TOC23">2.3. Extensions to the <code>textarea</code> element</h3>
+
+  <p>The <code>rows</code> and <code>cols</code> attributes of the
+  <code>textarea</code> element are no longer required attributes.
+  When unspecified, CSS-compliant browsers should lay the element out
+  as specified by CSS, and non-CSS UAs may use UA-specific defaults,
+  such as, for visual UAs, using the width of the display device and a
+  height suitable for the device.</p>
+
+  <p>The <code>textarea</code> element may have a <code>wrap</code>
+  attribute specified. This attribute controls the wrapping behaviour
+  of submitted text.</p>
+
+  <dl>
+
+   <dt><code>soft</code></dt>
+
+   <dd>This is the default value. The text is submitted without line
+   breaks other than explicitly entered line breaks. (In other words,
+   the submitted text is exactly as found in the DOM.)</dd>
+
+   <dt><code>hard</code></dt>
+
+   <dd>The text is submitted with explicit line breaks, and in
+   addition, line breaks added to wrap the text at the width given by
+   the <code>cols</code> attribute. (These additional line breaks
+   can't be seen in the DOM.)</dd>
+
+  </dl>
+
+  <p>Authors should always specify a <code>cols</code> attribute when
+  the <code>wrap</code> attribute is set to <code>hard</code>. When
+  <code>wrap="hard"</code> is specified without a <code>cols</code>
+  attribute, user agents should use the display width when wrapping
+  the text for submission. This will typically mean that different
+  users submit text at different wrapping widths, defeating much of
+  the purpose of client-side wrapping.</p>
+
+  <p>CSS UAs should <em>render</em> <code>textarea</code> elements as
+  specified by the <code>'white-space'</code> property, although UAs
+  may have rules in their UA stylesheet that key the default
+  'white-space' property values based on the <code>wrap</code> element
+  for <code>textarea</code> elements.</p>
+
+  <h2 id="TOC24">2.4. Extensions to existing attributes</a></h2>
+
+  <p>In addition to the new attributes given in this section, some
+  existing attributes from HTML4 are clarified:</p>
+
+  <dl>
+
+   <dt><code>accept</code></dt>
+
+   <dd>The file upload control (<code>&lt;input
+   type="file"&gt;</code>) uses the <code>accept</code> attribute to
+   specify a comma-separated list of content types that a server
+   processing the form will handle correctly. In this module, this
+   attribute is extended as follows:
+
+    <ul>
+
+     <li>
+      MIME types may have a subtype of <code>*</code>, for example:
+      <pre class="example">&lt;input type="file" name="avatar" accept="<em>image/*</em>"/&gt;</pre>
+      In this way, the <code>accept</code> attribute may be used to
+      specify that the server is expecting an image, a sound clip, a
+      video, etc, without specifying the exact list of types.
+     </li>
+
+     <li>UAs should use the list of acceptable types in constructing a
+     filter for a file picker, if one is provided to the user.</li>
+
+     <li>If the UA wishes to let the user create the file prior to
+     upload, it should use the <code>accept</code> attribute's MIME
+     type list to determine which application to use.
+     <div class="example">
+
+      <p>One recent use for sound file upload has been the concept of
+      <em>audio blogging</em>. This is similar to straight-forward Web
+      logging, or diary writing, but instead of submitting textual
+      entries, one submits sound bites.</p>
+
+      <p>The submission interface to such a system could be written as
+      follows:</p>
+
+      <pre>
+&lt;form action="submit" method="post"&gt;
+ &lt;label&gt;
+  Attach your audio-blog sound file:
+  &lt;input type="file" name="blog" accept="audio/*"/&gt;
+ &lt;/label&gt;
+ &lt;input type="submit" value="Blog!"/&gt;
+&lt;/form&gt;
+</pre>
+      <p>A compliant UA could, upon encountering this form, provide a
+      "Record" button instead of, or in addition to, the more usual
+      "Browse" button. Selecting this button could then bring up a
+      sound recording application.</p>
+     </div>
+     <p>This is expected to be most useful on small devices that do
+     not have file systems and for which the only way of handling
+     file upload is to generate the content on the fly.</p>
+     </li>
+
+     <li>UAs must not submit files that do not have a MIME type
+     conforming to one of the MIME types listed as acceptable (<a
+     href="#ERROR_TYPE_MISMATCH">ERROR_TYPE_MISMATCH</a>). (UAs may,
+     however, allow the user to override the MIME type to be one of
+     the allowable types, e.g. if the file is originally incorrectly
+     labelled.)</li>
+
+     <li>If an <code>accept</code> attribute is set on a
+     <code>form</code> element, it sets the default for any file
+     upload controls in that form.</li>
+
+    </ul>
+
+   </dd>
+
+   <dt><code>disabled</code></dt>
+
+   <dd>The <code>disabled</code> attribute applies to all control
+   types, including <code>fieldset</code> (in HTML4 the
+   <code>disabled</code> attribute did not apply to the
+   <code>fieldset</code> element)<!-- except the <code>output</code>
+   type-->.</p></dd>
+
+   <dt><code>maxlength</code></dt>
+
+   <dd>This attribute only applies to <code>text</code> and
+   <code>password</code> input types. In particular, it does not apply
+   to the date-related, time-related, and numeric field types, nor to
+   the <code>email</code> type. When this attribute is specified, the
+   server must not submit a form with the control having more than the
+   specified number of characters (<a
+   href="#ERROR_TOO_LONG">ERROR_TOO_LONG</a>).</dd>
+
+   <dt><code>readonly</code></dt>
+
+   <dd>This attribute only applies to <code>text</code>,
+   <code>password</code>, <code>email</code>, date-related,
+   time-related, and numeric input types, as well as the
+   <code>textarea</code> element. Specifically, it does not apply to
+   radio buttons, check boxes, file upload fields, <code>select</code>
+   elements (editable or not), or any of the button types; the
+   interface concept of "readonly" values does not apply to
+   button-like interfaces. (The DOM <code>readonly</code> attribute
+   obviously applies to the same set of types as the HTML
+   attribute.)</dd>
+
+  </dl>
+
+  <p>Other attributes not listed here retain the same semantics as in
+  HTML4.</p>
+
+  <h3 id="TOC25">2.5. The <code>pattern</code> attribute</h3>
+
+  <p>For the <code>text</code> type of the <code>input</code> element,
+  the <code>select</code> element when it has the new
+  <code>editable</code> attribute set, and the <code>textarea</code>
+  element, a new attribute, <code>pattern</code>, is introduced to
+  specify patterns that the strings must match.</p>
+
+  <p>When specified, the <code>pattern</code> attribute contains a
+  regular expression that the field's value must match before the form
+  may be submitted (<a
+  href="#ERROR_PATTERN_MISMATCH">ERROR_PATTERN_MISMATCH</a>).</p>
+
+  <pre class="example">
+&lt;label&gt; Credit Card Number:
+ &lt;input type="text" pattern="^[0-9]{10}$" name="cc" /&gt;
+&lt;/label&gt;
+</pre>
+
+  <p>The regular expression language used for this attribute is the
+  same as that defined in <a href="#refsECMA262">[ECMA262]</a>.</p>
+
+  <p>UAs must refuse to submit forms that contain fields whose values
+  do not match their patterns.</p>
+
+  <h3 id="TOC26">2.6. The <code id="required">required</code> attribute</h3>
+
+  <p>Form controls can have the <code>required</code> attribute
+  specified, to indicate that the user must enter a value into the
+  form control before submitting the form.</p>
+
+  <p>For check boxes, those with the type <code>hidden</code><!-- or
+  <code>output</code>-->, and disabled controls, the attribute has no
+  effect. The <code>required</code> attribute applies to all other
+  form controls. It <em>can</em> be used on controls with the
+  <code>readonly</code> attribute set; this may be useful in scripted
+  environments.</p>
+
+  <p>User agents must not submit forms that have form controls marked
+  as required that do not have values (<a
+  href="#ERROR_REQUIRED">ERROR_REQUIRED</a>). For radio buttons,
+  exactly one radio button from each set must be checked.</p>
+
+  <div class="example">
+   <p>Here is a form fragment showing two required fields and one
+   optional field. A user agent would not allow the user to submit the
+   form until the "name" and "team" fields were filled in.</p>
+   <pre>
+&lt;ul&gt;
+  &lt;li&gt;Name: &lt;input type="text" name="name" required="required" /&gt;&lt;/li&gt;
+  &lt;li&gt;Team:
+    &lt;select name="team" required="required"&gt;
+      &lt;option value="fox"&gt;The Foxes&lt;/option&gt;
+      &lt;option value="ferrets"&gt;The Ferrets&lt;/option&gt;
+      &lt;option value="kittens"&gt;The Kittens&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;li&gt;Comment: &lt;input type="text" name="comment" /&gt;&lt;/li&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+  </div>
+
+  <h3 id="TOC27">2.7. The <code>form</code> attribute</h3>
+
+  <p>All form controls can have the <code>form</code> attribute
+  specified. The <code>form</code> attribute gives the ID of the
+  <code>form</code> element the form control should be associated
+  with, and overrides the relationship between the form control and
+  any ancestor <code>form</code> element.</p>
+
+  <p>An element with a <code>form</code> attribute pointing to a
+  non-existent form is treated like an element with no
+  <code>form</code> element ancestor (even if it has such an
+  ancestor). Setting the form attribute to the empty string (as in
+  <code>form=""</code>) disassociates the form control from its
+  form.</p>
+
+  <p>When set on a <code>fieldset</code> element, this also changes
+  the association of any descendant form controls, unless they have
+  <code>form</code> attributes of their own.</p>
+
+  <p>When forms are submitted, reset, or have their form controls
+  enumerated through the DOM, only those controls associated with the
+  form are taken into account. A control can only be associated with
+  one form at a time.</p>
+
+  <div class="example">
+
+   <p>In this example, each row contains one form, even though it
+   would not normally be possible to have more than one form per
+   table if any of them span cells.</p>
+
+   <pre>
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th&gt;Name&lt;/th&gt;
+   &lt;th&gt;Value&lt;/th&gt;
+   &lt;th&gt;Action&lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td&gt;
+    &lt;form id="edit1" action="/edit" method="post"&gt;
+     &lt;input type="hidden" name="id" value="1"/&gt;
+     &lt;input type="text" name="name" value="First Row"/&gt;
+    &lt;/form&gt;
+   &lt;/td&gt;
+   &lt;td&gt;
+    &lt;input form="edit1" type="text" name="value"/&gt;
+   &lt;/td&gt;
+   &lt;td&gt;
+    &lt;input form="edit1" type="submit" name="Edit"/&gt;
+   &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;
+    &lt;form id="edit2" action="/edit" method="post"&gt;
+     &lt;input type="hidden" name="id" value="2"/&gt;
+     &lt;input type="text" name="name" value="Second Row"/&gt;
+    &lt;/form&gt;
+   &lt;/td&gt;
+   &lt;td&gt;
+    &lt;input form="edit2" type="text" name="value"/&gt;
+   &lt;/td&gt;
+   &lt;td&gt;
+    &lt;input form="edit2" type="submit" name="Edit"/&gt;
+   &lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+
+  </div>
+
+  <h3 id="TOC28">2.8. The <code>autocomplete</code> attribute</h3>
+
+  <p>All form controls except the various push button controls and
+  <code>hidden</code> <!--and <code>output</code>--> controls, can
+  have the <code>autocomplete</code> attribute set. The attribute
+  takes two values, <code>true</code> and <code>false</code>. The
+  default, when the attribute is not specified, is
+  <code>true</code>.</p>
+
+  <p>A true value means the UA is allowed to store the value entered
+  by the user so that if the user returns to the page, the UA can
+  prefill the form. A false value means that the UA must not
+  remember that field's value.</p>
+
+  <div class="example">
+   <p>Banks frequently do not want UAs to prefill login
+   information:</p>
+   <pre>
+&lt;p&gt;Account: &lt;input type="text" name="ac" autocomplete="false" /&gt;&lt;/li&gt;
+&lt;p&gt;PIN: &lt;input type="text" name="pin" autocomplete="false" /&gt;&lt;/li&gt;
+</pre>
+  </div>
+
+  <h3 id="TOC29">2.9. The <code>inputmode</code> attribute</h3>
+
+  <p>The <code>inputmode</code> attribute applies to the
+  <code>input</code> element when it has a <code>type</code> attribute
+  of <code>text</code>, <code>password</code>, or <code>email</code>,
+  to the <code>select</code> element when it has a the
+  <code>editable</code> attribute set, and to the
+  <code>textarea</code> element.</p>
+
+  <p>This attribute is defined to be exactly equivalent to the
+  <code>inputmode</code> attribute <a
+  href="http://www.w3.org/TR/2003/PR-xforms-20030801/sliceE.html">defined
+  in the XForms PR Draft</a>.</p>
+
+  <h3 id="TOC2A">2.10. The <code>help</code> attribute</h3>
+
+  <p>Any form control can have a <code>help</code> attribute
+  specified. This attribute contains a URI that the UA may use to
+  provide help information regarding the active field.</p>
+
+  <p>This specification does not specify how help information should
+  be used, but for example, the UA could show a small popup window if
+  the user focusses such a control and pressed the <kbd>F1</kbd> key,
+  or could show the help information in a sidebar while the relevant
+  control is focussed.</p>
+
+  <p class="note">This attribute is added mainly because XForms has
+  it, to show that it would be trivial to add to HTML as well.
+  However, there is some doubt that it is actually a useful feature.</p>
+
+  <h2 id="TOC3">3. Form Validation</h2>
+
+  <p>With the introduction of the various type checking mechanisms,
+  some way for scripting authors to hook into the type checking
+  process is required. This is provided by the FormError event
+  (<code>formerror</code>), of type <code>FormEvent</code>.</p>
+
+  <p>When a form is submitted, each control in that form, in document
+  order, is checked for validity. For each control that fails to
+  comply with its constraints, a <code>formerror</code> event should
+  be fired on the control.</p>
+
+  <p>The <code>onformerror</code> attribute (on <code>input</code>
+  elements) can be used to write handlers for this event.</p>
+
+<pre class="idl">
+/* Similar to the UIEvent interface */
+interface FormEvent : Event {
+  const unsigned short      ERROR_TYPE_MISMATCH            = 1;
+  const unsigned short      ERROR_RANGE_UNDERFLOW          = 2;
+  const unsigned short      ERROR_RANGE_OVERFLOW           = 3;
+  const unsigned short      ERROR_TOO_LONG                 = 4;
+  const unsigned short      ERROR_PATTERN_MISMATCH         = 5;
+  const unsigned short      ERROR_REQUIRED                 = 6;
+  const unsigned short      ERROR_USER_DEFINED             = 256;
+
+  readonly attribute long             validationError;
+  void               initFormEvent(in DOMString typeArg, 
+                                   in boolean canBubbleArg, 
+                                   in boolean cancelableArg, 
+                                   in long validationErrorArg);
+};
+</pre>
+
+  <p>The FormError event has contextual information, given by the
+  <code>validationError</code> attribute. It's value is one of the
+  <code>ERROR_XXX</code> constants.</p>
+
+  <dl>
+
+   <dt id="ERROR_TYPE_MISMATCH"> ERROR_TYPE_MISMATCH </dt>
+   <dd> The data entered does not match the type of the control. For
+   example, if the UA allows uninterpreted arbitrary text entry for
+   <code>expdate</code> fields, and the user has entered
+   <kbd>SEP02</kbd>, then this error code would be used. This code is
+   also used when the selected file in a file upload control does not
+   have an appropriate MIME type. </dd>
+
+   <dt id="ERROR_RANGE_UNDERFLOW"> ERROR_RANGE_UNDERFLOW </dt>
+   <dd> The numeric, date, or time value of a field with a
+   <code>minimum</code> attribute is lower than the minimum. </dd>
+
+   <dt id="ERROR_RANGE_OVERFLOW"> ERROR_RANGE_OVERFLOW </dt>
+   <dd> The numeric, date, or time value of a field with a
+   <code>maximum</code> attribute is higher than the maximum. </dd>
+
+   <dt id="ERROR_TOO_LONG"> ERROR_TOO_LONG </dt>
+   <dd> The value of a field with a <code>maxlength</code> attribute
+   is longer than the attribute allows. </dd>
+
+   <dt id="ERROR_PATTERN_MISMATCH"> ERROR_PATTERN_MISMATCH </dt>
+   <dd> The value of the field with a <code>pattern</code> attribute
+   doesn't match the pattern. </dd>
+
+   <dt id="ERROR_REQUIRED"> ERROR_REQUIRED </dt>
+   <dd> The field has the <code>required</code> attribute set but has no
+   value. </dd>
+
+   <dt id="ERROR_USER_DEFINED"> ERROR_USER_DEFINED </dt>
+   <dd> The field was marked invalid from script. </dd>
+
+  </dl>
+
+  <p>When the definitions above refer to elements that have an
+  attribute set on them, they do not refer to elements on which that
+  attribute is defined not to apply. For example, the
+  <code>ERROR_REQUIRED</code> code cannot be sent to an
+  <code>&lt;input type="checkbox"&gt;</code> element, even if that
+  element has the <code>required</code> attribute set, since
+  <code>required</code> doesn't apply to check boxes.</p>
+
+  <p>The FormError event bubbles. If a <code>formerror</code> event is
+  targetted at, or bubbles into, a form control with a
+  <code>form</code> attribute pointing to a valid form, it continues
+  bubbling not at the node's parent, but at the specified form
+  element.</p>
+
+  <p>The FormError event is cancellable. The default behaviour is
+  UA-specific, but is expected to consist of focussing the element,
+  and alerting the user that the entered value is unacceptable, in the
+  user's native language, and along with explanatory text saying
+  <em>why</em> the value is currently invalid. UAs would typically
+  only do this for the first form control found to be invalid; while
+  the event is dispatched to all invalid controls, it is simpler for
+  the user to deal with one error at a time.</p>
+
+  <p class="note">On-the-fly validation hooks will be provided as part
+  of a CSS or DOM module on Dynamic UI.</p>
+
+  <h2 id="TOC4">4. XML Submission</h2>
+
+  <p>This section defines the expected behaviour for step 3, "Step
+  three: Encode the form data set", of the submission algorithm
+  described in HTML4, for the form content type
+  <code>application/x-form-submission+xml</code>. The rest of the form
+  submission process progresses as described in the HTML
+  specification.</p>
+
+  <p>When the form's <code>enctype</code> attribute is set to this
+  value, the <code>method</code> attribute must specify a method that
+  expects a message entity (i.e., not 'GET'). If an unsuitable method
+  is given, or if no method is specified, the method is assumed to be
+  'POST'.</p>
+
+  <p>The message entity is an XML 1.0 document, encoded as UTF-8,
+  which has a root element named "submission" in no namespace. UA may
+  include an XML declaration but this is not necessary as it would be
+  redundant (the MIME type and version must not be changed from the
+  above values, and submission documents have no document type and
+  therefore are always standalone.).</p>
+
+  <p>Generally, for each successful control, in the order that the
+  controls are to be found in the original document, an element
+  <code>field</code> in no namespace is inserted, with an attribute
+  <code>name</code> having the name of the form control, and with the
+  element content being the value of the form control. Form controls
+  with multiple values result in multiple <code>field</code>
+  elements being inserted into the output, one for each value.</p>
+
+  <p>File controls are submitted using a <code>file</code> element
+  instead of a <code>field</code> element. The <code>file</code>
+  element has three attributes, <code>name</code>,
+  <code>filename</code>, and <code>type</code>. The <code>name</code>
+  attribute contains the name of the file control. The
+  <code>filename</code> attribute is optional and may contain the name
+  of the file. The <code>type</code> attribute is not optional and
+  must contain the MIME type of the file. The contents of the file are
+  base64 encoded and then included literally as content directly
+  inside the <code>file</code> element. As base64 data is
+  whitespace-clean, UAs may introduce whitespace into the
+  <code>file</code> element to ensure the submitted data has
+  reasonable line lengths. This is, however, completely optional. (It
+  is primarily intended to make it possible to write readable examples
+  of submission output.)</p>
+
+  <p>UAs may use either CDATA blocks, entities, or both in escaping
+  the contents of attributes and elements, as appropriate. The
+  resulting XML must be a well-formed XML instance.</p>
+
+  <p>Whitespace may be inserted around elements that are children of
+  the <code>submission</code> element in order to make the submitted
+  data easier to scan by eye. However, this is optional. Processors
+  should not be affected by such whitespace, or whitespace inside
+  <code>file</code> elements, when reading the submitted data back
+  from the XML instance. (Whitespace inside <code>field</code>
+  elements is significant, however.)</p>
+
+  <p>The following example illustrates
+  <code>application/x-form-submission+xml</code> encoding. Suppose we
+  have the following form:</p>
+
+<pre>
+ &lt;form action="http://server.com/cgi/handle"
+       enctype="application/x-form-submission+xml"
+       method="post"&gt;
+   &lt;p&gt;
+    &lt;label&gt; What is your name? &lt;input type="text" name="submit-name"/&gt; &lt;/label&gt;
+    &lt;label&gt; What files are you sending? &lt;input type="file" name="files"/&gt; &lt;/label&gt;
+    &lt;label&gt; When were they written? &lt;input type="date" name="stamp"/&gt; &lt;/label&gt;
+   &lt;input type="submit" value="Send"&gt; &lt;input type="reset"/&gt;
+ &lt;/form&gt;
+</pre>
+
+  <p>If the user enters "Larry" in the text input, selects the text
+  file "file1.txt", and picks an arbitrary date, the user agent might
+  send back the following data:</pre>
+
+<pre>
+   Content-Type: application/x-form-submission+xml
+
+   &lt;submission&gt;
+    &lt;field name="submit-name"&gt;Larry&lt;/field&gt;
+    &lt;file name="files" filename="file1.txt" type="text/plain;charset=iso-8859-1"&gt;
+     Y29udGVudHMgb2YgZmlsZTEudHh0
+    &lt;/file&gt;
+    &lt;field name="stamp"&gt;1979-04-13&lt;/field&gt;
+   &lt;/submission&gt;
+</pre>
+
+  <p>If the user selected a second (image) file "file2.png", and
+  changes the date, the user agent might construct the entity as
+  follows:</p>
+
+<pre>
+   Content-Type: application/x-form-submission+xml
+
+   &lt;submission&gt;
+    &lt;field name="submit-name"&gt;Larry&lt;/field&gt;
+    &lt;file name="files" filename="file1.txt" type="text/plain;charset=iso-8859-1"&gt;
+     Y29udGVudHMgb2YgZmlsZTEudHh0
+    &lt;/file&gt;
+    &lt;file name="files" filename="file2.png" type="image/png"$gt;
+     iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAABGdBTUEAAK
+     /INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwA
+     AAAGUExURQD/AAAAAG8DfkMAAAAMSURBVHjaYmAACDAAAAIAAU9tWeEAAA
+     AASUVORK5CYII=
+    &lt;/file&gt;
+    &lt;field name="stamp"&gt;1979-12-27&lt;/field&gt;
+   &lt;/submission&gt;
+</pre>
+
+  <p>Note how the content of the plain text attached file is
+  base64-encoded, despite being a plain text file. This preserves the
+  integrity of the file in cases where the MIME type is incorrect. It
+  also means that files with malformed content, for example a file
+  encoded as UTF-8 with stray continuation bytes, will be transmitted
+  faithfully instead of being re-encoded by the UA.</p>
+
+  <p>[after the document has been created, an onXMLSubmit event is
+  fired on the form with a mutable version of the document node of the
+  submission document as its context information. this could be passed
+  to an XSLT processor to turn the submision XML into a new
+  format.]</p>
+
+  <h2 id="TOC5">5. Dynamic Form Manipulation</h2>
+
+  <p>There are several aspects of XForms that have been traditionally
+  achieved using scripts. This section gives some samples that show
+  how to use existing DOM interfaces and scripting to replicate some
+  of this XForms functionality.</p>
+
+  <p class="note">The intent is that a future version of this
+  specification will change this section from giving examples to
+  specifying a formal interface that turns the most frequently used
+  blocks of code into standardised functions.</p>
+
+  <h3 id="TOC51">5.1. Repeating a block of form controls</h3>
+
+  <p>The following example shows how to use scripting to dynamically
+  add more rows to a form in a table.</p>
+
+  <pre>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Form Repeat Demo&lt;/title&gt;
+  &lt;script type="text/javascript" src="library.js"&gt;&lt;/script&gt;
+  &lt;script type="text/javascript"&gt;
+   var count = 1;
+   var template;
+   function init() {
+     template = repeatFormControlBlock(document.getElementById('row_1'), 'template');
+   }
+   function addRow(event) {
+     document.getElementById('data').appendChild(repeatFormControlBlock(template, ++count));
+   }
+   function deleteRow(event) {
+     row = event.target.parentNode.parentNode;
+     row.parentNode.removeChild(row);
+   }
+  &lt;/script&gt;
+ &lt;/head&gt;
+ &lt;body onload="init()"&gt;
+  &lt;form action="http://software.hixie.ch/utilities/cgi/test-tools/echo" method="post" enctype="multipart/form-data"&gt;
+   &lt;table&gt;
+    &lt;thead&gt;
+     &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Count&lt;/th&gt;
+      &lt;th&gt;&lt;/th&gt;
+     &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody id="data"&gt;
+     &lt;tr id="row_1"&gt;
+      &lt;td&gt;&lt;input type="text" name="name_1" value=""&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;input type="text" name="count_1" value="1"&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;input type="button" value="Delete Row" onclick="deleteRow(event)"&gt;&lt;/td&gt;
+     &lt;/tr&gt;
+    &lt;/tbody&gt;
+   &lt;/table&gt;
+   &lt;p&gt;
+    &lt;input type="button" onclick="addRow(event)" value="Add Row"&gt;
+   &lt;/p&gt;
+  &lt;/form&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+  <p>The above example assumes the following functions are available,
+  for example in an external script library.</p>
+
+  <pre>
+/* repeatFormControlBlock (Element, String) : Element */
+/* Takes a DOM element, clones it, resets any form controls within the
+ * cloned content to their initial values, changes their name and ID
+ * attributes by stripping everything from the last underscore to the
+ * end of the name and replacing it with the second argument, and
+ * returns the new element. */
+/* Callers are expected to take the return value and insert it into
+ * the parent of the first argument. */
+/* This implementation is specific to the HTML DOM and would not work
+ * for XHTML documents. It would be relatively simple to extend this
+ * function to cope with other cases such as that, as well as handling
+ * UA-specific requirements. Doing so is left as an exercise to the
+ * reader. */
+function repeatFormControlBlock(template, newID) {
+  // clone the node.
+  var newNode = template.cloneNode(true);
+  // walk the node, resetting form controls.
+  var node = newNode;
+  while (true) {
+    // reset the node
+    if (node instanceof HTMLOptionElement) {
+      node.selected = node.defaultSelected;
+    } else if (node instanceof HTMLInputElement) {
+      node.checked = node.defaultChecked;
+      node.value = node.defaultValue;
+    } else if (node instanceof HTMLTextAreaElement) {
+      node.value = node.defaultValue;
+    }
+    if (node instanceof HTMLSelectElement ||
+        node instanceof HTMLInputElement ||
+        node instanceof HTMLTextAreaElement ||
+        node instanceof HTMLButtonElement) {
+      node.name = _rename(node.name, '_', newID);
+    }
+    if (node instanceof HTMLElement) {
+      node.id = _rename(node.id, '_', newID);
+    }
+    // crawl
+    if (node.firstChild) {
+      node = node.firstChild;
+    } else {
+      while (!node.nextSibling) {
+        node = node.parentNode;
+        if (node == newNode) {
+          return newNode;
+        }
+      }
+      node = node.nextSibling;
+    }
+  }
+}
+
+function _rename(name, separator, suffix) {
+  // strip the current suffix if there is one
+  var pos = name.lastIndexOf(separator);
+  if (pos >= 0)
+    name = name.substring(0, pos);
+  // add the new suffix and return it
+  return name + separator + suffix;
+}
+</pre>
+
+  <h3 id="TOC52">5.2. Displaying alternative sections dynamically</h3>
+
+  <p>[...]</p>
+
+  <h3 id="TOC53">5.3. Keeping form controls synchronised</h3>
+
+  <p>[...]</p>
+
+  <h2 id="TOC6">6. Extensions to the HTML Level 2 DOM interfaces</h2>
+
+  <p>[...]</p>
+
+  <p>[.validate() method to force the form control to be validated and have onFormError events sent to it if appropriate]</p>
+  <p>[.selectedItems attribute for select elements]</p>
+  <p>[.markValid() and .markInvalid() methods to override the automatic type checking]
+
+  <h2 id="TOCA">A. XHTML Module Definition</h2>
+
+  <p>The Forms Extensions Module provides all of the forms features
+  found in HTML 4.0, plus the extensions described above.
+  Specifically, the Forms Extensions Module supports:</p>
+
+  <table class="moduledef" summary="Elements and Attributes for Forms Extensions Module">
+   <thead>
+    <tr>
+     <th>Elements</th>
+     <th>Attributes</th>
+     <th>Minimal Content Model</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>form</td>
+     <td>
+      <span class="collection"><a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      accept (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_ContentTypes">ContentTypes</a></span>),
+      accept-charset (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Charsets">Charsets</a></span>),
+      action* (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI">URI</a></span>),
+      method ("get"* | "post"),
+      enctype (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_ContentType">ContentType</a></span>)
+     </td>
+     <td>(Heading | List | Block - form | fieldset)*</td>
+    </tr>
+    <tr>
+     <td>input</td>
+     <td>
+      <span class="collection"><a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      accept (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_ContentTypes">ContentTypes</a></span>),
+      accesskey (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Character">Character</a></span>),
+      alt (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Text">Text</a></span>),
+      autocomplete ("true"* | "false"),
+      checked ("checked"),
+      disabled ("disabled"),
+      form (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF">IDREF</a></span>),
+      help (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI">URI</a></span>),
+      inputmode (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      maxlength (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      minimum (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      maximum (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      name (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      pattern (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      readonly ("readonly"),
+      required ("required"),
+      size (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      src (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI">URI</a></span>),
+      tabindex (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      type ("text"* | "password" | "checkbox" | "radio" | "button" | "submit" | "reset" | "file" | "hidden" | "image" | "datetime" | "date" | "expdate" | "time" | "number" | "integer" | "email"<!-- | "output"-->),
+      value (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+     </td>
+     <td>EMPTY</td>
+    </tr>
+    <tr>
+     <td>select</td>
+     <td>
+      <span class="collection"><a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      autocomplete ("true"* | "false"),
+      disabled ("disabled"),
+      editable ("editable"),
+      form (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF">IDREF</a></span>),
+      help (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI">URI</a></span>),
+      inputmode (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      multiple ("multiple"),
+      name (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      pattern (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      required ("required"),
+      size (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      tabindex (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>)
+     </td>
+     <td>(optgroup | option)*</td>
+    </tr>
+    <tr>
+     <td>option</td>
+     <td>
+      <span class="collection"><a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      disabled ("disabled"),
+      label (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Text">Text</a></span>),
+      selected ("selected"),
+      value (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>)
+     </td>
+     <td>PCDATA</td>
+    </tr>
+    <tr>
+     <td>textarea</td>
+     <td>
+      <span class="collection"><a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      accesskey (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Character">Character</a></span>),
+      autocomplete ("true"* | "false"),
+      cols (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      disabled ("disabled"),
+      form (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF">IDREF</a></span>),
+      help (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI">URI</a></span>),
+      inputmode (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      name (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      readonly ("readonly"),
+      required ("required"),
+      rows (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      tabindex (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      wrap ("soft"* | "hard")
+     </td>
+     <td>PCDATA</td>
+    </tr>
+    <tr>
+     <td>button</td>
+     <td>
+      <span class="collection"><a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      accesskey (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Character">Character</a></span>),
+      disabled ("disabled"),
+      form (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF">IDREF</a></span>),
+      help (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI">URI</a></span>),
+      name (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>),
+      tabindex (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Number">Number</a></span>),
+      type ("button" | "submit"* | "reset"),
+      value (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_CDATA">CDATA</a></span>)
+     </td>
+     <td>(PCDATA | Heading | List | Block - Form | Inline - Formctrl)*</td>
+    </tr>
+    <tr>
+     <td>fieldset</td>
+     <td>
+      <span class="collection"><a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      disabled ("disabled"),
+      help (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_URI">URI</a></span>),
+     </td>
+     <td>(PCDATA | legend | Flow)*</td>
+    </tr>
+    <tr>
+     <td>label</td>
+     <td>
+      <span class="collection"><a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      accesskey (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Character">Character</a></span>),
+      for (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF">IDREF</a></span>)
+     </td>
+     <td>(PCDATA | Inline - label)*</td>
+    </tr>
+    <tr>
+     <td>legend</td>
+     <td>
+      <span class="collection"><a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      accesskey (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Character">Character</a></span>)
+     </td>
+     <td>(PCDATA | Inline)*</td>
+    </tr>
+    <tr>
+     <td>optgroup</td>
+     <td>
+      <span class="collection"><a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_common_collection">Common</a></span>,
+      disabled ("disabled"),
+      label* (<span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Text">Text</a></span>)
+     </td>
+     <td>option*</td>
+    </tr>
+   </tbody>
+  </table>
+  <p>This module defines two content sets:</p>
+  <dl>
+   <dt>Form</dt>
+   <dd><span class="content">form | fieldset</span></dd>
+   <dt>Formctrl</dt>
+   <dd><span class="content">input | select | textarea | label | button</span></dd>
+  </dl>
+  <p>When this module is used, it adds the Form content set to the
+  Block content set and it adds the Formctrl content set to the Inline
+  content set as these are defined in the Text Module.</p>
+  <p>The Forms Extensions Module is a superset of the Forms and Basic
+  Forms modules. These modules may not be used together in a single
+  document type.</p>
+
+  <h2 id="TOCB">B. Attribute Summary</h2>
+
+  <p>The <code>input</code> element takes a large number of attributes
+  that do not always apply. The following table summarizes which
+  attributes apply to which input types.</p>
+
+  <table class="applies">
+   <thead>
+    <tr>
+     <th>type</th>
+     <th>text</th>
+     <th>password</th>
+     <th>checkbox</th>
+     <th>radio</th>
+     <th>button</th>
+     <th>submit</th>
+     <th>reset</th>
+     <th>file</th>
+     <th>hidden</th>
+     <th>image</th>
+     <th>datetime</th>
+     <th>date</th>
+     <th>expdate</th>
+     <th>time</th>
+     <th>number</th>
+     <th>integer</th>
+     <th>email</th>
+     <!-- <th>output</th> -->
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <th>accept</th>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>accesskey</th>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>alt</th>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>autocomplete</th>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>checked</th>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>disabled</th>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>form</th>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <!-- <td class="yes">Yes</td> -->
+    </tr>
+    <tr>
+     <th>help</th>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>inputmode</th>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>maxlength</th>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>minimum</th>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>maximum</th>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>name</th>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <!-- <td class="yes">Yes</td> -->
+    </tr>
+    <tr>
+     <th>pattern</th>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>readonly</th>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>required</th>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr class="deprecated">
+     <th>size</th>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>src</th>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <td class="no">-</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>tabindex</th>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <!-- <td class="no">-</td> -->
+    </tr>
+    <tr>
+     <th>value</th>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="no">-</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <td class="yes">Yes</td>
+     <!-- <td class="yes">Yes</td> -->
+    </tr>
+   </tbody>
+  </table>
+
+  <h2 id="TOCC">C. Relation to the CSS3 User Interface module</h2>
+
+  <p>CSS3 introduces a number of pseudo-classes for form controls.
+  Their relationship to the form controls described in this
+  specification is described here.</p>
+
+  <dl>
+
+   <dt>:enabled</dt>
+   <dd>Matches form control elements that do not have the
+   <code>disabled</code> attribute set.</dd>
+
+   <dt>:disabled</dt>
+   <dd>Matches form control elements that do have the
+   <code>disabled</code> attribute set.</dd>
+
+   <dt>:checked</dt>
+   <dd>Matches radio and check box form control elements that are
+   <code>checked</code>.</dd>
+
+   <dt>:indeterminate</dt>
+   <dd>Matches no HTML form control elements.</dd>
+
+   <dt>:default</dt>
+
+   <dd>Matches the button (if any) that will be selected if the user
+   presses the enter key (or some equivalent behavior on less typical
+   systems).</dd>
+
+   <dt>:valid</dt>
+   <dd>Matches form control elements that would not have the
+   <code>formerror</code> event fired at them if the form was
+   submitted.</dd>
+
+   <dt>:invalid</dt>
+   <dd>Matches form control elements that would have the
+   <code>formerror</code> event fired at them if the form was 
+   submitted.</dd>
+
+   <dt>:in-range</dt>
+   <dd>Matches numeric, date-related, or time-related form control
+   elements when the current value is type-correct, greater than or
+   equal to the minimum (if any), and less than or equal to the
+   maximum (if any).</dd>
+
+   <dt>:out-of-range</dt>
+   <dd>Matches numeric, date-related, or time-related form control
+   elements when the current value is type-correct, but either less
+   than the minimum or greater than the maximum.</dd>
+
+   <dt>:required</dt>
+   <dd>Matches form control elements that have the
+   <code>required</code> attribute set.</dd>
+
+   <dt>:optional</dt>
+   <dd>Matches form control elements that do not have the
+   <code>required</code> attribute set.</dd>
+
+   <dt>:read-only</dt>
+   <dd>Matches form control elements that have the
+   <code>readonly</code> attribute set.</dd>
+
+   <dt>:read-write</dt>
+   <dd>Matches form control elements that do not have the
+   <code>readonly</code> attribute set (including
+   <code>password</code> fields, although technically they should be
+   called "writeonly").</dd>
+
+  </dl>
+
+  <p>When the definitions above refer to elements that have an
+  attribute set on them, they do not refer to elements on which that
+  attribute is defined not to apply. For example, the
+  <code>:read-only</code> attribute cannot apply to a <code>&lt;input
+  type="radio"&gt;</code> element, even if that element has the
+  <code>readonly</code> attribute set, since <code>readonly</code>
+  doesn't apply to radio buttons.</p>
+
+  <h2 id="TOCD">D. References</h2>
+
+  <dl>
+   <dt id="refsRFC2119">[RFC2119]</dt>
+   <dd><cite><a href="http://www.ietf.org/rfc/rfc2119">Key words for use in RFCs to Indicate Requirement Levels</a></cite>, S. Bradner. IETF, March 1997. RFC2119 is available at http://www.ietf.org/rfc/rfc2119</dd>
+   <dt id="refsRFC822">[RFC822]</dt>
+   <dd><cite><a href="http://www.ietf.org/rfc/rfc822">Standard for the Format of ARPA Internet Text Messages</a></cite>, David H. Crocker. IETF, August 1982. RFC822 is available at http://www.ietf.org/rfc/rfc822</dd>
+   <dt id="refsISO8601">[ISO8601]</dt>
+   <dd><cite><a href="http://www.iso.ch/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=26780&ICS1=1&ICS2=140&ICS3=30">ISO8602:2000 Data elements and interchange formats -- Information interchange -- Representation of dates and times</a></cite>. ISO, December 2000. ISO8601 is available for purchase at http://www.iso.ch/</dd>
+   <dt id="refsECMA262">[EMCA262]</dt>
+   <dd><cite><a href="http://www.ecma.ch/ecma1/STAND/ECMA-262.HTM">ECMAScript Language Specification</a></cite>, Third Edition. European Computer Manufacturers Association, December 1999. This version of the ECMAScript Language is available at http://www.ecma.ch/ecma1/STAND/ECMA-262.HTM</dd>
+  </dl>
+
+  <h2 id="TOCE">E. Acknowledgements</h2>
+
+  <p>Thanks to H&aring;kon Wium Lie, Maciej Stachowiak, David Hyatt, Peter N Stark, and John Keiser for their comments.</p>
+  <p>Thanks to the XForms working group for unintentionally giving the incentive to develop this module.</p>
+
+ </body>
+</html>
+
+<!--
+.reset() in form controls, form
+session history interface
+submit event that takes a Document
+preprocess="xslt"
+initialising the data using an external file
+-->

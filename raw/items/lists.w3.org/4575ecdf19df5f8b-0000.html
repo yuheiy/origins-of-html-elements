@@ -1,0 +1,1146 @@
+<!-- received="Thu Jan  9 12:34:24 1992 EDT" -->
+<!-- sent="Thu, 9 Jan 92 12:34:24 GMT+0100" -->
+<!-- name="Tim Berners-Lee" -->
+<!-- email="timbl" -->
+<!-- subject="Re: Is there a paper which describes the www protocol?" -->
+<!-- id="9201091134.AA08666@ nxoc01.cern.ch " -->
+<!-- inreplyto="Is there a paper which describes the www protocol?" -->
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head><title>www-talk from January to February 1992: Re: Is there a paper which describes the www protocol?</title></head>
+<body>
+<h1>Re: Is there a paper which describes the www protocol?</h1>
+<strong>Tim Berners-Lee</strong> (<a href="mailto:timbl"><em>timbl</em></a>)<br>
+<em>Thu, 9 Jan 92 12:34:24 GMT+0100</em>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#0">[ date ]</a><a href="thread.html#0">[ thread ]</a><a href="subject.html#0">[ subject ]</a><a href="author.html#0">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0001.html">Tim Berners-Lee: "WorldWideWeb news: New software includes Gopher, News, Telnet access"</a>
+<!-- nextthread="start" -->
+</ul>
+<hr>
+<!-- body="start" -->
+<pre>
+Date: Thu, 9 Jan 92 12:34:24 GMT+0100
+From: timbl (Tim Berners-Lee)
+Message-Id: &lt;9201091134.AA08666@ nxoc01.cern.ch &gt;
+To: Mark Alexander Davis-Craig &lt;mad@merit.edu&gt;
+Subject: Re: Is there a paper which describes the www protocol?
+Cc: www-talk
+
+
+
+&gt; From: Mark Alexander Davis-Craig &lt;mad@merit.edu&gt;
+&gt; 
+
+&gt; I was looking through the web and found information on servers and
+&gt; clients.  I saw mention in the "History" section about wanting to
+&gt; develop a good protocol for information exchange, but haven't seen a
+&gt; paper specifically about the www protocol.  Is there one?  If not,
+&gt; could you describe it in some detail?
+
+You are right that the protocol documentation was not as good as it could
+have been. I have improved it. To save you browing through the web for it,
+I append to this message the information as plain text.
+
+&gt; I ask because we at the University of Michigan are evaluating www,
+&gt; wais, and gopher for campus-wide information delivery.
+&gt;
+
+I have no need to tell you what our suggestion would be!  The W3 architecure
+will give you (almost) everything you can get from WAIS and Gopher rolled into one.
+The trick is that almost anything is representable by hypertext links and index searches. The  
+Gopher menus and plain text, for example, are both special cases of hypertext.  As it is more  
+work to do the job for hypertext in general, we do not yet have software to cover as many  
+platforms as Gopher, for example. However, when we do, the W3 system will be more flexible.   
+Running a W3 server on top of a WAIS or Gopher world in fact makes these worlds subsets of the W3  
+web. The reverse is not possible because the WAIS and Gopher information models are not flexible  
+enough
+to encompass the W3 model.
+
+That said, if you want an indexer we can only recommend the wais code (or NeXT code) and we do  
+not yet supply (as Gopher does) an off-the shelf index server for either of those indexes yet. It  
+is easy to do, however, with our generic server code.
+
+Please keep me informed of your thinking, whether you plan to go W3 or Gopher.  If we can help  
+you set up a demonstration system, then mail me.
+ 
+
+&gt;Thanks in advance.
+&gt;  -----------------------------------------------------------------
+&gt;  Mark Davis-Craig, Merit/MichNet Technical Support Consultant
+&gt;  mad@merit.edu        mad@merit.bitnet        (313)-936-2110
+
+
+Tim Berners-Lee                       timbl@info.cern.ch
+World Wide Web project                (NeXTMail is ok)	
+CERN                                  Tel: +41(22)767 3755
+1211 Geneva 23, Switzerland           Fax: +41(22)767 7155
+
+_________________________________ protocol notes follow ___________
+
+
+                                         The HTTP Protocol As Implemented In W3
+
+
+                          HTTP AS IMPLEMENTED IN WWW
+                                       
+
+   This document defines the Hypertext Transfer protocol  (HTTP) as currently
+   implemented by the WorldWideWeb initaitive software. This is a subset of the
+   proposed full HTTP protocol.  No client profile information is transferred
+   with the query. Future HTTP protocols will be back-compatible with this
+   protocol.
+   
+
+    The protocol  uses the normal internet-style telnet protocol style on a
+   TCP-IP link. The following describes how a client acquires a (hypertext)
+   document from an HTTP server, given an HTTP document address .
+   
+
+Connection
+
+   The client makes a TCP-IP connection to the host using the domain name or IP
+   number , and the port number  given in the address.
+   
+
+    During development, the default HTTP TCP port number is 2784 -- this will
+   change when an official port number is allocated.
+   
+
+    The server accepts the connection.
+   
+
+    Note: HTTP currently runs over TCP, but could run over any
+   connection-oriented service.   The interpretation of the protocol below in
+   the case of a sequenced packet service (such as DECnet(TM) or ISO TP4) is
+   that that the request should be one TPDU, but the repose may be many.
+   
+
+Request
+
+   The client sends a document request consisting of a line of ASCII characters
+   terminated by a CR LF (carriage return, line feed) pair. A well-behaved
+   server will not require the carriage return character.
+   
+
+    This request consists of the word "GET", a space, the document address ,
+   omitting the "http:, host and port parts when they are the coordinates just
+   used to make the connection. (If a gateway is being used, then a full
+   document address may be given specifying a different naming scheme).
+   
+
+    The search functionality of the protocol lies in the ability of the
+   addressing syntax to describe a search on a named index .
+   
+
+    A search should only be requested by a client when the index document
+   itself has been descibed as an index using the  ISINDEX tag .
+   
+
+Response
+
+   The response to a simple GET request is a message in hypertext mark-up
+   language ( HTML ). This is a byte stream of ASCII characters.
+   
+
+    Lines shall be delimited by an optional carriage return followed by a
+   mandatory line feed chararcter. The client should not assume that the
+   carriage return will be present.  Lines may be of any length. Well-behaved
+   servers should retrict line length to 80 characters excluding the CR LF
+   pair.
+   
+
+    The format of the message is HTML - that is, a trimmed SGML document. Note
+   that this format allows for menus and hit lists to be returned as hypertext.
+   It also allows for plain ASCII text to be returned following the  PLAINTEXT
+   tag .
+   
+
+    The message is terminated by  the closing of the connection by the server.
+   
+
+    Well-behaved clients will read the entire document as fast as possible. The
+   client shall not wait for user action (output paging for example) before
+   reading the whole of the document.  The server may impose a timeout of the
+   order of 15 seconds on inactivity.
+   
+
+    Error responses are supplied in human readable text in HTML syntax. There
+   is no way to distinguish an error response from a satisfactory response
+   except for the content of the text.
+   
+
+Disconnection
+
+   The TCP-IP connection is broken by the server when the whole document has
+   been transferred.
+   
+
+    The client may abort the transfer by breaking the connection before this,
+   in which case the server will not record any error condidtion.
+   
+
+    Requests are idempotent .  The server need not store any information about
+   the request after disconnection.
+   
+
+    _________________________________________________________________
+   
+
+                                                                         Tim BL
+                                                                               
+
+                               W3 NAMING SCHEMES
+                                       
+
+   (See also: a discussion of design issues involved , BNF syntax , W3
+   background)
+   
+
+    The format of a hypertext name consists of the name of the naming
+   sub-scheme to be used, then a name in a format particular to that subscheme,
+   then an optional anchor identifier within the document. For example, the
+   format is for all internet-based access methods:
+   
+
+      scheme : // host.domain:port / path / path  # anchor
+   
+
+    A suffix # anchor id allows one to refer to a particular anchor within a
+   document.
+   
+
+    A suffix ? followed by words separated by + signs  allows one to seach an
+   index (see details ).
+   
+
+    References from one document to another with a similar name may be
+   abbreviated to a relative name . This imposes certain restrictions on the
+   way that the "path" is represented.
+   
+
+    A special format is used to represent a search on an index . See also: the
+   full BNF description , about escaping illegal characters .
+   
+
+Examples
+
+
+         <a href="file://cernvax.cern.ch/usr/lib/WWW/defaut.html#123">file://cernvax.cern.ch/usr/lib/WWW/defaut.html#123</a>
+
+   This is a fully qualified file name, referring to a document in the file
+   name space of the given internet node, and an imaginary anchor 123 within
+   it.
+   
+
+
+         #greg
+
+   This refers to anchor "greg" in the same document as that in which the name
+   appears.
+   
+
+Naming sub-schemes
+
+   Different schemes usually use different protocols on the network. The format
+   of the address after the scheme name is a function of the particular scheme.
+   In practice, all internet-based schemes have a common format for the node
+   name and port.   Schemes currently defined are as follows, with links to
+   more details.
+   
+
+  file                    Access is provided to files, using whatever means the
+                         browser and/or gateways have to reach files on obscure
+                         machines.
+                         
+
+  news                    Access is provided to news articles, and newsgroups,
+                         normally using the NNTP protocol.
+                         
+
+  http                    Access is provided to any other information using the
+                         HTTP search and retrieve protocol . The internal
+                         addressing of the information system is mapped onto a
+                         W3 path.
+                         
+
+  telnet                  Access is provided by an interactive telnet session.
+                         This is provided ONLY as an interface to other
+                         existing online systems which cannot or have not been
+                         mapped onto the W3 space.
+                         
+
+  gopher                  Access is provided using the "gopher" protocol. The
+                         gopher protocol is similar to HTTP but uses separate
+                         concepts of menus and text files rather than
+                         hypertext.
+                         
+
+   Other schemes we foresee are wais and x500.  Systems (such as WAIS) which
+   are not currently accessed directly be W3 servers may be accessed though
+   gateways, in which case the document address is encoded within the http
+   address of the document in the gateway.  Browsers which do not have the
+   ability to use certain protocols may (in principle) be configured to
+   automaticaly use certain gateways for certain addressing schemes.
+   
+
+    This will allow, for example, simple PC-based clients to follow links
+   through X500 name servers.
+   
+
+                                RELATIVE NAMING
+                                       
+
+   The address of a hypertext document is normally given within the context of
+   another hypertext document. Where the addresses of the two documents are the
+   similar, this allows only the difference between the two names to be given,
+   saving space. An example is the address of the destination of a hypertext
+   link , which is specified relative to the source document address.
+   
+
+    (A futher practical advantage is that a group of documents may be
+   transmitted without internal changes, or accessed using more than one
+   address.)
+   
+
+    In the WWW address format , the rules for relative naming are:
+   
+
+       If the "scheme" parts  are different, the whole absolute address must be
+          given. Other wise, the scheme is omitted, and:
+          
+
+       If the "host" and/or "port" parts are the different, the host name and
+          all the rest of the address must be given. The host name may be given
+          using internet hostname conventions, ie domains may be omitted where
+          different. This is not very well defined:  one tends to assume that
+          if any dot is present, then the full domain name is being given, up
+          to the root (.) domain, while if there are no dots, the domain is the
+          same as that of the hostname part of the the base address.
+          
+
+       If the access and host parts are the same, then the path may be given
+          with the unix convention, including the use of  ".." to mean indicate
+          deletion of a path element. Within the path:
+          
+
+       If a leading slash is present, the path is absolute. Otherwise:
+          
+
+       The last part of the path of the base address (e.g. the filename of the
+          current document) is removed, and the given relative address appended
+          in its place.
+          
+
+       Within the result,  all occurences "xxx/.."  are recursively removed,
+          where xxx is one path element (directory).
+          
+
+   The use of the slash "/" and double dot ".." in this case must be respected
+   by all servers. If necessary, this may mean converting their local
+   representations in order that these characters should not appear within path
+   elements (see "escaping").
+   
+
+                          ADDRESS FOR AN INDEX SEARCH
+                                       
+
+   If a given hypertext node is an index, or the server has an index associated
+   with it, then a search may be done on that index by suffixing the name of
+   the index with a list of keywords, after a question mark:
+   
+
+
+        address_of_index ? keywordlist
+
+   The address of the index is a normal hypertext address. In the keuwordlist,
+   multiple keywords are separated by plus signs (+) .  (See BNF syntax
+   description .)  The resulting string still does not contain any spaces. It
+   may be considered to be the hypertext address of a document which is the
+   result of making the keyword search on the index. Normally, if the search
+   was successful, the document returned will contain anchors leading to other
+   documents which match the selection criteria.
+   
+
+    The search method, and the logical and lexical functions, weights, etc
+   applied to the keywords will depend on the index address.  One actual index
+   may have several hypertext addresses,  which when searched on will behave in
+   different ways. For example, one may allow a search on author-given keywords
+   only, while another may be a full text search.  These things particular to
+   an index should be descibed in the hypertext page for the index node itself
+   (or in linked documents). For example, a server may allow specific boolean
+   search combinations may be represented by the words "and", "or" and "not".
+   
+
+Example:
+
+
+                <a href="http://cernvm/FIND/?sgml+cms">http://cernvm/FIND/?sgml+cms</a>
+
+   indicates the result of perfoming a search for keywords "sgml" and "cms" on
+   the index <a href="http://cernvm/FIND/">http://cernvm/FIND/</a>.
+   
+
+                                HTTP ADDRESSING
+                                       
+
+   With an access code of http:,  a protocol introduced for  the WWW initiative
+   is used to acquire data from a server. This is the "Hypertext Transfer
+   protocol", HTTP , a simple search and retrieve (S and R) protocol.
+   
+
+    The syntax of an http address is, with [] indicating optional parts (see
+   BNF description ),
+   
+
+
+        http : // hostname [ : port ] / path [ ? searchwords ]
+
+   for example, the following are valid addresses:
+   
+
+
+        <a href="http://info.cern.ch/hypertext/WWW/TheProject.html">http://info.cern.ch/hypertext/WWW/TheProject.html</a>
+
+        <a href="http://crnvmc.cern.ch/FIND?sgml+examples">http://crnvmc.cern.ch/FIND?sgml+examples</a>
+
+   HTTP addresses conform to the WWW conventions,  including the possibility of
+   using the search format . The significance of the items in the path part of
+   the document name is completely up to the server. Different paths may be
+   used to select different databases, different views of the same database,
+   etc.
+   
+
+  hostname                This is the name of the server in internet form. A
+                         numeric form (e.g. 128.141.201.74) may be used, by the
+                         domain name form (e.g. info.cern.ch) is preferred. The
+                         hostname is mandatory.
+                         
+
+  port                    This is a numeric port number. If a non-numeric
+                         string is used, it must be a defined service name.
+                         Note that as there is no central repository for
+                         service names (they are defined locaaly for each
+                         host), a service name is NOT an appropriate way to
+                         specify a port number for a hypertext address. If the
+                         port number is omitted the preceding colon must also
+                         be omitted. In this case, port number 2784 is assumed
+                         [This may change!].
+                         
+
+  See also: WWW addressing in general , HTTP protocol .
+                         
+
+   _________________________________________________________________
+   
+
+                                                                         Tim BL
+                                                                               
+
+                             W3 ADDRESSES OF FILES
+                                       
+
+   The format of a hypertext reference to a file is an extension of the unix
+   naming system. The full explicit format is:
+   
+
+       file :  //  node /  directories /  name
+   
+
+    The actual protocols used by the client depend on the implementation of the
+   browser and the environment. Typically, the browser will check to see
+   whether the node is the local node,  or a node for which files are available
+   mounted in some form of distributed file system.  If neither of these are
+   the case, then the browser may try rpc, anonymous FTP or other protocols.
+   
+
+Examples
+
+
+         <a href="file://cernvax.cern.ch/usr/lib/WWW/defaut.html">file://cernvax.cern.ch/usr/lib/WWW/defaut.html</a>
+
+   This is a fully qualified file name.
+   
+
+
+         fred.html
+
+   This relative name , used within a file, will refer to a file of the same
+   node and directory as that file, but the name fred.html.
+   
+
+Improvements : Directory access
+
+   The final file name should be optional. If the address ends with a '/', the
+   browser should retrieve the contents of the specified directory and generate
+   a page of virtual hypertext pointing to its contents. In addition, it could
+   display an information file contained in that directory, if any is present.
+   Suggested file names to search for in order : README.html, *README*.html,
+   README, *README*, *readme*.
+   
+
+   
+
+   
+
+                        HYPERTEXT ADDRESS FOR NET NEWS
+                                       
+
+   The format of a hypertext reference to information in the internet/usenet
+   news system can take any of the following forms:
+   
+
+  news: newsgroup         This refers to a list of articles currently available
+                         in the given newsgroup. The newsgroup is a series of
+                         alphanumeric characters and dots.
+                         
+
+  news:*                  This refers to a list of valid newsgroups.
+                         
+
+  news: message_id        This refers to a given article explicitly. The
+                         message_id is optionally surrounded by angle brackets,
+                         and must contain an @ sign.
+                         
+
+  
+
+                         
+
+   Possible extensions to this are more generous wildcarding for the list of
+   newsgroups. It takes too long to load the whole list, and it would be more
+   useful to be able to browse through a set of newsgroups.
+   
+
+    There is no way of referring to "unread" articles. Keeping track of this is
+   the job of the browser.
+   
+
+Examples
+
+
+         news:&lt;12345678@cernvax.cern.ch&gt;
+
+         <a href="news:12345678@cernvax.cern.ch">news:12345678@cernvax.cern.ch</a>
+
+   These addresses both refer to the same (imaginary!) article by its unique
+   message-id.
+   
+
+
+
+<a href="news:comp.sys.next.announce">news:comp.sys.next.announce</a>
+
+   This refers to a list of articles in the newsgroup comp.sys.next.announce.
+   The list is, of course, a list of references to article by message-id.
+   
+
+                               TELNET ADDRESSING
+                                       
+
+   A telnet address is a spcecial case of a W3 address.
+   
+
+    When a telnet address is used, information can only be rertrieved using an
+   interactive telnet session. This has the disadvantage that information
+   cannot be indexed, searched, etc automatically, nor can it be gatewayed into
+   other systems.  The telnet addressing form is used to allow a pointer to
+   information systems such as library information systems which have not been
+   gatewayed into the web properly yet.
+   
+
+    The syntax is, with [] indicating optional parts (see full BNF)
+   
+
+
+        telnet : / /  [ user @ ] host  [ : port ]
+
+   There should be no spaces. For example, the following are valid telnet
+   addresses:
+   
+
+
+        <a href="telnet://www@info.cern.ch:23">telnet://www@info.cern.ch:23</a>
+
+        <a href="telnet://www@info.cern.ch">telnet://www@info.cern.ch</a>
+
+        <a href="telnet://info.cern.ch">telnet://info.cern.ch</a>
+
+  user                   is the optional name of the user to be used for login.
+                         If the username  is omitted, then so must be the "@"
+                         sign. This is equivalent to the argument used with the
+                         -l option on the ucb telnet command. When the username
+                         is omitted, some access servers will prompt for a
+                         username and password.
+                         
+
+  host                   This is the name of the server in internet form. A
+                         numeric form (e.g. 128.141.201.74) may be used, by the
+                         domain name form (e.g.  info.cern.ch) is preferred.
+                         The host is mandatory.
+                         
+
+  port                   This is a numeric port number. If a non-numeric string
+                         is used, it must be a defined service name. Note that
+                         as there is no central repository for service names
+                         (they are defined locaaly for each host),  a service
+                         name is NOT an appropriate way to specify a port
+                         number for a hypertext address. If the port number is
+                         omitted the preceding colon must also be omitted. In
+                         this case, port number 23 is assumed.
+                         
+
+   _________________________________________________________________
+   
+
+                                                                         Tim BL
+                                                                               
+
+                               GOPHER ADDRESSING
+                                       
+
+   Gopher addresses indicate that the gopher protocol should be used to access
+   the information.  The Gopher protocol is a simple internet protocol similar
+   to HTTP . It allows the transfer of menus or plain text files.  (HTTP
+   expresses both menus and plain text files as special cases of hypertext
+   files). See the gopher protocol notes .
+   
+
+    The syntax is, with [] indicating optional parts (see BNF )
+   
+
+
+        <a href="gopher://">gopher://</a> hostname [: port ] [/gtype/ [selector] ] [ ? search ]
+
+   There should be no spaces. For example, the following are valid addresses:
+   
+
+
+        <a href="gopher://gopher.micro.umn.edu:70">gopher://gopher.micro.umn.edu:70</a>
+
+        <a href="gopher://gopher.micro.umn.edu:70/1/">gopher://gopher.micro.umn.edu:70/1/</a>
+
+        <a href="gopher://gopher.micro.umn.edu:70">gopher://gopher.micro.umn.edu:70</a>
+
+   The W3 address for a gopher item may be derived from the fields of a gopher
+   menu line which has the format
+   
+
+  host                    This is the name of the server in internet form. A
+                         numeric form (e.g. 128.141.201.74) may be used, by the
+                         domain name form (e.g. info.cern.ch) is preferred. The
+                         hostname is mandatory.
+                         
+
+  port                    This is a numeric port number. If a non-numeric
+                         string is used, it must be a defined service name.
+                         Note that as there is no central repository for
+                         service names (they are defined locaaly for each
+                         host), a service name is NOT an appropriate way to
+                         specify a port number for a hypertext address. If the
+                         port number is omitted the preceding colon must also
+                         be omitted. In this case, port number 70 is assumed.
+                         
+
+  gtype                   This is a gopher item type number, a (hopefully
+                         printable!) ASCII character.  Currently these types
+                         are all ASCII decimal digit characters. Character "0"
+                         (hex 30)  signifies a plain text file. Character "1"
+                         signifies a Menu.  Character "7" signifies a
+                         searchable index.  Character "8" should not be used in
+                         a W3 address: use telnet addressing instead.  In
+                         general W3 terms, the type is the first part of the
+                         path. The rest of the path is the gopher selector
+                         string. The type field is a hint to the client as to
+                         how to represent the anchor, and how to follow it.
+                         
+
+  selector                This is the string to be sent to the gopher server to
+                         identify the information required.
+                         
+
+   _________________________________________________________________
+   
+
+                                                                         Tim BL
+                                                                               
+
+                          ESCAPING ILLEGAL CHARACTERS
+                                       
+
+   The W3 address syntax allows a path to contain most printable ASCII
+   characters, but some are inevitably used for punctuation are excluded. W3
+   addresses are sometimes used to represent addresses in some other space.
+   This happens when an HTTP server, for example, uses file names as its
+   document names, or when addresses from some other protocol (Gopher, WAIS,
+   etc) are mapped into the W3 web.
+   
+
+    In these cases, a convention is normally used to map illegal characters in
+   these "foreign" names onto the allowed set.
+   
+
+    In the case of an HTTP server,  any mapping may be used.
+   
+
+    A suitable convention is that a percent sign (%) followed by two
+   hexadecimal digits (0-9 or a-f)  stands for the single character with ASCII
+   hexadecimal code represented by those two digits (Most significant digit
+   first).
+   
+
+    A percent sign itself must therefore be represented by %25, as 25 hex is
+   the ASCII code for "%".
+   
+
+    _________________________________________________________________
+   
+
+                                                                         Tim BL
+                                                                               
+
+                            W3 ADDRESS SYNTAX: BNF
+                                       
+
+   This is a BNF-like description of the W3 addressing syntax . We use a
+   vertical line "|" to indicate alternatives, and [brackets] to indicate
+   optional parts.   Spaces are representational only: no spaces are actually
+   allowed within a W3 address. Single letters stand for single letters. All
+   words of more than one letter below are entites described elsewhere in the
+   syntax description.  (Entity names are here linked to their definitions,
+   probably making this unreadable with the line mode browser.)
+   
+
+    An absolute address specified in a link is an anchoraddress . The address
+   which is passed to a server is a docaddress .
+   
+
+  anchoraddress           docaddress [ # anchor ]
+                         
+
+  docaddress              httpaddress | fileaddress | newsaddress |
+                         telnetaddress | gopheraddress
+                         
+
+  httpaddress             h t t p :   / / hostport  [  / path ] [ ? search ]
+                         
+
+  fileaddress             f i l e : / / host / path
+                         
+
+  newsaddress            n e w s : groupart
+                         
+
+  groupart               * | group | article
+                         
+
+  group                  ialpha [ . group ]
+                         
+
+  article                xalphas @ host
+                         
+
+  telnetaddress           t e l n e t : / / [ user @ ] hostport
+                         
+
+  gopheraddress           g o p h e r : / / hostport  [/ gtype  [ / selector ]
+                         ] [ ? search ]
+                         
+
+  hostport                host [ : port ]
+                         
+
+  host                    hostname | hostnumber
+                         
+
+  hostname                ialpha [  .  hostname ]
+                         
+
+  hostnumber              digits . digits . digits . digits
+                         
+
+  port                    digits
+                         
+
+  selector                path
+                         
+
+  path                    void |  xalphas  [  / path ]
+                         
+
+  search                  xalphas [ + search ]
+                         
+
+  user                    xalphas
+                         
+
+  anchor                  xalphas
+                         
+
+  gtype                   xalpha
+                         
+
+  xalpha                  alpha | $ | _ | @ | ! | % | ^ | | * |  (  |  ) | . |
+                         digit
+                         
+
+  xalphas                 xalpha [ xalphas ]
+                         
+
+  ialpha                 alpha [ xalphas ]
+                         
+
+  alpha                   a | b | c | d | e | f | g | h | i | j | k | l | m | n
+                         | o | p | q | r | s | t | u | v | w | x | y | z | A |
+                         B | C | D | E | F | G | H | I | J | K | L | M | N  | O
+                         | P | Q | R | S | T | U | V | W | X | Y | Z
+                         
+
+  digit                   0 |1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+                         
+
+  digits                  digit [ digits ]
+                         
+
+  alphanum                alpha | digit
+                         
+
+  alphanums               alphanum [ alphanums ]
+                         
+
+  void
+                         
+
+  See also: General description of this syntax, Escaping conventions.
+                         
+
+   _________________________________________________________________
+   
+
+                                                                         Tim BL
+                                                                               
+
+                                     HTML
+                                       
+
+   The WWW system uses marked-up text to represent a hypertext document for
+   transmision over the network. The hypertext mark-up language is an SGML
+   format. This defines the basic syntax used. The particular language, the set
+   of tags and the rules about their use, and their significance is not part of
+   the SGML standard. There being no standard on this, we have adopted a set
+   which seems sensible. We call them HTML -- hypertext markup language. HTML
+   is not an alternative to SGML, it is a particular format within the SGML
+   rules (an SGML "DTD"). HTML parsers should ignore tags which they do not
+   understand, and ignore attributes which they do not understand of tags which
+   they do understand.
+   
+
+    See also:
+   
+
+  The tags                A list of the tags used in HTML with their
+                         significance.
+                         
+
+  Example                 A file containing a variety of tags used for test
+                         purposes.
+                         
+
+Default text
+
+   Unless otherwise defined by tags, text is transmitted as a stream of lines.
+   The division of the stream of characters into lines is arbitrary, and only
+   made in order to allow the text to be passed through systems which can only
+   handle text with a limited line length. The recommended line length for
+   transmission is 80 characters. The division into lines has no significance
+   (except in the case of  example sections and PLAINTEXT ) apart from
+   indicating a word end. Line breaks between tags have no significance.
+   
+
+                                   HTML TAGS
+                                       
+
+   This is a list of tags used in the HTML language.  Each tag starts with a
+   tag opener (a less than sign) and ends with a tag closer (a greater than
+   sign).   Many tags have corresponding closing tags which identical except
+   for a slash after the tag opener. (For example, the TITLE tag).
+   
+
+    Some tags take parameters, called attributes. The attributes are given
+   after the tag, separated by spaces. Certain attributes have an effect simply
+   by their presence, others are followed by an equals sign and a value. (See
+   the Anchor tag, for example). The names of tags and attributes are not case
+   sensitive: they may be in lower, upper, or mixed case with exactly the same
+   meaning.  (In this document they are generally represented in upper case.)
+   
+
+    Currently HTML documents are transmitted without the normal SGML framing
+   tags, but if these are included parsers will ignore them.
+   
+
+Title
+
+   The title of a document is given between title tags:
+   
+
+
+        &lt;TITLE&gt; ... &lt;/TITLE&gt;
+
+   The text between the opening and the closing tags is a title for the
+   hypertext node. There should only be one title in any node. It should
+   identify the content of the node in a fairly wide context, and should
+   ideally fit on one line.
+   
+
+    The title is not strictly part of the text of the document, but is an
+   attribute of the node. It may not contain anchors, paragraph marks, or
+   highlighting. the title may be used to identify the node in a history list,
+   to label the window displaying the node, etc. It is not normally displayed
+   in the text of a document itself. Contrast titles with headings .
+   
+
+Next ID
+
+   This tag takes a  single attribute which is the number of the next
+   document-wide numeric identifier to be allocated (not good SGML). Note that
+   when modifying a document,  old anchor ids should not be reused, as there
+   may be references stored elsewhere which point to them.  This is read and
+   generated by hypertext editors. Human writers of HTML usually use mnemonic
+   alpha identifiers.  Browser software may ignore this tag. Example of use:
+   
+
+
+        &lt;NEXTID 27&gt;
+
+Base Address
+
+   Anchors specify addresses of other documents, in a from relative to the
+   address of the current document. Normally, the address of a document is
+   known to the browser because it was used to access the document. However, is
+   a document is mailed, or is somehow visible with more than one address (for
+   example, via its filename and also via its library name server catalogue
+   number), then the browser needs to know the base address in order to
+   correctly deduce external document addresses.
+   
+
+    The format of this tag is not yet specified.
+   
+
+Anchors
+
+   The format of an anchor is as follows:
+   
+
+
+        &lt;A NAME=xxx HREF=XXX&gt; ... &lt;/A&gt;
+
+   The text between the opening tag and the closing tag is either the start or
+   destination (or both) of a link. Attributes of the anchor tag are as
+   follows.
+   
+
+  HREF                    If the HREF attribute is present, the anchor is
+                         senstive text: the start of a link. If the reader
+                         selects this text,  he should be presented with
+                         another document whose network address is defined by
+                         the value of the HREF attribute . The format of the
+                         network address is specified elsewhere . This allows
+                         for the form HREF=#identifier to refer to another
+                         anchor in the same document. If the anchor is in
+                         another document, the atribute is a relative name ,
+                         relative to the documents address (or specified base
+                         address if any).
+                         
+
+  NAME                    The attribute NAME allows the anchor to be the
+                         destination of a link. The value of the parameter is
+                         that part of a hypertext address which follows the
+                         hash sign.
+                         
+
+  TYPE                    An attribute TYPE may give the relationship described
+                         by the hyertext link. The type is expressed by a
+                         string for extensibility.  Strings for types with
+                         particular semantics will be registered by the W3
+                         team. The default relationship if none other is given
+                         is void.
+                         
+
+   All attributes are optional, although one of NAME and HREF is necessary for
+   the anchor to be useful.
+   
+
+IsIndex
+
+   This tag informs the reader that the document is an index document. As well
+   as reading it, the reader may use a keyword search.
+   
+
+    Format:
+   
+
+
+        &lt;ISINDEX&gt;
+
+   The node may be queried with a keyword search by suffixing the node address
+   with a question mark, followed by a list of keywords separated by plus
+   signs. See the network address format.
+   
+
+Plaintext
+
+   This tag indicates that all following text is to be taken litterally, up to
+   the end of the file.  Plain text is designed to be represented in the same
+   way as example XMP text, with fixed width character and significant line
+   breaks. Format:
+   
+
+
+                &lt;PLAINTEXT&gt;
+
+   This tag allows the rest of a file to be read efficiently without parsing.
+   Its presence is an optimisation. There is no closing tag.
+   
+
+Example sections
+
+   These styles allow text of fixed-width characters to be embedded absolutely
+   as is into the document. The format is:
+   
+
+
+        &lt;LISTING&gt;
+
+                ...
+
+        &lt;/LISTING&gt;
+
+   The text between these tags is to be portrayed in a fixed width font, so
+   that any formatting done by character spacing on successive lines will be
+   maintained. Between the opening and closing tags:
+   
+
+       The text may contain any ISO Latin printable characters, including the
+          tag opener, so long as it does not contain the closing tag in full.
+          
+
+       Line boundaries are significant, and are to be interpreted as a move to
+          the start of a new line.
+          
+
+       The ASCII Horizontal Tab (HT) character should be interpreted as the
+          smallest positive nonzero number of spaces which will leave the
+          number of characters so far on the line as a multiple of 8. Its use
+          is not recommended however.
+          
+
+   The LISTING tag is portrayed so that at least 132 characters will fit on a
+   line.  The XMP tag is portrayed in a font so that at least 80 characters
+   will fit on a line but is otherwise identical to LISTING. The examples of
+   markup are here given using the XMP tag.
+   
+
+Paragraph
+
+   This tag indicates a new paragraph. The exact representation of this
+   (indentation,  leading, etc) is not defined here, and may be a function of
+   other tags, style sheets etc. The format is simply
+   
+
+
+        &lt;P&gt;
+
+   (In SGML terms, paragraph elements are transmitted in minimised form).
+   
+
+Headings
+
+   Several levels (at least six) of heading are supported. Note that a
+   hypertext document tends to need less levels of  heading than a normal
+   document whose only structure is given by the nesting of headings. H1 is the
+   highest level of heading, and is recommened for the start of a hypertext
+   node.   It is suggested that the first heading be one suitable for a reader
+   who is already browsing in related information, in contrast to the title tag
+   which should identify the node in a wider context.
+   
+
+
+        &lt;H1&gt;, &lt;H2&gt;, &lt;H3&gt;, &lt;H4&gt;, &lt;H5&gt;, &lt;H6&gt;
+
+   These tags are kept as defined in the CERN SGML guide. Their definition is
+   completely historical, deriving from the AAP tag set.  A difference is that
+   HTML documents allow headings to be terminated by  closing tags:
+   
+
+
+        &lt;H2&gt;Second level heading&lt;/h2&gt;
+
+Highlighting
+
+   The highlighted phrase tags may occur in normal text, and may be nested. For
+   each opening tag there must follow a corresponding closing tag. NOT
+   CURRENTLY USED.
+   
+
+
+
+        &lt;HP1&gt;...&lt;/HP1&gt;   &lt;HP2&gt;... &lt;/HP2&gt; etc.
+
+Glossaries
+
+
+   A glosary (or definition list) is a list of paragraphs each of which has a
+   short title alongside it.  Apart from glossaries, this format is useful for
+   presenting a set of named elements to the reader. The format is as follows:
+   
+
+
+
+        &lt;DL&gt;
+
+        &lt;DT&gt;Term&lt;DD&gt;definition pagagraph
+
+        &lt;DT&gt;Term2&lt;DD&gt;Definition of term2
+
+        &lt;/DL&gt;
+
+Lists
+
+
+   A list is a sequence of paragraphs, each of which is preceded by a special
+   mark or sequence number. The format is:
+   
+
+
+
+        &lt;UL&gt;
+
+        &lt;LI&gt; list element
+
+        &lt;LI&gt; another list element ...
+
+        &lt;/LI&gt;
+
+   The opening list tag (UL for an unordered list, OL for an ordered one) must
+   be immediately followed by the first list element. The representation of the
+   list is not defined here, but a bulleted list for unordered lists,  and a
+   sequence of numbered paraghraphs for an ordered list would be quite
+   appropriate.
+   
+
+    "OL" IS NOT CURRENTLY USED
+
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#0">[ date ]</a><a href="thread.html#0">[ thread ]</a><a href="subject.html#0">[ subject ]</a><a href="author.html#0">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0001.html">Tim Berners-Lee: "WorldWideWeb news: New software includes Gopher, News, Telnet access"</a>
+<!-- nextthread="start" -->
+</ul>
+</body>
+</html>

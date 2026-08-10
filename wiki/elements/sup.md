@@ -10,7 +10,7 @@ HTML+のDTDが一般テキストでも許可した`SUP`をHTML 3.0へ引き継�
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、superscriptを表す。単なる表示上の上下配置ではなく、表記規則上superscriptとなる内容に使う。 [一次定義](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements)（2026-08-09確認）
+WHATWG HTML Living Standardでは、superscriptを表す。単なる表示上の上下配置ではなく、表記規則上superscriptとなる内容に使う。 [HTML Living Standard](../../raw/html-living-standard/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -42,15 +42,15 @@ HTML 3.0系列、国際化系列、HTML 3.2の間は個別採用因果が未確�
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1993-11-08 | HTML+ §12 | 一次仕様・提案 | 数学式で`SUP`をsuperscriptとして使用する。 | [一次資料](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html) | 2026-08-09 |
-| 1994-09-09 | Murray Maloney, “Re: HTML 3.0 Process” | HTML-WG mailing list（Calgary大学保存） | `SUB`／`SUP`をmathだけでなく一般テキストでも使えるinline要素にするよう提案する。 | [保存資料](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/340.html) | 2026-08-10 |
-| 1994-09-12 | Dave Raggett, “Re: HTML 3.0 Process” | HTML-WG mailing list（Calgary大学保存） | HTML+ DTDがordinary textで`SUB`／`SUP`を許可し、HTML 3.0でも同じ設計が有用だと述べる。 | [保存資料](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html) | 2026-08-10 |
-| 1995 | HTML 3.0 font style elements | W3C保存の失効草案 | 一般テキスト用`SUP`を定義する。 | [一次資料](https://www.w3.org/MarkUp/html3/emphasis.html) | 2026-08-10 |
-| 1995-09-25 | `draft-ietf-html-i18n-01` | IETF Internet-Draft | 一般テキストの国際化要求から`SUP`を導入する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01) | 2026-08-09 |
-| 1997-01 | RFC 2070 §4.2 | 一次仕様・提案 | 一般テキストでも必要なsuperscriptとして追加する。 | [一次資料](https://www.rfc-editor.org/rfc/rfc2070.html) | 2026-08-09 |
-| 1997-01-14 | HTML 3.2 | 一次仕様・提案 | `SUP`を採録する。 | [一次資料](https://www.w3.org/TR/REC-html32) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1993-11-08 | [HTML+ §12](../../raw/html-plus/htmlplus_45.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)） | 一次仕様・提案 | 数学式で`SUP`をsuperscriptとして使用する。 | 2026-08-09 |
+| 1994-09-09 | [Murray Maloney, “Re: HTML 3.0 Process”](../../raw/items/ksi.cpsc.ucalgary.ca/c7b8d712c333da86-340.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/340.html)） | HTML-WG mailing list（Calgary大学保存） | `SUB`／`SUP`をmathだけでなく一般テキストでも使えるinline要素にするよう提案する。 | 2026-08-10 |
+| 1994-09-12 | [Dave Raggett, “Re: HTML 3.0 Process”](../../raw/items/ksi.cpsc.ucalgary.ca/d5cc8c2805e835e8-361.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html)） | HTML-WG mailing list（Calgary大学保存） | HTML+ DTDがordinary textで`SUB`／`SUP`を許可し、HTML 3.0でも同じ設計が有用だと述べる。 | 2026-08-10 |
+| 1995 | [HTML 3.0 font style elements](../../raw/html-3.0/emphasis.html)（[公開元](https://www.w3.org/MarkUp/html3/emphasis.html)） | W3C保存の失効草案 | 一般テキスト用`SUP`を定義する。 | 2026-08-10 |
+| 1995-09-25 | [`draft-ietf-html-i18n-01`](../../raw/rfc2070-html-internationalization/c9a35dcf095ac764-draft-ietf-html-i1.html)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01)） | IETF Internet-Draft | 一般テキストの国際化要求から`SUP`を導入する。 | 2026-08-09 |
+| 1997-01 | [RFC 2070 §4.2](../../raw/rfc2070-html-internationalization/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)） | 一次仕様・提案 | 一般テキストでも必要なsuperscriptとして追加する。 | 2026-08-09 |
+| 1997-01-14 | [HTML 3.2](../../raw/html-3.2/index.html)（[公開元](https://www.w3.org/TR/REC-html32)） | 一次仕様・提案 | `SUP`を採録する。 | 2026-08-09 |
 
 ## 確度
 

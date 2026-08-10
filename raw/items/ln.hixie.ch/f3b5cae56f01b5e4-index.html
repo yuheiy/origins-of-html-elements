@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html lang="en-GB-x-Hixie">
+ <head>
+  <meta name="viewport" content="initial-scale=1.0">
+  <link rel="stylesheet" href="/resources/style/2010/">
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss/html">
+  <link rel="pingback" href="http://ln.hixie.ch/">
+  <link rel="icon" href="/resources/images/astrophy/16-a">
+  <link rel="author" href="http://ian.hixie.ch/">
+  <title>Hixie's Natural Log: HTML 8000</title>
+ </head>
+ <body>
+  <header>
+   <hgroup>
+    <h1><span class="domain"><!--
+    --><span class="subdomain"><span class="site-label-ln">log<sub>e</sub></span></span><!--
+    --><span class="dot">.</span><!--
+    --><span class="hixie">hixie</span><!--
+    --><span class="dot">.</span><!--
+    --><span class="ch"><span class="c">c</span>h</span><!--
+    --></span></h1>
+    <h2>Hixie's Natural Log</h2>
+   </hgroup>
+  </header>
+
+  <article>
+   <h3 title="413926333">
+    <a href="?start=1372461305&amp;count=1" rel="bookmark">2013-06-28 23:15 UTC</a>
+    HTML 8000
+   </h3>
+<p>Today we reached revision 8000 of the HTML standard. We started tracking revisions in March 2006, about two years after we started work on HTML in the WHATWG, which itself was about 6 months after we first started the work on updating HTML (when we first started, we called the work &quot;XForms Basic&quot;, because we were trying to show that you could do much of what XForms did, by just extending plain old HTML &mdash; that work eventually made it into the forms section of the current HTML standard).
+<p>That&#39;s an average of three checkins a day, every day, for over seven years! That&#39;s what progress looks like. :-) Some checkins are trivial one-character typo fixes, some, like today&#39;s r8000, are big multi-thousand-line diffs (r8000 integrates the new &lt;template&gt; element into HTML, based on a proposal by Rafael (of Google) and Tony (of Microsoft), and implemented already in Chrome and Firefox).
+<p>As of right now my metrics tell me there&#39;s 1199 feedback e-mails remaining to process, and 156 bugs. So still lots of work to do.
+<p><figure><a href="http://whatwg.org/html"><img src="http://www.whatwg.org/images/logo"></a><figcaption><a href="http://whatwg.org/html">HTML Standard</a></figcaption></figure>
+   <!--  RDF for trackback autodiscovery:
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+               xmlns:dc="http://purl.org/dc/elements/1.1/"
+               xmlns:tb="http://madskills.com/public/xml/rss/module/trackback/">
+      <rdf:Description
+          about="http://ln.hixie.ch/?start=1372461305&amp;count=1"
+          dc:identifier="http://ln.hixie.ch/?start=1372461305&amp;count=1"
+          dc:title="HTML 8000"
+          dc:date="2013-06-28T23:15:05+00:00"
+          tb:ping="http://software.hixie.ch/utilities/cgi/pingback-proxy/trackback-to-pingback/http%253A%252F%252Fln.hixie.ch%252F%2Chttp%253A%252F%252Fln.hixie.ch%252F%253Fstart%253D1372461305%2526count%253D1"/>
+      </rdf:RDF>
+    -->
+  </article>
+
+  <nav>
+   <div class="jump">
+    <form action="./" method="GET">
+     <p>
+      <label>
+       Jump to
+       <select name="start">
+        <option value="0">Latest</option>
+        <option value="1696014234">2023-09-29 19:03 UTC - Meeting philosophy</option>
+        <option value="1691780719">2023-08-11 19:05 UTC - The Spectrum of Openness</option>
+        <option value="1674863881">2023-01-27 23:58 UTC - Deciding which bugs to fix</option>
+        <option value="1660174115">2022-08-10 23:28 UTC - Flutter: Static analysis of sample code snippets in API docs</option>
+        <option value="1637381157">2021-11-20 04:05 UTC - Assertions</option>
+        <option value="1623051423">2021-06-07 07:37 UTC - Extracts from a private Q&amp;A retrospective about the WHATWG</option>
+        <option value="1610654145">2021-01-14 19:55 UTC - Ask for forgiveness, not permission</option>
+        <option value="1528498856">2018-06-08 23:00 UTC - Indexing into a string</option>
+        <option value="1515099369">2018-01-04 20:56 UTC - Flutter: Negative margins</option>
+        <option value="1502748706">2017-08-14 22:11 UTC - Flutter: So what'd I miss?</option>
+        <option value="1483667371">2017-01-06 01:49 UTC - Tolerance</option>
+        <option value="1470157939">2016-08-02 17:12 UTC - Flutter: Hot reload</option>
+        <option value="1464379708">2016-05-27 20:08 UTC - Flutter: Embrace the yak shave</option>
+        <option value="1463779425">2016-05-20 21:23 UTC - Flutter at Google I/O</option>
+        <option value="1462558100">2016-05-06 18:08 UTC - Flutter's mahogany staircase</option>
+        <option value="1461348863">2016-04-22 18:14 UTC - Flutter: Performance and testing</option>
+        <option value="1459065018">2016-03-27 07:50 UTC - Flutter: Developer experience</option>
+        <option value="1452649501">2016-01-13 01:45 UTC - Flutter: Accessibility</option>
+        <option value="1396241966">2014-03-31 04:59 UTC - Looping constructs</option>
+        <option value="1372461305" selected="selected">2013-06-28 23:15 UTC - HTML 8000</option>
+        <option value="1363672582">2013-03-19 05:56 UTC - DRM</option>
+        <option value="1351100586">2012-10-24 17:43 UTC - Consensus</option>
+        <option value="1344621190">2012-08-10 17:53 UTC - Replacing HTML</option>
+        <option value="1330147628">2012-02-25 05:27 UTC - Living Standards</option>
+        <option value="1311447733">2011-07-23 19:02 UTC - Improving on HTML</option>
+        <option value="1296711456">2011-02-03 05:37 UTC - Script execution order post-mortem</option>
+        <option value="1270240159">2010-04-02 20:29 UTC - Acid3 update for :link/:visited privacy changes</option>
+        <option value="1265967771">2010-02-12 09:42 UTC - Consistency</option>
+        <option value="1263974578">2010-01-20 08:02 UTC - T-Mobile makes no sense</option>
+        <option value="1262824431">2010-01-07 00:33 UTC - Phone &quot;support&quot;</option>
+        <option value="1256285491">2009-10-23 08:11 UTC - Zarro Boogs</option>
+        <option value="1253571952">2009-09-21 22:25 UTC - Different perspectives in the Web standards community, part 2</option>
+        <option value="1252309022">2009-09-07 07:37 UTC - She's so adorable, she has her own magazine</option>
+        <option value="1240208625">2009-04-20 06:23 UTC - Wolff has ruined my life</option>
+        <option value="1237798220">2009-03-23 08:50 UTC - SacrÃ© manteau!</option>
+        <option value="1234235516">2009-02-10 03:11 UTC - Bike light recommendation: BR Lights C2-K</option>
+        <option value="1232754792">2009-01-23 23:53 UTC - Disclosure</option>
+        <option value="1232666113">2009-01-22 23:15 UTC - Different perspectives in the Web standards community</option>
+        <option value="1230170410">2008-12-25 02:00 UTC - Give me my sandbox back</option>
+        <option value="1021042338">Start</option>
+       </select>
+      </label>
+      <input type="hidden" name="order" value="-1">
+      <input type="hidden" name="count" value="1">
+      <input type="submit" value="Go &#x21A0;">
+     </p>
+    </form>
+   </div>
+   <div class="options">
+    <form action="./" method="GET">
+     <p>
+      <input type="hidden" name="start" value="1396241966">
+      <input type="hidden" name="order" value="-1">
+      <input type="hidden" name="count" value="1">
+      <input type="submit" value="Newer &#x21A9;">
+     </p>
+    </form>
+    <form action="./" method="GET">
+     <p>
+      <input type="hidden" name="start" value="1363672582">
+      <input type="hidden" name="order" value="-1">
+      <input type="hidden" name="count" value="1">
+      <input type="submit" value="Older &#x21AA;">
+     </p>
+    </form>
+    <form action="./" method="GET">
+     <p>
+      <input type="hidden" name="start" value="1372461305">
+      <input type="hidden" name="order" value="1">
+      <input type="hidden" name="count" value="1">
+      <input type="submit" value="Reverse &#x21A5;">
+     </p>
+    </form>
+    <form action="./" method="GET">
+     <p>
+      <input type="hidden" name="start" value="1372461305">
+      <input type="hidden" name="order" value="-1">
+      <label>
+       Show up to
+       <input type="number" name="count" value="1" size="3" min=1 max=5>
+       posts
+      </label>
+      <input type="submit" value="Update">
+     </p>
+    </form>
+   </div>
+  </nav>
+
+  <!-- AGE -->
+  <script src="/resources/scripts/age.js"></script>
+  <script>
+   var headers = document.getElementsByTagName('H3');
+   for (var i = 0; i < headers.length; ++i) {
+     if (headers[i].title) {
+       headers[i].title = age(headers[i].title);
+     }
+   }
+   document.body.className += " aged";
+  </script>
+
+  <footer>
+   <p>
+    <a href="./">Home</a> -
+    <a href="?command=index">Index</a> -
+    <a href="/rss/html">RSS</a> -
+    <a href="?command=login">Log In</a>
+   </p>
+   <p class="dh-ad"><span><a href="http://www.dreamhost.com/r.cgi?529"><span>Carbon Neutral</span> <span>Hosting by DreamHost</span></a></span></p>
+  </footer>
+ </body>
+</html>
+

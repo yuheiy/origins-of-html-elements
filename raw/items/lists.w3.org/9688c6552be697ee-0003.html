@@ -1,0 +1,142 @@
+<!-- received="Tue Oct 29 10:03:11 1991 EDT" -->
+<!-- sent="Tue, 29 Oct 91 10:03:11 GMT+0100" -->
+<!-- name="Tim Berners-Lee" -->
+<!-- email="timbl" -->
+<!-- subject="Re: status. Re: X11 BROWSER for WWW" -->
+<!-- id="9110290903.AA07413@ nxoc01.cern.ch " -->
+<!-- inreplyto="status. Re: X11 BROWSER for WWW" -->
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head><title>www-talk from September to October 1991: Re: status. Re: X11 BROWSER for WWW</title></head>
+<body>
+<h1>Re: status. Re: X11 BROWSER for WWW</h1>
+<strong>Tim Berners-Lee</strong> (<a href="mailto:timbl"><em>timbl</em></a>)<br>
+<em>Tue, 29 Oct 91 10:03:11 GMT+0100</em>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#3">[ date ]</a><a href="thread.html#3">[ thread ]</a><a href="subject.html#3">[ subject ]</a><a href="author.html#3">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0004.html">Tim Berners-Lee: "Telnet access to W3 information server"</a>
+<li> <strong>Previous message:</strong> <a href="0002.html">Steve Dieringer: "add www-talk"</a>
+<!-- nextthread="start" -->
+</ul>
+<hr>
+<!-- body="start" -->
+<pre>
+Date: Tue, 29 Oct 91 10:03:11 GMT+0100
+From: timbl (Tim Berners-Lee)
+Message-Id: &lt;9110290903.AA07413@ nxoc01.cern.ch &gt;
+To: connolly@pixel.convex.com, www-talk
+Subject: Re: status. Re: X11 BROWSER for WWW 
+
+Dan,
+
+&gt; I've made some tangible progress on the X11 browser, so I though 
+
+&gt; I'd let you know.
+&gt; ...
+&gt; This code is not in any shape to distribute, or even show anybody.
+&gt; But it works, and it's pretty speedy. That's enough to encourage me  
+&gt; to polish it off.
+
+Sounds like great progress! The TCL sounds interesting -- where did  
+you get it? 
+
+
+&gt; [If you wan't my stuff, you'll have to be C++ capable. I can't
+&gt; think in C any more. :-]
+
+Don't worry - we can handle C++, although for the line mode browser  
+we wanted portability into places where C++ could not reach. That's  
+why the common code (in WWW/Implementation) is all in C. Believe me,  
+after writing the NeXT browser in Objective-C it was a wrench to  
+conclude that it would have to be deobjectified.
+
+&gt; If you could round up some info on exactly what I can expect to see  
+&gt; in an HTML file, and some idea of how you want it formatted [I have  
+&gt; the HTML doc and the LineMode browser, but if you've got time to
+&gt; give me a little more info...] I'll be ready to tackle that pretty  
+&gt; soon.
+
+You ask for info on exactly what you can expect to find in an HTML  
+file, but you've read the two HTML files about HTML.  What is missing  
+from there?
+
+Here is some discussion about the tags -- where it's not in  
+<a href="http://info.cern.ch/hypertext/WWW/MarkUp/Tags.html">http://info.cern.ch/hypertext/WWW/MarkUp/Tags.html</a> I have updated  
+that document now.
+
+Most of the tags are just style tags: this goes for the headings H1  
+to H6, the lists UL and OL with list elements LI, the glossary DL  
+with elements DT and DD.
+
+&lt;TITLE&gt; ..&lt;TITLE&gt; is designed to be used for putting in the top  
+banner of a window, or using as the window  name. It also is what you  
+would use in a history list. It shouldn't be displayed in the text  
+itself, as usually there is a &lt;H1&gt; heading atteh top of the text  
+anyway. A difference is that thet title is designed to make sense out  
+of context, whereas the heading is within context. For example,
+a title might be "Formatting Characters for Printf -- C reference  
+manual" whereas the heading may just be "Formatting characters".
+
+The base address tag is not used, nor is highlighting HP1 etc.
+
+Anchors are used!  The REL attribute is NOT used.
+
+&lt;ISINDEX&gt; is sent by servers to indicate that they will accept a  
+search given this document name plus keywords. It turns on a search  
+panel when the document is the main window.  An even better  
+implementation would have a keyword field at the bottom of the text  
+window if the document is a searchable index.  That would make the  
+document more self-contained as an item in the user's eyes, and  
+reduce screen clutter.
+
+&lt;NEXTID&gt; can be ignored by browsers, only needed for editors.
+
+&lt;XMP&gt; and &lt;LISTING&gt; are used to indicate inserted literal text.
+To make life easier for those writing documents (and because we don't  
+have entities in the code yet) they are special in that EVERYTHING is  
+litteral text until the closing tag - so one can use XMP for giving
+examples of HTML for example.  (We really need an escaping method -  
+the next parser will have simpl entities like "&amp;lt." for "&lt;".)
+Within XMP or LISTING, newlines are significant (and mean "new  
+line"!)
+
+&lt;PLAINTEXT&gt; is used to indicate that the rest of the file is in fact
+just ASCII. It turns off SGML parsing completely. It's a fudge for
+the moment, until we have the document format negociation.
+______________________________________
+
+        Structure of documents:
+
+In writing a new generic parser, I wondered whether your text object  
+will store the nested structure of a document. At the moment, the  
+document is a linear sequence of styles: you can't have lists within  
+lists, etc. Ideally, it would be able to handle this - although its  
+more difficult for a human writer to handle when formatting the  
+document. I would in fact prefer, instead of &lt;H1&gt;, &lt;H2&gt; etc for  
+headings [those come from the AAP DTD] to have a nestable  
+&lt;SECTION&gt;..&lt;/SECTION&gt; element, and a generic &lt;H&gt;..&lt;/H&gt; which at any  
+level within the sections would produce the required level of  
+heading.
+
+For a browser, it is quite satisfactory to flatten the structure back  
+into a sequence of styles, but for an editor it isn't. Are you going  
+to go for editing capability?
+
+Tim
+
+PS: Shall I put you on the www-talk list?
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#3">[ date ]</a><a href="thread.html#3">[ thread ]</a><a href="subject.html#3">[ subject ]</a><a href="author.html#3">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0004.html">Tim Berners-Lee: "Telnet access to W3 information server"</a>
+<li> <strong>Previous message:</strong> <a href="0002.html">Steve Dieringer: "add www-talk"</a>
+<!-- nextthread="start" -->
+</ul>
+</body>
+</html>

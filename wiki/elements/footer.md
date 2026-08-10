@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、最も近い祖先sectioning content、該当する祖先がなければ`body`のfooterを表す。通常は著者、関連文書、著作権等、そのsectionについての情報を含む。[一次定義](https://html.spec.whatwg.org/multipage/sections.html#the-footer-element)（2026-08-10確認）
+WHATWG HTML Living Standardでは、最も近い祖先sectioning content、該当する祖先がなければ`body`のfooterを表す。通常は著者、関連文書、著作権等、そのsectionについての情報を含む。[HTML Living Standard](../../raw/html-living-standard/sections.html)（[公開版](https://html.spec.whatwg.org/multipage/sections.html#the-footer-element)、2026-08-10確認）
 
 ## HTMLへの導入
 
@@ -36,15 +36,15 @@ WHATWG HTML Living Standardでは、最も近い祖先sectioning content、該�
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2004-08-26 | `<section>` and headings | WHATWG mailing list | Grahamがsite-wide要素とpage固有contentを区別するsingle-purpose elementとして`footer`を求めたこと。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html) | 2026-08-10 |
-| 2004-08-29 | `<section>` and headings | WHATWG mailing list | Hicksonが`footer`を候補として挙げ、一般的な`div`のpseudo-semantic用途を減らす目的を説明したこと。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html) | 2026-08-10 |
-| 2004-11-12 | Re: `<section>` and headings | WHATWG mailing list | `footer`をsectionのfooterとしてsectioning modelへ組み込んだこと。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html) | 2026-08-10 |
-| 2004-12-08 | Web Applications 1.0 | WHATWG保存Working Draft | `footer`を最も近いancestor section、なければpageのfooterとして定義したこと。 | [一次資料](https://web.archive.org/web/20041210054847id_/http://www.whatwg.org/specs/web-apps/current-work/#footer) | 2026-08-10 |
-| 2005-04-05 | Re: `<section>` and headings and other threads | WHATWG mailing list | 当時の仕様にある語彙が典型的siteのmarkup、特に`div`濫用の調査から直接得られたという編集者の説明。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html) | 2026-08-10 |
-| 2005-09-01 | Web Applications 1.0 | WHATWG保存Early Working Draft | sectionに関する著者・著作権等の情報を表す`footer`。 | [一次資料](https://whatwg.org/specs/web-apps/2005-09-01/#the-footer) | 2026-08-09 |
-| 2005-12 | Web Authoring Statistics: Classes | Googleによる当時のusage調査（保存複製） | 既存`footer` classとHTML5 `footer`の対応。 | [一次資料](https://web.archive.org/web/20060101000000id_/http://code.google.com/webstats/2005-12/classes.html) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2004-08-26 | [`<section>` and headings](../../raw/items/lists.whatwg.org/3410681618b3e6ea-001989.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html)） | WHATWG mailing list | Grahamがsite-wide要素とpage固有contentを区別するsingle-purpose elementとして`footer`を求めたこと。 | 2026-08-10 |
+| 2004-08-29 | [`<section>` and headings](../../raw/items/lists.whatwg.org/15a13e1b313b3b1f-002134.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html)） | WHATWG mailing list | Hicksonが`footer`を候補として挙げ、一般的な`div`のpseudo-semantic用途を減らす目的を説明したこと。 | 2026-08-10 |
+| 2004-11-12 | [Re: `<section>` and headings](../../raw/items/lists.whatwg.org/2787ce0070a2766d-002362.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)） | WHATWG mailing list | `footer`をsectionのfooterとしてsectioning modelへ組み込んだこと。 | 2026-08-10 |
+| 2004-12-08 | [Web Applications 1.0](../../raw/whatwg-web-apps-history/47bdd5e05dea69cc-current.html)（[公開元](https://web.archive.org/web/20041210054847id_/http://www.whatwg.org/specs/web-apps/current-work/#footer)） | WHATWG保存Working Draft | `footer`を最も近いancestor section、なければpageのfooterとして定義したこと。 | 2026-08-10 |
+| 2005-04-05 | [Re: `<section>` and headings and other threads](../../raw/items/lists.whatwg.org/55c518e04004c276-045650.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html)） | WHATWG mailing list | 当時の仕様にある語彙が典型的siteのmarkup、特に`div`濫用の調査から直接得られたという編集者の説明。 | 2026-08-10 |
+| 2005-09-01 | [Web Applications 1.0](../../raw/whatwg-web-apps-history/f8bdeadb28b78825-2005-.html)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-footer)） | WHATWG保存Early Working Draft | sectionに関する著者・著作権等の情報を表す`footer`。 | 2026-08-09 |
+| 2005-12 | [Web Authoring Statistics: Classes](../../raw/items/web.archive.org/88fd2ea9e5c46f6b-classes.html)（[公開元](https://web.archive.org/web/20060101000000id_/http://code.google.com/webstats/2005-12/classes.html)） | Googleによる当時のusage調査（保存複製） | 既存`footer` classとHTML5 `footer`の対応。 | 2026-08-09 |
 
 ## 確度
 

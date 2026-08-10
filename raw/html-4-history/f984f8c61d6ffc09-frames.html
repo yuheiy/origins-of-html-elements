@@ -1,0 +1,709 @@
+<!-- $Id: frames.src,v 1.28 1997/07/08 09:49:31 lehors Exp $ -->
+<head>
+<title>Frames in HTML documents</title>
+<LINK rel="next" SRC="../interact/intertop.html">
+<LINK rel="prev" SRC="graphics.html">
+<LINK rel="STYLESHEET" href="../style/default.css" type="text/css">
+</head>
+<body>
+<div class="navbar">
+<center><a href="graphics.html">previous</a> &nbsp; <a href="../interact/intertop.html">next</a> &nbsp; <a href="../contents.html">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center><hr>
+</div>
+
+<H1 align="center">Frames<!-- Multi-view presentation of documents
+--><a name="h-8.3">&nbsp;</a></H1>
+<div class="subtoc"><p><strong>Contents</strong>
+<ol>
+<li><a href="frames.html#h-8.3.1">Layout of frames</a>
+<ol>
+<li><a href="frames.html#h-8.3.1.1">The <samp class="einst2">FRAMESET</samp>
+      element</a>
+<li><a href="frames.html#h-8.3.1.2">The <samp class="einst2">FRAME</samp>
+element</a>
+</ol>
+<li><a href="frames.html#h-8.3.2">Specifying target frame information</a>
+<ol>
+<li><a href="frames.html#h-8.3.2.1">Setting the default target for links</a>
+<li><a href="frames.html#h-8.3.2.2">Target semantics</a>
+<li><a href="frames.html#h-8.3.2.3">Target names</a>
+</ol>
+<li><a href="frames.html#h-8.3.3">Alternate content</a>
+<ol>
+<li><a href="frames.html#h-8.3.3.1">The <samp class="einst2">NOFRAMES</samp>
+element</a>
+</ol>
+<li><a href="frames.html#h-8.3.4">Inline frames: the <samp class="einst2">IFRAME</samp> element</a>
+</ol>
+</div>
+
+<p>HTML frames allow authors to present documents in multiple views.
+Views may be independent windows or subwindows. Multiple views offer
+designers a way to keep certain information visible, while other views
+are scrolled or replaced. For instance, to use three frames: one for a
+static banner, one for a navigation menu, and one for a main view that
+can be scrolled though or replaced by clicking on an item in the
+navigation frame.
+
+<h2>Layout of frames<a name="h-8.3.1">&nbsp;</a></h2>
+
+<p>An HTML document with frames has a slightly different makeup
+than an HTML document without frames. A standard document has one 
+<a href="../struct/global.html#edef-HEAD"><samp class="einst">HEAD</samp></a> section and one <a href="../struct/global.html#edef-BODY"><samp
+class="einst">BODY</samp></a>. A document with frames has a <a href="../struct/global.html#edef-HEAD"><samp
+class="einst">HEAD</samp></a>, a <a href="frames.html#edef-FRAMESET"><samp class="einst">FRAMESET</samp></a>, and
+an optional <a href="../struct/global.html#edef-BODY"><samp class="einst">BODY</samp></a>.
+
+<P>The <a href="frames.html#edef-FRAMESET"><samp class="einst">FRAMESET</samp></a> section of a document
+specifies the layout of views in the main user agent window.
+
+<P>The <a href="../struct/global.html#edef-BODY"><samp class="einst">BODY</samp></a> section that follows the <a href="frames.html#edef-FRAMESET"><samp
+class="einst">FRAMESET</samp></a> declaration provides alternate content
+for user agents that do not support frames or are configured not to
+display frames. We discuss <a href="#alternate">alternate content</a>
+in more detail below.
+
+<P>Elements that might normally be placed in the <a href="../struct/global.html#edef-BODY"><samp
+class="einst">BODY</samp></a> element must not appear before the first
+<a href="frames.html#edef-FRAMESET"><samp class="einst">FRAMESET</samp></a>element or the <a href="frames.html#edef-FRAMESET"><samp
+class="einst">FRAMESET</samp></a> will be ignored.
+
+<h3>The <a name="edef-FRAMESET"><samp class="edef">FRAMESET</samp></a>
+      element<a name="h-8.3.1.1">&nbsp;</a></h3>
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="frames.html#edef-FRAMESET"><samp class="einst">FRAMESET</samp></a> - - ((FRAMESET|FRAME)+ & NOFRAMES?)&gt;
+&lt;!ATTLIST FRAMESET
+  -- absolute pixel values, percentages or relative scales. --
+  <a href="frames.html#adef-rows-FRAMESET"><samp class="ainst-FRAMESET">rows</samp></a>        CDATA      #IMPLIED  -- if not given, default is 1 row --
+  <a href="frames.html#adef-cols-FRAMESET"><samp class="ainst-FRAMESET">cols</samp></a>        CDATA      #IMPLIED  -- if not given, default is 1 column --
+  <a href="../interact/scripts.html#adef-onload"><samp class="ainst-FRAMESET">onload</samp></a>      %Script    #IMPLIED  -- all the frames have been loaded  -- 
+  <a href="../interact/scripts.html#adef-onunload"><samp class="ainst-FRAMESET">onunload</samp></a>    %Script    #IMPLIED  -- all the frames have been removed -- 
+  &gt;
+</pre>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+<div class="adef-list"><P>
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-rows-FRAMESET"><samp class="adef">rows</samp></a> = <a href="../types.html#type-length"><em>length-list</em></a>
+<dd>This attribute specifies the layout of horizontal frames. It is a
+comma-separated list of lengths. If not specified, the default value is 100%.
+
+<dt><a name="adef-cols-FRAMESET"><samp class="adef">cols</samp></a> = <a href="../types.html#type-length"><em>length-list</em></a>
+<dd>This attribute specifies the layout of vertical frames. It is a
+comma-separated list of lengths. If not specified, the default value is 100%.
+</dl>
+</div>
+
+<div class="aref-list"><P>
+<em>Attributes defined elsewhere</em> 
+<ul>
+<li><a href="../interact/scripts.html#adef-onload"><samp class="ainst">onload</samp></a>, <a href="../interact/scripts.html#adef-onunload"><samp
+    class="ainst">onunload</samp></a> (<a
+    href="../interact/scripts.html#events">intrinsic events</a>)
+</ul>
+</div>
+
+
+<P>The <a href="frames.html#edef-FRAMESET"><samp class="einst">FRAMESET</samp></a> element specifies the
+layout of the main user window in terms of rectangular subspaces.
+
+<h4>Rows and columns<a name="h-8.3.1.1.1">&nbsp;</a></h4>
+<p>Setting the <a href="frames.html#adef-rows-FRAMESET"><samp class="ainst-FRAMESET">rows</samp></a> attribute
+defines the number of horizontal subspaces. Setting the <a href="frames.html#adef-cols-FRAMESET"><samp
+class="ainst-FRAMESET">cols</samp></a> attribute defines the number of vertical
+subspaces. Both attributes may be set simultaneously to create a
+grid. 
+
+<P>If the <a href="frames.html#adef-rows-FRAMESET"><samp class="ainst-FRAMESET">rows</samp></a> attribute is not
+set, each column extends the entire length of the page. If the <a href="frames.html#adef-cols-FRAMESET"><samp
+class="ainst-FRAMESET">cols</samp></a> attribute is not set, each row
+extends the entire width of the page. If neither attribute is set, the
+frame takes up exactly the size of the page.
+
+<P>These two attributes have values that are comma-separated lists of
+lengths. A length may be absolute (given as a number of pixels or
+a percentage of the screen) or a relative length, indicated by the
+form "i*", where "i" is an integer. When allotting space to rows and
+columns, user agents allot absolute lengths first, then divide up
+remaining space among relative length rows or columns. The value
+"*" is equivalent to "1*".
+
+<P>Views are created left-to-right for columns and top-to-bottom
+for rows. When both attributes are specified, views are created
+left-to-right in the top row, left-to-right in the second row, etc.
+
+<div class="example"><P>
+The first example divides the screen vertically in two (i.e., creates
+a top half and a bottom half).
+
+<pre>
+&lt;FRAMESET rows="50%, 50%"&gt;
+<em>...the rest of the definition...</em>
+&lt;/FRAMESET&gt;
+</pre>
+
+<P>The next example creates three columns: the second has a fixed width
+of 250 pixels (useful, for example, to hold an image with a known
+size). The first receives 25% of the remaining space and the third 75%
+of the remaining space.
+
+<pre>
+&lt;FRAMESET cols="1*,250,3*"&gt;
+<em>...the rest of the definition...</em>
+&lt;/FRAMESET&gt;
+</pre>
+
+<P>The next example creates a 2x3 grid of subspaces.
+
+<pre>
+&lt;FRAMESET rows="30%,70%" cols="33%,34%,33%"&gt;
+<em>...the rest of the definition...</em>
+&lt;/FRAMESET&gt;
+</pre>
+
+<P>For the next example, suppose the browser window is currently 1000
+pixels high. The first view is allotted 30% of the total height (300
+pixels). The second view is specified to be exactly 400 pixels high.
+This leaves 300 pixels to be divided between the other two frames. The
+fourth frame's height is specified as "2*", so it is twice as high as
+the third frame, whose height is only "*" (1*). Therefore the third
+frame will be 100 pixels high and the fourth will be 200 pixels high.
+
+
+<PRE>
+&lt;FRAMESET rows="30%,400,*,2*"&gt;
+<em>...the rest of the definition...</em>
+&lt;/FRAMESET&gt
+</PRE>
+</div>
+
+<p>Absolute lengths that do not sum to 100% of the real available
+space should be adjusted by the user agent. When underspecified,
+remaining space should be allotted proportionally to each view. When
+overspecified, each view should be reduced according to its specified
+proportion of the total space.
+
+
+<h4>Nested frame sets<a name="h-8.3.1.1.2">&nbsp;</a></h4>
+<p>Framesets may be nested to any level. 
+
+<div class="example"><P>
+In the following example, the outer <a href="frames.html#edef-FRAMESET"><samp
+class="einst">FRAMESET</samp></a> divides the available space into three
+equal columns. The inner <a href="frames.html#edef-FRAMESET"><samp class="einst">FRAMESET</samp></a> then
+divides the second area into two rows of unequal height. 
+<pre>
+&lt;FRAMESET cols="33%, 33%, 34%"&gt;
+     <em>...contents of first frame...</em>
+     &lt;FRAMESET rows="40%, 50%"&gt;
+        <em>...contents of second frame, first row...</em>
+        <em>...contents of second frame, second row...</em>
+     &lt;/FRAMESET&gt;
+     <em>...contents of third frame...</em>
+&lt;/FRAMESET&gt;
+</pre>
+</div>
+
+
+<h3>The <a name="edef-FRAME"><samp class="edef">FRAME</samp></a>
+element<a name="h-8.3.1.2">&nbsp;</a></h3>
+<pre class="dtd-fragment">
+&lt;!-- reserved frame names start with "_" otherwise starts with letter --&gt;
+&lt;!ELEMENT <a href="frames.html#edef-FRAME"><samp class="einst">FRAME</samp></a> - O EMPTY&gt;
+&lt;!ATTLIST FRAME
+  <a href="frames.html#adef-name-FRAME"><samp class="ainst-FRAME">name</samp></a>        CDATA      #IMPLIED  -- name of frame for targetting --
+  <a href="frames.html#adef-src-FRAME"><samp class="ainst-FRAME">src</samp></a>         %URL       #IMPLIED  -- source of frame content --
+  <a href="frames.html#adef-frameborder"><samp class="ainst-FRAME">frameborder</samp></a> (1|0)      1         -- request frame borders? --
+  <a href="frames.html#adef-marginwidth"><samp class="ainst-FRAME">marginwidth</samp></a> %Pixels    #IMPLIED  -- margin widths in pixels --
+  <a href="frames.html#adef-marginheight"><samp class="ainst-FRAME">marginheight</samp></a> %Pixels   #IMPLIED  -- margin height in pixels --
+  <a href="frames.html#adef-noresize"><samp class="ainst-FRAME">noresize</samp></a>    (noresize) #IMPLIED  -- allow users to resize frames? --
+  <a href="frames.html#adef-scrolling"><samp class="ainst-FRAME">scrolling</samp></a> (yes|no|auto) auto     -- scrollbar or none --
+  &gt;
+</pre>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>forbidden</strong></em></p>
+<div class="adef-list"><P>
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-name-FRAME"><samp class="adef">name</samp></a> = <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute assigns a name to the current frame. This name may
+be the target of subsequent links.
+
+<dt><a name="adef-src-FRAME"><samp class="adef">src</samp></a> = <a href="../types.html#type-url"><em>url</em></a>
+<dd>This attribute specifies the location of the initial document to
+be contained in the frame. 
+
+<dt><a name="adef-noresize"><samp class="adef">noresize</samp></a>
+<dd>When present, this boolean attribute tells the user agent that the frame
+window must not be resizeable. 
+
+<dt><a name="adef-scrolling"><samp class="adef">scrolling</samp></a> =
+<samp>auto|yes|no</samp>
+<dd>This attribute specifies scroll information for the frame
+window. Possible values
+<ul>
+<li><samp>auto:</samp> This value tells the user agent to provide 
+scrolling devices for the frame window when necessary. This is the
+default value.
+<li><samp>yes:</samp> This value tells the user agent to always provide
+scrolling devices for the frame window.
+<li><samp>no:</samp> This value tells the user agent not to provide
+scrolling devices for the frame window.
+</ul>
+
+<dt><a name="adef-frameborder"><samp class="adef">frameborder</samp></a>
+= <samp>1|0</samp>
+<dd>This attribute provides the user agent with information about the
+frame border. Possible values:
+<ul>
+<li><samp>1:</samp> This value tells the user agent to draw a
+separator between this frame and every adjoining frame. This is the
+default value. 
+<li><samp>0:</samp> This value tells the user agent not to draw a
+separator between this frame and every adjoining frame. Note that
+separators may be drawn next to this frame nonetheless if specified by
+other frames.
+</ul>
+
+<dt><a name="adef-marginwidth"><samp class="adef">marginwidth</samp></a> = <a href="../types.html#type-length"><em>length</em></a>
+<dd>This attribute specifies the amount of space to be left between
+the frame's contents in its left and right margins. The value must be
+greater than one pixel. The default value depends on the user agent.
+
+<dt><a name="adef-marginheight"><samp class="adef">marginheight</samp></a> = <a href="../types.html#type-length"><em>length</em></a>
+<dd>This attribute specifies the amount of space to be left between
+the frame's contents in its top and bottom margins. The value must be
+greater than one pixel. The default value depends on the uesr agent.
+</dl>
+</div>
+
+<div class="aref-list"><P>
+<em>Attributes defined elsewhere</em> 
+<ul>
+<li><a href="frames.html#adef-target"><samp class="ainst">target</samp></a> (<a
+href="../present/frames.html#target-info">target frame
+information</a>)
+</ul>
+</div>
+
+<P>The <a href="frames.html#edef-FRAME"><samp class="einst">FRAME</samp></a> element defines the contents
+and appearance of a single view.
+
+<!-- Scope of frame names here -->
+
+<h4>Setting the initial document in a frame<a name="h-8.3.1.2.1">&nbsp;</a></h4> 
+<P>The <a href="../interact/forms.html#adef-src"><samp class="ainst">src</samp></a> attribute specifies the initial
+document the frame will contain. It is not possible for the contents
+of a frame to be in the same document as the frame's definition.
+
+<div class="example"><P>
+The following example example HTML document:
+<pre>
+&lt;HTML&gt;
+&lt;FRAMESET cols="33%,33%,33%"&gt;
+  &lt;FRAMESET rows="*,200"&gt;
+      &lt;FRAME src="contents_of_frame1.html"&gt;
+      &lt;FRAME src="contents_of_frame2.gif"&gt;
+  &lt;/FRAMESET&gt;
+  &lt;FRAME src="contents_of_frame3.html"&gt;
+  &lt;FRAME src="contents_of_frame4.html"&gt;
+&lt;/FRAMESET&gt;
+&lt;/HTML&gt;
+</pre>
+
+<P>will create a frame layout something like this:
+
+<pre>
+--------------------------------------------
+|Frame 1     |Frame 3       |Frame 4       |
+|            |              |              |
+|            |              |              |
+|            |              |              |
+|            |              |              |
+|            |              |              |
+|            |              |              |
+|            |              |              |
+-------------|              |              |
+|Frame 2     |              |              |
+|            |              |              |
+|            |              |              |
+--------------------------------------------
+</pre>
+
+<P>and cause the user agent to load each file into a separate view. 
+</div>
+
+<div class="illegal-example"><P>
+<span class="example-title">ILLEGAL EXAMPLE:</span><br>
+The following frameset definition is not legal HTML since the contents
+	  of the second frame are in the same document as the frameset.
+<pre>
+&lt;HTML&gt;
+&lt;FRAMESET cols="50%,50%"&gt;
+  &lt;FRAME src="contents_of_frame1.html"&gt;
+  &lt;FRAME src="#anchor_in_same_document"&gt;
+&lt;/FRAMESET&gt;
+&lt;BODY&gt;
+<em>...some text...</em>
+&lt;H2&gt;&lt;A name="anchor_in_same_document"&gt;Important section&lt;/A&gt;&lt;/H2&gt;
+<em>...some text...</em>
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+</div>
+</div>
+
+
+<h4>Decorating a frame<a name="h-8.3.1.2.2">&nbsp;</a></h4>
+<div class="example"><P>
+The following example illustrates the usage of the decorative <a href="frames.html#edef-FRAME"><samp
+class="einst">FRAME</samp></a> attributes.  We specify that frame 1 will
+allow no scroll bars.  Frame 2 will leave white space around its
+contents (initially, an image file) and the frame will not be
+resizeable. No border will be drawn between frames 3 and 4. Borders
+will be drawn (by default) between frames 1, 2, and 3.
+
+<pre>
+&lt;HTML&gt;
+&lt;FRAMESET cols="33%,33%,33%"&gt;
+  &lt;FRAMESET rows="*,200"&gt;
+      &lt;FRAME src="contents_of_frame1.html" scrolling="no"&gt;
+      &lt;FRAME src="contents_of_frame2.gif" 
+                marginwidth="10" marginheight="15"
+                noresize&gt;
+  &lt;/FRAMESET&gt;
+  &lt;FRAME src="contents_of_frame3.html" border="0"&gt;
+  &lt;FRAME src="contents_of_frame4.html" border="0"&gt;
+&lt;/FRAMESET&gt;
+&lt;/HTML&gt;
+</pre>
+</div>
+
+<h2><a name="target-info">Specifying target frame information</a><a name="h-8.3.2">&nbsp;</a></h2> 
+<P><div class="adef-list">
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-target"><samp class="adef">target</samp></a> 
+= <a href="../langtop.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute specifies the name of a target frame where a document
+is to be opened.
+</dl>
+</div>
+
+
+By assigning a name to a frame via the <a href="frames.html#adef-name-FRAME"><samp class="ainst-FRAME">name</samp></a>
+attribute, authors can refer to it as the "target" of links defined by
+other elements. The <a href="frames.html#adef-target"><samp class="ainst">target</samp></a> attribute may be
+set for elements that create links (<a href="../struct/links.html#edef-A"><samp class="einst">A</samp></a>,
+<a href="../struct/links.html#edef-LINK"><samp class="einst">LINK</samp></a>), image maps (<a href="../struct/includes.html#edef-AREA"><samp
+class="einst">AREA</samp></a>), and forms (<a href="../interact/forms.html#edef-FORM"><samp
+class="einst">FORM</samp></a>).
+
+<div class="example"><P>
+This example illustrates how targets allow the dynamic modification of
+a frame's contents. First we define a frameset in the document 
+<tt>frameset.html</tt>, shown here:
+
+<pre>
+&lt;HTML&gt;
+&lt;FRAMESET rows="50%,50%"&gt;
+   &lt;FRAME name="fixed" src="init_fixed.html"&gt;
+   &lt;FRAME name="dynamic" src="init_dynamic.html"&gt;
+&lt;/FRAMESET&gt;
+&lt;/HTML&gt;
+</pre>
+
+<P>Then, in <tt>init_dynamic.html</tt>, we link to the frame named
+"dynamic".
+
+<Pre>
+&lt;HTML&gt;
+&lt;BODY&gt;
+<em>...beginning of the document...</em>
+Now you may advance to 
+    &lt;A href="slide2.html" target="dynamic"&gt;slide 2.&lt;/A&gt;
+<em>...more document...</em>
+You're doing great. Now on to
+    &lt;A href="slide3.html" target="dynamic"&gt;slide 3.&lt;/A&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</Pre>
+
+<P>Activating either link opens a new document in the
+frame named "dynamic" while the other frame, "fixed", maintains its
+initial contents. 
+</div>
+
+<div class="note"><P>
+<em>Note: Once a frame's content is changed dynamically, the 
+original frameset definition no longer reflects the true
+contents of each frame; the frameset definition does not change.</em>
+
+<P><em>The is currently no way to encode the entire state of a
+frameset in a URL. Therefore, many user agents do not allow users to
+assign a bookmark to a frameset.</em>
+
+
+<P><em>Framesets may make navigation forward and backward through
+your user agent's history more difficult for users.</em>
+</div>
+
+
+<h3>Setting the default target for links<a name="h-8.3.2.1">&nbsp;</a></h3>
+<p>When many links in the same document designate the same target, it is
+possible to specify the target once and dispense with the <a href="frames.html#adef-target"><samp
+class="ainst">target</samp></a> attributes in each element. This is done
+by setting the <a href="frames.html#adef-target"><samp class="ainst">target</samp></a> attribute of the
+<a href="../struct/links.html#edef-BASE"><samp class="einst">BASE</samp></a> element. 
+
+<div class="example"><P>
+We return to the previous example, this time factorizing the target
+information by defining it in the <a href="../struct/links.html#edef-BASE"><samp class="einst">BASE</samp></a>
+element and removing it from the <a href="../struct/links.html#edef-A"><samp class="einst">A</samp></a> elements.
+<pre>
+&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;BASE target="dynamic"&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+<em>...beginning of the document...</em>
+Now you may advance to &lt;A href="slide2.html"&gt;slide 2.&lt;/A&gt;
+<em>...more document...</em>
+You're doing great. Now on to 
+       &lt;A href="slide3.html"&gt;slide 3.&lt;/A&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+</div>
+
+<h3>Target semantics<a name="h-8.3.2.2">&nbsp;</a></h3>
+<p>There are several methods for making a frame the target of a link. Here
+we define their interaction.
+
+<ol>
+<li>If an element has its target attribute set to a known frame, when
+the element is activated, the document designated by the element will
+be loaded into the target frame.
+
+<LI>If an element does not have the <a href="frames.html#adef-target"><samp class="ainst">target</samp></a>
+attribute set but the <a href="../struct/links.html#edef-BASE"><samp class="einst">BASE</samp></a> element does,
+the <a href="../struct/links.html#edef-BASE"><samp class="einst">BASE</samp></a> element's target determines the
+frame, and loading obeys the same semantics as 1.
+
+<li>If neither the element nor the <a href="../struct/links.html#edef-BASE"><samp class="einst">BASE</samp></a>
+element refer to a target, the document designated by the element will
+be loaded into the frame containing the element.
+
+<li>If any target refers to an unknown frame <tt>F</tt>, the user
+agent will create a new window and frame, assign the name <tt>F</tt>
+to the frame, and load the document designated by the element in the new
+frame. 
+</ol>
+
+<P>User agents may provide users with a mechanism to override the
+<a href="frames.html#adef-target"><samp class="ainst">target</samp></a> attribute.
+
+<h3><a name="target-reserved">Target names</a><a name="h-8.3.2.3">&nbsp;</a></h3>
+<p>Except for the reserved names listed below, target names must begin
+with an alphabetic character (a-zA-Z). User agents should ignore all other
+target names.
+
+<p>The following target names are reserved and have special meanings.
+
+<DL>
+<DT><samp>_blank</samp>
+<DD>The user agent should load the designated document in a new,
+unnamed window.
+
+<DT><samp>_self</samp>
+<DD>The user agent should load the document in the same frame as the
+element that refers to this target. 
+
+<DT><samp>_parent</samp>
+<DD>The user agent should load the document into the immediate <a href="frames.html#edef-FRAMESET"><samp
+class="einst">FRAMESET</samp></a> parent of the current frame. This value
+is equivalent to <tt>_self</tt> if the current frame has no parent.
+
+<DT><samp>_top</samp>
+<DD>The user agent should load the document into the full, original
+window (thus cancelling all other frames). This value is equivalent to
+<tt>_self</tt> if the current frame has no parent.
+</DL>  
+
+<h2><a name="alternate">Alternate content</a><a name="h-8.3.3">&nbsp;</a></h2>
+<p>We strongly recommend providing alternate versions of content for those
+user agents that do not support frames or are configured not to
+display frames. 
+
+<P>User agents that do not support frames must display the <a href="../struct/global.html#edef-BODY"><samp
+class="einst">BODY</samp></a> section that follows the outermost <a href="frames.html#edef-FRAMESET"><samp
+class="einst">FRAMESET</samp></a> of a document. User agents that do
+support frames must ignore this <a href="../struct/global.html#edef-BODY"><samp class="einst">BODY</samp></a> unless
+currently configured not to display frames. 
+
+<h3>The <a name="edef-NOFRAMES"><samp class="edef">NOFRAMES</samp></a>
+element<a name="h-8.3.3.1">&nbsp;</a></h3>
+<!--There's still an action item unresolved that has to do with
+allowing noframes around body.-->
+
+<pre class="dtd-fragment">
+&lt;!--
+ The following is quite complicated because of the mixed
+ content model. However it's actually only meant to contain
+ either BODY or %block.
+ --&gt;
+&lt;!ELEMENT <a href="frames.html#edef-NOFRAMES"><samp class="einst">NOFRAMES</samp></a> - -
+ (#PCDATA,((BODY,#PCDATA)|
+           (((%blocklevel)|%font|%phrase|%special|%formctrl),%block)))&gt;
+</pre>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<P>The <a href="frames.html#edef-NOFRAMES"><samp class="einst">NOFRAMES</samp></a> element specifies content that
+should be displayed only when frames are not being displayed. User
+agents that support frames must only display the contents of a <a href="frames.html#edef-NOFRAMES"><samp
+class="einst">NOFRAMES</samp></a> declaration when configured not to
+display frames. User agents that do not support frames must display
+the contents of <a href="frames.html#edef-NOFRAMES"><samp class="einst">NOFRAMES</samp></a> in any case.
+
+<div class="example"><P>
+Suppose we have a sample frameset defined in "top.html" that designates a
+document ("main.html") and a special table of contents
+("table_of_contents.html") related to the main document. Here is "top.html":
+
+<pre>
+&lt;HTML&gt;
+&lt;FRAMESET cols="50%, 50%"&gt;
+   &lt;FRAME src="main.html"&gt;
+   &lt;FRAME src="table_of_contents.html"&gt;
+&lt;/FRAMESET&gt;
+&lt;/HTML&gt;
+</pre>
+
+<P>What happens when the user reads "top.html" and the user agent is
+not displaying frames? The user won't see anything since we have not
+specified alternate content in the <a href="../struct/global.html#edef-BODY"><samp class="einst">BODY</samp></a> of
+"top.html". If we insert "table_of_contents.html" and "main.html"
+directly in the <a href="../struct/global.html#edef-BODY"><samp class="einst">BODY</samp></a>, we solve the problem
+of associating the two documents, but we may cause user agents that
+support frames to retrieve the same data twice: one copy associated
+with the frameset and one copy inserted in the <a href="../struct/global.html#edef-BODY"><samp
+class="einst">BODY</samp></a>.
+
+<p>It is more economical to include the table of contents at the top
+of "main.html" within a <a href="frames.html#edef-NOFRAMES"><samp class="einst">NOFRAMES</samp></a> element:
+
+<pre>
+&lt;!-- This is main.html --&gt;
+&lt;HTML&gt;
+&lt;BODY&gt;
+&lt;NOFRAMES&gt;
+<em>...the table of contents here...</em>
+&lt;/NOFRAMES&gt;
+<em>...the rest of the document...</em>
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+
+
+<P>and to link to "main.html" from "top.html" for the case when frames
+are not displayed:
+
+<pre>
+&lt;!-- This is top.html --&gt;
+&lt;HTML&gt;
+&lt;FRAMESET cols="50%, 50%"&gt;
+   &lt;FRAME src="main.html"&gt;
+   &lt;FRAME src="table_of_contents.html"&gt;
+&lt;/FRAMESET&gt;
+&lt;BODY&gt;
+Click &lt;A href="main.html"&gt;here&lt;/A&gt; for a non-frames version.
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+</div>
+
+<h2>Inline frames: the <a name="edef-IFRAME"><samp
+class="edef">IFRAME</samp></a> element<a name="h-8.3.4">&nbsp;</a></h2>
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="frames.html#edef-IFRAME"><samp class="einst">IFRAME</samp></a> - - %block&gt;
+&lt;!ATTLIST IFRAME
+  <samp class="ainst-IFRAME">name</samp>        CDATA      #IMPLIED  -- name of frame for targetting --
+  <a href="../interact/forms.html#adef-src"><samp class="ainst-IFRAME">src</samp></a>         %URL       #IMPLIED  -- source of frame content --
+  <a href="frames.html#adef-frameborder"><samp class="ainst-IFRAME">frameborder</samp></a> (1|0)      1         -- request frame borders? --
+  <a href="frames.html#adef-marginwidth"><samp class="ainst-IFRAME">marginwidth</samp></a> %Pixels    #IMPLIED  -- margin widths in pixels --
+  <a href="frames.html#adef-marginheight"><samp class="ainst-IFRAME">marginheight</samp></a> %Pixels   #IMPLIED  -- margin height in pixels --
+  <a href="frames.html#adef-scrolling"><samp class="ainst-IFRAME">scrolling</samp></a> (yes|no|auto) auto     -- scrollbar or none --
+  <a href="graphics.html#adef-align"><samp class="ainst-IFRAME">align</samp></a>       %IAlign    #IMPLIED  -- vertical or horizontal alignment --
+  <a href="frames.html#adef-height-IFRAME"><samp class="ainst-IFRAME">height</samp></a>      %Length    #IMPLIED  -- suggested height --
+  <a href="frames.html#adef-width-IFRAME"><samp class="ainst-IFRAME">width</samp></a>       %Length    #IMPLIED  -- suggested width --
+  &gt;
+</pre>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<P><div class="adef-list">
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-width-IFRAME"><samp class="adef">width</samp></a> = <a href="../langtop.html#type-length"><em>length</em></a>
+<dd>The width of the inline frame.
+
+<dt><a name="adef-height-IFRAME"><samp class="adef">height</samp></a> = <a href="../langtop.html#type-length"><em>length</em></a>
+<dd>The height of the inline frame.
+</dl>
+</div>
+
+<ul>
+<li><a href="frames.html#adef-name-FRAME"><samp class="ainst-FRAME">name</samp></a>, <a href="frames.html#adef-src-FRAME"><samp
+	      class="ainst-FRAME">src</samp></a>,  <a href="frames.html#adef-frameborder"><samp
+	    class="ainst-FRAME">frameborder</samp></a>, <a href="frames.html#adef-marginwidth"><samp
+	    class="ainst-FRAME">marginwidth</samp></a>, <a href="frames.html#adef-marginheight"><samp
+	    class="ainst-FRAME">marginheight</samp></a>, <a href="frames.html#adef-scrolling"><samp
+	    class="ainst-FRAME">scrolling</samp></a> (<a 
+href="#edef-FRAME">frame controls and decoration</a>)
+<li><a href="frames.html#adef-target"><samp class="ainst">target</samp></a> (<a
+href="../present/frames.html#target-info">target frame
+information</a>)
+<li><a href="graphics.html#adef-align"><samp class="ainst">align</samp></a> (<a href="graphics.html#alignment">alignment</a>)
+</ul>
+</div>
+
+
+The <a href="frames.html#edef-IFRAME"><samp class="einst">IFRAME</samp></a> element allows authors to insert
+a frame within a block of text. Inserting an inline frame within a
+section of text is much like inserting an object via the <a href="../struct/includes.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> element: they both allow you to insert an
+HTML document in the middle of another, they may both be aligned with
+surrounding text, etc.
+
+<P>The information to be inserted inline is designated by the <a href="../interact/forms.html#adef-src"><samp
+class="ainst-IFRAME">src</samp></a> attribute of this element.  The
+<em>contents</em> of the <a href="frames.html#edef-IFRAME"><samp class="einst">IFRAME</samp></a> element, on
+the other hand, should only be rendered by user agents that do not
+support frames or are configured not to display frames.
+
+<div class="example"><P>
+For user agents that support frames, the following example will place
+	an inline frame surrounded by a border in the middle of the text.
+
+<PRE>
+  &lt;IFRAME src="foo.html" width="400" height="500"
+             scrolling="auto" frameborder="1"&gt;
+  [Your user agent does not support frames or is currently configured
+  not to display frames. Click to retrieve
+  &lt;A href="foo.html"&gt;the related document.&lt;/A&gt;]
+  &lt;/IFRAME&gt;
+</PRE>
+</div>
+
+<p>Inline frames may not be resized (and thus, they do not take the
+<a href="frames.html#adef-noresize"><samp class="ainst">noresize</samp></a> attribute).
+
+<div class="note"><P>
+<em>Note: HTML documents may also be embedded in other HTML documents with
+the <a href="../struct/includes.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> element. See the section on <a
+href="../struct/includes.html#include-files"> including files in HTML
+documents</a> for details.</em>
+</div>
+
+<div class="navbar">
+<hr><center><a href="graphics.html">previous</a> &nbsp; <a href="../interact/intertop.html">next</a> &nbsp; <a href="../contents.html">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center></div>
+</body>

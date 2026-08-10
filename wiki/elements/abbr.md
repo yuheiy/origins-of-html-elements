@@ -10,7 +10,7 @@ HTML+／HTML 3.0には`ABBREV`と`ACRONYM`が別要素としてあり、HTML 4�
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、略語または頭字語を表し、任意でその展開形を`title`属性に与える。 [一次定義](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、略語または頭字語を表し、任意でその展開形を`title`属性に与える。 [HTML Living Standard](../../raw/html-living-standard/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -40,14 +40,14 @@ HTML 3.0 `ABBREV`からHTML 4草案の変更への接続は未確認のため矢
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1993-11-08 | HTML+ §5.6 | 一次仕様・提案 | `ABBREV`をabbreviation roleとして定義する。 | [一次資料](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html) | 2026-08-09 |
-| 1995-04-25 | HTML 3.0 draft | 一次仕様・提案 | `ABBREV`と`ACRONYM`を別々のnew elementとして定義する。 | [一次資料](https://www.w3.org/MarkUp/html3/logical.html) | 2026-08-10 |
-| 1997-09-17 | HTML 4.0 Working Draft | W3C Working Draft | `ACRONYM`だけを定義し、abbreviation専用markupは含まないと明記する。 | [一次資料](https://www.w3.org/TR/WD-html40-970917/struct/text.html) | 2026-08-10 |
-| 1997-09-29 | Holger Wahlen, “Why is it still \"ACRONYM\"?” | W3C public mailing list | HTML 3.0の`ABBREV`とHTML 4草案の`ACRONYM`を対比し、略語全般を扱う要素への一般化を提案する。editorの採択は確認できない。 | [一次資料](https://lists.w3.org/Archives/Public/www-html/1997Sep/0385.html) | 2026-08-10 |
-| 1997-11-07 | HTML 4.0 Proposed Recommendation | W3C Proposed Recommendation | `ABBR`を定義し、以前のHTML版とHTML 4初期草案ではこの要素を`ACRONYM`と呼んだと明記する。 | [一次資料](https://www.w3.org/TR/PR-html40-971107/struct/text.html) | 2026-08-10 |
-| 1997-12-18 | HTML 4.0 | W3C Recommendation | `ABBR`と`ACRONYM`を別々のphrase elementとして標準化する。 | [一次資料](https://www.w3.org/TR/REC-html40/struct/text.html#h-9.2.1) | 2026-08-10 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1993-11-08 | [HTML+ §5.6](../../raw/html-plus/htmlplus_18.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)） | 一次仕様・提案 | `ABBREV`をabbreviation roleとして定義する。 | 2026-08-09 |
+| 1995-04-25 | [HTML 3.0 draft](../../raw/html-3.0/logical.html)（[公開元](https://www.w3.org/MarkUp/html3/logical.html)） | 一次仕様・提案 | `ABBREV`と`ACRONYM`を別々のnew elementとして定義する。 | 2026-08-10 |
+| 1997-09-17 | [HTML 4.0 Working Draft](../../raw/html-4-history/beae6d761bb720e9-text.html)（[公開元](https://www.w3.org/TR/WD-html40-970917/struct/text.html)） | W3C Working Draft | `ACRONYM`だけを定義し、abbreviation専用markupは含まないと明記する。 | 2026-08-10 |
+| 1997-09-29 | [Holger Wahlen, “Why is it still \"ACRONYM\"?”](../../raw/items/lists.w3.org/651c79e45b50fefb-0385.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1997Sep/0385.html)） | W3C public mailing list | HTML 3.0の`ABBREV`とHTML 4草案の`ACRONYM`を対比し、略語全般を扱う要素への一般化を提案する。editorの採択は確認できない。 | 2026-08-10 |
+| 1997-11-07 | [HTML 4.0 Proposed Recommendation](../../raw/html-4-history/04286e6da58132b5-text.html)（[公開元](https://www.w3.org/TR/PR-html40-971107/struct/text.html)） | W3C Proposed Recommendation | `ABBR`を定義し、以前のHTML版とHTML 4初期草案ではこの要素を`ACRONYM`と呼んだと明記する。 | 2026-08-10 |
+| 1997-12-18 | [HTML 4.0](../../raw/html-4-history/451f824c2f95b280-text.html)（[公開元](https://www.w3.org/TR/REC-html40/struct/text.html#h-9.2.1)） | W3C Recommendation | `ABBR`と`ACRONYM`を別々のphrase elementとして標準化する。 | 2026-08-10 |
 
 ## 確度
 

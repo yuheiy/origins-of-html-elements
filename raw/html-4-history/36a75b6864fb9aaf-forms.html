@@ -1,0 +1,1902 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en">
+<!-- $Id: forms.src,v 1.53 1997/09/17 11:43:57 lehors Exp $ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Forms in HTML documents</title>
+<LINK rel="previous" href="../present/frames.html">
+<LINK rel="next" href="scripts.html">
+<LINK rel="contents" href="../cover.html#toc">
+<LINK rel="STYLESHEET" href="../style/default.css" type="text/css">
+</head>
+
+<body>
+<div class="navbar">
+<center><a href="../present/frames.html">previous</a> &nbsp; <a href="scripts.html">next</a> &nbsp; <a href="../cover.html#toc">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center><hr>
+</div>
+
+
+<H1 align="center"><a name="h-18">18</a> <a name="forms">Forms</a><!-- User-input Forms:
+	Text Fields, Buttons, Menus, and more --></H1>
+<div class="subtoc"><p><strong>Contents</strong>
+<ol>
+<li><a href="forms.html#h-18.1">The <samp class="einst2">FORM</samp> element</a>
+<li><a href="forms.html#h-18.2">Controls</a>
+<ol>
+<li><a href="forms.html#h-18.2.1">The <samp class="einst2">INPUT</samp> element</a>
+<li><a href="forms.html#h-18.2.2">The <samp class="einst2">BUTTON</samp> element </a>
+<li><a href="forms.html#h-18.2.3">The <samp class="einst2">SELECT</samp> 
+and <samp class="einst2">OPTION</samp> elements</a>
+<li><a href="forms.html#h-18.2.4">The <samp class="einst2">TEXTAREA</samp>
+element</a>
+<li><a href="forms.html#h-18.2.5">The <samp class="einst2">LABEL</samp> element</a>
+<li><a href="forms.html#h-18.2.6">The <samp class="einst2">FIELDSET</samp>
+and <samp class="einst2">LEGEND</samp>
+elements</a>
+</ol>
+<li><a href="forms.html#h-18.3">Giving focus to an element</a>
+<ol>
+<li><a href="forms.html#h-18.3.1">Tabbing navigation</a>
+<li><a href="forms.html#h-18.3.2">Access keys</a>
+</ol>
+<li><a href="forms.html#h-18.4">Disabled and read-only elements</a>
+<ol>
+<li><a href="forms.html#h-18.4.1">Disabled elements</a>
+<li><a href="forms.html#h-18.4.2">Read-only elements</a>
+</ol>
+<li><a href="forms.html#h-18.5">Form submission</a>
+<ol>
+<li><a href="forms.html#h-18.5.1">Processing form data</a>
+<li><a href="forms.html#h-18.5.2">Which control values are submitted</a>
+</ol>
+</ol>
+</div>
+
+<p>An HTML form is a section of a document containing
+normal content, markup, and special elements called <a
+href="#form-controls"><em>controls</em></a>. Controls respond to and
+accept user input. Users generally "complete" forms by entering text,
+selecting menu items, etc., and then submitting the form for processing.
+Submitted forms may either be mailed to another user or fed to a program
+for treatment.
+
+<P>Controls may be check boxes, radio buttons, labels, menus, etc.
+Each control may be assigned a name. When the form is submitted, some
+controls <a href="#submitted-values">(depending on their state)</a>
+have their name and current value submitted along with the form.  The
+nature of the value submitted depends on the control (e.g., the value
+of a text box is the input text). 
+
+<div class="note">
+<P><em>Note: This specification includes more
+detailed information about forms in sections on
+<a href="../appendix/notes.html#notes-forms">form
+display issues</a>. Further information on encoding
+form contents is expected to be added in later
+revisions to this draft.</em>
+</div>
+
+
+<h2><a name="h-18.1">18.1</a> The <a name="edef-FORM"><samp class="edef">FORM</samp></a> element</h2>
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="forms.html#edef-FORM"><samp class="einst">FORM</samp></a> - - (<a href="../sgml/loosedtd.html#block">%block;</a>)+ -(FORM) -- interactive form --&gt;
+&lt;!ATTLIST FORM
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="forms.html#adef-action"><samp class="ainst-FORM">action</samp></a>      <a href="../sgml/loosedtd.html#URL">%URL;</a>      #REQUIRED -- server-side form handler --
+  <a href="forms.html#adef-method"><samp class="ainst-FORM">method</samp></a>      (GET|POST) GET       -- HTTP method used to submit the form --
+  <a href="forms.html#adef-enctype"><samp class="ainst-FORM">enctype</samp></a>     <a href="../sgml/loosedtd.html#ContentType">%ContentType;</a> "application/x-www-form-urlencoded"
+  <a href="scripts.html#adef-onsubmit"><samp class="ainst-FORM">onsubmit</samp></a>    <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- the form was submitted --
+  <a href="scripts.html#adef-onreset"><samp class="ainst-FORM">onreset</samp></a>     <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- the form was reset --
+  <a href="../present/frames.html#adef-target"><samp class="ainst-FORM">target</samp></a>      CDATA      #IMPLIED  -- where to render result --
+  <a href="forms.html#adef-accept-charset"><samp class="ainst-FORM">accept-charset</samp></a> CDATA   #IMPLIED  -- list of supported charsets --
+  &gt;
+</pre>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<div class="adef-list">
+<P><em>Attribute definitions</em>
+
+<dl>
+<dt><a name="adef-action"><samp class="adef">action</samp></a> =
+  <a href="../types.html#type-url"><em>url</em></a>
+<dd>This attribute specifies a program for handling the submitted
+  form. It may be an HTTP URL (to submit the form to a program) or a
+  <a href="../htmlweb.html#mailto-url"> MAILTO URL</a> (to email the form).
+
+<dt><a name="adef-method"><samp class="adef">method</samp></a> =
+  <samp>get|post</samp>
+<dd>This attribute specifies which HTTP method will be used to submit
+  name/value pairs to the form handler. Possible values (which are
+  case-insensitive):
+
+<ul>
+<li><samp>post:</samp> Use the HTTP POST method. This method
+includes name/value pairs in the body of the form and not in the URL
+specified by the <a href="forms.html#adef-action"><samp class="ainst">action</samp></a> attribute.
+
+<li><samp>get:</samp><strong>Deprecated.</strong> Use the HTTP GET
+method. This method appends name/value pairs to the URL specified
+by <a href="forms.html#adef-action"><samp class="ainst">action</samp></a> and sends this new URL to the
+server.  This is the default value for backwards compatibility. This
+method has been deprecated for reasons of internationalization.
+</ul>
+
+<dt><a name="adef-enctype"><samp class="adef">enctype</samp></a>  =
+  <a href="../types.html#type-cdata"><em>cdata</em></a> 
+<dd>This attribute specifies the Internet Media Type (see
+  <a rel="biblioentry"
+  href="../references.html#ref-MIMETYPES">[MIMETYPES]</a>) used
+  to submit the form to the server (when the value of <a href="forms.html#adef-method"><samp
+  class="ainst">method</samp></a> is "post"). The default value for 
+  this attribute is "application/x-www-form-urlencoded". The value
+  "multipart/form-data" should be used when the returned document
+  includes submitted files.
+
+<dt><a name="adef-accept-charset"><samp class="adef">accept-charset</samp></a> =
+  <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute specifies the list of <a
+  href="../charset.html#doc-char-set">character encodings</a> for input
+  data that must be accepted by the server processing this form. The value
+  is a space and/or comma-delimited list of "charsets" as defined in <a
+  rel="biblioentry" href="./references.html#ref-RFC2045">[RFC2045]</a>.
+  The server must interpret this list as an exclusive-or list, i.e., the
+  server must be able to accept any single character encoding per entity
+  received.
+
+<P>The default value for this attribute is the reserved string
+"UNKNOWN". User agents may interpret this value as the character
+encoding that was used to transmit the document containing this <a href="forms.html#edef-FORM"><samp
+class="einst">FORM</samp></a> element.
+
+<dt><a name="adef-accept"><samp class="adef">accept</samp></a> =
+  <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute specifies a comma-separated list of MIME types
+  that a server processing this form will handle correctly. User agents
+  may use this information to filter out non-conforming files when
+  prompting a user to select files to be sent to the server
+  (cf. the <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> element when <a href="forms.html#adef-type"><samp
+  class="ainst">type</samp></a>="file").
+</dl>
+</div>
+
+<div class="aref-list">
+<P><em>Attributes defined elsewhere</em> 
+<ul>
+<li><a href="../struct/global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="../struct/global.html#adef-class"><samp class="ainst">class</samp></a>
+    (<a href="../struct/global.html#id-and-class">document-wide
+	   identifiers</a>) 
+<li><a href="../struct/dirlang.html#adef-lang"><samp class="ainst">lang</samp></a>
+  (<a href="../struct/dirlang.html#language-info">language
+  information</a>), <a href="../struct/dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+  (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a> (<a 
+    href="../present/styles.html#style-element">inline style
+    information</a>) 
+<li><a href="../struct/global.html#adef-title"><samp class="ainst">title</samp></a> (<a
+	     href="../struct/global.html#titles">element
+	     titles</a>) 
+<li><a href="../present/frames.html#adef-target"><samp class="ainst">target</samp></a>
+  (<a href="../present/frames.html#target-info">target frame
+  information</a>)
+<li><a href="scripts.html#adef-onsubmit"><samp class="ainst">onsubmit</samp></a>,
+  <a href="scripts.html#adef-onreset"><samp class="ainst">onreset</samp></a>, 
+  <a href="scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>,
+  <a href="scripts.html#adef-ondblclick"><samp class="ainst">ondblclick</samp></a>,
+  <a href="scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>,
+  <a href="scripts.html#adef-onmouseup"><samp class="ainst">onmouseup</samp></a>,
+  <a href="scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>,
+  <a href="scripts.html#adef-onmousemove"><samp class="ainst">onmousemove</samp></a>,
+  <a href="scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>,
+  <a href="scripts.html#adef-onkeypress"><samp class="ainst">onkeypress</samp></a>,
+  <a href="scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>,
+  <a href="scripts.html#adef-onkeyup"><samp class="ainst">onkeyup</samp></a>
+ (<a href="../interact/scripts.html#events">intrinsic events</a>)
+</ul>
+</div>
+
+<P>The <a href="forms.html#edef-FORM"><samp class="einst">FORM</samp></a> element acts as a container
+for controls. It specifies:
+
+<ul>
+<li>The layout of the form (given by the contents of the element).
+
+<li>The program that will handle the completed and submitted form
+(the <a href="forms.html#adef-action"><samp class="ainst">action</samp></a> attribute). The receiving
+program must be able to parse name/value pairs in order to
+make use of them.
+
+<li>The method by which user data will be sent to the server
+(the <a href="forms.html#adef-method"><samp class="ainst">method</samp></a> attribute).
+
+<li>A character encoding that must accepted by the server in order
+to handle this form (the <a href="forms.html#adef-accept-charset"><samp class="ainst">accept-charset</samp></a>
+attribute).  User agents may advise the user of the value of the
+<a href="forms.html#adef-accept-charset"><samp class="ainst">accept-charset</samp></a> attribute and/or to
+restrict the user's ability to enter unrecognized characters.
+</ul>
+
+<P>A form can contain text and markup (paragraphs, lists, etc.)
+as well as the controls listed below.
+
+<P>The scope of the <samp>name</samp> attribute for any controls
+within a <a href="forms.html#edef-FORM"><samp class="einst">FORM</samp></a> element is the
+<a href="forms.html#edef-FORM"><samp class="einst">FORM</samp></a> element. 
+
+<div class="example">
+<P>The following example specifies that the submitted form will be
+processed by the "adduser" program. The form will be sent to the
+program	using the HTTP POST method.</p>
+
+<pre>
+ &lt;FORM action="http://somesite.com/prog/adduser" method="post"&gt;
+ <em>...form contents...</em>
+ &lt;/FORM&gt;
+</pre>
+
+<P>The following example shows how to send a submitted form to an
+email address.
+
+<pre>
+ &lt;FORM action="mailto:Kligor.T@gee.whiz.com" method="post"&gt;
+ <em>...form contents...</em>
+ &lt;/FORM&gt;
+</pre>
+</div>
+
+<h2><a name="h-18.2">18.2</a> <a name="form-controls">Controls</a></h2>
+
+<p>The following control elements generally appear within a <a href="forms.html#edef-FORM"><samp
+class="einst">FORM</samp></a> element declaration. However, these elements
+may also appear outside of a <a href="forms.html#edef-FORM"><samp class="einst">FORM</samp></a> element
+declaration when they are used to build user interfaces. This is
+discussed later in this specification, in the section on <a
+href="./scripts.html#events">intrinsic events.</a>
+
+<P><strong>Control labels</strong><BR>
+Some form controls automatically have labels associated with
+them (press buttons created by <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>
+and <a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a>) while most do not
+(text fields created by <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> and
+<a href="forms.html#edef-TEXTAREA"><samp class="einst">TEXTAREA</samp></a>, checkboxes and radio
+buttons created by <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>, and menus
+created by <a href="forms.html#edef-SELECT"><samp class="einst">SELECT</samp></a>).
+
+<P>For those controls that have implicit labels, user agents should
+take the value of the <samp class="ainst">value</samp> attribute for
+the label string.
+
+<P>For those controls without implicit labels, authors must provide
+labels before or after the control element's definition. This is
+illustrated in the examples below.
+
+<h3><a name="h-18.2.1">18.2.1</a> The <a name="edef-INPUT"><samp class="edef">INPUT</samp></a> element</h3>
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!ENTITY % InputType
+  "(TEXT | PASSWORD | CHECKBOX |
+    RADIO | SUBMIT | RESET |
+    FILE | HIDDEN | IMAGE | BUTTON)"
+   &gt;
+
+&lt;!-- attribute name required for all but submit & reset --&gt;
+&lt;!ELEMENT <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> - O EMPTY -- form control --&gt;
+&lt;!ATTLIST INPUT
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="forms.html#adef-type"><samp class="ainst-INPUT">type</samp></a>       <a href="../sgml/loosedtd.html#InputType">%InputType;</a> TEXT      -- what kind of widget is needed --
+  <a href="forms.html#adef-name-INPUT"><samp class="ainst-INPUT">name</samp></a>        CDATA      #IMPLIED  -- submit as part of form --
+  <a href="forms.html#adef-value-INPUT"><samp class="ainst-INPUT">value</samp></a>       CDATA      #IMPLIED  -- required for radio and checkboxes --
+  <a href="forms.html#adef-checked"><samp class="ainst-INPUT">checked</samp></a>   (checked)    #IMPLIED  -- for radio buttons and check boxes --
+  <a href="forms.html#adef-disabled"><samp class="ainst-INPUT">disabled</samp></a>  (disabled)   #IMPLIED  -- control is unavailable in this context --
+  <a href="forms.html#adef-readonly"><samp class="ainst-INPUT">readonly</samp></a>  (readonly)   #IMPLIED  -- for text and passwd --
+  <a href="forms.html#adef-size-INPUT"><samp class="ainst-INPUT">size</samp></a>        CDATA      #IMPLIED  -- specific to each type of field --
+  <a href="forms.html#adef-maxlength"><samp class="ainst-INPUT">maxlength</samp></a>   NUMBER     #IMPLIED  -- max chars for text fields --
+  <a href="forms.html#adef-src"><samp class="ainst-INPUT">src</samp></a>         <a href="../sgml/loosedtd.html#URL">%URL;</a>      #IMPLIED  -- for fields with images --
+  <a href="../struct/objects.html#adef-alt"><samp class="ainst-INPUT">alt</samp></a>         CDATA      #IMPLIED  -- short description --
+  <a href="../struct/objects.html#adef-usemap"><samp class="ainst-INPUT">usemap</samp></a>      <a href="../sgml/loosedtd.html#URL">%URL;</a>      #IMPLIED  -- use client-side image map --
+  <a href="../present/graphics.html#adef-align"><samp class="ainst-INPUT">align</samp></a>       <a href="../sgml/loosedtd.html#IAlign">%IAlign;</a>   #IMPLIED  -- vertical or horizontal alignment --
+  <a href="forms.html#adef-tabindex"><samp class="ainst-INPUT">tabindex</samp></a>    NUMBER     #IMPLIED  -- position in tabbing order --
+  <a href="forms.html#adef-accesskey"><samp class="ainst-INPUT">accesskey</samp></a>   CDATA      #IMPLIED  -- accessibility key character --
+  <a href="scripts.html#adef-onfocus"><samp class="ainst-INPUT">onfocus</samp></a>     <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- the element got the focus --
+  <a href="scripts.html#adef-onblur"><samp class="ainst-INPUT">onblur</samp></a>      <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- the element lost the focus --
+  <a href="scripts.html#adef-onselect"><samp class="ainst-INPUT">onselect</samp></a>    <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- some text was selected --
+  <a href="scripts.html#adef-onchange"><samp class="ainst-INPUT">onchange</samp></a>    <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- the element value was changed --
+  <a href="forms.html#adef-accept"><samp class="ainst-INPUT">accept</samp></a>      CDATA      #IMPLIED  -- list of MIME types for file upload --
+  &gt;
+</pre>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>forbidden</strong></em></p>
+
+<div class="adef-list"><P>
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-type"><samp class="adef">type</samp></a> =
+<samp>text|password|checkbox|radio|submit|reset|file|hidden|image|button</samp>
+<dd>This attribute specifies the type of input control to create. 
+ We discuss <a href="#input-types">input control types</a> below.
+ The default value for this attribute is "text".
+
+<dt><a name="adef-name-INPUT"><samp class="adef">name</samp></a> =
+ <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute assigns a name to the control. This name will be
+paired with the current value of the control if the element's value
+is submitted along with the form.
+
+<dt><a name="adef-value-INPUT"><samp class="adef">value</samp></a> =
+ <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute specifies the initial value of the control.
+ It is optional except when the control type is "radio".
+
+<dt><a name="adef-size-INPUT"><samp class="adef">size</samp></a> =
+ <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute tells the user agent the initial width of the
+ control. The width is given in pixels, except for control types "text"
+ and "password" when it is the (integer) number of characters.
+
+<dt><a name="adef-maxlength"><samp class="adef">maxlength</samp></a> =
+ <em>integer</em>
+<dd>When the control type is "text" or "password", this attribute
+ specifies the maximum number of characters that may be entered. This
+ number may exceed the specified <a href="forms.html#adef-size-INPUT"><samp class="ainst-INPUT">size</samp></a>,
+ in which case the user agent should offer a scrolling mechanism. The
+ default value for this attribute is an unlimited number.
+
+<dt><a name="adef-checked"><samp class="adef">checked</samp></a> <dd>When
+the control type is "radio" or "checkbox", this boolean attribute specifies
+that the button is on. This attribute must be ignored for other control
+types.
+
+<dt><a name="adef-src"><samp class="adef">src</samp></a> =
+ <a href="../types.html#type-url"><em>url</em></a>
+<dd>When the control type is "image", this attribute specifies the
+ location of the image to be used to decorate the graphical submit
+ button.
+</dl>
+</div>
+
+<div class="aref-list">
+<P><em>Attributes defined elsewhere</em></p>
+
+<ul>
+<li><a href="../struct/global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="../struct/global.html#adef-class"><samp class="ainst">class</samp></a>
+ (<a href="../struct/global.html#id-and-class">document-wide
+ identifiers</a>) 
+<li><a href="../struct/dirlang.html#adef-lang"><samp class="ainst">lang</samp></a>
+ (<a href="../struct/dirlang.html#language-info">language
+ information</a>), <a href="../struct/dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+ (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+<li><a href="../struct/global.html#adef-title"><samp class="ainst">title</samp></a>
+ (<a href="../struct/global.html#titles">element titles</a>) 
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a>
+ (<a href="../present/styles.html#style-element">inline style
+ information</a>) 
+<li><a href="../struct/objects.html#adef-alt"><samp class="ainst">alt</samp></a>
+ (<a href="../struct/objects.html#alternate-text">alternate text</a>) 
+<li><a href="../present/graphics.html#adef-align"><samp class="ainst">align</samp></a>
+ (<a href="../present/graphics.html#alignment">alignment</a>)
+<li><a href="forms.html#adef-accept"><samp class="ainst">accept</samp></a> 
+ (<a href="#edef-FORM">legal MIME types for a server</a>)
+<li><a href="forms.html#adef-readonly"><samp class="ainst">readonly</samp></a>
+ (<a href="#read-only">read-only input controls</a>)
+<li><a href="forms.html#adef-disabled"><samp class="ainst">disabled</samp></a>
+ (<a href="#disabled">disabled input controls</a>)
+<li><a href="forms.html#adef-tabindex"><samp class="ainst">tabindex</samp></a>
+ (<a href="../interact/forms.html#tabbing-navigation">tabbing navigation</a>)
+<li><a href="forms.html#adef-accesskey"><samp class="ainst">accesskey</samp></a>
+  (<a href="../interact/forms.html#access-keys">access keys</a>)
+<li><a href="../struct/objects.html#adef-usemap"><samp class="ainst">usemap</samp></a>
+ (<a href="../struct/objects.html#edef-MAP">client-side image maps</a>)
+<li><a href="scripts.html#adef-onfocus"><samp class="ainst">onfocus</samp></a>, <a href="scripts.html#adef-onblur"><samp class="ainst">onblur</samp></a>,
+ <a href="scripts.html#adef-onselect"><samp class="ainst">onselect</samp></a>, <a href="scripts.html#adef-onchange"><samp class="ainst">onchange</samp></a>,
+ <a href="scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>, 
+  <a href="scripts.html#adef-ondblclick"><samp class="ainst">ondblclick</samp></a>,
+  <a href="scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>,
+  <a href="scripts.html#adef-onmouseup"><samp class="ainst">onmouseup</samp></a>,
+  <a href="scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>,
+  <a href="scripts.html#adef-onmousemove"><samp class="ainst">onmousemove</samp></a>,
+  <a href="scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>,
+  <a href="scripts.html#adef-onkeypress"><samp class="ainst">onkeypress</samp></a>,
+  <a href="scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>,
+  <a href="scripts.html#adef-onkeyup"><samp class="ainst">onkeyup</samp></a>
+  (<a href="../interact/scripts.html#events">intrinsic events</a>)
+</ul>
+</div>
+
+
+<P>The nature of a control defined by the <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>
+element depends on the value of the <a href="forms.html#adef-type"><samp class="ainst">type</samp></a>
+attribute.
+
+
+<h4><a name="input-types">Input types</a><a name="h-18.2.1.1">&nbsp;</a></h4>
+
+<p>The <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> element's <a href="forms.html#adef-type"><samp
+class="ainst">type</samp></a> attribute determines which control will be
+created.</p>
+
+<dl>
+<dt><strong>text</strong>
+<dd>This type creates a single-line text box. The value
+  submitted by a text control is the input text.
+
+<dt><strong>password</strong>
+<dd>Like "text", but the input text is rendered in such a way as to hide
+  the characters (e.g., a series of asterisks). This control is used for
+  sensitive input such as passwords. The value submitted by a password
+  control is the input text (not the rendering).
+
+<dt><strong>checkbox</strong>
+<dd>A checkbox is an on/off switch. When the switch is on, the value of
+the checkbox is "active". When the switch is off, the value is inactive.
+The checkbox value is only submitted with the form when the switch is on.
+
+<P>Several checkboxes within the same form may bear the same name. Upon
+submission, each "on" checkbox with the same name submits a name/value
+pair with the same name component. This allows users to select more than
+one value for a given property.</P>
+
+<dt><strong>radio</strong>
+<dd>A radio button is an on/off switch. When the switch is on, the value
+of the radio button is "active". When the switch is off, the value is
+inactive. The radio button value is only submitted with the form when
+the switch is on.
+
+<P>Several radio button within the same form may bear the same name.
+However, only one of these buttons may be "on" at any one time. All
+related buttons are set to "off" as soon as one is set to "on". Thus,
+for related radio buttons, only one name/value pair is ever
+submitted.</P>
+
+<dt><strong>submit</strong> 
+<dd>Creates a submit button. When this button is activated by
+the user, the form is submitted to the location specified by the
+<a href="forms.html#adef-action"><samp class="ainst">action</samp></a> attribute of the parent
+<a href="forms.html#edef-FORM"><samp class="einst">FORM</samp></a> element. 
+
+<P>A form may contain more than one submit button. Only the name/value
+pair of the activated submit button is submitted with the form.</P>
+
+<dt><strong>image</strong> 
+<dd>Creates a graphical <em>submit</em> button. The value of the
+<a href="forms.html#adef-src"><samp class="ainst">src</samp></a> attribute specifies the URL of the
+image that will decorate the button. Some users will be unable to
+see this image. We strongly recommend you provide a value for the
+<a href="../struct/objects.html#adef-alt"><samp class="ainst">alt</samp></a> attribute as an textual alternative
+for the image.
+
+<p>When a pointing device is used to click on the image, the form is
+submitted and the location passed to the server. The x value is measured
+in pixels from the left of the image, and the y value in pixels from the
+top of the image. The submitted data includes <em>name</em>.x=<em>x-value</em>
+and <em>name</em>.y=<em>y-value</em> where <em>"name"</em> is the value
+of the <samp class="ainst">name</samp> attribute, and <em>x-value</em> and
+<em>y-value</em> are the x and y coordinate values respectively.
+
+<p>If the server takes different actions depending on the location
+clicked, users of non-graphical browsers will be disadvantaged. For this
+reason, you are recommended to consider alternative approaches:</p>
+
+<ul>
+<li>Use multiple submit buttons (each with their own image)
+in place of a single graphical submit button. You can use style sheets
+to control the positioning of these buttons.
+<li>Use a <a href="../struct/objects.html#include-maps">client-side
+image map</a> together with scripting.
+</ul>
+
+<div class="note">
+<p><em>A possible future extension would be to add the
+<a href="../struct/objects.html#adef-usemap"><samp class="ainst">usemap</samp></a> attribute to
+<a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> for use as as client-side
+image map when "<a href="forms.html#adef-type"><samp class="ainst">type</samp></a>=image".
+The <a href="../struct/objects.html#edef-AREA"><samp class="einst">AREA</samp></a> element corresponding to
+the location clicked would contribute the value to be passed
+to the server. To avoid the need to modify server scripts, it
+may be appropriate to extend <a href="../struct/objects.html#edef-AREA"><samp class="einst">AREA</samp></a>
+to provide x and y values for use with the 
+<a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> element.</em></p>
+</div>
+
+<dt><strong>reset</strong> 
+<dd>Creates a reset button. When this button is activated by the user,
+all of the form's controls have their values reset to the initial values
+specified by their <samp class="ainst">value</samp> attributes. The
+name/value for a reset button are not submitted with the form.
+
+<dt><strong>button</strong> 
+<dd>Creates a push button that has no default behavior. The behavior of
+the button is defined by associating the button with client-side scripts
+that are triggered when events affecting the button occur (e.g.,
+clicking the button). The value of the <samp class="ainst">value</samp>
+attribute is the label used for the button.
+
+<div class="example"><P>
+<P>For example, the following declaration causes the function named 
+<tt>verify</tt> to be executed when the button is clicked. The script
+must be defined by a <a href="scripts.html#edef-SCRIPT"><samp class="einst">SCRIPT</samp></a> element.</p>
+
+<pre>
+&lt;INPUT type="button" value="Click Me" onclick="verify()"&gt;
+</pre>
+</div>
+
+<P>Please consult the section on
+<a href="./scripts.html#events">intrinsic events</a>
+for more information about scripting and events.</P>
+
+<dt><strong>hidden</strong>
+<dd>Creates a element that is not rendered by the user agent.
+However, the element's name and value are submitted with the form. 
+
+<P>This control type is generally used to store information between
+client/server exchanges that would otherwise be loss due to the
+stateless nature of HTTP.
+
+<P><a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> controls of type <samp
+class="ainst">hidden</samp> have their values submitted with the
+form. The same holds for controls that are not rendered because of
+style information. The following control, though hidden by the user
+agent, will have its value submitted with the form.</P>
+
+<PRE>
+&lt;INPUT type="password" style="display:none"  
+          name="invisible-password"
+          value="mypassword"&gt;
+</PRE>
+
+<dt><strong>file</strong>
+<dd>Prompts the user for a file name. When the form is submitted, the
+contents of the file are submitted to the server as well as other user
+input.
+
+<P>User agents should encapsulate multiple files in
+a MIME multipart document (see <a rel="biblioentry"
+href="../references.html#ref-RFC2045">[RFC2045]</a>).
+This mechanism encapsulates each file in a a body-part of a
+multipart MIME body that is sent as the HTTP entity. Each each
+body part can be labeled with an appropriate "Content-Type",
+including if necessary a "charset" parameter that specifies
+the character encoding.
+</dl>
+
+<div class="example">
+<P>The following sample HTML fragment defines a simple form that allows
+the user to enter a first name, last name, email address, and sex. When
+the submit button is activated, the form is sent to the program
+specified by the <a href="forms.html#adef-action"><samp class="ainst">action</samp></a> attribute.</p>
+
+<pre>
+ &lt;FORM action="http://somesite.com/prog/adduser" method="post"&gt;
+    &lt;P&gt;
+    First name: &lt;INPUT type="text" name="firstname"&gt;&lt;BR&gt;
+    Last name: &lt;INPUT type="text" name="lastname"&gt;&lt;BR&gt;
+    email: &lt;INPUT type="text" name="email"&gt;&lt;BR&gt;
+    &lt;INPUT type="radio" name="sex" value="Male"&gt; Male&lt;BR&gt;
+    &lt;INPUT type="radio" name="sex" value="Female"&gt; Female&lt;BR&gt;
+    &lt;INPUT type="submit" value="Send"&gt; &lt;INPUT type="reset"&gt;
+ &lt;/FORM&gt;
+</pre>
+
+<P>This form might be rendered as follows:
+
+<P><IMG src="../images/form_exmpl.gif" alt="An example form rendering.">
+
+<P>In the section on the <a href="forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a> element,
+we discuss marking up labels such as "First name".
+</div>
+
+
+<div class="example">
+<P>The following example shows how the contents of a user-specified
+file may be submitted with a form. This example is based on an
+example from <a rel="biblioentry"
+href="../references.html#ref-RFC1867">[RFC1867]</a>.
+
+<P>In this example, the user is prompted to enter a name and
+a list of names of files whose contents should be submitted
+with the form. By specifying the <a href="forms.html#adef-enctype"><samp class="ainst">enctype</samp></a>
+value of "multipart/form-data", each file's contents are stored in
+a separate section of a multipart document.</p>
+
+<pre>
+&lt;FORM action="http://server.dom/cgi/handle"
+    enctype="multipart/form-data"
+    method="post"&gt;
+ What is your name? &lt;INPUT type="text" name="name_of_sender"&gt;
+ What files are you sending? &lt;INPUT type="file" name="name_of_files"&gt;
+&lt;/FORM>
+</pre>
+
+<P>Please consult <a rel="biblioentry"
+href="../references.html#ref-RFC1867">[RFC1867]</a> for
+more information about file submissions.
+</div>
+
+<h4>The <a name="edef-ISINDEX"><samp class="edef">ISINDEX</samp></a>
+element<a name="h-18.2.1.2">&nbsp;</a></h4>
+
+<p><strong>ISINDEX is deprecated.</strong> Users should use
+the <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> element instead of this element.
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="forms.html#edef-ISINDEX"><samp class="einst">ISINDEX</samp></a> - O EMPTY -- single line prompt --&gt;
+&lt;!ATTLIST ISINDEX
+  <a href="../sgml/loosedtd.html#coreattrs">%coreattrs;</a>                      -- <a href="../struct/global.html#adef-id">id</a>, <a href="../struct/global.html#adef-class">class</a>, <a href="../present/styles.html#adef-style">style</a>, <a href="../struct/global.html#adef-title">title</a> --
+  <a href="../sgml/loosedtd.html#i18n">%i18n;</a>                           -- <a href="../struct/dirlang.html#adef-lang">lang</a>, <a href="../struct/dirlang.html#adef-dir">dir</a> --
+  <a href="forms.html#adef-prompt"><samp class="ainst-ISINDEX">prompt</samp></a>      CDATA      #IMPLIED  -- prompt message --&gt;
+</pre>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>forbidden</strong></em></p>
+
+<div class="adef-list">
+<P><em>Attribute definitions</em>
+
+<dl>
+<dt><a name="adef-prompt"><samp class="adef">prompt</samp></a> =
+ <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd><strong>Deprecated.</strong> This attribute specifies
+ a prompt string for the input field.
+</dl>
+</div>
+
+<div class="aref-list">
+<P><em>Attributes defined elsewhere</em></p>
+
+<ul>
+<li><a href="../struct/global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="../struct/global.html#adef-class"><samp class="ainst">class</samp></a>
+  (<a href="../struct/global.html#id-and-class">document-wide
+  identifiers</a>) 
+<li><a href="../struct/dirlang.html#adef-lang"><samp class="ainst">lang</samp></a>
+  (<a href="../struct/dirlang.html#language-info">language
+  information</a>), <a href="../struct/dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+  (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+<li><a href="../struct/global.html#adef-title"><samp class="ainst">title</samp></a>
+  (<a href="../struct/global.html#titles">element titles</a>) 
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a>
+  (<a href="../present/styles.html#style-element">inline style
+  information</a>) 
+</ul>
+</div>
+
+<p>The <a href="forms.html#edef-ISINDEX"><samp class="einst">ISINDEX</samp></a> element causes the user
+agent to prompt the user for a single line of input (allowing any
+number of characters). The user agent may use the value of the <a href="forms.html#adef-prompt"><samp
+class="ainst">prompt</samp></a> attribute as a title for the prompt.
+
+<div class="deprecated-example">
+<P><span class="example-title">DEPRECATED EXAMPLE:</span><br>
+The following <a href="forms.html#edef-ISINDEX"><samp class="einst">ISINDEX</samp></a> declaration:</p>
+
+<PRE>
+&lt;ISINDEX prompt="Enter your search phrase: "&gt;
+</PRE>
+
+<P>is equivalent to the following <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>
+declaration:
+
+<PRE>
+&lt;FORM action="..." method="post"&gt;
+Enter your search phrase: &lt;INPUT type="text"&gt;
+&lt;/FORM&gt;
+</PRE>
+</div>
+
+<div class="note">
+<P><em><strong>Semantics of <samp class="einst">ISINDEX.</samp></strong>
+Currently, the semantics for <a href="forms.html#edef-ISINDEX"><samp class="einst">ISINDEX</samp></a>
+are only well-defined when the base URL for the enclosing document is
+an HTTP URL.  In practice, the input string is restricted to Latin-1 as
+there is no mechanism for the URL to specify a different character
+set.</em>
+</div>
+
+<h3><a name="h-18.2.2">18.2.2</a> The <a name="edef-BUTTON"><samp class="edef">BUTTON</samp></a> element </h3>
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a> - -
+     (<a href="../sgml/loosedtd.html#inline">%inline;</a> | <a href="../sgml/loosedtd.html#blocklevel">%blocklevel;</a>)+ -(A | <a href="../sgml/loosedtd.html#formctrl">%formctrl;</a> | FORM | ISINDEX | FIELDSET)
+     -- push button --&gt;
+&lt;!ATTLIST BUTTON
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="forms.html#adef-name-BUTTON"><samp class="ainst-BUTTON">name</samp></a>        CDATA      #IMPLIED  -- for scripting/forms as submit button --
+  <a href="forms.html#adef-value-BUTTON"><samp class="ainst-BUTTON">value</samp></a>       CDATA      #IMPLIED  -- gets passed to server when submitted --
+  <a href="forms.html#adef-type-BUTTON"><samp class="ainst-BUTTON">type</samp></a> (button|submit|reset) submit -- for use as form submit/reset button --
+  <a href="forms.html#adef-disabled"><samp class="ainst-BUTTON">disabled</samp></a>   (disabled)  #IMPLIED  -- control is unavailable in this context --
+  <a href="forms.html#adef-tabindex"><samp class="ainst-BUTTON">tabindex</samp></a>    NUMBER     #IMPLIED  -- position in tabbing order --
+  <a href="forms.html#adef-accesskey"><samp class="ainst-BUTTON">accesskey</samp></a>   CDATA      #IMPLIED  -- accessibility key character --
+  <a href="scripts.html#adef-onfocus"><samp class="ainst-BUTTON">onfocus</samp></a>     <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- the element got the focus --
+  <a href="scripts.html#adef-onblur"><samp class="ainst-BUTTON">onblur</samp></a>      <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- the element lost the focus --
+  &gt;
+</pre>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<div class="adef-list">
+<P><em>Attribute definitions</em>
+
+<dl>
+<dt><a name="adef-name-BUTTON"><samp class="adef">name</samp></a> =
+ <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute assigns a name to the button.
+
+<dt><a name="adef-value-BUTTON"><samp class="adef">value</samp></a> =
+ <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute assigns a value to the button. 
+
+<dt><a name="adef-type-BUTTON"><samp class="adef">type</samp></a> =
+ <samp>submit|button|reset</samp>
+<dd>This attribute declares the type of the button. Possible values:
+
+<ul>
+<li><samp>submit:</samp> Creates a button that submits the 
+ form that contains it. This is the default value.
+
+<li><samp>button:</samp> Creates a simple push button intended to
+ trigger a script.
+
+<li><samp>reset:</samp> Creates a button that resets the form that
+contains it.
+</ul>
+</dl>
+</div>
+
+<div class="aref-list">
+<P><em>Attributes defined elsewhere</em></p>
+
+<ul>
+<li><a href="forms.html#adef-disabled"><samp class="ainst">disabled</samp></a>
+ (<a href="#disabled">disabled input controls</a>)
+<li><a href="forms.html#adef-accesskey"><samp class="ainst">accesskey</samp></a>
+  (<a href="../interact/forms.html#access-keys">access keys</a>)
+<li><a href="../struct/objects.html#adef-usemap"><samp class="ainst">usemap</samp></a>
+ (<a href="../struct/objects.html#edef-MAP">client-side image maps</a>)
+<li><a href="scripts.html#adef-onfocus"><samp class="ainst">onfocus</samp></a>,
+ <a href="scripts.html#adef-onblur"><samp class="ainst">onblur</samp></a>, <a href="scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>, <a href="scripts.html#adef-ondblclick"><samp
+class="ainst">ondblclick</samp></a>, <a href="scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>, <a href="scripts.html#adef-onmouseup"><samp
+class="ainst">onmouseup</samp></a>, <a href="scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>, <a href="scripts.html#adef-onmousemove"><samp
+class="ainst">onmousemove</samp></a>, <a href="scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>, <a href="scripts.html#adef-onkeypress"><samp
+class="ainst">onkeypress</samp></a>, <a href="scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>, <a href="scripts.html#adef-onkeyup"><samp
+class="ainst">onkeyup</samp></a> (<a
+href="../interact/scripts.html#events">intrinsic events</a>)
+</ul>
+</div>
+
+<P>A <a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a> element whose type is
+"submit" is very similar to an <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>
+element whose type is "submit". They both cause a form to be
+submitted, but the <a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a> element allows
+richer presentational possibilities.
+
+<P>A <a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a> element whose type
+is "submit" and whose content is an image (e.g., the
+<a href="../struct/objects.html#edef-IMG"><samp class="einst">IMG</samp></a> element) is very similar to
+an <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> element whose type is "image".
+They both cause a form to be submitted, but their presentation is
+different. In this context, a graphical user agent may render an <a href="forms.html#edef-INPUT"><samp
+class="einst">INPUT</samp></a> element as a "flat" image, and render a
+<a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a> as a button (e.g., with relief and an
+up/down motion when clicked).
+
+<div class="example">
+<P>The following example expands a previous example by substituting the
+<a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> elements that create submit and reset
+buttons with <a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a> instances. The
+buttons contain images by way of the <a href="../struct/objects.html#edef-IMG"><samp class="einst">IMG</samp></a>
+element.</p>
+
+<pre>
+ &lt;FORM action="http://somesite.com/prog/adduser" method="post"&gt;
+    &lt;P&gt;
+    First name: &lt;INPUT type="text" name="firstname"&gt;&lt;BR&gt;
+    Last name: &lt;INPUT type="text" name="lastname"&gt;&lt;BR&gt;
+    email: &lt;INPUT type="text" name="email"&gt;&lt;BR&gt;
+    &lt;INPUT type="radio" name="sex" value="Male"&gt; Male&lt;BR&gt;
+    &lt;INPUT type="radio" name="sex" value="Female"&gt; Female&lt;BR&gt;
+    &lt;BUTTON name="submit" value="submit" type="submit"&gt;
+    Send&lt;IMG src="/icons/wow.gif" alt="wow"&gt;&lt;/BUTTON&gt;
+    &lt;BUTTON name="reset" type="reset"&gt;
+    Reset&lt;IMG src="/icons/oops.gif" alt="oops"&gt;&lt;/BUTTON&gt;
+ &lt;/FORM&gt;
+</pre>
+</div>
+
+
+<P>If a <a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a> is used with an
+<a href="../struct/objects.html#edef-IMG"><samp class="einst">IMG</samp></a> element, you are recommended
+to exploit the <a href="../struct/objects.html#edef-IMG"><samp class="einst">IMG</samp></a> element's 
+<a href="../struct/objects.html#adef-alt"><samp class="ainst">alt</samp></a> attribute to provide a description
+for users unable to see the image.
+
+<P>It is illegal to associate an image map with an
+<a href="../struct/objects.html#edef-IMG"><samp class="einst">IMG</samp></a> that appears as the
+contents of a <a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a> element.
+
+<div class="illegal-example">
+<P><span class="example-title">ILLEGAL EXAMPLE:</span><br>
+The following is not considered legal HTML.</p>
+
+<pre>
+&lt;BUTTON&gt;
+&lt;IMG src="foo.gif" usemap="..."&gt;
+&lt;/BUTTON&gt;
+</pre>
+</div>
+
+<P>A <a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a> element whose type is "reset" is
+very similar to an <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> element whose type
+is "reset". They both cause controls to regain their initial values, but
+the <a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a> element allows richer
+presentation.
+
+<P>The <a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a> element may also be used together
+with scripts, in which case it's <a href="forms.html#adef-type"><samp class="ainst">type</samp></a> should
+be "button". When such a button is activated, a client-side script is
+executed. We discuss this use of <a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a>
+later in the specification in the section on <a
+href="./scripts.html#events">intrinsic events</a>.
+
+<h3><a name="h-18.2.3">18.2.3</a> The <a name="edef-SELECT"><samp class="edef">SELECT</samp></a> 
+and <a name="edef-OPTION"><samp class="edef">OPTION</samp></a> elements</h3>
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="forms.html#edef-SELECT"><samp class="einst">SELECT</samp></a> - - (OPTION)+ -- option selector --&gt;
+&lt;!ATTLIST SELECT
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="forms.html#adef-name-SELECT"><samp class="ainst-SELECT">name</samp></a>        CDATA      #IMPLIED -- field name --
+  <a href="forms.html#adef-size-SELECT"><samp class="ainst-SELECT">size</samp></a>        NUMBER     #IMPLIED  -- rows visible --
+  <a href="forms.html#adef-multiple"><samp class="ainst-SELECT">multiple</samp></a>  (multiple)   #IMPLIED  -- default is single selection --
+  <a href="forms.html#adef-disabled"><samp class="ainst-SELECT">disabled</samp></a>  (disabled)   #IMPLIED  -- control is unavailable in this context --
+  <a href="forms.html#adef-tabindex"><samp class="ainst-SELECT">tabindex</samp></a>    NUMBER     #IMPLIED  -- position in tabbing order --
+  <a href="scripts.html#adef-onfocus"><samp class="ainst-SELECT">onfocus</samp></a>     <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- the element got the focus --
+  <a href="scripts.html#adef-onblur"><samp class="ainst-SELECT">onblur</samp></a>      <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- the element lost the focus --
+  <a href="scripts.html#adef-onchange"><samp class="ainst-SELECT">onchange</samp></a>    <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- the element value was changed --
+  &gt;
+</pre>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<div class="adef-list">
+<P><em>SELECT Attribute definitions</em>
+
+<dl>
+<dt><a name="adef-name-SELECT"><samp class="adef">name</samp></a> =
+ <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute assigns a name to the element. This name will
+ be paired with any selected values when the form is submitted.
+
+<dt><a name="adef-size-SELECT"><samp class="adef">size</samp></a> =
+ <em>integer</em>
+<dd>This attribute specifies the number of rows to be rendered by the
+ user agent. The number of rows may be smaller than the number of
+ possible choices. In this case, the user agent should provide a
+ scrolling mechanism for accessing all possible choices. 
+
+<dt><a name="adef-multiple"><samp class="adef">multiple</samp></a>
+<dd>When set, this boolean attribute allows multiple selections. When
+ not set, the <a href="forms.html#edef-SELECT"><samp class="einst">SELECT</samp></a> element only permits
+ single selections. Traditionally, visual user agents render
+ multiple-selection elements as list boxes, while single-selection 
+ elements are rendered as drop-down menus.
+</dl>
+</div>
+
+
+<P>The <a href="forms.html#edef-SELECT"><samp class="einst">SELECT</samp></a> element creates
+a  list of choices that may be selected by the user. Each
+<a href="forms.html#edef-SELECT"><samp class="einst">SELECT</samp></a> element must contain at
+least one choice. Each choice is specified by an instance
+of the <a href="forms.html#edef-OPTION"><samp class="einst">OPTION</samp></a> element.
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="forms.html#edef-OPTION"><samp class="einst">OPTION</samp></a> - O (#PCDATA) -- selectable choice --&gt;
+&lt;!ATTLIST OPTION
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="forms.html#adef-selected"><samp class="ainst-OPTION">selected</samp></a>  (selected)   #IMPLIED
+  <a href="forms.html#adef-disabled"><samp class="ainst-OPTION">disabled</samp></a>  (disabled)   #IMPLIED  -- control is unavailable in this context --
+  <a href="forms.html#adef-value-OPTION"><samp class="ainst-OPTION">value</samp></a>       CDATA      #IMPLIED  -- defaults to element content --
+  &gt;
+</pre>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>optional</strong></em></p>
+
+<div class="adef-list">
+<P><em>OPTION Attribute definitions</em>
+
+<dl>
+<dt><a name="adef-selected"><samp class="adef">selected</samp></a>
+<dd>When set, this boolean attribute specifies that this option is
+ selected (initially or by the user). 
+
+<dt><a name="adef-value-OPTION"><samp class="adef">value</samp></a> =
+ <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute specifies the value to be submitted for this
+ choice if the choice is selected when the form is submitted. The value
+ is paired with the <samp class="ainst">name</samp> assigned to the
+ <a href="forms.html#edef-SELECT"><samp class="einst">SELECT</samp></a> element. If this attribute is not
+ set, the submitted value defaults to the content of the <a href="forms.html#edef-OPTION"><samp
+ class="einst">OPTION</samp></a> element. 
+</dl>
+</div>
+
+<div class="aref-list">
+<P><em>Attributes defined elsewhere</em> </p>
+
+<ul>
+<li><a href="../struct/global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="../struct/global.html#adef-class"><samp class="ainst">class</samp></a>
+ (<a href="../struct/global.html#id-and-class">document-wide
+ identifiers</a>) 
+<li><a href="../struct/dirlang.html#adef-lang"><samp class="ainst">lang</samp></a>
+ (<a href="../struct/dirlang.html#language-info">language
+ information</a>), <a href="../struct/dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+ (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+<li><a href="../struct/global.html#adef-title"><samp class="ainst">title</samp></a>
+ (<a href="../struct/global.html#titles">element titles</a>) 
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a>
+ (<a href="../present/styles.html#style-element">inline style
+ information</a>) 
+<li><a href="forms.html#adef-disabled"><samp class="ainst">disabled</samp></a>
+ (<a href="#disabled">disabled input controls</a>)
+<li><a href="forms.html#adef-tabindex"><samp class="ainst">tabindex</samp></a>
+ (<a href="../interact/forms.html#tabbing-navigation">tabbing
+ navigation</a>)
+<li><a href="scripts.html#adef-onfocus"><samp class="ainst">onfocus</samp></a>,
+ <a href="scripts.html#adef-onblur"><samp class="ainst">onblur</samp></a>, <a href="scripts.html#adef-onchange"><samp class="ainst">onchange</samp></a>,
+ <a href="scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>,
+  <a href="scripts.html#adef-ondblclick"><samp class="ainst">ondblclick</samp></a>,
+  <a href="scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>,
+  <a href="scripts.html#adef-onmouseup"><samp class="ainst">onmouseup</samp></a>,
+  <a href="scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>,
+  <a href="scripts.html#adef-onmousemove"><samp class="ainst">onmousemove</samp></a>,
+  <a href="scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>,
+  <a href="scripts.html#adef-onkeypress"><samp class="ainst">onkeypress</samp></a>,
+  <a href="scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>,
+  <a href="scripts.html#adef-onkeyup"><samp class="ainst">onkeyup</samp></a>
+  (<a href="../interact/scripts.html#events">intrinsic events</a>)
+</ul>
+</div>
+
+
+<P>User agents should use the content of the
+<a href="forms.html#edef-OPTION"><samp class="einst">OPTION</samp></a> element as the
+displayed choice.
+
+<div class="example">
+<P>In this example, we create a menu that allows the user to select
+which of seven software components to install. The first and second
+components are initially selected but may be deselected by the user.
+The remaining components are not initially selected. The <a href="forms.html#adef-size-SELECT"><samp
+class="ainst-SELECT">size</samp></a> attribute states that the menu should
+only have 4 rows even though the user may select from among 7 options.
+The other options must be made available through a scrolling mechanism.
+
+<P>The <a href="forms.html#edef-SELECT"><samp class="einst">SELECT</samp></a> is followed by submit and reset
+buttons.
+
+<PRE>
+&lt;FORM action="http://somesite.com/prog/component-select" method="post"&gt;
+   &lt;SELECT multiple size="4" name="component-select"&gt;
+      &lt;OPTION selected value="Component_1_a"&gt;Component_1&lt;/OPTION&gt;
+      &lt;OPTION selected value="Component_1_b"&gt;Component_2&lt;/OPTION&gt;
+      &lt;OPTION&gt;Component_3&lt;/OPTION&gt;
+      &lt;OPTION&gt;Component_4&lt;/OPTION&gt;
+      &lt;OPTION&gt;Component_5&lt;/OPTION&gt;
+      &lt;OPTION&gt;Component_6&lt;/OPTION&gt;
+      &lt;OPTION&gt;Component_7&lt;/OPTION&gt;
+   &lt;/SELECT&gt;
+   &lt;INPUT type="submit" value="Send"&gt;&lt;INPUT type="reset"&gt;
+&lt;/FORM&gt;
+</PRE>
+
+<P>When the form is submitted, each selected choice will be paired with
+the name "component-select" and submitted. The submitted value of each
+<a href="forms.html#edef-OPTION"><samp class="einst">OPTION</samp></a> will be its contents, except where
+overridden by the <samp class="ainst">value</samp> attribute (here, in
+the first two components).
+</div>
+
+
+<h3><a name="h-18.2.4">18.2.4</a> The <a name="edef-TEXTAREA"><samp class="edef">TEXTAREA</samp></a>
+element</h3> 
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="forms.html#edef-TEXTAREA"><samp class="einst">TEXTAREA</samp></a> - - (#PCDATA) -- multi-line text field --&gt;
+&lt;!ATTLIST TEXTAREA
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="forms.html#adef-name-TEXTAREA"><samp class="ainst-TEXTAREA">name</samp></a>        CDATA      #IMPLIED
+  <a href="forms.html#adef-rows-TEXTAREA"><samp class="ainst-TEXTAREA">rows</samp></a>        NUMBER     #REQUIRED
+  <a href="forms.html#adef-cols-TEXTAREA"><samp class="ainst-TEXTAREA">cols</samp></a>        NUMBER     #REQUIRED
+  <a href="forms.html#adef-disabled"><samp class="ainst-TEXTAREA">disabled</samp></a>  (disabled)   #IMPLIED  -- control is unavailable in this context --
+  <a href="forms.html#adef-readonly"><samp class="ainst-TEXTAREA">readonly</samp></a>  (readonly)   #IMPLIED
+  <a href="forms.html#adef-tabindex"><samp class="ainst-TEXTAREA">tabindex</samp></a>    NUMBER     #IMPLIED  -- position in tabbing order --
+  <a href="scripts.html#adef-onfocus"><samp class="ainst-TEXTAREA">onfocus</samp></a>     <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- the element got the focus --
+  <a href="scripts.html#adef-onblur"><samp class="ainst-TEXTAREA">onblur</samp></a>      <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- the element lost the focus --
+  <a href="scripts.html#adef-onselect"><samp class="ainst-TEXTAREA">onselect</samp></a>    <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- some text was selected --
+  <a href="scripts.html#adef-onchange"><samp class="ainst-TEXTAREA">onchange</samp></a>    <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- the element value was changed --
+  &gt;
+</pre>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<div class="adef-list">
+<P><em>Attribute definitions</em>
+
+<dl>
+<dt><a name="adef-name-TEXTAREA"><samp class="adef">name</samp></a> =
+ <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute assigns a name to the element. This name will be
+paired with the content of the element when submitted to the server.
+
+<dt><a name="adef-rows-TEXTAREA"><samp class="adef">rows</samp></a> =
+ <em>integer</em>
+<dd>Specifies the number of visible text lines. Users should be able to
+enter more lines than this, so user agents should provide some means to
+scroll through the contents of the textarea field when the contents
+extend beyond the visible area. 
+
+<dt><a name="adef-cols-TEXTAREA"><samp class="adef">cols</samp></a> =
+ <em>integer</em>
+<dd>Specifies the visible width in average character widths. Users
+should be able to enter longer lines than this, so user agents should
+provide some means to scroll through the contents of the textarea field
+when the contents extend beyond the visible area. User agents may wrap
+visible text lines to keep long lines visible without the need for
+scrolling. 
+
+</dl>
+</div>
+
+<div class="aref-list">
+<P><em>Attributes defined elsewhere</em> </p>
+
+<ul>
+<li><a href="../struct/global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="../struct/global.html#adef-class"><samp class="ainst">class</samp></a>
+  (<a href="../struct/global.html#id-and-class">document-wide
+  identifiers</a>) 
+
+<li><a href="../struct/dirlang.html#adef-lang"><samp class="ainst">lang</samp></a>
+  (<a href="../struct/dirlang.html#language-info">language
+  information</a>), <a href="../struct/dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+  (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+
+<li><a href="../struct/global.html#adef-title"><samp class="ainst">title</samp></a>
+  (<a href="../struct/global.html#titles">element titles</a>) 
+
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a>
+  (<a href="../present/styles.html#style-element">inline style
+   information</a>) 
+
+<li><a href="forms.html#adef-readonly"><samp class="ainst">readonly</samp></a>
+  (<a href="#read-only">read-only input controls</a>)
+
+<li><a href="forms.html#adef-disabled"><samp class="ainst">disabled</samp></a>
+  (<a href="#disabled">disabled input controls</a>)
+
+<li><a href="forms.html#adef-tabindex"><samp class="ainst">tabindex</samp></a>
+  (<a href="../interact/forms.html#tabbing-navigation">tabbing
+   navigation</a>)
+
+<li><a href="scripts.html#adef-onfocus"><samp class="ainst">onfocus</samp></a>,
+  <a href="scripts.html#adef-onblur"><samp class="ainst">onblur</samp></a>, 
+  <a href="scripts.html#adef-onselect"><samp class="ainst">onselect</samp></a>, 
+  <a href="scripts.html#adef-onchange"><samp class="ainst">onchange</samp></a>,
+  <a href="scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>,
+   <a href="scripts.html#adef-ondblclick"><samp class="ainst">ondblclick</samp></a>,
+   <a href="scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>,
+   <a href="scripts.html#adef-onmouseup"><samp class="ainst">onmouseup</samp></a>,
+   <a href="scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>,
+   <a href="scripts.html#adef-onmousemove"><samp class="ainst">onmousemove</samp></a>,
+   <a href="scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>,
+   <a href="scripts.html#adef-onkeypress"><samp class="ainst">onkeypress</samp></a>,
+   <a href="scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>,
+   <a href="scripts.html#adef-onkeyup"><samp class="ainst">onkeyup</samp></a>
+   (<a href="../interact/scripts.html#events">intrinsic events</a>)
+</ul>
+</div>
+
+
+<P>The <a href="forms.html#edef-TEXTAREA"><samp class="einst">TEXTAREA</samp></a> element creates
+a multi-line text input control (as opposed to a single-line
+<a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> control). The content of this
+element provides the initial text presented by the control.
+
+<div class="example">
+<P>This example creates a <a href="forms.html#edef-TEXTAREA"><samp class="einst">TEXTAREA</samp></a> control
+that is 20 rows by 80 columns and contains two lines of text initially.
+The <a href="forms.html#edef-TEXTAREA"><samp class="einst">TEXTAREA</samp></a> is followed by submit and reset
+buttons.<p>
+
+<pre>
+&lt;FORM action="http://somesite.com/prog/text-read" method="post"&gt;
+   &lt;TEXTAREA name="thetext" rows="20" cols="80"&gt;
+   First line of initial text.
+   Second line of initial text.
+   &lt;/TEXTAREA&gt;
+   &lt;INPUT type="submit" value="Send"&gt;&lt;INPUT type="reset"&gt;
+&lt;/FORM&gt;
+</pre>
+
+<P>Setting the <a href="forms.html#adef-readonly"><samp class="ainst">readonly</samp></a> attribute
+allows authors to display unmodifiable text in a <a href="forms.html#edef-TEXTAREA"><samp
+class="einst">TEXTAREA</samp></a>. This differs from using standard
+marked-up text in a document because the value of <a href="forms.html#edef-TEXTAREA"><samp
+class="einst">TEXTAREA</samp></a> is submitted with the form.
+</div>
+
+<!-- the following is from HTML 3.2 - what happened to the stuff
+ from Larry Masinter's RFC on file submission ??? -->
+<p>User agents should canonicalize line endings to CR,
+LF (ASCII decimal 13, 10) when submitting the field's contents. The
+character set for submitted data should be ISO Latin-1, unless the
+server has previously indicated that it can support alternative
+character sets. 
+
+<h3><a name="h-18.2.5">18.2.5</a> The <a name="edef-LABEL"><samp class="edef">LABEL</samp></a> element</h3>
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a> - - (<a href="../sgml/loosedtd.html#inline">%inline;</a>)* -(LABEL) -- form field label text --&gt;
+&lt;!ATTLIST LABEL
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="forms.html#adef-for"><samp class="ainst-LABEL">for</samp></a>         IDREF      #IMPLIED  -- matches field ID value --
+  <a href="forms.html#adef-disabled"><samp class="ainst-LABEL">disabled</samp></a>    (disabled) #IMPLIED  -- control is unavailable in this context --
+  <a href="forms.html#adef-accesskey"><samp class="ainst-LABEL">accesskey</samp></a>   CDATA      #IMPLIED  -- accessibility key character --
+  <a href="scripts.html#adef-onfocus"><samp class="ainst-LABEL">onfocus</samp></a>     <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- the element got the focus --
+  <a href="scripts.html#adef-onblur"><samp class="ainst-LABEL">onblur</samp></a>      <a href="../sgml/loosedtd.html#Script">%Script;</a>   #IMPLIED  -- the element lost the focus --
+  &gt;
+</pre>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<div class="adef-list">
+<P><em>Attribute definitions</em>
+
+<dl>
+<dt><a name="adef-for"><samp class="adef">for</samp></a> =
+ <em>control-name</em>
+<dd>This attribute explicitly associates the label being defined with
+ another control. The value of this attribute must be the value of the
+ <a href="../struct/global.html#adef-id"><samp class="ainst">id</samp></a> attribute of some other control in the
+ same document. In the absence of this attribute, the label being
+ defined is associated with its contents.
+</dl>
+</div>
+
+<div class="aref-list">
+<P><em>Attributes defined elsewhere</em></p>
+
+<ul>
+<li><a href="../struct/global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="../struct/global.html#adef-class"><samp class="ainst">class</samp></a>
+  (<a href="../struct/global.html#id-and-class">document-wide
+   identifiers</a>)
+
+<li><a href="../struct/dirlang.html#adef-lang"><samp class="ainst">lang</samp></a>
+  (<a href="../struct/dirlang.html#language-info">language
+   information</a>), <a href="../struct/dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+  (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+
+<li><a href="../struct/global.html#adef-title"><samp class="ainst">title</samp></a>
+  (<a href="../struct/global.html#titles">element titles</a>) 
+
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a>
+  (<a href="../present/styles.html#style-element">inline style
+   information</a>) 
+
+<li><a href="forms.html#adef-disabled"><samp class="ainst">disabled</samp></a>
+  (<a href="#disabled">disabled input controls</a>)
+
+<li><a href="forms.html#adef-accesskey"><samp class="ainst">accesskey</samp></a>
+  (<a href="../interact/forms.html#access-keys">access keys</a>)
+
+<li><a href="forms.html#adef-tabindex"><samp class="ainst">tabindex</samp></a>
+  (<a href="../interact/forms.html#tabbing-navigation">tabbing
+   navigation</a>)
+
+<li><a href="scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>,
+
+<li><a href="scripts.html#adef-onfocus"><samp class="ainst">onfocus</samp></a>,
+ <a href="scripts.html#adef-onblur"><samp class="ainst">onblur</samp></a>,
+ <a href="scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>,
+ <a href="scripts.html#adef-ondblclick"><samp class="ainst">ondblclick</samp></a>,
+ <a href="scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>,
+ <a href="scripts.html#adef-onmouseup"><samp class="ainst">onmouseup</samp></a>,
+ <a href="scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>,
+ <a href="scripts.html#adef-onmousemove"><samp class="ainst">onmousemove</samp></a>,
+ <a href="scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>,
+ <a href="scripts.html#adef-onkeypress"><samp class="ainst">onkeypress</samp></a>,
+ <a href="scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>,
+ <a href="scripts.html#adef-onkeyup"><samp class="ainst">onkeyup</samp></a>
+ (<a href="../interact/scripts.html#events">intrinsic events</a>)
+</ul>
+</div>
+
+
+<P>The <a href="forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a> element may be used to
+attach information to other control elements (excluding other
+<a href="forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a> elements). Labels may be rendered
+by user agents in a number of ways (e.g., visually, read by speech
+synthesizers, etc.)
+
+<P>When a <a href="forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a> element receives focus,
+it passes the focus on to its associated control. See the section
+below on <a href="access-keys">access keys</a> for examples.
+
+<P>To associate a label with another control explicitly,
+set the <a href="forms.html#adef-for"><samp class="ainst">for</samp></a> attribute of the
+<a href="forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a>. 
+
+<div class="example">
+<P>This example creates a table that is used to align two <a href="forms.html#edef-INPUT"><samp
+class="einst">INPUT</samp></a> controls and their associated labels.
+Each label is associated explicitly with one of the <a href="forms.html#edef-INPUT"><samp
+class="einst">INPUT</samp></a> elements.</P>
+
+<pre>
+&lt;FORM action="..." method="post"&gt;
+&lt;TABLE&gt;
+  &lt;TR&gt;
+    &lt;TD&gt;&lt;LABEL for="fname"&gt;First Name&lt;/LABEL&gt;
+    &lt;TD&gt;&lt;INPUT type="text" name="firstname" id="fname"&gt;
+  &lt;TR&gt;
+    &lt;TD&gt;&lt;LABEL for="lname"&gt;Last Name&lt;/LABEL&gt;
+    &lt;TD&gt;&lt;INPUT type="text" name="lastname" id="lname"&gt;
+&lt;/TABLE&gt;
+&lt;FORM&gt;
+</pre>
+</div>
+
+<div class="example">
+<P>This example extends a previous example form to include
+<a href="forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a> elements. Note that the
+<a href="forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a> elements are associated to
+the <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> elements through the
+<a href="../struct/global.html#adef-id"><samp class="ainst">id</samp></a> attribute.</P>
+
+<pre>
+ &lt;FORM action="http://somesite.com/prog/adduser" method="post"&gt;
+    &lt;P&gt;
+    &lt;LABEL for="firstname"&gt;First name: &lt;/LABEL&gt;&lt;INPUT 
+              type="text" id="firstname"&gt;&lt;BR&gt;
+    &lt;LABEL for="lastname"&gt;Last name: &lt;/LABEL&gt;&lt;INPUT 
+              type="text" id="lastname"&gt;&lt;BR&gt;
+    &lt;LABEL for="email"email: &lt;/LABEL&gt;&lt;INPUT 
+              type="text" id="email"&gt;&lt;BR&gt;
+    &lt;INPUT type="radio" name="sex" value="Male"&gt; Male&lt;BR&gt;
+    &lt;INPUT type="radio" name="sex" value="Female"&gt; Female&lt;BR&gt;
+    &lt;INPUT type="submit" value="Send"&gt; &lt;INPUT type="reset"&gt;
+ &lt;/FORM&gt;
+</pre>
+</div>
+
+<P>More than one <a href="forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a> may be associated
+with the same control by creating multiple references via the <a href="forms.html#adef-for"><samp
+class="ainst">for</samp></a> attribute.
+
+<P>To associate a label with another control implicitly, make the
+control the contents of the <a href="forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a>. In this
+case, the <a href="forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a> may only contain one other
+control element. The label itself may be positioned before or after the
+associated control.
+
+<div class="example">
+<P>In this example, we implicitly associate two labels and two <a href="forms.html#edef-INPUT"><samp
+class="einst">INPUT</samp></a> elements. Notice that the implicit
+association prevents us from being able to layout the label and its
+associated control in a table (see the previous example).</P>
+ 
+<pre>
+&lt;FORM action="..." method="post"&gt;
+&lt;LABEL&gt;
+   First Name
+   &lt;INPUT type="text" name="firstname"&gt;
+&lt;/LABEL&gt;
+&lt;LABEL&gt;
+   &lt;INPUT type="text" name="lastname"&gt;
+   Last Name
+&lt;/LABEL&gt;
+&lt;/FORM&gt;
+</pre>
+</div>
+
+<h3><a name="h-18.2.6">18.2.6</a> The <a name="edef-FIELDSET"><samp class="edef">FIELDSET</samp></a>
+and <a name="edef-LEGEND"><samp class="edef">LEGEND</samp></a>
+elements</h3>
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!--
+  #PCDATA is to solve the mixed content problem,
+  per specification only whitespace is allowed there!
+ --&gt;
+&lt;!ELEMENT <a href="forms.html#edef-FIELDSET"><samp class="einst">FIELDSET</samp></a> - - (#PCDATA,LEGEND,(<a href="../sgml/loosedtd.html#block">%block;</a>)+) -- form control group --&gt;
+&lt;!ATTLIST FIELDSET
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  &gt;
+
+&lt;!ELEMENT <a href="forms.html#edef-LEGEND"><samp class="einst">LEGEND</samp></a> - - (<a href="../sgml/loosedtd.html#inline">%inline;</a>)* -- fieldset legend --&gt;
+&lt;!ENTITY % LAlign "(top|bottom|left|right)"&gt;
+
+&lt;!ATTLIST LEGEND
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="forms.html#adef-align-LEGEND"><samp class="ainst-LEGEND">align</samp></a>       <a href="../sgml/loosedtd.html#LAlign">%LAlign;</a>   #IMPLIED  -- relative to fieldset --
+  <a href="forms.html#adef-accesskey"><samp class="ainst-LEGEND">accesskey</samp></a>   CDATA      #IMPLIED  -- accessibility key character --
+  &gt;
+</pre>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<div class="adef-list">
+<P><em>LEGEND Attribute definitions</em></P>
+
+<dl>
+<dt><a name="adef-align-LEGEND"><samp class="adef">align</samp></a> =
+  <samp>top|bottom|left|right</samp>
+<dd>This attribute specifies the position of the legend with
+ respect to the fieldset. Possible values:
+
+<ul>
+<li><samp>top:</samp> The legend is above the fieldset.
+ This is the default value.
+<li><samp>bottom:</samp> The legend is below the fieldset.
+<li><samp>left:</samp> The legend is to the left of the fieldset.
+<li><samp>right:</samp> The legend is to the right of the fieldset.
+</ul>
+</dl>
+</div>
+
+<div class="aref-list">
+<P><em>Attributes defined elsewhere</em></p>
+
+<ul>
+<li><a href="../struct/global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="../struct/global.html#adef-class"><samp class="ainst">class</samp></a>
+  (<a href="../struct/global.html#id-and-class">document-wide
+  identifiers</a>)
+
+<li><a href="../struct/dirlang.html#adef-lang"><samp class="ainst">lang</samp></a>
+  (<a href="../struct/dirlang.html#language-info">language
+  information</a>), <a href="../struct/dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+  (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+
+<li><a href="../struct/global.html#adef-title"><samp class="ainst">title</samp></a>
+  (<a href="../struct/global.html#titles">element titles</a>) 
+
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a>
+  (<a href="../present/styles.html#style-element">inline style
+  information</a>)
+
+<li><a href="forms.html#adef-accesskey"><samp class="ainst">accesskey</samp></a> 
+  (<a href="../interact/forms.html#access-keys">access keys</a>)
+
+<li><a href="../present/graphics.html#adef-align"><samp class="ainst">align</samp></a>
+  (<a href="../present/graphics.html#alignment">alignment</a>)
+
+<li><a href="scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>,
+ <a href="scripts.html#adef-ondblclick"><samp class="ainst">ondblclick</samp></a>,
+ <a href="scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>,
+ <a href="scripts.html#adef-onmouseup"><samp class="ainst">onmouseup</samp></a>,
+ <a href="scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>,
+ <a href="scripts.html#adef-onmousemove"><samp class="ainst">onmousemove</samp></a>,
+ <a href="scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>,
+ <a href="scripts.html#adef-onkeypress"><samp class="ainst">onkeypress</samp></a>,
+ <a href="scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>,
+ <a href="scripts.html#adef-onkeyup"><samp class="ainst">onkeyup</samp></a>
+ (<a href="../interact/scripts.html#events">intrinsic events</a>)
+</ul>
+</div>
+
+
+<P>The <a href="forms.html#edef-FIELDSET"><samp class="einst">FIELDSET</samp></a> element allows form
+designers to group thematically related controls together. Grouping
+controls makes it easier for users to understand their purpose while
+simultaneously facilitating tabbing navigation for visual user agents
+and speech navigation for speech-oriented user agents. The proper use
+of this element makes documents more accessible to people with
+disabilities.
+
+<P>The <a href="forms.html#edef-LEGEND"><samp class="einst">LEGEND</samp></a> element allows designers to
+assign a caption to a <a href="forms.html#edef-FIELDSET"><samp class="einst">FIELDSET</samp></a>. The legend
+improves accessibility when the <a href="forms.html#edef-FIELDSET"><samp class="einst">FIELDSET</samp></a> is
+rendered non-visually. When rendered visually, setting the <a href="../present/graphics.html#adef-align"><samp
+class="ainst">align</samp></a> attribute on the <a href="forms.html#edef-LEGEND"><samp
+class="einst">LEGEND</samp></a> element aligns it with respect to the
+<a href="forms.html#edef-FIELDSET"><samp class="einst">FIELDSET</samp></a>.
+
+<!-- the name was changed from CAPTION since a major vendor reported
+ implementation difficulties in using CAPTION for both FIELDSET
+ and TABLE, apparently associated will error recovery code -->
+
+<div class="example">
+<P>In this example, we create a form that one might fill out at the
+doctor's office. It is divided into three sections: personal
+information, medical history, and current medication. Each section
+contains controls for inputting the appropriate information.</P>
+
+<pre>
+&lt;FORM action="..." method="post"&gt;
+&lt;FIELDSET&gt;
+&lt;LEGEND align="top"&gt;Personal Information&lt;/LEGEND&gt;
+Last Name: &lt;INPUT name="personal_lastname" type="text" tabindex="1"&gt;
+First Name: &lt;INPUT name="personal_firstname" type="text" tabindex="2"&gt;
+Address: &lt;INPUT name="personal_address" type="text" tabindex="3"&gt;
+<em>...more personal information...</em>
+&lt;/FIELDSET&gt;
+&lt;FIELDSET&gt;
+&lt;LEGEND align="top"&gt;Medical History&lt;/LEGEND&gt;
+&lt;INPUT name="history_illness" 
+       type="checkbox" 
+       value="Smallpox" tabindex="20"&gt; Smallpox&lt;/INPUT&gt;
+&lt;INPUT name="history_illness" 
+       type="checkbox" 
+       value="Mumps" tabindex="21"&gt; Mumps&lt;/INPUT&gt;
+&lt;INPUT name="history_illness" 
+       type="checkbox" 
+       value="Dizziness" tabindex="22"&gt; Dizziness&lt;/INPUT&gt;
+&lt;INPUT name="history_illness" 
+       type="checkbox" 
+       value="Sneezing" tabindex="23"&gt; Sneezing&lt;/INPUT&gt;
+<em>...more medical history...</em>
+&lt;/FIELDSET&gt;
+&lt;FIELDSET&gt;
+&lt;LEGEND align="top"&gt;Current Medication&lt;/LEGEND&gt;
+Are you currently taking any medication? 
+&lt;INPUT name="medication_now" 
+       type="radio" 
+       value="Yes" tabindex="35"&gt;Yes&lt;/INPUT&gt;
+&lt;INPUT name="medication_now" 
+       type="radio" 
+       value="No" tabindex="35"&gt;No&lt;/INPUT&gt;
+
+If you are currently taking medication, please indicate
+it in the space below:
+&lt;TEXTAREA name="current_medication" 
+          rows="20" cols="50"
+          tabindex="40"&gt;
+&lt;/TEXTAREA&gt;
+&lt;/FIELDSET&gt;
+&lt;/FORM&gt;
+</pre>
+
+<P>Note that in this example, we might improve the presentation
+of the form by aligning elements within each <a href="forms.html#edef-FIELDSET"><samp
+class="einst">FIELDSET</samp></a> (with style sheets), adding color and
+font information (with style sheets), adding scripting (say, to only
+open the "current medication" text area if the user indicates he or
+she is currently on medication), etc.
+</div>
+
+
+<h2><a name="h-18.3">18.3</a> <a name="focus">Giving focus to an element</a></h2>
+
+<P>Active elements in HTML documents must receive <em>focus</em> from
+the user in order to perform their tasks. For example, users must
+activate a link specified by the <a href="../struct/links.html#edef-A"><samp class="einst">A</samp></a> element in
+order to follow the specified link. Similarly, users must give a <a href="forms.html#edef-TEXTAREA"><samp
+class="einst">TEXTAREA</samp></a> focus in order to enter text into it. 
+
+<P>There are several ways to give focus to an element:</P>
+
+<ul>
+<li>Designate the element with a pointing device.
+
+<li>Navigate from one element to the next with the keyboard.  The
+document's author may define a <em>tabbing order</em> that specifies
+the order in which elements will receive focus if the user navigates
+the document with the keyboard (<a href="#tabbing-navigation">tabbing
+navigation</a>).  Once selected, an element may be activated by some
+other key sequence.
+
+<li>Select an element by a series of keyboard actions known as an <a
+href="#access-keys"><em>access key</em></a> (sometimes called "keyboard
+shortcut" or "keyboard accelerator").
+</ul>
+
+
+<h3><a name="h-18.3.1">18.3.1</a> <a name="tabbing-navigation">Tabbing navigation</a></h3>
+
+<div class="adef-list">
+<P><em>Attribute definitions</em></P>
+
+<dl>
+<dt><a name="adef-tabindex"><samp class="adef">tabindex</samp></a> =
+ <em>integer</em>
+<dd>This attribute specifies the position of the current element in the
+ tabbing order for the current document. This value may be a positive or
+ negative integer.
+</dl>
+</div>
+
+<P>The tabbing order defines the order in which elements will receive
+focus when navigated by the user via the keyboard. The tabbing order may
+include elements nested within other elements.
+
+<P>Elements that may receive focus should be navigated by user agents
+according to the following rules:</P>
+
+<ol>
+<li>Those elements that support the <a href="forms.html#adef-tabindex"><samp class="ainst">tabindex</samp></a>
+attribute and assign a costive value to it are navigated
+first. Navigation proceeds from the element with the lowest
+<a href="forms.html#adef-tabindex"><samp class="ainst">tabindex</samp></a> value to the element with the
+highest value. Values need not be sequential nor must they begin
+with any particular value. Elements that have identical
+<a href="forms.html#adef-tabindex"><samp class="ainst">tabindex</samp></a> should be navigated in the
+order they appear in the document.
+
+<li>Those elements that do not define the
+<a href="forms.html#adef-tabindex"><samp class="ainst">tabindex</samp></a> attribute or do not
+support it are navigated next. These elements are navigated
+in the order they appear in the document.
+
+<li>Those elements that support the <a href="forms.html#adef-tabindex"><samp class="ainst">tabindex</samp></a>
+attribute and assign a negative value to it do not participate in the
+tabbing order.
+
+<li>Elements that are <a href="#disabled">disabled</a> do not
+participate in the tabbing order.
+</ol>
+
+<P>The following elements support the
+<a href="forms.html#adef-tabindex"><samp class="ainst">tabindex</samp></a> attribute:
+  <a href="../struct/links.html#edef-A"><samp class="einst">A</samp></a>,
+  <a href="../struct/objects.html#edef-AREA"><samp class="einst">AREA</samp></a>,
+  <a href="../struct/objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a>,
+  <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>,
+  <a href="forms.html#edef-SELECT"><samp class="einst">SELECT</samp></a>,
+  <a href="forms.html#edef-TEXTAREA"><samp class="einst">TEXTAREA</samp></a>, and
+  <a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a>.
+
+<div class="example">
+<P>In this example, the tabbing order will be the
+<a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a>, the <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>
+elements in order (note that "field1" and the button share the same
+tabindex, but "field1" appears later in the document), and finally the
+link created by the <a href="../struct/links.html#edef-A"><samp class="einst">A</samp></a> element.
+
+<pre>
+&lt;HTML&gt;
+&lt;BODY&gt;
+<em>...some text...</em>
+Go to the 
+&lt;A tabindex="10" href="http://www.w3.org/"&gt;W3C Web site.&lt;/A&gt;
+<em>...some more...</em>
+&lt;BUTTON type="button" name="get-database"
+           tabindex="1" onclick="get-database"&gt;
+Get the current database.
+&lt;/BUTTON&gt;
+<em>...some more...</em>
+&lt;FORM action="..." method="post"&gt;
+&lt;INPUT tabindex="1" type="text" name="field1"&gt;
+&lt;INPUT tabindex="2" type="text" name="field2"&gt;
+&lt;INPUT tabindex="3" type="submit" name="submit"&gt;
+&lt;/FORM&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+</div>
+
+<div class="note">
+<P><em><strong>Tabbing keys.</strong>
+The actual key sequence that causes tabbing navigation or element
+activation depends on the configuration of the user agent (e.g., the
+"tab" key is used for navigation and the "enter" key is used to
+activate a selected element).</em>
+
+<P><em>User agents may also define key sequences to navigate the tabbing
+order in reverse. When the end (or beginning) of the tabbing order is
+reached, user agents may circle back to the beginning (or end).</em>
+</div>
+
+<h3><a name="h-18.3.2">18.3.2</a> <a name="access-keys">Access keys</a></h3>
+
+<div class="adef-list">
+<P><em>Attribute definitions</em></P>
+
+<dl>
+<dt><a name="adef-accesskey"><samp class="adef">accesskey</samp></a> =
+ <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute assigns an access key to an element. An access key
+ is a single character from the document character set.<strong>Note.
+ </strong>Authors should consider the input method of the expected reader
+ when specifying an accesskey.
+</dl>
+</div>
+
+<P>Pressing an access key assigned to an element gives focus to the
+element. The action that is executed when an element receives focus
+depends on the element. Links defined by <a href="../struct/links.html#edef-A"><samp class="einst">A</samp></a>
+are generally followed by the user agent, activated radio buttons change
+values, text fields with focus allow user input, etc.
+
+<P>The following elements support the <a href="forms.html#adef-accesskey"><samp class="ainst">accesskey</samp></a>
+attribute: <a href="forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a>, <a href="../struct/links.html#edef-A"><samp class="einst">A</samp></a>,
+<a href="../struct/tables.html#edef-CAPTION"><samp class="einst">CAPTION</samp></a>, and <a href="forms.html#edef-LEGEND"><samp class="einst">LEGEND</samp></a>.
+
+<div class="example">
+<P>This example assigns the access key "U" to a label associated with an
+<a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> control. Typing the access key gives
+focus to the label which in turn gives it to the associated control. The
+user may then enter text into the <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> area.</P>
+
+<pre>
+&lt;FORM action="..." method="post"&gt;
+&lt;LABEL for="fuser" accesskey="U"&gt;
+User Name
+&lt;/LABEL&gt;
+&lt;INPUT type="text" name="user" id="fuser"&gt;
+&lt;/FORM&gt;
+</pre>
+</div>
+
+<div class="example">
+<P>In this example, we assign an access key to a link defined by the
+<a href="../struct/links.html#edef-A"><samp class="einst">A</samp></a> element. Typing this access key takes the
+user to another document, in this case, a table of contents.</P>
+
+<PRE>
+&lt;A accesskey="C" 
+      href="http://someplace.com/specification/contents.html"&gt;
+    Table of Contents&lt;/A&gt;
+</PRE>
+</div>
+
+<P>The invocation of access keys depends on the underlying system.
+For instance, on machines running MS Windows, one generally has to
+press the "alt" key in addition to the access key. On Apple systems,
+one generally has to press the "cmd" key in addition to the access
+key.
+
+<P>The rendering of access keys depends on the user agent. We recommend
+that authors include the access key in label text or wherever the access
+key is to apply. User agents should render the value of an access key in
+such a way as to emphasize its role and to distinguish it from other
+characters (e.g., by underlining it).
+
+<h2><a name="h-18.4">18.4</a> <a name="disabled-read-only">Disabled and read-only elements</a></h2>
+
+<p>In contexts where user input is either undesirable or irrelevant,
+it is important to be able to disable an element or render it read-only.
+For example, one may want to disable a form's submit button until the
+user has entered some required data. Similarly, an author may want to
+include a piece of read-only text that must be submitted as a value
+along with the form. The following sections describe disabled and
+read-only elements.
+
+<h3><a name="h-18.4.1">18.4.1</a> <a name="disabled">Disabled elements</a></h3>
+
+<div class="adef-list">
+<P><em>Attribute definitions</em></p>
+
+<dl>
+<dt><a name="adef-disabled"><samp class="adef">disabled</samp></a>
+<dd>When set for a form control, this boolean attribute disables the
+  control for user input. 
+</dl>
+</div>
+
+<P>When set, the <a href="forms.html#adef-disabled"><samp class="ainst">disabled</samp></a> attribute
+has the following effects on an element:</p>
+
+<ul>
+<li>Disabled elements do not receive focus.
+<li>Disabled elements are skipped in tabbing navigation.
+<li>Values of disabled controls are not submitted with a form.
+</ul>
+
+<P>The following elements support the
+ <a href="forms.html#adef-disabled"><samp class="ainst">disabled</samp></a> attribute:
+  <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>,
+  <a href="forms.html#edef-TEXTAREA"><samp class="einst">TEXTAREA</samp></a>,
+  <a href="forms.html#edef-SELECT"><samp class="einst">SELECT</samp></a>,
+  <a href="forms.html#edef-OPTION"><samp class="einst">OPTION</samp></a>,
+  <a href="../struct/objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a>,
+  <a href="forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a>, and
+  <a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a>.
+
+<P>How disabled elements are rendered depends on the user agent.
+For example, some user agents "gray out" disabled menu items,
+button labels, etc.
+
+<div class="example">
+<P>In this example, the disabled <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>
+element cannot receive user input nor will its value be submitted
+with the form.</p>
+
+<pre>
+&lt;INPUT disabled name="fred" value="stone"&gt;
+</pre>
+</div>
+
+<div class="note">
+<P><em>Note: The only way to modify dynamically the value of the <a href="forms.html#adef-disabled"><samp
+class="ainst">disabled</samp></a> attribute is through a script.</em>
+</div>
+
+
+<h3><a name="h-18.4.2">18.4.2</a> <a name="read-only">Read-only elements</a></h3>
+
+<div class="adef-list">
+<P><em>Attribute definitions</em></p>
+
+<dl>
+<dt><a name="adef-readonly"><samp class="adef">readonly</samp></a>
+<dd>When set for a form control, this boolean attribute prohibits
+ changes to control. 
+</dl>
+</div>
+
+<p>The <a href="forms.html#adef-readonly"><samp class="ainst">readonly</samp></a> attribute
+specifies whether the element may be modified by the user. 
+
+<P>When set, the <a href="forms.html#adef-readonly"><samp class="ainst">readonly</samp></a> attribute has the
+following effects on an element:</p>
+
+<!-- ARE THESE TRUE? -->
+<ul>
+<li>Read-only elements receive focus but cannot be modified by the user.
+<li>Read-only elements are included in tabbing navigation.
+<li>Values of read-only controls are submitted with a form.
+</ul>
+
+<P>The following elements support the
+ <a href="forms.html#adef-readonly"><samp class="ainst">readonly</samp></a> attribute:
+  <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>,
+  <samp class="einst">TEXT</samp>,
+  <samp class="einst">PASSWORD</samp>,
+  and <a href="forms.html#edef-TEXTAREA"><samp class="einst">TEXTAREA</samp></a>.
+
+<P>How read-only elements are rendered depends on the user agent.</P>
+
+<div class="note">
+<P><em>Note: The only way to modify dynamically the value of the <a href="forms.html#adef-readonly"><samp
+class="ainst">readonly</samp></a> attribute is through a script.</em>
+</div>
+
+<h2><a name="h-18.5">18.5</a> <a name="submit-format">Form submission</a></h2>
+
+<h3><a name="h-18.5.1">18.5.1</a> <a name="form-data-processing">Processing form data</a></h3>
+
+<p>A form may contain named form controls that may have initial
+values.  The user may interact with some of the controls, possibly
+changing their values (e.g., entering text, toggling radio buttons,
+etc.). When the user submits the form (e.g., by activating a submit
+button), the user agent processes it as follows.
+
+<H4>Step one: Build a form data set<a name="h-18.5.1.1">&nbsp;</a></H4>
+<P>First, the user agent builds a <em>form data set</em>, based on the
+values of the form controls at submission time. For form data set
+is a sequence of name/value pairs.
+
+<P>The names are values of the <samp class="ainst">name</samp>
+attribute specified by each form control.
+
+<P>The type of each form control determines how its name is paired
+with values. For instance, when three <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>
+elements whose <a href="forms.html#adef-type"><samp class="ainst-INPUT">type</samp></a> is "checkbox"
+share the same <a href="forms.html#adef-name-INPUT"><samp class="ainst-INPUT">name</samp></a>, each checkbox
+value is paired with one instance of the name in the form data set.
+On the other hand, when three <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>
+elements whose <a href="forms.html#adef-type"><samp class="ainst-INPUT">type</samp></a> is "radio" share
+the same <a href="forms.html#adef-name-INPUT"><samp class="ainst-INPUT">name</samp></a>, the value of the
+active button is paired with the <a href="forms.html#adef-name-INPUT"><samp class="ainst-INPUT">name</samp></a>
+one time only. Please consult the definition of each form control for
+information about which value or values are paired with the control's
+name.
+
+<P>Not all form controls have their values submitted with the form.
+See the section on <a href="#submitted-values"> which control values are
+submitted</a> for details.
+
+<P>Each value is a character string. Please consult the definition of
+each form control for information about constraints on values imposed
+by the control.
+
+<H4>Step two: Encode the form data set<a name="h-18.5.1.2">&nbsp;</a></H4>
+
+<P>The names and values of the form data set are then encoded
+according to the method specified by the <a href="forms.html#adef-enctype"><samp
+class="ainst">enctype</samp></a> attribute of the <a href="forms.html#edef-FORM"><samp
+class="einst">FORM</samp></a> element. The default encoding is
+"application/x-www-form-urlencoded", which is defined as follows:
+
+<ol>
+
+<li>Form field names and values are escaped. Space characters are
+replaced by <SAMP>`+'</SAMP>, and then reserved characters are escaped
+as described in <a rel="biblioentry"
+href="../references.html#ref-RFC1738">[RFC1738]</a>: Non-alphanumeric
+characters are replaced by <SAMP>`%HH'</SAMP>, a percent sign and two
+hexadecimal digits representing the ASCII code of the character.  Line
+breaks, as in multi-line text field values, are represented as "CR LF"
+pairs, i.e., <SAMP>`%0D%0A'</SAMP>.
+
+<li>The fields are listed in the order they appear in the document
+with the name separated from the value by <SAMP>`='</SAMP> and the
+pairs separated from each other by <SAMP>`&#38;'</SAMP>.  Fields with
+null values may be omitted.  In particular, unselected radio buttons
+and checkboxes should not appear in the encoded data, but hidden
+fields with <samp class="ainst">value</samp> attributes present should.
+</OL>
+
+<H4>Step three: Submit the encoded form data set<a name="h-18.5.1.3">&nbsp;</a></H4>
+
+<P>Finally, the encoded data is sent to the handler addressed by the
+<a href="forms.html#adef-action"><samp class="ainst">action</samp></a> attribute using the protocol
+specified by the <a href="forms.html#adef-method"><samp class="ainst">method</samp></a> attribute.
+
+<P>This specification does not specify all valid data set encodings
+and submission methods. However, HTML 4.0 user agents must
+support the established conventions in the following cases:
+
+<ul>
+<li>If the <a href="forms.html#adef-method"><samp class="ainst">method</samp></a> is "get":
+<ul>
+<li>If <a href="forms.html#adef-action"><samp class="ainst">action</samp></a> is an HTTP URL, the user agent
+takes the value of <a href="forms.html#adef-action"><samp class="ainst">action</samp></a>, appends a
+<SAMP>`?'</SAMP> to it, then appends the form data set, encoded using
+the default encoding.  The user agent then traverses the link to this
+URL.In this scenario, form data are restricted to ASCII codes.</li>
+
+<li>For any other type of <a href="forms.html#adef-action"><samp class="ainst">action</samp></a>, behavior
+is unspecified.</li>
+</ul>
+
+<li>Else if the <a href="forms.html#adef-method"><samp class="ainst">method</samp></a> is "post":
+<ul>
+<li>If <a href="forms.html#adef-action"><samp class="ainst">action</samp></a> is an HTTP URL:
+<ul>
+<li>If the value of <a href="forms.html#adef-enctype"><samp class="ainst">enctype</samp></a> is
+"multipart/form-data", see <a rel="biblioentry"
+href="../references.html#ref-RFC1867">[RFC1867]</a>, section 7.</li>
+
+<li>Else, if the value of <a href="forms.html#adef-enctype"><samp class="ainst">enctype</samp></a> is the
+default value or "application/x-www-urlencoded", the user agent
+conducts an HTTP POST transaction using the value of <a href="forms.html#adef-action"><samp
+class="ainst">action</samp></a> and a message
+body of type "application/x-www-form-urlencoded".</li>
+<li>Else, for other values of <a href="forms.html#adef-enctype"><samp class="ainst">enctype</samp></a>, behavior
+is unspecified.</li>
+</ul>
+<li>For any other value of <a href="forms.html#adef-action"><samp class="ainst">action</samp></a>, behavior
+is unspecified.</li>
+</ul>
+<li>For any other value of <a href="forms.html#adef-method"><samp class="ainst">method</samp></a>, behavior
+is unspecified.</li>
+</ul>
+
+<P>The user agent should display the response from either the HTTP GET
+or POST transactions.
+
+<h3><a name="h-18.5.2">18.5.2</a> <a name="submitted-values">Which control values are submitted</a></h3>
+
+<P>Not all elements have their values submitted with a form.
+
+<P>For <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> elements with <a href="forms.html#adef-type"><samp
+class="ainst-INPUT">type</samp></a>="radio" or <a href="forms.html#adef-type"><samp
+class="ainst-INPUT">type</samp></a>="checkbox",  and <a href="forms.html#edef-SELECT"><samp
+class="einst">SELECT</samp></a> elements, only the selected values should be
+submitted.
+
+<P>Conforming user agents should <strong>not</strong> submit:</p>
+
+<ul>
+<li>Disabled <a href="#form-controls">form controls</a>.
+<li><a href="#form-controls">Form controls</a> without values for the
+<samp class="ainst">name</samp> attribute.
+<li><a href="../struct/objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> elements without the
+<samp class="ainst">name</samp> attribute.
+<li><a href="../struct/objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> elements with the
+<a href="../struct/objects.html#adef-declare"><samp class="ainst">declare</samp></a> attribute.
+</ul>
+<div class="navbar">
+<hr><center><a href="../present/frames.html">previous</a> &nbsp; <a href="scripts.html">next</a> &nbsp; <a href="../cover.html#toc">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center></div>
+</body>
+</html>

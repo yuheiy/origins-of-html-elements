@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en">
+<!-- $Id: changes.html,v 1.1 2013/05/28 21:38:48 denis Exp $ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Changes between HTML 3.2 and HTML 4.0</title>
+<LINK rel="previous" href="../sgml/entities.html">
+<LINK rel="next" href="notes.html">
+<LINK rel="contents" href="../cover.html#toc">
+<LINK rel="STYLESHEET" href="../style/default.css" type="text/css">
+</head>
+<body>
+<div class="navbar">
+<center>&nbsp;<a href="../sgml/entities.html">previous</a> &nbsp; <a href="notes.html">next</a> &nbsp; <a href="../cover.html#toc">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center><hr>
+</div>
+
+<H1 align="center"><a name="h-A">Appendix A:</a> Changes between HTML 3.2 and HTML 4.0</H1>
+<div class="subtoc"><p><strong>Contents</strong>
+<ol>
+<li><a href="changes.html#h-A.1">Changes to elements</a>
+<ol>
+<li><a href="changes.html#h-A.1.1">New elements</a>
+<li><a href="changes.html#h-A.1.2">Deprecated elements</a>
+<li><a href="changes.html#h-A.1.3">Obsolete elements</a>
+</ol>
+<li><a href="changes.html#h-A.2">Changes to Tables</a>
+<li><a href="changes.html#h-A.3">Changes to Forms</a>
+<li><a href="changes.html#h-A.4">Changes for internationalization</a>
+</ol>
+</div>
+
+
+<h2><a name="h-A.1">A.1</a> Changes to elements</h2> 
+
+<h3><a name="h-A.1.1">A.1.1</a> New elements</h3> 
+
+<p>The new elements in this version of HTML are <samp
+class="einst">Q</samp>, <samp class="einst">INS</samp>, <samp
+class="einst">DEL</samp>, <samp class="einst">ABBR</samp>, <samp
+class="einst">LEGEND</samp>, <samp class="einst">COLGROUP</samp>, 
+<samp class="einst">BUTTON</samp>, <samp class="einst">OPTGROUP</samp>, and
+<samp class="einst">FIELDSET</samp>.
+
+<h3><a name="h-A.1.2">A.1.2</a> <a href="../convent.html#deprecated">Deprecated</a> elements</h3>
+
+<p>The following elements are now <a
+href="../convent.html#deprecated">deprecated</a>: <samp
+class="einst">ISINDEX</samp>, <samp class="einst">APPLET</samp>, <samp
+class="einst">CENTER</samp>, <samp class="einst">FONT</samp>, <samp
+class="einst">BASEFONT</samp>, <samp class="einst">STRIKE</samp>,
+<samp class="einst">S</samp>, <samp class="einst">U</samp>, <samp
+class="einst">DIR</samp>, and <samp class="einst">MENU</samp>.
+
+<h3><a name="h-A.1.3">A.1.3</a> Obsolete elements</h3>
+
+<p>The following elements are now obsolete: <samp
+class="einst">XMP</samp>, <samp class="einst">PLAINTEXT</samp>, and
+<samp class="einst">LISTING</samp>. For all of them, you should use
+the <samp class="einst">PRE</samp> element instead.
+
+<h2><a name="h-A.2">A.2</a> <a name="table_changes">Changes to Tables</a></h2>
+
+<p>The HTML 4.0 table model has grown out of early work on HTML+ and
+the initial draft of <a
+href="../references.html#ref-HTML30">HTML3.0</a>. The earlier 
+model has been extended in response to requests from information
+providers for improved control over the presentation of tabular
+information:
+
+<ul>
+    <li>The ability to align on designated characters such as "." and":"<br> 
+        (e.g., aligning a column of numbers on the decimal point).
+
+    <li>The need for more flexibility in specifying table frames and rules.
+
+    <li>The need for incremental display of large tables as data is received.
+
+    <li>The ability to support scrollable tables with fixed headers
+        plus better support for breaking tables across pages for printing.
+
+    <li>The need for optional column based defaults for alignment properties
+</ul>
+
+<p>In addition, a major goal has been to provide backwards
+compatibility with the widely deployed Netscape implementation of
+tables. Another goal has been to simplify importing tables
+conforming to the SGML CALS model.  The latest draft makes the <samp
+class="ainst-TABLE">align</samp> attribute compatible with the
+latest versions of the most popular browsers.  Some clarifications
+have been made to the role of the <samp class="ainst-TABLE">dir</samp>
+attribute attribute and recommended behavior when absolute and
+relative column widths are mixed.
+
+<p>A new element, <samp class="einst">COLGROUP</samp>, has been
+introduced to allow sets of columns to be grouped with different width
+and alignment properties specified by one or more <samp
+class="einst">COL</samp> elements. The semantics of <samp
+class="einst">COLGROUP</samp> have been clarified over previous
+drafts, and <tt>rules="basic"</tt> replaced by <tt>rules="groups"</tt>.
+
+<p>The <samp class="ainst-TABLE">style</samp> attribute is included as a
+means for extending the properties associated with edges and interiors
+of groups of cells. For instance, the line style: dotted, double,
+thin/thick etc; the color/pattern fill for the interior; cell margins
+and font information. This will be the subject for a companion specification
+on style sheets.
+
+<p>The <samp class="ainst-TABLE">frame</samp> and <samp
+class="ainst-TABLE">rules</samp> attributes have been modified to avoid SGML
+name clashes with each other, and to avoid clashes with the <samp
+class="ainst-TABLE">align</samp> and <samp class="ainst">valign</samp>
+attributes. These changes were additionally motivated by the desire to
+avoid future problems if this specification is extended to allow <samp
+class="ainst-TABLE">frame</samp> and <samp class="ainst-TABLE">rules</samp>
+attributes with other table elements.
+
+<h2><a name="h-A.3">A.3</a> <a name="form_changes">Changes to Forms</a></h2>
+
+<p>The forms specified in HTML 3.2 have the following problems:
+
+<ul>
+<li>There is no provision for keyboard shortcuts for particular actions,
+for access keys for driving menus, etc.
+
+<li>Although form controls can be made insensitive dynamically, they cannot
+be declared as such at initialization time.
+
+<li>Along the same line form controls, such as form fields, cannot be made
+"read only".
+
+<li>Labels for radio buttons and checkboxes are not sensitive, i.e.,
+clicking on a label text doesn't effect the button state.
+
+<li>There is no way to markup groups of related form fields in a way that
+effectively supports browsing with speech-based user agents.
+
+<li>There is no provision for checking values as they are entered into form
+fields. All checking is done at the server when the form's contents are
+submitted.
+
+<li>Nothing is provided to specify what type of data file is expected when
+the user is asked to submit files.
+
+<li>Forms can only contain the two buttons submit and reset.
+
+<li>There is no way to specify what character sets the server issuing
+a form can handle.
+</ul>
+
+
+<p>To solve these problems this specification introduces several new
+attributes and elements.
+
+<ul>
+<li>The <samp class="ainst-LABEL">accesskey</samp> attribute provides for
+specifying direct keyboard access to form fields.
+
+<li>The <samp class="ainst-LABEL">disabled</samp> attribute allows
+form providers to make a form control initially insensitive.
+
+<li>And with the additional attribute <samp
+class="ainst-INPUT">readonly</samp>, authors can prohibit changes to a
+form field.
+
+<li>The <samp class="einst">LABEL</samp> element associates a label
+with a particular form control.  The <samp
+class="einst">FIELDSET</samp> element groups related fields together
+and, in association with the <samp class="einst">LEGEND</samp>
+element, can be used to name the group.  Both of these new elements
+allow better rendering and better interactivity. Speech-based browsers
+can better describe the form and graphic browsers can make labels
+sensitive.
+
+<li>A new set of attributes, including <samp
+class="ainst">onchange-INPUT</samp>, in association with support for
+scripting languages, allows form providers to verify user-entered data.
+
+<li>The <samp class="einst">INPUT</samp> element has a new attribute
+<samp class="ainst-INPUT">accept</samp> that allows authors to specify a
+list of valid content types or type patterns for the input.
+
+<li>The new <samp class="einst">BUTTON</samp> element can be used to
+make richer forms with more than just a submit and a reset button.
+
+<li>The <samp class="einst">FORM</samp> element includes the attribute
+<samp class="ainst-FORM">accept-charset</samp>, modeled on the HTTP
+"Accept-Charset" header (see <a rel="biblioentry"
+href="../references.html#ref-RFC2068">[RFC2068]</a>). This attribute
+(first proposed in <a rel="biblioentry"
+href="../references.html#ref-RFC1867">[RFC1867]</a>) may be used to
+specify a list of character sets acceptable to the server.
+</ul>
+
+<h2><a name="h-A.4">A.4</a> Changes for internationalization</h2> 
+
+<P>HTML 4.0 takes into account recommendations of <a rel="biblioentry"
+href="../references.html#ref-RFC2070">[RFC2070]</a> for the
+internationalization of HTML.
+
+<div class="navbar">
+<hr><center><a href="../sgml/entities.html">previous</a> &nbsp; <a href="notes.html">next</a> &nbsp; <a href="../cover.html#toc">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center></div>
+</body>
+</html>

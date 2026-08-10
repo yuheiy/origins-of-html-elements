@@ -10,11 +10,11 @@ tableの一つ以上のcolumnを表す空要素である。1995年9月25日のHT
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、親`colgroup`が親`table`を持つとき、そのcolumn group内の一つ以上のcolumnsを表す。`span`属性でcolumn数を指定できる。[一次定義](https://html.spec.whatwg.org/multipage/tables.html#the-col-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、親`colgroup`が親`table`を持つとき、そのcolumn group内の一つ以上のcolumnsを表す。`span`属性でcolumn数を指定できる。[HTML Living Standard](../../raw/html-living-standard/tables.html)（[公開版](https://html.spec.whatwg.org/multipage/tables.html#the-col-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
-確認できる最初期の公開仕様はDave Raggettによる1995年9月25日のW3C Working Draft `WD-tables-950925`である。大きなtableを全dataの受信前に表示するにはcolumn数とwidthが必要だという設計課題に対し、table dataより前にwidthとalignment defaultsを指定する空要素`COL`を定義した。7月7日のIETF revision 00はwidthを`COLW`、水平・垂直alignmentを`HSPEC`／`VSPEC`で扱っており、`COL`はまだない。10月3日のrevision 01はW3C草案と同じ`COL` modelを採る。RFC 1942はこのdraft seriesをExperimental RFCとして標準化し、HTML 4.0は5要素を含むtable DTD blockをRFC 1942のIETF table standardへ明示的に帰属させて採録した。[revision 00](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt) [W3C Working Draft](https://www.w3.org/TR/WD-tables-950925.html) [revision 01](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-01.txt) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 4.01 DTD](../../raw/html-4.01/strict.dtd)
+確認できる最初期の公開仕様はDave Raggettによる1995年9月25日のW3C Working Draft `WD-tables-950925`である。大きなtableを全dataの受信前に表示するにはcolumn数とwidthが必要だという設計課題に対し、table dataより前にwidthとalignment defaultsを指定する空要素`COL`を定義した。7月7日のIETF revision 00はwidthを`COLW`、水平・垂直alignmentを`HSPEC`／`VSPEC`で扱っており、`COL`はまだない。10月3日のrevision 01はW3C草案と同じ`COL` modelを採る。RFC 1942はこのdraft seriesをExperimental RFCとして標準化し、HTML 4.0は5要素を含むtable DTD blockをRFC 1942のIETF table standardへ明示的に帰属させて採録した。[revision 00](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt) [W3C Working Draft](https://www.w3.org/TR/WD-tables-950925.html) [revision 01](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-01.txt) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 4.01 DTD](../../raw/html-4.01/strict.dtd)（[公開元](https://www.w3.org/TR/html401/sgml/dtd.html)）
 
 ## HTML直前の祖先
 
@@ -36,12 +36,12 @@ RFC 1942はtable model全体が既存SGML table models、word processors、紙�
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1995-04-25 | HTML 3.0 Internet-Draft, “Tables” | 失効したIETF Working Draft | column widthを`TABLE`の`COLSPEC`属性で指定し、`COL`要素は定義しない。 | [一次資料](https://www.w3.org/MarkUp/html3/tables.html) | 2026-08-09 |
-| 1995-09-25 | W3C Working Draft `WD-tables-950925`, *The HTML3 Table Model* | W3C Working Draft | 公開仕様上の`COL`初出を確認できる。revision 00の`COLW`、`HSPEC`、`VSPEC`に代わり、width、span、水平・垂直alignment defaultsを一要素で扱うが、変更理由は記さない。 | [W3C Working Draft](https://www.w3.org/TR/WD-tables-950925.html)・[revision 00](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt) | 2026-08-10 |
-| 1996-05 | RFC 1942, *HTML Tables* | Experimental RFC | `COL`のDTDと、incremental displayのためcolumn widthをdataより先に指定する導入理由を記す。`*` width表記だけはCALS importとの関係を明記する。 | [一次資料](https://www.rfc-editor.org/rfc/rfc1942.html) | 2026-08-09 |
-| 1997-12-18 | HTML 4.0 | W3C Recommendation | `COL`をHTML 3.2以後の新要素として採録し、5要素を含むtable DTD blockをRFC 1942のIETF table standardへ帰属させる。 | [HTML 4.01 DTD](../../raw/html-4.01/strict.dtd)・[changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1) | 2026-08-10 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1995-04-25 | [HTML 3.0 Internet-Draft, “Tables”](../../raw/html-3.0/2332ea66b0fd9bd3-tables.html)（[公開元](https://www.w3.org/MarkUp/html3/tables.html)） | 失効したIETF Working Draft | column widthを`TABLE`の`COLSPEC`属性で指定し、`COL`要素は定義しない。 | 2026-08-09 |
+| 1995-09-25 | W3C Working Draft `WD-tables-950925`, *The HTML3 Table Model*：[W3C Working Draft](../../raw/rfc1942-html-tables/159ecce48597babf-WD-tables-950925.html)・[revision 00](../../raw/rfc1942-html-tables/21729a3a6f491e3d-draft-ietf-html-tables-00.txt)（[公開元1](https://www.w3.org/TR/WD-tables-950925.html)・[公開元2](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt)） | W3C Working Draft | 公開仕様上の`COL`初出を確認できる。revision 00の`COLW`、`HSPEC`、`VSPEC`に代わり、width、span、水平・垂直alignment defaultsを一要素で扱うが、変更理由は記さない。 | 2026-08-10 |
+| 1996-05 | [RFC 1942, *HTML Tables*](../../raw/rfc1942-html-tables/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)） | Experimental RFC | `COL`のDTDと、incremental displayのためcolumn widthをdataより先に指定する導入理由を記す。`*` width表記だけはCALS importとの関係を明記する。 | 2026-08-09 |
+| 1997-12-18 | [HTML 4.0](../../raw/html-4-history/8956e5bf2cd33e94-changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1)） | W3C Recommendation | `COL`をHTML 3.2以後の新要素として採録し、5要素を含むtable DTD blockをRFC 1942のIETF table standardへ帰属させる。 | 2026-08-10 |
 
 ## 確度
 

@@ -1,0 +1,252 @@
+<HTML>
+<HEAD>
+<TITLE>Extensions to HTML 3.0</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#ffffff" LINK="#0000ff" VLINK="#ff0000" ALINK="#ff0000" TEXT="#000000" >
+
+
+<CENTER>
+
+<A HREF="/index.html">
+<IMG SRC="/assist/images/assist_ban.gif" WIDTH=468 HEIGHT=32 BORDER=0></A>
+
+<H2>
+<FONT SIZE=+3>E</FONT>XTENSIONS TO
+<FONT SIZE=+3>HTML</FONT> 3.0
+</H2>
+
+</CENTER>
+
+<P>
+<P>
+Netscape works with the Internet Engineering Task Force and the World
+Wide Web Consortium to develop standards of the Internet. Proposals that
+have been made since HTML 2.0 went into final review have been grouped
+together as <A
+HREF="http://www.w3.org/hypertext/WWW/MarkUp/html3/CoverPage.html" TARGET="_top">HTML
+3.0</A>. HTML 3.0 is getting closer to completion and embodies a wide range of useful extensions.
+<P>
+
+Netscape remains committed to supporting HTML 3.0. To that end, we've
+gone ahead and implemented several of the more stable proposals, in expectation that they will be approved. We believe that Netscape Navigator 2.0 supports more of the HTML 3.0 specifications than any other commercial client.
+<P>
+
+In addition, we've also added several new areas of HTML functionality to Netscape Navigator that are not currently in the HTML 3.0 specification. We think they belong there, and as part of the standards process, we are <A HREF="/assist/net_sites/new_html3_prop.html">proposing</A> them for inclusion.
+<P>
+
+<HR SIZE=4><P>
+
+<CENTER>
+<H3>
+<FONT SIZE=+2>N</FONT>EW
+<FONT SIZE=+2>F</FONT>ONT
+<FONT SIZE=+2>S</FONT>TYLE
+<FONT SIZE=+2>E</FONT>LEMENTS
+</H3>
+</CENTER>
+
+<DL>
+<DT><B><TT>&lt;BIG&gt;</tt> (big print)</B>
+<dd>The <TT>BIG</TT> element specifies that the enclosed text should be
+displayed, if practical, using a big font (compared with normal text).
+<P>
+<DT><B><TT>&lt;SMALL&gt;</tt> (small print)</B>
+<dd>The <TT>SMALL</TT> element specifies that the enclosed text should be
+displayed, if practical, using a small font (compared with normal text).
+<P>
+<DT><B><TT>&lt;SUB&gt;</tt> (subscript)</B>
+<dd> The <TT>SUB</TT> element specifies that the enclosed text should be
+displayed as a subscript, and, if practical, using a smaller font (compared
+with normal text). The <TT>ALIGN</TT> attribute for <TT>SUB</TT> is only meaningful within
+the <TT>MATH</TT> element. 
+<P>
+<DT><B><TT>&lt;SUP&gt;</tt> (superscript)</B>
+<dd>The <TT>SUP</TT> element specifies that the enclosed text should be
+displayed as a superscript, and if practical, using a smaller font
+(compared with normal text). The <TT>ALIGN</TT> attribute for <TT>SUP</TT> is only applicable
+within the <TT>MATH</TT> element. 
+</DT>
+</DL>
+<P>
+<HR SIZE=4>
+<P>
+
+<CENTER>
+<H3>
+<FONT SIZE=+2>P</FONT>ARAGRAPH
+<FONT SIZE=+2>A</FONT>TTRIBUTES
+</H3>
+</CENTER>
+<P>
+<DL>
+<DT><B><TT>&lt;P&gt;</tt> (paragraph)</B>
+<P>
+<DT><B><TT>&lt;DIV&gt;</tt> (divisions)</B>
+<dd>Netscape Navigator 2.0 supports the left, right, and center <CODE>ALIGN</CODE> attributes of both <CODE>P</CODE> and <CODE>DIV</CODE>.
+</DT>
+</DL>
+<P>
+
+<HR SIZE=4>
+<P>
+
+<CENTER>
+<H3>
+<FONT SIZE=+2>C</FONT>LIENT-<FONT SIZE=+2>S</FONT>IDE
+<FONT SIZE=+2>I</FONT>MAGE
+<FONT SIZE=+2>M</FONT>APS</A>
+</H3>
+</CENTER>
+<P>
+
+Image maps are an important feature of the point-and-click interface
+that makes the World Wide Web so popular. The most common use of image maps
+is to allow users to access different documents by clicking on different
+areas in an image.
+<P>There are several limitations of the current image map implementation
+as it applies to this use. First, it only works over the HTTP protocol, making
+it unusable for reading local files or files accessed via alternate protocols.
+Second, a server transaction is required merely to determine where the link
+is directed. This can degrade performance noticeably when accessing distant
+sites. Third, unlike for normal links, there is no way for a browser to provide
+visual feedback to the user by showing where a portion of an image map leads
+before the user actually clicks on it. Lastly, the implementation of image
+maps is server-dependent, compromising portability of documents.
+
+<P>While HTML+<SUP>1</SUP> contains provisions for "hypertext buttons" on images via
+use of the <CODE>FIG</CODE> element, this method is an unworkable short-term
+solution for several reasons. First, complete support of the <CODE>FIG</CODE>
+element requires significant additional processing by the browser. Second,
+it cannot degrade gracefully on browsers that do not support it. Third, it
+requires the map description to be specified when the image appears, which
+is inappropriate for some applications. The extension to support client-side
+image maps addresses these issues.
+<P><B> S<FONT SIZE=-1>YNTAX</FONT></B><BR> Adding a <CODE>USEMAP</CODE> attribute to an
+<CODE>IMG</CODE> element indicates that it is a client-side image map. The
+<CODE>USEMAP</CODE> attribute can be used with the <CODE>ISMAP</CODE> attribute
+to indicate that the image can be processed as either a client-side or
+server-side image map. The argument to <CODE>USEMAP</CODE> specifies which
+map to use with the image, in a format similar to the <CODE>HREF</CODE> attribute
+on anchors. If the argument to <CODE>USEMAP</CODE> starts with a "#", it
+is assumed to be in the same document as the <CODE>IMG</CODE> tag. A few
+examples would be:
+<P>You can only click here if your browser supports client-side image
+maps: <BR><CODE> &lt;IMG&#160;SRC="../images/tech/pic1.gif"
+USEMAP="maps.html#map1"&gt;</CODE>
+<P>This image map will work regardless:<CODE><BR> &lt;A&#160;HREF="/cgi-bin/image
+map/pic2"&gt; &lt;IMG&#160;SRC="../images/tech/pic2.gif" USEMAP="maps.html#map2"
+ISMAP&gt;&lt;/A&gt;</CODE>
+<P>Clicking here will take you to a page with an error message if you don't
+have client-side image map support:<CODE> &lt;A&#160;HREF="no_csim.html"&gt;
+&lt;IMG&#160;SRC="../images/tech/pic3.gif" USEMAP="maps.html#map3"&gt;
+&lt;/A&gt;</CODE>
+<P>The different regions of the image are described using a <CODE>MAP</CODE>
+element. The map describes each region in the image and indicates where it
+links. The basic format for the <CODE>MAP</CODE> element is as follows:
+<P>
+<CODE>&lt;MAP&#160;NAME="</CODE>&nbsp;<EM>name</EM><CODE>&nbsp;"&gt;<BR> &lt;AREA
+[SHAPE="</CODE><EM>&nbsp;shape&nbsp;</EM><CODE>"]
+COORDS="</CODE><EM>x,y,...</EM><CODE>"
+[HREF="</CODE><EM>&nbsp;reference&nbsp;</EM><CODE>"] [NOHREF]&gt;<BR>
+&lt;/MAP&gt;</CODE>
+<P>The <EM>name</EM> specifies the name of the map so that it can be referenced
+by an <CODE>IMG</CODE> element. The <EM>shape</EM> gives the shape of this
+area. Currently supported shapes include rectangles (<CODE>RECT</CODE>), polygons (<CODE>POLY</CODE>), circles (<CODE>CIRCLE</CODE>), and default (<CODE>DEFAULT</CODE>), but the syntax
+is defined in a way that allows other shapes to be added. If the
+<CODE>SHAPE</CODE> tag is omitted, <CODE>SHAPE="RECT"</CODE> is assumed.
+The <CODE>COORDS</CODE> tag gives the coordinates of the shape, using image
+pixels as the units. For a rectangle, the coordinates are given as
+"<EM>left,top,right,bottom</EM>". The rectangular region defined includes
+the lower right corner specified (i.e. to specify the entire area of
+a 100-by-100-pixel image, the coordinates would be "0,0,99,99"). Circles are defined as a center point and then a radius (a total of three numbers).
+<P>The <CODE>NOHREF</CODE> tag indicates that clicks in this region should
+perform no action. An <CODE>HREF</CODE> tag specifies where a click in that
+area should lead. Note that a relative anchor specification will be expanded
+using the URL of the map description as a base, rather than using the URL
+of the document from which the map description is referenced. If a
+<CODE>BASE</CODE> tag is present in the document containing the map description,
+that URL will be used as the base.
+<P>An arbitrary number of <CODE>AREA</CODE> tags may be specified. If two
+areas intersect, the one that appears first in the map definition takes
+precedence in the overlapping region. For example, a button bar in a document
+might use a 160-by-60-pixel image and appear like this:
+<P>
+<PRE>&lt;MAP&#160;NAME="buttonbar"&gt;
+<P>&lt;AREA SHAPE="RECT" COORDS="10,10,49,49" HREF="about_us.html"&gt;
+<P>&lt;AREA SHAPE="RECT" COORDS="60,10,99,49" HREF="products.html"&gt;
+<P>&lt;AREA SHAPE="RECT" COORDS="110,10,149,49" HREF="index.html"&gt;
+<P>&lt;AREA SHAPE="RECT" COORDS="0,0,159,59" NOHREF&gt;
+<P>&lt;/MAP&gt;
+<P>&lt;IMG SRC="../images/tech/bar.gif" USEMAP="#buttonbar"&gt;
+</PRE><P>This example includes a region encompassing the entire image with a <CODE>NOHREF</CODE> tag, but this is actually redundant. Any region of the image that is not defined by an <CODE>AREA</CODE> tag is assumed to be <CODE>NOHREF</CODE>.
+
+<P>
+<B>D<FONT SIZE=-1>ISCUSSION</FONT></B><BR> This syntax provides maximum flexibility to the document author for dealing with browsers that do not support this extension, since such browsers will ignore the <CODE>MAP</CODE> and <CODE>AREA</CODE> elements. If the document resides on an HTTP server, the server can still provide <CODE>ISMAP</CODE>-style support. Otherwise, the author can choose to have the image not appear as an anchor at all, or can choose to have a click anywhere within it lead to another page, perhaps providing an equivalent textual list of options.
+<P>The demand for a non-HTTP-based mechanism for image maps will also increase as archives of material in HTML format begins to appear on CD-ROM. The expected increase in pay-per-access servers will also lead to users saving copies of documents locally, which they would then expect to function identically to those on the original server. The extensions described here could serve as a basis to satisfy these needs.
+<P>
+
+<P><B>R<FONT SIZE=-1>EFERENCES</FONT></B><BR>
+1. Ragget, Dave, <A HREF="http://www.w3.org/hypertext/WWW/MarkUp/HTMLPlus/htmlplus_2.html"><I>HTML+ Discussion Document</I></A><BR>
+(<CODE>http://www.w3.org/hypertext/WWW/MarkUp/HTMLPlus/htmlplus_1.html</CODE>)
+<P>
+<HR SIZE=4>
+
+<CENTER>
+<H3>
+<FONT SIZE=+2>HTTP F</FONT>ILE
+<FONT SIZE=+2>U</FONT>PLOAD
+</H3>
+</CENTER>
+
+Previously, form input was limited to input boxes and other simple
+elements like
+checkboxes and radio buttons. Now you can write forms that ask for files
+as input. A new <CODE>ENCTYPE</CODE> attribute on the <CODE>FORM</CODE> tag allows you to write
+forms that take files as input. An example of such a form would be:
+<P>
+<CODE>
+<P>&lt;FORM ENCTYPE="multipart/form-data" ACTION="_URL_" METHOD=POST&gt;
+<P>Send this file: &lt;INPUT NAME="userfile" TYPE="file"&gt;
+<P>&lt;INPUT TYPE="submit" VALUE="Send File"&gt;
+<P>&lt;/FORM&gt;</CODE>
+<P>
+
+
+
+<HR SIZE=4>
+
+
+<P>
+<CENTER>
+
+
+<A HREF="/misc/bottom.map" TARGET="_top"><IMG SRC="/images/navigation_bar.gif"
+ISMAP USEMAP="#barmap" BORDER=0 WIDTH=468 HEIGHT=32 ALT="Navigation bar"></A>
+<P>
+
+<MAP NAME="barmap">
+<AREA COORDS="0,7,70,31" HREF="/index.html" TARGET="_top">
+<AREA COORDS="71,7,150,31" HREF="/comprod/mirror/index.html" TARGET="_top">
+<AREA COORDS="151,7,225,31" HREF="/assist/index.html" TARGET="_top">
+<AREA COORDS="226,7,300,31" HREF="http://help.netscape.com/" TARGET="_top">
+<AREA COORDS="301,7,371,31" HREF="/search/index.html" TARGET="_top">
+<AREA COORDS="372,7,467,31" HREF="/ads/index.html" TARGET="_top">
+<AREA COORDS="0,0,467,31" HREF="/index.html" TARGET="_top">
+</MAP>
+
+<FONT SIZE=-1>
+Corporate Sales: 415/937-2555; Personal Sales: 415/937-3777; Government Sales: 415/937-3678<BR>
+If you have any questions, please visit <A HREF="/assist/index.html" TARGET="_top">Customer Service</A>, or contact your nearest <A HREF="/misc/contact_info.html">sales office</A>.<P>
+<A HREF="/misc/trademarks.html">Copyright</A> © 1997 Netscape Communications Corporation<P>
+This site powered by <A HREF="/comprod/server_central/index.html" TARGET="_top">Netscape SuiteSpot</A> servers.</FONT>
+
+
+
+</CENTER>
+<P>
+<P>
+
+
+</BODY>
+</HTML>

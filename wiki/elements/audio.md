@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、soundまたはaudio streamを表すmedia elementである。`video`と共通のmedia modelを持つが、visual contentのplayback areaは持たない。[一次定義](https://html.spec.whatwg.org/multipage/media.html#the-audio-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、soundまたはaudio streamを表すmedia elementである。`video`と共通のmedia modelを持つが、visual contentのplayback areaは持たない。[HTML Living Standard](../../raw/html-living-standard/media.html)（[公開版](https://html.spec.whatwg.org/multipage/media.html#the-audio-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,13 +38,13 @@ WHATWG `Audio` constructor／interface（2004年〜）
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2007-03-15 | “Video proposals” | WHATWG mailing list・編集者回答 | `audio`要素を求める意見と、既存`Audio` APIに対して要素のuse caseを問う当時の回答。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/052433.html) | 2026-08-09 |
-| 2007-03-23 | WHATWG HTML commit `37bbc4fa`（revision 689） | 仕様commit | `audio`、`HTMLAudioElement`、game sound effect用途、既存media modelの再利用。 | [一次資料](https://github.com/whatwg/html/commit/37bbc4fa05ac4f5a9401e8f2bc7b7e4b7a2fd08c) | 2026-08-09 |
-| 2007-03-29 | *Web Applications 1.0*, revision 699 | WHATWG保存仕様 | soundまたはaudio streamを表す定義、gameのsound effectという用途、`video`との共通media API。 | [一次資料](https://platform.html5.org/history/webapps/r699.html#audio) | 2026-08-09 |
-| 2007-04-12 | WHATWG HTML commit `82114971`（revision 730） | 仕様commit | 独立した`Audio` sectionを`HTMLAudioElement`のために削除し、`Audio(src)`が`HTMLAudioElement`を構築するよう変更。 | [一次資料](https://github.com/whatwg/html/commit/8211497160124b53938eab1f94725a80b28a305f) | 2026-08-09 |
-| 2026-08-09 | WHATWG HTML Living Standard, “The audio element” | 現行仕様 | `audio`の現行定義。 | [一次資料](https://html.spec.whatwg.org/multipage/media.html#the-audio-element) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2007-03-15 | [“Video proposals”](../../raw/items/lists.whatwg.org/c974dc225232cb7c-052433.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/052433.html)） | WHATWG mailing list・編集者回答 | `audio`要素を求める意見と、既存`Audio` APIに対して要素のuse caseを問う当時の回答。 | 2026-08-09 |
+| 2007-03-23 | [WHATWG HTML commit `37bbc4fa`（revision 689）](../../raw/whatwg-html-history/2cbafc204365f408-37bbc4fa05ac4f5a9401e8f2bc7b7e4b7a2.html)（[公開元](https://github.com/whatwg/html/commit/37bbc4fa05ac4f5a9401e8f2bc7b7e4b7a2fd08c)） | 仕様commit | `audio`、`HTMLAudioElement`、game sound effect用途、既存media modelの再利用。 | 2026-08-09 |
+| 2007-03-29 | [*Web Applications 1.0*, revision 699](../../raw/whatwg-web-apps-history/167cb993a954cee1-r699.html)（[公開元](https://platform.html5.org/history/webapps/r699.html#audio)） | WHATWG保存仕様 | soundまたはaudio streamを表す定義、gameのsound effectという用途、`video`との共通media API。 | 2026-08-09 |
+| 2007-04-12 | [WHATWG HTML commit `82114971`（revision 730）](../../raw/whatwg-html-history/b6a9db9141408750-8211497160124b53938eab1f94725a80b28.html)（[公開元](https://github.com/whatwg/html/commit/8211497160124b53938eab1f94725a80b28a305f)） | 仕様commit | 独立した`Audio` sectionを`HTMLAudioElement`のために削除し、`Audio(src)`が`HTMLAudioElement`を構築するよう変更。 | 2026-08-09 |
+| 2026-08-09 | [WHATWG HTML Living Standard, “The audio element”](../../raw/html-living-standard/media.html)（[公開元](https://html.spec.whatwg.org/multipage/media.html#the-audio-element)） | 現行仕様 | `audio`の現行定義。 | 2026-08-09 |
 
 ## 確度
 

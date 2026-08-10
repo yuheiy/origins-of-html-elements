@@ -1,0 +1,138 @@
+<!-- received="Thu Jul 16 05:36:01 1992 EDT" -->
+<!-- sent="Wed, 15 Jul 92 22:35:19 CDT" -->
+<!-- name="Dan Connolly" -->
+<!-- email="connolly@pixel.convex.com" -->
+<!-- subject="HTML DTD enclosed" -->
+<!-- id="9207160335.AA24812@pixel.convex.com" -->
+<!-- inreplyto="" -->
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head><title>www-talk from July to August 1992: HTML DTD enclosed</title></head>
+<body>
+<h1>HTML DTD enclosed</h1>
+<strong>Dan Connolly</strong> (<a href="mailto:connolly@pixel.convex.com"><em>connolly@pixel.convex.com</em></a>)<br>
+<em>Wed, 15 Jul 92 22:35:19 CDT</em>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#20">[ date ]</a><a href="thread.html#20">[ thread ]</a><a href="subject.html#20">[ subject ]</a><a href="author.html#20">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0021.html">Dan Connolly: "perl script to legalize HTML files"</a>
+<li> <strong>Previous message:</strong> <a href="0019.html">Pei Y. Wei: "viola update (with latest W3 library)"</a>
+<!-- nextthread="start" -->
+<li> <strong>Next in thread:</strong> <a href="0024.html">Jean Francois Groff: "Re: HTML DTD enclosed"</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<pre>
+Message-Id: &lt;9207160335.AA24812@pixel.convex.com&gt;
+To: www-talk@nxoc01.cern.ch
+Subject: HTML DTD enclosed
+Date: Wed, 15 Jul 92 22:35:19 CDT
+From: Dan Connolly &lt;connolly@pixel.convex.com&gt;
+
+&lt;!-- html.dtd - document type declaration subset for
+                HyperText Markup Language as defined
+		by the World Wide Web project.
+
+	15 Jul 92 by connolly@convex.com
+
+	See also: <a href="http://info.cern.ch/hypertext/WWW/MarkUp/Tags.html">http://info.cern.ch/hypertext/WWW/MarkUp/Tags.html</a>
+  --&gt;
+
+&lt;!--      Terminal symbols        --&gt;
+
+&lt;!ENTITY lt "&lt;"&gt;
+&lt;!ENTITY gt "&gt;"&gt;
+&lt;!ENTITY amp "&amp;"&gt;
+
+&lt;!-- some existing html uses these. I think they meant
+	&amp;amp;
+     in stead of 
+	&amp;amp.
+     --&gt;
+&lt;!ENTITY lt. "&lt;"&gt;
+&lt;!ENTITY gt. "&gt;"&gt;
+&lt;!ENTITY amp. "&amp;"&gt;
+
+&lt;!--    Non-ELEMENT symbols       --&gt;
+
+&lt;!ENTITY % heading "H1|H2|H3|H4|H5|H6" &gt;
+&lt;!ENTITY % list "UL|OL|DIR|MENU|DL"&gt;
+&lt;!ENTITY % text "P|#PCDATA"&gt;
+&lt;!ENTITY % raw "XMP|LISTING"&gt;
+&lt;!-- PlainText is more than 8 characters, and changing the
+     NAMELEN capacity involves including a lengthy SGML declaration
+     in every HTML file. Besides: the semantics of PlainText can't
+     be captured by real SGML anyway. --&gt;
+&lt;!ENTITY % body "%heading|%list|%text|%raw"&gt;
+
+&lt;!--     Document structure       --&gt;
+
+&lt;!ELEMENT HTML	O O  ((TITLE? &amp; NEXTID? &amp; ISINDEX?), BODY, ADDRESS?)&gt;
+
+&lt;!ELEMENT TITLE	- -  (#PCDATA)&gt;
+
+&lt;!ELEMENT NEXTID - O EMPTY &gt;
+&lt;!ATTLIST NEXTID N NUMBER #REQUIRED&gt;
+&lt;!-- as noted in Tags.html, the conventional &lt;NEXTID 10&gt; is
+     illegal. Use &lt;NEXTID N=10&gt; to comply with this DTD. --&gt;
+
+&lt;!ELEMENT ISINDEX - O EMPTY &gt;
+
+&lt;!ELEMENT BODY O O ((%heading), (%body)+) +(A)&gt;
+&lt;!-- The BODY element is necessary to avoid mixed content
+     in the HTML element. Mixed content and optional elements
+     don't mix very well. --&gt;
+
+&lt;!ELEMENT (%heading)	- -  (%text)+
+	--Tags.html says titles should fit on one line, but
+	the browser handles paragraph breaks inside headings
+	gracefully. --&gt;
+
+&lt;!ELEMENT (MENU|UL|OL|DIR) - -  (LI+)&gt;
+
+&lt;!ELEMENT DL	- -  ((DT, DD)+)&gt;
+
+&lt;!ELEMENT LI	- O  (%text)+&gt;
+&lt;!ELEMENT DT	- O  (#PCDATA)+&gt;
+&lt;!ELEMENT DD	- O  (%text)+&gt;
+&lt;!ELEMENT ADDRESS - O (%text)+ +(A)&gt;
+&lt;!-- Tags.html says "This tag is for address information, signatures,
+etc, normally at the top or bottom of a document." Here, it is only
+allowed at the end of a document. --&gt;
+
+&lt;!ELEMENT (%raw) - -  CDATA&gt;
+&lt;!-- BUG:
+tags.html says that you can put anything but &lt;/XMP&gt; in the
+text of an XMP element. SGML says that ETAGO, "&lt;/" ends a CDATA
+section.
+--&gt;
+
+&lt;!ELEMENT P	- O  EMPTY -- paragraph SEPARATOR --&gt;
+
+&lt;!-- We could use this to let blank lines separate paragraphs
+  &lt;!ENTITY   ptag   STARTTAG "p"&gt;
+  &lt;!SHORTREF bodymap "&amp;#RS;&amp;#RE;" ptag&gt;
+  &lt;!USEMAP   bodymap  BODY;&gt;
+  --&gt;
+
+&lt;!ELEMENT A	- -  (%body)+&gt;
+&lt;!ATTLIST A
+	HREF CDATA #IMPLIED -- attribute values with colons etc. must
+				be quoted. --
+	NAME CDATA #IMPLIED
+	TYPE CDATA #IMPLIED &gt;
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#20">[ date ]</a><a href="thread.html#20">[ thread ]</a><a href="subject.html#20">[ subject ]</a><a href="author.html#20">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0021.html">Dan Connolly: "perl script to legalize HTML files"</a>
+<li> <strong>Previous message:</strong> <a href="0019.html">Pei Y. Wei: "viola update (with latest W3 library)"</a>
+<!-- nextthread="start" -->
+<li> <strong>Next in thread:</strong> <a href="0024.html">Jean Francois Groff: "Re: HTML DTD enclosed"</a>
+</ul>
+</body>
+</html>

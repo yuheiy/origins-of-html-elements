@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、順序を変えると文書の意味が変わるよう意図的に並べられた項目のlistを表す。 [一次定義](https://html.spec.whatwg.org/multipage/grouping-content.html#the-ol-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、順序を変えると文書の意味が変わるよう意図的に並べられた項目のlistを表す。 [HTML Living Standard](../../raw/html-living-standard/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-ol-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,15 +36,15 @@ CERN-SGML tags →［集合単位、個別対応は不明］WorldWideWeb accepte
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1988-10-18 | *SCRIPT GML User’s Guide* | Waterloo公式文書の保存版 | 先行GMLに`:OL`が存在する。HTMLへの採用因果は示さない。 | [Internet Archive](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt) | 2026-08-09 |
-| 1990-12-07（HTTP Last-Modified） | WorldWideWeb `backup_of_test.html` | CERN/W3C保存の実装test file | CERN-SGML tagsetから一部をHTMLへ含めたと明記し、`OL`と`LI`の実例を使う。ordered listをunordered表示でsupportするという実装差と誤った`</UL>`も記録する。個別対応は指定しない。 | [W3C History](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html) | 2026-08-10 |
-| 1991-10-29 | “Re: status. Re: X11 BROWSER for WWW” | www-talkへの当事者投稿 | `OL`をHTMLのstyle tagとして列挙する。 | [W3C Mail Archive](https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html) | 2026-08-09 |
-| 1992-01-09 | “Re: Is there a paper which describes the www protocol?” | www-talkへの当事者投稿 | `OL`をordered listとしつつ“NOT CURRENTLY USED”と記録する。 | [W3C Mail Archive](https://lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html) | 2026-08-09 |
-| 1992-11-13（更新日） | *Tags used in HTML* | CERN公式HTML資料のhistorical snapshot | list opening tagsとして`UL`、`MENU`、`DIR`を列挙し、`OL`は列挙しない。 | [W3C History](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) | 2026-08-09 |
-| 1992-12-02（更新日） | *Future plans for HTML* | CERN設計ノート | unordered listとの区別のため`OL`を戻し、Connollyが実装中だと記録する。 | [W3C History](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html) | 2026-08-09 |
-| 1993-06 | *Hypertext Markup Language (HTML)* | IETF Internet-Draft | `OL`を順序が重要な番号付きlistとして説明し、DTDのlist集合へ含める。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1988-10-18 | [*SCRIPT GML User’s Guide*](../../raw/items/web.archive.org/b82275288ef607cd-script-gmlref-tso.txt)（[公開元](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)） | Waterloo公式文書の保存版 | 先行GMLに`:OL`が存在する。HTMLへの採用因果は示さない。 | 2026-08-09 |
+| 1990-12-07（HTTP Last-Modified） | [WorldWideWeb `backup_of_test.html`](../../raw/early-www/9d5e16b6a4d23c08-backup_of_test.html)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)） | CERN/W3C保存の実装test file | CERN-SGML tagsetから一部をHTMLへ含めたと明記し、`OL`と`LI`の実例を使う。ordered listをunordered表示でsupportするという実装差と誤った`</UL>`も記録する。個別対応は指定しない。 | 2026-08-10 |
+| 1991-10-29 | [“Re: status. Re: X11 BROWSER for WWW”](../../raw/items/lists.w3.org/9688c6552be697ee-0003.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)） | www-talkへの当事者投稿 | `OL`をHTMLのstyle tagとして列挙する。 | 2026-08-09 |
+| 1992-01-09 | [“Re: Is there a paper which describes the www protocol?”](../../raw/items/lists.w3.org/4575ecdf19df5f8b-0000.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html)） | www-talkへの当事者投稿 | `OL`をordered listとしつつ“NOT CURRENTLY USED”と記録する。 | 2026-08-09 |
+| 1992-11-13（更新日） | [*Tags used in HTML*](../../raw/early-www/6fba3e9651380c1e-Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)） | CERN公式HTML資料のhistorical snapshot | list opening tagsとして`UL`、`MENU`、`DIR`を列挙し、`OL`は列挙しない。 | 2026-08-09 |
+| 1992-12-02（更新日） | [*Future plans for HTML*](../../raw/early-www/c778b33c842bb160-Future.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)） | CERN設計ノート | unordered listとの区別のため`OL`を戻し、Connollyが実装中だと記録する。 | 2026-08-09 |
+| 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | `OL`を順序が重要な番号付きlistとして説明し、DTDのlist集合へ含める。 | 2026-08-09 |
 
 ## 確度
 

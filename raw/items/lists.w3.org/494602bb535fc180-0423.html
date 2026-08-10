@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="hypermail 3.0.0, see https://github.com/hypermail-project/hypermail/" />
+<title>[whatwg] About Descendent Tags from Ian Hickson on 2009-04-30 (public-whatwg-archive@w3.org from April 2009)</title>
+<meta name="Author" content="Ian Hickson (ian&#x40;&#0104;&#0105;&#0120;&#0105;&#0101;&#0046;&#0099;&#0104;)" />
+<meta name="Subject" content="[whatwg] About Descendent Tags" />
+<meta name="Date" content="2009-04-30" />
+<link rel="stylesheet" title="Normal view" href="/assets/styles/public.css" />
+<link rel="alternate stylesheet" title="Shorter view" 
+    href="//www.w3.org/StyleSheets/Mail/style-short.css" />
+<link rel="help" href="/Help/" />
+<link rel="start" href="../" title= "public-whatwg-archive@w3.org archives" />
+</head>
+<body class="message">
+<header class="head">
+<nav class="breadcrumb" id="upper">
+  <ul>
+    <li><a href="https://www.w3.org/">W3C home</a></li>
+    <li><a href="/">Mailing lists</a></li>
+    <li><a href="../../">Public</a></li>
+    <li><a href="../">public-whatwg-archive@w3.org</a></li>
+    <li><a href="./">April 2009</a></li>
+  </ul>
+</nav>
+<h1>[whatwg] About Descendent Tags</h1>
+<!-- received="Thu Apr 30 12:11:17 2009" -->
+<!-- isoreceived="20090430121117" -->
+<!-- sent="Thu, 30 Apr 2009 19:11:17 +0000 (UTC)" -->
+<!-- isosent="20090430191117" -->
+<!-- name="Ian Hickson" -->
+<!-- email="ian&#x40;&#0104;&#0105;&#0120;&#0105;&#0101;&#0046;&#0099;&#0104;" -->
+<!-- subject="[whatwg] About Descendent Tags" -->
+<!-- id="Pine.LNX.4.62.0904301909310.18851@hixie.dreamhostps.com" -->
+<!-- charset="UTF-8" -->
+<!-- inreplyto="49DB8574.2020007&#64;opera.com" -->
+<!-- expires="-1" -->
+<nav id="navbar">
+<ul class="links hmenu_container">
+<li>
+<span class="heading">This message</span>: <ul class="hmenu"><li><a href="#start" id="options1">Message body</a></li>
+<li><a href="mailto:public-whatwg-archive&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20%5Bwhatwg%5D%20About%20Descendent%20Tags&amp;In-Reply-To=%3CPine.LNX.4.62.0904301909310.18851%40hixie.dreamhostps.com%3E&amp;References=%3CPine.LNX.4.62.0904301909310.18851%40hixie.dreamhostps.com%3E">Respond</a></li>
+<li><a href="#options3">More options</a></li>
+</ul></li>
+<li>
+<span class="heading">Related messages</span>: <ul class="hmenu">
+<!-- unext="start" -->
+<li><a href="0424.html">Next message</a></li>
+<li><a href="0422.html">Previous message</a></li>
+<li><a href="0110.html">In reply to</a></li>
+<!-- unextthread="start" -->
+<!-- ureply="end" -->
+</ul></li>
+</ul>
+</nav>
+</header>
+<!-- body="start" -->
+<main class="mail">
+<ul class="headers" aria-label="message headers">
+<li><span class="from">
+<span class="heading">From</span>: Ian Hickson &lt;<a href="mailto:ian&#x40;&#0104;&#0105;&#0120;&#0105;&#0101;&#0046;&#0099;&#0104;?Subject=Re%3A%20%5Bwhatwg%5D%20About%20Descendent%20Tags&amp;In-Reply-To=%3CPine.LNX.4.62.0904301909310.18851%40hixie.dreamhostps.com%3E&amp;References=%3CPine.LNX.4.62.0904301909310.18851%40hixie.dreamhostps.com%3E">ian&#x40;&#0104;&#0105;&#0120;&#0105;&#0101;&#0046;&#0099;&#0104;</a>&gt;
+</span></li>
+<li><span class="date"><span class="heading">Date</span>: Thu, 30 Apr 2009 19:11:17 +0000 (UTC)</span></li>
+<li><span class="message-id"><span class="heading">Message-ID</span>: &lt;Pine.LNX.4.62.0904301909310.18851&#x40;&#0104;&#0105;&#0120;&#0105;&#0101;&#0046;&#0100;&#0114;&#0101;&#0097;&#0109;&#0104;&#0111;&#0115;&#0116;&#0112;&#0115;&#0046;&#0099;&#0111;&#0109;&gt;
+</span></li>
+</ul>
+<pre id="start" class="body">
+On Tue, 7 Apr 2009, Diego Eis wrote:
+&gt;
+&gt; my name is Diego Eis. I'm from Brazil. Sorry for my bad english, ok? :D 
+&gt; I have a website about web standards in pt-br called Tableless.com.br. 
+&gt; And I have a little question.
+&gt; 
+&gt; I have read some HTML5 articles and the specifications in WHATWG 
+&gt; website. I read, for example, the element 'h3' or others headers not 
+&gt; appear as a descendant of the 'footer' element. And I see also the 
+&gt; element 'nav' must not appear as a descendant of the header element. I 
+&gt; don't understand why. The obviously for me when I use the element 
+&gt; header, I say to browsers that element is a header and all elements 
+&gt; descendant are components of this header.
+
+I've allowed &lt;nav&gt; in &lt;header&gt; now.
+
+If you need a heading in your footer, though, just use &lt;section&gt;.
+
+
+&gt; When I write HTML or XHTML, the strutucture look like this:
+&gt;
+&gt; &lt;div id=&quot;header&quot;&gt;
+&gt;    &lt;h1&gt;logo&lt;/h1&gt;
+&gt;    &lt;ul menu&gt;
+&gt;    &lt;form search&gt;
+&gt; &lt;/div&gt;
+&gt; 
+&gt; With HTML5 header element, I can't do this.
+
+You now can.
+
+
+On Tue, 7 Apr 2009, Kristof Zelechovski wrote:
+&gt;
+&gt; The header element is not for the page header, it is for grouping section
+&gt; headings, and the tag name chosen for this element is misleading.
+
+I've renamed the old &lt;header&gt; to &lt;hgroup&gt;.
+
+-- 
+Ian Hickson               U+1047E                )\._.,--....,'``.    fL
+<a href="http://ln.hixie.ch/">http://ln.hixie.ch/</a>       U+263A                /,   _.. \   _\  ;`._ ,.
+Things that are impossible just take longer.   `._.-(,_..'--(,_..'`-.;.'
+</pre>
+<p class="received"><span class="heading">Received on</span> Thursday, 30 April 2009 12:11:17 UTC</p>
+</main>
+<!-- body="end" -->
+<footer class="foot">
+<nav id="navbarfoot">
+<ul class="links hmenu_container">
+<li><span class="heading">This message</span>: <span class="message_body"><a href="#start">Message body</a></span></li>
+<!-- lnext="start" -->
+<li><span class="heading">Next message</span>: <a href="0424.html">Ian Hickson: "[whatwg] SVG extensions to &#0060;canvas&#0062;"</a></li>
+<li><span class="heading">Previous message</span>: <a href="0422.html">Ian Hickson: "[whatwg] Start position of media resources"</a></li>
+<li><span class="heading">In reply to</span>: <a href="0110.html">James Graham: "[whatwg] About Descendent Tags"</a></li>
+<!-- lnextthread="start" -->
+<!-- lreply="end" -->
+</ul>
+<ul class="links hmenu_container">
+<li id="options3"><span class="heading">Mail actions</span>: <ul class="hmenu"><li><a href="mailto:public-whatwg-archive&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20%5Bwhatwg%5D%20About%20Descendent%20Tags&amp;In-Reply-To=%3CPine.LNX.4.62.0904301909310.18851%40hixie.dreamhostps.com%3E&amp;References=%3CPine.LNX.4.62.0904301909310.18851%40hixie.dreamhostps.com%3E">respond to this message</a></li>
+<li><a href="mailto:public-whatwg-archive&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;">mail a new topic</a></li></ul></li>
+<li><span class="heading">Contemporary messages sorted</span>: <ul class="hmenu"><li><a href="index.html#msg423">by date</a></li>
+<li><a href="thread.html#msg423">by thread</a></li>
+<li><a href="subject.html#msg423">by subject</a></li>
+<li><a href="author.html#msg423">by author</a></li>
+</ul></li>
+<li><span class="heading">Help</span>: [ <a href=
+   "/Help/" accesskey="h" rel="help">How to use the archives</a> ] [ <a href=
+   "https://www.w3.org/Search/Mail/Public/search?type-index=public-whatwg-archive&amp;index-type=t">Search in the archives</a> ]
+</li>
+</ul>
+</nav>
+<!-- trailer="footer" -->
+<p class="colophon">
+This archive was generated by <a href="https://github.com/hypermail-project/hypermail/">hypermail 3.0.0</a>: Saturday, 26 August 2023 22:10:46 UTC
+</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<HEADER>
+<TITLE>Active Areas</TITLE>
+</HEADER>
+<BODY>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_35.html">[Up]</A> <A HREF="htmlplus_37.html">[Next]</A> <A HREF="htmlplus_35.html">[Previous]</A> <P>
+<H1>8.1	 - Active Areas</H1>
+<HR>
+The upper left of the image is designated as x,y = (0, 0), with x increasing across the page and y down the page. This choice was made for continuity with the <TT>IMG</TT> element in HTML, to ensure a simple migration path to HTML+. If points are given in real numbers, the lower right corner of the image is taken as being (1.0, 1.0), otherwise, with integer values the coordinates are assumed to be in pixels. A simple test to distinguish the two schemes is to check if a "." character occurs anywhere in the list of points. Using scaled coordinates is much safer as the pixel extent of an image may alter, e.g. as a result of format negotiation with the server.<P>
+For some images, HTTP servers will be able to handle mouse/pen clicks or drags on the image. This is signalled in the header information returned along with the image data. Alternatively, the  <TT>ISMAP</TT> attribute can  be used to signal this capability. The mouse click is sent to the server indicated by the URL in the <TT>SRC</TT> attribute, using the same URL plus the suffix "?x=<I>X</I>&amp;y=<I>Y</I>"<A NAME=htmlplus_FootNote_114 HREF=htmlplus_FootNote_114.html>*1</A> where <I>X</I> and <I>Y</I> are the coordinates of the click event. Mouse drags can be used to designate a rectangular region of the image. In this case the suffix takes the form: "?x=<I>X</I>&amp;y=<I>Y</I>&amp;w=<I>W</I>&amp;h=<I>H</I>" where <I>(X, Y)</I> is the upper left of the rectangle, and <I>(W, H)</I> define its width and height. The <TT>ISMAP</TT> mechanism is useful when the active regions in the image change their boundaries with time, e.g.<P>
+<PRE>
+&lt;fig ismap src="weather.gif"&gt;
+&lt;caption&gt;Click on your area for a local forecast&lt;/caption&gt;
+Todays weather map for the US.
+&lt;/fig&gt;
+</PRE>
+<HR>
+<ADDRESS>HTML+ Discussion Document - November 8, 1993</ADDRESS><P>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_35.html">[Up]</A> <A HREF="htmlplus_37.html">[Next]</A> <A HREF="htmlplus_35.html">[Previous]</A> <P>
+</BODY>

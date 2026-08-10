@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、明文化されていないが明示的にrenderされるnon-textual annotationを持つtext spanを表す。 [一次定義](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-u-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、明文化されていないが明示的にrenderされるnon-textual annotationを持つtext spanを表す。 [HTML Living Standard](../../raw/html-living-standard/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-u-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -42,15 +42,15 @@ W3C HTML5 nonconforming `U` → 2011年HTML WG決定によるconforming `U`
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1992-10-06 | *Texinfo — The GNU Documentation Format*, Edition 2.16 | GNU公式配布物内マニュアル | 印刷用font commandsにunderline用`@u`を確認できない。 | [GNU archive](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z) | 2026-08-09 |
-| 1993-01-06（埋込みDTDのRCS識別子）、1993-06（draft） | *Hypertext Markup Language (HTML)*, draft-ietf-iiir-html-00 | IETF Internet-Draft／埋込みDTD | `html.dtd,v 1.3 93/01/06`の`inline` entityに`U`があり、本文は`U`を含む12要素名をTexinfo macro names由来と一括して述べる。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) | 2026-08-09 |
-| 1995-06-07 | *Texinfo — The GNU Documentation Format*, Edition 2.21、および同梱実装 | GNU公式配布物内マニュアル・実装 | font commandsとcommand tableにunderline用`@u`を確認できない。 | [GNU archive](https://ftp.gnu.org/gnu/texinfo/texinfo37.tar-gz) | 2026-08-09 |
-| 1995-11 | RFC 1866 | IETF Proposed Standard | HTML 2.0 DTDに`U`を含めない。除外理由は述べない。 | [一次資料](https://www.rfc-editor.org/rfc/rfc1866.html) | 2026-08-10 |
-| 1996-07-31 | Arne Knudson, “Re: Cougar DTD -- Ugh!” | W3C public mailing list | Wilbur／Cougar DTDへの`U`の再収録を批判し、underlineとlinkの混同を以前の除外理由として回顧する。WG決定ではない。 | [一次資料](https://www.w3.org/mid/199607311834.OAA09274@ebt-inc.ebt.com;list=www-html) | 2026-08-10 |
-| 1997-01-14 | HTML 3.2 | W3C Recommendation | `U`をdeprecated font style elementとして採録する。個別の再採録理由は述べない。 | [一次資料](https://www.w3.org/TR/REC-html32) | 2026-08-10 |
-| 2011-04-08 | HTML Working Group Decision: ISSUE-144 | W3C HTML WG decision | nonconformingだった`U`をconformingにする提案を採択し、editorへ仕様変更を指示する。 | [一次資料](https://lists.w3.org/Archives/Public/public-html/2011Apr/0212.html) | 2026-08-10 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1992-10-06 | [*Texinfo — The GNU Documentation Format*, Edition 2.16](../../raw/texinfo-2.16/texinfo2.texi)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)） | GNU公式配布物内マニュアル | 印刷用font commandsにunderline用`@u`を確認できない。 | 2026-08-09 |
+| 1993-01-06（埋込みDTDのRCS識別子）、1993-06（draft） | [*Hypertext Markup Language (HTML)*, draft-ietf-iiir-html-00](../../raw/draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft／埋込みDTD | `html.dtd,v 1.3 93/01/06`の`inline` entityに`U`があり、本文は`U`を含む12要素名をTexinfo macro names由来と一括して述べる。 | 2026-08-09 |
+| 1995-06-07 | *Texinfo — The GNU Documentation Format*, Edition 2.21、および同梱実装：[manual](../../raw/texinfo-3.7/texinfo.texi)・[implementation](../../raw/texinfo-3.7/texinfo.tex)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo37.tar-gz)） | GNU公式配布物内マニュアル・実装 | font commandsとcommand tableにunderline用`@u`を確認できない。 | 2026-08-09 |
+| 1995-11 | [RFC 1866](../../raw/html-2.0/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html)） | IETF Proposed Standard | HTML 2.0 DTDに`U`を含めない。除外理由は述べない。 | 2026-08-10 |
+| 1996-07-31 | [Arne Knudson, “Re: Cougar DTD -- Ugh!”](../../raw/items/www.w3.org/380bdd817d9c1435-199607311834.OAA09274-ebt-inc.ebt.com-list-www.html)（[公開元](https://www.w3.org/mid/199607311834.OAA09274@ebt-inc.ebt.com;list=www-html)） | W3C public mailing list | Wilbur／Cougar DTDへの`U`の再収録を批判し、underlineとlinkの混同を以前の除外理由として回顧する。WG決定ではない。 | 2026-08-10 |
+| 1997-01-14 | [HTML 3.2](../../raw/html-3.2/index.html)（[公開元](https://www.w3.org/TR/REC-html32)） | W3C Recommendation | `U`をdeprecated font style elementとして採録する。個別の再採録理由は述べない。 | 2026-08-10 |
+| 2011-04-08 | [HTML Working Group Decision: ISSUE-144](../../raw/items/lists.w3.org/ea59b9e4ec4be9fa-0212.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2011Apr/0212.html)） | W3C HTML WG decision | nonconformingだった`U`をconformingにする提案を採択し、editorへ仕様変更を指示する。 | 2026-08-10 |
 
 ## 確度
 

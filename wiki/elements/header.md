@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、導入またはナビゲーションを支援する内容群を表す。通常は見出しを含むが必須ではなく、目次、検索form、logo等も含められる。[一次定義](https://html.spec.whatwg.org/multipage/sections.html#the-header-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、導入またはナビゲーションを支援する内容群を表す。通常は見出しを含むが必須ではなく、目次、検索form、logo等も含められる。[HTML Living Standard](../../raw/html-living-standard/sections.html)（[公開版](https://html.spec.whatwg.org/multipage/sections.html#the-header-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -42,17 +42,17 @@ page／section headerを表す要求（2009年） → 新しいWHATWG `header`�
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2004-11-10 | Semantic elements and spec complexity | WHATWG mailing list | `header`を含むsemantic element集合と、汎用`div`との差に関する議論。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/date.html) | 2026-08-09 |
-| 2005-09-01 | Web Applications 1.0 | WHATWG保存Early Working Draft | sectionのheadingを表す`header`。 | [一次資料](https://whatwg.org/specs/web-apps/2005-09-01/#the-header) | 2026-08-09 |
-| 2005-12 | Web Authoring Statistics: Classes | Googleによる当時のusage調査（保存複製） | `title`, `header`, `top` classとHTML5 `header`の対応。 | [一次資料](https://web.archive.org/web/20060101000000id_/http://code.google.com/webstats/2005-12/classes.html) | 2026-08-09 |
-| 2009-04-07 | “About Descendent Tags” | WHATWG mailing list | 当時の`header`では`nav`を子にできず、見出し、menu、検索formをまとめたpage header相当を表せないという要求。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-April/061491.html) | 2026-08-09 |
-| 2009-04-30 | WHATWG HTML commit `7e9b2d1b` | 仕様commit | 旧`header`を`hgroup`へ改名しsubheading用へ限定。 | [一次資料](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4) | 2026-08-09 |
-| 2009-04-30 | WHATWG HTML commit `a729fd0c` | 仕様commit | 新しい`header`をsection headerとして導入し、見出し、目次、検索form、logo、introductory／navigational aidsを内容例とした。 | [一次資料](https://github.com/whatwg/html/commit/a729fd0c57b9a8cc7ed783a03e72cfc74549c9db) | 2026-08-09 |
-| 2009-04-30 | WHATWG HTML commit `b3e77f6f` | 仕様commit | `header`をintroductory／navigational aidsのgroupと明確化し、sectioning contentではないと追記したこと。 | [一次資料](https://github.com/whatwg/html/commit/b3e77f6f1a15c5cc7fedc9e16b4a480426b2e07e) | 2026-08-09 |
-| 2009-04-30 | WHATWG HTML commit `77883ac9` | 仕様commit | headingとheaderの用語混同を整理したこと。 | [一次資料](https://github.com/whatwg/html/commit/77883ac94547e66273da7450487ac298b6bb625d) | 2026-08-09 |
-| 2009-04-30 | “About Descendent Tags” | WHATWG editorの返信 | `nav`を`header`内で許可し、問題提起された構造を可能にし、旧`header`を`hgroup`へ改名したという変更理由。 | [一次資料](https://lists.w3.org/Archives/Public/public-whatwg-archive/2009Apr/0423.html) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2004-11-10 | [Semantic elements and spec complexity](../../raw/items/lists.whatwg.org/6da4e046dc1ff3f5-date.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/date.html)） | WHATWG mailing list | `header`を含むsemantic element集合と、汎用`div`との差に関する議論。 | 2026-08-09 |
+| 2005-09-01 | [Web Applications 1.0](../../raw/whatwg-web-apps-history/f8bdeadb28b78825-2005-.html)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-header)） | WHATWG保存Early Working Draft | sectionのheadingを表す`header`。 | 2026-08-09 |
+| 2005-12 | [Web Authoring Statistics: Classes](../../raw/items/web.archive.org/88fd2ea9e5c46f6b-classes.html)（[公開元](https://web.archive.org/web/20060101000000id_/http://code.google.com/webstats/2005-12/classes.html)） | Googleによる当時のusage調査（保存複製） | `title`, `header`, `top` classとHTML5 `header`の対応。 | 2026-08-09 |
+| 2009-04-07 | [“About Descendent Tags”](../../raw/items/lists.whatwg.org/e72589190a369dd6-061491.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-April/061491.html)） | WHATWG mailing list | 当時の`header`では`nav`を子にできず、見出し、menu、検索formをまとめたpage header相当を表せないという要求。 | 2026-08-09 |
+| 2009-04-30 | [WHATWG HTML commit `7e9b2d1b`](../../raw/whatwg-html-history/31b33dcfb6d09e2a-7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae.html)（[公開元](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)） | 仕様commit | 旧`header`を`hgroup`へ改名しsubheading用へ限定。 | 2026-08-09 |
+| 2009-04-30 | [WHATWG HTML commit `a729fd0c`](../../raw/whatwg-html-history/573c473dbc995ebf-a729fd0c57b9a8cc7ed783a03e72cfc7454.html)（[公開元](https://github.com/whatwg/html/commit/a729fd0c57b9a8cc7ed783a03e72cfc74549c9db)） | 仕様commit | 新しい`header`をsection headerとして導入し、見出し、目次、検索form、logo、introductory／navigational aidsを内容例とした。 | 2026-08-09 |
+| 2009-04-30 | [WHATWG HTML commit `b3e77f6f`](../../raw/whatwg-html-history/28dab1bae670b297-b3e77f6f1a15c5cc7fedc9e16b4a480426b.html)（[公開元](https://github.com/whatwg/html/commit/b3e77f6f1a15c5cc7fedc9e16b4a480426b2e07e)） | 仕様commit | `header`をintroductory／navigational aidsのgroupと明確化し、sectioning contentではないと追記したこと。 | 2026-08-09 |
+| 2009-04-30 | [WHATWG HTML commit `77883ac9`](../../raw/whatwg-html-history/b62a3ab44edd3b99-77883ac94547e66273da7450487ac298b6b.html)（[公開元](https://github.com/whatwg/html/commit/77883ac94547e66273da7450487ac298b6bb625d)） | 仕様commit | headingとheaderの用語混同を整理したこと。 | 2026-08-09 |
+| 2009-04-30 | [“About Descendent Tags”](../../raw/items/lists.w3.org/494602bb535fc180-0423.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2009Apr/0423.html)） | WHATWG editorの返信 | `nav`を`header`内で許可し、問題提起された構造を可能にし、旧`header`を`hgroup`へ改名したという変更理由。 | 2026-08-09 |
 
 ## 確度
 

@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、文書を他のresourceへ結び付け、`rel`によって文書とdestination resourceの関係を指定する。link typeに応じてhyperlinkまたはexternal resource linkになる。 [一次定義](https://html.spec.whatwg.org/multipage/semantics.html#the-link-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、文書を他のresourceへ結び付け、`rel`によって文書とdestination resourceの関係を指定する。link typeに応じてhyperlinkまたはexternal resource linkになる。 [HTML Living Standard](../../raw/html-living-standard/semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/semantics.html#the-link-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,12 +36,12 @@ WWWのdocument-wide typed-link要求 → 新DTD向けHTML `LINK`提案（1992）
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1992（historical snapshot） | *Link Types* | CERN設計ノート | node間のpart、authorship、index、glossaryなどのtyped relationを記録する。 | [W3C History](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/LinkTypes.html) | 2026-08-09 |
-| 1992-12-02（更新日） | *Future plans for HTML* | CERN設計ノート | localized anchorと異なるdocument-wide linkとして空の`LINK`を提案し、用途と属性を説明する。 | [W3C History](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html) | 2026-08-09 |
-| 1993-01-06（DTD RCS id） | *Hypertext Markup Language (HTML)*収録DTD | IETF Internet-Draft内のDTD | `HEAD`内の`LINK`と`HREF`、`REL`、`REV`等の属性を宣言する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) | 2026-08-09 |
-| 1995-11 | RFC 1866: *Hypertext Markup Language - 2.0* | IETF Standards Track RFC | `LINK`を`HEAD`内のhyperlinkとして標準化し、典型的なdocument relationを列挙する。 | [RFC Editor](https://www.rfc-editor.org/rfc/rfc1866#section-5.2.4) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1992（historical snapshot） | [*Link Types*](../../raw/early-www/176c770282bdd8c9-LinkTypes.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/LinkTypes.html)） | CERN設計ノート | node間のpart、authorship、index、glossaryなどのtyped relationを記録する。 | 2026-08-09 |
+| 1992-12-02（更新日） | [*Future plans for HTML*](../../raw/early-www/c778b33c842bb160-Future.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)） | CERN設計ノート | localized anchorと異なるdocument-wide linkとして空の`LINK`を提案し、用途と属性を説明する。 | 2026-08-09 |
+| 1993-01-06（DTD RCS id） | [*Hypertext Markup Language (HTML)*収録DTD](../../raw/draft-ietf-iiir-html-00/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft内のDTD | `HEAD`内の`LINK`と`HREF`、`REL`、`REV`等の属性を宣言する。 | 2026-08-09 |
+| 1995-11 | [RFC 1866: *Hypertext Markup Language - 2.0*](../../raw/html-2.0/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866#section-5.2.4)） | IETF Standards Track RFC | `LINK`を`HEAD`内のhyperlinkとして標準化し、典型的なdocument relationを列挙する。 | 2026-08-09 |
 
 ## 確度
 

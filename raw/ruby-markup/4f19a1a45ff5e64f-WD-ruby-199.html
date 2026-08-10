@@ -1,0 +1,493 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en-US">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Ruby</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style type="text/css">
+<!--  p.example { font-weight: bold }
+      /* img.example { margin-left: 3em; }*/
+      div.figure { text-align: left; margin-left: 3em; }
+      div.figure p { font-size: smaller; margin-right: 6em; }
+      pre { color: maroon;  margin-left: 3em; }
+      pre.xml { color: #006000; margin-left: 3em; }
+      div.figure pre, div.figure pre.xml { margin-left: 0em }
+      div.dtd-fragment { width: 100%; border: none; background-color: #eee; }
+      pre.dtd-fragment { margin-left: 0em; }
+      div.dtd-fragment-xml { width: 100%; border: none; background-color: #eee; }
+      pre.dtd-fragment-xml { color: #006000; margin-left: 0em; }
+      h3, h4 { margin-top: 1em; }
+ --></style>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/Icons/w3c_home" alt="W3C" border="0" align="left" width="72" height="48"></a></p>
+
+<h4 align="right">WD-ruby-19981221</h4>
+
+<h1 align="center">Ruby</h1>
+
+<h3 align="CENTER">World Wide Web Consortium Working Draft 21-December-1998</h3>
+
+<dl>
+  <dt>This version:</dt>
+  <dd><a href="https://www.w3.org/TR/1998/WD-ruby-19981221">http://www.w3.org/TR/1998/WD-ruby-19981221</a></dd>
+  <dt>Latest version:</dt>
+  <dd><a href="https://www.w3.org/TR/WD-ruby">http://www.w3.org/TR/WD-ruby</a>
+    <br>
+    Also available for local browsing as a <a href="WD-ruby.zip">Zipped archive</a></dd>
+
+  <dt>Editor:</dt>
+  <dd><a href="mailto:marcins@microsoft.com">Marcin Sawicki</a> (Microsoft)</dd>
+</dl>
+
+<dl>
+  <dt>Additional contributors:</dt>
+  <dd><a href="mailto:duerst@w3.org">Martin D&uuml;rst</a> (W3C)</dd>
+  <dd><a href="mailto:mimasa@w3.org">Masayasu Ishikawa</a> (W3C)</dd>
+  <dd><a href="mailto:cwilso@microsoft.com">Chris Wilson</a> (Microsoft)</dd>
+</dl>
+
+<p><small><a href="https://www.w3.org/Consortium/Legal/ipr-notice.html#Copyright">Copyright</a>
+&nbsp;&copy;&nbsp; 1998 <a href="https://www.w3.org/">W3C</a> (<a href="http://www.lcs.mit.edu">MIT</a>,
+<a href="http://www.inria.fr/">INRIA</a>, <a href="http://www.keio.ac.jp/">Keio</a>), All
+Rights Reserved. W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice.html#LegalDisclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice.html#W3CTrademarks">trademark</a>, <a href="https://www.w3.org/Consortium/Legal/copyright-documents.html">document use</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-software.html">software licensing</a>
+rules apply.</small></p>
+
+<h2>Status of This Document</h2>
+
+<p>This is a W3C Working Draft for review by W3C members and other interested parties. It
+is a draft document and may be updated, replaced, or obsoleted by other documents at any
+time. The W3C will not allow early implementation to constrain its ability to make changes
+to this specification prior to final release. It is inappropriate to use W3C Working
+Drafts as reference material or to cite them as other than &quot;work in progress&quot;. A
+list of current W3C Working Drafts can be found at <a href="https://www.w3.org/TR" class="loc">http://www.w3.org/TR</a>.</p>
+
+<p>This W3C Working Draft is published by the <a href="https://www.w3.org/International/Group/">Internationalization Working Group</a> (<a href="http://cgi.w3.org/MemberAccess/">members only</a>). In
+a future version, this work is intended to be submitted to the <a href="https://www.w3.org/MarkUp/Group/">HTML Working Group</a> (<a href="http://cgi.w3.org/MemberAccess/">members only</a>) for
+inclusion in the next version of HTML.</p>
+
+<p>Please send comments and questions regarding this document to <a
+href="mailto:i18n-editor@w3.org">i18n-editor@w3.org</a>. Comments in languages other than
+English, in particular Japanese, are also welcome.</p>
+
+<hr>
+
+<h2><a name="Abstract">Abstract</a></h2>
+
+<p>The HyperText Markup Language (HTML) is a simple markup language used to create
+hypertext documents that are portable from one platform to another. HTML documents are
+SGML documents with generic semantics that are appropriate for representing information
+from a wide range of applications. The following specification extends HTML to support
+ruby text typically used in East Asian documents. Familiarity with both HTML 4.0 [<a href="#html4">HTML4</a>]
+and XML-ized HTML [<a href="#xml">HTML-XML]</a> is assumed.</p>
+
+<hr>
+
+<h2><a name="Contents">Contents</a></h2>
+
+<div CLASS="toc">
+<ul>
+  <li CLASS="toc"><a HREF="#a1">1.&nbsp;&nbsp;Introduction</a></li>
+  <li CLASS="toc"><a HREF="#a2">2.&nbsp;&nbsp;Ruby elements</a>
+  <ul>
+    <li CLASS="toc"><a HREF="#a2-1">2.1&nbsp;&nbsp;The <samp>ruby</samp> element</a></li>
+    <li CLASS="toc"><a HREF="#a2-2">2.2&nbsp;&nbsp;The <samp>rb</samp> element</a></li>
+    <li CLASS="toc"><a HREF="#a2-3">2.3&nbsp;&nbsp;The <samp>rt</samp> element</a></li>
+    <li CLASS="toc"><a HREF="#a2-4">2.4&nbsp;&nbsp;The <samp>rp</samp> element</a></li>
+  </ul>
+  </li>
+  <li CLASS="toc"><a HREF="#a3">3.&nbsp;&nbsp;Ruby box model</a></li>
+  <li class="toc"><a HREF="#a4">4.&nbsp;&nbsp;Glossary</a> </li>
+  <li CLASS="toc"><a HREF="#ack">Acknowledgements</a></li>
+  <li CLASS="toc"><a HREF="#ref">References</a></li>
+</ul>
+</div>
+
+<hr>
+
+<h2><a name="a1">1.&nbsp;&nbsp;Introduction</a></h2>
+
+<p>East Asian typography contains structural elements and types of formatting that are not
+yet exposed in HTML and thus impossible to achieve on the Web without using special
+workarounds or graphics. One of such elements is ruby text. The &quot;ruby&quot; is the
+commonly used name for a run of text that appears in the immediate vicinity of another run
+of text, referred to as the &quot;base&quot;, and serves as an annotation or a
+pronunciation guide associated with that run of text. Ruby, as used in Japanese, is
+described in JIS-X-4051 [<a href="#jis">JIS</a>].</p>
+
+<p>Ruby text's font size is normally half the font size of the base. The name
+&quot;ruby&quot; in fact originated from the name of the 5.5pt font size in British
+printing, which is about half the 10pt font size commonly used for normal text.</p>
+
+<p>There are several positions that the ruby text can appear at relative to its base. They
+can be divided into two main categories: ruby text can appear <em>alongside</em> the base,
+or it can appear as <em>inline</em> text immediately following the base. When ruby
+text appears alongside the base, then it almost always appears above the base in
+horizontal layout (although there are cases of ruby appearing below the base).</p>
+
+<div class="figure">
+<p><img class="example" src="ruby-jp-ex.gif" width="128" height="30"
+alt="Example showing ruby on top of base in horizontal Japanese"></p>
+
+<p><b>Figure 1.1.1</b>: Top ruby in horizontal Japanese</p>
+</div>
+
+<p>In vertical ideographic layout, &quot;alongside&quot; ruby appears on the right side of
+the vertical column of text, and its own layout flow is the same as that of its base, i.e.
+vertical ideographic.</p>
+
+<div class="figure">
+<p><img class="example" src="ruby-jp-vi-ex.gif" width="32" height="133"
+alt="Example showing ruby on the right side of base in vertical Japanese text"></p>
+
+<p><b>Figure 1.1.2</b>: Top ruby applied to vertical ideographic Japanese</p>
+</div>
+
+<p>When the ruby text appears inline, it may be enclosed within parentheses. Note
+however that the parentheses are used only for inline ruby. There are no parentheses
+around ruby text that runs alongside the base.</p>
+
+<div class="figure">
+<p><img class="example" src="ruby-in-ex.gif" width="148" height="35"
+alt="Example showing ruby within parentheses inline with the base in horizontal Japanese"></p>
+
+<p><b>Figure 1.1.3</b>: Inline ruby applied to horizontal Japanese</p>
+</div>
+
+<p>This document introduces a ruby model in HTML using the new <samp>ruby</samp> element
+containing the <samp>rb</samp>, <samp>rt</samp> and <samp>rp</samp> elements. Only the
+structure of the ruby is discussed in this document. For example, the following ruby</p>
+
+<div class="figure">
+<p><img class="example" src="ruby-en-ex.gif" width="145" height="30"
+alt="Example showing ruby on top of base in horizontal English text"></p>
+
+<p><b>Figure 1.1.4</b>: Top ruby applied to horizontal English</p>
+</div>
+
+<p>can be represented by the following markup in SGML HTML:</p>
+
+<pre>&lt;ruby&gt;WWW&lt;rp&gt;(&lt;rt&gt;World Wide Web&lt;rp&gt;)&lt;/ruby&gt;</pre>
+
+<p>while the XML-ized HTML [<a href="#xml">HTML-XML</a>] version of it would be: </p>
+
+<pre class="xml">&lt;ruby&gt;&lt;rb&gt;WWW&lt;/rb&gt;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;World Wide Web&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;</pre>
+
+<p>This document only defines ruby markup.  Formatting properties for styling ruby will be defined not for HTML/XML, but for CSS/XSL.</p>
+
+<p>This proposal does not include markup to allow to intelligently distribute the base text and
+the ruby text over two lines when the whole construct would need to be hyphenated.  There are
+very few systems that actually do such processing and the additional markup would be quite complicated.  
+Authors are advised to limit the length of the base text where possible.</p>
+
+<hr>
+
+<h2><a name="a2">2.&nbsp;&nbsp;Ruby elements</a></h2>
+
+<p>This section contains the ruby DTD and the specification of the functionality of the
+ruby elements. Two DTD versions are given for each tag. The first one is in SGML [<a
+href="#html4">HTML4</a>]. The second one is in XML-ized HTML [<a href="#xml">HTML-XML</a>]. 
+Note that in the SGML DTD, elements and attributes are intended to be case-insensitive,
+however, in the XML DTD, elements and attributes are case-sensitive.
+And also, start and end tags are always required in XML.</p>
+
+<p>For convenience, the following parameter entities are used:</p>
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment-xml">
+&lt;!-- %Inline; covers inline or &quot;text-level&quot; elements --&gt;
+&lt;!ENTITY % Inline &quot;(#PCDATA | %inline; | %misc; | ruby)*&quot;&gt;
+
+&lt;!-- %ruby.content; is %Inline; without ruby --&gt;
+&lt;!ENTITY % ruby.content &quot;(#PCDATA | %inline; | %misc;)*&quot;&gt;
+
+&lt;!ENTITY % attrs &quot;%coreattrs; %i18n; %events; %extra-attrs;&quot;&gt;
+</pre>
+</div>
+
+<p>Further definitions can be found in [<a href="#xml">HTML-XML</a>].</p>
+
+<h3><a name="a2-1">2.1&nbsp;&nbsp;The <samp>ruby</samp> element</a></h3>
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!-- SGML DTD: container for ruby elements --&gt;
+&lt;!ELEMENT ruby - - (rb, rp?, rt, rp?)&gt;
+&lt;!ATTLIST ruby %attrs; &gt;
+</pre>
+</div>
+
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<div class="dtd-fragment-xml">
+<pre class="dtd-fragment-xml">
+&lt;!-- XML DTD: container for ruby elements --&gt;
+&lt;!ELEMENT ruby (rb, rp?, rt, rp?)&gt;
+&lt;!ATTLIST ruby %attrs; &gt;
+</pre>
+</div>
+
+<p>The <samp>ruby</samp> element serves as the container for the <samp>rb</samp>, <samp>rp</samp>
+and <samp>rt</samp> elements only.  It provides the structural association between
+the ruby base and its ruby text.</p>
+
+<p>The <samp>ruby</samp> element does not accept any attributes other than the standard
+ones, such as <samp>id</samp>, <samp>class</samp> or <samp>style</samp>.</p>
+
+<p>In this simplest example, ruby &quot;aaa&quot; is associated with base &quot;AA&quot;:</p>
+
+<div class="figure">
+<pre>
+&lt;ruby&gt;AA&lt;rt&gt;aaa&lt;/ruby&gt;
+</pre>
+
+<p><b>Figure 2.1.1</b>: SGML usage of the <samp>ruby</samp> element</p>
+</div>
+
+<p>In XML-ized HTML, the above example would be:</p>
+
+<div class="figure">
+<pre class="xml">&lt;ruby&gt;&lt;rb&gt;AA&lt;/rb&gt;&lt;rt&gt;aaa&lt;/rt&gt;&lt;/ruby&gt;</pre>
+
+<p><b>Figure 2.1.2</b>: XML usage of the <samp>ruby</samp> element</p>
+</div>
+
+<h3><a name="a2-2">2.2&nbsp;&nbsp;The <samp>rb</samp> element</a></h3>
+<div class="dtd-fragment">
+
+<pre class="dtd-fragment">&lt;!-- SGML DTD: container for ruby base --&gt;
+&lt;!ELEMENT rb O O %ruby.content; &gt;
+&lt;!ATTLIST rb %attrs; &gt;
+</pre>
+</div>
+
+<p><em>Start tag: <strong>optional</strong>, End tag: <strong>optional</strong></em></p>
+
+<p>In SGML, neither the opening nor the closing tags are required, which means that any
+text in the <samp>ruby</samp> element that is not enclosed within an <samp>rt</samp> or an
+<samp>rp</samp> element belongs to the <samp>rb</samp> element. The <samp>rb</samp>
+element is automatically closed by an <samp>rt</samp> or an <samp>rp</samp> element.</p>
+
+<div class="dtd-fragment-xml">
+<pre class="dtd-fragment-xml">
+&lt;!-- XML DTD: container for ruby base --&gt;
+&lt;!ELEMENT rb %ruby.content; &gt;
+&lt;!ATTLIST rb %attrs; &gt;
+</pre>
+</div>
+
+<p>The <samp>rb</samp> element is the container for the text of the ruby base. Any
+content, other than another <samp>ruby</samp> element, is valid inside of <samp>rb</samp>.</p>
+
+<h3><a name="a2-3">2.3&nbsp;&nbsp;The <samp>rt</samp> element</a></h3>
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!-- SGML DTD: container for ruby text --&gt;
+&lt;!ELEMENT rt - O %ruby.content; &gt;
+&lt;!ATTLIST rt %attrs; &gt;
+</pre>
+</div>
+
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>optional</strong></em></p>
+
+<p>In SGML, only the opening tag is required. The <samp>rt</samp> element is automatically
+closed by an opening <samp>rp</samp> tag or a closing <samp>ruby</samp> tag.</p>
+
+<div class="dtd-fragment-xml">
+<pre class="dtd-fragment-xml">
+&lt;!-- XML DTD: container for ruby text --&gt;
+&lt;!ELEMENT rt %ruby.content; &gt;
+&lt;!ATTLIST rt %attrs; &gt;
+</pre>
+</div>
+
+<p>The <samp>rt</samp> element is the container for the ruby text. The <samp>rt</samp>
+element does not allow other nested <samp>ruby</samp> elements inside of it.</p>
+
+<h3><a name="a2-4">2.4&nbsp;&nbsp;The <samp>rp</samp> element</a></h3>
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!-- SGML DTD: container for parenthesis characters --&gt;
+&lt;!-- ELEMENT rp - O %ruby.content; --&gt;
+&lt;!ELEMENT rp - O (#PCDATA)&gt;
+&lt;!ATTLIST rp %attrs; &gt;
+</pre>
+</div>
+
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>optional</strong></em></p>
+
+<p>In SGML, the <samp>rp</samp> element is automatically closed by an opening <samp>rt</samp>
+tag or a closing <samp>ruby</samp> tag.</p>
+
+<div class="dtd-fragment-xml">
+<pre class="dtd-fragment-xml">
+&lt;!-- XML DTD: container for parenthesis characters --&gt;
+&lt;!-- ELEMENT rp %ruby.content; --&gt;
+&lt;!ELEMENT rp (#PCDATA)&gt;
+&lt;!ATTLIST rp %attrs; &gt;
+</pre>
+</div>
+
+<p>This element is intended to contain parenthesis characters. Parentheses are necessary
+for the ruby to be rendered correctly when it is inline. When rendering a non-inline (i.e.
+an <em>alongside</em>) ruby, the UA must ignore the contents of the <samp>rp</samp>
+elements completely, as if there were a &quot;<a href="https://www.w3.org/TR/REC-CSS2/visuren.html#propdef-display">display</a>: none&quot;
+setting in the <samp>rp</samp> CSS definition [<a href="#css">CSS2</a>]. The existence of
+the <samp>rp</samp> element however is necessary for UA's that are unable to render ruby.
+That way, any ruby will degrade to no worse than a properly formed inline ruby in
+non-supporting UA's.</p>
+
+<p>Consider the following markup, specifying a top (default) ruby:</p>
+
+<div class="figure">
+<pre>
+&lt;ruby&gt;&lt;rb&gt;A&lt;/rb&gt;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;aaa&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;
+</pre>
+
+<p><b>Figure 2.4.1</b>: Ruby markup using <samp>rp</samp> elements</p>
+</div>
+
+<p>A user agent that supports top ruby would render it as:</p>
+
+<div class="figure">
+<pre><tt>
+aaa
+ A
+</tt></pre>
+
+<p><b>Figure 2.4.2</b>: Top ruby rendered by a supporting UA (note the parentheses are not
+visible)</p>
+</div>
+
+<p>However, a UA that is unable to render top ruby or does not support ruby HTML, would
+still correctly show:</p>
+
+<div class="figure">
+<pre><tt>
+A(aaa)
+</tt></pre>
+
+<p><b>Figure 2.4.3</b>: Top ruby rendered by a non-supporting UA (note the parentheses are
+visible)</p>
+</div>
+
+<hr>
+
+<h2>3.&nbsp;&nbsp;<a name="a3">Ruby box model</a></h2>
+
+<p>In a UA that supports ruby, the ruby structure consists of three boxes.  The
+outermost container is the <samp>ruby</samp> element itself.  It is a container for
+two non-overlapping boxes: the ruby text box and the ruby base box.</p>
+
+<div class="figure">
+<p><img class="example" src="r-box-t.gif" width="268" height="91"
+alt="Diagram of the ruby box model"></p>
+
+<p><b>Figure 3.1.1</b>: Ruby box model</p>
+</div>
+
+<p>The width of the ruby element is by default determined by its widest child element,
+whose width in turn is determined by its content.  Both of ruby's children assume the
+width of the widest one of them.  In this respect, the <samp>ruby</samp> element is
+much like a two-cell <samp>table</samp> element, with the following exceptions: 
+
+<ul>
+  <li>the ruby element is an inline element, like an image, even though it itself, like a
+    table, is a container of (two) other boxes</li>
+  <li>both the <samp>rt</samp> and the <samp>rb</samp> boxes may overlap with adjacent text if
+    an appropriate &quot;overhang&quot; parameter is set via CSS.</li>
+</ul>
+
+<p>If the ruby text is not allowed to overhang anything, then the ruby behaves like a
+traditional box, i.e. only its contents are rendered within its boundaries and adjacent
+elements do not cross the box boundary:</p>
+
+<div class="figure">
+<p><img src="ro-n.gif" class="example" width="220" height="91"
+alt="Diagram showing the ruby boxes interacting with adjacent text"></p>
+
+<p><b>Figure 3.1.2</b>: Ruby whose text is not allowed to overhang adjacent text</p>
+</div>
+
+<p>However, if ruby text is allowed to overhang adjacent elements and it happens to be
+wider than its base, then the adjacent content is partially rendered within the area of
+the <samp>rb</samp> box, while the <samp>rt</samp> may be partially overlapping with the
+upper blank parts of the adjacent content:</p>
+
+<div class="figure">
+<p><img src="ro-a.gif" class="example" width="177" height="91"
+alt="Diagram showing the ruby boxes interacting with adjacent text"></p>
+
+<p><b>Figure 3.1.3</b>: Ruby whose text is allowed to overhang adjacent text</p>
+</div>
+
+<p>Ruby text from one base can never overhang another ruby base.</p>
+
+<p>The alignment of the contents of the base or the ruby text is not affected by the
+overhanging behavior.  The alignment is achieved the same way regardless of the
+overhang behavior setting and it is computed before the space available for overlap is
+determined.</p>
+
+<p>The exact circumstances in which the ruby text will overhang other elements, and to
+what degree it will do so, will be controlled by ruby CSS properties.</p>
+
+<p>This entire logic applies the same way in vertical ideographic layout, only the
+dimension in which it works in such a layout is vertical, instead of horizontal.</p>
+
+<hr>
+
+<h2><a name="a4">4.&nbsp;&nbsp;Glossary</a></h2>
+
+<dl>
+  <dt><a name="g-RB"><strong>Ruby base</strong></a></dt>
+  <dd>Run of text that has a <a HREF="#g-RT">ruby text</a> associated with it.</dd>
+  <dt><a name="g-RT"><strong>Ruby text</strong></a></dt>
+  <dd>Run of text that appears in the immediate vicinity of another run of text (<a
+    HREF="#g-RB">&quot;ruby base&quot;</a>) and serves as an annotation or a pronunciation
+    guide associated with the base.</dd>
+</dl>
+
+<hr>
+
+<h2><a name="ack">Acknowledgements</a></h2>
+
+<p>The model presented in this specification is largely inspired by the work done by
+Martin D&uuml;rst [<a href="#dur97">DUR97</a>].</p>
+
+<p>This specification would also not have been possible without the help from:</p>
+
+<p>Laurie Anna Edlund, Arye Gittelman, Koji Ishii, Eric LeVine, Chris
+Lilley, Chris Pratley, Rahul Sonnad, Michel Suignard, Takao Suzuki, Chris Thrasher. </p>
+
+<hr>
+
+<h2><a NAME="ref">References</a></h2>
+
+<dl>
+  <dt>[<a name="css">CSS2</a>] </dt>
+  <dd><em>&quot;<cite>Cascading Stylesheets, level 2 (CSS2) Specification</cite>&quot;, W3C Recommendation</em></dd>
+  <dd>Bert Bos, H&aring;kon Wium Lie, Chris Lilley and Ian Jacobs, 12 May 1998<br>
+    Available at: <a href="https://www.w3.org/TR/REC-CSS2">http://www.w3.org/TR/REC-CSS2</a></dd>
+  <dt>[<a name="dur97">DUR97</a>] </dt>
+  <dd><em>&quot;<cite>Ruby in the Hypertext Markup Language</cite>&quot;, Internet Draft</em></dd>
+  <dd>Martin D&uuml;rst, 28 February 1997, <em>expired</em><br>
+    Available at: <a href="https://www.w3.org/International/draft-duerst-ruby-01">http://www.w3.org/International/draft-duerst-ruby-01</a></dd>
+  <dt>[<a name="html4">HTML4</a>] </dt>
+  <dd><em>&quot;<cite>HTML 4.0 Specification</cite>&quot;, W3C Recommendation</em></dd>
+  <dd>Dave Raggett, Arnaud Le Hors and Ian Jacobs, 18 December 1997, revised 24 April 1998<br>
+    Available at: <a href="https://www.w3.org/TR/REC-html40">http://www.w3.org/TR/REC-html40</a></dd>
+  <dt>[<a name="xml">HTML-XML</a>] </dt>
+  <dd><em>&quot;<cite>Reformulating HTML in XML</cite>&quot;, W3C Working Draft</em></dd>
+  <dd>Dave Raggett, Frank Boumphrey, Murray Altheim and Ted Wugofski, 5 December 1998<br>
+    Available at: <a href="https://www.w3.org/TR/WD-html-in-xml/">http://www.w3.org/TR/WD-html-in-xml</a></dd>
+  <dt>[<a name="jis">JIS</a>] </dt>
+  <dd><em>&quot;<cite>Line composition rules for Japanese documents</cite>&quot;</em></dd>
+  <dd>JIS X 4051-1995, Japanese Standards Association, 1995 (in Japanese)</dd>
+</dl>
+<script src="https://www.w3.org/scripts/TR/fixup.js"></script></body>
+</html>

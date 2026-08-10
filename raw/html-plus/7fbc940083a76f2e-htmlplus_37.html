@@ -1,0 +1,25 @@
+<HEADER>
+<TITLE>Placing Hypertext Buttons on Images</TITLE>
+</HEADER>
+<BODY>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_35.html">[Up]</A> <A HREF="htmlplus_38.html">[Next]</A> <A HREF="htmlplus_36.html">[Previous]</A> <P>
+<H1>8.2	 - Placing Hypertext Buttons on Images</H1>
+<HR>
+The <TT>A</TT> element<A NAME=htmlplus_FootNote_115 HREF=htmlplus_FootNote_115.html>*1</A> can be used to define shaped buttons on top of images. The shape is defined by an arbitrary polygon and specified via the <TT>SHAPE</TT> attribute, e.g.<P>
+<PRE>
+&lt;FIG SRC="test.gif"&gt;
+&lt;CAPTION&gt;Click on the triangle or the rectangle&lt;/CAPTION&gt;
+A line drawing with a
+&lt;A SHAPE="0.35,0.1&0.1,0.8&0.35,0.8"	HREF="button1.html"&gt;
+triangle&lt;/A&gt;			and a
+&lt;A SHAPE="0.5,0.25&0.5,0.5&0.8,0.5&0.8,0.25" HREF="button2.html"&gt;
+rectangle&lt;/A&gt;
+&lt;/FIG&gt;
+</PRE>
+Which could be rendered as:<P><IMG SRC="htmlplus_AFrame_12.gif"><P>
+<P>
+The example uses scaled coordinates, and shows how you give the vertices of the polygon defining the shape of the button. Like the <TT>ISMAP</TT> mechanism, you can use pixel-based coordinates by using integer numbers throughout. Note that clicks on shaped buttons take precedence over the <TT>ISMAP</TT> mechanism for sending events to the server. An efficient algorithm for testing if a mouse/pen click lies inside a polygon is given as a C routine in <A HREF="htmlplus_60.html#0">Appendix III</A>.<P>
+<HR>
+<ADDRESS>HTML+ Discussion Document - November 8, 1993</ADDRESS><P>
+<A HREF="htmlplus_1.html">[Top]</A> <A HREF="htmlplus_35.html">[Up]</A> <A HREF="htmlplus_38.html">[Next]</A> <A HREF="htmlplus_36.html">[Previous]</A> <P>
+</BODY>

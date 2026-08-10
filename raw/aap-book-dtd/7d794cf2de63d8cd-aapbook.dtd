@@ -1,0 +1,309 @@
+<!DOCTYPE book
+[
+<!-- Document Type Declaration Subset
+and a Typical Document Type Declaration
+for Book (BK-1)
+$Header: aapbook.dtd,v 1.1 91/02/01 15:16:47 gpg Exp $
+-->
+
+
+<!-- Public document type declaration subset. Typical invocation:
+<!DOCTYPE book PUBLIC "-//USA/AAP//DTD BK-1//EN"
+ [<!ENTITY % ISOnum PUBLIC "ISO 8879:1986//ENTITIES Numeric and
+          Special Graphic//EN" >
+  <!ENTITY % ISOpub PUBLIC "ISO 8879:1986//ENTITIES
+          Publishing//EN" >
+  %ISOnum;  %ISOpub;
+  <!ENTITY % srmaps PUBLIC "-//USA/AAP//SHORTREF SR-1//EN" >
+  %srmaps;
+]>
+-->
+
+<!ENTITY % ISOnum PUBLIC
+ "ISO 8879:1986//ENTITIES Numeric and Special Graphic//EN" >
+%ISOnum;
+
+<!ENTITY % ISOpub PUBLIC "ISO 8879:1986//ENTITIES Publishing//EN" >
+%ISOpub;
+
+<!ENTITY % srmaps PUBLIC "-//USA/AAP//SHORTREF SR-1//EN" >
+%srmaps;
+
+<!--This is the AAP's document type declaration for a book/monograph.
+It contains the necessary elements for use as a technical report, a
+conference proceedings, or a thesis or dissertation.  It is also suitable
+
+
+for textbooks. -->
+
+            <!-- Entity Naming Conventions -->
+<!--
+                   Prefix = where used:
+     p.  = in paragraphs (also in phrases if .ph suffix)
+     s.  = in sections (i.e., among paragraphs)
+     i.  = where allowed by inclusion exceptions
+     m.  = content model or declared content
+     a.  = attribute definition
+     NONE= specific use defined in models
+                 Suffix = allowed content:
+     .ph = elements whose content is %m.ph;
+     .d  = elements whose content has same model as defaults
+     NONE= individually defined elements
+-->
+<!ENTITY % book   "book" -- default document type generic identifier -->
+
+               <!-- Specialized Elements -->
+<!ENTITY % ade.ph  "str|cty|sbd|cny|pc|san|ead"  -- address elements -->
+<!ENTITY % bib     "au|cau|msn|srt|loc|pdt|pp|atl|sct|obi" -- bibliographic -->
+
+
+<!ENTITY % bmcps.d "vt" -- back matter cps elements -->
+<!ENTITY % bmsec.d "awd|bib|notes" -- back matter sections -->
+<!ENTITY % bmsec.i "gl|idx" -- indexes and glossary -->
+<!ENTITY % fmcps.d "ack|ded|abs|smtl" -- front matter cps elements -->
+<!ENTITY % fmsec.d "fwd|pf" -- front matter sections -->
+<!ENTITY % pub     "cgs|cgn|rps|crt|pdt|pnm|loc|cng|avl" -- pubfm -->
+<!ENTITY % pub.ph  "cdn|aon|isbn|lcn|rid|ed|vid|cip|phi|prc|ext|pkg|pid" >
+
+
+
+             <!-- Basic Document Elements -->
+<!ENTITY % i.float "fig|fn|nit" -- floating elements -->
+<!ENTITY % p.e1    "dl|oad|iad|art|bq|lit|pdt|bb|bibl|itml|au|cau" -- general -->
+
+
+<!ENTITY % p.em.ph "it|b|bi|rm|scp|e1|e2|e3" -- emphasis -->
+<!ENTITY % p.lst.d "l|l1|l2|l3|l4|l5" -- list, types 1 thru 5 -->
+<!ENTITY % p.rf.ph "ntr|fnr|fgr|tbr|artr|apr|srr|rb" -- references -->
+<!ENTITY % p.tbl   "tbl" -- table matter -- >
+<!ENTITY % p.zz    "(%p.e1;)|(%p.tbl;)|(%p.lst.d;)" -- paragraph subelements -->
+
+
+<!ENTITY % p.zz.ph "q |pp|(%p.em.ph;)|(%p.rf.ph;)|gk|cyr|emq" -- phrases -->
+
+
+<!ENTITY % s.h.ph  "h|h1|h2|h3|h4" -- headings -->
+<!ENTITY % s.top.d "top1|top2|top3|top4" -- topics -->
+<!ENTITY % s.zz    "p|(%p.zz;)|(%s.h.ph;)|(%s.top.d;)"-- section subelements -->
+
+
+
+                      <!-- Models -->
+<!ENTITY % m.addr  "(%ade.ph;)*" -- address (no name) -->
+<!ENTITY % m.bib   "(no?, ti, (%bib;)*)" -- bibliographic entry -->
+<!ENTITY % m.copy  "(crd|crn|cci)+" -- copyright notice data -->
+<!ENTITY % m.cps   "(h?, p, (%s.zz;)*)" -- captioned par seq -->
+<!ENTITY % m.date  "(mo?, day?, yr)" -- date components -->
+<!ENTITY % m.fig   "EMPTY" -- default FIG content -->
+<!ENTITY % m.name  "(fnm?, snm, (deg|sch)*, role*, (%ade.ph;)*, aff?)" >
+<!ENTITY % m.org   "(onm, odv*, %m.addr;)" -- organization name -->
+<!ENTITY % m.p     "(#PCDATA|(%p.zz.ph;)|(%p.zz;))*" -- paragraph text -->
+
+
+<!ENTITY % m.ph    "(#PCDATA|(%p.zz.ph;))*" -- phrase model -->
+<!ENTITY % m.pseq  "(p, (p|(%p.zz;))*)" -- P with sequence -->
+<!ENTITY % m.rep   "(rep1, (rep2, rep3?)?)?"  -- repeating information -->
+
+
+<!ENTITY % m.rep1  "(ti)" -- repeating identifier 1 -->
+<!ENTITY % m.rep2  "(pdt)" -- repeating identifier 2 -->
+<!ENTITY % m.rep3  "(vid)" -- repeating identifier 3 -->
+<!ENTITY % m.sec   "(st, (%s.zz;)*, ss1*)" -- section -->
+<!ENTITY % m.tcchp "(no?, ct, pp*, tcsec*)" -- TOC chp model -->
+<!ENTITY % m.tcpt  "(no?, pt, pp*, tcchp*)" -- TOC part model -->
+<!ENTITY % m.tcsec "(no?, st, pp*, tcss1*)" -- TOC sec model -->
+<!ENTITY % m.tcss1 "(no?, st, pp*, tcss2*)" -- TOC ss1 model -->
+<!ENTITY % m.tcss2 "(no?, st, pp*, tcss3*)" -- TOC ss2 model -->
+<!ENTITY % m.tcss3 "(no?, st, pp*)"         -- TOC ss3 model -->
+<!ENTITY % m.toc   "(tcpt+|tcchp+)?"        -- TOC elements -->
+<!ENTITY % m.idx   "(%m.sec;|itml|((idxn|idxs)*,pp*))" --model for
+                         indexes and glossary -->
+
+              <!-- Attribute Definitions -->
+<!ENTITY % a.id    "id ID #IMPLIED" -- ID attribute definition -->
+<!ENTITY % a.rid   "rid IDREF #IMPLIED" -- IDREF attribute definition:
+                    content must be empty if IDREF is specified. -->
+<!ENTITY % a.sizes "sizex NUTOKEN #IMPLIED sizey NUTOKEN #IMPLIED unit CDATA #IMPLIED"
+
+
+                    -- unit must be specified if sizex or sizey are. -->
+
+
+              <!-- Data Content Notations -->
+<!NOTATION cyrillic PUBLIC "-//USA/AAP//NOTATION CYRIL-1//EN">
+<!NOTATION greek    PUBLIC "-//USA/AAP//NOTATION GREEK-1//EN">
+
+<!--       ELEMENT           MIN  CONTENT               (EXCEPTIONS) -->
+<!ELEMENT (%book;)           - -  (fm, bdy, appm?, bm?)  +(%i.float;)>
+
+<!--                 FRONT MATTER ELEMENTS -->
+
+<!ELEMENT fm                 O O  (tig, (au|cau)*, %m.rep, pubfm?,
+                                 (%fmsec.d; | %fmcps.d;)*, toc?)>
+<!ELEMENT (%fmsec.d;)        - O  %m.sec;>
+<!ELEMENT (%fmcps.d;)        - O  %m.cps;>
+
+<!--                     Title Group -->
+<!ELEMENT tig                O O  (msn?, srt?, no?, ti, sbt?)>
+<!ELEMENT (ti|sbt)           O O  %m.ph;>
+
+<!--                     Author Group -->
+<!ELEMENT au                 - O  %m.name;>
+<!ELEMENT (onm|snm)          O O  %m.ph;>
+<!ELEMENT (fnm|role|deg|odv) - O  %m.ph;>
+<!ELEMENT (aff|cau|sch)      - O  %m.org;>
+<!ELEMENT (%ade.ph;)         - O  %m.ph;>
+
+<!--                  Repeating Elements -->
+<!ELEMENT rep1               - O  %m.rep1;>
+<!ELEMENT rep2               - O  %m.rep2;>
+<!ELEMENT rep3               - O  %m.rep3;>
+
+<!--               Publisher's Front Matter -->
+<!ELEMENT pubfm               - O  ((%pub;) | (%pub.ph;))*>
+<!ELEMENT (%pub.ph;|cgn)     - O  %m.ph;>
+<!ELEMENT (pnm|avl|cgs)      - O  %m.org;>
+<!ELEMENT rps                - O  (%m.org;|%m.name;)>
+
+<!--                       Copyright -->
+<!ELEMENT crt                - -  %m.copy;>
+<!ELEMENT cci                - -  %m.org;>
+<!ELEMENT crn                - -  (%m.org;|%m.name;)>
+<!ELEMENT crd                - O  %m.date;>
+
+<!--                    Conference Group -->
+<!ELEMENT cng                - -  (cnn?, cnm, cnd?, cnp?, cns?)>
+<!ELEMENT cnd                - O  %m.date;>
+<!ELEMENT (cnm|cnn)          - O  %m.ph;>
+<!ELEMENT cnp                - O  %m.addr;>
+<!ELEMENT cns                - O  %m.org;>
+
+<!--                   Table of Contents -->
+<!ELEMENT toc                - O  %m.toc;>
+<!ELEMENT tcpt               - O  %m.tcpt;>
+<!ELEMENT tcchp              - O  %m.tcchp;>
+<!ELEMENT tcsec              - O  %m.tcsec;>
+<!ELEMENT tcss1              - O  %m.tcss1;>
+<!ELEMENT tcss2              - O  %m.tcss2;>
+<!ELEMENT tcss3              - O  %m.tcss3;>
+
+<!--                     BODY ELEMENTS -->
+<!--       ELEMENT           MIN  CONTENT               (EXCEPTIONS) -->
+
+<!--                    Body Structure -->
+<!ELEMENT bdy                O O  (part+|chp+)>
+<!ELEMENT part               - O  (no?, pt, (%s.zz;)*, chp+)>
+<!ELEMENT chp                - O  (no?, ct, (%s.zz;)*, sec*)>
+<!ELEMENT sec                - O  (no?, %m.sec;)>
+<!ELEMENT ss1                - O  (no?, st, (%s.zz;)*, ss2*)>
+<!ELEMENT ss2                - O  (no?, st, (%s.zz;)*, ss3*)>
+<!ELEMENT ss3                - O  (no?, st, (%s.zz;)*)>
+<!ELEMENT no                 - O  (#PCDATA)>
+<!ELEMENT (pt|ct|st)         O O  %m.ph;>
+
+<!--                  Section Subelements -->
+<!ELEMENT p                  O O  %m.p;>
+<!--      Null or blank paragraphs should be ignored. -->
+<!ELEMENT (%s.h.ph;)          - O  %m.ph;   -- headings -->
+<!ELEMENT (%s.top.d;)         - O  %m.cps;  -- topics -->
+
+<!--                 Paragraph Subelements -->
+<!ELEMENT bq                 - -  %m.pseq;>
+<!ELEMENT oad                - O  %m.org;  -- organization address -->
+<!ELEMENT iad                - O  %m.name; -- individual address -->
+<!ELEMENT art                - O  EMPTY>
+
+<!ELEMENT lit                - -  CDATA>
+
+<!ELEMENT (%p.lst.d;)        - -  (lh?, li)*>
+<!ELEMENT li                 - O  %m.pseq;>
+<!ELEMENT lh                 - O  %m.ph;>
+
+<!ELEMENT dl                 - -  ((dthd, ddhd)?, dt, dd)*>
+<!ELEMENT (dt|dthd|ddhd)     - O  %m.ph;>
+<!ELEMENT dd                 O O  %m.pseq;>
+
+<!ELEMENT bibl               - O  (lh?, bb)*>
+<!ELEMENT bb                 - O  %m.bib;>
+<!ELEMENT (atl|obi|sct|srt|pp)  O O  %m.ph;>
+<!ELEMENT loc                - O  %m.addr;>
+<!ELEMENT msn                - O  (#PCDATA)>
+
+<!ELEMENT itml               - O  (lh?, itm)*>
+<!ELEMENT itm                - O  (sit1, (sit2, sit3*)*, pp*)>
+<!ELEMENT (sit1|sit2|sit3)   O O  %m.ph;>
+
+<!--                        Phrases -->
+<!ELEMENT q                  - -  %m.ph;>
+<!ELEMENT emq                - -  %m.ph;>
+<!ELEMENT (%p.em.ph;)        - -  %m.ph;>
+<!ELEMENT (%p.rf.ph;)        - O  %m.ph;>
+<!ELEMENT gk                 - -  %m.ph;>
+<!ELEMENT cyr                - -  %m.ph;>
+<!ELEMENT pdt                O O  %m.date;>
+<!ELEMENT (mo|day|yr)        - O  %m.ph;>
+
+<!--                   Floating Elements -->
+<!ELEMENT fig                - O  %m.fig;>
+
+<!ELEMENT fn                 - -  (no?, %m.pseq;) -(%i.float;)>
+
+<!ELEMENT nit                - -  (no?, %m.pseq;)>  
+<!--                        Tables -->
+<!ELEMENT tbl                - -  (no?, tt, tby, src?) -(%i.float;|%p.tbl;)>
+
+
+<!ELEMENT tt                 - O  %m.ph;>
+<!ELEMENT tby                - O  (th*, tsh*, row*)>
+<!ELEMENT row                - O  (tsb?, c*)>
+<!ELEMENT (th|tsh)           - O  %m.ph;>
+<!ELEMENT (tsb|c)            - O  %m.pseq;>
+<!ELEMENT src                - O  %m.bib;>
+
+
+<!--                  APPENDIX ELEMENTS                                 -->
+
+
+<!--       ELEMENT           MIN  CONTENT               (EXCEPTIONS) -->
+<!ELEMENT appm               - O  (app+)>
+<!ELEMENT app                - O  (no?, apt, (%s.zz;)*, sec*)>
+<!ELEMENT apt                O O  %m.ph;>
+
+<!--                  BACK MATTER ELEMENTS                              -->
+
+
+<!--       ELEMENT           MIN  CONTENT               (EXCEPTIONS) -->
+
+<!ELEMENT bm                 - O  ((%bmcps.d;)|(%bmsec.d;)|(%bmsec.i;))*>
+
+
+<!ELEMENT (%bmcps.d;)        - O  %m.cps;>
+<!ELEMENT (%bmsec.d;)        - O  %m.sec;>
+<!ELEMENT (%bmsec.i;)        - O  %m.idx;>
+<!ELEMENT (idxn|idxs)        O O  %m.ph;>
+
+<!--               Attribute Definition Lists   -->
+<!--      ELEMENT   ATTRIB DEF  -->
+<!ATTLIST src         %a.id;>
+<!ATTLIST fn          %a.id;>
+<!ATTLIST nit         %a.id;>
+<!ATTLIST tbl         %a.id;>
+<!ATTLIST gk          lang NOTATION (greek) greek>
+<!ATTLIST cyr         lang NOTATION (cyrillic) cyrillic>
+<!ATTLIST fig
+                      %a.id;
+                      %a.sizes;>
+<!ATTLIST bb          %a.id;>
+<!ATTLIST (%p.rf.ph;) %a.rid;>
+<!ATTLIST art
+                      %a.id;
+                      %a.sizes;>
+
+<!--                Short References -->
+
+<!USEMAP bkmap %book;>
+<!USEMAP listmap (%p.lst.d;)>
+<!USEMAP dlmap dl>
+<!USEMAP qmap q>
+<!USEMAP tblmap tby>
+]>

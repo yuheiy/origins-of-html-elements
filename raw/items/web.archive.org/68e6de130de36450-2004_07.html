@@ -1,0 +1,799 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=2N_sDSC0" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://weblogs.mozillazine.org:80/hyatt/archives/2004_07.html","20040708074642","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1089272802");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3" />
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv" />
+<!-- End Wayback Rewrite JS Include -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Surfin' Safari</title>
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://web.archive.org/web/20040708074642/http://www.mozillazine.org/weblogs/hyatt/blogger_rss.xml"/>
+
+<script language="javascript" type="text/javascript">
+function OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+</script>
+</head>
+<body>
+<!-- Top bar and minor navigation -->
+<div id="texttitle"><h1>Surfin' Safari</h1></div>
+<div id="titlebar"></div>
+<div id="subtitlebar">
+<p><a href="/web/20040708074642/http://weblogs.mozillazine.org/hyatt/index.html">Front Page</a>
+&nbsp;-&nbsp;
+<a href="https://web.archive.org/web/20040708074642/http://www.technorati.com/cosmos/links.html?rank=&amp;url=http%3A%2F%2Fwww.mozillazine.org%2Fweblogs%2Fhyatt%2F&amp;sub=Get+Link+Cosmos">Technorati</a>
+</p>
+</div>
+
+<!-- Left column, major content area  -->
+<div id="left">
+
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005928"
+    trackback:ping="http://weblogs.mozillazine.org/mt/mt-tb.cgi/2373"
+    dc:title="On Extending HTML"
+    dc:identifier="http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005928"
+    dc:subject="Safari"
+    dc:description="A few people have written me expressing concern over the extensions that Apple has made to HTML in order to..."
+    dc:creator="hyatt"
+    dc:date="2004-07-07T13:09:06-08:00" />
+</rdf:RDF>
+-->
+
+
+<span class="box"><h2>July 07, 2004</h2></span><span class="boxend"></span>
+
+<br class="spacer"/>
+<div class="title">
+<h3><a name="005928" href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005928">On Extending HTML</a></h3>				
+
+<h5>Posted at 01:09 PM</h5>
+</div>
+
+<p>A few people have written me expressing concern over the extensions that Apple has made to HTML in order to support Safari RSS and Dashboard.  I wanted to explain what we've done and hopefully clear up any confusion.</p>
+
+<p>Let's start by talking about the contenteditable attribute and drag and drop.  I bring these up first because what we implemented is exactly compatible with WinIE.  In the case of contenteditable, we have no choice regarding syntax.  We have received many bugs to support already-deployed systems that use contenteditable, and so we are constrained syntactically.  Had we gone our own route, we still wouldn't work with the Web pages that use it, and it would be unrealistic to expect all of those Web sites to modify their systems simply to support Safari.  This is especially true if you consider that Web sites frequently deploy systems that they didn't write in the first place, and so they wouldn't know how to modify them anyway.</p>
+
+<p>Drag and drop is a similar situation.  Web sites use it, and so we need to support it.  We already support dozens of WinIE-invented properties, many of which are incredibly useful and well-specified, so I'm a bit confused as to why contenteditable and drag and drop are creating any stir at all.  These attributes are no different from innerHTML or offsetWidth and offsetHeight or innerText or oncontextmenu or any one of the other WinIE extensions that Safari has supported since its first beta 18 months ago.</p>
+
+<p>We have a phrase we like to use here on the Safari team, and that's "real-world standards compliance."  What that means is that where possible we attempt to be fully compatible with the W3C standards, but we also want to support the real-world standards, i.e., extensions that for better or worse have become de facto standards.  If you really do believe we should not have implemented contenteditable, then you are simply out of touch with reality.</p>
+
+<p>As for the Dashboard extensions that involve changing HTML, there are exactly four of them.  We've tried to keep the number to a minimum, but this functionality was required in order to build the gadgets.  Let me outline them again:</p>
+
+<p>(1) Slider controls. This is not only used by Dashboard but also by Safari RSS, and so this feature cannot be restricted only to the Dashboard.<br/>
+(2) Search fields.  Again, this feature is used by Dashboard and Safari RSS.<br/>
+(3) The new composite attribute on the img tag.  This feature is used only by Dashboard.<br/>
+(4) The canvas tag.  This feature is used only by Dashboard.</p>
+
+<p>The principal complaint seems to be that we should not be polluting HTML.  However, I'm not sure what we should have done instead.  I can outline some of your suggestions and explain why we discarded them.</p>
+
+<p>First, it was suggested that the widgets be written in XML rather than HTML and that all of the new tags and attributes be namespaced.  However, this would have dramatically increased the complexity of crafting Dashboard widgets.  People know how to write HTML, but most of those same people have never written an XML file, and namespaces are a point of confusion.</p>
+
+<p>In addition there are technical hurdles to the use of XML.  Every modern browser, including Mozilla and Safari, is much worse at XHTML than at HTML.  People tend to foolishly gloss over the transition from one to the other, thinking that code you write for one will "just work" when you switch to XHTML.  That simply isn't true.  If you look at XHTML in both Mozilla and Safari and compare it to HTML, you'll see that it's slower, non-incremental, and generally buggier than HTML.</p>
+
+<p>An example of a feature that won't "just work" when moved from HTML to XHTML is editing.  The serialization model is totally different for XHTML, and HTML elements that have to be written out when you get the raw markup must know to do so using XML-style syntax in XHTML documents.  Editing must be able to serialize namespaces, and ideally even preserve the namespace prefixes that were used at various points in the document as well as the use of default namespaces as set up by the author.  Right off the bat I've outlined a challenging editing feature that only exists in the XHTML world.  There are many more examples of these kinds of problems.</p>
+
+<p>The perfect example of a widget that combines editing with HTML extensions is the Stickies widget.  We simply could not have moved this widget to XHTML without doing an enormous amount of XML work.</p>
+
+<p>A second complaint leveled against us was over the canvas tag, namely that it should have been done using SVG.  My response to this is simple.  Go to the w3c Web site and print out the SVG specification.  Twenty minutes later, after you've killed a few dozen trees, then maybe you'll have an appreciation for why this wasn't practical.</p>
+
+<p>Remember that SVG would have forced the use of XHTML, which had all the problems outlined above.  Now add to that time the amount of work that would be required to get even a rudimentary SVG implementation going.  Now factor in the time it would have taken to make that implementation perform well enough when compared with a programmatic counterpart like the canvas.  Canvas only took a handful of days to implement.  SVG would take months to implement.</p>
+
+<p>In other words, in an ideal world where we had two years to craft Dashboard, maybe we could have used XHTML and SVG, but we aren't living in that ideal world.  We can basically manage only one "huge" layout engine feature in a development cycle, and given our developer feedback the choice of HTML editing as the feature to focus on this cycle was clear.  We would still love to implement SVG and XSLT and other great technologies in the future, but we simply can't do everything at once.</p>
+
+<p>Finally we have submitted all of our extensions to the <a href="https://web.archive.org/web/20040708074642/http://www.whatwg.org/">WHAT-WG</a> for review.  The slider in particular is already in the Web Forms draft.  It is our hope that these HTML extensions will ultimately be standardized by a working group, but I wanted to emphasize that we are working with other browser vendors such as Opera and Mozilla to ensure that these extensions are implementable in those browsers and that these extensions can be standardized.  We are not simply off "doing our own thing."</p>
+<cite>
+
+              <a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/mt/mt-tb.cgi?__mode=view&amp;entry_id=5928" onclick="OpenTrackback(this.href); return false">trackback 
+
+(6)</a>
+
+</cite>
+
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913"
+    trackback:ping="http://weblogs.mozillazine.org/mt/mt-tb.cgi/2363"
+    dc:title="Introducing the Canvas"
+    dc:identifier="http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913"
+    dc:subject="Safari"
+    dc:description="Another extension we made to HTML is a new element called the canvas. This element is essentially an image element..."
+    dc:creator="hyatt"
+    dc:date="2004-07-05T12:16:42-08:00" />
+</rdf:RDF>
+-->
+
+
+<span class="box"><h2>July 05, 2004</h2></span><span class="boxend"></span>
+
+<br class="spacer"/>
+<div class="title">
+<h3><a name="005913" href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913">Introducing the Canvas</a></h3>				
+
+<h5>Posted at 12:16 PM</h5>
+</div>
+
+<p>Another extension we made to HTML is a new element called the canvas.  This element is essentially an image element that supports programmatic drawing.  The way it works is that you can invoke a method called <i>getContext</i> on the canvas and then you have access to a whole range of 2d drawing calls.  This element is how the hands of the Dashboard clock are drawn in HTML.  The canvas fully participates in CSS styling too, so you can give it borders or background images while still painting the foreground content programmatically.</p>
+
+<p>In addition to the canvas element, we've also introduced a new attribute onto the <i>img</i> element.  The <i>composite</i> attribute allows you to control how an image gets composited.  The default is <i>source-over</i>, which is how images are normally composited on the Web, but now we've introduced other values for more complex compositing operations.  Especially in the Dashboard with its transparent windows, these other compositing operations become useful, since you can use this feature to "punch holes" to the desktop, allowing for all sorts of wild irregular shapes.</p>
+<cite>
+
+              <a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/mt/mt-tb.cgi?__mode=view&amp;entry_id=5913" onclick="OpenTrackback(this.href); return false">trackback 
+
+(189)</a>
+
+</cite>
+
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005905"
+    trackback:ping="http://weblogs.mozillazine.org/mt/mt-tb.cgi/2357"
+    dc:title="HTML Editing"
+    dc:identifier="http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005905"
+    dc:subject="Safari"
+    dc:description="The new WebCore also supports HTML editing. You can specify editable regions in a page using the contenteditable attribute (which..."
+    dc:creator="hyatt"
+    dc:date="2004-07-03T12:35:01-08:00" />
+</rdf:RDF>
+-->
+
+
+<span class="box"><h2>July 03, 2004</h2></span><span class="boxend"></span>
+
+<br class="spacer"/>
+<div class="title">
+<h3><a name="005905" href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005905">HTML Editing</a></h3>				
+
+<h5>Posted at 12:35 PM</h5>
+</div>
+
+<p>The new WebCore also supports HTML editing.  You can specify editable regions in a page using the <i>contenteditable</i> attribute (which maps to a CSS property behind the scenes, so you can even set that property in your user stylesheets if you want to get crazy).  We've also added a <i>selection</i> object so that you can get the current selection, and of course support for <i>execCommand</i> so that you can perform operations on the selection.  And yes, so that you can actually tell what you're doing stylistically, <i>getComputedStyle</i> is now also supported.<br/>
+</p>
+<cite>
+
+              <a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/mt/mt-tb.cgi?__mode=view&amp;entry_id=5905" onclick="OpenTrackback(this.href); return false">trackback 
+
+(7)</a>
+
+</cite>
+
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005899"
+    trackback:ping="http://weblogs.mozillazine.org/mt/mt-tb.cgi/2354"
+    dc:title="Plugin Scriptability"
+    dc:identifier="http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005899"
+    dc:subject="Safari"
+    dc:description="One reader of my previous entry (in the trackbacks) expressed concern that only Dashboard widget apps could execute native code...."
+    dc:creator="hyatt"
+    dc:date="2004-07-02T08:52:11-08:00" />
+</rdf:RDF>
+-->
+
+
+<span class="box"><h2>July 02, 2004</h2></span><span class="boxend"></span>
+
+<br class="spacer"/>
+<div class="title">
+<h3><a name="005899" href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005899">Plugin Scriptability</a></h3>				
+
+<h5>Posted at 08:52 AM</h5>
+</div>
+
+<p>One reader of my previous entry (in the trackbacks) expressed concern that only Dashboard widget apps could execute native code.  Well, we have an answer to that as well.  You see, we're working with other browser vendors to extend the plugin API to add scriptability.  See <a href="https://web.archive.org/web/20040708074642/http://www.mozilla.org/press/mozilla-2004-06-30.html">this link</a> for more information.  This means you can obviously execute native code from within any WebKit application's Web pages through the use of scriptable plugins.</p>
+<cite>
+
+              <a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/mt/mt-tb.cgi?__mode=view&amp;entry_id=5899" onclick="OpenTrackback(this.href); return false">trackback 
+
+(3)</a>
+
+</cite>
+
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005896"
+    trackback:ping="http://weblogs.mozillazine.org/mt/mt-tb.cgi/2352"
+    dc:title="Dashboard III"
+    dc:identifier="http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005896"
+    dc:subject="Safari"
+    dc:description="Todd Dominey writes about Dashboard in his blog and asks some questions that I&apos;d like to clear up. A Dashboard..."
+    dc:creator="hyatt"
+    dc:date="2004-07-02T01:21:25-08:00" />
+</rdf:RDF>
+-->
+
+
+
+
+<br class="spacer"/>
+<div class="title">
+<h3><a name="005896" href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005896">Dashboard III</a></h3>				
+
+<h5>Posted at 01:21 AM</h5>
+</div>
+
+<p><a href="https://web.archive.org/web/20040708074642/http://whatdoiknow.org/archives/001745.shtml">Todd Dominey</a> writes about Dashboard in his blog and asks some questions that I'd like to clear up.</p>
+
+<p>A Dashboard widget is a bundle that contains a principal HTML file and any supporting code that the widget requires (be it CSS, JS, images, or native code).  A widget can add an optional interface to native code, written in Objective-C, that can be bound into JavaScript and made accessible from the HTML document's JS window object.</p>
+
+<p>In other words, an address book widget could inject a property called "addressBook" into the JS window object of an address book widget's HTML document, and then expose methods and properties on that object that can be invoked from the JS.  This effectively allows you to execute native code through the use of this special type of plugin.</p>
+
+<p>The "native code as a service accessible from JS" model should be familiar to anyone who has used XPCOM with XUL.  It's essentially the same idea.  Extensions to the Firefox browser that contain native code can expose that native code to script as an XPCOM service, and then that object can be obtained from JS and have methods/properties invoked.  </p>
+
+<p>Again, when viewed from a certain perspective, this is a competitive <i>Web browser feature</i> that has been fused with Expose.  These widgets that might otherwise have had to be inside the browser window as sidebar panels or toolbars have been set free by the brilliant idea of using Expose.  <br/>
+ <br/>
+Anyway, some points about this model.<br/>
+(1) The native plugin code must be owned by root.  This means that in order for a Dashboard widget that contains one of these special types of plugins to execute that code, you have to enter a root account password (to chown the plugin code).  This plugin code cannot execute, therefore, without the widget being "blessed" just as an application that you might install on your system must be.<br/>
+(2) This plugin will not be present in Safari or other WebKit applications, and is only accessible from Dashboard.<br/>
+(3) The dashboard object is also exposed on the JS window object of the HTML document and has methods for "meta-functions" that the Dashboard can execute.</p>
+
+<p>As for many of the animations, fades, slides, etc in the widgets themselves., they simply look so damn cool because of Safari's rich support for CSS3 used in conjunction with DHTML.  Do you know what I talked about at WWDC?  Image replacement.  Sliding doors.  Using opacity to create fade effects. CSS3 text truncation.  Web standards.  All of which are being used to full effect in Dashboard widgets.  Our standards support has grown so rich and our engine has become so smooth at effects that people are constantly mistaking pure JS/DHTML/CSS stuff that people are doing for something fancier.  I've heard "That's HTML?!" several times in the past week.</p>
+
+<p>Now it is true that we have made many extensions to WebCore, but only in places where there are holes in HTML that must be filled.  And even then, we have tried to implement compatible models or to design so that our enhancements could be standardized in the future.</p>
+
+<p>For example, the new WebCore supports all of WinIE's drag events, and that's how drag and drop is done in the Dashboard.  So at the same time we added this rich support to WebCore, we also added support for a feature that can now be used in Web pages in a compatible fashion with WinIE.  We started with a compatible base and enhanced drag and drop to allow you to dynamically set the drag image and even enhanced CSS with a new drag pseudo-class so that you could re-resolve style on the element while it's being dragged, but at the core, we made sure to pick a practical starting point.</p>
+
+<p>In other examples, we added support for new slider widgets and search field widgets (wrapping NSSlider and NSSearchField respectively).  HTML is missing these widgets, and so we had to add them so that Dashboard widgets could use them.  But even there we did so in a way that is designed to be compatible with <a href="https://web.archive.org/web/20040708074642/http://www.whatwg.org/specs/web-forms/2004-06-27-call-for-comments/">other browsers</a>.</p>
+<cite>
+
+              <a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/mt/mt-tb.cgi?__mode=view&amp;entry_id=5896" onclick="OpenTrackback(this.href); return false">trackback 
+
+(6)</a>
+
+</cite>
+
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005893"
+    trackback:ping="http://weblogs.mozillazine.org/mt/mt-tb.cgi/2350"
+    dc:title="Safari RSS"
+    dc:identifier="http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005893"
+    dc:subject="Safari"
+    dc:description="I haven&apos;t had a chance to talk about this, but I thought I&apos;d again start by briefly clearing up a..."
+    dc:creator="hyatt"
+    dc:date="2004-07-01T11:23:10-08:00" />
+</rdf:RDF>
+-->
+
+
+<span class="box"><h2>July 01, 2004</h2></span><span class="boxend"></span>
+
+<br class="spacer"/>
+<div class="title">
+<h3><a name="005893" href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005893">Safari RSS</a></h3>				
+
+<h5>Posted at 11:23 AM</h5>
+</div>
+
+<p>I haven't had a chance to talk about this, but I thought I'd again start by briefly clearing up a point of confusion.  Safari RSS is not the name of the entire Safari browser on Tiger.  It is the name of the RSS/Atom feature in Safari itself.  If you pull down the About information in Safari on Tiger, you'll see that the version is 2.0.</p>
+<cite>
+
+              <a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/mt/mt-tb.cgi?__mode=view&amp;entry_id=5893" onclick="OpenTrackback(this.href); return false">trackback 
+
+(3)</a>
+
+</cite>
+
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005890"
+    trackback:ping="http://weblogs.mozillazine.org/mt/mt-tb.cgi/2347"
+    dc:title="The Search Field"
+    dc:identifier="http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005890"
+    dc:subject="Safari"
+    dc:description="One of the new features added to WebCore is an HTML wrapper for the Cocoa NSSearchField, which means you will..."
+    dc:creator="hyatt"
+    dc:date="2004-07-01T02:02:34-08:00" />
+</rdf:RDF>
+-->
+
+
+
+
+<br class="spacer"/>
+<div class="title">
+<h3><a name="005890" href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005890">The Search Field</a></h3>				
+
+<h5>Posted at 02:02 AM</h5>
+</div>
+
+<p>One of the new features added to WebCore is an HTML wrapper for the Cocoa NSSearchField, which means you will be able to use this control in your Web pages and Dashboard widgets.</p>
+
+<p>The syntax is:</p>
+
+<p><tt>&lt;input type="search"&gt;</tt></p>
+
+<p>The <tt>incremental</tt> attribute can be used to control whether or not the search is performed as you type.  </p>
+
+<p>The <tt>placeholder</tt> attribute can be used to set the greyed placeholder text in the control.  </p>
+
+<p>The <tt>autosave</tt> attribute allows you to specify an autosave name for your search results in the dropdown.  What's cool about the autosave is that it's global, which means that two Web sites could put up a search field with an autosave name of <i>google</i> and then they would share the search results.  (Since the actual result values are not accessible to the page there is no privacy violation.)</p>
+
+<p>The <tt>results</tt> attribute allows you to specify how many results should be displayed in the dropdown.</p>
+
+<p>The <tt>search</tt> DOM event fires at the precise time the search should be performed and obeys the heuristic for the control, so you don't have to trap key and click events at all.  You can use the <tt>onsearch</tt> attribute on the control to respond when the search happens.</p>
+
+<p>When submitted, the search control will save the submitted result, so that the user can select it from the dropdown when returning to the page.</p>
+
+<p>In addition the search control is a subclass of NSTextField and also supports all of the functionality of the text input element, so you can make it readonly, set a maxlength, etc.</p>
+
+<p>The search control will also even degrade gracefully in other browsers, since they won't recognize the unknown type and so will just use a text field instead.</p>
+
+<p>If you have the 1.3 preview for Panther or are playing with Tiger, you can try this feature out.  It works in both.</p>
+<cite>
+
+              <a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/mt/mt-tb.cgi?__mode=view&amp;entry_id=5890" onclick="OpenTrackback(this.href); return false">trackback 
+
+(186)</a>
+
+</cite>
+
+
+
+<!-- Footer -->
+<p><address>Copyright © Dave Hyatt 2003, Design by <a href="https://web.archive.org/web/20040708074642/http://www.projetsurbain.com/">St&eacute;phane Curzi/ProjetsUrbain.com</a></p>
+
+</div>
+
+<!-- Right column, box & link -->
+<div id="right">
+<img src="/web/20040708074642im_/http://weblogs.mozillazine.org/hyatt/images/box_calendar.gif" width="180" height="35" alt="Calendar" title="Calendar" border="0"/>
+<div class="box">
+<table style="font-size: 0.9em" border="0" cellspacing="4" cellpadding="0" summary="Monthly calendar with 
+
+links to each day's posts">
+<caption class="calendarhead">
+July 2004
+</caption>
+<tr>
+<th abbr="Sunday" align="center"><span class="calendar">Sun</span></th>
+<th abbr="Monday" align="center"><span class="calendar">Mon</span></th>
+<th abbr="Tuesday" align="center"><span class="calendar">Tue</span></th>
+<th abbr="Wednesday" align="center"><span class="calendar">Wed</span></th>
+<th abbr="Thursday" align="center"><span class="calendar">Thu</span></th>
+<th abbr="Friday" align="center"><span class="calendar">Fri</span></th>
+<th abbr="Saturday" align="center"><span class="calendar">Sat</span></th>
+</tr>
+
+<tr>
+
+<td align="center"><span class="calendar">
+
+
+
+&nbsp;</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+
+&nbsp;</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+
+&nbsp;</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+
+&nbsp;</span></td>
+
+
+
+<td align="center"><span class="calendar">
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005893">
+1</a>
+
+
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005899">
+2</a>
+
+
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005905">
+3</a>
+
+
+</span></td>
+</tr>
+
+<tr>
+
+<td align="center"><span class="calendar">
+
+
+4
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913">
+5</a>
+
+
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+6
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005928">
+7</a>
+
+
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+8
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+9
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+10
+</span></td>
+</tr>
+
+<tr>
+
+<td align="center"><span class="calendar">
+
+
+11
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+12
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+13
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+14
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+15
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+16
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+17
+</span></td>
+</tr>
+
+<tr>
+
+<td align="center"><span class="calendar">
+
+
+18
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+19
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+20
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+21
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+22
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+23
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+24
+</span></td>
+</tr>
+
+<tr>
+
+<td align="center"><span class="calendar">
+
+
+25
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+26
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+27
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+28
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+29
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+30
+</span></td>
+
+
+
+<td align="center"><span class="calendar">
+
+
+31
+</span></td>
+</tr>
+
+
+</table>
+
+</div>
+
+
+
+<img src="/web/20040708074642im_/http://weblogs.mozillazine.org/hyatt/images/box_bottom.gif" width="180" height="15" alt="Box bottom" title="Box 
+
+bottom" border="0"/>			<br/><br/>
+
+<img src="/web/20040708074642im_/http://weblogs.mozillazine.org/hyatt/images/box_search.gif" width="180" height="35" alt="Search" title="Search" border="0"/>
+
+<div class="box">
+<form style="margin: 0" method="get" action="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/mt/mt-search.cgi">
+<input type="hidden" name="IncludeBlogs" value="2"/>
+<label for="search" accesskey="4">Search this site:</label><br/>
+<input id="search" name="search" size="20"/><br/>
+<input type="submit" value="Search"/>
+</form>
+</div>
+
+<img src="/web/20040708074642im_/http://weblogs.mozillazine.org/hyatt/images/box_bottom.gif" width="180" height="15" alt="Box bottom" title="Box 
+
+bottom" border="0"/>
+<br/><br/>
+	
+
+<img src="/web/20040708074642im_/http://weblogs.mozillazine.org/hyatt/images/box_recent.gif" width="180" height="35" alt="Recent Entries" title="Recent Entries" border="0"/>
+<div class="box">
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005928">On Extending HTML</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913">Introducing the Canvas</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005905">HTML Editing</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005899">Plugin Scriptability</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005896">Dashboard III</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005893">Safari RSS</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005890">The Search Field</a><br/>
+
+</div>
+<img src="/web/20040708074642im_/http://weblogs.mozillazine.org/hyatt/images/box_bottom.gif" width="180" height="15" alt="Box bottom" title="Box 
+
+bottom" border="0"/>			<br/><br/>
+
+<img src="/web/20040708074642im_/http://weblogs.mozillazine.org/hyatt/images/box_archives.gif" width="180" height="35" alt="Archives" title="Archives" border="0"/>
+<div class="box">
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html">July 2004</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_06.html">June 2004</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_05.html">May 2004</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_04.html">April 2004</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_03.html">March 2004</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_02.html">February 2004</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_01.html">January 2004</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2003_12.html">December 2003</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2003_11.html">November 2003</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2003_10.html">October 2003</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2003_09.html">September 2003</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2003_08.html">August 2003</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2003_07.html">July 2003</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2003_06.html">June 2003</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2003_05.html">May 2003</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2003_04.html">April 2003</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2003_03.html">March 2003</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2003_02.html">February 2003</a><br/>
+<a href="https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2003_01.html">January 2003</a><br/>
+
+</div>
+<img src="/web/20040708074642im_/http://weblogs.mozillazine.org/hyatt/images/box_bottom.gif" width="180" height="15" alt="Box bottom" title="Box bottom" border="0"/>
+</div>
+
+<div id="tracking">
+<font size="1" color="white">
+<a id="tracklink" style="text-decoration: none" target="_top" href="https://web.archive.org/web/20040708074642/http://w.extreme-dm.com/?login=mozdave">
+&nbsp;
+<img onload="this.style.visibility='hidden'" name="im" src="https://web.archive.org/web/20040708074642im_/http://w1.extreme-dm.com/i.gif" height="38" border="0" width="41" alt=""></a><script language="javascript"><!--
+an=navigator.appName;d=document;function
+pr(){d.write("<img src=\"http://w0.extreme-dm.com",
+"/0.gif?tag=mozdave&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;j=y&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;srw="+srw+"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;srb="+srb+"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;",
+"rs="+r+"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;l="+escape(d.referrer)+"\" height=1 ",
+"width=1>");}srb="na";srw="na";//-->
+</script><script language="javascript1.2"><!--
+s=screen;srw=s.width;an!="Netscape"?
+srb=s.colorDepth:srb=s.pixelDepth;//-->
+</script><script language="javascript"><!--
+r=41;d.images?r=d.im.width:z=0;pr();//-->
+</script><noscript><img height="1" width="1" alt="" src="https://web.archive.org/web/20040708074642im_/http://w0.extreme-dm.com/0.gif?tag=mozdave&amp;j=n"></noscript>
+</font>
+</div>
+
+</body>
+</html><!--
+     FILE ARCHIVED ON 07:46:42 Jul 08, 2004 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:47:20 Aug 10, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.372
+  exclusion.robots: 0.032
+  exclusion.robots.policy: 0.025
+  esindex: 0.005
+  cdx.remote: 4.792
+  LoadShardBlock: 51.128 (3)
+  PetaboxLoader3.datanode: 68.298 (4)
+  load_resource: 155.999
+  PetaboxLoader3.resolve: 109.289
+-->

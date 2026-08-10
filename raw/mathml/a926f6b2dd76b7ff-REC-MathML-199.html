@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+
+<TITLE>Mathematical Markup Language (MathML)</TITLE>
+   <META NAME="PRAGMA" CONTENT="no-cache">
+</HEAD>
+<BODY BACKGROUND="images/recbg.jpeg">
+
+<DIV ALIGN=RIGHT>
+<A HREF="https://www.w3.org/"><IMG SRC="images/w3c_home.gif"
+ALT="W3C" BORDER=0 HEIGHT=48 WIDTH=72 ALIGN=LEFT></A>
+<B>REC-MathML-19980407</B>
+</DIV>
+<PRE>
+
+</PRE>
+
+<H1
+ALIGN=CENTER>Mathematical Markup Language<BR>
+(MathML)<BR>
+1.0 Specification</H1>
+
+<H2 ALIGN=CENTER>W3C Recommendation 07-April-1998</H2>
+
+<DL>
+<!-- start versions -->
+<DT>This version: </DT>
+<DD><A HREF="https://www.w3.org/TR/1998/REC-MathML-19980407">http://www.w3.org/TR/1998/REC-MathML-19980407</A><BR>
+<A HREF="https://www.w3.org/TR/1998/REC-MathML-19980407.tar.gz">http://www.w3.org/TR/1998/REC-MathML-19980407.tar.gz</A><BR>
+<A HREF="https://www.w3.org/TR/1998/REC-MathML-19980407.zip">http://www.w3.org/TR/1998/REC-MathML-19980407.zip</A>
+</DD>
+
+<DT>Latest version: </DT>
+<DD><A HREF="https://www.w3.org/TR/REC-MathML">
+http://www.w3.org/TR/REC-MathML</A></DD>
+
+
+<DT>Previous version: </DT>
+<DD><A HREF="https://www.w3.org/TR/1998/PR-math-19980224">
+http://www.w3.org/TR/1998/PR-math-19980224</A></DD>
+</DL>
+<!-- end versions -->
+
+<DL>
+<DT>Editors: </DT>
+
+<DD>Patrick Ion
+<A HREF="mailto:ion@ams.org">&lt;ion@ams.org&gt;</A><BR>
+(Mathematical Reviews / American Mathematical Society) <BR>
+</DD>
+
+<DD>Robert Miner <A
+HREF="mailto:rminer@geom.umn.edu">&lt;rminer@geom.umn.edu&gt;</A><BR>
+(Geometry Center / University of Minnesota) <BR></DD>
+</DL>
+
+<DL>
+<DT>Principal Writers:</DT>
+
+<DD>Stephen Buswell, Stan Devitt, Angel Diaz, Nico Poppelier,<BR>
+Bruce Smith, Neil Soiffer, Robert Sutor, Stephen Watt
+</DL>
+
+<P><HR>
+
+<H2>Abstract</H2>
+
+<P>This specification defines the Mathematical Markup
+Language, or MathML.  MathML is an XML application for
+describing mathematical notation and capturing both its
+structure and content. The goal of MathML is to enable
+mathematics to be served, received, and processed on the
+Web, just as HTML has enabled this functionality for
+text.</P>
+
+<P>This specification of the markup language MathML is
+intended primarily for a readership consisting of those who
+will be developing or implementing renderers or editors using
+it, or software that will communicate using MathML as a
+protocol for input or output. It is not a User's Guide but
+rather a reference document. </P>
+
+<P>This document begins with background information on
+mathematical notation, the problems it poses, and the
+philosophy underlying the solutions MathML proposes.  MathML
+can be used to encode both mathematical notation and
+mathematical content.  Twenty-eight of the MathML tags
+describe abstract notational structures, while another
+seventy-five provide a way of unambiguously specifying the
+intended meaning of an expression.  Additional chapters
+discuss how the MathML content and presentation elements
+interact, and how MathML renderers might be implemented and
+should interact with browsers.  Finally, this document
+addresses the issue of MathML entities (extended characters)
+and their relation to fonts.</P>
+
+<P>While MathML is human-readable it is anticipated that, in
+all but the simplest cases, authors will use equation
+editors, conversion programs, and other specialized software
+tools to generate MathML. Several early versions of such
+MathML tools already exist, and a number of others, both
+freely available software and commercial products, are under
+development.</P>
+
+<P><HR>
+
+<H2>Status of this document</H2>
+
+<P>This is a stable document derived from the 24 February
+1998 Proposed Recommendation of the MathML specification.  This
+document has been produced as part of the W3C HTML Activity.
+The publication of this document does not imply endorsement
+by the Consortium's staff or Member organizations.
+
+<P>The fundamental <A HREF="https://www.w3.org/pub/WWW/TR/WD-xml.html">eXtensible
+Markup Language (XML)</A> 1.0 specification has been
+adopted as a W3C Recommendation.  Should future changes in
+the XML specification necessitate changes in the MathML
+specification, it is the intention of the W3C Math Working
+Group to issue a revision of the MathML specification.
+However, any changes are very unlikely to be substantial.
+</P>
+
+<P>Most of this document represents technology tested by multiple
+implementations.  A summary of MathML rendering and authoring software
+is described on the <A HREF="https://www.w3.org/Math">W3C Math Working
+Group</A> home page. 
+
+<P>The <A
+HREF="http://lists.w3.org/Archives/Public/www-math">www-math</A>
+mailing list is a public forum for questions and comments about MathML
+and issues related to putting math on the Web.
+
+<P>The W3C Math Working Group intends further development of
+recommendations for mathematics on the Web, as set out <A
+HREF="chapter1.html#goals">below</A>.
+
+<P>A list of current W3C Technical Reports can be found at <A HREF="https://www.w3.org/TR">http://www.w3.org/TR</A>.</P>
+
+<P><HR>
+
+
+<H2>Table of Contents </H2>
+
+<P><A HREF="toc.html"><B>Extended Table of Contents</B></A>
+
+<P>
+<A HREF="chapter1.html">Chapter 1. Introduction</A> <BR>
+<A HREF="chapter2.html">Chapter 2. MathML Fundamentals</A><BR>
+<A HREF="chap3_1.html">Chapter 3. Presentation Markup</A><BR>
+<A HREF="chap4_1.html">Chapter 4. Content Markup</A> <BR>
+<A HREF="chapter5.html">Chapter 5. Mixing Presentation and Content </A><BR>
+<A HREF="chapter6.html">Chapter 6. Entities, Characters and Fonts</A> <BR>
+<A HREF="chapter7.html">Chapter 7. Implementing MathML</A>
+</P>
+
+<P>
+<A HREF="appendixA.html">Appendix A. DTD for MathML</A><BR>
+<A HREF="appendixB.html">Appendix B. Glossary</A> <BR>
+<A HREF="appendixC.html">Appendix C. Operator Dictionary</A> <BR>
+<A HREF="appendixD.html">Appendix D. Working Group Membership</A><BR>
+<A HREF="appendixE.html">Appendix E. Informal EBNF Grammar for Content
+Elements</A><BR>
+<A HREF="appendixF.html">Appendix F. Default Semantic Bindings for
+Content Elements</A>
+
+</P>
+<P>
+<A HREF="refs.html">References</A>
+</P>
+
+
+<A href="https://www.w3.org/Consortium/Legal/ipr-notice.html#Copyright">
+Copyright</A> &nbsp;&copy;&nbsp; 1998 <A href="https://www.w3.org">W3C</A>
+(<A href="http://www.lcs.mit.edu">MIT</A>,
+<A href="http://www.inria.fr/">INRIA</A>,
+<A href="http://www.keio.ac.jp/">Keio</A> ), All Rights Reserved. W3C
+<A href="https://www.w3.org/Consortium/Legal/ipr-notice.html#Legal Disclaimer">liability,</A>
+<A href="https://www.w3.org/Consortium/Legal/ipr-notice.html#W3C Trademarks">trademark</A>,
+<A href="https://www.w3.org/Consortium/Legal/copyright-documents.html">document
+use </A>and
+<A href="https://www.w3.org/Consortium/Legal/copyright-software.html">software
+licensing </A>rules apply.
+<SCRIPT src="https://www.w3.org/scripts/TR/fixup.js"></SCRIPT></BODY>
+</HTML>

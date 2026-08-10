@@ -1,0 +1,2715 @@
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html data-bs-theme="auto" lang="en">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+            
+                draft-ietf-html-tables-03
+            
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://static.ietf.org/fonts/inter/import.css" rel="stylesheet">
+        <link href="https://static.ietf.org/fonts/noto-sans-mono/import.css" rel="stylesheet">
+        
+            <link rel="stylesheet" href="https://static.ietf.org/dt/12.70.0/ietf/css/document_html_referenced.css">
+            
+            <script type="module" crossorigin="" src="https://static.ietf.org/dt/12.70.0/assets/embedded-2377a63b.js"></script>
+<link href="https://static.ietf.org/dt/12.70.0/assets/create-pinia-singleton-510f8001.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+<link href="https://static.ietf.org/dt/12.70.0/assets/Scrollbar-c6614013.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+            <script src="https://static.ietf.org/dt/12.70.0/ietf/js/document_html.js"></script>
+            <script src="https://static.ietf.org/dt/12.70.0/ietf/js/theme.js"></script>
+        
+        <link rel="alternate" type="application/atom+xml" title="Document changes" href="/feed/document-changes/draft-ietf-html-tables/">
+        <meta name="description"
+            
+                content="HTML Tables (Internet-Draft, 1995)"
+            >
+        
+
+<link rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor-180.png">
+<link rel="icon"
+      sizes="32x32"
+      href="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor-32.png">
+<link rel="icon"
+      sizes="16x16"
+      href="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor-16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon"
+      href="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor-mask.svg"
+      color="#ffffff">
+<meta name="msapplication-TileColor"
+      content="#ffffff">
+<meta name="theme-color"
+      content="#ffffff">
+        
+
+
+
+
+<meta property="og:title" content="HTML Tables">
+<meta property="og:url" content="https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt">
+<link rel="canonical" href="https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt">
+<meta property="og:site_name" content="IETF Datatracker">
+<meta property="og:description" content="">
+<meta property="og:type" content="article">
+
+<meta property="og:image" content="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-card.png">
+<meta property="og:image:alt" content="Logo of the IETF">
+<meta property="article:section" content="IETF - Internet Engineering Task Force">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+
+
+
+        
+        <style>
+            
+            .diff-form .select2-selection__rendered {
+                direction: rtl;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <noscript><iframe class="status" title="Site status" src="/status/latest"></iframe></noscript>
+<div class="vue-embed" data-component="Status"></div>
+        <div class="btn-toolbar sidebar-toolbar position-fixed top-0 end-0 m-2 m-lg-3 d-print-none">
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary btn-sm me-1 dropdown-toggle d-flex align-items-center"
+                    id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                    aria-label="Toggle theme">
+                        <i class="theme-icon-active bi bi-circle-half"></i>
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="bd-theme">
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center"
+                            data-bs-theme-value="light" aria-pressed="false">
+                            <i class="me-2 opacity-50 theme-icon bi bi-sun-fill"></i>
+                            Light<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center"
+                            data-bs-theme-value="dark" aria-pressed="false">
+                            <i class="me-2 opacity-50 theme-icon bi bi-moon-stars-fill"></i>
+                            Dark<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center active"
+                            data-bs-theme-value="auto" aria-pressed="true">
+                            <i class="me-2 opacity-50 theme-icon bi bi-circle-half"></i>
+                            Auto<i class="bi bi-check2 ms-auto d-none"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn btn-outline-secondary btn-sm sidebar-toggle"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebar"
+                    aria-expanded="true"
+                    aria-controls="sidebar"
+                    aria-label="Toggle metadata sidebar"
+                    title="Toggle metadata sidebar">
+            <i class="bi bi-arrow-bar-left sidebar-shown"></i>
+            <i class="bi bi-arrow-bar-right sidebar-collapsed"></i>
+            </button>
+        </div>
+        <nav class="navbar bg-light-subtle px-1 fixed-top d-print-none d-md-none">
+            <a class="nav-link ps-1"
+               href="/doc/draft-ietf-html-tables/">
+                 
+                    draft-ietf-html-tables-03
+                
+                <br class="d-sm-none">
+
+                <span class="ms-sm-3 badge rounded-pill badge-draft">
+                    
+                        Internet-Draft
+                    
+                </span>
+            </a>
+            <button class="navbar-toggler p-1"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#docinfo-collapse"
+                    aria-controls="docinfo-collapse"
+                    aria-expanded="false"
+                    aria-label="Show document information">
+                <span class="navbar-toggler-icon small"></span>
+            </button>
+            <div class="navbar-nav navbar-nav-scroll overscroll-none collapse pt-1" id="docinfo-collapse">
+                <div class="bg-light-subtle p-0">
+                    <table class="table table-sm table-borderless small">
+                        <tbody class="meta align-top">
+                            <tr>
+                                <th scope="row"></th>
+                                <th scope="row">Title</th>
+                                <td class="edit"></td>
+                                <td>HTML Tables</td>
+                            </tr>
+                        </tbody>
+                        
+
+
+
+
+
+
+
+<tbody class="meta align-top ">
+    <tr>
+        <th scope="row">Document</th>
+        <th scope="row">Document type</th>
+        <td class="edit"></td>
+        <td>
+            
+
+
+
+
+
+
+ 
+    <div>This is an older version of an Internet-Draft that was ultimately published as <a href="/doc/rfc1942/">RFC 1942</a>.</div>
+
+            
+            
+                <div class="badge rounded-pill text-bg-warning">
+                    Expired &amp; archived
+                </div>
+            
+            
+                
+
+
+
+
+    
+
+
+            
+        </td>
+    </tr>
+    
+        <tr>
+            <td></td>
+            <th scope="row">Select version</th>
+            <td class="edit"></td>
+            <td>
+                
+
+
+
+    <ul class="revision-list pagination pagination-sm text-center flex-wrap my-0">
+        
+            
+                 
+                    <li class="page-item ">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-tables-00"
+                        >
+                            00
+                        </a>
+                    </li>
+                
+            
+                 
+                    <li class="page-item ">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-tables-01"
+                        rel="nofollow">
+                            01
+                        </a>
+                    </li>
+                
+            
+                 
+                    <li class="page-item ">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-tables-02"
+                        rel="nofollow">
+                            02
+                        </a>
+                    </li>
+                
+            
+                 
+                    <li class="page-item active">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-tables-03"
+                        rel="nofollow">
+                            03
+                        </a>
+                    </li>
+                
+            
+                 
+                    <li class="page-item ">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-tables-04"
+                        rel="nofollow">
+                            04
+                        </a>
+                    </li>
+                
+            
+                 
+                    <li class="page-item ">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-tables-05"
+                        >
+                            05
+                        </a>
+                    </li>
+                
+            
+            
+                <li class="page-item rfc">
+                    <a class="page-link"
+                    href="/doc/html/rfc1942">
+                        RFC 1942
+                    </a>
+                </li>
+            
+        
+    </ul>
+
+            </td>
+        </tr>
+        
+            <tr>
+                <td></td>
+                <th scope="row">Compare versions</th>
+                <td class="edit"></td>
+                <td>
+                    
+
+
+
+<form class="form-horizontal diff-form"
+      action="https://author-tools.ietf.org/iddiff"
+      method="get"
+      target="_blank">
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="From revision"
+                    name="url1">
+                
+                    <option value="rfc1942">
+                        RFC 1942
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-05">
+                        draft-ietf-html-tables-05
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-04" selected>
+                        draft-ietf-html-tables-04
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-03">
+                        draft-ietf-html-tables-03
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-02">
+                        draft-ietf-html-tables-02
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-01">
+                        draft-ietf-html-tables-01
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-00">
+                        draft-ietf-html-tables-00
+                        
+                    </option>
+                
+                
+            </select>
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="To revision"
+                    name="url2">
+                
+                    <option value="rfc1942">
+                        RFC 1942
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-05" selected>
+                        draft-ietf-html-tables-05
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-04">
+                        draft-ietf-html-tables-04
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-03">
+                        draft-ietf-html-tables-03
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-02">
+                        draft-ietf-html-tables-02
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-01">
+                        draft-ietf-html-tables-01
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-00">
+                        draft-ietf-html-tables-00
+                        
+                    </option>
+                
+                
+            </select>
+
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--html"
+                    name="difftype">
+                Side-by-side
+            </button>
+            
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--hwdiff"
+                    name="difftype">
+                Inline
+            </button>
+
+</form>
+                </td>
+            </tr>
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">Author</th>
+        <td class="edit">
+            
+        </td>
+        <td>
+            
+            
+            
+        </td>
+    </tr>
+    
+    
+        
+        
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            RFC stream
+        </th>
+        <td class="edit">
+            
+        </td>
+        <td >
+            
+                
+                
+                    
+                        
+
+
+
+<img alt="IETF Logo"
+     class="d-lm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor-white.svg"
+        
+     
+     >
+
+<img alt="IETF Logo"
+     class="d-dm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor.svg"
+        
+     
+     >
+                    
+                
+                
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            Other formats
+        </th>
+        <td class="edit">
+        </td>
+        <td>
+            
+                
+    <div class="buttonlist">
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.ietf.org/archive/id/draft-ietf-html-tables-05.txt">
+            
+                <i class="bi bi-file-text"></i> txt
+            
+        </a>
+        
+    
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/draft-ietf-html-tables/05/bibtex/">
+            
+                <i class="bi bi-file-ruled"></i> bibtex
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/bibxml3/draft-ietf-html-tables-05.xml">
+            
+                <i class="bi bi-file-code"></i> bibxml
+            
+        </a>
+        
+    
+</div>
+
+            
+        </td>
+    </tr>
+    
+    
+        
+            <tr>
+                <td>
+                </td>
+                <th scope="row">
+                    Additional resources
+                </th>
+                <td class="edit">
+                    
+                </td>
+                <td>
+                    
+                        
+                        
+                            
+                                <a href="http://www.ics.uci.edu/pub/ietf/html/">
+                                    Mailing list discussion
+                                </a>
+                            
+                        
+                    
+                </td>
+            </tr>
+        
+    
+</tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <th scope="row"></th>
+                            <td class="edit"></td>
+                            <td>
+                                <a class="btn btn-sm btn-warning mb-3"
+                                target="_blank"
+                                href="https://github.com/ietf-tools/datatracker/issues/new/choose">
+                                    Report a bug
+                                    <i class="bi bi-bug"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </nav>
+        <div class="row g-0">
+            <div class="col-md-9 d-flex justify-content-center lh-sm"
+                 data-bs-spy="scroll"
+                 data-bs-target="#toc-nav"
+                 data-bs-smooth-scroll="true"
+                 tabindex="0"
+                 id="content">
+                
+                    <div class="rfcmarkup">
+                        <br class="noprint">
+                        <!-- [html-validate-disable-block attr-quotes, void-style, element-permitted-content, heading-level -- FIXME: rfcmarkup/rfc2html generates HTML with issues] -->
+                        <div class="rfcmarkup"><pre>HTML Tables                                                        27-Oct-1995
+
+   <h1>INTERNET DRAFT                                 Dave Raggett, W3C</h1>
+   <h1>Expires in six months                          email: &lt;dsr@w3.org&gt;</h1>
+
+                                 HTML Tables
+
+                       &lt;<a href="/doc/html/draft-ietf-html-tables-03.txt">draft-ietf-html-tables-03.txt</a>&gt;
+
+Status of this Memo
+
+   This document is an Internet draft. Internet drafts are working
+   documents of the Internet Engineering Task Force (IETF), its areas
+   and its working groups. Note that other groups may also distribute
+   working information as Internet drafts.
+
+   Internet Drafts are draft documents valid for a maximum of six
+   months and can be updated, replaced or obsoleted by other documents
+   at any time. It is inappropriate to use Internet drafts as reference
+   material or to cite them as other than as &quot;work in progress&quot;.
+
+   To learn the current status of any Internet draft please check the
+   &quot;lid-abstracts.txt&quot; listing contained in the Internet drafts shadow
+   directories on ftp.is.co.za (Africa), nic.nordu.net (Europe),
+   munnari.oz.au (Pacific Rim), ds.internic.net (US East coast) or
+   ftp.isi.edu (US West coast). Further information about the IETF can
+   be found at URL: <a href="http://www.ietf.org/">http://www.ietf.org/</a>
+
+   Distribution of this document is unlimited. Please send comments to
+   the HTML working group (HTML-WG) of the Internet Engineering Task
+   Force (IETF) at &lt;html-wg@oclc.org&gt;. Discussions of this group are
+   archived at URL:  <a href="http://www.acl.lanl.gov/HTML-WG/archives.html">http://www.acl.lanl.gov/HTML-WG/archives.html</a>.
+
+   This specification is also available via the Web in hypertext form
+   as a Working Draft of the World Wide Web Consortium, see:
+   <a href="http://www.w3.org/pub/WWW/TR/Overview.html">http://www.w3.org/pub/WWW/TR/Overview.html</a>
+
+Abstract
+
+   The HyperText Markup Language (HTML) is a simple markup language
+   used to create hypertext documents that are portable from one
+   platform to another. HTML documents are SGML documents with generic
+   semantics that are appropriate for representing information from a
+   wide range of applications. This specification extends HTML to
+   support a wide variety of tables. The model is designed to work well
+   with associated style sheets, but does not require them. It also
+   supports rendering to braille, or speech, and exchange of tabular
+   data with databases and spreadsheets. The HTML table model embodies
+   certain aspects of the CALS table model, e.g. the ability to group
+   table rows into thead, tbody and tfoot sections, plus the ability to
+   specify cell alignment compactly for sets of cells according to the
+   context.
+
+------------------------------------------------------------------------------
+
+
+Dave Raggett                                                            Page 1
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+Contents
+
+   *   Recent Changes  .................................................... <a href="#page-1-2">2</a>
+
+   *   Brief Introduction  ................................................ <a href="#page-1-3">3</a>
+
+   *   Design Rationale  .................................................. <a href="#page-1-5">5</a>
+
+   *   Walkthrough of the Table DTD  ...................................... <a href="#page-1-7">7</a>
+
+   *   Recommended Layout Algorithms  .................................... <a href="#page-1-20">20</a>
+
+   *   The Table DTD  .................................................... <a href="#page-1-23">23</a>
+
+   *   References  ....................................................... <a href="#page-1-26">26</a>
+
+Recent Changes
+
+   This specification extends HTML to support tables. The table model
+   has grown out of early work on HTML+ and the initial draft of HTML3.
+   The earlier model has been been extended in response to requests
+   from information providers for improved control over the
+   presentation of tabular information:
+
+   *   alignment on designated characters such as &quot;.&quot; and &quot;:&quot;
+       e.g. aligning a column of numbers on the decimal point
+
+   *   more flexibility in specifying table frames and rules
+
+   *   incremental display for large tables as data is received
+
+   *   the ability to support scrollable tables with fixed headers plus
+       better support for breaking tables across pages for printing
+
+   *   optional column based defaults for alignment properties
+
+   In addition, a major goal has been to provide backwards
+   compatibility with the widely deployed Netscape implementation of
+   tables. A subsidiary goal has been to simplify importing tables
+   conforming to the SGML CALS model. The latest draft makes the ALIGN
+   attribute compatible with the latest Netscape and Microsoft
+   browsers. Some clarifications have been made to the role of the DIR
+   attribute and recommended behaviour when absolute and relative
+   column widths are mixed.
+
+   A new element COLGROUP has been introduced to allow sets of columns
+   be grouped with different width and alignment properties specified
+   by one or more COL elements. The STYLE attribute is defined as a
+   means for extending the properties associated with edges and
+   interiors of groups of cells. For instance, the line style: dotted,
+   double, thin/thick etc; the colour/pattern fill for the interior;
+   cell margins and font info. This will be the subject for a companion
+   specification on style sheets.
+
+Dave Raggett                                                            Page 2
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+   The FRAME and RULES attributes have been modified to avoid SGML name
+   clashes with each other, and to avoid clashes with the ALIGN and
+   VALIGN attributes. These changes are chosen to avoid future problems
+   if this specification is extended to allow FRAME and RULES
+   attributes with other table elements.
+
+------------------------------------------------------------------------------
+A Brief Introduction to HTML Tables
+
+   Tables start with an optional caption followed by one or more rows.
+   Each row is formed by one or more cells, which are differentiated
+   into header and data cells. Cells can be merged across rows and
+   columns, and include attributes assisting rendering to speech and
+   braille, or for exporting table data into databases. The model
+   provides limited support for control over appearence, for example
+   horizontal and vertical alignment of cell contents, border styles
+   and cell margins. You can further affect this by grouping rows and
+   columns together. Tables can contain a wide range of content, such
+   as headers, lists, paragraphs, forms, figures, preformatted text and
+   even nested tables.
+
+Example
+
+   &lt;TABLE BORDER&gt;
+     &lt;CAPTION&gt;A test table with merged cells&lt;/CAPTION&gt;
+     &lt;TR&gt;&lt;TH ROWSPAN=2&gt;&lt;TH COLSPAN=2&gt;Average
+         &lt;TH ROWSPAN=2&gt;other&lt;BR&gt;category&lt;TH&gt;Misc
+     &lt;TR&gt;&lt;TH&gt;height&lt;TH&gt;weight
+     &lt;TR&gt;&lt;TH ALIGN=LEFT&gt;males&lt;TD&gt;1.9&lt;TD&gt;0.003
+     &lt;TR&gt;&lt;TH ALIGN=LEFT ROWSPAN=2&gt;females&lt;TD&gt;1.7&lt;TD&gt;0.002
+   &lt;/TABLE&gt;
+
+   On a dumb terminal, this would be rendered something like:
+
+                 A test table with merged cells
+       /--------------------------------------------------\
+       |          |      Average      |  other   |  Misc  |
+       |          |-------------------| category |--------|
+       |          |  height |  weight |          |        |
+       |-----------------------------------------|--------|
+       | males    | 1.9     | 0.003   |          |        |
+       |-----------------------------------------|--------|
+       | females  | 1.7     | 0.002   |          |        |
+       \--------------------------------------------------/
+
+
+   Next, a richer example with grouped rows and columns (adapted from
+   &quot;Developing International Software&quot; by Nadine Kano). First here is
+   what the table looks like on paper:
+
+
+
+
+
+Dave Raggett                                                            Page 3
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+
+                     CODE-PAGE SUPPORT IN MICROSOFT WINDOWS
+   ===============================================================================
+   Code-Page | Name                         | ACP  OEMCP | Windows Windows Windows
+       ID    |                              |            |  NT 3.1 NT 3.51    95
+   -------------------------------------------------------------------------------
+      1200   | Unicode (BMP of ISO 10646)   |            |    X       X       *
+      1250   | Windows 3.1 Eastern European |  X         |    X       X       X
+      1251   | Windows 3.1 Cyrillic         |  X         |    X       X       X
+      1252   | Windows 3.1 US (ANSI)        |  X         |    X       X       X
+      1253   | Windows 3.1 Greek            |  X         |    X       X       X
+      1254   | Windows 3.1 Turkish          |  X         |    X       X       X
+      1255   | Hebrew                       |  X         |                    X
+      1256   | Arabic                       |  X         |                    X
+      1257   | Baltic                       |  X         |                    X
+      1361   | Korean (Johab)               |  X         |            **      X
+   -------------------------------------------------------------------------------
+       437   | MS-DOS United States         |        X   |    X       X       X
+       708   | Arabic (ASMO 708)            |        X   |                    X
+       709   | Arabic (ASMO 449+, BCON V4)  |        X   |                    X
+       710   | Arabic (Transparent Arabic)  |        X   |                    X
+       720   | Arabic (Transparent ASMO)    |        X   |                    X
+   ===============================================================================
+
+
+   The markup for this uses COL elements to group columns and set
+   column alignment. TBODY elements are used to group rows. The FRAME
+   and RULES attributes are used to select which borders to render.
+
+
+   &lt;table border=2 frame=hsides rules=cols&gt;
+   &lt;caption&gt;CODE-PAGE SUPPORT IN MICROSOFT WINDOWS&lt;/caption&gt;
+   &lt;col align=center&gt;
+   &lt;col align=left&gt;
+   &lt;col align=center span=2&gt;
+   &lt;col align=center span=3&gt;
+   &lt;thead valign=top&gt;
+   &lt;tr&gt;
+   &lt;th&gt;Code-Page&lt;br&gt;ID
+   &lt;th&gt;Name
+   &lt;th&gt;ACP
+   &lt;th&gt;OEMCP
+   &lt;th&gt;Windows&lt;br&gt;NT 3.1
+   &lt;th&gt;Windows&lt;br&gt;NT 3.51
+   &lt;th&gt;Windows&lt;br&gt;95
+   &lt;tbody&gt;
+   &lt;tr&gt;&lt;td&gt;1200&lt;td&gt;Unicode (BMP of ISO 10646)&lt;td&gt;&lt;td&gt;&lt;td&gt;X&lt;td&gt;X&lt;TD&gt;*
+   &lt;tr&gt;&lt;td&gt;1250&lt;td&gt;Windows 3.1 Eastern European&lt;td&gt;X&lt;td&gt;&lt;td&gt;X&lt;td&gt;X&lt;TD&gt;X
+   &lt;tr&gt;&lt;td&gt;1251&lt;td&gt;Windows 3.1 Cyrillic&lt;td&gt;X&lt;td&gt;&lt;td&gt;X&lt;td&gt;X&lt;TD&gt;X
+   &lt;tr&gt;&lt;td&gt;1252&lt;td&gt;Windows 3.1 US (ANSI)&lt;td&gt;X&lt;td&gt;&lt;td&gt;X&lt;td&gt;X&lt;TD&gt;X
+   &lt;tr&gt;&lt;td&gt;1253&lt;td&gt;Windows 3.1 Greek&lt;td&gt;X&lt;td&gt;&lt;td&gt;X&lt;td&gt;X&lt;TD&gt;X
+   &lt;tr&gt;&lt;td&gt;1254&lt;td&gt;Windows 3.1 Turkish&lt;td&gt;X&lt;td&gt;&lt;td&gt;X&lt;td&gt;X&lt;TD&gt;X
+   &lt;tr&gt;&lt;td&gt;1255&lt;td&gt;Hebrew&lt;td&gt;X&lt;td&gt;&lt;td&gt;&lt;td&gt;&lt;td&gt;X
+
+Dave Raggett                                                            Page 4
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+   &lt;tr&gt;&lt;td&gt;1256&lt;td&gt;Arabic&lt;td&gt;X&lt;td&gt;&lt;td&gt;&lt;td&gt;&lt;td&gt;X
+   &lt;tr&gt;&lt;td&gt;1257&lt;td&gt;Baltic&lt;td&gt;X&lt;td&gt;&lt;td&gt;&lt;td&gt;&lt;td&gt;X
+   &lt;tr&gt;&lt;td&gt;1361&lt;td&gt;Korean (Johab)&lt;td&gt;X&lt;td&gt;&lt;td&gt;&lt;td&gt;**&lt;td&gt;X
+   &lt;tbody&gt;
+   &lt;tr&gt;&lt;td&gt;437&lt;td&gt;MS-DOS United States&lt;td&gt;&lt;td&gt;X&lt;td&gt;X&lt;td&gt;X&lt;TD&gt;X
+   &lt;tr&gt;&lt;td&gt;708&lt;td&gt;Arabic (ASMO 708)&lt;td&gt;&lt;td&gt;X&lt;td&gt;&lt;td&gt;&lt;td&gt;X
+   &lt;tr&gt;&lt;td&gt;709&lt;td&gt;Arabic (ASMO 449+, BCON V4)&lt;td&gt;&lt;td&gt;X&lt;td&gt;&lt;td&gt;&lt;td&gt;X
+   &lt;tr&gt;&lt;td&gt;710&lt;td&gt;Arabic (Transparent Arabic)&lt;td&gt;&lt;td&gt;X&lt;td&gt;&lt;td&gt;&lt;td&gt;X
+   &lt;tr&gt;&lt;td&gt;720&lt;td&gt;Arabic (Transparent ASMO)&lt;td&gt;&lt;td&gt;X&lt;td&gt;&lt;td&gt;&lt;td&gt;X
+   &lt;/table&gt;
+
+
+------------------------------------------------------------------------------
+Design Rationale
+
+   The HTML table model has evolved from studies of existing SGML
+   tables models, the treatment of tables in common word processing
+   packages, and looking at a wide range of tabular layout in
+   magazines, books and other paper-based documents. The model was
+   chosen to allow simple tables to be expressed simply with extra
+   complexity only when needed. This makes it practical to create the
+   markup for HTML tables with everyday text editors and reduces the
+   learning curve for getting started. This feature has been very
+   important to the success of HTML to date.
+
+   Increasingly people are using filters from other document formats or
+   direct wysiwyg editors for HTML. It is important that the HTML table
+   model fits well with these routes for authoring HTML. This affects
+   how the representation handles cells which span multiple rows or
+   columns, and how alignment and other presentation properties are
+   associated with groups of cells.
+
+   A major consideration for the HTML table model is that the fonts and
+   window sizes etc. in use with browsers are not under the author&#x27;s
+   control. This makes it risky to rely on column widths specified in
+   terms of absolute units such as picas or pixels. Instead, tables can
+   be dynamically sized to match the current window size and fonts.
+   Authors can provide guidance as to the relative widths of columns,
+   but user agents should to ensure that columns are wide enough to
+   avoid clipping cell contents.
+
+   For large tables or slow network connections, it is desirable to be
+   able to start displaying the table before all of the data has been
+   received. The default window width for most user agents shows about
+   80 characters, and the graphics for many HTML pages are designed
+   with these defaults in mind. Authors can provide a hint to user
+   agents to activate incremental display of table contents. This
+   feature requires the author to specify the number of columns, and
+   includes provision for control of table width and the relative
+   widths of different columns.
+
+
+
+
+Dave Raggett                                                            Page 5
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+   For incremental display, the browser needs the number of columns and
+   their widths. The default width of the table is the current window
+   size (width=&quot;100%&quot;). This can be altered by including a WIDTH
+   attribute in the TABLE start tag. By default all columns have the
+   same width, but you can specify column widths with one or more COL
+   elements before the table data starts.
+
+   The remaining issue is the number of columns. Some people have
+   suggested waiting until the first row of the table has been
+   received, but this could take a long time if the cells have a lot of
+   content. On the whole it makes more sense, when incremental display
+   is desired, to get authors to explicitly specify the number of
+   columns in the TABLE start tag.
+
+   Authors still need a way of informing the browser whether to use
+   incremental display or to automatically size the table to match the
+   cell contents. For the two pass auto sizing mode, the number of
+   columns is determined by the first pass, while for the incremental
+   mode, the number of columns needs to be stated up front. So it seems
+   to that COLS=_nn_ would be better for this purpose than a LAYOUT
+   attribute such as LAYOUT=FIXED or LAYOUT=AUTO.
+
+   It is generally held useful to consider documents from two
+   perspectives: Structural idioms such as headers, paragraphs, lists,
+   tables, and figures; and rendering idioms such as margins, leading,
+   font names and sizes. The wisdom of past experience encourages us to
+   separate the structural information in documents from rendering
+   information. Mixing them together ends up causing increased cost of
+   ownership for maintaining documents, and reduced portability between
+   applications and media.
+
+   For tables, the alignment of text within table cells, and the
+   borders between cells are, from the purist&#x27;s point of view,
+   rendering information. In practice, though, it is useful to group
+   these with the structural information, as these features are highly
+   portable from one application to the next. The HTML table model
+   leaves most rendering information to associated style sheets. The
+   model is designed to take advantage of such style sheets but not to
+   require them.
+
+   This specification provides a superset of the simpler model
+   presented in earlier work on HTML+. Tables are considered as being
+   formed from an optional caption together with a sequence of rows,
+   which in turn consist of a sequence of table cells. The model
+   further differentiates header and data cells, and allows cells to
+   span multiple rows and columns.
+
+   Following the CALS table model, this specification allows table rows
+   to be grouped into head and body and foot sections. This simplifies
+   the representation of rendering information and can be used to
+   repeat table head and foot rows when breaking tables across page
+   boundaries, or to provide fixed headers above a scrollable body
+   panel. In the markup, the foot section is placed before the body
+
+Dave Raggett                                                            Page 6
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+   sections. This is an optimization shared with CALS for dealing with
+   very long tables. It allows the foot to be rendered without having
+   to wait for the entire table to be processed.
+
+   For the visually impaired, HTML offers the hope of setting to rights
+   the damage caused by the adoption of windows based graphical user
+   interfaces. The HTML table model includes attributes for labeling
+   each cell, to support high quality text to speech conversion. The
+   same attributes can also be used to support automated import and
+   export of table data to databases or spreadsheets.
+
+   Current desktop publishing packages provide very rich control over
+   the rendering of tables, and it would be impractical to reproduce
+   this in HTML, without making HTML into a bulky rich text format like
+   RTF or MIF. This specification does, however, offer authors the
+   ability to choose from a set of commonly used classes of border
+   styles. The FRAME attribute controls the appearence of the border
+   frame around the table while the RULES attribute determines the
+   choice of rulings within the table. A finer level of control will be
+   supported via rendering annotations. The STYLE attribute can be used
+   for including rendering information with individual elements.
+   Further rendering information can be given with the STYLE element in
+   the document head or via linked style sheets.
+
+   During the development of this specification, a number of avenues
+   were investigated for specifying the ruling patterns for tables. One
+   issue concerns the kinds of statements that can be made. Including
+   support for edge subtraction as well as edge addition leads to
+   relatively complex algorithms. For instance work on allowing the
+   full set of table elements to include the FRAME and RULES attributes
+   led to an algorithm involving some 24 steps to determine whether a
+   particular edge of a cell should be ruled or not. Even this
+   additional complexity doesn&#x27;t provide enough rendering control to
+   meet the full range of needs for tables. The current specification
+   deliberately sticks to a simple intuitive model, sufficient for most
+   purposes. Further experimental work is needed before a more complex
+   approach is standardized.
+
+------------------------------------------------------------------------------
+A walk through the table DTD
+
+   The table document type definition provides the formal definition of
+   the allowed syntax for html tables. The following is an annotated
+   listing of the DTD. The complete listing appears at the end of this
+   document.
+
+   Note that the TABLE element is a block-like element rather a
+   character-level element. As such it is a peer of other HTML
+   block-like elements such as paragraphs, lists and headers.
+
+
+
+
+
+Dave Raggett                                                            Page 7
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+Common Attributes
+
+   The following attributes occur in several of the elements and are
+   defined here for brevity. In general, all attribute names and values
+   in this specification are case insensitive, except where noted
+   otherwise.
+
+
+   &lt;!ENTITY % attrs
+          &quot;id      ID       #IMPLIED  -- element identifier --
+           class   NAMES    #IMPLIED  -- for subclassing elements --
+           style   CDATA    #IMPLIED  -- rendering annotation --
+           lang    NAME     #IMPLIED  -- as per <a href="/doc/html/rfc1766">RFC 1766</a> --
+           dir   (ltr|rtl)  #IMPLIED  -- I18N text direction --&quot;&gt;
+
+
+   ID
+       Used to define a document-wide identifier. This can be used for
+       naming positions within documents as the destination of a
+       hypertext link. It may also be used by style sheets for
+       rendering an element in a unique style. An ID attribute value is
+       an SGML NAME token. NAME tokens are formed by an initial letter
+       followed by letters, digits, &quot;-&quot; and &quot;.&quot; characters. The letters
+       are restricted to A-Z and a-z.
+
+   CLASS
+       A space separated list of SGML NAME tokens. CLASS names specify
+       that the element belongs to the corresponding named classes.
+       These may be used by style sheets to provide class dependent
+       renderings.
+
+   STYLE
+       A text string providing rendering information specific to this
+       element. The notation is specified with the STYLE element in the
+       document head. The user agent can select an appropriate
+       rendering style based on rendering annotations using the STYLE
+       attribute of the current element, rendering information in the
+       STYLE element in the document head, and linked style sheets. The
+       specification of the syntax and semantics for style notations is
+       outside the scope of this document.
+
+   LANG
+       A LANG attribute identifies the natural language used by the
+       content of the associated element.The syntax and registry of
+       language values are defined by <a href="/doc/html/rfc1766">RFC 1766</a>. In summary the language
+       is given as a primary tag followed by zero or more subtags,
+       separated by &quot;-&quot;. White space is not allowed and all tags are
+       case insensitive. The name space of tags is administered by
+       IANA. The two letter primary tag is an ISO 639 language
+       abbreviation, while the initial subtag is a two letter ISO 3166
+       country code. Example values for LANG include:
+
+             en, en-US, en-uk, i-cherokee, x-pig-latin.
+
+Dave Raggett                                                            Page 8
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+   DIR
+       Human writing systems are grouped into scripts, which determine
+       amongst other things, the direction the characters are written.
+       Elements of the Latin script are nominally left to right, while
+       those of the Arabic script are nominally right to left. These
+       characters have what is called strong directionality. Other
+       characters can be directionally neutral (spaces) or weak
+       (punctuation).
+
+       The DIR attribute specifies an encapsulation boundary which
+       governs the interpretation of neutral and weakly directional
+       characters. It does not override the directionality of strongly
+       directional characters. The DIR attribute value is one of LTR
+       for left to right, or RTL for right to left, e.g. DIR=RTL.
+
+       When applied to TABLE, it indicates the geometric layout of rows
+       (i.e. row 1 is on right if DIR=RTL, but on the left if DIR=LTR)
+       and it indicates a default base directionality for any text in
+       the table&#x27;s content if no other DIR attribute applies to that
+       text.
+
+------------------------------------------------------------------------------
+Horizontal and Vertical Alignment Attributes
+
+   The alignment of cell contents can be specified on a cell by cell
+   basis, or inherited from enclosing elements, such as the row, column
+   or the table element itself.
+
+   ALIGN
+       This specifies the horizontal alignment of cell contents.
+
+       &lt;!-- horizontal alignment attributes for cell contents --&gt;
+       &lt;!ENTITY % cell.halign
+               &quot;align  (left|center|right|justify|char) #IMPLIED
+                char    CDATA   #IMPLIED -- alignment char, e.g. char=&#x27;:&#x27; --
+                charoff CDATA   #IMPLIED -- offset for alignment char --&quot;
+               &gt;
+
+       The attribute value should be one of LEFT, CENTER, RIGHT,
+       JUSTIFY and CHAR. User agents may treat JUSTIFY as left
+       alignment if they lack support for text justification.
+       ALIGN=CHAR is used for aligning cell contents on a particular
+       character.
+
+       For cells spanning multiple rows or columns, where the alignment
+       property is inherited from the row or column, the initial row
+       and column for the cell determines the appropriate alignment
+       property to use.
+
+       Note that an alignment attribute on elements within the cell,
+       e.g. on a P element, overrides the normal alignment value for
+       the cell.
+
+
+Dave Raggett                                                            Page 9
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+   CHAR
+       This is used to specify an alignment character for use with
+       align=char, e.g. char=&quot;:&quot;. The default character is the decimal
+       point for the current language, as set by the LANG attribute.
+       The CHAR attribute value is case sensitive.
+
+   CHAROFF
+       Specifies the offset to the first occurrence of the alignment
+       character on each line. If a line doesn&#x27;t include the alignment
+       character, it should be horizontally shifted to end at the
+       alignment position. The resolved direction of the cell, as
+       determined by the inheritance of the DIR attribute, is used to
+       set whether the offset is from the left or right margin of the
+       cell. For Latin scripts, the offset will be from the left
+       margin, while for Arabic scripts, it will be from the right
+       margin. In addition to standard units, the &quot;%&quot; sign may be used
+       to indicate that the value specifies the alignment position as a
+       percentage offset of the current cell, e.g. CHAROFF=&quot;30%&quot;
+       indicates the alignment character should be positioned 30%
+       through the cell.
+
+       In the absence of an explicit or inherited CHAROFF attribute,
+       the default alignment position when using the two pass layout
+       algorithm can be determined by choosing the position that would
+       center lines for which the width before and after the alignment
+       character are at the maximum values for any of the lines in the
+       column for which ALIGN=CHAR. For incremental table layout the
+       suggested default is CHAROFF=&quot;50%&quot;. If several cells in
+       different rows for the same column use character alignment, then
+       by default, all such cells should line up, regardless of which
+       character is used for alignment.
+
+   VALIGN
+       Defines whether the cell contents are aligned with the top,
+       middle or bottom of the cell.
+
+       &lt;!-- vertical alignment attributes for cell contents --&gt;
+       &lt;!ENTITY % cell.valign
+               &quot;valign  (top|middle|bottom|baseline)  #IMPLIED&quot;
+               &gt;
+
+       If present, the value of the attribute should be one of: TOP,
+       MIDDLE, BOTTOM or BASELINE. All cells in the same row with
+       valign=baseline should be vertically positioned so that the
+       first text line in each such cell occur on a common baseline.
+       This constraint does not apply to subsequent text lines in these
+       cells.
+
+
+
+
+
+
+
+Dave Raggett                                                           Page 10
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+Inheritance Order
+
+   Alignment properties can be included with most of the table
+   elements: COL, THEAD, TBODY, TFOOT, TR, TH and TD. When rendering
+   cells, horizontal alignment is determined by columns in preference
+   to rows, while for vertical alignment, the rows are more important
+   than the columns. The following table gives the detailed precedence
+   order for each attribute:
+
+   ALIGN, CHAR and CHAROFF:
+
+    cells &lt; columns &lt; column groups &lt; rows &lt; row groups &lt; default
+
+   VALIGN, LANG, DIR and STYLE:
+
+    cells &lt; rows &lt; row groups &lt; columns &lt; column groups &lt; table &lt; default
+
+   Where cells are defined by TH and TD elements; rows by TR elements;
+   row groups by THEAD, TBODY and TFOOT elements, columns by COL
+   elements; and column groups by COLGROUP and COL elements. Note that
+   there is no inheritance mechanism for the CLASS attribute.
+
+   Properties defined on cells take precedence over inherited
+   properties, but are in turn over-ridden by alignment properties on
+   elements within cells. In the absence of an ALIGN attribute along
+   the inheritance path, the recommended default alignment for table
+   cell contents is ALIGN=LEFT for table data and ALIGN=CENTER for
+   table headers. The recommended default for vertical alignment is
+   VALIGN=MIDDLE. These defaults are chosen to match the behaviour of
+   the widely deployed Netscape implementation.
+
+------------------------------------------------------------------------------
+Standard Units for Widths
+
+   Several attributes specify widths as a number followed by an
+   optional suffix. The units for widths are specified by the suffix:
+   pt denotes points, pi denotes picas, in denotes inches, cm denotes
+   centimeters, mm denotes millimeters, em denotes em units (equal to
+   the height of the default font), and px denotes screen pixels. The
+   default units are screen pixels (chosen for backwards
+   compatibility). The number is an integer value or a real valued
+   number such as &quot;2.5&quot;. Exponents, as in &quot;1.2e2&quot;, are not allowed.
+   White space is not allowed between the number and the suffix.
+
+   The above set of suffices is augmented for certain elements: &quot;%&quot; is
+   used for the WIDTH attribute for the TABLE element. It indicates
+   that the attribute specifies the percentage width of the space
+   between the current left and right margins, e.g. width=&quot;50%&quot;. For
+   the COL element, &quot;*&quot; is used with the the WIDTH attribute to specify
+   relative column widths, e.g. width=&quot;3*&quot;, using the same
+   representation as the CALS table model.
+
+------------------------------------------------------------------------------
+
+Dave Raggett                                                           Page 11
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+The TABLE element
+
+
+   &lt;!ENTITY % Where &quot;(left|center|right)&quot;&gt;
+
+   &lt;!ELEMENT table - - (caption?, (col|colgroup)*, thead?, tfoot?, tbody+)&gt;
+
+   &lt;!ATTLIST table                    -- table element --
+           %attrs;                    -- id, lang, style, dir and class --
+           align   %Where;  #IMPLIED  -- table position relative to window --
+           width   CDATA    #IMPLIED  -- table width relative to window --
+           cols    NUMBER   #IMPLIED  -- used for immediate display mode --
+           border  CDATA    #IMPLIED  -- controls frame width around table --
+           frame   %Frame;  #IMPLIED  -- which parts of table frame to include --
+           rules   %Rules;  #IMPLIED  -- controls rules between cells --
+           cellspacing CDATA #IMPLIED -- spacing between cells --
+           cellpadding CDATA #IMPLIED -- spacing within cells --
+           &gt;
+
+   The TABLE element requires both start and end tags. Table elements
+   start with an optional CAPTION element, optionally followed by one
+   or more COL or COLGROUP elements, then an optional THEAD, an
+   optional TFOOT, and finally one or more TBODY elements.
+
+------------------------------------------------------------------------------
+   ID, CLASS, STYLE, LANG and DIR
+       See earlier description of common attributes.
+
+   ALIGN
+       Defines the horizontal position of the table relative to the
+       current left and right margins. ALIGN=CENTER centers the table
+       midway between the left and right margins. To allow text to flow
+       around the table, use ALIGN=LEFT to position the table at the
+       left margin, with text flowing around its right handside, or use
+       ALIGN=RIGHT to position the table at the right margin, with text
+       flowing around its left handside.
+
+       Note use &lt;BR CLEAR=LEFT&gt; after the table element if you want to
+       avoid text flowing along side the table when you have specified
+       ALIGN=LEFT, or &lt;BR CLEAR=RIGHT&gt; for a right aligned table.
+
+   WIDTH
+       Specifies the desired width of the table. In addition to the
+       standard units, the &quot;%&quot; sign may used to indicate that the width
+       specifies the percentage width of the space between the current
+       left and right margins, e.g. width=&quot;50%&quot;.
+
+       It is recommended that the table width be increased beyond the
+       value indicated by the WIDTH attribute as needed to avoid
+       clipping of cell contents. In the absence of this attribute, the
+       table width can be determined by the layout algorithm given
+       later on.
+
+
+Dave Raggett                                                           Page 12
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+   COLS
+       Specifies the number of columns for the table. If present the
+       user agent may render the table dynamically as data is received
+       from the network without waiting for the complete table to be
+       received. If the WIDTH attribute is missing, a default of &quot;100%&quot;
+       may be assumed for this purpose. If the COLS attribute is
+       absent, a prepass through the table&#x27;s contents is needed to
+       determine the number of columns together with suitable values
+       for the widths of each column.
+
+   BORDER
+       Specifies the width of the border framing the table, see
+       standard units.
+
+   FRAME
+       Specifies which sides of the frame to render.
+
+       &lt;!ENTITY % Frame
+          &quot;(void|above|below|hsides|lhs|rhs|vsides|box|border)&quot;&gt;
+
+       VOID
+           Don&#x27;t render any sides of the frame.
+
+       ABOVE
+           The top side of the frame
+
+       BELOW
+           The bottom side of the frame
+
+       HSIDES
+           The top and bottom sides of the frame
+
+       LHS
+           The left hand side of the frame
+
+       RHS
+           The right hand side of the frame
+
+       VSIDES
+           The left and right sides of the frame
+
+       BOX
+           All four sides of the frame
+
+       BORDER
+           All four sides of the frame
+
+       The value &quot;Border&quot; is included for backwards compatibility with
+       deployed browsers. If a document includes &lt;TABLE BORDER&gt; the
+       user agent will see FRAME=BORDER and BORDER=_implied_. If the
+       document includes &lt;TABLE BORDER=_n_&gt; then the user agent should
+       treat this as FRAME=BORDER except if _n=0_ for which FRAME=VOID
+       is appropriate.
+
+Dave Raggett                                                           Page 13
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+   RULES
+       Specifies where to draw rules within the table interior. The
+       values have been chosen to avoid an SGML NAME clash with the
+       FRAME attribute.
+
+       &lt;!ENTITY % Rules &quot;(none | basic | rows | cols | all)&quot;&gt;
+
+       NONE
+           Suppresses internal rulings.
+
+       BASIC
+           The THEAD, TFOOT and TBODY elements divide the table into
+           groups of rows. This choice places a horizontal rule between
+           each such group.
+
+       ROWS
+           Place horizontal rules between all rows. User agents may
+           choose to use a heavier rule between groups of rows for
+           emphasis.
+
+       COLS
+           Place vertical rules between groups of columns as defined by
+           COLSET and COL elements, plus horizontal rules between row
+           groups (see rules=basic).
+
+       ALL
+           Place rules between all rows and all columns. User agents
+           may choose to use a heavier rule between groups of rows and
+           columns for emphasis.
+
+       If a document includes &lt;TABLE BORDER&gt; or &lt;TABLE BORDER=_n_&gt; then
+       the default for the table element is RULES=ALL, except if _n=0_
+       for which RULES=NONE is appropriate.
+
+   CELLSPACING
+       Specifies the space between individual cells in a table. See
+       standard units.
+
+   CELLPADDING
+       Specifies the amount of space between the border of the cell and
+       its contents. See standard units.
+
+------------------------------------------------------------------------------
+Table Captions
+
+   &lt;!ELEMENT caption - - (%text;)+&gt;
+
+   &lt;!ENTITY % Caption &quot;(top|bottom|left|right)&quot;&gt;
+
+   &lt;!ATTLIST caption                  -- table caption --
+           %attrs;                    -- id, lang, style, dir and class --
+           align   %Caption; #IMPLIED -- relative to table --
+           &gt;
+
+Dave Raggett                                                           Page 14
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+   The optional CAPTION element is used to provide a caption for the
+   table. Both start and end tags are required.
+
+   ID, CLASS, STYLE, LANG and DIR
+       See earlier description of common attributes.
+
+   ALIGN
+       This may be used to control the placement of captions relative
+       to the table. When present, the ALIGN attribute should have one
+       of the values: TOP, BOTTOM, LEFT and RIGHT. It is recommended
+       that the caption is made to fit within the width or height of
+       the table as appropriate. The default position of the caption is
+       deliberately unspecified.
+
+       _The ALIGN attribute is overused in HTML, but is retained here
+       for compatibility with currently deployed browsers._
+
+------------------------------------------------------------------------------
+The COLGROUP Element
+
+   &lt;!ELEMENT colgroup - O (col+)&gt;
+
+    &lt;!ATTLIST colgroup
+           %attrs;                    -- id, lang, style, dir and class --
+           %cell.halign;              -- horizontal alignment in cells --
+           %cell.valign;              -- vertical alignment in cells --
+           &gt;
+
+   Normally, the COL element defines a group of one or more columns.
+   The number of columns in the group is specified by the SPAN
+   attribute. If you also want to specify the width for each of the
+   columns using the WIDTH attribute, then each of the columns must
+   have the same width.
+
+   The COLGROUP element allows you to escape this limitation. It acts
+   as a container for one or more COL elements, so you can give each of
+   the columns in the group different widths and alignment properties.
+   COLGROUP suppresses the normal interpretation of COL elements as
+   column groups for any COL elements contained within it.
+
+   COLGROUP requires a start tag, but the end tag may be omitted. This
+   is useful when defining a sequence of COLGROUP elements, e.g.
+
+       &lt;TABLE FRAME=ALL RULES=COLS&gt;
+         &lt;COLGROUP&gt;
+           &lt;COL WIDTH=&quot;1*&quot;&gt;
+           &lt;COL WIDTH=&quot;2*&quot;&gt;
+         &lt;COLGROUP&gt;
+           &lt;COL WIDTH=&quot;1*&quot;&gt;
+           &lt;COL WIDTH=&quot;3*&quot;&gt;
+         &lt;THEAD&gt;
+           &lt;TR&gt; ...
+       &lt;/TABLE&gt;
+
+Dave Raggett                                                           Page 15
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+   COLGROUP elements can be used with the following attributes:
+
+   ID, CLASS, STYLE, LANG and DIR
+       See earlier description of common attributes.
+
+   ALIGN, CHAR, CHAROFF and VALIGN
+       Specify values for horizontal and vertical alignment within
+       table cells. See inheritance order of alignment properties.
+
+------------------------------------------------------------------------------
+The COL Element
+
+   &lt;!ELEMENT col - O EMPTY&gt;
+
+   &lt;!ATTLIST col                      -- column groups and properties --
+           %attrs;                    -- id, lang, style, dir and class --
+           span    NUMBER   1         -- number of columns spanned by group --
+           width   CDATA    #IMPLIED  -- relative width e.g. width=&quot;2.5*&quot; --
+           %cell.halign;              -- horizontal alignment in cells --
+           %cell.valign;              -- vertical alignment in cells --
+           &gt;
+
+   This optional element is used to specify column based defaults for
+   table properties. It is an empty element, and as such has no
+   content, and shouldn&#x27;t be given an end tag. Several COL elements may
+   be given in succession.
+
+   ID, CLASS, STYLE, LANG and DIR
+       See earlier description of common attributes.
+
+   SPAN
+       A positive integer value that specifies how many columns this
+       element applies to, defaulting to one. In the absence of SPAN
+       attributes the first COL element applies to the first column,
+       the second COL element to the second column and so on. If the
+       second COL element had SPAN=2, it would apply to the second and
+       third column. The next COL element would then apply to the
+       fourth column and so on. SPAN=0 has a special significance and
+       implies that the COL element spans all columns from the current
+       column up to and including the last column.
+
+   WIDTH
+       Specifies the width of the columns, see standard units. If the
+       element spans several columns then the WIDTH attribute specifies
+       the width for each of the individual columns - not the width of
+       the group. In addition, the &quot;*&quot; suffix denotes relative widths,
+       e.g.
+
+            width=64        width in screen pixels
+            width=0.5*      a relative width of 0.5
+
+       Relative widths act as constraints on the relative widths of
+       different columns. If a COL element specifies a relative width
+
+Dave Raggett                                                           Page 16
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+       of zero, the column should always be set to its minimum width.
+       When widths are given in absolute units, the user agent can use
+       these to constrain the width of the table. The &quot;*&quot; suffix is
+       used to simplify importing tables from the CALS representation.
+
+   ALIGN, CHAR, CHAROFF and VALIGN
+       Specify values for horizontal and vertical alignment within
+       table cells. See inheritance order of alignment properties.
+
+------------------------------------------------------------------------------
+Table Head, Foot and Body Elements
+
+   &lt;!ELEMENT thead - O tr+&gt;
+   &lt;!ELEMENT tfoot - O tr+&gt;
+   &lt;!ELEMENT tbody O O tr+&gt;
+
+   &lt;!ATTLIST (thead|tbody|tfoot)      -- table section --
+           %attrs;                    -- id, lang, style, dir and class --
+           %cell.halign;              -- horizontal alignment in cells --
+           %cell.valign;              -- vertical alignment in cells --
+           &gt;
+
+   Tables may be divided up into head and body sections. The THEAD and
+   TFOOT elements are optional, but one or more TBODY elements are
+   always required. If the table only consists of a TBODY section, the
+   TBODY start and end tags may be omitted, as the parser can infer
+   them. If a THEAD element is present, the THEAD start tag is
+   required, but the end tag can be omitted, provided a TFOOT or TBODY
+   start tag follows. The same applies to TFOOT. _This definition
+   provides compatibility with tables created for the older model, as
+   well as allowing the end tags for THEAD, TFOOT and TBODY to be
+   omitted._
+
+   The THEAD, TFOOT and TBODY elements provide a convenient means for
+   controlling rendering. If the table has a large number of rows in
+   the body, user agents may choose to use a scrolling region for the
+   table body sections. When rendering to a paged device, tables will
+   often have to be broken across page boundaries. The THEAD, TFOOT and
+   TBODY elements allow the user agent to repeat the table foot at the
+   bottom of the current page, and then the table head at the top of
+   the new page before continuing on with the table body.
+
+   TFOOT is placed before the TBODY in the markup sequence, so that
+   browsers can render the foot before receiving all of the table data.
+   This is useful when very long tables are rendered with scrolling
+   body sections, or for paged output, involving breaking the table
+   over many pages.
+
+   Each THEAD, TFOOT and TBODY element must contain one or more TR
+   elements.
+
+   ID, CLASS, STYLE, LANG and DIR
+       See earlier description of common attributes.
+
+Dave Raggett                                                           Page 17
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+   ALIGN, CHAR, CHAROFF and VALIGN
+       Specify values for horizontal and vertical alignment within
+       table cells. See inheritance order of alignment properties.
+
+------------------------------------------------------------------------------
+Table Row (TR) elements
+
+   &lt;!ELEMENT tr - O (th|td)+&gt;
+
+   &lt;!ATTLIST tr                       -- table row --
+           %attrs;                    -- id, lang, style, dir and class --
+           %cell.halign;              -- horizontal alignment in cells --
+           %cell.valign;              -- vertical alignment in cells --
+           &gt;
+
+   The TR or table row element acts as a container for a row of table
+   cells. The end tag may be omitted.
+
+   ID, CLASS, STYLE, LANG and DIR
+       See earlier description of common attributes.
+
+   ALIGN, CHAR, CHAROFF and VALIGN
+       Specify values for horizontal and vertical alignment within
+       table cells. See inheritance order of alignment properties.
+
+------------------------------------------------------------------------------
+Table Cells: TH and TD
+
+   &lt;!ELEMENT (th|td) - O %body.content&gt;
+
+   &lt;!ATTLIST (th|td)                  -- header or data cell --
+           %attrs;                    -- id, lang, style, dir and class --
+           axis    CDATA    #IMPLIED  -- defaults to cell content --
+           axes    CDATA    #IMPLIED  -- list of axis names --
+           nowrap (nowrap)  #IMPLIED  -- suppress word wrap --
+           rowspan NUMBER   1         -- number of rows spanned by cell --
+           colspan NUMBER   1         -- number of cols spanned by cell --
+           %cell.halign;              -- horizontal alignment in cells --
+           %cell.valign;              -- vertical alignment in cells --
+           &gt;
+
+   TH elements are used to represent header cells, while TD elements
+   are used to represent data cells. This allows user agents to render
+   header and data cells distinctly, even in the absence of style
+   sheets.
+
+   Cells can span multiple rows and columns, and may be empty. Cells
+   spanning rows contribute to the column count on each of the spanned
+   rows, but only appear in the markup once (in the first row spanned).
+   The row count is determined by the number of TR elements. Any rows
+   implied by cells spanning rows beyond this should be ignored.
+
+
+
+Dave Raggett                                                           Page 18
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+   If the column count for the table is greater than the number of
+   cells for a given row (after including cells for spanned rows), the
+   missing cells are treated as occurring on the right hand side of the
+   table and rendered as empty cells. If the language context indicates
+   a right to left writing order, then the missing cells should be
+   placed on the left hand side.
+
+   It is possible to create tables with overlapping cells, for
+   instance:
+
+       &lt;table border&gt;
+       &lt;tr&gt;&lt;td rowspan=2&gt;1&lt;td&gt;2&lt;td&gt;3
+       &lt;tr&gt;&lt;td rowspan=2&gt;4
+       &lt;tr&gt;&lt;td colspan=2&gt;5&lt;td&gt;6
+       &lt;/table&gt;
+
+   which might look something like:
+
+       /-----------\
+       | 1 | 2 | 3 |
+       |   |-------|
+       |   | 4 |   |
+       |---|...|---|
+       | 5 :   | 6 |
+       \-----------/
+
+   In this example, the cells labelled 4 and 5 overlap. In such cases,
+   the rendering is implementation dependent.
+
+   The AXIS and AXES attributes for cells provide a means for defining
+   concise labels for cells. When rendering to speech, these attributes
+   may be used to provide abbreviated names for the headers relevant to
+   each cell. Another application is when you want to be able to later
+   process table contents to enter them into a database. These
+   attributes are then used to give database field names. The table&#x27;s
+   class attribute should be used to let the software recognize which
+   tables can be treated in this way.
+
+   ID, CLASS, STYLE, LANG and DIR
+       See earlier description of common attributes.
+
+   AXIS
+       This defines an abbreviated name for a header cell, e.g. which
+       can be used when rendering to speech. It defaults to the cell&#x27;s
+       content.
+
+   AXES
+       This is a comma separated list of axis names which together
+       identify the row and column headers that pertain to this cell.
+       It is used for example when rendering to speech to identify the
+       cell&#x27;s position in the table. If missing the user agent can try
+       to follow up columns and left along rows (right for some
+       languages) to find the corresponding header cells.
+
+Dave Raggett                                                           Page 19
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+   NOWRAP, e.g. &lt;TD NOWRAP&gt;
+       The presence of this attribute disables automatic wrapping of
+       text lines for this cell. If used uncautiously, it may result in
+       excessively wide cells.
+
+   ROWSPAN, e.g. &lt;TD ROWSPAN=2&gt;
+       A positive integer value that defines how may rows this cell
+       spans. The default ROWSPAN is 1. ROWSPAN=0 has a special
+       significance and implies that the cell spans all rows from the
+       current row up to the last row of the table.
+
+   COLSPAN, e.g. &lt;TD COLSPAN=2&gt;
+       A positive integer value that defines how may columns this cell
+       spans. The default COLSPAN is 1. COLSPAN=0 has a special
+       significance and implies that the cell spans all columns from
+       the current column up to the last column of the table.
+
+   ALIGN, CHAR, CHAROFF and VALIGN
+       Specify values for horizontal and vertical alignment within
+       table cells. See inheritance order of alignment properties.
+
+   Note: It is recommended that implementors provide support for the
+   Netscape 1.1 WIDTH attribute for TH and TD, although this isn&#x27;t part
+   of the current specification. Document authors are advised to use
+   the width attribute for the COL element instead.
+
+------------------------------------------------------------------------------
+Recommended Layout Algorithms
+
+   If the COLS attribute on the TABLE element specifies the number of
+   columns, then the table may be rendered using a fixed layout,
+   otherwise the autolayout algorithm described below should be used.
+
+Fixed Layout Algorithm
+
+   For this algorithm, it is assumed that the number of columns is
+   known. The column widths by default should be set to the same size.
+   Authors may override this by specifying relative or absolute column
+   widths, using the COL element. The default table width is the space
+   between the current left and right margins, but may be overridden by
+   the WIDTH attribute on the TABLE element, or determined from
+   absolute column widths. To deal with mixtures of absolute and
+   relative column widths, the first step is to allocate space from the
+   table width to columns with absolute widths. After this, the space
+   remaining is divided up between the columns with relative widths.
+
+   The table syntax alone is insufficient to guarantee the consistency
+   of attribute values. For instance, the number of columns specified
+   by the COLS attribute may be inconsistent with the number of columns
+   implied by the COL elements. This in turn, may be inconsistent with
+   the number of columns implied by the table cells. A further problem
+   occurs when the columns are too narrow to avoid clipping cell
+   contents. The width of the table as specified by the TABLE element
+
+Dave Raggett                                                           Page 20
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+   or COL elements may result in clipping of cell contents. It is
+   recommended that user agents attempt to recover gracefully from
+   these situations, e.g. by hyphenating words and resorting to
+   splitting words if hyphenation points are unknown.
+
+Autolayout Algorithm
+
+   If the COLS attribute is missing from the table start tag, then the
+   user agent should use the following autolayout algorithm. It uses
+   two passes through the table data and scales linearly with the size
+   of the table.
+
+   In the first pass, line wrapping is disabled, and the user agent
+   keeps track of the minimum and maximum width of each cell. The
+   maximum width is given by the widest line. As line wrap has been
+   disabled, paragraphs are treated as long lines unless broken by &lt;BR&gt;
+   elements. The minimum width is given by the widest word or image
+   etc. taking into account leading indents and list bullets etc. In
+   other words, if you were to format the cell&#x27;s content in a window of
+   its own, determine the minimum width you could make the window
+   before things begin to be clipped.
+
+   To cope with character alignment of cell contents, the algorithm
+   keeps three running min/max totals for each column: Left of align
+   char, right of align char and un-aligned. The minimum width for a
+   column is then: max(min_left + min_right, min_non-aligned).
+
+   The minimum and maximum cell widths are then used to determine the
+   corresponding minimum and maximum widths for the columns. These in
+   turn, are used to find the minimum and maximum width for the table.
+   Note that cells can contain nested tables, but this doesn&#x27;t
+   complicate the code significantly. The next step is to assign column
+   widths according to the current window size (more accurately - the
+   width between the left and right margins).
+
+   For cells which span multiple columns, a simple approach, as used by
+   Arena, is to evenly apportion the min/max widths to each of the
+   constituent columns. A slightly more complex approach is to use the
+   min/max widths of unspanned cells to weight how spanned widths are
+   apportioned. Experimental study suggests a blend of the two
+   approaches will give good results for a wide range of tables.
+
+   The table borders and intercell margins need to be included in
+   assigning column widths. There are three cases:
+
+   1.  The minimum table width is equal to or wider than the available
+       space. In this case, assign the minimum widths and allow the
+       user to scroll horizontally. For conversion to braille, it will
+       be necessary to replace the cells by references to notes
+       containing their full content. By convention these appear before
+       the table.
+
+   2.  The maximum table width fits within the available space. In this
+
+Dave Raggett                                                           Page 21
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+       case, set the columns to their maximum widths.
+
+   3.  The maximum width of the table is greater than the available
+       space, but the minimum table width is smaller. In this case,
+       find the difference between the available space and the minimum
+       table width, lets call it W. Lets also call D the difference
+       between maximum and minimum width of the table.
+
+       For each column, let d be the the difference between maximum and
+       minimum width of that column. Now set the column&#x27;s width to the
+       minimum width plus d times W over D. This makes columns with
+       lots of text wider than columns with smaller amounts.
+
+   This assignment step is then repeated for nested tables. In this
+   case, the width of the enclosing table&#x27;s cell plays the role of the
+   current window size in the above description. This process is
+   repeated recursively for all nested tables.
+
+   If the table width is specified with the WIDTH attribute, the user
+   agent attempts to set column widths to match. The WIDTH attribute is
+   not binding if this results in columns having less than their
+   minimum widths.
+
+   If relative widths are specified with the COL element, the algorithm
+   is modified to increase column widths over the minimum width to meet
+   the relative width constraints. The COL elements should be taken as
+   hints only, so columns shouldn&#x27;t be set to less than their minimum
+   width. Similarly, columns shouldn&#x27;t be made so wide that the table
+   stretches well beyond the extent of the window. If a COL element
+   specifies a relative width of zero, the column should always be set
+   to its minimum width.
+
+------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dave Raggett                                                           Page 22
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+HTML Table DTD
+
+   The DTD or document type definition provides the formal definition
+   of the allowed syntax for HTML tables.
+
+   &lt;!-- Content model entities imported from parent DTD:
+
+     %body.content; allows table cells to contain headers, paras,
+     lists, form elements and even arbitrarily nested tables.
+
+     %text; is text characters, including character entities and
+     character emphasis elements, IMG and anchors
+   --&gt;
+
+   &lt;!ENTITY % attrs
+          &quot;id      ID       #IMPLIED  -- element identifier --
+           class   NAMES    #IMPLIED  -- for subclassing elements --
+           style   CDATA    #IMPLIED  -- rendering annotation --
+           lang    NAME     #IMPLIED  -- as per <a href="/doc/html/rfc1766">RFC 1766</a> --
+           dir   (ltr|rtl)  #IMPLIED  -- I18N text direction --&quot;&gt;
+
+   &lt;!--
+    The BORDER attribute sets the thickness of the frame around the
+    table. The default units are screen pixels.
+
+    The FRAME attribute specifies which parts of the frame around
+    the table should be rendered. The values are not the same as
+    CALS to avoid a name clash with the VALIGN attribute.
+
+    The value &quot;border&quot; is included for backwards compatibility with
+    &lt;TABLE BORDER&gt; which yields frame=border and border=implied
+    For &lt;TABLE BORDER=1&gt; you get border=1 and frame=implied. In this
+    case, its appropriate to treat this as frame=border for backwards
+    compatibility with deployed browsers.
+   --&gt;
+
+   &lt;!ENTITY % Frame &quot;(void|above|below|hsides|lhs|rhs|vsides|box|border)&quot;&gt;
+
+   &lt;!--
+    The RULES attribute defines which rules to draw between cells:
+
+    If RULES is absent then assume:
+        &quot;none&quot; if BORDER is absent or BORDER=0 otherwise &quot;all&quot;
+   --&gt;
+
+   &lt;!ENTITY % Rules &quot;(none | basic | rows | cols | all)&quot;&gt;
+
+   &lt;!-- horizontal placement of table relative to window --&gt;
+   &lt;!ENTITY % Where &quot;(left|center|right)&quot;&gt;
+
+
+
+
+
+Dave Raggett                                                           Page 23
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+   &lt;!-- horizontal alignment attributes for cell contents --&gt;
+   &lt;!ENTITY % cell.halign
+           &quot;align  (left|center|right|justify|char) #IMPLIED
+            char    CDATA   #IMPLIED -- alignment char, e.g. char=&#x27;:&#x27; --
+            charoff CDATA   #IMPLIED -- offset for alignment char --&quot;
+           &gt;
+
+   &lt;!-- vertical alignment attributes for cell contents --&gt;
+   &lt;!ENTITY % cell.valign
+           &quot;valign  (top|middle|bottom|baseline)  #IMPLIED&quot;
+           &gt;
+
+   &lt;!ELEMENT table - - (caption?, (col|colgroup)*, thead?, tfoot?, tbody+)&gt;
+   &lt;!ELEMENT caption - - (%text;)+&gt;
+   &lt;!ELEMENT thead - O (tr+)&gt;
+   &lt;!ELEMENT tfoot - O (tr+)&gt;
+   &lt;!ELEMENT tbody O O (tr+)&gt;
+   &lt;!ELEMENT col - O EMPTY&gt;
+   &lt;!ELEMENT tr - O (th|td)+&gt;
+   &lt;!ELEMENT (th|td) - O %body.content&gt;
+
+   &lt;!ATTLIST table                    -- table element --
+           %attrs;                    -- id, lang, style, dir and class --
+           align   %Where;  #IMPLIED  -- table position relative to window --
+           width   CDATA    #IMPLIED  -- table width relative to window --
+           cols    NUMBER   #IMPLIED  -- used for immediate display mode --
+           border  CDATA    #IMPLIED  -- controls frame width around table --
+           frame   %Frame;  #IMPLIED  -- which parts of table frame to include --
+           rules   %Rules;  #IMPLIED  -- rulings between rows and cols --
+           cellspacing CDATA #IMPLIED -- spacing between cells --
+           cellpadding CDATA #IMPLIED -- spacing within cells --
+           &gt;
+
+   &lt;!-- ALIGN is used here for compatibility with deployed browsers --&gt;
+   &lt;!ENTITY % Caption &quot;(top|bottom|left|right)&quot;&gt;
+
+   &lt;!ATTLIST caption                  -- table caption --
+           %attrs;                    -- id, lang, style, dir and class --
+           align  %Caption; #IMPLIED  -- relative to table --
+           &gt;
+
+   &lt;!--
+   COLGROUP groups a set of COL elements. It allows you to group
+   several columns together. COL elements contained within a COLGROUP
+   element do not themselves define column groups.
+   --&gt;
+
+   &lt;!ELEMENT colgroup - O (col+)&gt;
+   &lt;!ATTLIST colgroup
+           %attrs;                    -- id, lang, style, dir and class --
+           %cell.halign;              -- horizontal alignment in cells --
+           %cell.valign;              -- vertical alignment in cells --
+           &gt;
+
+Dave Raggett                                                           Page 24
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+
+   &lt;!--
+    COL elements define the alignment properties for cells in a given
+    column or spanned columns. The WIDTH attribute specifies the
+    width of the columns, e.g.
+
+        width=64        width in screen pixels
+        width=0.5*      relative width of 0.5
+   --&gt;
+
+   &lt;!ATTLIST col                      -- column groups and properties --
+           %attrs;                    -- id, lang, style, dir and class --
+           span    NUMBER   1         -- number of columns spanned by group --
+           width   CDATA    #IMPLIED  -- relative width e.g. 2.5 --
+           %cell.halign;              -- horizontal alignment in cells --
+           %cell.valign;              -- vertical alignment in cells --
+           &gt;
+
+   &lt;!--
+       Use THEAD to duplicate headers when breaking table
+       across page boundaries, or for static headers when
+       body sections are rendered in scrolling panel.
+
+       Use TFOOT to duplicate footers when breaking table
+       across page boundaries, or for static footers when
+       body sections are rendered in scrolling panel.
+
+       Use multiple TBODY sections when rules are needed
+       between groups of table rows.
+   --&gt;
+   &lt;!ATTLIST (thead|tbody|tfoot)      -- table section --
+           %attrs;                    -- id, lang, style, dir and class --
+           %cell.halign;              -- horizontal alignment in cells --
+           %cell.valign;              -- vertical alignment in cells --
+           &gt;
+
+   &lt;!ATTLIST tr                       -- table row --
+           %attrs;                    -- id, lang, style, dir and class --
+           %cell.halign;              -- horizontal alignment in cells --
+           %cell.valign;              -- vertical alignment in cells --
+           &gt;
+
+   &lt;!ATTLIST (th|td)                  -- header or data cell --
+           %attrs;                    -- id, lang, style, dir and class --
+           axis    CDATA    #IMPLIED  -- defaults to cell content --
+           axes    CDATA    #IMPLIED  -- list of axis names --
+           nowrap (nowrap)  #IMPLIED  -- suppress word wrap --
+           rowspan NUMBER   1         -- number of rows spanned by cell --
+           colspan NUMBER   1         -- number of cols spanned by cell --
+           %cell.halign;              -- horizontal alignment in cells --
+           %cell.valign;              -- vertical alignment in cells --
+           &gt;
+
+
+Dave Raggett                                                           Page 25
+
+
+
+HTML Tables                                                        27-Oct-1995
+
+------------------------------------------------------------------------------
+References
+
+   Arena
+       W3C&#x27;s HTML3 browser, see &quot;http://www.w3.org/pub/WWW/Arena/&quot;.
+       Arena was originally created as a proof of concept demo for
+       ideas in the HTML+ specification that preceded HTML3. The
+       browser is now being re-implemented to provide a reference
+       implementation of HTML3 along with support for style sheets and
+       client-side scripting.
+
+   CALS
+       Continuous Acquisition and Life-Cycle Support (formerly
+       Computer-aided Acquisition and Logistics Support) (CALS) is a
+       Department of Defense (DoD) strategy for achieving effective
+       creation, exchange, and use of digital data for weapon systems
+       and equipment. More information can be found from the US Navy
+       CALS home page at <a href="http://navysgml.dt.navy.mil/cals.html">http://navysgml.dt.navy.mil/cals.html</a>
+
+
+   HTML 3.0
+       HyperText Markup Language Specification Version 3.0. This is the
+       initial draft specification as published in March 1995. Work on
+       refining HTML3 is proceeding piecemeal with the new table
+       specification as one of the pieces. For W3C related work on
+       HTML, see &quot;http://www.w3.org/pub/WWW/MarkUp/&quot;.
+
+   <a href="/doc/html/rfc1766">RFC 1766</a>
+       &quot;Tags for the Identification of Languages&quot;, by H. Alvestrand,
+       UNINETT, March 1995. This document can be downloaded from
+       &quot;ftp://ds.internic.net/rfc/rfc1766.txt&quot;.
+
+------------------------------------------------------------------------------
+    The World Wide Web Consortium:
+   <a href="http://www.w3.org/pub/WWW/Consortium/">http://www.w3.org/pub/WWW/Consortium/</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dave Raggett                                                           Page 26
+</pre></div>
+                    </div>
+                
+            </div>
+            <div class="d-print-none col-md-3 bg-light-subtle collapse show" id="sidebar">
+                <div class="position-fixed border-start sidebar overflow-scroll overscroll-none no-scrollbar">
+                    <div class="d-flex flex-column vh-100 pt-2 pt-lg-3 ps-3 pl-md-2 pl-lg-3">
+                        <div>
+                            <a class="btn btn-primary btn-sm" href="/doc/draft-ietf-html-tables/">Datatracker</a>
+                            <p class="fw-bold pt-2">
+                                
+                                    draft-ietf-html-tables-03
+                                
+                                <br>
+                                
+
+
+
+
+
+
+ 
+    <div>This is an older version of an Internet-Draft that was ultimately published as <a href="/doc/rfc1942/">RFC 1942</a>.</div>
+
+                            </p>
+                        </div>
+                        
+                        <ul class="nav nav-tabs nav-fill small me-2" role="tablist">
+                            <li class="nav-item" role="presentation" title="Document information">
+                                <button class="nav-link px-2"
+                                        id="docinfo-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#docinfo-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="docinfo-tab-pane"
+                                        aria-selected="true">
+                                    <i class="bi bi-info-circle"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Info</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation" title="Table of contents">
+                                <button class="nav-link px-2"
+                                        id="toc-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#toc-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="toc-tab-pane"
+                                        aria-selected="false">
+                                    <i class="bi bi-list-ol"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Contents</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation" title="Preferences">
+                                <button class="nav-link px-2"
+                                        id="pref-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#pref-tab-pane"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="pref-tab-pane"
+                                        aria-selected="false">
+                                    <i class="bi bi-gear"></i><span class="d-none d-md-block d-xl-inline ms-xl-1">Prefs</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="overflow-auto tab-content pt-2 me-2">
+                            <div class="tab-pane"
+                                 id="docinfo-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="docinfo-tab"
+                                 tabindex="0">
+                                <table class="table table-sm table-borderless">
+                                    
+
+
+
+
+
+
+
+<tbody class="meta align-top ">
+    <tr>
+        <th scope="row">Document</th>
+        <th scope="row">Document type</th>
+        <td class="edit"></td>
+        <td>
+            
+
+
+
+
+
+
+ 
+    <div>This is an older version of an Internet-Draft that was ultimately published as <a href="/doc/rfc1942/">RFC 1942</a>.</div>
+
+            
+            
+                <div class="badge rounded-pill text-bg-warning">
+                    Expired &amp; archived
+                </div>
+            
+            
+                
+
+
+
+
+    
+
+
+            
+        </td>
+    </tr>
+    
+        <tr>
+            <td></td>
+            <th scope="row">Select version</th>
+            <td class="edit"></td>
+            <td>
+                
+
+
+
+    <ul class="revision-list pagination pagination-sm text-center flex-wrap my-0">
+        
+            
+                 
+                    <li class="page-item ">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-tables-00"
+                        >
+                            00
+                        </a>
+                    </li>
+                
+            
+                 
+                    <li class="page-item ">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-tables-01"
+                        rel="nofollow">
+                            01
+                        </a>
+                    </li>
+                
+            
+                 
+                    <li class="page-item ">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-tables-02"
+                        rel="nofollow">
+                            02
+                        </a>
+                    </li>
+                
+            
+                 
+                    <li class="page-item active">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-tables-03"
+                        rel="nofollow">
+                            03
+                        </a>
+                    </li>
+                
+            
+                 
+                    <li class="page-item ">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-tables-04"
+                        rel="nofollow">
+                            04
+                        </a>
+                    </li>
+                
+            
+                 
+                    <li class="page-item ">
+                        <a class="page-link"
+                        href="/doc/html/draft-ietf-html-tables-05"
+                        >
+                            05
+                        </a>
+                    </li>
+                
+            
+            
+                <li class="page-item rfc">
+                    <a class="page-link"
+                    href="/doc/html/rfc1942">
+                        RFC 1942
+                    </a>
+                </li>
+            
+        
+    </ul>
+
+            </td>
+        </tr>
+        
+            <tr>
+                <td></td>
+                <th scope="row">Compare versions</th>
+                <td class="edit"></td>
+                <td>
+                    
+
+
+
+<form class="form-horizontal diff-form"
+      action="https://author-tools.ietf.org/iddiff"
+      method="get"
+      target="_blank">
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="From revision"
+                    name="url1">
+                
+                    <option value="rfc1942">
+                        RFC 1942
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-05">
+                        draft-ietf-html-tables-05
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-04" selected>
+                        draft-ietf-html-tables-04
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-03">
+                        draft-ietf-html-tables-03
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-02">
+                        draft-ietf-html-tables-02
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-01">
+                        draft-ietf-html-tables-01
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-00">
+                        draft-ietf-html-tables-00
+                        
+                    </option>
+                
+                
+            </select>
+
+            <select class="form-select form-select-sm mb-1 select2-field"
+                    data-max-entries="1"
+                    data-width="resolve"
+                    data-allow-clear="false"
+                    data-minimum-input-length="0"
+                    aria-label="To revision"
+                    name="url2">
+                
+                    <option value="rfc1942">
+                        RFC 1942
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-05" selected>
+                        draft-ietf-html-tables-05
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-04">
+                        draft-ietf-html-tables-04
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-03">
+                        draft-ietf-html-tables-03
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-02">
+                        draft-ietf-html-tables-02
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-01">
+                        draft-ietf-html-tables-01
+                        
+                    </option>
+                
+                    <option value="draft-ietf-html-tables-00">
+                        draft-ietf-html-tables-00
+                        
+                    </option>
+                
+                
+            </select>
+
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--html"
+                    name="difftype">
+                Side-by-side
+            </button>
+            
+            <button type="submit"
+                    class="btn btn-primary btn-sm"
+                    value="--hwdiff"
+                    name="difftype">
+                Inline
+            </button>
+
+</form>
+                </td>
+            </tr>
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">Author</th>
+        <td class="edit">
+            
+        </td>
+        <td>
+            
+            
+            
+        </td>
+    </tr>
+    
+    
+        
+        
+        
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            RFC stream
+        </th>
+        <td class="edit">
+            
+        </td>
+        <td >
+            
+                
+                
+                    
+                        
+
+
+
+<img alt="IETF Logo"
+     class="d-lm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor-white.svg"
+        
+     
+     >
+
+<img alt="IETF Logo"
+     class="d-dm-none w-25 mt-1"
+     
+     
+        
+             src="https://static.ietf.org/dt/12.70.0/ietf/images/ietf-logo-nor.svg"
+        
+     
+     >
+                    
+                
+                
+            
+        </td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <th scope="row">
+            Other formats
+        </th>
+        <td class="edit">
+        </td>
+        <td>
+            
+                
+    <div class="buttonlist">
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="https://www.ietf.org/archive/id/draft-ietf-html-tables-05.txt">
+            
+                <i class="bi bi-file-text"></i> txt
+            
+        </a>
+        
+    
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/draft-ietf-html-tables/05/bibtex/">
+            
+                <i class="bi bi-file-ruled"></i> bibtex
+            
+        </a>
+        
+    
+        
+        <a class="btn btn-primary btn-sm"
+          
+          target="_blank"
+          href="/doc/bibxml3/draft-ietf-html-tables-05.xml">
+            
+                <i class="bi bi-file-code"></i> bibxml
+            
+        </a>
+        
+    
+</div>
+
+            
+        </td>
+    </tr>
+    
+    
+        
+            <tr>
+                <td>
+                </td>
+                <th scope="row">
+                    Additional resources
+                </th>
+                <td class="edit">
+                    
+                </td>
+                <td>
+                    
+                        
+                        
+                            
+                                <a href="http://www.ics.uci.edu/pub/ietf/html/">
+                                    Mailing list discussion
+                                </a>
+                            
+                        
+                    
+                </td>
+            </tr>
+        
+    
+</tbody>
+                                </table>
+                                <a class="btn btn-sm btn-warning mb-3"
+                                target="_blank"
+                                href="https://github.com/ietf-tools/datatracker/issues/new/choose">
+                                    Report a datatracker bug
+                                    <i class="bi bi-bug"></i>
+                                </a>
+                            </div>
+                            <div class="tab-pane mb-5"
+                                 id="toc-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="toc-tab"
+                                 tabindex="0">
+                                <nav class="nav nav-pills flex-column small" id="toc-nav">
+                                </nav>
+                            </div>
+                            <div class="tab-pane mb-5 small"
+                                 id="pref-tab-pane"
+                                 role="tabpanel"
+                                 aria-labelledby="pref-tab"
+                                 tabindex="0">
+                                <label class="form-label fw-bold mb-2">Show sidebar by default</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="sidebar" id="on-radio">
+                                    <label class="btn btn-outline-primary" for="on-radio">Yes</label>
+                                    <input type="radio" class="btn-check" name="sidebar" id="off-radio">
+                                    <label class="btn btn-outline-primary" for="off-radio">No</label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">Tab to show by default</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="deftab" id="docinfo-radio">
+                                    <label class="btn btn-outline-primary" for="docinfo-radio">
+                                        <i class="bi bi-info-circle me-1"></i>Info
+                                    </label>
+                                    <input type="radio" class="btn-check" name="deftab" id="toc-radio">
+                                    <label class="btn btn-outline-primary" for="toc-radio">
+                                        <i class="bi bi-list-ol me-1"></i>Contents
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">HTMLization configuration</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="htmlconf" id="txt-radio">
+                                    <label class="btn btn-outline-primary" for="txt-radio" title="This is the traditional HTMLization method.">
+                                        <i class="bi bi-badge-sd me-1"></i>HTMLize the plaintext
+                                    </label>
+                                    <input type="radio" class="btn-check" name="htmlconf" id="html-radio">
+                                    <label class="btn btn-outline-primary" for="html-radio" title="This is the modern HTMLization method.">
+                                        <i class="bi bi-badge-hd me-1"></i>Plaintextify the HTML
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2" for="ptsize">Maximum font size</label>
+                                <input type="range" class="form-range" min="7" max="16" id="ptsize" oninput="ptdemo.value = ptsize.value">
+                                <label class="form-label fw-bold mt-4 mb-2">Page dependencies</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="pagedeps" id="inline-radio">
+                                    <label class="btn btn-outline-primary" for="inline-radio" title="Generate larger, standalone web pages that do not require network access to render.">
+                                        <i class="bi bi-box me-1"></i>Inline
+                                    </label>
+                                    <input type="radio" class="btn-check" name="pagedeps" id="reference-radio">
+                                    <label class="btn btn-outline-primary" for="reference-radio" title="Generate regular web pages that require network access to render.">
+                                        <i class="bi bi-link-45deg me-1"></i>Reference
+                                    </label>
+                                </div>
+                                <label class="form-label fw-bold mt-4 mb-2">Citation links</label>
+                                <div class="btn-group-vertical btn-group-sm d-flex" role="group">
+                                    <input type="radio" class="btn-check" name="reflinks" id="refsection-radio">
+                                    <label class="btn btn-outline-primary" for="refsection-radio" title="Citation links go to the reference section.">
+                                        <i class="bi bi-arrow-clockwise"></i> Go to reference section
+                                    </label>
+                                    <input type="radio" class="btn-check" name="reflinks" id="citation-radio">
+                                    <label class="btn btn-outline-primary" for="citation-radio" title="Citation links go directly to the cited document.">
+                                        <i class="bi bi-link-45deg me-1"></i>Go to linked document
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<script>
+  var _paq = window._paq || [];
+  
+  _paq.push(['disableCookies']);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.ietf.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', 7]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.ietf.org/matomo.php?idsite=7" style="border:0;" alt="" /></p></noscript>
+
+    </body>
+</html>

@@ -1,0 +1,146 @@
+<!-- MHonArc v2.6.15 -->
+<!--X-Subject: Re: [Usability] Using nouns or verbs for the disclosure widgets -->
+<!--X-From-R13: [nggurj Bnhy Fubznf <zcgNzlernyobk.pbz> -->
+<!--X-Date: Wed,  7 Jun 2006 20:08:27 &#45;0400 (EDT) -->
+<!--X-Message-Id: 83a57a3908c9daadda5812fafca772a5@myrealbox.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 1149595300.6792.6.camel@sebi&#45;mac -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Re: [Usability] Using nouns or verbs for the disclosure widgets</TITLE>
+<LINK REV="made" HREF="mailto:mpt myrealbox com">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+[<a href="msg00014.html">Date Prev</a>][<a href="msg00016.html">Date Next</a>] &nbsp; [<a href="msg00011.html">Thread Prev</a>][<a href="msg00012.html">Thread Next</a>] &nbsp; 
+[<A HREF="thread.html#00015">Thread Index</A>]
+[<A HREF="date.html#00015">Date Index</A>]
+[<A HREF="author.html#00015">Author Index</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [Usability] Using nouns or verbs for the disclosure widgets</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><em>From</em>: Matthew Paul Thomas &lt;mpt myrealbox com&gt;</li>
+<li><em>To</em>: Gnome usability &lt;usability gnome org&gt;</li>
+<li><em>Subject</em>: Re: [Usability] Using nouns or verbs for the disclosure widgets</li>
+<li><em>Date</em>: Wed, 7 Jun 2006 20:07:37 -0400</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+On Jun 6, 2006, at 8:01 AM, Sebastian Heinlein wrote:
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+...
+would you recommend to use a noun for the disclosure widgets e.g.
+&quot;Details&quot; or verbs e.g. &quot;Show details&quot;/&quot;Hide details&quot;?
+...
+</pre></blockquote><pre style="margin: 0em;">
+
+Hi Sebastian
+
+</pre><tt>I suggest making the label a summary of the values of the disclosed 
+</tt><tt>controls, if practical, not just a description. &quot;Details&quot; is the least 
+</tt><tt>informative example of a description, and may be appropriate if you 
+</tt><tt>want the expander to be very unobtrusive. But a more informative label 
+</tt><tt>may reduce the need for people to expand the section at all. For 
+</tt><tt>example,
+</tt><pre style="margin: 0em;">
+
+    |&gt; Progress details
+
+which expands to
+    __
+    \/ Progress details
+
+       Time remaining: about 11 minutes
+             Progress: 15 of 29 items
+              Copying: vilanova_presentation.ogg
+                 Size: 10.0 MB of 45.0 MB
+
+is much less useful than
+
+    |&gt; Time remaining: about 11 minutes
+
+which expands to
+    __
+    \/ Time remaining: about 11 minutes
+
+             Progress: 15 of 29 items
+              Copying: vilanova_presentation.ogg
+                 Size: 10.0 MB of 45.0 MB
+
+</pre><tt>Conversely, a more informative label may give a clue of unusual things 
+</tt><tt>that you set accidentally, or that you set long ago and then forgot 
+</tt><tt>about. For example:
+</tt><pre style="margin: 0em;">
+    __
+    \/ Custom style sheet (2 rules active)
+     __________________________________________________________
+    |:link, :visited {text-decoration: underline !important}   |
+    |a[href^=&quot;javascript:&quot;] {color: green !important}          |
+    |                                                          |
+    |__________________________________________________________|
+
+</pre><tt>Switching between &quot;Show Foo&quot; and &quot;Hide Foo&quot; would make the function of 
+</tt><tt>the control more obvious, but it would also make the label jump around 
+</tt><tt>between collapsed and expanded states. It also would result in ugly 
+</tt><tt>repetition where several expander controls were next to each other.
+</tt><pre style="margin: 0em;">
+
+    For example, repeating &quot;Show&quot;      Printing the heading for each
+    in a formatting palette would      expandable area by itself is
+    look nasty:                        much easier to scan:
+     ___________________________        ___________________________
+    |(X)     Formatting      (-)|      |(X)     Formatting      (-)|
+    |___________________________|      |___________________________|
+    |_&gt;_Show_Font_Settings______|      |_&gt;_Font____________________|
+    |_&gt;_Show_Paragraph_Settings_|      |_&gt;_Paragraph_______________|
+    |_&gt;_Show_List_Settings______|      |_&gt;_List____________________|
+    |_&gt;_Show_Border_Settings____|      |_&gt;_Border__________________|
+    |_&gt;_Show_Page_Settings______|      |_&gt;_Page____________________|
+
+Cheers
+--
+Matthew Paul Thomas
+<a  rel="nofollow" href="http://mpt.net.nz/">http://mpt.net.nz/</a>
+
+
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00008" href="msg00008.html">[Usability] Using nouns or verbs for the disclosure widgets</a></strong>
+<ul><li><em>From:</em> Sebastian Heinlein</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<HR>
+[<a href="msg00014.html">Date Prev</a>][<a href="msg00016.html">Date Next</a>] &nbsp; [<a href="msg00011.html">Thread Prev</a>][<a href="msg00012.html">Thread Next</a>] &nbsp; 
+[<A HREF="thread.html#00015">Thread Index</A>]
+[<A HREF="date.html#00015">Date Index</A>]
+[<A HREF="author.html#00015">Author Index</A>]
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+</body>
+</html>

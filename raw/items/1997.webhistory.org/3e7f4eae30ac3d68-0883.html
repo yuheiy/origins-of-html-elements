@@ -1,0 +1,161 @@
+<!-- received="Fri Sep 10 17:44:19 1993 PDT" -->
+<!-- sent="Fri, 10 Sep 93 17:08:40 BST" -->
+<!-- name="Dave_Raggett" -->
+<!-- email="dsr@hplb.hpl.hp.com" -->
+<!-- subject="Your views on changes to HTML+" -->
+<!-- id="9309101608.AA29522@manuel.hpl.hp.com" -->
+<!-- inreplyto="" -->
+<title>WWW-Talk Jul-Sep 1993: Your views on changes to HTML+</title>
+<h1>Your views on changes to HTML+</h1>
+Dave_Raggett (<i>dsr@hplb.hpl.hp.com</i>)<br>
+<i>Fri, 10 Sep 93 17:08:40 BST</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#883">[ date ]</a><a href="index.html#883">[ thread ]</a><a href="subject.html#883">[ subject ]</a><a href="author.html#883">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0884.html">Omy Ronquillo: "Re: Announcing Access Authorization Documentation"</a>
+<li> <b>Previous message:</b> <a href="0882.html">Ari Luotonen: "Announcing Access Authorization Documentation"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0930.html">Timo Harmo - SocSci U of Helsinki: "Re: Your views on changes to HTML+"</a>
+</ul>
+<hr>
+<!-- body="start" -->
+I would really value your input on possible changes to HTML+ following the<br>
+www workshop and subsequent discussions on www-talk. I hope to produce a<br>
+second draft within a couple of weeks for comments. When we are happy with<br>
+the revised spec, I will then put it forward to the IETF for consideration as<br>
+an internet draft.<br>
+<p>
+HTML+ is positioned as a simple format especially suited to the needs of the<br>
+World Wide Web, with a wider range of features than the earlier HTML format,<br>
+e.g. tables, forms, figures, equations, and improved support for dividing<br>
+large works into a number of smaller nodes.<br>
+<p>
+<p>
+Supporting large works, e.g. books<br>
+----------------------------------<br>
+<p>
+The existing draft is too concise and needs worked out examples of how<br>
+books and other large works can be broken up into a number of separate<br>
+nodes. The features for implicit and explicit navigation links need<br>
+further explanation, and offer a way of making available vast quantities<br>
+of works for which<the copyright has now expired, and which<would be too<br>
+large as individual nodes. The general idea is to allow toolbars to show<br>
+navigation buttons dependent on the node in question. This would work well<br>
+even for scanned documents with each page as a separate node.<br>
+<p>
+A node could be designated as the top level with the order of links in this<br>
+node implying the prev/next sequence for reading its contents. Alternatively,<br>
+a more general hierarchy can be defined analogous to printed books with a<br>
+table of contents (TOC) as just another node. In this case, the prev/next<br>
+sequence is defined independently of the TOC. The GROUP tag is used to define<br>
+hierarchical structures independently of node boundaries. (I would also like<br>
+to rename GROUP to SECT to make its role more obvious).<br>
+<p>
+<p>
+Tables<br>
+------<br>
+<p>
+Minor changes only, &lt;tbl&gt; to be replaced by &lt;table&gt; and &lt;tt&gt; by &lt;tblcap&gt;.<br>
+&lt;tb&gt; to be dropped. The performance fears due to the need for a pre-pass<br>
+seem to be unwarranted, since this information can be cached and used for<br>
+resizing and scrolling.<br>
+<p>
+<p>
+Figures<br>
+-------<br>
+<p>
+Due to lack of interest and to ensure simplicity, the &lt;FIGT&gt; element for<br>
+overlays is to be dropped. It could be reinstated in future versions of HTML+.<br>
+Some people at w^5 suggested that &lt;IMG&gt; be used to define the image content<br>
+for figures. I am against this as the IMG align attribute (top, middle,<br>
+bottom) is quite different from that of FIG (left, center, right). It also<br>
+avoids having to add alignment attributes to the EMBED tag.<br>
+<p>
+<p>
+Lists<br>
+-----<br>
+<p>
+As currently drafted HTML+ doesn't allow DL lists within UL and OL lists.<br>
+Some people have complained that this is unnecessarily restrictive.<br>
+<p>
+O'Reilly &amp; Associates have suggested we give authors greater control over<br>
+lists perhaps inspired by the DocBook DTD. Thus for UL lists we could<br>
+support mark=bullet, dash, box, check or a URL/URN for an icon. A small set<br>
+of standard symbols<would be useful. For ordered lists, we may want to<br>
+allow authors to select the style: Arabic (1,2, 3), UpperAlpha (A, B, C)<br>
+and LowerRoman (i, ii, iii) etc. Alternatively, authors should be allowed<br>
+to specify the sequence identifier as an attribute e.g. &lt;LI ITEM="c)"&gt;<br>
+<p>
+For unordered lists, a new attribute wrap=horiz or wrap=vert would allow<br>
+multicolumn lists to be wrapped appropriately. For the second case with N<br>
+items in the list, the current window size determines the number of columns C,<br>
+and each column then has the N/C items (as in a standard Unix ls command).<br>
+This mechanism requires a simple pre-pass to establish<the column width and<br>
+total number of items. This information can be cached as for tables. <br>
+<p>
+<p>
+Normal text<br>
+-----------<br>
+<p>
+The line break tag &lt;BR&gt; is to be dropped in favour of a &lt;L&gt;....&lt;/L&gt; element<br>
+which<can take an ID as used in the TEI DTD. This gives greater flexibility<br>
+for identifying lines e.g. in old texts.<br>
+<p>
+Perhaps the DTD should require authors to use a &lt;P&gt; element rather than<br>
+allowing naked %text;<br>
+<p>
+<p>
+Emphasis<br>
+--------<br>
+<p>
+At the www workshop, some people complained that the EM element was<br>
+overloaded and should be split up. Perhaps we should move to something closer<br>
+to HTML with a small set of presentation specific tags plus a wider set of<br>
+logical tags, e.g.<br>
+<p>
+    Presentation specific tags:<br>
+<p>
+        &lt;I&gt;, &lt;B&gt;, &lt;U&gt;, &lt;S&gt; for italic, bold, underline and strike-thru<br>
+<p>
+        These could be nested and optionally take a role attribute.<br>
+<p>
+    Bibliographic tags:<br>
+<p>
+        &lt;author&gt;, &lt;cite&gt;, &lt;isbn&gt;, ...<br>
+<p>
+    Computer Documentation tags:<br>
+<p>
+        &lt;cmd&gt;, &lt;opt&gt;, &lt;kbd&gt;, &lt;var&gt;, &lt;dfn&gt;, ...<br>
+<p>
+    Miscellaneous tags:<br>
+<p>
+        &lt;sub&gt;, &lt;sub&gt;, &lt;footnote&gt;, &lt;margin&gt;<br>
+<p>
+The logical tags could be an open ended set with their rendering controlled<br>
+via associated style sheets. This approach means that browsers can simply<br>
+ignore such<tags and render their contents as normal text, unless otherwise<br>
+directed. In general unknown tags should be ignored and their contents parsed<br>
+as if the tag wasn't present. This also applies to unknown attributes.<br>
+<p>
+<p>
+Changes to documents<br>
+--------------------<br>
+<p>
+In addition to the change bar elements, there are two new elements for legal<br>
+documents:  &lt;added&gt; and &lt;removed&gt; rendered as strike-thru and italic text<br>
+respectively (along with optional colour cues).<br>
+<p>
+Many thanks,<br>
+<p>
+Dave Raggett<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0884.html">Omy Ronquillo: "Re: Announcing Access Authorization Documentation"</a>
+<li> <b>Previous message:</b> <a href="0882.html">Ari Luotonen: "Announcing Access Authorization Documentation"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0930.html">Timo Harmo - SocSci U of Helsinki: "Re: Your views on changes to HTML+"</a>
+</ul>

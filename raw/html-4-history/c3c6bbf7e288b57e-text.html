@@ -1,0 +1,931 @@
+<!-- $Id: text.src,v 1.50 1997/07/07 17:11:12 lehors Exp $ -->
+<HEAD>
+<TITLE>Paragraphs, Lines, and Phrases</TITLE>
+<LINK rel="next" SRC="lists.html">
+<LINK rel="prev" SRC="global.html">
+<LINK rel="STYLESHEET" href="../style/default.css" type="text/css">
+</HEAD>
+
+<body>
+<div class="navbar">
+<center><a href="global.html">previous</a> &nbsp; <a href="lists.html">next</a> &nbsp; <a href="../contents.html">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center><hr>
+</div>
+
+<H1 align="center">Text<!-- Paragraphs, Lines, and Phrases --><a name="h-7.3">&nbsp;</a></H1>
+<div class="subtoc"><p><strong>Contents</strong>
+<ol>
+<li><a href="text.html#h-7.3.1">White space</a>
+<li><a href="text.html#h-7.3.2">Structured text</a>
+<ol>
+<li><a href="text.html#h-7.3.2.1">Phrasal elements: 
+<samp class="einst2">EM</samp>,
+<samp class="einst2">STRONG</samp>,
+<samp class="einst2">DFN</samp>,
+<samp class="einst2">CODE</samp>,
+<samp class="einst2">SAMP</samp>,
+<samp class="einst2">KBD</samp>,
+<samp class="einst2">VAR</samp>,
+<samp class="einst2">CITE</samp>, and
+<samp class="einst2">ACRONYM</samp></a>
+<li><a href="text.html#h-7.3.2.2">Quotations: The <samp class="einst2">BLOCKQUOTE</samp> and <samp class="einst2">Q</samp> elements</a>
+<li><a href="text.html#h-7.3.2.3">Subscripts and superscripts: the <samp class="einst2">SUB</samp> and <samp class="einst2">SUP</samp> elements</a>
+</ol>
+<li><a href="text.html#h-7.3.3">Lines and Paragraphs</a>
+<ol>
+<li><a href="text.html#h-7.3.3.1">Paragraphs: the <samp class="einst2">P</samp>
+element</a>
+<li><a href="text.html#h-7.3.3.2">Visual rendering of paragraphs</a>
+<li><a href="text.html#h-7.3.3.3">Controlling line breaks</a>
+<li><a href="text.html#h-7.3.3.4">Hyphenation</a>
+<li><a href="text.html#h-7.3.3.5">Preformatted text: The <samp class="einst2">PRE</samp> element</a>
+</ol>
+<li><a href="text.html#h-7.3.4">Marking document changes: The INS 
+and DEL elements</a>
+<ol>
+<li><a href="text.html#h-7.3.4.1">Date and time format</a>
+</ol>
+</ol>
+</div>
+
+<p>The following sections discuss issues surrounding the structuring of
+text. Elements that format text (alignment elements, font elements,
+style sheets, etc.) are discussed in later sections of the
+specification. Please consult the section on SGML for questions about
+<a href="../charset.html#doc-char-set">character syntax</a>. 
+
+<h2><a name="whitespace">White space<a name="h-7.3.1">&nbsp;</a></h2>
+
+<p>The SGML specification distinguishes between record start
+characters (line feeds) and record ends (carriage returns). On the
+Internet, some platforms use carriage return line feed pairs for line
+breaks, some use just line feeds, and others just carriage returns. As
+a result, HTML user agents should consider both isolated line feed and
+carriage return characters as line breaks, with carriage return line
+feed pairs treated as single line breaks.
+
+<p>A line break occurring immediately following a start tag should be
+discarded, as should a line break occurring immediately before an end
+tag. This applies to all HTML elements without exceptions. In
+addition, for all elements except <a href="text.html#edef-PRE"><samp class="einst">PRE</samp></a>, a
+sequence of contiguous white space characters such as spaces,
+horizontal tabs, form feeds and line breaks, should be replaced by a
+single word space.
+
+<p>Since the notion of what word space is varies from script (written
+language) to script, user agents should collapse white space in
+script-sensitive ways. For example, in Latin scripts, a single word
+space is just a space (ASCII decimal 32), while in Thai it is a
+zero-width word separator. In Japanese and Chinese, a word space is
+ignored entirely. 
+
+<p>These rules allow authors to use white space to lay out their
+markup as desired, clarifying the source HTML with white space that
+will not be rendered by a user agent.
+
+<P>For instance, the following source HTML:
+
+<div class=example>
+<pre>
+&lt;P&gt;
+  This example shows a paragraph and a list.
+&lt;/P&gt;
+
+&lt;UL&gt;
+  &lt;LI&gt;
+    This is the &lt;EM&gt;first&lt;/EM&gt; item
+  &lt;/LI&gt;
+
+  &lt;LI&gt;
+    This is the &lt;EM&gt;second&lt;/EM&gt; item
+  &lt;/LI&gt;
+&lt;/UL&gt;
+</pre>
+</div>
+
+<p>may be rewritten (by omitting end tags) and laid out
+differently (by using less white space):
+
+<div class=example>
+<pre>
+&lt;P&gt;This example shows a paragraph and a list.
+
+&lt;UL&gt;
+  &lt;LI&gt;This is the &lt;EM&gt;first&lt;/EM&gt; item
+  &lt;LI&gt;This is the &lt;EM&gt;second&lt;/EM&gt; item
+&lt;/UL&gt;
+</pre>
+
+<P>but should be rendered identically by a user agent.
+</div>
+
+<p>The <a href="text.html#edef-PRE"><samp class="einst">PRE</samp></a> element is used for <a
+href="#preformatted">preformatted text</a>, where white space is
+significant. The <a href="text.html#edef-PRE"><samp class="einst">PRE</samp></a> element is described
+below.
+
+<div class="note">
+<em>Word space processing can and should be done even in the absence
+of language information specified by the <a href="dirlang.html#adef-lang"><samp
+class="ainst">lang</samp></a> attribute. This is a script issue, not a
+language issue.</em>
+</div>
+
+
+<h2>Structured text<a name="h-7.3.2">&nbsp;</a></h2>
+
+<h3>Phrasal elements: 
+<a name="edef-EM"><samp class="edef">EM</samp></a>,
+<a name="edef-STRONG"><samp class="edef">STRONG</samp></a>,
+<a name="edef-DFN"><samp class="edef">DFN</samp></a>,
+<a name="edef-CODE"><samp class="edef">CODE</samp></a>,
+<a name="edef-SAMP"><samp class="edef">SAMP</samp></a>,
+<a name="edef-KBD"><samp class="edef">KBD</samp></a>,
+<a name="edef-VAR"><samp class="edef">VAR</samp></a>,
+<a name="edef-CITE"><samp class="edef">CITE</samp></a>, and
+<a name="edef-ACRONYM"><samp class="edef">ACRONYM</samp></a><a name="h-7.3.2.1">&nbsp;</a></h3>
+
+<pre class="dtd-fragment">
+&lt;!ENTITY % phrase "<a href="text.html#edef-EM"><samp class="einst">EM</samp></a> | <a href="text.html#edef-STRONG"><samp class="einst">STRONG</samp></a> | <a href="text.html#edef-DFN"><samp class="einst">DFN</samp></a> | <a href="text.html#edef-CODE"><samp class="einst">CODE</samp></a> |
+                   <a href="text.html#edef-SAMP"><samp class="einst">SAMP</samp></a> | <a href="text.html#edef-KBD"><samp class="einst">KBD</samp></a> | <a href="text.html#edef-VAR"><samp class="einst">VAR</samp></a> | <a href="text.html#edef-CITE"><samp class="einst">CITE</samp></a> | <a href="text.html#edef-ACRONYM"><samp class="einst">ACRONYM</samp></a>"&gt;
+&lt;!ELEMENT (%font|%phrase) - - (%inline)*&gt;
+&lt;!ATTLIST (%font|%phrase)
+  %attrs;                          -- %coreattrs, %i18n, %events --
+  &gt;
+</pre>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<div class="aref-list"><P>
+<em>Attributes defined elsewhere</em> 
+<ul>
+<li><a href="global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="global.html#adef-class"><samp class="ainst">class</samp></a>
+    (<a href="../struct/global.html#id-and-class">document-wide
+	   identifiers</a>) 
+<li><a href="dirlang.html#adef-lang"><samp class="ainst">lang</samp></a> (<a
+    href="../struct/dirlang.html#language-info">language
+    information</a>), <a href="dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+    (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+<li><a href="global.html#adef-title"><samp class="ainst">title</samp></a> (<a
+	     href="../struct/global.html#titles">element
+	     titles</a>) 
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a> (<a 
+    href="../present/styles.html#style-element">inline style
+    information</a>) 
+<li><a href="../interact/scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>, <a href="../interact/scripts.html#adef-ondblclick"><samp
+class="ainst">ondblclick</samp></a>, <a href="../interact/scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>, <a href="../interact/scripts.html#adef-onmouseup"><samp
+class="ainst">onmouseup</samp></a>, <a href="../interact/scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>, <a href="../interact/scripts.html#adef-onmousemove"><samp
+class="ainst">onmousemove</samp></a>, <a href="../interact/scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>, <a href="../interact/scripts.html#adef-onkeypress"><samp
+class="ainst">onkeypress</samp></a>, <a href="../interact/scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>, <a href="../interact/scripts.html#adef-onkeyup"><samp
+class="ainst">onkeyup</samp></a> (<a
+href="../interact/scripts.html#events">intrinsic events</a>)
+</ul>
+</div>
+
+
+<p>Phrasal elements add structural information to text fragments.
+The usual meanings of phrasal elements are following:
+
+<P>
+<dl>
+<dt><b>EM:</b><dd> Indicates emphasis.
+<dt><b>STRONG:</b><dd> Indicates stronger emphasis.
+<dt><b>CITE:</b><dd> Cites a reference or other source.
+<dt><b>DFN:</b><dd> Indicates that this is the defining instance of the
+enclosed term.
+<dt><b>CODE:</b><dd> Designates a fragment of computer code.
+<dt><b>SAMP:</b><dd> Designates sample output from programs, scripts, etc.
+<dt><b>KBD:</b><dd> Indicates text to be entered by the user.
+<dt><b>VAR:</b><dd> Indicates an instance of a variable or program argument.
+<dt><b>ACRONYM:</b><dd> Indicates an acronym (e.g., WWW, HTTP, URL, etc.).
+</dl>
+
+<P><a href="text.html#edef-EM"><samp class="einst">EM</samp></a> and <a href="text.html#edef-STRONG"><samp class="einst">STRONG</samp></a>
+are useful in general to indicate emphasis. The other phrasal elements
+have particular significance in technical documents. These examples
+illustrate the rendering of some of the textual markup elements:
+
+<pre class="example">
+"More information can be found in &lt;CITE&gt;[ISO-0000]&lt;/CITE&gt;."
+
+"Please refer to the following reference number in future
+correspondence: &lt;STRONG&gt;1-234-55&lt;/STRONG&gt;"
+</pre>
+
+<p>The <a href="text.html#edef-ACRONYM"><samp class="einst">ACRONYM</samp></a> element allows authors to
+clearly indicate a sequence of characters that compose an acronym
+(e.g., "WWW", "FNAC", "IRS", etc.). The ability to identify acronyms
+is useful to spell checkers, speech synthesizers, and other user
+agents and tools.
+
+<P>The content of the <a href="text.html#edef-ACRONYM"><samp class="einst">ACRONYM</samp></a> element
+specifies the acronym itself. The <a href="global.html#adef-title"><samp class="ainst">title</samp></a>
+attribute may be used to provide the text to which the acronym
+expands. Here are some sample acronym definitions:
+
+
+<pre class="example">
+&lt;ACRONYM title="World Wide Web"&gt;WWW&lt;/ACRONYM&gt;
+&lt;ACRONYM 
+   lang="fr" 
+   title="Soci&amp;eacute;t&amp;eacute; Nationale de Chemins de Fer"&gt;
+   SNCF
+&lt;/ACRONYM&gt;
+</pre>
+
+<p>The presentation of phrasal elements depends on the user agent.
+Generally, visual user agents present <a href="text.html#edef-EM"><samp class="einst">EM</samp></a>
+text in italics and <a href="text.html#edef-STRONG"><samp class="einst">STRONG</samp></a> text in bold
+font. Speech synthesiser agents might change the synthesis parameters,
+such as volume, pitch and rate accordingly. Acronyms are generally
+spoken by pronouncing the individual letters separately.
+
+<div class="note">
+<p><em>Note: This version of HTML doesn't include special markup for
+abbreviations. We recommend that speech synthesizers use client-side
+dictionaries to expand any abbreviations found in the document. For
+specialized vocabularies, <a href="links.html#edef-LINK"><samp class="einst">LINK</samp></a> elements in
+the document head can be used to reference suitable dictionaries.</em>
+</div>
+
+<h3>Quotations: The <a name="edef-BLOCKQUOTE"><samp
+class="edef">BLOCKQUOTE</samp></a> and <a name="edef-Q"><samp
+class="edef">Q</samp></a> elements<a name="h-7.3.2.2">&nbsp;</a></h3>
+
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="text.html#edef-BLOCKQUOTE"><samp class="einst">BLOCKQUOTE</samp></a> - - %block&gt;
+&lt;!ATTLIST BLOCKQUOTE
+  %attrs;                          -- %coreattrs, %i18n, %events --
+  <samp class="ainst-BLOCKQUOTE">cite</samp>        %URL       #IMPLIED  -- URL for source document or msg --
+  &gt;
+&lt;!ELEMENT <a href="text.html#edef-Q"><samp class="einst">Q</samp></a> - - (%inline)*&gt;
+&lt;!ATTLIST Q
+  %attrs;                          -- %coreattrs, %i18n, %events --
+  <a href="text.html#adef-cite-Q"><samp class="ainst-Q">cite</samp></a>        %URL       #IMPLIED  -- URL for source document or msg --
+  &gt;
+</pre>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+
+<div class="adef-list">
+<P><em>Attribute definitions</em><dl>
+
+<dt><a name="adef-cite-Q"><samp class="adef">cite</samp></a> =
+<a href="../types.html#type-url"><em>url</em></a>
+<dd>The value of this attribute is a URL that designates a
+source document or message. This attribute is intended to give
+information about the source from which the quotation was
+borrowed.
+</dl>
+</div>
+
+<div class="aref-list"><P>
+<em>Attributes defined elsewhere</em> 
+<ul>
+<li><a href="global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="global.html#adef-class"><samp class="ainst">class</samp></a>
+    (<a href="../struct/global.html#id-and-class">document-wide
+	   identifiers</a>) 
+<li><a href="dirlang.html#adef-lang"><samp class="ainst">lang</samp></a> (<a
+    href="../struct/dirlang.html#language-info">language
+    information</a>), <a href="dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+    (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+<li><a href="global.html#adef-title"><samp class="ainst">title</samp></a> (<a
+	     href="../struct/global.html#titles">element
+	     titles</a>) 
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a> (<a 
+    href="../present/styles.html#style-element">inline style
+    information</a>) 
+<li><a href="../interact/scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>, <a href="../interact/scripts.html#adef-ondblclick"><samp
+class="ainst">ondblclick</samp></a>, <a href="../interact/scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>, <a href="../interact/scripts.html#adef-onmouseup"><samp
+class="ainst">onmouseup</samp></a>, <a href="../interact/scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>, <a href="../interact/scripts.html#adef-onmousemove"><samp
+class="ainst">onmousemove</samp></a>, <a href="../interact/scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>, <a href="../interact/scripts.html#adef-onkeypress"><samp
+class="ainst">onkeypress</samp></a>, <a href="../interact/scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>, <a href="../interact/scripts.html#adef-onkeyup"><samp
+class="ainst">onkeyup</samp></a> (<a
+href="../interact/scripts.html#events">intrinsic events</a>)
+</ul>
+</div>
+
+<p>These two elements designate quoted text.  <a href="text.html#edef-BLOCKQUOTE"><samp
+class="einst">BLOCKQUOTE</samp></a> is for long quotations and <a href="text.html#edef-Q"><samp
+class="einst">Q</samp></a> is intended for short quotations that don't
+require paragraph breaks.</p>
+
+<div class="example"><P>
+This example formats an excerpt from "The Two Towers", by
+J.R.R. Tolkien, as a blockquote.
+
+<pre>
+&lt;BLOCKQUOTE cite="http://www.mycom.com/tolkien/twotowers.html"&gt;
+They went in single file, running like hounds on a strong scent,
+and an eager light was in their eyes. Nearly due west the broad
+swath of the marching Orcs tramped its ugly slot; the sweet grass
+of Rohan had been bruised and blackened as they passed.
+&lt;/BLOCKQUOTE&gt;
+</pre>
+</div>
+
+<P>Visual user agents generally render <a href="text.html#edef-BLOCKQUOTE"><samp
+class="einst">BLOCKQUOTE</samp></a> as an indented block.
+
+<div class="note">
+<p><em><strong>Quotation marks</strong>It is recommended that style
+sheets provide a way to insert quotation marks before and after a
+quotation delimited by <a href="text.html#edef-Q"><samp class="einst">Q</samp></a> or <a href="text.html#edef-BLOCKQUOTE"><samp
+class="einst">BLOCKQUOTE</samp></a> in a manner appropriate to the current
+language context (see the <a href="dirlang.html#adef-lang"><samp class="ainst">lang</samp></a> attribute)
+and the degree of nesting of quotations.</em>
+
+<p><em>However, as some authors have used <a href="text.html#edef-BLOCKQUOTE"><samp
+class="einst">BLOCKQUOTE</samp></a> merely as a mechanism to indent text,
+in order to preserve the intention of the authors, it is recommended
+that user agents <strong>not</strong> insert quotation marks in the
+default style.</em>
+
+<p><em>Furthermore, if authors include quotation marks in a <a href="text.html#edef-Q"><samp
+class="einst">Q</samp></a> or <a href="text.html#edef-BLOCKQUOTE"><samp class="einst">BLOCKQUOTE</samp></a>
+element, user agents should not insert additional quotation
+marks.</em>
+
+<P><em>The usage of <a href="text.html#edef-BLOCKQUOTE"><samp class="einst">BLOCKQUOTE</samp></a> to indent
+text is deprecated in favor of style sheets.</em>
+</div>
+
+<h3>Subscripts and superscripts: the <a name="edef-SUB"><samp
+class="edef">SUB</samp></a> and <a name="edef-SUP"><samp
+class="edef">SUP</samp></a> elements<a name="h-7.3.2.3">&nbsp;</a></h3>
+
+<pre class="dtd-fragment">
+&lt;!-- subscripts and superscripts --&gt;
+&lt;!ELEMENT (<a href="text.html#edef-SUB"><samp class="einst">SUB</samp></a>|<a href="text.html#edef-SUP"><samp class="einst">SUP</samp></a>) - - (%inline)*&gt;
+&lt;!ATTLIST (SUB|SUP)
+  %attrs;                          -- %coreattrs, %i18n, %events --
+  &gt;
+</pre>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<div class="aref-list"><P>
+<em>Attributes defined elsewhere</em> 
+<ul>
+<li><a href="global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="global.html#adef-class"><samp class="ainst">class</samp></a>
+    (<a href="../struct/global.html#id-and-class">document-wide
+	   identifiers</a>) 
+<li><a href="dirlang.html#adef-lang"><samp class="ainst">lang</samp></a> (<a
+    href="../struct/dirlang.html#language-info">language
+    information</a>), <a href="dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+    (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+<li><a href="global.html#adef-title"><samp class="ainst">title</samp></a> (<a
+	     href="../struct/global.html#titles">element
+	     titles</a>) 
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a> (<a 
+    href="../present/styles.html#style-element">inline style
+    information</a>) 
+<li><a href="../interact/scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>, <a href="../interact/scripts.html#adef-ondblclick"><samp
+class="ainst">ondblclick</samp></a>, <a href="../interact/scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>, <a href="../interact/scripts.html#adef-onmouseup"><samp
+class="ainst">onmouseup</samp></a>, <a href="../interact/scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>, <a href="../interact/scripts.html#adef-onmousemove"><samp
+class="ainst">onmousemove</samp></a>, <a href="../interact/scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>, <a href="../interact/scripts.html#adef-onkeypress"><samp
+class="ainst">onkeypress</samp></a>, <a href="../interact/scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>, <a href="../interact/scripts.html#adef-onkeyup"><samp
+class="ainst">onkeyup</samp></a> (<a
+href="../interact/scripts.html#events">intrinsic events</a>)
+</ul>
+</div>
+
+<p>Many scripts (e.g., French) require superscripts or subscripts
+for proper rendering. The <a href="text.html#edef-SUB"><samp class="einst">SUB</samp></a> and <a href="text.html#edef-SUP"><samp
+class="einst">SUP</samp></a> elements should be used to markup text in
+these cases.
+
+<div class="example"><P>
+Here, we use <a href="text.html#edef-SUP"><samp class="einst">SUP</samp></a> to raise the "lle" in the French
+"M<sup>lle</sup> Dupont":
+	
+<pre>
+      M&lt;sup&gt;lle&lt;/sup&gt; Dupont
+</pre>
+</div>
+
+<h2>Lines and Paragraphs<a name="h-7.3.3">&nbsp;</a></h2>
+
+Authors traditionally divide their thoughts and arguments into
+sequences of paragraphs. The organization of information into
+paragraphs is not affected by how the paragraphs are presented:
+paragraphs that are double-justified contain the same thoughts as
+those that are left-justified.
+
+<P>The HTML markup for <em>defining</em> a paragraph is straightforward:
+the <a href="text.html#edef-P"><samp class="einst">P</samp></a> element defines a paragraph.
+
+<P>The visual presentation of paragraphs is not so simple. A number of
+issues, both stylistic and technical, must be addressed:
+
+<ul>
+<li>Treatment of white space
+<li>Line breaking and word wrapping
+<li>Justification
+<li>Hyphenation
+<li>Written language conventions and text directionality
+<li>Formatting of paragraphs with respect to surrounding content
+</ul>
+
+<P>We address these questions below. <a
+href="../present/graphics.html#alignment">Paragraph alignment and
+floating objects</a> are discussed later in this document.
+
+<h3>Paragraphs: the <a name="edef-P"><samp class="edef">P</samp></a>
+element<a name="h-7.3.3.1">&nbsp;</a></h3>
+
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="text.html#edef-P"><samp class="einst">P</samp></a> - O (%inline)*&gt;
+&lt;!ATTLIST P
+  %attrs;                          -- %coreattrs, %i18n, %events --
+  %align;                          -- <a href="../present/graphics.html#adef-align">align</a>, text alignment --
+  &gt;
+</pre>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>optional</strong></em></p>
+
+<div class="aref-list"><P>
+<em>Attributes defined elsewhere</em> 
+<ul>
+<li><a href="global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="global.html#adef-class"><samp class="ainst">class</samp></a>
+    (<a href="../struct/global.html#id-and-class">document-wide
+	   identifiers</a>) 
+<li><a href="dirlang.html#adef-lang"><samp class="ainst">lang</samp></a> (<a
+    href="../struct/dirlang.html#language-info">language
+    information</a>), <a href="dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+    (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+<li><a href="global.html#adef-title"><samp class="ainst">title</samp></a> (<a
+	     href="../struct/global.html#titles">element
+	     titles</a>) 
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a> (<a 
+    href="../present/styles.html#style-element">inline style
+    information</a>) 
+<li><a href="../present/graphics.html#adef-align"><samp class="ainst">align</samp></a> (<a href="../present/graphics.html#alignment">alignment</a>)
+<li><a href="../interact/scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>, <a href="../interact/scripts.html#adef-ondblclick"><samp
+class="ainst">ondblclick</samp></a>, <a href="../interact/scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>, <a href="../interact/scripts.html#adef-onmouseup"><samp
+class="ainst">onmouseup</samp></a>, <a href="../interact/scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>, <a href="../interact/scripts.html#adef-onmousemove"><samp
+class="ainst">onmousemove</samp></a>, <a href="../interact/scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>, <a href="../interact/scripts.html#adef-onkeypress"><samp
+class="ainst">onkeypress</samp></a>, <a href="../interact/scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>, <a href="../interact/scripts.html#adef-onkeyup"><samp
+class="ainst">onkeyup</samp></a> (<a
+href="../interact/scripts.html#events">intrinsic events</a>)
+</ul>
+</div>
+
+<p>The <a href="text.html#edef-P"><samp class="einst">P</samp></a> element represents a paragraph.
+It cannot contain block-level elements (including <a href="text.html#edef-P"><samp
+class="einst">P</samp></a> itself). You can omit the end tag, which is
+then implied by the next block-level start tag. It is also implied by
+the end tag of the element that encloses the <a href="text.html#edef-P"><samp
+class="einst">P</samp></a> element. 
+
+<div class="example">
+For example, the following two paragraphs:
+
+<pre>
+&lt;P&gt;This is the first paragraph.&lt;/P&gt;
+&lt;P&gt;This is the second paragraph.&lt;/P&gt;
+<em>...a block element...</em>
+</pre>
+
+<P>may be rewritten without their end tags:
+
+<pre>
+&lt;P&gt;This is the first paragraph.
+&lt;P&gt;This is the second paragraph.
+<em>...a block element...</em>
+</pre>
+
+<P>since both are implicitly ended by the block elements that follow
+them. Similarly, if a paragraph is enclosed by a block element, as in:
+
+<pre>
+&lt;DIV&gt;
+&lt;P&gt;This is the paragraph.
+&lt;/DIV&gt;
+</pre>
+
+<P>the end tag of the enclosing block element (here, <a href="global.html#edef-DIV"><samp
+class="einst">DIV</samp></a>) implies the end tag of the <a href="text.html#edef-P"><samp
+class="einst">P</samp></a> element.
+</div>
+
+<P>Empty <a href="text.html#edef-P"><samp class="einst">P</samp></a> elements are bad form and
+should be ignored by the renderer.
+
+<h3>Visual rendering of paragraphs<a name="h-7.3.3.2">&nbsp;</a></h3>
+
+<P>How paragraphs are rendered visually depends on the user agent.
+
+Paragraphs are usually rendered flush left with a
+ragged right margin. Other defaults are appropriate for 
+right-to-left scripts.
+
+<P>HTML user agents have traditionally rendered paragraphs with white
+space before and after, e.g.,
+
+<pre class="example">
+  At the same time, there began to take form a system of numbering,
+  the calendar, hieroglyphic writing, and a technically advanced
+  art, all of which later influenced other peoples.
+
+  Within the framework of this gradual evolution or cultural
+  progress the Preclassic horizon has been divided into Lower,
+  Middle and Upper periods, to which can be added a transitional
+  or Protoclassic period with several features that would later
+  distinguish the emerging civilizations of Mesoamerica.
+</pre>
+
+<p>This contrasts with the style used in novels which indents the first
+line of the paragraph and uses the regular line spacing between the line
+of the last paragraph and the first line of the next, e.g.,
+
+<pre class="example">
+     At the same time, there began to take form a system of
+  numbering, the calendar, hieroglyphic writing, and a technically
+  advanced art, all of which later influenced other peoples.
+     Within the framework of this gradual evolution or cultural
+  progress the Preclassic horizon has been divided into Lower,
+  Middle and Upper periods, to which can be added a transitional
+  or Protoclassic period with several features that would later
+  distinguish the emerging civilizations of Mesoamerica.
+</pre>
+
+<p>Following the precedent set by the NCSA Mosaic browser in 1993, user
+agents generally don't justify both margins, in part because it's hard to
+do this effectively without sophisticated hyphenation routines. The advent
+of style sheets, and antialiased fonts with subpixel positioning promises
+to offer richer choices to HTML authors than previously possible.
+
+<p>Style sheets provide rich control over the size and style of a
+font, the margins, space before and after a paragraph, the first line
+indent, justification and many other details. The user agent's default
+style sheet renders <a href="text.html#edef-P"><samp class="einst">P</samp></a> elements in a familar
+form, as illustrated above. You could in principle override this to
+render paragraphs without the breaks that conventionally distinguish
+successive paragraphs, but this would be confusing to readers and as a
+rule bad practice.
+
+<p>By convention, visual HTML user agents wrap text lines to fit
+within the available margins. Wrapping algorithms depend on the
+script being formatted. 
+<!-- See email from Martin about Kanji, Kani, and Thai! -->
+
+<P>In Western scripts, for example, text should only be wrapped at
+white space. Early user agents incorrectly wrapped lines at the
+beginning (or end) of elements, which resulted in dangling
+punctuation. For example,</p>
+
+<div class="example">
+<pre>
+  A statue of the &lt;a href="cih78"&gt;Cihuateteus&lt;/a&gt;, who are patron ...
+</pre>
+
+<p>Wrapping the line at the end of the anchor tag causes the comma to
+be stranded at the beginning of the next line:
+
+<pre>
+  A statue of the Cihuateteus
+  , who are patron goddesses ...
+</pre>
+
+<p>This is an error, since there was no white space at that point in the
+markup. 
+</div>
+
+<h3>Controlling line breaks<a name="h-7.3.3.3">&nbsp;</a></h3>
+
+It is possible to force or forbid a line break in HTML. 
+
+<h4>Forcing a line break: the <a name="edef-BR"><samp
+	    class="edef">BR</samp></a> element<a name="h-7.3.3.3.1">&nbsp;</a></h4>
+
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="text.html#edef-BR"><samp class="einst">BR</samp></a> - O EMPTY          -- forced line break --&gt;
+&lt;!ATTLIST BR
+  %coreattrs;                      -- <a href="global.html#adef-id">id</a>, <a href="global.html#adef-class">class</a>, <a href="../present/styles.html#adef-style">style</a>, <a href="global.html#adef-title">title</a> --
+  <a href="../present/graphics.html#adef-clear"><samp class="ainst-BR">clear</samp></a> (left|all|right|none) none -- control of text flow --
+  &gt;
+</pre>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>forbidden</strong></em></p>
+
+<div class="aref-list">
+<P><em>Attributes defined elsewhere</em> 
+<ul>
+<li><a href="global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="global.html#adef-class"><samp class="ainst">class</samp></a>
+    (<a href="../struct/global.html#id-and-class">document-wide
+	   identifiers</a>) 
+<li><a href="global.html#adef-title"><samp class="ainst">title</samp></a> (<a
+	     href="../struct/global.html#titles">element
+	     titles</a>) 
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a> (<a 
+    href="../present/styles.html#style-element">inline style
+    information</a>) 
+<li><a href="../present/graphics.html#adef-clear"><samp class="ainst-BR">clear</samp></a> (<a
+	      href="../present/graphics.html#alignment">alignment and
+	      floating objects</a>)
+</ul>
+</div>
+
+<P>The <a href="text.html#edef-BR"><samp class="einst">BR</samp></a> element forcibly breaks (ends) the
+current line of text.
+
+<p>For visual user agents, the <a href="../present/graphics.html#adef-clear"><samp class="ainst">clear</samp></a>
+attribute can be used to determine whether markup following the <a href="text.html#edef-BR"><samp
+class="einst">BR</samp></a> element flows around images and other objects
+floated to the left or right margin, or whether it starts after the
+bottom of such objects. Further details are given in the section on <a
+href="../present/graphics.html#alignment">alignment and floating
+objects</a>. Authors are advised to use style sheets to control text
+flow around floating images and other objects. The <a href="../present/graphics.html#adef-clear"><samp
+class="ainst">clear</samp></a> attribute, along with other HTML presentation
+attributes and tags, is only appropriate when you need to consider user
+agents that don't support style sheets.
+
+<P>With respect to bidirectional formatting, the <a href="text.html#edef-BR"><samp
+class="einst">BR</samp></a> element should be treated in the same way as a
+Unicode LINE SEPARATOR character.
+
+<h4><a name="nbsp">Prohibiting a line break<a name="h-7.3.3.3.2">&nbsp;</a></h4>
+
+<p>Sometimes you will want to prevent a line break from occurring
+between two words. The &amp;nbsp; entity (&amp;#160;, &amp;#xA0;) acts as a
+space where user agents should not cause a line break.
+
+<h3><a name="hyphenation">Hyphenation<a name="h-7.3.3.4">&nbsp;</a></h3>
+
+<p>In HTML, there are two types of hyphens: the plain hyphen and the soft
+hyphen. The plain hyphen should be interpreted by a user agent as just
+another character. The soft hyphen tells the user agent where a line
+break can occur. 
+
+<P>Those browsers that interpret soft hyphens must observe the following
+semantics: If a line is broken at a soft hyphen, a hyphen character must
+be displayed at the end of the first line. If a line is not broken at a
+hyphen, the user agent must not display a hyphen character. For
+operations such as searching and sorting, the soft hyphen should always
+be ignored.
+
+<P>In HTML, the plain hyphen is represented by the "-" character
+(&amp;#45;, &amp;#x2D;). The soft hyphen is represented by the named character
+entity &amp;shy; (&amp;#173;, &amp;#xAD;)
+
+<h3><a name="preformatted">Preformatted text:</a> The <a name="edef-PRE"><samp
+class="edef">PRE</samp></a> element<a name="h-7.3.3.5">&nbsp;</a></h3>
+
+<pre class="dtd-fragment">
+&lt;!ENTITY % pre.exclusion "IMG|BIG|SMALL|SUB|SUP|FONT"&gt;
+
+&lt;!ELEMENT <a href="text.html#edef-PRE"><samp class="einst">PRE</samp></a> - - (%inline)* -(%pre.exclusion)&gt;
+&lt;!ATTLIST PRE
+  %attrs;                          -- %coreattrs, %i18n, %events --
+  <a href="text.html#adef-width-PRE"><samp class="ainst-PRE">width</samp></a>       NUMBER     #IMPLIED
+  &gt;
+</pre>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<div class="adef-list">
+<P><em>Attribute definitions</em>
+
+<dl>
+<dt><a name="adef-width-PRE"><samp class="adef">width</samp></a> = 
+<em>integer</em>
+<dd>This attribute provides a hint to visual user agents about the
+desired width of the formatted block. The user agent can
+use this information to select an appropriate font size or
+to indent the content appropriately. The desired width is 
+expressed in number of characters. This attribute is not
+widely supported currently.
+</dl>
+</div>
+
+<div class="aref-list">
+<P> <em>Attributes defined elsewhere</em> 
+
+<ul>
+<li><a href="global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="global.html#adef-class"><samp class="ainst">class</samp></a>
+(<a href="../struct/global.html#id-and-class">document-wide identifiers</a>) 
+
+<li><a href="dirlang.html#adef-lang"><samp class="ainst">lang</samp></a>
+(<a href="../struct/dirlang.html#language-info">language information</a>),
+<a href="dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> (<a href="../struct/dirlang.html#bidirection">text
+direction</a>)
+
+<li><a href="global.html#adef-title"><samp class="ainst">title</samp></a>
+(<a href="../struct/global.html#titles">element titles</a>) 
+
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a>
+(<a href="../present/styles.html#style-element">inline style information</a>) 
+<li><a href="../interact/scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>, <a href="../interact/scripts.html#adef-ondblclick"><samp
+class="ainst">ondblclick</samp></a>, <a href="../interact/scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>, <a href="../interact/scripts.html#adef-onmouseup"><samp
+class="ainst">onmouseup</samp></a>, <a href="../interact/scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>, <a href="../interact/scripts.html#adef-onmousemove"><samp
+class="ainst">onmousemove</samp></a>, <a href="../interact/scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>, <a href="../interact/scripts.html#adef-onkeypress"><samp
+class="ainst">onkeypress</samp></a>, <a href="../interact/scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>, <a href="../interact/scripts.html#adef-onkeyup"><samp
+class="ainst">onkeyup</samp></a> (<a
+href="../interact/scripts.html#events">intrinsic events</a>)
+</ul>
+</div>
+
+<p>The <a href="text.html#edef-PRE"><samp class="einst">PRE</samp></a> element tells visual user agents
+that the enclosed text is "preformatted". Visual user agents must 
+treat preformatted text as follows:
+
+<ul>
+<li>They may leave  <a href="#whitespace">white space</a> intact.
+<li>They may render text with a fixed-pitch font.
+<li>They may disable automatic word wrap.
+<li>They must not disable bidirectional processing.
+</ul>
+
+<p>Note that the SGML standard requires that the parser
+remove a newline immediately following the start tag
+or immediately preceding the end tag.
+
+<p>The DTD fragment above indicates which elements may not appear
+within a <a href="text.html#edef-PRE"><samp class="einst">PRE</samp></a> declaration. This is the same
+as in HTML 3.2, and is intended to preserve constant line spacing and
+column alignment for text rendered in a fixed pitch font. Authors are
+discouraged from altering this behavior through style sheets.
+
+<div class="example">
+<p>The following example shows a preformatted verse from Shelly's poem
+<em>To a Skylark</em>:
+
+<pre>
+&lt;PRE&gt;
+       Higher still and higher
+         From the earth thou springest
+       Like a cloud of fire;
+         The blue deep thou wingest,
+And singing still dost soar, and soaring ever singest.
+&lt;/PRE&gt;
+</pre>
+
+<p>Here is the same verse as rendered by your user agent:
+<pre>
+       Higher still and higher
+         From the earth thou springest
+       Like a cloud of fire;
+         The blue deep thou wingest,
+And singing still dost soar, and soaring ever singest.
+</pre>
+</div>
+
+<div class="note"><P>
+<em><strong>The horizontal tab character</strong><br> 
+The horizontal tab character (encoded in <a rel="biblioentry"
+href="../references.html#ref-UNICODE">[UNICODE]</a>, US ASCII, and <a
+rel="biblioentry" href="../references.html#ref-ISO88591">[ISO88591]</a>
+as decimal 9) is usually interpreted by visual user agents as the
+smallest non-zero number of spaces necessary to line characters up along
+tab stops that are every 8 characters. We strongly discourage using
+horizontal tabs in preformatted text since it is common practice, when
+editing, to set the tab-spacing to other values, leading to misaligned
+documents.</em>
+</div>
+
+<h2>Marking document changes: The <a name="edef-ins">INS</a> 
+and <a name="edef-del">DEL</a> elements<a name="h-7.3.4">&nbsp;</a></h2>
+ 
+<pre class="dtd-fragment">
+&lt;!-- INS/DEL are handled by inclusion on BODY --&gt;
+&lt;!ELEMENT (<a href="text.html#edef-ins"><samp class="einst">INS</samp></a>|<a href="text.html#edef-del"><samp class="einst">DEL</samp></a>) - - (%inline)* -- inserted/deleted text --&gt;
+&lt;!ATTLIST (INS|DEL)
+  %attrs                           -- %coreattrs, %i18n, %events --
+  <a href="text.html#adef-cite-INS"><samp class="ainst-INS">cite</samp></a>        %URL      #IMPLIED   -- info on reason for change --
+  <a href="text.html#adef-datetime"><samp class="ainst-INS">datetime</samp></a>    CDATA     #IMPLIED   -- when changed: ISO date format --
+  &gt;
+</pre>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<div class="adef-list">
+<P><em>Attribute definitions</em>
+
+<dl>
+<dt><a name="adef-cite-INS"><samp class="adef">cite</samp></a> =
+<a href="../types.html#type-url"><em>url</em></a> 
+<dd>The value of this attribute is a URL that designates a source
+document or message. This attribute is intended to point
+to information explaining why a document was changed.
+
+<dt><a name="adef-datetime"><samp class="adef">datetime</samp></a> =
+<a href="../types.html#type-cdata"><em>cdata</em></a> 
+<dd>The value of this attribute specifies the date and time
+when the change was made. This value must have a format as specified in 
+<a rel="biblioentry" href="../references.html#ref-ISO8601">[ISO8601]</a>
+and limited by the profile defined in the section below on <a
+href="#datetime">dates and times</a>.
+</dl>
+</div>
+
+<div class="aref-list"><P>
+<em>Attributes defined elsewhere</em> 
+<ul>
+<li><a href="global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="global.html#adef-class"><samp class="ainst">class</samp></a>
+    (<a href="../struct/global.html#id-and-class">document-wide
+	   identifiers</a>) 
+<li><a href="dirlang.html#adef-lang"><samp class="ainst">lang</samp></a> (<a
+    href="../struct/dirlang.html#language-info">language
+    information</a>), <a href="dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+    (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+<li><a href="global.html#adef-title"><samp class="ainst">title</samp></a> (<a
+	     href="../struct/global.html#titles">element
+	     titles</a>) 
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a> (<a 
+    href="../present/styles.html#style-element">inline style
+    information</a>) 
+<li><a href="../interact/scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>, <a href="../interact/scripts.html#adef-ondblclick"><samp
+class="ainst">ondblclick</samp></a>, <a href="../interact/scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>, <a href="../interact/scripts.html#adef-onmouseup"><samp
+class="ainst">onmouseup</samp></a>, <a href="../interact/scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>, <a href="../interact/scripts.html#adef-onmousemove"><samp
+class="ainst">onmousemove</samp></a>, <a href="../interact/scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>, <a href="../interact/scripts.html#adef-onkeypress"><samp
+class="ainst">onkeypress</samp></a>, <a href="../interact/scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>, <a href="../interact/scripts.html#adef-onkeyup"><samp
+class="ainst">onkeyup</samp></a> (<a
+href="../interact/scripts.html#events">intrinsic events</a>)
+</ul>
+</div>
+
+<P><a href="text.html#edef-ins"><samp class="einst">INS</samp></a> and <a href="text.html#edef-del"><samp class="einst">DEL</samp></a>
+are used to markup sections of the document that have been inserted or
+deleted since a previous version of a document (e.g., in draft
+legislation where law makers need to view the changes).
+
+<P>These two elements are unsual for HTML in that they are neither
+block-level nor inline elements. They may contain one or more words
+within a paragraph or englobe one or more block-level elements such as
+paragraphs, lists and tables.
+
+<P>User agents may render inserted and deleted text in ways that
+make the change obvious. For instance, inserted text may
+appear in a special font, deleted text may not be shown at
+all or be shown as struck-through or with special markings, etc.
+
+<P>User agents that do not recognize the <a href="text.html#edef-del"><samp class="einst">DEL</samp></a>
+element must render that element's content nonetheless.
+
+<h3><a name="datetime">Date and time format<a name="h-7.3.4.1">&nbsp;</a></h3>
+
+<P><a rel="biblioentry"
+href="../references.html#ref-ISO8601">[ISO8601]</a> allows many
+options and variations in the representation of dates and times. This
+specification defines a specific format which is one of those allowed
+by <a rel="biblioentry"
+href="../references.html#ref-ISO8601">[ISO8601]</a>.</P>
+
+<p>The format is:</p>
+
+<pre>
+  YYYY-MM-DDThh:mm:ssTZD
+</pre>
+
+where:
+
+<pre>
+     YYYY = four-digit year
+     MM   = two-digit month (01=January, etc.)
+     DD   = two-digit day of month (01 through 31)
+     hh   = two digits of hour (00 through 23) (am/pm NOT allowed)
+     mm   = two digits of minute (00 through 59)
+     ss   = two digits of second (00 through 59)
+     TZD  = time zone designator
+</pre>
+
+<p>The time zone designator is one of:</p>
+<dl>
+<dt><samp>Z</samp>
+<dd>indicates UTC (Coordinated Universal Time).
+<dt><samp>+hh:mm</samp>
+<dd>indicates that the time is a local time which is <samp>hh</samp> hours and
+<samp>mm</samp> minutes ahead of UTC.
+<dt><samp>-hh:mm</samp>
+<dd>indicates that the time is a local time which is <samp>hh</samp> hours and
+<samp>mm</samp> minutes behind UTC.
+</dl>
+
+<p>Exactly the components shown here must be present, with exactly
+this punctuation.  Note that the <samp>"T"</samp> appears literally in
+the string, to indicate the beginning of the time element, as
+specified in <a rel="biblioentry"
+href="../references.html#ref-ISO8601">[ISO8601]</a></p>
+
+<p>If a generating application does not know the time to the second,
+it may use the value "00" for the seconds (and minutes and hours if
+necessary).</p>
+
+
+<div class="example">
+Both of the following examples correspond to November 5, 1994,
+8:15:30 am, US Eastern Standard Time.
+
+<pre>
+     1994-11-05T13:15:30Z
+     1994-11-05T08:15:30-05:00
+</pre>
+
+<p>Used with <a href="text.html#edef-ins"><samp class="einst">INS</samp></a>, this gives:
+
+<pre>
+&lt;INS datetime="1994-11-05T08:15:30-05:00"&gt;
+I added this on November 5th
+&lt;/INS&gt;
+</pre>
+</div>               
+<div class="navbar">
+<hr><center><a href="global.html">previous</a> &nbsp; <a href="lists.html">next</a> &nbsp; <a href="../contents.html">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center></div>
+</body>

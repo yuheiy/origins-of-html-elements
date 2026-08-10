@@ -1,0 +1,153 @@
+<!-- received="Tue May 26 16:01:05 1992 EDT" -->
+<!-- sent="Tue, 26 May 92 15:55:11 GMT+0100" -->
+<!-- name="timbl@www2.cern.ch" -->
+<!-- email="timbl@www2.cern.ch" -->
+<!-- subject="Making a simple file server for unix" -->
+<!-- id="9205261455.AA00465@ www2.cern.ch " -->
+<!-- inreplyto="" -->
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head><title>www-talk from May to June 1992: Making a simple file server for unix</title></head>
+<body>
+<h1>Making a simple file server for unix</h1>
+<a href="mailto:timbl@www2.cern.ch"><em>timbl@www2.cern.ch</em></a><br>
+<em>Tue, 26 May 92 15:55:11 GMT+0100</em>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#12">[ date ]</a><a href="thread.html#12">[ thread ]</a><a href="subject.html#12">[ subject ]</a><a href="author.html#12">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0013.html">Jean Francois Groff: "Re: Just a question"</a>
+<li> <strong>Previous message:</strong> <a href="0011.html">Pei Y. Wei: "Re:  Installation of viola"</a>
+<!-- nextthread="start" -->
+</ul>
+<hr>
+<!-- body="start" -->
+<pre>
+Date: Tue, 26 May 92 15:55:11 GMT+0100
+From: timbl@www2.cern.ch
+Message-Id: &lt;9205261455.AA00465@ www2.cern.ch &gt;
+To: John O'Neall &lt;JON@frcpn11.in2p3.fr&gt;
+Subject: Making a simple file server for unix
+Cc: www-talk@nxoc01.cern.ch
+
+&gt; Date:         Tue, 26 May 92 09:16:33 EST
+&gt; From: John O'Neall &lt;JON@frcpn11.in2p3.fr&gt;
+
+John,
+
+Thanks for your mails asking about how to make a simple hypertext  
+list of files. 
+
+
+Let me take your model of the three layers. I sugest that the 1st  
+layer
+
+&gt;helppage (1st-layer):  various info and pointers to local
+&gt;         info that won't change much as well as to WWW proper.
+&gt;         Among other things, it'll point to a [...]
+
+you write by hand.  You can read the HTML documentation in    
+<a href="http://info.cern.ch/hypertext/WWW/MarkUp/MarkUp.html">http://info.cern.ch/hypertext/WWW/MarkUp/MarkUp.html</a>
+or you can just copy another node which looks like what you want.   
+(Get its address and then read it with www -source address). Or both.
+
+You might want to put pointers to the general subject index, and the  
+index of HEP sites.  Let me know when you set up a server so that I  
+can put in on the list!
+
+For the second layer,
+
+&gt; 2nd-layer list:  this is the thing that will point to ALL the
+&gt;    local flat files.  Then I need an automatic (cron'd) procedure
+&gt;    to regenerate the list every time I add more flat data
+&gt;     files (or periodically).
+
+
+This is easy: you generate it with a little shell script. How about  
+the one appended to this message?  It generates a hypertext menu of  
+files in a set of directories (passed as arguments). You can massage  
+it to put in your own title, heading, etc. If you can generate some  
+human-readable description of each file, so much the better.  You  
+could run this as a cron job into an Overveiw.html file which you  
+then publish with httpd, or run it from a server daemon script so  
+that the list is generated fresh for every read, and always  
+up-to-date.
+
+The third layer is your set of files.  If you publish these with a  
+server script, you can add to each one a title (if you can generate  
+it) and maybe a link back to the list of other documents befre you  
+just send the plain text file.
+
+You could read some of the tips on the web about ettiquette, etc.
+
+&gt;By the way, if such a list already exists in W3 somewhere, I'll be
+&gt;happy to point to it too.  And then there's no reason why our server
+&gt;shouldn't be accessible to the rest of W3.
+
+It would be a great addition to the web!  Let me know when it's up  
+and I'll put pointers to it from some overview documents. (evn at the  
+experimental stage, I'll mark the links "experimental" if you like).
+
+&gt;Tim, any chance of getting the hypertext editor for something other
+&gt;than Next one day?  I realize that was the simplest thing to develop
+&gt;it on, but I suspect it's not the commonest workstation in HEP.
+
+It's on the "hit-list" and we're lookig for volunteers. Maybe the Mac  
+browser will be the first to be also an editor. Or maybe one of hte X  
+browsers.  I agree the NeXT is not the most common platform! (Though  
+it is neat ;-)
+
+&gt;Excuse me for rushing, but I'm supposed to present this project to  
+the
+&gt;HEPIX-F meeting in Paris on Tuesday and this weekend will be a long  
+one
+&gt; (at least, in France).
+
+Good luck! Mail cailliau@(I'm off to the US -- so I'm rushing too!)
+
+Mail me or www-talk@info.cern.ch if you have any problems... 
+
+
+If you have smart ideas, circulate them to this list too.
+
+	Tim
+
+__________________
+
+#! /bin/sh
+# Generate hypertext menu from directory list
+echo "&lt;TITLE&gt;Information under: $*&lt;/TITLE&gt;"
+echo "&lt;H1&gt;$*&lt;/H1&gt;"
+# If there is a README file include that as plain text
+if [ -f $1/README ]; then
+    echo "&lt;XMP&gt;"
+    cat $1/README
+    echo "&lt;/XMP&gt;"
+fi
+# Now generate a list of links to files
+echo "&lt;DIR&gt;"
+for dir in $*
+do (
+    cd $dir
+    for file in *.html *.txt
+    do 
+
+	echo "&lt;LI&gt;&lt;A HREF=./$dir/$file&gt;Title of $file&lt;/A&gt;" 
+
+    done
+    )
+done
+echo "&lt;/DIR&gt;"
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#12">[ date ]</a><a href="thread.html#12">[ thread ]</a><a href="subject.html#12">[ subject ]</a><a href="author.html#12">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0013.html">Jean Francois Groff: "Re: Just a question"</a>
+<li> <strong>Previous message:</strong> <a href="0011.html">Pei Y. Wei: "Re:  Installation of viola"</a>
+<!-- nextthread="start" -->
+</ul>
+</body>
+</html>
