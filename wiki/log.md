@@ -533,3 +533,7 @@ XFormsで確認できる初期`output`、HTML版の追加時期、contentとdata
 初回調査と分離して2000年と2001年のXForms草案、2003年9月と12月のHTML forms案、12月5日の批判、7日の編集者回答、8日の再反論、Web Forms 2.0へ戻り、より早い出現、追加時期、主体、要素名、引用文脈、系譜の各矢印を再照合した。動的boilerplate textをcontentとする判断を、XFormsから`output`を採用した判断やHTML固有DOM modelの個別理由へ拡張せず、A−と二つの未解決点を維持した。
 
 対象ページについて必須見出し順、空でない証拠表、frontmatter、相対リンク、generic placeholder、Markdown whitespaceを検査した。`h1-h6.md`を6要素として数え、全115要素の確度集計がA 83件、A− 17件、B 12件、C 3件、未評価0件で`wiki/README.md`と一致し、敵対的検証済み115件を維持できることを確認して合格とし、状態を`完成`とした。
+
+## [2026-08-11] update | Rawリソースの保守ファイル
+
+Rawリソースの取得スクリプトとマニフェストを`raw/`直下へ移し、配置に合わせて`fetch.sh`と`sources.tsv`へ改名した。`raw/README.md`の複数の正本URLは裸URLから明示的なMarkdownリンクへ変更し、GitHub Previewで区切りがリンクに取り込まれる表示崩れを解消した。

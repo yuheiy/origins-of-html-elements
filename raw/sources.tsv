@@ -1,4 +1,4 @@
-# kind	output	url
+# kind	output	source URL
 file	html-living-standard/canvas.html	https://html.spec.whatwg.org/multipage/canvas.html
 file	html-living-standard/custom-elements.html	https://html.spec.whatwg.org/multipage/custom-elements.html
 file	html-living-standard/edits.html	https://html.spec.whatwg.org/multipage/edits.html

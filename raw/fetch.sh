@@ -3,9 +3,9 @@ set -eu
 
 root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 raw="$root/raw"
-manifest="$root/tools/raw-sources.tsv"
+manifest="$raw/sources.tsv"
 [ "$#" -eq 0 ] || { echo "usage: $0" >&2; exit 2; }
-[ -z "$(git -C "$root" status --porcelain -- raw)" ] || { echo 'raw has uncommitted changes' >&2; exit 1; }
+[ -z "$(git -C "$root" status --porcelain -- raw ':!raw/README.md' ':!raw/fetch.sh' ':!raw/sources.tsv')" ] || { echo 'raw has uncommitted changes' >&2; exit 1; }
 
 tmp=$(mktemp -d "${TMPDIR:-/tmp}/fetch-raw.XXXXXX")
 cleanup() {
@@ -15,7 +15,7 @@ cleanup() {
 trap cleanup EXIT HUP INT TERM
 stage="$tmp/raw"
 mkdir "$stage"
-cp "$raw/README.md" "$stage/README.md"
+cp "$raw/README.md" "$raw/fetch.sh" "$manifest" "$stage"
 
 tab=$(printf '\t')
 while IFS="$tab" read -r kind output url; do
