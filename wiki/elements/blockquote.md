@@ -10,7 +10,7 @@ Dan Connollyが1992年12月4日のmailで、新しいparagraph styleとしてHTM
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、別の出典から引用されたsectionを表す。 [一次定義](https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、別の出典から引用されたsectionを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,11 +36,11 @@ HTML DTDへの`BLOCKQUOTE`追加説明（1992-12-04）→ HTML DTD `BLOCKQUOTE`�
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1992-11-13（更新日） | *Tags used in HTML* | CERN公式HTML資料のhistorical snapshot | 当時のHTML tag一覧に`BLOCKQUOTE`を確認できない。 | [W3C History](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) | 2026-08-09 |
-| 1992-12-04 | “Re: The spec evolves...” | www-talkへの当事者投稿 | Connollyが新しいparagraph styleとして`BLOCKQUOTE`をDTDへ追加すると説明する。 | [W3C Mail Archive](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html) | 2026-08-09 |
-| 1993-06 | *Hypertext Markup Language (HTML)* | IETF Internet-Draft | `BLOCKQUOTE`の引用用途、typical rendering、例、DTD宣言を記録する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1992-11-13（更新日） | [*Tags used in HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)） | CERN公式HTML資料のhistorical snapshot | 当時のHTML tag一覧に`BLOCKQUOTE`を確認できない。 | 2026-08-09 |
+| 1992-12-04 | [“Re: The spec evolves...”](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html)） | www-talkへの当事者投稿 | Connollyが新しいparagraph styleとして`BLOCKQUOTE`をDTDへ追加すると説明する。 | 2026-08-09 |
+| 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | `BLOCKQUOTE`の引用用途、typical rendering、例、DTD宣言を記録する。 | 2026-08-09 |
 
 ## 確度
 

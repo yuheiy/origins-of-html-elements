@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、周囲の内容へ間接的に関連し、その内容から分離して考えられるページのsectionを表す。pull quote、sidebar、広告、`nav`群などに使用できる。[一次定義](https://html.spec.whatwg.org/multipage/sections.html#the-aside-element)（2026-08-10確認）
+WHATWG HTML Living Standardでは、周囲の内容へ間接的に関連し、その内容から分離して考えられるページのsectionを表す。pull quote、sidebar、広告、`nav`群などに使用できる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/sections.html)（[公開版](https://html.spec.whatwg.org/multipage/sections.html#the-aside-element)、2026-08-10確認）
 
 ## HTMLへの導入
 
@@ -36,15 +36,15 @@ WHATWG `sidebar`案（2004年） → 配置方向に限定しない名称とし�
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2004-08-29 | `<section>` and headings | WHATWG mailing list | Hicksonが`sidebar`を候補として挙げ、一般的な`div`のpseudo-semantic用途を減らす目的を説明したこと。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html) | 2026-08-10 |
-| 2004-11-12 | `<section>` and headings | WHATWG mailing list | `sidebar`をsectioning element集合へ含め、本文に関連するがflow外にあるcontentと説明したこと。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002363.html) | 2026-08-10 |
-| 2004-12-08 | Web Applications 1.0 | WHATWG保存Working Draft | `sidebar`をmain textの直接の一部ではないが関連topicのsectionとして定義したこと。 | [一次資料](https://web.archive.org/web/20041210054847id_/http://www.whatwg.org/specs/web-apps/current-work/#sidebar) | 2026-08-10 |
-| 2005-04-05 | Re: `<section>` and headings and other threads | WHATWG mailing list | 当時の仕様にある語彙が、典型的siteのmarkup、特に`div`濫用の調査から直接得られたという編集者の説明。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html) | 2026-08-10 |
-| 2005-09-01 | Web Applications 1.0 | WHATWG保存Early Working Draft | `aside`の存在と、周囲へ間接的に関連するsectionという意味。 | [一次資料](https://whatwg.org/specs/web-apps/2005-09-01/#the-aside) | 2026-08-09 |
-| 2008-01-22 | HTML 5 differences from HTML 4 | W3C Working Draft | `aside`をHTML 4にないdocument markupとして列挙。 | [一次資料](https://www.w3.org/TR/2008/WD-html5-diff-20080122/#new-elements) | 2026-08-09 |
-| 2008-11-29 | Thoughts on HTML 5 | WHATWG editorの返信 | `sidebar`ではpageのsideだけに使えると誤解されるため、`aside`という名称を選んだこと。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-November/017596.html) | 2026-08-10 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2004-08-29 | [`<section>` and headings](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html)） | WHATWG mailing list | Hicksonが`sidebar`を候補として挙げ、一般的な`div`のpseudo-semantic用途を減らす目的を説明したこと。 | 2026-08-10 |
+| 2004-11-12 | [`<section>` and headings](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002363.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002363.html)） | WHATWG mailing list | `sidebar`をsectioning element集合へ含め、本文に関連するがflow外にあるcontentと説明したこと。 | 2026-08-10 |
+| 2004-12-08 | [Web Applications 1.0](../../raw/web.archive.org/web/20041210054847id_/http%3A/www.whatwg.org/specs/web-apps/current-work/index.html)（[公開元](https://web.archive.org/web/20041210054847id_/http://www.whatwg.org/specs/web-apps/current-work/#sidebar)） | WHATWG保存Working Draft | `sidebar`をmain textの直接の一部ではないが関連topicのsectionとして定義したこと。 | 2026-08-10 |
+| 2005-04-05 | [Re: `<section>` and headings and other threads](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html)） | WHATWG mailing list | 当時の仕様にある語彙が、典型的siteのmarkup、特に`div`濫用の調査から直接得られたという編集者の説明。 | 2026-08-10 |
+| 2005-09-01 | [Web Applications 1.0](../../raw/whatwg.org/specs/web-apps/2005-09-01/index.html)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-aside)） | WHATWG保存Early Working Draft | `aside`の存在と、周囲へ間接的に関連するsectionという意味。 | 2026-08-09 |
+| 2008-01-22 | [HTML 5 differences from HTML 4](../../raw/www.w3.org/TR/2008/WD-html5-diff-20080122/index.html)（[公開元](https://www.w3.org/TR/2008/WD-html5-diff-20080122/#new-elements)） | W3C Working Draft | `aside`をHTML 4にないdocument markupとして列挙。 | 2026-08-09 |
+| 2008-11-29 | [Thoughts on HTML 5](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-November/017596.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-November/017596.html)） | WHATWG editorの返信 | `sidebar`ではpageのsideだけに使えると誤解されるため、`aside`という名称を選んだこと。 | 2026-08-10 |
 
 ## 確度
 

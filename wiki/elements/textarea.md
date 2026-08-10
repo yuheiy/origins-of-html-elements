@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、raw valueを編集するmultiline plain-text controlを表し、要素内容はcontrolのdefault valueを表す。 [一次定義](https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、raw valueを編集するmultiline plain-text controlを表し、要素内容はcontrolのdefault valueを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,10 +36,10 @@ HTML+初期案 `INPUT TYPE=TEXT` → HTML+ `TEXTAREA` → HTML 2.0 `TEXTAREA` �
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1993-11-08 | HTML+ §10 | Internet-Draft | `TEXTAREA`のHTML+ forms上の設計を確認できる。 | [一次資料](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) | 2026-08-09 |
-| 1995-11 | RFC 1866 | Standards Track RFC | HTML 2.0 formsを定義し、forms materialのHTML+由来を明記する。 | [一次資料](https://www.rfc-editor.org/rfc/rfc1866.html) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1993-11-08 | [HTML+ §10](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)） | Internet-Draft | `TEXTAREA`のHTML+ forms上の設計を確認できる。 | 2026-08-09 |
+| 1995-11 | [RFC 1866](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html)） | Standards Track RFC | HTML 2.0 formsを定義し、forms materialのHTML+由来を明記する。 | 2026-08-09 |
 
 ## 確度
 

@@ -1,0 +1,159 @@
+<!-- received="Sat Dec  5 00:54:42 1992 EDT" -->
+<!-- sent="Fri, 04 Dec 92 18:07:49 CST" -->
+<!-- name="Dan Connolly" -->
+<!-- email="connolly@pixel.convex.com" -->
+<!-- subject="Re: The spec evolves..." -->
+<!-- id="9212050007.AA23595@pixel.convex.com" -->
+<!-- inreplyto="m0mxlnB-00009qC@garnet.msen.com" -->
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head><title>www-talk from November to December 1992: Re: The spec evolves...</title></head>
+<body>
+<h1>Re: The spec evolves...</h1>
+<strong>Dan Connolly</strong> (<a href="mailto:connolly@pixel.convex.com"><em>connolly@pixel.convex.com</em></a>)<br>
+<em>Fri, 04 Dec 92 18:07:49 CST</em>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#159">[ date ]</a><a href="thread.html#159">[ thread ]</a><a href="subject.html#159">[ subject ]</a><a href="author.html#159">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0160.html">Dan Connolly: "multimedia projects survey..."</a>
+<li> <strong>Previous message:</strong> <a href="0158.html">Marc Andreessen: "last-modified document info?"</a>
+<li> <strong>In reply to:</strong> <a href="0156.html">Edward Vielmetti: "Re: The spec evolves..."</a>
+<!-- nextthread="start" -->
+<li> <strong>Next in thread:</strong> <a href="0157.html">Edward Vielmetti: "Re: The spec evolves..."</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<pre>
+Message-Id: &lt;9212050007.AA23595@pixel.convex.com&gt;
+To: Edward Vielmetti &lt;emv@msen.com&gt;
+Cc: www-talk@nxoc01.cern.ch
+Subject: Re: The spec evolves... 
+In-Reply-To: <a href="0156.html">Your message of "Fri, 04 Dec 92 17:46:23 EST."</a>
+             <a href="0156.html">&lt;m0mxlnB-00009qC@garnet.msen.com&gt; </a>
+Date: Fri, 04 Dec 92 18:07:49 CST
+From: Dan Connolly &lt;connolly@pixel.convex.com&gt;
+
+
+&gt;Is there an SGML reason (apart from a W3 reason) not to also recommend
+&gt;that we do a
+&gt;   &lt;A HREF="<a href="ftp://wuarchive.wustl.edu:/graphics/gif/f/fishies">ftp://wuarchive.wustl.edu:/graphics/gif/f/fishies</a>"
+&gt;      CONTENTTYPE="image/gif"&gt; 
+&gt;   This is a link to a picture of some fishies.&lt;/A&gt;
+&gt;where the CONTENTTYPE matches the MIME/IANA registry of same?  This
+&gt;would be a simple enough way to stick in links to graphics.  
+
+There's no SGML reason. The reason I didn't generalize to arbitrary
+MIME entities is that the A tag has never had those semantics, and
+it would be problematic to introduce them now.
+
+Imagine what would happen if you fed that sample to the current linemode
+browser: it would gladly ftp to wuarchive and barf gif data on
+your screen.
+
+This is not so much of a problem as long as the referent entity
+is some subtype of text/* -- that's the reason for the two-level
+hierarchy of mime types in the first place.
+
+I'm trying to keep up with all sorts of HTML ideas.  Some things can be
+added to html.dtd without significant changes to W3 code (like adding a
+BLOCKQUOTE tag for a new paragraph style). But for things that will
+require changes to the architecture, I'm developing a separate DTD from
+the descriptive html.dtd.
+
+First, I'm suggesting a change in terminology. The representation
+of a node, which used to be called a document, and is sometimes
+now called a resource (e.g. Universal Resource Locator), should
+be called an Entity. This coincides with the SGML and MIME
+usage of the term for "a unit of retreival."
+
+Then the term "document" is not used for a unit of retrieval.
+The WAIS protocol, for example, allows you to retrieve individual
+"chunks" -- paragraphs, lines, etc. The term "entity" is well
+suited to these chunks.
+
+In stead, a "document" is a collection of entities that share
+some context. This context is what the client uses to translate
+relative URL's into absolute URLs. So the document that a node
+belongs to consists of all the nodes you can reach from that node
+by following only local links (i.e. a maximally-connected subgraph
+of the web).
+
+This allows the author to differentiate between links between
+nodes of the corpus s/he's writing and links outside to
+other works.
+
+From my new DTD...
+
+&lt;!-- I think the A tag is overloaded. I'd like to deprecate
+     it in favor of the XREF and SEE elements.
+  --&gt; 
+
+&lt;!ELEMENT XREF - - (#PCDATA)
+ -- This element is for links within an HTML document. (a document
+    is a collection of entities, or a web of nodes that share context).
+ --&gt;
+
+&lt;!ATTLIST XREF
+        CONTEXT CDATA #IMPLIED -- defaults to the entity containing the XREF --
+        -- SGML purists would make this attribute an ENTITY reference,
+           and put the URL in the SYSTEM identifier in the prologue.
+           For expediency, we put the URL right in the attribute.
+        --
+        ORIGIN CDATA #IMPLIED
+        -- another URL, used as an identifier, rather than a locator.
+           Ala the WAIS original-server,database,local-id triple.
+        --
+        REF IDREF #REQUIRED  -- ID of referent element --
+        &gt;
+
+&lt;!ELEMENT SEE - - (#PCDATA)
+ -- This element is for links from an HTML document to any entity
+    in the global web. The address and content-type of the entity
+    are sufficient to resolve the reference.
+
+    The other attributes could be specified in the text of the
+    SEE content, but by making them attributes, the client software
+    can process them, for example, to display a table of references
+    sorted by date.
+ --&gt;
+&lt;!ATTLIST SEE
+        ADDRESS CDATA #REQUIRED -- URL of referent entity --
+        CONTENT-TYPE CDATA #REQUIRED -- MIME Content-Type for the entity --
+        TARGET CDATA #IMPLIED
+        -- This is the analogue of the #anchor mechanism.
+           If CONTEXT is an SGML entity, this could be an ID,
+           though it won't be validated.
+           However, if CONTEXT is a text file, this could be a line number
+	   to scroll to.
+           The meaning depends on the content-type.
+        --
+        ORIGIN CDATA #IMPLIED
+        -- another URL, used as an identifier, rather than a locator.
+           Ala the WAIS original-server,database,local-id triple.
+        --
+        FROM CDATA #IMPLIED -- email address or name of author/provider --
+        DATE NUMBER #IMPLIED -- in ISO format: YYYYMMDDHHMMSSZ --
+        BYTES NUMBER #IMPLIED -- useful in many cases --
+        MD5 CDATA #IMPLIED -- data signature --
+        &gt;
+
+Comments are solicited...
+
+
+Dan
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#159">[ date ]</a><a href="thread.html#159">[ thread ]</a><a href="subject.html#159">[ subject ]</a><a href="author.html#159">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0160.html">Dan Connolly: "multimedia projects survey..."</a>
+<li> <strong>Previous message:</strong> <a href="0158.html">Marc Andreessen: "last-modified document info?"</a>
+<li> <strong>In reply to:</strong> <a href="0156.html">Edward Vielmetti: "Re: The spec evolves..."</a>
+<!-- nextthread="start" -->
+<li> <strong>Next in thread:</strong> <a href="0157.html">Edward Vielmetti: "Re: The spec evolves..."</a>
+</ul>
+</body>
+</html>

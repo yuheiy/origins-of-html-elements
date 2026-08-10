@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは外部resourceを表し、resource typeに応じてimageまたはchild navigableとして扱われる。`data`がresourceのURLを、`type`がMIME typeを指定し、resourceを表示できない場合はchildrenがfallback contentになる。[一次定義](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは外部resourceを表し、resource typeに応じてimageまたはchild navigableとして扱われる。`data`がresourceのURLを、`type`がMIME typeを指定し、resourceを表示できない場合はchildrenがfallback contentになる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/iframe-embed-object.html)（[公開版](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,13 +38,13 @@ HTML3 `INSERT`（1995年） → `OBJECT`への改名（1996-02-13） → W3C `OB
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1995-12-20 | *Inserting multimedia objects into HTML3* | W3C Working Draft | `IMG`とvendor別案の限界、汎用`INSERT`、data／code／parameters／fallback model。 | [一次資料](https://www.w3.org/TR/WD-insert-951220.html) | 2026-08-09 |
-| 1996-02-13（決定）、1996-03-08（公開版） | *Inserting objects into HTML* | W3C Working Draft | `INSERT` elementsを`OBJECT`へrenameした直接記録と継続する設計。 | [一次資料](https://www.w3.org/TR/WD-object-960308.html) | 2026-08-09 |
-| 1996-04-22 | *Inserting objects into HTML* | W3C Working Draft | editor／authors、複数vendorのmedia mechanismを一般化する目的、fallback。 | [一次資料](https://www.w3.org/TR/WD-object-960422) | 2026-08-09 |
-| 1995〜1997 | *Cougar — The next version of HTML* | W3C標準化ページ | object草案を含むlisted draftsがHTML 4.0のbasisを形成した集合単位の関係。 | [一次資料](https://www.w3.org/MarkUp/Cougar/) | 2026-08-09 |
-| 1999-12-24 | HTML 4.01 §13 | W3C Recommendation | generic object inclusion、限定的ancestorとしての`IMG`／`APPLET`、nested fallback。 | [一次資料](https://www.w3.org/TR/html401/struct/objects.html) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1995-12-20 | [*Inserting multimedia objects into HTML3*](../../raw/www.w3.org/TR/WD-insert-951220.html)（[公開元](https://www.w3.org/TR/WD-insert-951220.html)） | W3C Working Draft | `IMG`とvendor別案の限界、汎用`INSERT`、data／code／parameters／fallback model。 | 2026-08-09 |
+| 1996-02-13（決定）、1996-03-08（公開版） | [*Inserting objects into HTML*](../../raw/www.w3.org/TR/WD-object-960308.html)（[公開元](https://www.w3.org/TR/WD-object-960308.html)） | W3C Working Draft | `INSERT` elementsを`OBJECT`へrenameした直接記録と継続する設計。 | 2026-08-09 |
+| 1996-04-22 | [*Inserting objects into HTML*](../../raw/www.w3.org/TR/WD-object-960422)（[公開元](https://www.w3.org/TR/WD-object-960422)） | W3C Working Draft | editor／authors、複数vendorのmedia mechanismを一般化する目的、fallback。 | 2026-08-09 |
+| 1995〜1997 | [*Cougar — The next version of HTML*](../../raw/www.w3.org/MarkUp/Cougar/index.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） | W3C標準化ページ | object草案を含むlisted draftsがHTML 4.0のbasisを形成した集合単位の関係。 | 2026-08-09 |
+| 1999-12-24 | [HTML 4.01 §13](../../raw/www.w3.org/TR/html401/struct/objects.html)（[公開元](https://www.w3.org/TR/html401/struct/objects.html)） | W3C Recommendation | generic object inclusion、限定的ancestorとしての`IMG`／`APPLET`、nested fallback。 | 2026-08-09 |
 
 ## 確度
 

@@ -537,3 +537,147 @@ XFormsで確認できる初期`output`、HTML版の追加時期、contentとdata
 ## [2026-08-11] update | Rawリソースの保守ファイル
 
 Rawリソースの取得スクリプトとマニフェストを`raw/`直下へ移し、配置に合わせて`fetch.sh`と`sources.tsv`へ改名した。`raw/README.md`の複数の正本URLは裸URLから明示的なMarkdownリンクへ変更し、GitHub Previewで区切りがリンクに取り込まれる表示崩れを解消した。
+
+## [2026-08-11] schema | LLM Wiki Scheme
+
+`AGENTS.md`をRaw sources、Wiki、Schemeの三層とIngest、Query、Research、Lintの基本操作で再構成した。証拠区分、確度、状態、要素ページ契約、敵対的検証をドメイン固有の制約として維持し、4操作のshortcutを`.agents/skills/`へ追加した。生成Indexの契約と標準ライブラリだけの生成器も追加した。
+
+既存Wikiには移行が必要である。Rawのappend-only化と全根拠資料の収録、任意のsourceページとsynthesis体系、frontmatterの`summary`、`wiki/index.md`への切り替え、`wiki/README.md`の廃止、Scheme適用後の一操作一Log項目への移行は、この変更では実施していない。過去のLogはappend-onlyの履歴として維持する。
+
+## [2026-08-11] lint | 新SchemeへのWiki移行
+
+全110 elementページ、7 lineageページ、収録範囲を新Schemeへ移行した。全ページへ一行summaryと状態を設定し、elementの証拠表を7列へ統一して、現在定義と歴史的根拠の全行へローカルRawと公開一次資料を併記した。収録範囲の正本を`scope.md`へ移し、旧`wiki/README.md`を廃止して生成物`wiki/index.md`へ切り替えた。再利用上の追加解釈を必要とする資料がなかったため、任意のsourceページは作成していない。
+
+Raw manifestを取得種別、保存先、取得元URL、取得日、SHA-256の316件へ移行し、268件のsnapshotを含む全保存対象をmanifestへ対応付けた。既存Rawを置換しない`fetch.sh`へ変更し、保存済みfileのdigestと三つの配布archiveのdigest・展開内容を検証した。壊れていた`datalist` commit、HTML+ DTD／論文、Microsoft DHTML referenceの参照先を回収または訂正した。敵対的検証ではMicrosoft referenceの`IFRAME`がHTML・scriptともIE4からとする記述を確認し、IE3のfloating-frame機能との要素単位の接続を未確認として維持した。
+
+全110 elementページの必須見出し順、空でない7列証拠表、現在定義のRaw・公開定義・確認日、各証拠行のRaw・外部URL・閲覧日、frontmatter、相対リンク、重複title、generic placeholder、孤立snapshot、manifest重複、Index再現性、状態、集計を検査した。取得途中の失敗でRawへ一部だけ追加されないことを回帰テストで確認した。全118ページと115要素を`完成`とし、確度A 83件、A− 17件、B 12件、C 3件、未評価0件が独立集計と生成Indexで一致することを確認した。
+
+## [2026-08-11] schema | 生成Indexの廃止
+
+Wikiの規模とディレクトリ構造では生成Indexが探索のための独立した価値を持たないとの判断に基づき、`wiki/index.md`、生成器、生成器テストを削除した。Indexの表示にだけ使っていた`summary`を全WikiページのfrontmatterとSchemeから削除し、各操作はWiki内検索から関連ページを選ぶ形へ戻した。検証状態を管理する`status`はIndexと独立した既存契約のため維持した。全118ページのstatus、summaryの不在、相対リンクを検査し、Raw検証と残存テストに合格した。
+
+## [2026-08-11] schema | Scope、Raw配置、資料リンク
+
+収録範囲は横断分析ではなくWiki全体の境界を定める正本であるため、`wiki/syntheses/scope.md`から`wiki/scope.md`へ移した。旧`raw/snapshots/`の268資料を個別に見直し、同じ仕様系列、配布物、repository、または保存corpusとして文脈を共有する153件を20の名前付きcollectionへ、単独で成立する115件を`raw/items/{取得元host}/`へ移した。collectionはWHATWG HTML履歴42件、HTML 4履歴18件、初期WWW 15件、WHATWG Web Applications履歴10件、W3C HTML5履歴10件、HTML 3.0 8件、RFC 1942系列6件、client-side image maps 5件、RFC 2070系列5件、HTML style履歴4件、WAI-ARIA 4件、HTML scripting履歴4件、Web Forms 2.0 4件、AAP Book DTD 3件、ruby markup 3件、HTML+ 3件、HTML object履歴3件、MathML 2件、SVG 2件、XForms 2件とした。取得元hostや話題が同じだけの資料はまとめず、配置が採用因果や証拠上の優劣を意味しない境界をSchemeとRaw READMEへ明記した。
+
+全110 elementページの証拠表を`年月日`、`資料`、`種別`、`この資料から確認できる内容`、`閲覧日`の5列へ変更した。ローカルRawを固定された検証対象として資料名へ直接リンクし、その直後に`公開元`を置く表記へ、現在定義は同じ形の`公開版`表記へ統一した。複数資料は保存資料ごとのlink labelと公開元を対応させ、同一配布物の複数ファイルだけは公開元を共有できる契約とした。
+
+全118正本ページ、554証拠行、316 manifest項目、Raw参照、内部相対リンク、frontmatter、必須見出し順、115要素の確度集計を検査した。`raw/fetch.sh`による全digest検証と取得失敗時の原子性テストに合格し、Rawの内容は変更していない。
+
+## [2026-08-11] schema | Wiki README
+
+`wiki/README.md`をWikiの入口と収録範囲の正本として作成し、`wiki/scope.md`の抽出規則、境界事例、確認日、根拠を統合して同ページを削除した。READMEにはWikiの目的と読み方、全110 elementページ、7 lineageページ、Logへの案内を収録し、elementの概要は各ページの`概要`を再利用した。sourceとsynthesisは現存しないことを明記した。
+
+README用のfrontmatter summaryや生成器は追加せず、ページの追加、削除、改名、主要結論の変更時に対応する一行概要を更新する契約とした。全110 elementページ、7 lineageページ、554証拠行、READMEのページ網羅性と概要、必須見出し順、frontmatter、Raw参照、内部相対リンク、重複title、115要素の確度集計を検査した。Raw digest検証と取得失敗時の原子性テストに合格し、Researchへ送る新しい問題はなかった。
+
+## [2026-08-11] lint | READMEの見出し
+
+READMEの一覧見出しを`要素ページ`と`共有系譜ページ`から`要素`と`共有系譜`へ変更し、案内リンクのlabelも`要素`へ揃えた。ページ網羅数、相対リンク、Markdown whitespaceを検査し、内容と構造に影響がないことを確認した。
+
+## [2026-08-11] schema | Raw snapshot配置
+
+資料間の関係を物理配置へ重ねていた名前付きcollectionと`items/`の区分を廃止した。個別に取得した313件のfile snapshotを`raw/{取得元host}/{取得元URLのSHA-256先頭16桁}-{識別可能なファイル名}`へ移し、HTML 4.01 ZIP、GNU Texinfo 2.16 tar、GNU Texinfo 3.7 tarの三つは一体として取得したtreeのためartifact識別子と内部構造を維持した。資料系列はRaw READMEの収録案内とWikiで扱い、取得単位と保存先は`sources.tsv`を正本とするSchemeへ変更した。
+
+316 manifest出力、313 fileのdigest、三つのarchive tree、全ローカルMarkdownリンクを検査し、`raw/fetch.sh`の全Raw検証と取得失敗時の原子性テストに合格した。Rawの内容とWikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | Raw運用の集約とURL path配置
+
+Rawの運用規則を唯一のSchemeである`AGENTS.md`へ集約し、重複する収録一覧を持っていた`raw/README.md`を削除した。`wiki/sources/`の任意page層も廃止し、資料の書誌情報と証拠上の役割は使用するWikiページ、取得記録は`sources.tsv`を正本とした。取得失敗時の原子性を確認していた単独の回帰テストは、明示指示により削除した。
+
+個別取得した313件のfile snapshotを`raw/{取得元host}/{URL path}`へ移し、末尾`/`は`index.html`、query付き8件はbasenameへ取得元URLのSHA-256先頭16桁を付け、ファイルシステムで安全に扱えないpath文字をpercent-encodeする規則へ変更した。HTML 4.01とGNU Texinfo 2版の三つのarchive treeは配置と内部構造を維持した。316 manifest出力、313 fileのdigest、三つのarchive tree、URL path規則、全ローカルMarkdownリンクを検査し、`raw/fetch.sh`の全Raw検証に合格した。Rawの内容とWikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | Query URLのhash suffix
+
+Query付きURLの衝突回避hashをbasenameのprefixから拡張子直前のsuffixへ変更し、8件のfile snapshot、manifest、Wiki参照を移行した。313 fileのdigest、URL path規則、全ローカルMarkdownリンクを検査し、Rawの内容とWikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | Manifest outputの導出
+
+`raw/sources.tsv`から保存先の`output`列を削除し、取得種別、取得元URL、取得日、内容識別子の4列へ簡素化した。保存先は取得元URLから一意に導出し、同一URLの複数snapshotを許さない契約とした。内容が変わるresourceは公式のversioned URLまたは信頼できるarchive URLを別の取得元として記録する。
+
+URL解析とarchive処理を安全に扱うため、shell scriptをNode標準ライブラリだけの`raw/fetch.mjs`へ置き換えた。fileは導出先へ保存し、archiveはURL path自体をディレクトリとして内部treeを変更せず展開する形に統一して、HTML 4.01 ZIPとGNU Texinfo 2版のtreeおよびWiki参照を移行した。316 manifest項目の4列形式とURL一意性、313 fileのdigest、三つのarchive tree、全119 Markdown fileのローカルリンク、取得器の構文と実行を検査した。明示指示に従い、独立したテストは追加していない。
+
+## [2026-08-11] schema | Query hashの拡張子後suffix
+
+Query付きURLの衝突回避hashを拡張子直前からURL path全体の末尾へ移し、`file.cgi-{hash}`形式へ変更した。8件のfile snapshotとWiki参照を移行し、取得器の構文、313 fileのdigest、旧path参照の不在、全119 Markdown fileのローカルリンクを検査した。Rawの内容とWikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | Raw manifestの正規化
+
+取得記録の役割を明確にするため、`raw/sources.tsv`を`raw/manifest.tsv`へ改名した。schemaを`url`、`kind`、`retrieved_on`、`sha256`へ変更し、主キーのURLを先頭へ置いてlocaleに依存しない昇順に統一した。SHA-256 algorithmは列名で固定し、各値から重複する`sha256:`prefixを削除した。
+
+取得器、Scheme、Wiki READMEの参照を移行し、manifestのheader、4列形式、316 URLの一意性と順序、313 fileのdigest、三つのarchive tree、全Markdownのローカルリンクを検査した。Raw snapshotの内容とWikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | Raw差分検出のGit集約
+
+Raw内容の変更はGitで検出できるため、`raw/manifest.tsv`から`sha256`列を削除し、`url`、`kind`、`retrieved_on`の3列へ簡素化した。取得器からfileとdownloadのdigest検査を削除し、manifestと保存先の構造検査および欠落resourceの取得だけを担わせた。Query URLの保存先を決定論的に導出するSHA-256 suffixは内容検査と独立しているため維持した。
+
+SchemeではGitをRaw内容差分と展開済みarchive treeの正本とした。manifestのheader、3列形式、316 URLの一意性と順序、313 fileと三つのarchive treeの存在と種別、全Markdownのローカルリンク、取得器の構文と実行を検査した。Raw snapshotの内容とWikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | Raw manifestの2列化
+
+取得日をGitの追加履歴とWiki証拠表の閲覧日に集約し、`raw/manifest.tsv`から`retrieved_on`列を削除した。manifestは主キーで検索と一意性を管理する`url`を先頭、取得処理を指定する`kind`を二列目とするURL昇順の2列構成へ簡素化した。
+
+取得器とSchemeを移行し、manifestのheader、2列形式、316 URLの一意性と順序、313 fileと三つのarchive treeの存在と種別、全Markdownのローカルリンク、取得器の構文と実行を検査した。Raw snapshotの内容とWikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | Raw取得器のNode 24化
+
+取得器の処理内容は実行可能なscript自体を正本とし、`AGENTS.md`から実行コマンドと欠落resource取得の実装説明を削除した。SchemeにはURLからの保存先導出、Rawの不変性、archive treeの維持、一時領域からの追加など、実装を変更しても維持する制約だけを残した。
+
+`raw/fetch.mjs`をNode.js 24.0.0以上の実行へ限定し、`fileURLToPath`を`import.meta.dirname`へ、外部`curl`を標準`fetch`へ置き換えた。Node 24.0では組み込みTypeScriptのtype strippingがstableではなく型検査も行わないため、追加の価値がないTypeScript化は見送った。取得器の構文と実行、標準`fetch`、manifestの316 URLと保存先、全Markdownのローカルリンクを検査した。Raw snapshotの内容とWikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | Raw取得器のNode 24.12化
+
+`raw/fetch.mjs`の実行要件をNode.js 24.12.0以上へ引き上げ、`fs.mkdtempDisposableSync()`と`using`による一時領域の自動破棄へ変更して、手動の`try/finally` cleanupを削除した。Node 24.12でtype strippingはstableになったが型検査は行わず、このscriptではruntime validationを置き換えないためTypeScript化は見送った。`fetch.mjs`は欠落resourceの取得という主操作を直接表し、`sync`のように既存Rawを更新する誤解も生まないためファイル名を維持した。
+
+Node 24.19環境で取得器の構文と実行、一時領域の自動削除、標準`fetch`、manifestの316 URLと保存先、全Markdownのローカルリンクを検査した。Raw snapshotの内容、Scheme、Wikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | Raw取得器のjs extension
+
+人間が追加した`raw/package.json`の`"type": "module"`によりpackage内の`.js`をES moduleとして明示できるため、`raw/fetch.mjs`を`raw/fetch.js`へ改名した。package.jsonのNode.js 24.12系runtime指定とscript自身のversion guardは維持し、追加のpackage設定や依存関係は導入していない。
+
+`node raw/fetch.js`と実行可能fileとしての直接実行、取得器の構文、manifestの316 URLと保存先、全Markdownのローカルリンクを検査した。Raw snapshotの内容、Scheme、Wikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | URL指定Raw取得と生成index
+
+既存Rawを再取得せず内容差分をGitへ委ねる運用では永続manifestとmanifest materializerの独立した価値が不足するため、`raw/manifest.tsv`と`raw/fetch.js`を削除した。代わりに、LLMが指定した単一URLを決定論的な保存先へ追加する`raw/add.js`を作成した。CLIは通常fileに加えて明示指定されたZIPとtarを扱い、既存targetを拒否し、一時領域で取得とarchive path検査を完了してからRawへ追加する。
+
+Raw rootのtoolingを除く取得元host directory以下の全fileをpath順に列挙する`raw/generate-index.js`と生成物`wiki/raw-index.md`を追加した。indexは各fileへのlinkと、先頭256 KiB内のHTML `title`要素から抽出したdocument titleを持ち、確認できないtitleは推測せず`—`とする。Scheme、Ingest、Lint、READMEをURL指定CLIと生成indexへ移行した。
+
+local HTTP serverを使ったCLIのfile取得、query hash suffix、重複拒否、518 Raw fileと327 document titleの列挙、indexの決定論的再生成、取得器と生成器の構文、全Markdownのローカルリンクを検査した。既存Raw snapshotの内容とWikiの歴史的結論は変更していない。
+
+## [2026-08-11] lint | Raw indexのdocument title判定
+
+`raw/generate-index.js`がC sourceやplain-text仕様中のHTML例をdocument titleと誤認していたため、先頭の空白とHTML commentを除いた後にHTML文書の開始を確認してから`title`要素を抽出するよう修正した。`ParseHTML.h`とplain-text仕様4件を`—`へ訂正し、`.txt`として保存されたHTML文書を含む既存322 titleは維持した。
+
+518 Raw fileの網羅、誤認5件の除外、拡張子に依存しないHTML title抽出、indexの決定論的再生成を検査した。Raw snapshotの内容とWikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | Raw indexの生成物表示
+
+`wiki/raw-index.md`は知識ページではなく決定論的な生成indexであるため、`status` frontmatterを削除した。代わりに、`raw/generate-index.js`による生成物であり、直接編集せず再生成することを本文へ明記した。
+
+生成器とSchemeを同期し、518 Raw fileの網羅とindexの決定論的再生成を検査した。Raw snapshotの内容とWikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | Raw indexの導入文簡素化
+
+`wiki/raw-index.md`の生成物に関する注意書きをblockquoteへ変更し、resource件数とtitle抽出規則を説明する導入文を削除した。生成規則の正本はSchemeとscriptに維持した。
+
+518 Raw fileの網羅とindexの決定論的再生成を検査した。Raw snapshotの内容とWikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | Raw toolingの分離
+
+`raw/`をsnapshot専用にするため、CLIを`scripts/add-raw.js`と`scripts/generate-raw-index.js`へ移動し、用途が名前だけで判別できるよう改名した。ES moduleとNode.js 24.12.0以上の実行要件を定義する`package.json`もrepository rootへ移し、各scriptは自身の位置から`raw/`と`wiki/`を解決する構成へ変更した。
+
+URL追加CLIのusageと保存先解決、518 Raw fileの網羅、322 document title、indexの決定論的再生成、Scheme内の現行参照を検査した。Raw snapshotの内容とWikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | AGENTS契約の簡素化
+
+資料選定の権限を、人間が調査対象と重要な判断を選び、LLMがその範囲内で資料と探索経路を選ぶ契約へ統一した。対象Lintの検査閉包と`合格|修正済み|Research必要`の終了条件、`h1-h6.md`を共通の確度と状態で扱える条件、Log本文のappend-only例外を明文化した。Raw取得の来歴として取得元URL、redirect後の最終URL、取得日をLogへ残す契約を追加し、`scripts/add-raw.js`がそれらを出力するようにした。
+
+elementの概要は各elementページだけを正本とし、`wiki/README.md`の110ページ分の要約をlinkだけへ移行した。lineageとsynthesisの一行概要は横断ページの選択に必要なため維持した。Raw配置規則をRaw source maintenanceへ集約し、Ingestの重複した完了条件とValidationのLint規則再掲を削除した。
+
+対象Lintは、必須項目、READMEの110 elementページ（115要素）と7 lineageページの網羅、117知識ページのタイトル一意性、1,645ローカルMarkdown link、518 Raw fileのindex再現性、script構文、whitespaceを`合格`、契約の矛盾とREADMEの重複を`修正済み`、`Research必要`はなしと確認した。Wikiの歴史的結論とRaw snapshotは変更していない。
+
+## [2026-08-11] schema | READMEの人間向け要素概要
+
+`wiki/README.md`の要素概要は、人間が一覧から調査済みの起点、経路、主要な未解決点を判断して読むページを選ぶために必要だという指示を受け、Page contractへ戻した。同期負担とのtrade-offとして、elementページの`概要`を全文複製せず、確認済みの起点または経路と、解釈を左右する未解決点だけを一行に編集する契約とした。主要な結論の変更で概要が不正確になる場合は同じ変更で更新し、Lintでも正確性を確認する。
+
+全110 elementページの現行`概要`を旧README文と突き合わせて再検討し、73件を索引用に書き直し、既に短く役割を満たす37件を維持した。複数文の`概要`をそのまま再掲した項目はない。対象Lintは、110 element概要と7 lineage概要の網羅、115要素の集計、1,645ローカルMarkdown link、518 Raw fileのindex再現性、script構文、whitespaceを`合格`、人間向け概要を失ったREADME契約を`修正済み`、`Research必要`はなしと確認した。Wikiの歴史的結論とRaw snapshotは変更していない。

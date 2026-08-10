@@ -1,0 +1,2186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"><!-- when publishing, change bits marked ZZZ --><html class="split chapter" lang="en-US-x-Hixie"><meta content="text/html; charset=ascii" http-equiv="Content-Type"><title>4.8.6 The video element &mdash; HTML5 (Edition for Web Authors)</title><meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" name="viewport"><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><link href="whatwg.css" rel="stylesheet"><style type="text/css">
+   pre { margin-left: 2em; white-space: pre-wrap; }
+   h2 { margin: 3em 0 1em 0; }
+   h3 { margin: 2.5em 0 1em 0; }
+   h4 { margin: 2.5em 0 0.75em 0; }
+   h5, h6 { margin: 2.5em 0 1em; }
+   h1 + h2, h1 + h2 + h2 { margin: 0.75em 0 0.75em; }
+   h2 + h3, h3 + h4, h4 + h5, h5 + h6 { margin-top: 0.5em; }
+   p { margin: 1em 0; }
+   hr:not(.top) { display: block; background: none; border: none; padding: 0; margin: 2em 0; height: auto; }
+   dl, dd { margin-top: 0; margin-bottom: 0; }
+   dt { margin-top: 0.75em; margin-bottom: 0.25em; clear: left; }
+   dt + dt { margin-top: 0; }
+   dd dt { margin-top: 0.25em; margin-bottom: 0; }
+   dd p { margin-top: 0; }
+   dd dl + p { margin-top: 1em; }
+   dd table + p { margin-top: 1em; }
+   p + * > li, dd li { margin: 1em 0; }
+   dt, dfn { font-weight: bold; font-style: normal; }
+   dt dfn { font-style: italic; }
+   pre, code { font-size: inherit; font-family: monospace; font-variant: normal; }
+   pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+   pre em { font-weight: bolder; font-style: normal; }
+   @media screen { code { color: orangered; } code :link, code :visited { color: inherit; } }
+   var sub { vertical-align: bottom; font-size: smaller; position: relative; top: 0.1em; }
+   table { border-collapse: collapse; border-style: hidden hidden none hidden; }
+   table thead, table tbody { border-bottom: solid; }
+   table tbody th:first-child { border-left: solid; }
+   table tbody th { text-align: left; }
+   table td, table th { border-left: solid; border-right: solid; border-bottom: solid thin; vertical-align: top; padding: 0.2em; }
+   blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+
+   .bad, .bad *:not(.XXX) { color: gray; border-color: gray; background: transparent; }
+   .matrix, .matrix td { border: none; text-align: right; }
+   .matrix { margin-left: 2em; }
+   .dice-example { border-collapse: collapse; border-style: hidden solid solid hidden; border-width: thin; margin-left: 3em; }
+   .dice-example caption { width: 30em; font-size: smaller; font-style: italic; padding: 0.75em 0; text-align: left; }
+   .dice-example td, .dice-example th { border: solid thin; width: 1.35em; height: 1.05em; text-align: center; padding: 0; }
+
+   .toc dfn, h1 dfn, h2 dfn, h3 dfn, h4 dfn, h5 dfn, h6 dfn { font: inherit; }
+   img.extra { float: right; }
+   pre.idl { border: solid thin; background: #EEEEEE; color: black; padding: 0.5em 1em; }
+   pre.idl :link, pre.idl :visited { color: inherit; background: transparent; }
+   pre.css { border: solid thin; background: #FFFFEE; color: black; padding: 0.5em 1em; }
+   pre.css:first-line { color: #AAAA50; }
+   dl.domintro { color: green; margin: 2em 0 2em 2em; padding: 0.5em 1em; border: none; background: #DDFFDD; }
+   hr + dl.domintro, div.impl + dl.domintro { margin-top: 2.5em; margin-bottom: 1.5em; }
+   dl.domintro dt, dl.domintro dt * { color: black; text-decoration: none; }
+   dl.domintro dd { margin: 0.5em 0 1em 2em; padding: 0; }
+   dl.domintro dd p { margin: 0.5em 0; }
+   dl.switch { padding-left: 2em; }
+   dl.switch > dt { text-indent: -1.5em; }
+   dl.switch > dt:before { content: '\21AA'; padding: 0 0.5em 0 0; display: inline-block; width: 1em; text-align: right; line-height: 0.5em; }
+   dl.triple { padding: 0 0 0 1em; }
+   dl.triple dt, dl.triple dd { margin: 0; display: inline }
+   dl.triple dt:after { content: ':'; }
+   dl.triple dd:after { content: '\A'; white-space: pre; }
+   .diff-old { text-decoration: line-through; color: silver; background: transparent; }
+   .diff-chg, .diff-new { text-decoration: underline; color: green; background: transparent; }
+   a .diff-new { border-bottom: 1px blue solid; }
+
+   h2 { page-break-before: always; }
+   h1, h2, h3, h4, h5, h6 { page-break-after: avoid; }
+   h1 + h2, hr + h2.no-toc { page-break-before: auto; }
+
+   p  > span:not([title=""]):not([class="XXX"]):not([class="impl"]):not([class="note"]),
+   li > span:not([title=""]):not([class="XXX"]):not([class="impl"]):not([class="note"]), { border-bottom: solid #9999CC; }
+
+   div.head { margin: 0 0 1em; padding: 1em 0 0 0; }
+   div.head p { margin: 0; }
+   div.head h1 { margin: 0; }
+   div.head .logo { float: right; margin: 0 1em; }
+   div.head .logo img { border: none } /* remove border from top image */
+   div.head dl { margin: 1em 0; }
+   div.head p.copyright, div.head p.alt { font-size: x-small; font-style: oblique; margin: 0; }
+
+   body > .toc > li { margin-top: 1em; margin-bottom: 1em; }
+   body > .toc.brief > li { margin-top: 0.35em; margin-bottom: 0.35em; }
+   body > .toc > li > * { margin-bottom: 0.5em; }
+   body > .toc > li > * > li > * { margin-bottom: 0.25em; }
+   .toc, .toc li { list-style: none; }
+
+   .brief { margin-top: 1em; margin-bottom: 1em; line-height: 1.1; }
+   .brief li { margin: 0; padding: 0; }
+   .brief li p { margin: 0; padding: 0; }
+
+   .category-list { margin-top: -0.75em; margin-bottom: 1em; line-height: 1.5; }
+   .category-list::before { content: '\21D2\A0'; font-size: 1.2em; font-weight: 900; }
+   .category-list li { display: inline; }
+   .category-list li:not(:last-child)::after { content: ', '; }
+   .category-list li > span, .category-list li > a { text-transform: lowercase; }
+   .category-list li * { text-transform: none; } /* don't affect <code> nested in <a> */
+
+   .XXX { color: #E50000; background: white; border: solid red; padding: 0.5em; margin: 1em 0; }
+   .XXX > :first-child { margin-top: 0; }
+   p .XXX { line-height: 3em; }
+   .annotation { border: solid thin black; background: #0C479D; color: white; position: relative; margin: 8px 0 20px 0; }
+   .annotation:before { position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin: 6px -6px -6px 6px; background: #333333; z-index: -1; content: ''; }
+   .annotation :link, .annotation :visited { color: inherit; }
+   .annotation :link:hover, .annotation :visited:hover { background: transparent; }
+   .annotation span { border: none ! important; }
+   .note { color: green; background: transparent; font-family: sans-serif; }
+   .warning { color: red; background: transparent; }
+   .note, .warning { font-weight: bolder; font-style: italic; }
+   p.note, div.note { padding: 0.5em 2em; }
+   span.note { padding: 0 2em; }
+   .note p:first-child, .warning p:first-child { margin-top: 0; }
+   .note p:last-child, .warning p:last-child { margin-bottom: 0; }
+   .warning:before { font-style: normal; }
+   p.note:before { content: 'Note: '; }
+   p.warning:before { content: '\26A0 Warning! '; }
+
+   .bookkeeping:before { display: block; content: 'Bookkeeping details'; font-weight: bolder; font-style: italic; }
+   .bookkeeping { font-size: 0.8em; margin: 2em 0; }
+   .bookkeeping p { margin: 0.5em 2em; display: list-item; list-style: square; }
+   .bookkeeping dt { margin: 0.5em 2em 0; }
+   .bookkeeping dd { margin: 0 3em 0.5em; }
+
+   h4 { position: relative; z-index: 3; }
+   h4 + .element, h4 + div + .element { margin-top: -2.5em; padding-top: 2em; }
+   .element {
+     background: #EEEEFF;
+     color: black;
+     margin: 0 0 1em 0.15em;
+     padding: 0 1em 0.25em 0.75em;
+     border-left: solid #9999FF 0.25em;
+     position: relative;
+     z-index: 1;
+   }
+   .element:before {
+     position: absolute;
+     z-index: 2;
+     top: 0;
+     left: -1.15em;
+     height: 2em;
+     width: 0.9em;
+     background: #EEEEFF;
+     content: ' ';
+     border-style: none none solid solid;
+     border-color: #9999FF;
+     border-width: 0.25em;
+   }
+
+   .example { display: block; color: #222222; background: #FCFCFC; border-left: double; margin-left: 2em; padding-left: 1em; }
+   td > .example:only-child { margin: 0 0 0 0.1em; }
+
+   ul.domTree, ul.domTree ul { padding: 0 0 0 1em; margin: 0; }
+   ul.domTree li { padding: 0; margin: 0; list-style: none; position: relative; }
+   ul.domTree li li { list-style: none; }
+   ul.domTree li:first-child::before { position: absolute; top: 0; height: 0.6em; left: -0.75em; width: 0.5em; border-style: none none solid solid; content: ''; border-width: 0.1em; }
+   ul.domTree li:not(:last-child)::after { position: absolute; top: 0; bottom: -0.6em; left: -0.75em; width: 0.5em; border-style: none none solid solid; content: ''; border-width: 0.1em; }
+   ul.domTree span { font-style: italic; font-family: serif; }
+   ul.domTree .t1 code { color: purple; font-weight: bold; }
+   ul.domTree .t2 { font-style: normal; font-family: monospace; }
+   ul.domTree .t2 .name { color: black; font-weight: bold; }
+   ul.domTree .t2 .value { color: blue; font-weight: normal; }
+   ul.domTree .t3 code, .domTree .t4 code, .domTree .t5 code { color: gray; }
+   ul.domTree .t7 code, .domTree .t8 code { color: green; }
+   ul.domTree .t10 code { color: teal; }
+
+   body.dfnEnabled dfn { cursor: pointer; }
+   .dfnPanel {
+     display: inline;
+     position: absolute;
+     z-index: 10;
+     height: auto;
+     width: auto;
+     padding: 0.5em 0.75em;
+     font: small sans-serif, Droid Sans Fallback;
+     background: #DDDDDD;
+     color: black;
+     border: outset 0.2em;
+   }
+   .dfnPanel * { margin: 0; padding: 0; font: inherit; text-indent: 0; }
+   .dfnPanel :link, .dfnPanel :visited { color: black; }
+   .dfnPanel p { font-weight: bolder; }
+   .dfnPanel * + p { margin-top: 0.25em; }
+   .dfnPanel li { list-style-position: inside; }
+
+   #configUI { position: absolute; z-index: 20; top: 10em; right: 1em; width: 11em; font-size: small; }
+   #configUI p { margin: 0.5em 0; padding: 0.3em; background: #EEEEEE; color: black; border: inset thin; }
+   #configUI p label { display: block; }
+   #configUI #updateUI, #configUI .loginUI { text-align: center; }
+   #configUI input[type=button] { display: block; margin: auto; }
+
+   fieldset { margin: 1em; }
+   fieldset > legend * + { margin-top: 0; }
+   fieldset > :last-child { margin-bottom: 0; }
+
+  </style><style type="text/css">
+
+   .applies thead th > * { display: block; }
+   .applies thead code { display: block; }
+   .applies tbody th { whitespace: nowrap; }
+   .applies td { text-align: center; }
+   .applies .yes { background: yellow; }
+
+   .matrix, .matrix td { border: hidden; text-align: right; }
+   .matrix { margin-left: 2em; }
+
+   .dice-example { border-collapse: collapse; border-style: hidden solid solid hidden; border-width: thin; margin-left: 3em; }
+   .dice-example caption { width: 30em; font-size: smaller; font-style: italic; padding: 0.75em 0; text-align: left; }
+   .dice-example td, .dice-example th { border: solid thin; width: 1.35em; height: 1.05em; text-align: center; padding: 0; }
+
+   td.eg { border-width: thin; text-align: center; }
+
+   #table-example-1 { border: solid thin; border-collapse: collapse; margin-left: 3em; }
+   #table-example-1 * { font-family: "Essays1743", serif; line-height: 1.01em; }
+   #table-example-1 caption { padding-bottom: 0.5em; }
+   #table-example-1 thead, #table-example-1 tbody { border: none; }
+   #table-example-1 th, #table-example-1 td { border: solid thin; }
+   #table-example-1 th { font-weight: normal; }
+   #table-example-1 td { border-style: none solid; vertical-align: top; }
+   #table-example-1 th { padding: 0.5em; vertical-align: middle; text-align: center; }
+   #table-example-1 tbody tr:first-child td { padding-top: 0.5em; }
+   #table-example-1 tbody tr:last-child td { padding-bottom: 1.5em; }
+   #table-example-1 tbody td:first-child { padding-left: 2.5em; padding-right: 0; width: 9em; }
+   #table-example-1 tbody td:first-child::after { content: leader(". "); }
+   #table-example-1 tbody td { padding-left: 2em; padding-right: 2em; }
+   #table-example-1 tbody td:first-child + td { width: 10em; }
+   #table-example-1 tbody td:first-child + td ~ td { width: 2.5em; }
+   #table-example-1 tbody td:first-child + td + td + td ~ td { width: 1.25em; }
+
+   .apple-table-examples { border: none; border-collapse: separate; border-spacing: 1.5em 0em; width: 40em; margin-left: 3em; }
+   .apple-table-examples * { font-family: "Times", serif; }
+   .apple-table-examples td, .apple-table-examples th { border: none; white-space: nowrap; padding-top: 0; padding-bottom: 0; }
+   .apple-table-examples tbody th:first-child { border-left: none; width: 100%; }
+   .apple-table-examples thead th:first-child ~ th { font-size: smaller; font-weight: bolder; border-bottom: solid 2px; text-align: center; }
+   .apple-table-examples tbody th::after, .apple-table-examples tfoot th::after { content: leader(". ") }
+   .apple-table-examples tbody th, .apple-table-examples tfoot th { font: inherit; text-align: left; }
+   .apple-table-examples td { text-align: right; vertical-align: top; }
+   .apple-table-examples.e1 tbody tr:last-child td { border-bottom: solid 1px; }
+   .apple-table-examples.e1 tbody + tbody tr:last-child td { border-bottom: double 3px; }
+   .apple-table-examples.e2 th[scope=row] { padding-left: 1em; }
+   .apple-table-examples sup { line-height: 0; }
+
+   .details-example img { vertical-align: top; }
+
+   #named-character-references-table {
+     white-space: nowrap;
+     font-size: 0.6em;
+     column-width: 30em;
+     column-gap: 1em;
+     -moz-column-width: 30em;
+     -moz-column-gap: 1em;
+     -webkit-column-width: 30em;
+     -webkit-column-gap: 1em;
+   }
+   #named-character-references-table > table > tbody > tr > td:first-child + td,
+   #named-character-references-table > table > tbody > tr > td:last-child { text-align: center; }
+   #named-character-references-table > table > tbody > tr > td:last-child:hover > span { position: absolute; top: auto; left: auto; margin-left: 0.5em; line-height: 1.2; font-size: 5em; border: outset; padding: 0.25em 0.5em; background: white; width: 1.25em; height: auto; text-align: center; }
+   #named-character-references-table > table > tbody > tr#entity-CounterClockwiseContourIntegral > td:first-child { font-size: 0.5em; }
+
+   .glyph.control { color: red; }
+
+   @font-face {
+     font-family: 'Essays1743';
+     src: url('http://www.whatwg.org/specs/web-apps/current-work/fonts/Essays1743.ttf');
+   }
+   @font-face {
+     font-family: 'Essays1743';
+     font-weight: bold;
+     src: url('http://www.whatwg.org/specs/web-apps/current-work/fonts/Essays1743-Bold.ttf');
+   }
+   @font-face {
+     font-family: 'Essays1743';
+     font-style: italic;
+     src: url('http://www.whatwg.org/specs/web-apps/current-work/fonts/Essays1743-Italic.ttf');
+   }
+   @font-face {
+     font-family: 'Essays1743';
+     font-style: italic;
+     font-weight: bold;
+     src: url('http://www.whatwg.org/specs/web-apps/current-work/fonts/Essays1743-BoldItalic.ttf');
+   }
+
+  </style><link href="data:text/css," id="complete" rel="stylesheet" title="Complete specification"><link href="data:text/css,.impl%20%7B%20display:%20none;%20%7D%0Ahtml%20%7B%20border:%20solid%20yellow;%20%7D%20.domintro:before%20%7B%20display:%20none;%20%7D" id="author" rel="alternate stylesheet" title="Author documentation only"><link href="data:text/css,.impl%20%7B%20background:%20%23FFEEEE;%20%7D%20.domintro:before%20%7B%20background:%20%23FFEEEE;%20%7D" id="highlight" rel="alternate stylesheet" title="Highlight implementation requirements"><script type="text/javascript">
+ function getCookie(name) {
+   var params = location.search.substr(1).split("&");
+   for (var index = 0; index < params.length; index++) {
+     if (params[index] == name)
+       return "1";
+     var data = params[index].split("=");
+     if (data[0] == name)
+       return unescape(data[1]);
+   }
+   var cookies = document.cookie.split("; ");
+   for (var index = 0; index < cookies.length; index++) {
+     var data = cookies[index].split("=");
+     if (data[0] == name)
+       return unescape(data[1]);
+   }
+   return null;
+ }
+ function load(script) {
+   var e = document.createElement('script');
+   e.setAttribute('src', script + '?' + encodeURIComponent(location) + '&' + encodeURIComponent(document.referrer));
+   document.body.appendChild(e);
+ }
+ function init() {
+   if (location.search == '?slow-browser')
+     return;
+   var configUI = document.createElement('div');
+   configUI.id = 'configUI';
+   document.body.appendChild(configUI);
+   if (document.getElementById('head'))
+     load('toc.js');
+   load('dfn.js');
+   if (getCookie('profile') == '1')
+     document.getElementsByTagName('h2')[0].textContent += '; load: ' + (new Date() - loadTimer) + 'ms';
+   fixBrokenLink();
+ }
+</script><link href="https://www.w3.org/StyleSheets/TR/W3C-WD" rel="stylesheet" type="text/css"><link href="style.css" rel="stylesheet"><script src="link-fixup.js"></script><link href="the-iframe-element.html" rel="prev" title="4.8.2 The iframe element">
+  <link href="Overview.html#contents" rel="index" title="Table of contents">
+  <link href="the-canvas-element.html" rel="next" title="4.8.11 The canvas element">
+  <body onload="fixBrokenLink(); init()"><div class="head" id="head">
+   <p><a href="https://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/Icons/w3c_home" width="72"></a></p>
+
+   <h1>HTML5 <span class="edition">Edition for Web Authors</span> <span class="rcsrevision">revision 1.4519</span></h1>
+   </div><div>
+   <a href="the-iframe-element.html">&larr; 4.8.2 The iframe element</a> &ndash;
+   <a href="Overview.html#contents">Table of contents</a> &ndash;
+   <a href="the-canvas-element.html">4.8.11 The canvas element &rarr;</a>
+  <ol class="toc"><li><ol><li><ol><li><a href="video.html#video" id="x4.8.6-the-video-element"><span class="secno">4.8.6 </span>The <code>video</code> element</a><li><a href="video.html#audio" id="x4.8.7-the-audio-element"><span class="secno">4.8.7 </span>The <code>audio</code> element</a><li><a href="video.html#the-source-element" id="x4.8.8-the-source-element"><span class="secno">4.8.8 </span>The <code>source</code> element</a><li><a href="video.html#the-track-element" id="x4.8.9-the-track-element"><span class="secno">4.8.9 </span>The <code>track</code> element</a><li><a href="video.html#media-elements"><span class="secno">4.8.10 </span>Media elements</a>
+      <ol><li><a href="video.html#error-codes"><span class="secno">4.8.10.1 </span>Error codes</a><li><a href="video.html#location-of-the-media-resource"><span class="secno">4.8.10.2 </span>Location of the media resource</a><li><a href="video.html#mime-types"><span class="secno">4.8.10.3 </span>MIME types</a><li><a href="video.html#network-states"><span class="secno">4.8.10.4 </span>Network states</a><li><a href="video.html#loading-the-media-resource"><span class="secno">4.8.10.5 </span>Loading the media resource</a><li><a href="video.html#offsets-into-the-media-resource"><span class="secno">4.8.10.6 </span>Offsets into the media resource</a><li><a href="video.html#the-ready-states"><span class="secno">4.8.10.7 </span>The ready states</a><li><a href="video.html#playing-the-media-resource"><span class="secno">4.8.10.8 </span>Playing the media resource</a><li><a href="video.html#seeking"><span class="secno">4.8.10.9 </span>Seeking</a><li><a href="video.html#timed-tracks"><span class="secno">4.8.10.10 </span>Timed tracks</a>
+        <ol><li><a href="video.html#timed-track-model"><span class="secno">4.8.10.10.1 </span>Timed track model</a><li><a href="video.html#sourcing-in-band-timed-tracks"><span class="secno">4.8.10.10.2 </span>Sourcing in-band timed tracks</a><li><a href="video.html#timed-track-api"><span class="secno">4.8.10.10.3 </span>Timed track API</a></ol><li><a href="video.html#user-interface"><span class="secno">4.8.10.11 </span>User interface</a><li><a href="video.html#time-ranges"><span class="secno">4.8.10.12 </span>Time ranges</a><li><a href="video.html#mediaevents"><span class="secno">4.8.10.13 </span>Event summary</a></ol></ol></ol></ol></div>
+
+  <h4 id="video"><span class="secno">4.8.6 </span>The <dfn><code>video</code></dfn> element</h4><p class="XXX annotation"><span><a href="https://www.w3.org/html/wg/tracker/issues/9">ISSUE-9</a> (video-accessibility) blocks progress to Last Call</span><dl class="element"><dt>Categories</dt>
+   <dd><a href="content-models.html#flow-content" id="flow-content-100">Flow content</a>.</dd>
+   <dd><a href="content-models.html#phrasing-content" id="phrasing-content-110">Phrasing content</a>.</dd>
+   <dd><a href="content-models.html#embedded-content" id="embedded-content-15">Embedded content</a>.</dd>
+   <dd>If the element has a <code title="attr-media-controls"><a href="#attr-media-controls" id="controls-1">controls</a></code> attribute: <a href="content-models.html#interactive-content" id="interactive-content-9">Interactive content</a>.</dd>
+   <dt>Contexts in which this element can be used:</dt>
+   <dd>Where <a href="content-models.html#embedded-content" id="embedded-content-16">embedded content</a> is expected.</dd>
+   <dt>Content model:</dt>
+   <dd>If the element has a <code title="attr-media-src"><a href="#attr-media-src" id="src-31">src</a></code> attribute:
+<!--KEEP-END w3c-html--><!--TT-->
+ zero or more <code><a href="#the-track-element" id="track-3">track</a></code> elements, then
+<!--KEEP-START w3c-html--><!--TT-->
+ <a href="content-models.html#transparent" id="transparent-7">transparent</a>, but with no <a href="#media-element" id="media-element-1">media element</a> descendants.</dd>
+   <dd>If the element does not have a <code title="attr-media-src"><a href="#attr-media-src" id="src-32">src</a></code> attribute: one or more <code><a href="#the-source-element" id="source-1">source</a></code> elements, then
+<!--KEEP-END w3c-html--><!--TT-->
+ zero or more <code><a href="#the-track-element" id="track-4">track</a></code> elements, then
+<!--KEEP-START w3c-html--><!--TT-->
+ <a href="content-models.html#transparent" id="transparent-8">transparent</a>, but with no <a href="#media-element" id="media-element-2">media element</a> descendants.</dd>
+   <dt>Content attributes:</dt>
+   <dd><a href="elements.html#global-attributes" id="global-attributes-65">Global attributes</a></dd>
+   <dd><code title="attr-media-src"><a href="#attr-media-src" id="src-33">src</a></code></dd>
+   <dd><code title="attr-video-poster"><a href="#attr-video-poster" id="poster">poster</a></code></dd>
+   <dd><code title="attr-media-preload"><a href="#attr-media-preload" id="preload">preload</a></code></dd>
+   <dd><code title="attr-media-autoplay"><a href="#attr-media-autoplay" id="autoplay">autoplay</a></code></dd>
+   <dd><code title="attr-media-loop"><a href="#attr-media-loop" id="loop">loop</a></code></dd>
+   <dd><code title="attr-media-audio"><a href="#attr-media-audio" id="audio-23">audio</a></code></dd>
+   <dd><code title="attr-media-controls"><a href="#attr-media-controls" id="controls-2">controls</a></code></dd>
+   <dd><code title="attr-dim-width"><a href="the-map-element.html#attr-dim-width" id="width-8">width</a></code></dd>
+   <dd><code title="attr-dim-height"><a href="the-map-element.html#attr-dim-height" id="height-8">height</a></code></dd>
+   <dt>DOM interface:</dt>
+   <dd>
+    <pre class="idl">interface <dfn id="htmlvideoelement">HTMLVideoElement</dfn> : <a href="#htmlmediaelement" id="htmlmediaelement-0">HTMLMediaElement</a> {
+           attribute unsigned long <a class="full-spec-link" href="http://dev.w3.org/html5/spec/the-map-element.html#dom-dim-width" title='Read about this "width" reference in the full HTML5 spec.'>width</a>;
+           attribute unsigned long <a class="full-spec-link" href="http://dev.w3.org/html5/spec/the-map-element.html#dom-dim-height" title='Read about this "height" reference in the full HTML5 spec.'>height</a>;
+  readonly attribute unsigned long <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-video-videowidth" title='Read about this "videoWidth" reference in the full HTML5 spec.'>videoWidth</a>;
+  readonly attribute unsigned long <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-video-videoheight" title='Read about this "videoHeight" reference in the full HTML5 spec.'>videoHeight</a>;
+           attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-video-poster" title='Read about this "poster" reference in the full HTML5 spec.'>poster</a>;
+           attribute boolean <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-media-audio" title='Read about this "audio" reference in the full HTML5 spec.'>audio</a>; <!-- attr-media-audio -->
+};</pre>
+   </dd>
+  </dl><p>A <code><a href="#video" id="video-15">video</a></code> element is used for playing videos or
+  movies.<p>Content may be provided inside the <code><a href="#video" id="video-16">video</a></code>
+  element; it is intended for older Web browsers which do
+  not support <code><a href="#video" id="video-17">video</a></code>, so that legacy video plugins can be
+  tried, or to show text to the users of these older browsers informing
+  them of how to access the video contents.<p class="note">In particular, this content is not intended to
+  address accessibility concerns. To make video content accessible to
+  the blind, deaf, and those with other physical or cognitive
+  disabilities, authors are expected to provide alternative media
+  streams and/or to embed accessibility aids (such as caption or
+  subtitle tracks, audio description tracks, or sign-language
+  overlays) into their media streams.<p>The <code><a href="#video" id="video-18">video</a></code> element is a <a href="#media-element" id="media-element-3">media element</a>
+  whose <a href="#media-data" id="media-data-0">media data</a> is ostensibly video data, possibly
+  with associated audio data.<p>The <code title="attr-media-src"><a href="#attr-media-src" id="src-34">src</a></code>, <code title="attr-media-preload"><a href="#attr-media-preload" id="preload-0">preload</a></code>, <code title="attr-media-autoplay"><a href="#attr-media-autoplay" id="autoplay-0">autoplay</a></code>, <code title="attr-media-loop"><a href="#attr-media-loop" id="loop-0">loop</a></code>, and <code title="attr-media-controls"><a href="#attr-media-controls" id="controls-3">controls</a></code> attributes are <a href="#media-element-attributes" id="media-element-attributes-0" title="media element attributes">the attributes common to all media
+  elements</a>. The <code title="attr-media-audio"><a href="#attr-media-audio" id="audio-24">audio</a></code>
+  attribute <a href="#attr-media-audio" id="attr-media-audio-0" title="attr-media-audio">controls the audio
+  channel</a>.<p>The <dfn id="attr-video-poster" title="attr-video-poster"><code>poster</code></dfn>
+  attribute gives the address of an image file that the user agent can
+  show while no video data is available. The attribute, if present,
+  must contain a <a href="urls.html#valid-non-empty-url-potentially-surrounded-by-spaces" id="valid-non-empty-url-potentially-surrounded-by-spaces-7">valid non-empty URL potentially surrounded by
+  spaces</a>. </p><!-- thus it is unaffected by changes to the base
+  URL. --><p class="note">The image given by the <code title="attr-video-poster"><a href="#attr-video-poster" id="poster-0">poster</a></code> attribute, the <i><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#poster-frame" title='Read about this "poster frame" reference in the full HTML5 spec.'>poster
+  frame</a></i>, is intended to be a representative frame of the video
+  (typically one of the first non-blank frames) that gives the user an
+  idea of what the video is like.<dl class="domintro"><dt><var title="">video</var> . <code title="dom-video-videoWidth"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-video-videowidth" title='Read about this "videoWidth" reference in the full HTML5 spec.'>videoWidth</a></code></dt>
+   <dt><var title="">video</var> . <code title="dom-video-videoHeight"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-video-videoheight" title='Read about this "videoHeight" reference in the full HTML5 spec.'>videoHeight</a></code></dt>
+
+   <dd>
+
+    <p>These attributes return the intrinsic dimensions of the video,
+    or zero if the dimensions are not known.</p>
+
+   </dd>
+
+  </dl><p>The <code><a href="#video" id="video-19">video</a></code> element supports <a href="the-map-element.html#dimension-attributes" id="dimension-attributes-4">dimension
+  attributes</a>.<div class="example">
+
+   <p>This example shows how to detect when a video has failed to play
+   correctly:</p>
+
+   <pre>&lt;script&gt;
+ function failed(e) {
+   // video playback failed - show a message saying why
+   switch (e.target.error.code) {
+     case e.target.error.MEDIA_ERR_ABORTED:
+       alert('You aborted the video playback.');
+       break;
+     case e.target.error.MEDIA_ERR_NETWORK:
+       alert('A network error caused the video download to fail part-way.');
+       break;
+     case e.target.error.MEDIA_ERR_DECODE:
+       alert('The video playback was aborted due to a corruption problem or because the video used features your browser did not support.');
+       break;
+     case e.target.error.MEDIA_ERR_SRC_NOT_SUPPORTED:
+       alert('The video could not be loaded, either because the server or network failed or because the format is not supported.');
+       break;
+     default:
+       alert('An unknown error occurred.');
+       break;
+   }
+ }
+&lt;/script&gt;
+&lt;p&gt;&lt;video src="tgif.vid" autoplay controls onerror="failed(event)"&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="tgif.vid"&gt;Download the video file&lt;/a&gt;.&lt;/p&gt;</pre>
+
+  </div><!--CODECS
+
+  <div class="impl">
+
+  <h5>Video and audio codecs for <code>video</code> elements</h5>
+
+  <p>User agents may support any video and audio codecs and container
+  formats.</p>
+
+  <p class="note">Certain user agents might support no codecs at all,
+  e.g. text browsers running over SSH connections.</p>
+
+  <!- - similar note in audio codecs section - ->
+  <p class="note">Implementations are free to implement support for
+  video codecs either natively, or using platform-specific APIs, or
+  using plugins: this specification does not specify how codecs are to
+  be implemented.</p>
+
+  </div>
+
+  (when replacing this text, also fix "- -" nested comments)--><h4 id="audio"><span class="secno">4.8.7 </span>The <dfn><code>audio</code></dfn> element</h4><dl class="element"><dt>Categories</dt>
+   <dd><a href="content-models.html#flow-content" id="flow-content-101">Flow content</a>.</dd>
+   <dd><a href="content-models.html#phrasing-content" id="phrasing-content-111">Phrasing content</a>.</dd>
+   <dd><a href="content-models.html#embedded-content" id="embedded-content-17">Embedded content</a>.</dd>
+   <dd>If the element has a <code title="attr-media-controls"><a href="#attr-media-controls" id="controls-4">controls</a></code> attribute: <a href="content-models.html#interactive-content" id="interactive-content-10">Interactive content</a>.</dd>
+   <dt>Contexts in which this element can be used:</dt>
+   <dd>Where <a href="content-models.html#embedded-content" id="embedded-content-18">embedded content</a> is expected.</dd>
+   <dt>Content model:</dt>
+   <dd>If the element has a <code title="attr-media-src"><a href="#attr-media-src" id="src-35">src</a></code> attribute: 
+<!--KEEP-END w3c-html--><!--TT-->
+zero or more <code><a href="#the-track-element" id="track-5">track</a></code> elements, then 
+<!--KEEP-START w3c-html--><!--TT-->
+<a href="content-models.html#transparent" id="transparent-9">transparent</a>, but with no <a href="#media-element" id="media-element-4">media element</a> descendants.</dd>
+   <dd>If the element does not have a <code title="attr-media-src"><a href="#attr-media-src" id="src-36">src</a></code> attribute: one or more <code><a href="#the-source-element" id="source-2">source</a></code> elements, then
+<!--KEEP-END w3c-html--><!--TT-->
+ zero or more <code><a href="#the-track-element" id="track-6">track</a></code> elements, then
+<!--KEEP-START w3c-html--><!--TT-->
+ <a href="content-models.html#transparent" id="transparent-10">transparent</a>, but with no <a href="#media-element" id="media-element-5">media element</a> descendants.</dd>
+   <dt>Content attributes:</dt>
+   <dd><a href="elements.html#global-attributes" id="global-attributes-66">Global attributes</a></dd>
+   <dd><code title="attr-media-src"><a href="#attr-media-src" id="src-37">src</a></code></dd>
+   <dd><code title="attr-media-preload"><a href="#attr-media-preload" id="preload-1">preload</a></code></dd>
+   <dd><code title="attr-media-autoplay"><a href="#attr-media-autoplay" id="autoplay-1">autoplay</a></code></dd>
+   <dd><code title="attr-media-loop"><a href="#attr-media-loop" id="loop-1">loop</a></code></dd>
+   <dd><code title="attr-media-controls"><a href="#attr-media-controls" id="controls-5">controls</a></code></dd>
+   <dt>DOM interface:</dt>
+   <dd>
+    <pre class="idl">[NamedConstructor=<a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-audio" title='Read about this "Audio" reference in the full HTML5 spec.'>Audio</a>(),
+ NamedConstructor=<a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-audio-s" title='Read about this "Audio" reference in the full HTML5 spec.'>Audio</a>(in DOMString src)]
+interface <dfn id="htmlaudioelement">HTMLAudioElement</dfn> : <a href="#htmlmediaelement" id="htmlmediaelement-1">HTMLMediaElement</a> {};</pre>
+   </dd>
+  </dl><p>An <code><a href="#audio" id="audio-5">audio</a></code> element <a class="full-spec-link" href="http://dev.w3.org/html5/spec/rendering.html#represents" title='Read about this "represents" reference in the full HTML5 spec.'>represents</a> a sound or
+  audio stream.</p><!-- v2 (actually v3) suggestions:
+    * Audio syntesis. Use cases from Charles Pritchard:
+      > Use a sound of varying pitch to hint to a user the location of their
+      > mouse (is it hovering over a button, is it x/y pixels away from the edge
+      > of the screen, how close is it to the center).
+      >
+      > Alter the pitch of a sound to make a very cheap midi instrument.
+      >
+      > Pre-mix a few generated sounds, because the client processor is slow.
+      >
+      > Alter the pitch of an actual audio recording, and pre-mix it, to give
+      > different sounding voices to pre-recorded readings of a single text. As
+      > has been tried for "male" "female" sound fonts.
+      >
+      > Support very simple audio codecs, and programmable synthesizers.
+  --><p>Content may be provided inside the <code><a href="#audio" id="audio-6">audio</a></code>
+  element; it is intended for older Web browsers which do
+  not support <code><a href="#audio" id="audio-7">audio</a></code>, so that legacy audio plugins can be
+  tried, or to show text to the users of these older browsers informing
+  them of how to access the audio contents.<p class="note">In particular, this content is not intended to
+  address accessibility concerns. To make audio content accessible to
+  the deaf or to those with other physical or cognitive disabilities,
+  authors are expected to provide alternative media streams and/or to
+  embed accessibility aids (such as transcriptions) into their media
+  streams.<p>The <code><a href="#audio" id="audio-8">audio</a></code> element is a <a href="#media-element" id="media-element-6">media element</a>
+  whose <a href="#media-data" id="media-data-1">media data</a> is ostensibly audio data.<p>The <code title="attr-media-src"><a href="#attr-media-src" id="src-38">src</a></code>, <code title="attr-media-preload"><a href="#attr-media-preload" id="preload-2">preload</a></code>, <code title="attr-media-autoplay"><a href="#attr-media-autoplay" id="autoplay-2">autoplay</a></code>, <code title="attr-media-loop"><a href="#attr-media-loop" id="loop-2">loop</a></code>, and <code title="attr-media-controls"><a href="#attr-media-controls" id="controls-6">controls</a></code> attributes are <a href="#media-element-attributes" id="media-element-attributes-1" title="media element attributes">the attributes common to all media
+  elements</a>.<dl class="domintro"><dt><var title="">audio</var> = new <code title="dom-Audio"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-audio" title='Read about this "Audio" reference in the full HTML5 spec.'>Audio</a></code>( [ <var title="">url</var> ] )</dt>
+
+   <dd>
+
+    <p>Returns a new <code><a href="#audio" id="audio-9">audio</a></code> element, with the <code title="attr-media-src"><a href="#attr-media-src" id="src-39">src</a></code> attribute set to the value
+    passed in the argument, if applicable.</p>
+
+   </dd>
+
+  </dl><!--CODECS
+
+  <div class="impl">
+
+  <h5>Audio codecs for <code>audio</code> elements</h5>
+
+  <p>User agents may support any audio codecs and container
+  formats.</p>
+
+  <p>User agents must support the WAVE container format with audio
+  encoded using the 16 bit PCM (LE) codec, at sampling frequencies of
+  11.025kHz, 22.050kHz, and 44.100kHz, and for both mono and
+  stereo. <a href="#- -refsWAVE">[WAVE]</a></p>
+
+  <!- -
+   <dt id="- -refsWAVE">WAVE</dt>
+   <dd>http://en.wikipedia.org/wiki/WAV? </dd>
+  - ->
+
+  <!- - similar note in video codecs section - ->
+  <p class="note">Implementations are free to implement support for
+  audio codecs either natively, or using platform-specific APIs, or
+  using plugins: this specification does not specify how codecs are to
+  be implemented.</p>
+
+  </div>
+
+  (when replacing this text, also fix "- -" nested comments)--><h4 id="the-source-element"><span class="secno">4.8.8 </span>The <dfn><code>source</code></dfn> element</h4><dl class="element"><dt>Categories</dt>
+   <dd>None.</dd>
+   <dt>Contexts in which this element can be used:</dt>
+   <dd>As a child of a <a href="#media-element" id="media-element-7">media element</a>, before any <a href="content-models.html#flow-content" id="flow-content-102">flow content</a>
+<!--KEEP-END w3c-html--><!--TT-->
+ or <code><a href="#the-track-element" id="track-7">track</a></code> elements.</dd>
+<!--KEEP-START w3c-html--><!--TT-->
+   <dt>Content model:</dt>
+   <dd>Empty.</dd>
+   <dt>Content attributes:</dt>
+   <dd><a href="elements.html#global-attributes" id="global-attributes-67">Global attributes</a></dd>
+   <dd><code title="attr-source-src"><a href="#attr-source-src" id="src-27">src</a></code></dd>
+   <dd><code title="attr-source-type"><a href="#attr-source-type" id="type-25">type</a></code></dd>
+   <dd><code title="attr-source-media"><a href="#attr-source-media" id="media-6">media</a></code></dd>
+   <dt>DOM interface:</dt>
+   <dd>
+<pre class="idl">interface <dfn id="htmlsourceelement">HTMLSourceElement</dfn> : <a href="elements.html#htmlelement" id="htmlelement-69">HTMLElement</a> {
+           attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-source-src" title='Read about this "src" reference in the full HTML5 spec.'>src</a>;
+           attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-source-type" title='Read about this "type" reference in the full HTML5 spec.'>type</a>;
+           attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-source-media" title='Read about this "media" reference in the full HTML5 spec.'>media</a>;
+};</pre>
+   </dd>
+  </dl><p>The <code><a href="#the-source-element" id="source-3">source</a></code> element allows authors to specify
+  multiple alternative <a href="#media-resource" id="media-resource-0" title="media resource">media
+  resources</a> for <a href="#media-element" id="media-element-8" title="media element">media
+  elements</a>. It does not <a class="full-spec-link" href="http://dev.w3.org/html5/spec/rendering.html#represents" title='Read about this "represent" reference in the full HTML5 spec.'>represent</a> anything on its own.<p>The <dfn id="attr-source-src" title="attr-source-src"><code>src</code></dfn> attribute
+  gives the address of the <a href="#media-resource" id="media-resource-1">media resource</a>. The value must
+  be a <a href="urls.html#valid-non-empty-url-potentially-surrounded-by-spaces" id="valid-non-empty-url-potentially-surrounded-by-spaces-8">valid non-empty URL potentially surrounded by
+  spaces</a>. This attribute must be present.<p class="note">Dynamically modifying a <code><a href="#the-source-element" id="source-4">source</a></code> element
+  and its attribute when the element is already inserted in a
+  <code><a href="#video" id="video-20">video</a></code> or <code><a href="#audio" id="audio-10">audio</a></code> element will have no
+  effect. To change what is playing, either just use the <code title="attr-media-src"><a href="#attr-media-src" id="src-40">src</a></code> attribute on the <a href="#media-element" id="media-element-9">media
+  element</a> directly, or call the <code title="dom-media-load"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-load" title='Read about this "load()" reference in the full HTML5 spec.'>load()</a></code> method on the <a href="#media-element" id="media-element-10">media
+  element</a> after manipulating the <code><a href="#the-source-element" id="source-5">source</a></code>
+  elements.<p>The <dfn id="attr-source-type" title="attr-source-type"><code>type</code></dfn>
+  attribute gives the type of the <a href="#media-resource" id="media-resource-2">media resource</a>, to help
+  the user agent determine if it can play this <a href="#media-resource" id="media-resource-3">media
+  resource</a> before fetching it. If specified, its value must be
+  a <a href="infrastructure.html#valid-mime-type" id="valid-mime-type-6">valid MIME type</a>. The <code title="">codecs</code>
+  parameter, which certain MIME types define, might be necessary to
+  specify exactly how the resource is encoded. <a href="references.html#refsRFC4281">[RFC4281]</a><div class="example">
+
+   <p>The following list shows some examples of how to use the <code title="">codecs=</code> MIME parameter in the <code title="attr-source-type"><a href="#attr-source-type" id="type-26">type</a></code> attribute.</p>
+
+   <dl><dt>H.264 Constrained baseline profile video (main and extended video compatible) level 3 and Low-Complexity AAC audio in MP4 container</dt>
+    <dd><pre>&lt;source src='video.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'&gt;</pre></dd>
+
+    <dt>H.264 Extended profile video (baseline-compatible) level 3 and Low-Complexity AAC audio in MP4 container</dt>
+    <dd><pre>&lt;source src='video.mp4' type='video/mp4; codecs="avc1.58A01E, mp4a.40.2"'&gt;</pre></dd>
+
+    <dt>H.264 Main profile video level 3 and Low-Complexity AAC audio in MP4 container</dt>
+    <dd><pre>&lt;source src='video.mp4' type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'&gt;</pre></dd>
+
+    <dt>H.264 'High' profile video (incompatible with main, baseline, or extended profiles) level 3 and Low-Complexity AAC audio in MP4 container</dt>
+    <dd><pre>&lt;source src='video.mp4' type='video/mp4; codecs="avc1.64001E, mp4a.40.2"'&gt;</pre></dd>
+
+
+    <dt>MPEG-4 Visual Simple Profile Level 0 video and Low-Complexity AAC audio in MP4 container</dt>
+    <dd><pre>&lt;source src='video.mp4' type='video/mp4; codecs="mp4v.20.8, mp4a.40.2"'&gt;</pre></dd>
+
+    <dt>MPEG-4 Advanced Simple Profile Level 0 video and Low-Complexity AAC audio in MP4 container</dt>
+    <dd><pre>&lt;source src='video.mp4' type='video/mp4; codecs="mp4v.20.240, mp4a.40.2"'&gt;</pre></dd>
+
+    <dt>MPEG-4 Visual Simple Profile Level 0 video and AMR audio in 3GPP container</dt>
+    <dd><pre>&lt;source src='video.3gp' type='video/3gpp; codecs="mp4v.20.8, samr"'&gt;</pre></dd>
+
+
+    <dt>Theora video and Vorbis audio in Ogg container</dt>
+    <dd><pre>&lt;source src='video.ogv' type='video/ogg; codecs="theora, vorbis"'&gt;</pre></dd>
+
+    <dt>Theora video and Speex audio in Ogg container</dt>
+    <dd><pre>&lt;source src='video.ogv' type='video/ogg; codecs="theora, speex"'&gt;</pre></dd>
+
+    <dt>Vorbis audio alone in Ogg container</dt>
+    <dd><pre>&lt;source src='audio.ogg' type='audio/ogg; codecs=vorbis'&gt;</pre></dd>
+
+    <dt>Speex audio alone in Ogg container</dt>
+    <dd><pre>&lt;source src='audio.spx' type='audio/ogg; codecs=speex'&gt;</pre></dd>
+
+    <dt>FLAC audio alone in Ogg container</dt>
+    <dd><pre>&lt;source src='audio.oga' type='audio/ogg; codecs=flac'&gt;</pre></dd>
+
+    <dt>Dirac video and Vorbis audio in Ogg container</dt>
+    <dd><pre>&lt;source src='video.ogv' type='video/ogg; codecs="dirac, vorbis"'&gt;</pre></dd>
+
+    <dt>Theora video and Vorbis audio in Matroska container</dt>
+    <dd><pre>&lt;source src='video.mkv' type='video/x-matroska; codecs="theora, vorbis"'&gt;</pre></dd>
+
+<!-- awaiting definition by the Ogg or BBC guys:
+    <dt>Dirac video and Vorbis audio in Matroska container</dt>
+    <dd><pre>&lt;source src='video.mkv' type='video/x-matroska; codecs='></pre></dd>
+-->
+
+
+<!-- awaiting definition by the Microsoft guys:
+
+    <dt>WMV9 video and WMA 2 audio in ASF container</dt>
+    <dd><pre>&lt;source src='video.wmv' type='video/x-ms-wmv; codecs='></pre></dd>
+
+    <dt>WMV8 video and WMA 2 audio in ASF container</dt>
+    <dd><pre>&lt;source src='video.wmv' type='video/x-ms-wmv; codecs='></pre></dd>
+
+    <dt>VC-1 video and WMA 10 Pro audio in ASF container</dt>
+    <dd><pre>&lt;source src='video.wmv' type='video/x-ms-wmv; codecs='></pre></dd>
+
+    <dt>XviD video and MP3 audio in AVI container</dt>
+    <dd><pre>&lt;source src='video.avi' type='video/x-msvideo; codecs='></pre></dd>
+
+    <dt>Motion-JPEG video and uncompressed PCM audio in AVI container</dt>
+    <dd><pre>&lt;source src='video.avi' type='video/x-msvideo; codecs='></pre></dd>
+
+-->
+
+
+<!-- awaiting definition by Real:
+    <dt>Real Video 10 video and High-Efficiency AAC audio in Real Media container</dt>
+    <dd><pre>&lt;source src='video.rm' type='application/vnd.rn-realmedia; codecs='></pre></dd>
+-->
+
+
+<!--  undefined:
+    <dt>MPEG-1 video and MPEG-1 Audio Layer II audio in MPEG-1 program stream</dt>
+    <dd><pre>&lt;source src='video.mpg' type='video/mpeg; codecs='></pre></dd>
+-->
+
+   </dl></div><p>The <dfn id="attr-source-media" title="attr-source-media"><code>media</code></dfn>
+  attribute gives the intended media type of the <a href="#media-resource" id="media-resource-4">media
+  resource</a>, to help the user agent determine if this
+  <a href="#media-resource" id="media-resource-5">media resource</a> is useful to the user before fetching
+  it. Its value must be a <a href="common-microsyntaxes.html#valid-media-query" id="valid-media-query-2">valid media query</a>.<p id="source-default-media">The default, if the <code title="attr-srouce-media">media</code> attribute is omitted, is
+  "<code title="">all</code>", meaning that by default the <a href="#media-resource" id="media-resource-6">media
+  resource</a> is suitable for all media.<div class="example">
+
+   <p>If the author isn't sure if the user agents will all be able to
+   render the media resources provided, the author can listen to the
+   <code title="event-error">error</code> event on the last
+   <code><a href="#the-source-element" id="source-6">source</a></code> element and trigger fallback behavior:</p>
+
+   <pre>&lt;script&gt;
+ function fallback(video) {
+   // replace &lt;video&gt; with its contents
+   while (video.hasChildNodes()) {
+     if (video.firstChild instanceof HTMLSourceElement)
+       video.removeChild(video.firstChild);
+     else
+       video.parentNode.insertBefore(video.firstChild, video);
+   }
+   video.parentNode.removeChild(video);
+ }
+&lt;/script&gt;
+&lt;video controls autoplay&gt;
+ &lt;source src='video.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'&gt;
+ &lt;source src='video.ogv' type='video/ogg; codecs="theora, vorbis"'
+         onerror="fallback(parentNode)"&gt;
+ ...
+&lt;/video&gt;</pre>
+
+  </div><!--KEEP-END w3c-html--><!--TT--><!--<div data-component="other Hixie drafts (editor: Ian Hickson)">--><h4 id="the-track-element"><span class="secno">4.8.9 </span>The <dfn><code>track</code></dfn> element</h4><p class="XXX annotation"><span><a href="https://www.w3.org/html/wg/tracker/issues/9">ISSUE-9</a> (video-accessibility) blocks progress to Last Call</span><dl class="element"><dt>Categories</dt>
+   <dd>None.</dd>
+   <dt>Contexts in which this element can be used:</dt>
+   <dd>As a child of a <a href="#media-element" id="media-element-11">media element</a>, before any <a href="content-models.html#flow-content" id="flow-content-103">flow content</a>.</dd>
+   <dt>Content model:</dt>
+   <dd>Empty.</dd>
+   <dt>Content attributes:</dt>
+   <dd><a href="elements.html#global-attributes" id="global-attributes-68">Global attributes</a></dd>
+   <dd><code title="attr-track-kind"><a href="#attr-track-kind" id="kind">kind</a></code></dd>
+   <dd><code title="attr-track-src"><a href="#attr-track-src" id="src-29">src</a></code></dd>
+   <dd><code title="attr-track-charset"><a href="#attr-track-charset" id="charset-13">charset</a></code></dd>
+   <dd><code title="attr-track-srclang"><a href="#attr-track-srclang" id="srclang">srclang</a></code></dd>
+   <dd><code title="attr-track-label"><a href="#attr-track-label" id="label-1">label</a></code></dd>
+   <dt>DOM interface:</dt>
+   <dd>
+<pre class="idl">interface <dfn id="htmltrackelement">HTMLTrackElement</dfn> : <a href="elements.html#htmlelement" id="htmlelement-70">HTMLElement</a> {
+           attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-track-kind" title='Read about this "kind" reference in the full HTML5 spec.'>kind</a>;
+           attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-track-src" title='Read about this "src" reference in the full HTML5 spec.'>src</a>;
+           attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-track-charset" title='Read about this "charset" reference in the full HTML5 spec.'>charset</a>;
+           attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-track-srclang" title='Read about this "srclang" reference in the full HTML5 spec.'>srclang</a>;
+           attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-track-label" title='Read about this "label" reference in the full HTML5 spec.'>label</a>;
+
+  readonly attribute <a href="#timedtrack" id="timedtrack-0">TimedTrack</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-track-track" title='Read about this "track" reference in the full HTML5 spec.'>track</a>;
+};</pre>
+   </dd>
+  </dl><p>The <code><a href="#the-track-element" id="track-8">track</a></code> element allows authors to specify explicit
+  external <a href="#timed-track" id="timed-track-0" title="timed track">timed tracks</a> for <a href="#media-element" id="media-element-12" title="media element">media elements</a>. It does not <a class="full-spec-link" href="http://dev.w3.org/html5/spec/rendering.html#represents" title='Read about this "represent" reference in the full HTML5 spec.'>represent</a> anything on its own.<p>The <dfn id="attr-track-kind" title="attr-track-kind"><code>kind</code></dfn>
+  attribute is an <a href="common-microsyntaxes.html#enumerated-attribute" id="enumerated-attribute-2">enumerated attribute</a>. The following
+  table lists the keywords defined for this attribute. The keyword
+  given in the first cell of each row maps to the state given in the
+  second cell.<table><thead><tr><th>Keyword
+     <th>State
+     <th>Brief description
+   <tbody><tr><td><dfn id="attr-track-kind-keyword-subtitles" title="attr-track-kind-keyword-subtitles"><code>subtitles</code></dfn>
+     <td><dfn id="attr-track-kind-subtitles" title="attr-track-kind-subtitles">Subtitles</dfn>
+     <td>Transcription or translation of the dialogue, suitable for when the sound is available but not understood (e.g. because the user does not understand the language of the <a href="#media-resource" id="media-resource-7">media resource</a>'s soundtrack).
+    <tr><td><dfn id="attr-track-kind-keyword-captions" title="attr-track-kind-keyword-captions"><code>captions</code></dfn>
+     <td><dfn id="attr-track-kind-captions" title="attr-track-kind-captions">Captions</dfn>
+     <td>Transcription or translation of the dialogue, sound effects, relevant musical cues, and other relevant audio information, suitable for when the soundtrack is unavailable (e.g. because it is muted or because the user is deaf).
+    <tr><td><dfn id="attr-track-kind-keyword-descriptions" title="attr-track-kind-keyword-descriptions"><code>descriptions</code></dfn>
+     <td><dfn id="attr-track-kind-descriptions" title="attr-track-kind-descriptions">Descriptions</dfn>
+     <td>Textual descriptions of the video component of the <a href="#media-resource" id="media-resource-8">media resource</a>, intended for audio synthesis when the visual component is unavailable (e.g. because the user is interacting with the application without a screen while driving, or because the user is blind).
+    <tr><td><dfn id="attr-track-kind-keyword-chapters" title="attr-track-kind-keyword-chapters"><code>chapters</code></dfn>
+     <td><dfn id="attr-track-kind-chapters" title="attr-track-kind-chapters">Chapters</dfn>
+     <td>Chapter titles, intended to be used for navigating the <a href="#media-resource" id="media-resource-9">media resource</a>.
+    <tr><td><dfn id="attr-track-kind-keyword-metadata" title="attr-track-kind-keyword-metadata"><code>metadata</code></dfn>
+     <td><dfn id="attr-track-kind-metadata" title="attr-track-kind-metadata">Metadata</dfn>
+     <td>Tracks intended for use from script.
+  </table><p>The attribute may be omitted. The <i>missing value default</i> is
+  the <a href="#attr-track-kind-subtitles" id="attr-track-kind-subtitles-0" title="attr-track-kind-subtitles">subtitles</a> state.<p>The <dfn id="attr-track-src" title="attr-track-src"><code>src</code></dfn> attribute
+  gives the address of the timed track data. The value must be a
+  <a href="urls.html#valid-non-empty-url-potentially-surrounded-by-spaces" id="valid-non-empty-url-potentially-surrounded-by-spaces-9">valid non-empty URL potentially surrounded by
+  spaces</a>. This attribute must be present.<p>If the elements's <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#track-url" title='Read about this "track URL" reference in the full HTML5 spec.'>track URL</a> identifies a
+  <span>WebSRT</span> resource, and the element's <code title="attr-track-kind"><a href="#attr-track-kind" id="kind-0">kind</a></code> attribute is not in the <a href="#attr-track-kind-metadata" id="attr-track-kind-metadata-0" title="attr-track-kind-metadata">metadata</a> state, then the
+  <span>WebSRT</span> file must be a <span>WebSRT file using cue
+  text</span>.<p>If the elements's <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#track-url" title='Read about this "track URL" reference in the full HTML5 spec.'>track URL</a> identifies a
+  <span>WebSRT</span> resource, then the <dfn id="attr-track-charset" title="attr-track-charset"><code>charset</code></dfn> attribute may
+  be specified. If the attribute is set, its value must be a valid
+  character encoding name, must be an <a href="infrastructure.html#ascii-case-insensitive" id="ascii-case-insensitive-12">ASCII
+  case-insensitive</a> match for the <a href="infrastructure.html#preferred-mime-name" id="preferred-mime-name-2">preferred MIME
+  name</a> for that encoding, and must match the character encoding
+  of the <span>WebSRT</span> file. <a href="references.html#refsIANACHARSET">[IANACHARSET]</a><p>The <dfn id="attr-track-srclang" title="attr-track-srclang"><code>srclang</code></dfn>
+  attribute gives the language of the timed track data. The value must
+  be a valid BCP 47 language tag. This attribute must be present if
+  the element's <code title="attr-track-kind"><a href="#attr-track-kind" id="kind-1">kind</a></code> attribute is
+  in the <a href="#attr-track-kind-subtitles" id="attr-track-kind-subtitles-1" title="attr-track-kind-subtitles">subtitles</a>
+  state. <a href="references.html#refsBCP47">[BCP47]</a><p>The <dfn id="attr-track-label" title="attr-track-label"><code>label</code></dfn>
+  attribute gives a user-readable title for the track. This title is
+  used by user agents when listing <a href="#attr-track-kind-subtitles" id="attr-track-kind-subtitles-2" title="attr-track-kind-subtitles">subtitle</a>, <a href="#attr-track-kind-captions" id="attr-track-kind-captions-0" title="attr-track-kind-captions">caption</a>, and <a href="#attr-track-kind-descriptions" id="attr-track-kind-descriptions-0" title="attr-track-kind-descriptions">audio description</a> tracks
+  in their user interface.<p>The value of the <code title="attr-track-label"><a href="#attr-track-label" id="label-2">label</a></code>
+  attribute, if the attribute is present, must not be the empty
+  string. Furthermore, there must not be two <code><a href="#the-track-element" id="track-9">track</a></code>
+  element children of the same <a href="#media-element" id="media-element-13">media element</a> whose <code title="attr-track-kind"><a href="#attr-track-kind" id="kind-2">kind</a></code> attributes are in the same
+  state, whose <code title="attr-track-srclang"><a href="#attr-track-srclang" id="srclang-0">srclang</a></code>
+  attributes are both missing or have values that represent the same
+  language, and whose <code title="attr-track-label"><a href="#attr-track-label" id="label-3">label</a></code>
+  attributes are again both missing or both have the same value.<dl class="domintro"><dt><var title="">track</var> . <code title="dom-track-track"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-track-track" title='Read about this "track" reference in the full HTML5 spec.'>track</a></code></dt>
+
+   <dd>
+
+    <p>Returns the <code><a href="#timedtrack" id="timedtrack-1">TimedTrack</a></code> object corresponding to the <a href="#timed-track" id="timed-track-1">timed track</a> of the <code><a href="#the-track-element" id="track-10">track</a></code> element.</p>
+
+   </dd>
+
+  </dl><div class="example">
+
+   <p>This video has subtitles in several languages:</p>
+
+   <pre>&lt;video src="brave.webm"&gt;
+ &lt;track kind=subtitles src=brave.en.srt srclang=en label="English"&gt;
+ &lt;track kind=captions src=brave.en.srt srclang=en label="English for the Hard of Hearing"&gt;
+ &lt;track kind=subtitles src=brave.fr.srt srclang=fr label="Fran&ccedil;ais"&gt;
+ &lt;track kind=subtitles src=brave.de.srt srclang=de label="Deutsch"&gt;
+&lt;/video&gt;</pre>
+
+  </div><!--</div>--><!--KEEP-START w3c-html--><!--TT--><h4 id="media-elements"><span class="secno">4.8.10 </span>Media elements</h4><p><dfn id="media-element" title="media element">Media elements</dfn>
+  (<code><a href="#audio" id="audio-11">audio</a></code> and <code><a href="#video" id="video-21">video</a></code>, in this specification)
+  implement the following interface:<pre class="idl">interface <dfn id="htmlmediaelement">HTMLMediaElement</dfn> : <a href="elements.html#htmlelement" id="htmlelement-71">HTMLElement</a> {
+
+  // error state
+  readonly attribute <a href="#mediaerror" id="mediaerror-0">MediaError</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-error" title='Read about this "error" reference in the full HTML5 spec.'>error</a>;
+
+  // network state
+           attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-src" title='Read about this "src" reference in the full HTML5 spec.'>src</a>;
+  readonly attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-currentsrc" title='Read about this "currentSrc" reference in the full HTML5 spec.'>currentSrc</a>;
+  const unsigned short <a href="#dom-media-network_empty" id="dom-media-network_empty-0" title="dom-media-NETWORK_EMPTY">NETWORK_EMPTY</a> = 0;
+  const unsigned short <a href="#dom-media-network_idle" id="dom-media-network_idle-0" title="dom-media-NETWORK_IDLE">NETWORK_IDLE</a> = 1;
+  const unsigned short <a href="#dom-media-network_loading" id="dom-media-network_loading-0" title="dom-media-NETWORK_LOADING">NETWORK_LOADING</a> = 2;
+  const unsigned short <a href="#dom-media-network_no_source" id="dom-media-network_no_source-0" title="dom-media-NETWORK_NO_SOURCE">NETWORK_NO_SOURCE</a> = 3;
+  readonly attribute unsigned short <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-networkstate" title='Read about this "networkState" reference in the full HTML5 spec.'>networkState</a>;
+           attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-preload" title='Read about this "preload" reference in the full HTML5 spec.'>preload</a>;
+<!--v3BUF  readonly attribute double <span title="dom-media-bufferingRate">bufferingRate</span>;
+  readonly attribute boolean <span title="dom-media-bufferingThrottled">bufferingThrottled</span>;
+-->  readonly attribute <a href="#timeranges" id="timeranges-0">TimeRanges</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-buffered" title='Read about this "buffered" reference in the full HTML5 spec.'>buffered</a>;
+  void <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-load" title='Read about this "load" reference in the full HTML5 spec.'>load</a>();
+  DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-navigator-canplaytype" title='Read about this "canPlayType" reference in the full HTML5 spec.'>canPlayType</a>(in DOMString type);
+
+  // ready state
+  const unsigned short <a href="#dom-media-have_nothing" id="dom-media-have_nothing-0" title="dom-media-HAVE_NOTHING">HAVE_NOTHING</a> = 0;
+  const unsigned short <a href="#dom-media-have_metadata" id="dom-media-have_metadata-0" title="dom-media-HAVE_METADATA">HAVE_METADATA</a> = 1;
+  const unsigned short <a href="#dom-media-have_current_data" id="dom-media-have_current_data-0" title="dom-media-HAVE_CURRENT_DATA">HAVE_CURRENT_DATA</a> = 2;
+  const unsigned short <a href="#dom-media-have_future_data" id="dom-media-have_future_data-0" title="dom-media-HAVE_FUTURE_DATA">HAVE_FUTURE_DATA</a> = 3;
+  const unsigned short <a href="#dom-media-have_enough_data" id="dom-media-have_enough_data-0" title="dom-media-HAVE_ENOUGH_DATA">HAVE_ENOUGH_DATA</a> = 4;
+  readonly attribute unsigned short <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-readystate" title='Read about this "readyState" reference in the full HTML5 spec.'>readyState</a>;
+  readonly attribute boolean <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-seeking" title='Read about this "seeking" reference in the full HTML5 spec.'>seeking</a>;
+
+  // playback state
+           attribute double <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-currenttime" title='Read about this "currentTime" reference in the full HTML5 spec.'>currentTime</a>;
+  readonly attribute double <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-initialtime" title='Read about this "initialTime" reference in the full HTML5 spec.'>initialTime</a>;
+  readonly attribute double <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-duration" title='Read about this "duration" reference in the full HTML5 spec.'>duration</a>;
+  readonly attribute <span>Date</span> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-startoffsettime" title='Read about this "startOffsetTime" reference in the full HTML5 spec.'>startOffsetTime</a>;
+  readonly attribute boolean <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-paused" title='Read about this "paused" reference in the full HTML5 spec.'>paused</a>;
+           attribute double <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-defaultplaybackrate" title='Read about this "defaultPlaybackRate" reference in the full HTML5 spec.'>defaultPlaybackRate</a>;
+           attribute double <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-playbackrate" title='Read about this "playbackRate" reference in the full HTML5 spec.'>playbackRate</a>;
+  readonly attribute <a href="#timeranges" id="timeranges-1">TimeRanges</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-played" title='Read about this "played" reference in the full HTML5 spec.'>played</a>;
+  readonly attribute <a href="#timeranges" id="timeranges-2">TimeRanges</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-seekable" title='Read about this "seekable" reference in the full HTML5 spec.'>seekable</a>;
+  readonly attribute boolean <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-ended" title='Read about this "ended" reference in the full HTML5 spec.'>ended</a>;
+           attribute boolean <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-autoplay" title='Read about this "autoplay" reference in the full HTML5 spec.'>autoplay</a>;
+           attribute boolean <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-loop" title='Read about this "loop" reference in the full HTML5 spec.'>loop</a>;
+  void <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-play" title='Read about this "play" reference in the full HTML5 spec.'>play</a>();
+  void <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-pause" title='Read about this "pause" reference in the full HTML5 spec.'>pause</a>();
+
+  // controls
+           attribute boolean <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-controls" title='Read about this "controls" reference in the full HTML5 spec.'>controls</a>;
+           attribute double <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-volume" title='Read about this "volume" reference in the full HTML5 spec.'>volume</a>;
+           attribute boolean <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-muted" title='Read about this "muted" reference in the full HTML5 spec.'>muted</a>;
+<!--KEEP-END w3c-html--><!--TT-->
+  // timed tracks
+  readonly attribute <a href="#timedtrack" id="timedtrack-2">TimedTrack</a>[] <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-media-tracks" title='Read about this "tracks" reference in the full HTML5 spec.'>tracks</a>;
+  <a href="#mutabletimedtrack" id="mutabletimedtrack-0">MutableTimedTrack</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-media-addtrack" title='Read about this "addTrack" reference in the full HTML5 spec.'>addTrack</a>(in DOMString kind, in optional DOMString label, in optional DOMString language);
+<!--KEEP-START w3c-html--><!--TT-->
+};</pre><p>The <dfn id="media-element-attributes">media element attributes</dfn>, <code title="attr-media-src"><a href="#attr-media-src" id="src-41">src</a></code>, <code title="attr-media-preload"><a href="#attr-media-preload" id="preload-3">preload</a></code>, <code title="attr-media-autoplay"><a href="#attr-media-autoplay" id="autoplay-3">autoplay</a></code>, <code title="attr-media-loop"><a href="#attr-media-loop" id="loop-3">loop</a></code>, and <code title="attr-media-controls"><a href="#attr-media-controls" id="controls-7">controls</a></code>, apply to all <a href="#media-element" id="media-element-14" title="media element">media elements</a>. They are defined in
+  this section.</p><!-- attr-media-audio --><!-- proposed v2 (actually v3!) features:
+    * frame forward / backwards / step(n) while paused
+    * hasAudio, hasVideo, hasCaptions, etc
+    * per-frame control: get current frame; set current frame
+    * queue of content
+      - pause current stream and insert content at front of queue to play immediately
+      - pre-download another stream
+      - add stream(s) to play at end of current stream
+      - pause playback upon reaching a certain time
+      - playlists, with the ability to get metadata out of them (e.g. xspf)
+    * general meta data, implemented as getters (don't expose the whole thing)
+      - getMetadata(key: string, language: string) => HTMLImageElement or string
+      - onmetadatachanged (no context info)
+      - general custom metadata store (ratings, etc.)
+    * video: applying CSS filters
+    * an event to notify people of when the video size changes
+      (e.g. for chained Ogg streams of multiple independent videos)
+    * balance and 3D position audio
+    * audio filters
+    * audio synthesis (see <audio> section for use cases)
+    * feedback to the script on how well the video is playing
+       - frames per second?
+       - skipped frames per second?
+       - an event that reports playback difficulties?
+       - an arbitrary quality metric?
+    * bufferingRate/bufferingThrottled (see v3BUF)
+    * events for when the user agent's controls get shown or hidden
+      so that the author's controls can get away of the UA's
+  --><!-- v2 features that already have experimental implementations:
+    * webkitPreservesPitch (for when playbackRate != 1.0)
+  --><p><a href="#media-element" id="media-element-15" title="media element">Media elements</a> are used to
+  present audio data, or video and audio data, to the user. This is
+  referred to as <dfn id="media-data">media data</dfn> in this section, since this
+  section applies equally to <a href="#media-element" id="media-element-16" title="media element">media
+  elements</a> for audio or for video. The term <dfn id="media-resource">media
+  resource</dfn> is used to refer to the complete set of media data,
+  e.g. the complete video file, or complete audio file.<h5 id="error-codes"><span class="secno">4.8.10.1 </span>Error codes</h5><dl class="domintro"><dt><var title="">media</var> . <code title="dom-media-error"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-error" title='Read about this "error" reference in the full HTML5 spec.'>error</a></code></dt>
+
+   <dd>
+
+    <p>Returns a <code><a href="#mediaerror" id="mediaerror-1">MediaError</a></code> object representing the
+    current error state of the element.</p>
+
+    <p>Returns null if there is no error.</p>
+
+   </dd>
+
+  </dl><pre class="idl">interface <dfn id="mediaerror">MediaError</dfn> {
+  const unsigned short <a href="#dom-mediaerror-media_err_aborted" id="dom-mediaerror-media_err_aborted-0" title="dom-MediaError-MEDIA_ERR_ABORTED">MEDIA_ERR_ABORTED</a> = 1;
+  const unsigned short <a href="#dom-mediaerror-media_err_network" id="dom-mediaerror-media_err_network-0" title="dom-MediaError-MEDIA_ERR_NETWORK">MEDIA_ERR_NETWORK</a> = 2;
+  const unsigned short <a href="#dom-mediaerror-media_err_decode" id="dom-mediaerror-media_err_decode-0" title="dom-MediaError-MEDIA_ERR_DECODE">MEDIA_ERR_DECODE</a> = 3;
+  const unsigned short <a href="#dom-mediaerror-media_err_src_not_supported" id="dom-mediaerror-media_err_src_not_supported-0" title="dom-MediaError-MEDIA_ERR_SRC_NOT_SUPPORTED">MEDIA_ERR_SRC_NOT_SUPPORTED</a> = 4;
+  readonly attribute unsigned short <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-mediaerror-code" title='Read about this "code" reference in the full HTML5 spec.'>code</a>;
+};</pre><dl class="domintro"><dt><var title="">media</var> . <code title="dom-media-error"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-error" title='Read about this "error" reference in the full HTML5 spec.'>error</a></code> . <code title="dom-MediaError-code"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-mediaerror-code" title='Read about this "code" reference in the full HTML5 spec.'>code</a></code></dt>
+
+   <dd>
+
+    <p>Returns the current error's error code, from the list below.</p>
+
+   </dd>
+
+  </dl><dl><dt><dfn id="dom-mediaerror-media_err_aborted" title="dom-MediaError-MEDIA_ERR_ABORTED"><code>MEDIA_ERR_ABORTED</code></dfn> (numeric value 1)</dt>
+
+   <dd>The fetching process for the <a href="#media-resource" id="media-resource-10">media resource</a> was
+   aborted by the user agent at the user's request.</dd>
+
+   <dt><dfn id="dom-mediaerror-media_err_network" title="dom-MediaError-MEDIA_ERR_NETWORK"><code>MEDIA_ERR_NETWORK</code></dfn> (numeric value 2)</dt>
+
+   <dd>A network error of some description caused the user agent to
+   stop fetching the <a href="#media-resource" id="media-resource-11">media resource</a>, after the resource
+   was established to be usable.</dd>
+
+   <dt><dfn id="dom-mediaerror-media_err_decode" title="dom-MediaError-MEDIA_ERR_DECODE"><code>MEDIA_ERR_DECODE</code></dfn> (numeric value 3)</dt>
+
+   <dd>An error of some description occurred while decoding the
+   <a href="#media-resource" id="media-resource-12">media resource</a>, after the resource was established to
+   be usable.</dd>
+
+   <dt><dfn id="dom-mediaerror-media_err_src_not_supported" title="dom-MediaError-MEDIA_ERR_SRC_NOT_SUPPORTED"><code>MEDIA_ERR_SRC_NOT_SUPPORTED</code></dfn> (numeric value 4)</dt>
+
+   <dd>The <a href="#media-resource" id="media-resource-13">media resource</a> indicated by the <code title="attr-media-src"><a href="#attr-media-src" id="src-42">src</a></code> attribute was not suitable.</dd>
+
+  </dl><h5 id="location-of-the-media-resource"><span class="secno">4.8.10.2 </span>Location of the media resource</h5><p>The <dfn id="attr-media-src" title="attr-media-src"><code>src</code></dfn> content
+  attribute on <a href="#media-element" id="media-element-17" title="media element">media elements</a> gives
+  the address of the media resource (video, audio) to show. The
+  attribute, if present, must contain a <a href="urls.html#valid-non-empty-url-potentially-surrounded-by-spaces" id="valid-non-empty-url-potentially-surrounded-by-spaces-10">valid non-empty
+  URL potentially surrounded by spaces</a>.<dl class="domintro"><dt><var title="">media</var> . <code title="dom-media-currentSrc"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-currentsrc" title='Read about this "currentSrc" reference in the full HTML5 spec.'>currentSrc</a></code></dt>
+
+   <dd>
+
+    <p>Returns the address of the current <a href="#media-resource" id="media-resource-14">media resource</a>.</p>
+
+    <p>Returns the empty string when there is no <a href="#media-resource" id="media-resource-15">media resource</a>.</p>
+
+   </dd>
+
+  </dl><p class="note">There are two ways to specify a <a href="#media-resource" id="media-resource-16">media
+  resource</a>, the <code title="attr-media-src"><a href="#attr-media-src" id="src-43">src</a></code>
+  attribute, or <code><a href="#the-source-element" id="source-7">source</a></code> elements. The attribute overrides
+  the elements.<h5 id="mime-types"><span class="secno">4.8.10.3 </span>MIME types</h5><p>A <a href="#media-resource" id="media-resource-17">media resource</a> can be described in terms of its
+  <em>type</em>, specifically a <a href="infrastructure.html#mime-type" id="mime-type-6">MIME type</a>, in some cases
+  with a <code title="">codecs</code> parameter. (Whether the <code title="">codecs</code> parameter is allowed or not depends on the
+  MIME type.) <a href="references.html#refsRFC4281">[RFC4281]</a><p>Types are usually somewhat incomplete descriptions; for example
+  "<code title="">video/mpeg</code>" doesn't say anything except what
+  the container type is, and even a type like "<code title="">video/mp4; codecs="avc1.42E01E,
+  mp4a.40.2"</code>" doesn't include information like the actual
+  bitrate (only the maximum bitrate). Thus, given a type, a user agent
+  can often only know whether it <em>might</em> be able to play
+  media of that type (with varying levels of confidence), or whether
+  it definitely <em>cannot</em> play media of that type.<p><dfn id="a-type-that-the-user-agent-knows-it-cannot-render">A type that the user agent knows it cannot render</dfn> is
+  one that describes a resource that the user agent definitely does
+  not support, for example because it doesn't recognize the container
+  type, or it doesn't support the listed codecs.<p>The <a href="infrastructure.html#mime-type" id="mime-type-7">MIME type</a>
+  "<code>application/octet-stream</code>" with no parameters is never
+  <a href="#a-type-that-the-user-agent-knows-it-cannot-render" id="a-type-that-the-user-agent-knows-it-cannot-render-0">a type that the user agent knows it cannot render</a>. User
+  agents must treat that type as equivalent to the lack of any
+  explicit <a class="full-spec-link" href="http://dev.w3.org/html5/spec/fetching-resources.html#content-type" title='Read about this "Content-Type metadata" reference in the full HTML5 spec.'>Content-Type metadata</a>
+  when it is used to label a potential <a href="#media-resource" id="media-resource-18">media
+  resource</a>.<p class="note">In the absence of a <!-- pretty crazy -->
+  specification to the contrary, the <a href="infrastructure.html#mime-type" id="mime-type-8">MIME type</a>
+  "<code>application/octet-stream</code>" when used <em>with</em>
+  parameters, e.g.
+  "<code>application/octet-stream;codecs=theora</code>", <em>is</em>
+  <a href="#a-type-that-the-user-agent-knows-it-cannot-render" id="a-type-that-the-user-agent-knows-it-cannot-render-1">a type that the user agent knows it cannot render</a>,
+  since that parameter is not defined for that type.<dl class="domintro"><dt><var title="">media</var> . <code title="dom-navigator-canPlayType"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-navigator-canplaytype" title='Read about this "canPlayType" reference in the full HTML5 spec.'>canPlayType</a></code>(<var title="">type</var>)</dt>
+
+   <dd>
+
+    <p>Returns the empty string (a negative response), "maybe", or
+    "probably" based on how confident the user agent is that it can
+    play media resources of the given type.</p>
+
+   </dd>
+
+  </dl><div class="example">
+
+   <p>This script tests to see if the user agent supports a
+   (fictional) new format to dynamically decide whether to use a
+   <code><a href="#video" id="video-22">video</a></code> element or a plugin:</p>
+
+   <pre>&lt;section id="video"&gt;
+ &lt;p&gt;&lt;a href="playing-cats.nfv"&gt;Download video&lt;/a&gt;&lt;/p&gt;
+&lt;/section&gt;
+&lt;script&gt;
+ var videoSection = document.getElementById('video');
+ var videoElement = document.createElement('video');
+ var support = videoElement.canPlayType('video/x-new-fictional-format;codecs="kittens,bunnies"');
+ if (support != "probably" &amp;&amp; "New Fictional Video Plug-in" in navigator.plugins) {
+   // not confident of browser support
+   // but we have a plugin
+   // so use plugin instead
+   videoElement = document.createElement("embed");
+ } else if (support == "") {
+   // no support from browser and no plugin
+   // do nothing
+   videoElement = null;
+ }
+ if (videoElement) {
+   while (videoSection.hasChildNodes())
+     videoSection.removeChild(videoSection.firstChild);
+   videoElement.setAttribute("src", "playing-cats.nfv");
+   videoSection.appendChild(videoElement);
+ }
+&lt;/script&gt;</pre>
+
+  </div><p class="note">The <code title="attr-source-type"><a href="#attr-source-type" id="type-27">type</a></code>
+  attribute of the <code><a href="#the-source-element" id="source-8">source</a></code> element allows the user agent
+  to avoid downloading resources that use formats it cannot
+  render.<h5 id="network-states"><span class="secno">4.8.10.4 </span>Network states</h5><dl class="domintro"><dt><var title="">media</var> . <code title="dom-media-networkState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-networkstate" title='Read about this "networkState" reference in the full HTML5 spec.'>networkState</a></code></dt>
+
+   <dd>
+
+    <p>Returns the current state of network activity for the element,
+    from the codes in the list below.</p>
+
+   </dd>
+
+  </dl><dl><dt><dfn id="dom-media-network_empty" title="dom-media-NETWORK_EMPTY"><code>NETWORK_EMPTY</code></dfn> (numeric value 0)</dt>
+
+   <dd>The element has not yet been initialized. All attributes are in
+   their initial states.</dd>
+
+   <dt><dfn id="dom-media-network_idle" title="dom-media-NETWORK_IDLE"><code>NETWORK_IDLE</code></dfn> (numeric value 1)</dt>
+
+   <dd>The element has selected a <a href="#media-resource" id="media-resource-19" title="media resource">resource</a>, but it is not actually
+   using the network at this time.</dd>
+
+   <dt><dfn id="dom-media-network_loading" title="dom-media-NETWORK_LOADING"><code>NETWORK_LOADING</code></dfn> (numeric value 2)</dt>
+
+   <dd>The user agent is actively trying to download data.</dd>
+
+   <dt><dfn id="dom-media-network_no_source" title="dom-media-NETWORK_NO_SOURCE"><code>NETWORK_NO_SOURCE</code></dfn> (numeric value 3)</dt>
+
+   <dd>The element has so not yet found a
+   <a href="#media-resource" id="media-resource-20" title="media resource">resource</a> to use.</dd>
+
+  </dl><h5 id="loading-the-media-resource"><span class="secno">4.8.10.5 </span>Loading the media resource</h5><dl class="domintro"><dt><var title="">media</var> . <code title="dom-media-load"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-load" title='Read about this "load" reference in the full HTML5 spec.'>load</a></code>()</dt>
+
+   <dd>
+
+    <p>Causes the element to reset and start selecting and loading a
+    new <a href="#media-resource" id="media-resource-21">media resource</a> from scratch.</p>
+
+   </dd>
+
+  </dl><hr><p>The <dfn id="attr-media-preload" title="attr-media-preload"><code>preload</code></dfn>
+  attribute is an <a href="common-microsyntaxes.html#enumerated-attribute" id="enumerated-attribute-3">enumerated attribute</a>. The following table
+  lists the keywords and states for the attribute &mdash; the keywords
+  in the left column map to the states in the cell in the second
+  column on the same row as the keyword.<table><thead><tr><th> Keyword
+     <th> State
+     <th> Brief description
+   <tbody><tr><td><dfn id="attr-media-preload-none" title="attr-media-preload-none"><code>none</code></dfn>
+     <td><dfn id="attr-media-preload-none-state" title="attr-media-preload-none-state">None</dfn>
+     <td>Hints to the user agent that either the author does not expect the user to need the media resource, or that the server wants to minimise unnecessary traffic.
+    <tr><td><dfn id="attr-media-preload-metadata" title="attr-media-preload-metadata"><code>metadata</code></dfn>
+     <td><dfn id="attr-media-preload-metadata-state" title="attr-media-preload-metadata-state">Metadata</dfn>
+     <td>Hints to the user agent that the author does not expect the user to need the media resource, but that fetching the resource metadata (dimensions, first frame, track list, duration, etc) is reasonable.
+    <tr><td><dfn id="attr-media-preload-auto" title="attr-media-preload-auto"><code>auto</code></dfn>
+     <td><dfn id="attr-media-preload-auto-state" title="attr-media-preload-auto-state">Automatic</dfn>
+     <td>Hints to the user agent that the user agent can put the user's needs first without risk to the server, up to and including optimistically downloading the entire resource.
+  </table><p>The empty string is also a valid keyword, and maps to the <a href="#attr-media-preload-auto-state" id="attr-media-preload-auto-state-0" title="attr-media-preload-auto-state">Automatic</a> state. The
+  attribute's <i>missing value default</i> is user-agent defined,
+  though the <a href="#attr-media-preload-auto-state" id="attr-media-preload-auto-state-1" title="attr-media-preload-auto-state">Metadata</a> state is
+  suggested as a compromise between reducing server load and providing
+  an optimal user experience.<p class="note">The <code title="attr-media-autoplay"><a href="#attr-media-autoplay" id="autoplay-4">autoplay</a></code> attribute can override
+  the <code title="attr-media-preload"><a href="#attr-media-preload" id="preload-4">preload</a></code> attribute (since
+  if the media plays, it naturally has to buffer first, regardless of
+  the hint given by the <code title="attr-media-preload"><a href="#attr-media-preload" id="preload-5">preload</a></code> attribute). Including
+  both is not an error, however.<hr><!--v3BUF (when readding this, also add a domintro block)
+  <p>The <dfn
+  title="dom-media-bufferingRate"><code>bufferingRate</code></dfn>
+  attribute must return the average number of bits received per second
+  for the current download over the past few seconds. If there is no
+  download in progress, the attribute must return 0.</p>
+
+  <p>The <dfn
+  title="dom-media-bufferingThrottled"><code>bufferingThrottled</code></dfn>
+  attribute must return true if the user agent is intentionally
+  throttling the bandwidth used by the download (including when
+  throttling to zero to pause the download altogether), and false
+  otherwise.</p>
+
+  <hr>
+--><dl class="domintro"><dt><var title="">media</var> . <code title="dom-media-buffered"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-buffered" title='Read about this "buffered" reference in the full HTML5 spec.'>buffered</a></code></dt>
+
+   <dd>
+
+    <p>Returns a <code><a href="#timeranges" id="timeranges-3">TimeRanges</a></code> object that represents the
+    ranges of the <a href="#media-resource" id="media-resource-22">media resource</a> that the user agent has
+    buffered.</p>
+
+   </dd>
+
+  </dl><h5 id="offsets-into-the-media-resource"><span class="secno">4.8.10.6 </span>Offsets into the media resource</h5><dl class="domintro"><dt><var title="">media</var> . <code title="dom-media-duration"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-duration" title='Read about this "duration" reference in the full HTML5 spec.'>duration</a></code></dt>
+
+   <dd>
+
+    <p>Returns the length of the <a href="#media-resource" id="media-resource-23">media resource</a>, in
+    seconds, assuming that the start of the <a href="#media-resource" id="media-resource-24">media
+    resource</a> is at time zero.</p>
+
+    <p>Returns NaN if the duration isn't available.<p>
+
+    <p>Returns Infinity for unbounded streams.</p>
+
+   </dd>
+
+   <dt><var title="">media</var> . <code title="dom-media-currentTime"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-currenttime" title='Read about this "currentTime" reference in the full HTML5 spec.'>currentTime</a></code> [ = <var title="">value</var> ]</dt>
+
+   <dd>
+
+    <p>Returns the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#current-playback-position" title='Read about this "current playback position" reference in the full HTML5 spec.'>current playback position</a>, in seconds.</p>
+
+    <p>Can be set, to seek to the given time.<p>
+
+    <p>Will throw an <code><a href="urls.html#invalid_state_err" id="invalid_state_err-7">INVALID_STATE_ERR</a></code> exception if there
+    is no selected <a href="#media-resource" id="media-resource-25">media resource</a>. Will throw an
+    <code><a href="urls.html#index_size_err" id="index_size_err-0">INDEX_SIZE_ERR</a></code> exception if the given time is not
+    within the ranges to which the user agent can seek.</p>
+
+   </dd>
+
+   <dt><var title="">media</var> . <code title="dom-media-initialTime"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-initialtime" title='Read about this "initialTime" reference in the full HTML5 spec.'>initialTime</a></code></dt>
+
+   <dd>
+
+    <p>Returns the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#initial-playback-position" title='Read about this "initial playback position" reference in the full HTML5 spec.'>initial playback position</a>, that is, time
+    to which the <a href="#media-resource" id="media-resource-26">media resource</a> was automatically seeked
+    when it was loaded. Returns zero if the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#initial-playback-position" title='Read about this "initial playback position" reference in the full HTML5 spec.'>initial playback
+    position</a> is still unknown.</p>
+
+   </dd>
+
+  </dl><hr><p>The <dfn id="attr-media-loop" title="attr-media-loop"><code>loop</code></dfn>
+  attribute is a <a href="common-microsyntaxes.html#boolean-attribute" id="boolean-attribute-6">boolean attribute</a> that, if specified,
+  indicates that the <a href="#media-element" id="media-element-18">media element</a> is to seek back to the
+  start of the <a href="#media-resource" id="media-resource-27">media resource</a> upon reaching the end.<h5 id="the-ready-states"><span class="secno">4.8.10.7 </span>The ready states</h5><dl class="domintro"><dt><var title="">media</var> . <code title="dom-media-readyState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-readystate" title='Read about this "readyState" reference in the full HTML5 spec.'>readyState</a></code></dt>
+
+   <dd>
+
+    <p>Returns a value that expresses the current state of the element
+    with respect to rendering the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#current-playback-position" title='Read about this "current playback position" reference in the full HTML5 spec.'>current playback
+    position</a>, from the codes in the list below.</p>
+
+   </dd>
+
+  </dl><dl><dt><dfn id="dom-media-have_nothing" title="dom-media-HAVE_NOTHING"><code>HAVE_NOTHING</code></dfn> (numeric value 0)</dt>
+
+   <dd>No information regarding the <a href="#media-resource" id="media-resource-28">media resource</a> is
+   available. No data for the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#current-playback-position" title='Read about this "current playback position" reference in the full HTML5 spec.'>current playback position</a>
+   is available. <a href="#media-element" id="media-element-19" title="media element">Media elements</a>
+   whose <code title="dom-media-networkState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-networkstate" title='Read about this "networkState" reference in the full HTML5 spec.'>networkState</a></code>
+   attribute are set to <code title="dom-media-NETWORK_EMPTY"><a href="#dom-media-network_empty" id="network_empty">NETWORK_EMPTY</a></code> are always in
+   the <code title="dom-media-HAVE_NOTHING"><a href="#dom-media-have_nothing" id="have_nothing">HAVE_NOTHING</a></code>
+   state.</dd>
+
+   <dt><dfn id="dom-media-have_metadata" title="dom-media-HAVE_METADATA"><code>HAVE_METADATA</code></dfn> (numeric value 1)</dt>
+
+   <dd>Enough of the resource has been obtained that the duration of
+   the resource is available. In the case of a <code><a href="#video" id="video-23">video</a></code>
+   element, the dimensions of the video are also available. The API
+   will no longer raise an exception when seeking. No <a href="#media-data" id="media-data-2">media
+   data</a> is available for the immediate <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#current-playback-position" title='Read about this "current playback position" reference in the full HTML5 spec.'>current playback
+   position</a>.
+<!--KEEP-END w3c-html--><!--TT-->
+   The <a href="#timed-track" id="timed-track-2" title="timed track">timed tracks</a>
+   are <a href="#the-timed-tracks-are-ready" id="the-timed-tracks-are-ready-0" title="the timed tracks are ready">ready</a>.
+<!--KEEP-START w3c-html--><!--TT-->
+   </dd>
+
+   <dt><dfn id="dom-media-have_current_data" title="dom-media-HAVE_CURRENT_DATA"><code>HAVE_CURRENT_DATA</code></dfn> (numeric value 2)</dt>
+
+   <dd>Data for the immediate <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#current-playback-position" title='Read about this "current playback position" reference in the full HTML5 spec.'>current playback position</a>
+   is available, but either not enough data is available that the user
+   agent could successfully advance the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#current-playback-position" title='Read about this "current playback position" reference in the full HTML5 spec.'>current playback
+   position</a> in the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#direction-of-playback" title='Read about this "direction of playback" reference in the full HTML5 spec.'>direction of playback</a> at all
+   without immediately reverting to the <code title="dom-media-HAVE_METADATA"><a href="#dom-media-have_metadata" id="have_metadata">HAVE_METADATA</a></code> state, or
+   there is no more data to obtain in the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#direction-of-playback" title='Read about this "direction of playback" reference in the full HTML5 spec.'>direction of
+   playback</a>. For example, in video this corresponds to the user
+   agent having data from the current frame, but not the next frame;
+   and to when <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#ended-playback" title='Read about this "playback has ended" reference in the full HTML5 spec.'>playback has
+   ended</a>.</dd>
+
+   <dt><dfn id="dom-media-have_future_data" title="dom-media-HAVE_FUTURE_DATA"><code>HAVE_FUTURE_DATA</code></dfn> (numeric value 3)</dt>
+
+   <dd>Data for the immediate <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#current-playback-position" title='Read about this "current playback position" reference in the full HTML5 spec.'>current playback position</a>
+   is available, as well as enough data for the user agent to advance
+   the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#current-playback-position" title='Read about this "current playback position" reference in the full HTML5 spec.'>current playback position</a> in the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#direction-of-playback" title='Read about this "direction of playback" reference in the full HTML5 spec.'>direction
+   of playback</a> at least a little without immediately reverting
+   to the <code title="dom-media-HAVE_METADATA"><a href="#dom-media-have_metadata" id="have_metadata-0">HAVE_METADATA</a></code>
+   state. For example, in video this corresponds to the user agent
+   having data for at least the current frame and the next frame. The
+   user agent cannot be in this state if <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#ended-playback" title='Read about this "playback has ended" reference in the full HTML5 spec.'>playback has ended</a>, as the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#current-playback-position" title='Read about this "current playback position" reference in the full HTML5 spec.'>current playback
+   position</a> can never advance in this case.</dd>
+
+   <dt><dfn id="dom-media-have_enough_data" title="dom-media-HAVE_ENOUGH_DATA"><code>HAVE_ENOUGH_DATA</code></dfn> (numeric value 4)</dt>
+
+   <dd>All the conditions described for the <code title="dom-media-HAVE_FUTURE_DATA"><a href="#dom-media-have_future_data" id="have_future_data">HAVE_FUTURE_DATA</a></code> state
+   are met, and, in addition, the user agent estimates that data is
+   being fetched at a rate where the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#current-playback-position" title='Read about this "current playback position" reference in the full HTML5 spec.'>current playback
+   position</a>, if it were to advance at the rate given by the
+   <code title="dom-media-defaultPlaybackRate"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-defaultplaybackrate" title='Read about this "defaultPlaybackRate" reference in the full HTML5 spec.'>defaultPlaybackRate</a></code>
+   attribute, would not overtake the available data before playback
+   reaches the end of the <a href="#media-resource" id="media-resource-29">media resource</a>.</dd>
+
+  </dl><p class="note">It is possible for the ready state of a media
+  element to jump between these states discontinuously. For example,
+  the state of a media element can jump straight from <code title="dom-media-HAVE_METADATA"><a href="#dom-media-have_metadata" id="have_metadata-1">HAVE_METADATA</a></code> to <code title="dom-media-HAVE_ENOUGH_DATA"><a href="#dom-media-have_enough_data" id="have_enough_data">HAVE_ENOUGH_DATA</a></code> without
+  passing through the <code title="dom-media-HAVE_CURRENT_DATA"><a href="#dom-media-have_current_data" id="have_current_data">HAVE_CURRENT_DATA</a></code> and
+  <code title="dom-media-HAVE_FUTURE_DATA"><a href="#dom-media-have_future_data" id="have_future_data-0">HAVE_FUTURE_DATA</a></code>
+  states.<p>The <dfn id="attr-media-autoplay" title="attr-media-autoplay"><code>autoplay</code></dfn>
+  attribute is a <a href="common-microsyntaxes.html#boolean-attribute" id="boolean-attribute-7">boolean attribute</a>. When present, the
+  user agent  will automatically begin playback of the
+  <a href="#media-resource" id="media-resource-30">media resource</a> as soon as it can do so without
+  stopping.<p class="note">Authors are urged to use the <code title="attr-media-autoplay"><a href="#attr-media-autoplay" id="autoplay-5">autoplay</a></code> attribute rather than
+  using script to trigger automatic playback, as this allows the user
+  to override the automatic playback when it is not desired, e.g. when
+  using a screen reader. Authors are also encouraged to consider not
+  using the automatic playback behavior at all, and instead to let the
+  user agent wait for the user to start playback explicitly.<h5 id="playing-the-media-resource"><span class="secno">4.8.10.8 </span>Playing the media resource</h5><dl class="domintro"><dt><var title="">media</var> . <code title="dom-media-paused"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-paused" title='Read about this "paused" reference in the full HTML5 spec.'>paused</a></code></dt>
+
+   <dd>
+
+    <p>Returns true if playback is paused; false otherwise.</p>
+
+   </dd>
+
+   <dt><var title="">media</var> . <code title="dom-media-ended"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-ended" title='Read about this "ended" reference in the full HTML5 spec.'>ended</a></code></dt>
+
+   <dd>
+
+    <p>Returns true if playback has reached the end of the <a href="#media-resource" id="media-resource-31">media resource</a>.</p>
+
+   </dd>
+
+   <dt><var title="">media</var> . <code title="dom-media-defaultPlaybackRate"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-defaultplaybackrate" title='Read about this "defaultPlaybackRate" reference in the full HTML5 spec.'>defaultPlaybackRate</a></code> [ = <var title="">value</var> ]</dt>
+
+   <dd>
+
+    <p>Returns the default rate of playback, for when the user is not
+    fast-forwarding or reversing through the <a href="#media-resource" id="media-resource-32">media
+    resource</a>.</p>
+
+    <p>Can be set, to change the default rate of playback.</p>
+
+    <p>The default rate has no direct effect on playback, but if the
+    user switches to a fast-forward mode, when they return to the
+    normal playback mode, it is expected that the rate of playback
+    will be returned to the default rate of playback.</p>
+
+   </dd>
+
+   <dt><var title="">media</var> . <code title="dom-media-playbackRate"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-playbackrate" title='Read about this "playbackRate" reference in the full HTML5 spec.'>playbackRate</a></code> [ = <var title="">value</var> ]</dt>
+
+   <dd>
+
+    <p>Returns the current rate playback, where 1.0 is normal speed.</p>
+
+    <p>Can be set, to change the rate of playback.</p>
+
+   </dd>
+
+   <dt><var title="">media</var> . <code title="dom-media-played"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-played" title='Read about this "played" reference in the full HTML5 spec.'>played</a></code></dt>
+
+   <dd>
+
+    <p>Returns a <code><a href="#timeranges" id="timeranges-4">TimeRanges</a></code> object that represents the
+    ranges of the <a href="#media-resource" id="media-resource-33">media resource</a> that the user agent has
+    played.</p>
+
+   </dd>
+
+   <dt><var title="">media</var> . <code title="dom-media-play"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-play" title='Read about this "play" reference in the full HTML5 spec.'>play</a></code>()</dt>
+
+   <dd>
+
+    <p>Sets the <code title="dom-media-paused"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-paused" title='Read about this "paused" reference in the full HTML5 spec.'>paused</a></code> attribute
+    to false, loading the <a href="#media-resource" id="media-resource-34">media resource</a> and beginning
+    playback if necessary. If the playback had ended, will restart it
+    from the start.</p>
+
+   </dd>
+
+   <dt><var title="">media</var> . <code title="dom-media-pause"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-pause" title='Read about this "pause" reference in the full HTML5 spec.'>pause</a></code>()</dt>
+
+   <dd>
+
+    <p>Sets the <code title="dom-media-paused"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-paused" title='Read about this "paused" reference in the full HTML5 spec.'>paused</a></code> attribute
+    to true, loading the <a href="#media-resource" id="media-resource-35">media resource</a> if necessary.</p>
+
+   </dd>
+
+  </dl><h5 id="seeking"><span class="secno">4.8.10.9 </span>Seeking</h5><dl class="domintro"><dt><var title="">media</var> . <code title="dom-media-seeking"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-seeking" title='Read about this "seeking" reference in the full HTML5 spec.'>seeking</a></code></dt>
+
+   <dd>
+
+    <p>Returns true if the user agent is currently seeking.</p>
+
+   </dd>
+
+   <dt><var title="">media</var> . <code title="dom-media-seekable"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-seekable" title='Read about this "seekable" reference in the full HTML5 spec.'>seekable</a></code></dt>
+
+   <dd>
+
+    <p>Returns a <code><a href="#timeranges" id="timeranges-5">TimeRanges</a></code> object that represents the
+    ranges of the <a href="#media-resource" id="media-resource-36">media resource</a> to which it is possible
+    for the user agent to seek.</p>
+
+   </dd>
+
+  </dl><!--KEEP-END w3c-html--><!--TT--><!--<div data-component="other Hixie drafts (editor: Ian Hickson)">--><h5 id="timed-tracks"><span class="secno">4.8.10.10 </span>Timed tracks</h5><p class="XXX annotation"><span><a href="https://www.w3.org/html/wg/tracker/issues/9">ISSUE-9</a> (video-accessibility) blocks progress to Last Call</span><h6 id="timed-track-model"><span class="secno">4.8.10.10.1 </span>Timed track model</h6><p>A <a href="#media-element" id="media-element-20">media element</a> can have a group of associated <dfn id="timed-track" title="timed track">timed tracks</dfn>, known as the <a href="#media-element" id="media-element-21">media
+  element</a>'s <dfn id="list-of-timed-tracks">list of timed tracks</dfn>. The <a href="#timed-track" id="timed-track-3" title="timed track">timed tracks</a> are sorted as follows:<ol class="brief"><li>The <a href="#timed-track" id="timed-track-4" title="timed track">timed tracks</a> corresponding
+   to <code><a href="#the-track-element" id="track-11">track</a></code> element children of the <a href="#media-element" id="media-element-22">media
+   element</a>, in <a href="infrastructure.html#tree-order" id="tree-order-5">tree order</a>.</li>
+
+   <li>Any <a href="#timed-track" id="timed-track-5" title="timed track">timed tracks</a> added using
+   the <code title="dom-media-addTrack"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-media-addtrack" title='Read about this "addTrack()" reference in the full HTML5 spec.'>addTrack()</a></code> method, in
+   the order they were added, oldest first.</li>
+
+   <li>Any <a href="#media-resource-specific-timed-track" id="media-resource-specific-timed-track-0" title="media-resource-specific timed
+   track">media-resource-specific timed tracks</a> (<a href="#timed-track" id="timed-track-6" title="timed track">timed tracks</a> corresponding to data in
+   the <a href="#media-resource" id="media-resource-37">media resource</a>), in the order defined by the
+   <a href="#media-resource" id="media-resource-38">media resource</a>'s format specification.</li>
+
+  </ol><p>A <a href="#timed-track" id="timed-track-7">timed track</a> consists of:<dl><dt><dfn id="timed-track-kind" title="timed track kind">The kind of timed track</dfn>
+
+   <dd>
+
+    <p>This decides how the track is handled by the user agent. The
+    kind is represented by a string. The possible strings are:</p>
+
+    <ul class="brief"><li><dfn id="dom-timedtrack-kind-subtitles" title="dom-TimedTrack-kind-subtitles"><code>subtitles</code></dfn>
+     <li><dfn id="dom-timedtrack-kind-captions" title="dom-TimedTrack-kind-captions"><code>captions</code></dfn>
+     <li><dfn id="dom-timedtrack-kind-descriptions" title="dom-TimedTrack-kind-descriptions"><code>descriptions</code></dfn>
+     <li><dfn id="dom-timedtrack-kind-chapters" title="dom-TimedTrack-kind-chapters"><code>chapters</code></dfn>
+     <li><dfn id="dom-timedtrack-kind-metadata" title="dom-TimedTrack-kind-metadata"><code>metadata</code></dfn>
+    </ul><p>The <a href="#timed-track-kind" id="timed-track-kind-0" title="timed track kind">kind of track</a> can
+    change dynamically, in the case of a <a href="#timed-track" id="timed-track-8">timed track</a>
+    corresponding to a <code><a href="#the-track-element" id="track-12">track</a></code> element.</p>
+
+   </dd>
+
+   <dt><dfn id="timed-track-label" title="timed track label">A label</dfn>
+
+   <dd>
+
+    <p>This is a human-readable string intended to identify the track
+    for the user. In certain cases, the label might be generated
+    automatically.</p>
+
+    <p>The <a href="#timed-track-label" id="timed-track-label-0" title="timed track label">label of a track</a> can
+    change dynamically, in the case of a <a href="#timed-track" id="timed-track-9">timed track</a>
+    corresponding to a <code><a href="#the-track-element" id="track-13">track</a></code> element or in the case of an
+    automatically-generated label whose value depends on variable
+    factors such as the user's preferred user interface language.</p>
+
+   </dd>
+
+   <dt><dfn id="timed-track-language" title="timed track language">A language</dfn>
+
+   <dd>
+
+    <p>This is a string (a BCP 47 language tag) representing the
+    language of the timed track's cues. <a href="references.html#refsBCP47">[BCP47]</a></p>
+
+    <p>The <a href="#timed-track-language" id="timed-track-language-0" title="timed track language">language of a timed
+    track</a> can change dynamically, in the case of a <a href="#timed-track" id="timed-track-10">timed
+    track</a> corresponding to a <code><a href="#the-track-element" id="track-14">track</a></code> element.</p>
+
+   </dd>
+
+   <dt><dfn id="timed-track-readiness-state" title="timed track readiness state">A readiness state</dfn>
+
+   <dd>
+
+    <p>One of the following:</p>
+
+    <dl><dt><dfn id="timed-track-not-loaded" title="timed track not loaded">Not loaded</dfn>
+
+     <dd>
+
+      <p>Indicates that the timed track is known to exist (e.g. it has
+      been declared with a <code><a href="#the-track-element" id="track-15">track</a></code> element), but its cues
+      have not been obtained.</p>
+
+     </dd>
+
+     <dt><dfn id="timed-track-loading" title="timed track loading">Loading</dfn>
+
+     <dd>
+
+      <p>Indicates that the timed track is loading and there have been
+      no fatal errors encountered so far. Further cues might still be
+      added to the track.</p>
+
+     </dd>
+
+     <dt><dfn id="timed-track-loaded" title="timed track loaded">Loaded</dfn>
+
+     <dd>
+
+      <p>Indicates that the timed track has been loaded with no fatal
+      errors. No new cues will be added to the track except if the
+      <a href="#timed-track" id="timed-track-11">timed track</a> corresponds to a
+      <code><a href="#mutabletimedtrack" id="mutabletimedtrack-1">MutableTimedTrack</a></code> object.</p>
+
+     </dd>
+
+     <dt><dfn id="timed-track-failed-to-load" title="timed track failed to load">Failed to load</dfn>
+
+     <dd>
+
+      <p>Indicates that the timed track was enabled, but when the user
+      agent attempted to obtain it, this failed in some way
+      (e.g. <a href="urls.html#url" id="url-11">URL</a> could not be <a class="full-spec-link" href="http://dev.w3.org/html5/spec/urls.html#resolve-a-url" title='Read about this "resolved" reference in the full HTML5 spec.'>resolved</a>, network error, unknown timed track
+      format). Some or all of the cues are likely missing and will not
+      be obtained.</p>
+
+     </dd>
+
+    </dl><p>The <a href="#timed-track-readiness-state" id="timed-track-readiness-state-0" title="timed track readiness state">readiness
+    state</a> of a <a href="#timed-track" id="timed-track-12">timed track</a> changes dynamically as
+    the track is obtained.</p>
+
+   </dd>
+
+   <dt><dfn id="timed-track-mode" title="timed track mode">A mode</dfn>
+
+   <dd>
+
+    <p>One of the following:</p>
+
+    <dl><dt><dfn id="timed-track-disabled" title="timed track disabled">Disabled</dfn>
+
+     <dd>
+
+      <p>Indicates that the timed track is not active. Other than for
+      the purposes of exposing the track in the DOM, the user agent is
+      ignoring the timed track. No cues are active, no events are
+      fired, and the user agent will not attempt to obtain the track's
+      cues.</p>
+
+     </dd>
+
+     <dt><dfn id="timed-track-hidden" title="timed track hidden">Hidden</dfn>
+
+     <dd>
+
+      <p>Indicates that the timed track is active, but that the user
+      agent is not actively displaying the cues. If no attempt has yet
+      been made to obtain the track's cues, the user agent will
+      perform such an attempt momentarily. The user agent is
+      maintaining a list of which cues are active, and events are
+      being fired accordingly.</p>
+
+     </dd>
+
+     <dt><dfn id="timed-track-showing" title="timed track showing">Showing</dfn>
+
+     <dd>
+
+      <p>Indicates that the timed track is active. If no attempt has
+      yet been made to obtain the track's cues, the user agent will
+      perform such an attempt momentarily. The user agent is
+      maintaining a list of which cues are active, and events are
+      being fired accordingly. In addition, for timed tracks whose
+      <a href="#timed-track-kind" id="timed-track-kind-1" title="timed track kind">kind</a> is <code title="dom-mediatrack-kind-subtitles">subtitles</code> or <code title="dom-mediatrack-kind-captions">captions</code>, the cues
+      are being displayed over the video as appropriate; for timed
+      tracks whose <a href="#timed-track-kind" id="timed-track-kind-2" title="timed track kind">kind</a> is <code title="dom-mediatrack-kind-descriptions">descriptions</code>,
+      the user agent is making the cues available to the user in a
+      non-visual fashion; and for timed tracks whose <a href="#timed-track-kind" id="timed-track-kind-3" title="timed track kind">kind</a> is <code title="dom-mediatrack-kind-chapters">chapters</code>, the user
+      agent is making available to the user a mechanism by which the
+      user can navigate to any point in the <a href="#media-resource" id="media-resource-39">media
+      resource</a> by selecting a cue.</p>
+
+     </dd>
+
+    </dl></dd>
+
+   <dt><dfn id="timed-track-list-of-cues" title="timed track list of cues">A list of zero or more cues</dfn>
+
+   <dd>
+
+    <p>A list of <a href="#timed-track-cue" id="timed-track-cue-0" title="timed track cue">timed track
+    cues</a>, along with <dfn id="rules-for-updating-the-timed-track-rendering">rules for updating the timed track
+    rendering</dfn> (e.g., for <span>WebSRT</span>, the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#rules-for-updating-the-display-of-websrt-timed-tracks" title='Read about this "rules for updating the display of WebSRT timed tracks" reference in the full HTML5 spec.'>rules
+    for updating the display of WebSRT timed tracks</a>).</p>
+
+    <p>The <a href="#timed-track-list-of-cues" id="timed-track-list-of-cues-0" title="timed track list of cues">list of cues of a
+    timed track</a> can change dynamically, either because the
+    <a href="#timed-track" id="timed-track-13">timed track</a> has <a href="#timed-track-not-loaded" id="timed-track-not-loaded-0" title="timed track not
+    loaded">not yet been loaded</a> or is still <a href="#timed-track-loading" id="timed-track-loading-0" title="timed
+    track loading">loading</a>, or because the the <a href="#timed-track" id="timed-track-14">timed
+    track</a> corresponds to a <code><a href="#mutabletimedtrack" id="mutabletimedtrack-2">MutableTimedTrack</a></code>
+    object, whose API allows individual cues can be added or removed
+    dynamically.</p>
+
+   </dd>
+
+  </dl><p>Each <a href="#timed-track" id="timed-track-15">timed track</a> has a corresponding
+  <code><a href="#timedtrack" id="timedtrack-3">TimedTrack</a></code> object.<p>The <a href="#timed-track" id="timed-track-16" title="timed track">timed tracks</a> of a
+  <a href="#media-element" id="media-element-23">media element</a> are <dfn id="the-timed-tracks-are-ready" title="the timed tracks are
+  ready">ready</dfn> if all the <a href="#timed-track" id="timed-track-17" title="timed track">timed
+  tracks</a> whose <a href="#timed-track-mode" id="timed-track-mode-0" title="timed track mode">mode</a> was
+  not in the <a href="#timed-track-disabled" id="timed-track-disabled-0" title="timed track disabled">disabled</a> state
+  when the element's <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#concept-media-load-algorithm" title='Read about this "resource selection algorithm" reference in the full HTML5 spec.'>resource selection
+  algorithm</a> last started now have a <a href="#timed-track-readiness-state" id="timed-track-readiness-state-1">timed track readiness
+  state</a> of <a href="#timed-track-loaded" id="timed-track-loaded-0" title="timed track loaded">loaded</a> or
+  <a href="#timed-track-failed-to-load" id="timed-track-failed-to-load-0" title="timed track failed to load">failed to load</a>.<hr><p>A <dfn id="timed-track-cue">timed track cue</dfn> is the unit of time-sensitive data
+  in a <a href="#timed-track" id="timed-track-18">timed track</a>, corresponding for instance for
+  subtitles and captions to the text that appears at a particular time
+  and disappears at another time.<p>Each <a href="#timed-track-cue" id="timed-track-cue-1">timed track cue</a> consists of:<dl><dt><dfn id="timed-track-cue-identifier" title="timed track cue identifier">An identifier</dfn>
+   <dd>
+    <p>An arbitrary string.</p>
+   </dd>
+
+   <dt><dfn id="timed-track-cue-start-time" title="timed track cue start time">A start time</dfn>
+   <dd>
+    <p>A time, in seconds and fractions of a second, at which the cue
+    becomes relevant.</p>
+   </dd>
+
+   <dt><dfn id="timed-track-cue-end-time" title="timed track cue end time">An end time</dfn>
+   <dd>
+    <p>A time, in seconds and fractions of a second, at which the cue
+    stops being relevant.</p>
+   </dd>
+
+   <dt><dfn id="timed-track-cue-pause-on-exit-flag" title="timed track cue pause-on-exit flag">A pause-on-exit flag</dfn>
+   <dd>
+    <p>A boolean indicating whether playback of the <a href="#media-resource" id="media-resource-40">media
+    resource</a> is to pause when the cue stops being relevant.</p>
+   </dd>
+
+   <dt><dfn id="timed-track-cue-writing-direction" title="timed track cue writing direction">A writing direction</dfn>
+   <dd>
+    <p>A writing direction, either <dfn id="timed-track-cue-horizontal-writing-direction" title="timed track cue
+    horizontal writing direction">horizontal</dfn> (a line extends
+    horizontally and is positioned vertically, with consecutive lines
+    displayed below each other), <dfn id="timed-track-cue-vertical-growing-left-writing-direction" title="timed track cue vertical
+    growing left writing direction">vertical growing left</dfn> (a
+    line extends vertically and is positioned horizontally, with
+    consecutive lines displayed to the left of each other<!-- used
+    for east asian-->), or <dfn id="timed-track-cue-vertical-growing-right-writing-direction" title="timed track cue vertical
+    growing right writing direction">vertical growing right</dfn> (a
+    line extends vertically and is positioned horizontally, with
+    consecutive lines displayed to the right of each other<!-- used for
+    mongolian -->).</p>
+
+    <p>If the <a href="#timed-track-cue-writing-direction" id="timed-track-cue-writing-direction-0" title="timed track cue writing direction">writing
+    direction</a> is <a href="#timed-track-cue-horizontal-writing-direction" id="timed-track-cue-horizontal-writing-direction-0" title="timed track cue horizontal
+    writing direction">horizontal</a>, then <a href="#timed-track-cue-line-position" id="timed-track-cue-line-position-0" title="timed
+    track cue line position">line position</a> percentages are
+    relative to the height of the video, and <a href="#timed-track-cue-text-position" id="timed-track-cue-text-position-0" title="timed track
+    cue text position">text position</a> and <a href="#timed-track-cue-size" id="timed-track-cue-size-0" title="timed
+    track cue size">size</a> percentages are relative to the width
+    of the video.</p>
+
+    <p>Otherwise, <a href="#timed-track-cue-line-position" id="timed-track-cue-line-position-1" title="timed track cue line position">line
+    position</a> percentages are relative to the width of the
+    video, and <a href="#timed-track-cue-text-position" id="timed-track-cue-text-position-1" title="timed track cue text position">text
+    position</a> and <a href="#timed-track-cue-size" id="timed-track-cue-size-1" title="timed track cue size">size</a>
+    percentages are relative to the height of the video.</p>
+
+   </dd>
+
+   <dt><dfn id="timed-track-cue-snap-to-lines-flag" title="timed track cue snap-to-lines flag">A snap-to-lines flag</dfn>
+   <dd>
+    <p>A boolean indicating whether the <a href="#timed-track-cue-line-position" id="timed-track-cue-line-position-2" title="timed track cue
+    line position">line's position</a> is a line position
+    (positioned to a multiple of the line dimensions of the first line
+    of the cue), or whether it is a percentage of the dimension of the
+    video.</p>
+   </dd>
+
+   <dt><dfn id="timed-track-cue-line-position" title="timed track cue line position">A line position</dfn>
+   <dd>
+    <p>Either a number giving the position of the lines of the cue, to
+    be interpreted as defined by the <a href="#timed-track-cue-writing-direction" id="timed-track-cue-writing-direction-1" title="timed track cue
+    writing direction">writing direction</a> and <a href="#timed-track-cue-snap-to-lines-flag" id="timed-track-cue-snap-to-lines-flag-0" title="timed
+    track cue snap-to-lines flag">snap-to-lines flag</a> of the
+    cue, or the special value <dfn id="timed-track-cue-automatic-line-position" title="timed track cue automatic line
+    position">auto</dfn>, which means the position is to depend on
+    the other active tracks.</p>
+   </dd>
+
+   <dt><dfn id="timed-track-cue-text-position" title="timed track cue text position">A text position</dfn>
+   <dd>
+    <p>A number giving the position of the text of the cue within each
+    line, to be interpreted as a percentage of the video, as defined
+    by the <a href="#timed-track-cue-writing-direction" id="timed-track-cue-writing-direction-2" title="timed track cue writing direction">writing
+    direction</a>.</p>
+   </dd>
+
+   <dt><dfn id="timed-track-cue-size" title="timed track cue size">A size</dfn>
+   <dd>
+    <p>A number giving the size of the box within which the text of
+    each line of the cue is to be aligned, to be interpreted as a
+    percentage of the video, as defined by the <a href="#timed-track-cue-writing-direction" id="timed-track-cue-writing-direction-3" title="timed
+    track cue writing direction">writing direction</a>.</p>
+   </dd>
+
+   <dt><dfn id="timed-track-cue-alignment" title="timed track cue alignment">An alignment</dfn>
+   <dd>
+    <p>An alignment for the text of each line of the cue, either <dfn id="timed-track-cue-start-alignment" title="timed track cue start alignment">start alignment</dfn> (the
+    text is aligned towards its start side), <dfn id="timed-track-cue-middle-alignment" title="timed track
+    cue middle alignment">middle alignment</dfn> (the text is aligned
+    centered between its start and end sides), <dfn id="timed-track-cue-end-alignment" title="timed track
+    cue end alignment">end alignment</dfn> (the text is aligned
+    towards its end side). Which sides are the start and end sides
+    depends on the Unicode bidirectional algorithm and the <a href="#timed-track-cue-writing-direction" id="timed-track-cue-writing-direction-4" title="timed track cue writing direction">writing
+    direction</a>. <a href="references.html#refsBIDI">[BIDI]</a></p>
+   </dd>
+
+   <dt><dfn id="timed-track-cue-voice-identifier" title="timed track cue voice identifier">A voice identifier</dfn>
+   <dd>
+    <p>A string identifying the voice with which the cue is associated.</p>
+   </dd>
+
+   <dt><dfn id="timed-track-cue-text" title="timed track cue text">The text of the cue</dfn>
+   <dd>
+    <p>The raw text of the cue, and rules for its interpretation,
+    allowing the text to be rendered and converted to a DOM fragment.</p>
+   </dd>
+
+  </dl><p>A <a href="#timed-track-cue" id="timed-track-cue-2">timed track cue</a> is immutable.<p>Each <a href="#timed-track-cue" id="timed-track-cue-3">timed track cue</a> has a corresponding
+  <code><a href="#timedtrackcue" id="timedtrackcue-0">TimedTrackCue</a></code> object, and can be associated with a
+  particular <a href="#timed-track" id="timed-track-19">timed track</a>. Once a <a href="#timed-track-cue" id="timed-track-cue-4">timed track
+  cue</a> is associated with a particular <a href="#timed-track" id="timed-track-20">timed track</a>,
+  the association is permanent.<p>In addition, each <a href="#timed-track-cue" id="timed-track-cue-5">timed track cue</a> has two pieces of
+  dynamic information:<dl><dt>The <dfn id="timed-track-cue-active-flag" title="timed track cue active flag">active flag</dfn>
+   <dd>
+
+    <p>This flag must be initially unset.  The flag is used to ensure
+    events are fired appropriately when the cue becomes active or
+    inactive, and to make sure the right cues are rendered.</p>
+
+    <p>The user agent must synchronously unset this flag whenever the
+    <a href="#timed-track-cue" id="timed-track-cue-6">timed track cue</a> is removed from its <a href="#timed-track" id="timed-track-21">timed
+    track</a>'s <a href="#timed-track-list-of-cues" id="timed-track-list-of-cues-1">timed track list of cues</a>; whenever the
+    <a href="#timed-track" id="timed-track-22">timed track</a> itself is removed from its <a href="#media-element" id="media-element-24">media
+    element</a>'s <a href="#list-of-timed-tracks" id="list-of-timed-tracks-0">list of timed tracks</a> or has its
+    <a href="#timed-track-mode" id="timed-track-mode-1">timed track mode</a> changed to <a href="#timed-track-disabled" id="timed-track-disabled-1" title="timed track
+    disabled">disabled</a>; and whenever the <a href="#media-element" id="media-element-25">media
+    element</a>'s <code title="dom-media-readyState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-readystate" title='Read about this "readyState" reference in the full HTML5 spec.'>readyState</a></code> is changed back to
+    <code title="dom-media-HAVE_NOTHING"><a href="#dom-media-have_nothing" id="have_nothing-0">HAVE_NOTHING</a></code>. When the
+    flag is unset in this way for one or more cues in <a href="#timed-track" id="timed-track-23" title="timed track">timed tracks</a> that were <a href="#timed-track-showing" id="timed-track-showing-0" title="timed track showing">showing</a> prior to the relevant
+    incident, the user agent must, after having unset the flag for all
+    the affected cues, apply the <a href="#rules-for-updating-the-timed-track-rendering" id="rules-for-updating-the-timed-track-rendering-0">rules for updating the timed
+    track rendering</a> of those <a href="#timed-track" id="timed-track-24" title="timed track">timed
+    tracks</a> (e.g., for <a href="#timed-track" id="timed-track-25" title="timed track">timed
+    tracks</a> based on <span>WebSRT</span>, the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#rules-for-updating-the-display-of-websrt-timed-tracks" title='Read about this "rules for updating the display of WebSRT timed tracks" reference in the full HTML5 spec.'>rules for
+    updating the display of WebSRT timed tracks</a>).</p>
+
+   </dd>
+
+   <dt>The <dfn id="timed-track-cue-display-state" title="timed track cue display state">display state</dfn>
+   <dd>
+
+    <p>This is used as part of the rendering model, to keep cues in a
+    consistent position. It must initially be empty. Whenever the
+    <a href="#timed-track-cue-active-flag" id="timed-track-cue-active-flag-0">timed track cue active flag</a> is unset, the user agent
+    must empty the <a href="#timed-track-cue-display-state" id="timed-track-cue-display-state-0">timed track cue display state</a>.</p>
+
+   </dd>
+
+  </dl><p>The <a href="#timed-track-cue" id="timed-track-cue-7" title="timed track cue">timed track cues</a> of a
+  <a href="#media-element" id="media-element-26">media element</a>'s <a href="#timed-track" id="timed-track-26" title="timed track">timed
+  tracks</a> are ordered relative to each other in the <dfn id="timed-track-cue-order">timed
+  track cue order</dfn>, which is determined as follows: first group
+  the <a href="#timed-track-cue" id="timed-track-cue-8" title="timed track cue">cues</a> by their <a href="#timed-track" id="timed-track-27">timed
+  track</a>, with the groups being sorted in the same order as
+  their <a href="#timed-track" id="timed-track-28" title="timed track">timed tracks</a> appear in the
+  <a href="#media-element" id="media-element-27">media element</a>'s <a href="#list-of-timed-tracks" id="list-of-timed-tracks-1">list of timed tracks</a>;
+  then, within each group, <a href="#timed-track-cue" id="timed-track-cue-9" title="timed track cue">cues</a>
+  must be sorted by their <a href="#timed-track-cue-start-time" id="timed-track-cue-start-time-0" title="timed track cue start
+  time">start time</a>, earliest first; then, any <a href="#timed-track-cue" id="timed-track-cue-10" title="timed track cue">cues</a> with the same <a href="#timed-track-cue-start-time" id="timed-track-cue-start-time-1" title="timed
+  track cue start time">start time</a> must be sorted by their
+  <a href="#timed-track-cue-end-time" id="timed-track-cue-end-time-0" title="timed track cue end time">end time</a>, earliest
+  first; and finally, any <a href="#timed-track-cue" id="timed-track-cue-11" title="timed track cue">cues</a>
+  with identical <a href="#timed-track-cue-end-time" id="timed-track-cue-end-time-1" title="timed track cue end time">end
+  times</a> must be sorted in the order they were created (so
+  e.g. for cues from a <span>WebSRT</span> file, that would be the
+  order in which the cues were listed in the file).<h6 id="sourcing-in-band-timed-tracks"><span class="secno">4.8.10.10.2 </span>Sourcing in-band timed tracks</h6><p>A <dfn id="media-resource-specific-timed-track">media-resource-specific timed track</dfn> is a <a href="#timed-track" id="timed-track-29">timed
+  track</a> that corresponds to data found in the <a href="#media-resource" id="media-resource-41">media
+  resource</a>.<h6 id="timed-track-api"><span class="secno">4.8.10.10.3 </span>Timed track API</h6><dl class="domintro"><dt><var title="">media</var> . <code title="dom-media-tracks"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-media-tracks" title='Read about this "tracks" reference in the full HTML5 spec.'>tracks</a></code> . <code title="">length</code></dt>
+   <dd>
+    <p>Returns the number of <a href="#timed-track" id="timed-track-30" title="timed track">timed tracks</a> associated with the <a href="#media-element" id="media-element-28">media element</a> (e.g. from <code><a href="#the-track-element" id="track-16">track</a></code> elements). This is the number of <a href="#timed-track" id="timed-track-31" title="timed track">timed tracks</a> in the <a href="#media-element" id="media-element-29">media element</a>'s <a href="#list-of-timed-tracks" id="list-of-timed-tracks-2">list of timed tracks</a>.</p>
+   </dd>
+
+   <dt><var title="">media</var> . <code title="dom-media-tracks"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-media-tracks" title='Read about this "tracks[" reference in the full HTML5 spec.'>tracks[</a></code> <var title="">n</var> <code title="">]</code></dt>
+   <dd>
+    <p>Returns the <code><a href="#timedtrack" id="timedtrack-4">TimedTrack</a></code> object representing the <var title="">n</var>th <a href="#timed-track" id="timed-track-32">timed track</a> in the <a href="#media-element" id="media-element-30">media element</a>'s <a href="#list-of-timed-tracks" id="list-of-timed-tracks-3">list of timed tracks</a>.</p>
+   </dd>
+
+   <dt><var title="">track</var> . <code title="dom-track-track"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-track-track" title='Read about this "track" reference in the full HTML5 spec.'>track</a></code></dt>
+   <dd>
+    <p>Returns the <code><a href="#timedtrack" id="timedtrack-5">TimedTrack</a></code> object representing the <code><a href="#the-track-element" id="track-17">track</a></code> element's <a href="#timed-track" id="timed-track-33">timed track</a>.</p>
+   </dd>
+
+  </dl><hr><pre class="idl">interface <dfn id="timedtrack">TimedTrack</dfn> {
+  readonly attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-kind" title='Read about this "kind" reference in the full HTML5 spec.'>kind</a>;
+  readonly attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-label" title='Read about this "label" reference in the full HTML5 spec.'>label</a>;
+  readonly attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-language" title='Read about this "language" reference in the full HTML5 spec.'>language</a>;
+
+  const unsigned short <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-none" title='Read about this "NONE" reference in the full HTML5 spec.'>NONE</a> = 0;
+  const unsigned short <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-loading" title='Read about this "LOADING" reference in the full HTML5 spec.'>LOADING</a> = 1;
+  const unsigned short <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-loaded" title='Read about this "LOADED" reference in the full HTML5 spec.'>LOADED</a> = 2;
+  const unsigned short <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-error" title='Read about this "ERROR" reference in the full HTML5 spec.'>ERROR</a> = 3;
+  readonly attribute unsigned short <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-readystate" title='Read about this "readyState" reference in the full HTML5 spec.'>readyState</a>;
+  readonly attribute <a href="webappapis.html#function" id="function-132">Function</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#handler-timedtrack-onload" title='Read about this "onload" reference in the full HTML5 spec.'>onload</a>;
+  readonly attribute <a href="webappapis.html#function" id="function-133">Function</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#handler-timedtrack-onerror" title='Read about this "onerror" reference in the full HTML5 spec.'>onerror</a>;
+
+  const unsigned short <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-off" title='Read about this "OFF" reference in the full HTML5 spec.'>OFF</a> = 0;
+  const unsigned short <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-hidden" title='Read about this "HIDDEN" reference in the full HTML5 spec.'>HIDDEN</a> = 1;
+  const unsigned short <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-showing" title='Read about this "SHOWING" reference in the full HTML5 spec.'>SHOWING</a> = 2;
+           attribute unsigned short <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-mode" title='Read about this "mode" reference in the full HTML5 spec.'>mode</a>;
+
+  readonly attribute <a href="#timedtrackcuelist" id="timedtrackcuelist-0">TimedTrackCueList</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-cues" title='Read about this "cues" reference in the full HTML5 spec.'>cues</a>;
+  readonly attribute <a href="#timedtrackcuelist" id="timedtrackcuelist-1">TimedTrackCueList</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-activecues" title='Read about this "activeCues" reference in the full HTML5 spec.'>activeCues</a>;
+
+  readonly attribute <a href="webappapis.html#function" id="function-134">Function</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#handler-timedtrack-oncuechange" title='Read about this "oncuechange" reference in the full HTML5 spec.'>oncuechange</a>;
+};</pre><dl class="domintro"><dt><var title="">timedTrack</var> . <code title="dom-TimedTrack-kind"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-kind" title='Read about this "kind" reference in the full HTML5 spec.'>kind</a></code></dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-kind" id="timed-track-kind-4">timed track kind</a> string.</p>
+   </dd>
+
+   <dt><var title="">timedTrack</var> . <code title="dom-TimedTrack-label"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-label" title='Read about this "label" reference in the full HTML5 spec.'>label</a></code></dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-label" id="timed-track-label-1">timed track label</a>.</p>
+   </dd>
+
+   <dt><var title="">timedTrack</var> . <code title="dom-TimedTrack-language"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-language" title='Read about this "language" reference in the full HTML5 spec.'>language</a></code></dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-language" id="timed-track-language-1">timed track language</a> string.</p>
+   </dd>
+
+   <dt><var title="">timedTrack</var> . <code title="dom-TimedTrack-readyState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-readystate" title='Read about this "readyState" reference in the full HTML5 spec.'>readyState</a></code></dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-readiness-state" id="timed-track-readiness-state-2">timed track readiness state</a>,
+    represented by a number from the following list:</p>
+    <dl><dt><code><a href="#timedtrack" id="timedtrack-6">TimedTrack</a></code> . <code title="dom-TimedTrack-NONE"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-none" title='Read about this "NONE" reference in the full HTML5 spec.'>NONE</a></code> (0)</dt>
+     <dd>
+      <p>The <a href="#timed-track-not-loaded" id="timed-track-not-loaded-1">timed track not loaded</a> state.</p>
+     </dd>
+     <dt><code><a href="#timedtrack" id="timedtrack-7">TimedTrack</a></code> . <code title="dom-TimedTrack-LOADING"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-loading" title='Read about this "LOADING" reference in the full HTML5 spec.'>LOADING</a></code> (1)</dt>
+     <dd>
+      <p>The <a href="#timed-track-loading" id="timed-track-loading-1">timed track loading</a> state.</p>
+     </dd>
+     <dt><code><a href="#timedtrack" id="timedtrack-8">TimedTrack</a></code> . <code title="dom-TimedTrack-LOADED"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-loaded" title='Read about this "LOADED" reference in the full HTML5 spec.'>LOADED</a></code> (2)</dt>
+     <dd>
+      <p>The <a href="#timed-track-loaded" id="timed-track-loaded-1">timed track loaded</a> state.</p>
+     </dd>
+     <dt><code><a href="#timedtrack" id="timedtrack-9">TimedTrack</a></code> . <code title="dom-TimedTrack-ERROR"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-error" title='Read about this "ERROR" reference in the full HTML5 spec.'>ERROR</a></code> (3)</dt>
+     <dd>
+      <p>The <a href="#timed-track-failed-to-load" id="timed-track-failed-to-load-1">timed track failed to load</a> state.</p>
+     </dd>
+    </dl></dd>
+
+   <dt><var title="">timedTrack</var> . <code title="dom-TimedTrack-mode"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-mode" title='Read about this "mode" reference in the full HTML5 spec.'>mode</a></code></dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-mode" id="timed-track-mode-2">timed track mode</a>, represented by a
+    number from the following list:</p>
+    <dl><dt><code><a href="#timedtrack" id="timedtrack-10">TimedTrack</a></code> . <code title="dom-TimedTrack-OFF"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-off" title='Read about this "OFF" reference in the full HTML5 spec.'>OFF</a></code> (0)</dt>
+     <dd>
+      <p>The <a href="#timed-track-disabled" id="timed-track-disabled-2">timed track disabled</a> mode.</p>
+     </dd>
+     <dt><code><a href="#timedtrack" id="timedtrack-11">TimedTrack</a></code> . <code title="dom-TimedTrack-HIDDEN"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-hidden" title='Read about this "HIDDEN" reference in the full HTML5 spec.'>HIDDEN</a></code> (0)</dt>
+     <dd>
+      <p>The <a href="#timed-track-hidden" id="timed-track-hidden-0">timed track hidden</a> mode.</p>
+     </dd>
+     <dt><code><a href="#timedtrack" id="timedtrack-12">TimedTrack</a></code> . <code title="dom-TimedTrack-SHOWING"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-showing" title='Read about this "SHOWING" reference in the full HTML5 spec.'>SHOWING</a></code> (0)</dt>
+     <dd>
+      <p>The <a href="#timed-track-showing" id="timed-track-showing-1">timed track showing</a> mode.</p>
+     </dd>
+    </dl><p>Can be set, to change the mode.</p>
+   </dd>
+
+   <dt><var title="">timedTrack</var> . <code title="dom-TimedTrack-cues"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-cues" title='Read about this "cues" reference in the full HTML5 spec.'>cues</a></code></dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-list-of-cues" id="timed-track-list-of-cues-2">timed track list of cues</a>, as a <code><a href="#timedtrackcuelist" id="timedtrackcuelist-2">TimedTrackCueList</a></code> object.</p>
+   </dd>
+
+   <dt><var title="">timedTrack</var> . <code title="dom-TimedTrack-activeCues"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrack-activecues" title='Read about this "activeCues" reference in the full HTML5 spec.'>activeCues</a></code></dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-cue" id="timed-track-cue-12" title="timed track cue">timed track cues</a> from the <a href="#timed-track-list-of-cues" id="timed-track-list-of-cues-3">timed track list of cues</a> that are currently active (i.e. that start before the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#current-playback-position" title='Read about this "current playback position" reference in the full HTML5 spec.'>current playback position</a> and end after it), as a <code><a href="#timedtrackcuelist" id="timedtrackcuelist-3">TimedTrackCueList</a></code> object.</p>
+   </dd>
+
+  </dl><hr><pre class="idl">interface <dfn id="mutabletimedtrack">MutableTimedTrack</dfn> : <a href="#timedtrack" id="timedtrack-13">TimedTrack</a> {
+ void <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-mutabletimedtrack-addcue" title='Read about this "addCue" reference in the full HTML5 spec.'>addCue</a>(in <a href="#timedtrackcue" id="timedtrackcue-1">TimedTrackCue</a> cue);
+ void <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-mutabletimedtrack-removecue" title='Read about this "removeCue" reference in the full HTML5 spec.'>removeCue</a>(in <a href="#timedtrackcue" id="timedtrackcue-2">TimedTrackCue</a> cue);
+};</pre><dl class="domintro"><dt><var title="">mutableTimedTrack</var> = <var title="">media</var> . <code title="dom-media-addTrack"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-media-addtrack" title='Read about this "addTrack" reference in the full HTML5 spec.'>addTrack</a></code>( <var title="">kind</var> [, <var title="">label</var> [, <var title="">language</var> ] ] )</dt>
+   <dd>
+    <p>Creates and returns a new <code><a href="#mutabletimedtrack" id="mutabletimedtrack-3">MutableTimedTrack</a></code> object, which is also added to the <a href="#media-element" id="media-element-31">media element</a>'s <a href="#list-of-timed-tracks" id="list-of-timed-tracks-4">list of timed tracks</a>.</p>
+   </dd>
+
+   <dt><var title="">mutableTimedTrack</var> . <code title="dom-MutableTimedTrack-addCue"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-mutabletimedtrack-addcue" title='Read about this "addCue" reference in the full HTML5 spec.'>addCue</a></code>( <var title="">cue</var> )</dt>
+   <dd>
+    <p>Adds the given cue to <var title="">mutableTimedTrack</var>'s <a href="#timed-track-list-of-cues" id="timed-track-list-of-cues-4">timed track list of cues</a>.</p>
+    <p>Raises an exception if the argument is null, associated with another <a href="#timed-track" id="timed-track-34">timed track</a>, or already in the list of cues.</p>
+   </dd>
+
+   <dt><var title="">mutableTimedTrack</var> . <code title="dom-MutableTimedTrack-removeCue"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-mutabletimedtrack-removecue" title='Read about this "removeCue" reference in the full HTML5 spec.'>removeCue</a></code>( <var title="">cue</var> )</dt>
+   <dd>
+    <p>Removes the given cue from <var title="">mutableTimedTrack</var>'s <a href="#timed-track-list-of-cues" id="timed-track-list-of-cues-5">timed track list of cues</a>.</p>
+    <p>Raises an exception if the argument is null, associated with another <a href="#timed-track" id="timed-track-35">timed track</a>, or not in the list of cues.</p>
+   </dd>
+
+  </dl><div class="example">
+
+   <p>In this example, an <code><a href="#audio" id="audio-12">audio</a></code> element is used to play a
+   specific sound-effect from a sound file containing many sound
+   effects. A cue is used to pause the audio, so that it ends exactly
+   at the end of the clip, even if the browser is busy running some
+   script. If the page had relied on script to pause the audio, then
+   the start of the next clip might be heard if the browser was not
+   able to run the script at the exact time specified.</p>
+
+   <pre>var sfx = new Audio('sfx.wav');
+var sounds = a.addTrack('metadata');
+// add sounds we care about
+sounds.addCue(new TimedTrackCue('dog bark', 12.783, 13.612, '', '', '', true));
+sounds.addCue(new TimedTrackCue('kitten mew', 13.612, 15.091, '', '', '', true));
+
+function playSound(id) {
+  sfx.currentTime = sounds.getCueById(id).startTime;
+  sfx.play();
+}
+
+sfx.oncanplaythrough = function () {
+  playSound('dog bark');
+}
+window.onbeforeunload = function () {
+  playSound('kitten mew');
+  return 'Are you sure you want to leave this awesome page?';
+}</pre>
+
+  </div><hr><pre class="idl">interface <dfn id="timedtrackcuelist">TimedTrackCueList</dfn> {
+  readonly attribute unsigned long <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcuelist-length" title='Read about this "length" reference in the full HTML5 spec.'>length</a>;
+  getter <a href="#timedtrackcue" id="timedtrackcue-3">TimedTrackCue</a> (in unsigned long index);
+  <a href="#timedtrackcue" id="timedtrackcue-4">TimedTrackCue</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcuelist-getcuebyid" title='Read about this "getCueById" reference in the full HTML5 spec.'>getCueById</a>(in DOMString id);
+};</pre><dl class="domintro"><dt><var title="">cuelist</var> . <code title="dom-TimedTrackCueList-length"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcuelist-length" title='Read about this "length" reference in the full HTML5 spec.'>length</a></code></dt>
+   <dd>
+    <p>Returns the number of <a href="#timed-track-cue" id="timed-track-cue-13" title="timed track cue">cues</a> in the list.</p>
+   </dd>
+
+   <dt><var title="">cuelist</var>[<var title="">index</var>]</dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-cue" id="timed-track-cue-14">timed track cue</a> with index <var title="">index</var> in the list. The cues are sorted in <a href="#timed-track-cue-order" id="timed-track-cue-order-0">timed track cue order</a>.</p>
+   </dd>
+
+   <dt><var title="">cuelist</var> . <code title="dom-TimedTrackCueList-getCueById"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcuelist-getcuebyid" title='Read about this "getCueById" reference in the full HTML5 spec.'>getCueById</a></code>( <var title="">id</var> )</dt>
+   <dd>
+    <p>Returns the first <a href="#timed-track-cue" id="timed-track-cue-15">timed track cue</a> (in <a href="#timed-track-cue-order" id="timed-track-cue-order-1">timed track cue order</a>) with <a href="#timed-track-cue-identifier" id="timed-track-cue-identifier-0">timed track cue identifier</a> <var title="">id</var>.</p>
+    <p>Returns null if none of the cues have the given identifier or if the argument is the empty string.</p>
+   </dd>
+
+  </dl><hr><pre class="idl">[<a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue" title='Read about this "Constructor" reference in the full HTML5 spec.'>Constructor</a>(in DOMString id, in double startTime, in double endTime, in DOMString text, in optional DOMString settings, in optional DOMString voice, in optional boolean pauseOnExit)]
+interface <dfn id="timedtrackcue">TimedTrackCue</dfn> {
+  readonly attribute <a href="#timedtrack" id="timedtrack-14">TimedTrack</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-track" title='Read about this "track" reference in the full HTML5 spec.'>track</a>;
+  readonly attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-id" title='Read about this "id" reference in the full HTML5 spec.'>id</a>;
+
+  readonly attribute double <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-starttime" title='Read about this "startTime" reference in the full HTML5 spec.'>startTime</a>;
+  readonly attribute double <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-endtime" title='Read about this "endTime" reference in the full HTML5 spec.'>endTime</a>;
+  readonly attribute boolean <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-pauseonexit" title='Read about this "pauseOnExit" reference in the full HTML5 spec.'>pauseOnExit</a>;
+
+  readonly attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-direction" title='Read about this "direction" reference in the full HTML5 spec.'>direction</a>;
+  readonly attribute boolean <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-snaptolines" title='Read about this "snapToLines" reference in the full HTML5 spec.'>snapToLines</a>;
+  readonly attribute long <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-lineposition" title='Read about this "linePosition" reference in the full HTML5 spec.'>linePosition</a>;
+  readonly attribute long <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-textposition" title='Read about this "textPosition" reference in the full HTML5 spec.'>textPosition</a>;
+  readonly attribute long <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-size" title='Read about this "size" reference in the full HTML5 spec.'>size</a>;
+  readonly attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-alignment" title='Read about this "alignment" reference in the full HTML5 spec.'>alignment</a>;
+
+  readonly attribute DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-voice" title='Read about this "voice" reference in the full HTML5 spec.'>voice</a>;
+  DOMString <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-getcueassource" title='Read about this "getCueAsSource" reference in the full HTML5 spec.'>getCueAsSource</a>();
+  <a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#documentfragment" title='Read about this "DocumentFragment" reference in the full HTML5 spec.'>DocumentFragment</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-getcueashtml" title='Read about this "getCueAsHTML" reference in the full HTML5 spec.'>getCueAsHTML</a>();
+
+  readonly attribute <a href="webappapis.html#function" id="function-135">Function</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#handler-timedtrackcue-onenter" title='Read about this "onenter" reference in the full HTML5 spec.'>onenter</a>;
+  readonly attribute <a href="webappapis.html#function" id="function-136">Function</a> <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#handler-timedtrackcue-onexit" title='Read about this "onexit" reference in the full HTML5 spec.'>onexit</a>;
+};</pre><dl class="domintro"><dt><var title="">cue</var> = new <code title="dom-TimedTrackCue"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue" title='Read about this "TimedTrackCue" reference in the full HTML5 spec.'>TimedTrackCue</a></code>( <var title="">id</var>, <var title="">startTime</var>, <var title="">endTime</var>, <var title="">text</var> [, <var title="">settings</var> [, <var title="">voice</var> [, <var title="">pauseOnExit</var> ] ] ] )</dt>
+   <dd>
+    <p>Returns a new <code><a href="#timedtrackcue" id="timedtrackcue-5">TimedTrackCue</a></code> object, for use with the <code title="dom-MutableTimedTrack-addCue"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-mutabletimedtrack-addcue" title='Read about this "addCue()" reference in the full HTML5 spec.'>addCue()</a></code> method.</p>
+    <p>The <var title="">id</var> argument sets the <a href="#timed-track-cue-identifier" id="timed-track-cue-identifier-1">timed track cue identifier</a>.</p>
+    <p>The <var title="">startTime</var> argument sets the <a href="#timed-track-cue-start-time" id="timed-track-cue-start-time-2">timed track cue start time</a>.</p>
+    <p>The <var title="">endTime</var> argument sets the <a href="#timed-track-cue-end-time" id="timed-track-cue-end-time-2">timed track cue end time</a>.</p>
+    <p>The <var title="">text</var> argument sets the <a href="#timed-track-cue-text" id="timed-track-cue-text-0">timed track cue text</a>.</p>
+    <p>The <var title="">settings</var> argument is a string in the format of <span>WebSRT cue settings</span>. If omitted, the empty string is assumed.</p>
+    <p>The <var title="">voice</var> argument sets the <a href="#timed-track-cue-voice-identifier" id="timed-track-cue-voice-identifier-0">timed track cue voice identifier</a>. If omitted, the empty string is assumed.</p>
+    <p>The <var title="">pauseOnExit</var> argument sets the <a href="#timed-track-cue-pause-on-exit-flag" id="timed-track-cue-pause-on-exit-flag-0">timed track cue pause-on-exit flag</a>. If omitted, false is assumed.</p>
+   </dd>
+
+   <dt><var title="">cue</var> . <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-track" title='Read about this "track" reference in the full HTML5 spec.'>track</a></dt>
+   <dd>
+    <p>Returns the <code><a href="#timedtrack" id="timedtrack-15">TimedTrack</a></code> object to which this
+    <a href="#timed-track-cue" id="timed-track-cue-16">timed track cue</a> belongs, if any, or null
+    otherwise.</p>
+   </dd>
+
+   <dt><var title="">cue</var> . <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-id" title='Read about this "id" reference in the full HTML5 spec.'>id</a></dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-cue-identifier" id="timed-track-cue-identifier-2">timed track cue identifier</a>.</p>
+   </dd>
+
+   <dt><var title="">cue</var> . <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-starttime" title='Read about this "startTime" reference in the full HTML5 spec.'>startTime</a></dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-cue-start-time" id="timed-track-cue-start-time-3">timed track cue start time</a>, in seconds.</p>
+   </dd>
+
+   <dt><var title="">cue</var> . <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-endtime" title='Read about this "endTime" reference in the full HTML5 spec.'>endTime</a></dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-cue-end-time" id="timed-track-cue-end-time-3">timed track cue end time</a>, in seconds.</p>
+   </dd>
+
+   <dt><var title="">cue</var> . <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-pauseonexit" title='Read about this "pauseOnExit" reference in the full HTML5 spec.'>pauseOnExit</a></dt>
+   <dd>
+    <p>Returns true if the <a href="#timed-track-cue-pause-on-exit-flag" id="timed-track-cue-pause-on-exit-flag-1">timed track cue pause-on-exit flag</a> is set, false otherwise.</p>
+   </dd>
+
+   <dt><var title="">cue</var> . <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-direction" title='Read about this "direction" reference in the full HTML5 spec.'>direction</a></dt>
+   <dd>
+    <p>Returns a string representing the <a href="#timed-track-cue-writing-direction" id="timed-track-cue-writing-direction-5">timed track cue writing direction</a>, as follows:</p>
+    <dl class="switch"><dt>If it is <a href="#timed-track-cue-horizontal-writing-direction" id="timed-track-cue-horizontal-writing-direction-1" title="timed track cue horizontal writing direction">horizontal</a></dt>
+     <dd><p>The string "<code title="">horizontal</code>".</dd>
+     <dt>If it is <a href="#timed-track-cue-vertical-growing-left-writing-direction" id="timed-track-cue-vertical-growing-left-writing-direction-0" title="timed track cue vertical growing left writing direction">vertical growing left</a></dt>
+     <dd><p>The string "<code title="">vertical</code>".</dd>
+     <dt>If it is <a href="#timed-track-cue-vertical-growing-right-writing-direction" id="timed-track-cue-vertical-growing-right-writing-direction-0" title="timed track cue vertical growing right writing direction">vertical growing right</a></dt>
+     <dd><p>The string "<code title="">vertical-lr</code>".</dd>
+    </dl></dd>
+
+   <dt><var title="">cue</var> . <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-snaptolines" title='Read about this "snapToLines" reference in the full HTML5 spec.'>snapToLines</a></dt>
+   <dd>
+    <p>Returns true if the <a href="#timed-track-cue-snap-to-lines-flag" id="timed-track-cue-snap-to-lines-flag-1">timed track cue snap-to-lines flag</a> is set, false otherwise.</p>
+   </dd>
+
+   <dt><var title="">cue</var> . <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-lineposition" title='Read about this "linePosition" reference in the full HTML5 spec.'>linePosition</a></dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-cue-line-position" id="timed-track-cue-line-position-3">timed track cue line position</a>. In the
+    case of the value being <a href="#timed-track-cue-automatic-line-position" id="timed-track-cue-automatic-line-position-0" title="timed track cue automatic
+    line position">auto</a>, the appropriate default is returned.</p>
+   </dd>
+
+   <dt><var title="">cue</var> . <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-textposition" title='Read about this "textPosition" reference in the full HTML5 spec.'>textPosition</a></dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-cue-text-position" id="timed-track-cue-text-position-2">timed track cue text position</a>.</p>
+   </dd>
+
+   <dt><var title="">cue</var> . <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-size" title='Read about this "size" reference in the full HTML5 spec.'>size</a></dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-cue-size" id="timed-track-cue-size-2">timed track cue size</a>.</p>
+   </dd>
+
+   <dt><var title="">cue</var> . <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-alignment" title='Read about this "alignment" reference in the full HTML5 spec.'>alignment</a></dt>
+   <dd>
+    <p>Returns a string representing the <a href="#timed-track-cue-alignment" id="timed-track-cue-alignment-0">timed track cue alignment</a>, as follows:</p>
+    <dl class="switch"><dt>If it is <a href="#timed-track-cue-start-alignment" id="timed-track-cue-start-alignment-0" title="timed track cue start alignment">start alignment</a></dt>
+     <dd><p>The string "<code title="">start</code>".</dd>
+     <dt>If it is <a href="#timed-track-cue-middle-alignment" id="timed-track-cue-middle-alignment-0" title="timed track cue middle alignment">middle alignment</a></dt>
+     <dd><p>The string "<code title="">middle</code>".</dd>
+     <dt>If it is <a href="#timed-track-cue-end-alignment" id="timed-track-cue-end-alignment-0" title="timed track cue end alignment">end alignment</a></dt>
+     <dd><p>The string "<code title="">end</code>".</dd>
+    </dl></dd>
+
+   <dt><var title="">cue</var> . <a class="full-spec-link" href="http://dev.w3.org/html5/spec/.html#dom-timedtrackcue-voice" title='Read about this "voice" reference in the full HTML5 spec.'>voice</a></dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-cue-voice-identifier" id="timed-track-cue-voice-identifier-1">timed track cue voice identifier</a>.</p>
+   </dd>
+
+   <dt><var title="">source</var> = <var title="">cue</var> . <span title="dom-TimedTrackCue-getCueAsSource">getCueAsSource</span>()</dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-cue-text" id="timed-track-cue-text-1">timed track cue text</a> in raw unparsed form.</p>
+   </dd>
+
+   <dt><var title="">fragment</var> = <var title="">cue</var> . <span title="dom-TimedTrackCue-getCueAsHTML">getCueAsHTML</span>()</dt>
+   <dd>
+    <p>Returns the <a href="#timed-track-cue-text" id="timed-track-cue-text-2">timed track cue text</a> as a <code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#documentfragment" title='Read about this "DocumentFragment" reference in the full HTML5 spec.'>DocumentFragment</a></code> of <a href="infrastructure.html#html-elements" id="html-elements-27">HTML elements</a> and other DOM nodes.</p>
+   </dd>
+
+  </dl><!--KEEP-START w3c-html--><!--TT--><h5 id="user-interface"><span class="secno">4.8.10.11 </span>User interface</h5><p>The <dfn id="attr-media-controls" title="attr-media-controls"><code>controls</code></dfn>
+  attribute is a <a href="common-microsyntaxes.html#boolean-attribute" id="boolean-attribute-8">boolean attribute</a>. If present, it
+  indicates that the author has not provided a scripted controller and
+  would like the user agent to provide its own set of controls.<dl class="domintro"><dt><var title="">media</var> . <code title="dom-media-volume"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-volume" title='Read about this "volume" reference in the full HTML5 spec.'>volume</a></code> [ = <var title="">value</var> ]</dt>
+
+   <dd>
+
+    <p>Returns the current playback volume, as a number in the range
+    0.0 to 1.0, where 0.0 is the quietest and 1.0 the loudest.</p>
+
+    <p>Can be set, to change the volume.</p>
+
+    <p>Throws an <code><a href="urls.html#index_size_err" id="index_size_err-1">INDEX_SIZE_ERR</a></code> if the new value is not
+    in the range 0.0 .. 1.0.</p>
+
+   </dd>
+
+   <dt><var title="">media</var> . <code title="dom-media-muted"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-muted" title='Read about this "muted" reference in the full HTML5 spec.'>muted</a></code> [ = <var title="">value</var> ]</dt>
+
+   <dd>
+
+    <p>Returns true if audio is muted, overriding the <code title="dom-media-volume"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-volume" title='Read about this "volume" reference in the full HTML5 spec.'>volume</a></code> attribute, and false if the
+    <code title="dom-media-volume"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-volume" title='Read about this "volume" reference in the full HTML5 spec.'>volume</a></code> attribute is being
+    honored.</p>
+
+    <p>Can be set, to change whether the audio is muted or not.</p>
+
+   </dd>
+
+  </dl><p>The <dfn id="attr-media-audio" title="attr-media-audio"><code>audio</code></dfn>
+  attribute on the <code><a href="#video" id="video-24">video</a></code> element controls the default
+  state of the audio channel of the <a href="#media-resource" id="media-resource-42">media resource</a>,
+  potentially overriding user preferences.<p>The <code title="attr-media-audio"><a href="#attr-media-audio" id="audio-25">audio</a></code> attribute, if
+  specified, must have a value that is an <a href="common-microsyntaxes.html#unordered-set-of-unique-space-separated-tokens" id="unordered-set-of-unique-space-separated-tokens-1">unordered set of
+  unique space-separated tokens</a>, which are <a href="infrastructure.html#ascii-case-insensitive" id="ascii-case-insensitive-13">ASCII
+  case-insensitive</a>. The tokens must be from the following list
+  (currently, only one allowed token is defined):<dl><dt><dfn id="attr-media-audio-keyword-muted" title="attr-media-audio-keyword-muted"><code>muted</code></dfn></dt>
+
+   <dd>
+
+    <p>Causes the user agent to override the user's preferences, if
+    any, and always default the video to muted.</p>
+
+   </dd>
+
+  </dl><p class="note">A future version of this specification will probably
+  introduce new values here, e.g. to control the default volume, or to
+  select a default audio track.<p class="note">This attribute has no dynamic effect (it only
+  controls the default state of the element).<div class="example">
+
+   <p>This video (an advertisment) autoplays, but to avoid annoying
+   users, it does so without sound, and allows the user to turn the
+   sound on.</p>
+
+   <pre>&lt;video src="adverts.cgi?kind=video" controls autoplay loop audio=muted&gt;&lt;/video&gt;</pre>
+
+  </div><h5 id="time-ranges"><span class="secno">4.8.10.12 </span>Time ranges</h5><p>Objects implementing the <code><a href="#timeranges" id="timeranges-6">TimeRanges</a></code> interface
+  represent a list of ranges (periods) of time.<pre class="idl">interface <dfn id="timeranges">TimeRanges</dfn> {
+  readonly attribute unsigned long <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-timeranges-length" title='Read about this "length" reference in the full HTML5 spec.'>length</a>;
+  double <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-timeranges-start" title='Read about this "start" reference in the full HTML5 spec.'>start</a>(in unsigned long index);
+  double <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-timeranges-end" title='Read about this "end" reference in the full HTML5 spec.'>end</a>(in unsigned long index);
+};</pre><dl class="domintro"><dt><var title="">media</var> . <code title="dom-TimeRanges-length"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-timeranges-length" title='Read about this "length" reference in the full HTML5 spec.'>length</a></code></dt>
+
+   <dd>
+
+    <p>Returns the number of ranges in the object.</p>
+
+   </dd>
+
+   <dt><var title="">time</var> = <var title="">media</var> . <code title="dom-TimeRanges-start"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-timeranges-start" title='Read about this "start" reference in the full HTML5 spec.'>start</a></code>(<var title="">index</var>)</dt>
+
+   <dd>
+
+    <p>Returns the time for the start of the range with the given index.</p>
+
+    <p>Throws an <code><a href="urls.html#index_size_err" id="index_size_err-2">INDEX_SIZE_ERR</a></code> if the index is out of range.</p>
+
+   </dd>
+
+   <dt><var title="">time</var> = <var title="">media</var> . <code title="dom-TimeRanges-end"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-timeranges-end" title='Read about this "end" reference in the full HTML5 spec.'>end</a></code>(<var title="">index</var>)</dt>
+
+   <dd>
+
+    <p>Returns the time for the end of the range with the given index.</p>
+
+    <p>Throws an <code><a href="urls.html#index_size_err" id="index_size_err-3">INDEX_SIZE_ERR</a></code> if the index is out of range.</p>
+
+   </dd>
+
+  </dl><h5 id="mediaevents"><span class="secno">4.8.10.13 </span>Event summary</h5><p><i>This section is non-normative.</i><p>The following events fire on <a href="#media-element" id="media-element-32" title="media element">media
+  elements</a> as part of the processing model described above:<table><thead><tr><th>Event name
+     <th>Interface
+     <th>Dispatched when...
+     <th>Preconditions
+
+   <tbody><tr><td><dfn id="event-media-loadstart" title="event-media-loadstart"><code>loadstart</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>The user agent begins looking for <a href="#media-data" id="media-data-3">media data</a>, as part of the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#concept-media-load-algorithm" title='Read about this "resource selection algorithm" reference in the full HTML5 spec.'>resource selection algorithm</a>.
+     <td><code title="dom-media-networkState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-networkstate" title='Read about this "networkState" reference in the full HTML5 spec.'>networkState</a></code> equals <code title="dom-media-NETWORK_LOADING"><a href="#dom-media-network_loading" id="network_loading">NETWORK_LOADING</a></code>
+    <tr><td><dfn id="event-media-progress" title="event-media-progress"><code>progress</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>The user agent is fetching <a href="#media-data" id="media-data-4">media data</a>.
+     <td><code title="dom-media-networkState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-networkstate" title='Read about this "networkState" reference in the full HTML5 spec.'>networkState</a></code> equals <code title="dom-media-NETWORK_LOADING"><a href="#dom-media-network_loading" id="network_loading-0">NETWORK_LOADING</a></code>
+    <tr><td><dfn id="event-media-suspend" title="event-media-suspend"><code>suspend</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>The user agent is intentionally not currently fetching <a href="#media-data" id="media-data-5">media data</a>, but does not have the entire <a href="#media-resource" id="media-resource-43">media resource</a> downloaded.
+     <td><code title="dom-media-networkState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-networkstate" title='Read about this "networkState" reference in the full HTML5 spec.'>networkState</a></code> equals <code title="dom-media-NETWORK_IDLE"><a href="#dom-media-network_idle" id="network_idle">NETWORK_IDLE</a></code>
+    <tr><td><dfn id="event-media-abort" title="event-media-abort"><code>abort</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>The user agent stops fetching the <a href="#media-data" id="media-data-6">media data</a> before it is completely downloaded, but not due to an error.
+     <td><code title="dom-media-error"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-error" title='Read about this "error" reference in the full HTML5 spec.'>error</a></code> is an object with the code <code title="dom-MediaError-MEDIA_ERR_ABORTED"><a href="#dom-mediaerror-media_err_aborted" id="media_err_aborted">MEDIA_ERR_ABORTED</a></code>.
+         <code title="dom-media-networkState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-networkstate" title='Read about this "networkState" reference in the full HTML5 spec.'>networkState</a></code> equals either <code title="dom-media-NETWORK_EMPTY"><a href="#dom-media-network_empty" id="network_empty-0">NETWORK_EMPTY</a></code> or <code title="dom-media-NETWORK_IDLE"><a href="#dom-media-network_idle" id="network_idle-0">NETWORK_IDLE</a></code>, depending on when the download was aborted.
+    <tr><td><dfn id="event-media-error" title="event-media-error"><code>error</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>An error occurs while fetching the <a href="#media-data" id="media-data-7">media data</a>.
+     <td><code title="dom-media-error"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-error" title='Read about this "error" reference in the full HTML5 spec.'>error</a></code> is an object with the code <code title="dom-MediaError-MEDIA_ERR_NETWORK"><a href="#dom-mediaerror-media_err_network" id="media_err_network">MEDIA_ERR_NETWORK</a></code> or higher.
+         <code title="dom-media-networkState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-networkstate" title='Read about this "networkState" reference in the full HTML5 spec.'>networkState</a></code> equals either <code title="dom-media-NETWORK_EMPTY"><a href="#dom-media-network_empty" id="network_empty-1">NETWORK_EMPTY</a></code> or <code title="dom-media-NETWORK_IDLE"><a href="#dom-media-network_idle" id="network_idle-1">NETWORK_IDLE</a></code>, depending on when the download was aborted.
+    <tr><td><dfn id="event-media-emptied" title="event-media-emptied"><code>emptied</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>A <a href="#media-element" id="media-element-33">media element</a> whose <code title="dom-media-networkState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-networkstate" title='Read about this "networkState" reference in the full HTML5 spec.'>networkState</a></code> was previously not in the <code title="dom-media-NETWORK_EMPTY"><a href="#dom-media-network_empty" id="network_empty-2">NETWORK_EMPTY</a></code> state has just switched to that state (either because of a fatal error during load that's about to be reported, or because the <code title="dom-media-load"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-load" title='Read about this "load()" reference in the full HTML5 spec.'>load()</a></code> method was invoked while the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#concept-media-load-algorithm" title='Read about this "resource selection algorithm" reference in the full HTML5 spec.'>resource selection algorithm</a> was already running).
+     <td><code title="dom-media-networkState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-networkstate" title='Read about this "networkState" reference in the full HTML5 spec.'>networkState</a></code> is <code title="dom-media-NETWORK_EMPTY"><a href="#dom-media-network_empty" id="network_empty-3">NETWORK_EMPTY</a></code>; all the IDL attributes are in their initial states.
+    <tr><td><dfn id="event-media-stalled" title="event-media-stalled"><code>stalled</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>The user agent is trying to fetch <a href="#media-data" id="media-data-8">media data</a>, but data is unexpectedly not forthcoming.
+     <td><code title="dom-media-networkState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-networkstate" title='Read about this "networkState" reference in the full HTML5 spec.'>networkState</a></code> is <code title="dom-media-NETWORK_LOADING"><a href="#dom-media-network_loading" id="network_loading-1">NETWORK_LOADING</a></code>.
+
+   <tbody><tr><td><dfn id="event-media-play" title="event-media-play"><code>play</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>Playback has begun. Fired after the <code title="dom-media-play"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-play" title='Read about this "play()" reference in the full HTML5 spec.'>play()</a></code> method has returned, or when the <code title="attr-media-autoplay"><a href="#attr-media-autoplay" id="autoplay-6">autoplay</a></code> attribute has caused playback to begin.
+     <td><code title="dom-media-paused"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-paused" title='Read about this "paused" reference in the full HTML5 spec.'>paused</a></code> is newly false.
+    <tr><td><dfn id="event-media-pause" title="event-media-pause"><code>pause</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>Playback has been paused. Fired after the <code title="dom-media-pause"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-pause" title='Read about this "pause()" reference in the full HTML5 spec.'>pause()</a></code> method has returned.
+     <td><code title="dom-media-paused"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-paused" title='Read about this "paused" reference in the full HTML5 spec.'>paused</a></code> is newly true.
+
+   <tbody><tr><td><dfn id="event-media-loadedmetadata" title="event-media-loadedmetadata"><code>loadedmetadata</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>The user agent has just determined the duration and dimensions of the <a href="#media-resource" id="media-resource-44">media resource</a>
+<!--KEEP-END w3c-html--><!--TT-->
+ and <a href="#the-timed-tracks-are-ready" id="the-timed-tracks-are-ready-1">the timed tracks are ready</a>.
+<!--KEEP-START w3c-html--><!--TT-->
+     <td><code title="dom-media-readyState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-readystate" title='Read about this "readyState" reference in the full HTML5 spec.'>readyState</a></code> is newly equal to <code title="dom-media-HAVE_METADATA"><a href="#dom-media-have_metadata" id="have_metadata-2">HAVE_METADATA</a></code> or greater for the first time.
+    <tr><td><dfn id="event-media-loadeddata" title="event-media-loadeddata"><code>loadeddata</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>The user agent can render the <a href="#media-data" id="media-data-9">media data</a> at the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#current-playback-position" title='Read about this "current playback position" reference in the full HTML5 spec.'>current playback position</a> for the first time.
+     <td><code title="dom-media-readyState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-readystate" title='Read about this "readyState" reference in the full HTML5 spec.'>readyState</a></code> newly increased to <code title="dom-media-HAVE_CURRENT_DATA"><a href="#dom-media-have_current_data" id="have_current_data-0">HAVE_CURRENT_DATA</a></code> or greater for the first time.
+    <tr><td><dfn id="event-media-waiting" title="event-media-waiting"><code>waiting</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>Playback has stopped because the next frame is not available, but the user agent expects that frame to become available in due course.
+     <td><code title="dom-media-readyState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-readystate" title='Read about this "readyState" reference in the full HTML5 spec.'>readyState</a></code> is newly equal to or less than <code title="dom-media-HAVE_CURRENT_DATA"><a href="#dom-media-have_current_data" id="have_current_data-1">HAVE_CURRENT_DATA</a></code>, and <code title="dom-media-paused"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-paused" title='Read about this "paused" reference in the full HTML5 spec.'>paused</a></code> is false. Either <code title="dom-media-seeking"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-seeking" title='Read about this "seeking" reference in the full HTML5 spec.'>seeking</a></code> is true, or the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#current-playback-position" title='Read about this "current playback position" reference in the full HTML5 spec.'>current playback position</a> is not contained in any of the ranges in <code title="dom-media-buffered"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-buffered" title='Read about this "buffered" reference in the full HTML5 spec.'>buffered</a></code>. It is possible for playback to stop for two other reasons without <code title="dom-media-paused"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-paused" title='Read about this "paused" reference in the full HTML5 spec.'>paused</a></code> being false, but those two reasons do not fire this event: maybe <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#ended-playback" title='Read about this "playback ended" reference in the full HTML5 spec.'>playback ended</a>, or playback <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#stopped-due-to-errors" title='Read about this "stopped due to errors" reference in the full HTML5 spec.'>stopped due to errors</a>.
+    <tr><td><dfn id="event-media-playing" title="event-media-playing"><code>playing</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>Playback has started.
+     <td><code title="dom-media-readyState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-readystate" title='Read about this "readyState" reference in the full HTML5 spec.'>readyState</a></code> is newly equal to or greater than <code title="dom-media-HAVE_FUTURE_DATA"><a href="#dom-media-have_future_data" id="have_future_data-1">HAVE_FUTURE_DATA</a></code>, <code title="dom-media-paused"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-paused" title='Read about this "paused" reference in the full HTML5 spec.'>paused</a></code> is false, <code title="dom-media-seeking"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-seeking" title='Read about this "seeking" reference in the full HTML5 spec.'>seeking</a></code> is false, or the <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#current-playback-position" title='Read about this "current playback position" reference in the full HTML5 spec.'>current playback position</a> is contained in one of the ranges in <code title="dom-media-buffered"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-buffered" title='Read about this "buffered" reference in the full HTML5 spec.'>buffered</a></code>.
+    <tr><td><dfn id="event-media-canplay" title="event-media-canplay"><code>canplay</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>The user agent can resume playback of the <a href="#media-data" id="media-data-10">media data</a>, but estimates that if playback were to be started now, the <a href="#media-resource" id="media-resource-45">media resource</a> could not be rendered at the current playback rate up to its end without having to stop for further buffering of content.
+     <td><code title="dom-media-readyState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-readystate" title='Read about this "readyState" reference in the full HTML5 spec.'>readyState</a></code> newly increased to <code title="dom-media-HAVE_FUTURE_DATA"><a href="#dom-media-have_future_data" id="have_future_data-2">HAVE_FUTURE_DATA</a></code> or greater.
+    <tr><td><dfn id="event-media-canplaythrough" title="event-media-canplaythrough"><code>canplaythrough</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>The user agent estimates that if playback were to be started now, the <a href="#media-resource" id="media-resource-46">media resource</a> could be rendered at the current playback rate all the way to its end without having to stop for further buffering.
+     <td><code title="dom-media-readyState"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-readystate" title='Read about this "readyState" reference in the full HTML5 spec.'>readyState</a></code> is newly equal to <code title="dom-media-HAVE_ENOUGH_DATA"><a href="#dom-media-have_enough_data" id="have_enough_data-0">HAVE_ENOUGH_DATA</a></code>.
+
+   <tbody><tr><td><dfn id="event-media-seeking" title="event-media-seeking"><code>seeking</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>The <code title="dom-media-seeking"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-seeking" title='Read about this "seeking" reference in the full HTML5 spec.'>seeking</a></code> IDL attribute changed to true and the seek operation is taking long enough that the user agent has time to fire the event.
+     <td>
+    <tr><td><dfn id="event-media-seeked" title="event-media-seeked"><code>seeked</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>The <code title="dom-media-seeking"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-seeking" title='Read about this "seeking" reference in the full HTML5 spec.'>seeking</a></code> IDL attribute changed to false.
+     <td>
+    <tr><td><dfn id="event-media-timeupdate" title="event-media-timeupdate"><code>timeupdate</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>The <a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#current-playback-position" title='Read about this "current playback position" reference in the full HTML5 spec.'>current playback position</a> changed as part of normal playback or in an especially interesting way, for example discontinuously.
+     <td>
+    <tr><td><dfn id="event-media-ended" title="event-media-ended"><code>ended</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>Playback has stopped because the end of the <a href="#media-resource" id="media-resource-47">media resource</a> was reached.
+     <td><code title="dom-media-currentTime"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-currenttime" title='Read about this "currentTime" reference in the full HTML5 spec.'>currentTime</a></code> equals the end of the <a href="#media-resource" id="media-resource-48">media resource</a>; <code title="dom-media-ended"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-ended" title='Read about this "ended" reference in the full HTML5 spec.'>ended</a></code> is true.
+
+   <tbody><tr><td><dfn id="event-media-ratechange" title="event-media-ratechange"><code>ratechange</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>Either the <code title="dom-media-defaultPlaybackRate"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-defaultplaybackrate" title='Read about this "defaultPlaybackRate" reference in the full HTML5 spec.'>defaultPlaybackRate</a></code> or the <code title="dom-media-playbackRate"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-playbackrate" title='Read about this "playbackRate" reference in the full HTML5 spec.'>playbackRate</a></code> attribute has just been updated.
+     <td>
+    <tr><td><dfn id="event-media-durationchange" title="event-media-durationchange"><code>durationchange</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>The <code title="dom-media-duration"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-duration" title='Read about this "duration" reference in the full HTML5 spec.'>duration</a></code> attribute has just been updated.
+     <td>
+    <tr><td><dfn id="event-media-volumechange" title="event-media-volumechange"><code>volumechange</code></dfn>
+     <td><code><a class="full-spec-link" href="http://dev.w3.org/html5/spec/infrastructure.html#event" title='Read about this "Event" reference in the full HTML5 spec.'>Event</a></code>
+     <td>Either the <code title="dom-media-volume"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-volume" title='Read about this "volume" reference in the full HTML5 spec.'>volume</a></code> attribute or the <code title="dom-media-muted"><a class="full-spec-link" href="http://dev.w3.org/html5/spec/video.html#dom-media-muted" title='Read about this "muted" reference in the full HTML5 spec.'>muted</a></code> attribute has changed. Fired after the relevant attribute's setter has returned.
+     <td>
+  </table>

@@ -10,7 +10,7 @@ HTML+とHTML 3.0にpresentational strike-throughの`S`が存在し、HTML 3.2で
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、もはや正確でない、または関係しなくなった内容を表す。 [一次定義](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-s-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、もはや正確でない、または関係しなくなった内容を表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-s-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -42,13 +42,13 @@ HTML+ `S` → HTML 3.0 `S` → ［HTML 3.2では欠落］
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1993-11-08 | HTML+ §5.4 | 一次仕様・提案 | `S`をstrike-throughのpresentation-only tagとして定義する。 | [一次資料](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_16.html) | 2026-08-09 |
-| 1997-01-14 | HTML 3.2 | 一次仕様・提案 | `S`ではなく`STRIKE`を採録する。 | [一次資料](https://www.w3.org/TR/REC-html32) | 2026-08-09 |
-| 1997-12-18 | HTML 4.0／HTML 4.01 changes | 一次仕様・提案 | deprecatedな`S`をnew elementとして記録する。 | [一次資料](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1) | 2026-08-09 |
-| 2010-04-06〜2010-09-29 | W3C Bug 9429, “Unobsolete the `<strike>` element” | 標準化bug・編集者回答 | `S`／`STRIKE`の再採録提案、`DEL`と区別する意味の形成、`STRIKE`ではなく`S`を選ぶ編集判断。 | [一次資料](https://www.w3.org/Bugs/Public/show_bug.cgi?id=9429) | 2026-08-09 |
-| 2010-09-29 | WHATWG HTML commit `40c807c2`（revision 5561） | 仕様commit | `S`を「もはや正確でない、または関係しない内容」としてlanguageへ追加し、document editsには`DEL`を使うと明記。 | [一次資料](https://github.com/whatwg/html/commit/40c807c2c3525301b13ac46ae2f2e77572efe486) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1993-11-08 | [HTML+ §5.4](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_16.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_16.html)） | 一次仕様・提案 | `S`をstrike-throughのpresentation-only tagとして定義する。 | 2026-08-09 |
+| 1997-01-14 | [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32)） | 一次仕様・提案 | `S`ではなく`STRIKE`を採録する。 | 2026-08-09 |
+| 1997-12-18 | [HTML 4.0／HTML 4.01 changes](../../raw/www.w3.org/TR/html401/appendix/changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1)） | 一次仕様・提案 | deprecatedな`S`をnew elementとして記録する。 | 2026-08-09 |
+| 2010-04-06〜2010-09-29 | [W3C Bug 9429, “Unobsolete the `<strike>` element”](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-fbca4c889bfb6216)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=9429)） | 標準化bug・編集者回答 | `S`／`STRIKE`の再採録提案、`DEL`と区別する意味の形成、`STRIKE`ではなく`S`を選ぶ編集判断。 | 2026-08-09 |
+| 2010-09-29 | [WHATWG HTML commit `40c807c2`（revision 5561）](../../raw/github.com/whatwg/html/commit/40c807c2c3525301b13ac46ae2f2e77572efe486)（[公開元](https://github.com/whatwg/html/commit/40c807c2c3525301b13ac46ae2f2e77572efe486)） | 仕様commit | `S`を「もはや正確でない、または関係しない内容」としてlanguageへ追加し、document editsには`DEL`を使うと明記。 | 2026-08-09 |
 
 ## 確度
 

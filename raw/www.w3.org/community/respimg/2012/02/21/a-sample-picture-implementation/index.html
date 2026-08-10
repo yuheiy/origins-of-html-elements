@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="en-US" class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en-US" class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en-US" class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en-US" class="no-js"><!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="robots" content="index"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;">
+    <link rel="shortcut icon" href="/community/wp-content/themes/StoryTeller/favicon.ico" type="image/x-icon"/>
+
+    <title>A sample picture implementation | Responsive Images Community Group</title><meta property='og:title' content='A sample picture implementation | Responsive Images Community Group' />
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <link rel="stylesheet" media="all" href="/community/wp-content/themes/StoryTeller/style.css"/>
+    <link rel="pingback" href="https://www.w3.org/community/respimg/xmlrpc.php"/>
+    <script type="text/javascript" src="/community/wp-content/themes/StoryTeller/js/modernizr-1.7.min.js"></script>
+
+    <meta name='robots' content='max-image-preview:large' />
+<link rel="alternate" type="application/rss+xml" title="Responsive Images Community Group &raquo; Feed" href="https://www.w3.org/community/respimg/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Responsive Images Community Group &raquo; Comments Feed" href="https://www.w3.org/community/respimg/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Responsive Images Community Group &raquo; A sample picture implementation Comments Feed" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.w3.org/community/respimg/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.w3.org%2Fcommunity%2Frespimg%2F2012%2F02%2F21%2Fa-sample-picture-implementation%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.w3.org/community/respimg/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.w3.org%2Fcommunity%2Frespimg%2F2012%2F02%2F21%2Fa-sample-picture-implementation%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='dashicons-css' href='https://www.w3.org/community/respimg/wp-includes/css/dashicons.min.css?ver=71748430da06f32f06e316dbb2f5ba0b' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css' href='https://www.w3.org/community/respimg/wp-includes/css/admin-bar.min.css?ver=71748430da06f32f06e316dbb2f5ba0b' type='text/css' media='all' />
+<style id='admin-bar-inline-css' type='text/css'>
+
+		@media screen { html { margin-top: 32px !important; } }
+		@media screen and ( max-width: 782px ) { html { margin-top: 46px !important; } }
+	
+@media print { #wpadminbar { display:none; } }
+/*# sourceURL=admin-bar-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='username-changer-css' href='https://www.w3.org/community/respimg/wp-content/plugins/username-changer/assets/css/frontend.css?ver=3.2.9' type='text/css' media='all' />
+<link rel='stylesheet' id='enlighterjs-css' href='https://www.w3.org/community/respimg/wp-content/plugins/enlighter/cache/X112_enlighterjs.min.css?ver=f+SjinOcqp8YjQw' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="https://www.w3.org/community/respimg/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.w3.org/community/respimg/wp-json/wp/v2/posts/22" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.w3.org/community/respimg/xmlrpc.php?rsd" />
+
+<link rel="canonical" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/" />
+<link rel='shortlink' href='https://www.w3.org/community/respimg/?p=22' />
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-22 single-format-standard admin-bar no-customize-support wp-theme-StoryTeller">
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul role='menu' id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li role='group' id='wp-admin-bar-w3c-skip'><a class='ab-item' role="menuitem" href='#content' title='Skip to content (e.g., when browsing via audio)'>Skip</a></li><li role='group' id='wp-admin-bar-log-in'><a class='ab-item' role="menuitem" href='https://www.w3.org/community/respimg/wp-login.php?redirect_to=%2Fcommunity%2Frespimg%2F2012%2F02%2F21%2Fa-sample-picture-implementation%2F' title='Log In'>Log In</a></li><li role='group' id='wp-admin-bar-my-account'><a class='ab-item' role="menuitem" href='https://www.w3.org/users/myprofile/' title='My W3C Account'>My W3C Account</a></li><li role='group' id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1" role="menuitem"><form action="https://www.w3.org/community/respimg/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search" /></form></div></li></ul>			</div>
+		</div>
+
+		<!--[if lte IE 8 ]>
+<noscript><strong>JavaScript is required for this website to be displayed correctly. Please enable JavaScript before
+    continuing...</strong></noscript>
+<![endif]-->
+
+<header>
+    <div class="logos">
+        <a href="/" class="w3-logo"><img alt="w3c logo" class="animated fadeInLeft" src="/assets/logos/w3c-2025-transitional/w3c-skew-10-greenish.svg"/></a>
+        <a href="/community/" class="cgbg-logo"><img alt="w3c community group logo" class="animated fadeInRotate height"
+                                                     src="/community/wp-content/themes/StoryTeller/img/svg/cgbg-logo.svg"/></a>
+        <a href="/community/" class="cgbg-logo-title"><h1 class="animated fadeInRight">Community & Business Groups</h1>
+        </a>
+    </div>
+
+    <div class="white-bar"></div>
+    <div class="white-circle"></div>
+    <div class="blue-top"></div>
+</header><!-- #header -->
+
+<div class="center ov-visible">
+    <nav id="access" class="right main-nav">
+                            <ul id="menu-top-menu">
+                <li id="menu-item-60"
+                    class="cg menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-60">
+                    <a title="Groups" href="/community/groups/"><span>Current Groups</span></a></li>
+                <li id="menu-item-57" class="rp menu-item menu-item-type-custom menu-item-object-custom menu-item-57"><a
+                            href="/community/reports/"><span>Reports</span></a></li>
+                <li id="menu-item-59" class="ab menu-item menu-item-type-post_type menu-item-object-page menu-item-59">
+                    <a title="About" href="/community/about/"><span>About</span></a></li>
+            </ul>
+            </nav><!-- #access -->
+</div>
+
+<div class="center">
+
+<div class="maincolumn">
+
+    <div class="breadcrumbs"><ul><li><a href="/community/" title="Community &amp; Business Groups">Home</a>&nbsp;/&nbsp;</li><li><a href="https://www.w3.org/community/respimg" title="Responsive Images Community Group">Responsive Images Co...</a>&nbsp;/&nbsp;</li><li>  A sample picture implementat...</li></ul></div>    
+
+    
+        
+
+<section class="news">
+
+
+
+
+
+			<article id="post-22" class="post-22 post type-post status-publish format-standard hentry category-uncategorized">
+				<h1 class="news-title red"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/" rel="bookmark" title="Permanent Link to A sample picture implementation">A sample picture implementation</a></h1>
+					<div class="article_date"> <span class="author4"><a class="url fn n" href="https://www.w3.org/community/respimg/author/sjehl/" title="View all posts by Scott Jehl">Scott Jehl</a> | </span> Posted on: <a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/" rel="bookmark"><time datetime="2012-02-21T09:23:28+00:00">February 21, 2012</time></a> </div>
+								<p>Hi all.</p>
+<p>As a result of a weird lunchtime hacking idea, I&#8217;ve created a crude working example of the proposed picture element markup and behavior (<em>a polyfill for a non-existent feature, how weird&#8230;</em>).</p>
+<p>This isn&#8217;t meant to be used in a production setting right now; it just seemed like it might be helpful to have something tangeable to work with while mapping out a preferred markup pattern. That said, I think it behaves roughly the same as existing client-only workarounds, so if it ends up proving helpful, I&#8217;ll try and maintain it as discussions progress so that it could potentially be used as a polyfill when-or-if a picture element lands in a browser or a candidate recommendation.</p>
+<p><strong>Example URL</strong></p>
+<p><em><a href="https://scottjehl.github.com/picturefill/" target="_blank" rel="nofollow">http://scottjehl.github.com/picturefill/</a></em></p>
+<p><em>Like the proposed picture element, you&#8217;ll need a media-query supporting browser to see anything more than fallback content, so IE9+, etc.</em></p>
+<p><strong>Source code</strong></p>
+<p><a href="https://github.com/scottjehl/picturefill" target="_blank" rel="nofollow">https://github.com/scottjehl/picturefill</a></p>
+<p><strong>Markup:</strong> <a href="https://github.com/scottjehl/picturefill/blob/master/index.html" target="_blank" rel="nofollow">https://github.com/scottjehl/picturefill/blob/master/index.html</a></p>
+<p><strong>JS:</strong> <a href="https://github.com/scottjehl/picturefill/blob/master/picturefill.js" target="_blank" rel="nofollow">https://github.com/scottjehl/picturefill/blob/master/picturefill.js</a></p>
+<p><strong>Some notes:</strong></p>
+<ul>
+<li>The JS uses the matchMedia API (with polyfill included in the external folder) to find matches within the source elements, keeping the last match it finds in source order.</li>
+<li>Per Mat&#8217;s example markup, the last element in the picture element is the fallback img element, and for the sake of this script, the matching src is simply plugged into that element.</li>
+<li>This script does nothing to prevent the fallback image from downloading before it is overridden by another potential match, and I&#8217;m not sure it needs to, since that&#8217;s an advantage a native implementation will bring.</li>
+<li>The script is configured to run when the DOM is ready, and on window resize (which tends to catch orientationchange as well).</li>
+</ul>
+<p>&#8212;</p>
+<p>Please let me know if this is at all detrimental to the planning stages. Here&#8217;s hoping it provides us something to play with and see what sort of markup will make the most sense in the end.</p>
+<p>Thanks,</p>
+<p>Scott Jehl</p>
+									
+			<footer class="entry-utility">
+                                                  47 Comments |
+			                              <a rel='nofollow' class='comment-reply-link' href='https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#respond' onclick='return addComment.moveForm( "post-22", "0", "respond", "22" )'>Leave a Comment</a> | 
+			  		        
+				                                					<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Category</span> <a href="https://www.w3.org/community/respimg/category/uncategorized/" rel="category tag">Uncategorized</a>					</span>
+															</footer><!-- .entry-utility -->
+		</article><!-- #post-## -->
+
+		
+			<div id="comments">
+
+
+			<h3 id="comments-title">47 Responses to <em>A sample picture implementation</em></h3>
+
+
+			<ul class="commentlist">
+					<li class="comment byuser comment-author-ngallagh even thread-even depth-1" id="li-comment-5">
+		<div id="comment-5" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/9eecfabc23fd999927fa7989a7eaff5f/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Nicolas Gallagher</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-5">
+				February 21, 2012 at 12:27 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Thanks Scott. Some feedback:</p>
+<p>The stacking of `min-width: 400px`, `min-width: 800px`, etc., should probably behave like it would in CSS. I was expecting all the images to be downloaded at higher viewport dimensions &#8211; as all stylesheets would be if using the examples `media` values &#8211; but only the larger one was.</p>
+<p>When I resize the viewport, smaller images are downloaded. And when I resize to wider viewports, the larger images are re-downloaded. So I can end up with dozens of requests.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=5#respond" data-commentid="5" data-postid="22" data-belowelement="comment-5" data-respondelement="respond" data-replyto="Reply to Nicolas Gallagher" aria-label="Reply to Nicolas Gallagher">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-sjehl bypostauthor odd alt depth-2" id="li-comment-8">
+		<div id="comment-8" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/4137f7daffde77fce06a26a1ac92f9bf/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Scott Jehl</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-8">
+				February 21, 2012 at 12:41 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Hey Nicolas. Yeah, great points.</p>
+<p>First pass, I wasn&#8217;t sure how best to handle all of that, so this is nice to discuss. </p>
+<p>For the rules, I was thinking along the lines of CSS behavior too, but maybe in a different way than you were. I was thinking that if we considered the picture to only allow one valid source at a time, sortof like an element&#8217;s background-image value, then the last valid src in the source order would be requested, and ideally, none of the others that it overrides would be requested.</p>
+<p>On resize, again like media queries, it&#8217;s re-running the logic, and I am not at all sure if that&#8217;s desirable for folks here, but it&#8217;s mapping to what I think I&#8217;d expect to happen with CSS at least, where there&#8217;s also potential for many requests after resize. Do you think it should only apply during initial load? </p>
+<p>There&#8217;s probably precedent for both of these questions with the video element and its relation to source media attributes. Maybe we can make sure this maps to that, if it makes sense for picture.</p>
+<p>Thanks!</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=8#respond" data-commentid="8" data-postid="22" data-belowelement="comment-8" data-respondelement="respond" data-replyto="Reply to Scott Jehl" aria-label="Reply to Scott Jehl">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-ngallagh even depth-3" id="li-comment-11">
+		<div id="comment-11" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/9eecfabc23fd999927fa7989a7eaff5f/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Nicolas Gallagher</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-11">
+				February 21, 2012 at 1:49 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>What does `video` do with `source` and `media` like this? It would be confusing if any potential new media element did things differently to `video`.</p>
+<p>About the resizing. I don&#8217;t think you&#8217;d ever want to redownload an image that has already been downloaded. But, ignoring that bug, this early script is a great way to show one way how the end-user experience might turn out for a new element like this. Thanks.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=11#respond" data-commentid="11" data-postid="22" data-belowelement="comment-11" data-respondelement="respond" data-replyto="Reply to Nicolas Gallagher" aria-label="Reply to Nicolas Gallagher">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-sjehl bypostauthor odd alt depth-4" id="li-comment-12">
+		<div id="comment-12" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/4137f7daffde77fce06a26a1ac92f9bf/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Scott Jehl</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-12">
+				February 21, 2012 at 1:53 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Yeah, I&#8217;m tending to agree with what you&#8217;re thinking about resize. Pending what others say, I&#8217;m not sure picture source elements should update at all after initial load&#8230;</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=12#respond" data-commentid="12" data-postid="22" data-belowelement="comment-12" data-respondelement="respond" data-replyto="Reply to Scott Jehl" aria-label="Reply to Scott Jehl">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-sjehl bypostauthor even depth-4" id="li-comment-15">
+		<div id="comment-15" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/4137f7daffde77fce06a26a1ac92f9bf/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Scott Jehl</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-15">
+				February 21, 2012 at 1:58 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>One scenario where it could be useful is if the different sizes use contextual crops (rather than simple resizes). In that case, you&#8217;d want the proper size to flip in on resize, I think.</p>
+<p>The Nokia browser site used to be a nice example of that, but it doesn&#8217;t seem to have different crops anymore.. hmm.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=15#respond" data-commentid="15" data-postid="22" data-belowelement="comment-15" data-respondelement="respond" data-replyto="Reply to Scott Jehl" aria-label="Reply to Scott Jehl">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-tkadlec odd alt depth-5" id="li-comment-60">
+		<div id="comment-60" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/a9a379f2e92c7ded4564190c5b286b78/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Tim Kadlec</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-60">
+				February 22, 2012 at 2:47 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>I think they&#8217;re still doing that in some places. For example, the top image on <a href="http://browser.nokia.com/meego-browser.html" rel="nofollow ugc">http://browser.nokia.com/meego-browser.html</a>.</p>
+<p>I would personally expect the &#8216;picture&#8217; element to swap sources on resize. However, considering &#8216;source&#8217; is it&#8217;s own element in the spec, the behavior should be consistent regardless of which media element it is contained in. So, if &#8216;video&#8217; doesn&#8217;t reassess the source, &#8216;picture&#8217; probably shouldn&#8217;t either.</p>
+						<p class="reply">
+							</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-gbrander even depth-4" id="li-comment-58">
+		<div id="comment-58" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/a3c35a63b683ffa143ec2b6ad4578a95/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Gordon Brander</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-58">
+				February 22, 2012 at 2:40 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>I certainly think images should be reassessed after a window resize:</p>
+<p>This matches the way CSS media queries work; e.g. which media queries are active is reassessed when resizing.<br />
+Resizing is a bit of an edge case (not many people actively do it), so I don&#8217;t see it as a serious performance hit.<br />
+It keeps you from getting into awkward situations. For example, you may want to change things like aspect ratios between breakpoints &#8212; that banner image isn&#8217;t so great at mobile sizes. If your mobile styles are assuming, say, a square image, <b>not</b> reassessing the image could lead to layout breakage.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=58#respond" data-commentid="58" data-postid="22" data-belowelement="comment-58" data-respondelement="respond" data-replyto="Reply to Gordon Brander" aria-label="Reply to Gordon Brander">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-sjehl bypostauthor odd alt depth-5" id="li-comment-61">
+		<div id="comment-61" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/4137f7daffde77fce06a26a1ac92f9bf/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Scott Jehl</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-61">
+				February 22, 2012 at 2:50 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Good point, but orientation changes are assumed to be more common, and usually result in a resize too (unless the device is square? 🙂 ).</p>
+						<p class="reply">
+							</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-gbrander even depth-5" id="li-comment-63">
+		<div id="comment-63" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/a3c35a63b683ffa143ec2b6ad4578a95/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Gordon Brander</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-63">
+				February 22, 2012 at 3:10 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Point taken, but I still think the other 2 points hold.</p>
+						<p class="reply">
+							</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-sjehl bypostauthor odd alt depth-5" id="li-comment-70">
+		<div id="comment-70" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/4137f7daffde77fce06a26a1ac92f9bf/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Scott Jehl</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-70">
+				February 22, 2012 at 4:04 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>I&#8217;m leaning back towards yes on resize + reassess 🙂</p>
+						<p class="reply">
+							</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-mwilcox2 even thread-odd thread-alt depth-1" id="li-comment-9">
+		<div id="comment-9" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/b78446f857933a87776bffd44ec66f98/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn"><a href="http://adaptive-images.com" class="url" rel="ugc external nofollow">Matt Wilcox</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-9">
+				February 21, 2012 at 12:46 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Nice work 🙂</p>
+<p>&#8220;This script does nothing to prevent the fallback image from downloading before it is overridden by another potential match, and I’m not sure it needs to, since that’s an advantage a native implementation will bring.&#8221;</p>
+<p>I class this firmly as a disadvantage, not an advantage. One of the goals for responsive images is efficiency, and downloading an image that won&#8217;t be used is inefficient, both in bandwidth, HTTP calls, and device memory. That&#8217;s why the existing JS solutions are all no-go&#8217;s.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=9#respond" data-commentid="9" data-postid="22" data-belowelement="comment-9" data-respondelement="respond" data-replyto="Reply to Matt Wilcox" aria-label="Reply to Matt Wilcox">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-sjehl bypostauthor odd alt thread-even depth-1" id="li-comment-10">
+		<div id="comment-10" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/4137f7daffde77fce06a26a1ac92f9bf/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Scott Jehl</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-10">
+				February 21, 2012 at 12:58 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Hey Matt!</p>
+<p>Oh, agreed. It&#8217;s totally a disadvantage. That&#8217;s why we&#8217;re trying to get a native implementation, right?</p>
+<p>If you wanted to make this sort of script production-ready/responsible, tying it together with your script or even a quick inline cookie setting in the head could at least make that fallback request re-route to a blank gif or something less painful.</p>
+<p>The current markup is at least unlikely to punish a handheld, since the fallback and the first source element are equal sources. </p>
+<p>But yeah, you&#8217;re totally correct on production value of this. It&#8217;s not intended for that at this point. </p>
+<p>Thanks!</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=10#respond" data-commentid="10" data-postid="22" data-belowelement="comment-10" data-respondelement="respond" data-replyto="Reply to Scott Jehl" aria-label="Reply to Scott Jehl">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment even depth-2" id="li-comment-13">
+		<div id="comment-13" class="clearfix">
+
+		<div class="comment-author">
+			<img alt='' src='https://secure.gravatar.com/avatar/deb7c1dad4e0cd326ff1e09d0995be2e88d47e6271ef12ddeae859b303b35387?s=40&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/deb7c1dad4e0cd326ff1e09d0995be2e88d47e6271ef12ddeae859b303b35387?s=80&#038;d=mm&#038;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' loading='lazy' decoding='async'/>			<cite class="fn"><a href="http://www.chriskrycho.com/web/" class="url" rel="ugc external nofollow">Chris</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-13">
+				February 21, 2012 at 1:55 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>It seems like the question of bandwidth continues to be a limiting issue, and I&#8217;ve seen a couple people batting around the notion of <code>@media (bandwidth &gt;= x)</code> &#8211; not necessarily in those terms, but that basic concept. I don&#8217;t know the browser side of it as much, but it seems like that should be doable in general, right? That would allow for a sensible native implementation of this: combining screen resolution with bandwidth would allow you to prioritize that way, and the same thing would support <code></code> and <code></code> nicely. The only potential downside I see is that bandwidth might change mid-streaming of the content. Someone much more familiar with browser attributes/limitations than me might be better equipped to comment&#8230;</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=13#respond" data-commentid="13" data-postid="22" data-belowelement="comment-13" data-respondelement="respond" data-replyto="Reply to Chris" aria-label="Reply to Chris">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment odd alt depth-3" id="li-comment-14">
+		<div id="comment-14" class="clearfix">
+
+		<div class="comment-author">
+			<img alt='' src='https://secure.gravatar.com/avatar/deb7c1dad4e0cd326ff1e09d0995be2e88d47e6271ef12ddeae859b303b35387?s=40&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/deb7c1dad4e0cd326ff1e09d0995be2e88d47e6271ef12ddeae859b303b35387?s=80&#038;d=mm&#038;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' loading='lazy' decoding='async'/>			<cite class="fn"><a href="http://www.chriskrycho.com/web/" class="url" rel="ugc external nofollow">Chris Krycho</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-14">
+				February 21, 2012 at 1:58 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>That should read &#8220;the same thing would support video and audio nicely&#8221;; I wrapped them in <code>code</code> tags, but may have done so incorrectly.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=14#respond" data-commentid="14" data-postid="22" data-belowelement="comment-14" data-respondelement="respond" data-replyto="Reply to Chris Krycho" aria-label="Reply to Chris Krycho">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-sjehl bypostauthor even depth-3" id="li-comment-17">
+		<div id="comment-17" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/4137f7daffde77fce06a26a1ac92f9bf/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Scott Jehl</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-17">
+				February 21, 2012 at 2:00 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Hey Chris,<br />
+Bandwidth is a complicated issue that I&#8217;m not sure the picture element is poised to address on its own, but perhaps other apis and media queries will get there one day, and the proposed markup for picture should be able to tap into whatever comes with that.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=17#respond" data-commentid="17" data-postid="22" data-belowelement="comment-17" data-respondelement="respond" data-replyto="Reply to Scott Jehl" aria-label="Reply to Scott Jehl">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment odd alt depth-4" id="li-comment-18">
+		<div id="comment-18" class="clearfix">
+
+		<div class="comment-author">
+			<img alt='' src='https://secure.gravatar.com/avatar/deb7c1dad4e0cd326ff1e09d0995be2e88d47e6271ef12ddeae859b303b35387?s=40&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/deb7c1dad4e0cd326ff1e09d0995be2e88d47e6271ef12ddeae859b303b35387?s=80&#038;d=mm&#038;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' loading='lazy' decoding='async'/>			<cite class="fn"><a href="http://www.chriskrycho.com/web/" class="url" rel="ugc external nofollow">Chris Krycho</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-18">
+				February 21, 2012 at 2:09 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Hmm&#8230; yeah, sorry; that comment probably belongs in a different context. I&#8217;ve got it on the brain at the moment.</p>
+<p>More on topic: Presumably you&#8217;re still going to have the ability to save the image (*right-click&rarr;save&#8221;); how would a native implementation handle allowing the user to save the highest resolution image? Would it default to that with a save action? I am wondering if video and audio already have solutions for that which picture could adopt, so I&#8217;ll start by going and reading the specs.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=18#respond" data-commentid="18" data-postid="22" data-belowelement="comment-18" data-respondelement="respond" data-replyto="Reply to Chris Krycho" aria-label="Reply to Chris Krycho">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment even depth-5" id="li-comment-26">
+		<div id="comment-26" class="clearfix">
+
+		<div class="comment-author">
+			<img alt='' src='https://secure.gravatar.com/avatar/deb7c1dad4e0cd326ff1e09d0995be2e88d47e6271ef12ddeae859b303b35387?s=40&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/deb7c1dad4e0cd326ff1e09d0995be2e88d47e6271ef12ddeae859b303b35387?s=80&#038;d=mm&#038;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' loading='lazy' decoding='async'/>			<cite class="fn"><a href="http://www.chriskrycho.com/web/" class="url" rel="ugc external nofollow">Chris Krycho</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-26">
+				February 21, 2012 at 4:05 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Okay, I went and read through the specs for audio and video. It looks like those specs assume that the only time an author is going to want a direct link to those elements &#8211; that is, the only time a user is going to be attempting to save those elements &#8211; is when the user-agent player is not working, i.e. the fallback case. That makes some sense in the context of those particular elements, I suppose, although I think an argument could probably be made for easier ability to save those elements to local storage for later retrieval.</p>
+<p>Pictures are a bit different, though, at least from my point of view. I often want to at least <em>see</em> the highest resolution of an image, even if I wouldn&#8217;t necessarily want it loaded on my page. Now, in theory a content provider could wrap a <code>&lt;picture&gt;</code> element in a link to the highest resolution form of the image &#8211; that&#8217;s already fairly common practice in cases where a thumbnail is being displayed. Should we just assume that <code>&lt;picture&gt;</code> will ultimately be supplying &#8220;thumbnail&#8221;-like content and wrapping in links if we want the users to have access to that image at a higher resolution? That seems an eminently reasonable approach to me, but I&#8217;m curious if people who are thinking much more and harder about this than me already have thoughts on this issue.</p>
+<p>Awesome work in any case.</p>
+						<p class="reply">
+							</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-mwilcox2 odd alt depth-2" id="li-comment-20">
+		<div id="comment-20" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/b78446f857933a87776bffd44ec66f98/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn"><a href="http://adaptive-images.com" class="url" rel="ugc external nofollow">Matt Wilcox</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-20">
+				February 21, 2012 at 2:32 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Ahhh, I think I mis-interpreted what you said originally, sorry! I thought you were saying you weren&#8217;t sure *the final solution* needed to avoid the duplicate requests. You&#8217;re actually saying that the final solution would solve that problem so the &#8216;bad behaviour&#8217; of the test isn&#8217;t an issue?</p>
+<p>Doh.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=20#respond" data-commentid="20" data-postid="22" data-belowelement="comment-20" data-respondelement="respond" data-replyto="Reply to Matt Wilcox" aria-label="Reply to Matt Wilcox">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-sjehl bypostauthor even depth-3" id="li-comment-21">
+		<div id="comment-21" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/4137f7daffde77fce06a26a1ac92f9bf/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Scott Jehl</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-21">
+				February 21, 2012 at 2:43 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>You put it far more clearly. So, what you said! 🙂</p>
+<p>I&#8217;m not sure what a finalized picture element polyfill will entail once the element is actually supported in some places, but I&#8217;d imagine the first step would be to return immediately after determining the element is actually supported, and provide a way to easily tie-in server-side workarounds for the double-request problem. It&#8217;d be nice if the most basic polyfill, like that above, didn&#8217;t care much about that part. At any rate, when it gets to that stage, I&#8217;d love your help in planning how that piece can work.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=21#respond" data-commentid="21" data-postid="22" data-belowelement="comment-21" data-respondelement="respond" data-replyto="Reply to Scott Jehl" aria-label="Reply to Scott Jehl">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-mwilcox2 odd alt depth-4" id="li-comment-24">
+		<div id="comment-24" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/b78446f857933a87776bffd44ec66f98/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn"><a href="http://adaptive-images.com" class="url" rel="ugc external nofollow">Matt Wilcox</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-24">
+				February 21, 2012 at 3:41 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>I&#8217;m up for helping where I can 🙂 It&#8217;s a shame my JS knowledge is poor, and my PHP rusty (Adaptive Images was the first time I&#8217;d done any real PHP in 5yrs or more!)</p>
+<p>Yeah, as a proof of concept polyfill what you&#8217;ve got seems good. Be interesting to see how versatile it can be made.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=24#respond" data-commentid="24" data-postid="22" data-belowelement="comment-24" data-respondelement="respond" data-replyto="Reply to Matt Wilcox" aria-label="Reply to Matt Wilcox">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-gbrander even thread-odd thread-alt depth-1" id="li-comment-34">
+		<div id="comment-34" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/a3c35a63b683ffa143ec2b6ad4578a95/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Gordon Brander</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-34">
+				February 21, 2012 at 5:34 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>@Scott Jehl looks like we spent our President&#8217;s Day weekend the same way: <a href="https://github.com/gordonbrander/Picturize" rel="nofollow">github.com/gordonbrander/Picturize</a> :).</p>
+<p>One thing the script I hacked together has on offer is a Modernizr test, followed by a fast exit if the hypothetical <code>picture</code> tag is supported. Feel free to lift/repurpose.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=34#respond" data-commentid="34" data-postid="22" data-belowelement="comment-34" data-respondelement="respond" data-replyto="Reply to Gordon Brander" aria-label="Reply to Gordon Brander">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-sjehl bypostauthor odd alt thread-even depth-1" id="li-comment-55">
+		<div id="comment-55" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/4137f7daffde77fce06a26a1ac92f9bf/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Scott Jehl</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-55">
+				February 22, 2012 at 1:18 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Hey Gordon! Hah, it appears we did 🙂</p>
+<p>Great work. At a glance, it seems these do similar things, which is great to see. As I mentioned above and you did also, a feature test for picture support is missing in the version I&#8217;d posted. However, I think there&#8217;s some value in a non-jQuery dependent version too, and the matchMedia polyfill nudges quite a few media-query-supporting browsers as well.</p>
+<p>Might I invite you in on the  picturefill repo so we can get the element test integrated up top in the script? If it needs modernizr, that could be okay, though a quick element test without it might do just as well for now.</p>
+<p>I&#8217;ve added you as a committer, so let me know if you&#8217;re interested 🙂</p>
+<p>Thanks and again, awesome work!</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=55#respond" data-commentid="55" data-postid="22" data-belowelement="comment-55" data-respondelement="respond" data-replyto="Reply to Scott Jehl" aria-label="Reply to Scott Jehl">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-gbrander even depth-2" id="li-comment-56">
+		<div id="comment-56" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/a3c35a63b683ffa143ec2b6ad4578a95/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Gordon Brander</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-56">
+				February 22, 2012 at 1:42 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Totally agreed re: jQuery &#8212; a plain ol&#8217; JS approach is superior.</p>
+<p>I&#8217;ll send a pull request your way with those changes later tonight.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=56#respond" data-commentid="56" data-postid="22" data-belowelement="comment-56" data-respondelement="respond" data-replyto="Reply to Gordon Brander" aria-label="Reply to Gordon Brander">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-sjehl bypostauthor odd alt depth-3" id="li-comment-57">
+		<div id="comment-57" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/4137f7daffde77fce06a26a1ac92f9bf/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Scott Jehl</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-57">
+				February 22, 2012 at 2:05 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Can&#8217;t wait to see it Gordon! Thanks for joining forces on this 🙂</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=57#respond" data-commentid="57" data-postid="22" data-belowelement="comment-57" data-respondelement="respond" data-replyto="Reply to Scott Jehl" aria-label="Reply to Scott Jehl">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-gbrander even depth-3" id="li-comment-64">
+		<div id="comment-64" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/a3c35a63b683ffa143ec2b6ad4578a95/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Gordon Brander</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-64">
+				February 22, 2012 at 3:31 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Sent the pull request your way <a href="https://github.com/scottjehl/picturefill/pull/3" rel="nofollow ugc">https://github.com/scottjehl/picturefill/pull/3</a>. I&#8217;ll let you do the merge if it all looks fine and dandy to you.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=64#respond" data-commentid="64" data-postid="22" data-belowelement="comment-64" data-respondelement="respond" data-replyto="Reply to Gordon Brander" aria-label="Reply to Gordon Brander">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-sjehl bypostauthor odd alt depth-4" id="li-comment-67">
+		<div id="comment-67" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/4137f7daffde77fce06a26a1ac92f9bf/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Scott Jehl</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-67">
+				February 22, 2012 at 3:42 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Gordon, fantastic work, man. I will review this today.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=67#respond" data-commentid="67" data-postid="22" data-belowelement="comment-67" data-respondelement="respond" data-replyto="Reply to Scott Jehl" aria-label="Reply to Scott Jehl">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-59">
+		<div id="comment-59" class="clearfix">
+
+		<div class="comment-author">
+			<img alt='' src='https://secure.gravatar.com/avatar/66d90b88a7bcfcbd7c3c2f69ab7819972306fc9dd5d1f52ca7acd98455474d7c?s=40&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/66d90b88a7bcfcbd7c3c2f69ab7819972306fc9dd5d1f52ca7acd98455474d7c?s=80&#038;d=mm&#038;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' loading='lazy' decoding='async'/>			<cite class="fn"><a href="http://grayghostvisuals.com" class="url" rel="ugc external nofollow">Gray Ghost Visuals</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-59">
+				February 22, 2012 at 2:45 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>I would definitely expect/assume them to be reassessed on re-size at first thought. Although it seems more HTTP requests are a bit scary at the moment to do the switch. I know this might sound a bit silly, but If only there was a way to make something like this to serve up images for devices/resolution: </p>
+<p><code><br />
+@mobile {..} or<br />
+@mobile and (min-resolution:96dpi) and (max-resolution: 100dpi) {..}</p>
+<p>@desktop and (min-width:960px) {}</p>
+<p>@print {..}<br />
+</code></p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=59#respond" data-commentid="59" data-postid="22" data-belowelement="comment-59" data-respondelement="respond" data-replyto="Reply to Gray Ghost Visuals" aria-label="Reply to Gray Ghost Visuals">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-sjehl bypostauthor odd alt depth-2" id="li-comment-62">
+		<div id="comment-62" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/4137f7daffde77fce06a26a1ac92f9bf/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Scott Jehl</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-62">
+				February 22, 2012 at 3:02 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Indeed, there are media queries that exist already for that purpose, and you can already use them with this polyfill for browsers that understand them. For example, this line sends higher-resolution icons to HD (or &#8220;retina&#8221;) screens in jQuery Mobile: <a href="https://github.com/jquery/jquery-mobile/blob/master/css/themes/default/jquery.mobile.theme.css#L880" rel="nofollow ugc">https://github.com/jquery/jquery-mobile/blob/master/css/themes/default/jquery.mobile.theme.css#L880</a></p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=62#respond" data-commentid="62" data-postid="22" data-belowelement="comment-62" data-respondelement="respond" data-replyto="Reply to Scott Jehl" aria-label="Reply to Scott Jehl">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-dgaebel even depth-3" id="li-comment-65">
+		<div id="comment-65" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/ba88aeabd95060b1a2f525a426216c2b/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn"><a href="http://grayghostvisuals.com" class="url" rel="ugc external nofollow">grayghostvisuals</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-65">
+				February 22, 2012 at 3:36 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>A great start/solution for background imagery, but I see its still back to a needed solution to accomplish this for embedded media much like the <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> tag already discussed. hmmmmm&#8230;.more sleep , then coffee. Maybe we should stop embedding images in markup altogether?</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=65#respond" data-commentid="65" data-postid="22" data-belowelement="comment-65" data-respondelement="respond" data-replyto="Reply to grayghostvisuals" aria-label="Reply to grayghostvisuals">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-sjehl bypostauthor odd alt depth-4" id="li-comment-66">
+		<div id="comment-66" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/4137f7daffde77fce06a26a1ac92f9bf/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Scott Jehl</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-66">
+				February 22, 2012 at 3:41 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>heh. well, if that&#8217;s suitable for you, then this <a href="https://twitter.com/scottjehl/status/169117397838602240" rel="nofollow ugc">https://twitter.com/scottjehl/status/169117397838602240</a></p>
+<p>🙂</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=66#respond" data-commentid="66" data-postid="22" data-belowelement="comment-66" data-respondelement="respond" data-replyto="Reply to Scott Jehl" aria-label="Reply to Scott Jehl">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-dgaebel even depth-5" id="li-comment-69">
+		<div id="comment-69" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/ba88aeabd95060b1a2f525a426216c2b/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn"><a href="http://grayghostvisuals.com" class="url" rel="ugc external nofollow">grayghostvisuals</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-69">
+				February 22, 2012 at 4:00 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Awesome! just popped it up on the opera mobile emulator and what a difference. The image was so elastic.</p>
+						<p class="reply">
+							</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-dgaebel odd alt thread-even depth-1" id="li-comment-68">
+		<div id="comment-68" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/ba88aeabd95060b1a2f525a426216c2b/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn"><a href="http://grayghostvisuals.com" class="url" rel="ugc external nofollow">grayghostvisuals</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-68">
+				February 22, 2012 at 3:53 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Side note: I wish resolution detection was more like I referenced in my initial comment rather than <code>device&ndash;pixel&ndash;ratio</code> currently implemented. It just seems easier to reference and understand the exact resolution over the ratio usage.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=68#respond" data-commentid="68" data-postid="22" data-belowelement="comment-68" data-respondelement="respond" data-replyto="Reply to grayghostvisuals" aria-label="Reply to grayghostvisuals">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-71">
+		<div id="comment-71" class="clearfix">
+
+		<div class="comment-author">
+			<img alt='' src='https://secure.gravatar.com/avatar/cacdd00fd18e874cd6256d46865b14c8460ccedcd7fe7c1d2d15b439240d4861?s=40&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/cacdd00fd18e874cd6256d46865b14c8460ccedcd7fe7c1d2d15b439240d4861?s=80&#038;d=mm&#038;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' loading='lazy' decoding='async'/>			<cite class="fn"><a href="http://www.frequency-decoder.com/" class="url" rel="ugc external nofollow">Brian McAllister</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-71">
+				February 22, 2012 at 7:54 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Can I play the devil&#8217;s advocate and suggest a &#8220;reassess&#8221; attribute on the picture element. </p>
+<p>This would give developers an opt-in to the &#8220;reload on resize&#8221; question on an element-by-element basis.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=71#respond" data-commentid="71" data-postid="22" data-belowelement="comment-71" data-respondelement="respond" data-replyto="Reply to Brian McAllister" aria-label="Reply to Brian McAllister">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="post pingback">
+		<p>Pingback: <a href="https://www.w3.org/community/respimg/2012/02/23/picture-for-existing-browsers/" class="url" rel="ugc">&lt;picture&gt; for existing browsers. | Responsive Images Community Group</a></p>
+	</li><!-- #comment-## -->
+	<li class="post pingback">
+		<p>Pingback: <a href="http://abitgoneplus.wordpress.com/2012/03/12/currying-favour-with-responsive-web-developers/" class="url" rel="ugc external nofollow">Currying Favour with Responsive Web Developers | abitgone+</a></p>
+	</li><!-- #comment-## -->
+	<li class="post pingback">
+		<p>Pingback: <a href="https://www.w3.org/community/respimg/2012/03/15/polyfilling-picture-without-the-overhead/" class="url" rel="ugc">Polyfilling picture without the overhead | Responsive Images Community Group</a></p>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1" id="li-comment-175">
+		<div id="comment-175" class="clearfix">
+
+		<div class="comment-author">
+			<img alt='' src='https://secure.gravatar.com/avatar/9d31d5774389b1e6d6d7212664bc7497bd02ea3eb07b3acedb7aa90647c93273?s=40&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/9d31d5774389b1e6d6d7212664bc7497bd02ea3eb07b3acedb7aa90647c93273?s=80&#038;d=mm&#038;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' loading='lazy' decoding='async'/>			<cite class="fn"><a href="http://www.brettjankord.com" class="url" rel="ugc external nofollow">Brett Jankord</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-175">
+				March 15, 2012 at 11:03 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>@Brian &#8211; I think that&#8217;s a good idea. I&#8217;d like to see an attribute on the picture element, something like reload=&#8221;true|false&#8221; or some better wording where you could specify if images in the picture element should be reassessed on resize as opposed to reassessing all of them.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=175#respond" data-commentid="175" data-postid="22" data-belowelement="comment-175" data-respondelement="respond" data-replyto="Reply to Brett Jankord" aria-label="Reply to Brett Jankord">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="post pingback">
+		<p>Pingback: <a href="http://themousepotatowebsite.co.za/the-responsive-image-problem/" class="url" rel="ugc external nofollow">The Responsive Image Problem | Mouse Potato</a></p>
+	</li><!-- #comment-## -->
+	<li class="post pingback">
+		<p>Pingback: <a href="http://www.trickflash.com/2012/03/17/picturefill/" class="url" rel="ugc external nofollow">Picturefill | TRICKFLASH</a></p>
+	</li><!-- #comment-## -->
+	<li class="post pingback">
+		<p>Pingback: <a href="http://mao.li/html5-picture-tag/" class="url" rel="ugc external nofollow">迷路的猫少年 &raquo; Blog Archive &raquo; html5需要个picture标签?</a></p>
+	</li><!-- #comment-## -->
+	<li class="post pingback">
+		<p>Pingback: <a href="http://paramarkinc.com/2012/03/26/the-web-needs-to-get-ready-for-the-high-resolution-future/" class="url" rel="ugc external nofollow">The Web Needs to Get Ready for the High-Resolution Future | Paramark Inc.</a></p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-356">
+		<div id="comment-356" class="clearfix">
+
+		<div class="comment-author">
+			<img alt='' src='https://secure.gravatar.com/avatar/64910007e788d59e4252f6044b57118f068f457c91b2554f01cbbf2684dbb873?s=40&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/64910007e788d59e4252f6044b57118f068f457c91b2554f01cbbf2684dbb873?s=80&#038;d=mm&#038;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' loading='lazy' decoding='async'/>			<cite class="fn"><a href="http://rodneyrehm.de/en/" class="url" rel="ugc external nofollow">Rodney Rehm</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-356">
+				March 28, 2012 at 9:19 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>How would &lt;picture&gt; handle image maps? different sources may very well rearrange the contents of an image, image-maps would then have to be changed accordingly.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=356#respond" data-commentid="356" data-postid="22" data-belowelement="comment-356" data-respondelement="respond" data-replyto="Reply to Rodney Rehm" aria-label="Reply to Rodney Rehm">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-ahannema odd alt depth-2" id="li-comment-359">
+		<div id="comment-359" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/3d2342126c0fa6c0a2e8fcf2e86ae76e/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn">Anselm Hannemann</cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-359">
+				March 28, 2012 at 10:59 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Very good point that until now hasn&#8217;t been discussed. I think it has to be the same as with the image tag. We need a new spec for ?<br />
+This again questions if we should have a solution like a &#8220;MQ-template&#8221; as Matt proposed.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=359#respond" data-commentid="359" data-postid="22" data-belowelement="comment-359" data-respondelement="respond" data-replyto="Reply to Anselm Hannemann" aria-label="Reply to Anselm Hannemann">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-jmather even depth-2" id="li-comment-363">
+		<div id="comment-363" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/effe67025c52628749cb4fbf19d1e860/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn"><a href="http://itsmajax.com/" class="url" rel="ugc external nofollow">Jacob Mather</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-363">
+				March 28, 2012 at 1:59 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>It would actually be much easier to support image maps with this sort of implementation.</p>
+<p>Currently, on the image, you just assign which image map to use.</p>
+<p>With Scott&#8217;s polyfill, and the proposed implementation, we would simply move that to the source tag, which fixes almost ANY problem related to image maps.</p>
+<p>Granted, this now means you would have to have an image map for each size you show at, so perhaps there could be some improvements with the imagemap accepting percentages (or some other measurement).</p>
+<p>I always saw image maps as a kind of hack anyway, and they&#8217;re much less needed now that you can just directly position anchors over an area where you want them to appear.</p>
+<p>Maybe the answer is that image maps are dead?</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=363#respond" data-commentid="363" data-postid="22" data-belowelement="comment-363" data-respondelement="respond" data-replyto="Reply to Jacob Mather" aria-label="Reply to Jacob Mather">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1" id="li-comment-360">
+		<div id="comment-360" class="clearfix">
+
+		<div class="comment-author">
+			<img alt='' src='https://secure.gravatar.com/avatar/c4ae4a504cb7920d7244a281624697a54a5438d0f5a290f12772867fbe368e62?s=40&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/c4ae4a504cb7920d7244a281624697a54a5438d0f5a290f12772867fbe368e62?s=80&#038;d=mm&#038;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' loading='lazy' decoding='async'/>			<cite class="fn"><a href="http://scottjehl.com" class="url" rel="ugc external nofollow">Scott Jehl</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-360">
+				March 28, 2012 at 11:17 am</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>image maps are pixel-based, rather than percentages, right? That seems like less of a problem with the picture element and more of a problem with image maps not working in fluid layouts.</p>
+<p>You might also try and reproduce an image map technique with positioned anchors in CSS, where you&#8217;d likely have much better luck with fluid and responsive layouts.</p>
+<p>I&#8217;m not sure that this is a problem picture needs to solve though&#8230;</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=360#respond" data-commentid="360" data-postid="22" data-belowelement="comment-360" data-respondelement="respond" data-replyto="Reply to Scott Jehl" aria-label="Reply to Scott Jehl">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-jmather even depth-2" id="li-comment-364">
+		<div id="comment-364" class="clearfix">
+
+		<div class="comment-author">
+			<img src="https://www.w3.org/avatars/effe67025c52628749cb4fbf19d1e860/?s=200" height="40" class="avatar avatar-40 photo" style="height: 40px" />			<cite class="fn"><a href="http://itsmajax.com/" class="url" rel="ugc external nofollow">Jacob Mather</a></cite>			<span class="ascii-star"> ✪ </span>
+			<span class="comment-meta commentmetadata"><a href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/#comment-364">
+				March 28, 2012 at 2:05 pm</a>			</span><!-- .comment-meta .commentmetadata -->
+		</div><!-- .comment-author -->				
+
+		<div class="comment-body">
+			<p>Agreed. I think anchors in CSS are the better solution anyway.</p>
+						<p class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/?replytocom=364#respond" data-commentid="364" data-postid="22" data-belowelement="comment-364" data-respondelement="respond" data-replyto="Reply to Jacob Mather" aria-label="Reply to Jacob Mather">Reply</a>			</p><!-- .reply -->
+		</div>
+
+		
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="post pingback">
+		<p>Pingback: <a href="http://uablogs.missouri.edu/interface/2012/04/responsive-web-design/" class="url" rel="ugc external nofollow">Responsive Web Design &#8211; Interface - Blog of Web Communications at the University of Missouri</a></p>
+	</li><!-- #comment-## -->
+			</ul>
+
+
+
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/community/respimg/2012/02/21/a-sample-picture-implementation/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://www.w3.org/community/respimg/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><p class="comment-form-comment"><label class="visuallyhidden" for="comment">Comment</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required placeholder="What's on your mind?"	></textarea></p><p class="form-allowed-tags">Before you comment here, note that this forum is moderated and your IP address is sent to <a href="https://automattic.com/privacy/">Akismet</a>, the plugin we use to mitigate spam comments.</p><p class="comment-form-author"><label for="author">Name</label> <input id="author" name="author" type="text" value="" size="30" placeholder = "What can we call you?" required/><span class="required">*</span></p>
+<p class="comment-form-email"><label for="email">Email</label> <input id="email" name="email" type="email" value="" size="30" placeholder="How can we reach you?" required /><span class="required">*</span></p>
+<p class="comment-form-url"><label for="url">Website</label><input id="url" name="url" type="url" value="" size="30" placeholder="Have you got a website?" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='22' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="6cc48d9a34" /></p><p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="210"/><script type="text/javascript">
+/* <![CDATA[ */
+document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );
+/* ]]> */
+</script>
+</p></form>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+	
+
+</section>
+
+</div><!-- .maincolumn -->
+
+				<div class="sidebar">							
+					<section id="search-2" class="widget-container widget_search"><div id="search-form">
+	<form role="search" method="get" id="search-form" action="https://www.w3.org/community/respimg/">
+	    <input type="text" placeholder="Search blogs" value="" name="s" id="s" />
+	    <button id="search-submit" name="search-submit" type="submit">
+	    	<img class="magnifier" src="https://www.w3.org/community/respimg/wp-content/themes/StoryTeller/img/search-button.png" alt="Search" />
+	    </button>
+	</form> 
+</div></section><section id="archives-2" class="widget-container widget_archive"><h3>Archives</h3>
+			<ul>
+					<li><a href='https://www.w3.org/community/respimg/2015/07/'>July 2015</a></li>
+	<li><a href='https://www.w3.org/community/respimg/2014/04/'>April 2014</a></li>
+	<li><a href='https://www.w3.org/community/respimg/2014/02/'>February 2014</a></li>
+	<li><a href='https://www.w3.org/community/respimg/2013/10/'>October 2013</a></li>
+	<li><a href='https://www.w3.org/community/respimg/2013/09/'>September 2013</a></li>
+	<li><a href='https://www.w3.org/community/respimg/2013/04/'>April 2013</a></li>
+	<li><a href='https://www.w3.org/community/respimg/2012/11/'>November 2012</a></li>
+	<li><a href='https://www.w3.org/community/respimg/2012/10/'>October 2012</a></li>
+	<li><a href='https://www.w3.org/community/respimg/2012/09/'>September 2012</a></li>
+	<li><a href='https://www.w3.org/community/respimg/2012/08/'>August 2012</a></li>
+	<li><a href='https://www.w3.org/community/respimg/2012/07/'>July 2012</a></li>
+	<li><a href='https://www.w3.org/community/respimg/2012/06/'>June 2012</a></li>
+			</ul>
+
+			</section><section id="categories-2" class="widget-container widget_categories"><h3>Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-15"><a href="https://www.w3.org/community/respimg/category/general-issues/">General Issues</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://www.w3.org/community/respimg/category/request-header/">Request Header</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://www.w3.org/community/respimg/category/responsive-web-design/">Responsive Web Design</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://www.w3.org/community/respimg/category/uncategorized/">Uncategorized</a>
+</li>
+			</ul>
+
+			</section>					
+					
+				</div><!-- .sidebar -->
+			
+		
+
+
+
+	</div> <!-- end .center -->
+
+  
+
+    <!-- Footer -->
+    <aside id="w3c_footer">
+        <div class="logo-footer"><a href="/community/"><img
+                        src="https://www.w3.org/community/wp-content/themes/StoryTeller/img/svg/cgbg-logo-footer.svg"
+                        alt="Community and Business Groups"></a></div>
+        <div class="center">
+            <h2 class="visuallyhidden">Footer Navigation</h2>
+            <div class="footer-nav">
+                <h3>Navigation</h3>
+                <ul class="footer_top_nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/standards/">Standards</a></li>
+                    <li><a href="/groups/">Groups</a></li>
+                    <li><a href="/get-involved/">Get involved</a></li>
+                    <li><a href="/resources/">Resources</a></li>
+                    <li><a href="/news-events/">News &amp; Events</a></li>
+                    <li><a href="/about/">About W3C</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav">
+                <h3>Contact W3C</h3>
+                <ul class="footer_bottom_nav">
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a accesskey="0" href="/help/">Help</a></li>
+                    <li><a href="/support-us/">Support us</a></li>
+                    <li><a href="/policies/">Legal &amp; Policies</a></li>
+                    <li><a href="/about/corporation/">Corporation</a></li>
+                    <li><a href="https://status.w3.org/">Systems Status</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav">
+                <h3>W3C Updates</h3>
+                <ul class="footer_follow_nav">
+                    <li>
+                        <a href="https://w3c.social/@w3c" title="W3C on Mastodon"><img
+                                    src="https://www.w3.org/community/wp-content/themes/StoryTeller/img/svg/mastodon-logo.svg"
+                                    alt="Mastodon" class="social-icon"
+                                    height="40"/></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- #footer address / page signature -->
+            <footer class="clear copyright">Copyright &copy; 2026 <a href="/">World Wide Web Consortium</a>.<br>
+                <abbr title="World Wide Web Consortium">W3C</abbr><sup>&reg;</sup> <a href="/policies/#disclaimers">liability</a>,
+                <a href="/policies/#trademarks">trademark</a> and <a rel="license" href="/copyright/document-license/"
+                                                                     title="W3C Document License">permissive license</a>
+                rules apply.
+            </footer>
+
+        </div><!-- .center -->
+    </aside>
+
+
+    <!-- modal window - propose a community group - not logged in -->
+<div id="login-modal" role="dialog">
+  <div class="modal">
+    <header><p>Log In</p></header>
+    <a href="#" class="modal_close" tabindex="8">x</a>
+    <div class="modal_content arrow-down">
+      <form name="loginform" id="loginform" action="https://www.w3.org/community/respimg/wp-login.php" method="post">
+        <div class="wrap-input">
+        	<label for="user_login" class="visuallyhidden">Username:</label>
+         	<input type="text" name="log" id="user_login" class="input" value="" size="20" tabindex="3" placeholder="username" autofocus />
+
+			<label for="user_pass" class="visuallyhidden">Password:</label>
+         	<input type="password" name="pwd" id="user_pass" class="input highlight" value="" size="20" tabindex="4" placeholder="password"/>
+        </div>
+        <p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever" tabindex="5"/> Remember me</label></p>
+        <p class="submit">
+          <button type="submit" name="wp-submit" id="wp-submit" class="button action dark-green" value="Log In" tabindex="6">Log in</button> <span class="separator">or</span>
+          <a class="button action green none" href="/account/request/" tabindex="7">Request an account</a>
+          <input type="hidden" name="redirect_to" value="/community/wp-admin/"/>
+          <input type="hidden" name="testcookie" value="1"/>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+
+	    <script>window.jQuery || document.write('<script src="/community/wp-content/themes/StoryTeller/js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+	    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	    <script type='text/javascript' src='/community/wp-content/themes/StoryTeller/js/jquery.tinysort.min.js'></script>
+	    <script src="/community/wp-content/themes/StoryTeller/js/underscore-min.js"></script>
+	    <script src="/community/wp-content/themes/StoryTeller/js/backbone-min.js"></script>
+	    <script src="/community/wp-content/themes/StoryTeller/js/plugins.js"></script>
+	    <script src="/community/wp-content/themes/StoryTeller/js/main.js"></script>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/community/respimg/*"},{"not":{"href_matches":["/community/respimg/wp-*.php","/community/respimg/wp-admin/*","/community/respimg/files/*","/community/respimg/wp-content/*","/community/respimg/wp-content/plugins/*","/community/respimg/wp-content/themes/StoryTeller/*","/community/respimg/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="https://www.w3.org/community/respimg/wp-includes/js/hoverintent-js.min.js?ver=2.2.1" id="hoverintent-js-js"></script>
+<script type="text/javascript" src="https://www.w3.org/community/respimg/wp-includes/js/admin-bar.min.js?ver=71748430da06f32f06e316dbb2f5ba0b" id="admin-bar-js"></script>
+<script type="text/javascript" src="https://www.w3.org/community/respimg/wp-includes/js/comment-reply.min.js?ver=71748430da06f32f06e316dbb2f5ba0b" id="comment-reply-js" async="async" data-wp-strategy="async" fetchpriority="low"></script>
+<script type="text/javascript" src="https://www.w3.org/community/respimg/wp-content/plugins/enlighter/cache/X112_enlighterjs.min.js?ver=f+SjinOcqp8YjQw" id="enlighterjs-js"></script>
+<script type="text/javascript" id="enlighterjs-js-after">
+/* <![CDATA[ */
+!function(e,n){if("undefined"!=typeof EnlighterJS){var o={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":4,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"break","linenumbers":true,"theme":"enlighter","language":"enlighter","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""}};(e.EnlighterJSINIT=function(){EnlighterJS.init(o.selectors.block,o.selectors.inline,o.options)})()}else{(n&&(n.error||n.log)||function(){})("Error: EnlighterJS resources not loaded yet!")}}(window,console);
+//# sourceURL=enlighterjs-js-after
+/* ]]> */
+</script>
+<script defer type="text/javascript" src="https://www.w3.org/community/respimg/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1777110187" id="akismet-frontend-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.w3.org/community/respimg/wp-includes/js/wp-emoji-release.min.js?ver=71748430da06f32f06e316dbb2f5ba0b"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://www.w3.org/community/respimg/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+
+</body>
+</html>

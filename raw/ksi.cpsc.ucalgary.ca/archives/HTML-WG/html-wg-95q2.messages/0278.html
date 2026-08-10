@@ -1,0 +1,297 @@
+<!-- received="Tue Apr 25 09:15:48 1995 MDT" -->
+<!-- sent="Tue, 25 Apr 95 11:01:04 EDT" -->
+<!-- name="Dave Raggett" -->
+<!-- email="dsr@hplb.hpl.hp.com" -->
+<!-- subject="Re: More comments on the HTML 3.0 draft" -->
+<!-- id="199504251457.AA006261860@dragget.hpl.hp.com" -->
+<!-- inreplyto="More comments on the HTML 3.0 draft" -->
+<title>html-wg-95q2: Re: More comments on the HTML 3.0 draft</title>
+<h1>Re: More comments on the HTML 3.0 draft</h1>
+Dave Raggett (<i>dsr@hplb.hpl.hp.com</i>)<br>
+<i>Tue, 25 Apr 95 11:01:04 EDT</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="index.html#278">[ date ]</a><a href="thread.html#278">[ thread ]</a><a href="subject.html#278">[ subject ]</a><a href="author.html#278">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0279.html">Dave Raggett: "Re: RANGE - default value"</a>
+<li> <b>Previous message:</b> <a href="0277.html">Murray Maloney: "REL and REV attributes (Was: More comments on HTML 3.0)"</a>
+<li> <b>Maybe in reply to:</b> <a href="0253.html">Bert Bos: "More comments on the HTML 3.0 draft"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<!-- body="start" -->
+Thanks to Bert for his feedback.<br>
+<p>
+<i>&gt; Nevertheless, here are some comments, followed by some comments on the</i><br>
+<i>&gt; latest TABLE proposal that Dave sent to the list this weekend.</i><br>
+..<br>
+<i>&gt; p.16 "The HTML element":</i><br>
+<p>
+<i>&gt;       The ROLE attr. should be removed. A doc. doesn't have a role</i><br>
+<i>&gt;       on its own, it can only have a role in relation to another</i><br>
+<i>&gt;       doc. Therefore only the source anchor of a link can specify</i><br>
+<i>&gt;       the role of the target doc.</i><br>
+<p>
+I find it hard to accept the position that a document can't have a role<br>
+on its own. One advantage of directly associating roles with documents<br>
+is that you can then use iconic representations for documents when<br>
+displaying histories, hotlists; and 2D or 3D maps of hypertextlinks.<br>
+If the roles are only associated with the links, such maps become<br>
+confusing to look at, compared with different icons for different<br>
+kinds of nodes. Have a look at the work on 3D modelling of the Web's<br>
+links that was presented at the Darmstadt conference recently.<br>
+<p>
+<i>&gt; p.28 "NOWRAP":</i><br>
+<p>
+<i>&gt;       In non-wrapping text, you may not only want a forced line</i><br>
+<i>&gt;       break (&lt;BR&gt;), but also an allowed line break. While were</i><br>
+<i>&gt;       waiting for Unicode, I propose we define an entity &amp;sbsp;</i><br>
+<i>&gt;       (cf. Netscape's proposed &lt;WBR&gt; tag).</i><br>
+<p>
+For the next revision, I am proposing &amp;cbsp; for the Conditional<br>
+Breaking SPace. I also propose that the soft hyphen &amp;shy; is also<br>
+treated like a conditional break - and can be used to break lines<br>
+even when nowrap is true.<br>
+<p>
+<i>&gt; p.50 "The IMG (Image) Element":</i><br>
+<p>
+<i>&gt;       Why is IMG not intended for embedding HTML? Are there any</i><br>
+<i>&gt;       other restrictions?</i><br>
+<p>
+For embedding HTML, I am recommending that HTML3 compliant user agents<br>
+support external entities as this is the SGML mechanism for inclusion<br>
+of additional markup, such that after inclusion, the resultant document<br>
+conplies with the DTD.<br>
+<p>
+<i>&gt; p.51 "WIDTH" &amp; "HEIGHT":</i><br>
+<p>
+<i>&gt;       The size is only "suggested", whereas in &lt;FIG&gt; (p.73) it is</i><br>
+<i>&gt;       the size into which the image will be forced. Why the</i><br>
+<i>&gt;       inconsistency?</i><br>
+<p>
+The I-D doesn't say this. For IMG:<br>
+<p>
+        Optional suggested width for the image. By default,<br>
+        this is given in pixels.<br>
+<p>
+For FIG:<br>
+<p>
+        Specifies the desired width in pixels or en units<br>
+        (according to the value of the UNITS attribute). User<br>
+        agents may scale the figure image to match this width.<br>
+<p>
+I should probably use "suggested" in both cases. As for the UNITS<br>
+attribute I am proposing to drop this in favor of specifying the<br>
+units as a suffix on the width/height values, since this is the<br>
+approach adopted by both Netscape and CALS tables.<br>
+<p>
+<i>&gt; p.78 "Tables", 5th par, 8th par, figure:</i><br>
+<p>
+<i>&gt;       Conflict between the cell counting rules:</i><br>
+<p>
+<i>&gt;       The 4th rule says: "If the column count for the table is</i><br>
+<i>&gt;       greater than the number of cells for a given row (after</i><br>
+<i>&gt;       including cells for spanned rows),..." The part between</i><br>
+<i>&gt;       parentheses conflicts with the 7th rule, that says that cells</i><br>
+<i>&gt;       can overlap. If you apply rule 4 to the example, the last row</i><br>
+<i>&gt;       will count four cells instead of three (and therefore has only</i><br>
+<i>&gt;       one empty cell).</i><br>
+<p>
+Changing the wording from "including" to "accounting for" removes<br>
+the conflict. Note that the example table is defined as invalid,<br>
+with an implementation dependent rendering.<br>
+<p>
+<i>&gt;       The example exhibits another inconsistency:</i><br>
+<p>
+<i>&gt;       Cell 6 is pushed to the right by cell 1, while cell 7 isn't</i><br>
+<i>&gt;       pushed to the right by cell 6. This suggests that the</i><br>
+<i>&gt;       possibility of invalid tables (overlapping cells) can be</i><br>
+<i>&gt;       completely removed by reformulating rule 7 in terms of this</i><br>
+<i>&gt;       "pushing to the right" effect.</i><br>
+<p>
+I think that would be unwise. The current definition matches the<br>
+obvious behaviour and the one exhibited by Netscape 1.1, lets keep<br>
+it that way!<br>
+<p>
+<i>&gt;       More comments about tables are at the end of this message.</i><br>
+<p>
+<i>&gt; p.111 "Horizontal rules":</i><br>
+<p>
+<i>&gt;       Is the CLASS attr. a *space* separated list or a *period*</i><br>
+<i>&gt;       separated list? The text switches from one to the other.</i><br>
+<p>
+Ooops!!!  I was completely blind to that one!<br>
+<p>
+<i>&gt; p.113 "Preformatted text":</i><br>
+<p>
+<i>&gt;       "The &lt;P&gt; tag should be avoided", but the DTD says that is not</i><br>
+<i>&gt;       even allowed. Which is true?</i><br>
+<p>
+The DTD is correct, I will alter the text to make this clear.<br>
+<p>
+<i>&gt; p.118 "Foototes":</i><br>
+<p>
+<i>&gt;       Footnotes have one indirection too many: first you have to</i><br>
+<i>&gt;       click on a word to jump to the place where the footnote is</i><br>
+<i>&gt;       stored, then you have to click again to open the footnote.</i><br>
+<p>
+Where did you get that idea from?<br>
+<p>
+I anticipated that clicking on the link would cause a footnote to<br>
+popup with out scrolling the document. You then click on the footnote<br>
+to dismiss it - One click to view/One click to hide. However, thats just<br>
+one way of supporting the idea - there are other possibilities, but the<br>
+HTML3 spec doesn't leglislate one way or the other.<br>
+<p>
+<i>&gt; p.169 in DTD, "style sheets control numbering style":</i><br>
+<p>
+<i>&gt;       The CONTINUE attr of &lt;OL&gt; is difficult to implement, since</i><br>
+<i>&gt;       previous lists have already disappeared from the parser stack</i><br>
+<i>&gt;       when this attr. is encountered. But I guess that's not</i><br>
+<i>&gt;       sufficient argument to drop the attr.</i><br>
+<p>
+The same argument applies to the sequence number for LI.<br>
+I am proposing that user agents track the sequence numbers to avoid<br>
+the need to walk back arbitrarily far over the parse tree. This will<br>
+speed up formatting as compared with a naive implementation.<br>
+<p>
+<i>&gt; p.171 in DTD, "BODYTEXT":</i><br>
+<p>
+<i>&gt;       Why does this element exist at all, it can't even be omitted!</i><br>
+<i>&gt;       Same for FIGTEXT (p.177).</i><br>
+<p>
+These dummy elements are needed to circumvent problems with SGML<br>
+mixed content models. They allow you to place whitespace between<br>
+&lt;BODY&gt; and &lt;BANNER&gt;, or between &lt;FIG&gt; and &lt;CAPTION&gt;. The problem<br>
+arises because later on in the content model #PCDATA is permitted.<br>
+<p>
+<i>&gt; p.173 in DTD, "SELECT":</i><br>
+<p>
+<i>&gt;       The inclusion exception is superfluous.</i><br>
+<i>&gt;       Same for TEXTAREA.</i><br>
+<p>
+This exclusion is necessary to forbid people putting input fields<br>
+within SELECT elements. The same applies for TEXTAREA.<br>
+<p>
+<i>&gt; Dave Raggett proposed a new syntax for the TABLE element, which more</i><br>
+<i>&gt; closely resembles CALS tables. I've never seen a real CALS table, but</i><br>
+<i>&gt; judging from the fragments that have passed this list I think this</i><br>
+<i>&gt; resemblance is rather an argument *against* the new proposal.</i><br>
+<p>
+<i>&gt; Some people seem bent on introducing into HTML all the errors of the</i><br>
+<i>&gt; CALS table model. What's next? Do we get NAMEST back as well?  I've</i><br>
+<i>&gt; stated my views on this before, but here are some additional notes on</i><br>
+<i>&gt; the new proposal.</i><br>
+<p>
+Think of it like this:<br>
+<p>
+Column widths are a global property of the table, while alignment<br>
+properties are really cell based properties. TSPEC is useful to<br>
+specifying cell based properties in a concise way.<br>
+<p>
+<i>&gt; BORDER attr:</i><br>
+<p>
+<i>&gt;       Why should the border width be given at all? The style sheet</i><br>
+<i>&gt;       can do that. Instead</i><br>
+<p>
+<i>&gt;         BORDER NAMES "" -- any comb. of left, right, top, bottom --</i><br>
+<p>
+<i>&gt;       seems much more useful. The BORDER applies to every TR, TH and</i><br>
+<i>&gt;       TD as well (it's "inherited"), but TR, TH and TD can also have</i><br>
+<i>&gt;       BORDER attrs. of their own.</i><br>
+<p>
+Borders are much better handle via style sheets, using cell class names.<br>
+You associate particular border styles with boundaries between different<br>
+cell classes, with the th/td distinction as the starting point.<br>
+<p>
+<i>&gt; WIDTH attr:</i><br>
+<p>
+<i>&gt;       A default unit of pixels seems the wrong choice. See Jon</i><br>
+<i>&gt;       Bosak's message "Widths in tables"</i><br>
+<i>&gt;       &lt;9504231936.AA05292@aristotle.sjf.novell.com.SJF.Novell.COM&gt;</i><br>
+<i>&gt;       earlier on this list.</i><br>
+<p>
+I was following Netscape here. Bear in mind that graphics are often<br>
+carefully crafted to look good at a particular pixel size, so that<br>
+pixel based units do make a lot of sense for graphics artists.<br>
+<p>
+<i>&gt; CELLSPACING, CELLPADDING attr:</i><br>
+<p>
+<i>&gt;       This a matter for the style sheet. Besides, why do we need</i><br>
+<i>&gt;       them both?</i><br>
+<p>
+These are sufficiently generic, and supported by Netscape today.<br>
+<p>
+<i>&gt; TBODY:</i><br>
+<i>&gt;       This element is redundant.</i><br>
+<p>
+No, its useful for CALS style tables e.g.<br>
+<p>
+    &lt;TABLE&gt;<br>
+        &lt;THEAD&gt;<br>
+          &lt;TR&gt; ...<br>
+          &lt;TR&gt; ...<br>
+        &lt;TBODY&gt;<br>
+          &lt;TR&gt; ...<br>
+          &lt;TR&gt; ...<br>
+          &lt;TR&gt; ...<br>
+          &lt;TR&gt; ...<br>
+        &lt;TFOOT&gt;<br>
+          &lt;TR&gt; ...<br>
+    &lt;/TABLE&gt;<br>
+<p>
+<i>&gt; TSPEC:</i><br>
+<p>
+<i>&gt;       The TSPEC element contains information about the way the</i><br>
+<i>&gt;       elements in another branch of the SGML tree should be</i><br>
+<i>&gt;       formatted. To summarize my earlier objections: there is no</i><br>
+<i>&gt;       relation between the TSPEC and the elements to which it</i><br>
+<i>&gt;       refers (the parser will already have thrown away the TSPECS</i><br>
+<i>&gt;       when it comes to the table cells), and TSPECs are unnecesarily</i><br>
+<i>&gt;       verbose.</i><br>
+<p>
+This is a misleading argument. TSPEC provides a compact way of<br>
+specifying cell properties for selected groups of cells.<br>
+<p>
+<i>&gt;       The TSPECs introduce another nasty "feature", similar to the</i><br>
+<i>&gt;       NAMEST attr. of the former COLSPEC element: the possibility to</i><br>
+<i>&gt;       explicitly attach a TSPEC to one or more columns and rows</i><br>
+<i>&gt;       introduces countless opportunities for mistakes and</i><br>
+<i>&gt;       ambiguities. It makes it harder to parse the table and it does</i><br>
+<i>&gt;       nothing whatsoever to make it easier for the writer.</i><br>
+<p>
+My proposal provides an explicit mechanism for resolving conflicts<br>
+in an unambiguous manner. TSPEC makes life easier for the writer<br>
+by providing a compact way of specifying cell properties rather<br>
+than having to repeat those properties separately for each cell.<br>
+<p>
+<i>&gt;       (For example: does TSPEC apply to TFOOT and THEAD as well?</i><br>
+<i>&gt;       what to do with &lt;TSPEC WIDTH="4em"&gt;&lt;TSPEC COL=1 WIDTH="5em"&gt;,</i><br>
+<i>&gt;       will it be 4 or 5 em?)</i><br>
+<p>
+In the order you've given, column 1 would be 5 em's wide and the<br>
+other columns 4 em's wide.<br>
+<p>
+<i>&gt; TD, TH:</i><br>
+<p>
+<i>&gt;       Cells can override WIDTH, HEIGHT, ALIGN, VALIGN, NOWRAP, CHAR,</i><br>
+<i>&gt;       but why can't they override BORDER as well? (or CELLSPACING,</i><br>
+<i>&gt;       CELLPADDING?)</i><br>
+<p>
+BORDER is a global mechanism for suppressing borders, but a poor way<br>
+for specifying their appearence. Netscape supports border=number for<br>
+the width in pixels of a border bevel, but this is only one approach.<br>
+<p>
+-- Dave Raggett &lt;dsr@w3.org&gt; url = <a href="http://www.hpl.hp.co.uk/people/dsr">http://www.hpl.hp.co.uk/people/dsr</a><br>
+   Hewlett Packard Laboratories, Filton Road, | tel: +44 117 922 8046<br>
+   Bristol BS12 6QZ, United Kingdom           | fax: +44 117 922 8924<br>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0279.html">Dave Raggett: "Re: RANGE - default value"</a>
+<li> <b>Previous message:</b> <a href="0277.html">Murray Maloney: "REL and REV attributes (Was: More comments on HTML 3.0)"</a>
+<li> <b>Maybe in reply to:</b> <a href="0253.html">Bert Bos: "More comments on the HTML 3.0 draft"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

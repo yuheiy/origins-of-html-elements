@@ -1,0 +1,623 @@
+<!-- received="Sat Apr 29 18:53:47 1995 MDT" -->
+<!-- sent="Sat, 29 Apr 95 20:37:26 EDT" -->
+<!-- name="Harvey Bingham" -->
+<!-- email="bingham@amos.HQ.ileaf.com" -->
+<!-- subject="Re: HTML/CALS/ICADD Table Prop" -->
+<!-- id="9504300032.AA19000@amos.HQ.Ileaf.COM" -->
+<!-- inreplyto="HTML/CALS/ICADD Table Prop" -->
+<title>html-wg-95q2: Re: HTML/CALS/ICADD Table Prop</title>
+<h1>Re: HTML/CALS/ICADD Table Prop</h1>
+Harvey Bingham (<i>bingham@amos.HQ.ileaf.com</i>)<br>
+<i>Sat, 29 Apr 95 20:37:26 EDT</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="index.html#432">[ date ]</a><a href="thread.html#432">[ thread ]</a><a href="subject.html#432">[ subject ]</a><a href="author.html#432">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0433.html">yuri@sq.com: "Re: HTML/CALS/ICADD Table Prop"</a>
+<li> <b>Previous message:</b> <a href="0431.html">Brian Behlendorf: "Re: Charset labelling (Was: Comments on: "Character Set" Considered Harmful)"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<!-- body="start" -->
+Subject: Re: HTML/CALS/ICADD Table Prop<br>
+Cc: dsr@w3.org, html-wg@oclc.org, montulli@netscape.com<br>
+<p>
+<i>&gt;From bingham Sat Apr 29 01:47:01 1995</i><br>
+From: bingham (Harvey Bingham)<br>
+To: tables@sgmlopen.org<br>
+Subject: Re: HTML/CALS/ICADD table proposal notes, 5Apr95<br>
+Cc: dsr@hplb.hpl.hp.com, dsr@w3.org, bingham<br>
+<p>
+This is an interesting proposal for a significantly generalized table model <br>
+that approximates the SGML Open CALS Core Table Model, simplifies cell<br>
+location, and adds some different capabilities. From the CALS model perspective:<br>
+<p>
+    TGROUP as container gone.<br>
+    COLSPEC and SPANSPEC (dealing with columns) coallesced into TSPECs<br>
+        that provide attribute default sources, 2-dimensional descriptions<br>
+        (each for list of rows and row-ranges, list of cols and col-ranges)<br>
+        possibly overlapping, possibly partial specification of all cell<br>
+        positions <br>
+    THEAD TBODY TFOOT reorded this way, only contain rows<br>
+    ROW becomes TR with content (TH|TD)*     not (ENTRY|ENTRYTBL)+<br>
+    ENTRYTBL gone (though may be replaced by recursive TABLE, <br>
+        but not in this draft)<br>
+    ROWSEP and COLSEP gone without detail replacement: all or nothing<br>
+        but with compound specification for cellspacing and cellpadding<br>
+    ENTRY replaced by TH and TD to fill cells<br>
+        Spanning by colspan and rowspan attributes indicating how many <br>
+        cols and rows in the TH and TD  <br>
+        axis and axes identifiers can provide alternative names for <br>
+        describing TH, TD.<br>
+    <br>
+It proposes different units of measure, seemingly with little advantage<br>
+and with some major problems. <br>
+<p>
+Hereafter lines beginning with ": " are as received from Dave Raggett.<br>
+Others are my critique. The original notes had a detailed comparison of<br>
+what had been proposed at the IETF meeting, and what had been the original<br>
+table model from the draft HTML3.0-dtd.<br>
+              <br>
+: <br>
+: From hplb.hpl.hp.com!dsr@ileaf.prospect.com Fri Apr 21 13:24:15 1995<br>
+: To: bingham@amos.HQ.Ileaf.COM (Harvey Bingham)<br>
+: Cc: dsr@w3.org, montulli@netscape.com, html-wg@oclc.org, tables@sgmlopen.org<br>
+: Subject: Re: IETF HTML/CALS/ICADD table proposal notes, 5Apr95 <br>
+: In-Reply-To: Your message of "Fri, 14 Apr 95 16:56:23 EDT."<br>
+:              &lt;9504142056.AA09056@amos.HQ.Ileaf.COM&gt; <br>
+: From: "Dave Raggett" &lt;dsr@hplb.hpl.hp.com&gt;<br>
+: <br>
+: <br>
+: In replying to this message,  please Cc me directly so that I can<br>
+: filter replies from the mountain of email I am currently burdened with.<br>
+: <br>
+: Thanks Harvey, for sending me your summary of the tables and html3<br>
+: meeting at Danvers. I have now had time to reflect on the ideas<br>
+: put forward at that meeting and would like to bounce a proposal off<br>
+: you and the rest of the SGML Open table group and the HTML working group<br>
+: for a model that I believe satifies the needs for importing CALS tables,<br>
+satisfies<br>
+: is directly compatible with Netscape 1.1, and simplifies control of table<br>
+: style.<br>
+: <br>
+: The down side, is that formally, &lt;table border&gt; is illegal as such.<br>
+: One possible way out of this mess might be:<br>
+: <br>
+:     border  (border|0|1|2|3|4|5|6|7|8|9|10)  0<br>
+: <br>
+: But this doesn't allow you to specify the units for the border width.<br>
+: I welcome discussion of the issue of how to specify border widths and<br>
+: also the widths of columns. For instance should we allow floating<br>
+: point numbers; should we allow pt for points etc. or should we aim<br>
+: for an enumerated set of border widths that is implementation dependent?<br>
+: <br>
+I have sent separate comments on units: basically agreeing with Terry<br>
+Allen. I believe we need points (pt) and for convenience should have inch<br>
+(in) and millimeter (mm) measures as well.<br>
+<p>
+We can allow proper decimal representation (not general floating point<br>
+scientific notation such as 1.2E3) of the measure, to which a unit is attached.<br>
+<p>
+I'd eliminate pixel, a measure that is device dependent, in an otherwise<br>
+device-independent interchange of SGML information. Who knows what<br>
+the size or resolution of the requestor well enough to specify it at<br>
+the source? Would it need changing for each client?<br>
+<p>
+I believe the use of "en" is inappropriate. "em" is the conventional<br>
+measure of a font pointsize, and might be justified on the basis of<br>
+recognizing some font and pointsize as the default, then such measure<br>
+is in terms of that default, which value presumably a user can change.<br>
+<p>
+I believe the proportional column measure is the most useful, possibly<br>
+with some columns given fixed measure, and the others consuming the rest.<br>
+<p>
+I note that a user changing a window size may require local table<br>
+recomposition. <br>
+<p>
+: The proposal uses a generalization of COLSPEC which I have named TSPEC<br>
+: after a suggestion by Tom Magliery. It allows you a compact way of<br>
+: defining properties for sets of cells defined by groups of rows and<br>
+: columns. This seems to me a natural extension, that will be of great<br>
+: value when using style sheets to control the detailed appearence of tables.<br>
+appearance<br>
+: <br>
+<p>
+: The DTD fragment for the table proposal follows: <br>
+: <br>
+: &lt;!ENTITY % attrs  -- common attributes for elements --<br>
+:    'id       ID      #IMPLIED -- as target for hrefs (link ends) --<br>
+:     lang     CDATA   #IMPLIED -- ISO language, country code --<br>
+:     class    NAMES   #IMPLIED -- for subclassing elements --'<br>
+:     &gt;<br>
+: <br>
+: &lt;!ENTITY % block.align<br>
+:    "align  (bleedleft|left|center|right|bleedright|justify|bleedboth) center"&gt;<br>
+: <br>
+: &lt;!ELEMENT CAPTION - - (%text;)+ -- table or figure caption --&gt;<br>
+: &lt;!ATTLIST CAPTION<br>
+:     %attrs;   -- id, lang, class --<br>
+:     align (top|bottom|left|right) #IMPLIED<br>
+:     &gt;<br>
+: <br>
+I dislike using the same attribute name with different kinds<br>
+of values in different contexts. This is an unnecessary overloading.<br>
+In this small DTD fragment you have align with different namelists in<br>
+    table   align (bleedleft|left|center|right|bleedright|justify|bleedboth)<br>
+                  center     to align the whole table<br>
+    CAPTION align (top|bottom|left|right) #IMPLIED<br>
+			    to position on some side of table<br>
+			    [that list is not a subset of the <br>
+			     align for table.]<br>
+    (tspec|th|td) align (left|center|right|justify) #IMPLIED<br>
+			     to position cell th or td #PCDATA content<br>
+			     [that is a subset of table align values]<br>
+			     [presumably if not otherwise positioned<br>
+			      by a richer element content]<br>
+Note that you have suggested an ordered resolution of #IMPLIED values<br>
+That is unnecessarily complex if only some of the potential values are<br>
+appropriate for inheritance. <br>
+<p>
+Inheritance in the CALS model come from nearest ancestor (or<br>
+corresponding sibling in the case of COLSPECS) with an<br>
+explicit value for an attribute of that name.<br>
+<p>
+Here that won't work: they will get a subset of values, and possibly<br>
+some illegal ones from table align (the presumed parent element)<br>
+<p>
+: &lt;!--<br>
+:     The HTML3 table model is based upon experience with<br>
+:     the CALS table model, as well as study of a wide variety<br>
+:     of printed examples of tables and other material loosely<br>
+:     laid out on a two dimensional matrix. The model supports<br>
+:     very simple tables with minimal markup as well as large<br>
+:     and complex tables. The model features:<br>
+: <br>
+:         o   Auto-sized tables<br>
+:         o   Arbitrarily nested tables<br>
+:         o   Control of column widths<br>
+:         o   Control of cell contents alignments<br>
+:         o   Arbitrary subclassing of groups of rows and columns<br>
+:         o   CALS style THEAD, TBODY and TFOOT elements<br>
+:         o   Conversion to speech and braille<br>
+:         o   Export to spreadsheets and databases<br>
+: <br>
+:     Properties of table cells are determined by searching<br>
+:     up a hierarchy, starting with the cell itself. The next<br>
+:     level is the table row, followed by the row group (i.e.<br>
+:     thead, tbody or tfoot), then the tspec elements and<br>
+:     finally the table element itself. Within the sequence<br>
+:     of tspec elements, they are searched starting with the<br>
+:     last tspec element, and finishing with the first. This<br>
+:     means you should place generic tspec elements lexically<br>
+:     before more specific tspec elements. The search process<br>
+:     for each property (e.g. alignments and widths) is made<br>
+:     independently of other properties. You can thus set<br>
+:     different properties with different (and overlapping)<br>
+:     tspec elements.<br>
+Interesting and useful generalization, and inheritance model. <br>
+<p>
+In this fragment tables do not appear to nest. I would prefer to<br>
+keep that restriction.<br>
+<p>
+If tables should nest, inheritance needn't go outside of table, <br>
+However, the minimum width of a nested table would have to<br>
+propagate outward to affect the width of the containing<br>
+table column(s), if the entire nested table is expected to<br>
+appear where it is nested. An alternative is to allow a<br>
+reference to the conceptually nested table that could actually<br>
+appear elsewhere, unnested. <br>
+<p>
+A spanned table cell is assumed to be rectangular, not ragged.<br>
+[individual widths can be associated with TD and TH.<br>
+Spanning table cells should generally get their inheritance path<br>
+from the single (top-left) position where the TH or TD occurs.<br>
+That isn't completely satisfactory for widths, as the spanned width<br>
+is the sum of widths of all the columns (in the top row where TH or TD<br>
+go) that compose the span, and the widths of the TABLE colspacing and<br>
+colpadding for each column).<br>
+<p>
+No overlapping TH or TD are permitted. Thus empty<br>
+placeholder TH or TD in successive rows or columns of the span<br>
+are not permitted.<br>
+: <br>
+:     Table attributes:<br>
+: <br>
+:       WIDTH=&lt;value&gt; e.g. width="50%" or width="100 en"<br>
+:         This specifies the desired width of the table. The<br>
+:         default units are pixels. If the percent sign is<br>
+:         given, the value is taken as the percentage of the<br>
+:         document width.<br>
+<p>
+I note that percentages imply a sum of 100, though it isn't either<br>
+enforceable, nor readily generated manually (given the other<br>
+width-taking stuff).<br>
+<p>
+I propose the CALS use of  1* 1* 1* as arbitrary proportion, so can do 3<br>
+equal columns<br>
+<p>
+: <br>
+:       BORDER=&lt;value&gt; <br>
+:         This specifies the width of the outer table border.<br>
+:         If absent or border=0 then the border is not drawn.<br>
+: <br>
+This width specification is probably unnecessary, a presentation<br>
+style that depends to some extent on the granularity of the<br>
+display device. It could be a local decision, possibly to provide<br>
+heavier ruling than internal rulings if used, possibly lighter<br>
+if no internal rulings.<br>
+<p>
+:       CELLSPACING=&lt;value&gt; <br>
+:         Like it sounds, cell spacing is the amount of space<br>
+:         inserted between individual cells in a table.<br>
+<p>
+Only a single spacing sounds like a minimum gutter between cells<br>
+vertically and same inter-row spacing. That cellspacing value<br>
+is absorbed within the straddles.<br>
+Non-negative fixed-point values are appropriate, with a unit.<br>
+Zero value means "no cell rulings internal to the border".<br>
+A non-zero value means use that ruling width for all internal<br>
+table rulings around TH or TD (but of course not within them when<br>
+they are straddling cells). Is the presumption that CELLSPACING<br>
+is necessarily marking (to provide rulings between adjacent TH<br>
+and/or TD? Otherwise how turn such rulings on or off?<br>
+: <br>
+:       CELLPADDING=&lt;value&gt; <br>
+:         Cell padding is the amount of space between the border<br>
+:         of the cell and the contents of the cell.<br>
+: <br>
+Again a single non-negative value with unit to apply (as a minimum)<br>
+to all four outside margins for every cell, single or straddled.<br>
+When these are specified the remaining space after border, cellspacing,<br>
+and cellpadding are consumed (as fixed widths) and the space required<br>
+for CAPTION when it applies to left or right edge determined, then<br>
+any remaining is the amount available for relative width apportionment.<br>
+<p>
+What if there is a deficiency of available width? <br>
+<p>
+Presumably the cellspacing is centered between cellpaddings.<br>
+<p>
+:     In general the units for widths are given by a suffix.<br>
+:     The allowed suffices are:<br>
+suffixes? <br>
+: <br>
+:         pixels      /* the default units */<br>
+:         ch          /* characters */<br>
+:         en          /* half the point-size */<br>
+:         %           /* percentage */<br>
+:         *           /* relative widths e.g. for columns */<br>
+I'd rather have default be pt.<br>
+I note that ch to be meaningful would use a monospace font.<br>
+With proportional fonts, those font metrics are required to map from<br>
+ch to a width useable for presentation.<br>
+I'd eliminate en. <br>
+I'd eliminate %, replacing it by the arbitrary integer factor on *, and<br>
+defining * as (available width)/(sum of coefficients) to allow integer<br>
+measure to whatever precision is desired. Available width was what was<br>
+left after fixed parts were deducted.<br>
+CALS used NUMBER attributes, which doesn't allow decimal numbers as factors.<br>
+NUTOKEN would, so does CDATA, although CDATA is too general when not<br>
+needed (it allows character entities in attribute values, much as if it were<br>
+RCDATA in element declared content--an SGML inconsistency).<br>
+<p>
+Then percent is redundant and more restrictive than "*". If percent<br>
+were treated the same way as * it would almost work. What if sum of<br>
+percentages don't add up to 100%? Is the rest of the available width<br>
+available for *? Do the percentages include or exclude the fixed width<br>
+specifications and those for cellspacing and cellpadding?<br>
+<p>
+: <br>
+:     Whitespace is permitted between the number and the suffix.<br>
+Whitespace seems also desirable as separator between list items<br>
+when specifying widths on successive col. If col includes ranges,<br>
+those same ranges would need to be indicated in a width list.<br>
+<p>
+CALS did not allow whitespace between numeric and unit part.<br>
+<p>
+: --&gt;<br>
+: <br>
+: &lt;!ENTITY % cell "TH | TD"&gt;<br>
+: &lt;!ENTITY % horiz.align "left|center|right|justify"&gt;<br>
+: &lt;!ENTITY % vert.align  "top|middle|bottom|baseline"&gt;<br>
+I recommend eliminating baseline alignment.<br>
+Baseline alignment seems meaningful only within a single TH or TD, and<br>
+then if there are different pointsizes in the same line. <br>
+When different content and pointsizes occur in different TH or TD in<br>
+same row, or when multiline content occur in those TH or TD, or when some<br>
+copntent crosses rowspans and others don't, I believe this just invites<br>
+unnecessary complexity. <br>
+: <br>
+: &lt;!ELEMENT table - - (caption?, tspec*, thead?, tbody, tfoot?)&gt;<br>
+&lt;!-- hwb closed comment below after cellspacing --&gt;<br>
+: &lt;!ATTLIST table<br>
+:     %attrs;   -- id, lang, class --<br>
+:     %needs;   -- for control of text flow --<br>
+:     model  %URI;    #IMPLIED -- link to formal table model --<br>
+:     border CDATA    #IMPLIED -- if present then draw borders --<br>
+:     width  CDATA    #IMPLIED -- absolute or percentage width --<br>
+:     cellspacing CDATA #IMPLIED -- space between table cells --<br>
+:     cellpadding CDATA #IMPLIED -- margins within cells --<br>
+:     %block.align;  -- horizontal alignment of table not cell contents --<br>
+:     noflow (noflow) #IMPLIED -- noflow around table --<br>
+:     nowrap (nowrap) #IMPLIED -- don't wrap words --<br>
+<p>
+Need rules on width elucidated for whole table, and when composed for a<br>
+list of individual column widths. How is width of TH or TD inherited<br>
+from the intermediary TSPEC or from this TABLE width?<br>
+Nothing at table level indicates number of columns.<br>
+<p>
+nowrap -- need it keep whole TH or TD content in one line? Or allow<br>
+multiline displey, but apply just to long words, or also to phrases,<br>
+or equation forms, or unbreakable compound words such as "mother-in-law"?<br>
+Should individual cells allow scrolling if nowrap and a word is just <br>
+too wide? Should the spreadsheet display model apply where a "too-wide"<br>
+cell content can extend over a next cell without content?<br>
+<p>
+:     &gt;<br>
+: <br>
+: &lt;!--<br>
+:     TSPEC defines properties of sets of cells<br>
+: <br>
+:     It provides a superset of the CALS COLSPEC element, and allows<br>
+:     you to specify the width and default alignment for cells in<br>
+:     a given row/column range, as given by the row, col attributes.<br>
+:     The ability to subclass TSPEC makes it easy to provide detailed<br>
+:     control over the table style when using associated style sheets.<br>
+<p>
+Not quite a superset, though the functionality is there in a nicely<br>
+generalized way: It replaces column names (that might have significance) by<br>
+implicit column numbers. It eliminates the need for those names as they<br>
+were the extreme column names for horizontal spans.<br>
+(Axis and axes phrases could generalize this naming role.)<br>
+<p>
+One asymmetric judgement made in CALS was that tables were fixed width,<br>
+and grew arbitrarily in depth. That direction of viewing and scrolling<br>
+is more convenient for most screen viewing as well. The symmetry<br>
+identified for TSPEC may simplify the possibility of transposing the<br>
+display (diagonally reflecting rows and columns -- but not their<br>
+content and writing direction.)  <br>
+<p>
+TSPEC are elder siblings of THEAD, TBODY, and TFOOT. The computational model<br>
+for each attribute value for each cell starting at a TH or TD is to thread<br>
+independently through indefinitely many places in order to find<br>
+each implied value: TR, THEAD or TBODY or TFOOT, the full set of TSPEC, the<br>
+TABLE, or the ultimate system default. The inheritance paths are not quite<br>
+symmetric.<br>
+<p>
+The TH and TD allow individual widths that can conflict with the <br>
+widths laid down by the last of the TSPECs that affect each of the<br>
+columns of a colspan. There is nothing analogous for row depths,<br>
+or any conflict among source for depth of a cell or its rowspan<br>
+<p>
+TR intrudes with valign and nowrap but not align, char, width, col, row<br>
+thead tbody and tfoot allow valign<br>
+: <br>
+: <br>
+:     The row and col attributes are defined by a comma separated<br>
+:     list of numbers or ranges, e.g.<br>
+: <br>
+:         col = "2, 4, 6, 8"<br>
+:         row = "2-6"<br>
+: <br>
+:         col = "2-5, 9"<br>
+: <br>
+:     Note that rows and columns are numbered from 1 upwards counting<br>
+:     down and to the right. A range consists of the first and last<br>
+:     row or column numbers, separated by a "-" sign.<br>
+<p>
+One concern with TSPEC generalization is that we now have to define the<br>
+TSPEC error conditions in 2-dimensions when only part of a table is<br>
+specified by TSPEC. The "default, cover the whole table" TSPEC must <br>
+know the number of rows and columns to specify the appropriate ranges.<br>
+<p>
+The HyTime 1 -1 kind of ranging notation covering first to last would<br>
+be useful. In the absence of complete coverage, what would the<br>
+values be for "spaces between TSPEC"? You might consider the spreadsheet<br>
+3..5 indication for range, to not confuse it with the HyTime ranging.<br>
+[By the way, HyTime 1 3 would select three elements starting with the<br>
+first, The other parts of the HyTime ranging are defined awkwardly <br>
+Range should be in increasing order. <br>
+<p>
+How should TSPECs be related to rows of THEAD TBODY or TFOOT?<br>
+How consistent need they be? What if there are more or less TRs?<br>
+What if there are more or less filled cells from TH or TD?<br>
+<p>
+If TSPEC tries to define the full scope of the table: col="1..30" row="1..200"<br>
+presumably that doesn't count any TR from THEAD or from TFOOT more<br>
+than once?<br>
+<p>
+A similar list of widths could be formed, for each column or<br>
+corresponding range of columns defined for TSPEC. What if<br>
+some but not all of the TSPECs later in the list define widths that<br>
+consume more than is available for a part of a TSPEC defining a range<br>
+of columns, and a width for the set? The widths are not independent,<br>
+particularly with overlapping ways of specifying them (both in TSPECs<br>
+and in TH or TD). <br>
+<p>
+A list for each of align (applying to columns) and valign (applying<br>
+to rows) could also occur. <br>
+<p>
+: --&gt;<br>
+: &lt;!ELEMENT tspec - O EMPTY&gt;<br>
+: &lt;!ATTLIST tspec<br>
+:     %attrs;   -- id, lang, class --<br>
+:     col    CDATA     #IMPLIED -- set of column numbers --<br>
+:     row    CDATA     #IMPLIED -- set of row numbers --<br>
+:     width  CDATA     #IMPLIED -- cell width --<br>
+:     align  (%horiz.align) #IMPLIED -- horizontal alignment --<br>
+:     valign (%vert.align)  #IMPLIED -- vertical alignment --<br>
+:     char   CDATA     #IMPLIED -- alignment char e.g. char=":" --<br>
+:     nowrap (nowrap)  #IMPLIED -- don't wrap words --<br>
+:     &gt;<br>
+: <br>
+Added, not in CALS<br>
+<p>
+%attrs;<br>
+col<br>
+row<br>
+valign               CALS kept that a row or entry attribute<br>
+nowrap<br>
+<p>
+Lost from CALS COLSPEC:<br>
+<p>
+charoff    indication of where to place the alignment<br>
+           position relative to the cell width.<br>
+<p>
+rowsep     the individual way to specify the rulings on or off:<br>
+colsep         to the right of a cell (colsep) and below a cell (rowsep)<br>
+<p>
+colnum NUMBER #IMPLIED       of column starting at 1<br>
+colname NMTOKEN #IMPLIED     of column, used for spanspecs, unnecessary    <br>
+<p>
+: &lt;!--<br>
+:     THEAD, TBODY and TFOOT are borrowed from CALS<br>
+In concept, though attribute enriched with %attrs;, and<br>
+No embedded and localized colspecs for THEAD nor TFOOT.<br>
+Instead the rows composing them can have separate TSPECs<br>
+<p>
+If the row enumeration includes the rows in THEAD (one time)<br>
+and in TFOOT (one time), and THEAD and TFOOT content gets<br>
+displayed many times for a long table, those repeated displayed<br>
+rows are ignored in the row information of the TSPECs.<br>
+: <br>
+:     These elements appear in the natural order they would<br>
+:     appear in a short table. For longer tables which need<br>
+:     to be split across pages or for which the TBODY is<br>
+:     displayed as a scrolling region, the user agent will<br>
+:     have to process the entire table, before reaching the<br>
+:     TFOOT. This allows for simple implementations which<br>
+:     ignore the THEAD/TBODY/TFOOT distinction.<br>
+: <br>
+:     You can omit both start and end tags for TBODY for<br>
+:     simple tables.<br>
+<p>
+In general I dislike omitted starttags. There are useful<br>
+attributes on tbody. Including one with explicit default<br>
+value causes some systems to always deliver that value,<br>
+so the tag will be there.<br>
+: --&gt;<br>
+: &lt;!ELEMENT (thead|tfoot) - O (TR*)&gt;<br>
+: &lt;!ELEMENT tbody O O (TR*)&gt;<br>
+: <br>
+Is the expectation that a distinct TSPEC applies for<br>
+each of THEAD, TBODY, or TFOOT?<br>
+It doesn't seem that row numbers can be restarted in each, as<br>
+there is no way to tie a TSPEC to THEAD, TBODY, or TFOOT.<br>
+<p>
+: &lt;!ATTLIST thead<br>
+:     %attrs;   -- id, lang, class --<br>
+:     valign (%vert.align) bottom -- vertical alignment --<br>
+:     &gt;<br>
+: <br>
+: &lt;!ATTLIST tbody<br>
+:     %attrs;   -- id, lang, class --<br>
+:     valign (%vert.align) top -- vertical alignment --<br>
+:     &gt;<br>
+: <br>
+: &lt;!ATTLIST tfoot<br>
+:     %attrs;   -- id, lang, class --<br>
+:     valign (%vert.align) top -- vertical alignment --<br>
+:     &gt;<br>
+: <br>
+: &lt;!--<br>
+:     TR contains a single table row and corresponds<br>
+:     to CALS ROW element.<br>
+: --&gt;<br>
+: &lt;!ELEMENT tr - O (%cell)*&gt;<br>
+: <br>
+: &lt;!ATTLIST tr<br>
+:     %attrs;   -- id, lang, class --<br>
+:     valign (%vert.align) #IMPLIED -- vertical alignment --<br>
+:     nowrap (nowrap)      #IMPLIED -- don't wrap words --<br>
+:     &gt;<br>
+That would match some word processors' model where every row is<br>
+effectively independent, with distinct cell widths and number.<br>
+I recommend that the number of columns consumed by a table be knowable<br>
+without computation from some attribute. <br>
+: <br>
+: &lt;!--<br>
+:     Table cells are differentiated into header cells and<br>
+:     data cells with TH and TD respectively. This allows<br>
+:     for very flexible layout of header and data cells.<br>
+: <br>
+:     The AXIS, AXES attributes are used to support conversion<br>
+:     to speech and braille, and for exporting table data to<br>
+:     spreadsheets or databases.<br>
+I note axis and axes would seem to be particularly useful on TH<br>
+cells, and their names would desirably apply as defaults for TD<br>
+or possibly as value pairs for the axes on TD cells<br>
+in the corresponding row and column.<br>
+[I see no nice way to use content of colspan TH cells as top of<br>
+hierarchy for columns with further TH thereunder, in developing the<br>
+axis and axes values. Need explicit semantics on how their contents<br>
+is ordered and used.  : <br>
+:     ROWSPAN and COLSPAN are used to merge cells across<br>
+:     rows and columns. Tables with overlapping cells are<br>
+:     considered to be illegal.<br>
+I believe that spans crossing THEAD into TBODY, or TBODY into TFOOT<br>
+or attempting to span beyond the TABLE border are considered to be illegal?<br>
+(or should they cause bumps, extending the appropriate region?) Since<br>
+width judgement can be destroyed by more columns this arbitrary<br>
+extension is risky.<br>
+<p>
+With TSPECs defined for a fixed number of rows, table extension is<br>
+awkward. Growth in thead, tbody or tfoot would affect the TSPEC row and<br>
+col attribute values..<br>
+<p>
+: --&gt;<br>
+: &lt;!ELEMENT (%cell) - O (%text;)*&gt;<br>
+<p>
+So far as I can tell from a terse look, no member of %text; <br>
+in HTML3.0.dtd can contain another table. That certainly simplifies<br>
+the presentation process.<br>
+<p>
+: &lt;!ATTLIST (%cell)<br>
+:     %attrs;   -- id, lang, class --<br>
+:     colspan NUMBER    1      -- columns spanned --<br>
+:     rowspan NUMBER    1      -- rows spanned --<br>
+:     width  CDATA     #IMPLIED -- absolute or percentage width --<br>
+:     align (%horiz.align) #IMPLIED -- horizontal alignment --<br>
+:     valign (%vert.align)  #IMPLIED -- vertical alignment --<br>
+:     char   CDATA     #IMPLIED -- alignment char e.g. char=":" --<br>
+:     nowrap (nowrap)  #IMPLIED -- don't wrap words --<br>
+:     axis   CDATA     #IMPLIED -- axis name, defaults to element content --<br>
+:     axes   CDATA     #IMPLIED -- comma separated list of axis names --<br>
+:     &gt;<br>
+I assume the default way to define the column into which a TH or TD<br>
+falls is next one in order, left to right, obeying and skipping<br>
+rowspanning encroaching from above, and counting colspan amounts.<br>
+Is it valid to ignore cells at the right that would otherwise have<br>
+no content?  Or does the semantics for axis and axes values extend<br>
+to this use?<br>
+Since the axis name can differ for each cell in a column (or in a row)<br>
+how does that help to reuse those in the axes model: Is an axis value<br>
+used only once per table,<br>
+and then referred to by successive axes values? Is there a column/row<br>
+pair or hierarchy of column/hierarchy of row pair useful to specify<br>
+axes? <br>
+<p>
+An alternative use for axis, rather than as a locator, is as an<br>
+alternative description. That would be useful if a graphic were in a<br>
+cell. [Suggested by the comment, default is text content.]<br>
+: <br>
+: -- Dave Raggett &lt;dsr@w3.org&gt; url = <a href="http://www.hpl.hp.co.uk/people/dsr">http://www.hpl.hp.co.uk/people/dsr</a><br>
+:    Hewlett Packard Laboratories, Filton Road, | tel: +44 117 922 8046<br>
+:    Bristol BS12 6QZ, United Kingdom           | fax: +44 117 922 8924<br>
+: <br>
+<p>
+Regards/Harvey Bingham<br>
+SGML Open Tables Committee Collator<br>
+CALS Table model coauthor<br>
+<p>
+Standards Manager<br>
+Interleaf Inc.                     | tel +1 617 290 4990 x3419 <br>
+Prospect Place, 9 Hillside Avenue  | fax +1 617 290 4970<br>
+Waltham, MA 02154 USA              | bingham@ileaf.com<br>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0433.html">yuri@sq.com: "Re: HTML/CALS/ICADD Table Prop"</a>
+<li> <b>Previous message:</b> <a href="0431.html">Brian Behlendorf: "Re: Charset labelling (Was: Comments on: "Character Set" Considered Harmful)"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

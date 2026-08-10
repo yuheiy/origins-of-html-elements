@@ -10,7 +10,7 @@ HTML 3.0草案で、`class`とともにchapter、section、abstract、appendix�
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、それ自体に特別な意味を持たずchildrenを表す。連続する要素群へ`class`、`lang`、`title`等で共通の意味を付ける場合などに使うlast-resortのflow containerである。[一次定義](https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、それ自体に特別な意味を持たずchildrenを表す。連続する要素群へ`class`、`lang`、`title`等で共通の意味を付ける場合などに使うlast-resortのflow containerである。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,10 +38,10 @@ HTML 3.0 `DIV`（1995年） → HTML 3.2 `DIV` → 現行HTML `<div>`
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1995-03 | HTML 3.0 draft “Divisions” | W3C保存仕様草案 | `DIV`を`CLASS`付きのchapter、section、abstract、appendix等のcontainerとして定義。 | [一次資料](https://www.w3.org/MarkUp/html3/divisions.html) | 2026-08-09 |
-| 1997-01-14 | HTML 3.2 | W3C Recommendation | `DIV`のdivision hierarchyとHTML 3.0 `DIV`へのbrowser support。 | [一次資料](https://www.w3.org/TR/REC-html32#div) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1995-03 | [HTML 3.0 draft “Divisions”](../../raw/www.w3.org/MarkUp/html3/divisions.html)（[公開元](https://www.w3.org/MarkUp/html3/divisions.html)） | W3C保存仕様草案 | `DIV`を`CLASS`付きのchapter、section、abstract、appendix等のcontainerとして定義。 | 2026-08-09 |
+| 1997-01-14 | [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32#div)） | W3C Recommendation | `DIV`のdivision hierarchyとHTML 3.0 `DIV`へのbrowser support。 | 2026-08-09 |
 
 ## 確度
 

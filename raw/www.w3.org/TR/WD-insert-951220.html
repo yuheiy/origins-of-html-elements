@@ -1,0 +1,1109 @@
+<TITLE>HTML3 Linking and Embedding Model</TITLE>
+<H3 align=right><A HREF="https://www.w3.org/pub/WWW/Consortium/"><IMG align=left alt="W3C" src="https://www.w3.org/pub/WWW/Icons/WWW/w3c_48x48.gif"></A>
+WD-insert-951220</H3>
+
+<H1 align=center>Inserting multimedia objects into HTML3</H1>
+
+<H3 align=center>W3C Working Draft 20-Dec-95</H3>
+
+<DL>
+<DT>This version:
+<DD>http://www.w3.org/pub/WWW/TR/WD-insert-951220.html
+<DT>Latest version:
+<DD>http://www.w3.org/pub/WWW/TR/WD-insert.html
+<DT>Editor:
+<DD>Dave Raggett <a href="mailto:dsr@w3.org">&lt;dsr@w3.org&gt;</a>
+<DT>Authors:
+<DD>Charlie Kindel, <a href="http://www.microsoft.com/">Microsoft
+Corporation</a><BR>
+Lou Montulli, <a href="http://www.netscape.com/">Netscape
+Communications Corp.</a><BR>
+Eric Sink, <a href="http://www.spyglass.com/">Spyglass Inc.</a><BR>
+Wayne Gramlich, <a href="http://www.sun.com/">Sun Microsystems</a><BR>
+Jonathan Hirschman, <a
+href="http://www.pathfinder.com/">Pathfinder</a><BR>
+Tim Berners-Lee, <a href="https://www.w3.org/">W3C</a><BR>
+Dan Connolly, <a href="https://www.w3.org/">W3C</a>
+</DL>
+
+<HR>
+
+<H3>Status of this document</H3>
+
+<P>This is a W3C Working Draft for review by W3C members and other
+interested parties. It is a draft document and may be updated,
+replaced or obsoleted by other documents at any time. It is
+inappropriate
+to use W3C Working Drafts as reference material or to cite them
+as other than &quot;work in progress&quot;. A list of current
+W3C working drafts can be found at: <A href="https://www.w3.org/pub/WWW/TR">http://www.w3.org/pub/WWW/TR</A>
+
+<P><B>Note:</B> since working drafts are subject to frequent change,
+you are advised to reference the above URL, rather than the URLs
+for working drafts themselves. 
+<H2>Abstract</H2>
+
+<P>The HyperText Markup Language (HTML) is a simple markup language
+used to create hypertext documents that are portable from one
+platform to another. HTML documents are SGML documents with generic
+semantics that are appropriate for representing information from
+a wide range of applications. This specification extends HTML
+to support the insertion of multimedia objects including Microsoft
+Component Object Model (COM) objects (e.g. OLE Controls and OLE
+Document embeddings), Java applets, and a wide range of other
+media plug-ins. The approach allows objects to be specified in
+a general manner and provides the ability to override the default
+implementation of objects.
+<HR>
+
+<!--NewPage--> 
+<H3>Contents</H3>
+
+<UL>
+<LI><A href="#intro" rev=toc>Introduction</A>
+<LI><A href="#insert" rev=toc>The INSERT tag</A>
+<LI><A href="#tree" rev=toc>Decision Tree for binding objects</A>
+<LI><A href="#param" rev=toc>The PARAM tag</A>
+<LI><A href="#alias" rev=toc>The ALIAS tag</A>
+<LI><A href="#future" rev=toc>Further work</A>
+<LI><A href="#dtd" rev=toc>The DTD</A>
+</UL>
+
+<HR>
+
+<H2><A NAME="intro">Introduction</A></H2>
+
+<P>HTML 2.0 defined only a single mechanism for inserting media into
+HTML documents: the IMG tag. While this tag has certainly proved
+worthwhile, the fact that it is restricted to image media severely
+limits it usefulness as richer and richer media finds its way
+onto the Web. 
+
+<P>Developers have been experimenting with ideas for dealing with
+new media: Microsoft's DYNSRC attribute for video and audio, Netscape's
+EMBED tag for compound document embedding, and Sun's APP and APPLET
+tags for executable code. 
+
+<P>Each of these proposed solutions attacks the problem from a slightly
+different perspective, and on the surface are each very different.
+In addition, each of these proposals falls short, in one way or
+another, of meeting the requirements of the Web community as a
+whole. However, we believe that this problem can be addressed
+with a single extension that addresses all of the current needs,
+and is fully extensible for the future. 
+
+<P>This specification defines a new tag &lt;INSERT&gt; which subsumes
+the role of the IMG tag, and provides a general solution for dealing
+with new media, while providing for effective backwards compatibility
+with existing browsers. INSERT allows the HTML author to specify
+the data, including persistent data and/or properties/parameters
+for initializing objects to be inserted into HTML documents, as
+well as the code that can be used to display/manipulate that data.
+Here, the term object is used to describe the things that people
+want to place in HTML documents, but other terms for these things
+are: components, applets, plug-ins, media handlers, etc. 
+
+<P>The data can be specified in one of several ways: via a universally
+unique object identifier (uuid) <a href="#osf">(&lt;&lt;REFERENCE
+OSF/DCE RPC
+Specification&gt;&gt;)</a>, a file specified by a URL, in-line data,
+or as a set of named properties. In addition, there are a number
+of attributes that allow authors to specify standard properties
+such as width, and height. The code for the object is specified
+in several ways: indirectly by the object's uuid, by information
+included as part of the object's data, and the combination of
+an object class name and a network address. 
+
+<P>This specification covers the syntax and semantics for inserting
+such objects into HTML documents, but leaves out the architectural
+and application programming interface issues for how objects
+communicate
+with the document and other objects on the same page. It is anticipated
+that future specifications will cover these topics, including
+scripting languages and interfaces. 
+<HR>
+
+<H2><A NAME="examples">An introduction to the INSERT tag</A></H2>
+
+<P>This section is intended to help readers get the feel of the
+insertion
+mechanism, and is not a normative part of the specification. The
+<TT>INSERT</TT> tag provides a richer alternative to the <TT>IMG</TT>
+tag. It may be used when the author wishes to provide an alternative
+for user agents that don't support a particular media. A simple
+example of using <TT>INSERT</TT> is: 
+
+<PRE>    &lt;insert data=TheEarth.avi
+type=&quot;application/avi&quot;&gt;
+    &lt;param name=loop value=infinite&gt;
+    &lt;img src=TheEarth.gif alt=&quot;The Earth&quot;&gt;
+    &lt;/insert&gt;</PRE>
+
+<P>Here the user agent would show an animation if it supports the
+AVI format, otherwise it would show a GIF image. The IMG element
+is used for the latter as it provides for backwards compatibility
+with existing browsers. The TYPE attribute allows the user agent
+to quickly detect that it doesn't support a particular format,
+and hence avoid wasting time downloading the object. Another motivation
+for using the TYPE attribute is when the object is loaded off
+a CD-ROM, as it allows the format to be specified directly rather
+than being inferred from the file extension. 
+
+<P>The next example inserts an OLE control for a clock: 
+
+<PRE>    &lt;insert
+       id=clock1
+        type=&quot;application/x-oleobject&quot;
+       data=&quot;http://www.foo.bar/test.stm&quot;
+       code=&quot;http://www.foo.bar/controls&quot;
+    &gt;
+    &lt;/insert&gt;</PRE>
+
+<P>The ID attribute allows other controls on the same page to locate
+the clock. The DATA attribute points to the persistent stream
+data used to initialize the object's state. It includes a class
+identifier. The CODE attribute points to a file containing the
+implementation for this object. The file may contain the code
+for several classes, but this can be resolved by the class id
+from the object's data stream. 
+
+<P>In the absence of the CODE attribute, the class identifier may
+be sufficient to locate the code implementing this object. User
+agents may provide a range of mechanisms for locating and downloading
+such code. For some formats such as image files, the Internet
+media type returned with the data is sufficient. 
+
+<P>The class identifier can be specified explicitly using the CLASSID
+attribute. This value takes precedence over a class identifier
+included as part of the object's data, e.g. 
+
+<PRE>    &lt;insert
+       id=clock1
+        type=&quot;application/x-oleobject&quot;
+       classid=&quot;uuid:{663C8FEF-1EF9-11CF-A3DB-080036F12502}&quot;
+       data=&quot;http://www.acme.com/ole/clock.stm&quot;
+    &gt;
+    &lt;/insert&gt;</PRE>
+
+<P>For speedy loading of objects you can inline the object's state
+data using the new URL scheme &quot;data:&quot;, e.g. 
+
+<PRE>    &lt;insert
+       id=clock1
+       classid=&quot;uuid:{663C8FEF-1EF9-11CF-A3DB-080036F12502}&quot;
+       data=&quot;data:34hqi6n3gs9c3hdish2h568fhsb3uds7b4jawkl5h&quot;
+       type=&quot;application/x-oleobject; clsid=no&quot;
+    &gt;
+    &lt;/insert&gt;</PRE>
+
+<P>The data is expressed as a Base64 encoded byte stream. The
+interpretation
+of this stream is class dependent. If the CLASSID attribute is
+missing or is insufficient to disambiguate the precise format
+of this stream then the TYPE attribute may be used to resolve
+matters. In the example, the Internet media type for COM streams
+takes a parameter that indicates that the stream doesn't start
+with a class identifier. 
+
+<P>The next example is a Java applet: 
+
+<PRE>    &lt;insert
+       classid=&quot;java:NervousText.class&quot;
+       code=&quot;http://java.acme.com/applets/&quot;
+       width=400
+       height=75
+       align=center
+    &gt;
+    &lt;param name=text value=&quot;This is the Applet Viewer&quot;&gt;
+    &lt;/insert&gt;</PRE>
+
+<P>The CODE attribute points to a file or directory containing the
+implementation of the NervousText class. The CLASSID attribute specifies
+the Java class name. The other attributes on the INSERT element define
+rendering properties of the container for the applet viewer. The PARAM
+element specifies a named property which is used to initialize the class.
+PARAM elements can be combined with data streams for greater control.
+
+<HR>
+<H2><A NAME="walkthru">A walk through the DTD</A></H2>
+
+<P>The <A href="#dtd">document type definition</A> provides the formal
+definition of the allowed syntax for HTML inserts. The following
+is an annotated listing of the DTD. The complete listing appears
+at the end of this document. 
+
+<H3><A NAME="units">Standard Units for Lengths</A></H3>
+
+<P>Length values can be specified as an integer representing
+the number of screen pixels, or as a percentage of the current
+displayable region, for widths, this is the space between the
+current left and right margins, while for heights, this is the
+height of the current window or table cell etc.
+
+<P>Additional units may be added in the future to give designers
+greater control over the size of objects relative to fonts specified
+in fixed units such as points, picas, inches and centimeters.
+
+<P><I><B>Note:</b> Shouldn't we add these now for consistency with HTML3
+tables? The additional implementation effort would be minimal - with
+<b>pt</b> for points, <b>pi</b> for picas, <b>in</b> for inches, and
+<b>cm</b> for centimeters, where 72pt = 6pi = 1in = 2.54cm.</I>
+
+<HR>
+<H2><A NAME="insert">The INSERT Tag</A></H2>
+
+<P>The INSERT element is used to insert an object into an HTML document.
+It requires both start and end tags. The INSERT element has the same
+content model as the HTML BODY element, except that one or more
+optional PARAM or ALIAS elements can be placed immediately after the
+INSERT start tag and used to initialize the inserted object. The
+content of the INSERT element is rendered if the object specified by
+the data, code or classid attributes can't be rendered. This provides
+for backwards compatibility with existing browsers, and allows authors
+to specify alternative media via nested INSERT elements.
+
+<P>Note that this doesn't provide the same level of flexibility as
+would be provided by a richer description of resource variants.
+For instance when a resource in available are several media types
+and for each such type in English, Spanish, French and German.
+
+<PRE>&lt;!-- Content model entities imported from parent DTD:
+
+  %body.content allows inserts to contain headers, paras,
+  lists, form elements and even arbitrarily nested inserts.
+--&gt;
+
+&lt;!ENTITY % attrs
+       &quot;id      ID       #IMPLIED  -- element identifier --
+        class   NAMES    #IMPLIED  -- for subclassing elements --
+        style   CDATA    #IMPLIED  -- rendering annotation --
+        dir   (ltr|rtl)  #IMPLIED  -- I18N text direction --
+        lang    NAME     #IMPLIED  -- as per RFC 1766 --&quot;&gt;
+        
+&lt;!ENTITY % URL &quot;CDATA&quot; -- universal reference locator
+--&gt;
+&lt;!ENTITY % Align
+&quot;(top|middle|textmiddle|bottom|left|center|right)&quot;&gt;
+&lt;!ENTITY % Length &quot;CDATA&quot; -- standard length value --&gt;
+
+&lt;!-- INSERT is a character-like element for inserting objects --&gt;
+&lt;!ELEMENT insert - - (param*, bodytext)&gt;
+&lt;!ATTLIST insert
+        %attrs      -- id, class, style, lang, dir --
+        classid %URL     #IMPLIED   -- object's UUID --
+        code    %URL     #IMPLIED   -- ref to object's code --
+        data    %URL     #IMPLIED   -- ref to object's data --
+        type    CDATA    #IMPLIED   -- Internet media type --
+        align   %Align   #IMPLIED   -- positioning inside document --
+        height  %Length  #IMPLIED   -- suggested height --
+        width   %Length  #IMPLIED   -- suggested width --
+        border  %Length  #IMPLIED   -- suggested link border width --
+        hspace  %Length  #IMPLIED   -- suggested horizontal gutter --
+        vspace  %Length  #IMPLIED   -- suggested vertical gutter --
+        usemap  %URL     #IMPLIED   -- ref to image map --
+        ismap   (ismap)  #IMPLIED   -- use server image map --
+        &gt;
+
+&lt;!-- the BODYTEXT element is needed to avoid problems with
+      SGML mixed content, but is never used in actual documents --&gt;
+&lt;!ELEMENT bodytext O O %body.content&gt;</PRE>
+
+<P>In general, all attribute names and values in this specification
+are case insensitive, except where noted otherwise. INSERT has
+the following attributes: 
+
+<DL>
+<DT><B>ID</B>
+<DD>Used to define a document-wide identifier. This can be used
+for naming positions within documents as the destination of a
+hypertext link. It may also be used by style sheets for rendering
+an element in a unique style. An ID attribute value is an SGML
+NAME token. NAME tokens are formed by an initial letter followed
+by letters, digits, &quot;-&quot; and &quot;.&quot; characters.
+The letters are restricted to A-Z and a-z.  It may also be used
+by the user agent or other objects in the document to find and
+communicate with objects on the document.
+
+<DT><B>CLASS</B>
+<DD>A space separated list of SGML NAME tokens. CLASS names specify
+that the element belongs to the corresponding named classes. These
+may be used by style sheets to provide class dependent renderings.
+
+<DT><A NAME="lang"><B>LANG</B></A>
+<DD>A LANG attribute identifies the natural language used by the
+content of the associated element.The syntax and registry of language
+values are defined by <A href="#rfc1766">RFC 1766.</A> In summary
+the language is given as a primary tag followed by zero or more
+subtags, separated by &quot;-&quot;. White space is not allowed
+and all tags are case insensitive. The name space of tags is
+administered
+by IANA. The two letter primary tag is an ISO 639 language
+abbreviation,
+while the initial subtag is a two letter ISO 3166 country code.
+Example values for LANG include: 
+</DL>
+
+<PRE>      en, en-US, en-uk, i-cherokee, x-pig-latin.</PRE>
+
+<DL>
+<DT><A NAME="dir"><B>DIR</B></A>
+<DD>Human writing systems are grouped into scripts, which determine
+amongst other things, the direction the characters are written.
+Elements of the Latin script are nominally left to right, while
+those of the Arabic script are nominally right to left. These
+characters have what is called strong directionality. Other characters
+can be directionally neutral (spaces) or weak (punctuation). 
+
+<P>The DIR attribute specifies an encapsulation boundary which governs
+the interpretation of neutral and weakly directional characters.
+It does not override the directionality of strongly directional
+characters. The DIR attribute value is one of LTR for left to
+right, or RTL for right to left, e.g. <TT>DIR=RTL</TT>. 
+
+<DT><B>STYLE</B>
+<DD>The <TT>STYLE</TT> attribute allows you to include rendering
+information. W3C has produced a separate specifcation on how to
+associate HTML documents with rendering information in different
+notations, see <A href="#style">W3C-style</A>.
+
+<DT><B>CLASSID</B>
+<DD>This can be used to specify a class identifier for an object.
+This could be a DCE universally unique object identifier
+(uuid), or another type of class name as appropriate to the object
+system, e.g. Java or Corba. This allows effective use of caching,
+as the user agent can use simple string comparison to check whether
+two objects are the same independent of their location.
+
+<P>The CLASSID attribute value takes the form of a URL style prefix
+separated by a colon from the character string defining the class
+identifier. The prefix is used to identify the object system for the
+class identifier, for example
+<TT>classid=&quot;uuid:{663C8FEF-1EF9-11CF-A3DB-080036F12502}&quot;</TT>
+gives the uuid for a Microsoft COM object, using the UUID name space,
+while <TT>classid=&quot;java:Animator.class&quot;</TT> gives the class
+name for Java applet.
+
+<P>CLASSID may be sufficient for the user agent to locate the code
+implementing the object. However, the CODE attribute can also be used
+with CLASSID to provide a hint as to where to look for this code. The
+search mechanism will in general depend on the object system the
+identifier belongs to. Note that the value specified with CLASSID takes
+precedence over a class identifier derived from the object's data
+stream.
+
+<P>When searching for the implementation of an object, the
+CLASSID attribute takes precedence over the CODE attribute
+which in turn takes precedence over the DATA attribute.
+A <A href="#tree">decision tree</A> giving further details on
+this resolution procedure appears later on in this specification.
+
+<DT><B>CODE</B>
+<DD>This specifies a URL referencing where to find the code which
+implements the object's behaviour. If this URL is insufficient to
+locate the intended object, when for instance, a file or directory
+contains the implementations for several classes, the CLASSID may be
+used to supply a disambiguating class identifier.
+
+<DT><B>DATA</B>
+<DD>Specifies a URL referencing the object's data. This could
+be a GIF file or the pickled data representing an object's state.
+In many cases the media type or the data itself contains sufficient
+information to identify what code is needed to initialize the
+object. Note that an object's data can even be included inline
+for super efficient loading. This specification proposes a new
+URL scheme &quot;<B>data:</B>&quot;. The rest of the URL is a
+base64 encoded character string that specifies the object's data
+as an opaque byte stream.
+
+<P>On its own, this would be meaningless. If the DATA attribute
+appears without a CODE or CLASSID attribute, then a TYPE attribute
+may be sufficient to interpret the data. For instance a Microsoft
+COM object can be asked to write its state using the WriteClassStream
+procedure. This inserts the object's class id as the first 16
+bytes of the stream. If the TYPE attribute indicates that the
+data is in the COM persistent stream format, then the class id
+can be retrieved from the DATA attribute and used to find the
+code implementing the object's behaviour. 
+
+<P>The CLASSID or CODE attributes can be used to override the
+default implementation as implied by the DATA attribute. For
+example, you may have the pickled data for an Excel spread sheet
+but want to view it with the &quot;SuperGraph&quot; package. You
+would then use the DATA attribute to point to the Excel spreadsheet
+data, and the CLASSID or CODE attribute to point to the SuperGraph
+plug-in.
+
+<P>The CLASSID, CODE and DATA attributes specify URLs. Any fragment
+identifier included as part of these URLs should be passed to the
+object, either directly, or by callback.
+
+<DT><B>TYPE</B>
+<DD>This specifies an <A href="#rfc1590">Internet Media Type</A>
+(see RFC 1590) for the object's data. The attribute can be used
+to allow user agents to quickly skip media they don't support,
+and instead to render the contents of the INSERT element. It is
+also useful when loading objects off local drives as it allows
+the media type to be specified explicitly rather than being derived
+from the file extension.
+
+<P>The following grammar for media types is a superset of that for
+<A href="#rfc1521">MIME</A> because it does not restrict itself
+to the official IANA and x-token types. 
+</DL>
+
+<PRE>       media-type     = type &quot;/&quot; subtype *(&quot;;&quot; parameter )
+       type           = token
+       subtype        = token</PRE>
+
+<DL>
+<DD>where token is defined by: 
+</DL>
+
+<PRE>       token          =  1*&lt;any (ASCII) CHAR except SPACE, CTLs, or tspecials&gt;
+
+       tspecials      = &lt;one of the set&gt;   ( ) &lt; &gt; @ , ; : \ &quot; / [ ] ? =</PRE>
+
+<DL>
+<DD>Parameters may follow the type/subtype in the form of
+attribute/value pairs. 
+</DL>
+
+<PRE>       parameter      = attribute &quot;=&quot; value
+       attribute      = token
+       value          = token | quoted-string</PRE>
+
+<DL>
+<DD>The type, subtype, and parameter attribute names are
+case-insensitive.
+Parameter values may or may not be case-sensitive, depending on
+the semantics of the parameter name. White space characters must
+not be included between the type and subtype, nor between an attribute
+and its value.
+
+<P>If a given media-type value has been registered by the IANA, any
+use of that value must be indicative of the registered data format.
+Although HTML allows the use of non-registered media types, such
+usage must not conflict with the IANA registry. Data providers
+are strongly encouraged to register their media types with IANA
+via the procedures outlined in <A href="#rfc1590">RFC 1590</A>.
+
+<P>All media-type's registered by IANA must be preferred over extension
+tokens. However, HTML does not limit applications to the use of
+officially registered media types, nor does it encourage the use
+of an &quot;x-&quot; prefix for unofficial types outside of explicitly
+short experimental use between consenting applications. 
+
+<DT><B>ALIGN</B>
+<DD>This determines where to place the object. The ALIGN attribute
+allows objects to be placed as part of the current text line,
+or as a distinct unit, aligned to the left, center or right. 
+
+<P>The following values are chosen for their ease of implementation, 
+and their independence of other graphics occurring earlier on the same
+line:
+
+<DL><DD>
+<P>For <TT>ALIGN=TEXTTOP</TT>, the top of the object is vertically
+aligned with the top of the current font.
+
+<P>For <TT>ALIGN=MIDDLE</TT>, the middle of the object is vertically
+aligned with the baseline.
+
+<P>For <TT>ALIGN=TEXTMIDDLE</TT>, the middle of the object is vertically
+aligned with the position midway between the baseline and the x-height
+for the current font. The x-height is defined as the top of a lower
+case x in western writing systems. If the text font is an all-caps
+style then use the height of a capital X. For other writing systems,
+align the middle of the object with the middle of the text.
+
+<P>For <TT>ALIGN=BASELINE</TT>, the bottom of the object is vertically
+aligned with the baseline of the text line in which the object
+appears.
+
+<P>For <TT>ALIGN=TEXTBOTTOM</TT>, the bottom of the object is
+vertically aligned with the bottom of the current font.
+</DL>
+
+<P>The following alignment values allow the object to float rather
+than being treated as part of the current line:
+
+<DL><DD>
+<P>For <TT>ALIGN=LEFT</TT>, the object is floated down and over to
+the current left margin. Subsequent text is flowed past the right
+hand side of the visible area of the object.
+
+<P>For <TT>ALIGN=CENTER</TT>, the object is floated to after the end
+of the current line and centered between the left and right margins.
+Subsequent text starts at the beginning of the next line.
+
+<P>For <TT>ALIGN=RIGHT</TT>, the object is floated down and over to the
+current right margin. Subsequent text is flowed past the left hand side
+of the visible area of the object.
+</DL>
+
+
+<DT><B>WIDTH</B>
+<DD>This gives the suggested width of a box enclosing the visible
+area of the object. The width is specified in <A href="#units">standard
+units</A>. User agents may use this value to scale an object to
+match the requested width if appropriate.
+
+<P><I>Smooth scaling a small image to a larger size provides an
+effective solution to reducing the time needed to download an image,
+offering better subjective results when compared to color reduction.</I>
+
+<DT><B>HEIGHT</B>
+<DD>This gives the suggested height of a box enclosing the visible
+area of the object. The height is specified in <A href="#units">standard
+units</A>. User agents may use this value to scale an object to
+match the requested height if appropriate.
+
+<DT><B>BORDER</B>
+<DD>This attribute applies to the border shown when the object
+forms part of a hypertext link, as specified by an enclosing anchor
+element. The attribute specifies the suggested width of this border
+around the visible area of the object. The width is specified
+in <A href="#units">standard units</A>. For <TT>BORDER=0</TT>
+no border should be shown. This is normally used when such a border
+would interfere with the visual affordances presented by the object
+itself. For instance, the object could render itself as a number
+of bevelled buttons. 
+
+<DT><B>HSPACE</B>
+<DD>The suggested width of the space to the left and right of
+the box enclosing the visible area of the object. The width is
+specified in <A href="#units">standard units</A>. This attribute
+is used to alter the separation of preceding and following text
+from the object. 
+
+<DT><B>VSPACE</B>
+<DD>The suggested height of the space to the top and bottom of
+the box enclosing the visible area of the object. The height is
+specified in <A href="#units">standard units</A>. 
+
+<DT><B>USEMAP</B>
+<DD>This specifies a universal resource identifier for a <A
+href="#map">client-side image map</A>
+in the format proposed by Spyglass Inc. This is normally appropriate
+only for static images. 
+
+<DT><B>ISMAP</B>
+<DD>When the INSERT element appears within a hypertext link, this
+attribute indicates that the server provides an image map, so
+that mouse clicks should be sent to the server in the same manner
+as for the IMG element.  This is normally appropriate only for
+static images.
+</DL>
+
+<H3><A NAME="tree">Decision Tree for Binding Objects</A></H3>
+
+<P>This section defines the steps needed to bind an object given
+various combinations of attributes. Without a precise semantics
+for this, different user agents would otherwise produce different
+results to the frustration of authors. The basic idea is that when
+finding the implementation for an object the CLASSID takes precedence
+over CODE, which in turn takes precedence over DATA.
+
+<P>In the following, the ExtractClassId function is somewhat
+simplified.
+This function depends on recognising the format of the data stream.
+Normally this will be given by the Internet Media Type for the stream.
+If the data is inlined, the format may be given by the TYPE attribute
+or derived from the CLASSID or CODE attributes. The format of
+the data stream also effects the Invoke function. For instance,
+the class initialization procedure may require you to adjust the
+stream pointer to after the class identifier. 
+
+<P>This decision tree doesn't make explicit how to deal with the
+cases where you use the CODE attribute to load the implementation,
+but need additional information to find the appropriate entry
+point into this code. This could be provided by the CLASSID attribute
+or by a class identifier extracted from the data as pointed to
+by the DATA attribute. 
+
+<PRE>properties = GetParams();     // collect properties from PARAM elements
+type = AttributeValue(TYPE);  // get value of TYPE attribute
+
+if (clsid = AttributeValue(CLASSID)) then
+    if (class = LoadImplementation(clsid, null)) then
+        if (data = AttributeValue(DATA)) then
+            if (stream = LoadData(data)) then
+                Invoke(class, stream, params);
+            else
+                Fail(&quot;Can't load data&quot;);
+            fi
+        else // no data
+            Invoke(class, null, params);
+        fi
+    else // can't get implementation using only CLASSID
+        if (code = AttributeValue(CODE)) then
+            if (class = LoadImplementation(clsid, code)) then
+                if (data = AttributeValue(DATA)) then
+                    if (stream = LoadData(data)) then
+                        Invoke(class, stream, params);
+                    else
+                        Fail(&quot;Can't load data&quot;);
+                    fi
+                else
+                    Invoke(class, null, params);
+                fi
+            else   // can't get implementation using classid/code
+                if (data = AttributeValue(DATA)) then
+                    if (stream = LoadData(data)) then
+                        if (clsid = ExtractClassId(stream)) then
+                            if (class = LoadImplementation(clsid, code)) then
+                                Invoke(class, stream, params);
+                            else
+                                Fail(&quot;Can't get implementation&quot;);
+                            fi
+                        else // no class id within data
+                            Fail(&quot;Can't get implementation&quot;);
+                        fi
+                    else // can't load data
+                        Fail(&quot;Can't get implementation&quot;);
+                    fi
+                else  // no DATA
+                    Fail(&quot;Can't get implementation&quot;);
+                fi
+            fi
+        else // CLASSID not good enough and no CODE attribute
+            if (data = AttributeValue(DATA)) then
+                    if (stream = LoadData(data)) then
+                        if (clsid = ExtractClassId(stream)) then
+                            if (class = LoadImplementation(clsid, null)) then
+                                Invoke(class, stream, params);
+                            else
+                                Fail(&quot;Can't get implementation&quot;);
+                            fi
+                        else // no class id within data
+                            Fail(&quot;Can't get implementation&quot;);
+                        fi
+                    else // can't load data
+                        Fail(&quot;Can't load data&quot;);
+                    fi
+            else // no DATA
+                Fail(&quot;Can't get implementation&quot;);
+            fi
+        fi
+    fi
+else // no CLASSID
+    if (code = AttributeValue(CODE)) then
+        if (class = LoadImplementation(null, code)) then
+            if (data = AttributeValue(DATA)) then
+                if (stream = LoadData(data)) then
+                    Invoke(class, stream, params);
+                else
+                    Fail(&quot;Can't load data&quot;);
+                fi
+            else // no DATA
+                Invoke(class, null, params);
+            fi
+        else  // CODE is insufficient to locate implementation
+            if (data = AttributeValue(DATA)) then
+                if (stream = Load(data)) then
+                    if (clsid = ExtractClassId(stream)) then
+                        if (class = LoadImplementation(clsid, code)) then
+                            Invoke(class, stream, params);
+                        else
+                            Fail(&quot;Can't get implementation&quot;);
+                        fi
+                    else // no class id within data
+                        Fail(&quot;Can't get implementation&quot;);
+                    fi
+                else // can't load data
+                    Fail(&quot;Can't get implementation&quot;);
+                fi
+            else  // no DATA
+                Fail(&quot;Can't get implementation&quot;);
+            fi
+        fi
+    else // no CLASSID or CODE
+        if (data = AttributeValue(DATA)) then
+            if (stream = Load(data)) then
+                if (clsid = ExtractClassId(stream)) then
+                    if (class = LoadImplementation(clsid, null)) then
+                        Invoke(class, stream, params);
+                    else
+                        Fail(&quot;Can't get implementation&quot;);
+                    fi
+                else // no class id within data
+                    Fail(&quot;Can't get implementation&quot;);
+                fi
+            else // can't load data
+                Fail(&quot;Can't get implementation&quot;);
+            fi
+        else // no DATA
+            Fail(&quot;Can't get implementation&quot;);
+        fi
+    fi
+fi</PRE>
+
+<HR>
+<H2><A NAME="param">The PARAM element</A></H2>
+
+<P>The PARAM element allows a list of named property values (used
+to initialize a OLE control, plug-in module or Java applet) to
+be represented as a sequence of PARAM elements. Note that PARAM
+is an empty element and should appear without an endtag. 
+
+<PRE>&lt;!ELEMENT param - O EMPTY -- named property value --&gt;
+&lt;!ATTLIST param
+        name    CDATA    #REQUIRED  -- property name --
+        value   CDATA    #IMPLIED   -- property value --
+        valueref  %URL   #IMPLIED   -- ref to object ALIAS --
+        type    CDATA    #IMPLIED   -- Internet media type --
+        &gt;</PRE>
+
+<P>The NAME attribute defines the property name. The case sensitivity
+of the name is dependent on the code implementing the object.
+
+<P>The VALUE attribute is used to specify the property value. It is an
+opaque character string whose meaning is determined by the object based
+on the property name. Note that CDATA attribute values need characters
+such as &amp; to be escaped using the standard SGML character entities,
+e.g. &amp;amp; for "&amp;". It is also essential to escape the &gt;
+character to defend against incorrect handling by many existing
+browsers (use &amp;gt;).
+
+<P>The VALUEREF attribute is used when the property is itself an object.
+A distinct attribute is needed as in some cases the property type
+cannot be deduced from the property name. VALUEREF typically provides a
+URL based reference to an ALIAS element (see below) that defines the
+object itself.
+
+<P>VALUEREF can also be used to specify an object directly. For example
+<TT><I>valueref=foo.gif</I></TT>. Another possibility is to use inline
+data with the &quot;data:&quot; URL scheme. Both of these options save
+having to include an associated ALIAS element.
+
+<P>The TYPE attribute is required when the &quot;data:&quot; URL scheme
+is used. It specifies the media type for the data stream and allows
+the user agent to decode the stream, e.g. to pick out an embedded
+class identifier.
+
+<HR>
+<H2><A NAME="alias">The ALIAS element</A></H2>
+
+<P>The ALIAS element is used to define an object without inserting it
+into the document. It is used with the valueref attribute of the PARAM
+element to allow an object to be passed as parameter, when initializing
+an object associated with another INSERT or ALIAS element. The
+attributes take exactly the same meaning as for the INSERT element. The
+ALIAS element is a container and requires both start and end tags. It
+can be placed anywhere in the document HEAD or BODY. The contents are
+limited to PARAM and ALIAS elements, although it is anticipated that
+this may be extended to cover the same content model as INSERT at some
+point in the future.
+
+<PRE>&lt;!-- ALIAS is allowed anywhere in document HEAD and BODY
+     it defines an alias for an object without inserting it --&gt;
+&lt;!ELEMENT alias - - (param*, alias?)&gt;
+&lt;!ATTLIST alias
+        id      ID       #REQUIRED  -- defines name for alias --
+        data    %URL     #IMPLIED   -- ref to object's data --
+        code    %URL     #IMPLIED   -- ref to object's code --
+        classid %URL     #IMPLIED   -- object's UUID --
+        type    CDATA    #IMPLIED   -- Internet media type --
+        &gt;</PRE>
+
+<P>Note that the object isn't created until its needed by something
+that references it. Each such reference creates a separate copy
+of the object. 
+
+<P>If the aliased object isn't supported, the user agent should try
+the contents of the ALIAS element, which is current restricted to
+another ALIAS element. The TYPE attribute can be used to specify
+the Internet Media Type for the object as a hint for this situation.
+
+<HR>
+<H2><A NAME="future">Further Work</A></H2>
+
+<P>This section describes proposals for extending the capabilities
+of the insertion mechanism as an encouragement and guide to developers
+wishing to experiment with such features. These ideas are not
+part of the current specification, and support is not required
+for conformance with this specification. 
+
+<H3>Document Background</H3>
+
+<P>Using a GIF image to tile the document background often results in
+significant delays while the image tile is downloaded. The ability to
+use a small Java applet or OLE Control to generate the image tile would
+allow rich background textures and patterns to be used without causing
+significant delay. As processing speeds increase, using an object to
+generate the background would make it practical to create animated
+backgrounds.
+
+<P>The proposed extension is to allow the <TT>BACKGROUND</TT> attribute
+of the <TT>BODY</TT> element to reference <TT>ALIAS</TT> elements,
+for example: 
+
+<PRE>&lt;title&gt;Demo Document&lt;/title&gt;
+&lt;alias id=marble
+code=&quot;http://www.acme.com/applets/marble.class&quot;&gt;
+&lt;/alias&gt;
+&lt;body background=&quot;#marble&quot;&gt;
+&lt;p&gt;This document has a marble texture generated by an applet.</PRE>
+
+<H3>Overlays</H3>
+
+<P>Overlays are useful for reducing network bandwidth needs. For
+instance, you can place a PNG overlay on top of a JPEG image. If the
+PNG image is used for an antialiased text overlay while the JPEG image
+is used for an underlying photographic image with a high compression
+factor, then the two images will take significantly less time to send
+than a single image combining both layers. Selecting the format and
+compression for each layer separately allows you to get higher
+compression for the same level of quality.
+
+<P>Overlays also save time by making caching more effective. For
+instance you might send a large image on one page, and then make
+small changes to it on subsequent pages. Using an overlay allows
+the original large image to be reused, so that only the small
+changes need to be sent with each successive page. 
+
+<PRE>&lt;!ELEMENT overlay - O EMPTY -- image overlay --&gt;
+&lt;!ATTLIST overlay
+        id          ID          #IMPLIED  -- for naming this overlay --
+        class       NAMES       #IMPLIED  -- for subclassing element --
+        style       CDATA       #IMPLIED  -- for attaching style info --
+        x           %Length     #IMPLIED  -- offset from left of parent --
+        y           %Length     #IMPLIED  -- offset from top of parent --
+        width       %Length     #IMPLIED  -- suggested width --
+        height      %Length     #IMPLIED  -- suggested height --
+        src         %URL        #IMPLIED  -- network address of object --
+        &gt;</PRE>
+
+<P>For instance, here is a road map overlayed on an aerial photograph:
+
+<PRE>    &lt;insert data=&quot;photo.jpeg&quot;&gt;
+        &lt;overlay src=grid.png&gt;
+    &lt;/insert&gt;</PRE>
+
+<P>The SRC attribute of the OVERLAY element could be used together
+with an ALIAS element. This allows you to create overlays from
+OLE controls or Java applets. 
+
+<H3>Non-Rectangular and Resizable Objects</H3>
+
+<P>Many objects will size themselves according to their contents.
+Another popular feature is likely to be the ability for users
+to dynamically resize objects, e.g. by dragging size bars. The
+height and width attributes of the INSERT element can be used
+as suggested initial values. For instance, images can be automatically
+resized to match these values. The ability to smoothly magnify
+an image allows a small image file to fill a large space, and
+saves network time. 
+
+<P>Simple user agents may consider objects as having a rectangular
+outline. Of course, the object can render itself with a transparent
+background to give the effect of a shaped object, but any text flowing
+past would still follow the rectangular frame around the object.
+Smarter user agents can "ask" the object for its outline and flow text
+around that.
+
+<P>To speed up display of the rest of the document, it is desirable to
+get the outline as early as possible. For this reason it makes sense to
+be able to specify the outine via an attribute (e.g. SHAPE) on the
+INSERT element. It is suggested that the user agent scale the object to
+the WIDTH and HEIGHT attribute values (if given) and then to clip it to
+the outline as given by the SHAPE attribute. Subsequent text would then
+flow around the outline. The ability to offset the object relative to
+the outline would also be very useful. The syntax for SHAPE is left to
+a future specification.
+
+<H3>Figure Captions</H3>
+
+<P>A time proven idiom for document layout is the figure. This is
+often an illustration, but may contain textual material separate
+from the main flow of the document. Figures are typically captioned
+and floated to between columns or to the top or bottom of a page.
+It is not uncommon to see separate contents lists for figures
+and tables, in addition to the main table of contents. 
+
+<P>It is proposed that the FIG element is used to create captioned
+figures: 
+
+<PRE>    &lt;!ENTITY % f.align &quot;(left|center|right)&quot;&gt;
+        
+    &lt;!ELEMENT fig - - (caption?, bodytext)&gt;
+    &lt;!ATTLIST fig
+        %attrs                      -- id, class, style, lang, dir --
+        align   %f.align #IMPLIED   -- position on page --
+        height  %Length  #IMPLIED   -- suggested height --
+        width   %Length  #IMPLIED   -- suggested width --
+        &gt;
+        
+    &lt;!ENTITY % c.align &quot;(top|bottom|left|right)&quot;&gt;
+        
+    &lt;!ELEMENT caption - - %body.content&gt;
+    &lt;!ATTLIST caption
+        %attrs                      -- id, class, style, lang, dir --
+        align   %c.align #IMPLIED   -- position relative to figure --
+        &gt;</PRE>
+
+<P>For example: 
+
+<PRE>    &lt;fig&gt;
+        &lt;caption&gt;Mount Washington&lt;/caption&gt;
+        &lt;insert data=http://www.acme.com/images/vista.jpeg&gt;
+        &lt;p&gt;A spectacular view of Mount Washington during a winter sunset.
+        &lt;/insert&gt;
+    &lt;/fig&gt;</PRE>
+
+<P>Note that FIG is a block-like element similar to tables. If a
+user agent supports tables then adding support for figures is
+quite simple, since the FIG element behaves in the same as a table
+with a caption and a single cell. Of course some would argue that
+in this case, why not use the TABLE element. This is an example
+of approaching HTML with a view to getting a desired visual effect
+without regard to what the markup means. This makes it hard to
+export HTML to other document formats, and makes it harder to
+read the markup, as you now have to guess what the author actually
+was trying to do. 
+
+<H3>Credits and Copyright</H3>
+
+<P>Image such as GIF and PNG formats allow textual messages to be
+included with the image data. This provides an appropriate place
+to store copyright messages since these will then be automatically
+transferred with the image when it is dragged from the document
+to the desktop etc. For other formats, copyright notices can be
+included in HTTP headers, or by wrapping up the objects as MIME
+multipart files. 
+
+<P>Even when information can be included as part of the object's
+data, it is still useful to present a credit or copyright message
+to the user as part of the document text. Something immediately
+visible is more effective that something hidden! The suggested
+way of handling credits is to use a new character emphasis element
+CREDIT that can be given as part of the FIG contents, e.g. 
+
+<PRE>    &lt;fig&gt;
+        &lt;insert data=http://www.acme.com/images/vista.jpeg&gt;
+        &lt;p&gt;A spectacular view of Mount Washington during a winter
+sunset.
+        &lt;/insert&gt;
+        &lt;credit&gt;John Smith&lt;/credit&gt;
+    &lt;/fig&gt;</PRE>
+
+<HR>
+<!--NewPage-->
+
+<H2><A NAME="dtd">HTML Inserts DTD</A></H2>
+
+<P>The DTD or document type definition provides the formal definition
+of the allowed syntax for HTML inserts. 
+
+<PRE>&lt;!-- Content model entities imported from parent DTD:
+
+  %body.content allows inserts to contain headers, paras,
+  lists, form elements and even arbitrarily nested inserts.
+--&gt;
+
+&lt;!ENTITY % attrs
+       &quot;id      ID       #IMPLIED  -- element identifier --
+        class   NAMES    #IMPLIED  -- for subclassing elements --
+        style   CDATA    #IMPLIED  -- rendering annotation --
+        dir   (ltr|rtl)  #IMPLIED  -- I18N text direction --
+        lang    NAME     #IMPLIED  -- as per RFC 1766 --&quot;&gt;
+        
+&lt;!ENTITY % URL &quot;CDATA&quot; -- universal reference locator
+--&gt;
+&lt;!ENTITY % Align
+&quot;(top|middle|bottom|left|center|right)&quot;&gt;
+&lt;!ENTITY % Length &quot;CDATA&quot; -- standard length value --&gt;
+
+&lt;!-- INSERT is a character-like element for inserting objects --&gt;
+&lt;!ELEMENT insert - - (param*, bodytext)&gt;
+&lt;!ATTLIST insert
+        %attrs      -- id, class, style, lang, dir --
+        data    %URL     #IMPLIED   -- ref to object's data --
+        code    %URL     #IMPLIED   -- ref to object's code --
+        classid %URL     #IMPLIED   -- object's UUID --
+        type    CDATA    #IMPLIED   -- Internet media type --
+        align   %Align   #IMPLIED   -- positioning inside document --
+        height  %Length  #IMPLIED   -- suggested height --
+        width   %Length  #IMPLIED   -- suggested width --
+        border  %Length  #IMPLIED   -- suggested link border width --
+        hspace  %Length  #IMPLIED   -- suggested horizontal gutter --
+        vspace  %Length  #IMPLIED   -- suggested vertical gutter --
+        usemap  %URL     #IMPLIED   -- ref to image map --
+        ismap   (ismap)  #IMPLIED   -- use server image map --
+        &gt;
+
+&lt;!-- the BODYTEXT element is needed to avoid problems with
+      SGML mixed content, but is never used in actual documents --&gt;
+&lt;!ELEMENT bodytext O O %body.content&gt;
+
+&lt;!ELEMENT param - O EMPTY -- named property value --&gt;
+&lt;!ATTLIST param
+        name    CDATA    #REQUIRED  -- property name --
+        value   CDATA    #IMPLIED   -- property value --
+        valueref  %URL   #IMPLIED   -- ref to object ALIAS --
+        type    CDATA    #IMPLIED   -- Internet media type --
+        &gt;
+
+&lt;!-- ALIAS is allowed anywhere in document HEAD and BODY
+     it defines an alias for an object without inserting it --&gt;
+&lt;!ELEMENT alias - - (param*, alias?)&gt;
+&lt;!ATTLIST alias
+        id      ID       #REQUIRED  -- defines name for alias --
+        data    %URL     #IMPLIED   -- ref to object's data --
+        code    %URL     #IMPLIED   -- ref to object's code --
+        classid %URL     #IMPLIED   -- object's UUID --
+        type    CDATA    #IMPLIED   -- Internet media type --
+        &gt;</PRE>
+<HR>
+<!--NewPage-->
+<H2><A NAME="refs">References</A></H2>
+
+<DL>
+<DT><A NAME="css"><B>Cascading Style Sheets</B></A>
+<DD>W3C's working draft specification can be found at: <A href="https://www.w3.org/pub/WWW/Style/css/draft.html">&quot;http://www.w3.org/pub/WWW/Style/css/draft.html&quot;</A>
+
+<DT><A NAME="style"><B>HTML and Style Sheets</B></A>
+<DD>W3C's working draft specification on associating rendering
+information with HTML documents can be found at: <A href="https://www.w3.org/pub/WWW/TR">http://www.w3.org/pub/WWW/TR</A>
+
+<DT><A NAME="rfc1590"><B>Internet Media Types - RFC 1590</B></A>
+<DD>J. Postel. &quot;Media Type Registration Procedure.&quot;
+RFC 1590, USC/ISI, March 1994. This can be found at <A
+href="ftp://ds.internic.net/rfc/rfc1590.txt">ftp://ds.internic.net/rfc/rfc1590.txt</A>.
+
+<DT><A NAME="rfc1521"><B>MIME - RFC 1521</B></A>
+<DD>Borenstein N., and N. Freed, &quot;MIME (Multipurpose Internet
+Mail Extensions) Part One: Mechanisms for Specifying and Describing
+the Format of Internet Message Bodies&quot;, RFC 1521, Bellcore,
+Innosoft, September 1993. This can be found at <A
+href="ftp://ds.internic.net/rfc/rfc1521.txt">ftp://ds.internic.net/rfc/rfc1521.txt</A>.
+
+<DT><A NAME="osf"><B>OSF DCE</B>
+<DD>Further information about the OSF Distributed Computing Environment
+can be found at <a
+href="http://www.osf.org/dce">http://www.osf.org/dce</a>.
+
+<DT><A NAME="map"><B>Client-Side Image maps</B></A>
+<DD>&quot;A Proposed Extension to HTML : Client-Side Image Maps&quot;,
+James L. Seidman, 03 Aug 1995. <A
+href="http://www.ics.uci.edu/pub/ietf/html/draft-ietf-html-clientsideimagemap-01.txt">draft-ietf-html-clientsideimagemap-01.txt</A>
+
+<P>The markup language known as &quot;HTML/2.0&quot; provides for
+image maps. Image maps are document elements which allow clicking
+on different areas of an image to reference different network
+resources, as specified by Uniform Resource Locators (URIs). The
+image map capability in HTML/2.0 is limited in several ways, such
+as the restriction that it only works with documents served via
+the &quot;HTTP&quot; protocol, and the lack of a viable fallback
+for users of text-only browsers. This document specifies an extension
+to the HTML language, referred to as &quot;Client-Side Image
+Maps,&quot;
+which resolves these limitations. 
+</DL>
+
+<HR>
+
+<P><A HREF="/pub/WWW/Consortium/"><IMG align=left alt="W3C:" src="https://www.w3.org/pub/WWW/Icons/WWW/w3c_48x48.gif"></A>
+The World Wide Web Consortium: <A HREF="https://www.w3.org/pub/WWW/Consortium/">http://www.w3.org/pub/WWW/Consortium/</A>
+
+

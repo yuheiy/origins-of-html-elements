@@ -1,0 +1,190 @@
+<!-- $Id: changes.src,v 1.15 1997/07/08 09:48:09 lehors Exp $ -->
+<head>
+<title>Changes between HTML 3.2 and HTML 4.0</title>
+<LINK rel="prev" SRC="appentop.html">
+<LINK rel="next" SRC="notes.html">
+<LINK rel="STYLESHEET" href="../style/default.css" type="text/css">
+</head>
+<body>
+<div class="navbar">
+<center><a href="appentop.html">previous</a> &nbsp; <a href="notes.html">next</a> &nbsp; <a href="../contents.html">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center><hr>
+</div>
+
+<H1 align="center">Changes between HTML 3.2 and HTML 4.0<a name="h-13.1">&nbsp;</a></H1>
+<div class="subtoc"><p><strong>Contents</strong>
+<ol>
+<li><a href="changes.html#h-13.1.1">Changes to elements</a>
+<ol>
+<li><a href="changes.html#h-13.1.1.1">New elements</a>
+<li><a href="changes.html#h-13.1.1.2">Deprecated elements</a>
+<li><a href="changes.html#h-13.1.1.3">Obsolete elements</a>
+</ol>
+<li><a href="changes.html#h-13.1.2">Changes to Tables</a>
+<li><a href="changes.html#h-13.1.3">Changes to Forms</a>
+</ol>
+</div>
+
+<h2>Changes to elements<a name="h-13.1.1">&nbsp;</a></h2> 
+
+<h3>New elements<a name="h-13.1.1.1">&nbsp;</a></h3> 
+
+<p>The new elements in this version of HTML are <a href="../struct/text.html#edef-Q"><samp
+class="einst">Q</samp></a>, <a href="../struct/text.html#edef-ins"><samp class="einst">INS</samp></a>, <a href="../struct/text.html#edef-del"><samp
+class="einst">DEL</samp></a>, <a href="../struct/text.html#edef-ACRONYM"><samp class="einst">ACRONYM</samp></a>, <a href="../interact/forms.html#edef-LEGEND"><samp
+class="einst">LEGEND</samp></a>, <a href="../struct/tables.html#edef-COLGROUP"><samp class="einst">COLGROUP</samp></a>, 
+<a href="../interact/forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a>, and
+<a href="../interact/forms.html#edef-FIELDSET"><samp class="einst">FIELDSET</samp></a>.
+
+<h3>Deprecated elements<a name="h-13.1.1.2">&nbsp;</a></h3>
+
+<p>The following elements are now deprecated: <a href="../interact/forms.html#edef-ISINDEX"><samp
+class="einst">ISINDEX</samp></a>, <a href="../struct/includes.html#edef-APPLET"><samp class="einst">APPLET</samp></a>, <a href="../present/graphics.html#edef-CENTER"><samp
+class="einst">CENTER</samp></a>, <a href="../present/graphics.html#edef-FONT"><samp class="einst">FONT</samp></a>, <a href="../present/graphics.html#edef-BASEFONT"><samp
+class="einst">BASEFONT</samp></a>, <a href="../present/graphics.html#edef-STRIKE"><samp class="einst">STRIKE</samp></a>,
+<a href="../present/graphics.html#edef-S"><samp class="einst">S</samp></a>, <a href="../present/graphics.html#edef-U"><samp class="einst">U</samp></a>, <a href="../struct/lists.html#edef-DIR"><samp
+class="einst">DIR</samp></a>, and <a href="../struct/lists.html#edef-MENU"><samp class="einst">MENU</samp></a>.
+
+<h3>Obsolete elements<a name="h-13.1.1.3">&nbsp;</a></h3>
+
+<p>The following elements are now obsolete: <samp
+class="einst">XMP</samp>, <samp class="einst">PLAINTEXT</samp>, and
+<samp class="einst">LISTING</samp>. For all of them, you should use
+the <a href="../struct/text.html#edef-PRE"><samp class="einst">PRE</samp></a> element instead.
+
+<h2><a name=table_changes>Changes to Tables</a><a name="h-13.1.2">&nbsp;</a></h2>
+
+<p>The HTML 4.0 table model has grown out of early work on HTML+ and
+the initial draft of <a
+href="../references.html#ref-HTML30">HTML3.0</a>. The earlier 
+model has been been extended in response to requests from information
+providers for improved control over the presentation of tabular
+information:
+
+<ul>
+    <li>The ability to align on designated characters such as "." and":"<br> 
+        (e.g., aligning a column of numbers on the decimal point).
+
+    <li>The need for more flexibility in specifying table frames and rules.
+
+    <li>The need for incremental display of large tables as data is received.
+
+    <li>The ability to support scrollable tables with fixed headers
+        plus better support for breaking tables across pages for printing.
+
+    <li>The need for optional column based defaults for alignment properties
+</ul>
+
+<p>In addition, a major goal has been to provide backwards
+compatibility with the widely deployed Netscape implementation of
+tables. Another goal has been to simplify importing tables
+conforming to the SGML CALS model.  The latest draft makes the <a href="../struct/tables.html#adef-align-TABLE"><samp
+class="ainst-TABLE">align</samp></a> attribute attribute compatible with the
+latest versions of the most popular browsers.  Some clarifications
+have been made to the role of the <a href="../struct/dirlang.html#adef-dir"><samp class="ainst-TABLE">dir</samp></a>
+attribute attribute and recommended behavior when absolute and
+relative column widths are mixed.
+
+<p>A new element, <a href="../struct/tables.html#edef-COLGROUP"><samp class="einst">COLGROUP</samp></a>, has been
+introduced to allow sets of columns to be grouped with different width
+and alignment properties specified by one or more <a href="../struct/tables.html#edef-COL"><samp
+class="einst">COL</samp></a> elements. The semantics of <a href="../struct/tables.html#edef-COLGROUP"><samp
+class="einst">COLGROUP</samp></a> have been clarified over previous
+drafts, and <tt>rules="basic"</tt> replaced by <tt>rules="groups"</tt>.
+
+<p>The <a href="../present/styles.html#adef-style"><samp class="ainst-TABLE">style</samp></a> attribute is included as a
+means for extending the properties associated with edges and interiors
+of groups of cells. For instance, the line style: dotted, double,
+thin/thick etc; the color/pattern fill for the interior; cell margins
+and font information. This will be the subject for a companion specification
+on style sheets.
+
+<p>The <a href="../struct/tables.html#adef-frame"><samp class="ainst-TABLE">frame</samp></a> and <a href="../struct/tables.html#adef-rules"><samp
+class="ainst-TABLE">rules</samp></a> attributes have been modified to avoid SGML
+name clashes with each other, and to avoid clashes with the <a href="../struct/tables.html#adef-align-TABLE"><samp
+class="ainst-TABLE">align</samp></a> and <a href="../struct/tables.html#adef-valign"><samp class="ainst">valign</samp></a>
+attributes. These changes were additionally motivated by the desire to
+avoid future problems if this specification is extended to allow <a href="../struct/tables.html#adef-frame"><samp
+class="ainst-TABLE">frame</samp></a> and <a href="../struct/tables.html#adef-rules"><samp class="ainst-TABLE">rules</samp></a>
+attributes with other table elements.
+
+<h2><a name="form_changes">Changes to Forms</a><a name="h-13.1.3">&nbsp;</a></h2>
+
+<p>The forms specified in HTML 3.2 have the following problems:
+
+<ul>
+<li>There is no provision for keyboard shortcuts for particular actions,
+for access keys for driving menus, etc.
+
+<li>Although form controls can be made insensitive dynamically, they cannot
+be declared as such at initialization time.
+
+<li>Along the same line form controls, such as form fields, cannot be made
+"read only".
+
+<li>Labels for radio buttons and checkboxes are not sensitive, i.e.,
+clicking on a label text doesn't effect the button state.
+
+<li>There is no way to markup groups of related form fields in a way that
+effectively supports browsing with speech-based user agents.
+
+<li>There is no provision for checking values as they are entered into form
+fields. All checking is done at the server when the form's contents are
+submitted.
+
+<li>Nothing is provided to specify what type of data file is expected when
+the user is asked to submit files.
+
+<li>Forms can only contain the two buttons submit and reset.
+
+<li>There is no way to specify what character sets the server issuing
+a form can handle.
+</ul>
+
+
+<p>To solve these problems this specification introduces several new
+attributes and elements.
+
+<ul>
+<li>The <a href="../interact/forms.html#adef-accesskey"><samp class="ainst-LABEL">accesskey</samp></a> attribute provides for
+specifying direct keyboard access to form fields.
+
+<li>The <a href="../interact/forms.html#adef-disabled"><samp class="ainst-LABEL">disabled</samp></a> attribute allows
+form providers to make a form control initially insensitive.
+
+<li>And with the additional attribute <a href="../interact/forms.html#adef-readonly"><samp
+class="ainst-INPUT">readonly</samp></a>, authors can prohibit changes to a
+form field.
+
+<li>The <a href="../interact/forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a> element associates a label
+with a particular form control.  The <a href="../interact/forms.html#edef-FIELDSET"><samp
+class="einst">FIELDSET</samp></a> element groups related fields together
+and, in association with the <a href="../interact/forms.html#edef-LEGEND"><samp class="einst">LEGEND</samp></a>
+element, can be used to name the group.  Both of these new elements
+allow better rendering and better interactivity. Speech-based browsers
+can better describe the form and graphic browsers can make labels
+sensitive.
+
+<li>A new set of attributes, including <samp
+class="ainst">onchange-INPUT</samp>, in association with support for
+scripting languages, allows form providers to verify user-entered data.
+
+<li>The <a href="../interact/forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> element has a new attribute
+<a href="../interact/forms.html#adef-accept"><samp class="ainst-INPUT">accept</samp></a> that allows authors to specify a
+list of valid media types or type patterns for the input.
+
+<li>The new <a href="../interact/forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a> element can be used to
+make richer forms with more than just a submit and a reset button.
+
+<li>The <a href="../interact/forms.html#edef-FORM"><samp class="einst">FORM</samp></a> element includes the attribute
+<a href="../interact/forms.html#adef-accept-charset"><samp class="ainst-FORM">accept-charset</samp></a>, modeled on the HTTP
+"Accept-Charset" header (see <a rel="biblioentry"
+href="../references.html#ref-RFC2068">[RFC2068]</a>). This attribute
+(first proposed in <a rel="biblioentry"
+href="../references.html#ref-RFC1867">[RFC1867]</a>) may be used to
+specify a list of character sets acceptable to the server.
+</ul>
+<div class="navbar">
+<hr><center><a href="appentop.html">previous</a> &nbsp; <a href="notes.html">next</a> &nbsp; <a href="../contents.html">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center></div>
+</body>

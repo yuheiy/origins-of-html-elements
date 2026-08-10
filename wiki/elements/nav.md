@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、他のページまたは同じページ内の箇所へリンクするページのsectionを表し、主に主要なナビゲーションlink群へ使用する。[一次定義](https://html.spec.whatwg.org/multipage/sections.html#the-nav-element)（2026-08-10確認）
+WHATWG HTML Living Standardでは、他のページまたは同じページ内の箇所へリンクするページのsectionを表し、主に主要なナビゲーションlink群へ使用する。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/sections.html)（[公開版](https://html.spec.whatwg.org/multipage/sections.html#the-nav-element)、2026-08-10確認）
 
 ## HTMLへの導入
 
@@ -38,14 +38,14 @@ WHATWG `navigation`案（2004年）　[名称変更の判断未確認]　Web App
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2004-08-31 | Re: `<section>` and headings | WHATWG mailing list | 一般的なsite ID調査から`navigation`を新要素候補として要約したこと。採用の一対一因果は述べない。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002181.html) | 2026-08-10 |
-| 2004-11-12 | Re: `<section>` and headings | WHATWG mailing list | `navigation`をsectioning element集合に含めたこと。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html) | 2026-08-10 |
-| 2004-12-08 | Web Applications 1.0 | WHATWG保存Working Draft | `navigation`をnavigation linksのblockとして定義したこと。 | [一次資料](https://web.archive.org/web/20041210054847id_/http://www.whatwg.org/specs/web-apps/current-work/#navigation) | 2026-08-10 |
-| 2005-04-05 | Re: `<section>` and headings and other threads | WHATWG mailing list | 当時の仕様にある語彙が典型的siteのmarkup、特に`div`濫用の調査から直接得られたという編集者の説明。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html) | 2026-08-10 |
-| 2005-09-01 | Web Applications 1.0 | WHATWG保存Early Working Draft | navigation linksのsectionを表す`nav`。 | [一次資料](https://whatwg.org/specs/web-apps/2005-09-01/#the-nav) | 2026-08-09 |
-| 2005-12 | Web Authoring Statistics: Classes | Googleによる当時のusage調査（保存複製） | 既存`nav` classとHTML5 `nav`の対応。 | [一次資料](https://web.archive.org/web/20060101000000id_/http://code.google.com/webstats/2005-12/classes.html) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2004-08-31 | [Re: `<section>` and headings](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002181.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002181.html)） | WHATWG mailing list | 一般的なsite ID調査から`navigation`を新要素候補として要約したこと。採用の一対一因果は述べない。 | 2026-08-10 |
+| 2004-11-12 | [Re: `<section>` and headings](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)） | WHATWG mailing list | `navigation`をsectioning element集合に含めたこと。 | 2026-08-10 |
+| 2004-12-08 | [Web Applications 1.0](../../raw/web.archive.org/web/20041210054847id_/http%3A/www.whatwg.org/specs/web-apps/current-work/index.html)（[公開元](https://web.archive.org/web/20041210054847id_/http://www.whatwg.org/specs/web-apps/current-work/#navigation)） | WHATWG保存Working Draft | `navigation`をnavigation linksのblockとして定義したこと。 | 2026-08-10 |
+| 2005-04-05 | [Re: `<section>` and headings and other threads](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html)） | WHATWG mailing list | 当時の仕様にある語彙が典型的siteのmarkup、特に`div`濫用の調査から直接得られたという編集者の説明。 | 2026-08-10 |
+| 2005-09-01 | [Web Applications 1.0](../../raw/whatwg.org/specs/web-apps/2005-09-01/index.html)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-nav)） | WHATWG保存Early Working Draft | navigation linksのsectionを表す`nav`。 | 2026-08-09 |
+| 2005-12 | [Web Authoring Statistics: Classes](../../raw/web.archive.org/web/20060101000000id_/http%3A/code.google.com/webstats/2005-12/classes.html)（[公開元](https://web.archive.org/web/20060101000000id_/http://code.google.com/webstats/2005-12/classes.html)） | Googleによる当時のusage調査（保存複製） | 既存`nav` classとHTML5 `nav`の対応。 | 2026-08-09 |
 
 ## 確度
 

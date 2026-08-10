@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、任意のcaptionを伴い、自己完結していて、通常は文書のmain flowから一単位として参照されるflow contentを表す。最初の子`figcaption`があれば内容のcaptionとなる。[一次定義](https://html.spec.whatwg.org/multipage/grouping-content.html#the-figure-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、任意のcaptionを伴い、自己完結していて、通常は文書のmain flowから一単位として参照されるflow contentを表す。最初の子`figcaption`があれば内容のcaptionとなる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-figure-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -50,22 +50,22 @@ DocBook `figure`／`title`とXHTML 2 `object`／`caption`は、WHATWG `figure`�
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1993-11-08 | HTML+ “Figures” | 失効したInternet-Draft | `FIG`と子`CAPTION`の先行存在。WHATWGへの採用因果は示さない。 | [一次資料](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html) | 2026-08-10 |
-| 2006-04-22 | Simon Pieters, image caption proposal | WHATWG mailing list | HTML+ `FIG`／`CAPTION`を明示して、`fig`、`caption`、`img`によるHTML5向け再利用案を提示した。 | [一次資料](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html) | 2026-08-10 |
-| 2006-05-03 | Michel Fortin, formal `figure` proposal | WHATWG mailing list | `figure`、任意の`caption`、illustrative contentの構造と、main flowから分離可能な意味を提案した。 | [一次資料](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006May/0002.html) | 2026-08-10 |
-| 2006-07-26 | XHTML 2.0 Working Draft | W3C Working Draft | `object`が任意の先頭子`caption`を持つ先行構造。`figure`要素は定義せず、WHATWGへの採用因果も示さない。 | [一次資料](https://www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html) | 2026-08-10 |
-| 2006-10-01 | DocBook V4.5 | OASIS Standard／公式要素reference | `figure`を必須`title`を持つformal objectとして定義する。WHATWGへの採用因果は示さない。 | [一次資料](https://tdg.docbook.org/tdg/4.5/figure) | 2026-08-10 |
-| 2006-11-27 | WHATWG HTML commit `32bff0ac` | 仕様commit／親diff | Ian Hicksonによる`figure`の追加、embedded contentとcaptionのmodel、`legend`の再利用。 | [一次資料](https://github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059) | 2026-08-10 |
-| 2006-11-28 | “many messages regarding image captions” | WHATWG feedback総括／W3C保存mail | Fortinの`figure`提案とpublisher use cases、PietersによるHTML+案の提示、Hicksonによる採用回答、`caption`を避け`legend`を使うparser上の理由。DocBookへの別件の言及は採用せず、XHTML 2は参照しない。 | [一次資料](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html) | 2026-08-10 |
-| 2009-09-15 | “Re: `<details>`” | W3C public-html mailing list | `details`へ出された`dt`／`dd`案をHicksonが受諾し、同時に`figure`にも適用したこと、`figure`では`legend`より直感的でないと認識していたこと。 | [一次資料](https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html) | 2026-08-10 |
-| 2009-09-15 | WHATWG HTML commit `9c490f21` | 仕様commit／親diff | `figure`と`details`を`legend`から`dt`／`dd`へ変更した。 | [一次資料](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7) | 2026-08-10 |
-| 2009-09-17–2010-03-30 | W3C Bug 7657 | Bugzilla | `dt`／`dd`再利用による意味・構造上の混乱、IE 6／7のDOM互換性問題、ISSUE-83への昇格、修正後の解決。 | [一次資料](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7657) | 2026-08-10 |
-| 2009-09-17 | W3C Bug 7669 | Bugzilla | `figure`専用caption要素を追加し、caption以外のcontentを直接置いて構造を単純化する要求。 | [一次資料](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7669) | 2026-08-10 |
-| 2009-09-29–2010-02-12 | HTML WG ISSUE-83 | issue tracker | Bug 7657からの昇格、代替案の審議、仕様編集後のamicable resolution。 | [一次資料](https://www.w3.org/html/wg/tracker/issues/83) | 2026-08-10 |
-| 2010-01-12 | “Change Proposal: figure and details” | WHATWG Wiki上の同時代変更提案 | 後方互換性、stylesheet、既定style、構造・意味、余分なwrapperの問題と、専用`figcaption`案の要求。 | [一次資料](https://wiki.whatwg.org/index.php?title=Change_Proposal:_figure_and_details&oldid=4382) | 2026-08-10 |
-| 2010-01-30 | WHATWG HTML commit `c3974951` | 仕様commit／親diff | `dt`／`dd`を除き、専用`figcaption`と直接のflow contentへ変更した。 | [一次資料](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f) | 2026-08-10 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1993-11-08 | [HTML+ “Figures”](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html)） | 失効したInternet-Draft | `FIG`と子`CAPTION`の先行存在。WHATWGへの採用因果は示さない。 | 2026-08-10 |
+| 2006-04-22 | [Simon Pieters, image caption proposal](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html)） | WHATWG mailing list | HTML+ `FIG`／`CAPTION`を明示して、`fig`、`caption`、`img`によるHTML5向け再利用案を提示した。 | 2026-08-10 |
+| 2006-05-03 | [Michel Fortin, formal `figure` proposal](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006May/0002.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006May/0002.html)） | WHATWG mailing list | `figure`、任意の`caption`、illustrative contentの構造と、main flowから分離可能な意味を提案した。 | 2026-08-10 |
+| 2006-07-26 | [XHTML 2.0 Working Draft](../../raw/www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html)（[公開元](https://www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html)） | W3C Working Draft | `object`が任意の先頭子`caption`を持つ先行構造。`figure`要素は定義せず、WHATWGへの採用因果も示さない。 | 2026-08-10 |
+| 2006-10-01 | [DocBook V4.5](../../raw/tdg.docbook.org/tdg/4.5/figure)（[公開元](https://tdg.docbook.org/tdg/4.5/figure)） | OASIS Standard／公式要素reference | `figure`を必須`title`を持つformal objectとして定義する。WHATWGへの採用因果は示さない。 | 2026-08-10 |
+| 2006-11-27 | [WHATWG HTML commit `32bff0ac`](../../raw/github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059)（[公開元](https://github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059)） | 仕様commit／親diff | Ian Hicksonによる`figure`の追加、embedded contentとcaptionのmodel、`legend`の再利用。 | 2026-08-10 |
+| 2006-11-28 | [“many messages regarding image captions”](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)） | WHATWG feedback総括／W3C保存mail | Fortinの`figure`提案とpublisher use cases、PietersによるHTML+案の提示、Hicksonによる採用回答、`caption`を避け`legend`を使うparser上の理由。DocBookへの別件の言及は採用せず、XHTML 2は参照しない。 | 2026-08-10 |
+| 2009-09-15 | [“Re: `<details>`”](../../raw/lists.w3.org/Archives/Public/public-html/2009Sep/0566.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html)） | W3C public-html mailing list | `details`へ出された`dt`／`dd`案をHicksonが受諾し、同時に`figure`にも適用したこと、`figure`では`legend`より直感的でないと認識していたこと。 | 2026-08-10 |
+| 2009-09-15 | [WHATWG HTML commit `9c490f21`](../../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)（[公開元](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)） | 仕様commit／親diff | `figure`と`details`を`legend`から`dt`／`dd`へ変更した。 | 2026-08-10 |
+| 2009-09-17–2010-03-30 | [W3C Bug 7657](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-2867df8a72c94218)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7657)） | Bugzilla | `dt`／`dd`再利用による意味・構造上の混乱、IE 6／7のDOM互換性問題、ISSUE-83への昇格、修正後の解決。 | 2026-08-10 |
+| 2009-09-17 | [W3C Bug 7669](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-e603fef40f4a1959)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7669)） | Bugzilla | `figure`専用caption要素を追加し、caption以外のcontentを直接置いて構造を単純化する要求。 | 2026-08-10 |
+| 2009-09-29–2010-02-12 | [HTML WG ISSUE-83](../../raw/www.w3.org/html/wg/tracker/issues/83)（[公開元](https://www.w3.org/html/wg/tracker/issues/83)） | issue tracker | Bug 7657からの昇格、代替案の審議、仕様編集後のamicable resolution。 | 2026-08-10 |
+| 2010-01-12 | [“Change Proposal: figure and details”](../../raw/wiki.whatwg.org/index.php-ab175fe94c92f193)（[公開元](https://wiki.whatwg.org/index.php?title=Change_Proposal:_figure_and_details&oldid=4382)） | WHATWG Wiki上の同時代変更提案 | 後方互換性、stylesheet、既定style、構造・意味、余分なwrapperの問題と、専用`figcaption`案の要求。 | 2026-08-10 |
+| 2010-01-30 | [WHATWG HTML commit `c3974951`](../../raw/github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)（[公開元](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)） | 仕様commit／親diff | `dt`／`dd`を除き、専用`figcaption`と直接のflow contentへ変更した。 | 2026-08-10 |
 
 ## 確度
 

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="hypermail 3.0.0, see https://github.com/hypermail-project/hypermail/" />
+<title>Current HTML ruby markup usage from Philip Taylor on 2008-05-26 (public-html@w3.org from May 2008)</title>
+<meta name="Author" content="Philip Taylor (pjt47&#x40;&#0099;&#0097;&#0109;&#0046;&#0097;&#0099;&#0046;&#0117;&#0107;)" />
+<meta name="Subject" content="Current HTML ruby markup usage" />
+<meta name="Date" content="2008-05-26" />
+<link rel="stylesheet" title="Normal view" href="/assets/styles/public.css" />
+<link rel="help" href="/Help/" />
+<link rel="start" href="../" title="public-html@w3.org archives" />
+<script defer="defer" src="/assets/js/archives.js"></script>
+</head>
+<body class="message">
+<header class="head">
+<nav class="breadcrumb" id="upper">
+  <ul>
+    <li><a href="https://www.w3.org/">W3C home</a></li>
+    <li><a href="/">Mailing lists</a></li>
+    <li><a href="../../">Public</a></li>
+    <li><a href="../" rel="start">public-html@w3.org</a></li>
+    <li><a href="./" rel="contents">May 2008</a></li>
+  </ul>
+</nav>
+<h1>Current HTML ruby markup usage</h1>
+<!-- received="Mon May 26 23:40:37 2008" -->
+<!-- isoreceived="20080526234037" -->
+<!-- sent="Tue, 27 May 2008 00:39:58 +0100" -->
+<!-- isosent="20080526233958" -->
+<!-- name="Philip Taylor" -->
+<!-- email="pjt47&#x40;&#0099;&#0097;&#0109;&#0046;&#0097;&#0099;&#0046;&#0117;&#0107;" -->
+<!-- subject="Current HTML ruby markup usage" -->
+<!-- id="483B4A4E.6080605@cam.ac.uk" -->
+<!-- charset="UTF-8" -->
+<!-- expires="-1" -->
+<nav id="navbar">
+<ul class="links hmenu_container">
+<li>
+<span class="heading">This message</span>: <ul class="hmenu"><li><a href="#start" id="options1">Message body</a></li>
+<li><a href="mailto:public-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20Current%20HTML%20ruby%20markup%20usage&amp;In-Reply-To=%3C483B4A4E.6080605%40cam.ac.uk%3E&amp;References=%3C483B4A4E.6080605%40cam.ac.uk%3E">Respond</a></li>
+<li><a href="#options3">More options</a></li>
+</ul></li>
+<li>
+<span class="heading">Related messages</span>: <ul class="hmenu">
+<!-- unext="start" -->
+<li><a href="0621.html">Next message</a></li>
+<li><a href="0619.html">Previous message</a></li>
+<!-- unextthread="start" -->
+<!-- ureply="end" -->
+</ul></li>
+</ul>
+</nav>
+</header>
+<!-- body="start" -->
+<main class="mail">
+<ul class="headers" aria-label="message headers">
+<li><span class="from">
+<span class="heading">From</span>: Philip Taylor &lt;<a href="mailto:pjt47&#x40;&#0099;&#0097;&#0109;&#0046;&#0097;&#0099;&#0046;&#0117;&#0107;?Subject=Re%3A%20Current%20HTML%20ruby%20markup%20usage&amp;In-Reply-To=%3C483B4A4E.6080605%40cam.ac.uk%3E&amp;References=%3C483B4A4E.6080605%40cam.ac.uk%3E">pjt47&#x40;&#0099;&#0097;&#0109;&#0046;&#0097;&#0099;&#0046;&#0117;&#0107;</a>&gt;
+</span></li>
+<li><span class="date"><span class="heading">Date</span>: Tue, 27 May 2008 00:39:58 +0100</span></li>
+<li><span class="to"><span class="heading">To</span>: HTML WG &lt;<a href="mailto:public-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20Current%20HTML%20ruby%20markup%20usage&amp;In-Reply-To=%3C483B4A4E.6080605%40cam.ac.uk%3E&amp;References=%3C483B4A4E.6080605%40cam.ac.uk%3E">public-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;</a>&gt;
+</span></li>
+<li><span class="message-id"><span class="heading">Message-ID</span>: &lt;483B4A4E.6080605&#x40;&#0099;&#0097;&#0109;&#0046;&#0097;&#0099;&#0046;&#0117;&#0107;&gt;
+</span></li>
+</ul>
+<pre id="start" class="body">
+Given the recent work on adding ruby markup to HTML5, I thought I'd look 
+at how it's currently used (mainly to (hopefully) confirm the data Hixie 
+based the design on), so I've put some examples up at 
+&lt;<a href="https://philip.html5.org/demos/html/ruby/wild-examples.html">http://philip.html5.org/demos/html/ruby/wild-examples.html</a>&gt;, extracted 
+from all the sites using ruby elements from a random sample of 130K 
+pages from dmoz.org.
+
+I've not looked in any detail, but some simple observations:
+
+* Ruby is used on about 0.3% of the 3286 .jp pages in my sample. (For 
+comparison, &lt;acronym&gt; and &lt;sub&gt; and &lt;csaction&gt; are each used on about 
+0.3% of all (not just .jp) pages.) (I only have 315 .cn pages so I don't 
+have enough data to compare.)
+
+* End tags are often omitted. (Corollary: this is not XHTML.)
+
+* &lt;ruby&gt;, &lt;rb&gt;, &lt;rt&gt; and &lt;rp&gt; are frequently used. &lt;rbc&gt; and &lt;rtc&gt; don't 
+come up at all, but my sample is too small to know how rare they are.
+
+* Ruby elements are sometimes used accidentally. (See 
+<a href="http://www.bellabotanica.com/">http://www.bellabotanica.com/</a> - &lt;rb&gt;&lt;/br&gt;)
+
+* &lt;ruby&gt; is always (in this sample) used whenever there are other 
+intentionally-used ruby elements.
+
+* The 'lang' attribute is not always to be trusted. (See 
+<a href="http://za455.myweb.hinet.net/">http://za455.myweb.hinet.net/</a> - &lt;span lang=&quot;EN-US&quot; style=&quot;font-family: 
+新細明體&quot;&gt;&lt;font size=&quot;4&quot;&gt;僅&lt;/font&gt;&lt;/span&gt;)
+
+-- 
+Philip Taylor
+<a href="mailto:pjt47&#x40;&#0099;&#0097;&#0109;&#0046;&#0097;&#0099;&#0046;&#0117;&#0107;?Subject=Re%3A%20Current%20HTML%20ruby%20markup%20usage&amp;In-Reply-To=%3C483B4A4E.6080605%40cam.ac.uk%3E&amp;References=%3C483B4A4E.6080605%40cam.ac.uk%3E">pjt47&#x40;&#0099;&#0097;&#0109;&#0046;&#0097;&#0099;&#0046;&#0117;&#0107;</a>
+</pre>
+<p class="received"><span class="heading">Received on</span> Monday, 26 May 2008 23:40:37 UTC</p>
+</main>
+<!-- body="end" -->
+<footer class="foot">
+<nav id="navbarfoot">
+<ul class="links hmenu_container">
+<li><span class="heading">This message</span>: <span class="message_body"><a href="#start">Message body</a></span></li>
+<!-- lnext="start" -->
+<li><span class="heading">Next message</span>: <a href="0621.html">John Foliot: "RE: Is Flickr an Edge Case? (was Re: HTML Action Item 54)"</a></li>
+<li><span class="heading">Previous message</span>: <a href="0619.html">Jens Meiert: "Re: [whatwg] Ruby"</a></li>
+<!-- lnextthread="start" -->
+<!-- lreply="end" -->
+</ul>
+<ul class="links hmenu_container">
+<li id="options3"><span class="heading">Mail actions</span>: <ul class="hmenu"><li><a href="mailto:public-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20Current%20HTML%20ruby%20markup%20usage&amp;In-Reply-To=%3C483B4A4E.6080605%40cam.ac.uk%3E&amp;References=%3C483B4A4E.6080605%40cam.ac.uk%3E">respond to this message</a></li>
+<li><a href="mailto:public-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;">mail a new topic</a></li></ul></li>
+<li><span class="heading">Contemporary messages sorted</span>: <ul class="hmenu"><li><a href="index.html#msg620">by date</a></li>
+<li><a href="thread.html#msg620">by thread</a></li>
+<li><a href="subject.html#msg620">by subject</a></li>
+<li><a href="author.html#msg620">by author</a></li>
+</ul></li>
+<li><span class="heading">Help</span>: <ul class="hmenu">
+    <li><a href="/Help/" rel="help">how to use the archives</a></li>
+    <li><a href="https://www.w3.org/Search/Mail/Public/search?type-index=public-html&amp;index-type=t">search the archives</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<!-- trailer="footer" -->
+<p class="colophon">
+This archive was generated by <a href="https://github.com/hypermail-project/hypermail/">hypermail 3.0.0</a>: Thursday, 13 July 2023 18:03:26 UTC
+</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>17930 &ndash; specify parsing of the template element</title>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="data/assets/54486398487c111ba3305277d0702e66.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="style.css">
+
+
+
+    
+
+
+    
+
+
+    
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+                       title="Bugzilla" href="./search_plugin.cgi">
+    <link rel="shortcut icon" href="images/favicon.ico">
+  </head>
+
+  <body 
+        class="www-w3-org-Bugs-Public
+                 bz_bug
+                 bz_status_RESOLVED
+                 bz_product_WHATWG
+                 bz_component_HTML
+                 bz_bug_17930 yui-skin-sam">
+
+  <div id="header"><div id="banner">
+  </div>
+
+    <div id="titles">
+      <span id="title">Bugzilla &ndash; Bug&nbsp;17930</span>
+
+        <span id="subtitle" class="subheader">specify parsing of the template element</span>
+
+        <span id="information" class="header_addl_info">Last modified: 2013-06-28 22:44:26 UTC</span>
+    </div>
+
+
+    
+  </div>
+
+  <div id="bugzilla-body"><div class="archivalnote"><p>This is an archived snapshot of W3C's public bugzilla bug tracker, decommissioned in April 2019. Please see the <a href="./">home page</a> for more details.</p></div>
+
+
+
+
+<form name="changeform" id="changeform" method="post" action="process_bug.cgi">
+
+  <input type="hidden" name="delta_ts" value="2013-06-28 22:44:26">
+  <input type="hidden" name="id" value="17930">
+  <input type="hidden" name="token" value="1554155216-oUlsx3tO-cOoiL_dyLwgIDgUbAyJlz8Af8iT-HlEoyI">
+<div class="bz_short_desc_container edit_form">
+     <a href="show_bug.cgi?id=17930"><b>Bug&nbsp;17930</b></a> <span id="summary_container" class="bz_default_hidden">
+      - <span id="short_desc_nonedit_display">specify parsing of the template element</span>
+     </span>
+
+    <div id="summary_input"><span class="field_label "
+    id="field_label_short_desc">
+
+
+  <a 
+      title="The bug summary is a short sentence which succinctly describes what the bug is about."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#short_desc"
+  >Summary:</a>
+
+</span>specify parsing of the template element
+    </div>
+  </div>
+  
+  <table class="edit_form">
+    <tr>
+      
+      <td id="bz_show_bug_column_1" class="bz_show_bug_column">     
+        <table>
+          <tr>
+    <th class="field_label">
+      <a href="page.cgi?id=fields.html#bug_status">Status</a>:
+    </th>
+    <td id="bz_field_status">
+      <span id="static_bug_status">RESOLVED
+          FIXED
+      </span>
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_alias">
+
+
+  <a 
+      title="A short, unique name assigned to a bug in order to assist with looking it up and referring to it in other places in Bugzilla."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#alias"
+  >Alias:</a>
+
+</th>
+    <td>
+        None
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_product">
+
+
+  <a 
+      title="Bugs are categorised into Products and Components."
+      class="field_help_link"
+      href="describecomponents.cgi"
+  >Product:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_product" >WHATWG
+
+</td>
+    </tr>
+
+    
+    <tr class="bz_default_hidden"><th class="field_label "
+    id="field_label_classification">
+
+
+  <a 
+      title="Bugs are categorised into Classifications, Products and Components. classifications is the top-level categorisation."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#classification"
+  >Classification:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_classification" >Unclassified
+
+</td>
+    </tr>
+        
+    
+    
+    <tr><th class="field_label "
+    id="field_label_component">
+
+
+  <a 
+      title="Components are second-level categories; each belongs to a particular Product. Select a Product to narrow down this list."
+      class="field_help_link"
+      href="describecomponents.cgi?product=WHATWG"
+  >Component:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_component" >HTML
+
+  (<a href="buglist.cgi?component=HTML&amp;product=WHATWG&amp;bug_status=__open__"
+      target="_blank">show other bugs</a>)
+</td>
+    </tr>
+    <tr><th class="field_label "
+    id="field_label_version">
+
+
+  <a 
+      title="The version field defines the version of the software the bug was found in."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#version"
+  >Version:</a>
+
+</th>
+<td>unspecified
+  </td>
+    </tr>
+        
+    
+        
+    <tr><th class="field_label "
+    id="field_label_rep_platform">
+
+
+  <a 
+      title="The hardware platform the bug was observed on. Note: When searching, selecting the option &quot;All&quot; only finds bugs whose value for this field is literally the word &quot;All&quot;."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#rep_platform"
+  >Hardware:</a>
+
+</th>
+      <td class="field_value">Other
+        other
+      </td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          
+          <tr>
+      <th class="field_label">
+        <label  accesskey="i">
+          <a href="page.cgi?id=fields.html#importance"><u>I</u>mportance</a></label>:
+      </th>
+      <td>P3
+       normal
+      </td>
+    </tr>
+
+      <tr><th class="field_label "
+    id="field_label_target_milestone">
+
+
+  <a 
+      title="The Target Milestone field is used to define when the engineer the bug is assigned to expects to fix it."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#target_milestone"
+  >Target Milestone:</a>
+
+</th><td>Unsorted
+  </td>
+      </tr>
+          
+          <tr><th class="field_label "
+    id="field_label_assigned_to">
+
+
+  <a 
+      title="The person in charge of resolving the bug."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#assigned_to"
+  >Assignee:</a>
+
+</th>
+      <td><span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+      </td>
+    </tr>
+
+    <tr><th class="field_label "
+    id="field_label_qa_contact">
+
+
+  <a 
+      title="The person responsible for confirming this bug if it is unconfirmed, and for verifying the fix once the bug has been resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#qa_contact"
+  >QA Contact:</a>
+
+</th>
+      <td><span class="vcard">contributor
+</span>
+      </td>
+    </tr>
+    
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          <tr><th class="field_label "
+    id="field_label_bug_file_loc">
+
+
+  <a 
+      title="Bugs can have a URL associated with them - for example, a pointer to a web site where the problem is seen."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#bug_file_loc"
+  >URL:</a>
+
+</th>
+    <td>
+      <span id="bz_url_input_area">
+          <a href="https://www.whatwg.org/specs/web-apps/current-work/#tree-construction" rel="noreferrer"><span title="http://www.whatwg.org/specs/web-apps/current-work/#tree-construction">http://www.whatwg.org/specs/web-apps/...
+        </span></a>
+      </span>
+    </td>
+  </tr>
+
+    <tr><th class="field_label "
+    id="field_label_status_whiteboard">
+
+
+  <a 
+      title="Each bug has a free-form single line text entry box for adding tags and status information."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#status_whiteboard"
+  >Whiteboard:</a>
+
+</th><td>  
+  </td>
+    </tr>
+
+    <tr><th class="field_label "
+    id="field_label_keywords">
+
+
+  <a 
+      title="You can add keywords from a defined list to bugs, in order to easily identify and group them."
+      class="field_help_link"
+      href="describekeywords.cgi"
+  >Keywords:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_keywords" >
+
+</td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+          <tr>
+    <th class="field_label">
+      <label>Duplicates (1)</label>:
+    </th>
+    <td class="field_value">
+      <span id="duplicates"><a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED DUPLICATE - [HTML] Integrate HTML Template Element"
+   href="show_bug.cgi?id=22219">22219</a> 
+      </span>
+      (<a href="buglist.cgi?bug_id=22219">view as bug list</a>)
+    </td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_dependson">
+
+
+  <a 
+      title="The bugs listed here must be resolved before this bug can be resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#dependson"
+  >Depends on:</a>
+
+</th>
+
+  <td>
+    <span id="dependson_input_area">
+    </span>
+
+  </td>
+  </tr>
+  
+  <tr><th class="field_label "
+    id="field_label_blocked">
+
+
+  <a 
+      title="This bug must be resolved before the bugs listed in this field can be resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#blocked"
+  >Blocks:</a>
+
+</th>
+
+  <td>
+    <span id="blocked_input_area">
+    </span>
+<a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED FIXED - Where possible, replace parts of the parser that say &quot;act as is a ... tag had been seen&quot; with explicit requirements to act appropriately (e.g. pop the stack, add elements, etc)"
+   href="show_bug.cgi?id=22322">22322</a> 
+  </td>
+  </tr>
+
+    <tr>
+      <th>&nbsp;</th>
+
+      <td id="show_dependency_tree_or_graph">
+        Show dependency <a href="showdependencytree.cgi?id=17930&amp;hide_resolved=1">tree</a>
+
+          /&nbsp;<a href="showdependencygraph.cgi?id=17930">graph</a>
+      </td>
+    </tr>
+          
+        </table>
+      </td>
+      <td>
+        <div class="bz_column_spacer">&nbsp;</div>
+      </td>
+      
+      <td id="bz_show_bug_column_2" class="bz_show_bug_column">
+        <table>
+        <tr>
+    <th class="field_label">
+      Reported:
+    </th>
+    <td>2012-07-18 07:18 UTC by <span class="vcard">contributor
+</span>
+    </td>
+  </tr>
+  
+  <tr>
+    <th class="field_label">
+      Modified:
+    </th>
+    <td>2013-06-28 22:44 UTC
+      (<a href="show_activity.cgi?id=17930">History</a>)
+    </td>
+  
+  </tr>
+<tr>
+      <th class="field_label">
+        <label  accesskey="a">
+          CC List:
+        </label>
+      </th>
+      <td>12 
+          users
+          <span id="cc_edit_area_showhide_container" class="bz_default_hidden">
+            (<a href="#" id="cc_edit_area_showhide">show</a>)
+          </span>
+        <div id="cc_edit_area">
+          <br>
+            <select id="cc" multiple="multiple" size="5" >
+                <option value="annevk">annevk</option>
+                <option value="dglazkov">dglazkov</option>
+                <option value="eoconnor">eoconnor</option>
+                <option value="eric">eric</option>
+                <option value="hsivonen">hsivonen</option>
+                <option value="ian">ian</option>
+                <option value="james">james</option>
+                <option value="mike">mike</option>
+                <option value="rafaelw">rafaelw</option>
+                <option value="robin">robin</option>
+                <option value="w3c">w3c</option>
+                <option value="zcorpan">zcorpan</option>
+            </select>
+        </div>
+          
+      </td>
+    </tr>
+
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_see_also">
+
+
+  <a 
+      title="This allows you to refer to bugs in other installations. You can enter a URL to a bug in the 'Add Bug URLs' field to note that that bug is related to this one. You can enter multiple URLs at once by separating them with whitespace. You should normally use this field to refer to bugs in other installations. For bugs in this installation, it is better to use the Depends on and Blocks fields."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#see_also"
+  >See Also:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_see_also" >
+
+</td>
+    </tr> 
+
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+
+
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+          <hr id="bz_top_half_spacer">
+      </td>
+    </tr>
+  </table>
+
+  <table id="bz_big_form_parts">
+  <tr>
+  <td>
+
+    
+
+
+<br>
+<table id="attachment_table">
+  <tr id="a0">
+    <th colspan="2" class="left">
+      Attachments
+    </th>
+  </tr>
+
+
+
+  
+</table>
+<br>
+<div id="add_comment" class="bz_section_additional_comments">
+      <table>
+        <tr>
+          <td>
+            
+          </td>
+        </tr> 
+      </table>
+  </div>
+  </td>
+  <td>
+  </td>
+  </tr></table>
+
+  
+  <div id="comments">
+
+
+
+
+<!-- This auto-sizes the comments and positions the collapse/expand links 
+     to the right. -->
+<table class="bz_comment_table">
+<tr>
+<td>
+<div id="c0" class="bz_comment bz_first_comment">
+
+      <div class="bz_first_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c0">Description</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard">contributor
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-07-18 07:18:58 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">This was was cloned from <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED FIXED - specify parsing of the template element"
+   href="show_bug.cgi?id=16789">bug 16789</a> as part of operation convergence.
+Originally filed: 2012-04-18 18:30:00 +0000
+
+================================================================================
+ #0   <a href="mailto:contributor&#64;whatwg.org">contributor&#64;whatwg.org</a>                          2012-04-18 18:30:49 +0000 
+--------------------------------------------------------------------------------
+Specification: <a href="https://www.whatwg.org/specs/web-apps/current-work/">http://www.whatwg.org/specs/web-apps/current-work/</a>
+Multipage: <a href="https://www.whatwg.org/C#tree-construction">http://www.whatwg.org/C#tree-construction</a>
+Complete: <a href="https://www.whatwg.org/c#tree-construction">http://www.whatwg.org/c#tree-construction</a>
+
+Comment:
+specify parsing of the template element
+
+Posted from: 2620:0:1002:1005:72cd:60ff:feab:f3a
+User agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.24 Safari/536.5
+================================================================================
+ #1   Rafael Weinstein                                2012-04-18 18:33:05 +0000 
+--------------------------------------------------------------------------------
+For reference: <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html#dfn-template">http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html#dfn-template</a>
+================================================================================</pre>
+    </div>
+
+    <div id="c1" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c1">Comment 1</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-09-19 23:49:57 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Would be great to get deeper review of the spec above before I try to merge this into the HTML parser spec proper.</pre>
+    </div>
+
+    <div id="c2" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c2">Comment 2</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-11-25 05:01:58 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Do we have any interest in implementing this in the near future from non-WebKit vendors yet?</pre>
+    </div>
+
+    <div id="c3" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c3">Comment 3</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Henri Sivonen</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-11-26 09:14:58 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">We are looking into implementing this in Gecko.</pre>
+    </div>
+
+    <div id="c4" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c4">Comment 4</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Rafael Weinstein</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-11-26 18:23:06 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Henri, James: 
+
+Have you guys had a chance to review the parser changes in the spec? We'd love to get more eyes on that.</pre>
+    </div>
+
+    <div id="c5" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c5">Comment 5</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Rafael Weinstein</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-11-26 18:24:34 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Also, note that we opened bugs for the additional changes (XHTML parsing, XDM/XSLT/XPATH changes) we settled on at TPAC. It's on my schedule this week to dig into those.</pre>
+    </div>
+
+    <div id="c6" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c6">Comment 6</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-05-30 22:23:58 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Rafael: You said this was ready, right?</pre>
+    </div>
+
+    <div id="c7" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c7">Comment 7</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Rafael Weinstein</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-05-30 22:26:23 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">yup</pre>
+    </div>
+
+    <div id="c8" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c8">Comment 8</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-05-31 17:22:27 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text"><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html">https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html</a></pre>
+    </div>
+
+    <div id="c9" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c9">Comment 9</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-05-31 17:22:29 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">*** <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED DUPLICATE - [HTML] Integrate HTML Template Element"
+   href="show_bug.cgi?id=22219">Bug 22219</a> has been marked as a duplicate of this bug. ***</pre>
+    </div>
+
+    <div id="c10" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c10">Comment 10</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-06-12 19:04:14 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Going to wait until I've done 22322 before doing this.</pre>
+    </div>
+
+    <div id="c11" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c11">Comment 11</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Robin Berjon</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-06-14 15:02:59 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=17930#c10">comment #10</a>)
+<span class="quote">&gt; Going to wait until I've done 22322 before doing this.</span >
+
+Actually I got started on this barely a few hours before this comment. I've checked the template import into the GH repo:
+
+<a href="https://github.com/w3c/html/commit/2502feb541063a3834f1ef07e2a23d0824d96914">https://github.com/w3c/html/commit/2502feb541063a3834f1ef07e2a23d0824d96914</a>
+<a href="https://github.com/w3c/html/commit/daaf6bc1e76365b6678a14b47954bcf9c5db54c6">https://github.com/w3c/html/commit/daaf6bc1e76365b6678a14b47954bcf9c5db54c6</a>
+
+I reckon that it might be simpler to incorporate first so that the 22322 just apply to all of it.</pre>
+    </div>
+
+    <div id="c12" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c12">Comment 12</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-06-14 17:17:46 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Oh, cool, thanks!
+
+Is it ok to use those patches in the WHATWG copy? (i.e. does the W3C put those patches in the public domain or equivalent?) (I presume yes, but just making sure so we don't end up with a political quagmire later...)</pre>
+    </div>
+
+    <div id="c13" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c13">Comment 13</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-06-14 17:21:32 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text"><a href="https://github.com/w3c/html/commit/845afeeb1cd52fa58a8c5de405ebbfd51af860f2">https://github.com/w3c/html/commit/845afeeb1cd52fa58a8c5de405ebbfd51af860f2</a></pre>
+    </div>
+
+    <div id="c14" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c14">Comment 14</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Robin Berjon</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-06-14 19:45:21 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=17930#c12">comment #12</a>)
+<span class="quote">&gt; Oh, cool, thanks!
+&gt; 
+&gt; Is it ok to use those patches in the WHATWG copy? (i.e. does the W3C put
+&gt; those patches in the public domain or equivalent?) (I presume yes, but just
+&gt; making sure so we don't end up with a political quagmire later...)</span >
+
+I reckon it falls under fair use :)
+
+If there's fallout, I'll take it.</pre>
+    </div>
+
+    <div id="c15" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c15">Comment 15</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-06-18 23:46:55 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Right-o, thanks.
+
+I'll do this once Rafael's reviewed the patch. Rather than waiting for <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED FIXED - Where possible, replace parts of the parser that say &quot;act as is a ... tag had been seen&quot; with explicit requirements to act appropriately (e.g. pop the stack, add elements, etc)"
+   href="show_bug.cgi?id=22322">bug 22322</a> to be done, I'll do this first, that way it minimises the delta before merging.</pre>
+    </div>
+
+    <div id="c16" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c16">Comment 16</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Robin Berjon</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-06-24 12:59:14 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=17930#c15">comment #15</a>)
+<span class="quote">&gt; Right-o, thanks.
+&gt; 
+&gt; I'll do this once Rafael's reviewed the patch. Rather than waiting for bug
+&gt; 22322 to be done, I'll do this first, that way it minimises the delta before
+&gt; merging.</span >
+
+I reckon this set of changes addresses Rafael's comments:
+
+<a href="https://github.com/w3c/html/compare/89f7ed47d5c10b41da28b37bb224fb92e368d0d8...ced939ba849a4a30645e7916102b843cbf2d5482">https://github.com/w3c/html/compare/89f7ed47d5c10b41da28b37bb224fb92e368d0d8...ced939ba849a4a30645e7916102b843cbf2d5482</a>
+
+LMK if it's good for you.
+
+On a more general note, I'd be interested in knowing if this works for you coordination-wise for largish changes like this one.</pre>
+    </div>
+
+    <div id="c17" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c17">Comment 17</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Rafael Weinstein</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-06-25 00:44:43 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">changes lgtm.</pre>
+    </div>
+
+    <div id="c18" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c18">Comment 18</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-06-25 05:22:44 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">I ended up not being able to use the diffs directly. I started doing so, but it left the spec with too many &quot;comefrom&quot;-style requirements, e.g. the foster parenting and the templating logic both trying to remote-control the insertion logic, and so on, which IMHO is just not workable (it was bad enough with just the foster parenting doing it, but having multiple spots trying to monkeypatch each other is too much). So I'm doing it manually from based on the doc by Tony and Rafael instead. Sorry about that. I'll try to make the changes match the diffs where this isn't an issue, though.</pre>
+    </div>
+
+    <div id="c19" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c19">Comment 19</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Robin Berjon</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-06-25 12:22:40 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=17930#c18">comment #18</a>)
+<span class="quote">&gt; I ended up not being able to use the diffs directly. I started doing so, but
+&gt; it left the spec with too many &quot;comefrom&quot;-style requirements, e.g. the
+&gt; foster parenting and the templating logic both trying to remote-control the
+&gt; insertion logic, and so on, which IMHO is just not workable (it was bad
+&gt; enough with just the foster parenting doing it, but having multiple spots
+&gt; trying to monkeypatch each other is too much). So I'm doing it manually from
+&gt; based on the doc by Tony and Rafael instead. Sorry about that. I'll try to
+&gt; make the changes match the diffs where this isn't an issue, though.</span >
+
+Fair enough. That said, I reckon it's worth checking your changes against mine since I caught a few bugs along the way. Most were small, but at least one was of the kind that slips through easily (the additions to &quot;in table&quot; and &quot;in frameset&quot;, for the end-of-file token, the delta states &quot;If the current node is the root html element&quot; whereas it should be &quot;If the current node is *NOT* the root html element&quot;). I think that's the biggest, but I didn't think to keep track of what I fixed as I went along, and it'd be a shame if something like that resurfaced.</pre>
+    </div>
+
+    <div id="c20" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c20">Comment 20</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-06-25 18:14:13 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Noted, thanks for the heads-up.</pre>
+    </div>
+
+    <div id="c21" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c21">Comment 21</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-06-28 22:44:00 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Ok, I've merged in the &lt;template&gt; element into the WHATWG spec. Here are the notes I took while doing it (hopefully mostly complete, though I'm sure I missed some things). As noted above, I ended up having to do this from scratch, because there were a lot of things that needed tighter integration with the HTML spec or just things that were inconsistent with the spec's style.
+
+Editorial changes:
+- &quot;template contents&quot; insertion mode renamed to &quot;in template&quot; for consistency
+  with the other insertion modes.
+- Avoided the indirection through the &quot;html element scope&quot; thing; instead I just
+  said to look in the stack directly.
+- Different terminology around the stack of template insertion modes, to avoid
+  the mistake I made with the downwards-growing stack of open elements.
+- Cleaned up the &quot;reset the insertion mode&quot; algorithm for processing &lt;head&gt;, and
+  used the indigenous terminology rather than comparing the nodes directly.
+- Made foster parenting and template off-document parsing an explicit part of
+  the parser, rather than using internal &quot;comefrom&quot;-style monkeypatching.
+- The precise place where I put some things was adjusted to be more consistent
+  with the style of the spec. (For example, inserting markers into the 
+  list of active formatting elements before inserting them into the DOM.)
+- I didn't add the &quot;template contents case&quot; annotations. I think I'm going to
+  remove all the fragment case annotations.
+- I removed some more &quot;fragment case&quot; annotations, e.g. &lt;template&gt;&lt;td&gt;&lt;/td&gt;&lt;tr&gt;
+  ignores the implied &lt;/tr&gt;, which thus causes the &lt;tr&gt; to be ignored as well,
+  even though there's no fragment case going on.
+- I didn't change the end-of-file token handling. As far as I can tell, the
+  proposed additions actually amounted to a no-op (except for the case of
+  innerHTML on &lt;template&gt;, which was left undefined if I am reading it right).
+- The AAA changes ended up being unnecessary due to earlier changes to the AAA
+  logic to factor out the foster parenting. (I think...)
+- I used a less complicated phrasing for the &lt;template&gt;&lt;col&gt;&lt;/colgroup&gt; case.
+- I simplified the description of EOF handling for the &quot;in frameset&quot;,
+  &quot;in table&quot;, &quot;in colgroup&quot;, and &quot;in select&quot; cases by just deferring to the
+  rules for EOF in &quot;in body&quot;.
+- Simplified the &quot;template contents&quot;/&quot;in template&quot; insertion mode prose (e.g.
+  didn't list &quot;template&quot; start tag twice, deferred to &quot;in body&quot; for more stuff).
+- Fixed things like &quot;a start tag whose name is&quot; (should say &quot;a start tag whose
+  tag name is&quot;), punctuation (sentences should end with a period), cross-
+  references (e.g. insertion mode names should be linked), and so on, for 
+  consistency with the rest of the spec.
+- I phrased things in the XHTML section differently, for precision and clarity,
+  and to avoid introducing new terms redundant with existing ones.
+- Avoided some misuse of RFC2119 terms (e.g. &quot;when something must, it must&quot;
+  doesn't really make any sense in an RFC2119 context, and using RFC2119 terms
+  in a non-normative section is nonsensical).
+- Revamped the way &quot;template contents&quot; is initialised so that it's just one
+  algorithm and so that it's consistent with the style of the rest of the spec.
+
+Normative changes:
+- Added &quot;template&quot; to the list of things that end the &quot;has an element in scope&quot; 
+  algorithm (also affects button and list item scope). See also <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED FIXED - [HTML Parsing] The template element should probably get a general scope marker (not just a table scope marker)"
+   href="show_bug.cgi?id=22482">bug 22482</a>.
+     <a href="http://software.hixie.ch/utilities/js/live-dom-viewer/?saved=2373">http://software.hixie.ch/utilities/js/live-dom-viewer/?saved=2373</a> *
+     <a href="http://software.hixie.ch/utilities/js/live-dom-viewer/?saved=2375">http://software.hixie.ch/utilities/js/live-dom-viewer/?saved=2375</a> *
+- Made the ownerDocument requirement apply to children of elements in templates
+  as well, not just children of the template, so that all nodes in a template
+  are created and remain inert.
+- Made foster parenting when there's a &lt;table&gt; in a &lt;template&gt; go above the 
+  &lt;table&gt;, not below it, for consistency with the non-template case.
+     <a href="http://software.hixie.ch/utilities/js/live-dom-viewer/?saved=2376">http://software.hixie.ch/utilities/js/live-dom-viewer/?saved=2376</a> *
+- Made the &quot;reset the insertion mode&quot; algorithm detect when it should reset to
+  &quot;in select in table&quot; rather than just &quot;in select&quot;. See also <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED FIXED - [HTML Parsing] Reset the insertion mode needs to check whether InSelect or InSelectInTable"
+   href="show_bug.cgi?id=22484">bug 22484</a>.
+     <a href="http://software.hixie.ch/utilities/js/live-dom-viewer/?saved=2374">http://software.hixie.ch/utilities/js/live-dom-viewer/?saved=2374</a> *#
+- The &quot;in select&quot; mode needed work for its end-of-file token handling.
+- I've dumped &lt;frameset&gt; support. The &lt;template&gt; spec didn't support it
+  fully anyway (there were weird bugs like &lt;template&gt;&lt;frame&gt;&lt;frameset&gt;
+  &lt;/frameset&gt; not closing the nested frameset, &lt;template&gt;&lt;frame&gt; working but
+  &lt;template&gt;&lt;frameset&gt; not), and the elements involved have been deprecated for
+  over a decade. As part of this I made &lt;template&gt; trigger the frameset-ok flag,
+  so that &lt;body&gt;&lt;template&gt;&lt;/template&gt;&lt;frameset&gt; doesn't blow away the template;
+  and I removed &quot;frame&quot; from the list of tokens handled in the &quot;in template&quot;
+  mode. See also <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED FIXED - [HTML Template Element] Should we just remove support for &lt;frameset&gt;/&lt;frame&gt;"
+   href="show_bug.cgi?id=22486">bug 22486</a>.
+- Made the &lt;template&gt; fragment case handle EOF by calling &quot;stop parsing&quot;.
+- Added base, basefont, bgsound, noframes, and title to the list of elements
+  that don't imply in-body parsing in &lt;template&gt;. See also <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED FIXED - [HTML Parsing] 'Template Contents' mode should include all metadata elements are deferring to 'in head'"
+   href="show_bug.cgi?id=22501">bug 22501</a>.
+- I made the content model of &lt;template&gt; be more specific, so that things like:
+   &lt;template&gt;&lt;col&gt;&lt;select&gt;&lt;/template&gt;
+  ...are not valid (since they would not parse as expected).
+- Allowed &lt;template&gt; to be used in non-flow/non-metadata elements like &lt;table&gt;
+  or &lt;select&gt;.
+- Adjusted a bunch of stuff relating to content models and syntax to make them
+  work with the way &lt;template&gt; holds things off-document (e.g. see the term
+  'contents' at #concept-html-contents).
+
+(Tests marked &quot;*&quot; are those where Firefox implemented the spec as it was, and will need to change to match these changes. &quot;#&quot; indicates the same but for Chrome.)
+
+I'm sure I made lots of mistakes, so if anyone wants to review this, I would be most grateful. :-)
+
+Note that I didn't attempt to address <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED NEEDSINFO - [Templates]: Enable generated template elements to share a content docFrag"
+   href="show_bug.cgi?id=16153">bug 16153</a>, and <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED FIXED - [Templates]: EOF processing fails if a &lt;template&gt; in a non-html namespace is on the stack of open elements"
+   href="show_bug.cgi?id=21293">bug 21293</a> still exists (though it's not quite as bad as described given the way I phrased the spec), but that'll get fixed when I fix <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED FIXED - HTML5 parser does inspect the namespace of elements on the stack of open elements"
+   href="show_bug.cgi?id=21292">bug 21292</a>, which should be relatively soon (hopefully next week or the week after).</pre>
+    </div>
+
+    <div id="c22" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=17930#c22">Comment 22</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard">contributor
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2013-06-28 22:44:26 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Checked in as WHATWG revision r8000.
+Check-in comment: Integrate &lt;template&gt; into HTML.
+<a href="https://html5.org/tools/web-apps-tracker?from=7999&amp;to=8000">http://html5.org/tools/web-apps-tracker?from=7999&amp;to=8000</a></pre>
+    </div>
+
+
+  
+
+</td>
+<td>
+</td>
+</tr></table>
+  </div>
+        
+
+</form>
+
+<hr>
+<ul class="related_actions">
+    <li><a href="show_bug.cgi?format=multiple&amp;id=17930">Format For Printing</a></li>
+    <li>&nbsp;-&nbsp;<a href="show_bug.cgi?ctype=xml&amp;id=17930">XML</a></li>
+    <li>&nbsp;-&nbsp;<a href="enter_bug.cgi?cloned_bug_id=17930">Clone This Bug</a></li>
+    
+    <li>&nbsp;-&nbsp;<a href="#">Top of page </a></li>
+    </ul>
+
+<br>
+</div>
+
+    
+
+  </body>
+</html>

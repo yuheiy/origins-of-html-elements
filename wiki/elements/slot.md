@@ -10,7 +10,7 @@ Shadow DOM v0の`content` insertion pointをslotsとして再設計し、DOMのs
 
 ## 現在の意味
 
-WHATWG HTML Living Standardではslotを定義し、主にshadow tree内で使う。割り当てられたnodeがあればそれらを、なければ自身の内容を表す。[一次定義](https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element)（2026-08-09確認）
+WHATWG HTML Living Standardではslotを定義し、主にshadow tree内で使う。割り当てられたnodeがあればそれらを、なければ自身の内容を表す。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/scripting.html)（[公開版](https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,12 +36,12 @@ Shadow DOM v0 `content` insertion point → 再設計されたslot model → WHA
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2012-05-22 | *Shadow DOM* | W3C First Public Working Draft | `content`をshadow DOM insertion pointとして定義。 | [一次資料](https://www.w3.org/TR/2012/WD-shadow-dom-20120522/) | 2026-08-09 |
-| 2015-04-27 | Web Components issue 92 | 標準化issue | `content`から`slot`への改名理由とmodel変更の議論。 | [一次資料](https://github.com/WICG/webcomponents/issues/92) | 2026-08-09 |
-| 2016-03-21 | WHATWG DOM commit `a2b04df5` | 仕様commit | slotとslotableのDOM概念。 | [一次資料](https://github.com/whatwg/dom/commit/a2b04df51b4342d7617c128e80e5aa892889d2e0) | 2026-08-09 |
-| 2016-04-20 | WHATWG HTML commit `3c157377` | 仕様commit | DOM slot概念を参照するHTML `slot`の追加。 | [一次資料](https://github.com/whatwg/html/commit/3c157377135d05fbdd74f8c69199b47408bc6a9a) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2012-05-22 | [*Shadow DOM*](../../raw/www.w3.org/TR/2012/WD-shadow-dom-20120522/index.html)（[公開元](https://www.w3.org/TR/2012/WD-shadow-dom-20120522/)） | W3C First Public Working Draft | `content`をshadow DOM insertion pointとして定義。 | 2026-08-09 |
+| 2015-04-27 | [Web Components issue 92](../../raw/github.com/WICG/webcomponents/issues/92)（[公開元](https://github.com/WICG/webcomponents/issues/92)） | 標準化issue | `content`から`slot`への改名理由とmodel変更の議論。 | 2026-08-09 |
+| 2016-03-21 | [WHATWG DOM commit `a2b04df5`](../../raw/github.com/whatwg/dom/commit/a2b04df51b4342d7617c128e80e5aa892889d2e0)（[公開元](https://github.com/whatwg/dom/commit/a2b04df51b4342d7617c128e80e5aa892889d2e0)） | 仕様commit | slotとslotableのDOM概念。 | 2026-08-09 |
+| 2016-04-20 | [WHATWG HTML commit `3c157377`](../../raw/github.com/whatwg/html/commit/3c157377135d05fbdd74f8c69199b47408bc6a9a)（[公開元](https://github.com/whatwg/html/commit/3c157377135d05fbdd74f8c69199b47408bc6a9a)） | 仕様commit | DOM slot概念を参照するHTML `slot`の追加。 | 2026-08-09 |
 
 ## 確度
 

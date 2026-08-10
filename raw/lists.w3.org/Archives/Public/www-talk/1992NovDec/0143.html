@@ -1,0 +1,145 @@
+<!-- received="Wed Dec  2 03:09:11 1992 EDT" -->
+<!-- sent="Tue, 01 Dec 92 20:22:15 CST" -->
+<!-- name="Dan Connolly" -->
+<!-- email="connolly@pixel.convex.com" -->
+<!-- subject="HTML providers: please grab sgmls and the DTD" -->
+<!-- id="9212020222.AA20569@pixel.convex.com" -->
+<!-- inreplyto="" -->
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head><title>www-talk from November to December 1992: HTML providers: please grab sgmls and the DTD</title></head>
+<body>
+<h1>HTML providers: please grab sgmls and the DTD</h1>
+<strong>Dan Connolly</strong> (<a href="mailto:connolly@pixel.convex.com"><em>connolly@pixel.convex.com</em></a>)<br>
+<em>Tue, 01 Dec 92 20:22:15 CST</em>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#143">[ date ]</a><a href="thread.html#143">[ thread ]</a><a href="subject.html#143">[ subject ]</a><a href="author.html#143">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0144.html">Dan Connolly: "Re: Ideas for the future"</a>
+<li> <strong>Previous message:</strong> <a href="0142.html">Thomas A. Fine: "Ideas for the future"</a>
+<!-- nextthread="start" -->
+<li> <strong>Next in thread:</strong> <a href="0145.html">Marc Andreessen: "HTML providers: please grab sgmls and the DTD"</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<pre>
+Message-Id: &lt;9212020222.AA20569@pixel.convex.com&gt;
+To: www-talk@nxoc01.cern.ch
+Subject: HTML providers: please grab sgmls and the DTD
+Date: Tue, 01 Dec 92 20:22:15 CST
+From: Dan Connolly &lt;connolly@pixel.convex.com&gt;
+
+Tim,
+
+I noticed you've been diddling with the HTML files
+on info.cern.ch -- quoted your attributes, dotted
+your i's and crossed your t's, so to speak.
+
+But the files still don't fit into SGML.
+
+Please: grab the sgmls-0.8.tar ... wait! there's a 1.0!
+on ifi.uio.no in /pub/SGML/SGMLS. I have experience
+with the sgmls-0.8.tar.Z -- I know it builds and runs
+like a champ. I'll have to check the 1.0 version out.
+
+Then check a few of your files by doing
+
+% sgmls -s html.dtd yourfile.html
+
+If you get errors, either fix your software or
+diddle with the DTD until you get something that
+works. Even if the official HTML dtd is never
+modified to match your data, you'll have _some_
+SGML DTD that specifies what you produce.
+
+A word of warning: there's a rule-of-thumb everybody
+ought to follow in writing DTD's: only used mixed
+content for repeatable-or groups. That is, if you've
+got an element that can contain a mixture of PCDATA
+and elements, don't impose any special order on
+the elements.
+
+For example: I wanted to do this:
+
+&lt;!ELEMENT HTML - - ((TITLE? &amp; ISINDEX?), (H1|H2|DL|OL|XMP|#PCDATA)+)&gt;
+
+But then the HTML element would have mixed content (see
+the TITLE, H1, elements along with #PCDATA). The problem
+is that if you write:
+
+&lt;TITLE&gt;foo&lt;/title&gt;
+&lt;ISINDEX&gt;
+&lt;h1&gt;a header&lt;/h1&gt;
+some data...
+
+The newline after &lt;/title&gt; is treated as PCDATA, which is not
+allowed before ISINDEX. The options you're left with are:
+
+1. Watch out where you put newlines (we hate this.)
+
+2. Use a repeatable-or group, like this:
+&lt;!ELEMENT HTML - - (TITLE | ISINDEX | H1|H2|DL|OL|XMP|#PCDATA)*&gt;
+Then all your structure is gone (TITLES are allowed anywhere...).
+
+3. Only use element content (move the #PCDATA out
+	of the HTML element) like this:
+&lt;!ELEMENT HTML - - ((TITLE? &amp; ISINDEX?), BODY&gt;
+&lt;!ELEMENT BODY - - (H1|H2|DL|OL|XMP|#PCDATA)+)&gt;
+This is what I did.
+
+[Notice that these tags are minimizable,
+so that existing HTML documents that don't have them are
+still legal. This was perhaps a bad idea. For example, I
+had to hack the BODY model group badly to get the desired
+effect.]
+
+I've wrestled quite a bit with the header/body thing, and
+I can't seem to come up with a DTD that 1) makes most existing
+HTML legal, and 2) imposes _any_ structure on the thing.
+
+I'm just about to give up on the structure business. Do any
+implementations have problems with &lt;TITLE&gt; elements in
+the middle of the document? If not, I can just change the
+DTD so that HTML is just "tag soup" -- anything goes anywhere.
+
+Another idea is to move the TITLE and other header
+info outside the HTML format and MIME messages for
+HTTP transport, so that
+
+&lt;TITLE&gt;the title&lt;/TITLE&gt;
+&lt;h1&gt;the header&lt;/h1&gt;
+... the text...
+
+becomes
+
+Subject: the title
+Content-type: text/x-html
+
+&lt;h1&gt;the header&lt;/h1&gt;
+
+The header information would be part of the protocol, and
+not part of the HTML data. Local files would get their
+header information from the filesystem. WAIS documents
+would get their header information from the :document
+structure.
+
+Anyway... get the sgmls parser and validate the data
+you provide! I'd like to have more folks than just
+me bumping up against the SGML issues.
+
+Dan
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#143">[ date ]</a><a href="thread.html#143">[ thread ]</a><a href="subject.html#143">[ subject ]</a><a href="author.html#143">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0144.html">Dan Connolly: "Re: Ideas for the future"</a>
+<li> <strong>Previous message:</strong> <a href="0142.html">Thomas A. Fine: "Ideas for the future"</a>
+<!-- nextthread="start" -->
+<li> <strong>Next in thread:</strong> <a href="0145.html">Marc Andreessen: "HTML providers: please grab sgmls and the DTD"</a>
+</ul>
+</body>
+</html>

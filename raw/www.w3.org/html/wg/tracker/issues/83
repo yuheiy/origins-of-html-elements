@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" type="text/css" href="/2005/06/tracker/webui.css" media="screen" />
+  <link rel='alternate' type='application/atom+xml' href='/html/wg/tracker/issues/83.atom' title='Chagelog as ATOM feed' />   <title>ISSUE-83: Use of the dt and dd elements in figure and details content models - HTML Weekly Tracker</title>
+<script type='text/javascript' src='/2007/08/datepicker/js/datepicker.js'></script>
+<script src='/2005/06/tracker/ui.js' type='text/javascript'></script>
+
+<link href='/2007/08/datepicker/css/datepicker.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<div id="sidebar">
+  <div id="navigation">
+  <h3><a href='https://www.w3.org/html/wg/'>HTML Weekly</a> Issue Tracking</h3>
+  <ul>
+    <li><a href="/html/wg/tracker/">Summary</a></li>
+  <li>Issues: 
+     <ul>
+     <li><a href="/html/wg/tracker/issues/raised">Raised</a></li>
+     <li><a href="/html/wg/tracker/issues/open">Open</a></li>
+<li><a href="/html/wg/tracker/issues/pendingreview">Pending Review</a></li>
+             <li><a href="/html/wg/tracker/issues/closed">Closed</a></li>      
+     <li><a href="/html/wg/tracker/issues/postponed">Postponed</a></li>
+              <li><a href="/html/wg/tracker/issues">All</a></li>
+         <li><a href="/html/wg/tracker/issues/new">Create</a></li>
+      </ul>
+  </li>
+  <li>Actions:
+  <ul>
+      <li><a href="/html/wg/tracker/actions/open">Open</a></li>
+      <li><a href="/html/wg/tracker/actions/overdue">Overdue</a></li>
+      <li><a href="/html/wg/tracker/actions/closed">Closed</a></li>
+      <li><a href="/html/wg/tracker/actions/pendingreview">Pending Review</a></li>
+<li><a href="/html/wg/tracker/actions/new">Raise</a></li>
+  </ul>
+  </li>
+  <li><a href="/html/wg/tracker/users">Users</a>
+  <ul><li><a href='/2005/06/tracker/users/my'><em>My</em> Tracker</a></li></ul>
+  </li> 
+  <li><a href="/html/wg/tracker/products">Products</a></li>
+  <li><a href="/html/wg/tracker/agenda">Agenda planning</a></li>
+  <li><a href="/html/wg/tracker/changelog">Recent activity</a></li> 
+  </ul>
+</div>
+<div id="operation">
+  <ul>
+    <li><a href="/html/wg/tracker/issues/83/edit">Edit this issue</a></li>
+  </ul>
+</div>
+</div>
+
+<div id="content">
+<h1>ISSUE-83: Use of the dt and dd elements in figure and details content models</h1>
+<h2>dt-dd-semantics</h2>
+<h2>Use of the dt and dd elements in figure and details content models</h2>
+<dl>
+<dt>State:</dt>
+<dd>CLOSED</dd>
+<dt>Product:</dt>
+<dd><a href='/html/wg/tracker/products/1'>HTML 5 spec</a></dd>
+<dt>Raised by:</dt>
+<dd><a href='/html/wg/tracker/users/'>Michael[tm] Smith</a></dd>
+<dt>Opened on:</dt>
+<dd>2009-09-29</dd>
+<dt>Description:</dt>
+<dd>The content models for the &lt;figure&gt; and &lt;details&gt; elements use the &lt;dt&gt; and &lt;dd&gt; elements, but give them different semantics.<br />
+<br />
+Related bugs:<br />
+<a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=7657">http://www.w3.org/Bugs/Public/show_bug.cgi?id=7657</a><br />
+<a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=7669">http://www.w3.org/Bugs/Public/show_bug.cgi?id=7669</a><br />
+<br />
+Issue 83 <a href="/html/wg/tracker/actions/152">ACTION-152</a> dt/dd Change Proposal by Shelley Powers, November 10, 2009<br />
+<br />
+At burningbird:<br />
+<a href="https://burningbird.net/node/82">http://burningbird.net/node/82</a><br />
+<br />
+Also in the ESW Wiki:<br />
+<a href='http://esw.w3.org/topic/HTML/ChangeProposals/DdDt'>http://esw.w3.org/topic/HTML/ChangeProposals/DdDt</a> </dd>
+<dt>Related Actions Items:</dt>
+<ul><li><del class='closed'><a href='/html/wg/tracker/actions/152'>ACTION-152</a> on Maciej Stachowiak to Check on Change Proposal for dt/dd semantics - due <span class='date'>2009-11-10</span>, closed</del></li>
+</ul>
+<dt>Related emails:</dt>
+<dd id='emails'><ol>
+<li id='e103191'><a href="https://www.w3.org/mid/20110829130858523477.5468bbc5%2540xn--mlform-iua.no">Re: &lt;caption&gt;, &lt;figcaption&gt;, &lt;seccaption&gt;,  &lt;divcaption&gt;, etc.</a> (from xn--mlform-iua@xn--mlform-iua.no on 2011-08-29)</li>
+<li id='e65184'><a href="https://www.w3.org/mid/C6DFFCB2-901D-4C67-985D-0846A376364C%2540apple.com">Re: CfC: Close ISSUE-83 dt-dd-semantics by amicable resolution</a> (from mjs@apple.com on 2010-02-11)</li>
+<li id='e65165'><a href="https://www.w3.org/mid/4B7451D8.6060904%2540intertwingly.net">Minutes HTML WG 11 February 2010</a> (from rubys@intertwingly.net on 2010-02-11)</li>
+<li id='e65105'><a href="https://www.w3.org/mid/2AE48D93-6F73-4569-92A8-0848E2F324F3%2540webconforme.com">Re: {agenda} HTML WG telcon 2010-02-11: actions, issues, publication,  decision policy, task force reports</a> (from dboudreau@webconforme.com on 2010-02-10)</li>
+<li id='e65076'><a href="https://www.w3.org/mid/20100210213006.GB3287%2540sonata.rednote.net">Re: {agenda} HTML WG telcon 2010-02-11: actions, issues,  publication,  decision policy, task force reports</a> (from janina@rednote.net on 2010-02-10)</li>
+<li id='e65025'><a href="https://www.w3.org/mid/267F18971244A34BA58D684E5EAA4E6F2C8EAAA3%2540TK5EX14MBXC139.redmond.corp.microsoft.com">{agenda} HTML WG telcon 2010-02-11: actions, issues, publication,   decision policy, task force reports</a> (from Paul.Cotton@microsoft.com on 2010-02-10)</li>
+<li id='e65010'><a href="https://www.w3.org/mid/267F18971244A34BA58D684E5EAA4E6F2C8EAA44%2540TK5EX14MBXC139.redmond.corp.microsoft.com">{agenda} HTML WG telcon 2010-02-11: actions, issues, publication,  decision policy, task force reports</a> (from Paul.Cotton@microsoft.com on 2010-02-10)</li>
+<li id='e64482'><a href="https://www.w3.org/mid/EFA45E40-F0DB-4DBD-BEA8-01446893475E%2540apple.com">Minutes HTML WG 4 February 2010</a> (from mjs@apple.com on 2010-02-04)</li>
+<li id='e64418'><a href="https://www.w3.org/mid/1CCFDFF3-ECB3-43D8-BA1A-8CED54FD7475%2540apple.com">Re: {agenda} HTML WG telcon 2010-02-02: actions, issues, publication, F2F, decision process, licensing</a> (from singer@apple.com on 2010-02-03)</li>
+<li id='e64384'><a href="https://www.w3.org/mid/4B69AB5C.30109%2540intertwingly.net">{agenda} HTML WG telcon 2010-02-02: actions, issues, publication,  F2F, decision process, licensing</a> (from rubys@intertwingly.net on 2010-02-03)</li>
+<li id='e64116'><a href="https://www.w3.org/mid/AD4E425E-6687-447B-8750-4515B9F16EFE%2540apple.com">CfC: Close ISSUE-83 dt-dd-semantics by amicable resolution</a> (from mjs@apple.com on 2010-02-02)</li>
+<li id='e63929'><a href="https://www.w3.org/mid/40BB0189-C01C-4157-9B06-1E585F31FC68%2540apple.com">Re: Next issues to move forward on</a> (from mjs@apple.com on 2010-01-29)</li>
+<li id='e63746'><a href="https://www.w3.org/mid/17F69784-64DF-4EA5-ACEB-98EB2E4FC85B%2540apple.com">{agenda} HTML WG telcon 2010-01-28:</a> (from mjs@apple.com on 2010-01-27)</li>
+<li id='e63461'><a href="https://www.w3.org/mid/20100126034530522512.38ca4bb6%2540xn--mlform-iua.no">Re: Request for group input on ISSUE-83 (figure and details  captions)</a> (from xn--mlform-iua@xn--mlform-iua.no on 2010-01-26)</li>
+<li id='e63458'><a href="https://www.w3.org/mid/20100126015859583799.762f5ee2%2540xn--mlform-iua.no">Re: Request for group input on ISSUE-83 (figure and details   captions)</a> (from xn--mlform-iua@xn--mlform-iua.no on 2010-01-26)</li>
+<li id='e63457'><a href="https://www.w3.org/mid/4B5E2805.5070503%2540lachy.id.au">Re: Request for group input on ISSUE-83 (figure and details  captions)</a> (from lachlan.hunt@lachy.id.au on 2010-01-26)</li>
+<li id='e63459'><a href="https://www.w3.org/mid/63df84f1001251701w7db63b6yf33eac43e5b67ec8%2540mail.gmail.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from jonas@sicking.cc on 2010-01-25)</li>
+<li id='e63398'><a href="https://www.w3.org/mid/20100125181152787652.17657c07%2540xn--mlform-iua.no">Re: Request for group input on ISSUE-83 (figure and details  captions)</a> (from xn--mlform-iua@xn--mlform-iua.no on 2010-01-25)</li>
+<li id='e63366'><a href="https://www.w3.org/mid/dd0fbad1001242203ya5562ecwe80d7087011b1873%2540mail.gmail.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from jackalmage@gmail.com on 2010-01-25)</li>
+<li id='e63352'><a href="https://www.w3.org/mid/20100125041431001815.ac5b234b%2540xn--mlform-iua.no">Re: Request for group input on ISSUE-83 (figure and details  captions)</a> (from xn--mlform-iua@xn--mlform-iua.no on 2010-01-25)</li>
+<li id='e63365'><a href="https://www.w3.org/mid/643cc0271001242153j4209cd32tb6d2f8434be3bdce%2540mail.gmail.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from shelley.just@gmail.com on 2010-01-24)</li>
+<li id='e63355'><a href="https://www.w3.org/mid/643cc0271001241946t298a6bfah37affba932bb36c6%2540mail.gmail.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from shelley.just@gmail.com on 2010-01-24)</li>
+<li id='e63354'><a href="https://www.w3.org/mid/643cc0271001241945h4bba5d4dkb6de3cbd7841eb69%2540mail.gmail.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from shelley.just@gmail.com on 2010-01-24)</li>
+<li id='e63353'><a href="https://www.w3.org/mid/4CB48A6F-901D-4628-BD5C-DAFCDADD1BCE%2540apple.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from mjs@apple.com on 2010-01-24)</li>
+<li id='e63344'><a href="https://www.w3.org/mid/7c2a12e21001241215l55c7dbcaifb04077d79056661%2540mail.gmail.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from Simetrical+w3c@gmail.com on 2010-01-24)</li>
+<li id='e63335'><a href="https://www.w3.org/mid/643cc0271001240725l6c369460u8d5f61155b59bd49%2540mail.gmail.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from shelley.just@gmail.com on 2010-01-24)</li>
+<li id='e63333'><a href="https://www.w3.org/mid/4B5C2128.3060406%2540keryx.se">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from gunther@keryx.se on 2010-01-24)</li>
+<li id='e63329'><a href="https://www.w3.org/mid/Pine.LNX.4.64.1001240207450.19587%2540ps20323.dreamhostps.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from ian@hixie.ch on 2010-01-24)</li>
+<li id='e63330'><a href="https://www.w3.org/mid/2968AA12-8AD1-4ED0-93CA-8A8F7279C4E8%2540apple.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from mjs@apple.com on 2010-01-23)</li>
+<li id='e63226'><a href="https://www.w3.org/mid/FAA8FFC7-6D89-4E29-8070-9873E4D94529%2540apple.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from mjs@apple.com on 2010-01-21)</li>
+<li id='e63225'><a href="https://www.w3.org/mid/B8DFEEB5-869B-4E99-8A57-36761819E4A4%2540apple.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from mjs@apple.com on 2010-01-21)</li>
+<li id='e63222'><a href="https://www.w3.org/mid/7c2a12e21001211504m4c8ffed9i6ca1be6fa15908c0%2540mail.gmail.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from Simetrical+w3c@gmail.com on 2010-01-21)</li>
+<li id='e63196'><a href="https://www.w3.org/mid/4B58A577.1000308%2540intertwingly.net">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from rubys@intertwingly.net on 2010-01-21)</li>
+<li id='e63193'><a href="https://www.w3.org/mid/643cc0271001211036o3cdd58f9mdd3f21842fe8b7f8%2540mail.gmail.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from shelley.just@gmail.com on 2010-01-21)</li>
+<li id='e63192'><a href="https://www.w3.org/mid/643cc0271001211031x2f0893dv91cda42a31953e%2540mail.gmail.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from shelley.just@gmail.com on 2010-01-21)</li>
+<li id='e63190'><a href="https://www.w3.org/mid/7c2a12e21001211020g54657dd6x27175949a06577ed%2540mail.gmail.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from Simetrical+w3c@gmail.com on 2010-01-21)</li>
+<li id='e63167'><a href="https://www.w3.org/mid/267F18971244A34BA58D684E5EAA4E6F283CB5ED%2540TK5EX14MBXC141.redmond.corp.microsoft.com">[VER 2] {agenda} HTML WG telcon 2010-01-21: AIs, CfC/CfPs, and  heartbeat  docs</a> (from Paul.Cotton@microsoft.com on 2010-01-21)</li>
+<li id='e63138'><a href="https://www.w3.org/mid/643cc0271001210622ra5de118i8ab88769b6f9d783%2540mail.gmail.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from shelley.just@gmail.com on 2010-01-21)</li>
+<li id='e63136'><a href="https://www.w3.org/mid/4B586213.9080406%2540lachy.id.au">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from lachlan.hunt@lachy.id.au on 2010-01-21)</li>
+<li id='e63090'><a href="https://www.w3.org/mid/8146603F-8AC8-48FE-A04E-F271E656D316%2540apple.com">Re: {agenda} HTML WG telcon 2010-01-21: AIs, CfC/CfPs, and heartbeat  docs</a> (from singer@apple.com on 2010-01-21)</li>
+<li id='e63118'><a href="https://www.w3.org/mid/58604F61-16E3-47D1-98DA-BCBDE3A0EB5E%2540apple.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from mjs@apple.com on 2010-01-20)</li>
+<li id='e63002'><a href="https://www.w3.org/mid/267F18971244A34BA58D684E5EAA4E6F283CA53B%2540TK5EX14MBXC141.redmond.corp.microsoft.com">{agenda} HTML WG telcon 2010-01-21: AIs, CfC/CfPs, and heartbeat   docs</a> (from Paul.Cotton@microsoft.com on 2010-01-20)</li>
+<li id='e62979'><a href="https://www.w3.org/mid/267F18971244A34BA58D684E5EAA4E6F283CA511%2540TK5EX14MBXC141.redmond.corp.microsoft.com">{agenda} HTML WG telcon 2010-01-21: AIs, CfC/CfPs, and heartbeat  docs</a> (from Paul.Cotton@microsoft.com on 2010-01-20)</li>
+<li id='e62545'><a href="https://www.w3.org/mid/63A949D6-475D-4D33-90D5-32E465321655%2540apple.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from mjs@apple.com on 2010-01-16)</li>
+<li id='e62543'><a href="https://www.w3.org/mid/643cc0271001162115se2b52e7l654ce83eeac8cb88%2540mail.gmail.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from shelley.just@gmail.com on 2010-01-16)</li>
+<li id='e62542'><a href="https://www.w3.org/mid/dd0fbad1001162112l3037a151m47c48081e98741da%2540mail.gmail.com">Re: Request for group input on ISSUE-83 (figure and details captions)</a> (from jackalmage@gmail.com on 2010-01-16)</li>
+<li id='e62540'><a href="https://www.w3.org/mid/2F3611E8-8AF3-4A09-9C33-FA45DA763326%2540apple.com">Request for group input on ISSUE-83 (figure and details captions)</a> (from mjs@apple.com on 2010-01-16)</li>
+<li id='e62461'><a href="https://www.w3.org/mid/CAA86FA1CC6449D2A4BCF293A906D671%2540kmPC">(not really) Re: Alternate proposals for ISSUE-83</a> (from 1981km@gmail.com on 2010-01-15)</li>
+<li id='e62459'><a href="https://www.w3.org/mid/Pine.LNX.4.64.1001150038020.22353%2540ps20323.dreamhostps.com">Re: Alternate proposals for ISSUE-83</a> (from ian@hixie.ch on 2010-01-15)</li>
+<li id='e62463'><a href="https://www.w3.org/mid/9D978352-2051-426A-A619-E31640424682%2540apple.com">Re: (not really) Re: Alternate proposals for ISSUE-83</a> (from mjs@apple.com on 2010-01-14)</li>
+<li id='e62462'><a href="https://www.w3.org/mid/7c2a12e21001141747y1dc4f89ehb4f0a974089347ee%2540mail.gmail.com">Re: Alternate proposals for ISSUE-83</a> (from Simetrical+w3c@gmail.com on 2010-01-14)</li>
+<li id='e62460'><a href="https://www.w3.org/mid/D0AC047D-BD37-4D90-917E-EBA8EB723D35%2540apple.com">Re: Alternate proposals for ISSUE-83</a> (from mjs@apple.com on 2010-01-14)</li>
+<li id='e62458'><a href="https://www.w3.org/mid/dd0fbad1001141616ted0f7a5r999dfac5fb0fa100%2540mail.gmail.com">Re: Alternate proposals for ISSUE-83</a> (from jackalmage@gmail.com on 2010-01-14)</li>
+<li id='e62456'><a href="https://www.w3.org/mid/63df84f1001141559x1532bb1ehd9bf45b08d043692%2540mail.gmail.com">Re: Alternate proposals for ISSUE-83</a> (from jonas@sicking.cc on 2010-01-14)</li>
+<li id='e62455'><a href="https://www.w3.org/mid/7c2a12e21001141551r1db4a04ch138e2d5a017e6e28%2540mail.gmail.com">Re: Alternate proposals for ISSUE-83</a> (from Simetrical+w3c@gmail.com on 2010-01-14)</li>
+<li id='e62454'><a href="https://www.w3.org/mid/8B35C50E-7DFC-4525-A627-084B4FA59E80%2540apple.com">Re: Alternate proposals for ISSUE-83</a> (from mjs@apple.com on 2010-01-14)</li>
+<li id='e62452'><a href="https://www.w3.org/mid/Pine.LNX.4.64.1001142328340.17282%2540ps20323.dreamhostps.com">Re: Alternate proposals for ISSUE-83</a> (from ian@hixie.ch on 2010-01-14)</li>
+<li id='e62451'><a href="https://www.w3.org/mid/643cc0271001141525n1d81b307yecfbc0d9451c646f%2540mail.gmail.com">Re: Alternate proposals for ISSUE-83</a> (from shelley.just@gmail.com on 2010-01-14)</li>
+<li id='e62450'><a href="https://www.w3.org/mid/op.u6jpgm2ch8on37%2540bruce-pc">Re: Alternate proposals for ISSUE-83</a> (from brucel@opera.com on 2010-01-14)</li>
+<li id='e62449'><a href="https://www.w3.org/mid/Pine.LNX.4.64.1001142225130.22353%2540ps20323.dreamhostps.com">Re: Alternate proposals for ISSUE-83</a> (from ian@hixie.ch on 2010-01-14)</li>
+<li id='e62434'><a href="https://www.w3.org/mid/B66A28C9-8DD7-41A7-8D8C-18473F601032%2540apple.com">Re: Alternate proposals for ISSUE-83</a> (from mjs@apple.com on 2010-01-14)</li>
+<li id='e62433'><a href="https://www.w3.org/mid/20100114202850.pxv6menk00gww4oc%2540staff.opera.com">Re: Alternate proposals for ISSUE-83</a> (from jgraham@opera.com on 2010-01-14)</li>
+<li id='e62411'><a href="https://www.w3.org/mid/643cc0271001141111l14f2a62cw800479437bd3b21f%2540mail.gmail.com">Re: Alternate proposals for ISSUE-83</a> (from shelley.just@gmail.com on 2010-01-14)</li>
+<li id='e62409'><a href="https://www.w3.org/mid/F2B4026D-05EA-499F-B64E-0AF0C3BAE654%2540apple.com">Re: Alternate proposals for ISSUE-83</a> (from mjs@apple.com on 2010-01-14)</li>
+<li id='e62408'><a href="https://www.w3.org/mid/643cc0271001141046o637aea1emc23081d777dab3de%2540mail.gmail.com">Re: Alternate proposals for ISSUE-83</a> (from shelley.just@gmail.com on 2010-01-14)</li>
+<li id='e62406'><a href="https://www.w3.org/mid/59644210-8958-4510-AFDD-DA1BF11F8A54%2540apple.com">Alternate proposals for ISSUE-83</a> (from mjs@apple.com on 2010-01-14)</li>
+<li id='e62332'><a href="https://www.w3.org/mid/dd0fbad1001131359w48f1507dh9c99f89c7d54a847%2540mail.gmail.com">Re: ISSUE-83 alternate Change Proposal - fcaption and dlabel elements  	(or similar)</a> (from jackalmage@gmail.com on 2010-01-13)</li>
+<li id='e62331'><a href="https://www.w3.org/mid/A1C59F5B-C7ED-47A3-AF2F-C73A697DE75C%2540apple.com">Re: ISSUE-83 alternate Change Proposal - fcaption and dlabel elements  (or similar)</a> (from mjs@apple.com on 2010-01-13)</li>
+<li id='e62330'><a href="https://www.w3.org/mid/2EF7246B-0EC6-4F5C-AFC0-345C7A96CF74%2540apple.com">ISSUE-83 alternate Change Proposal - fcaption and dlabel elements (or  similar)</a> (from mjs@apple.com on 2010-01-13)</li>
+<li id='e62310'><a href="https://www.w3.org/mid/643cc0271001131014u28d218e9h778d426376297127%2540mail.gmail.com">Re: {agenda} HTML WG telcon 2010-01-14: AIs, CfC/CfPs, TFs, plus:  	heartbeat docs</a> (from shelley.just@gmail.com on 2010-01-13)</li>
+<li id='e62283'><a href="https://www.w3.org/mid/4B4E0668.1000503%2540intertwingly.net">{agenda} HTML WG telcon 2010-01-14: AIs, CfC/CfPs, TFs, plus: heartbeat  docs</a> (from rubys@intertwingly.net on 2010-01-13)</li>
+<li id='e62064'><a href="https://www.w3.org/mid/268BCF49-7548-4316-98FE-384C4C3269AA%2540apple.com">Re: Work on Alternate Proposals for ISSUE-83 dt-dd-semantics</a> (from mjs@apple.com on 2010-01-12)</li>
+<li id='e62012'><a href="https://www.w3.org/mid/op.u6e1gv1dh8on37%2540bruce-pc">Re: Work on Alternate Proposals for ISSUE-83 dt-dd-semantics</a> (from brucel@opera.com on 2010-01-12)</li>
+<li id='e62006'><a href="https://www.w3.org/mid/FDFD29D2-8D7F-40B1-AAE9-2505F29D30BA%2540apple.com">Re: Work on Alternate Proposals for ISSUE-83 dt-dd-semantics</a> (from mjs@apple.com on 2010-01-11)</li>
+<li id='e62005'><a href="https://www.w3.org/mid/op.u6d4ggi4h8on37%2540bruce-pc">Re: Work on Alternate Proposals for ISSUE-83 dt-dd-semantics</a> (from brucel@opera.com on 2010-01-11)</li>
+<li id='e62004'><a href="https://www.w3.org/mid/77093073-AF0E-4E89-A18C-BD4A778A1DC7%2540apple.com">Work on Alternate Proposals for ISSUE-83 dt-dd-semantics</a> (from mjs@apple.com on 2010-01-11)</li>
+<li id='e61926'><a href="https://www.w3.org/mid/643cc0271001100823p42a8c3ber482381ec30f7c450%2540mail.gmail.com">Re: details should be a child</a> (from shelley.just@gmail.com on 2010-01-10)</li>
+<li id='e61920'><a href="https://www.w3.org/mid/01E21066-9A4A-4AF8-B88E-ACCCC39FBC21%2540apple.com">Re: sections removed, current and ongoing</a> (from mjs@apple.com on 2010-01-09)</li>
+<li id='e61918'><a href="https://www.w3.org/mid/4B48C2C8.9000808%2540intertwingly.net">Re: sections removed, current and ongoing</a> (from rubys@intertwingly.net on 2010-01-09)</li>
+<li id='e61172'><a href="https://www.w3.org/mid/267F18971244A34BA58D684E5EAA4E6F14E31C6B%2540TK5EX14MBXC137.redmond.corp.microsoft.com">{agenda} HTML WG telcon 2009-12-17: action items, calls for   consensus/proposals,  task forces</a> (from Paul.Cotton@microsoft.com on 2009-12-15)</li>
+<li id='e61146'><a href="https://www.w3.org/mid/267F18971244A34BA58D684E5EAA4E6F14E31C47%2540TK5EX14MBXC137.redmond.corp.microsoft.com">{agenda} HTML WG telcon 2009-12-17: action items, calls for  consensus/proposals,  task forces</a> (from Paul.Cotton@microsoft.com on 2009-12-15)</li>
+<li id='e60763'><a href="https://www.w3.org/mid/643cc0270912100718o3b9174fbx475ff30c1538ccbc%2540mail.gmail.com">Re: {agenda} HTML WG telcon 2009-10-29: action items, calls for  	consensus/proposals, task forces</a> (from shelley.just@gmail.com on 2009-12-10)</li>
+<li id='e60741'><a href="https://www.w3.org/mid/643cc0270912100716w1c57752cw96f3c0e968bd41ed%2540mail.gmail.com">Re: {agenda} HTML WG telcon 2009-10-29: action items, calls for  	consensus/proposals, task forces</a> (from shelley.just@gmail.com on 2009-12-10)</li>
+<li id='e60678'><a href="https://www.w3.org/mid/085F3029-4D04-460F-BBE4-E9E907D116C5%2540apple.com">Re: ISSUE-83: dt-dd-semantics - Chairs Solicit Alternate Proposals or  Counter-Proposals</a> (from mjs@apple.com on 2009-12-09)</li>
+<li id='e60677'><a href="https://www.w3.org/mid/643cc0270912091006s64682e0fm138ede1061980d29%2540mail.gmail.com">Re: ISSUE-83: dt-dd-semantics - Chairs Solicit Alternate Proposals or  	Counter-Proposals</a> (from shelley.just@gmail.com on 2009-12-09)</li>
+<li id='e60664'><a href="https://www.w3.org/mid/4B1FE5E2.50204%2540intertwingly.net">{agenda} HTML WG telcon 2009-10-29: action items, calls for consensus/proposals,  task forces</a> (from rubys@intertwingly.net on 2009-12-09)</li>
+<li id='e60651'><a href="https://www.w3.org/mid/D0DD00BC-9BF7-45EA-9565-EFCDEE96E816%2540apple.com">Re: ISSUE-83: dt-dd-semantics - Chairs Solicit Alternate Proposals or  Counter-Proposals</a> (from mjs@apple.com on 2009-12-09)</li>
+<li id='e60650'><a href="https://www.w3.org/mid/643cc0270912090901u7671c4fbi72c216affa3ea812%2540mail.gmail.com">Re: ISSUE-83: dt-dd-semantics - Chairs Solicit Alternate Proposals or  	Counter-Proposals</a> (from shelley.just@gmail.com on 2009-12-09)</li>
+<li id='e60596'><a href="https://www.w3.org/mid/8F931244-56E8-4E19-99D4-58776AEA1CC5%2540apple.com">ISSUE-83: dt-dd-semantics - Chairs Solicit Alternate Proposals or  Counter-Proposals</a> (from mjs@apple.com on 2009-12-08)</li>
+<li id='e60139'><a href="https://www.w3.org/mid/4B185158.9070901%2540w3.org">Minutes HTML WG 3 December 2009</a> (from cooper@w3.org on 2009-12-03)</li>
+<li id='e59846'><a href="https://www.w3.org/mid/AE13E366-7F42-46A8-8631-048A89897F5B%2540apple.com">{agenda} HTML WG telcon 2009-12-3: issues, action items,  calls for  consensus/proposals, task force reports</a> (from mjs@apple.com on 2009-12-02)</li>
+<li id='e59789'><a href="https://www.w3.org/mid/A0571128-D098-4B07-ABE0-EB0C52D650F8%2540apple.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in	figure  and details</a> (from mjs@apple.com on 2009-12-01)</li>
+<li id='e59786'><a href="https://www.w3.org/mid/643cc0270912011636p50631246sd843bde080535146%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from shelley.just@gmail.com on 2009-12-01)</li>
+<li id='e59724'><a href="https://www.w3.org/mid/4B157F06.8060600%2540intertwingly.net">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in   	figure and details</a> (from rubys@intertwingly.net on 2009-12-01)</li>
+<li id='e59722'><a href="https://www.w3.org/mid/BA7D3CBE-8D3B-41F3-88F1-1634953220D6%2540apple.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in	figure  and details</a> (from mjs@apple.com on 2009-12-01)</li>
+<li id='e59720'><a href="https://www.w3.org/mid/643cc0270912011232j82b5843v6aba1fc2bbd9c87c%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from shelley.just@gmail.com on 2009-12-01)</li>
+<li id='e59718'><a href="https://www.w3.org/mid/A8226540-D6D6-44D9-9693-DA089BDBC758%2540apple.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in	figure  and details</a> (from mjs@apple.com on 2009-12-01)</li>
+<li id='e59577'><a href="https://www.w3.org/mid/20091130034813079761.4adeff82%2540xn--mlform-iua.no">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in     figure and details</a> (from xn--mlform-iua@xn--mlform-iua.no on 2009-11-30)</li>
+<li id='e59575'><a href="https://www.w3.org/mid/20091130030721836591.e0a0f1d0%2540xn--mlform-iua.no">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in    figure and details</a> (from xn--mlform-iua@xn--mlform-iua.no on 2009-11-30)</li>
+<li id='e59550'><a href="https://www.w3.org/mid/643cc0270911280934h77a2869wa151c82f9f5b9f8d%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from shelley.just@gmail.com on 2009-11-28)</li>
+<li id='e59548'><a href="https://www.w3.org/mid/9945efe50911280852p1bb6ac9bjcc006f5da4fce141%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from noreplytopreventspam@blijbol.nl on 2009-11-28)</li>
+<li id='e59537'><a href="https://www.w3.org/mid/9945efe50911271522i794ca75dr4a54807d5f7a77f8%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from noreplytopreventspam@blijbol.nl on 2009-11-28)</li>
+<li id='e59546'><a href="https://www.w3.org/mid/643cc0270911272058y716a99d4k32be22fdc75c7b3c%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from shelley.just@gmail.com on 2009-11-27)</li>
+<li id='e59544'><a href="https://www.w3.org/mid/dd0fbad0911272046u32231b17ibae96cf42460f60d%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from jackalmage@gmail.com on 2009-11-27)</li>
+<li id='e59542'><a href="https://www.w3.org/mid/B2516BE3-48EB-4317-9E70-4603F6132969%2540apple.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in	figure  and details</a> (from mjs@apple.com on 2009-11-27)</li>
+<li id='e59539'><a href="https://www.w3.org/mid/643cc0270911271615i7d2024f8n2e23ecd76ccc5bdf%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from shelley.just@gmail.com on 2009-11-27)</li>
+<li id='e59535'><a href="https://www.w3.org/mid/643cc0270911271431nac38ae7k7de89f2f0f0c12c8%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from shelley.just@gmail.com on 2009-11-27)</li>
+<li id='e59533'><a href="https://www.w3.org/mid/dd0fbad0911271415y7a9b48dej2575e26041050db9%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from jackalmage@gmail.com on 2009-11-27)</li>
+<li id='e59531'><a href="https://www.w3.org/mid/643cc0270911271152g7ea62cd4w5d86b7ee17ad7149%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from shelley.just@gmail.com on 2009-11-27)</li>
+<li id='e59529'><a href="https://www.w3.org/mid/643cc0270911271140u3093ddb8id7f42b382bad6300%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from shelley.just@gmail.com on 2009-11-27)</li>
+<li id='e59524'><a href="https://www.w3.org/mid/dd0fbad0911270753n2e07fd46ha0d3a4203575b3ed%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from jackalmage@gmail.com on 2009-11-27)</li>
+<li id='e59518'><a href="https://www.w3.org/mid/9945efe50911261454t62bd011v81a1ee0bec8f9a38%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from noreplytopreventspam@blijbol.nl on 2009-11-26)</li>
+<li id='e58872'><a href="https://www.w3.org/mid/4b054495.86c3f10a.69d0.fffff27f%2540mx.google.com">Re: {agenda} HTML WG telcon 2009-11-19: issues, action items,   calls for  consensus/proposals, task force reports</a> (from oradnio@gmail.com on 2009-11-19)</li>
+<li id='e58842'><a href="https://www.w3.org/mid/1c8dbcaa0911190253j5155161aw5db9124ea3af9ce%2540mail.gmail.com">Re: {agenda} HTML WG telcon 2009-11-19: issues, action items, calls  	for consensus/proposals, task force reports</a> (from laura.lee.carlson@gmail.com on 2009-11-19)</li>
+<li id='e58700'><a href="https://www.w3.org/mid/267F18971244A34BA58D684E5EAA4E6F044525AE%2540TK5EX14MBXC137.redmond.corp.microsoft.com">{agenda} HTML WG telcon 2009-11-19: issues, action items, calls for   consensus/proposals, task force reports</a> (from Paul.Cotton@microsoft.com on 2009-11-18)</li>
+<li id='e58672'><a href="https://www.w3.org/mid/267F18971244A34BA58D684E5EAA4E6F0445256B%2540TK5EX14MBXC137.redmond.corp.microsoft.com">{agenda} HTML WG telcon 2009-11-19: issues, action items, calls for  consensus/proposals, task force reports</a> (from Paul.Cotton@microsoft.com on 2009-11-18)</li>
+<li id='e58535'><a href="https://www.w3.org/mid/20091117064258.GC2814%2540sideshowbarker">We now have Atom feeds for all Tracker issues [was: HTML Working 	Group Decision Policy - for discussion]</a> (from mike@w3.org on 2009-11-17)</li>
+<li id='e58326'><a href="https://www.w3.org/mid/4AFB56AE.20108%2540xn--mlform-iua.no">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in figure    	and details</a> (from xn--mlform-iua@xn--mlform-iua.no on 2009-11-12)</li>
+<li id='e58330'><a href="https://www.w3.org/mid/F4319674-B07F-4CDD-992B-167E09EDE022%2540apple.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in	figure  and details</a> (from mjs@apple.com on 2009-11-11)</li>
+<li id='e58308'><a href="https://www.w3.org/mid/COL103-W4038C6C25E2178E210077A84AA0%2540phx.gbl">RE: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  figure and details</a> (from kunter_ilalan@hotmail.com on 2009-11-11)</li>
+<li id='e58291'><a href="https://www.w3.org/mid/643cc0270911110709l34688656r8dbfaa31ccf84319%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from shelley.just@gmail.com on 2009-11-11)</li>
+<li id='e58284'><a href="https://www.w3.org/mid/dd0fbad0911110639v52ee6b6ard2ed147959c31c09%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from jackalmage@gmail.com on 2009-11-11)</li>
+<li id='e58282'><a href="https://www.w3.org/mid/643cc0270911110625t1ec158e2od573ec13436ac740%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from shelley.just@gmail.com on 2009-11-11)</li>
+<li id='e58280'><a href="https://www.w3.org/mid/643cc0270911110553l234e8555l5784a4fb83c4b3f8%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from shelley.just@gmail.com on 2009-11-11)</li>
+<li id='e58278'><a href="https://www.w3.org/mid/643cc0270911110538x7d236250nbc1422023a87262a%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from shelley.just@gmail.com on 2009-11-11)</li>
+<li id='e58276'><a href="https://www.w3.org/mid/643cc0270911110536q6a974e09te552841d9d818bda%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from shelley.just@gmail.com on 2009-11-11)</li>
+<li id='e58259'><a href="https://www.w3.org/mid/4AFA8EBC.3000406%2540opera.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in figure   	and details</a> (from jgraham@opera.com on 2009-11-11)</li>
+<li id='e58253'><a href="https://www.w3.org/mid/89A5CC66-287B-434A-828C-51DB0E868E05%2540apple.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in	figure  and details</a> (from mjs@apple.com on 2009-11-10)</li>
+<li id='e58250'><a href="https://www.w3.org/mid/643cc0270911101755s3c66449wd1dee88322b805fa%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from shelley.just@gmail.com on 2009-11-10)</li>
+<li id='e58248'><a href="https://www.w3.org/mid/1c8dbcaa0911101748w5635b976q5d37f6209e8949b2%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from laura.lee.carlson@gmail.com on 2009-11-10)</li>
+<li id='e58246'><a href="https://www.w3.org/mid/643cc0270911101526l55f0bf2evedc852f574979a4d%2540mail.gmail.com">Re: ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in  	figure and details</a> (from shelley.just@gmail.com on 2009-11-10)</li>
+<li id='e58244'><a href="https://www.w3.org/mid/643cc0270911101243w435b92d4tc1768ce0c4bb87b8%2540mail.gmail.com">ISSUE-83 ACTION-152 Change Proposal for the use of dt/dd in figure  	and details</a> (from shelley.just@gmail.com on 2009-11-10)</li>
+<li id='e55837'><a href="https://www.w3.org/mid/4AD08F63.3090402%2540burningbird.net">Re: ISSUE-83 offer to write change proposal</a> (from shelleyp@burningbird.net on 2009-10-10)</li>
+<li id='e55833'><a href="https://www.w3.org/mid/D7BF237A-611A-43B4-A0BC-6413673E5C57%2540apple.com">Re: ISSUE-83 offer to write change proposal</a> (from mjs@apple.com on 2009-10-10)</li>
+<li id='e55831'><a href="https://www.w3.org/mid/4AD07E67.7010004%2540burningbird.net">ISSUE-83 offer to write change proposal</a> (from shelleyp@burningbird.net on 2009-10-10)</li>
+<li id='e55064'><a href="https://www.w3.org/mid/20091001165604.GB26265%2540sideshowbarker">minutes of 2009-10-01 telcon</a> (from mike@w3.org on 2009-10-02)</li>
+<li id='e54807'><a href="https://www.w3.org/mid/2FA1F46B-76FD-44A3-995C-7FC5A7C419DC%2540apple.com">Agenda for HTML WG telcon 2009-09-24 - CfCs, Accessibility TF,  Testing  TF, etc.</a> (from mjs@apple.com on 2009-09-30)</li>
+<li id='e54567'><strong  class='hl'><a href="https://www.w3.org/mid/E1MsUM7-0006GF-0n%2540wiggum.w3.org">[Bug 7657] Redefining dt and dd</a> (from bugzilla@wiggum.w3.org on 2009-09-29)</strong></li>
+</ol></dd>
+</dl>
+<h2>Related notes:</h2>
+<div class="user">
+<p id='n60169'>[MikeSmith]: escalated from <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=7657">http://www.w3.org/Bugs/Public/show_bug.cgi?id=7657</a><address><span class='date'>29 Sep 2009, 04:29:03</span></address></p>
+</div>
+<div class="user">
+<p id='n60575'>[MikeSmith]: see Dean Edwards message at <a href="https://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2009-October/023276.html">http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2009-October/023276.html</a> and subsequent thread<address><span class='date'>5 Oct 2009, 02:32:50</span></address></p>
+</div>
+<div class="user highlighted">
+<p id='n60581'><strong class='hl'>Related email thread: &quot;what is dt?&quot; Shelley Powers<br />
+<a href='http://lists.w3.org/Archives/Public/public-html/2009Sep/thread.html#msg575'>http://lists.w3.org/Archives/Public/public-html/2009Sep/thread.html#msg575</a><address><cite>Laura Carlson</cite>, <span class='date'>5 Oct 2009, 13:29:11</span></address></strong></p>
+</div>
+<div class="user">
+<p id='n68548'>[rubys]: I believe that this is still in process<address><span class='date'>11 Feb 2010, 17:26:17</span></address></p>
+</div>
+<div class="user">
+<p id='n68606'>This has been closed by amicable resolution.<address><cite>Maciej Stachowiak</cite>, <span class='date'>12 Feb 2010, 02:52:49</span></address></p>
+</div>
+<p>Display <a href='/html/wg/tracker/issues/83?changelog'>change log</a> <a href='/html/wg/tracker/issues/83.atom'><img src='/2008/site/images/icons/atom'
+			 alt='ATOM feed' width='12' height='12' /></a></p>
+</div>
+<div class="diagnostics">
+</div>
+<hr />
+<address>
+Maciej Stachowiak &lt;<a href='mailto:mjs@apple.com'>mjs@apple.com</a>&gt;, Sam Ruby &lt;<a href='mailto:rubys@intertwingly.net'>rubys@intertwingly.net</a>&gt;, Chairs, Michael[tm] Smith &lt;<a href='mailto:mike@w3.org'>mike@w3.org</a>&gt;, Staff Contact<br />
+Tracker: <a href="https://www.w3.org/2005/06/tracker/">documentation</a>, 
+(<a href='/html/wg/tracker/options'>configuration for this group</a>), originally developed by <a href="https://www.w3.org/People/Dean/">Dean Jackson</a>, 
+is developed and maintained by the Systems Team &lt;<a href='mailto:w3t-sys@w3.org'>w3t-sys@w3.org</a>&gt;.<br />
+$Id: 83.html,v 1.1 2019/10/11 08:04:51 carcone Exp $</address>
+<script src='/2005/06/tracker/show-email-inline.js' type='text/javascript'></script>
+</body>
+</html>

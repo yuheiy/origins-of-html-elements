@@ -1,0 +1,144 @@
+<!-- received="Sun Mar 14 09:42:00 1993 PDT" -->
+<!-- sent="Sun, 14 Mar 93 03:00:45 -0800" -->
+<!-- name="Marc Andreessen" -->
+<!-- email="marca@ncsa.uiuc.edu" -->
+<!-- subject="NCSA Mosaic for X 0.10 released" -->
+<!-- id="9303141100.AA22479@wintermute.ncsa.uiuc.edu" -->
+<!-- inreplyto="" -->
+<title>WWW-Talk Jan-Mar 1993: NCSA Mosaic for X 0.10 released</title>
+<h1>NCSA Mosaic for X 0.10 released</h1>
+Marc Andreessen (<i>marca@ncsa.uiuc.edu</i>)<br>
+<i>Sun, 14 Mar 93 03:00:45 -0800</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#262">[ date ]</a><a href="index.html#262">[ thread ]</a><a href="subject.html#262">[ subject ]</a><a href="author.html#262">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0263.html">Marc Andreessen: "inlined image demo/explanation"</a>
+<li> <b>Previous message:</b> <a href="0261.html">Lou Montulli: "Support for CSO and gopher type 2"</a>
+<!-- nextthread="start" -->
+</ul>
+<hr>
+<!-- body="start" -->
+Beta version 0.10 of NCSA Mosaic for the X Window System, a networked<br>
+information systems and World Wide Web browser, is hereby released:<br>
+<p>
+<a href="file://ftp.ncsa.uiuc.edu/Web/xmosaic/xmosaic-0.10.tar.Z">file://ftp.ncsa.uiuc.edu/Web/xmosaic/xmosaic-0.10.tar.Z</a><br>
+                         .../xmosaic/binaries-0.10/xmosaic-sun.Z<br>
+                         .../xmosaic/binaries-0.10/xmosaic-sgi.Z<br>
+                         .../xmosaic/binaries-0.10/xmosaic-ibm.Z<br>
+                         .../xmosaic/binaries-0.10/xmosaic-dec.Z<br>
+<p>
+This release of NCSA Mosaic is known to compile on the following<br>
+platforms:<br>
+<p>
+  SGI (IRIX 4.0.2) <br>
+  IBM (AIX 3.2)<br>
+  Sun 4 (SunOS 4.1.2 with stock X11R4 and Motif 1.1).<br>
+  DEC Ultrix.<br>
+<p>
+More binaries will be supplied as I am able to find other<br>
+Motif-configured platforms to use.  (Contributions of working<br>
+binaries, or development systems, are welcome.)  Documentation is<br>
+available online.<br>
+<p>
+Changes since 0.9 include:<br>
+<p>
+ o Support for &lt;IMG&gt; tag: inlined images in HTML documents.<br>
+    o Handles X bitmap and GIF formats so far.<br>
+    o New resource, colorsPerInlinedImage, can be used to restrict<br>
+      color use of inlined images -- default is 50.<br>
+    o Image files can be located anywhere on the net (pointed to by<br>
+      URL); image data is cached in memory for fast display and<br>
+      reuse.<br>
+    o Example of inlined bitmap: <br>
+      &lt;IMG SRC="<a href="file://foobar.com/foobar.xbm">file://foobar.com/foobar.xbm</a>"&gt;<br>
+    o Example of inlined image serving as anchor: <br>
+      &lt;A HREF="<a href="http://foobar.com/ref.html">http://foobar.com/ref.html</a>"&gt; <br>
+      &lt;IMG SRC="<a href="file://foobar.com/blagh.gif">file://foobar.com/blagh.gif</a>"&gt; &lt;/A&gt;<br>
+ o Better support for acting as binary file retrieval client.<br>
+    o Each window can either be in binary transfer mode or not;<br>
+      resource binaryTransferMode controls startup value (default<br>
+      is 'False', and you probably don't want to change this). A<br>
+      toggle button in the Options menu allows changing on the fly.<br>
+    o If a window is not in binary trasfer mode, data files with<br>
+      unrecognized types will be displayed in the window as either<br>
+      plain text or HTML (depending on the server type), as before.<br>
+    o If a window is in binary transfer mode, data files with<br>
+      unrecognized types will be dumped to a local file after being<br>
+      transferred over as binary data.<br>
+    o Regardless of whether a window is in binary transfer mode or<br>
+      not, files with recognizes types (images, sound, etc.) will be<br>
+      handled as usual, and uncompression will be transparent as<br>
+      usual.<br>
+    o The whole point of all this is to allow the user to select on the<br>
+      fly how a given file of an unrecognized type is to be handled.<br>
+    o Because files are currently typed by filename extension,<br>
+      binary transfer mode should generally be kept off, otherwise<br>
+      it will screw up things like WAIS searches pretty badly. Also,<br>
+      since Gopher does things differently from everyone else,<br>
+      things are different there too.<br>
+    o Setting one of the multimedia resources to the text string<br>
+      "dump" will cause files of that type to be dumped to local<br>
+      disk as though in binary transfer mode.<br>
+    o See <a href="http://hoohoo.ncsa.uiuc.edu:80/mosaic-docs/file-typing-issues.html">http://hoohoo.ncsa.uiuc.edu:80/mosaic-docs/file-typing-issues.html</a> <br>
+      for a more thorough discussion of these issues.<br>
+ o Audio annotations for Sun's with /usr/demo/SOUND/record (or<br>
+   something similar) are now enabled. Resources<br>
+   recordCommandLocation and recordCommand are used to specify the<br>
+   command used to record sound; theoretically, this approach can be<br>
+   used on any platform with appropriate hardware and software,<br>
+   although SGI Indigo &amp; Sun Sparcstation are the only two that I know<br>
+   of.<br>
+ o Search capability within documents: enter search term, scrollbar<br>
+   jumps to match and match is highlighted; repeat as desired.<br>
+ o Enhanced support for various Gopher types, including binary files<br>
+   and CSO phonebooks (sorry, phonebooks aren't supported yet, but at<br>
+   least now an error message shows up).<br>
+ o Spaces converted to +'s in keyword queries now.<br>
+ o Scrollbar arrows now increment a reasonable amount when viewing<br>
+   large documents.<br>
+ o Anonymous FTP password is now always user@host.domain,<br>
+   enabling access to every strange FTP server out there that I know of.<br>
+ o Pattern-matching to determine file type based on file name now uses<br>
+   caseless string compare.<br>
+ o Better default visited anchor color for non-SGI color displays.<br>
+ o Messages from libwww now show up in pop-up dialogs like they<br>
+   should.<br>
+ o Telnet never gets asked to use unrecognized -l flag.<br>
+ o Tar files are now always retrieved to local disk (and not displayed).<br>
+ o Replacement (and better) Archie interface.<br>
+ o Mail Developers window is cleared on each use.<br>
+ o New resource trackVisitedAnchors; can be used to turn off tracking<br>
+   of visited anchors altogether.<br>
+ o Better transparent uncompression support:<br>
+    o Gzipped (.z) files are now recognized and uncompressed on<br>
+      the fly (as well as .Z files, as before).<br>
+    o New resources uncompressCommand (default 'uncompress')<br>
+      and gunzipCommand (default 'gunzip').<br>
+ o As usual, little bugfixes and cleanups.<br>
+<p>
+We're targeting a 1.0 release for the beginning of April, so quick<br>
+feedback and bug reports will be GREATLY appreciated.<br>
+<p>
+Finally, thanks *again* to everyone who's been contributing comments<br>
+and bug reports -- keep 'em coming!<br>
+<p>
+Cheers,<br>
+Marc &amp; Eric<br>
+<p>
+<pre>
+--
+Marc Andreessen &amp; Eric Bina
+Software Development Group
+National Center for Supercomputing Applications
+marca@ncsa.uiuc.edu, ebina@ncsa.uiuc.edu
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0263.html">Marc Andreessen: "inlined image demo/explanation"</a>
+<li> <b>Previous message:</b> <a href="0261.html">Lou Montulli: "Support for CSO and gopher type 2"</a>
+<!-- nextthread="start" -->
+</ul>

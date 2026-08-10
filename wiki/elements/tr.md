@@ -10,7 +10,7 @@ HTML+作業中にrow separatorからrow containerへ変化し、RFC 1942を経�
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、table内のcellのrowを表す。 [一次定義](https://html.spec.whatwg.org/multipage/tables.html#the-tr-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、table内のcellのrowを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/tables.html)（[公開版](https://html.spec.whatwg.org/multipage/tables.html#the-tr-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,11 +36,11 @@ HTML+ `TR`（separator） → HTML+ `TR`（container） → RFC 1942 → HTML 3.
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1993-11-08 | HTML+ §9 | Internet-Draft | `TR`を含む単純table modelを定義する。 | [一次資料](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html) | 2026-08-09 |
-| 1996-05 | RFC 1942 | Experimental RFC | table modelがHTML+とHTML 3 draftから発展したと明記する。 | [一次資料](https://www.rfc-editor.org/rfc/rfc1942.html) | 2026-08-09 |
-| 1997-01-14 | HTML 3.2 | W3C Recommendation | 広く実装されたtable subsetとして`TR`を採録する。 | [一次資料](https://www.w3.org/TR/REC-html32#table) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1993-11-08 | [HTML+ §9](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)） | Internet-Draft | `TR`を含む単純table modelを定義する。 | 2026-08-09 |
+| 1996-05 | [RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)） | Experimental RFC | table modelがHTML+とHTML 3 draftから発展したと明記する。 | 2026-08-09 |
+| 1997-01-14 | [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32#table)） | W3C Recommendation | 広く実装されたtable subsetとして`TR`を採録する。 | 2026-08-09 |
 
 ## 確度
 

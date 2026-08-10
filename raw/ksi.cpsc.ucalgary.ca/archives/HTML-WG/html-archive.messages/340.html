@@ -1,0 +1,286 @@
+<TITLE>EMail Msg &lt;9409091612.aa09611@dali.scocan.sco.COM&gt;</title>
+<H1>Re: HTML 3.0 Process</H1><ADDRESS>Murray Maloney &lt;murray@sco.COM&gt;</ADDRESS>
+<UL><LI><B>Mail folder: </B><A HREF="../html-archive.index.html#340.html">html-archive</A><LI><B>Next message: </B><A HREF="341.html">Jeff Suttor: &quot;Re: ICADD elements in HTML&quot;</A><LI><B>Previous message: </B><A HREF="339.html">Terry Allen: &quot;3in1 HTML dtd&quot;</A><LI><B>Maybe in reply to: </B><A HREF="333.html">Dave Raggett: &quot;Re: HTML 3.0 Process&quot;</A><LI><B>Reply: </B><A HREF="361.html">Dave Raggett: &quot;Re: HTML 3.0 Process&quot;</A></UL>
+<PRE>Date: Fri, 9 Sep 94 16:25:07 EDT
+Message-id: <A HREF="340.html">&lt;9409091612.aa09611@dali.scocan.sco.COM&gt;</A>
+Reply-To: murray@sco.COM
+Originator: html-wg@oclc.org
+Sender: html-wg@oclc.org
+Precedence: bulk
+From: Murray Maloney &lt;murray@sco.COM&gt;
+To: Multiple recipients of list &lt;html-wg@oclc.org&gt;
+Subject: Re: HTML 3.0 Process
+X-Listprocessor-Version: 6.0c -- ListProcessor by Anastasios Kotsikonas
+X-Comment: HTML Working Group (Private)
+</PRE><PRE>
+&gt; 
+&gt; HTML Math:
+&gt; 
+&gt; Oops! I forgot to enclose our current math markup proposal.
+&gt; This is still experimental, and we will soon get a better
+&gt; feeling when the implementation shapes up.
+&gt; --
+&gt; Best wishes,
+&gt; 
+&gt; Dave Raggett
+
+Hi all,
+
+I have a quite a few comments to make on this Math fragment
+and I see that I am the first to do so...
+
+----------------------------------------
+First, I think that it would be a mistake NOT to include the
+elements of inline mathematical formatting into the general
+%text definition.  That is, I must be able to use &lt;SUP&gt; and
+&lt;SUB&gt; and some of the other elements within a paragraph, list
+or heading.
+
+----------------------------------------
+Secondly, perhaps I am the only person among us who isn't familiar
+with TeX, and that might make it harder for me to understand or 
+appreciate some of the constructs that are presented here.  
+
+I have some difficulty with the list of EMPTY elements which
+are used to more like delimiters in a programming language.
+For example, &lt;LEFT&gt; is used to indicate that what came before
+is to be placed to the left and &lt;RIGHT&gt; is used to indicate 
+that what comes next is to be placed to the right.  I assume,
+not knowing, that this is more or less how TeX would do it.
+
+If you want to use TeX, then why not provide support for TeX
+within the browser and provide portable code to the rest of
+the community to support it too?  Personally, being much more
+experienced with EQN, I would like to see it adopted as another
+NOTATION supported by HTML browsers.
+
+----------------------------------------
+Quoting from the notes I took in Geneva:
+
+&quot;It was noted that the model described by Philip for mathematics 
+was more accurately a model for fairly precise typographical layout
+and would serve the community very well in that capacity. As such,
+it could also serve as a means by which mathematics could be layed 
+out typographically.  Nonetheless, for the purposes of publishing
+pure mathematics in a notation that could be parsed and unambiguously
+interpreted by man or machine, a mathematical NOTATION(s) would be
+better suited.&quot;
+
+So, I wonder if a content model like this makes any sense to you all:
+(I assume that ROOT, SUB and SUP would be part of %text;)
+
+	&lt;!ENTITY % formulae &quot;(#PCDATA | BOX | ARRAY)*&quot;&gt;
+
+	&lt;!ELEMENT MATH   - - (LABEL, (%formulae; | A )*)&gt;
+	&lt;!ELEMEMT LABEL  - - ((%text; | A )*)&gt;
+
+	&lt;!ELEMEMT BOX    - - (LEFT?, ATOP?, CENTER,     OVER?, RIGHT?)&gt;
+	&lt;!ATTLIST BOX        ALIGN (left | top | bottom | right) 
+			     LDELIM CDATA  #IMPLIED
+			     TDELIM CDATA  #IMPLIED
+			     BDELIM CDATA  #IMPLIED
+			     RDELIM CDATA  #IMPLIED
+			     SIZE  NUMBER 100 &gt;
+
+	&lt;!ELEMENT LEFT   - o (LEFT?, TOP?, CENTER,     (BOTTOM|OVER)?, RIGHT?)&gt;
+	&lt;!ELEMENT TOP    - o (LEFT?, TOP?, CENTER,     (BOTTOM|OVER)?, RIGHT?)&gt;
+	&lt;!ELEMENT CENTER - o (LEFT?, TOP?, %formulae;, (BOTTOM|OVER)?, RIGHT?)&gt;
+	&lt;!ELEMENT BOTTOM - o (LEFT?, TOP?, CENTER,     (BOTTOM|OVER)?, RIGHT?)&gt;
+	&lt;!ELEMENT OVER   - o (LEFT?, TOP?, CENTER,     (BOTTOM|OVER)?, RIGHT?)&gt;
+	&lt;!ELEMENT RIGHT  - o (LEFT?, TOP?, CENTER,     (BOTTOM|OVER)?, RIGHT?)&gt;
+
+	&lt;!ATTLIST LEFT       ALIGN (left | top | center | bottom | right) &gt;
+	&lt;!ATTLIST TOP        ALIGN (left | top | center | bottom | right) &gt;
+	&lt;!ATTLIST CENTER     ALIGN (left | top | center | bottom | right) &gt;
+	&lt;!ATTLIST BOTTOM     ALIGN (left | top | center | bottom | right) &gt;
+	&lt;!ATTLIST RIGHT      ALIGN (left | top | center | bottom | right) &gt;
+
+	&lt;!ATTLIST SUB        ALIGN (left | top | center | bottom | right) &gt;
+	&lt;!ATTLIST SUP        ALIGN (left | top | center | bottom | right) &gt;
+
+----------------------------------------
+The &lt;ABOVE&gt; and &lt;BELOW&gt; that are defined in Dave's fragment become
+redundant because this model will allow one to construct them:
+
+	&lt;BOX&gt; &lt;CENTER&gt; &amp;rarr; &lt;BOTTOM&gt; &amp;pi;r&lt;SUP&gt;2&lt;/SUP&gt; &lt;/BOX&gt;
+		or
+	&lt;BOX&gt; &lt;TOP&gt; &amp;rarr; &lt;CENTER&gt; &amp;pi;r&lt;SUP&gt;2&lt;/SUP&gt; &lt;/BOX&gt;
+
+Furthermore, the browsers could be trained to extend certain characters
+across the breadth or over the height of a formatted element, thus
+ensuring that parens, brackets, braces, rules and arrows fit the
+area appropriately.
+
+But, perhaps I just don't understand and appreciate the added value
+that &lt;ABOVE&gt; and &lt;BELOW&gt; would provide.
+
+----------------------------------------
+In the definition of &lt;BOX&gt; attributes above, I have used a NUMBER
+for the SIZE attribute so that relative size could be indicated.
+The deault 100 is meant to be interpreted as 100% of the size
+(horizontally or vertically) of the typographic element being matched.
+
+It also occured to me that it might be important to specify left,
+right, top and bottom delimiters distinctly rather than trying
+to parse multiple values from a single attribute.
+----------------------------------------
+I would redefine &lt;ROOT&gt; thus:
+
+	&lt;!ELEMENT ROOT   - - (RADIX?, %formulae)&gt;
+	&lt;!ELEMENT RADIX  - - (%formulae)&gt;
+
+----------------------------------------
+I'm not sure that I fully appreciate the &lt;ARRAY&gt; element yet.
+I'll wait to hear from others before I comment any further.
+
+----------------------------------------
+I see that &lt;B&gt; is redefined to contain %formulae;, but I note
+that &lt;I&gt; is not similarly redefined.  Why not?
+
+----------------------------------------
+&lt;MATH&gt; is defined to include &lt;LABEL&gt; at the end of its content.
+Why not have &lt;LABEL&gt; at the beginning and then place it at the
+end if that is how you decide to format it?  In all of the
+DTDs that I have worked on, &lt;TITLE&gt;s and &lt;LABEL&gt;s have always
+been placed at the beginning of the content model.
+
+----------------------------------------
+
+&gt; 
+&gt; -----------------------------------------------------------------------------
+&gt; &lt;!--
+&gt; Here is my revised DTD for maths. It looks like it will be quite easy
+&gt; to parse and layout, as well as being deliberately easy to import LaTeX.
+&gt; HTML-Math would clearly benefit from SHORTREF definitions to cut down on
+&gt; typing. Indeed it may be practical to use _{..} and ^{..} as short forms
+&gt; for SUB and SUP in this way. More work is needed to test this out. 
+&gt; 
+&gt; Dave Raggett Thu  8-Sep-94 15:00:21
+&gt; --&gt;
+&gt; 
+&gt; &lt;![ %HTML.math [
+&gt; 
+&gt; &lt;!ENTITY % formulae &quot;#PCDATA|BOX|ABOVE|BELOW|ROOT|ARRAY|SUB|SUP|B&quot;&gt;
+&gt; 
+&gt; &lt;!-- Use &amp;thinsp; &amp;emsp; etc to control spacing. TeX entity names
+&gt;      are supported as a convenience when converting from LaTeX. --&gt;
+&gt; 
+&gt; &lt;!ELEMENT MATH - - ((%formulae;)*, LABEL?)&gt;
+&gt; &lt;!ATTLIST MATH id ID #IMPLIED&gt;
+&gt; 
+&gt; &lt;!ELEMENT LABEL - - (#PCDATA)* -- equation labels --&gt;
+&gt; &lt;!ELEMENT B - - (%formulae;)+ -- bold text enhancement --&gt;
+&gt; 
+&gt; &lt;!-- Subscripts and Superscripts
+&gt; 
+&gt;   &lt;SUB&gt; and &lt;SUP&gt; are used for subscripts and superscripts.
+&gt; 
+&gt;                                           i j
+&gt;       X &lt;SUP&gt;i&lt;/SUP&gt;Y&lt;SUP&gt;j&lt;/SUP&gt;  is   X  Y
+&gt; 
+&gt;   i.e. the space following the X disambiguates the binding.
+&gt;   An alternative offering better control at a cost of verbosity is:
+&gt; 
+&gt;     &lt;!ATTLIST (SUB|SUP) ALIGN (left|center|right) #IMPLIED&gt;
+&gt; --&gt;
+&gt; 
+&gt; &lt;!ELEMENT (SUB|SUP) - - (%formulae;)+&gt;
+&gt; &lt;!ATTLIST (SUB|SUP) ALIGN (left|center|right) #IMPLIED&gt;
+&gt; 
+&gt; &lt;!-- The BOX element acts as brackets. Delimiters are optional and
+&gt;      stretch to match the height of the box. The OVER element is used
+&gt;      when you want a line between numerator and denominator. This line
+&gt;      is suppressed with the alternative ATOP element. You can get
+&gt;      oversize delimiters with the SIZE attribute. Delimiters are
+&gt;      specified as a pair of characters, or as a space separated pair
+&gt;      of string or entity names, e.g. &quot;&amp;lceil;&amp;rceil;&quot;. You can suppress
+&gt;      one of the delimiters by using the '.' character.
+&gt; 
+&gt;                                     1 + X
+&gt;      &lt;BOX&gt;1 + X&lt;OVER&gt;Y&lt;/BOX&gt;  is   _______
+&gt;                                       Y
+&gt; 
+&gt;                                        a + b
+&gt;      &lt;BOX&gt;a + b&lt;ATOP&gt;c - d&lt;/BOX&gt; is  
+&gt;                                        c - d
+&gt; 
+&gt;      &lt;BOX delim=&quot;(]&quot;&gt;a&lt;/BOX&gt;  is   (a]
+&gt; 
+&gt;      &lt;BOX delim=&quot;|| ||&quot;&gt;a&lt;/BOX&gt;   is   || a ||
+&gt; 
+&gt;      The delimiters can also be expressed using the LEFT and RIGHT
+&gt;      elements as in:
+&gt; 
+&gt;      &lt;BOX&gt;[&lt;LEFT&gt;x + y&lt;RIGHT&gt;]&lt;/BOX&gt; is  [ x + y ]
+&gt; 
+&gt;      This is useful with definite integrals when you want the integral
+&gt;      sign to stretch to match the integrand, e.g.
+&gt; 
+&gt;      &lt;BOX&gt;&amp;int;&lt;SUB&gt;0&lt;/SUB&gt;&lt;SUP&gt;N&lt;/SUP&gt;&lt;LEFT&gt;f(x) dx&lt;/BOX&gt;
+&gt; 
+&gt;      Note that the default size of integral and related symbols is
+&gt;      sufficient for most needs.
+&gt; 
+&gt; --&gt;
+&gt; &lt;!ELEMENT BOX - - ((%formulae;)*, (LEFT, (%formulae;)+),
+&gt;                    ((OVER|ATOP), (%formulae;)+),
+&gt;                    (RIGHT, (%formulae;)+))&gt;
+&gt; &lt;!ATTLIST BOX
+&gt;         delim CDATA #IMPLIED -- optional stretchy delimiters --
+&gt;         size  (normal|medium|large|huge) normal -- oversize delims --&gt;
+&gt; 
+&gt; &lt;!ELEMENT (OVER|ATOP|LEFT|RIGHT) - O (EMPTY)&gt;
+&gt; &lt;!ELEMENT SCOPE O O (%formulae;)*&gt;
+&gt; 
+&gt; &lt;!-- Horizontal line drawn ABOVE contents
+&gt;      The symbol attribute allows authors to 
+&gt;      supply an entity name for an arrow symbol etc.
+&gt;  --&gt;
+&gt; &lt;!ELEMENT ABOVE - - (%formulae;)+&gt;
+&gt; &lt;!ATTLIST ABOVE symbol ENTITY #IMPLIED&gt;
+&gt; 
+&gt; &lt;!-- Horizontal line drawn BELOW contents
+&gt;      The symbol attribute allows authors to 
+&gt;      supply an entity name for an arrow symbol etc.
+&gt;  --&gt;
+&gt; &lt;!ELEMENT BELOW - - (%formulae;)+&gt;
+&gt; &lt;!ATTLIST BELOW symbol ENTITY #IMPLIED&gt;
+&gt; 
+&gt; &lt;!-- Roots - default to square root --&gt;
+&gt; &lt;!ELEMENT ROOT - - (%formulae;)*&gt;
+&gt; &lt;!ATTLIST ROOT root CDATA #IMPLIED -- e.g. &quot;3&quot; for cube root --&gt;
+&gt; 
+&gt; &lt;!-- LaTeX like arrays. The coldef attribute specifies
+&gt;      a single letter for each column, which also determines
+&gt;      how the column should be aligned, e.g. coldef&quot;=ccc&quot;
+&gt; 
+&gt;         &quot;l&quot;     left
+&gt;         &quot;c&quot;     center
+&gt;         &quot;r&quot;     right
+&gt; 
+&gt;      The DELIM attribute behaves the same as for BOX.
+&gt;      When the LABELS attribute is present, the array
+&gt;      is displayed with the first row and the first
+&gt;      column as labels displaced from the other elements.
+&gt;      In this case, the first element of the first row
+&gt;      should normally be left blank.
+&gt; 
+&gt;      Use &amp;vdots; &amp;vdots; and &amp;ddots; for vertical, horizontal
+&gt;      and diagonal ellipsis dots. Use &amp;dotfill; to fill an array
+&gt;      cell with horizontal dots.
+&gt; --&gt;
+&gt; &lt;!ELEMENT ARRAY - - (AROW)+&gt;
+&gt; &lt;!ATTLIST ARRAY
+&gt;         coldef CDATA #REQUIRED
+&gt;         delim CDATA #IMPLIED -- optional stretchy delimiters --
+&gt;         labels (labels) #IMPLIED -- TeX's \bordermatrix style --&gt;
+&gt; 
+&gt; &lt;!ELEMENT AROW - O (ITEM)*&gt;
+&gt; &lt;!ELEMENT ITEM - O (%formulae;)*&gt;
+&gt; &lt;!ATTLIST ITEM
+&gt;         align   CDATA  #IMPLIED  -- overide coldef alignment --
+&gt;         colspan NUMBER 1         -- merge columns as per TABLE --
+&gt;         rowspan NUMBER 1         -- merge rows as per TABLE --&gt;
+&gt; ]]&gt;
+
+</PRE>

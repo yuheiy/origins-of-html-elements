@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="hypermail 3.0.0, see https://github.com/hypermail-project/hypermail/" />
+<title>[whatwg] Declarative Inert DOM (e.g. the &lt;template&gt; element) from Rafael Weinstein on 2011-11-17 (public-whatwg-archive@w3.org from November 2011)</title>
+<meta name="Author" content="Rafael Weinstein (rafaelw&#x40;&#0099;&#0104;&#0114;&#0111;&#0109;&#0105;&#0117;&#0109;&#0046;&#0111;&#0114;&#0103;)" />
+<meta name="Subject" content="[whatwg] Declarative Inert DOM (e.g. the &lt;template&gt; element)" />
+<meta name="Date" content="2011-11-17" />
+<link rel="stylesheet" title="Normal view" href="/assets/styles/public.css" />
+<link rel="alternate stylesheet" title="Shorter view" 
+    href="//www.w3.org/StyleSheets/Mail/style-short.css" />
+<link rel="help" href="/Help/" />
+<link rel="start" href="../" title= "public-whatwg-archive@w3.org archives" />
+</head>
+<body class="message">
+<header class="head">
+<nav class="breadcrumb" id="upper">
+  <ul>
+    <li><a href="https://www.w3.org/">W3C home</a></li>
+    <li><a href="/">Mailing lists</a></li>
+    <li><a href="../../">Public</a></li>
+    <li><a href="../">public-whatwg-archive@w3.org</a></li>
+    <li><a href="./">November 2011</a></li>
+  </ul>
+</nav>
+<h1>[whatwg] Declarative Inert DOM (e.g. the &lt;template&gt; element)</h1>
+<!-- received="Thu Nov 17 11:15:28 2011" -->
+<!-- isoreceived="20111117111528" -->
+<!-- sent="Thu, 17 Nov 2011 11:15:28 -0800" -->
+<!-- isosent="20111117191528" -->
+<!-- name="Rafael Weinstein" -->
+<!-- email="rafaelw&#x40;&#0099;&#0104;&#0114;&#0111;&#0109;&#0105;&#0117;&#0109;&#0046;&#0111;&#0114;&#0103;" -->
+<!-- subject="[whatwg] Declarative Inert DOM (e.g. the &lt;template&gt; element)" -->
+<!-- id="CABMdHiSuzgUYo-E59wHmxgXxt47DwQz=G9N4wV=ZbK0LrtsPLQ@mail.gmail.com" -->
+<!-- charset="UTF-8" -->
+<!-- expires="-1" -->
+<nav id="navbar">
+<ul class="links hmenu_container">
+<li>
+<span class="heading">This message</span>: <ul class="hmenu"><li><a href="#start" id="options1">Message body</a></li>
+<li><a href="mailto:public-whatwg-archive&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20%5Bwhatwg%5D%20Declarative%20Inert%20DOM%20(e.g.%20the%20%3Ctemplate%3E%20element)&amp;In-Reply-To=%3CCABMdHiSuzgUYo-E59wHmxgXxt47DwQz%3DG9N4wV%3DZbK0LrtsPLQ%40mail.gmail.com%3E&amp;References=%3CCABMdHiSuzgUYo-E59wHmxgXxt47DwQz%3DG9N4wV%3DZbK0LrtsPLQ%40mail.gmail.com%3E">Respond</a></li>
+<li><a href="#options3">More options</a></li>
+</ul></li>
+<li>
+<span class="heading">Related messages</span>: <ul class="hmenu">
+<!-- unext="start" -->
+<li><a href="0141.html">Next message</a></li>
+<li><a href="0139.html">Previous message</a></li>
+<!-- unextthread="start" -->
+<li><a href="0141.html">Next in thread</a></li>
+<li><a href="#replies">Replies</a></li>
+<!-- ureply="end" -->
+</ul></li>
+</ul>
+</nav>
+</header>
+<!-- body="start" -->
+<main class="mail">
+<ul class="headers" aria-label="message headers">
+<li><span class="from">
+<span class="heading">From</span>: Rafael Weinstein &lt;<a href="mailto:rafaelw&#x40;&#0099;&#0104;&#0114;&#0111;&#0109;&#0105;&#0117;&#0109;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20%5Bwhatwg%5D%20Declarative%20Inert%20DOM%20(e.g.%20the%20%3Ctemplate%3E%20element)&amp;In-Reply-To=%3CCABMdHiSuzgUYo-E59wHmxgXxt47DwQz%3DG9N4wV%3DZbK0LrtsPLQ%40mail.gmail.com%3E&amp;References=%3CCABMdHiSuzgUYo-E59wHmxgXxt47DwQz%3DG9N4wV%3DZbK0LrtsPLQ%40mail.gmail.com%3E">rafaelw&#x40;&#0099;&#0104;&#0114;&#0111;&#0109;&#0105;&#0117;&#0109;&#0046;&#0111;&#0114;&#0103;</a>&gt;
+</span></li>
+<li><span class="date"><span class="heading">Date</span>: Thu, 17 Nov 2011 11:15:28 -0800</span></li>
+<li><span class="message-id"><span class="heading">Message-ID</span>: &lt;CABMdHiSuzgUYo-E59wHmxgXxt47DwQz=G9N4wV=ZbK0LrtsPLQ&#x40;&#0109;&#0097;&#0105;&#0108;&#0046;&#0103;&#0109;&#0097;&#0105;&#0108;&#0046;&#0099;&#0111;&#0109;&gt;
+</span></li>
+</ul>
+<pre id="start" class="body">
+Problem:
+
+Dynamic web pages often need to author and deliver fragments of DOM
+which *may* be used at some point during the page's lifetime, but have
+them be &quot;inert&quot; until they are needed.
+
+In this context, &quot;inert&quot; means not only that the fragment isn't
+rendered, but also that:
+
+-Resources don't load
+-Scripts &amp; plugins don't run
+-Audio/Video don't play
+-Attributes aren't normalized
+-getElementById &amp; querySelector don't match inert elements
+(etc)
+
+
+What are web pages doing now (all client-side templating libraries
+have *some* solution for this)?
+
+They hide these inert structures in various ways:
+-text literals within js files
+-hidden text areas
+-script tags with non-script file types
+-comment tags
+-elements marked as display: none
+
+
+Why isn't this good enough:
+
+All of these approaches either:
+-Force the treatment of the inert fragment as text which must be
+parsed and encourages the use of innerHTML (and often leads to XSS)
+-Or don't meet the requirements for &quot;inert&quot; listed above.
+
+In addition, because the approaches are non-standard, they interact
+badly with the HTML tool-chain and/or have encoding limitations
+(script does not allow &quot;&lt;/script&gt;&quot;, etc...).
+
+
+(Very hand-wavvy) Proposal:
+
+&lt;template&gt;
+ &lt;div&gt;
+  &lt;span&gt;Hello, world (at some point)&lt;/span&gt;
+ &lt;/div&gt;
+&lt;/template&gt;
+
+For parsing, the template element's contents are treated as HTML, but
+aren't subjected to normalization or placement/lifting rules.
+
+Big question: by what mechanism are these elements inert?
+
+One idea:
+
+Elements which are descendants of a template element have no default
+view (similar to elements in a document that does not have a view).
+
+Pro:
+-Elements are what their tagName suggests.
+-Their API is consistent between the inert state and the live state.
+-Inert elements are usable by simply placing them elsewhere in the DOM
+(by simply moving them to be descendants of a document)
+
+Con:
+-Will we need to spec the behavior of all elements while in this state?
+
+An alternate approach:
+
+The parsing of the template element's contents creates
+HTMLInertElements (or HTMLUnknownElements) which only have tagName &amp;
+get/setAttribute. &lt;template&gt; gets a method called &quot;instantiate()&quot;
+which returns a DocumentFragment containing the corresponding elements
+made &quot;live&quot;.
+
+
+Comments? Other options?
+</pre>
+<p class="received"><span class="heading">Received on</span> Thursday, 17 November 2011 11:15:28 UTC</p>
+</main>
+<!-- body="end" -->
+<footer class="foot">
+<nav id="navbarfoot">
+<ul class="links hmenu_container">
+<li><span class="heading">This message</span>: <span class="message_body"><a href="#start">Message body</a></span></li>
+<!-- lnext="start" -->
+<li><span class="heading">Next message</span>: <a href="0141.html">Adam Barth: "[whatwg] Declarative Inert DOM (e.g. the &#0060;template&#0062; element)"</a></li>
+<li><span class="heading">Previous message</span>: <a href="0139.html">Kinuko Yasuda: "[whatwg] Drag-and-drop folders/files support with directory structure using DirectoryEntry"</a></li>
+<!-- lnextthread="start" -->
+<li><span class="heading">Next in thread</span>: <a href="0141.html">Adam Barth: "[whatwg] Declarative Inert DOM (e.g. the &#0060;template&#0062; element)"</a></li>
+<li id="replies"><span class="heading">Reply</span>: <a href="0141.html">Adam Barth: "[whatwg] Declarative Inert DOM (e.g. the &#0060;template&#0062; element)"</a></li>
+<li><span class="heading">Reply</span>: <a href="0145.html">Tab Atkins Jr.: "[whatwg] Declarative Inert DOM (e.g. the &#0060;template&#0062; element)"</a></li>
+<li><span class="heading">Reply</span>: <a href="0170.html">Jonas Sicking: "[whatwg] Declarative Inert DOM (e.g. the &#0060;template&#0062; element)"</a></li>
+<!-- lreply="end" -->
+</ul>
+<ul class="links hmenu_container">
+<li id="options3"><span class="heading">Mail actions</span>: <ul class="hmenu"><li><a href="mailto:public-whatwg-archive&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20%5Bwhatwg%5D%20Declarative%20Inert%20DOM%20(e.g.%20the%20%3Ctemplate%3E%20element)&amp;In-Reply-To=%3CCABMdHiSuzgUYo-E59wHmxgXxt47DwQz%3DG9N4wV%3DZbK0LrtsPLQ%40mail.gmail.com%3E&amp;References=%3CCABMdHiSuzgUYo-E59wHmxgXxt47DwQz%3DG9N4wV%3DZbK0LrtsPLQ%40mail.gmail.com%3E">respond to this message</a></li>
+<li><a href="mailto:public-whatwg-archive&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;">mail a new topic</a></li></ul></li>
+<li><span class="heading">Contemporary messages sorted</span>: <ul class="hmenu"><li><a href="index.html#msg140">by date</a></li>
+<li><a href="thread.html#msg140">by thread</a></li>
+<li><a href="subject.html#msg140">by subject</a></li>
+<li><a href="author.html#msg140">by author</a></li>
+</ul></li>
+<li><span class="heading">Help</span>: [ <a href=
+   "/Help/" accesskey="h" rel="help">How to use the archives</a> ] [ <a href=
+   "https://www.w3.org/Search/Mail/Public/search?type-index=public-whatwg-archive&amp;index-type=t">Search in the archives</a> ]
+</li>
+</ul>
+</nav>
+<!-- trailer="footer" -->
+<p class="colophon">
+This archive was generated by <a href="https://github.com/hypermail-project/hypermail/">hypermail 3.0.0</a>: Saturday, 26 August 2023 22:11:06 UTC
+</p>
+</footer>
+</body>
+</html>

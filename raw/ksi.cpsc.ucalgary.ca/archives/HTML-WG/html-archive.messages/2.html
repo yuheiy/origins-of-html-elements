@@ -1,0 +1,110 @@
+<TITLE>EMail Msg &lt;9406101612.AA07777@ulua.hal.com&gt;</title>
+<H1>[Dave Raggett: Re: HTML 2.0 Call for Review]</H1><ADDRESS>&quot;Daniel W. Connolly&quot; &lt;connolly@hal.com&gt;</ADDRESS>
+<UL><LI><B>Mail folder: </B><A HREF="../html-archive.index.html#2.html">html-archive</A><LI><B>Next message: </B><A HREF="3.html">Daniel W. Connolly: &quot;[&quot;Daniel W. Connolly&quot;: Re: That old &lt;p&gt; tag again ]&quot;</A><LI><B>Previous message: </B><A HREF="1.html">Daniel W. Connolly: &quot;Effective ways to comment on the HTML 2.0 spec&quot;</A></UL>
+<PRE>Message-id: <A HREF="2.html">&lt;9406101612.AA07777@ulua.hal.com&gt;</A>
+To: html-ig@oclc.org
+Subject: [Dave Raggett: Re: HTML 2.0 Call for Review]
+Date: Fri, 10 Jun 1994 11:12:00 -0500
+From: &quot;Daniel W. Connolly&quot; &lt;connolly@hal.com&gt;
+Content-Length: 3499
+</PRE><PRE>
+
+I'm sending all the review comments I have so far to this list
+to be sure they become part of the archive.
+
+------- Forwarded Message
+
+From: Dave Raggett &lt;dsr@hplb.hpl.hp.com&gt;
+Message-Id: &lt;9406061225.AA11520@dragget.hpl.hp.com&gt;
+Subject: Re: HTML 2.0 Call for Review
+To: connolly@hal.com
+Date: Mon, 6 Jun 94 13:25:11 BST
+Cc: rdaniel@acl.lanl.gov, marca@netcom13.netcom.com, pflynn@curia.ucc.ie,
+        weibel@oclc.org, terry@ora.com, mcrae@ora.com, timbl@www0.cern.ch,
+        esink@spyglass.com, jay@eit.com, jackson@ncsa.uiuc.edu, yuri@sq.com,
+        murray@sco.com, gary.adams@east.sun.com, wmperry@indiana.edu
+Mailer: Elm [revision: 70.85]
+
+Dan,
+
+Please keep me informed as to developments. I am busy right now
+preparing for the Internet Society Conference next week, but will
+be keen to review the spec after that.
+
+Here is a list of preliminary comments:
+
+    o   Whats wrong with B, I etc inside PRE?
+
+Your comment suggests that these are illegal inside PRE elements, why?
+
+    o   &lt;!ENTITY % pre &quot;PRE | XMP | LISTING&quot;&gt;
+
+Doesn't this make it hard to test for obsolete elements with SGMLS?
+I would prefer to see them defined in a marked section so that
+its easy to switch obsolete elements in/out of the DTD for testing.
+
+    o   &lt;!ELEMENT LI    - O (%htext|%block)+&gt; etc.
+
+The content model allows for text and &lt;P&gt; to be intermingled
+as peers. This could be avoided by the following:
+
+        &lt;!ELEMENT LI    - O ((%htext)+|(%block)+)&gt;
+
+The same problem occurs for DD, BLOCKQUOTE and ADDRESS.
+I avoided this in HTML+ by requiring a &lt;P&gt; element before any
+text, which also makes it easy for browsers to infer missing &lt;P&gt;s
+
+    o   HTEXTAREA - I would prefer to use TEXTAREA
+        and make use of content-type mechanism
+
+Why do we need a new element to input hypertext into forms?
+It would be much more general to support a content-type mechanism
+e.g. via a new attribute on TEXTAREA. Then users would be able
+to paste images, hypertext or plain text into form fields.
+
+    o   MENU and DIR will be obsoleted in HTML 3.0
+        in favor of a more flexible use of UL
+
+You may want to mention this.
+
+    o   STRIKE used in place of HTML+ &lt;S&gt; why?
+
+The HTML+ spec has for a long time provided &lt;S&gt;..&lt;/S&gt; as a physical
+style for strikethru. Why are you using a new tag name? For logical
+use, I provided ADDED and REMOVED. One needs the ADDED tag to allow
+browsers to diffentiate such text, e.g. my browser changes text color.
+
+    o   what if people use dynamic entity declarations?
+
+You should explicitly state that browsers are NOT required
+to support such declarations. We may change this for HTML 3 or 4.
+
+    o   no mention of processing instructions
+
+You should require browsers to ignore comments and processing instructions.
+
+    o   COMPACT etc, with NAME rather than:
+            compact (compact) #IMPLIED 
+        as in SGML Handbook, page 534 for GL element
+
+I find this 2nd mechanism cleaner than the method you employ.
+
+    o   ISINDEX missing HREF attribute
+
+Doesn't Mosaic support this already? It allows documents to reference
+a different URL for processing index searches, and will be in HTML 3.0.
+- --
+Best wishes,
+
+Dave Raggett
+
+- -----------------------------------------------------------------------------
+Hewlett Packard Laboratories              email: dsr@hplb.hpl.hp.com
+Filton Road                               tel:   +44 272 228046
+Stoke Gifford                             fax:   +44 272 228003
+Bristol BS12 6QZ
+United Kingdom
+
+------- End of Forwarded Message
+
+</PRE>

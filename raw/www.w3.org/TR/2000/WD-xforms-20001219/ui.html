@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>XForms User Interface - W3C XForms 1.0 - Working Draft 20001219</title>
+<link rel="stylesheet" type="text/css" media="screen" href="style/xforms-style.css" />
+<link rel="stylesheet" type="text/css" href="https://www.w3.org/StyleSheets/TR/W3C-WD" />
+<link rel="prev" href="expr.html" />
+<link rel="next" href="binding.html" />
+<link rel="contents" href="index.html#minitoc" />
+<?xml-stylesheet type="text/css" href="style/xforms-style.css"?>
+<?xml-stylesheet type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD"?> 
+</head>
+<body>
+<div class="navlinks"> 
+  <p><a href="expr.html">previous</a> &#160; <a href="binding.html">next</a> 
+    &#160; <a href="index.html#minitoc">contents</a></p>
+</div>
+<hr class="navbar" />
+<h1>8 XForms User Interface</h1>
+<br />
+<h3><a id="chapter-title" name="chapter-title">Contents</a></h3>
+<ul class="toc">
+  <li class="tocline2"><a href="#intro" class="tocxref">8.1 Introduction</a></li>
+  <li class="tocline2"><a href="#formcontrols" class="tocxref">8.2 Abstract Form 
+    Controls</a></li>
+  <li class="tocline2"><a href="#abstract" class="tocxref">8.3 Core Form Controls</a></li>
+  <li class="tocline2"><a href="#customfc" class="tocxref">8.4 Custom Form Controls</a></li>
+  <li class="tocline2"><a href="#pages" class="tocxref">8.5 Multiple Pages</a></li>
+  <li class="tocline2"><a href="#layout" class="tocxref">8.6 Layout</a></li>
+</ul>
+<p><em>This chapter is normative.</em></p>
+<h2><a id="intro" name="intro">8.1 Introduction</a></h2>
+<p>This document describes:</p>
+<ul>
+  <li>Markup for the visual user interface for XForms</li>
+  <li>New style properties for use in combination with Cascading Style Sheets 
+    (CSS) style properties for laying out <a href="terms.html#def-form-control">form 
+    control</a>s.</li>
+  <li>A mechanism for <a href="terms.html#def-binding">binding</a> the user interface 
+    to the <a href="terms.html#def-XForms-Model">XForms Model</a> section.</li>
+</ul>
+<p>User interface controls are declared using markup elements, and their behavior 
+  refined via markup attributes. This markup may be further decorated with style 
+  properties that can be set using CSS stylesheets to deliver a customized look 
+  and feel. User interface controls defined here are bound to the underlying data 
+  instance by using the <a href="terms.html#def-binding">binding</a> attributes as defined in the <a href="binding.html">Binding 
+  chapter</a>.</p>
+<p>This chapter addresses accessibility by taking a uniform approach to such features 
+  as captions, help text, tabbing and short cuts.</p>
+<p>The group plans to address internationalization 
+  and conformance profiles once the initial work on user interfaces has gone through 
+  the first round of publication.</p>
+<h3>8.1.1 Design Input</h3>
+<p>The following cases have been considered 
+  in this design:</p>
+<ul>
+  <li><i>Group boxes used to group <a href="terms.html#def-form-control">form control</a>s</i></li>
+  <li><i>Explanatory text and graphics</i></li>
+  <li><i>Output <a href="terms.html#def-form-control">form control</a>s used for computed values</i></li>
+  <li><i>Single-line and multi-line text entry <a href="terms.html#def-form-control">form control</a>s</i></li>
+  <li><i>Check boxes for yes/no questions</i></li>
+  <li><i>radio buttons and drop down menus for multiple choice questions</i></li>
+  <li><i>Lists allowing multiple selections</i></li>
+  <li><i>Buttons for navigation or <a href="terms.html#def-instance-data">instance 
+    data</a> submission</i></li>
+  <li><i>Image maps functioning as one or more buttons</i></li>
+  <li><i>Tree controls with the ability to open and close nodes</i></li>
+  <li><i>Sliders or rotary controls for picking from a range</i></li>
+  <li><i>Spin controls for incrementing or decrementing a value</i></li>
+  <li><i>Custom pickers e.g. for dates or colors</i></li>
+  <li><i>Additional (pop-up) help</i></li>
+  <li><i>Mechanisms for navigation through <a href="terms.html#def-form-control">form control</a>s</i></li>
+  <li><i>Keyboard shortcuts for moving to particular <a href="terms.html#def-form-control">form control</a>s</i></li>
+  <li><i>The ability to disable particular <a href="terms.html#def-form-control">form control</a>s, thereby removing them 
+    from the navigation order, and from the submitted data</i></li>
+  <li><i>The ability to prevent users from changing the values of particular <a href="terms.html#def-form-control">form control</a>s</i></li>
+  <li><i>The ability for <a href="terms.html#def-form-control">form control</a>s to indicate an error in some manner</i></li>
+  <li><i>The ability to selectively hide or reveal groups of <a href="terms.html#def-form-control">form control</a>s</i></li>
+  <li><i>The ability to present XForms as a sequence of cards</i></li>
+</ul>
+<p>Eventually, this chapter will describe functionality for most or all of the 
+  above cases.</p>
+<h2><a id="abstract" name="abstract">8.2 Abstract Form Controls</a></h2>
+<p>Because many types of <a href="terms.html#def-form-control">form control</a>s share similar properties, we here specify 
+  a few abstract <a href="terms.html#def-form-control">form control</a>s which serves no purpose but to contain common attributes, 
+  properties, and elements. It is an error to include an abstract <a href="terms.html#def-form-control">form control</a> 
+  directly. Other <a href="terms.html#def-form-control">form control</a>s are later defined in terms of these abstract <a href="terms.html#def-form-control">form control</a>s.</p>
+<p class="note">Note: This approach does not constrain implementations to utilize 
+  abstract <a href="terms.html#def-form-control">form control</a>s.</p>
+<p>The following pieces of markup (core elements and attributes) are common to 
+  all user interface controls defined in this document.</p>
+<h3>8.2.1 anyControl</h3>
+<p>An abstract <a href="terms.html#def-form-control">form control</a> anyControl is the basis for all XForms <a href="terms.html#def-form-control">form control</a>s. 
+  It is defined as follows:</p>
+<blockquote> 
+  <table border="1" summary="XML representation for abstract anyControl">
+    <thead> 
+    <tr align="left"> 
+      <th><strong><font color="brown">XML Representation Summary</font></strong>:&nbsp; 
+        <code>anyControl</code></th>
+    </tr>
+    </thead> <tbody> 
+    <tr> 
+      <td> 
+        <p class="element-syntax"><a name="element-example">&lt;anyControl</a><br />
+          &nbsp;&nbsp;xml:lang<br />
+          &nbsp;&nbsp;id<br />
+          &nbsp;&nbsp;class<br />
+          &nbsp;&nbsp;style<br />
+          &nbsp;&nbsp;accesskey<br />
+          &nbsp;&nbsp;navindex&gt;<br />
+          &nbsp;&nbsp;<i>{ child elements specified separately}</i><br />
+          &lt;/anyControl&gt;</p>
+      </td>
+    </tr>
+    </tbody> 
+  </table>
+</blockquote>
+<h3>Common Attributes</h3>
+<p>In addition to the common elements and attributes defined here, see the <a href="binding.html">chapter</a> 
+  on <a href="terms.html#def-binding">binding</a> for common attributes specific 
+  to <a href="terms.html#def-binding">binding</a>.</p>
+<dl> 
+  <dt><code class="def">xml:Lang</code></dt>
+  <dd>This attribute may be used to specify the language as per the XML specification.</dd>
+  <dt><code class="def">id</code></dt>
+  <dd>A document level unique ID, as defined in <a href="a-references.html#ref-xml-10">[XML 
+    1.0]</a></dd>
+  <dt><code class="def">class</code></dt>
+  <dd>This attribute may be used to specify a string for use in a style rule selector.</dd>
+  <dt><code class="def">style</code></dt>
+  <dd>This attribute may be used to specify local styles as per the XHTML specification.</dd>
+</dl>
+<h3> Common Style Properties</h3>
+<p>Style properties specify custom look and feel, such as color and border styles. 
+  The specification uses the box model and style properties defined in the Cascading 
+  Style Sheets level 2 specification <a href="a-references.html#ref-css2">[CSS2]</a> 
+  and also introduces a few new properties for an extended layout model for XForms. 
+  Note that the XForms Working Group is aware that the definition of new CSS properties 
+  is beyond the scope of our work. The additional style properties mentioned in 
+  this chapter are meant as an initial basis for discussions with the CSS Working 
+  Group. Style properties can be specified via style sheets, and changed via scripts 
+  though the DOM.</p>
+<p>Some common properties include:</p>
+<ul>
+  <li><code class="def">display</code>: used to hide or display the <a href="terms.html#def-form-control">form control</a></li>
+  <li><code class="def">width</code>: the width of the <a href="terms.html#def-form-control">form control</a></li>
+  <li><code class="def">height</code>: the height of the <a href="terms.html#def-form-control">form control</a></li>
+  <li><code class="def">border</code>: (and related longhand properties) the style 
+    of the <a href="terms.html#def-form-control">form control</a>'s border</li>
+  <li><code class="def">caption-style</code>: Style for the <a href="terms.html#def-form-control">form control</a> label.</li>
+</ul>
+<p class="note">Note that interpretation of attributes like <code class="def">height</code> 
+  are dependent on the layout model we use.</p>
+<p>The new <code>caption-style</code> style property may be used to specify the 
+  position of the caption text relative to the <a href="terms.html#def-form-control">form control</a>. The value is top, 
+  left, right, bottom or hidden. It may be used together with the CSS <em>text-align</em> 
+  property to set left, center or right alignment.</p>
+<p class="note">The above list is illustrative; for the exhaustive list of CSS 
+  style properties, refer to the CSS specification.</p>
+<h3>Common Child Elements</h3>
+<h4>The <code>caption</code> element</h4>
+<p>This element labels the <a href="terms.html#def-form-control">form control</a> 
+  with a descriptive summary. The caption makes it possible for someone who can't 
+  see the <a href="terms.html#def-form-control">form control</a>s to obtain a 
+  short description as they navigate between <a href="terms.html#def-form-control">form 
+  control</a>s. This element is required. It contains inline content as defined 
+  by XHTML. Attributes <code>xml:lang</code>, <code>class</code> and <code>style</code> 
+  can be used to further qualify the <code>caption</code> element. Attribute <code>style</code> 
+  on element <code>caption</code> styles the caption text; attribute <code>captionStyle</code> 
+  on the <a href="terms.html#def-form-control">form control</a> containing the 
+  caption determines the position of the caption text relative to the associated 
+  <a href="terms.html#def-form-control">form control</a>.</p>
+<h4>The <code>help</code> element</h4>
+<p>This element provides a longer description that will help users to understand 
+  how to fill out this <a href="terms.html#def-form-control">form control</a>. 
+  The <code>help</code> text will normally be shown only on request. This optional 
+  element contains inline content as defined by XHTML. Attributes <code>xml:lang</code>, 
+  <code>class</code> and <code>style</code> can be used to further qualify the 
+  help element. Attribute <code>style</code> on element <code>help</code> styles 
+  the caption text; attribute <code>helpStyle</code> on the containing <a href="terms.html#def-form-control">form 
+  control</a> determines the position of the help text relative to the associated 
+  <a href="terms.html#def-form-control">form control</a>.</p>
+<h4>The <code>hint</code> element</h4>
+<p>This optional element provides a short hint for the user, typically represented 
+  as a tooltip by graphical <a href="terms.html#def-XForms-Processor">XForms Processor</a>s. 
+  The tooltip text will normally be shown when the user remains on the <a href="terms.html#def-form-control">form 
+  control</a> for more than a certain length of time. It contains inline content 
+  as defined by XHTML. Attributes <code>xml:lang</code>, <code>class</code> and 
+  <code>style</code> can be used to further qualify the <code>hint</code> element. 
+  Attribute <code>style</code> on element <code>hint</code> styles the <code>hint</code> 
+  text; attribute <code>hintStyle</code> on the containing <a href="terms.html#def-form-control">form 
+  control</a> determines the position of the <code>hint</code> text relative to 
+  the associated <a href="terms.html#def-form-control">form control</a>.</p>
+<h4>The <code>onevent</code> element</h4>
+<p>This element can be used to bind event handlers to <a href="terms.html#def-form-control">form control</a>s. It is defined 
+  in <a href="a-references.html#ref-xhtml-events">[XHTML Events]</a>. Details 
+  on XForms events can be found in the <a href="rpm.html">Reference Processing 
+  Model chapter</a>.</p>
+<h3>8.2.2 anyNavControl</h3>
+<p>The abstract <a href="terms.html#def-form-control">form control</a> <code>anyNavControl</code> represents any navigable 
+  <a href="terms.html#def-form-control">form control</a>. It is based on <code>anyControl</code>, sharing all its attributes 
+  and stylable properties. The following attributes are additionally defined:</p>
+
+<dl> 
+  <dt><code class="def">accesskey</code></dt>
+  <dd>This attribute defines a short cut for moving the input focus directly to 
+    a particular <a href="terms.html#def-form-control">form control</a>. The value of this attribute is a string. This is 
+    typically a single character which when pressed together with a platform specific 
+    modifier key (e.g. the <em>alt</em> key) results in the focus being set to 
+    this <a href="terms.html#def-form-control">form control</a>.</dd>
+  <dt><code class="def">navindex</code></dt>
+  <dd>This attribute is a non-negative integer used to define the navigation sequence. 
+    This gives the author control over the sequence in which <a href="terms.html#def-form-control">form control</a>s are 
+    traversed.</dd>
+</dl>
+<p>The default navigation order is a depth first traversal of the hierarchy of 
+  <a href="terms.html#def-form-control">form control</a>s.</p>
+<h2><a id="formcontrols" name="formcontrols">8.3 Core Form Controls</a></h2>
+<p>The following <a href="terms.html#def-form-control">form control</a>s are defined in terms of the abstract <a href="terms.html#def-form-control">form control</a> 
+  on which they are based in terms of syntax. Unless noted otherwise, all <a href="terms.html#def-form-control">form control</a>s here are treated as inline text for purposes of XHTML processing.</p>
+<h3>8.3.1 Hidden</h3>
+<p class="note">Issue: Given a separate <a href="terms.html#def-XForms-Model">XForms Model</a> that can store data values 
+  not visible to the end user, is there a need for a &quot;hidden&quot; <a href="terms.html#def-form-control">form control</a>, 
+  perhaps for compatibility with XHTML forms?</p>
+<h3><a id="output" name="output">8.3.2 Output</a></h3>
+<p><b>Description:</b> The <code>output</code> <a href="terms.html#def-form-control">form control</a> allows the display 
+  of a view of a data value, typically as part of other content. The resulting 
+  <a href="terms.html#def-form-control">form control</a> cannot be modified by the user.</p>
+<p><b>Based On:</b> <code>anyControl</code></p>
+<p><b>Syntax Definition</b>: The element name is <code>output</code>.</p>
+<p><b>Example:</b></p>
+<blockquote> 
+  <table cellpadding="5" bgcolor="#80ffff" border="1" summary="example of output form control">
+    <tbody> 
+    <tr> 
+      <td> 
+        <pre>The total comes to &lt;output ref="order/totalPrice"/&gt;
+</pre>
+      </td>
+    </tr>
+    </tbody> 
+  </table>
+</blockquote>
+<p>The <code>output</code> form control may be used in a <code>caption</code> 
+  , for instance when authors want to say: "I charged you 100.0 - and here is 
+  why".</p>
+<h3><a id="textentry" name="textentry">8.3.3 Text Entry</a></h3>
+<p><b>Description:</b> allows for the single or multiple line entry of text values.</p>
+<p><b>Based On:</b> <code>anyNavControl</code></p>
+<p><b>Syntax Definition</b>: The element name is <code>textbox</code>.</p>
+<p>Two additional attributes, <code>rows</code> and <code>cols</code> specify 
+  a number to be used as the <a href="terms.html#def-form-control">form control</a>'s height and width in characters, respectively. 
+  <code>rows</code><code></code> defaults to 1. Note that these do not constrain 
+  the amount of text that can be entered.</p>
+<p class="note">[Ed. We need a default for <code>cols</code>.]</p>
+<p><b>Example:</b></p>
+<blockquote> 
+  <table cellpadding="5" bgcolor="#80ffff" border="1" summary="example of textbox form control">
+    <tbody> 
+    <tr> 
+      <td> 
+        <pre>&lt;textbox ref="order/shipTo/street"&gt;
+  &lt;caption&gt;Street&lt;caption&gt;
+  &lt;help&gt;Please enter the number and street name&lt;/help&gt;
+&lt;/textbox&gt;
+</pre>
+      </td>
+    </tr>
+    </tbody> 
+  </table>
+</blockquote>
+<h3><a id="checkbox" name="checkbox">8.3.4 Checkbox</a></h3>
+<p><b>Description:</b> allows for binary (yes/no) input.</p>
+<p><b>Based On:</b> <code>anyNavControl</code></p>
+<p><b>Syntax Definition</b>: The element name is <code>checkbox</code>.</p>
+<p><b>Example:</b></p>
+<blockquote> 
+  <table cellpadding="5" bgcolor="#80ffff" border="1" summary="example of checkbox form control">
+    <tbody> 
+    <tr> 
+      <td> 
+        <pre>&lt;checkbox ref="questionaire/married"&gt;
+  &lt;caption&gt;Are you married?&lt;/caption&gt;
+  &lt;help&gt;We need this to determine your tax allowance&lt;/help&gt;
+&lt;/checkbox&gt;
+</pre>
+      </td>
+    </tr>
+    </tbody> 
+  </table>
+</blockquote>
+<p>The <code>checkbox</code> element is used for yes/no questions.</p>
+<h3><a id="menu" name="menu">8.3.5 Single Select: radio buttons, drop-down menus 
+  and list boxes</a></h3>
+<p ><b>Description:</b> allows for various representations of <a href="terms.html#def-form-control">form control</a>s that 
+  allow the user to choose one option out of many.</p>
+<p><b>Based On:</b> <code>anyNavControl</code></p>
+<p><b>Syntax Definition</b>: The element name is <code>exclusiveSelect</code>. 
+  One or more child <code>item</code> elements define the caption text for an 
+  individual radio button or menu item, with an optional attribute of <code>value</code>, 
+  which specifies the associated value to be used in the <a href="terms.html#def-instance-data">instance data</a>.</p>
+<p><b>Example:</b></p>
+<blockquote> 
+  <table cellpadding="5" bgcolor="#80ffff" border="1" summary="example of exclusiveSelect form control">
+    <tbody> 
+    <tr> 
+      <td> 
+        <pre>&lt;exclusiveSelect ref="icecream/flavor"&gt;
+  &lt;caption&gt;Flavor&lt;/caption&gt;
+  &lt;item value="a"&gt;Vanilla&lt;/item&gt;
+  &lt;item value="b"&gt;Strawberry&lt;/item&gt;
+  &lt;item value="c"&gt;Chocolate&lt;/item&gt;
+&lt;/exclusiveSelect&gt;
+</pre>
+      </td>
+    </tr>
+    </tbody> 
+  </table>
+</blockquote>
+<p >These constructs are used to encapsulate various forms of selection. We support 
+  two broad classes of selection characterized by the type of data being obtained 
+  from the user. When the <a href="terms.html#def-XForms-Model">XForms Model</a> allows the user to pick one or more from 
+  a set of choices, the type of the underlying instance is a container; contrast 
+  this with the case where the <a href="terms.html#def-XForms-Model">XForms Model</a> permits the user to pick <strong>only 
+  one</strong>. We parallel this distinction in the user interface markup by introducing 
+  elements <code class="def">multipleSelect</code> and <code
+class="def">exclusiveSelect</code>. </p>
+<p> User interfaces typically support a wide range of selection widgets characterized 
+  by distinctive appearances and behaviors. We capture these distinctions e.g., 
+  pull down list versus a combo box, via <code>style</code> attributes on elements 
+  <code>exclusiveSelect</code> and <code>multipleSelect</code>.</p>
+<p>The <code>list-ui</code> style property must be one of the following values:</p>
+<ul>
+  <li><code>radio</code></li>
+  <li><code>checkbox</code></li>
+  <li><code>menu</code></li>
+  <li><code>listbox</code></li>
+</ul>
+<p> Each option may have a platform-specific behavior.</p>
+<p class="note">[Ed. We need a default representation, to be used in the absence 
+  of a style sheet.]</p>
+<p>The items are bound to the choices in the data type in the lexical order in 
+  which they appear in the markup. This avoids the need to redundantly name things 
+  in both the presentation markup and in the <a href="terms.html#def-XForms-Model">XForms Model</a>.</p>
+
+<p>Layout can be handled through the automated layout mechanisms described later, 
+  or can use absolute positioning via style properties. </p>
+<p class="note">Accessibility requirement: long lists of choices are easier to 
+  use if they are grouped in some way, preferably with associated captions. Is 
+  there a need for hierarchical menus? An <tt>itemgroup</tt> or empty <tt>separator</tt> 
+  element would do the trick.</p>
+<h3><a id="lists" name="lists">8.3.6 Multiple Select: Lists</a></h3>
+<p><b>Description:</b> allows for various representations of <a href="terms.html#def-form-control">form control</a>s that 
+  allow the user to choose several options out of many.</p>
+<p><b>Based On:</b> <code>anyNavControl</code></p>
+<p><b>Syntax Definition</b>: The element name is <code>multipleSelect</code>. 
+  One or more child <code>item</code> elements are allowed, as for <code>exclusiveSelect</code>.</p>
+<p><b>Example:</b></p>
+<blockquote> 
+  <table cellpadding="5" bgcolor="#80ffff" border="1" summary="example of multipleSelect form control">
+    <tbody> 
+    <tr> 
+      <td> 
+        <pre>&lt;multipleSelect ref="icecream/flavors"&gt;
+  &lt;caption&gt;Flavors&lt;/caption&gt;
+  &lt;item value="a"&gt;Vanilla&lt;/item&gt;
+  &lt;item value="b"&gt;Strawberry&lt;/item&gt;
+  &lt;item value="c"&gt;Chocolate&lt;/item&gt;
+&lt;/multipleSelect&gt;
+</pre>
+      </td>
+    </tr>
+    </tbody> 
+  </table>
+</blockquote>
+<p>This construct can be used to populate structures like <code>array</code> in 
+  the <a href="terms.html#def-XForms-Model">XForms Model</a>. </p>
+<h3><a id="buttons" name="buttons">8.3.7 Buttons</a></h3>
+<p><b>Description:</b> similar to the XHTML <a href="terms.html#def-form-control">form control</a> of the same name, allows 
+  for one-time actions to occur.</p>
+<p><b>Based On:</b> <code>anyNavControl</code></p>
+<p><b>Syntax Definition</b>: The element name is <code>button</code>. The attribute 
+  <code>action</code> may contain an XForms Dynamic Constraint to call when the 
+  <a href="terms.html#def-form-control">form control</a> is activated.</p>
+<p><b>Example:</b></p>
+<blockquote> 
+  <table cellpadding="5" bgcolor="#80ffff" border="1" summary="example of button form control">
+    <tbody> 
+    <tr> 
+      <td> 
+        <pre>&lt;button action=&quot;city = 'London'; state = 'Ontario'&quot;&gt;
+  &lt;caption&gt;Set Values&lt;/caption&gt;
+&lt;/button&gt;
+</pre>
+      </td>
+    </tr>
+    </tbody> 
+  </table>
+</blockquote>
+<p>The <code>button</code> element is derived from XHTML. It allows you to submit 
+  the <a href="terms.html#def-instance-data">instance data</a>, or to set one 
+  or more data values at the same time. The caption is generally shown on the 
+  face of the button.</p>
+<h3>8.3.8 Submit</h3>
+<p><b>Description:</b> a specific control for submitting the <a href="terms.html#def-instance-data">instance data</a>.</p>
+<p><b>Based On:</b> <code>button</code></p>
+<p><b>Syntax Definition</b>: The element name is <code>submit</code>. The attribute 
+  <code>action</code> defaults to the <a href="terms.html#def-binding-expression">binding 
+  expression</a> <code>submit()</code>. The attribute <code>to</code> of type 
+  <code>xsd:IDREF</code> points to a <code>&lt;submit&gt;</code> element that 
+  defines the specifics of where and how to submit the <a href="terms.html#def-instance-data">instance 
+  data</a>.</p>
+<p><b>Example:</b></p>
+<blockquote> 
+  <table cellpadding="5" bgcolor="#80ffff" border="1" summary="example of submit form control">
+    <tbody> 
+    <tr> 
+      <td> 
+        <pre>&lt;submit ref=&quot;instance::foo&quot; to=&quot;...&quot;&gt;
+  &lt;caption&gt;Send XML&lt;/caption&gt;
+&lt;/submit&gt;
+</pre>
+      </td>
+    </tr>
+    </tbody> 
+  </table>
+</blockquote>
+<p>The <a href="terms.html#def-binding-expression">binding expression</a> on submit should select the <a href="terms.html#def-instance-data">instance data</a> that will 
+  be submitted.</p>
+<p>In future revisions, we will define similar controls, like <code>reset</code> 
+  or <code>suspend</code>.</p>
+<h3><a id="futurework" name="futurework">8.3.9 Future Work</a></h3>
+<p>The XForms Working Group is continuing to investigate and design additional 
+  controls for use within the <a href="terms.html#def-XForms-User-Interface">XForms User Interface</a>. These include sliders, spin 
+  controls, rotary controls, image maps, tree controls, and scrolling record controls.</p>
+<h2><a id="customfc" name="customfc">8.4 Custom Form Controls</a></h2>
+<p>The following section outlines some of our ideas for reusing user interface 
+  markup. </p>
+<h3><a id="custom" name="custom">8.4.1 Custom Pickers</a></h3>
+<p><em>Custom pickers</em> allow us to create reusable user interface components. 
+  Just as we can define data types and structures that can be reused within the 
+  <a href="terms.html#def-XForms-Model">XForms Model</a>, reusable user interface components allow us to design complex 
+  XForms using the basic building blocks described above, and then reuse these 
+  components in multiple situations. As with any component framework, this has 
+  two basic requirements:</p>
+<ul>
+  <li>Components need to declare what aspects of the component are parameterizable 
+    by the caller.</li>
+  <li>The caller needs to be able to override the default values of the parameters 
+    declared in the component.</li>
+</ul>
+<p>Here, we describe such a component framework along with sample markup. For 
+  this example, assume that <code>USShippingAddress</code> is a reusable data 
+  type that is used in multiple places in the <a href="terms.html#def-XForms-Model">XForms Model</a>, e.g. the user will 
+  be asked for a <code>billingAddress</code> and <code>shippingAddress</code> 
+  --both of type <code>USShippingAddress</code>.</p>
+<p>First, we show a simple example that is designed to bind a user interface to 
+  a <a href="terms.html#def-model-item">model item</a> of type <code>USShippingAddress</code> 
+  with no attention to making the component reusable.</p>
+<blockquote> 
+  <table cellpadding="5" bgcolor="#80ffff" border="1" summary="simple form">
+    <tbody> 
+    <tr> 
+      <td> 
+        <pre>&lt;groupbox&gt;
+  &lt;textbox ref="address/street"&gt;
+    &lt;caption&gt;Please enter your street address&lt;/caption&gt;
+  &lt;/textbox&gt;
+  &lt;textbox ref="address/zip"&gt;
+    &lt;caption&gt;Zip Code&lt;/caption&gt;
+  &lt;/textbox&gt;
+&lt;/groupbox&gt;
+</pre>
+      </td>
+    </tr>
+    </tbody> 
+  </table>
+</blockquote>
+<p>Next, we prepare the above <a href="terms.html#def-XForms-Model">XForms Model</a> fragment to become a reusable component 
+  that could be used for obtaining both the shipping and billing address. To do 
+  this, we need to parameterize those portions of the <em>component</em> that 
+  the caller will wish to modify.</p>
+<blockquote> 
+  <table cellpadding="5" bgcolor="#80ffff" border="1" summary="simple form">
+    <tbody> 
+    <tr> 
+      <td> 
+        <pre>&lt;component name="AddressWidget" dataType="USShippingAddress"&gt;
+  &lt;param name="streetPrompt"/&gt;
+  &lt;param name="zipPrompt"/&gt;
+  &lt;param name="border" value="line"/&gt;
+  &lt;groupbox border="$border"&gt;
+    &lt;textbox ref="address/street"&gt;
+      &lt;caption&gt;
+        &lt;value-of name="streetPrompt"/&gt;
+      &lt;/caption&gt;
+    &lt;/textbox&gt;
+    &lt;textbox ref="address/zip"&gt;
+      &lt;caption&gt;
+        &lt;value-of name="zipPrompt"/&gt;
+      &lt;/caption&gt;
+    &lt;/textbox&gt;
+  &lt;/groupbox&gt;
+&lt;/component&gt;
+</pre>
+      </td>
+    </tr>
+    </tbody> 
+  </table>
+</blockquote>
+<p>Note that the UI component as defined above does not create a user interface; 
+  user interface is created by explicitly instantiating the component via element 
+  <code>use-component</code> described next.</p>
+<p>Finally, we use this component to instantiate the user interface for obtaining 
+  the shipping and billing address.</p>
+<blockquote> 
+  <table cellpadding="5" bgcolor="#80ffff" border="1" summary="simple form">
+    <tbody> 
+    <tr> 
+      <td> 
+        <pre>&lt;use-component name="address" component="AddressWidget"&gt;
+  &lt;with-param name="streetPrompt"&gt;
+    Shipping Street Address
+  &lt;/with-param&gt;
+  &lt;with-param name="zipPrompt"&gt;
+    Zip Code for state where we are shipping to
+  &lt;/with-param&gt;
+  &lt;with-param name="border" value="dotted"/&gt;
+&lt;/use-component&gt;
+</pre>
+      </td>
+    </tr>
+    </tbody> 
+  </table>
+</blockquote>
+<p>The reusable component is instantiated by element <code>use-component</code>; 
+  parameter values are specified by the contained <code>with-param</code> elements.</p>
+<h2><a id="pages" name="pages">8.5 Multiple Pages</a></h2>
+<p>The following section outlines some of our ideas for allowing multiple-page 
+  forms. </p>
+<h3><a id="subpage" name="subpage">8.5.1 Subpages</a></h3>
+<p>Subpages provide a means to present XForms one bit at a time, breaking a complex 
+  task into smaller, simpler parts. Presentation of a subpage can occupy the entire 
+  "page" or just part of a page. Different presentations are possible, e.g. a 
+  stack of <em>pages</em> with visible name tags, or as a set of buttons for flipping 
+  through the stack or navigating directly to a particular subpage. One possible 
+  representation is a <code>formset</code> element enclosing one or more <code>subpage</code> 
+  elements, each of which starts with a <code>caption</code> element. </p>
+<p> As the name implies <code>subpage</code> is not specific to XForms --our intent 
+  is to design <code>subpage</code> so that it can be used within XForms --and 
+  more generally within XHTML to create presentations where document views are 
+  presented to progressively reveal the document structure and content.</p>
+<h2><a id="layout" name="layout">8.6 Layout</a></h2>
+<p>The following section outlines some of our ideas for making XForms independent 
+  from any particular presentation technology, for example XHTML tables.</p>
+<p class="note">Note: All style properties used by XForms to specify layout will be as defined 
+  by the CSS working group. </p>
+<h3><a id="groupbox" name="groupbox">8.6.1 Grouping</a></h3>
+<p>The <code>groupbox</code> element is used as a container for defining a hierarchy 
+  of <a href="terms.html#def-form-control">form control</a>s. A groupbox element can contain other groupbox elements.</p>
+<p>The hierarchy defined by nested groupbox elements is used to determine the 
+  traversal order specified by attribute <code>navindex</code> on <a href="terms.html#def-form-control">form control</a>s. 
+  Setting the input focus on a group box results in the focus being set to the 
+  lowest <a href="terms.html#def-form-control">form control</a> in the tabbing order within that group box.</p>
+<p class="note">[Ed. Currently, <code>groupbox</code> is being used to both group 
+  controls and provide <a href="terms.html#def-binding">binding</a> context. It 
+  is an open issue whether the binding attribute <code>ref</code> is allowed here.]</p>
+<h3>8.6.2 Additional Style Properties</h3>
+<p>The following are preliminary ideas intended to start a dialog with the CSS 
+  Working Group and other interested parties.</p>
+<p>Element <code>groupbox</code> allows the following additional layout attributes 
+  to control the layout of the <a href="terms.html#def-form-control">form control</a>s 
+  being packed inside the container. The <code>layout</code> property can be used 
+  to control whether the <a href="terms.html#def-form-control">form control</a>s 
+  within a group box are laid out from left to right or top to bottom. The value 
+  of the property is <code>horizontal</code>, <code>vertical</code> or <code>inherit</code>. 
+  It can be used together with CSS padding properties.</p>
+<p class="note">As we develop the layout model, we may factor out some of the 
+  more common behaviors desired of element <code>groupbox</code> into elements 
+  such as <code>grid</code> to avoid overloading element <code>groupbox</code> 
+  with multiple functions.</p>
+<p>The <code>field-align</code> property controls the amount of whitespace between 
+  the caption and the <a href="terms.html#def-form-control">form control</a> so 
+  as to ensure the desired alignment of all the <a href="terms.html#def-form-control">form 
+  control</a>s within the group box. The value of the property can be one of: 
+  <code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code>, 
+  <code>center</code>, <code>justify</code> or <code>inherit</code>. The default 
+  is <code>justify</code>.</p>
+<p class="note">[Ed. This could meet our requirement to not be dependent on XHTML 
+  tables.].</p>
+<p>The width and height of a group box can be set via the corresponding CSS properties. 
+  The default is to size the box to the minimum needed for the contents of the 
+  group box. Setting the width to 100% ensures that the box is the maximum width 
+  permitted by the enclosing CSS block.</p>
+<p>In the following example, the <a href="terms.html#def-form-control">form control</a>s are laid out horizontally and justified 
+  to fill the available space.</p>
+<p class="fig"><img src="images/groupbox1.jpg" width="430" height="74"
+alt="group box with fields layed out horizontally" /></p>
+<p>Here is another example, but this time with a vertical layout:</p>
+<p class="fig"><img src="images/groupbox2.jpg" width="431" height="98"
+alt="group box with fields layed out vertically" /></p>
+<p>To justify the <a href="terms.html#def-form-control">form control</a>s for a vertical layout, the <a href="terms.html#def-XForms-Processor">XForms Processor</a> adjusts 
+  the spacing between each <a href="terms.html#def-form-control">form control</a> and its caption. In the next example, 
+  the <code>field-align</code> property has been set to <i>left</i>. As a result, 
+  the spacing between the controls and the caption is the same for all <a href="terms.html#def-form-control">form control</a>s.</p>
+<p class="fig"><img src="images/groupbox3.jpg" width="328" height="107"
+alt="group box with fields layed out vertically" /></p>
+<h3>8.6.3 Grid Layout</h3>
+<p>Sometimes a simple horizontal or vertical layout is not enough. The next example 
+  uses a grid layout:</p>
+<p class="note">Note that we plan to introduce distinct markup elements for grouping 
+  constructs like grids --rather than overloading element <code>groupbox</code>. 
+</p>
+<p class="fig"><img src="images/groupbox4.jpg" width="251" height="113"
+alt="group box with fields layed out in a grid" /></p>
+<p class="note">Note: "in" in the example is an output <a href="terms.html#def-form-control">form control</a> that can display 
+  either "in" or "cm".</p>
+<p>Grid layout is potentially complex, and further study is needed to find the 
+  most appropriate solution for XForms. Here are several possibilities:</p>
+<ul>
+  <li> 
+    <p>Use explicit positioning for each <a href="terms.html#def-form-control">form control</a>. This is how most Windowing 
+      systems specify dialog boxes. It is common for the <a href="terms.html#def-form-control">form control</a>s to be constrained 
+      to positions on a grid with a spacing relative to the dialog font size. 
+      A subtlety is to make text input <a href="terms.html#def-form-control">form control</a>s use the same baseline as 
+      the caption text. This is a simple approach, and works fine provided the 
+      width and height of the group box are fixed.</p>
+  </li>
+  <li> 
+    <p>Use explicit positioning, but distinguish between hard and soft spacings. 
+      The soft spacings are adjusted automatically to match the width and height 
+      of the group box, and the font size etc. This is inspired by the approach 
+      used by Donald Knuth for T<sub>E</sub>X.</p>
+  </li>
+  <li> 
+    <p>Use a style property on <a href="terms.html#def-form-control">form control</a>s to force that <a href="terms.html#def-form-control">form control</a> to appear 
+      on the next row, e.g. <code>break-before</code>. This could be combined 
+      with another style property to specify which <a href="terms.html#def-form-control">form control</a>s need to be vertically 
+      aligned with one another. One possibility for this is a named tab stop (such 
+      as "foo" in <code>tab-stop: <i>foo</i></code>), where the position of the 
+      stop is determined automatically by the <a href="terms.html#def-XForms-Processor">XForms Processor</a>. Another possibility 
+      is to define a penalty scheme where layout engine adjusts the positioning 
+      to minimize the sum over the positioning penalties. This approach would 
+      involve little or no effort on behalf of the author.</p>
+  </li>
+  <li> 
+    <p>Use explicit markup for each row, either a container element similar to 
+      XHTML's table row element &lt;tr&gt;...&lt;/tr&gt; or an empty element such 
+      as &lt;br/&gt;</p>
+  </li>
+  <li> 
+    <p>A generalization is to allow explicit markup to divide the remaining space 
+      up progressively horizontally or vertically, similar to the mechanism provided 
+      by XHTML's frames.</p>
+  </li>
+</ul>
+<p class="note">Issue: What about "repeating structures" when these are specified 
+  in the <a href="terms.html#def-XForms-Model">XForms Model</a>? One possibility is a record set control which allows users 
+  to add and delete records, where all of the records satisfy the same <a href="terms.html#def-XForms-Model">XForms Model</a>. An example is a line item in an order form, consisting of the quantity, 
+  product code and unit price.</p>
+<h3><a id="content" name="content">8.6.4 Text and graphics</a></h3>
+<p>It is often desirable to include graphics and additional text within group 
+  boxes, for instance, the following uses graphics to illustrate the idea of printing 
+  in black &amp; white versus printing in color.</p>
+<p class="fig"><img src="images/groupbox6.jpg" width="429" height="72"
+alt="group box including graphics" /></p>
+<p>Group boxes can, in principle, include graphics marked up using the XHTML <code>img</code> 
+  element, or vector graphics marked up in SVG etc.</p>
+
+<hr class="navbar" />
+<div class="navlinks"> 
+  <p><a href="expr.html">previous</a> &#160; <a href="binding.html">next</a> 
+    &#160; <a href="index.html#minitoc">contents</a></p>
+</div>
+</body>
+</html>
+

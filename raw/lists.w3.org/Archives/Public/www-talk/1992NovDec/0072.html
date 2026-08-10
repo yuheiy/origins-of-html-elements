@@ -1,0 +1,173 @@
+<!-- received="Thu Nov 19 14:24:24 1992 EDT" -->
+<!-- sent="Thu, 19 Nov 92 14:32:11 +0100" -->
+<!-- name="Tim Berners-Lee" -->
+<!-- email="timbl@www3.cern.ch" -->
+<!-- subject="Re: HTML DTD issues" -->
+<!-- id="9211191332.AA00503@www3.cern.ch" -->
+<!-- inreplyto="HTML DTD issues" -->
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head><title>www-talk from November to December 1992: Re: HTML DTD issues</title></head>
+<body>
+<h1>Re: HTML DTD issues</h1>
+<strong>Tim Berners-Lee</strong> (<a href="mailto:timbl@www3.cern.ch"><em>timbl@www3.cern.ch</em></a>)<br>
+<em>Thu, 19 Nov 92 14:32:11 +0100</em>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#72">[ date ]</a><a href="thread.html#72">[ thread ]</a><a href="subject.html#72">[ subject ]</a><a href="author.html#72">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0073.html">Tim Berners-Lee: "Annotation in WWW"</a>
+<li> <strong>Previous message:</strong> <a href="0071.html">Kevin Hoadley: "Comments in HTML ?"</a>
+<li> <strong>Maybe in reply to:</strong> <a href="0068.html">Dan Connolly: "HTML DTD issues"</a>
+<!-- nextthread="start" -->
+<li> <strong>Next in thread:</strong> <a href="0074.html">Edward Vielmetti: "Re: HTML DTD issues"</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<pre>
+Date: Thu, 19 Nov 92 14:32:11 +0100
+From: Tim Berners-Lee &lt;timbl@www3.cern.ch&gt;
+Message-Id: &lt;9211191332.AA00503@www3.cern.ch&gt;
+To: Dan Connolly &lt;connolly@pixel.convex.com&gt;
+Subject: Re: HTML DTD issues
+Cc: www-talk@nxoc01.cern.ch
+
+Dan,
+
+Your work on the SGML side (as all your work) is much apreciated!
+
+&gt;  Date: Thu, 19 Nov 92 04:37:23 CST
+&gt;  From: Dan Connolly &lt;connolly@pixel.convex.com&gt;
+&gt;  
+
+&gt;  
+
+&gt;  The thrust to register HTML with the authorities has
+&gt;  spurred me to look over the DTD again. I've found some
+&gt;  problems.
+&gt;  
+
+&gt;  1. Currently the NAME attribute of an anchor is declared
+&gt;  as CDATA, i.e. just about anything. There's an SGML thingy
+&gt;  called an ID. SGML parsers enforce uniqueness among the
+&gt;  IDs of a document. Seems like that's what we want for ID
+&gt;  names.
+&gt;  
+
+&gt;  But an SGML ID has to start with a letter. So all the
+&gt;  HTML files that use numbers as anchor names will break.
+
+The enforcement of uniqueness is useful, and it is what we want.
+It is unfortunate that the very same constraint lead to the use of numbers!
+This is a hangup of the NeXT editor (which i still use, as
+until somone makes a more convenient editor!) but we oughtn't to
+worry about it.  A future editor could generate Z[0-9]* names.
+We could even specify that Z[0-9]* are related to a NEXTID attribute
+somewhere for the generation of time-unique IDs.
+
+The only neat thing about CDATA is that it would allow a gateway
+to put in something which as come from the data. For example,
+a glossary generator might generate anchors for each term
+whose name equals the term, and then generate index entries
+pointing to that.
+
+What do you think?
+
+&gt;  2. I introduced two tag names when I drafted the DTD:
+&gt;  	HTML contains the whole document. I defined it
+&gt;  so you can omit both the start and the end tags, so it's
+&gt;  inferred by SGML parsers. I don't think I can avoid some
+&gt;  top-level tag.
+&gt;  	DOCUMENT contains most of the "body" -- all the
+&gt;  headings and paragraphs. I did this to avoid something
+&gt;  called mixed content, which causes complications.  I
+&gt;  could rename this element as BODY, and introduce a
+&gt;  omitable HEADING tag to surround the TITLE, NEXTID, and
+&gt;  ISINDEX tags.
+
+I like the latter idea.  Header and Body fit in well with mail
+nomenclature, wherase "document" is normally the whole thing
+retrieved.
+
+&gt;  3. I stuck anchors in as an inclusion, meaning they could
+&gt;  be used just about anywhere. I thought stuff like &lt;a
+&gt;  name=foo&gt;&lt;h1&gt;Foo&lt;/h1&gt;&lt;/a&gt; was legal, but neither linemode
+&gt;  nor the midas browser groks.
+
+The line mdoe doesn't?  It should.  Only titles I wanted to insist were
+plain ascii text....
+Turns out to be a bug in HTML.c -- fixed for next release.
+
+&gt;  I'm editing the DTD to restrict the usage of anchors to
+&gt;  only contain text strings.
+
+I don't like that.... I think that especially as we introduce
+highlighting, anchors will want to be general areas of text, so
+long as they are nested properly. (An "SGML attitude" restriction
+which Frank Kappe objected to I recall).
+
+&gt;  4. The OL tag is disappearing. It's no longer documented
+&gt;  in the web, and it's not supported by MidasWWW. Should
+&gt;  I delete it from the DTD?
+
+You say its useful?  If you havce implemented it, and noone else
+objects, then we could put it back in. In principle, with hypertext, you don't  
+have to number tyhings, you can refer to them with a link. However, you
+can imagine the abstract difference between an ordered list and 
+
+a sack of objects being important.  [For example, a list of
+instructions is ordered].  I'll put it into the HTML2 list of features.
+I suggest everyone  implement OL as UL in programs which, like the line mode  
+browser, can't differentiate.
+
+
+&gt;  5. What about &lt;HP1&gt; thru &lt;HP5&gt;... should we include them?
+&gt;  I'd prefer &lt;em&gt;, &lt;tt&gt;, &lt;cite&gt;, ala TeX. Or we could go
+&gt;  with the O'Reilly/Hal DocBook tags:  &lt;Emphasis&gt;,
+&gt;  &lt;OopsChar&gt;, &lt;wordasword&gt;,&lt;CiteBook&gt;,&lt;Subscript&gt;,
+&gt;  &lt;Superscript&gt;.
+
+I agree that numbering them is on the verge of useless.  The trouble is,
+you never have enough. Why CiteBook but not CiteProgram? etc etc.
+The docbook names are on the long side, aren't they? Not very important
+I suppose.
+
+&gt;  6. Any more thoughts on the BaseAddress tag?
+
+Yes. It should be in. I think.  I've mentioned in  
+<a href="http://info.cern.ch/hypertext/WWW/MarkUp/Future.html">http://info.cern.ch/hypertext/WWW/MarkUp/Future.html</a>
+
+&gt;  7. The HTML tags documentation says Listing sections can
+&gt;  contain any ISO Latin 1 characters. The SGML standard
+&gt;  mentions ISO 646, i.e. ascii, as the default, but the
+&gt;  sgmls parser, the linemode browser, and MidasWWW all seem
+&gt;  to grok Latin1 just fine.
+
+I suggest we limit it to ASCII unless something outside the
+document says otherwise, while strongly recommending that
+8-bit character sets should be handled by the apps.  I have
+seen some funnies when two clients both handle 8-bit characters,
+but not the same ones.
+
+Does the SGML standard say how to specify the character set for
+the text?
+
+&gt;  Dan
+&gt;  
+
+	Tim
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<li> <strong>Messages sorted by:</strong> <a href="index.html#72">[ date ]</a><a href="thread.html#72">[ thread ]</a><a href="subject.html#72">[ subject ]</a><a href="author.html#72">[ author ]</a>
+<!-- next="start" -->
+<li> <strong>Next message:</strong> <a href="0073.html">Tim Berners-Lee: "Annotation in WWW"</a>
+<li> <strong>Previous message:</strong> <a href="0071.html">Kevin Hoadley: "Comments in HTML ?"</a>
+<li> <strong>Maybe in reply to:</strong> <a href="0068.html">Dan Connolly: "HTML DTD issues"</a>
+<!-- nextthread="start" -->
+<li> <strong>Next in thread:</strong> <a href="0074.html">Edward Vielmetti: "Re: HTML DTD issues"</a>
+</ul>
+</body>
+</html>

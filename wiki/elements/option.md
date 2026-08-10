@@ -10,7 +10,7 @@ HTML+ formsからHTML 2.0へ導出されたselection candidate要素である。
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、`select`内の選択肢、または`datalist`内の候補一覧の一項目を表す。 [一次定義](https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、`select`内の選択肢、または`datalist`内の候補一覧の一項目を表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,10 +36,10 @@ HTML+ `OPTION` → HTML 2.0 `OPTION` → 現行HTML `<option>`
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1993-11-08 | HTML+ §10 | Internet-Draft | `OPTION`のHTML+ forms上の設計を確認できる。 | [一次資料](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) | 2026-08-09 |
-| 1995-11 | RFC 1866 | Standards Track RFC | HTML 2.0 formsを定義し、forms materialのHTML+由来を明記する。 | [一次資料](https://www.rfc-editor.org/rfc/rfc1866.html) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1993-11-08 | [HTML+ §10](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)） | Internet-Draft | `OPTION`のHTML+ forms上の設計を確認できる。 | 2026-08-09 |
+| 1995-11 | [RFC 1866](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html)） | Standards Track RFC | HTML 2.0 formsを定義し、forms materialのHTML+由来を明記する。 | 2026-08-09 |
 
 ## 確度
 

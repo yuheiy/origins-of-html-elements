@@ -1,0 +1,89 @@
+<TITLE>EMail Msg &lt;9409121257.AA14263@dragget.hpl.hp.com&gt;</title>
+<H1>Re: HTML 3.0 Process</H1><ADDRESS>Dave Raggett &lt;dsr@hplb.hpl.hp.com&gt;</ADDRESS>
+<UL><LI><B>Mail folder: </B><A HREF="../html-archive.index.html#361.html">html-archive</A><LI><B>Next message: </B><A HREF="362.html">Peter Flynn: &quot;Re: SGML, HTML and CS:&quot;</A><LI><B>Previous message: </B><A HREF="360.html">Peter Flynn: &quot;Re: ICADD elements in HTML&quot;</A><LI><B>Maybe in reply to: </B><A HREF="340.html">Murray Maloney: &quot;Re: HTML 3.0 Process&quot;</A></UL>
+<PRE>Date: Mon, 12 Sep 94 13:38:42 EDT
+Message-id: <A HREF="361.html">&lt;9409121257.AA14263@dragget.hpl.hp.com&gt;</A>
+Reply-To: dsr@hplb.hpl.hp.com
+Originator: html-wg@oclc.org
+Sender: html-wg@oclc.org
+Precedence: bulk
+From: Dave Raggett &lt;dsr@hplb.hpl.hp.com&gt;
+To: Multiple recipients of list &lt;html-wg@oclc.org&gt;
+Subject: Re: HTML 3.0 Process
+X-Listprocessor-Version: 6.0c -- ListProcessor by Anastasios Kotsikonas
+X-Comment: HTML Working Group (Private)
+</PRE><PRE>
+Murray,
+
+&gt; First, I think that it would be a mistake NOT to include the
+&gt; elements of inline mathematical formatting into the general
+&gt; %text definition.  That is, I must be able to use &lt;SUP&gt; and
+&gt; &lt;SUB&gt; and some of the other elements within a paragraph, list
+&gt; or heading.
+
+The HTML+ DTD *allows* &lt;math&gt; elements within %text, but allows
+you to use SUB and SUP (not ROOT) in ordinary text with out the
+need for an enclosing math element. I was assuming the same
+would be useful for HTML 3.0.
+
+&gt; If you want to use TeX, then why not provide support for TeX
+&gt; within the browser and provide portable code to the rest of
+&gt; the community to support it too?
+
+TeX is too large to be required as a standard part of every browser.
+The HTML-math proposal aims to provide math support at *MODEST* cost to
+browsers, and when combined with tables, avoids the need for generating
+these as inlined images when converting from Word or Framemaker etc.
+
+The BOX element loosely corresponds to TeX's use of curly braces {}.
+LEFT and TOP correspond to \left ... \right and are needed when you
+want to ensure that delimiters or integral signs etc. scale to match
+the size of the enclosed expression. I originally used attributes for
+the left and right delimiters, but this doesn't work well when you have
+tripple integral with limits on each. The content declaration is then
+dictated by the need to avoid ambiguous content models.
+
+Although ABOVE and BELOW can be mapped into BOX, it was felt that having
+these as explicit elements would help authors, and reflects the underbrace
+and overbrace commands in TeX (also the underline and overline). In fact,
+we may want to introduce additional elements for \vec{a}, \ddot{a} etc.
+
+&gt; In the definition of &lt;BOX&gt; attributes above, I have used a NUMBER
+&gt; for the SIZE attribute so that relative size could be indicated.
+
+I chose an enumerated set here because typographical concerns dictate
+a small set of sizes rather than arbitrarily variable ones. Basically,
+it looks poor when the bracket sizes vary arbitrarily.
+
+&gt; &lt;MATH&gt; is defined to include &lt;LABEL&gt; at the end of its content.
+&gt; Why not have &lt;LABEL&gt; at the beginning and then place it at the
+&gt; end if that is how you decide to format it?
+
+I did it this way to reflect common practice in labelling equations.
+As you say, it doesn't really matter though.
+
+&gt; I see that &lt;B&gt; is redefined to contain %formulae;, but I note
+&gt; that &lt;I&gt; is not similarly redefined.  Why not?
+
+Within the MATH element the parsing/rendering works very differently
+from normal text. It is sometimes the case, that authors want to
+embolden certain terms in expressions. By default terms are rendered
+in italic, except for function names such as sin, log, etc. which
+are written as entity names. As a result it seemed pointless supporting
+the I element as well.
+
+The HTML-math proposal is the result of long study of the LaTeX and TeX
+manuals and repeated discussions with Phil Hallam-Baker.
+--
+Best wishes,
+
+Dave Raggett
+
+-----------------------------------------------------------------------------
+Hewlett Packard Laboratories              email: dsr@hplb.hpl.hp.com
+Filton Road                               tel:   +44 272 228046
+Stoke Gifford                             fax:   +44 272 228003
+Bristol BS12 6QZ
+United Kingdom
+
+</PRE>

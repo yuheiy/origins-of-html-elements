@@ -1,0 +1,72 @@
+<!-- received="Sat Mar 13 05:12:41 1993 PDT" -->
+<!-- sent="Fri, 12 Mar 93 22:32:12 -0800" -->
+<!-- name="Marc Andreessen" -->
+<!-- email="marca@ncsa.uiuc.edu" -->
+<!-- subject="Re: proposed new tag: IMG" -->
+<!-- id="9303130632.AA14200@wintermute.ncsa.uiuc.edu" -->
+<!-- inreplyto="9303022225.AA07248@dxcern.cern.ch" -->
+<title>WWW-Talk Jan-Mar 1993: Re: proposed new tag: IMG</title>
+<h1>Re: proposed new tag: IMG</h1>
+Marc Andreessen (<i>marca@ncsa.uiuc.edu</i>)<br>
+<i>Fri, 12 Mar 93 22:32:12 -0800</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#257">[ date ]</a><a href="index.html#257">[ thread ]</a><a href="subject.html#257">[ subject ]</a><a href="author.html#257">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0258.html">Marc Andreessen: "binary file access via Mosaic"</a>
+<li> <b>Previous message:</b> <a href="0256.html">paolo petta: "Re:  WWW processing of tar files -&gt; '.z' files!"</a>
+<li> <b>In reply to:</b> <a href="0221.html">Tim Berners-Lee: "Re: proposed new tag: IMG"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0259.html">Guido van Rossum: "Re: proposed new tag: IMG"</a>
+</ul>
+<hr>
+<!-- body="start" -->
+Back to the inlined image thread again -- I'm getting close to<br>
+releasing Mosaic v0.10, which will support inlined GIF and XBM<br>
+images/bitmaps, as mentioned previously.  So I just reread the<br>
+exchanges we had a while back, and have a few comments...<br>
+<p>
+Tim Berners-Lee writes:<br>
+<i>&gt; Let the IMG tag be INCLUDE and let it refer to an arbitrary document</i><br>
+<i>&gt; type.  Or EMBED if INCLUDE sounds like a cpp include which people</i><br>
+<i>&gt; will expect to provide SGML source code to be parsed inline -- not</i><br>
+<i>&gt; what was intended.</i><br>
+<p>
+We're not prepared to support INCLUDE/EMBED at this point; it raises a<br>
+number of nasty issues that are quite separate from the idea of<br>
+inlined images.  For example, what happens if one EMBEDS a document<br>
+that in turn EMBEDS the first document?  Oops.  Aside from this, I'm<br>
+not sure I see the point in allowing arbitrary EMBED's for things like<br>
+chunks of texts: this is a hypertext system, after all, and it ought<br>
+to be possible to get the functional effect of an EMBED by using an<br>
+ordinary link.  Right?<br>
+<p>
+So, we're probably going to go with &lt;IMG SRC="url"&gt; (not ICON, since<br>
+not all inlined images can be meaningfully called icons).  For the<br>
+time being, inlined images won't be explicitly content-type'd; down<br>
+the road, we plan to support that (along with the general adaptation<br>
+of MIME).  Actually, the image reading routines we're currently using<br>
+figure out the image format on the fly, so the filename extension<br>
+won't even be significant.<br>
+<p>
+Cheers,<br>
+Marc<br>
+<p>
+<pre>
+--
+Marc Andreessen
+Software Development Group
+National Center for Supercomputing Applications
+marca@ncsa.uiuc.edu
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0258.html">Marc Andreessen: "binary file access via Mosaic"</a>
+<li> <b>Previous message:</b> <a href="0256.html">paolo petta: "Re:  WWW processing of tar files -&gt; '.z' files!"</a>
+<li> <b>In reply to:</b> <a href="0221.html">Tim Berners-Lee: "Re: proposed new tag: IMG"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0259.html">Guido van Rossum: "Re: proposed new tag: IMG"</a>
+</ul>

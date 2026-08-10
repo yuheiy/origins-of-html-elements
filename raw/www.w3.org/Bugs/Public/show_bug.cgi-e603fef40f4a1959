@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>7669 &ndash; Redefining dt and dd, recommend new element as caption for Figure</title>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="data/assets/54486398487c111ba3305277d0702e66.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="style.css">
+
+
+
+    
+
+
+    
+
+
+    
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+                       title="Bugzilla" href="./search_plugin.cgi">
+    <link rel="shortcut icon" href="images/favicon.ico">
+  </head>
+
+  <body 
+        class="www-w3-org-Bugs-Public
+                 bz_bug
+                 bz_status_CLOSED
+                 bz_product_HTML_WG
+                 bz_component_pre-LC1_HTML5_spec_&#X28;editor&#X3A;_Ian_Hickson&#X29;
+                 bz_bug_7669 yui-skin-sam">
+
+  <div id="header"><div id="banner">
+  </div>
+
+    <div id="titles">
+      <span id="title">Bugzilla &ndash; Bug&nbsp;7669</span>
+
+        <span id="subtitle" class="subheader">Redefining dt and dd, recommend new element as caption for Figure</span>
+
+        <span id="information" class="header_addl_info">Last modified: 2010-10-04 14:29:13 UTC</span>
+    </div>
+
+
+    
+  </div>
+
+  <div id="bugzilla-body"><div class="archivalnote"><p>This is an archived snapshot of W3C's public bugzilla bug tracker, decommissioned in April 2019. Please see the <a href="./">home page</a> for more details.</p></div>
+
+
+
+
+<form name="changeform" id="changeform" method="post" action="process_bug.cgi">
+
+  <input type="hidden" name="delta_ts" value="2010-10-04 14:29:13">
+  <input type="hidden" name="id" value="7669">
+  <input type="hidden" name="token" value="1554091691-I5OIKKEEBVDKYhmrOvMlVSXmkZZLvEV-pvtm8EV7YdQ">
+<div class="bz_short_desc_container edit_form">
+     <a href="show_bug.cgi?id=7669"><b>Bug&nbsp;7669</b></a> <span id="summary_container" class="bz_default_hidden">
+      - <span id="short_desc_nonedit_display">Redefining dt and dd, recommend new element as caption for Figure</span>
+     </span>
+
+    <div id="summary_input"><span class="field_label "
+    id="field_label_short_desc">
+
+
+  <a 
+      title="The bug summary is a short sentence which succinctly describes what the bug is about."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#short_desc"
+  >Summary:</a>
+
+</span>Redefining dt and dd, recommend new element as caption for Figure
+    </div>
+  </div>
+  
+  <table class="edit_form">
+    <tr>
+      
+      <td id="bz_show_bug_column_1" class="bz_show_bug_column">     
+        <table>
+          <tr>
+    <th class="field_label">
+      <a href="page.cgi?id=fields.html#bug_status">Status</a>:
+    </th>
+    <td id="bz_field_status">
+      <span id="static_bug_status">CLOSED
+          FIXED
+      </span>
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_alias">
+
+
+  <a 
+      title="A short, unique name assigned to a bug in order to assist with looking it up and referring to it in other places in Bugzilla."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#alias"
+  >Alias:</a>
+
+</th>
+    <td>
+        None
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_product">
+
+
+  <a 
+      title="Bugs are categorised into Products and Components."
+      class="field_help_link"
+      href="describecomponents.cgi"
+  >Product:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_product" >HTML WG
+
+</td>
+    </tr>
+
+    
+    <tr class="bz_default_hidden"><th class="field_label "
+    id="field_label_classification">
+
+
+  <a 
+      title="Bugs are categorised into Classifications, Products and Components. classifications is the top-level categorisation."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#classification"
+  >Classification:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_classification" >Unclassified
+
+</td>
+    </tr>
+        
+    
+    
+    <tr><th class="field_label "
+    id="field_label_component">
+
+
+  <a 
+      title="Components are second-level categories; each belongs to a particular Product. Select a Product to narrow down this list."
+      class="field_help_link"
+      href="describecomponents.cgi?product=HTML WG"
+  >Component:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_component" >pre-LC1 HTML5 spec (editor: Ian Hickson)
+
+  (<a href="buglist.cgi?component=pre-LC1%20HTML5%20spec%20(editor%3A%20Ian%20Hickson)&amp;product=HTML%20WG&amp;bug_status=__open__"
+      target="_blank">show other bugs</a>)
+</td>
+    </tr>
+    <tr><th class="field_label "
+    id="field_label_version">
+
+
+  <a 
+      title="The version field defines the version of the software the bug was found in."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#version"
+  >Version:</a>
+
+</th>
+<td>unspecified
+  </td>
+    </tr>
+        
+    
+        
+    <tr><th class="field_label "
+    id="field_label_rep_platform">
+
+
+  <a 
+      title="The hardware platform the bug was observed on. Note: When searching, selecting the option &quot;All&quot; only finds bugs whose value for this field is literally the word &quot;All&quot;."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#rep_platform"
+  >Hardware:</a>
+
+</th>
+      <td class="field_value">Macintosh
+        Mac System 9.x
+      </td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          
+          <tr>
+      <th class="field_label">
+        <label  accesskey="i">
+          <a href="page.cgi?id=fields.html#importance"><u>I</u>mportance</a></label>:
+      </th>
+      <td>P2
+       normal
+      </td>
+    </tr>
+
+      <tr><th class="field_label "
+    id="field_label_target_milestone">
+
+
+  <a 
+      title="The Target Milestone field is used to define when the engineer the bug is assigned to expects to fix it."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#target_milestone"
+  >Target Milestone:</a>
+
+</th><td>---
+  </td>
+      </tr>
+          
+          <tr><th class="field_label "
+    id="field_label_assigned_to">
+
+
+  <a 
+      title="The person in charge of resolving the bug."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#assigned_to"
+  >Assignee:</a>
+
+</th>
+      <td><span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+      </td>
+    </tr>
+
+    <tr><th class="field_label "
+    id="field_label_qa_contact">
+
+
+  <a 
+      title="The person responsible for confirming this bug if it is unconfirmed, and for verifying the fix once the bug has been resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#qa_contact"
+  >QA Contact:</a>
+
+</th>
+      <td><span class="vcard"><span class="fn">HTML WG Bugzilla archive list</span>
+</span>
+      </td>
+    </tr>
+    
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          <tr><th class="field_label "
+    id="field_label_bug_file_loc">
+
+
+  <a 
+      title="Bugs can have a URL associated with them - for example, a pointer to a web site where the problem is seen."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#bug_file_loc"
+  >URL:</a>
+
+</th>
+    <td>
+      <span id="bz_url_input_area">
+      </span>
+    </td>
+  </tr>
+
+    <tr><th class="field_label "
+    id="field_label_status_whiteboard">
+
+
+  <a 
+      title="Each bug has a free-form single line text entry box for adding tags and status information."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#status_whiteboard"
+  >Whiteboard:</a>
+
+</th><td>  
+  </td>
+    </tr>
+
+    <tr><th class="field_label "
+    id="field_label_keywords">
+
+
+  <a 
+      title="You can add keywords from a defined list to bugs, in order to easily identify and group them."
+      class="field_help_link"
+      href="describekeywords.cgi"
+  >Keywords:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_keywords" >NE, TrackerIssue
+
+</td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+          
+<tr><th class="field_label "
+    id="field_label_dependson">
+
+
+  <a 
+      title="The bugs listed here must be resolved before this bug can be resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#dependson"
+  >Depends on:</a>
+
+</th>
+
+  <td>
+    <span id="dependson_input_area">
+    </span>
+<a class="bz_bug_link 
+          bz_status_CLOSED  bz_closed"
+   title="CLOSED FIXED - Redefining dt and dd"
+   href="show_bug.cgi?id=7657">7657</a> 
+  </td>
+  </tr>
+  
+  <tr><th class="field_label "
+    id="field_label_blocked">
+
+
+  <a 
+      title="This bug must be resolved before the bugs listed in this field can be resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#blocked"
+  >Blocks:</a>
+
+</th>
+
+  <td>
+    <span id="blocked_input_area">
+    </span>
+
+  </td>
+  </tr>
+
+    <tr>
+      <th>&nbsp;</th>
+
+      <td id="show_dependency_tree_or_graph">
+        Show dependency <a href="showdependencytree.cgi?id=7669&amp;hide_resolved=1">tree</a>
+
+          /&nbsp;<a href="showdependencygraph.cgi?id=7669">graph</a>
+      </td>
+    </tr>
+          
+        </table>
+      </td>
+      <td>
+        <div class="bz_column_spacer">&nbsp;</div>
+      </td>
+      
+      <td id="bz_show_bug_column_2" class="bz_show_bug_column">
+        <table>
+        <tr>
+    <th class="field_label">
+      Reported:
+    </th>
+    <td>2009-09-17 23:09 UTC by <span class="vcard"><span class="fn">Shelley Powers</span>
+</span>
+    </td>
+  </tr>
+  
+  <tr>
+    <th class="field_label">
+      Modified:
+    </th>
+    <td>2010-10-04 14:29 UTC
+      (<a href="show_activity.cgi?id=7669">History</a>)
+    </td>
+  
+  </tr>
+<tr>
+      <th class="field_label">
+        <label  accesskey="a">
+          CC List:
+        </label>
+      </th>
+      <td>5 
+          users
+          <span id="cc_edit_area_showhide_container" class="bz_default_hidden">
+            (<a href="#" id="cc_edit_area_showhide">show</a>)
+          </span>
+        <div id="cc_edit_area">
+          <br>
+            <select id="cc" multiple="multiple" size="5" >
+                <option value="ian">ian</option>
+                <option value="mike">mike</option>
+                <option value="public-html-admin">public-html-admin</option>
+                <option value="public-html-wg-issue-tracking">public-html-wg-issue-tracking</option>
+                <option value="shelleyp">shelleyp</option>
+            </select>
+        </div>
+          
+      </td>
+    </tr>
+
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_see_also">
+
+
+  <a 
+      title="This allows you to refer to bugs in other installations. You can enter a URL to a bug in the 'Add Bug URLs' field to note that that bug is related to this one. You can enter multiple URLs at once by separating them with whitespace. You should normally use this field to refer to bugs in other installations. For bugs in this installation, it is better to use the Depends on and Blocks fields."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#see_also"
+  >See Also:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_see_also" >
+
+</td>
+    </tr> 
+
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+
+
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+          <hr id="bz_top_half_spacer">
+      </td>
+    </tr>
+  </table>
+
+  <table id="bz_big_form_parts">
+  <tr>
+  <td>
+
+    
+
+
+<br>
+<table id="attachment_table">
+  <tr id="a0">
+    <th colspan="2" class="left">
+      Attachments
+    </th>
+  </tr>
+
+
+
+  
+</table>
+<br>
+<div id="add_comment" class="bz_section_additional_comments">
+      <table>
+        <tr>
+          <td>
+            
+          </td>
+        </tr> 
+      </table>
+  </div>
+  </td>
+  <td>
+  </td>
+  </tr></table>
+
+  
+  <div id="comments">
+
+
+
+
+<!-- This auto-sizes the comments and positions the collapse/expand links 
+     to the right. -->
+<table class="bz_comment_table">
+<tr>
+<td>
+<div id="c0" class="bz_comment bz_first_comment">
+
+      <div class="bz_first_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7669#c0">Description</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Shelley Powers</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2009-09-17 23:09:59 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">I have an open bug on redefining dt and dd for use as caption and content in Figure. See <a class="bz_bug_link 
+          bz_status_CLOSED  bz_closed"
+   title="CLOSED FIXED - Redefining dt and dd"
+   href="show_bug.cgi?id=7657">http://www.w3.org/Bugs/Public/show_bug.cgi?id=7657</a>.
+
+Rather than reuse dt/dd, which can cause considerable confusion, a new element to act as figure caption would be a better option. There wouldn't be any problems with legacy browsers, or any confusion about how dt/dd are to used in Figure as compared to definition list (dl) (see discussion at <a href="http://lists.w3.org/Archives/Public/public-html/2009Sep/0575.html">http://lists.w3.org/Archives/Public/public-html/2009Sep/0575.html</a>).
+
+In addition, this approach wouldn't impact on any existing application, and should help keep the Figure element as clean as possible (consisting of the contents of the figure, however they are defined, and the figure caption).
+
+There have been several names suggested, including c, figcapt, and so on. I have no preferences as to name.</pre>
+    </div>
+
+    <div id="c1" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7669#c1">Comment 1</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2009-09-21 10:10:12 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">This has been considered many times.
+
+Defining a new element has a number of disadvantages. It means yet another number for &quot;label&quot;/&quot;heading&quot;/&quot;caption&quot;/&quot;legend&quot;-like semantics (we're up to about 18 already depending on how you count them), which will lead to at least as much confusion as reusing &lt;dt&gt;, if not considerably more, as people try to remember when to use &lt;caption&gt; and when to use &lt;legend&gt; and when to use &lt;figcaption&gt; (or is it &lt;figlegend&gt;), etc. It also means more awkward parsing decisions, as well as generally being quite ugly. IMHO &lt;legend&gt; would be preferable to a new element, even with it's temporary issues with parsing in legacy browsers.</pre>
+    </div>
+
+    <div id="c2" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7669#c2">Comment 2</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Shelley Powers</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2009-10-05 00:58:31 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Even though there is an Issue on this item, I want this bug kept open, as this is the only way I can record links or other new information associated with both bug and issue.
+
+There is a discussion on dt/dd in the WhatWG pertinent to this topic.
+
+<a href="https://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2009-October/023276.html">http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2009-October/023276.html</a>
+
+I would be happy to &quot;close&quot; this bug, if I can add information to the Issue. Only HTML WG members can add information to the an issue.</pre>
+    </div>
+
+    <div id="c3" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7669#c3">Comment 3</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael[tm] Smith</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2009-10-05 03:05:43 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=7669#c2">comment #2</a>)
+<span class="quote">&gt; There is a discussion on dt/dd in the WhatWG pertinent to this topic.
+&gt; 
+&gt; <a href="https://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2009-October/023276.html">http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2009-October/023276.html</a></span >
+
+I'll note for the record here that this relates to Tracker issue 83:
+<a href="https://www.w3.org/html/wg/tracker/issues/83">http://www.w3.org/html/wg/tracker/issues/83</a>
+
+I added a note to that issue with a link the archived message above.
+
+<span class="quote">&gt; I would be happy to &quot;close&quot; this bug, if I can add information to the Issue.
+&gt; Only HTML WG members can add information to the an issue.</span >
+
+You can add information to a bug even if it's been marked resolved. To have information added to a Tracker issue associated with a particular bug, you can post a comment to the bug and request that it also be added to the Tracker issue.
+
+And for for a Tracker issue with the issue number NN, you can post a message with the string &quot;issue-NN&quot; in the message subject or in any part of the message body, and a link to the message will be added to the issue record for that issue. And if you want some information from such a message added as a note to an issue, or even added to the Description for an issue (so it'll appear more prominently), and you indicate that in the message, then I or one of the other people in the group with Tracker write perms can add it there.</pre>
+    </div>
+
+    <div id="c4" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7669#c4">Comment 4</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Shelley Powers</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-02-06 18:56:30 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">This item was fixed as part of the issue resolution process.</pre>
+    </div>
+
+
+  
+
+</td>
+<td>
+</td>
+</tr></table>
+  </div>
+        
+
+</form>
+
+<hr>
+<ul class="related_actions">
+    <li><a href="show_bug.cgi?format=multiple&amp;id=7669">Format For Printing</a></li>
+    <li>&nbsp;-&nbsp;<a href="show_bug.cgi?ctype=xml&amp;id=7669">XML</a></li>
+    <li>&nbsp;-&nbsp;<a href="enter_bug.cgi?cloned_bug_id=7669">Clone This Bug</a></li>
+    
+    <li>&nbsp;-&nbsp;<a href="#">Top of page </a></li>
+    </ul>
+
+<br>
+</div>
+
+    
+
+  </body>
+</html>

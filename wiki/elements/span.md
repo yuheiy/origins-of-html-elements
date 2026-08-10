@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、それ自体には意味を持たず子を表すinline containerであり、`class`、`lang`、`dir`などのglobal attributesと組み合わせる場合に有用である。[一次定義](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-span-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、それ自体には意味を持たず子を表すinline containerであり、`class`、`lang`、`dir`などのglobal attributesと組み合わせる場合に有用である。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-span-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -40,13 +40,13 @@ style草案の`C`を廃して既存`SPAN`を再利用する提案（1995年）�
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1995-09-25 | *Internationalization of the Hypertext Markup Language* `draft-ietf-html-i18n-01` | IETF Internet-Draft | `LANG`／bidi属性用generic containerの必要から`SPAN`を新規導入し、Unicode embeddingとの対応とDTDを記す。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt) | 2026-08-09 |
-| 1995-12-05 | Michael J Hannah, “draft-ietf-html-style-00.txt” | W3C www-style投稿 | style草案の新`C`要素を廃し、既存の国際化`SPAN`へ`STYLE`属性を加えて再利用することを提案。 | [W3C Mail Archive](https://lists.w3.org/Archives/Public/www-style/1995Dec/0039.html) | 2026-08-09 |
-| 1996-01-15 | *HTML3 and Style Sheets* | W3C Working Draft | paragraph内で既存要素が適切でない範囲へstyleを適用する`SPAN`を定義。 | [W3C](https://www.w3.org/TR/WD-style-960115) | 2026-08-09 |
-| 1997-01 | RFC 2070 | Standards Track RFC | `LANG`／`DIR`用generic containerとして`SPAN`を導入し、Unicode embeddingとの対応を定義。 | [一次資料](https://www.rfc-editor.org/rfc/rfc2070.html) | 2026-08-09 |
-| 1999-12-24 | HTML 4.01 | W3C Recommendation | RFC 2070の国際化勧告を統合し、`SPAN`をHTML 4.0のnew elementとして記録。 | [一次資料](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.13) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1995-09-25 | [*Internationalization of the Hypertext Markup Language* `draft-ietf-html-i18n-01`](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt)） | IETF Internet-Draft | `LANG`／bidi属性用generic containerの必要から`SPAN`を新規導入し、Unicode embeddingとの対応とDTDを記す。 | 2026-08-09 |
+| 1995-12-05 | [Michael J Hannah, “draft-ietf-html-style-00.txt”](../../raw/lists.w3.org/Archives/Public/www-style/1995Dec/0039.html)（[公開元](https://lists.w3.org/Archives/Public/www-style/1995Dec/0039.html)） | W3C www-style投稿 | style草案の新`C`要素を廃し、既存の国際化`SPAN`へ`STYLE`属性を加えて再利用することを提案。 | 2026-08-09 |
+| 1996-01-15 | [*HTML3 and Style Sheets*](../../raw/www.w3.org/TR/WD-style-960115)（[公開元](https://www.w3.org/TR/WD-style-960115)） | W3C Working Draft | paragraph内で既存要素が適切でない範囲へstyleを適用する`SPAN`を定義。 | 2026-08-09 |
+| 1997-01 | [RFC 2070](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)） | Standards Track RFC | `LANG`／`DIR`用generic containerとして`SPAN`を導入し、Unicode embeddingとの対応を定義。 | 2026-08-09 |
+| 1999-12-24 | [HTML 4.01](../../raw/www.w3.org/TR/html401/appendix/changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.13)） | W3C Recommendation | RFC 2070の国際化勧告を統合し、`SPAN`をHTML 4.0のnew elementとして記録。 | 2026-08-09 |
 
 ## 確度
 

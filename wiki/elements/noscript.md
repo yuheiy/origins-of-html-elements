@@ -10,7 +10,7 @@ W3CのClient-side Scripting草案で、scriptまたはその言語に非対応�
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、scriptingがenabledなら何も表さず、disabledならchildrenを表す。HTML syntaxで異なるmarkupを提示するためparserの動作へ影響し、XML syntaxでは使用できない。[一次定義](https://html.spec.whatwg.org/multipage/scripting.html#the-noscript-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、scriptingがenabledなら何も表さず、disabledならchildrenを表す。HTML syntaxで異なるmarkupを提示するためparserの動作へ影響し、XML syntaxでは使用できない。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/scripting.html)（[公開版](https://html.spec.whatwg.org/multipage/scripting.html#the-noscript-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -42,14 +42,14 @@ script・言語非対応時のdownlevel fallback要求 → W3C `NOSCRIPT`（遅�
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1996-06-27 | *Client-side Scripting and HTML* | W3C Working Draft | この版には`NOSCRIPT`定義がない。 | [一次資料](https://www.w3.org/TR/WD-script-960627.html) | 2026-08-10 |
-| 1996-07-09 | *Client-side Scripting and HTML* | W3C Working Draft | `NOSCRIPT`の最初期の確認、非対応時だけrenderする条件、downlevel browser向けの要求。 | [一次資料](https://www.w3.org/TR/WD-script-960709.html) | 2026-08-10 |
-| 1996 | Netscape *JavaScript Guide*, Version 3.0 | vendor公式manualの保存複製 | `NOSCRIPT`によるalternate contentと、NavigatorでJavaScriptを無効化した場合の表示を説明。 | [保存複製](https://www.uv.es/jordi/v3/js/jsguide/jsguide.pdf) | 2026-08-10 |
-| 公開日未確認 | Netscape *HTML Reference Guide: Tags for Netscape 3.0* | vendor公式referenceの保存複製 | `NOSCRIPT`をNavigator 3.0のtagとして記録。 | [保存複製](https://lib.ru/WEBMASTER/tags.txt) | 2026-08-10 |
-| 1997-03-14 | *Client-side Scripting and HTML* | W3C Working Draft | HTML 4統合前の`NOSCRIPT`とalternate content設計。 | [一次資料](https://www.w3.org/TR/WD-script-970314) | 2026-08-10 |
-| 1999-12-24 | HTML 4.01 §18.3.1 | W3C Recommendation | script無効・言語非対応・script非対応時のalternate content container。 | [一次資料](https://www.w3.org/TR/html401/interact/scripts.html#edef-NOSCRIPT) | 2026-08-10 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1996-06-27 | [*Client-side Scripting and HTML*](../../raw/www.w3.org/TR/WD-script-960627.html)（[公開元](https://www.w3.org/TR/WD-script-960627.html)） | W3C Working Draft | この版には`NOSCRIPT`定義がない。 | 2026-08-10 |
+| 1996-07-09 | [*Client-side Scripting and HTML*](../../raw/www.w3.org/TR/WD-script-960709.html)（[公開元](https://www.w3.org/TR/WD-script-960709.html)） | W3C Working Draft | `NOSCRIPT`の最初期の確認、非対応時だけrenderする条件、downlevel browser向けの要求。 | 2026-08-10 |
+| 1996 | [Netscape *JavaScript Guide*, Version 3.0](../../raw/www.uv.es/jordi/v3/js/jsguide/jsguide.pdf)（[公開元](https://www.uv.es/jordi/v3/js/jsguide/jsguide.pdf)） | vendor公式manualの保存複製 | `NOSCRIPT`によるalternate contentと、NavigatorでJavaScriptを無効化した場合の表示を説明。 | 2026-08-10 |
+| 公開日未確認 | [Netscape *HTML Reference Guide: Tags for Netscape 3.0*](../../raw/lib.ru/WEBMASTER/tags.txt)（[公開元](https://lib.ru/WEBMASTER/tags.txt)） | vendor公式referenceの保存複製 | `NOSCRIPT`をNavigator 3.0のtagとして記録。 | 2026-08-10 |
+| 1997-03-14 | [*Client-side Scripting and HTML*](../../raw/www.w3.org/TR/WD-script-970314)（[公開元](https://www.w3.org/TR/WD-script-970314)） | W3C Working Draft | HTML 4統合前の`NOSCRIPT`とalternate content設計。 | 2026-08-10 |
+| 1999-12-24 | [HTML 4.01 §18.3.1](../../raw/www.w3.org/TR/html401/interact/scripts.html)（[公開元](https://www.w3.org/TR/html401/interact/scripts.html#edef-NOSCRIPT)） | W3C Recommendation | script無効・言語非対応・script非対応時のalternate content container。 | 2026-08-10 |
 
 ## 確度
 

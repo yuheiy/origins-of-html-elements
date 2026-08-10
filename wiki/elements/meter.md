@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、既知範囲内のscalar measurementまたはfractional valueを表す。task progressには使わない。[一次定義](https://html.spec.whatwg.org/multipage/form-elements.html#the-meter-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、既知範囲内のscalar measurementまたはfractional valueを表す。task progressには使わない。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-meter-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,12 +36,12 @@ WHATWG Web Applications 1.0 `gauge` → 2006年revision 15 `meter` → HTML5 `me
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2006-03-02 | WHATWG HTML commit `c3550d90` | 仕様source・初回Git収録 | WIP `gauge`の初期意味と検討中の処理 | https://github.com/whatwg/html/commit/c3550d90867392905edbd91c94fec8c89fbfe648 | 2026-08-09 |
-| 2006-03-29 | WHATWG HTML commit `f8514de7`（revision 15） | 仕様commit | `gauge`から`meter`への改名、意味・属性・DOM modelの具体化 | https://github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00 | 2026-08-09 |
-| 2006-03-28 | *Web Applications 1.0*, revision 15 | WHATWG保存仕様 | `meter`の同時代定義と`progress`との役割分離 | https://platform.html5.org/history/webapps/r15.html#the-meter | 2026-08-09 |
-| 2026-08-09 | *HTML Living Standard: The meter element* | 現行仕様 | `meter`の現行定義 | https://html.spec.whatwg.org/multipage/form-elements.html#the-meter-element | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2006-03-02 | [WHATWG HTML commit `c3550d90`](../../raw/github.com/whatwg/html/commit/c3550d90867392905edbd91c94fec8c89fbfe648)（[公開元](https://github.com/whatwg/html/commit/c3550d90867392905edbd91c94fec8c89fbfe648)） | 仕様source・初回Git収録 | WIP `gauge`の初期意味と検討中の処理 | 2026-08-09 |
+| 2006-03-29 | [WHATWG HTML commit `f8514de7`（revision 15）](../../raw/github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00)（[公開元](https://github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00)） | 仕様commit | `gauge`から`meter`への改名、意味・属性・DOM modelの具体化 | 2026-08-09 |
+| 2006-03-28 | [*Web Applications 1.0*, revision 15](../../raw/platform.html5.org/history/webapps/r15.html)（[公開元](https://platform.html5.org/history/webapps/r15.html#the-meter)） | WHATWG保存仕様 | `meter`の同時代定義と`progress`との役割分離 | 2026-08-09 |
+| 2026-08-09 | [*HTML Living Standard: The meter element*](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開元](https://html.spec.whatwg.org/multipage/form-elements.html#the-meter-element)） | 現行仕様 | `meter`の現行定義 | 2026-08-09 |
 
 ## 確度
 

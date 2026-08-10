@@ -1,0 +1,525 @@
+<!doctype html public '-//IETF//DTD HTML 2.0 Strict//EN'>
+
+
+
+<title>HTML3 and Style Sheets</title>
+
+<h2 align=right><A HREF="/"><img align=left
+alt="W3C:" src="../Icons/WWW/w3c_48x48.gif"></A> WD-style-960115</h2>
+
+
+
+<h1 align=center>HTML3 and Style Sheets</h1>
+
+<h3 align=center>W3C Working Draft <i>15-Jan-1996</i></h3>
+<dl>
+<dt>This version:<dd>http://www.w3.org/pub/WWW/TR/WD-style-960115
+<dt>Latest version:<dd>http://www.w3.org/pub/WWW/TR/WD-style
+<dt>Authors:<dd>Bert Bos  &lt;bert@w3.org&gt;,<br>
+Dave Raggett &lt;dsr@w3.org&gt;,<br>
+H&aring;kon Lie &lt;howcome@w3.org&gt;
+</dl>
+<hr>
+
+
+<h2>Status of this document</h2>
+
+<p>This is a W3C Working Draft for review by W3C members and other interested
+parties. It is a draft document and may be updated, replaced or obsoleted by
+other documents at any time. It is inappropriate to use W3C Working Drafts
+as reference material or to cite them as other than "work in progress".
+A list of current W3C working drafts can be found at:
+<a href="https://www.w3.org/pub/WWW/TR">http://www.w3.org/pub/WWW/TR</a>
+
+<p><b>Note:</b> since working drafts are subject to frequent change, you are advised to reference
+the above URL, rather than the URLs for working drafts themselves. 
+
+<h2>Abstract</h2>
+
+<P>The HyperText Markup Language (HTML) is a simple markup language
+used to create hypertext documents that are portable from one
+platform to another. HTML documents are SGML documents with generic
+semantics that are appropriate for representing information from a
+wide range of applications. This specification extends HTML to
+provide support for rendering instructions expressed in separately
+specified notations. It is no longer necessary to extend HTML
+when new forms of rendering instructions are needed. Rendering
+instructions can be included with individual HTML elements to which
+they apply, or grouped together in the document head, or placed in
+associated style sheets. This specification does not specify particular
+style sheet notations, leaving that to other specifications.
+
+<hr> 
+<h3>Contents</h3>
+
+<ul>
+<li><a href="#link" rev=toc>Associating documents with style sheets</a>
+<li><a href="#media" rev=toc>Media Dependencies</a>
+<li><a href="#linktag" rev=toc>The LINK Tag</a>
+<li><a href="#styletag" rev=toc>The STYLE Tag</a>
+<li><a href="#generic" rev=toc>Common Attributes</a>
+<li><a href="#spantag" rev=toc>The SPAN tag</a>
+<li><a href="#divtag" rev=toc>The DIV tag</a>
+<li><a href="#ui">User interface and user supplied style sheets</a>
+<li><a href="#deployment" rev=toc>Deployment Issues</a>
+<li><a href="#performance" rev=toc>Performance Issues</a>
+<li><a href="#refs" rev=toc>References</a>
+</ul>
+
+<hr>
+<h3><a name=link>Associating HTML documents with Style Sheets</a></h3>
+
+<p>There are several approaches for associating HTML documents with
+separate style sheets:
+
+<dl>
+<dt><b>User applied style sheets</b>
+<dd>The user agent may provide the means for users to select and apply
+style sheets.<p>
+
+<dt><b>Implicit associations</b>
+<dd>The appropriate style sheet may be implied by the URL or other information
+describing the resource. This approach allows style sheets to be retrieved in
+advance of, or at the same time as, the HTML document itself. Implicit
+associations are not defined in this report.<p>
+
+<dt><b>Explicit associations</b>
+<dd>The author can specify one or more alternative style sheets for an
+HTML document using one of the methods described below.<p>
+</dl>
+
+<p>In HTML it is also possible to put style sheets in-line in the document.
+HTML is extended with a new element and a new attribute (both called STYLE),
+as described below. No matter how style sheets are applied, the user should
+be made aware that a particular style is in force and should have the option
+of turning it off.
+
+<p>To make it easier to apply a style to parts of a document, two new
+elements for use in the body of an HTML document are defined: DIV and
+SPAN. The first is to enclose a division (chapter, section, etc.) of a
+document, making it possible to give a whole section a distinctive
+style. The latter is used within paragraphs, similarly to EM, but in
+cases where none of the other HTML elements (EM, STRONG, VAR, CODE,
+etc.) apply.
+
+<hr>
+<h3><a name=media>Media Dependencies</a></h3>
+
+<p>Styles may often be designed for a restricted range of media, e.g.
+for graphical user interfaces with scalable fonts and millions of colors;
+for A4 paper media; for speech output; or for simple terminals with fixed
+pitch single font and 80x24 character displays. This proposal doesn't
+provide an explicit means to state the conditions under which a given
+style sheet is applicable.
+
+<p>Style sheet notations may themselves provide support for media
+dependencies. Another approach is to use a generic URL to reference
+a style sheet, and to make the binding to a specific URL according
+to the media required. This will be described in a separate working draft.
+
+<hr>
+<h3><a name="linktag">Using the HTML LINK element</a></h3>
+
+<p>In HTML, the LINK element is used to create a typed hyperlink between
+the document and some other resource. The REL attribute defines the type
+of the link. With REL=stylesheet, the LINK element can also be used to
+link to a style sheet.
+
+<p>Authors can use LINK elements to offer readers a choice of style sheets,
+e.g:
+
+<pre>    &lt;LINK TITLE="Traditional" REL=stylesheet HREF="old.style"&gt;
+    &lt;LINK TITLE="Modern" REL=stylesheet HREF="modern.style"&gt;
+    &lt;LINK TITLE="Wacky" REL=stylesheet HREF="wacky.style"&gt;
+    &lt;TITLE&gt;ACME Widgets Corp&lt;/TITLE&gt;
+
+    &lt;H1&gt;ACME Widgets Corp&lt;/H1&gt;
+    &lt;P&gt;If your browser supports style sheets, try our new look
+    in traditional, modern and wacky styles.
+    
+    ...</pre>
+
+<p>Another approach is to use a generic URL for a LINK which maps to a
+set of alternative style sheets. A separate working draft will describle
+how resource descriptions can be used for this purpose.
+
+<p>This specification builds upon the definition of the LINK element in
+<a href="#refs">HTML 2.0</a> in the following respects:
+
+<pre>    &lt;!ELEMENT LINK - O EMPTY&gt;
+    &lt;!ATTLIST LINK
+        href    CDATA     #REQUIRED  -- Universal Resource Locator --
+        title   CDATA     #IMPLIED   -- advisory title string --
+        rel     CDATA     #IMPLIED   -- forward link type --
+        rev     CDATA     #IMPLIED   -- reverse link type --
+        media   CDATA     #IMPLIED   -- Internet media type --
+        &gt;</pre>
+
+<UL>
+<LI>The forward link type "stylesheet" is hereby defined to signify
+that the associated LINK element specifies a link to a style sheet that
+may be applied to the HTML document containing the LINK element. The HREF
+attribute specifies the network address of the linked style sheet.<p>
+
+<LI>If there are several such links, then these are considered as providing
+a choice of alternative style sheets. The character string supplied with the
+TITLE attribute is recommended for use in building a menu of alternative
+styles.
+
+<p><b>Note</b> that the order of such LINK elements in the document markup
+does not signify preference order!<p>
+
+<LI>The MEDIA attribute may be used to specify the Internet Media type and
+associated parameters for the linked style sheet. This allows the user agent
+to disregard style sheets in unsupported notations, without the need to first
+make a remote query across the network.
+</UL>
+
+<hr>
+<h3><a name=styletag>The STYLE element</a></h3>
+
+<p>A single STYLE element may be included in the document head. It allows
+authors to include style rules within the HTML document, e.g.
+
+<pre>    &lt;HEAD&gt;
+    &lt;TITLE&gt;Title&lt;/TITLE&gt;
+    &lt;STYLE NOTATION="application/css" SRC="weird.css"&gt;
+      H1 { color: brown }
+      P  { color: blue  }
+    &lt;/STYLE&gt;
+    &lt;/HEAD&gt;</pre>
+
+<p>In the example, the CSS notation is used. The STYLE element specifies
+color overrides to the "weird.css" style sheet for H1 and P elements.
+The STYLE element is formally defined by:
+
+<pre>    &lt;!ELEMENT style - O (#PCDATA)&gt;
+    &lt;!ATTLIST style
+        notation CDATA    #REQUIRED -- Internet media type for style --
+        src      CDATA    #IMPLIED  -- URL for separate style sheet --
+        title    CDATA    #IMPLIED  -- advisory title for this style --
+        &gt;</pre>
+
+<p>The attributes are defined as follows:
+
+<dl>
+<dt><b>NOTATION</b>
+<dd>This required attribute defines the style notation as an Internet Media
+type including associated parameters. It is used in exactly the same way as
+with LINK elements. The notation applies to an external style sheet linked
+via the SRC attribute and to rendering annotations on elements in the
+document body attached with the <a href="#styleattr">STYLE attribute</a>.<p>
+
+<dt><b>SRC</b>
+<dd>This may be used to specify the URL for a base style sheet. The style
+sheet must use the same notation as rendering instructions in the STYLE
+element, and will normally be overridden by those instructions or
+subsequent STYLE attributes in the document body.
+
+<p>This attribute is needed for the extremely common case where a linked
+style sheet is overridden by a few rules in the style element or by
+properties given by the style attribute on particular elements. In the
+absence of the SRC attribute you would need to include the style element,
+a link element and a means for selecting which link element to use.<p>
+
+<dt><b>TITLE</b>
+<dd>The user agent is recommended to use the title string when building a
+menu of alternative style sheets. This will only happen if the STYLE element
+occurs together with linked style sheets as specified by one or more LINK
+elements. In the absence of such LINK elements, the TITLE attribute may
+be used to describe the style sheet for the purpose of allowing the user
+to turn style sheets on and off.<p>
+</dl>
+
+<p>CSS supports the ability to cascade several style sheets so that their
+effects are blended together. The STYLE element can be used with CSS to
+cascade style sheets using the CSS <tt>@import</tt> command, e.g.
+
+<pre>    &lt;HEAD&gt;
+    &lt;TITLE&gt;Title&lt;/TITLE&gt;
+    &lt;STYLE NOTATION="application/css"&gt;
+      @import "house-style.css"
+      @import "draft-report.css"
+      H1 { color: red }     -- override cascaded style sheets --
+    &lt;/STYLE&gt;
+    &lt;/HEAD&gt;</pre>
+
+<p>When the STYLE element occurs together with one or more LINK elements that
+specify linked style sheets, the user agent should consider the STYLE element
+in preference to the LINK elements.
+
+<p>The content model for the STYLE element precludes SGML tags, and the end
+tag of a STYLE element can usually be omitted, e.g. when the STYLE element
+is followed by another element. Instances of the characters "&amp;", "&lt;"
+or "&gt;" within rendering instructions should be escaped using SGML
+entities, e.g. &amp;amp; &amp;lt; and &amp;gt; respectively.
+
+<p><b>Note</b> that if we later decide to allow multiple STYLE elements
+in the document head, e.g. to cater for alternative styles, then we will need
+a different way of specifying the style notation in use for STYLE attributes
+for elements in the document body. The suggested choice is an attribute
+on the BODY element, e.g. "stylenotation", with the same definition as
+the "notation" attribute for the STYLE element.
+
+<hr>
+<!--NewPage-->
+<h2><a name="generic">Common Attributes</a></h2>
+
+<p>To support effective use of style sheets with HTML documents a
+number of common attributes are proposed. These can be used with most
+HTML elements. In general, all attribute names and values in this
+specification are case insensitive, except where noted otherwise.
+
+<pre>
+&lt;!ENTITY % attrs
+       "id      ID       #IMPLIED  -- element identifier --
+        class   NAMES    #IMPLIED  -- for subclassing elements --
+        style   CDATA    #IMPLIED  -- rendering annotation --
+        lang    NAME     #IMPLIED  -- as per RFC 1766 --
+        dir   (ltr|rtl)  #IMPLIED  -- I18N text direction --"&gt;
+</pre>
+
+<dl>
+<dt><B>ID</B>
+<dd>Used to define a document-wide identifier. This can be used for
+naming positions within documents as the destination of a hypertext
+link. It may also be used by style sheets for rendering an element in a
+unique style. An ID attribute value is an SGML NAME token. NAME tokens
+are formed by an initial letter followed by letters, digits, "-" and "."
+characters. The letters are restricted to A-Z and a-z.
+
+<dt><B>CLASS</B>
+<dd>A space separated list of SGML NAME tokens. CLASS names specify that
+the element belongs to the corresponding named classes. These may be used
+by style sheets to provide class dependent renderings.
+
+<dt><B>STYLE</B>
+<dd>A text string providing rendering information specific to this element.
+The notation is specified with the STYLE element in the document head.
+The default notation is hereby defined to be "application/css".
+
+<p>For example:
+
+<pre>    &lt;TITLE&gt;Test Document&lt;/TITLE&gt;
+    &lt;STYLE NOTATION="application/css"&gt;
+    &lt;P STYLE="color: red; font-style: small-caps"&gt;This text should
+     be in small capitals and colored red!</pre>
+
+<p>The end tag for the STYLE element has been omitted here since the
+element is unambigously ended by the &lt;P&gt; start tag.<p>
+
+<dt><A NAME=lang><B>LANG</B></A>
+<dd>A LANG attribute identifies the natural language used by the
+content of the associated element.The syntax and registry of language
+values are defined by <a href="#rfc1766">RFC 1766.</a> In summary the
+language is given as a primary tag followed by zero or more subtags,
+separated by "-". White space is not allowed and all tags are case
+insensitive. The name space of tags is administered by IANA. The two
+letter primary tag is an ISO 639 language abbreviation, while the initial
+subtag is a two letter ISO 3166 country code. Example values for LANG
+include:
+
+<pre>      en, en-US, en-uk, i-cherokee, x-pig-latin.</pre>
+
+<dt><a name=dir><B>DIR</B></a>
+<dd>Human writing systems are grouped into scripts, which determine
+amongst other things, the direction the characters are written.
+Elements of the Latin script are nominally left to right, while those
+of the Arabic script are nominally right to left. These characters have
+what is called strong directionality. Other characters can be directionally
+neutral (spaces) or weak (punctuation).
+
+<p>The DIR attribute specifies an encapsulation boundary which governs the
+interpretation of neutral and weakly directional characters.  It does not
+override the directionality of strongly directional characters. The DIR
+attribute value is one of LTR for left to right, or RTL for right
+to left, e.g. <tt>DIR=RTL</tt>.
+</dl>
+<hr>
+<h3><a name=spantag>The SPAN Tag</a></h3>
+
+<pre>    &lt;!ELEMENT span O O (%text)*&gt;
+    &lt;ATTLIST c
+            %attrs;     -- id, class, style, lang and dir --
+            &gt;</pre>
+
+<p>Sometimes it is desirable to apply a style to some text which doesn't
+have a structural role. For instance, the first few letters or words after
+a drop down capital may be rendered as small capital letters. In such
+situations it is inappropriate to use an existing tag such as &lt;EM&gt;.
+On existing user agents, the first letter would appear normally, but the next
+few would be mysteriously italicized. The new &lt;SPAN&gt; tag is recommended
+instead, as it has no effect on existing user agents.
+
+<p>An example based on CSS:
+
+<pre>    &lt;TITLE&gt;Title&lt;/TITLE&gt;
+    &lt;STYLE NOTATION="application/css"&gt;
+    P { 
+       text-effect: drop-cap,
+       font-size: 12pt,
+       alt-font-size: 24pt      -- assuming leading is zero --
+      }
+    SPAN { font-style: small-caps }
+    &lt;/STYLE&gt;
+    &lt;P&gt;T&lt;SPAN&gt;he first&lt;/SPAN&gt; few words of an article in The Economist..</pre>
+
+<p>This would be formatted to look something like:
+
+<pre>    ___
+     | HE FIRST few words
+     | of an article in the
+    Economist..</pre>
+
+<p>While on an existing user agent it would look like:
+
+<pre>    The first few words of an
+    article in the Economist..</pre>
+
+<p>The SPAN element can be used anywhere that EM is allowed. In the
+HTML DTD, the %phrase entity is modified thus:</p>
+<pre>
+    &lt;!ENTITY % phrase "SPAN|EM|STRONG|CODE|SAMP|KBD|VAR|CITE "&gt;</pre>
+
+<hr>
+<h3><a name=divtag>The DIV Tag</a></h3>
+
+<pre>    &lt;!ELEMENT div - - (%body.content)*&gt;
+    &lt;ATTLIST c
+            %attrs;     -- id, class, style, lang and dir --
+            &gt;</pre>
+
+<p>HTML lacks an element that can group paragraphs, headers, etc. into
+a chapter, a section, an abstract, etc. The DIV element is added to
+deal with this situation. It can enclose
+elements so that they can be given a distinctive style as a group.</p>
+<p>DIVs can be nested, to form, e.g., a hierarchy of chapters,
+sections, and subsections. The %body.content entity in the HTML DTD
+must be modified:</p>
+<pre>
+    &lt;!ENTITY % body.content "(DIV|%heading|%block|HR|ADDRESS|IMG)*"&gt;
+</pre>
+<p>(recommended) or:</p>
+<pre>
+    &lt;!ENTITY % body.content "(DIV|%heading|%text|%block|HR|ADDRESS)*"&gt;
+</pre>
+
+<hr>
+<h3><a name="ui">User interface and user supplied style
+sheets</a></h3>
+
+<p>In an interactive user agent, if an external (i.e., not built into
+the user agent or supplied by the user) style is being applied, the user
+should be made aware of it and be given the option of turning it off,
+or of selecting a different style, either for this document only or
+for all future documents as well. A flag in the corner of the window
+or an option button in the menubar should be enough.
+
+<p>It may be possible for the user to combine several of the available
+style sheets. At least it should be possible for the user to choose a
+personal style instead of, or maybe in combination with, external
+style sheets.
+
+<p>When a user agent applies a style sheet to a document while the
+author of that document has indicated a preference for a different
+style sheet, the user agent may have to alert the user to that fact.
+Exactly how and when that is done is outside the scope of this report.
+E.g., the CSS style sheet language gives precise rules for the
+conditions under which a user is allowed to override the author's
+choices.
+
+<hr>
+<h3><a name=deployment>Deployment Issues</a></h3>
+
+<p>The introduction of style sheets will give authors and users much
+greater control over the appearence of documents. It will also remove
+the pressure on vendors to extend HTML itself when ever a new rendering
+feature is needed. However, it will take time for widespread deployment
+of support for style sheets.  What are some of the deployment issues?
+
+<p>Traditionally, HTML user agents have silently ignored unknown start and
+end tags, or unknown attributes. Very few user agents support the LINK
+element. As as result:
+
+<ul>
+<li>The use of LINK for style sheets will be ignored
+<li>The STYLE attribute will be ignored
+<li>The STYLE element will be ignored, but its contents will
+be treated as part of the document body, and rendered as such.
+</ul>
+
+<p>As a result it is recommended that during the transition phase, authors
+avoid placing rendering instructions within the STYLE element. This leaves
+authors free to place rendering instructions within STYLE attributes on
+specific HTML elements and to use separate style sheets, linked via the
+STYLE element or one or more LINK elements.
+
+<p>This restriction may be lifted if vendors adopt another proposal by
+the World Wide Web Consortium for specifying variants of network resources.
+The resource variants mechanism would allow authors to serve up two versions
+of a document, one designed for old user agents and one for new user agents.
+The choice is made by the user agent based on descriptions of resource
+variants. The resource variants mechanism is the subject of a related
+working draft.
+<p>
+
+<hr>
+<h3><a name=performance>Performance Issues</a></h3>
+
+<p>Some people have voiced concerns over performance issues for style
+sheets. For instance, if the user agent has to wait until it has finished
+down loading lengthy style sheets, before it can start to display a
+document, then users will start to complain.  A similar situation arises
+if the document head includes a lengthy set of style rules.
+
+<p>The current proposal sidesteps these issues, by allowing authors to
+include rendering instructions within each HTML element. The rendering
+information is then always available by the time the user agent wants to
+render each element.
+
+<p>In many cases, authors will take advantage of a common style sheet for
+a group of documents. In this case, distributing rendering information
+through out the document will actually lead to worse performance than
+using a linked style sheet, since for most documents, the style sheet will
+already be present in the local cache. The public availability of good
+style sheets will encourage this effect.
+
+<p>The ability to override style sheets with information in the document
+head, or on individual HTML elements, increases the effectiveness of the
+local cache. Small changes to the document style can be kept out of the
+common style sheet, thereby allowing the same style sheet to be used with
+more documents, which in turn increases the chances of finding it in the
+cache.
+
+<hr>
+<h2><a name=refs>References</a></h2>
+
+<dl>
+<dt><b><a name=html2>RFC 1866</a></b>
+<dd>"Hypertext Markup Language - 2.0" by T. Berners-Lee &amp; D. Connolly,
+November 1995. This document can be downloaded from <a
+href="ftp://ds.internic.net/rfc/rfc1866.txt">ftp://ds.internic.net/rfc/rfc1866.txt</a>.
+
+<dt><b><a name="rfc1766">RFC 1766</a></b>
+<dd>"Tags for the Identification of Languages", by H. Alvestrand, UNINETT,
+March 1995. This document can be downloaded from <a
+href="ftp://ds.internic.net/rfc/rfc1766.txt">ftp://ds.internic.net/rfc/rfc1766.txt</a>.
+
+<dt><b><a name="css">CSS (5th draft)</a></b>
+<dd>"Cascading style sheets" by H&aring;kon Lie &amp; Bert Bos, November
+1995. This document can be downloaded from
+<a href="https://www.w3.org/hypertext/WWW/Style/css/draft5.html">http://www.w3.org/hypertext/WWW/Style/css/draft5.html</a>
+
+</dl>
+<hr>
+<A HREF="/"><img align=left
+alt="W3C:" src="../Icons/WWW/w3c_48x48.gif"></a>
+The World Wide Web Consortium:
+<A HREF="https://www.w3.org/">http://www.w3.org/</a>
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-declaration:"~/SGML/html.decl"
+sgml-live-element-indicator:t
+End:
+-->

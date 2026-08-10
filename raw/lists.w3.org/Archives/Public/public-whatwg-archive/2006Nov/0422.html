@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="hypermail 3.0.0, see https://github.com/hypermail-project/hypermail/" />
+<title>[whatwg] many messages regarding image captions from Ian Hickson on 2006-11-28 (public-whatwg-archive@w3.org from November 2006)</title>
+<meta name="Author" content="Ian Hickson (ian&#x40;&#0104;&#0105;&#0120;&#0105;&#0101;&#0046;&#0099;&#0104;)" />
+<meta name="Subject" content="[whatwg] many messages regarding image captions" />
+<meta name="Date" content="2006-11-28" />
+<link rel="stylesheet" title="Normal view" href="/assets/styles/public.css" />
+<link rel="alternate stylesheet" title="Shorter view" 
+    href="//www.w3.org/StyleSheets/Mail/style-short.css" />
+<link rel="help" href="/Help/" />
+<link rel="start" href="../" title= "public-whatwg-archive@w3.org archives" />
+</head>
+<body class="message">
+<header class="head">
+<nav class="breadcrumb" id="upper">
+  <ul>
+    <li><a href="https://www.w3.org/">W3C home</a></li>
+    <li><a href="/">Mailing lists</a></li>
+    <li><a href="../../">Public</a></li>
+    <li><a href="../">public-whatwg-archive@w3.org</a></li>
+    <li><a href="./">November 2006</a></li>
+  </ul>
+</nav>
+<h1>[whatwg] many messages regarding image captions</h1>
+<!-- received="Mon Nov 27 17:49:16 2006" -->
+<!-- isoreceived="20061127174916" -->
+<!-- sent="Tue, 28 Nov 2006 01:49:16 +0000 (UTC)" -->
+<!-- isosent="20061128014916" -->
+<!-- name="Ian Hickson" -->
+<!-- email="ian&#x40;&#0104;&#0105;&#0120;&#0105;&#0101;&#0046;&#0099;&#0104;" -->
+<!-- subject="[whatwg] many messages regarding image captions" -->
+<!-- id="Pine.LNX.4.62.0611272220570.8094@dhalsim.dreamhost.com" -->
+<!-- charset="UTF-8" -->
+<!-- inreplyto="174DB6F12D0D07428EAB24539DBBAE2C016CBCA6&#64;mse3.wvdrs.org" -->
+<!-- expires="-1" -->
+<nav id="navbar">
+<ul class="links hmenu_container">
+<li>
+<span class="heading">This message</span>: <ul class="hmenu"><li><a href="#start" id="options1">Message body</a></li>
+<li><a href="mailto:public-whatwg-archive&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20%5Bwhatwg%5D%20many%20messages%20regarding%20image%20captions&amp;In-Reply-To=%3CPine.LNX.4.62.0611272220570.8094%40dhalsim.dreamhost.com%3E&amp;References=%3CPine.LNX.4.62.0611272220570.8094%40dhalsim.dreamhost.com%3E">Respond</a></li>
+<li><a href="#options3">More options</a></li>
+</ul></li>
+<li>
+<span class="heading">Related messages</span>: <ul class="hmenu">
+<!-- unext="start" -->
+<li><a href="0423.html">Next message</a></li>
+<li><a href="0421.html">Previous message</a></li>
+<li><a href="0417.html">In reply to</a></li>
+<!-- unextthread="start" -->
+<li><a href="0423.html">Next in thread</a></li>
+<li><a href="#replies">Replies</a></li>
+<!-- ureply="end" -->
+</ul></li>
+</ul>
+</nav>
+</header>
+<!-- body="start" -->
+<main class="mail">
+<ul class="headers" aria-label="message headers">
+<li><span class="from">
+<span class="heading">From</span>: Ian Hickson &lt;<a href="mailto:ian&#x40;&#0104;&#0105;&#0120;&#0105;&#0101;&#0046;&#0099;&#0104;?Subject=Re%3A%20%5Bwhatwg%5D%20many%20messages%20regarding%20image%20captions&amp;In-Reply-To=%3CPine.LNX.4.62.0611272220570.8094%40dhalsim.dreamhost.com%3E&amp;References=%3CPine.LNX.4.62.0611272220570.8094%40dhalsim.dreamhost.com%3E">ian&#x40;&#0104;&#0105;&#0120;&#0105;&#0101;&#0046;&#0099;&#0104;</a>&gt;
+</span></li>
+<li><span class="date"><span class="heading">Date</span>: Tue, 28 Nov 2006 01:49:16 +0000 (UTC)</span></li>
+<li><span class="message-id"><span class="heading">Message-ID</span>: &lt;Pine.LNX.4.62.0611272220570.8094&#x40;&#0100;&#0104;&#0097;&#0108;&#0115;&#0105;&#0109;&#0046;&#0100;&#0114;&#0101;&#0097;&#0109;&#0104;&#0111;&#0115;&#0116;&#0046;&#0099;&#0111;&#0109;&gt;
+</span></li>
+</ul>
+<pre id="start" class="body">
+Based on a lot of the feedback, I wrote up a first draft of how to do 
+image captions in HTML5:
+
+   &lt;figure&gt;
+     &lt;img ...&gt;
+     &lt;legend&gt; ... &lt;/legend&gt;
+   &lt;/figure&gt;
+
+It's a block-level element, same level as &lt;p&gt;. The image and the legend 
+can come in any order, but there must be exactly one of each. The image 
+doesn't have to be &lt;img&gt;, it can be any of &lt;img&gt;, &lt;iframe&gt;, &lt;embed&gt;, 
+&lt;object&gt;, and &lt;canvas&gt;. There are special rules for what to do with 
+fallback that basically make the caption disappear (though of course this 
+won't happen in legacy UAs).
+
+There was a lot of feedback on this issue, I've tried to reply to all the 
+points made below. Several of the e-mails basically made the same point or 
+suggestion, so I sometimes only replied the first time that a proposal was 
+made. Please let me know if I missed anything. If I did it was unintentional.
+
+
+On Tue, 27 Jun 2006, dolphinling wrote:
+&gt;
+&gt; What's wrong with
+&gt; 
+&gt; &lt;div&gt;
+&gt;   &lt;img src=&quot;&quot;&gt;
+&gt;   &lt;p&gt;This is the caption.&lt;/p&gt;
+&gt; &lt;/div&gt;
+&gt; 
+&gt; ? That's how I think of it semantically, and I don't see it as being 
+&gt; common enough to warrant a separate element of its own.
+
+I think based on the number of people asking for it, there's enough 
+demand!
+
+The problem with the above is that it is exactly the same as:
+
+   &lt;img&gt;
+   &lt;p&gt;This is the caption.&lt;/p&gt;
+
+...which is (a) non-conforming, and (b) doesn't strongly associate the two 
+elements.
+
+
+On Tue, 27 Jun 2006, dolphinling wrote:
+&gt; &gt; 
+&gt; &gt; There's nothing &quot;wrong&quot; with that. Yet, that's not exactly an image 
+&gt; &gt; caption. There's no explicit association between the &lt;img&gt; and the 
+&gt; &gt; following &lt;p&gt;.
+&gt; 
+&gt; But there's the implicit association given by the fact that they're 
+&gt; there, together, in the &lt;div&gt;, and nothing else is. Do you really need 
+&gt; anything more than that?
+
+The difference is that with an actual caption, you can distinguish it from 
+just a paragraph in the same section, allowing you to draw out more data. 
+For example, you could imagine Windows Live Image Search using image 
+captions to get a better idea of what the images they index contain.
+
+
+On Tue, 27 Jun 2006, David Walbert wrote:
+&gt; 
+&gt; For scripting purposes I have occasionally needed to tie an image and 
+&gt; its caption explicitly by giving them related IDs that a particular 
+&gt; javascript function can call (e.g. img id=&quot;img1&quot; and p 
+&gt; id=&quot;img-caption&quot;), and it would be helpful in these situations to have a 
+&gt; standard syntax for that explicit relation.
+
+Agreed.
+
+
+&gt; But the availability of such syntax should not imply that everyone needs 
+&gt; to use it for all markup, all the time; I can't see it being useful in 
+&gt; ordinary web design (to the reader/user, which should ultimately be the 
+&gt; point) unless there are actions associated with the image and caption.
+
+Certainly, as with all markup, nobody is going to be forcing authors to 
+mark up every last semantic.
+
+
+On Tue, 27 Jun 2006, Anne van Kesteren wrote:
+&gt; 
+&gt; If the relationship between the image and caption is well defined. For 
+&gt; example, when the next sibling _element_ of &lt;img&gt; is &lt;p&gt;, &lt;p&gt; is the 
+&gt; caption of &lt;img&gt; you can easily introduce some DOM attribute on 
+&gt; HTMLImageElement named caption that gives you back the 
+&gt; HTMLParagraphElement associated with it.
+
+We could do that at some future point, yes.
+
+
+On Tue, 27 Jun 2006, Mihai Sucan wrote:
+&gt; 
+&gt; You could also use:
+&gt; 
+&gt; &lt;div class=&quot;image-caption&quot;&gt;
+&gt; &lt;img /&gt;
+&gt; &lt;p&gt;caption&lt;/p&gt;
+&gt; &lt;/div&gt;
+&gt; 
+&gt; However, this looks like a microformat. Nonetheless, it's better than leaving
+&gt; out the class attribute.
+
+That's basically the structure that's now in the spec, though with element 
+names instead of class names.
+
+
+On Tue, 27 Jun 2006, Michel Fortin wrote:
+&gt; 
+&gt; I think something like:
+&gt; 
+&gt;     &lt;aside&gt;
+&gt;        &lt;img src=&quot;...&quot;&gt;
+&gt;        &lt;p&gt;This is the caption.&lt;/p&gt;
+&gt;     &lt;/aside&gt;
+&gt; 
+&gt; would already be more appropriate than what you suggested as it removes 
+&gt; the paragraph from the main flow of the document and thus implicitly 
+&gt; link it with the image.
+&gt;
+&gt; But I think illustrative figures sould be disambiguated a little more, 
+&gt; as they are not always appropriate as asides[1] in the sense of 
+&gt; &quot;tangentially related to the content around&quot;, they are usually tied to 
+&gt; the content, they're not really &quot;separate from that content&quot;.
+
+Agreed.
+
+
+&gt; This construct is common enough if you follow news sites. Here is my 
+&gt; morning harvest of a couple of use cases in the news:
+&gt; 
+&gt; &lt;<a href="http://www.cnn.com/2006/WORLD/meast/06/27/iran.us.reut/index.html">http://www.cnn.com/2006/WORLD/meast/06/27/iran.us.reut/index.html</a>&gt;
+&gt; &lt;<a href="http://news.bbc.co.uk/2/hi/middle_east/5119732.stm">http://news.bbc.co.uk/2/hi/middle_east/5119732.stm</a>&gt;
+&gt; &lt;<a href="http://politics.guardian.co.uk/homeaffairs/story/0,,1806799,00.html">http://politics.guardian.co.uk/homeaffairs/story/0,,1806799,00.html</a>&gt;
+&gt; &lt;<a href="http://radio-canada.ca/nouvelles/regional/modele.asp?page=/regions/">http://radio-canada.ca/nouvelles/regional/modele.asp?page=/regions/</a>
+&gt; Montreal/2006/06/26/006-crise-logement-iris.shtml&gt;
+&gt; &lt;<a href="http://www.cbc.ca/story/world/national/2006/06/27/saddam-new-trail.html">http://www.cbc.ca/story/world/national/2006/06/27/saddam-new-trail.html</a>&gt;
+&gt; &lt;<a href="http://www.salon.com/ent/feature/2006/06/27/911_conspiracies/index_np.html">http://www.salon.com/ent/feature/2006/06/27/911_conspiracies/index_np.html</a>&gt;
+&gt; &lt;<a href="http://www.macworld.com/2006/06/firstlooks/flciviv/index.php">http://www.macworld.com/2006/06/firstlooks/flciviv/index.php</a>&gt;
+&gt; 
+&gt; 
+&gt; Such image captions are also widely used in many publications in the 
+&gt; scientific and technical fields to denote figures (hence the &lt;figure&gt; 
+&gt; element I proposed on May 3):
+&gt; 
+&gt; &lt;<a href="http://www.stanford.edu/group/hopes/basics/basichd/a1.html">http://www.stanford.edu/group/hopes/basics/basichd/a1.html</a>&gt;
+&gt; &lt;<a href="http://www.ess.gov.si/eng/AnnaulReport/lp98/2_4.htm">http://www.ess.gov.si/eng/AnnaulReport/lp98/2_4.htm</a>&gt;
+&gt; &lt;<a href="http://www.centrelink.gov.au/internet/internet.nsf/ar0001/chp4.2.htm#figure9">http://www.centrelink.gov.au/internet/internet.nsf/ar0001/chp4.2.htm#figure9</a>&gt;
+&gt; &lt;<a href="http://www.ai-junkie.com/ann/som/som1.html">http://www.ai-junkie.com/ann/som/som1.html</a>&gt;
+&gt; &lt;<a href="http://japanfocus.org/article.asp?id=413">http://japanfocus.org/article.asp?id=413</a>&gt;
+&gt; &lt;<a href="http://medicine.plosjournals.org/perlserv?request=get">http://medicine.plosjournals.org/perlserv?request=get</a>-
+&gt; document&amp;doi=10.1371/journal.pmed.0020228&gt;
+&gt; 
+&gt; 
+&gt; There is a lot of figures in computer technology articles too:
+&gt; 
+&gt; &lt;<a href="http://www.onlamp.com/pub/a/onlamp/2005/01/20/rails.html">http://www.onlamp.com/pub/a/onlamp/2005/01/20/rails.html</a>&gt;
+&gt; &lt;<a href="http://www.symbian.com/developer/techlib/v9.1docs/doc_source/N10356/">http://www.symbian.com/developer/techlib/v9.1docs/doc_source/N10356/</a>
+&gt; BuildTools/native/abiv1v2migration.html&gt;
+&gt; &lt;<a href="http://evonet.lri.fr/CIRCUS2/node.php?node=148">http://evonet.lri.fr/CIRCUS2/node.php?node=148</a>&gt;
+&gt; &lt;<a href="http://developer.apple.com/documentation/GraphicsImaging/Conceptual/">http://developer.apple.com/documentation/GraphicsImaging/Conceptual/</a>
+&gt; drawingwithquartz2d/dq_paths/chapter_4_section_2.html&gt;
+&gt; &lt;<a href="http://www.autodesk.fr/adsk/servlet/index?siteID=458335&amp;id=6013861">http://www.autodesk.fr/adsk/servlet/index?siteID=458335&amp;id=6013861</a>&gt;
+&gt; &lt;<a href="http://www-sop.inria.fr/semir/personnel/Laurent.Mirtain/ldap-livre.html">http://www-sop.inria.fr/semir/personnel/Laurent.Mirtain/ldap-livre.html</a>&gt;
+&gt; &lt;<a href="http://www.shirky.com/writings/powerlaw_weblog.html">http://www.shirky.com/writings/powerlaw_weblog.html</a>&gt;
+&gt; 
+&gt; 
+&gt; This one is about strings figures:
+&gt; 
+&gt; &lt;<a href="http://www.darsie.net/string/">http://www.darsie.net/string/</a>&gt;
+&gt; 
+&gt; 
+&gt; And image captions are an integral part of Wikipedia as you can see on many
+&gt; pages:
+&gt; 
+&gt; &lt;<a href="https://en.wikipedia.org/wiki/Amerindians">http://en.wikipedia.org/wiki/Amerindians</a>&gt;
+&gt; &lt;<a href="https://en.wikipedia.org/wiki/Oroonoko">http://en.wikipedia.org/wiki/Oroonoko</a>&gt;
+&gt; &lt;<a href="https://en.wikipedia.org/wiki/Earthquake">http://en.wikipedia.org/wiki/Earthquake</a>&gt;
+&gt; &lt;<a href="https://en.wikipedia.org/wiki/Lithosphere">http://en.wikipedia.org/wiki/Lithosphere</a>&gt;
+&gt; ...
+
+Wow! Thank you for this research!
+
+
+This one in particular:
+
+&gt; <a href="http://politics.guardian.co.uk/homeaffairs/story/0,,1806799,00.html">http://politics.guardian.co.uk/homeaffairs/story/0,,1806799,00.html</a>
+
+...suggests we may want to have multiple &lt;legend&gt; elements per &lt;figure&gt;, 
+to allow for a caption and photo credit to be given. What do people think? 
+Would some other way of inline giving photo credit metadata be better?
+
+
+
+On Tue, 27 Jun 2006, Mihai Sucan wrote:
+&gt; 
+&gt; Quick idea:
+&gt; 
+&gt; &lt;img src=&quot;&quot; caption=&quot;fig1&quot;&gt;
+&gt; &lt;p id=&quot;fig1&quot;&gt;This is the caption.&lt;/p&gt;
+&gt; 
+&gt; How about this? It's backwards compatible. Maybe this has already been
+&gt; suggested (apologies if this is the case).
+&gt; 
+&gt; [...]
+&gt; 
+&gt; That's why I came with the suggestion of &lt;img 
+&gt; caption=&quot;caption-element-id&quot; /&gt;. It does not require the isolation of 
+&gt; the image and caption in another tag. Thus, the markup is less verbose, 
+&gt; without losing the benefit of image and caption elements association. 
+&gt; Another benefit would be that the &lt;img&gt; and &lt;p&gt; can both be optionally 
+&gt; isolated with &lt;aside&gt;, &lt;div&gt; or anything else (if the author considers 
+&gt; this required, for styling or other purposes).
+
+Unfortunately, experience with that kind of structure (e.g. &lt;label 
+for=&quot;&quot;&gt;, &lt;object declare&gt;, &lt;td headers=&quot;&quot;&gt;, &lt;img usemap=&quot;&quot;&gt;) indicates 
+that it is fraught with problems, for authors, implementors, conformance 
+checkers, and spec writers. I'd rather avoid this kind of model if 
+possible.
+
+
+On Wed, 28 Jun 2006, Hugh Winkler wrote:
+&gt; 
+&gt; How about an anchor with rel=&quot;caption&quot;:
+&gt; 
+&gt; &lt;a rel=&quot;caption&quot; href=&quot;#caption1&quot;&gt;&lt;img src=&quot;x.jpg&quot;/&gt;&lt;/a&gt;
+&gt; &lt;span id=&quot;caption1&quot;&gt;man bites dog&lt;/span&gt;
+&gt; 
+&gt; or
+&gt; 
+&gt; &lt;img id=&quot;img1&quot; src=&quot;x.jpg&quot;/&gt;
+&gt; &lt;span id=&quot;caption1&quot;&gt;&lt;a rel=&quot;caption&quot; rev=&quot;#img1&quot;&gt;man bites
+&gt; dog&lt;/caption&gt;&lt;/span&gt;
+
+This seems a bit counter-intuitive, at least compared to &lt;figure&gt;.
+
+
+On Wed, 28 Jun 2006, Clayton Scott wrote:
+&gt; 
+&gt; No expanding of the &lt;caption&gt; element with a |for| attribute or nested
+&gt; inside any block element?
+&gt; 
+&gt; &lt;img id='photograph' src='...'&gt;
+&gt; &lt;caption for='photograph'&gt;Photo of Foo herders courtesy of Jimmy&lt;/caption&gt;
+&gt; 
+&gt; &lt;caption for='myFavList'&gt;My List of Favourite Things&lt;/caption&gt;
+&gt; &lt;ol id='myFavList'&gt;
+&gt;  &lt;li&gt;&lt;/li&gt;
+&gt; &lt;/ol&gt;
+&gt; 
+&gt; &lt;ol id='myFavList'&gt;
+&gt;  &lt;caption&gt;My List of Favourite Things&lt;/caption&gt;
+&gt;  &lt;li&gt;&lt;/li&gt;
+&gt; &lt;/ol&gt;
+
+Unfortunately, &lt;caption&gt; has weird parsing requirements which basically 
+mean we can't use it outside tables. But &lt;legend&gt; works (and means the 
+same thing, basically), so we can use that.
+
+Regarding the for=&quot;&quot;/id idea, see above.
+
+I'll look into the labelling of lists at a separate juncture (it's been 
+suggested before, though the use cases for it are a little vague to me -- 
+if you have input on this, please start a new thread).
+
+
+On Wed, 28 Jun 2006, Ben Meadowcroft wrote:
+&gt; 
+&gt; Perhaps a better method would be using the longdesc attribute to 
+&gt; associate a caption with an image. Specifically we could point the image 
+&gt; to fragment within the current page and give an explicit association in 
+&gt; this manner.
+&gt; 
+&gt; &lt;img src=&quot;man.gif&quot; alt=&quot;A Man&quot; longdesc=&quot;#manCaption&quot; /&gt;
+&gt; &lt;p id=&quot;manCaption&quot;&gt;A more full description of the image&lt;/p&gt;
+&gt; 
+&gt; Does anyone know how screenreaders and other assistive technologies 
+&gt; handle longdesc URIs pointing to fragments within the same page?
+
+longdesc was intended for a description, not a caption, so I wouldn't 
+like to reuse it in this way.
+
+
+On Wed, 28 Jun 2006, Michel Fortin wrote:
+&gt; 
+&gt; Interesting idea, but longdesc cannot be used with &lt;object&gt;, &lt;embed&gt; or 
+&gt; embedded XML (SVG for instance). Moreover, a caption isn't always a 
+&gt; description.
+
+Indeed.
+
+
+&gt; Also, if the caption isn't identified as a caption by some mean (say 
+&gt; with a &quot;caption&quot; class), styling is not easy and the &quot;caption paragraph&quot; 
+&gt; can be confounded with another paragraph else. The common practice of 
+&gt; having the illustration and its caption together, either floating on the 
+&gt; side, indented, or spaning into the margin cannot be easily realised 
+&gt; without additional, non-standard markup. People would then come again 
+&gt; with different markups to solve the same problem of displaying a 
+&gt; captioned image on screen, and we wouldn't have achieved much.
+
+I agree.
+
+
+On Thu, 29 Jun 2006, Lachlan Hunt wrote:
+&gt; 
+&gt; I think accessibility experts would have serious issues with this.  A 
+&gt; caption doesn't even come close to being a good long description.  See 
+&gt; what Joe Clark has to say about writing good long descriptions.
+&gt; 
+&gt; <a href="http://joeclark.org/book/sashay/serialization/Chapter06.html#h1-1715">http://joeclark.org/book/sashay/serialization/Chapter06.html#h1-1715</a>
+
+Indeed.
+
+
+On Wed, 28 Jun 2006, David Walbert wrote:
+&gt; 
+&gt; Agreed, and conversely, a literal description of the image makes a poor 
+&gt; caption -- it would be redundant to anyone who can see the image. A good 
+&gt; caption enhances the content of the image, usually by telling the 
+&gt; reader/viewer/listener why the image was included in the page.
+
+Indeed.
+
+
+On Wed, 5 Apr 2006, Lachlan Hunt wrote:
+&gt; &gt; &gt;
+&gt; &gt; &gt; I'm wondering what WA1 considers appropriate markup for a figure 
+&gt; &gt; &gt; with a caption.
+&gt; &gt; 
+&gt; &gt;    &lt;p&gt;&lt;img src=&quot;image-equivalent-of-text&quot; alt=&quot;text&quot; title=&quot;caption&quot;&gt;&lt;/p&gt;
+&gt;
+&gt; That's fairly limited because it doesn't allow markup within the title 
+&gt; attribute.
+
+Agreed.
+
+
+&gt; What about extending the &lt;caption&gt; element, currently used with &lt;table&gt;, 
+&gt; to &lt;img&gt;, &lt;object&gt; and &lt;embed&gt;?
+
+Sadly, this would break table parsing. But &lt;legend&gt; is safe to use, so we 
+can use that (and &quot;legend&quot; means &quot;caption&quot; anyway).
+
+
+On Wed, 5 Apr 2006, Michel Fortin wrote:
+&gt; 
+&gt; When you read some text, a figure is an illustration of what the text 
+&gt; says; it can be an image but is not necessarily: it could be a code 
+&gt; snippet, illustrative text or an mathematical equation. Its main 
+&gt; characteristic is that it is separated from the flow of the text: you 
+&gt; can read the text ignoring figures (and captions) and it should still 
+&gt; make sense.
+&gt; 
+&gt; So what did I just describe? It just seems to me that I've described is 
+&gt; the aside element. Would it make sense to simply lay out figures that 
+&gt; way?
+&gt; 
+&gt;     &lt;aside&gt;
+&gt;       &lt;h1&gt;Figure 1: Some image found &lt;a href=&quot;...&quot;&gt;here&lt;/a&gt;&lt;/h1&gt;
+&gt;       &lt;p&gt;&lt;img src=&quot;...&quot;&gt;&lt;/p&gt;
+&gt;     &lt;/aside&gt;
+&gt; 
+&gt; What about placing the image above the header? And is my interpretation 
+&gt; of the semantics correct? I'm wondering that I may be abusing aside a 
+&gt; little.
+
+I think there are definitely examples of figures that aren't asides. I 
+prefer your original proposal.
+
+
+On Thu, 6 Apr 2006, Alexey Feldgendler wrote:
+&gt; &gt;
+&gt; &gt;      &lt;aside&gt;
+&gt; &gt;        &lt;h1&gt;Figure 1: Some image found &lt;a href=&quot;...&quot;&gt;here&lt;/a&gt;&lt;/h1&gt;
+&gt; &gt;        &lt;p&gt;&lt;img src=&quot;...&quot;&gt;&lt;/p&gt;
+&gt; &gt;      &lt;/aside&gt;
+&gt; 
+&gt; I'm afraid this won't degrade gracefully: the &lt;h1&gt; would confuse the 
+&gt; document outline facilities in today's user agents.
+
+Indeed.
+
+
+On Thu, 6 Apr 2006, fantasai wrote:
+&gt; &gt; &gt; 
+&gt; &gt; &gt;      &lt;aside&gt;
+&gt; &gt; &gt;        &lt;h1&gt;Figure 1: Some image found &lt;a href=&quot;...&quot;&gt;here&lt;/a&gt;&lt;/h1&gt;
+&gt; &gt; &gt;        &lt;p&gt;&lt;img src=&quot;...&quot;&gt;&lt;/p&gt;
+&gt; &gt; &gt;      &lt;/aside&gt;
+&gt; &gt; 
+&gt; &gt; I'm afraid this won't degrade gracefully: the &lt;h1&gt; would confuse the 
+&gt; &gt; document outline facilities in today's user agents.
+&gt; 
+&gt; You could use &lt;h6&gt;. Just always use &lt;h6&gt; for the figure caption.
+&gt; 
+&gt; Actually, I think WA should generally allow the use of &lt;h6&gt; as a 
+&gt; terminal-level header, similar to the simplesect element in DocBook. 
+&gt; It's a useful markup construct sometimes, at least in my experience.
+
+That would seriously complicate the current definition of how to handle 
+headers, which is IMHO quite complicated enough as is.
+
+
+On Thu, 6 Apr 2006, mozer wrote:
+&gt; 
+&gt; Proposition 1 :
+&gt; -----------------
+&gt; And what about just giving to &lt;img&gt; a content ?
+
+This, sadly, wouldn't be very backwards compatible.
+
+
+&gt; Proposition 2 :
+&gt; -----------------------
+&gt; or just giving img an id
+&gt; then using &#64;for attribute
+&gt; &lt;p&gt;&lt;caption for=&quot;img1&quot;&gt;this is &lt;b&gt;the&lt;/b&gt; caption&lt;/caption&gt;&lt;img
+&gt; id=&quot;img1&quot; src=&quot;image-equivalent-of-text&quot; alt=&quot;text&quot;&gt;&lt;/p&gt;
+
+Such structures are, unfortunately, the source of many bugs and confusion; 
+I think we should avoid using ID references where we can.
+
+
+On Thu, 6 Apr 2006, Alexey Feldgendler wrote:
+&gt; 
+&gt; This heading shouldn't be within the document's main tree of headings. 
+&gt; It should be completely taken out, that's what &quot;aside&quot; means. But it 
+&gt; can't be done in a backwards compatible way.
+
+Indeed.
+
+
+On Fri, 7 Apr 2006, Alexey Feldgendler wrote:
+&gt; 
+&gt; As a user, I wouldn't want Opera to include image captions when 
+&gt; navigating headers. I don't feel that the caption is a header -- it's no 
+&gt; more of a header than a table caption is.
+
+Agreed.
+
+
+On Fri, 7 Apr 2006, Alexey Feldgendler wrote:
+&gt; 
+&gt; Actually, I tend to treat images and tables the same. Tables have 
+&gt; &lt;caption&gt;s, and a user agent can make a list of tables for navigation. 
+&gt; Why can't an image have a caption? I think images and tables are quite 
+&gt; similar.
+
+I agree.
+
+
+&gt; And I don't think that &quot;heading&quot; is the appropriate semantic entity for 
+&gt; marking up captions. Rather than making them headers and at the same 
+&gt; time taking measures so that they don't interfere with UA's outlining 
+&gt; facilities, I'd rather say that headings should be left entirely for 
+&gt; document outline, and captions are marked up explicitly as captions.
+
+Agreed.
+
+
+On Fri, 7 Apr 2006, Michel Fortin wrote:
+&gt; 
+&gt; Personally, I can leave with a caption element that doesn't show up in 
+&gt; the DOM of legacy user-agents. But given all the attention given to 
+&gt; backward compatibility, it just seem a little out of place to ignore 
+&gt; such an issue.
+
+Indeed. The even bigger problem is of &lt;caption&gt; inside &lt;td&gt; or &lt;caption&gt;, 
+where the parsing is even weirder.
+
+
+&gt; Yes, that was an accident, and not the first. I'm used to some other 
+&gt; lists where I can just hit reply.
+
+Just hit reply-all. :-)
+
+
+On Wed, 12 Apr 2006, Ben Meadowcroft wrote:
+&gt; 
+&gt; I'd prefer using a caption element, even if it isn't backwards 
+&gt; compatible. However as an alternative why not reuse the label element?
+
+&lt;label&gt; is an option, but it already has quite a lot of requirements 
+related to interaction, etc (e.g. clicking it is supposed to transfer 
+focus), and it has a for=&quot;&quot; attribute that would make this more complex 
+than necessary. Basically, we want to avoid overloading elements.
+
+Luckily, &lt;legend&gt; (which previously was just for &lt;fieldset&gt;) is actually 
+quite safe to use, since it hasn't had any important implementation 
+requirements in the past (with &lt;fieldset&gt;, the requirements rest with 
+&lt;fieldset&gt;, not &lt;legend&gt;, generally).
+
+
+On Wed, 12 Apr 2006, Michel Fortin wrote:
+&gt; 
+&gt; Apparently, the label element used outside a fieldset has the same 
+&gt; problems as caption outside a table (not present in the DOM, impossible 
+&gt; to style). At least on Gecko and WebKit.
+
+Indeed. However, since we are already requiring that the &lt;legend&gt; element 
+be handled more sanely by the parser, and since &lt;details&gt; is using 
+&lt;legend&gt; too, it seems reasonable to use &lt;legend&gt;.
+
+
+&gt; I've updated my test cases with a figure using the legend element and 
+&gt; added a stylesheet to set color of caption and legend elements to better 
+&gt; demonstrate that it doesn't work in HTML; with XML it works fine 
+&gt; however.
+&gt; 
+&gt; &lt;<a href="http://www.michelf.com/docs/figure.html">http://www.michelf.com/docs/figure.html</a>&gt;
+&gt; &lt;<a href="http://www.michelf.com/docs/figure.xml">http://www.michelf.com/docs/figure.xml</a>&gt;
+
+Thanks, this is indeed helpful.
+
+
+On Sat, 22 Apr 2006, Simon Pieters wrote:
+&gt; 
+&gt; HTML+ actually already has markup for image captions[1]:
+&gt; 
+&gt;   &lt;fig src=&quot;image-equivalent-of-text&quot;&gt;
+&gt;    &lt;caption&gt;caption&lt;/caption&gt;
+&gt;    text
+&gt;   &lt;/fig&gt;
+&gt; 
+&gt; Since no current browser supports the HTML+ &lt;fig&gt; element (AFAIK), we 
+&gt; could reuse it for image captions something like this:
+&gt; 
+&gt;   &lt;fig&gt;
+&gt;    &lt;caption&gt;caption&lt;/caption&gt;
+&gt;    &lt;img src=&quot;image-equivalent-of-text&quot; alt=&quot;text&quot;&gt;
+&gt;   &lt;/fig&gt;
+&gt; 
+&gt; [1] <a href="http://www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html">http://www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html</a>
+
+Except for the parsing problems with &lt;caption&gt;, and the use of &lt;figure&gt; 
+instead of &lt;fig&gt;, I agree, and this is what has now been added to the 
+spec. (I don't think it makes sense to abbreviate &lt;figure&gt; particularly.)
+
+
+On Wed, 3 May 2006, Michel Fortin wrote:
+&gt; 
+&gt; I just found out that at least one important HTML parser (Gecko) doesn't 
+&gt; create the right DOM tree out of something as simple as this:
+&gt; 
+&gt;     &lt;section&gt;
+&gt;       &lt;p&gt;Some paragraph&lt;/p&gt;
+&gt;     &lt;/section&gt;
+&gt; 
+&gt; The tree will be as if you wrote this:
+&gt; 
+&gt;     &lt;section&gt;
+&gt;       &lt;/section&gt;&lt;p&gt;Some paragraph&lt;/p&gt;
+&gt; 
+&gt; Why? Because unknown elements are considered inline and won't accept any 
+&gt; block element within. This problem applies to &lt;nav&gt;, &lt;header&gt;, &lt;footer&gt;, 
+&gt; and &lt;aside&gt; too (and maybe others).
+
+Indeed, this behaviour is considered wrong by the HTML parser required by 
+HTML5.
+
+
+&gt; The point I want to make is that because simple elements like section 
+&gt; aren't really backward-compatible, there is probably no point in 
+&gt; requiring that from image captions either. Hence it could be acceptable 
+&gt; to allow the following markup even if current HTML parsers are ignoring 
+&gt; caption:
+&gt; 
+&gt;     &lt;figure&gt;
+&gt;       &lt;caption&gt;Some image&lt;/caption&gt;
+&gt;       &lt;img src=&quot;...&quot;&gt;
+&gt;     &lt;/figure&gt;
+
+The problem isn't that UAs handle the above badly, it's that they are 
+required to handle situations such as the following in ways that aren't 
+compatible with the proposal:
+
+   &lt;table&gt;
+    &lt;tr&gt;
+     &lt;td&gt;
+      &lt;figure&gt;
+       &lt;caption&gt;
+
+(The &lt;caption&gt; ends the &lt;td&gt;.)
+
+
+&gt; Block-level element, and structured inline-level element.
+
+I couldn't really work out why it should be inline. It seems equivalent to 
+a &lt;p&gt;.
+
+
+&gt; Content model:
+&gt;     Zero or one caption element followed by inline-level content.
+
+Why not just embedded elements?
+
+
+&gt; I've chosen an inline-level content model because it allows not only 
+&gt; img, but also structured inline-level elements like pre. I'm not so sure 
+&gt; about that choice however.
+
+Hm, &lt;pre&gt; seems like an interesting thing to put in a &lt;figure&gt;. What do 
+people think? Right now it's only embedded content.
+
+
+On Thu, 29 Jun 2006, Lachlan Hunt wrote:
+&gt; 
+&gt; I agree that structure is the best approach.  That allows for good 
+&gt; styling, by setting the following:
+&gt; 
+&gt; figure { display: table; caption-side: bottom; }
+&gt; figure img { display: block; }
+&gt; caption { display: table-caption; }
+&gt; 
+&gt; The only problem is that it isn't very backwards compatible.  Firefox 
+&gt; doesn't include &lt;caption&gt; in the DOM outside of a table.  Moving the 
+&gt; caption after the image in the source and setting display: block; on the 
+&gt; image gives reasonable results in Firefox and Opera because the img is a 
+&gt; child of figure, but not in IE because figure and img are treated as 
+&gt; siblings.
+
+For anything with new elements to work in IE, we're going to have to rely 
+on JavaScript to wrap the elements around.
+
+
+&gt; Using the microformat approach instead, like the following, gives better
+&gt; backwards compatibility, but at the expense of proper semantic elements.
+&gt; 
+&gt; &lt;div class=&quot;figure&quot;&gt;
+&gt;   &lt;img ... &gt;
+&gt;   &lt;p class=&quot;caption&quot;&gt;Figure 1: Some image&lt;/p&gt;
+&gt; &lt;/div&gt;
+&gt; 
+&gt; We could also use a single-cell table for this, but this approach could be
+&gt; considered abuse and IE doesn't seem to support 'caption-side', but does
+&gt; support the deprecated align attribute on caption.
+&gt; 
+&gt; &lt;table class=&quot;figure&quot;&gt;
+&gt;   &lt;caption&gt;Figure 1: Some image&lt;/caption&gt;
+&gt;   &lt;tr&gt;
+&gt;     &lt;td&gt;&lt;img ... &gt;&lt;/td&gt;
+&gt;   &lt;/tr&gt;
+&gt; &lt;/table&gt;
+
+Yeah, those are probably what people will have to keep doing while we wait 
+for &lt;legend&gt; and &lt;figure&gt; to be better implemented.
+
+
+&gt; Whatever approach we eventually decide upon, it should be able to handle
+&gt; captions for a variety of strucutres, not just images.  This includes:
+&gt; * Blocks of code and sample input/output
+&gt; * Lists
+&gt; * &lt;object&gt;, &lt;embed&gt;, &lt;img&gt; and maybe &lt;iframe&gt;
+
+Interesting. At the moment it only allows embedded content (&lt;object&gt;, 
+&lt;embed&gt;, &lt;img&gt;, &lt;iframe&gt;). I certainly could see us also allowing &lt;figure&gt; 
+to label &lt;pre&gt;&lt;samp&gt; and &lt;pre&gt;&lt;code&gt;. People often ask for labelling 
+lists, which I guess is a figure of sorts too, so &lt;ul&gt; and &lt;ol&gt; might make 
+sense. What do people think? Should we give a list of elements that can be 
+used there? Or just make it any block-level element? The latter seems a 
+bit vague... it's not clear what
+
+   &lt;figure&gt;
+     &lt;p&gt;...&lt;/p&gt;
+     &lt;legend&gt; ... &lt;/legend&gt;
+   &lt;/figure&gt;
+
+...means.
+
+What should we do with the rules for handling fallback if we allow &lt;pre&gt; 
+et al? I suppose in those cases, there simply isn't any fallback, but what 
+if the &lt;object&gt; element falls back to an &lt;ol&gt;?
+
+   &lt;figure&gt;
+     &lt;object ...&gt; &lt;ol&gt; ... &lt;/ol&gt; &lt;/figure&gt;
+     &lt;legend&gt; ... &lt;/legend&gt;
+   &lt;/figure&gt;
+
+Currently that's either an object and its legend, or, a list; but if we 
+also allow:
+
+   &lt;figure&gt;
+     &lt;ol&gt;...&lt;/ol&gt;
+     &lt;legend&gt; ... &lt;/legend&gt;
+   &lt;/figure&gt;
+
+...then it would make sense that the &lt;figure&gt; would fall back to that. But 
+then how do you distinguish that case from the case where it doesn't want 
+to fall back to a list-with-a-legend?
+
+
+On Thu, 29 Jun 2006, Michel Fortin wrote:
+&gt; 
+&gt; Then I realised that, contrary to my first belief, others elements in 
+&gt; the current draft -- namely &lt;section&gt;, &lt;nav&gt;, &lt;header&gt;, &lt;footer&gt;, 
+&gt; &lt;aside&gt;, and maybe others -- aren't backward compatible either because 
+&gt; they can't contain even a paragraph, at least in Safari and Firefox.
+&gt; 
+&gt; Will this prevent &lt;section&gt; and others from being adopted? I doubt it. 
+&gt; Should this prevent a &lt;figure&gt; element from being adopted? I don't think 
+&gt; so.
+
+Agreed.
+
+
+On Wed, 1 Nov 2006, Michel Fortin wrote:
+&gt;
+&gt; I see no reason to be restrictive on the kind of content that can be 
+&gt; captioned.
+
+Well, we want the semantics to be well-defined. It's not clear to me what 
+the semantics will be in all cases if we allow anything to be captioned.
+
+
+On Wed, 1 Nov 2006, Jonathan Worent wrote:
+&gt; 
+&gt; Taking cues form the label element for forms you could either make the association explicit by
+&gt; wrapping the caption around the element its captioning
+&gt; &lt;caption&gt;
+&gt;    &lt;embed ...&gt;
+&gt;    A funny video of a man being hit in the groin by a football
+&gt; &lt;/caption&gt;
+&gt; 
+&gt; or make the association implicit by using the for attribute
+&gt; &lt;embed id=&quot;funnyVid&quot; ...&gt;
+&gt; &lt;caption for=&quot;funnyVid&quot;&gt;A funny video of a man being hit in the groin by a football&lt;/caption&gt;
+
+I don't really understand the use case for associating the caption in this 
+way.
+
+
+On Sat, 4 Nov 2006, Matthew Paul Thomas wrote:
+&gt; &gt; &gt;
+&gt; &gt; &gt; or make the association implicit by using the for attribute
+&gt; &gt; &gt; &lt;embed id=&quot;funnyVid&quot; ...&gt;
+&gt; &gt; &gt; &lt;caption for=&quot;funnyVid&quot;&gt;A funny video of a man being hit in the groin by a
+&gt; &gt; &gt; football&lt;/caption&gt;
+&gt; 
+&gt; That would work for the current page layouts of YouTube and Google Video.
+&gt; 
+&gt; &gt; I think what would work best for this is the &lt;figure&gt; element I've proposed
+&gt; &gt; back in june:
+&gt; &gt; 
+&gt; &gt;     &lt;figure&gt;
+&gt; &gt;       &lt;caption&gt;Some caption here&lt;/caption&gt;
+&gt; &gt;       ...
+&gt; &gt;     &lt;/figure&gt;
+&gt; &gt; ...
+&gt; 
+&gt; That would not. (At least, not without some tricky CSS.)
+
+Could you elaborate on that? I don't really understand why you think that. 
+Unless you mean just because of the order, but we could easily just allow 
+the caption to go at the end of the &lt;figure&gt; element.
+
+
+
+On Thu, 9 Nov 2006, Jeff Seager wrote:
+&gt;
+&gt; What's clearly missing from the IMG specification is an appropriate 
+&gt; means for pairing each picture or graphic with a caption. [...]
+
+Agreed.
+
+
+On Fri, 10 Nov 2006, Michel Fortin wrote:
+&gt; &gt;
+&gt; &gt; The difference is that &lt;caption&gt; will never work, because of things 
+&gt; &gt; like this:
+&gt; &gt; 
+&gt; &gt;    &lt;table&gt;
+&gt; &gt;      &lt;caption&gt;
+&gt; &gt;         &lt;figure&gt;
+&gt; &gt;            &lt;img ...&gt;
+&gt; &gt;            &lt;caption&gt; ...A... &lt;/caption&gt;
+&gt; &gt;         &lt;/figure&gt;
+&gt; &gt;      &lt;/caption&gt;
+&gt; &gt;      ...
+&gt; &gt;    &lt;/table&gt;
+&gt; &gt; 
+&gt; &gt; ...which, for legacy compatibility reasons, must result in a DOM where the
+&gt; &gt; text with &quot;A&quot; ends up in a second &lt;caption&gt; element that is a child of the
+&gt; &gt; &lt;table&gt; element.
+&gt; 
+&gt; I don't get it. Are you saying that &lt;caption&gt; cannot work outside &lt;table&gt;
+&gt; because it has to work a certain way when inside a &lt;table&gt; element?
+
+Yes. See also the examples earlier in this e-mail.
+
+
+&gt; Or are you simply saying that &lt;figure&gt; cannot work because it cannot 
+&gt; work inside a table caption?
+
+Um yes. That's the same thing. :-)
+
+
+&gt; If supporting &lt;figure&gt; inside a caption is so important, browsers could 
+&gt; treat &lt;figure&gt; in the same way they treat &lt;table&gt; when inside a caption. 
+
+I really don't want to change the table parsing model. :-)
+
+
+&gt; But any of these two samples seems completely ridiculous and confusing 
+&gt; to me. Personally, I don't think any of the above cases should be 
+&gt; allowed (caption has inline-level content in HTML4 by the way), and I 
+&gt; it'd also be fine if browsers continue to do whatever they do when 
+&gt; inside a &lt;caption&gt; element.
+&gt; 
+&gt; And I don't see how any of this could prevent &lt;caption&gt; from creating a 
+&gt; caption element in the DOM when *outside* a table.
+
+It would have the same problem in a table cell, and there's a lot of 
+content in table cells, whether we like it or not. :-)
+
+
+&gt; I'm not sure I like &quot;legend&quot; as a word for captions. A legend -- in the 
+&gt; context of a graph, a map, or a schema -- is a list of symbols or colors 
+&gt; followed by some definition of what they represents on the figure. It's 
+&gt; far different from a caption or the title of a figure.
+
+Actually, &lt;legend&gt; basically just means &lt;caption&gt;. The case you mention is 
+a specific type of &lt;legend&gt; (also known as a key).
+
+
+&gt; But &lt;legend&gt;, as an element, is worse: image captions and table captions 
+&gt; are much more similar in concept and in default presentation than 
+&gt; fieldset legends, which are some kind of title for a thematic group of 
+&gt; form controls.
+
+The way &lt;legend&gt; is defined now it's just a general captioning-like 
+element to be used in various places.
+
+
+&gt; By the way, I think &lt;legend&gt; for &lt;details&gt; is a perfect choice, because 
+&gt; like &lt;fieldset&gt;, &lt;details&gt; is a functional regroupment, so &lt;legend&gt; 
+&gt; becomes some sort of title for a group of related user interface 
+&gt; elements. That definition works for both &lt;fieldset&gt; and &lt;details&gt;. If 
+&gt; you add &lt;figure&gt; into the mix, &lt;legend&gt; becomes a title for something on 
+&gt; the page. I think this would dilute the semantics and make the language 
+&gt; less coherent.
+
+Well, it just means you get to work out the semantics from the parent 
+element instead of from just the tag name. It's not really diluted.
+
+
+&gt; Even if it's a little more difficult, I think using &lt;caption&gt; is the 
+&gt; right thing to do.
+
+As far as I can tell, it's more than a little more difficult.
+
+
+On Sat, 11 Nov 2006, Matthew Paul Thomas wrote:
+&gt; 
+&gt; Anyway, I support the idea of a caption *element* to accompany images. This
+&gt; would have two benefits over an attribute:
+&gt; 1.  It could contain markup, which an attribute cannot.
+&gt; 2.  With a for= attribute, it could apply to an image elsewhere in the
+&gt;     document, which would be useful for the print medium. For example:
+&gt;         &lt;p&gt;
+&gt;           &lt;legend for=&quot;classphoto&quot;&gt;&lt;i class=&quot;printonly&quot;&gt;Top left:&lt;/i&gt;
+&gt;           The class of 2006.&lt;/legend&gt;
+&gt;           &lt;legend for=&quot;bandseniors&quot;&gt;&lt;i class=&quot;printonly&quot;&gt;Top right:&lt;/i&gt;
+&gt;           Simone with her parents on graduation day.&lt;/legend&gt;
+&gt;         &lt;/p&gt;
+&gt;     (For the screen medium, ideally UAs would place a caption adjacent
+&gt;     to the relevant image, regardless of where the caption occurred in
+&gt;     the document.)
+
+That's an interesting use case. In general, though, I'd say that the 
+content shouldn't assume the location (e.g. by mentioning it in the 
+markup). That should be generated content. No?
+
+
+&gt; I suggest that this element behave in the opposite way from alt=: 
+&gt; whereas alt= should be presented only if the image itself is *not* 
+&gt; presented, the caption element should be presented only if the image 
+&gt; itself *is* presented. Otherwise there would be the same problem with 
+&gt; non-sequiturs in non-visual media as there is with descriptive alt=.
+
+Agreed; spec now requires this. Not sure how to make this jive with the 
+idea of allowing &lt;pre&gt;/&lt;ol&gt;/etc, though; see above.
+
+
+On Mon, 13 Nov 2006, Matthew Raymond wrote:
+&gt; 
+&gt;    I was actually thinking of something like this:
+&gt; 
+&gt; | &lt;figure&gt;
+&gt; |   &lt;img id=&quot;imageid&quot; [...]&gt;
+&gt; |   &lt;label for=&quot;imageid&quot;&gt;
+&gt; |     Image caption text.
+&gt; |   &lt;/label&gt;
+&gt; | &lt;figure&gt;
+
+The for/id is redundant in this example.
+
+
+&gt;    ...Where fallback content is ignored by &lt;figure&gt;:
+&gt; 
+&gt; | &lt;figure&gt;
+&gt; |   &lt;table&gt;
+&gt; |     &lt;tr&gt;&lt;td&gt;
+&gt; |       &lt;img id=&quot;imageid&quot; [...]&gt;
+&gt; |     &lt;/td&gt;&lt;/tr&gt;
+&gt; |     &lt;tr&gt;&lt;th&gt;
+&gt; |       &lt;label for=&quot;imageid&quot;&gt;
+&gt; |         Image caption text.
+&gt; |       &lt;/label&gt;
+&gt; |     &lt;/th&gt;&lt;/tr&gt;
+&gt; |   &lt;/table&gt;
+&gt; | &lt;figure&gt;
+&gt; 
+&gt;    So, in the above, the UA would treat the second example as if it 
+&gt; where the first.
+
+That seems a bit complex just to handle fallback, though. (I'm not sure 
+how it would work with CSS, either.)
+
+
+On Mon, 13 Nov 2006, Jeff Seager wrote:
+&gt; 
+&gt; I apologize if I've gone over old ground on this. I'm new to this list, 
+&gt; and others have indicated that this has been discussed before. Has it 
+&gt; been decided, though? To me, it seems a very basic and urgent need in 
+&gt; the HTML/XHTML specs.
+
+All feedback is welcome!
+
+
+On Tue, 14 Nov 2006, Alexey Feldgendler wrote:
+&gt; 
+&gt; I believe HTML should have an element for every attribute intended to 
+&gt; hold human-readable text. A raw idea can go like this:
+&gt; 
+&gt; &lt;img id=&quot;img1&quot; src=&quot;...&quot;&gt;
+&gt; &lt;label for=&quot;img1&quot; type=&quot;title&quot;&gt;...&lt;/label&gt;
+&gt; 
+&gt; Here, &lt;label&gt; holds a value which should be treated the same way like 
+&gt; the title attribute on &lt;img&gt;, except that it can contain nested markup. 
+&gt; This would be useful for all attributes defined as %Text in HTML -- in 
+&gt; HTML4, these are ABBR, ALT, LABEL, STANDBY, SUMMARY, TITLE. However, 
+&gt; doing a full straightforward solution like this may be bad for backward 
+&gt; compatibility, especially in the case of ALT. But the idea is: whenever 
+&gt; we write an attribute of type %Text, we want text with markup, so an 
+&gt; element instead of attribute is needed.
+
+I think that leads to far too many complications. Attributes have nice 
+properties, in that they are very simple to deal with. Elements introduce 
+all kinds of complications. For many things, e.g. tooltips, you really 
+don't want complications.
+
+
+On Sun, 19 Nov 2006, Andrew Fedoniouk wrote:
+&gt; |
+&gt; |   I don't see the point of replacing attribute-based tooltips with
+&gt; | elements. Many platforms/OSes don't have tooltips that support anything
+&gt; | other than text. If you really want to replace text tooltips with
+&gt; | elements that support HTML content, you might as well go all the way and
+&gt; | allow people to use it as a means of creating popup content. Once you go
+&gt; | down that road, people will be asking for it anyways.
+&gt; 
+&gt; &quot;...Many platforms/OSes don't have tooltips that support anything
+&gt; other than text....&quot;
+&gt; 
+&gt; How task of tooltip creation in HTML is related to what OS is using for
+&gt; tooltips?
+
+It's quite important that HTML not violate platform conventions. Being 
+consistent with the OS is one of the most important usability concerns of 
+writing applications.
+
+
+&gt; As an example: here is a screenshot of HTML/CSS defined
+&gt; tooltip in HTMLayout:
+&gt; <a href="http://www.terrainformatica.com/htmlayout/images/tooltip-balloon.jpg">http://www.terrainformatica.com/htmlayout/images/tooltip-balloon.jpg</a>
+&gt; as you may see this is far from what OS is using.
+
+It's also quite horrifying from a UI perspective. :-) But that's a topic 
+for another mailing list, as do the various XBL and CSS proposals that 
+spawned from this particular part of the caption thread (and which I have 
+therefore skipped here -- please let me know if there was something 
+on-topic that I missed and that I should reply to; I read all the e-mails 
+in question but didn't see anything that I should reply to).
+
+
+On Wed, 22 Nov 2006, Michel Fortin wrote:
+&gt; 
+&gt; So I propose a new &lt;fcaption&gt; elements -- for &quot;figure caption&quot; -- in
+&gt; replacement for the &lt;caption&gt; element in my previous figure construct:
+&gt; 
+&gt;     &lt;figure&gt;
+&gt;       &lt;fcaption&gt;Caption Text&lt;/fcaption&gt;
+&gt;       &lt;img src=&quot;...&quot;&gt;
+&gt;     &lt;/figure&gt;
+
+I really want to avoid introducing new elements for concepts we already 
+have... We already have four or so ways of doing &quot;caption&quot;-like things: 
+&lt;caption&gt;, &lt;legend&gt;, &lt;label&gt;, and title=&quot;&quot;, not to mention the &lt;hx&gt; 
+elements, &lt;th&gt;, and &lt;title&gt;, which are similar enough that people on this 
+thread have sometimes mentioned them. The more we introduce the more 
+confusing the language becomes.
+
+
+On Wed, 22 Nov 2006, Alexey Feldgendler wrote:
+&gt; 
+&gt; &lt;figure&gt; cannot be used like this:
+&gt; 
+&gt; &lt;table&gt;
+&gt;    &lt;thead&gt;
+&gt;      &lt;tr&gt;
+&gt;        &lt;th&gt;Painting&lt;/th&gt;
+&gt;        &lt;th&gt;Title&lt;/th&gt;
+&gt;        &lt;th&gt;Author&lt;/th&gt;
+&gt;      &lt;/tr&gt;
+&gt;    &lt;/thead&gt;
+&gt;    &lt;tbody&gt;
+&gt;      &lt;tr&gt;
+&gt;        &lt;td&gt;&lt;img id=&quot;img1&quot; src=&quot;...&quot;&gt;&lt;/td&gt;
+&gt;        &lt;td&gt;&lt;label for=&quot;img1&quot; type=&quot;title&quot;&gt;Mona Lisa&lt;/label&gt;&lt;/td&gt;
+&gt;        &lt;td&gt;Leonardo da Vinci&lt;/td&gt;
+&gt;      &lt;/tr&gt;
+&gt;      ...
+&gt;    &lt;/tbody&gt;
+&gt; &lt;/table&gt;
+
+This is a table, not a set of figures, so you would do:
+
+ &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Title&lt;/th&gt;
+        &lt;th&gt;Painting&lt;/th&gt;
+        &lt;th&gt;Author&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Mona Lisa&lt;/th&gt;
+        &lt;td&gt;&lt;img id=&quot;img1&quot; src=&quot;...&quot;&gt;&lt;/td&gt;
+        &lt;td&gt;Leonardo da Vinci&lt;/td&gt;
+      &lt;/tr&gt;
+      ...
+    &lt;/tbody&gt;
+ &lt;/table&gt;
+
+...or some such (note the use of &lt;th&gt;).
+
+IMHO, anyway.
+
+
+On Wed, 22 Nov 2006, James Graham wrote:
+&gt; 
+&gt; Another issue to consider is the possibility of multiple images with a single
+&gt; caption (this is very common in scientific papers, print magazines, etc.). A
+&gt; construct like
+&gt; &lt;figure&gt;
+&gt; &lt;img&gt;
+&gt; &lt;img&gt;
+&gt; &lt;img&gt;
+&gt; &lt;imgcaption&gt;
+&gt; &lt;/figure&gt;
+&gt; might be enough to support this (the details are, I think, non-trivial);
+&gt; something that requires the caption to point to exactly one image cannot.
+
+Hm. This is currently not possible either. I didn't see many (any?) 
+examples of this in the list of sample pages that Michel provided, though, 
+so I'm not sure we need to address this in the first version. What do 
+people think?
+
+
+On Wed, 22 Nov 2006, Steve Runyon wrote:
+&gt; 
+&gt; One minor point I would clarify: Alexey, you stated that &lt;label for=&quot;XX&quot; 
+&gt; type=&quot;title&quot;&gt; would replace the &quot;title&quot; attribute.  I assume you meant 
+&gt; that it should *supplement* it, since you wouldn't want to preclude its 
+&gt; use or mess with backward compatibility.
+&gt; 
+&gt; It sounds like &lt;label for=&quot;XX&quot; type=&quot;title&quot;&gt; would be a *terrific* 
+&gt; addition to HTML5, along with a new value for the &quot;display&quot; property, 
+&gt; &quot;tooltip&quot;. (I'm thinking of all the JS that I wouldn't have to write 
+&gt; anymore! :-)
+
+The complexity would be moved to the implementations, though, and the 
+proposal here seems complex enough that I could easily imagine browser 
+vendors never getting it right enough for authors to use it reliably.
+
+
+On Wed, 22 Nov 2006, Alexey Feldgendler wrote:
+&gt; &gt; 
+&gt; &gt; and I think the table makes the association pretty clear by itself.
+&gt; 
+&gt; It's not clear for Google Images which needs to extract (image, title) 
+&gt; pairs from documents.
+
+With the use of &lt;th&gt;, it seems like it would be.
+
+
+Thanks to everyone who took part in this discussion (bcc'ed). Obviously I 
+haven't been able to do what everyone suggested since there were many 
+contradicting proposals! Please send feedback on &lt;figure&gt; and company. 
+Hopefully having a concrete proposal in the spec will help focus the 
+discussion going forward.
+
+Cheers,
+-- 
+Ian Hickson               U+1047E                )\._.,--....,'``.    fL
+<a href="http://ln.hixie.ch/">http://ln.hixie.ch/</a>       U+263A                /,   _.. \   _\  ;`._ ,.
+Things that are impossible just take longer.   `._.-(,_..'--(,_..'`-.;.'
+</pre>
+<p class="received"><span class="heading">Received on</span> Monday, 27 November 2006 17:49:16 UTC</p>
+</main>
+<!-- body="end" -->
+<footer class="foot">
+<nav id="navbarfoot">
+<ul class="links hmenu_container">
+<li><span class="heading">This message</span>: <span class="message_body"><a href="#start">Message body</a></span></li>
+<!-- lnext="start" -->
+<li><span class="heading">Next message</span>: <a href="0423.html">Michel Fortin: "[whatwg] many messages regarding image captions"</a></li>
+<li><span class="heading">Previous message</span>: <a href="0421.html">Simon Pieters: "[whatwg] rel=&#0034;&#0034; on &#0060;a&#0062; and &#0060;area&#0062; dosn&#0039;t create a hyperlink"</a></li>
+<li><span class="heading">In reply to</span>: <a href="0417.html">Jeff Seager: "[whatwg] The IMG element, proposing a CAPTION attribute"</a></li>
+<!-- lnextthread="start" -->
+<li><span class="heading">Next in thread</span>: <a href="0423.html">Michel Fortin: "[whatwg] many messages regarding image captions"</a></li>
+<li id="replies"><span class="heading">Reply</span>: <a href="0423.html">Michel Fortin: "[whatwg] many messages regarding image captions"</a></li>
+<li><span class="heading">Reply</span>: <a href="0424.html">Andrew Fedoniouk: "[whatwg] many messages regarding image captions"</a></li>
+<li><span class="heading">Reply</span>: <a href="0425.html">L. David Baron: "[whatwg] image captions and fallback content"</a></li>
+<li><span class="heading">Reply</span>: <a href="0426.html">Edward O&#0039;Connor: "[whatwg] many messages regarding image captions"</a></li>
+<li><span class="heading">Reply</span>: <a href="0431.html">James Graham: "[whatwg] many messages regarding image captions"</a></li>
+<li><span class="heading">Reply</span>: <a href="0434.html">David Walbert: "[whatwg] many messages regarding image captions"</a></li>
+<li><span class="heading">Reply</span>: <a href="0442.html">Jeff Seager: "[whatwg] many messages regarding image captions"</a></li>
+<!-- lreply="end" -->
+</ul>
+<ul class="links hmenu_container">
+<li id="options3"><span class="heading">Mail actions</span>: <ul class="hmenu"><li><a href="mailto:public-whatwg-archive&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20%5Bwhatwg%5D%20many%20messages%20regarding%20image%20captions&amp;In-Reply-To=%3CPine.LNX.4.62.0611272220570.8094%40dhalsim.dreamhost.com%3E&amp;References=%3CPine.LNX.4.62.0611272220570.8094%40dhalsim.dreamhost.com%3E">respond to this message</a></li>
+<li><a href="mailto:public-whatwg-archive&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;">mail a new topic</a></li></ul></li>
+<li><span class="heading">Contemporary messages sorted</span>: <ul class="hmenu"><li><a href="index.html#msg422">by date</a></li>
+<li><a href="thread.html#msg422">by thread</a></li>
+<li><a href="subject.html#msg422">by subject</a></li>
+<li><a href="author.html#msg422">by author</a></li>
+</ul></li>
+<li><span class="heading">Help</span>: [ <a href=
+   "/Help/" accesskey="h" rel="help">How to use the archives</a> ] [ <a href=
+   "https://www.w3.org/Search/Mail/Public/search?type-index=public-whatwg-archive&amp;index-type=t">Search in the archives</a> ]
+</li>
+</ul>
+</nav>
+<!-- trailer="footer" -->
+<p class="colophon">
+This archive was generated by <a href="https://github.com/hypermail-project/hypermail/">hypermail 3.0.0</a>: Saturday, 26 August 2023 22:10:30 UTC
+</p>
+</footer>
+</body>
+</html>

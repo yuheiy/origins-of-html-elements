@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>7657 &ndash; Redefining dt and dd</title>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="data/assets/54486398487c111ba3305277d0702e66.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="style.css">
+
+
+
+    
+
+
+    
+
+
+    
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+                       title="Bugzilla" href="./search_plugin.cgi">
+    <link rel="shortcut icon" href="images/favicon.ico">
+  </head>
+
+  <body 
+        class="www-w3-org-Bugs-Public
+                 bz_bug
+                 bz_status_CLOSED
+                 bz_product_HTML_WG
+                 bz_component_pre-LC1_HTML5_spec_&#X28;editor&#X3A;_Ian_Hickson&#X29;
+                 bz_bug_7657 yui-skin-sam">
+
+  <div id="header"><div id="banner">
+  </div>
+
+    <div id="titles">
+      <span id="title">Bugzilla &ndash; Bug&nbsp;7657</span>
+
+        <span id="subtitle" class="subheader">Redefining dt and dd</span>
+
+        <span id="information" class="header_addl_info">Last modified: 2010-10-04 14:47:47 UTC</span>
+    </div>
+
+
+    
+  </div>
+
+  <div id="bugzilla-body"><div class="archivalnote"><p>This is an archived snapshot of W3C's public bugzilla bug tracker, decommissioned in April 2019. Please see the <a href="./">home page</a> for more details.</p></div>
+
+
+
+
+<form name="changeform" id="changeform" method="post" action="process_bug.cgi">
+
+  <input type="hidden" name="delta_ts" value="2010-10-04 14:47:47">
+  <input type="hidden" name="id" value="7657">
+  <input type="hidden" name="token" value="1554091665-ZSZU4hrUVMAFFZ_07jSp5slxtBcncn3goWTAM7R55c8">
+<div class="bz_short_desc_container edit_form">
+     <a href="show_bug.cgi?id=7657"><b>Bug&nbsp;7657</b></a> <span id="summary_container" class="bz_default_hidden">
+      - <span id="short_desc_nonedit_display">Redefining dt and dd</span>
+     </span>
+
+    <div id="summary_input"><span class="field_label "
+    id="field_label_short_desc">
+
+
+  <a 
+      title="The bug summary is a short sentence which succinctly describes what the bug is about."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#short_desc"
+  >Summary:</a>
+
+</span>Redefining dt and dd
+    </div>
+  </div>
+  
+  <table class="edit_form">
+    <tr>
+      
+      <td id="bz_show_bug_column_1" class="bz_show_bug_column">     
+        <table>
+          <tr>
+    <th class="field_label">
+      <a href="page.cgi?id=fields.html#bug_status">Status</a>:
+    </th>
+    <td id="bz_field_status">
+      <span id="static_bug_status">CLOSED
+          FIXED
+      </span>
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_alias">
+
+
+  <a 
+      title="A short, unique name assigned to a bug in order to assist with looking it up and referring to it in other places in Bugzilla."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#alias"
+  >Alias:</a>
+
+</th>
+    <td>
+        None
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_product">
+
+
+  <a 
+      title="Bugs are categorised into Products and Components."
+      class="field_help_link"
+      href="describecomponents.cgi"
+  >Product:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_product" >HTML WG
+
+</td>
+    </tr>
+
+    
+    <tr class="bz_default_hidden"><th class="field_label "
+    id="field_label_classification">
+
+
+  <a 
+      title="Bugs are categorised into Classifications, Products and Components. classifications is the top-level categorisation."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#classification"
+  >Classification:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_classification" >Unclassified
+
+</td>
+    </tr>
+        
+    
+    
+    <tr><th class="field_label "
+    id="field_label_component">
+
+
+  <a 
+      title="Components are second-level categories; each belongs to a particular Product. Select a Product to narrow down this list."
+      class="field_help_link"
+      href="describecomponents.cgi?product=HTML WG"
+  >Component:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_component" >pre-LC1 HTML5 spec (editor: Ian Hickson)
+
+  (<a href="buglist.cgi?component=pre-LC1%20HTML5%20spec%20(editor%3A%20Ian%20Hickson)&amp;product=HTML%20WG&amp;bug_status=__open__"
+      target="_blank">show other bugs</a>)
+</td>
+    </tr>
+    <tr><th class="field_label "
+    id="field_label_version">
+
+
+  <a 
+      title="The version field defines the version of the software the bug was found in."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#version"
+  >Version:</a>
+
+</th>
+<td>unspecified
+  </td>
+    </tr>
+        
+    
+        
+    <tr><th class="field_label "
+    id="field_label_rep_platform">
+
+
+  <a 
+      title="The hardware platform the bug was observed on. Note: When searching, selecting the option &quot;All&quot; only finds bugs whose value for this field is literally the word &quot;All&quot;."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#rep_platform"
+  >Hardware:</a>
+
+</th>
+      <td class="field_value">Macintosh
+        Mac System 9.x
+      </td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          
+          <tr>
+      <th class="field_label">
+        <label  accesskey="i">
+          <a href="page.cgi?id=fields.html#importance"><u>I</u>mportance</a></label>:
+      </th>
+      <td>P2
+       normal
+      </td>
+    </tr>
+
+      <tr><th class="field_label "
+    id="field_label_target_milestone">
+
+
+  <a 
+      title="The Target Milestone field is used to define when the engineer the bug is assigned to expects to fix it."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#target_milestone"
+  >Target Milestone:</a>
+
+</th><td>FPWD
+  </td>
+      </tr>
+          
+          <tr><th class="field_label "
+    id="field_label_assigned_to">
+
+
+  <a 
+      title="The person in charge of resolving the bug."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#assigned_to"
+  >Assignee:</a>
+
+</th>
+      <td><span class="vcard"><span class="fn">Michael[tm] Smith</span>
+</span>
+      </td>
+    </tr>
+
+    <tr><th class="field_label "
+    id="field_label_qa_contact">
+
+
+  <a 
+      title="The person responsible for confirming this bug if it is unconfirmed, and for verifying the fix once the bug has been resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#qa_contact"
+  >QA Contact:</a>
+
+</th>
+      <td><span class="vcard"><span class="fn">HTML WG Bugzilla archive list</span>
+</span>
+      </td>
+    </tr>
+    
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          <tr><th class="field_label "
+    id="field_label_bug_file_loc">
+
+
+  <a 
+      title="Bugs can have a URL associated with them - for example, a pointer to a web site where the problem is seen."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#bug_file_loc"
+  >URL:</a>
+
+</th>
+    <td>
+      <span id="bz_url_input_area">
+      </span>
+    </td>
+  </tr>
+
+    <tr><th class="field_label "
+    id="field_label_status_whiteboard">
+
+
+  <a 
+      title="Each bug has a free-form single line text entry box for adding tags and status information."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#status_whiteboard"
+  >Whiteboard:</a>
+
+</th><td>  
+  </td>
+    </tr>
+
+    <tr><th class="field_label "
+    id="field_label_keywords">
+
+
+  <a 
+      title="You can add keywords from a defined list to bugs, in order to easily identify and group them."
+      class="field_help_link"
+      href="describekeywords.cgi"
+  >Keywords:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_keywords" >NE, TrackerIssue
+
+</td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+          <tr>
+    <th class="field_label">
+      <label>Duplicates (1)</label>:
+    </th>
+    <td class="field_value">
+      <span id="duplicates"><a class="bz_bug_link 
+          bz_status_VERIFIED  bz_closed"
+   title="VERIFIED DUPLICATE - what about IE parsing problems? http://html5doctor.com/dd-details-wrong-again/"
+   href="show_bug.cgi?id=8246">8246</a> 
+      </span>
+      (<a href="buglist.cgi?bug_id=8246">view as bug list</a>)
+    </td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_dependson">
+
+
+  <a 
+      title="The bugs listed here must be resolved before this bug can be resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#dependson"
+  >Depends on:</a>
+
+</th>
+
+  <td>
+    <span id="dependson_input_area">
+    </span>
+
+  </td>
+  </tr>
+  
+  <tr><th class="field_label "
+    id="field_label_blocked">
+
+
+  <a 
+      title="This bug must be resolved before the bugs listed in this field can be resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#blocked"
+  >Blocks:</a>
+
+</th>
+
+  <td>
+    <span id="blocked_input_area">
+    </span>
+<a class="bz_bug_link 
+          bz_status_CLOSED  bz_closed"
+   title="CLOSED FIXED - Redefining dt and dd, recommend new element as caption for Figure"
+   href="show_bug.cgi?id=7669">7669</a> 
+  </td>
+  </tr>
+
+    <tr>
+      <th>&nbsp;</th>
+
+      <td id="show_dependency_tree_or_graph">
+        Show dependency <a href="showdependencytree.cgi?id=7657&amp;hide_resolved=1">tree</a>
+
+          /&nbsp;<a href="showdependencygraph.cgi?id=7657">graph</a>
+      </td>
+    </tr>
+          
+        </table>
+      </td>
+      <td>
+        <div class="bz_column_spacer">&nbsp;</div>
+      </td>
+      
+      <td id="bz_show_bug_column_2" class="bz_show_bug_column">
+        <table>
+        <tr>
+    <th class="field_label">
+      Reported:
+    </th>
+    <td>2009-09-17 02:40 UTC by <span class="vcard"><span class="fn">Shelley Powers</span>
+</span>
+    </td>
+  </tr>
+  
+  <tr>
+    <th class="field_label">
+      Modified:
+    </th>
+    <td>2010-10-04 14:47 UTC
+      (<a href="show_activity.cgi?id=7657">History</a>)
+    </td>
+  
+  </tr>
+<tr>
+      <th class="field_label">
+        <label  accesskey="a">
+          CC List:
+        </label>
+      </th>
+      <td>9 
+          users
+          <span id="cc_edit_area_showhide_container" class="bz_default_hidden">
+            (<a href="#" id="cc_edit_area_showhide">show</a>)
+          </span>
+        <div id="cc_edit_area">
+          <br>
+            <select id="cc" multiple="multiple" size="5" >
+                <option value="contributor">contributor</option>
+                <option value="ian">ian</option>
+                <option value="jackalmage">jackalmage</option>
+                <option value="julian.reschke">julian.reschke</option>
+                <option value="mike">mike</option>
+                <option value="mjs">mjs</option>
+                <option value="public-html-admin">public-html-admin</option>
+                <option value="public-html-wg-issue-tracking">public-html-wg-issue-tracking</option>
+                <option value="shelleyp">shelleyp</option>
+            </select>
+        </div>
+          
+      </td>
+    </tr>
+
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_see_also">
+
+
+  <a 
+      title="This allows you to refer to bugs in other installations. You can enter a URL to a bug in the 'Add Bug URLs' field to note that that bug is related to this one. You can enter multiple URLs at once by separating them with whitespace. You should normally use this field to refer to bugs in other installations. For bugs in this installation, it is better to use the Depends on and Blocks fields."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#see_also"
+  >See Also:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_see_also" >
+
+</td>
+    </tr> 
+
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+
+
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+          <hr id="bz_top_half_spacer">
+      </td>
+    </tr>
+  </table>
+
+  <table id="bz_big_form_parts">
+  <tr>
+  <td>
+
+    
+
+
+<br>
+<table id="attachment_table">
+  <tr id="a0">
+    <th colspan="2" class="left">
+      Attachments
+    </th>
+  </tr>
+
+
+
+  
+</table>
+<br>
+<div id="add_comment" class="bz_section_additional_comments">
+      <table>
+        <tr>
+          <td>
+            
+          </td>
+        </tr> 
+      </table>
+  </div>
+  </td>
+  <td>
+  </td>
+  </tr></table>
+
+  
+  <div id="comments">
+
+
+
+
+<!-- This auto-sizes the comments and positions the collapse/expand links 
+     to the right. -->
+<table class="bz_comment_table">
+<tr>
+<td>
+<div id="c0" class="bz_comment bz_first_comment">
+
+      <div class="bz_first_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7657#c0">Description</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Shelley Powers</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2009-09-17 02:40:00 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">The dt and dd elements were defined for use with a dl (Definition List) in HTML 4. In addition, the HTML 4 also recommended the use of the dl element, and dt and dd for use in dialogue. The elements have had broad implementation. 
+
+In HTML5, both elements have been redefined, in order to include them in both the Figure element and the Details element. If elements maintained the same semantics in both circumstances, such reuse might be more meaningful, but they're not. As noted in the HTML5 specification, a dt element is the name of a term, in dl, a caption, in Figure, and the summary in details. As another bug notes (<a class="bz_bug_link 
+          bz_status_VERIFIED  bz_closed"
+   title="VERIFIED FIXED - When the dd element is used inside figure and details it should probably not have margin by default."
+   href="show_bug.cgi?id=7629">http://www.w3.org/Bugs/Public/show_bug.cgi?id=7629</a>), formatting doesn't remain the same between uses either.
+
+The same conflicting semantics applies to the dd element. It's defined as a description or definition, in dl, as the &quot;data&quot; in a figure, and as details in a details element.
+
+In addition, you can have many sets of dt/dd within a dl element, which doesn't make sense within a figure, or within details. Seemingly the only reason for reuse is keyboard access, which is not a &quot;semantic&quot; choice, but a choice of convenience.
+
+Though we want to avoid creating new elements, it's preferable to confusing the semantics of an existing element, to the point where the use will more likely cause confusion than not. People will look at how dt/dd are used in dl, and assume the use can be the same for Figure, and Details, and vice versa. 
+
+Other options should be explored for Figure and Details.</pre>
+    </div>
+
+    <div id="c1" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7657#c1">Comment 1</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2009-09-21 10:06:10 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">An unbelievably large number of options have been explored over the past 6 years.
+
+I don't buy that these elements are that confusing. In all three cases, these elements mean roughly the same thing  &lt;dt&gt; is the label for something else, and &lt;dd&gt; is the something else.</pre>
+    </div>
+
+    <div id="c2" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7657#c2">Comment 2</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Shelley Powers</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2009-09-21 13:20:10 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">&quot;I don't buy that these elements are that confusing. In all three cases, these
+elements mean roughly the same thing  &lt;dt&gt; is the label for something else,
+and &lt;dd&gt; is the something else.&quot;
+
+I find it amazing that the same person who argues so strenuously for the needs of both section and article, is the same person who just wrote that.  If it is so important to have both a section and an article, because they semantically mean different things (and have different behaviors), than how much more so is it an error to use dt/dd in such a chaotic and messy manner.
+
+The use of dt/dd were added only recently, before that other HTML elements were 're-used', and to the same ill effect. 
+
+You can't say one is label for the other, when you allow only dt in some cases, only dd in other cases, and an add mix of both in yet other cases. 
+
+Worse, when authors see how dt/dd are used in Figure, they will parrot such use in Details, which will then cause confusion, and perhaps odd results. The same with dl -- such redefinition is badly done, a grasping at straws, rather than a thoughtful response.
+
+However, since the HTML5 author is indifferent to web page authors, developers, and designers, new evidence has surfaced that this approach is not backwards compatible with browses, either [1].
+
+[1] <a href="http://lists.w3.org/Archives/Public/public-html/2009Sep/0780.html">http://lists.w3.org/Archives/Public/public-html/2009Sep/0780.html</a></pre>
+    </div>
+
+    <div id="c3" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7657#c3">Comment 3</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Tab Atkins Jr.</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2009-09-29 01:39:41 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">As Shelley pointed out with her link to the mailing list, IE6 and IE7 will generate non-tree DOMs when they encounter &lt;dt&gt; or &lt;dd&gt; outside of &lt;dl&gt;.
+
+This issue cannot be easily gotten rid of with a simple JS hack, like you can do with the other new elements.  However, it *is* possible to (as far as we know) safely force IE6 and IE7 to generate a tree DOM of the expected shape by using a conditional comment to insert an empty &lt;object&gt; element.  I have no idea whether this has additional ill effects.
+
+While I don't expect to be able to depend on &lt;details&gt; being natively implemented for years yet, I *do* want to be able to slide in appropriate functionality via javascript until then (with a quick feature-test to seamlessly allow native implementations when they exist).  I can't do this for IE6 and IE7 if they generate bad DOMs, and I don't want to have to carry around a markup talisman to force it into working correctly - using a single js file to hack things into shape is bad enough.</pre>
+    </div>
+
+    <div id="c4" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7657#c4">Comment 4</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2009-09-29 02:19:20 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Well, these two features aren't anywhere near important enough to justify a whole new set of elements, IMHO; even introducing &lt;details&gt; and &lt;figure&gt; is somewhat pushing it.
+
+As far as the semantic argument, personally I don't understand the problem. Prior to HTML5, &lt;dt&gt; and &lt;dd&gt; had meaning inside &lt;dl&gt; only. These elements are meaningless outside &lt;dl&gt;, so why can't we introduce new meaning to these elements in new contexts? Furthermore, the new meanings are so close to the old meanings, that I really don't see an issue. If you disagree, please escalate this to the chairs.
+
+As far as the compatibility argument, as I see it we have three options:
+
+1. Use &lt;dt&gt;/&lt;dd&gt; and have people continue to use &lt;div&gt;s while we wait for 25% of today's browsers to be replaced with the current generation of browsers.
+
+2. Use &lt;legend&gt; and have people continue to use &lt;div&gt;s while we wait for browsers to implement the HTML parser and for 100% of today's browsers to be replaced with that new generation of browsers.
+
+3. Not have these two features and have people continue to use &lt;div&gt;s.
+
+Currently the spec picks 1. If you disagree, please escalate this to the chairs.</pre>
+    </div>
+
+    <div id="c5" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7657#c5">Comment 5</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Shelley Powers</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2009-09-29 02:39:12 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">You neglected to reference the other issues associated with dt/dd, including the fact that the different syntactic requirements for dt/dd based on container is going to lead to confusion about which is the proper use of the elements based on which container. 
+
+Your only reason for picking these is because there was no physical reason for not using them: not because they were a superior option, not because there was any real logic for using the elements, and not because it was the best solution for the future. It was a slap dash grab at something, anything.
+
+Yes, this needs to be escalated to an issue. </pre>
+    </div>
+
+    <div id="c6" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7657#c6">Comment 6</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Shelley Powers</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2009-09-29 02:50:40 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">And per this IRC entry, note to co-chair: I have listed concerns that are beyond &quot;philosophy&quot;
+
+<a href="http://krijnhoetmer.nl/irc-logs/whatwg/20090929#l-258">http://krijnhoetmer.nl/irc-logs/whatwg/20090929#l-258</a></pre>
+    </div>
+
+    <div id="c7" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7657#c7">Comment 7</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael[tm] Smith</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2009-09-29 04:30:26 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">escalated to tracker: <a href="https://www.w3.org/html/wg/tracker/issues/83">http://www.w3.org/html/wg/tracker/issues/83</a></pre>
+    </div>
+
+    <div id="c8" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7657#c8">Comment 8</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Shelley Powers</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2009-10-05 00:59:51 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Even though there is an Issue on this item, I want this bug kept open, as this is the only way I can record links or other new information associated with both bug and issue.
+
+There is a discussion on dt/dd in the WhatWG pertinent to this topic.
+
+<a href="https://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2009-October/023276.html">http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2009-October/023276.html</a>
+
+I would be happy to &quot;close&quot; this bug, if I can add information to the Issue. Only HTML WG members can add information to the an issue.</pre>
+    </div>
+
+    <div id="c9" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7657#c9">Comment 9</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Maciej Stachowiak</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2009-10-05 03:10:35 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">There's two ways anyone can add information to the escalated issue with this bug in &quot;resolved&quot; state:
+
+1) Leave comments on this bug, since it is linked from the issue, and so the information will not get lost.
+
+2) Send mail to the public-html mailing list with ISSUE-83 in the subject line or body, and the issue tracker will link it to the issue automatically.</pre>
+    </div>
+
+    <div id="c10" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7657#c10">Comment 10</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael[tm] Smith</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2009-10-05 06:58:04 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">The associated Tracker issue for this, issue-83, remains open pending resolution by the HTML WG. If that resolution ends up being something that requires a change to the spec (e.g., if the resolution is that &lt;dt&gt; and &lt;dd&gt; should not be repurposed for the &lt;figure&gt; and &lt;details&gt; element), then this bug will be reopened with a instructions to the editor to make whatever change the group decides on.
+
+I've updated the Description field of issue-83 with links to this bug and to <a class="bz_bug_link 
+          bz_status_CLOSED  bz_closed"
+   title="CLOSED FIXED - Redefining dt and dd, recommend new element as caption for Figure"
+   href="show_bug.cgi?id=7669">bug 7669</a>.</pre>
+    </div>
+
+    <div id="c11" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7657#c11">Comment 11</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Shelley Powers</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-02-06 18:58:18 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">This item was fixed as part of the resolution process.</pre>
+    </div>
+
+    <div id="c12" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=7657#c12">Comment 12</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Maciej Stachowiak</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-03-30 03:58:06 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">*** <a class="bz_bug_link 
+          bz_status_VERIFIED  bz_closed"
+   title="VERIFIED DUPLICATE - what about IE parsing problems? http://html5doctor.com/dd-details-wrong-again/"
+   href="show_bug.cgi?id=8246">Bug 8246</a> has been marked as a duplicate of this bug. ***</pre>
+    </div>
+
+
+  
+
+</td>
+<td>
+</td>
+</tr></table>
+  </div>
+        
+
+</form>
+
+<hr>
+<ul class="related_actions">
+    <li><a href="show_bug.cgi?format=multiple&amp;id=7657">Format For Printing</a></li>
+    <li>&nbsp;-&nbsp;<a href="show_bug.cgi?ctype=xml&amp;id=7657">XML</a></li>
+    <li>&nbsp;-&nbsp;<a href="enter_bug.cgi?cloned_bug_id=7657">Clone This Bug</a></li>
+    
+    <li>&nbsp;-&nbsp;<a href="#">Top of page </a></li>
+    </ul>
+
+<br>
+</div>
+
+    
+
+  </body>
+</html>

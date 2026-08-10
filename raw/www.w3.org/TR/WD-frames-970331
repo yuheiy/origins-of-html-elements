@@ -1,0 +1,1140 @@
+<HTML>
+<HEAD>
+<TITLE>Implementing HTML Frames</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF">
+
+<H3 align="right"><a href="https://www.w3.org/pub/WWW/Consortium/"><img src="https://www.w3.org/pub/WWW/Icons/WWW/w3c_home.gif" alt="W3C" align="left" border="0" hspace="0"></a>WD-frames-970331</h3>
+
+<br>
+<H1 align="center">Implementing HTML Frames</H1>
+
+<h3 align="center">W3C Working Draft 31-Mar-97</h3>
+
+<dl>
+    <dt>This version:
+    <dd>http://www.w3.org/pub/WWW/TR/WD-frames-970331
+    <dt>Latest version:
+    <dd>http://www.w3.org/pub/WWW/TR/WD-frames
+    <dt>Editor:
+    <dd>Arnaud Le Hors <a href="mailto:lehors@w3.org">&lt;lehors@w3.org&gt;</a>
+    <dt>Author:
+    <dd>Murray Maloney <a href="mailto:maloney@sq.com">&lt;maloney@sq.com&gt;</a>
+</dl>
+
+<hr>
+
+<H2>Status of This Document</H2>
+
+<p>This draft is work under review by the W3C HTML Working Group,
+for potential incorporation in an upcoming version of the HTML
+specification, code named Cougar. Please remember this is subject
+to change at any time, and may be updated, replaced or obsoleted
+by other documents. It is inappropriate to use W3C Working Drafts
+as reference material or to cite them as other than "work in
+progress".
+
+<p>A list of current W3C Working Drafts can be found at
+<a href="https://www.w3.org/pub/WWW/TR">http://www.w3.org/pub/WWW/TR</a>.
+This is work in progress and does
+not imply endorsement by, or the consensus of, either W3C or
+members of the HTML working group. Further information about
+Cougar is available at
+<a href="https://www.w3.org/pub/WWW/MarkUp/Cougar/">http://www.w3.org/pub/WWW/MarkUp/Cougar/</a>.
+
+<p>Please send detailed comments to 
+<a href="mailto:www-html-editor@w3.org">www-html-editor@w3.org</a>.
+We cannot garantee a personal response, but summaries will
+be maintained off the Cougar page. Public discussion on HTML
+features takes place on www-html@w3.org. To subscribe send a message to
+<a href="mailto:www-html-request@w3.org?subject=subscribe">www-html-request@w3.org</a>
+with subscribe in the subject.
+
+<H2>Abstract</H2>
+
+<P>This document describes frame documents, the HTML syntax for frames,
+frame implementation notes, and includes a new proposal for extensions.
+
+<P>Frames are a way to describe a presentation by dividing the
+two-dimensional space of a display window (the browser, or user agent) into
+rectangular areas. Each frame has a name and can be named as the display
+area to be used for the other anchor of an <samp>A</samp> link (via the
+<samp>TARGET</samp> attribute of the <samp>A</samp> element type, which
+names the frame the object located by the src atribute should be presented
+in). In other words, frames let you define a set of regions on a screen,
+give them some initial content and then let you continue to use them for
+objects linked to.
+
+<p>This document also describes a proposal for a new element called
+<samp>IFRAME</samp> designed as a means to create compound documents by
+placing frames in HTML documents. Called "inline frames," this design
+technique allows authors to insert HTML documents the same way they insert
+images using the <samp>IMG</samp> element. This means authors can use the
+<samp>ALIGN</samp> attribute just as they do with <samp>IMG</samp> to align
+the frame with the surrounding text. An alternative based on
+<samp>OBJECT</samp> is also discussed.
+<H2><A name="c-frames">Frame Documents</A></H2>
+
+<P>Frames divide a browser window into two or more document windows, each
+displaying a different document, or a different part of the same document.
+Frames in an HTML document can cause a web page to appear to be divided
+into multiple, scrollable regions. For each frame, you can assign a name, a
+source document locator, dimensions, border alignment and decorations,
+scroll and resize behaviors, loading and unloading behavior, file and topic
+maps, and style sheets.
+
+<UL>
+<LI>Names: You can place an anchor in any frame, link to any addressable
+object, and place the object into any named frame.
+
+<LI>Source document locator: You can use whatever addressing schemes your
+user agent supports, including URLs and filenames.
+
+<LI>Dimensions: You can rigidly or flexibly layout a two-dimensional grid
+of rectangular blocks.
+
+<LI>Border alignment and decoration: You can adjust the position of the
+left and right margins, the top and bottom margins, and the alignment of
+the frame. You can also make the borders of a frame invisible.
+
+<LI>Scrolling: Frames can have scrollbars, no scrollbars, or you can let
+the browser turn them on if the document is larger than the current
+horizontal or vertical size of the frame.
+
+<LI>Resizable: Frames are normaly resizable in the browser, but that can be
+disabled so the frame may not be resized at the user agent.
+
+<LI>Loading and unloading: You can provide a script to be run when the user
+agent finishes loading all frames or when the user exit the document.
+
+<LI>File and topic maps. You can place a file or topic navigator into a
+frame. The navigator might be a collapsible listing of file system, a
+listing of document headings, thumbnails of images in a document, or an
+index of any element type.
+</UL>
+
+<P>These properties make possible:
+
+<UL>
+
+<LI>Static frames. Elements that a user should always see, such as button
+bars, logos, copyright notices, and title graphics, can be placed in
+individual frames that are locked into place on the user agent window.
+
+<LI>Live frames. Documents, icons, interactive forms, videos, multimedia,
+topic maps, and anything else that can react to user input or programmed
+activity.
+
+<LI>As a user navigates a site in "live" frames, the contents of
+static frames remain fixed, even though adjoining frames redraw.
+
+<LI>Functional tables of contents. A frame can contain interactive tables
+of contents (TOCs) with links that, when clicked, display results in an
+adjoining frame. These TOCs can be static or interactive with collapsible
+lists, graphical maps of document structure, or displays of file and link
+architectures.
+
+<LI>Single-page query and answer displays. Frames designed side-by-side
+permit queries to be posed and answered on the same page, with one frame
+holding the query form, and the other presenting the results.
+
+<LI>Basically any two-dimensional arrangement of static and interactive
+frames that you want. You can place information in any rectangular block
+independently of the overall page or of other frames on the page.
+</UL>
+
+<H3>Frame Document Structure</H3>
+
+<P>Frames in HTML documents are created and controlled through the
+structure of three element types: <samp>FRAMESET</samp>, <samp>FRAME</samp>
+and <samp>NOFRAMES</samp>.
+
+<P>A web page containing frames is created by a main or "framing"
+document. This document defines the frame regions on the user agent's page
+or window, and addresses the documents or objects that initially appear in
+the frames. Hypertext anchors within any frame can also target specific
+frames to place the contents of addressable documents and objects.
+
+<P>The structure of a frame-enabling HTML document type is similar to usual
+HTML structure. The key difference in an HTML document type is that the
+<samp>BODY</samp> container element is basically replaced by a
+<samp>FRAMESET</samp> container element. The initial <samp>FRAMESET</samp>
+element describes the frames that make up the page, and the
+<samp>FRAME</samp> elements specify the sub-documents that appear initially
+in each.
+
+<P>A <samp>FRAMESET</samp> may only contain nested <samp>FRAMESET</samp>
+and <samp>FRAME</samp> elements. When a <samp>FRAMESET</samp> element is
+nested within another <samp>FRAMESET</samp> element, it acts as a
+subframe. A <samp>BODY</samp> element can follow the <samp>FRAMESET</samp>
+to provide an alternative document for user agents that do not support
+frames. And a <samp>BODY</samp> element can contain <samp>NOFRAMES</samp>
+elements whose contents are not to be rendered by user agents which support
+frames.
+
+<P>A frame document contains a set of frames, each of which likely uses the
+<samp>BODY</samp> element. Elements that might normally be placed in the
+<samp>BODY</samp> element should not appear before the first
+<samp>FRAMESET</samp> element, or the <samp>FRAMESET</samp> will be
+ignored. The <samp>FRAMESET</samp> tag has a matching end tag.
+
+
+<H3>Frame Document Syntax</H3>
+
+<P>Frame syntax is similar in scope and complexity to that used by tables,
+and has been designed to be quickly processed by Internet client layout
+engines.
+
+<PRE>&lt;HTML&gt;
+&lt;HEAD&gt; 
+&lt;/HEAD&gt; 
+
+&lt;FRAMESET rows="33%,33%,33%"&gt;
+  &lt;FRAMESET cols="50%,50%"&gt;
+      &lt;FRAME name="frame1"&gt;
+      &lt;FRAME name="frame2"&gt;
+  &lt;/FRAMESET&gt;
+  &lt;FRAME name="frame3"&gt;
+  &lt;FRAME name="frame4"&gt;
+&lt;/FRAMESET&gt;
+&lt;BODY&gt;
+...contents to display in non-frame-capable user agent...
+&lt;/BODY&gt;
+
+&lt;/HTML&gt;
+</PRE>
+
+
+<H4>Basic Frame Concepts</H4>
+
+<P>Try to remember the following basic frameset concepts:
+
+<UL>
+<LI>The opening <samp>FRAMESET</samp> tag defines the actual size
+and layout of the frames.
+
+<LI>Using the <samp>ROWS</samp> and <samp>COLS</samp> attributes of the
+<samp>FRAMESET</samp> tag, you define frames, then <B>fill</B> them with
+the <samp>FRAME</samp> element, or <B>subdivide</B> them with nested
+<samp>FRAMESET</samp> elements.
+
+<LI>The number of entries in <samp>ROWS</samp> or <samp>COLS</samp>
+attribute values determine how many frames are displayed and what size they
+are. If you have both <samp>ROWS</samp> and <samp>COLS</samp>, multiply the
+number of entries in each attribute value to calculate the total number of
+frames (i.e., three entries in the <samp>ROWS</samp> attribute and four
+entries in the <samp>COLS</samp> attribute create a grid of twelve frames).
+
+<LI>The <samp>FRAME</samp> elements fill the frames defined by
+<samp>FRAMESET</samp>, and are applied in the frame set in a left-to-right,
+top-to-bottom order.
+
+<LI> <samp>FRAME</samp> elements which include the <samp>SRC</samp>
+attribute, define the contents of each frame you create.
+
+<LI>Frames are <B>always</B> rectangular.
+</UL>    
+
+<H2><A name="frameset">The FRAMESET Element</A></H2>
+
+<P>A frameset divides the browser window into rectangular regions. Each
+such region can be:
+
+<UL>
+<LI>A <B>frame</B>, which displays one document. A frame is represented by
+a <samp>FRAME</samp> element.
+
+<LI>Another frame set, which is itself further divided into frames.
+</UL>
+
+<P>For example, a frame set can contain a frame, plus another frame set
+containing two frames, resulting in three frames in all.
+
+<P>An HTML document that contains frames basically replaces the
+<samp>BODY</samp> element with the <samp>FRAMESET</samp> element.
+
+<H3><A name="sec3">The rows and cols attributes</A></H3>
+
+<P>The attributes of the <samp>FRAMESET</samp> element are
+<samp>COLS</samp> (columns) and <samp>ROWS</samp>. They determine how many
+frames the frame set is divided into. These attributes may be blank, or may
+consist of a list of one or more values separated by commas or spaces. Each
+such value determines the width (for columns) and height (for rows) of the
+regions; the number of width and height values supplied determines how many
+rows and columns, respectively, are created. The default for each is
+one. For example if you have:
+
+<PRE>&lt;FRAMESET cols="20%,30%,50%"&gt;</PRE>
+
+<P>in which there is no <samp>ROWS</samp> value, the frame set is divided
+vertically into three regions: the first region's width is 20% of the
+current frame set (or browser window if this frame set is at the top
+level), the second region's width is 30%, and the third region's width is
+50%. When there is only one frame set in the document, these widths apply
+to the entire browser window. Similarly, when there is a <samp>ROWS</samp>
+value but no <samp>COLS</samp> value, the frame set is divided horizontally
+into regions. When values are supplied for both attributes, the frame set
+is divided into a grid of rows and columns.
+
+<P>The <samp>ROWS</samp> and <samp>COLS</samp> attributes take
+comma-separateds lists of values. These values can be absolute pixel
+values, percentage values between 1 and 100, or relative scaling
+values. The number of rows and columns is implicit in the number of values
+in the respective list. Since the total height of all the rows must equal
+the height of the window, row heights might be normalized to achieve
+this. If the rows (or cols) attribute values are unspecified, then the
+number of rows (or columns) is assumed to be one, and it may be arbitrarily
+sized to fit.
+
+<H4>Syntax of Value List</H4>
+
+<DL>
+<DT>value
+
+<DD>A simple numeric value is assumed to be a fixed size in pixels. The
+result of this value varies with the size of a viewer's window. Fixed pixel
+values are usually used with one or more of the relative size values
+described below. You might use a fixed value if you want a graphic, such as
+an image map, to fill an entire frame and you want to ensure that the frame
+is big enough to display the entire image. User agents can be expected to
+override a specified pixel value to ensure that the total proportions of a
+frame are 100% of the width and height of a user's window.
+
+
+<DT>value%
+
+<DD>This is a simple percentage value between 1 and 100. If the total is
+greater than 100, all percentages are scaled down. If the total is less
+than 100, and relative-sized frames exist, extra space is given to them. If
+there are no relative-sized frames, all percentages are scaled up to match
+a total of 100%. For example, suppose you assign the <samp>ROWS</samp>
+attribute a value of "50%,50%,50%". Each entry is 50%, which is
+one third of the sum of all the entries (150%), so the browser assigns the
+frame sizes proportionately, giving each frame one third of the browser
+height.
+
+<DT>value*
+
+<DD>The value on this field is optional. A single '*' character is a
+"relative-sized" frame and is interpreted as a request to give
+the frame all remaining space. If multiple relative-sized frames are
+specified, the remaining space is divided evenly among them. If there is a
+value in front of the '*', that frame gets that much more relative
+space. "2*,*" would give 2/3 of the space to the first frame, and
+1/3 to the second.
+
+</DL> 
+
+<H4><A name="sec6">Example: Setting Frame width and height</A></H4>
+
+<P>There are three ways to specify the width or height of a frame:
+
+<UL>
+<LI>As a percentage of the area allotted to the parent frame set.
+
+<LI>As an absolute (specific) number of screen pixels (e.g., 250).
+
+<LI>As a `relative size'.
+</UL>
+
+<P>Example for 3 rows, the first and the last being smaller than the center
+row:
+
+<PRE>&lt;FRAMESET rows="20%,60%,20%"&gt;</PRE>
+
+<P>Example for 3 rows, the first and the last being fixed height, with the
+remaining space assigned to the middle row:
+
+<PRE>&lt;FRAMESET rows="100,*,100"&gt;</PRE>
+
+<P>A `relative size' is specified with an asterisk, e.g., `1*', `2*', `3*'
+(`1*' can also be written simply as `*'). This is interpreted as follows:
+after all widths (or heights) specified as percentages or absolute amounts
+have been allocated to the corresponding frames, the remaining space is
+allocated to frames whose widths (or heights) have been specified as a
+relative size. The amount of space allocated to a frame is proportional to
+the number in front of the asterisk. For example:
+
+<PRE>&lt;FRAMESET rows="30%,400,*,2*"&gt;
+	&lt;FRAME ... &gt;
+	&lt;FRAME ... &gt;
+	&lt;FRAME ... &gt;
+	&lt;FRAME ... &gt;
+&lt;/FRAMESET&gt;</PRE>
+
+<P>Suppose the browser window is currently 1000 pixels high. The first
+frame gets 30% of the total height, that is, 300 pixels; the second frame
+gets 400 pixels, since an absolute amount was specified. This leaves 300
+pixels to be divided between the other two frames. The fourth frame's
+height is specified as `2*', so it is twice as high as the third frame,
+whose height is only `*' (1*). Therefore the third frame is 100 pixels high
+and the fourth is 200 pixels high.
+
+<H2><A name="frame">The FRAME Element</A></H2>
+
+<P>The FRAME element defines a single frame in a frameset. It has 7
+possible attributes: <samp>SRC</samp>, <samp>NAME</samp>,
+<samp>FRAMEBORDER</samp>, <samp>MARGINWIDTH</samp>,
+<samp>MARGINHEIGHT</samp>, <samp>SCROLLING</samp>, and
+<samp>NORESIZE</samp>. The <samp>FRAME</samp> tag is not a container so it
+has no matching end tag.
+
+<P>The attributes of the FRAME element type are as follows:
+
+<DL>
+<DT><B>src</B>="address" 
+
+<DD>Specifies the address of the document to be displayed in the
+frame. When omitted the frame is displayed as a blank space.
+
+
+<DT><B>name</B>="window_name" 
+
+<DD>The <samp>NAME</samp> attribute is used to assign a name to a frame so
+it can be targeted by links in other documents (These are usually from
+other frames in the same document.) The <samp>NAME</samp> attribute is
+optional; by default all windows are unnamed. Names must begin with an
+alphabetic character. Named frames can have their window contents targeted
+with the <samp>TARGET</samp> attribute.
+
+
+<DT><B>frameborder</B>="1|0"
+
+<DD><samp>FRAMEBORDER</samp> is a boolean which triggers the display of
+frame separators around the frame. When set to "1" a separator is
+drawn on every side next to another frame. When set to "0" the
+decision to draw separators is left to surrounding frames. Indeed in this
+case separators might still be drawn because <samp>FRAMEBORDER</samp> is
+set "1" on adjacent frames. Default is "1".
+
+
+<DT><B>marginwidth</B>="value"
+
+<DD>The <samp>MARGINWIDTH</samp> attribute is used when the document author
+wants some control of the margins for this frame. If specified, the value
+for <samp>MARGINWIDTH</samp> is in pixels. Margins can not be less than
+one; this insures that frame objects won't touch frame edges, and can't be
+specified in a way that leaves no space for the document contents. The
+<samp>MARGINWIDTH</samp> attribute is optional; by default, all frames
+default to letting the browser decide on an appropriate margin width.
+
+
+<DT><B>marginheight</B>="value"
+
+<DD>The <samp>MARGINHEIGHT</samp> attribute is just like
+<samp>MARGINWIDTH</samp> above, except it controls the upper and lower
+margins instead of the left and right margins.
+
+
+<DT><B>noresize</B> 
+
+<DD>The <samp>NORESIZE</samp> attribute doesn't require a value. It can
+simply be used as a flag to indicates that the frame is not resizable by
+the user. Users typically resize frames by dragging a frame edge to a new
+position. Note that if any frame adjacent to an edge is not resizable, that
+entire edge is restricted from moving. This affects the resizability of
+other frames. The <samp>NORESIZE</samp> attribute is optional; by default
+all frames are resizable.
+
+<DT><B>scrolling</B>="yes|no|auto" 
+
+<DD>The <samp>SCROLLING</samp> attribute indicates whether the frame should
+have scrollbars or not. "yes" results in scrollbars always being
+visible on that frame. "no" results in scrollbars never being
+visible. "auto" instructs the browser to decide whether
+scrollbars are needed, and to place them where necessary. That is, with
+"auto", the frame has scrollbars only if the document is larger
+than the current size of the frame. The <samp>SCROLLING</samp> attribute is
+optional; the default value is "auto."
+
+</DL>
+
+<H3><A name="sec5">Example</A></H3>
+
+<P>This small document causes three frames to be displayed. The first
+(outer) <samp>FRAMESET</samp> element divides the browser window into two
+horizontal regions. The upper region contains a single frame displaying the
+document <B>http://www.zenith.com/</B>, and the lower region displays the
+frames defined in the second (inner) <samp>FRAMESET</samp> element. This
+<samp>FRAMESET</samp> divides the lower part of the window into two
+vertical frames, displaying the documents <B>http://www.sinister.org/</B>
+and <B>http://www.dexter.org/</B>.
+
+<PRE>&lt;HTML&gt;
+&lt;FRAMESET rows="40%,60%"&gt;
+	&lt;FRAME src="http://www.zenith.com/"&gt;
+	&lt;FRAMESET cols="50%,50%"&gt;
+		&lt;FRAME src="http://www.sinister.org/"&gt;
+		&lt;FRAME src="http://www.dexter.org/"&gt;
+	&lt;/FRAMESET&gt;
+&lt;/FRAMESET&gt;
+&lt;/HTML&gt;
+</PRE> 
+
+<H3>The onLoad and onUnload attributes</H3>
+
+<P>The <samp>ONLOAD</samp> and <samp>ONUNLOAD</samp> attributes on
+<samp>FRAMESET</samp> are bound to <a
+href="script.html#intrinsic">Intrinsic Events</a>. They allow authors to
+provide scriptlets to be executed when these events occured giving them
+more control over the user agent behavior. This however requires that the
+user agent supports scripting, see <a href="script.html">HTML Scripts</a>
+for further details.
+
+
+<H2><a name=target>Naming and Targeting Frames</a></H2>
+
+<P>This feature gives a document author or designer a degree of control
+over which frame a document or object will appear in when a user clicks on
+an anchor or othewise traverses a link in a frame document.
+
+<P>This technique is useful as a standalone feature for a document space
+that is best viewed with multiple top-level windows (e.g., a list of
+subjects window, and a window displaying the current subject), but it is
+most useful in conjunction with frames.
+
+<H3>How It Works</H3>
+
+<P>Previously when a user clicked on an anchor, the inbound document either
+appeared in the window the user had clicked in, or alternately (and under
+the user's control) appeared in a completely new window. Targeting windows
+for delivery allows the document writer to assign names to specific
+windows, and target certain documents to always appear in the window
+bearing the matching name.
+
+<P>A name is assigned to a window in one of three ways:
+
+<UL>
+<LI>Set the <samp>NAME</samp> attribute on a <samp>FRAME</samp> element.
+
+<LI>A document can be accessed through a targeted link. In this case there
+is actual HTML that assigns a target window_name to a link. The document
+loaded from that link behaves as if it had a Window-target set as in method
+1 above.
+
+<LI>A document can be sent with the optional HTTP <KBD>Window-target</KBD>
+header:
+<PRE>
+	Window-target: window_name
+</PRE>
+
+This forces the document to load in the window named <KBD>window_name</KBD>
+or if such a window doesn't exist, one is created and the document is
+loaded in it.
+
+</UL>
+
+<H3>How the HTML looks</H3>
+
+<P>Targeting a frame with HTML is accomplished by means of the
+<samp>TARGET</samp> attribute. This attribute can be added to a variety of
+HTML elements to target a specific frame for links reresented by that
+element. The attribute takes the following form:
+
+<PRE>target="window_name"</PRE>
+
+<P>By default, any anchor in a frame will load a document into that same
+frame.
+
+<P><samp>NAME</samp> is an attribute of the <samp>FRAME</samp> element. By
+naming a frame, its contents can be changed with the use of a
+<samp>target</samp> attribute in your anchor elements, or in the
+<samp>BASE</samp> element of a document referred to in an anchor. By
+referring to a particular frame with the <samp>TARGET</samp> element, you
+control which frame will display the document.
+
+<P>The basic rules are as follows:
+
+<UL>
+
+<LI>The <samp>TARGET</samp> value of an anchor over-rides all others.
+
+<LI>If an anchor does <B>not</B> contain a <samp>TARGET</samp>
+attribute, it will use the <samp>TARGET</samp> specified in the document's
+<samp>BASE</samp> element.
+
+<LI>If the <samp>BASE</samp> element does not contain a <samp>TARGET</samp>
+attribute, the document loads into the frame that the anchor is in.
+
+<LI>If the anchor or <samp>BASE</samp> elements contain a
+<samp>TARGET</samp> attribute whose value is not an existing frame's
+<samp>NAME</samp>, the document will create a new instance of the browser,
+and that instance will behave like an individually-named
+<samp>FRAME</samp>.
+</UL>
+
+<P><I><B>Note:</B>User agents may provide a way to override the
+<samp>TARGET</samp> attribute.</I>
+
+<H3>TARGET usage on an A or LINK element</H3>
+
+<P>The anchor tag normally specifies a document to be loaded when the link
+is traversed; adding the <samp>TARGET</samp> attribute to these elements
+forces the document to be loaded into the targeted window. The A and LINK
+anchor elements can specify that a linked document should be displayed in a
+specifically named frame. Therefore any frame that the page designer
+chooses to be a delivery target must be given a name. The name of the frame
+is the value of the <samp>NAME</samp> attribute of the corresponding
+<samp>FRAME</samp> element. The value of the <samp>TARGET</samp> attribute
+of the <samp>A</samp> or <samp>LINK</samp> anchor element must be the name
+of the desired frame.
+
+<P>Here is an example of targeting specific frames using an anchor element.
+
+<PRE>&lt;FRAMESET rows="45%,10%,45%"&gt;
+	&lt;FRAME name="upper"&gt;
+	&lt;FRAME name="middle" src="sources.htm"&gt;
+	&lt;FRAME name="lower"&gt;
+&lt;/FRAMESET&gt;
+
+&lt;!-- In the document "sources.htm" --&gt;
+&lt;UL&gt;
+&lt;LI&gt;&lt;A target="upper" href="http://www.sgmlopen.org/"&gt;
+       SGML Open Home Page&lt;/A&gt;&lt;/LI&gt;
+&lt;LI&gt;&lt;A target="lower" href="http://www.w3.org/"&gt;
+       W3 Consortium Home Page&lt;/A&gt;&lt;/LI&gt;
+&lt;/UL&gt;
+</PRE>
+
+<P>Clicking on the first anchor will cause the document
+<B>http://www.sgmlopen.org/</B> to be displayed in the frame
+named "upper"; clicking on the second anchor will cause the document
+<B>http://www.w3.org/</B> to be displayed in the frame named
+"lower".
+
+<P>Attaching the <samp>TARGET</samp> attribute to the
+<samp>LINK</samp> element is not widely supported, except by SoftQuad
+Panorama PRO 2.0.
+
+<H3>TARGET usage on a BASE element</H3>
+
+<P>This option causes all (or most) of the links in a document to be
+targeted to the same window. In this case the <samp>TARGET</samp> attribute
+establishes a default <TT>window_name</TT> that all links in this document
+are targeted to. This default is of course overridden by specific instances
+of the <samp>TARGET</samp> attribute in individual anchor elements.
+Example:
+
+<PRE>&lt;BASE target="window_name"&gt;</PRE>
+
+
+<H3>TARGET usage on an AREA element</H3>
+
+<P>The IETF Internet-Draft of Client-Side Image Maps defines an area
+element type. It describes a shaped area in a client-side image map, and
+represents a link to traverse when the user clicks on it. Adding the
+<samp>TARGET</samp> attribute to <samp>AREA</samp> forces the linked
+document to load in the targeted window. Example:
+
+<PRE>&lt;AREA SHAPE="shape" COORDS="x,y,..." HREF="url" target="window_name"&gt;
+</PRE> 
+
+
+<H3>TARGET usage on a FORM element</H3>
+
+<P>The <samp>FORM</samp> element normally displays the results of a form
+submission in the same window the form was submitted from. By adding a
+<samp>TARGET</samp> attribute to <samp>FORM</samp>, the result of the form
+submission is loaded into the targeted window. Example:
+
+<PRE>&lt;FORM ACTION="url" target="window_name"&gt;</PRE> 
+
+
+<H3>Allowed TARGET names</H3>
+
+<P>The window name specified by a <samp>TARGET</samp> attribute must begin
+with an alphabetic character or an underscore character in case of a
+special name listed below. All other window names are ignored.
+
+<p>The recognized special target names are:
+
+<DL>
+<DT>_blank
+
+
+<DD>The document will be opened in a new window. This target causes the
+link to always load in a new blank window. This window is not named.
+
+
+<DT>_self
+
+
+<DD>The document will be opened in the same frame that you clicked in. This
+causes a linked document to always load into the same frame as the
+anchor. This can be used to override a globally assigned <samp>BASE</samp>
+target.
+
+
+<DT>_parent
+
+
+<DD>This target makes the linked document load into the immediate
+<samp>FRAMESET</samp> parent of this document. This defaults to acting like
+"_self" if the document has no parent.
+
+<DT>_top
+
+
+<DD>The document will be opened in the full browser window. If the window
+has been divided up into frames, it will become a single pane again. This
+defaults to acting like "_self" if the document is already at the
+top. It is useful for breaking out of an arbitrarily deep
+<samp>FRAME</samp> nesting.
+
+</DL>  
+
+<H2><A name="sec9">Alternate document for non-frame browsers</A></H2>
+
+<P>Content providers can create an alternative content viewable by
+non-frame-capable clients and clients set not to use frames. Since
+some browsers do not support frames, a document that uses frames
+should always supply an alternate document that these browsers can
+read. This is achieved by having a <samp>BODY</samp> element following
+the outermost <samp>FRAMSET</samp> element. This <samp>BODY</samp>
+element and its content is ignored by frame-capable web clients (unless
+they are set not to perform a frame based display).
+
+<p>In addition frame-capable browsers ignore all tags and data contain in a
+<samp>NOFRAMES</samp> element. Thanks to this element you can include in a
+document some data which is only displayed by non-frame browsers. Typically
+this is data that is otherwise displayed in another frame.
+
+<H2>Examples</H2>
+
+<P>This example shows the HTML source to achieve the layout below using
+frames.
+
+<PRE>+----------------------------------------------------------+
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |-----------------------------+
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |                             |
++----------------------------|                             |
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |-----------------------------+
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |                             |
+|                            |                             |
++----------------------------------------------------------+
+</PRE>
+
+<PRE>&lt;FRAMESET cols="50%,50%"&gt;
+    &lt;FRAMESET rows="50%,50%"&gt;
+        &lt;FRAME src="cell.html"&gt; 
+        &lt;FRAME src="cell.html"&gt; 
+    &lt;/FRAMESET&gt;
+    &lt;FRAMESET&gt;
+        &lt;FRAME src="cell.html"&gt; 
+        &lt;FRAME src="cell.html"&gt; 
+        &lt;FRAME src="cell.html"&gt; 
+    &lt;/FRAMESET&gt;
+&lt;/FRAMESET&gt;
+
+&lt;BODY&gt;
+&lt;H1&gt;Frame Alert!&lt;/H1&gt;
+&lt;P&gt;
+This document is designed to be viewed using the
+frames feature. If you see this message, you are 
+using a non-frame-capable web client. 
+&lt;/P&gt;
+&lt;/BODY&gt;
+</PRE>
+
+<p>The main layout in two columns is obtained by nesting two framesets
+inside the topmost frameset. The sub framesets then respectively contain
+two and three frames. At the end a <samp>BODY</samp> element is used to
+provide an alternate document for non frame based renderings.
+
+<p>In the following example the <samp>NOFRAMES</samp> element is used to
+include in a document a table of contents which is otherwise displayed in a
+separate frame.
+
+<pre>
+&lt;BODY&gt;
+&lt;H1&gt;The Different Fish Species&lt;/H1&gt;
+
+&lt;NOFRAMES&gt; &lt;!-- TOC for no frames display --&gt;
+    &lt;UL&gt;
+        &lt;LI&gt;&lt;a href=#sec1&gt;The fresh and sea water species&lt;/a&gt;
+        &lt;LI&gt;&lt;a href=#sec2&gt;A subjective comparison&lt;/a&gt;
+    &lt;/UL&gt;
+&lt;/NOFRAMES&gt;
+
+&lt;H1&gt;&lt;a name=sec1&gt;The fresh and sea water species&lt;/a&gt;&lt;/H1&gt;
+<p>Fishes can be classified into several categories starting by the type of
+water in which they live.
+...
+
+&lt;H1&gt;&lt;a name=sec2&gt;A subjective comparison&lt;/a&gt;&lt;/H1&gt;
+<p>This section is clearly not objective. I much prefer sea water fishes
+which are generally speaking more colorful and therefore more beautiful.
+...
+&lt;/BODY&gt;
+</pre>
+
+
+<H2>Frames Implementation Notes</H2>
+
+<P>These are some issues with implementing grids, and suggested solutions.
+
+<H3><a name=nesting>Nesting FRAMESET elements</a></H3>
+
+<P><samp>FRAMESET</samp> tags can be nested, as per the Frame Syntax
+description. But such a structure is basically flattened before display on
+the screen.
+
+<P>Of more importance is whether a <samp>FRAME</samp> can contain a
+document which is itself a <samp>FRAMESET</samp>. The answer is yes, but
+FRAMESETs must be nestable, especially with named frames, so that a link in
+one frame can reload multiple other frames.
+
+<H3>Infinite Recursion</H3>
+
+<P>It is possible to design a <samp>FRAMESET</samp> that recurses
+infinitely, stacking the same <samp>FRAMESET</samp> inside itself until a
+machine runs out of memory. Consider this example:
+
+<PRE>&lt;FRAMESET rows="50%,50%"&gt;
+  &lt;FRAME src="parent_url"&gt;
+  &lt;FRAME&gt;
+&lt;/FRAMESET&gt;
+</PRE>
+
+<P>Infinite recursion is prevented. Any frame that attempts to assign as
+its <samp>SRC</samp> a URL used by any of its ancestors is treated as if it
+has no <samp>SRC</samp> URL at all (basically a blank frame). This doesn't
+prevent all malicious documents, but it eliminates a troublesome class of
+them.
+
+
+<H2><A name="iframe">The IFRAME proposal</A></H2>
+
+<p>The <samp>IFRAME</samp> element is very similar to the
+<samp>FRAME</samp> element but is designed to be used in a
+<samp>BODY</samp> element instead of a <samp>FRAMESET</samp>. It defines a
+frame which takes place in the document flow, the way images inserted with
+the <samp>IMG</samp> element do. <samp>IFRAME</samp> is a text level
+element, it does not cause a paragraph break. Just like a
+<samp>FRAME</samp>, an <samp>IFRAME</samp> can be targeted, and navigated
+independent of the parent document.
+
+<P>The <samp>IFRAME</samp> element is a container. The end-tag is
+required. The contents are ignored by user agents that support
+<samp>IFRAME</samp> allowing alternative content to be supplied to
+down-level browsers.
+
+<P>Most attributes of the <samp>FRAME</samp> element are attributes of
+<samp>IFRAME</samp>. These are <samp>SRC</samp>, <samp>NAME</samp>,
+<samp>FRAMEBORDER</samp>, <samp>MARGINWIDTH</samp>,
+<samp>MARGINHEIGHT</samp>, <samp>SCROLLING</samp>. But <samp>IFRAME</samp>
+does not have the attribute <samp>NORESIZE</samp>; an inline frame is not
+resizable. And it has the additional attribute <samp>ALIGN</samp> which has
+the same value and meaning as the one of the <a
+href="textlevel.html#img"><samp>IMG</samp></a> element.
+
+<DL>
+<DT><B>src</B>="address"
+<DD>Specifies the address of the document to be displayed in the frame.
+
+<DT><B>name</B>
+<DD>Provides a target name for the frame.
+
+<DT><B>frameborder</B>="1|0"
+<DD>Triggers the display of a border around the frame. "1" (default) inserts a
+border. "0" displays no border.
+
+<DT><B>marginwidth</B>
+<DD>Controls the margin width for the frame, in pixels.
+
+<DT><B>marginheight</B>
+<DD>Controls the margin height for the frame, in pixels.
+
+<DT><B>scrolling</B>="yes|no|auto"
+<DD>Specifies whether the frame should have scrolbars or not. Default is
+"auto".
+
+<DT><B>width</B>
+<DD>Specifies the width of the inline frame, in pixels.
+
+<DT><B>height</B>
+<DD>Specifies the height of the inline frame, in pixels.
+
+<DT><B>align</B>="left|middle|right|top|bottom"
+<DD>Specifies how the frame is positioned relative to the current text line
+in which it occurs. The default is <samp>bottom</samp>.
+
+</DL>
+
+<H3>Examples</H3>
+
+<PRE>
+&lt;BODY&gt;
+  &lt;P&gt;This document contains an inline frame here &lt;IFRAME
+  src="foo.html" width=400 height=500&gt; that unfortunately your user
+  agent doesn't support. Alternatively you can get the related document
+  &lt;a href="foo.html"&gt;here&lt;/a&gt;.&lt;/IFRAME&gt; That's all folks!
+&lt;/BODY&gt;
+</PRE>
+
+<P>The following example shows how targets can be used with an inline frame.
+
+<PRE>
+&lt;BODY&gt;
+  &lt;P&gt;This document contains an inline frame
+  &lt;IFRAME name="iframe" width=400 height=500&gt;&lt;/IFRAME&gt;
+  in which you can choose to see various documents. These are:
+  &lt;UL&gt;
+  &lt;LI&gt;&lt;A target="iframe" href="http://www.sgmlopen.org/"&gt;
+       SGML Open Home Page&lt;/A&gt;&lt;/LI&gt;
+  &lt;LI&gt;&lt;A target="iframe" href="http://www.w3.org/"&gt;
+       W3 Consortium Home Page&lt;/A&gt;&lt;/LI&gt;
+  &lt;/UL&gt;
+&lt;/BODY&gt;
+</PRE>
+
+<P>Clicking on the first anchor will cause the document
+<B>http://www.sgmlopen.org/</B> to be displayed in the inline frame, named
+"iframe"; clicking on the second anchor will cause the document
+<B>http://www.w3.org/</B> to be displayed in this same frame.
+
+
+<H3>IFRAME vs OBJECT</H3>
+
+<P>Although a means for creating compound documents is recognized to be a
+real need the introduction of <samp>IFRAME</samp> to meet this need is
+arguable. The main reason is that compound documents can already be
+created using the existing <samp>OBJECT</samp> element. Indeed, the
+purpose of <samp>IFRAME</samp> is to provide authors with a way to insert
+HTML documents into an HTML document. At the same time the <samp>OBJECT</samp>
+element is designed to provide a general mechanism to insert any type of
+object into an HTML document. Based on this and given that an HTML document
+is only a particular type of object, it is reasonable to claim that
+<samp>IFRAME</samp> is not necessary, and that <samp>OBJECT</samp> should
+be used instead.
+
+<P>This section discusses this issue, providing various elements of
+comparison and what it would take to allow authors to actually use
+<samp>OBJECT</samp> instead of <samp>IFRAME</samp>.
+
+<H4>Similarities</H4>
+
+<P>Both elements allow you to insert an HTML document. Both of them are
+textlevel elements and do not cause a paragraph break. They are both
+containers supporting downlevel browsers in the same way; their contents are
+not rendered by user agents which support the element. So these elements
+are completely equivalent in these regards.
+
+<H4>Differences</H4>
+
+<P>The <samp>IFRAME</samp> element, as defined in this document, is however
+different from the <samp>OBJECT</samp> element since it provides a set of
+attributes which are not available on <samp>OBJECT</samp>. These attributes
+are: <samp>SRC</samp>, <samp>FRAMEBORDER</samp>, <samp>MARGINWIDTH</samp>,
+<samp>MARGINHEIGHT</samp> and <samp>SCROLLING</samp>. To which we must add
+the <samp>NAME</samp> attribute which is available on both elements but has
+a different meaning.
+
+<H4>Dealing with differences</H4>
+
+<P>The <samp>DATA</samp> attribute of <samp>OBJECT</samp> is equivalent to
+<samp>SRC</samp> and can be used in the same way.
+
+<P>The <samp>FRAMEBORDER</samp>, <samp>MARGINWIDTH</samp> and
+<samp>MARGINHEIGHT</samp> have no equivalent on <samp>OBJECT</samp>. Using
+<samp>OBJECT</samp> these have to be specified through the style sheet or
+alternatively via a set of <samp>PARAM</samp> elements.
+
+<P><samp>SCROLLING</samp> has no equivalent on <samp>OBJECT</samp> and
+needs to be specified via a <samp>PARAM</samp> element.
+
+<P>Based on this, the basic example:
+
+<PRE>
+  &lt;IFRAME src="foo.html" width=400 height=500&gt;
+  that unfortunately your user agent doesn't support. Alternatively you
+  can get the related document &lt;a href="foo.html"&gt;here&lt;/a&gt;.
+  &lt;/IFRAME&gt;
+</PRE>
+
+Becomes:
+
+<PRE>
+  &lt;OBJECT data="foo.html" width=400 height=500&gt;
+  that unfortunately your user agent doesn't support. Alternatively you
+  can get the related document &lt;a href="foo.html"&gt;here&lt;/a&gt;.
+  &lt;/OBJECT&gt;
+</PRE>
+
+<P>And the more complex example:
+
+<PRE>
+  &lt;IFRAME src="foo.html" width=400 height=500 scrolling=auto
+     frameborder=1&gt;
+  that unfortunately your user agent doesn't support. Alternatively you
+  can get the related document &lt;a href="foo.html"&gt;here&lt;/a&gt;.
+  &lt;/IFRAME&gt;
+</PRE>
+
+Becomes:
+
+<PRE>
+  &lt;OBJECT src="foo.html" width=400 height=500&gt;
+  &lt;PARAME name=scrolling value=auto&gt;
+  &lt;PARAME name=frameborder value=1&gt;
+  that unfortunately your user agent doesn't support. Alternatively you
+  can get the related document &lt;a href="foo.html"&gt;here&lt;/a&gt;.
+  &lt;/OBJECT&gt;
+</PRE>
+
+<P>The last difference is that <samp>IFRAME</samp> can be given a name, via
+its <samp>NAME</samp> attribute, so that it can be used as a link target as
+shown below.
+
+<PRE>
+&lt;BODY&gt;
+  &lt;P&gt;This document contains an inline frame
+  &lt;IFRAME name="iframe" width=400 height=500&gt;&lt;/IFRAME&gt;
+  in which you can choose to see various documents. These are:
+  &lt;UL&gt;
+  &lt;LI&gt;&lt;A target="iframe" href="http://www.sgmlopen.org/"&gt;
+       SGML Open Home Page&lt;/A&gt;&lt;/LI&gt;
+  &lt;LI&gt;&lt;A target="iframe" href="http://www.w3.org/"&gt;
+       W3 Consortium Home Page&lt;/A&gt;&lt;/LI&gt;
+  &lt;/UL&gt;
+&lt;/BODY&gt;
+</PRE>
+
+<P>The <samp>NAME</samp> attribute on <samp>OBJECT</samp> has a specific
+semantic and cannot be used for that purpose. Therefore, to specify a
+target name on an <samp>OBJECT</samp> the <samp>ID</samp> attribute has to
+be used instead. This leads to the following:
+
+<PRE>
+&lt;BODY&gt;
+  &lt;P&gt;This document contains an inline frame
+  &lt;OBJECT id="iframe" width=400 height=500&gt;&lt;/OBJECT&gt;
+  in which you can choose to see various documents. These are:
+  &lt;UL&gt;
+  &lt;LI&gt;&lt;A target="iframe" href="http://www.sgmlopen.org/"&gt;
+       SGML Open Home Page&lt;/A&gt;&lt;/LI&gt;
+  &lt;LI&gt;&lt;A target="iframe" href="http://www.w3.org/"&gt;
+       W3 Consortium Home Page&lt;/A&gt;&lt;/LI&gt;
+  &lt;/UL&gt;
+&lt;/BODY&gt;
+</PRE>
+
+<P>This is no big deal but it has a disadvantage though. The way authors
+specify target names on <samp>OBJECT</samp> and <samp>FRAME</samp>
+(<samp>ID</samp> vs <samp>NAME</samp>) becomes inconsistent. One way to
+solve this, is to deprecate the <samp>NAME</samp> attribute on
+<samp>FRAME</samp> and specify that <samp>ID</samp> should be used
+uniformly.
+
+
+<H2><a name="sec1">DTD Fragment for Frames</a></H2>
+
+<P>The following declarations define the proposed HTML frames support.
+
+<PRE>
+&lt;!ELEMENT FRAMESET - - (FRAMESET|FRAME)+&gt;
+&lt;!ATTLIST FRAMESET
+  -- absolute pixel values, percentages or relative scales. --
+  rows        CDATA      #IMPLIED  -- if not given, default is 1 row --
+  cols        CDATA      #IMPLIED  -- if not given, default is 1 column --
+  onLoad      CDATA      #IMPLIED  -- intrinsic event -- 
+  onUnload    CDATA      #IMPLIED  -- intrinsic event -- 
+  &gt;
+
+&lt;!-- reserved frame names start with "_" otherwise starts with letter --&gt;
+&lt;!ELEMENT FRAME - O EMPTY&gt;
+&lt;!ATTLIST FRAME
+  name        CDATA      #IMPLIED  -- name of frame for targetting --
+  src         %URL       #IMPLIED  -- source of frame content --
+  frameborder (1|0)      1         -- request frame separators? --
+  marginwidth %Pixels    #IMPLIED  -- margin widths in pixels --
+  marginheight %Pixels   #IMPLIED  -- margin height in pixels --
+  noresize    (noresize) #IMPLIED  -- allow users to resize frames? --
+  scrolling (yes|no|auto) auto     -- scrollbar or none --
+  &gt;
+
+&lt;!ELEMENT IFRAME - - %body.content&gt;
+&lt;!ATTLIST IFRAME
+  name        CDATA      #IMPLIED  -- name of frame for targetting --
+  src         %URL       #IMPLIED  -- source of frame content --
+  frameborder (1|0)      1         -- request frame borders? --
+  marginwidth %Pixels    #IMPLIED  -- margin widths in pixels --
+  marginheight %Pixels   #IMPLIED  -- margin height in pixels --
+  scrolling (yes|no|auto) auto     -- scrollbar or none --
+  align       %IAlign    #IMPLIED  -- vertical or horizontal alignment --
+  &gt;
+
+&lt;!ELEMENT NOFRAMES - - %body.content&gt;
+</PRE>
+
+
+<H2>Remarks</H2>
+
+<p>Because frames were deployed in various products before it was properly
+specified as part of HTML several features are available in some products
+but are not standard. Here are some of them:
+
+<DL>
+<DT><B>framespacing</B>
+
+<DD><samp>FRAMESPACING</samp> is an attribute of <samp>FRAMESET</samp>
+which is supported by Internet Explorer 3.0. It allows to define additional
+space between frames. The amount defined for <samp>FRAMESPACING</samp> does
+not include the width of the<samp>FRAMEBORDER</samp>.
+<samp>FRAMESPACING</samp> can be set on one or more framesets and applies
+to the contained framesets unless the contained frameset elements define a
+different value. The default value is &quot;2&quot;.
+
+<DT><B>bordercolor</B>
+
+<DD>An attribute of <samp>FRAME</samp> supported by Navigator 3.0 which can
+be used to set the color of the separator drawn between frames.
+</DL>
+
+<p>These attributes are limited to presentation properties and can better
+be specified using a style sheet.
+
+
+<H2>Pending Issues</H2>
+
+<UL>
+<LI>As explained the introduction of <samp>IFRAME</samp> is arguable.
+</UL>
+
+<P>
+<A href="https://www.w3.org/Consortium/Legal/ipr-notice.html#Copyright">
+Copyright</A> &nbsp;&copy;&nbsp; 1997 <A href="https://www.w3.org">W3C</A>
+(<A href="http://www.lcs.mit.edu">MIT</A>,
+<A href="http://www.inria.fr/">INRIA</A>,
+<A href="http://www.keio.ac.jp/">Keio</A> ), All Rights Reserved. W3C
+<A href="https://www.w3.org/Consortium/Legal/ipr-notice.html#Legal Disclaimer">liability,</A>
+<A href="https://www.w3.org/Consortium/Legal/ipr-notice.html#W3C Trademarks">trademark</A>,
+<A href="https://www.w3.org/Consortium/Legal/copyright-documents.html">document
+use </A>and
+<A href="https://www.w3.org/Consortium/Legal/copyright-software.html">software
+licensing </A>rules apply.
+</BODY>
+</HTML>

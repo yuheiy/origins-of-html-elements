@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、親`details`の残りの内容に対するsummary、caption、またはlegendを表す。親の最初の`summary`は開閉操作を担う。[一次定義](https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、親`details`の残りの内容に対するsummary、caption、またはlegendを表す。親の最初の`summary`は開閉操作を担う。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/interactive-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,11 +36,11 @@ HTML5 `details`＋`legend`（2006年） → `details`＋`dt`／`dd`（2009年）
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2006-07-06 | WHATWG HTML commit `f98736ae` | 仕様commit | `details`導入時に先頭`legend`をsummaryとして使用。 | [一次資料](https://github.com/whatwg/html/commit/f98736ae6caf9250ffaed0df557e214f0bf5aebd) | 2026-08-09 |
-| 2009-09-15 | public-html “Re: &lt;details&gt;”／commit `9c490f21` | 標準化mail／仕様commit | `details`のcaptionを`legend`から`dt`／`dd`へ変更。 | [mail](https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html) / [commit](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7) | 2026-08-09 |
-| 2010-01-30 | WHATWG HTML commit `c3974951` | 仕様commit | `details`の`dt`／`dd`または`legend` captionを専用`summary`へ変更。 | [一次資料](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2006-07-06 | [WHATWG HTML commit `f98736ae`](../../raw/github.com/whatwg/html/commit/f98736ae6caf9250ffaed0df557e214f0bf5aebd)（[公開元](https://github.com/whatwg/html/commit/f98736ae6caf9250ffaed0df557e214f0bf5aebd)） | 仕様commit | `details`導入時に先頭`legend`をsummaryとして使用。 | 2026-08-09 |
+| 2009-09-15 | public-html “Re: &lt;details&gt;”／commit `9c490f21`：[mail](../../raw/lists.w3.org/Archives/Public/public-html/2009Sep/0566.html)・[commit](../../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)（[公開元1](https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html)・[公開元2](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)） | 標準化mail／仕様commit | `details`のcaptionを`legend`から`dt`／`dd`へ変更。 | 2026-08-09 |
+| 2010-01-30 | [WHATWG HTML commit `c3974951`](../../raw/github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)（[公開元](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)） | 仕様commit | `details`の`dt`／`dd`または`legend` captionを専用`summary`へ変更。 | 2026-08-09 |
 
 ## 確度
 

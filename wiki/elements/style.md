@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、CSS style sheetを文書へ埋め込む。`media`で適用mediaを制限し、`blocking`でrender-blockingの扱いを指定できる。利用者向けcontent自体は表さない。[一次定義](https://html.spec.whatwg.org/multipage/semantics.html#the-style-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、CSS style sheetを文書へ埋め込む。`media`で適用mediaを制限し、`blocking`でrender-blockingの扱いを指定できる。利用者向けcontent自体は表さない。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/semantics.html#the-style-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -50,16 +50,16 @@ HTML 3.0から1995年11月草案、1996年草案群からHTML 3.2／Cougar、HTM
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1995-04-25 | HTML 3.0 | 失効したIETF Internet-Draftの仕様本文 | `LINK REL=StyleSheet`と`HEAD`内の`STYLE`を規定する、確認できる最初の出現。 | [IETF Datatracker](https://datatracker.ietf.org/doc/draft-ietf-html-specv3/)・[introduction](https://www.w3.org/MarkUp/html3/intro.html)・[document head](https://www.w3.org/MarkUp/html3/dochead.html) | 2026-08-10 |
-| 1995-11-22 | *HTML and Style Sheets* draft-00 | IETF HTML WG Internet-Draft | HTMLへ新しい`STYLE`要素を追加し、`HEAD`内のrulesとHTML 2.0 `LINK`による外部sheetを一体として定義する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-html-style-00) | 2026-08-10 |
-| 1996-01-23 | *HTML and Style Sheets* draft-01 | IETF HTML WG Internet-Draft | `STYLE`を維持し、style language指定を`TYPE`へ変更する。 | [IETF Datatracker](https://datatracker.ietf.org/doc/html/draft-ietf-html-style-01) | 2026-08-10 |
-| 1996-12-17 | CSS1 §1.1 | W3C Recommendation | HTMLとstyle sheetの四つの結合方式、`STYLE`の使用例。 | [一次資料](https://www.w3.org/TR/REC-CSS1-961217#containment-in-html) | 2026-08-09 |
-| 1997-01-14 | HTML 3.2 | W3C Recommendation | 将来のstyle sheets導入用placeholderとしての`STYLE`。 | [一次資料](https://www.w3.org/TR/REC-html32) | 2026-08-09 |
-| 1997-03-24 | *HTML and Style Sheets* | W3C Working Draft | Cougar向け`STYLE`定義、言語非依存、head内grouping。 | [一次資料](https://www.w3.org/TR/WD-style-970324) | 2026-08-09 |
-| 1995〜1997 | *Cougar — The next version of HTML* | W3C標準化ページ | listed draftsがHTML 4.0のbasisを形成したという集合単位の関係。 | [一次資料](https://www.w3.org/MarkUp/Cougar/) | 2026-08-09 |
-| 1999-12-24 | HTML 4.01 §14.2.3 | W3C Recommendation | `STYLE`を`HEAD`内のstyle rulesとして本格的に規定。 | [一次資料](https://www.w3.org/TR/html401/present/styles.html#style-group) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1995-04-25 | HTML 3.0：[IETF Datatracker](../../raw/datatracker.ietf.org/doc/draft-ietf-html-specv3/index.html)・[introduction](../../raw/www.w3.org/MarkUp/html3/intro.html)・[document head](../../raw/www.w3.org/MarkUp/html3/dochead.html)（[公開元1](https://datatracker.ietf.org/doc/draft-ietf-html-specv3/)・[公開元2](https://www.w3.org/MarkUp/html3/intro.html)・[公開元3](https://www.w3.org/MarkUp/html3/dochead.html)） | 失効したIETF Internet-Draftの仕様本文 | `LINK REL=StyleSheet`と`HEAD`内の`STYLE`を規定する、確認できる最初の出現。 | 2026-08-10 |
+| 1995-11-22 | [*HTML and Style Sheets* draft-00](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-style-00)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-style-00)） | IETF HTML WG Internet-Draft | HTMLへ新しい`STYLE`要素を追加し、`HEAD`内のrulesとHTML 2.0 `LINK`による外部sheetを一体として定義する。 | 2026-08-10 |
+| 1996-01-23 | [*HTML and Style Sheets* draft-01](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-style-01)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-style-01)） | IETF HTML WG Internet-Draft | `STYLE`を維持し、style language指定を`TYPE`へ変更する。 | 2026-08-10 |
+| 1996-12-17 | [CSS1 §1.1](../../raw/www.w3.org/TR/REC-CSS1-961217)（[公開元](https://www.w3.org/TR/REC-CSS1-961217#containment-in-html)） | W3C Recommendation | HTMLとstyle sheetの四つの結合方式、`STYLE`の使用例。 | 2026-08-09 |
+| 1997-01-14 | [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32)） | W3C Recommendation | 将来のstyle sheets導入用placeholderとしての`STYLE`。 | 2026-08-09 |
+| 1997-03-24 | [*HTML and Style Sheets*](../../raw/www.w3.org/TR/WD-style-970324)（[公開元](https://www.w3.org/TR/WD-style-970324)） | W3C Working Draft | Cougar向け`STYLE`定義、言語非依存、head内grouping。 | 2026-08-09 |
+| 1995〜1997 | [*Cougar — The next version of HTML*](../../raw/www.w3.org/MarkUp/Cougar/index.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） | W3C標準化ページ | listed draftsがHTML 4.0のbasisを形成したという集合単位の関係。 | 2026-08-09 |
+| 1999-12-24 | [HTML 4.01 §14.2.3](../../raw/www.w3.org/TR/html401/present/styles.html)（[公開元](https://www.w3.org/TR/html401/present/styles.html#style-group)） | W3C Recommendation | `STYLE`を`HEAD`内のstyle rulesとして本格的に規定。 | 2026-08-09 |
 
 ## 確度
 

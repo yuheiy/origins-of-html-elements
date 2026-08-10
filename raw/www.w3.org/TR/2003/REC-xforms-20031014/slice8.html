@@ -1,0 +1,1628 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator"
+content="HTML Tidy for Linux/x86 (vers 1st October 2002), see www.w3.org" />
+<meta http-equiv="Content-Type"
+content="text/html; charset=ISO-8859-1" />
+<title>Form Controls</title>
+<style type="text/css">
+/*<![CDATA[*/
+code           { font-family: monospace; }
+div.constraint,
+div.issue,
+div.note,
+div.notice     { margin-left: 2em; }
+dt.label       { display: run-in; }
+li p           { margin-top: 0.3em;
+                 margin-bottom: 0.3em; }
+div.exampleInner pre { margin-left: 1em;
+                       margin-top: 0em; margin-bottom: 0em}
+div.exampleOuter {border: 4px double gray;
+                  margin: 0em; padding: 0em}
+div.exampleInner { background-color: #d5dee3;
+                   border-top-width: 4px;
+                   border-top-style: double;
+                   border-top-color: #d3d3d3;
+                   border-bottom-width: 4px;
+                   border-bottom-style: double;
+                   border-bottom-color: #d3d3d3;
+                   padding: 4px; margin: 0em }
+div.exampleWrapper { margin: 4px }
+div.exampleHeader { font-weight: bold;
+                    margin: 4px}
+.xmlverb-default          { color: #333333; background-color: #ffffff; font-family: monospace }
+.xmlverb-element-name     { color: #990000 }
+.xmlverb-element-nsprefix { color: #666600 }
+.xmlverb-attr-name        { color: #660000 }
+.xmlverb-attr-content     { color: #000099; font-weight: bold }
+.xmlverb-ns-name          { color: #666600 }
+.xmlverb-ns-uri           { color: #330099 }
+.xmlverb-text             { color: #000000; font-weight: bold }
+.xmlverb-comment          { color: #006600; font-style: italic }
+.xmlverb-pi-name          { color: #006600; font-style: italic }
+.xmlverb-pi-content       { color: #006666; font-style: italic }
+/*]]>*/
+</style>
+<link rel="stylesheet" type="text/css" href="https://www.w3.org/StyleSheets/TR/W3C-REC.css" />
+</head>
+<body>
+<a id="Top" name="Top"></a><!-- TOP NAVIGATION BAR -->
+<table border="0" width="90%" cellpadding="4" cellspacing="0"
+bgcolor="#EEEEFF" class="navigation" summary="Navigation Bar">
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align="left"><a href="index.html#contents">Table of
+Contents</a></td>
+<td align="left"><a href="slice7.html">Prev</a></td>
+<td align="left"><a href="slice9.html">Next</a></td>
+<td align="left"><a href="#Bottom">Bottom</a></td>
+</tr>
+</table>
+<table border="0" width="90%" cellpadding="4" cellspacing="0"
+bgcolor="#EEEEFF" class="navigation-toc" summary="Navigation TOC">
+<col width="100%" />
+<tr align="left">
+<th>
+<hr />
+Quick Table of Contents
+<hr />
+</th>
+</tr>
+<tr>
+<td>8 <a href="slice8.html">Form Controls</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;8.1 <a href="slice8.html#id2625797">The
+XForms Form Controls Module</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.1 <a
+href="slice8.html#ui-processing">Implementation Requirements Common
+to All Form Controls</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.2 <a
+href="slice8.html#ui-input">The input Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.3 <a
+href="slice8.html#ui-secret">The secret Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.4 <a
+href="slice8.html#ui-textarea">The textarea Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.5 <a
+href="slice8.html#ui-output">The output Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.6 <a
+href="slice8.html#ui-upload">The upload Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.7 <a
+href="slice8.html#ui-range">The range Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.8 <a
+href="slice8.html#ui-button">The trigger Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.9 <a
+href="slice8.html#ui-submit">The submit Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.10 <a
+href="slice8.html#ui-selectMany">The select Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.11 <a
+href="slice8.html#ui-selectOne">The select1 Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;8.2 <a
+href="slice8.html#ui-commonelem">Common Markup for Selection
+Controls</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2.1 <a
+href="slice8.html#ui-common-elements-choices">The choices
+Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2.2 <a
+href="slice8.html#ui-common-elements-item">The item
+Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2.3 <a
+href="slice8.html#ui-common-choices-value">The value
+Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;8.3 <a
+href="slice8.html#ui-commonelems">Additional Elements</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3.1 <a
+href="slice8.html#ui-commonelems-filename">The filename
+Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3.2 <a
+href="slice8.html#ui-commonelems-mediatype">The mediatype
+Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3.3 <a
+href="slice8.html#ui-commonelems-label">The label Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3.4 <a
+href="slice8.html#ui-commonelems-help">The help Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3.5 <a
+href="slice8.html#ui-commonelems-hint">The hint Element</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3.6 <a
+href="slice8.html#ui-common-elements-alert">The alert
+Element</a><br />
+</td>
+</tr>
+</table>
+<div class="div1">
+<h2><a name="controls" id="controls"></a>8 Form Controls</h2>
+<div class="div2">
+<h3><a name="id2625797" id="id2625797"></a>8.1 The XForms Form
+Controls Module</h3>
+<p><a title="form control"
+href="slice13.html#def-form-control">Form controls</a> are declared
+using markup elements, and their behavior refined via markup
+attributes.</p>
+<table border="1"
+summary="listing of XForms Core elements, attributes, and content models">
+<tr>
+<th colspan="1" rowspan="1">Element</th>
+<th colspan="1" rowspan="1">Attributes</th>
+<th colspan="1" rowspan="1">Minimal Content Model</th>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-input">input</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a>, inputmode (xsd:string), incremental (xsd:boolean)</td>
+<td colspan="1" rowspan="1">label, (<a title=""
+href="slice8.html#elems-ui-common">UI Common</a>)*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-secret">secret</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a>, inputmode (xsd:string), incremental (xsd:boolean)</td>
+<td colspan="1" rowspan="1">label, (<a title=""
+href="slice8.html#elems-ui-common">UI Common</a>)*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-textarea">textarea</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a>, inputmode (xsd:string), incremental (xsd:boolean)</td>
+<td colspan="1" rowspan="1">label, (<a title=""
+href="slice8.html#elems-ui-common">UI Common</a>)*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-output">output</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional), appearance
+("full"|"compact"|"minimal"|xforms:QNameButNotNCNAME), value
+(XPathExpression)</td>
+<td colspan="1" rowspan="1">label?</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-upload">upload</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a>, mediatype (xsd:string), incremental (xsd:boolean)</td>
+<td colspan="1" rowspan="1">label, filename?, mediatype?, (<a
+title="" href="slice8.html#elems-ui-common">UI Common</a>)*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-range">range</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a>, start (xsd:string), end (xsd:string), step
+(xsd:string), incremental (xsd:boolean)</td>
+<td colspan="1" rowspan="1">label, (<a title=""
+href="slice8.html#elems-ui-common">UI Common</a>)*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-button">trigger</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional)</td>
+<td colspan="1" rowspan="1">label, (<a title=""
+href="slice8.html#elems-ui-common">UI Common</a>)*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-submit">submit</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional), submission (xsd:IDREF)</td>
+<td colspan="1" rowspan="1">label, (<a title=""
+href="slice8.html#elems-ui-common">UI Common</a>)*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-selectMany">select</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a>, selection ("open" | "closed"), incremental
+(xsd:boolean)</td>
+<td colspan="1" rowspan="1">label, (<a title=""
+href="slice8.html#elems-list-ui-common">List UI Common</a>)+, (<a
+title="" href="slice8.html#elems-ui-common">UI Common</a>)*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-selectOne">select1</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a>, selection ("open" | "closed"), incremental
+(xsd:boolean)</td>
+<td colspan="1" rowspan="1">label, (<a title=""
+href="slice8.html#elems-list-ui-common">List UI Common</a>)+, (<a
+title="" href="slice8.html#elems-ui-common">UI Common</a>)*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-common-elements-choices">choices</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a></td>
+<td colspan="1" rowspan="1">label?, (<a title=""
+href="slice8.html#elems-list-ui-common">List UI Common</a>)+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-common-elements-item">item</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a></td>
+<td colspan="1" rowspan="1">label, value, (<a title=""
+href="slice8.html#elems-ui-common">UI Common</a>)*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-commonelems-filename">filename</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a></td>
+<td colspan="1" rowspan="1">EMPTY</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-commonelems-mediatype">mediatype</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a></td>
+<td colspan="1" rowspan="1">EMPTY</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-common-choices-value">value</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional)</td>
+<td colspan="1" rowspan="1">(PCDATA|ANY)*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-commonelems-label">label</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional), <a title=""
+href="slice3.html#structure-attrs-link">Linking</a></td>
+<td colspan="1" rowspan="1">(PCDATA|(<a title=""
+href="slice8.html#elems-inline">UI Inline</a>))*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-commonelems-help">help</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional), <a title=""
+href="slice3.html#structure-attrs-link">Linking</a></td>
+<td colspan="1" rowspan="1">(PCDATA|(<a title=""
+href="slice8.html#elems-inline">UI Inline</a>))*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-commonelems-hint">hint</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional), <a title=""
+href="slice3.html#structure-attrs-link">Linking</a></td>
+<td colspan="1" rowspan="1">(PCDATA|(<a title=""
+href="slice8.html#elems-inline">UI Inline</a>))*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><a title=""
+href="slice8.html#ui-common-elements-alert">alert</a></td>
+<td colspan="1" rowspan="1"><a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional), <a title=""
+href="slice3.html#structure-attrs-link">Linking</a></td>
+<td colspan="1" rowspan="1">(PCDATA|(<a title=""
+href="slice8.html#elems-inline">UI Inline</a>))*</td>
+</tr>
+</table>
+<p>See also: <a
+href="slice9.html#ui-common-elements-itemset"><b>9.3.3 The itemset
+Element</b></a>.</p>
+<div class="note">
+<p class="prefix"><b>Note:</b></p>
+<p>Unless bound to form controls, instance data nodes are not
+presented to the user; consequently, there is no need for a form
+control corresponding to HTML <code>input type="hidden"</code>.</p>
+</div>
+<p>The following attributes are common to many user-interface
+related XForms elements, here called the <code>UI Common</code>
+attribute group.</p>
+<table border="1" id="attrs-ui-common"
+summary="listing of XForms Common UI attributes">
+<tr>
+<th colspan="1" rowspan="1">Element</th>
+<th colspan="1" rowspan="1">Attributes</th>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">(various)</td>
+<td colspan="1" rowspan="1">appearance
+("full"|"compact"|"minimal"|QName-but-not-NCName)</td>
+</tr>
+</table>
+<dl>
+<dt class="label">appearance</dt>
+<dd>
+<p>Optional attribute to define an appearance hint.</p>
+</dd>
+</dl>
+<div class="note">
+<p class="prefix"><b>Note:</b></p>
+<p>A host language is expected to add attributes such as
+<code>xml:lang</code> as well as an attribute, named
+<code>class</code>, that holds a list of strings that can be
+matched by CSS class selectors.</p>
+<p>Further, a host language must provide a way to indicate overall
+navigation order among form controls and other elements included in
+the host language, as well as keyboard or direct access navigation
+to specific elements. One such proposal is to uses a pair of
+attributes named <code>navindex</code> and <code>accesskey</code>,
+defined as follows:</p>
+<dl>
+<dt class="label">navindex</dt>
+<dd>
+<p>Optional attribute is a non-negative integer in the range of
+0-32767 used to define the navigation sequence. This gives the
+author control over the sequence in which <a title="form control"
+href="slice13.html#def-form-control">form control</a>s are
+traversed. The default navigation order is specified in the chapter
+<a href="slice4.html"><b>4 Processing Model</b></a>.</p>
+</dd>
+<dt class="label">accesskey</dt>
+<dd>
+<p>Optional attribute defines a shortcut for moving the input focus
+directly to a particular <a title="form control"
+href="slice13.html#def-form-control">form control</a>. The value of
+this is a single character which when pressed together with a
+platform specific modifier key (e.g., the <em>alt</em> key) results
+in the focus being set to this <a title="form control"
+href="slice13.html#def-form-control">form control</a>.</p>
+<p>The user agent must provide a means of identifying the
+accesskeys that can be used in a presentation. This may be
+accomplished in different ways by different implementations, for
+example through direct interaction with the application or via the
+user's guide. The accesskey requested by the author might not be
+made available by the player (for example it may not exist on the
+device used, or it may be used by the player itself). Therefore the
+user agent should make the specified key available, but may map the
+accesskey to a different interaction behavior.</p>
+</dd>
+</dl>
+</div>
+<p>Additionally, this module defines the following content
+sets:</p>
+<table border="1"
+summary="listing of XForms Core elements, attributes, and content models">
+<tr>
+<th colspan="1" rowspan="1">Content Set</th>
+<th colspan="1" rowspan="1">Minimal Content Model</th>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" id="elems-ui-common"><b>UI
+Common</b></td>
+<td colspan="1" rowspan="1">(help|hint|alert|<a title=""
+href="slice10.html#action-xmlevents">Action</a>)*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" id="elems-list-ui-common"><b>List UI
+Common</b></td>
+<td colspan="1" rowspan="1">(choices|item|itemset)+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" id="elems-form-controls"><b>Form
+Controls</b></td>
+<td colspan="1" rowspan="1">
+(input|secret|textarea|output|upload|range|trigger|submit|select|select1)*</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" id="elems-inline"><b>UI Inline</b></td>
+<td colspan="1" rowspan="1">(output)*</td>
+</tr>
+</table>
+<p>As shown above, the XML Events module adds the Actions content
+set into the UI Common content set. A host language should add
+inline markup to the Inline content set. When the XForms Extension
+module is present, it too should be included in the UI Common
+content set.</p>
+<div class="div3">
+<h4><a name="ui-processing" id="ui-processing"></a>8.1.1
+Implementation Requirements Common to All Form Controls</h4>
+<p>XForms user interface controls are bound to the underlying
+instance data using <a title="binding"
+href="slice13.html#def-binding">binding</a> attributes as defined
+in the chapter <a href="slice6.html"><b>6 Model Item
+Properties</b></a>.</p>
+<p>Form controls enable accessibility by taking a uniform approach
+to such features as labels, help text, navigation, and keyboard
+shortcuts. Internationalization issues are addressed by following
+the same design principles as in XHTML. All form controls are
+suitable for styling as aural or visual media.</p>
+<p>Form controls encapsulate high-level semantics without
+sacrificing the ability to deliver real implementations. For
+instance, the form control <code>select</code> enables the user to
+<em>select items from a set</em>. These form controls distinguish
+the functional aspects of the underlying control from the
+presentational and behavioral aspects. This separation enables the
+expression of the intent underlying a particular form
+control&mdash;see <a
+href="sliceB.html#aui-conversational-gestures">[AUI97]</a> for a
+definition of such high-level user interaction primitives.</p>
+<p>Form controls when rendered display the underlying data values
+to which they are bound. While the data presented to the user
+through a form control must directly correspond to the bound
+instance data, the display representation is not required to match
+the lexical value. For example, user agents should apply
+appropriate conventions to the display of dates, times, durations
+and numeric values including separator characters.</p>
+<p>All form controls must meet the following implementation
+requirements:</p>
+<ul>
+<li>
+<p>Form controls that write simpleContent to instance data must do
+so exactly as defined by the XForms Action <a
+href="slice10.html#action-setvalue"><b>10.1.9 The setvalue
+Element</b></a></p>
+</li>
+<li>
+<p>All form controls that read simpleContent instance data must do
+so as follows:</p>
+<ul>
+<li>
+<p>Element nodes: if text child nodes are present, returns the
+string-value of the first text child node. Otherwise, returns ""
+(the empty string)</p>
+</li>
+<li>
+<p>Attribute nodes: returns the string-value of the node.</p>
+</li>
+<li>
+<p>Text nodes: returns the string-value of the node.</p>
+</li>
+<li>
+<p>Namespace, processing instruction, comment, and the XPath root
+node: behavior is undefined.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Form controls must distinguish rendering between valid and
+invalid states. Control of this behavior should be made available
+to stylesheets.</p>
+</li>
+<li>
+<p>Form controls must indicate when the bound instance data
+contains a value the form control is not capable of rendering.
+Control of this behavior should be made available to
+stylesheets.</p>
+</li>
+<li>
+<p>Form controls must render upon request an explanation of the
+current state of a form control, including validity and associated
+model item properties. Control of this behavior should be made
+available to stylesheets.</p>
+</li>
+<li>
+<p>Form controls must provide a default explanation for the above
+when no user-specified explanation is available.</p>
+</li>
+</ul>
+<p>Sections in this chapter define the various form controls by
+specifying the following:</p>
+<blockquote>
+<p>Description<br />
+Common Attributes<br />
+Special Attributes<br />
+Examples<br />
+Data Binding Restrictions<br />
+Implementation Requirements</p>
+</blockquote>
+</div>
+<div class="div3">
+<h4><a name="ui-input" id="ui-input"></a>8.1.2 The input
+Element</h4>
+<p>Description: This form control enables free-form data entry.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node UI
+Binding</a></p>
+<p>Special Attributes:</p>
+<dl>
+<dt class="label">inputmode</dt>
+<dd>
+<p>This form control accepts an input mode hint. <a
+href="sliceE.html"><b>E Input Modes</b></a>.</p>
+</dd>
+<dt class="label">incremental</dt>
+<dd>
+<p>when <code>true</code>, this form control will generate
+additional <code>xforms-value-changed</code> events. The default
+value for this attribute is <code>false</code>.</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="exampleOuter">
+<div class="exampleInner">
+<pre>
+&lt;input ref="order/shipTo/street" class="streetAddress"&gt;
+  &lt;label&gt;Street&lt;/label&gt;
+  &lt;hint&gt;Please enter the number and street name&lt;/hint&gt;
+&lt;/input&gt;
+</pre>
+</div>
+</div>
+<p>In the above, the <code>class</code> attribute can be used by a
+style sheet to specify the display size of the form control. Note
+that the constraints on how much text can be input are obtained
+from the underlying XForms Model definition and not from these
+display properties.</p>
+<p>A graphical browser might render the above example as
+follows:</p>
+<p><img src="images/ui-input.png"
+alt="An average-looking text entry form control. The label, 'Street' has been aligned to the left" />
+</p>
+<p>Data Binding Restrictions: Binds to any simpleContent (except
+<code>xsd:base64Binary</code>, <code>xsd:hexBinary</code> or any
+datatype derived from these).</p>
+<p>Implementation Requirements: Must allow entry of a lexical value
+for the bound datatype. Implementations should provide a convenient
+means for entry of datatypes and take into account localization and
+internationalization issues such as representation of numbers. For
+example, an <code>input</code> bound to an instance data node of
+type <code>xsd:date</code> might provide a calendar control to
+enter dates; similarly, an input control bound to of type
+<code>boolean</code> might be rendered as a checkbox.</p>
+<div class="exampleOuter">
+<div class="exampleInner">
+<pre>
+&lt;input ref="order/shipDate"&gt;
+  &lt;label&gt;Ship By&lt;/label&gt;
+  &lt;hint&gt;Please specify the ship date for this order.&lt;/hint&gt;
+&lt;/input&gt;
+</pre>
+</div>
+</div>
+<p>A graphical browser might render the above example as
+follows:</p>
+<p><img src="images/calendar-picker-closed.png"
+alt="A text box for a date control, with a button to open into a calendar." />
+</p>
+<p>The user can type a date into the text edit box, or press the
+button to open a calendar:</p>
+<p><img src="images/calendar-picker-open.png"
+alt="A calendar picker graphical widget." /></p>
+</div>
+<div class="div3">
+<h4><a name="ui-secret" id="ui-secret"></a>8.1.3 The secret
+Element</h4>
+<p>Description: This form control is used to provide the user with
+the ability to supply information to the system in a manner that
+makes it difficult for someone, other than the user, who may be
+observing the process to discern the value that is being supplied.
+A common use is for password entry.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a></p>
+<p>Special Attributes:</p>
+<dl>
+<dt class="label">inputmode</dt>
+<dd>
+<p>This form control accepts an input mode hint. <a
+href="sliceE.html"><b>E Input Modes</b></a>.</p>
+</dd>
+<dt class="label">incremental</dt>
+<dd>
+<p>when <code>true</code>, this form control will generate
+additional <code>xforms-value-changed</code> events. The default
+value for this attribute is <code>false</code>.</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="exampleOuter">
+<div class="exampleHead">Example: Password Entry</div>
+<div class="exampleInner">
+<pre>
+&lt;secret ref="/login/password"&gt;
+  &lt;label&gt;Password&lt;/label&gt;
+  &lt;hint&gt;The password you enter will not be displayed.&lt;/hint&gt;
+&lt;/secret&gt;
+</pre>
+</div>
+</div>
+<p>A graphical browser might render this form control as
+follows:</p>
+<p><img src="images/ui-secret-with-hint.png"
+alt="A password entry form control, with '*' characters where the text would be expected and a hint box displaying hint text." />
+</p>
+<p>Data Binding Restrictions: Identical to <code>input</code>.</p>
+<p>Implementation Requirements: Implementations, including
+accessibility aids, must obscure the value being entered into this
+form control. One possible approach would be to render a "*" or
+similar character instead of the actual characters entered. Note
+that this provides only a casual level of security; truly sensitive
+information will require additional security measures outside the
+scope of XForms.</p>
+</div>
+<div class="div3">
+<h4><a name="ui-textarea" id="ui-textarea"></a>8.1.4 The textarea
+Element</h4>
+<p>Description: This form control enables free-form data entry and
+is intended for use in entering multiline content, e.g., the body
+of an email message.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a></p>
+<p>Special Attributes:</p>
+<dl>
+<dt class="label">inputmode</dt>
+<dd>
+<p>This form control accepts an input mode hint. <a
+href="sliceE.html"><b>E Input Modes</b></a>.</p>
+</dd>
+<dt class="label">incremental</dt>
+<dd>
+<p>when <code>true</code>, this form control will generate
+additional <code>xforms-value-changed</code> events. The default
+value for this attribute is <code>false</code>.</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="exampleOuter">
+<div class="exampleHead">Example: Email Message Body</div>
+<div class="exampleInner">
+<pre>
+&lt;textarea ref="message/body" class="messageBody"&gt;
+  &lt;label&gt;Message Body&lt;/label&gt;
+  &lt;hint&gt;Enter the text of your message here&lt;/hint&gt;
+&lt;/textarea&gt;
+</pre>
+</div>
+</div>
+<p>In the above, the <code>class</code> attribute can be used by a
+style sheet to specify the display size of the form control. Note
+that the constraints on how much text can be input are obtained
+from the underlying XForms Model definition and not from these
+display properties.</p>
+<p>A graphical browser might render the above example as
+follows:</p>
+<p><img src="images/ui-textarea.png"
+alt="A larger-than-average text entry form control. The title, 'Message Body:' provides an additional hint that large amounts of text are allowed here." />
+</p>
+<p>Data Binding Restrictions: Binds to <code>xsd:string</code> or
+any derived simpleContent.</p>
+<p>Implementation Requirements: Must allow entry of a lexical value
+for the bound datatype, including multiple lines of text.</p>
+</div>
+<div class="div3">
+<h4><a name="ui-output" id="ui-output"></a>8.1.5 The output
+Element</h4>
+<p>Description: This form control renders a value from the instance
+data, but provides no means for entering or changing data. It is
+used to display values from the instance, and is treated as
+<code>display:inline</code> for purposes of layout. Element
+<code>output</code> can be used to display the value at a
+particular location in the instance by using a binding expression;
+it can also be used to display the result of evaluating an XPath
+expression by specifying the XPath expression to be evaluated via
+attribute <code>value</code> instead of <code>ref</code>. Note that
+attributes <code>ref</code> and <code>value</code> on element
+<code>output</code> are mutually exclusive.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional)</p>
+<p>Special Attributes:</p>
+<dl>
+<dt class="label">appearance</dt>
+<dd>
+<p>This form control does not use the UI Common attribute group,
+but nevertheless still contains an appearance attribute, as defined
+above.</p>
+</dd>
+<dt class="label">value</dt>
+<dd>
+<p>An XPath expression to be evaluated. The result of the
+evaluation is rendered by the form control. If binding attributes
+are present to select a node, this attribute has no effect. The
+XPath expression is re-evaluated whenever there is a change in any
+node that the expression refers to.</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="exampleOuter">
+<div class="exampleHead">Example: Explanatory Message</div>
+<div class="exampleInner">
+<pre>
+I charged you -
+&lt;output ref="order/totalPrice"/&gt;
+- and here is why:
+</pre>
+</div>
+</div>
+<p>A graphical browser might render an output form control as
+follows:</p>
+<p><img src="images/ui-output.png"
+alt="Average-looking text, reading 'I charged you 100.0 - and here is why:'" />
+</p>
+<p>Data Binding Restrictions: Binds to any simpleContent.</p>
+<p>Implementation Requirements: Must allow display of a lexical
+value for the bound datatype. Implementations should provide a
+convenient means for display of datatypes and take into account
+localization and internationalization issues such as representation
+of numbers.</p>
+</div>
+<div class="div3">
+<h4><a name="ui-upload" id="ui-upload"></a>8.1.6 The upload
+Element</h4>
+<p>Description: This form control enables the common feature found
+on Web sites to upload a file from the local file system, as well
+as accepting input from various devices including microphones,
+pens, and digital cameras.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a></p>
+<p>Special Attributes:</p>
+<dl>
+<dt class="label">mediatype</dt>
+<dd>
+<p>Space-separated list of suggested media types, used by the
+XForms Processor to determine the possible sources of data to
+upload.</p>
+</dd>
+<dt class="label">incremental</dt>
+<dd>
+<p>When <code>true</code>, this form control will generate
+additional <code>xforms-value-changed</code> events. The default
+for this form control is <code>false</code>.</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="exampleOuter">
+<div class="exampleHead">Example: Uploading An Image</div>
+<div class="exampleInner">
+<pre>
+&lt;upload ref="mail/attachment" mediatype="image/*"&gt;
+  &lt;label&gt;Select image:&lt;/label&gt;
+  &lt;filename ref="@filename" /&gt;
+  &lt;mediatype ref="@mediatype" /&gt;
+&lt;/upload&gt;
+</pre>
+</div>
+</div>
+<p>A graphical browser might render this form control as
+follows:</p>
+<p><img src="images/ui-upload.png"
+alt="A drop-down box; main display reads 'Select Image:' with a cute icon. The drop-down itself has three items: (icon)-From Scanner or Camera...; (icon)-Scribble...; Browse..." />
+</p>
+<p>Implementation Requirements:</p>
+<ul>
+<li>
+<p>On activation, if child element <code>filename</code> is present
+and a filename is available, <code>upload</code> places the
+filename of the data to upload in the instance at the node
+indicated by the binding attributes on child element
+<code>filename</code>.</p>
+</li>
+<li>
+<p>On activation, if child element <code>mediatype</code> is
+present and a mediatype is available, <code>upload</code> places
+the mediatype of the data to upload in the instance at the node
+indicated by the binding attributes on child element
+<code>mediatype</code>.</p>
+</li>
+</ul>
+<p>Data Binding Restrictions: This form control can only be bound
+to datatypes <code>xsd:anyURI</code>, <code>xsd:base64Binary</code>
+or <code>xsd:hexBinary</code>, or types derived by restriction from
+these.</p>
+<p>Implementation Requirements: For base64Binary or hexBinary data
+binding:</p>
+<ul>
+<li>
+<p>When bound to an instance data node of type
+<code>xsd:base64binary</code>, <code>xsd:hexBinary</code>, or a
+type derived by restriction thereof, on activation
+<code>upload</code> places the binary content in the content of the
+node with the indicated encoding.</p>
+</li>
+</ul>
+<p>Implementation Requirements: For anyURI data binding:</p>
+<ul>
+<li>
+<p>When bound to an instance data node of type
+<code>xsd:anyURI</code> (or a type derived by restriction thereof),
+on activation <code>upload</code> places a URI in the content of
+the node.</p>
+<p>For security reasons, the XForms Processor must not dereference
+the URI bound to this form control without explicit user
+permission.</p>
+<div class="note">
+<p class="prefix"><b>Note:</b></p>
+<p>Implementors note that <code>upload</code> must associate the
+binary content, mediatype, and filename with that URI for <a
+href="slice11.html#serialize-multipart"><b>11.4 Serialization as
+multipart/related</b></a> and <a
+href="slice11.html#serialize-form-data"><b>11.5 Serialization as
+multipart/form-data</b></a> serialization.</p>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<p>Implementations with a file system should support <em>file
+upload</em>&mdash;selecting a specific file. The types of files
+presented by default should reflect the mediatype specified by
+attribute <code>mediatype</code>, for example defaulting to only
+audio file types in the file dialog when the mediatype is
+"audio/*".</p>
+</li>
+</ul>
+<p>Implementation Requirements: For all data bindings:</p>
+<ul>
+<li>
+<p>Implementations with specific pen/digitizer hardware should (and
+implementations with other pointing devices may) support
+<em>scribble</em>&mdash;allowing in-place creation of pen-based
+data.</p>
+</li>
+<li>
+<p>Implementations with specific audio recording capabilities
+should support <em>record audio</em>&mdash;in-place recording of an
+audio clip.</p>
+</li>
+<li>
+<p>Implementations with a digital camera, scanner interface or
+screen capture should support <em>acquire image</em>&mdash;in-place
+upload of images from an attached device.</p>
+</li>
+<li>
+<p>Implementations with video recording capability should provide a
+<em>record video</em> option.</p>
+</li>
+<li>
+<p>Implementations with 3d capabilities should provide a 3d
+interface option.</p>
+</li>
+<li>
+<p>Implementations may provide proprietary implementations (for
+example, a mediatype of <code>text/rtf</code> could invoke an edit
+window with a proprietary word processing application)</p>
+</li>
+<li>
+<p>Implementations are encouraged to support other input devices
+not mentioned here.</p>
+</li>
+<li>
+<p>Implementations which cannot support upload for the given
+mediatype must make this apparent to the user.</p>
+</li>
+</ul>
+<p>See the child elements <code>filename</code> <a
+href="slice8.html#ui-commonelems-filename"><b>8.3.1 The filename
+Element</b></a> and <code>mediatype</code> <a
+href="slice8.html#ui-commonelems-mediatype"><b>8.3.2 The mediatype
+Element</b></a>.</p>
+</div>
+<div class="div3">
+<h4><a name="ui-range" id="ui-range"></a>8.1.7 The range
+Element</h4>
+<p>Description: This form control allows selection from a
+sequential range of values.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a></p>
+<p>Special Attributes:</p>
+<dl>
+<dt class="label">start</dt>
+<dd>
+<p>Optional hint for the lexical starting bound for the
+range&mdash;a legal value for the underlying data. If provided,
+this value is used to further refine the constraints specified by
+the underlying model.</p>
+</dd>
+<dt class="label">end</dt>
+<dd>
+<p>Optional hint for the ending bound for the range&mdash;a legal
+value for the underlying data. If provided, this value is used to
+further refine the constraints specified by the underlying
+model.</p>
+</dd>
+<dt class="label">step</dt>
+<dd>
+<p>Optional value to use for incrementing or decrementing the
+value. Must be of a type capable of expressing the difference
+between two legal values of the underlying data.</p>
+</dd>
+<dt class="label">incremental</dt>
+<dd>
+<p>When <code>true</code>, this form control will generate
+additional <code>xforms-value-changed</code> events. The default
+for this form control is <code>false</code>.</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="exampleOuter">
+<div class="exampleHead">Example: Picking From A Range</div>
+<div class="exampleInner">
+<pre>
+&lt;range ref="/stats/balance" start="-2.0" end="2.0" step="0.5"&gt;
+  &lt;label&gt;Balance&lt;/label&gt;
+&lt;/range&gt;
+</pre>
+</div>
+</div>
+<p>A graphical browser might render this as follows:</p>
+<p><img src="images/ui-range.png"
+alt="a slider control, from -2 to +2" /></p>
+<p>Data Binding Restrictions: Binds only the following list of
+datatypes, or datatypes derived by restriction from those in the
+list: <code>xsd:duration</code>, <code>xsd:date</code>,
+<code>xsd:time</code>, <code>xsd:dateTime</code>,
+<code>xsd:gYearMonth</code>, <code>xsd:gYear</code>,
+<code>xsd:gMonthDay</code>, <code>xsd:gDay</code>,
+<code>xsd:gMonth</code>, <code>xsd:float</code>,
+<code>xsd:decimal</code>, <code>xsd:double</code>.</p>
+<p>Implementation Requirements: Must allow input of a value
+corresponding to the bound datatype. Implementations should inform
+the user of the upper and lower bounds, as well as the step size,
+if any. If the instance data value is outside the upper or lower
+bounds, this form control must indicate an out-of-range condition.
+In graphical environments, this form control may be rendered as a
+"slider" or "rotary control".</p>
+<p>Notice that the attributes of this element encapsulate
+sufficient metadata that in conjunction with the type information
+available from the XForms Model proves sufficient to produce
+meaningful prompts when using modalities such as speech, e.g., when
+using an accessibility aid. Thus, in the example below, an aural
+user agent might speak a prompt of the form <em>Please pick a date
+in the range January 1, 2001 through December 31, 2001.</em></p>
+<p>In the event of overlapping restrictions between the underlying
+datatype and the <code>start</code> and <code>end</code> hints, the
+most restrictive range should be used.</p>
+<p>Example:</p>
+<div class="exampleOuter">
+<div class="exampleHead">Example: Picking a date from a range</div>
+<div class="exampleInner">
+<pre>
+&lt;range ref="/order/shipDate" start="2001-01-01" end="2001-12-31"&gt;
+  &lt;label&gt;Ship Date&lt;/label&gt;
+&lt;/range&gt;
+</pre>
+</div>
+</div>
+</div>
+<div class="div3">
+<h4><a name="ui-button" id="ui-button"></a>8.1.8 The trigger
+Element</h4>
+<p>Description: This form control is similar to the HTML element
+<code>button</code> and allows for user-triggered actions. This
+form control may also be used to construct other custom form
+controls.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional)</p>
+<p>Example:</p>
+<div class="exampleOuter">
+<div class="exampleHead">Example: Simple Trigger</div>
+<div class="exampleInner">
+<pre>
+&lt;trigger&gt;
+  &lt;label&gt;Click here&lt;/label&gt;
+&lt;/trigger&gt;
+</pre>
+</div>
+</div>
+<p>Data Binding Restrictions: Binds to any node. This form control
+does not directly interact with form data, but is affected by model
+item properties of the bound node, thus binding attributes are not
+required.</p>
+<p>Implementation Requirements: The user agent must provide a means
+to generate an <code>DOMActivate</code> event on the form control.
+Graphical implementations might render this form control as a
+push-button with the label on the button face. Style sheets can be
+used to style this form control as an image, hyperlink, or other
+presentation.</p>
+</div>
+<div class="div3">
+<h4><a name="ui-submit" id="ui-submit"></a>8.1.9 The submit
+Element</h4>
+<p>Description: This form control initiates submission of all or
+part of the instance data to which it is bound.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional)</p>
+<p>Special Attributes:</p>
+<dl>
+<dt class="label">submission</dt>
+<dd>
+<p>Required reference to element <code>submission</code>.</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="exampleOuter">
+<div class="exampleHead">Example: Submit</div>
+<div class="exampleInner">
+<pre>
+&lt;submit submission="timecard"&gt;
+  &lt;label&gt;Submit Timecard&lt;/label&gt;
+&lt;/submit&gt;
+</pre>
+</div>
+</div>
+<p>Data Binding Restrictions: Binds to any node. This form control
+does not directly interact with form data, but is affected by model
+item properties of the bound node, thus binding attributes are not
+required.</p>
+<p>Implementation Requirements: Upon receiving event
+<code>DOMActivate</code>, this form control dispatches event
+<code>xforms-submit</code> to the <code>submission</code> element
+specified by required attribute <code>submission</code>. Upon
+activation, this control must become unavailable for further
+activations until the submit process concludes with either an
+<code>xforms-submit-done</code> or <code>xforms-submit-error</code>
+event.</p>
+</div>
+<div class="div3">
+<h4><a name="ui-selectMany" id="ui-selectMany"></a>8.1.10 The
+select Element</h4>
+<p>Description: This form control allows the user to make multiple
+selections from a set of choices.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a></p>
+<p>Special Attributes:</p>
+<dl>
+<dt class="label">selection</dt>
+<dd>
+<p>Optional attribute determining whether free entry is allowed in
+the list. Default is "closed".</p>
+</dd>
+<dt class="label">incremental</dt>
+<dd>
+<p>When <code>true</code>, this form control will generate
+additional <code>xforms-value-changed</code> events. The default
+for this form control is <code>true</code>.</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="exampleOuter">
+<div class="exampleHead">Example: Selecting Ice Cream Flavor</div>
+<div class="exampleInner">
+<pre>
+&lt;select ref="my:flavors"&gt;
+  &lt;label&gt;Flavors&lt;/label&gt;
+  &lt;choices&gt;
+    &lt;item&gt;
+      &lt;label&gt;Vanilla&lt;/label&gt;
+      &lt;value&gt;v&lt;/value&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;label&gt;Strawberry&lt;/label&gt;
+      &lt;value&gt;s&lt;/value&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+      &lt;label&gt;Chocolate&lt;/label&gt;
+      &lt;value&gt;c&lt;/value&gt;
+    &lt;/item&gt;
+  &lt;/choices&gt;
+&lt;/select&gt;
+</pre>
+</div>
+</div>
+<p>In the above example, more than one flavor can be selected.</p>
+<p>A graphical browser might render form control
+<code>select</code> as any of the following:</p>
+<table border="1" summary="Selection controls">
+<tr>
+<th colspan="1" rowspan="1"><code>appearance="full"</code></th>
+<th colspan="1" rowspan="1"><code>appearance="compact"</code></th>
+<th colspan="1" rowspan="1"><code>appearance="minimal"</code></th>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><img
+src="images/ui-selectMany-checkbox.png"
+alt="checkboxes, Vanilla, Strawberry, and Chocolate; Strawberry and Chocolate selected" />
+</td>
+<td colspan="1" rowspan="1"><img
+src="images/ui-selectMany-listbox.png"
+alt="list-box; Vanilla, Strawberry, and Chocolate visible; Strawberry and Chocolate selected" />
+</td>
+<td colspan="1" rowspan="1"><img src="images/menu.png"
+alt="A popup menu with three choices, 'Strawberry', 'Vanilla', and 'Chocolate'. The last two are checked." />
+</td>
+</tr>
+</table>
+<p>Typically, a style sheet would be used to determine the exact
+appearance of form controls, though a means is provided to suggest
+an appearance through attribute <code>appearance</code>. The value
+of the attribute consists of one of the following values:</p>
+<blockquote>
+<p>"full": all choices should be rendered at all times.<br />
+"compact": a fixed number of choices should be rendered, with
+scrolling facilities as needed<br />
+"minimal": a minimum number of choices should be rendered, with a
+facility to temporarily render additional choices</p>
+</blockquote>
+<p>Data Binding Restrictions: any simpleContent capable of holding
+a sequence. The restriction to binding simpleContent exists when
+the choices are authored as part of the user interface control as
+shown in this section. Element <code>itemset</code> for creating
+dynamic selections described in <a
+href="slice9.html#ui-common-elements-itemset"><b>9.3.3 The itemset
+Element</b></a> allows the available choices to be obtained from an
+XForms Model, and when using that construct, the data binding
+restriction to simpleContent is relaxed.</p>
+<div class="note">
+<p class="prefix"><b>Note:</b></p>
+<p>A limitation of the XML Schema list datatypes is that white
+space characters in the storage values (the <code>value</code>
+element) are always interpreted as separators between individual
+data values. Therefore, authors should avoid using white space
+characters within storage values with list simpleContent.</p>
+<div class="exampleOuter">
+<div class="exampleHead">Example: Incorrect Type Declaration</div>
+<div class="exampleInner">
+<pre>
+&lt;item&gt;
+  &lt;value&gt;United States of America&lt;/value&gt;
+  ...
+&lt;/item&gt;
+</pre>
+</div>
+</div>
+<p>When selected, this item would introduce not one but four
+additional selection values: "America", "of", "States", and
+"United".</p>
+</div>
+<p>Implementation Requirements: The label for each choice must be
+presented, allowing at any number of selections, possibly none.
+This form control stores the values corresponding to the selected
+choices as a space separated list in the location addressed by
+attribute <code>ref</code>. The values to be stored are either
+directly specified as the contents of element <code>value</code>,
+or specified indirectly through binding attributes on element
+<code>value</code>.</p>
+<p>Note that the datatype bound to this form control may include a
+non-enumerated value space, e.g., <code>xsd:string</code>, or a
+union of a enumeration and a non-enumerated datatype (called an
+open enumeration). In this case, control <code>select</code> may
+have attribute <code>selection="open"</code>. The form control
+should then allow free data entry, as described in <a
+href="slice8.html#ui-input"><b>8.1.2 The input Element</b></a>. The
+form control may permit multiple values to be entered through free
+entry.</p>
+<p>For closed selections: If the initial instance value matches the
+storage value of one or more of the given items, those items are
+selected. If there is no match, no items are initially selected. If
+any selected values do not have a choice with a matching storage
+value, the form control must indicate an out-of-range
+condition.</p>
+<p>For open selections: If the initial instance values match the
+storage value specified by one or more of the items, the all such
+matching items are selected. If the initial instance values do not
+match the storage value specified by one or more of the items, all
+such non-matching items are included as selected values, as if
+entered through free entry. Free entry text is handled the same as
+form control <code>input</code> <a
+href="slice8.html#ui-input"><b>8.1.2 The input Element</b></a>,
+possibly in multiplicity. When using dynamic selections with
+complexTypes, open selection has no effect.</p>
+<p>Implementation Hints: An accessibility aid might allow the user
+to browse through the available choices and leverage the grouping
+of choices in the markup to provide enhanced navigation through
+long lists of choices.</p>
+</div>
+<div class="div3">
+<h4><a name="ui-selectOne" id="ui-selectOne"></a>8.1.11 The select1
+Element</h4>
+<p>Description: This form control allows the user to make a single
+selection from multiple choices.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice8.html#attrs-ui-common">UI Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a></p>
+<p>Special Attributes:</p>
+<dl>
+<dt class="label">selection</dt>
+<dd>
+<p>Optional attribute determining whether free entry is allowed in
+the list. Default is "closed".</p>
+</dd>
+<dt class="label">incremental</dt>
+<dd>
+<p>When <code>true</code>, this form control will generate
+additional <code>xforms-value-changed</code> events. The default
+for this form control is <code>true</code>.</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="exampleOuter">
+<div class="exampleHead">Example: Pick A Flavor</div>
+<div class="exampleInner">
+<pre>
+&lt;select1 ref="my:flavor"&gt;
+  &lt;label&gt;Flavor&lt;/label&gt;
+  &lt;item&gt;
+    &lt;label&gt;Vanilla&lt;/label&gt;
+    &lt;value&gt;v&lt;/value&gt;
+  &lt;/item&gt;
+  &lt;item&gt;
+    &lt;label&gt;Strawberry&lt;/label&gt;
+    &lt;value&gt;s&lt;/value&gt;
+  &lt;/item&gt;
+  &lt;item&gt;
+    &lt;label&gt;Chocolate&lt;/label&gt;
+    &lt;value&gt;c&lt;/value&gt;
+  &lt;/item&gt;
+&lt;/select1&gt;
+</pre>
+</div>
+</div>
+<p>In the above example, selecting one of the choices will result
+in the associated value given by element <code>value</code> on the
+selected item being set in the underlying instance data at the
+location <code>icecream/flavor</code>.</p>
+<p>A graphical browser might render this form control as any of the
+following:</p>
+<table summary="Selection controls">
+<tr>
+<th colspan="1" rowspan="1">appearance="full"</th>
+<th colspan="1" rowspan="1">appearance="compact"</th>
+<th colspan="1" rowspan="1">appearance="minimal"</th>
+</tr>
+<tr>
+<td colspan="1" rowspan="1"><img
+src="images/ui-selectOne-radio.png"
+alt="radio buttons, Vanilla, Strawberry, Chocolate; Strawberry is selected" />
+</td>
+<td colspan="1" rowspan="1"><img
+src="images/ui-selectOne-listbox.png"
+alt="a list control, Vanilla, Strawberry, and Chocolate visible; Strawberry selected" />
+</td>
+<td colspan="1" rowspan="1"><img
+src="images/ui-selectOne-pulldown.png"
+alt="a collapsed pull-down list; Vanilla is selected" /></td>
+</tr>
+</table>
+<p>Data Binding Restrictions: Binds to any simpleContent. The
+restriction to binding simpleContent exists when the choices are
+authored as part of the user interface control as shown in this
+section. Element <code>itemset</code> for creating dynamic
+selections described in <a
+href="slice9.html#ui-common-elements-itemset"><b>9.3.3 The itemset
+Element</b></a> allows the available choices to be obtained from an
+XForms Model, and when using that construct, the data binding
+restriction to simpleContent is relaxed.</p>
+<p>Implementation Requirements: The label for each choice must be
+presented, allowing at all times exactly one selection. This form
+control stores the value corresponding to the selected choice in
+the location addressed by attribute <code>ref</code>. The value to
+be stored is either directly specified as the contents of element
+<code>value</code>, or specified indirectly through binding
+attributes on element <code>value</code>.</p>
+<p>Note that the datatype bound to this form control may include a
+non-enumerated value space, e.g., <code>xsd:string</code>, or a
+union of a enumeration and a non-enumerated datatype (called an
+open enumeration). In this case, control <code>select1</code> may
+have attribute <code>selection="open"</code>. The form control
+should then allow free data entry, as described in <a
+href="slice8.html#ui-input"><b>8.1.2 The input Element</b></a>.</p>
+<p>For closed selections: If the initial instance value matches the
+storage value of one of the given items, that item is selected. If
+there is no match, the form control must indicate an out-of-range
+condition..</p>
+<p>For open selections: If the initial instance value matches the
+storage value specified by one of the items, the first such
+matching item is selected. Otherwise, the selected value is the
+initial lexical value. Free entry text is handled the same as form
+control <code>input</code> <a href="slice8.html#ui-input"><b>8.1.2
+The input Element</b></a>.</p>
+<p>User interfaces may choose to render this form control as a
+pulldown list or group of radio buttons, among other options. The
+<code>appearance</code> attribute offers a hint as to which
+rendering might be most appropriate, although any styling
+information (such as CSS) should take precedence.</p>
+</div>
+</div>
+<div class="div2">
+<h3><a name="ui-commonelem" id="ui-commonelem"></a>8.2 Common
+Markup for Selection Controls</h3>
+<div class="div3">
+<h4><a name="ui-common-elements-choices"
+id="ui-common-elements-choices"></a>8.2.1 The choices Element</h4>
+<p>This element is used within selection form controls to group
+available choices. This provides the same functionality as element
+<code>optgroup</code> in HTML.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a></p>
+</div>
+<div class="div3">
+<h4><a name="ui-common-elements-item"
+id="ui-common-elements-item"></a>8.2.2 The item Element</h4>
+<p>This element specifies the storage value and label to represent
+an item in a list. It is found within elements <code>select1</code>
+and <code>select</code>, or grouped in element
+<code>choices</code>.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a></p>
+</div>
+<div class="div3">
+<h4><a name="ui-common-choices-value"
+id="ui-common-choices-value"></a>8.2.3 The value Element</h4>
+<p>This element provides a storage value to be used when an
+<code>item</code> is selected.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional)</p>
+<p>Data Binding Restriction: All lexical values must be valid
+according to the datatype bound to the selection control.</p>
+<p>If inline content and a <code>ref</code> attribute are both
+specified, the <code>ref</code> attribute is used.</p>
+</div>
+</div>
+<div class="div2">
+<h3><a name="ui-commonelems" id="ui-commonelems"></a>8.3 Additional
+Elements</h3>
+<p>The child elements detailed below provide the ability to attach
+metadata to form controls.</p>
+<p>Instead of supplying such metadata e.g., the label for a form
+control as inline content of the contained element
+<code>label</code>, the metadata can be pointed to by using a
+simple linking attribute <code>src</code> on these elements. Notice
+that systematic use of this feature can be exploited in
+internationalizing XForms user interfaces by:</p>
+<ul>
+<li>
+<p>Factoring all human readable messages to a separate resource XML
+file.</p>
+</li>
+<li>
+<p>Using URIs into this XML resource bundle within individual
+<code>label</code> elements</p>
+</li>
+<li>
+<p>Finally, an XForms implementation could use content negotiation
+to obtain the appropriate XML resource bundle, e.g., based on the
+<code>accept-language</code> headers from the client, to serve up
+the user interface with messages localized to the client's
+locale.</p>
+</li>
+</ul>
+<div class="div3">
+<h4><a name="ui-commonelems-filename"
+id="ui-commonelems-filename"></a>8.3.1 The filename Element</h4>
+<p>Binding attributes on optional element <code>filename</code>
+specify the location in the instance for the parent element
+<code>upload</code>, when activated, to place the filename for the
+chosen binary resource. For security reasons, <code>upload</code>
+must not take action due to any existing value of the node.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a></p>
+<p>In the following example, the user is prompted to select an
+image. When activated, <code>upload</code> places in
+<code>mail/attachment</code> either the binary data of the image or
+a URI for it, depending on the type declared for the
+<code>mail/attachment</code>. The filename, perhaps
+"<code>me.jpg</code>", is placed in the attribute node
+<code>mail/attachment@filename</code>, and the mediatype, perhaps
+"<code>image/jpeg</code>" in the attribute node
+<code>mail/attachment@mediatype</code>.</p>
+<p>Example:</p>
+<div class="exampleOuter">
+<div class="exampleInner">
+<pre>
+&lt;upload ref="mail/attachment" mediatype="image/*"&gt;
+  &lt;label&gt;Select an image to attach&lt;/label&gt;
+  &lt;filename ref="@filename"/&gt;
+  &lt;mediatype ref="@mediatype"/&gt;
+&lt;/upload&gt;
+</pre>
+</div>
+</div>
+</div>
+<div class="div3">
+<h4><a name="ui-commonelems-mediatype"
+id="ui-commonelems-mediatype"></a>8.3.2 The mediatype Element</h4>
+<p>Binding attributes on optional element <code>mediatype</code>
+specify the location in the instance for the parent element
+<code>upload</code>, when activated, to place the mediatype of the
+chosen binary resource, if available.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a></p>
+</div>
+<div class="div3">
+<h4><a name="ui-commonelems-label"
+id="ui-commonelems-label"></a>8.3.3 The label Element</h4>
+<p>This required element labels the containing form control with a
+descriptive label. Additionally, the label makes it possible for
+someone who can't see the form control to obtain a short
+description while navigating between form controls.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional), <a title=""
+href="slice3.html#structure-attrs-link">Linking</a></p>
+<p>Special Attributes:</p>
+<dl>
+<dt class="label">Linking Attributes</dt>
+<dd>
+<p>Link to external label. If the link traversal fails, it is
+treated as an error (<a href="slice4.html#evt-linkError"><b>4.5.3
+The xforms-link-error Event</b></a>).</p>
+</dd>
+</dl>
+<p>The label specified can exist in instance data, in a remote
+document, or as inline text. If more than one source of label is
+specified in this element, the order of precedence is: single node
+binding attributes, linking attributes, inline text.</p>
+<p>An accessibility aid might speak the metadata encapsulated here
+when the containing form control gets focus.</p>
+</div>
+<div class="div3">
+<h4><a name="ui-commonelems-help"
+id="ui-commonelems-help"></a>8.3.4 The help Element</h4>
+<p>The optional element <code>help</code> provides a convenient way
+to attach help information to a form control. This is equivalent to
+a <code>&lt;message level="modeless" ev:event="xforms-help"
+ev:propagate="stop&gt;</code>.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional), <a title=""
+href="slice3.html#structure-attrs-link">Linking</a></p>
+<p>Special Attributes:</p>
+<dl>
+<dt class="label">Linking Attributes</dt>
+<dd>
+<p>Link to external help information. If the link traversal fails,
+it is treated as an error (<a
+href="slice4.html#evt-linkError"><b>4.5.3 The xforms-link-error
+Event</b></a>).</p>
+</dd>
+</dl>
+<p>The message specified can exist in instance data, in a remote
+document, or as inline text. If more than one source of message is
+specified in this element, the order of precedence is: single node
+binding attributes, linking attributes, inline text.</p>
+<p>An example of this element is at <a
+href="slice10.html#action-info"><b>10.1.12 The message
+Element</b></a>.</p>
+</div>
+<div class="div3">
+<h4><a name="ui-commonelems-hint"
+id="ui-commonelems-hint"></a>8.3.5 The hint Element</h4>
+<p>The optional element <code>hint</code> provides a convenient way
+to attach hint information to a form control. This is equivalent to
+a handler for event <code>xforms-hint</code> that responds with a
+<code>&lt;message level="ephemeral"&gt;</code>.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional), <a title=""
+href="slice3.html#structure-attrs-link">Linking</a></p>
+<p>Special Attributes:</p>
+<dl>
+<dt class="label">Linking Attributes</dt>
+<dd>
+<p>Link to external hint. If the link traversal fails, it is
+treated as an error (<a href="slice4.html#evt-linkError"><b>4.5.3
+The xforms-link-error Event</b></a>).</p>
+</dd>
+</dl>
+<p>The message specified can exist in instance data, in a remote
+document, or as inline text. If more than one source of message is
+specified in this element, the order of precedence is: single node
+binding attributes, linking attributes, inline text.</p>
+<p>An example of this element is at <a
+href="slice10.html#action-info"><b>10.1.12 The message
+Element</b></a>.</p>
+</div>
+<div class="div3">
+<h4><a name="ui-common-elements-alert"
+id="ui-common-elements-alert"></a>8.3.6 The alert Element</h4>
+<p>The optional element <code>alert</code> provides a convenient
+way to attach alert or error information to a form control.
+Rendering of this element is implementation-defined, and there is
+no default <code>level</code> such as <code>modal</code> or
+<code>ephemeral</code> for the displayed message.</p>
+<p>Common Attributes: <a title=""
+href="slice3.html#structure-attrs-common">Common</a>, <a title=""
+href="slice3.html#structure-attrs-single-node">Single Node
+Binding</a> (optional), <a title=""
+href="slice3.html#structure-attrs-link">Linking</a></p>
+<p>Special Attributes:</p>
+<dl>
+<dt class="label">Linking Attributes</dt>
+<dd>
+<p>Link to external alert. If the link traversal fails, it is
+treated as an error (<a href="slice4.html#evt-linkError"><b>4.5.3
+The xforms-link-error Event</b></a>).</p>
+</dd>
+</dl>
+<p>The message specified can exist in instance data, in a remote
+document, or as inline text. If more than one source of message is
+specified in this element, the order of precedence is: single node
+binding attributes, linking attributes, inline text. See <a
+href="sliceF.html"><b>F XForms and Styling</b></a> for examples to
+see how this might be presented to the user.</p>
+</div>
+</div>
+</div>
+<a id="Bottom" name="Bottom"></a><!-- BOTTOM NAVIGATION BAR -->
+<table border="0" width="90%" cellpadding="4" cellspacing="0"
+bgcolor="#EEEEFF" class="navigation" summary="Navigation">
+<col width="50%" />
+<col width="50%" />
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align="left"><a href="index.html#contents">Table of
+Contents</a></td>
+<td align="left"><a href="#Top">Top</a></td>
+</tr>
+</table>
+</body>
+</html>

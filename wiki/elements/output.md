@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、計算結果またはuser actionの結果を表す。[一次定義](https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、計算結果またはuser actionの結果を表す。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -42,15 +42,15 @@ XForms `output`を含む機能集合 → 2003年HTML forms案 `output` → Web F
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2000-12-19 | *XForms 1.0: XForms User Interface* | W3C Working Draft | 非editableなdata value表示用`output` form control | https://www.w3.org/TR/2000/WD-xforms-20001219/ui.html#N1052 | 2026-08-10 |
-| 2003-09 | *XHTML Module: Extensions to Form Controls* | Opera Working Draft | HTML forms拡張の先行版には`output`要素がないこと | https://www.hixie.ch/specs/html/forms/hfp.html | 2026-08-10 |
-| 2003-12-04 | *Proposed XHTML Module: XForms Basic* | Editor's Working Draft | XForms機能をHTML formsへ加える方針とHTML `output` | https://www.hixie.ch/specs/html/forms/xforms-basic-1 | 2026-08-10 |
-| 2003-12-07 | “Re: Proposal for Extensions to HTML4” | www-forms・編集者回答 | 動的boilerplate textをdata modelではなくcontentとして扱う設計判断 | https://lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html | 2026-08-10 |
-| 2005-04-11 | *Web Forms 2.0* | W3C Member Submission | scriptで更新する`output`と計算例 | https://www.w3.org/submissions/2005/SUBM-web-forms2-20050411/#the-output | 2026-08-09 |
-| 2010-03-04 | *HTML5 differences from HTML4* | W3C Working Draft | Web Forms 2.0のHTML5への統合 | https://www.w3.org/TR/2010/WD-html5-diff-20100304/#changes-2009-04-23 | 2026-08-09 |
-| 2026-08-09 | *HTML Living Standard: The output element* | 現行仕様 | `output`の現行定義 | https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2000-12-19 | [*XForms 1.0: XForms User Interface*](../../raw/www.w3.org/TR/2000/WD-xforms-20001219/ui.html)（[公開元](https://www.w3.org/TR/2000/WD-xforms-20001219/ui.html#N1052)） | W3C Working Draft | 非editableなdata value表示用`output` form control | 2026-08-10 |
+| 2003-09 | [*XHTML Module: Extensions to Form Controls*](../../raw/www.hixie.ch/specs/html/forms/hfp.html)（[公開元](https://www.hixie.ch/specs/html/forms/hfp.html)） | Opera Working Draft | HTML forms拡張の先行版には`output`要素がないこと | 2026-08-10 |
+| 2003-12-04 | [*Proposed XHTML Module: XForms Basic*](../../raw/www.hixie.ch/specs/html/forms/xforms-basic-1)（[公開元](https://www.hixie.ch/specs/html/forms/xforms-basic-1)） | Editor's Working Draft | XForms機能をHTML formsへ加える方針とHTML `output` | 2026-08-10 |
+| 2003-12-07 | [“Re: Proposal for Extensions to HTML4”](../../raw/lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html)（[公開元](https://lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html)） | www-forms・編集者回答 | 動的boilerplate textをdata modelではなくcontentとして扱う設計判断 | 2026-08-10 |
+| 2005-04-11 | [*Web Forms 2.0*](../../raw/www.w3.org/submissions/2005/SUBM-web-forms2-20050411/index.html)（[公開元](https://www.w3.org/submissions/2005/SUBM-web-forms2-20050411/#the-output)） | W3C Member Submission | scriptで更新する`output`と計算例 | 2026-08-09 |
+| 2010-03-04 | [*HTML5 differences from HTML4*](../../raw/www.w3.org/TR/2010/WD-html5-diff-20100304/index.html)（[公開元](https://www.w3.org/TR/2010/WD-html5-diff-20100304/#changes-2009-04-23)） | W3C Working Draft | Web Forms 2.0のHTML5への統合 | 2026-08-09 |
+| 2026-08-09 | [*HTML Living Standard: The output element*](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開元](https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element)） | 現行仕様 | `output`の現行定義 | 2026-08-09 |
 
 ## 確度
 

@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、見出しとそれに関連する内容を表す。`h1`〜`h6`を、副見出し、別題、taglineを表す一つ以上の`p`とgroup化できる。[一次定義](https://html.spec.whatwg.org/multipage/sections.html#the-hgroup-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、見出しとそれに関連する内容を表す。`h1`〜`h6`を、副見出し、別題、taglineを表す一つ以上の`p`とgroup化できる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/sections.html)（[公開版](https://html.spec.whatwg.org/multipage/sections.html#the-hgroup-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,10 +36,10 @@ HTML5草案 `header`（2005年） → `hgroup`への改名とsubheading用途へ
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 2005-09-01 | Web Applications 1.0 | WHATWG保存Early Working Draft | 改名前の`header`とそのheading containerとしての意味。 | [一次資料](https://whatwg.org/specs/web-apps/2005-09-01/#the-header) | 2026-08-09 |
-| 2009-04-30 | WHATWG HTML commit `7e9b2d1b` | 仕様commit | `header`を`hgroup`へ改名し、subheading用へ限定した変更。 | [一次資料](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4) | 2026-08-09 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 2005-09-01 | [Web Applications 1.0](../../raw/whatwg.org/specs/web-apps/2005-09-01/index.html)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-header)） | WHATWG保存Early Working Draft | 改名前の`header`とそのheading containerとしての意味。 | 2026-08-09 |
+| 2009-04-30 | [WHATWG HTML commit `7e9b2d1b`](../../raw/github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)（[公開元](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)） | 仕様commit | `header`を`hgroup`へ改名し、subheading用へ限定した変更。 | 2026-08-09 |
 
 ## 確度
 

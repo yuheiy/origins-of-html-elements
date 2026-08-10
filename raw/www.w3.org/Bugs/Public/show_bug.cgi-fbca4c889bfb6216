@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>9429 &ndash; Unobsolete the &lt;strike&gt; element - instead suggest how to use it</title>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="data/assets/54486398487c111ba3305277d0702e66.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="style.css">
+
+
+
+    
+
+
+    
+
+
+    
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+                       title="Bugzilla" href="./search_plugin.cgi">
+    <link rel="shortcut icon" href="images/favicon.ico">
+  </head>
+
+  <body 
+        class="www-w3-org-Bugs-Public
+                 bz_bug
+                 bz_status_CLOSED
+                 bz_product_HTML_WG
+                 bz_component_pre-LC1_HTML5_spec_&#X28;editor&#X3A;_Ian_Hickson&#X29;
+                 bz_bug_9429 yui-skin-sam">
+
+  <div id="header"><div id="banner">
+  </div>
+
+    <div id="titles">
+      <span id="title">Bugzilla &ndash; Bug&nbsp;9429</span>
+
+        <span id="subtitle" class="subheader">Unobsolete the &lt;strike&gt; element - instead suggest how to use it</span>
+
+        <span id="information" class="header_addl_info">Last modified: 2011-02-17 08:20:09 UTC</span>
+    </div>
+
+
+    
+  </div>
+
+  <div id="bugzilla-body"><div class="archivalnote"><p>This is an archived snapshot of W3C's public bugzilla bug tracker, decommissioned in April 2019. Please see the <a href="./">home page</a> for more details.</p></div>
+
+
+
+
+<form name="changeform" id="changeform" method="post" action="process_bug.cgi">
+
+  <input type="hidden" name="delta_ts" value="2011-02-17 08:20:09">
+  <input type="hidden" name="id" value="9429">
+  <input type="hidden" name="token" value="1554095133-89iut8B-O3mY1Z1YevsQm2aF4OhTPVnTxsnG7FjSQpk">
+<div class="bz_short_desc_container edit_form">
+     <a href="show_bug.cgi?id=9429"><b>Bug&nbsp;9429</b></a> <span id="summary_container" class="bz_default_hidden">
+      - <span id="short_desc_nonedit_display">Unobsolete the &lt;strike&gt; element - instead suggest how to use it</span>
+     </span>
+
+    <div id="summary_input"><span class="field_label "
+    id="field_label_short_desc">
+
+
+  <a 
+      title="The bug summary is a short sentence which succinctly describes what the bug is about."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#short_desc"
+  >Summary:</a>
+
+</span>Unobsolete the &lt;strike&gt; element - instead suggest how to use it
+    </div>
+  </div>
+  
+  <table class="edit_form">
+    <tr>
+      
+      <td id="bz_show_bug_column_1" class="bz_show_bug_column">     
+        <table>
+          <tr>
+    <th class="field_label">
+      <a href="page.cgi?id=fields.html#bug_status">Status</a>:
+    </th>
+    <td id="bz_field_status">
+      <span id="static_bug_status">CLOSED
+          FIXED
+      </span>
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_alias">
+
+
+  <a 
+      title="A short, unique name assigned to a bug in order to assist with looking it up and referring to it in other places in Bugzilla."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#alias"
+  >Alias:</a>
+
+</th>
+    <td>
+        None
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_product">
+
+
+  <a 
+      title="Bugs are categorised into Products and Components."
+      class="field_help_link"
+      href="describecomponents.cgi"
+  >Product:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_product" >HTML WG
+
+</td>
+    </tr>
+
+    
+    <tr class="bz_default_hidden"><th class="field_label "
+    id="field_label_classification">
+
+
+  <a 
+      title="Bugs are categorised into Classifications, Products and Components. classifications is the top-level categorisation."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#classification"
+  >Classification:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_classification" >Unclassified
+
+</td>
+    </tr>
+        
+    
+    
+    <tr><th class="field_label "
+    id="field_label_component">
+
+
+  <a 
+      title="Components are second-level categories; each belongs to a particular Product. Select a Product to narrow down this list."
+      class="field_help_link"
+      href="describecomponents.cgi?product=HTML WG"
+  >Component:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_component" >pre-LC1 HTML5 spec (editor: Ian Hickson)
+
+  (<a href="buglist.cgi?component=pre-LC1%20HTML5%20spec%20(editor%3A%20Ian%20Hickson)&amp;product=HTML%20WG&amp;bug_status=__open__"
+      target="_blank">show other bugs</a>)
+</td>
+    </tr>
+    <tr><th class="field_label "
+    id="field_label_version">
+
+
+  <a 
+      title="The version field defines the version of the software the bug was found in."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#version"
+  >Version:</a>
+
+</th>
+<td>unspecified
+  </td>
+    </tr>
+        
+    
+        
+    <tr><th class="field_label "
+    id="field_label_rep_platform">
+
+
+  <a 
+      title="The hardware platform the bug was observed on. Note: When searching, selecting the option &quot;All&quot; only finds bugs whose value for this field is literally the word &quot;All&quot;."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#rep_platform"
+  >Hardware:</a>
+
+</th>
+      <td class="field_value">All
+        All
+      </td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          
+          <tr>
+      <th class="field_label">
+        <label  accesskey="i">
+          <a href="page.cgi?id=fields.html#importance"><u>I</u>mportance</a></label>:
+      </th>
+      <td>P2
+       normal
+      </td>
+    </tr>
+
+      <tr><th class="field_label "
+    id="field_label_target_milestone">
+
+
+  <a 
+      title="The Target Milestone field is used to define when the engineer the bug is assigned to expects to fix it."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#target_milestone"
+  >Target Milestone:</a>
+
+</th><td>LC
+  </td>
+      </tr>
+          
+          <tr><th class="field_label "
+    id="field_label_assigned_to">
+
+
+  <a 
+      title="The person in charge of resolving the bug."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#assigned_to"
+  >Assignee:</a>
+
+</th>
+      <td><span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+      </td>
+    </tr>
+
+    <tr><th class="field_label "
+    id="field_label_qa_contact">
+
+
+  <a 
+      title="The person responsible for confirming this bug if it is unconfirmed, and for verifying the fix once the bug has been resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#qa_contact"
+  >QA Contact:</a>
+
+</th>
+      <td><span class="vcard"><span class="fn">HTML WG Bugzilla archive list</span>
+</span>
+      </td>
+    </tr>
+    
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          <tr><th class="field_label "
+    id="field_label_bug_file_loc">
+
+
+  <a 
+      title="Bugs can have a URL associated with them - for example, a pointer to a web site where the problem is seen."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#bug_file_loc"
+  >URL:</a>
+
+</th>
+    <td>
+      <span id="bz_url_input_area">
+          <a href="http://dev.w3.org/html5/spec/Overview.html#strike"
+             rel="noreferrer"><span title="http://dev.w3.org/html5/spec/Overview.html#strike">http://dev.w3.org/html5/spec/Overview...
+        </span></a>
+      </span>
+    </td>
+  </tr>
+
+    <tr><th class="field_label "
+    id="field_label_status_whiteboard">
+
+
+  <a 
+      title="Each bug has a free-form single line text entry box for adding tags and status information."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#status_whiteboard"
+  >Whiteboard:</a>
+
+</th><td>  
+  </td>
+    </tr>
+
+    <tr><th class="field_label "
+    id="field_label_keywords">
+
+
+  <a 
+      title="You can add keywords from a defined list to bugs, in order to easily identify and group them."
+      class="field_help_link"
+      href="describekeywords.cgi"
+  >Keywords:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_keywords" >NE
+
+</td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+          
+<tr><th class="field_label "
+    id="field_label_dependson">
+
+
+  <a 
+      title="The bugs listed here must be resolved before this bug can be resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#dependson"
+  >Depends on:</a>
+
+</th>
+
+  <td>
+    <span id="dependson_input_area">
+    </span>
+
+  </td>
+  </tr>
+  
+  <tr><th class="field_label "
+    id="field_label_blocked">
+
+
+  <a 
+      title="This bug must be resolved before the bugs listed in this field can be resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#blocked"
+  >Blocks:</a>
+
+</th>
+
+  <td>
+    <span id="blocked_input_area">
+    </span>
+
+  </td>
+  </tr>
+          
+        </table>
+      </td>
+      <td>
+        <div class="bz_column_spacer">&nbsp;</div>
+      </td>
+      
+      <td id="bz_show_bug_column_2" class="bz_show_bug_column">
+        <table>
+        <tr>
+    <th class="field_label">
+      Reported:
+    </th>
+    <td>2010-04-06 01:51 UTC by <span class="vcard"><span class="fn">Leif Halvard Silli</span>
+</span>
+    </td>
+  </tr>
+  
+  <tr>
+    <th class="field_label">
+      Modified:
+    </th>
+    <td>2011-02-17 08:20 UTC
+      (<a href="show_activity.cgi?id=9429">History</a>)
+    </td>
+  
+  </tr>
+<tr>
+      <th class="field_label">
+        <label  accesskey="a">
+          CC List:
+        </label>
+      </th>
+      <td>10 
+          users
+          <span id="cc_edit_area_showhide_container" class="bz_default_hidden">
+            (<a href="#" id="cc_edit_area_showhide">show</a>)
+          </span>
+        <div id="cc_edit_area">
+          <br>
+            <select id="cc" multiple="multiple" size="5" >
+                <option value="excors">excors</option>
+                <option value="hsivonen">hsivonen</option>
+                <option value="ian">ian</option>
+                <option value="james">james</option>
+                <option value="mike">mike</option>
+                <option value="ojan">ojan</option>
+                <option value="public-html-admin">public-html-admin</option>
+                <option value="public-html-wg-issue-tracking">public-html-wg-issue-tracking</option>
+                <option value="shelleyp">shelleyp</option>
+                <option value="xn--mlform-iua">xn--mlform-iua</option>
+            </select>
+        </div>
+          
+      </td>
+    </tr>
+
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_see_also">
+
+
+  <a 
+      title="This allows you to refer to bugs in other installations. You can enter a URL to a bug in the 'Add Bug URLs' field to note that that bug is related to this one. You can enter multiple URLs at once by separating them with whitespace. You should normally use this field to refer to bugs in other installations. For bugs in this installation, it is better to use the Depends on and Blocks fields."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#see_also"
+  >See Also:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_see_also" >
+
+</td>
+    </tr> 
+
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+
+
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+          <hr id="bz_top_half_spacer">
+      </td>
+    </tr>
+  </table>
+
+  <table id="bz_big_form_parts">
+  <tr>
+  <td>
+
+    
+
+
+<br>
+<table id="attachment_table">
+  <tr id="a0">
+    <th colspan="2" class="left">
+      Attachments
+    </th>
+  </tr>
+
+
+
+  
+</table>
+<br>
+<div id="add_comment" class="bz_section_additional_comments">
+      <table>
+        <tr>
+          <td>
+            
+          </td>
+        </tr> 
+      </table>
+  </div>
+  </td>
+  <td>
+  </td>
+  </tr></table>
+
+  
+  <div id="comments">
+
+
+
+
+<!-- This auto-sizes the comments and positions the collapse/expand links 
+     to the right. -->
+<table class="bz_comment_table">
+<tr>
+<td>
+<div id="c0" class="bz_comment bz_first_comment">
+
+      <div class="bz_first_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c0">Description</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Leif Halvard Silli</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-04-06 01:51:58 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Strike and s are on the non-conforming list. And the spec says:
+
+]]
+For the s and strike elements, if they are marking up a removal from the element, consider using the del element instead.
+[[
+
+Please make it conforming.
+
+Strike
+
+* has better compatibility than &lt;del&gt; 
+* is more semantic than &lt;span style=&quot;text-decoration:linethrough&quot;&gt;
+* has better compatibility than &lt;span style=&quot;text-decoration:linethrough&quot;&gt;
+  
+See message with a compatibiliy comparison of &lt;del&gt;, &lt;span w/linethrough&gt; and &lt;strike&gt;
+<a href="http://lists.w3.org/Archives/Public/public-html/2010Mar/0732">http://lists.w3.org/Archives/Public/public-html/2010Mar/0732</a>
+
+It seems to be a not uncommon thing to make use of a linethrough style for signalling that &quot;the time is out&quot; or that piece of information no longer is relevant (because the event has become historical etc).
+
+Example of such use of the linethrough style: 
+      <a href="http://kunstkritikk.no/kalender/liste/69210?range=week&amp;time=1270764000">http://kunstkritikk.no/kalender/liste/69210?range=week&amp;time=1270764000</a>
+Others have suggested that strike could be used in a similar way in bugzillas.
+
+For these cases, &lt;del&gt; does not seem right - the document would not be complete without the striked content.</pre>
+    </div>
+
+    <div id="c1" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c1">Comment 1</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Leif Halvard Silli</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-04-06 01:54:33 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">&lt;strike&gt;, like many other of the character level elements with presentational semantics, works better in contexts where CSS is not an option.</pre>
+    </div>
+
+    <div id="c2" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c2">Comment 2</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Leif Halvard Silli</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-04-06 02:03:58 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">&lt;strike&gt;, like many other of the character level elements with presentational
+semantics, can also be used whenever we do not know anything about the semantics  - except how it looks and what we can assume. For instance, an historical text which should be marked up to match what its historical state: If striked out text is marked up with &lt;del&gt;, then it indicates that we are in full command of these editions.  &lt;strike&gt; can be used to present a freeze of a text in some state. Whereas &lt;del&gt; can be used to mark-up a &quot;living&quot; document.</pre>
+    </div>
+
+    <div id="c3" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c3">Comment 3</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-04-13 01:11:12 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">EDITOR'S RESPONSE: This is an Editor's Response to your comment. If you are satisfied with this response, please change the state of this bug to CLOSED. If you have additional information and would like the editor to reconsider, please reopen this bug. If you would like to escalate the issue to the full HTML Working Group, please add the TrackerRequest keyword to this bug, and suggest title and text for the tracker issue; or you may create a tracker issue yourself, if you are able to do so. For more details, see this document:
+   <a href="http://dev.w3.org/html5/decision-policy/decision-policy.html">http://dev.w3.org/html5/decision-policy/decision-policy.html</a>
+
+Status: Did Not Understand Request
+Change Description: no spec change
+Rationale: What would you describe the media-independent semantic of &lt;s&gt; as?</pre>
+    </div>
+
+    <div id="c4" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c4">Comment 4</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Leif Halvard Silli</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-04-13 17:52:20 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=9429#c3">comment #3</a>)
+<span class="quote">&gt; Status: Did Not Understand Request
+&gt; Change Description: no spec change
+&gt; Rationale: What would you describe the media-independent semantic of &lt;s&gt; as?</span >
+
+The s/strike element represents a span of text which is still part of its context (it has not been deleted from the text).
+
+The s/strike element represents a particular kind of emphasize. It can be described as a time based, negative emphasize. When reading a piece of tex which has been marked up with a s/strike element, then the reader is meant to think that something which has happened *outside* this text probably makes what is said here not relevant. It then depends on the readers ability to orientate himself/herself whether he/she understands why it has marked up with &lt;s&gt;/&lt;strike&gt;.
+
+Thus &lt;s&gt;/&lt;strike&gt; calls the readers attention to issues not found in the text itself.
+
+These issues can be that time has passed - 2008.12.28 is no longer a future date. Or the times mentioned in the TV program of yesterday, should no longer be considered relevant (but some readers might still find it useful to check which programme that was aired yesterday, so such a document is not irrelevant once the time is up). Striking such things out may help those who provide the info so that they do not receive enquires about events that have already taken place.
+
+When it comes to paper based, historical texts in written or printed form and which contains bits of text which are striked over, then too the &lt;s&gt;/&lt;strike&gt; can be used whenever the striking itself represents something that has be added &quot;added to the paper&quot; rather than being added to the text itself. Thus, in this case, the &lt;s&gt;/&lt;strike&gt; means that the reader - which could be a scholar - needs to not accept that the text with the strike has been deleted. Instead he/she should investigate factors outside the text in order to find out what the strike means.</pre>
+    </div>
+
+    <div id="c5" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c5">Comment 5</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-04-13 23:07:36 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">EDITOR'S RESPONSE: This is an Editor's Response to your comment. If you are satisfied with this response, please change the state of this bug to CLOSED. If you have additional information and would like the editor to reconsider, please reopen this bug. If you would like to escalate the issue to the full HTML Working Group, please add the TrackerRequest keyword to this bug, and suggest title and text for the tracker issue; or you may create a tracker issue yourself, if you are able to do so. For more details, see this document:
+   <a href="http://dev.w3.org/html5/decision-policy/decision-policy.html">http://dev.w3.org/html5/decision-policy/decision-policy.html</a>
+
+Status: Did Not Understand Request
+Change Description: no spec change
+Rationale: Hmm... I might be able to work with that... How should it be rendered in a speech browser?</pre>
+    </div>
+
+    <div id="c6" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c6">Comment 6</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-04-13 23:10:14 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(regarding <a href="show_bug.cgi?id=9429#c4">comment 4</a>, maybe &quot;indicates that the contents are no longer accurate or no longer relevant&quot; would be a good summary of those semantics.)</pre>
+    </div>
+
+    <div id="c7" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c7">Comment 7</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Leif Halvard Silli</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-04-14 02:24:56 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=9429#c5">comment #5</a>)
+
+<span class="quote">&gt; Status: Did Not Understand Request
+&gt; Change Description: no spec change
+&gt; Rationale: Hmm... I might be able to work with that... How should it be
+&gt; rendered in a speech browser?</span >
+
+Isn't the question about speech browsers also relevant when it comes to the &lt;b&gt; element? Is there a clear way to indicate &lt;b&gt; as opposed to e.g. &lt;em&gt; or &lt;strong&gt; in speech browsers? If there arent a clear diff for &lt;b&gt;, then why need there be a clear way for &lt;strike&gt;?
+
+I am not sure how speech browsers should operate. Somewhat related: when I tested Lynx and its relatives, then only one or two of them made any distinction between &lt;strike&gt; and &lt;del&gt; (some did not understand &lt;del&gt;).  A text console based browser requires that the user learns himself/herself to interpret those conventions that the text browser offers. Likewise, if a speech based browser announces a span of &lt;del&gt; as &quot;deleted&quot;, then a span of &lt;strike&gt; could be announced as &quot;striked&quot;. 
+
+If speech browsers is to separat the striked text stylistcally, rather than through an announcement, then I am unsure. May be reading it a little faster could be an option? When it is read faster, then one pays less attention to it. 
+
+Authors should probably not overdo things - to overuse of the &lt;strike&gt;/&lt;s&gt; element could perhaps be annoying to listen to.</pre>
+    </div>
+
+    <div id="c8" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c8">Comment 8</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Leif Halvard Silli</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-04-14 02:37:30 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=9429#c6">comment #6</a>)
+<span class="quote">&gt; (regarding <a href="show_bug.cgi?id=9429#c4">comment 4</a>, maybe &quot;indicates that the contents are no longer accurate
+&gt; or no longer relevant&quot; would be a good summary of those semantics.)</span >
+
+I guess I could live with that. 
+
+If I were to bring in another aspect, then,  &quot;issues outside the text - which the reader has to be aware of&quot; comes to mind. OTOH, this can perhaps be said to be coved by your summary, becuase: the reason why it is not  any longer accurate or relevant, is up to the reader to understand. So the summary is probably fine.
+
+Btw, speech browsers: The point is to make the reader wonder why it has been striked out. For a sighted user, then a striked out text is a little bit awkward to read, but immediately calls the attention. I don't know if the same can be achieved in a speech browsers.</pre>
+    </div>
+
+    <div id="c9" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c9">Comment 9</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Leif Halvard Silli</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-09-12 13:20:52 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">I have provided new info belo.</pre>
+    </div>
+
+    <div id="c10" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c10">Comment 10</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-09-28 05:17:16 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">I'm a little concerned about the difficulty of coming up with a good speech presentation. That's usually a sign that the element is actually presentational rather than semantic.
+
+I'm interested in the opinion of others on the usefulness of having an element to convey the semantic &quot;indicates that the contents are no longer accurate or no longer relevant&quot;.</pre>
+    </div>
+
+    <div id="c11" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c11">Comment 11</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Henri Sivonen</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-09-28 12:27:44 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">I approve of and encourage unobsoleting &lt;strike&gt;. &quot;No longer accurate or relevant&quot; works for me as a semantic fig leaf.</pre>
+    </div>
+
+    <div id="c12" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c12">Comment 12</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-09-29 19:23:34 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">For consistency with the rest of the language (hah!) I think I'll use &lt;s&gt; and leave &lt;strike&gt; as an obsolete synonym.</pre>
+    </div>
+
+    <div id="c13" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c13">Comment 13</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-09-29 22:27:54 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">EDITOR'S RESPONSE: This is an Editor's Response to your comment. If you are satisfied with this response, please change the state of this bug to CLOSED. If you have additional information and would like the editor to reconsider, please reopen this bug. If you would like to escalate the issue to the full HTML Working Group, please add the TrackerRequest keyword to this bug, and suggest title and text for the tracker issue; or you may create a tracker issue yourself, if you are able to do so. For more details, see this document:
+   <a href="http://dev.w3.org/html5/decision-policy/decision-policy.html">http://dev.w3.org/html5/decision-policy/decision-policy.html</a>
+
+Status: Partially Accepted
+Change Description: see diff given below
+Rationale: Added &lt;s&gt;, not &lt;strike&gt;.</pre>
+    </div>
+
+    <div id="c14" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c14">Comment 14</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard">contributor
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-09-29 22:28:14 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Checked in as WHATWG revision r5561.
+Check-in comment: Adding the &lt;s&gt; element to the language.
+<a href="https://html5.org/tools/web-apps-tracker?from=5560&amp;to=5561">http://html5.org/tools/web-apps-tracker?from=5560&amp;to=5561</a></pre>
+    </div>
+
+    <div id="c15" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c15">Comment 15</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Shelley Powers</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2010-09-30 15:52:17 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">I have filed a new bug on this item:
+
+<a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED WONTFIX - Remove the newly added &quot;s&quot; element"
+   href="show_bug.cgi?id=10862">http://www.w3.org/Bugs/Public/show_bug.cgi?id=10862</a>
+
+I am not escalating this item, because this issue seems to be more about making strike obsolete, not adding s.</pre>
+    </div>
+
+    <div id="c16" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c16">Comment 16</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Leif Halvard Silli</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-01-21 07:06:55 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">I am satisfied that you added &lt;s&gt;</pre>
+    </div>
+
+    <div id="c17" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=9429#c17">Comment 17</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ojan Vafai</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-02-17 08:20:09 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">FWIW, WebKit has just changed to match IE/Gecko and have execCommand('strikeThrough') generate &lt;strike&gt; instead of &lt;s&gt; due to web compat. See <a href="https://bugs.webkit.org/show_bug.cgi?id=53475">https://bugs.webkit.org/show_bug.cgi?id=53475</a>.</pre>
+    </div>
+
+
+  
+
+</td>
+<td>
+</td>
+</tr></table>
+  </div>
+        
+
+</form>
+
+<hr>
+<ul class="related_actions">
+    <li><a href="show_bug.cgi?format=multiple&amp;id=9429">Format For Printing</a></li>
+    <li>&nbsp;-&nbsp;<a href="show_bug.cgi?ctype=xml&amp;id=9429">XML</a></li>
+    <li>&nbsp;-&nbsp;<a href="enter_bug.cgi?cloned_bug_id=9429">Clone This Bug</a></li>
+    
+    <li>&nbsp;-&nbsp;<a href="#">Top of page </a></li>
+    </ul>
+
+<br>
+</div>
+
+    
+
+  </body>
+</html>

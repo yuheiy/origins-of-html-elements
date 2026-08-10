@@ -10,7 +10,7 @@ ruby非対応user agent向けの括弧を表す要素としてW3Cが提案・規
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、ruby annotationをsupportしないuser agentに表示させるため、ruby text componentの周囲へ括弧等の内容を与える。`ruby`の子である場合は何も表さない。[一次定義](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rp-element)（2026-08-09確認）
+WHATWG HTML Living Standardでは、ruby annotationをsupportしないuser agentに表示させるため、ruby text componentの周囲へ括弧等の内容を与える。`ruby`の子である場合は何も表さない。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rp-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -42,14 +42,14 @@ W3C／XHTML枝からHTML5への接続は未確認である。
 
 ## 証拠
 
-| 年月日 | 資料 | 種別 | この資料から確認できる内容 | URL | 閲覧日 |
-|---|---|---|---|---|---|
-| 1997-02-28 | *Ruby in the Hypertext Markup Language* | Internet-Draft | `RUBY`属性案と、非対応表示の先行案であるinline括弧表示。 | [一次資料](https://www.w3.org/International/draft-duerst-ruby-01) | 2026-08-10 |
-| 1998-12-21 | *Ruby* | W3C Working Draft | HTML拡張の`rp`を非対応browser用parenthesisとして提案。 | [一次資料](https://www.w3.org/TR/1998/WD-ruby-19981221/) | 2026-08-09 |
-| 2001-05-31 | *Ruby Annotation* | W3C Recommendation | XHTML moduleの`rp`をfallback括弧として規範化。 | [一次資料](https://www.w3.org/TR/2001/REC-ruby-20010531/) | 2026-08-09 |
-| 2007-08-12 | “My case for Ruby-elements” | WHATWG mail | 編集者が`ruby`のparserとsemanticsを調査済みで追加予定と説明。 | [一次資料](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html) | 2026-08-10 |
-| 2008-05-26 | WHATWG HTML commit `f4efc736` | 仕様commit | `rp`を含む単純構文の実利用を根拠に、三要素と`rp`開始tagのparser規則を追加。 | [一次資料](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9) | 2026-08-10 |
-| 2008-05-26 | “Current HTML ruby markup usage” | HTML WG mail／corpus追試 | DMOZ由来13万ページ標本で`rp`を含む意図的なruby markupを確認。 | [一次資料](https://lists.w3.org/Archives/Public/public-html/2008May/0620.html) | 2026-08-10 |
+| 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
+|---|---|---|---|---|
+| 1997-02-28 | [*Ruby in the Hypertext Markup Language*](../../raw/www.w3.org/International/draft-duerst-ruby-01)（[公開元](https://www.w3.org/International/draft-duerst-ruby-01)） | Internet-Draft | `RUBY`属性案と、非対応表示の先行案であるinline括弧表示。 | 2026-08-10 |
+| 1998-12-21 | [*Ruby*](../../raw/www.w3.org/TR/1998/WD-ruby-19981221/index.html)（[公開元](https://www.w3.org/TR/1998/WD-ruby-19981221/)） | W3C Working Draft | HTML拡張の`rp`を非対応browser用parenthesisとして提案。 | 2026-08-09 |
+| 2001-05-31 | [*Ruby Annotation*](../../raw/www.w3.org/TR/2001/REC-ruby-20010531/index.html)（[公開元](https://www.w3.org/TR/2001/REC-ruby-20010531/)） | W3C Recommendation | XHTML moduleの`rp`をfallback括弧として規範化。 | 2026-08-09 |
+| 2007-08-12 | [“My case for Ruby-elements”](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html)） | WHATWG mail | 編集者が`ruby`のparserとsemanticsを調査済みで追加予定と説明。 | 2026-08-10 |
+| 2008-05-26 | [WHATWG HTML commit `f4efc736`](../../raw/github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)（[公開元](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)） | 仕様commit | `rp`を含む単純構文の実利用を根拠に、三要素と`rp`開始tagのparser規則を追加。 | 2026-08-10 |
+| 2008-05-26 | [“Current HTML ruby markup usage”](../../raw/lists.w3.org/Archives/Public/public-html/2008May/0620.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2008May/0620.html)） | HTML WG mail／corpus追試 | DMOZ由来13万ページ標本で`rp`を含む意図的なruby markupを確認。 | 2026-08-10 |
 
 ## 確度
 

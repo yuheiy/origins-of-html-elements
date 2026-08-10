@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="hypermail 3.0.0, see https://github.com/hypermail-project/hypermail/" />
+<title>[whatwg] HTML5: Deprecate the SMALL element from Ian Hickson on 2005-04-12 (public-whatwg-archive@w3.org from April 2005)</title>
+<meta name="Author" content="Ian Hickson (ian&#x40;&#0104;&#0105;&#0120;&#0105;&#0101;&#0046;&#0099;&#0104;)" />
+<meta name="Subject" content="[whatwg] HTML5: Deprecate the SMALL element" />
+<meta name="Date" content="2005-04-12" />
+<link rel="stylesheet" title="Normal view" href="/assets/styles/public.css" />
+<link rel="alternate stylesheet" title="Shorter view" 
+    href="//www.w3.org/StyleSheets/Mail/style-short.css" />
+<link rel="help" href="/Help/" />
+<link rel="start" href="../" title= "public-whatwg-archive@w3.org archives" />
+</head>
+<body class="message">
+<header class="head">
+<nav class="breadcrumb" id="upper">
+  <ul>
+    <li><a href="https://www.w3.org/">W3C home</a></li>
+    <li><a href="/">Mailing lists</a></li>
+    <li><a href="../../">Public</a></li>
+    <li><a href="../">public-whatwg-archive@w3.org</a></li>
+    <li><a href="./">April 2005</a></li>
+  </ul>
+</nav>
+<h1>[whatwg] HTML5: Deprecate the SMALL element</h1>
+<!-- received="Tue Apr 12 16:02:31 2005" -->
+<!-- isoreceived="20050412160231" -->
+<!-- sent="Tue, 12 Apr 2005 23:02:31 +0000 (UTC)" -->
+<!-- isosent="20050412230231" -->
+<!-- name="Ian Hickson" -->
+<!-- email="ian&#x40;&#0104;&#0105;&#0120;&#0105;&#0101;&#0046;&#0099;&#0104;" -->
+<!-- subject="[whatwg] HTML5: Deprecate the SMALL element" -->
+<!-- id="Pine.LNX.4.61.0504122300210.9@dhalsim.dreamhost.com" -->
+<!-- charset="UTF-8" -->
+<!-- inreplyto="425C4F03.7030306&#64;misinterpreted.net" -->
+<!-- expires="-1" -->
+<nav id="navbar">
+<ul class="links hmenu_container">
+<li>
+<span class="heading">This message</span>: <ul class="hmenu"><li><a href="#start" id="options1">Message body</a></li>
+<li><a href="mailto:public-whatwg-archive&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20%5Bwhatwg%5D%20HTML5%3A%20Deprecate%20the%20SMALL%20element&amp;In-Reply-To=%3CPine.LNX.4.61.0504122300210.9%40dhalsim.dreamhost.com%3E&amp;References=%3CPine.LNX.4.61.0504122300210.9%40dhalsim.dreamhost.com%3E">Respond</a></li>
+<li><a href="#options3">More options</a></li>
+</ul></li>
+<li>
+<span class="heading">Related messages</span>: <ul class="hmenu">
+<!-- unext="start" -->
+<li><a href="0191.html">Next message</a></li>
+<li><a href="0189.html">Previous message</a></li>
+<li><a href="0187.html">In reply to</a></li>
+<!-- unextthread="start" -->
+<!-- ureply="end" -->
+</ul></li>
+</ul>
+</nav>
+</header>
+<!-- body="start" -->
+<main class="mail">
+<ul class="headers" aria-label="message headers">
+<li><span class="from">
+<span class="heading">From</span>: Ian Hickson &lt;<a href="mailto:ian&#x40;&#0104;&#0105;&#0120;&#0105;&#0101;&#0046;&#0099;&#0104;?Subject=Re%3A%20%5Bwhatwg%5D%20HTML5%3A%20Deprecate%20the%20SMALL%20element&amp;In-Reply-To=%3CPine.LNX.4.61.0504122300210.9%40dhalsim.dreamhost.com%3E&amp;References=%3CPine.LNX.4.61.0504122300210.9%40dhalsim.dreamhost.com%3E">ian&#x40;&#0104;&#0105;&#0120;&#0105;&#0101;&#0046;&#0099;&#0104;</a>&gt;
+</span></li>
+<li><span class="date"><span class="heading">Date</span>: Tue, 12 Apr 2005 23:02:31 +0000 (UTC)</span></li>
+<li><span class="message-id"><span class="heading">Message-ID</span>: &lt;Pine.LNX.4.61.0504122300210.9&#x40;&#0100;&#0104;&#0097;&#0108;&#0115;&#0105;&#0109;&#0046;&#0100;&#0114;&#0101;&#0097;&#0109;&#0104;&#0111;&#0115;&#0116;&#0046;&#0099;&#0111;&#0109;&gt;
+</span></li>
+</ul>
+<pre id="start" class="body">
+On Wed, 13 Apr 2005, Henrik Lied wrote:
+&gt;
+&gt; The element SMALL should be deprecated, as it describes the appearance 
+&gt; of the content. Alternatively, a new name for the element could be 
+&gt; created.
+&gt; 
+&gt; Since SMALL is usually used to describe copyright-notices and other 
+&gt; legal descriptions, my proposal for a new name is DISCLAIMER or NOTES.
+
+The name is (in HTML5) short for &quot;small print&quot;, which doesn't imply that 
+the text is small, but is the name given to runs of legal text or 
+disclaimers (whatever their actual font size).
+
+Keeping the name &lt;small&gt; has the advantage that it will also happen to 
+work in legacy browsers. I don't see what the advantage of a new name 
+would be.
+
+The way the element is defined in the draft at the moment is completely 
+independent of the rendering. It doesn't describe the appearance.
+
+-- 
+Ian Hickson               U+1047E                )\._.,--....,'``.    fL
+<a href="http://ln.hixie.ch/">http://ln.hixie.ch/</a>       U+263A                /,   _.. \   _\  ;`._ ,.
+Things that are impossible just take longer.   `._.-(,_..'--(,_..'`-.;.'
+</pre>
+<p class="received"><span class="heading">Received on</span> Tuesday, 12 April 2005 16:02:31 UTC</p>
+</main>
+<!-- body="end" -->
+<footer class="foot">
+<nav id="navbarfoot">
+<ul class="links hmenu_container">
+<li><span class="heading">This message</span>: <span class="message_body"><a href="#start">Message body</a></span></li>
+<!-- lnext="start" -->
+<li><span class="heading">Next message</span>: <a href="0191.html">Ian Hickson: "[whatwg] HTML5: New link-types regarding guideline 2.4 in WCAG 2.0"</a></li>
+<li><span class="heading">Previous message</span>: <a href="0189.html">Henrik Lied: "[whatwg] HTML5: New link-types regarding guideline 2.4 in WCAG 2.0"</a></li>
+<li><span class="heading">In reply to</span>: <a href="0187.html">Henrik Lied: "[whatwg] HTML5: Deprecate the SMALL element"</a></li>
+<!-- lnextthread="start" -->
+<!-- lreply="end" -->
+</ul>
+<ul class="links hmenu_container">
+<li id="options3"><span class="heading">Mail actions</span>: <ul class="hmenu"><li><a href="mailto:public-whatwg-archive&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20%5Bwhatwg%5D%20HTML5%3A%20Deprecate%20the%20SMALL%20element&amp;In-Reply-To=%3CPine.LNX.4.61.0504122300210.9%40dhalsim.dreamhost.com%3E&amp;References=%3CPine.LNX.4.61.0504122300210.9%40dhalsim.dreamhost.com%3E">respond to this message</a></li>
+<li><a href="mailto:public-whatwg-archive&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;">mail a new topic</a></li></ul></li>
+<li><span class="heading">Contemporary messages sorted</span>: <ul class="hmenu"><li><a href="index.html#msg190">by date</a></li>
+<li><a href="thread.html#msg190">by thread</a></li>
+<li><a href="subject.html#msg190">by subject</a></li>
+<li><a href="author.html#msg190">by author</a></li>
+</ul></li>
+<li><span class="heading">Help</span>: [ <a href=
+   "/Help/" accesskey="h" rel="help">How to use the archives</a> ] [ <a href=
+   "https://www.w3.org/Search/Mail/Public/search?type-index=public-whatwg-archive&amp;index-type=t">Search in the archives</a> ]
+</li>
+</ul>
+</nav>
+<!-- trailer="footer" -->
+<p class="colophon">
+This archive was generated by <a href="https://github.com/hypermail-project/hypermail/">hypermail 3.0.0</a>: Saturday, 26 August 2023 22:10:24 UTC
+</p>
+</footer>
+</body>
+</html>

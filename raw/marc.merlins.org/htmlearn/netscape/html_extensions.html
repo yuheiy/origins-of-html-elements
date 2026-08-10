@@ -1,0 +1,280 @@
+<TITLE>Extensions to HTML</TITLE>
+<BODY> <!-- /assist/images/assist_bg.gif -->
+
+
+<CENTER>
+
+<A HREF="/index.html">
+<IMG SRC="/gifs/mirrored/creating_net_sites.gif" WIDTH=468 HEIGHT=32 BORDER=0></A>
+
+<H2>
+<FONT SIZE="+3">E</FONT>XTENSIONS TO
+<FONT SIZE="+3">HTML</FONT>
+</H2>
+
+</CENTER>
+
+This document explains the extensions to the HTML 2.0 specification. We're
+currently working on a document about extensions to HTML 3.0 (keep your eyes
+peeled to these pages); in the meantime, you can get information about adding
+<A HREF="tables.html">tables</A>, <A HREF="background.html">backgrounds</A>,
+and <A HREF="pushpull.html">dynamic updating of documents</A> - <B>three
+important extensions in Netscape Navigator 1.1b1 and beyond that are being
+proposed for inclusion in HTML 3.0</B>.<P>
+
+Netscape Communications will continue to work with the appropriate
+standards bodies, including W3C and the authors of other WWW browsers, in
+an attempt to have these extensions available in all browsers in the near
+future. All of the Netscape Navigator extensions to HTML take the form of
+additional tags and attributes added to the HTML specification and are
+specifically designed not to break existing WWW browsers.
+<P>
+
+<HR SIZE=4><P>
+<A HREF=example.html><IMG SRC="/gifs/buttons/button.eye.gif" ALIGN=middle>Check this example page</A>
+<P>
+<HR SIZE=4><P>
+
+<CENTER>
+<H3>
+<FONT SIZE=+2>A</FONT>DDITIONS
+</H3>
+</CENTER>
+
+<DL>
+<DT><B><TT>&lt;ISINDEX&gt;</tt></B>
+<dd>To the ISINDEX element we have added the PROMPT tag.  ISINDEX indicates
+that a document is a searchable index.  PROMPT has been added so the
+document author can specify what message they want to appear before
+the text input field of the index.  The default is of course that unfortunate
+message:
+<CENTER>This is a searchable index. Enter search keywords:</CENTER>
+
+<DT><B><TT>&lt;HR&gt;</tt></B>
+<dd>The HR element specifies that a horizontal rule of some sort
+(The default being a shaded engraved line) be drawn across the page.
+To this element we have added 4 new tags to allow the document
+author some ability to describe how the horizontal rule should look.
+<DL>
+<DT><B><TT>&lt;HR SIZE=number&gt;</tt></B>
+<dd>The SIZE tag lets the author give an indication of how thick they
+wish the horizontal rule to be.
+<DT><B><TT>&lt;HR WIDTH=number|percent&gt;</tt></B>
+<dd>The default horizontal rule is always as wide as the page.  With the
+WIDTH tag, the author can specify an exact width in pixels, or a relative
+width measured in percent of document width.
+<DT><B><TT>&lt;HR ALIGN=left|right|center&gt;</tt></B>
+<dd>Now that horizontal rules do not have to be the width of the page
+we need to allow the author to specify whether they should be pushed
+up against the left margin, the right margin, or centered in the page.
+<DT><B><TT>&lt;HR NOSHADE&gt;</tt></B>
+<dd>Finally, for those times when you really want a solid bar,
+the NOSHADE tag lets you specify that you do not want any fancy
+shading of your horizontal rule.
+</DL>
+
+
+<DT><B><TT>&lt;UL&gt;</tt></B>
+<dd>Your basic bulleted list has a default progression of bullet
+types that changes as you move through indented levels.
+From a solid disc, to a circle to a square.
+We have added a TYPE tag to the UL element so no matter what your indent level
+you can specify whether you want a TYPE=disc, TYPE=circle, or TYPE=square
+as your bullet.
+
+<DT><B><TT>&lt;OL&gt;</tt></B>
+<dd>Your average ordered list counts 1, 2, 3, ... etc.
+We have also added the TYPE tag to this element to allow authors to specify
+whether the want their list items marked with: capital letters (TYPE=A),
+small letters (TYPE=a), large roman numerals (TYPE=I), small roman
+numerals (TYPE=i), or the default numbers (TYPE=1).
+<P>
+For lists that wish to start at values other than 1 we have the new
+tag START.  START is always specified in the default numbers, and
+will be converted based on TYPE before display.  Thus START=5 would
+display either an 'E', 'e', 'V', 'v', or '5' based on the TYPE tag.
+
+<DT><B><TT>&lt;LI&gt;</tt></B>
+<dd>To give even more flexibility to lists, we thought it would be nice
+if the author could change the list type, and for ordered lists the
+list count index as they progressed.  To this end we added the
+TYPE tag to the LI element as well.  It takes the same values
+as either UL or OL depending on the type of list you are in, and
+it changes the list type for that item, and all subsequent items.
+For ordered lists we have also added the VALUE element so you
+can change the count, for that list item and all subsequent.
+
+<DT><B><TT>&lt;IMG&gt;</tt></B>
+<dd>The IMG tag is probably the most extended tag.
+<DL>
+<DT><noBR><B><TT>&lt;IMG ALIGN=left|right|top|texttop|middle|absmiddle|baseline|bottom|absbottom&gt;</tt></B></noBR>
+<dd>The additions to your ALIGN options needs a lot of explanation.  First,
+the values "left" and "right".  Images with those alignments are an entirely
+new <I>floating</i> image type.  A ALIGN=left image will float down
+and over to the left margin (into the next available space there), and
+subsequent text will wrap around the right hand side of that image.
+Likewise for ALIGN=right the image aligns with the right margin, and the text
+wraps around the left.
+<P>
+The rest of the align options are my way of trying to correct for the
+horrible errors I made when first implementing the IMG tag, without
+destroying the look of existing documents.  ALIGN=top does just what it always
+did, which is align itself with the top of the tallest
+item in the line.  ALIGN=texttop does what many people thought top
+should do which is align itself with the top of the tallest text in
+the line (this is usually but not always the same as ALIGN=top).
+ALIGN=middle does just what it always did, it aligns the baseline
+of the current line with the middle of the image.  ALIGN=absmiddle does
+what middle should have done which is align the middle of the current
+line with the middle of the image.  ALIGN=baseline aligns the bottom of
+the image with the baseline of the current line.  ALIGN=bottom does
+just what it always did (which is identical to ALIGN=baseline but baseline
+is a better name).  ALIGN=absbottom does what bottom should have done
+which is align the bottom of the image with the bottom of the current line.
+<DT><B><TT>&lt;IMG WIDTH=value HEIGHT=value&gt;</tt></B>
+<dd>The WIDTH and HEIGHT tags were added to IMG mainly to speed up display
+of the document.  If the author specifies these, the viewer of their
+document will not have to wait for the image to be loaded over the
+network and its size calculated.  
+<DT><B><TT>&lt;IMG BORDER=value&gt;</tt></B>
+<dd>This lets the document author control the thickness of the border
+around an image displayed.  Warning: setting BORDER=0 on images that
+are also part of anchors may confuse your users as they are used to a 
+colored border indicating an image is an anchor.
+
+<DT><B><TT>&lt;IMG VSPACE=value HSPACE=value&gt;</tt></B>
+<dd>For the <I>floating</i> images it is likely that the author does
+not want them pressing up against the text wrapped around the image.
+VSPACE controls the vertical space above and below the image, while
+HSPACE controls the horizontal space to the left and right of the image.
+</DL>
+
+<DT><B><TT>&lt;BR&gt;</tt></B>
+<dd>With the addition of <I>floating</i> images, we needed to expand the
+BR tag.  Normal BR still just inserts a line break.  We have added a
+CLEAR tag to BR, so CLEAR=left will break the line, and move vertically
+down until you have a clear left margin (no <I>floating</i> images).
+CLEAR=right does the same for the right margin, and CLEAR=all moves
+down until both margins are clear of images.
+</DL>
+
+<HR SIZE=4>
+
+<CENTER>
+<H3>
+<FONT SIZE=+2>N</FONT>EW
+<FONT SIZE=+2>E</FONT>LEMENTS
+</H3>
+</CENTER>
+
+
+<DL>
+<DT><B><TT>&lt;NOBR&gt;</tt></B>
+<dd>The NOBR element stands for <B>NO BR</B>eak.  This means all the text
+between the start and end of the NOBR elements cannot have line breaks
+inserted between them.  While NOBR is essential for those odd character
+sequences you really don't want broken, please be careful; long text
+strings inside of NOBR elements can look rather odd.
+
+<DT><B><TT>&lt;WBR&gt;</tt></B>
+<dd>The WBR element stands for <B>W</B>ord <B>BR</B>eak.  This is for
+the very rare case when you have a NOBR section and you know exactly
+where you want it to break.  Also, any time you want to give the Netscape
+Navigator help
+by telling it where a word is allowed to be broken.  The WBR element
+does not force a line break (BR does that) it simply lets the Netscape Navigator know
+where a line break is allowed to be inserted if needed.
+
+<DT><B><TT>&lt;FONT SIZE=value&gt;</TT></B> <DD>Surprise!  Yo<FONT
+SIZE="+1">u</FONT> c<FONT SIZE="+2">a</FONT><FONT SIZE="+4">n</FONT> <FONT
+SIZE=7>c<FONT SIZE=6>h<FONT SIZE=5>a<FONT SIZE=4>n<FONT SIZE=3>g<FONT
+SIZE=2>e</FONT></FONT></FONT></FONT></FONT></FONT> the FONT size.  Valid
+values range from 1-7.  The default FONT size is 3.  The value given to size
+can optionally have a '+' or '-' character in front of it to specify that it
+is relative the the document baseFONT.  The default baseFONT is 3, and can be
+changed with the BASEFONT element.
+
+<DT><B><TT>&lt;BASEFONT SIZE=value&gt;</tt></B>
+<dd>This changes the size of the BASEFONT that all relative FONT
+changes are based on.  It defaults to 3, and has a valid range of 1-7.
+
+<DT><B><TT>&lt;CENTER&gt;</tt></B>
+<CENTER>
+<dd>You aren't dreaming, yes you can center your text. All lines of
+text between the begin and end of CENTER are centered between the
+current left and right margins.  A new tag has been introduced
+rather than using the proposed &lt;P Align="center"&gt; because
+using &lt;P Align="center"&gt; breaks many existing browsers when
+the &lt;P&gt; tag is used as a container.  The &lt;P Align="center"&gt;
+tag is also less general and does not support all cases where
+centering may be desired.
+</CENTER>
+
+</DL>
+
+<HR SIZE=4>
+
+<CENTER>
+<H3>
+<FONT SIZE=+2>B</FONT>EHAVIORAL
+<FONT SIZE=+2>C</FONT>HANGES
+</H3>
+</CENTER>
+
+Font attributes are now properly cumulative.  Text inside something like<BR>
+&lt;i&gt;&lt;tt&gt;&lt;FONT SIZE=6&gt;&lt;b&gt;Text here&lt;/b&gt;&lt;/FONT&gt;&lt;/tt&gt;&lt;/i&gt;<BR>
+will be
+<I><TT><FONT SIZE=6><B>
+italic fixed bold text of size 6</B></FONT></tt></i>.
+<P>
+The Netscape Navigator should now properly deal with the awful <B>HTML</B> comment
+sequence.  This should be:
+<CENTER>
+&lt;!-- Comment here --&gt;
+</CENTER>
+These comments can include other elements, and thus be used to
+quickly comment out large chunks of markup.
+<P>
+Line breaking is a little more under control now.  Unless 
+specified with a formatting element, lines can only be broken where
+empty space occurs in the original document.  This means any spaces,
+tabs, or newlines.  You should never again have the
+sequence &lt;A HREF=url&gt;Anchor here&lt;/A&gt;. broken between
+the highlighted anchor and the period.
+
+<HR SIZE=4>
+
+<CENTER>
+<H3>
+<FONT SIZE=+2>N</FONT>EW
+<FONT SIZE=+2>E</FONT>NTITIES
+</H3>
+</CENTER>
+
+In addition to the <a
+href="http://info.cern.ch/hypertext/WWW/MarkUp/ISOlat1.html">usual
+&amp; escaped entities</a>:<BR>
+&amp;reg; -> Registered Trademark -> &reg;<BR>
+&amp;copy; -> Copyright -> &copy;<BR>
+<P>
+
+<HR SIZE=4>
+
+
+<P>
+<CENTER>
+<A HREF="/misc/bottom.map"><img src="/gifs/mirrored/navigation_bar.gif"
+ISMAP BORDER=0 WIDTH=468 HEIGHT=32></a>
+<P>
+
+<FONT SIZE=-1><I>
+Find out more about Netscape at <A HREF=
+"mailto:info@netscape.com">info@netscape.com</A>, or call 415/528-2555.<BR>
+Copyright &copy; 1995 Netscape Communications Corporation</I></FONT>
+</CENTER>
+<P>
+<P>
+
+
+</BODY>
+
