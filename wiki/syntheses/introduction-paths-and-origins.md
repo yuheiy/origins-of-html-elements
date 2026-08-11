@@ -186,7 +186,8 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 
 `base`は、1993年3月の保存仕様と3月10日の配布告知を回収し、`BASE HREF`の確認上限を6月から3月へ縮めた。revision 1.4には`BASE`も`SAVEDAS`もなく、保存仕様にはすでに`BASE HREF`があるが、指定したW3CのRCS履歴、公開メール、保存DTDからその間の差分または改名判断は回収できなかったため、一度だけの探索を完了し、新しいDTDリビジョンまたは編集記録が現れるまで個別ページの問いを維持する。
 
-- [`menu`](../elements/menu.md): Line Mode Browser 1.2から1.2aの配布物、RCS履歴、開発メールと、`test_source.txt`の保存日時を位置付ける記録。
+[`menu`](../elements/menu.md)は、Line Mode Browser 1.2から1.2aの配布物、RCS履歴、1992年1月から4月の公開メール、W3Cの1992年保存ディレクトリ、Tim Berners-Leeの保存フロッピー、旧FTP移転目録を照合した。現存公開ソース配布物は2.11以降であり、1.2aの担当者と`test_source.txt`の2月11日というHTTP保存日時を位置付ける記録は回収できなかった。一度だけの探索を完了し、新しい1.2系配布物、RCS履歴、開発メールが現れるまで個別ページの問いを維持する。
+
 - [`address`](../elements/address.md)、[`body`](../elements/body.md)、[`pre`](../elements/pre.md)、[`iframe`](../elements/iframe.md): 個別ページが特定する初期ソース、内部DTD、配布物、または同時代ベンダー資料。
 
 #### 新しい一次資料が現れるまで保留する問題

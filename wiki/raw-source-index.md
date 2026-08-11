@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された616ファイルを、34の取得元ホストごとに収録する。
+Rawに保存された617ファイルを、34の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（10ファイル）
 
@@ -567,11 +567,12 @@ Rawに保存された616ファイルを、34の取得元ホストごとに収録
 |---|---|
 | [jordi/v3/js/jsguide/jsguide.pdf](../raw/www.uv.es/jordi/v3/js/jsguide/jsguide.pdf) | — |
 
-## `www.w3.org`（211ファイル）
+## `www.w3.org`（212ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
 | [2011/11/03-html-wg-minutes.html](../raw/www.w3.org/2011/11/03-html-wg-minutes.html) | HTML WG f2f -- 03 Nov 2011 |
+| [2016/11/ftp-shutdown/info.html](../raw/www.w3.org/2016/11/ftp-shutdown/info.html) | W3C FTP server shutdown |
 | [Bugs/Public/show_bug.cgi__q__ctype=xml&id=15476](../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__ctype=xml&id=15476) | — |
 | [Bugs/Public/show_bug.cgi__q__id=10807](../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=10807) | 10807 &ndash; i18n comment 1 : new attribute: ubi |
 | [Bugs/Public/show_bug.cgi__q__id=13240](../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=13240) | 13240 &ndash; Consider replacing &lt;time&gt; with &lt;data&gt; |

@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-1992年2月11日のHTTP保存日時を持つWorldWideWebテストソースで`MENU`と`LI`の実例を確認できる。一方、CERN Line Mode Browser変更履歴は2月12日より後、3月27日より前のバージョン1.2aで`MENU`と`DIR`を将来利用のため導入したと記録し、両資料の時系列は解消できていない。同年5月には検索結果生成に`MENU`が使われ、後続資料は`UL`より項目を詰め、通常1項目1行で表示するリストとする。HTML 4.01で非推奨となった後、WHATWGはWebアプリケーション向けのメニューと共有コマンド状態という要求に対して既存要素を再利用し、2004年9月にはナビゲーションリンクとコマンドの構造化リストへ再定義した。初期導入の担当者、具体的祖先、命名理由は未確認である。
+1992年2月11日のHTTP保存日時を持つWorldWideWebテストソースで`MENU`と`LI`の実例を確認できる。一方、CERN Line Mode Browser変更履歴は2月12日より後、3月27日より前のバージョン1.2aで`MENU`と`DIR`を将来利用のため導入したと記録し、両資料の時系列は解消できていない。同年5月には検索結果生成に`MENU`が使われ、後続資料は`UL`より項目を詰め、通常1項目1行で表示するリストとする。HTML 4.01で非推奨となった後、WHATWGはWebアプリケーション向けのメニューと共有コマンド状態という要求に対して既存要素を再利用し、2004年9月にはナビゲーションリンクとコマンドの構造化リストへ再定義した。W3Cの現存公開配布物は2.11以降であり、初期導入の担当者、具体的祖先、命名理由は未確認である。
 
 ## 現在の意味
 
@@ -15,6 +15,8 @@ WHATWG HTML Living Standardでは、利用者が実行・起動できるコマ�
 ## HTMLへの導入
 
 1992年1月9日にBerners-Leeがwww-talkへ添付したHTML説明はリスト開始タグを`UL`と`OL`だけとしており、`MENU`と`DIR`を含まない。W3Cが公開するWorldWideWebテストソースはHTTP `Last-Modified`を2月11日とし、`MENU`と`LI`による実例を含む。CERN Line Mode Browser変更履歴は、2月12日のバージョン1.2より後、3月27日に修正された1.2fより前の1.2aで`MENU`と`DIR`を「将来利用のため」導入したと記録する。保存日時とバージョン区間の前後は解消できず、2月11日を公開日または実装日とは断定しない。Berners-Leeは5月25日に検索結果の選択肢を`MENU`で、翌26日にディレクトリ一覧を`DIR`で生成する例を示した。6月26日のDTD議論は`MENU`を現行HTMLのタグに含め、7月15日のConnolly DTDは`MENU`を`UL`、`OL`、`DIR`と同じ`LI`リスト一群へ収録する。後続のCERNタグ一覧は`MENU`を`UL`より簡潔な小さい段落のリスト、典型的には1項目1行と説明する。要素を`UL`と分けた判断、名称のソース、変更担当者は記録されていない。[1992年1月のHTML説明](../../raw/lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html)） [WorldWideWeb test source](../../raw/www.w3.org/Test/test_source.txt)（[公開元](https://www.w3.org/Test/test_source.txt)） [Line Mode Browser change history](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/LineMode/Defaults/Features.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/LineMode/Defaults/Features.html)） [Berners-Lee, “Re: search engines & views”](../../raw/lists.w3.org/Archives/Public/www-talk/1992MayJun/0009.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0009.html)） [Berners-Lee, “Making a simple file server for unix”](../../raw/lists.w3.org/Archives/Public/www-talk/1992MayJun/0012.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0012.html)） [Berners-Lee, “Re: HTML DTD”](../../raw/lists.w3.org/Archives/Public/www-talk/1992MayJun/0063.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0063.html)） [Connolly, “HTML DTD enclosed”](../../raw/lists.w3.org/Archives/Public/www-talk/1992JulAug/0020.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992JulAug/0020.html)） [Berners-Lee, *HTML Tags*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)）
+
+W3Cが2016年に公開した旧FTPの移転目録は、Line Mode Browserの旧ソース配布物として2.11、2.12、2.13、2.14、2.15、3.0以降を列挙するが、1.2または1.2aを含まない。この目録、W3Cの1992年保存ディレクトリ、公開メール、想定RCSパスから欠落版を回収できなかったため、1.2から1.2aへの差分とテストソースの時系列は新しい保存配布物または履歴が現れるまで確定しない。[W3C FTP server shutdown](../../raw/www.w3.org/2016/11/ftp-shutdown/info.html)（[公開元](https://www.w3.org/2016/11/ftp-shutdown/info.html)）
 
 ## HTML直前の祖先
 
@@ -57,6 +59,7 @@ HTML 4.01は`MENU`と`DIR`を非推奨とした。2004年4月のWeb Applications
 | 2004-11-21 | [“Web Applications 1.0 and Menu Labels”](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/044780.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/044780.html)） | Ian HicksonによるWHATWGメール | メニュー例でリンクを使った理由を、既存マークアップからの変更を最小にし移行を容易にするためと説明する。 | 2026-08-11 |
 | 2006-03-28 | [*Web Applications 1.0*](../../raw/platform.html5.org/history/webapps/r15.html)（[公開元](https://platform.html5.org/history/webapps/r15.html)） | WHATWG草案 | `menu`をコマンドのリストとし、コンテキストメニュー用の`popup`とツールバー用の`toolbar`を区別する。 | 2026-08-11 |
 | 2008-01-22 | [*HTML 5*](../../raw/www.w3.org/TR/2008/WD-html5-20080122/__index)（[公開元](https://www.w3.org/TR/2008/WD-html5-20080122/#the-menu)） | W3C First Public Working Draft | `menu`をコマンドのリストとして維持し、`context`、`toolbar`、既定の`list`状態を定義する。 | 2026-08-11 |
+| 2016-11 | [*W3C FTP server shutdown*](../../raw/www.w3.org/2016/11/ftp-shutdown/info.html)（[公開元](https://www.w3.org/2016/11/ftp-shutdown/info.html)） | W3Cの旧FTP保存目録 | Line Mode Browserの旧ソース配布物として2.11以降を列挙するが、1.2と1.2aは含まない。 | 2026-08-12 |
 
 ## 確度
 
@@ -70,5 +73,5 @@ HTML 4.01は`MENU`と`DIR`を非推奨とした。2004年4月のWeb Applications
 
 ## 未解決
 
-- Line Mode Browser 1.2から1.2aのソース差分、配布告知、開発メールから、`MENU`と`DIR`の変更担当者、`UL`と別要素にした要求、名称のソースを確認できるか。
-- `test_source.txt`のHTTP保存日時とLine Mode Browser 1.2aの導入区間の前後を、RCS履歴または配布アーカイブで解消できるか。
+- 新たにLine Mode Browser 1.2／1.2aのソース、差分、配布告知、開発メールが保存公開された場合、`MENU`と`DIR`の変更担当者、`UL`と別要素にした要求、名称のソースを確認できるか。
+- 新たに`test_source.txt`のRCS履歴または同時代の配布アーカイブが保存公開された場合、HTTP保存日時とLine Mode Browser 1.2aの導入区間の前後を解消できるか。

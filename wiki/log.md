@@ -1167,3 +1167,11 @@ HTML 3.0 DTDの変更履歴、W3C公開メール、HTML WG議題、HTML 3.0公�
 追加したRawの取得記録は次のとおりである。`https://suika.suikawiki.org/www/2005/pre-id/html-spec-199303.pdf`、リダイレクトなし、2026-08-11T21:29:00.716Z、`raw/suika.suikawiki.org/www/2005/pre-id/html-spec-199303.pdf`；`http://1997.webhistory.org/www.lists/www-talk.1993q1/0245.html`、リダイレクトなし、2026-08-11T21:29:01.343Z、`raw/1997.webhistory.org/www.lists/www-talk.1993q1/0245.html`。Raw索引を616ファイルで再生成した。
 
 初回探索と分離した敵対的検証では、1993年1月14日の採用意向、revision 1.4の保存DTDとRCS ChangeLog、3月の保存仕様、3月10日の配布告知、6月のInternet-Draftを照合した。revision 1.4に`BASE`と`SAVEDAS`がないこと、3月仕様の本文とDTDに`BASE HREF`があることを確認した。RCS ChangeLogは後代に取り込まれた履歴であり、6月草案の付録DTDも古い`$Id`を残すため、いずれの日付からも改名時点を推定していない。指定したW3Cの公開RCS候補、www-talk、保存DTDでは中間リビジョンまたは編集判断を回収できなかったため、この探索を完了し、新しいリビジョンまたはメールが現れるまで保留する。対象リントでは、`base`のフロントマター、必須見出し順、9行の証拠表、各歴史的主張と出典の対応、README概要、統合ページの調査キュー、変更ページのローカルMarkdownリンク、Raw索引の616ファイル網羅と再生成一致、Markdown whitespaceを`合格`、`BASE HREF`の確認上限を`修正済み`、改名判断とHTML外祖先を`Research必要`として確認した。変更した知識ページは敵対的検証と対象リントに合格したため`完成`とした。
+
+## [2026-08-12] research | `menu`のLine Mode Browser 1.2系資料
+
+Line Mode Browser 1.2から1.2aの配布物、RCS履歴、開発メールと、WorldWideWeb `test_source.txt`の保存日時を位置付ける記録を再調査した。変更履歴は2月12日の1.2より後、3月27日に修正された1.2fより前の1.2aで`MENU`と`DIR`を導入したとする一方、公開テストソースは2月11日のHTTP `Last-Modified`を持つ。W3Cの旧FTP移転目録は現存するLine Mode Browserの旧ソース配布物として2.11以降だけを列挙し、1.2系を含まない。指定資料から担当者、導入要求、名称、二つの日時の関係を確定できなかったため、確度Cを維持した。
+
+追加したRawの取得記録は次のとおりである。`https://www.w3.org/2016/11/ftp-shutdown/info.html`、リダイレクトなし、2026-08-11T21:35:52.550Z、`raw/www.w3.org/2016/11/ftp-shutdown/info.html`。Raw索引を617ファイルで再生成した。
+
+初回探索と分離した敵対的検証では、W3Cの1992年保存ディレクトリ、Tim Berners-Leeの保存フロッピー、旧FTP移転目録、現存最古の2.11配布物、1992年1月から4月のwww-talk、公開テストソース、Line Mode Browser変更履歴、想定RCSパスを照合した。公開`test_source.txt`の2月11日というHTTP時刻を実装日または公開日へ読み替えず、2.11の実装から1.2aの変更者または判断を遡っていない。指定資料では欠落版と履歴を回収できなかったため、この探索を完了し、新しい1.2系配布物、RCS履歴、開発メールが現れるまで保留する。対象リントでは、`menu`のフロントマター、必須見出し順、18行の証拠表、歴史的主張と出典の対応、README概要、統合ページの調査キュー、変更ページのローカルMarkdownリンク、Raw索引の617ファイル網羅と再生成一致、Markdown whitespaceを`合格`、現存公開配布物の下限と再開条件を`修正済み`、初期担当者、要求、命名、テストソースの日時を`Research必要`として確認した。変更した知識ページは敵対的検証と対象リントに合格したため`完成`とした。
