@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された569ファイルを、32の取得元ホストごとに収録する。
+Rawに保存された577ファイルを、32の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（9ファイル）
 
@@ -217,15 +217,22 @@ Rawに保存された569ファイルを、32の取得元ホストごとに収録
 | [mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/README.first](../raw/ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/README.first) | — |
 | [mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd](../raw/ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd) | — |
 
-## `github.com`（60ファイル）
+## `github.com`（67ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
+| [WICG/webcomponents/commit/27e06d2a7e6390c5ca726afab4671cd48a121c9e](../raw/github.com/WICG/webcomponents/commit/27e06d2a7e6390c5ca726afab4671cd48a121c9e) | Stubbed out Slots proposal. · WICG/webcomponents@27e06d2 · GitHub |
+| [WICG/webcomponents/commit/c691d821bfab9bef5bf2a2c3f623402ac32b64d3](../raw/github.com/WICG/webcomponents/commit/c691d821bfab9bef5bf2a2c3f623402ac32b64d3) | Add `proposals` directory. · WICG/webcomponents@c691d82 · GitHub |
+| [WICG/webcomponents/issues/128](../raw/github.com/WICG/webcomponents/issues/128) | Finalize the slots proposal · Issue #128 · WICG/webcomponents · GitHub |
 | [WICG/webcomponents/issues/92](../raw/github.com/WICG/webcomponents/issues/92) | [Shadow]: rename &lt;content&gt; to &lt;slot&gt; (bugzilla: 28561) · Issue #92 · WICG/webcomponents · GitHub |
 | [WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c](../raw/github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c) | Part 1 of the new &lt;CANVAS&gt; tag implementation. This patch · WebKit/WebKit@048bd7c · GitHub |
+| [WebKit/WebKit/commit/2078001d3a7f34355de3cc104d8f4c948e3a3039](../raw/github.com/WebKit/WebKit/commit/2078001d3a7f34355de3cc104d8f4c948e3a3039) | HTMLSlotElement should render its assigned nodes · WebKit/WebKit@2078001 · GitHub |
 | [WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb](../raw/github.com/WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb) | Part 2 of the new &lt;CANVAS&gt; tag implementation. This adds the · WebKit/WebKit@368b129 · GitHub |
+| [WebKit/WebKit/commit/be43170fde964477f2e203e29cd419c2c3526ec3](../raw/github.com/WebKit/WebKit/commit/be43170fde964477f2e203e29cd419c2c3526ec3) | Source/WebCore: · WebKit/WebKit@be43170 · GitHub |
 | [alandipert/ncsa-mosaic/blob/master/CHANGES](../raw/github.com/alandipert/ncsa-mosaic/blob/master/CHANGES) | ncsa-mosaic/CHANGES at master · alandipert/ncsa-mosaic · GitHub |
+| [chromium/chromium/commit/071137e656e1ad78c5e8ce506346aa5d2eeef5f9](../raw/github.com/chromium/chromium/commit/071137e656e1ad78c5e8ce506346aa5d2eeef5f9) | Support the essential part of Shadow DOM v1 · chromium/chromium@071137e · GitHub |
 | [chromium/chromium/commit/235b09a98c3b53c49e977df7a32fb851ee224936](../raw/github.com/chromium/chromium/commit/235b09a98c3b53c49e977df7a32fb851ee224936) | selectlist: Make &lt;selectedoption&gt; cloneNode all contents · chromium/chromium@235b09a · GitHub |
+| [chromium/chromium/commit/7478fc4939b1eb3e68510ed873d50b5b638dda1c](../raw/github.com/chromium/chromium/commit/7478fc4939b1eb3e68510ed873d50b5b638dda1c) | Add the slot element under the ShadowDOMV1 runtime flag. · chromium/chromium@7478fc4 · GitHub |
 | [chromium/chromium/commit/b4a390a758ddbef7de1d864eab7823d44d1c8c95](../raw/github.com/chromium/chromium/commit/b4a390a758ddbef7de1d864eab7823d44d1c8c95) | selectlist: add &lt;selectedoption&gt; element · chromium/chromium@b4a390a · GitHub |
 | [openui/open-ui/commit/0feb63d9eef0c1f755b228b3ec5cf803b0a9dd74](../raw/github.com/openui/open-ui/commit/0feb63d9eef0c1f755b228b3ec5cf803b0a9dd74) | Initial recommendations for part events (#103) · openui/open-ui@0feb63d · GitHub |
 | [openui/open-ui/commit/c136064d27e9e43dd9a6f620b149d32e22482d74](../raw/github.com/openui/open-ui/commit/c136064d27e9e43dd9a6f620b149d32e22482d74) | Rename selectedvalue to selectedoption (#833) · openui/open-ui@c136064 · GitHub |
@@ -328,7 +335,7 @@ Rawに保存された569ファイルを、32の取得元ホストごとに収録
 |---|---|
 | [WEBMASTER/tags.txt](../raw/lib.ru/WEBMASTER/tags.txt) | HTML Referece Guide: Tags for Netscape 3.0 |
 
-## `lists.w3.org`（49ファイル）
+## `lists.w3.org`（50ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -346,6 +353,7 @@ Rawに保存された569ファイルを、32の取得元ホストごとに収録
 | [Archives/Public/public-html/2012Oct/0109.html](../raw/lists.w3.org/Archives/Public/public-html/2012Oct/0109.html) | maincontent extension - data on use of id=main and id=content in web pages from Steve Faulkner on 2012-10-16 (public-html@w3.org from October 2012) |
 | [Archives/Public/public-html/2012Sep/0086.html](../raw/lists.w3.org/Archives/Public/public-html/2012Sep/0086.html) | maincontent element from Steve Faulkner on 2012-09-09 (public-html@w3.org from September 2012) |
 | [Archives/Public/public-html/2013Jan/0033.html](../raw/lists.w3.org/Archives/Public/public-html/2013Jan/0033.html) | &lt;main&gt; has landed from Robin Berjon on 2013-01-11 (public-html@w3.org from January 2013) |
+| [Archives/Public/public-webapps/2015AprJun/0184.html](../raw/lists.w3.org/Archives/Public/public-webapps/2015AprJun/0184.html) | Proposal for changes to manage Shadow DOM content distribution from Ryosuke Niwa on 2015-04-22 (public-webapps@w3.org from April to June 2015) |
 | [Archives/Public/public-webhistory/2017Sep/0000.html](../raw/lists.w3.org/Archives/Public/public-webhistory/2017Sep/0000.html) | Re: Provenance of the blockquote element from Dan Connolly on 2017-09-11 (public-webhistory@w3.org from September 2017) |
 | [Archives/Public/public-whatwg-archive/2005Apr/0187.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0187.html) | [whatwg] HTML5: Deprecate the SMALL element from Henrik Lied on 2005-04-12 (public-whatwg-archive@w3.org from April 2005) |
 | [Archives/Public/public-whatwg-archive/2005Apr/0190.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0190.html) | [whatwg] HTML5: Deprecate the SMALL element from Ian Hickson on 2005-04-12 (public-whatwg-archive@w3.org from April 2005) |

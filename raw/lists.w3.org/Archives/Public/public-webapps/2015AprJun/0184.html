@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="hypermail 3.0.0, see https://github.com/hypermail-project/hypermail/" />
+<title>Proposal for changes to manage Shadow DOM content distribution from Ryosuke Niwa on 2015-04-22 (public-webapps@w3.org from April to June 2015)</title>
+<meta name="Author" content="Ryosuke Niwa (rniwa&#x40;&#0097;&#0112;&#0112;&#0108;&#0101;&#0046;&#0099;&#0111;&#0109;)" />
+<meta name="Subject" content="Proposal for changes to manage Shadow DOM content distribution" />
+<meta name="Date" content="2015-04-22" />
+<link rel="stylesheet" title="Normal view" href="/assets/styles/public.css" />
+<link rel="help" href="/Help/" />
+<link rel="start" href="../" title="public-webapps@w3.org archives" />
+<script defer="defer" src="/assets/js/archives.js"></script>
+</head>
+<body class="message">
+<header class="head">
+<nav class="breadcrumb" id="upper">
+  <ul>
+    <li><a href="https://www.w3.org/">W3C home</a></li>
+    <li><a href="/">Mailing lists</a></li>
+    <li><a href="../../">Public</a></li>
+    <li><a href="../" rel="start">public-webapps@w3.org</a></li>
+    <li><a href="./" rel="contents">April to June 2015</a></li>
+  </ul>
+</nav>
+<h1>Proposal for changes to manage Shadow DOM content distribution</h1>
+<!-- received="Wed Apr 22 03:19:29 2015" -->
+<!-- isoreceived="20150422031929" -->
+<!-- sent="Tue, 21 Apr 2015 20:19:00 -0700" -->
+<!-- isosent="20150422031900" -->
+<!-- name="Ryosuke Niwa" -->
+<!-- email="rniwa&#x40;&#0097;&#0112;&#0112;&#0108;&#0101;&#0046;&#0099;&#0111;&#0109;" -->
+<!-- subject="Proposal for changes to manage Shadow DOM content distribution" -->
+<!-- id="10A4FCA7-CB4F-48A9-A10B-5227B7A08D84@apple.com" -->
+<!-- charset="UTF-8" -->
+<!-- expires="-1" -->
+<nav id="navbar">
+<ul class="links hmenu_container">
+<li>
+<span class="heading">This message</span>: <ul class="hmenu"><li><a href="#start" id="options1">Message body</a></li>
+<li><a href="mailto:public-webapps&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20Proposal%20for%20changes%20to%20manage%20Shadow%20DOM%20content%20distribution&amp;In-Reply-To=%3C10A4FCA7-CB4F-48A9-A10B-5227B7A08D84%40apple.com%3E&amp;References=%3C10A4FCA7-CB4F-48A9-A10B-5227B7A08D84%40apple.com%3E">Respond</a></li>
+<li><a href="#options3">More options</a></li>
+</ul></li>
+<li>
+<span class="heading">Related messages</span>: <ul class="hmenu">
+<!-- unext="start" -->
+<li><a href="0185.html">Next message</a></li>
+<li><a href="0183.html">Previous message</a></li>
+<!-- unextthread="start" -->
+<li><a href="0185.html">Next in thread</a></li>
+<li><a href="#replies">Replies</a></li>
+<!-- ureply="end" -->
+</ul></li>
+</ul>
+</nav>
+</header>
+<!-- body="start" -->
+<main class="mail">
+<ul class="headers" aria-label="message headers">
+<li><span class="from">
+<span class="heading">From</span>: Ryosuke Niwa &lt;<a href="mailto:rniwa&#x40;&#0097;&#0112;&#0112;&#0108;&#0101;&#0046;&#0099;&#0111;&#0109;?Subject=Re%3A%20Proposal%20for%20changes%20to%20manage%20Shadow%20DOM%20content%20distribution&amp;In-Reply-To=%3C10A4FCA7-CB4F-48A9-A10B-5227B7A08D84%40apple.com%3E&amp;References=%3C10A4FCA7-CB4F-48A9-A10B-5227B7A08D84%40apple.com%3E">rniwa&#x40;&#0097;&#0112;&#0112;&#0108;&#0101;&#0046;&#0099;&#0111;&#0109;</a>&gt;
+</span></li>
+<li><span class="date"><span class="heading">Date</span>: Tue, 21 Apr 2015 20:19:00 -0700</span></li>
+<li><span class="to"><span class="heading">To</span>: WebApps WG &lt;<a href="mailto:public-webapps&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20Proposal%20for%20changes%20to%20manage%20Shadow%20DOM%20content%20distribution&amp;In-Reply-To=%3C10A4FCA7-CB4F-48A9-A10B-5227B7A08D84%40apple.com%3E&amp;References=%3C10A4FCA7-CB4F-48A9-A10B-5227B7A08D84%40apple.com%3E">public-webapps&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;</a>&gt;
+</span></li>
+<li><span class="cc"><span class="heading">Cc</span>: Edward O'Connor &lt;<a href="mailto:eoconnor&#x40;&#0097;&#0112;&#0112;&#0108;&#0101;&#0046;&#0099;&#0111;&#0109;?Subject=Re%3A%20Proposal%20for%20changes%20to%20manage%20Shadow%20DOM%20content%20distribution&amp;In-Reply-To=%3C10A4FCA7-CB4F-48A9-A10B-5227B7A08D84%40apple.com%3E&amp;References=%3C10A4FCA7-CB4F-48A9-A10B-5227B7A08D84%40apple.com%3E">eoconnor&#x40;&#0097;&#0112;&#0112;&#0108;&#0101;&#0046;&#0099;&#0111;&#0109;</a>&gt;, Jan Miksovsky &lt;<a href="mailto:jan&#x40;&#0099;&#0111;&#0109;&#0112;&#0111;&#0110;&#0101;&#0110;&#0116;&#0046;&#0107;&#0105;&#0116;&#0099;&#0104;&#0101;&#0110;?Subject=Re%3A%20Proposal%20for%20changes%20to%20manage%20Shadow%20DOM%20content%20distribution&amp;In-Reply-To=%3C10A4FCA7-CB4F-48A9-A10B-5227B7A08D84%40apple.com%3E&amp;References=%3C10A4FCA7-CB4F-48A9-A10B-5227B7A08D84%40apple.com%3E">jan&#x40;&#0099;&#0111;&#0109;&#0112;&#0111;&#0110;&#0101;&#0110;&#0116;&#0046;&#0107;&#0105;&#0116;&#0099;&#0104;&#0101;&#0110;</a>&gt;
+</span></li>
+<li><span class="message-id"><span class="heading">Message-id</span>: &lt;10A4FCA7-CB4F-48A9-A10B-5227B7A08D84&#x40;&#0097;&#0112;&#0112;&#0108;&#0101;&#0046;&#0099;&#0111;&#0109;&gt;
+</span></li>
+</ul>
+<section id="start" class="message-body-part">
+<pre class="body">
+Hi all,
+
+Following WebApps discussion last year [1] and earlier this year [2] about template transclusions and inheritance in shadow DOM, Jan Miksovsky at Component Kitchen, Ted O'Connor and I (Ryosuke Niwa) at Apple had a meeting where we came up with changes to the way shadow DOM distributes nodes to better fit real world use cases.
+
+After studying various real world use of web component APIs as well as exiting GUI frameworks, we noticed that selector based node distribution as currently spec'ed doesn't address common use cases and the extra flexibility CSS selectors offers isn't needed in practice.  Instead, we propose named insertion &quot;slots&quot; that could be filled with the contents in the original DOM as well as contents in subclasses.  Because the proposal uses the same slot filling mechanism for content distributions and inheritance transclusions, it eliminates the need for multiple shadow roots.
+
+Please take a look at our proposal at <a href="https://github.com/w3c/webcomponents/wiki/Proposal-for-changes-to-manage-Shadow-DOM-content-distribution">https://github.com/w3c/webcomponents/wiki/Proposal-for-changes-to-manage-Shadow-DOM-content-distribution</a> &lt;<a href="https://github.com/w3c/webcomponents/wiki/Proposal-for-changes-to-manage-Shadow-DOM-content-distribution">https://github.com/w3c/webcomponents/wiki/Proposal-for-changes-to-manage-Shadow-DOM-content-distribution</a>&gt;
+
+[1] <a href="https://lists.w3.org/Archives/Public/public-webapps/2014AprJun/0151.html">https://lists.w3.org/Archives/Public/public-webapps/2014AprJun/0151.html</a> &lt;<a href="https://lists.w3.org/Archives/Public/public-webapps/2014AprJun/0151.html">https://lists.w3.org/Archives/Public/public-webapps/2014AprJun/0151.html</a>&gt;
+[2] <a href="https://lists.w3.org/Archives/Public/public-webapps/2015JanMar/0611.html">https://lists.w3.org/Archives/Public/public-webapps/2015JanMar/0611.html</a> &lt;<a href="https://lists.w3.org/Archives/Public/public-webapps/2015JanMar/0611.html">https://lists.w3.org/Archives/Public/public-webapps/2015JanMar/0611.html</a>&gt;
+</pre>
+</section>
+<p class="received"><span class="heading">Received on</span> Wednesday, 22 April 2015 03:19:29 UTC</p>
+</main>
+<!-- body="end" -->
+<footer class="foot">
+<nav id="navbarfoot">
+<ul class="links hmenu_container">
+<li><span class="heading">This message</span>: <span class="message_body"><a href="#start">Message body</a></span></li>
+<!-- lnext="start" -->
+<li><span class="heading">Next message</span>: <a href="0185.html">Daniel Freedman: "Re: Proposal for changes to manage Shadow DOM content distribution"</a></li>
+<li><span class="heading">Previous message</span>: <a href="0183.html">Glen Huang: "Re: JSON imports?"</a></li>
+<!-- lnextthread="start" -->
+<li><span class="heading">Next in thread</span>: <a href="0185.html">Daniel Freedman: "Re: Proposal for changes to manage Shadow DOM content distribution"</a></li>
+<li id="replies"><span class="heading">Reply</span>: <a href="0185.html">Daniel Freedman: "Re: Proposal for changes to manage Shadow DOM content distribution"</a></li>
+<li><span class="heading">Reply</span>: <a href="0188.html">Brian Kardell: "Re: Proposal for changes to manage Shadow DOM content distribution"</a></li>
+<!-- lreply="end" -->
+</ul>
+<ul class="links hmenu_container">
+<li id="options3"><span class="heading">Mail actions</span>: <ul class="hmenu"><li><a href="mailto:public-webapps&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20Proposal%20for%20changes%20to%20manage%20Shadow%20DOM%20content%20distribution&amp;In-Reply-To=%3C10A4FCA7-CB4F-48A9-A10B-5227B7A08D84%40apple.com%3E&amp;References=%3C10A4FCA7-CB4F-48A9-A10B-5227B7A08D84%40apple.com%3E">respond to this message</a></li>
+<li><a href="mailto:public-webapps&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;">mail a new topic</a></li></ul></li>
+<li><span class="heading">Contemporary messages sorted</span>: <ul class="hmenu"><li><a href="index.html#msg184">by date</a></li>
+<li><a href="thread.html#msg184">by thread</a></li>
+<li><a href="subject.html#msg184">by subject</a></li>
+<li><a href="author.html#msg184">by author</a></li>
+</ul></li>
+<li><span class="heading">Help</span>: <ul class="hmenu">
+    <li><a href="/Help/" rel="help">how to use the archives</a></li>
+    <li><a href="https://www.w3.org/Search/Mail/Public/search?type-index=public-webapps&amp;index-type=t">search the archives</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<!-- trailer="footer" -->
+<p class="colophon">
+This archive was generated by <a href="https://github.com/hypermail-project/hypermail/">hypermail 3.0.0</a>: Thursday, 13 July 2023 18:05:23 UTC
+</p>
+</footer>
+</body>
+</html>
