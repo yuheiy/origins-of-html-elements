@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された612ファイルを、33の取得元ホストごとに収録する。
+Rawに保存された614ファイルを、33の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（9ファイル）
 
@@ -319,7 +319,7 @@ Rawに保存された612ファイルを、33の取得元ホストごとに収録
 | [multipage/tables.html](../raw/html.spec.whatwg.org/multipage/tables.html) | HTML Standard |
 | [multipage/text-level-semantics.html](../raw/html.spec.whatwg.org/multipage/text-level-semantics.html) | HTML Standard |
 
-## `ksi.cpsc.ucalgary.ca`（8ファイル）
+## `ksi.cpsc.ucalgary.ca`（10ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -328,6 +328,8 @@ Rawに保存された612ファイルを、33の取得元ホストごとに収録
 | [archives/HTML-WG/html-archive.messages/361.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html) | EMail Msg &lt;9409121257.AA14263@dragget.hpl.hp.com&gt; |
 | [archives/HTML-WG/html-wg-95q2.messages/0278.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0278.html) | html-wg-95q2: Re: More comments on the HTML 3.0 draft |
 | [archives/HTML-WG/html-wg-95q2.messages/0432.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html) | html-wg-95q2: Re: HTML/CALS/ICADD Table Prop |
+| [archives/WWW-TALK/www-talk-1993q2.messages/428.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/428.html) | EMail Msg &lt;9306021337.AA01357@www3.cern.ch&gt; |
+| [archives/WWW-TALK/www-talk-1993q2.messages/429.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/429.html) | EMail Msg &lt;199306021622.AA27852@ora.com&gt; |
 | [archives/WWW-TALK/www-talk-1993q3.messages/459.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/459.html) | EMail Msg &lt;9308102156.AA06138@austin.BSDI.COM&gt; |
 | [archives/WWW-TALK/www-talk-1993q3.messages/774.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/774.html) | EMail Msg &lt;9308260107.AA23088@stat1.cc.ukans.edu&gt; |
 | [archives/WWW-TALK/www-talk-1993q3.messages/821.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html) | EMail Msg &lt;9309060010.AA01749@wintermute.ncsa.uiuc.edu&gt; |

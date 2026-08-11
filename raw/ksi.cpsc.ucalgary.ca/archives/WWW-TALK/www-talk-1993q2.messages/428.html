@@ -1,0 +1,50 @@
+<TITLE>EMail Msg &lt;9306021337.AA01357@www3.cern.ch&gt;</TITLE>
+<H1>HTML+ DTD in ftp://info.cern.ch/pub/www/dev/htmlplus.dtd</H1><ADDRESS>Tim Berners-Lee &lt;timbl@www3.cern.ch&gt;</ADDRESS>
+<UL><LI><B>Mail folder: </B><A HREF="../www-talk-1993q2.index.html#428.html">WWW Talk Apr-Jun 1993 Archives</A><LI><B>Next message: </B><A HREF="429.html">Terry Allen: &quot;RE htmlplus.dtd of 1 June&quot;</A><LI><B>Previous message: </B><A HREF="427.html">Tim Berners-Lee: &quot;Re: Keeping HTML Simple &amp; Format negotiation between Browser &amp; Server&quot;</A></UL>
+<PRE>Date: Wed, 2 Jun 93 14:37:05 +0100
+From: Tim Berners-Lee &lt;timbl@www3.cern.ch&gt;
+Message-id: <A HREF="428.html">&lt;9306021337.AA01357@www3.cern.ch&gt;</A>
+To: www-talk@nxoc01.cern.ch
+Subject: HTML+ DTD in ftp://info.cern.ch/pub/www/dev/htmlplus.dtd
+Reply-To: timbl@nxoc01.cern.ch
+</PRE><PRE>
+
+From: Dave_Raggett &lt;dsr@hplb.hpl.hp.com&gt;
+Date: Wed, 2 Jun 93 13:01:14 BST
+
+Hi Tim,
+
+I have uploaded the latest copy of my DTD for HTML+ into
+[tbl moved it into:]
+
+    &quot;ftp://info.cern.ch/pub/www/dev/htmlplus.dtd&quot;
+
+
+The new DTD reflects recent discussions:
+
+    o   One tag for all inline emphasis
+    o   FIG tag similar to Pei's (but no TYPE attribute)
+    o   EMBED tag for foreign data (simple equations etc.)
+    o   DL lists extended for tables with optional hints
+    o   INPUT and SELECT form interaction elements
+
+I don't know how in SGML to specify a tag which may or may not
+have an endtag depending on its attribute values. Because of
+this I have used two tags for images:
+
+[I think (hope?) that this it is impossible to change
+ the EMPTY charactistic of an element as a function of the
+ attributes.  Would severly complicate parsing -Tim]
+ 
+
+    a)  &lt;FIG&gt; ...&lt;/FIG&gt; for captioned images
+    b)  &lt;ICON&gt; for small inline graphics without captions
+
+[...]
+
+Cheers,
+
+Dave Raggett
+
+
+</PRE>

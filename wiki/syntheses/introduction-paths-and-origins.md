@@ -182,7 +182,8 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 
 次の問題は欠落区間または資料名が具体的だが、周辺史料をすでに反復して調査している。一般的なキーワード探索を繰り返さず、指定した配布物、RCS履歴、保存ソースだけを対象とし、回収できなければ現存する公開資料の限界として保留する。
 
-- [`br`](../elements/br.md): 1993年6月1日版`htmlplus.dtd`と、HTML+、WWW Workshop、Lynx、NCSA Mosaic、HTML 2.0の間を結ぶ要素単位の記録。
+`br`は、1993年6月1日版HTML+ DTDの公開告知と、それを閲覧した同時代の返信を回収した。これにより版の実在は確定したが、保存メールはDTD本文を含まず、返信も`BR`へ言及しない。指定配布物、WWW-TALK保存メール、HTML+、Workshop記録、Lynx、NCSA Mosaic、HTML 2.0の既知資料を照合しても要素単位の接続記録は得られなかったため、一度だけの探索を完了し、保存本文または新しい編集記録が現れるまで個別ページの問いを維持する。
+
 - [`base`](../elements/base.md): 1993年のrevision 1.4から6月草案までに`SAVEDAS`を`BASE HREF`へ具体化したDTD／RCS差分またはメール。
 - [`menu`](../elements/menu.md): Line Mode Browser 1.2から1.2aの配布物、RCS履歴、開発メールと、`test_source.txt`の保存日時を位置付ける記録。
 - [`address`](../elements/address.md)、[`body`](../elements/body.md)、[`pre`](../elements/pre.md)、[`iframe`](../elements/iframe.md): 個別ページが特定する初期ソース、内部DTD、配布物、または同時代ベンダー資料。
