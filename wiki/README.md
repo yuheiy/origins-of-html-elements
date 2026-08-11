@@ -149,4 +149,4 @@ status: 完成
 
 ## 統合
 
-- [HTML要素の導入経路と由来](syntheses/introduction-paths-and-origins.md): HTML+等を含む現行HTMLへの導入経路と、HTML内の変遷を遡って具体的な由来を八つにまとめた分類を分け、現行115要素の主経路と根拠を示す。
+- [HTML要素の導入経路と由来](syntheses/introduction-paths-and-origins.md): HTML+等を含む現行HTMLへの導入経路と、HTML内部の変遷を通して遡れる具体的な由来による分類を分け、現行115要素の主経路と根拠を示す。

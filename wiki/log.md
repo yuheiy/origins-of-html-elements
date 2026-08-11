@@ -791,3 +791,27 @@ Raw、生成Raw index、過去Logを除くWikiを対象に、「供給」「起�
 内容が由来別分類だけでなくHTMLへの導入経路も扱うことを明示するため、`wiki/syntheses/origin-based-classification.md`を`wiki/syntheses/introduction-paths-and-origins.md`へ改名し、READMEの案内と統合一覧のリンクを更新した。本文、分類、歴史的結論、状態は変更していない。
 
 対象Lintは、新旧path、READMEの参照、synthesisのfrontmatterとtitle、Markdown whitespaceを`合格`、内容より狭かったファイル名を`修正済み`、`Research必要`はなしと確認した。
+
+## [2026-08-11] query | 導入経路と由来の説明明確化
+
+第二表が八つの由来そのものではなく、複数の具体的な由来を束ねた八つの大分類であることを明記した。冒頭と第二節の見出しでは、HTML内部だけを由来とするように読めた表現を、HTML内部の変遷を通して確認できる文書体系、実務、UI、設計要求、実装上の制約まで遡る表現へ改め、README概要も同期した。タイトル、分類、要素の所属、歴史的結論、Raw snapshot、element／lineageの確度は変更していない。
+
+対象Lintは、synthesisのfrontmatter、見出しと本文の用語整合、第二表の八大分類と起点未確認の例外、READMEのtitleと概要、ローカルMarkdown link、Markdown whitespaceを`合格`、説明上の曖昧さを`修正済み`、`Research必要`はなしと確認した。
+
+## [2026-08-11] query | 第二表と分類根拠の役割整理
+
+第二表に続く2.1〜2.3が八つの大分類の下位分類ではなく、各要素を第二表へ割り当てた根拠を由来の確認経路ごとに整理する節であることを明記した。単一要素の結論を再掲していた2.4を削除し、第二表の例外行から正本の`blockquote` elementページへリンクした。分類、要素の所属、歴史的結論、README概要、Raw snapshot、element／lineageの確度は変更していない。
+
+対象Lintは、synthesisのfrontmatter、第二表と2.1〜2.3の役割、八大分類と`blockquote`の例外、element正本へのリンク、Markdown whitespaceを`合格`、単一要素の重複説明を`修正済み`、`Research必要`はなしと確認した。
+
+## [2026-08-11] query | synthesis概要の簡略化
+
+READMEのsynthesis概要から、分類数と由来未確認の個別要素名を削除した。概要は導入経路と由来による分類という二軸、現行115要素の主経路と根拠に限定し、詳細はsynthesis本文を正本とした。本文、分類、歴史的結論、Raw snapshot、element／lineageの確度は変更していない。
+
+対象Lintは、READMEのtitle、概要とsynthesis本文の整合、synthesisへのローカルリンク、Markdown whitespaceを`合格`、詳細すぎる概要を`修正済み`、`Research必要`はなしと確認した。
+
+## [2026-08-11] query | 第二表の根拠節を導入先行へ再構成
+
+第二表の割り当て根拠を示す2.1〜2.3で、表の後にあった分類説明と出典段落を表の前へ移し、各表が何を示すかを先に読める導入へ再構成した。2.1は37要素の外部設計入力、2.2は12要素のHTML内部派生と第二表への配置、2.3は8要素の個別要求について、それぞれ説明と根拠から表へ進む順序に統一した。表、分類、要素の所属、歴史的結論、README概要、Raw snapshot、element／lineageの確度は変更していない。
+
+対象Lintは、synthesisのfrontmatter、2.1〜2.3の説明・根拠・表の順序、表の内容と要素数、ローカルMarkdown link、Markdown whitespaceを`合格`、表後に置かれていた導入相当段落を`修正済み`、`Research必要`はなしと確認した。
