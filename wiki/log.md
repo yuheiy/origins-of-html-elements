@@ -1159,3 +1159,11 @@ HTML 3.0 DTDの変更履歴、W3C公開メール、HTML WG議題、HTML 3.0公�
 追加したRawの取得記録は次のとおりである。`https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/428.html`、リダイレクトなし、2026-08-11T21:20:27.556Z、`raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/428.html`；`https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/429.html`、リダイレクトなし、2026-08-11T21:20:28.226Z、`raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/429.html`。Raw索引を614ファイルで再生成した。
 
 初回探索と分離した敵対的検証では、6月1日版への同時代コメント、7月12日版HTML+本文とDTD、7月の基礎HTML草案、Workshop参加者の二つの記録、Lynx公開告知、NCSA Mosaicの公開告知と配布物由来変更履歴、HTML 2.0を照合した。6月の返信に列挙された要素から未記載の`BR`を推定せず、前後関係だけから採用因果を補っていない。指定した保存ソースと配布物では本文または要素単位の接続記録を回収できなかったため、この探索を完了し、新しい保存本文または編集記録が現れるまで保留する。対象リントでは、`br`のフロントマター、必須見出し順、13行の証拠表、歴史的主張と出典の対応、README概要、統合ページの調査キュー、変更ページのローカルMarkdownリンク、Raw索引の614ファイル網羅と再生成一致、Markdown whitespaceを`合格`、1993年6月1日版DTDの実在を`修正済み`、同版の本文、`BR`収録、発案者、要素単位の採用因果を`Research必要`として確認した。変更した知識ページは敵対的検証と対象リントに合格したため`完成`とした。
+
+## [2026-08-12] research | `base`の1993年3月仕様
+
+1993年3月の保存仕様と同時代の配布告知を再調査した。保存仕様は、文書が取得時の文脈を失っても相対URLを解決するための`BASE HREF`を本文とDTDに収録する。3月10日にTim Berners-Leeは、最近改訂したHTML仕様のPostScript版とテキスト版をCERNから配布すると告知した。これにより`BASE HREF`の確認上限を6月から3月へ縮めたが、1月14日の`SAVEDAS`標準化意向と3月仕様の間で名称と構文を決めた記録は確認できないため、確度Bを維持した。
+
+追加したRawの取得記録は次のとおりである。`https://suika.suikawiki.org/www/2005/pre-id/html-spec-199303.pdf`、リダイレクトなし、2026-08-11T21:29:00.716Z、`raw/suika.suikawiki.org/www/2005/pre-id/html-spec-199303.pdf`；`http://1997.webhistory.org/www.lists/www-talk.1993q1/0245.html`、リダイレクトなし、2026-08-11T21:29:01.343Z、`raw/1997.webhistory.org/www.lists/www-talk.1993q1/0245.html`。Raw索引を616ファイルで再生成した。
+
+初回探索と分離した敵対的検証では、1993年1月14日の採用意向、revision 1.4の保存DTDとRCS ChangeLog、3月の保存仕様、3月10日の配布告知、6月のInternet-Draftを照合した。revision 1.4に`BASE`と`SAVEDAS`がないこと、3月仕様の本文とDTDに`BASE HREF`があることを確認した。RCS ChangeLogは後代に取り込まれた履歴であり、6月草案の付録DTDも古い`$Id`を残すため、いずれの日付からも改名時点を推定していない。指定したW3Cの公開RCS候補、www-talk、保存DTDでは中間リビジョンまたは編集判断を回収できなかったため、この探索を完了し、新しいリビジョンまたはメールが現れるまで保留する。対象リントでは、`base`のフロントマター、必須見出し順、9行の証拠表、各歴史的主張と出典の対応、README概要、統合ページの調査キュー、変更ページのローカルMarkdownリンク、Raw索引の616ファイル網羅と再生成一致、Markdown whitespaceを`合格`、`BASE HREF`の確認上限を`修正済み`、改名判断とHTML外祖先を`Research必要`として確認した。変更した知識ページは敵対的検証と対象リントに合格したため`完成`とした。

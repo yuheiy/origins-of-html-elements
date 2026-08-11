@@ -2,9 +2,9 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された614ファイルを、33の取得元ホストごとに収録する。
+Rawに保存された616ファイルを、34の取得元ホストごとに収録する。
 
-## `1997.webhistory.org`（9ファイル）
+## `1997.webhistory.org`（10ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -13,6 +13,7 @@ Rawに保存された614ファイルを、33の取得元ホストごとに収録
 | [www.lists/www-talk.1993q1/0183.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0183.html) | WWW-Talk Jan-Mar 1993: Re: proposed new tag: IMG |
 | [www.lists/www-talk.1993q1/0186.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0186.html) | — |
 | [www.lists/www-talk.1993q1/0197.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0197.html) | WWW-Talk Jan-Mar 1993: Re: proposed new tag: IMG |
+| [www.lists/www-talk.1993q1/0245.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0245.html) | WWW-Talk Jan-Mar 1993: World-Wide Web documentation in paper form |
 | [www.lists/www-talk.1993q1/0257.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0257.html) | WWW-Talk Jan-Mar 1993: Re: proposed new tag: IMG |
 | [www.lists/www-talk.1993q1/0262.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0262.html) | WWW-Talk Jan-Mar 1993: NCSA Mosaic for X 0.10 released |
 | [www.lists/www-talk.1993q3/0143.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q3/0143.html) | WWW-Talk Jul-Sep 1993: XMosaic 1.2 and HTML+ |
@@ -473,6 +474,12 @@ Rawに保存された614ファイルを、33の取得元ホストごとに収録
 | Rawファイル | 文書タイトル |
 |---|---|
 | [whatwg/html/26110c20e505c17533e1a8e876d726b7a0aa3484/source](../raw/raw.githubusercontent.com/whatwg/html/26110c20e505c17533e1a8e876d726b7a0aa3484/source) | — |
+
+## `suika.suikawiki.org`（1ファイル）
+
+| Rawファイル | 文書タイトル |
+|---|---|
+| [www/2005/pre-id/html-spec-199303.pdf](../raw/suika.suikawiki.org/www/2005/pre-id/html-spec-199303.pdf) | — |
 
 ## `tdg.docbook.org`（1ファイル）
 

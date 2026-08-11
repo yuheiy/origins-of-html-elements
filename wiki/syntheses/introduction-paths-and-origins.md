@@ -184,7 +184,8 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 
 `br`は、1993年6月1日版HTML+ DTDの公開告知と、それを閲覧した同時代の返信を回収した。これにより版の実在は確定したが、保存メールはDTD本文を含まず、返信も`BR`へ言及しない。指定配布物、WWW-TALK保存メール、HTML+、Workshop記録、Lynx、NCSA Mosaic、HTML 2.0の既知資料を照合しても要素単位の接続記録は得られなかったため、一度だけの探索を完了し、保存本文または新しい編集記録が現れるまで個別ページの問いを維持する。
 
-- [`base`](../elements/base.md): 1993年のrevision 1.4から6月草案までに`SAVEDAS`を`BASE HREF`へ具体化したDTD／RCS差分またはメール。
+`base`は、1993年3月の保存仕様と3月10日の配布告知を回収し、`BASE HREF`の確認上限を6月から3月へ縮めた。revision 1.4には`BASE`も`SAVEDAS`もなく、保存仕様にはすでに`BASE HREF`があるが、指定したW3CのRCS履歴、公開メール、保存DTDからその間の差分または改名判断は回収できなかったため、一度だけの探索を完了し、新しいDTDリビジョンまたは編集記録が現れるまで個別ページの問いを維持する。
+
 - [`menu`](../elements/menu.md): Line Mode Browser 1.2から1.2aの配布物、RCS履歴、開発メールと、`test_source.txt`の保存日時を位置付ける記録。
 - [`address`](../elements/address.md)、[`body`](../elements/body.md)、[`pre`](../elements/pre.md)、[`iframe`](../elements/iframe.md): 個別ページが特定する初期ソース、内部DTD、配布物、または同時代ベンダー資料。
 
