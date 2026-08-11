@@ -36,7 +36,7 @@ status: 完成
 - [`<b>`](elements/b.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した物理的な文字強調要素で、同時代Texinfoの`@b`との対応を確認できる。
 - [`<base>`](elements/base.md): 1991年の未使用のBase Addressタグ案、1992年の採用決定、1993年1月の`SAVEDAS`標準化意向から同年6月の`BASE HREF`へ至るが、最終構文と名称の具体化は未確認である。
 - [`<bdi>`](elements/bdi.md): W3C国際化グループの双方向文字分離要求と`ubi`属性案を、WHATWGが2010年に新要素へ変更して採録したものである。
-- [`<bdo>`](elements/bdo.md): 文脈だけでは方向を解けないテキストへUnicode書字方向の上書きを指定するため、1995年の国際化草案が導入しRFC 2070が標準化した。
+- [`<bdo>`](elements/bdo.md): 1995年の国際化草案が、埋め込みと上書きを兼ねた`BIDI`を`SPAN DIR`と`BDO`（BIDI override）へ分割し、RFC 2070が標準化した。
 - [`<blockquote>`](elements/blockquote.md): HTMLより早いDocBook 1.0の同名要素と導入直前のDocBook検討は確認できるが、Connollyの後代の説明がUsenet説と競合するため直接祖先は未確定である。
 - [`<body>`](elements/body.md): Tim Berners-Leeは1992年6月にヘッダー／本文分離案を示し、Dan Connollyの7月公開DTDは`BODY`を混在内容回避用の本文コンテナーとして宣言した。
 - [`<br>`](elements/br.md): 1993年7月のHTML+で意味を持つ改行として提案され、同月末に基礎HTMLへの追加が決まったが、HTML+からの要素単位の採用因果は未確認である。

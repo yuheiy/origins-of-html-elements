@@ -150,7 +150,7 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 
 | 調査群 | 対象 | 探索範囲 |
 |---|---|---|
-| W3C／IETF草案間の変更 | [`bdo`](../elements/bdo.md)、[`span`](../elements/span.md)、[`noscript`](../elements/noscript.md)、[`object`](../elements/object.md)、[`col`](../elements/col.md)、[`style`](../elements/style.md) | 連続する草案間に限定して、CVS／RCS差分、Working Group議事録、編集者メールから追加、改名、機能統合、後続仕様への採録を探す |
+| W3C／IETF草案間の変更 | [`span`](../elements/span.md)、[`noscript`](../elements/noscript.md)、[`object`](../elements/object.md)、[`col`](../elements/col.md)、[`style`](../elements/style.md) | 連続する草案間に限定して、CVS／RCS差分、Working Group議事録、編集者メールから追加、改名、機能統合、後続仕様への採録を探す |
 
 `mark`は、`m`の初出区間を2005年4月2日後〜4月13日までに限定し、2007年の名称議論と2008年の採用判断を確認したため、優先調査を完了した。初稿の提案者を示す公開記録は見つからず、個別ページの未解決点として維持する。
 
@@ -167,6 +167,8 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 `track`は、2010年5月4日の初回収録コミットと`track`定義のない親版、Silvia Pfeifferの`itext`提案への編集者応答、4月の`track`／`trackgroup`案、12月の編集者説明を照合した。初版から空要素であり、`trackgroup`の属性集約は各`track`へ属性を置く方式で表し、相互排他的な複数グループは用途が不明確として採らなかったことを確認したため、優先調査と個別ページの未解決点を完了した。
 
 `legend`は、1997年4月のCougarフォーム草案と7月のHTML 4.0 FPWDを照合し、FPWDソース内の編集コメントから、表と`FIELDSET`の双方に`CAPTION`を使うと大手ベンダーのエラー回復実装に支障が出るため`LEGEND`へ改名した判断を確認した。これにより直前祖先と改名理由を接続して確度Aとし、優先調査を完了した。`LEGEND`という語を選んだ人物と理由、報告したベンダーは公開資料から特定できず、個別ページの未解決点として維持する。
+
+`bdo`は、1995年8月の`draft-ietf-html-i18n-00`がUnicodeの埋め込みと上書きを一つの`BIDI`要素の`DIR`／`FORCE`属性で表し、9月のrevision 01が埋め込みを`SPAN DIR`へ、上書きを専用の`BDO DIR`へ分割した変更を確認した。草案自身が`BDO`を「BIDI override」の略と明記するため、直前祖先と略称を接続して優先調査を完了した。分割と略称を決めた個人および草案外の議論は公開資料から確認できず、個別ページの未解決点として維持する。
 
 #### 欠落資料を一度だけ探索する問題
 
