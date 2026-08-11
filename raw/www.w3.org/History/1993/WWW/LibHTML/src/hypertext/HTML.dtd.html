@@ -1,0 +1,294 @@
+<HEAD><TITLE>PUBLIC DRAFT -- HTML</TITLE>
+</HEAD><BODY><PRE>
+</PRE><PRE>&#60;!SGML  "ISO 8879:1986"
+--
+</PRE>
+<H1>HTML DTD
+</H1><PRE>        Document Type Definition for the HyperText Markup Language 
+        as used by the World Wide Web application (HTML DTD).
+
+        NOTE: This is a definition of HTML with respect to
+        SGML, and assumes an understaning of SGML terms.
+
+        For a description of HTML in layman's terms, see
+
+        "HTML: A Representation for Nodes in the World Wide Web"
+                by Dan Connolly.
+
+        aka
+
+        http://www.w3.org/hypertext/WWW/MarkUp/MarkUp.html
+                by &#60;connolly@convex.com&#62;
+--
+
+CHARSET
+         BASESET  "ISO 646:1983//CHARSET
+                   International Reference Version (IRV)//ESC 2/5 4/0"
+         DESCSET  0   9   UNUSED
+                  9   2   9
+                  11  2   UNUSED
+                  13  1   13
+                  14  18  UNUSED
+                  32  95  32
+                  127 1   UNUSED
+     BASESET   "ISO Registration Number 100//CHARSET
+                ECMA-94 Right Part of Latin Alphabet Nr. 1//ESC 2/13 4/1"
+     DESCSET   128 32 UNUSED
+               160 95 32
+               255  1 UNUSED
+
+CAPACITY        SGMLREF
+                TOTALCAP        150000
+                GRPCAP          150000
+  
+SCOPE    DOCUMENT
+SYNTAX   
+         SHUNCHAR CONTROLS 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+                           19 20 21 22 23 24 25 26 27 28 29 30 31 127 255
+         BASESET  "ISO 646:1983//CHARSET
+                   International Reference Version (IRV)//ESC 2/5 4/0"
+         DESCSET  0 128 0
+         FUNCTION RE          13
+                  RS          10
+                  SPACE       32
+                  TAB SEPCHAR  9
+         NAMING   LCNMSTRT ""
+                  UCNMSTRT ""
+                  LCNMCHAR ".-"
+                  UCNMCHAR ".-"
+                  NAMECASE GENERAL YES
+                           ENTITY  NO
+         DELIM    GENERAL  SGMLREF
+                  SHORTREF SGMLREF
+         NAMES    SGMLREF
+         QUANTITY SGMLREF
+                  NAMELEN  34
+                  TAGLVL   100
+                  LITLEN   1024
+                  GRPGTCNT 150
+                  GRPCNT   64                   
+
+FEATURES
+  MINIMIZE
+    DATATAG  NO
+    OMITTAG  NO
+    RANK     NO
+    SHORTTAG NO
+  LINK
+    SIMPLE   NO
+    IMPLICIT NO
+    EXPLICIT NO
+  OTHER
+    CONCUR   NO
+    SUBDOC   NO
+    FORMAL   YES
+  APPINFO    NONE
+&#62;
+
+&#60;!DOCTYPE HTML [
+&#60;!--
+ $Id: html.dtd,v 1.4 93/01/20 20:56:08 connolly Exp $
+--&#62;
+
+&#60;!--    Regarding clause 6.1, SGML Document:
+
+        [1] SGML document = SGML document entity,
+            (SGML subdocument entity |
+            SGML text entity | non-SGML data entity)*
+
+        The role of SGML document entity is filled by this DTD,
+        followed by the conventional HTML data stream.
+--&#62;
+
+&#60;!-- DTD definitions --&#62;
+
+&#60;!ENTITY % heading "H1|H2|H3|H4|H5|H6" &#62;
+&#60;!ENTITY % list "UL|OL|DIR|MENU"&#62;
+&#60;!ENTITY % literal "XMP|LISTING"&#62;
+
+&#60;!ENTITY % headelement
+         "TITLE | NEXTID | ISINDEX" &#62;
+
+&#60;!ENTITY % bodyelement
+         "P | %heading |
+         %list | DL | HEADERS | ADDRESS | PRE | BLOCKQUOTE
+        | %literal"&#62;
+
+&#60;!ENTITY % oldstyle "%headelement | %bodyelement | #PCDATA"&#62;
+&#60;!ENTITY % URL "CDATA"
+        -- The term URL means a CDATA attribute
+           whose value is a Universal Resource Locator,
+           as defined in ftp://ftp.w3.org/pub/www/doc/url3.txt
+        --&#62;
+
+&#60;!ENTITY % linkattributes
+        "NAME NMTOKEN #IMPLIED
+        HREF %URL; #IMPLIED
+        TYPE NAME #IMPLIED -- type of relashionship to referent data:
+                                PARENT CHILD, SIBLING, NEXT, TOP,
+                                 DEFINITION, UPDATE, ORIGINAL etc. --
+        URN CDATA #IMPLIED -- universal resource number. unique doc id --
+        TITLE CDATA #IMPLIED -- advisory only --
+        METHODS NAMES #IMPLIED -- supported methods of the object:
+                                        TEXTSEARCH, GET, HEAD, ... --
+        "&#62;
+
+&#60;!-- Document Element --&#62;
+
+&#60;!ELEMENT HTML O O  ((HEAD | BODY | %oldstyle)*, PLAINTEXT?)&#62;
+
+&#60;!ELEMENT HEAD - -  (TITLE? &#38; ISINDEX? &#38; NEXTID? &#38; LINK*)&#62;
+
+&#60;!ELEMENT TITLE - -  RCDATA
+          -- The TITLE element is not considered part of the flow of text.
+             It should be displayed, for example as the page header or
+             window title.
+          --&#62;
+
+&#60;!ELEMENT ISINDEX - O EMPTY
+          -- WWW clients should offer the option to perform a search on
+             documents containing ISINDEX.
+          --&#62;
+ 
+&#60;!ELEMENT NEXTID - O EMPTY&#62;
+&#60;!ATTLIST NEXTID N NUMBER #REQUIRED
+          -- The number should be the highest number that appears in
+             any NAME attribute in the document.
+          --&#62;
+
+&#60;!ELEMENT LINK - O EMPTY&#62;
+&#60;!ATTLIST LINK
+        %linkattributes&#62;
+        
+&#60;!ENTITY % inline "EM | TT | STRONG | B | I | U |
+                        CODE | SAMP | KBD | KEY | VAR | DFN | CITE "
+        &#62;
+
+&#60;!ELEMENT (%inline;) - - (#PCDATA)&#62;
+
+&#60;!ENTITY % hypertext "#PCDATA | %inline; | A"&#62;
+
+&#60;!ELEMENT BODY - -  (%bodyelement|%hypertext;)*&#62;
+
+&#60;!ELEMENT A     - -  (#PCDATA)&#62;
+&#60;!ATTLIST A
+        %linkattributes;
+        &#62;
+
+&#60;!ELEMENT P     - O EMPTY -- separates paragraphs --&#62;
+
+&#60;!ELEMENT (%heading)    - -  (%hypertext;)+&#62;
+
+&#60;!ELEMENT DL    - -  (DT | DD | P | %hypertext;)*&#62;
+&#60;!--    Content should match ((DT,(%hypertext;)+)+,(DD,(%hypertext;)+))
+        But mixed content is messy.
+  --&#62;
+&#60;!ATTLIST DL
+        STYLE NAME #IMPLIED -- COMPACT, etc.--
+        &#62;
+ 
+&#60;!ELEMENT DT    - O EMPTY&#62;
+&#60;!ELEMENT DD    - O EMPTY&#62;
+
+&#60;!ELEMENT (UL|OL) - -  (%hypertext;|LI|P)+&#62;
+&#60;!ELEMENT (DIR|MENU) - -  (%hypertext;|LI)+&#62;
+&#60;!--    Content should match ((LI,(%hypertext;)+)+)
+        But mixed content is messy.
+  --&#62;
+
+&#60;!ELEMENT LI    - O EMPTY&#62;
+
+&#60;!ELEMENT BLOCKQUOTE - - (%hypertext;|P)+
+        -- for quoting some other source --&#62;
+&#60;!ATTLIST BLOCKQUOTE
+        SOURCE CDATA #IMPLIED -- URL of source --
+        &#62;
+
+&#60;!ELEMENT ADDRESS - - (%hypertext;|P)+&#62;
+
+&#60;!ELEMENT PRE - - (#PCDATA | A | B | I | U | P)+&#62;
+&#60;!ATTLIST PRE
+        WIDTH NUMBER #implied
+        &#62;
+
+
+&#60;!-- Mnemonic character entities. --&#62;
+&#60;!ENTITY AElig "&#38;#198;" -- capital AE diphthong (ligature) --&#62;
+&#60;!ENTITY Aacute "&#38;#193;" -- capital A, acute accent --&#62;
+&#60;!ENTITY Acirc "&#38;#194;" -- capital A, circumflex accent --&#62;
+&#60;!ENTITY Agrave "&#38;#192;" -- capital A, grave accent --&#62;
+&#60;!ENTITY Aring "&#38;#197;" -- capital A, ring --&#62;
+&#60;!ENTITY Atilde "&#38;#195;" -- capital A, tilde --&#62;
+&#60;!ENTITY Auml "&#38;#196;" -- capital A, dieresis or umlaut mark --&#62;
+&#60;!ENTITY Ccedil "&#38;#199;" -- capital C, cedilla --&#62;
+&#60;!ENTITY ETH "&#38;#208;" -- capital Eth, Icelandic --&#62;
+&#60;!ENTITY Eacute "&#38;#201;" -- capital E, acute accent --&#62;
+&#60;!ENTITY Ecirc "&#38;#202;" -- capital E, circumflex accent --&#62;
+&#60;!ENTITY Egrave "&#38;#200;" -- capital E, grave accent --&#62;
+&#60;!ENTITY Euml "&#38;#203;" -- capital E, dieresis or umlaut mark --&#62;
+&#60;!ENTITY Iacute "&#38;#205;" -- capital I, acute accent --&#62;
+&#60;!ENTITY Icirc "&#38;#206;" -- capital I, circumflex accent --&#62;
+&#60;!ENTITY Igrave "&#38;#204;" -- capital I, grave accent --&#62;
+&#60;!ENTITY Iuml "&#38;#207;" -- capital I, dieresis or umlaut mark --&#62;
+&#60;!ENTITY Ntilde "&#38;#209;" -- capital N, tilde --&#62;
+&#60;!ENTITY Oacute "&#38;#211;" -- capital O, acute accent --&#62;
+&#60;!ENTITY Ocirc "&#38;#212;" -- capital O, circumflex accent --&#62;
+&#60;!ENTITY Ograve "&#38;#210;" -- capital O, grave accent --&#62;
+&#60;!ENTITY Oslash "&#38;#216;" -- capital O, slash --&#62;
+&#60;!ENTITY Otilde "&#38;#213;" -- capital O, tilde --&#62;
+&#60;!ENTITY Ouml "&#38;#214;" -- capital O, dieresis or umlaut mark --&#62;
+&#60;!ENTITY THORN "&#38;#222;" -- capital THORN, Icelandic --&#62;
+&#60;!ENTITY Uacute "&#38;#218;" -- capital U, acute accent --&#62;
+&#60;!ENTITY Ucirc "&#38;#219;" -- capital U, circumflex accent --&#62;
+&#60;!ENTITY Ugrave "&#38;#217;" -- capital U, grave accent --&#62;
+&#60;!ENTITY Uuml "&#38;#220;" -- capital U, dieresis or umlaut mark --&#62;
+&#60;!ENTITY Yacute "&#38;#221;" -- capital Y, acute accent --&#62;
+&#60;!ENTITY aacute "&#38;#225;" -- small a, acute accent --&#62;
+&#60;!ENTITY acirc "&#38;#226;" -- small a, circumflex accent --&#62;
+&#60;!ENTITY aelig "&#38;#230;" -- small ae diphthong (ligature) --&#62;
+&#60;!ENTITY agrave "&#38;#224;" -- small a, grave accent --&#62;
+&#60;!ENTITY amp "&#38;#38;" -- ampersand --&#62;
+&#60;!ENTITY aring "&#38;#229;" -- small a, ring --&#62;
+&#60;!ENTITY atilde "&#38;#227;" -- small a, tilde --&#62;
+&#60;!ENTITY auml "&#38;#228;" -- small a, dieresis or umlaut mark --&#62;
+&#60;!ENTITY ccedil "&#38;#231;" -- small c, cedilla --&#62;
+&#60;!ENTITY eacute "&#38;#233;" -- small e, acute accent --&#62;
+&#60;!ENTITY ecirc "&#38;#234;" -- small e, circumflex accent --&#62;
+&#60;!ENTITY egrave "&#38;#232;" -- small e, grave accent --&#62;
+&#60;!ENTITY eth "&#38;#240;" -- small eth, Icelandic --&#62;
+&#60;!ENTITY euml "&#38;#235;" -- small e, dieresis or umlaut mark --&#62;
+&#60;!ENTITY gt "&#38;#62;" -- greater than --&#62;
+&#60;!ENTITY iacute "&#38;#237;" -- small i, acute accent --&#62;
+&#60;!ENTITY icirc "&#38;#238;" -- small i, circumflex accent --&#62;
+&#60;!ENTITY igrave "&#38;#236;" -- small i, grave accent --&#62;
+&#60;!ENTITY iuml "&#38;#239;" -- small i, dieresis or umlaut mark --&#62;
+&#60;!ENTITY lt "&#38;#60;" -- less than --&#62;
+&#60;!ENTITY ntilde "&#38;#241;" -- small n, tilde --&#62;
+&#60;!ENTITY oacute "&#38;#243;" -- small o, acute accent --&#62;
+&#60;!ENTITY ocirc "&#38;#244;" -- small o, circumflex accent --&#62;
+&#60;!ENTITY ograve "&#38;#242;" -- small o, grave accent --&#62;
+&#60;!ENTITY oslash "&#38;#248;" -- small o, slash --&#62;
+&#60;!ENTITY otilde "&#38;#245;" -- small o, tilde --&#62;
+&#60;!ENTITY ouml "&#38;#246;" -- small o, dieresis or umlaut mark --&#62;
+&#60;!ENTITY szlig "&#38;#223;" -- small sharp s, German (sz ligature) --&#62;
+&#60;!ENTITY thorn "&#38;#254;" -- small thorn, Icelandic --&#62;
+&#60;!ENTITY uacute "&#38;#250;" -- small u, acute accent --&#62;
+&#60;!ENTITY ucirc "&#38;#251;" -- small u, circumflex accent --&#62;
+&#60;!ENTITY ugrave "&#38;#249;" -- small u, grave accent --&#62;
+&#60;!ENTITY uuml "&#38;#252;" -- small u, dieresis or umlaut mark --&#62;
+&#60;!ENTITY yacute "&#38;#253;" -- small y, acute accent --&#62;
+&#60;!ENTITY yuml "&#38;#255;" -- small y, dieresis or umlaut mark --&#62;
+
+&#60;!-- deprecated elements --&#62;
+
+&#60;!ELEMENT (%literal) - -  CDATA&#62;
+
+&#60;!ELEMENT PLAINTEXT - O EMPTY&#62;
+
+&#60;!-- Local Variables: --&#62;
+&#60;!-- mode: sgml --&#62;
+&#60;!-- compile-command: "sgmls -s -p " --&#62;
+&#60;!-- end: --&#62;
+]&#62;
+ 
+</PRE>

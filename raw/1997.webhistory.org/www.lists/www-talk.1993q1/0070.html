@@ -1,0 +1,624 @@
+<!-- received="Thu Jan 14 17:47:51 1993 PDT" -->
+<!-- sent="Thu, 14 Jan 93 18:02:07 +0100" -->
+<!-- name="Tim Berners-Lee" -->
+<!-- email="timbl@www3.cern.ch" -->
+<!-- subject="Re: HTML todo list" -->
+<!-- id="9301141702.AA00591@www3.cern.ch" -->
+<!-- inreplyto="HTML todo list" -->
+<title>WWW-Talk Jan-Mar 1993: Re: HTML todo list</title>
+<h1>Re: HTML todo list</h1>
+Tim Berners-Lee (<i>timbl@www3.cern.ch</i>)<br>
+<i>Thu, 14 Jan 93 18:02:07 +0100</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#70">[ date ]</a><a href="index.html#70">[ thread ]</a><a href="subject.html#70">[ subject ]</a><a href="author.html#70">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0071.html">Thomas A. Fine: "Re: web roaming robot (was: strategy for HTML spec?)"</a>
+<li> <b>Previous message:</b> <a href="0069.html">murphy@dccs.upenn.edu: "Re: web roaming robot (was: strategy for HTML spec?)"</a>
+<li> <b>Maybe in reply to:</b> <a href="0043.html">Dan Connolly: "HTML todo list"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0072.html">Dan Connolly: "Re: HTML todo list"</a>
+</ul>
+<hr>
+<!-- body="start" -->
+My machine crashed from too many wondows and I lost a few unsent mail  <br>
+messages with that.  So I may repeat myself at first, up to point 14.<br>
+<p>
+Changes to the DTD I have made are in <br>
+<p>
+/hypertext/WWW/MarkUp/HTML.dtd.html<br>
+<p>
+Connolly/Current/* is untouched.<br>
+<p>
+<i>&gt; Date: Mon, 11 Jan 93 22:36:43 CST</i><br>
+<i>&gt; From: Dan Connolly &lt;connolly@pixel.convex.com&gt;</i><br>
+<i>&gt; </i><br>
+<p>
+<p>
+<i>&gt; 1. My dictionary lists "markup" as a word, not mark-up.</i><br>
+Fixed<br>
+<i>&gt; 2. The PLAINTEXT situation should be logged as a bug against</i><br>
+OK it is but not many servers use it and clients like to be able to  <br>
+get source of postscript files for example easily. HTTP2 will fix it.<br>
+<i>&gt; 4. HTML should support QUESTION and RESPONSE elements to</i><br>
+<i>&gt; support converting USENET FAQ's to HTML</i><br>
+Too specific I think.<br>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/Provider/ShellScript.html">http://info.cern.ch/hypertext/WWW/Provider/ShellScript.html</a></i><br>
+<i>&gt; 5. PLAINTEXT is deprecated. Use PRE, and use a sed script</i><br>
+Done.  text2html.sed on th web under HTML generation tools.<br>
+<i>&gt; 6. .../WWW/Tools/HTMLGeneration/dir2html.txt</i><br>
+<i>&gt; This thing doesn't quote attributes; ...</i><br>
+Fixed. <br>
+<p>
+<i>&gt; 7. .../WWW/Tools/HTMLGeneration/ls2html.awk.txt&gt; Quotes around  </i><br>
+HREFS, PLAINTEXT.<br>
+Fixed<br>
+ <br>
+<p>
+<i>&gt; 8. .../WWW/Daemon/Implementation/asis.txt</i><br>
+<i>&gt; Quote HREFS, numeric character references where necessary.</i><br>
+Quote sin online version, original is being rewritten anyway I am  <br>
+told.<br>
+<i>&gt; 9. <a href="http://info.cern.ch/hypertext/WWW/HytelnetGate/src/htn2html.c">http://info.cern.ch/hypertext/WWW/HytelnetGate/src/htn2html.c</a></i><br>
+<i>&gt; Uses HEADER in stead of HEAD.</i><br>
+Fixed.<br>
+<i>&gt; Quote HREFs.</i><br>
+Fixed.<br>
+<i>&gt; Special character entities?</i><br>
+<i>&gt; Yeah! It uses numeric character references already!</i><br>
+Does it? You mean entities I think.<br>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/MarkUp.html">http://info.cern.ch/hypertext/WWW/MarkUp/MarkUp.html</a></i><br>
+<p>
+<i>&gt; 10. Mark-up again</i><br>
+Fixed<br>
+<p>
+<i>&gt; 11. This text seems out of place:</i><br>
+OK I have hidden it. :-) Does your spec say it anywhere?<br>
+<p>
+<i>&gt; 12. Default text: this node seems to confuse lots of issues.</i><br>
+OK Reference to your doc instead<br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/Tags.html">http://info.cern.ch/hypertext/WWW/MarkUp/Tags.html</a></i><br>
+<i>&gt; 13. This text is out of place: </i><br>
+<p>
+Gone.<br>
+ <br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/Elements/HEAD.html">http://info.cern.ch/hypertext/WWW/MarkUp/Elements/HEAD.html</a></i><br>
+<i>&gt; 14. These blurbs should probably quote their element declarations</i><br>
+I have started an HTML.dtd.html with links.<br>
+ <br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/Elements/TITLE.html">http://info.cern.ch/hypertext/WWW/MarkUp/Elements/TITLE.html</a></i><br>
+<i>&gt; 15. This seems redundant:</i><br>
+Fixed.<br>
+<p>
+<i>&gt; 16. What does this mean?</i><br>
+Elaborated and more sepcific.<br>
+ <br>
+<p>
+<i>&gt; 17. Should the TITLE element be CDATA, RCDATA, or PCDATA?</i><br>
+<i>&gt; If we want to be able to use Latin chars in the title,</i><br>
+<i>&gt; it can't be CDATA. The only difference between RCDATA</i><br>
+<i>&gt; and PCDATA (with no subelements allowed) is that comments</i><br>
+<i>&gt; are recognized in PCDATA, whereas they are just regular</i><br>
+<i>&gt; data in RCDATA.</i><br>
+<p>
+Good point.<br>
+<p>
+ - If we specify Latin 1 as the base set, can't wehave latin 1<br>
+   characters in CDATA?<br>
+<p>
+ - If we can't, then I guess we use PCADATA as it would be the<br>
+   only place except for &lt;XMP&gt; and &lt;LISTING&gt; where we can use<br>
+   RCDATA.<br>
+   <br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/Elements/ISINDEX.html">http://info.cern.ch/hypertext/WWW/MarkUp/Elements/ISINDEX.html</a></i><br>
+<i>&gt; 18. The word "Format" connotes lexical details, which are discussed</i><br>
+<i>&gt; elsewhere. I endorse the use of examples, but I'd like to keep</i><br>
+<i>&gt; the model of</i><br>
+<i>&gt; 	SGML source ==parser==&gt; ESIS ==WWW semantics==&gt;formatted  </i><br>
+output<br>
+<i>&gt; consistent. The WWW semantics processor doesn't deal with &lt;&gt;'s etc.</i><br>
+<i>&gt; It just sees the presence of the ISINDEX element and acts  </i><br>
+accordingly.<br>
+<p>
+Yes.  OK.  But I want as I said before (unless the crash lost the<br>
+message) to have two documents out of this. One is the HTML spec for  <br>
+MIME IANA registration.  The other is a readable document which is  <br>
+NOT 100% a precise refernce document but can be read by human beings  <br>
+WITHOUT SGML knowledge.  I can guess that this document will have 10  <br>
+times the readership of the other if it is readable, as &lt;10% of the  <br>
+people creating HTML will know about SGML CROs etc etc.<br>
+<p>
+It is good to have a lot of cross-reference between them.<br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/Elements/NEXTID.html">http://info.cern.ch/hypertext/WWW/MarkUp/Elements/NEXTID.html</a></i><br>
+<i>&gt; 19. The status of each element should be noted consistently. e.g.</i><br>
+<i>&gt; Mainstream	Consistently used by past, present, and future  </i><br>
+implementations.<br>
+<i>&gt; Deprecated	In use and will be supported, but should be avoided.  </i><br>
+(XMP)<br>
+<i>&gt; Obsolete	In use in some documents, but will not be supported.  </i><br>
+(NEXTID)<br>
+<i>&gt; Proposed	Not yet in the DTD or widely supported (e.g. LINK)</i><br>
+<i>&gt; Standard	Not yet widely supported, but will be (e.g. PRE)</i><br>
+<i>&gt; Extra		It's legal to ignore these. (e.g. EM)</i><br>
+<p>
+<p>
+We have almost as many categories as elements!  I'd add<br>
+Obsolescent	Will be obsolete when the alternative implementation<br>
+		(eg HTTP2) is available.<br>
+		<br>
+I'd make PRE mainstream as there are no implementations for which a  <br>
+new PRE-understanding version is not available or easily made  <br>
+available. And so cut out "Standard"  OOps I put it in again  <br>
+...see#31.<br>
+<p>
+I have made NEXTID Mainstream.  Editors need it: can't do without it<br>
+really.  I would perhaps change it to &lt;EDITING NEXTID=z27&gt; if that  <br>
+was felt to be more logical.<br>
+<p>
+We also need a hook for a version for the checkin/out/lock logic  <br>
+DAN(?) proposed.  That was that when you<br>
+lock or PUT a document, you specify the version so that a document  <br>
+can be PUT or CHECKED IN by a different person to the one who GoT it.<br>
+This means the server gives a key, a version or date code, with the  <br>
+document. This is all HTTP2 except when a document is stored  <br>
+somehwre, passed around and then eventually returned to the server.  <br>
+In that case, it needs a place to hold its original version number<br>
+on the server.<br>
+<p>
+&lt;EDITING NEXTID=z27 CHECKEDOUTAS="19930217234507"&gt;<br>
+<p>
+Thoughts?<br>
+<p>
+<i>&gt; <a href="http://info.cern.ch/hypertext/WWW/MarkUp/Elements/LINK.html">http://info.cern.ch/hypertext/WWW/MarkUp/Elements/LINK.html</a></i><br>
+<i>&gt; 20. How many of these are allowed? I could change</i><br>
+Any non-negative integer<br>
+<i>&gt; ... &lt;!ELEMENT HEAD - -  (TITLE? &amp; ISINDEX? &amp; NEXTID? &amp; LINK*)&gt;</i><br>
+<i>&gt; I don't know if the latter is legal SGML. I'd have to try</i><br>
+<i>&gt; it out.</i><br>
+I think that's what we want.<br>
+<p>
+<i>&gt; 21. Link types are not well defined. The only reason to put</i><br>
+<i>&gt; something in a public specification is so everybody can agree</i><br>
+<i>&gt; on some semantics. If there are no semantics to agree on,</i><br>
+<i>&gt; why include the TYPE attribute? (It's status is at best</i><br>
+<i>&gt; "proposed" in my mind, though it's in the DTD.)</i><br>
+<p>
+<p>
+Yes and no.  We need some well-define link type but we also need this  <br>
+as a hook for the future which we haven't enugh experience.  Link<br>
+types whould be registered.<br>
+<p>
+This is a flexibility point, but it must be firm ... like<br>
+a towing ball on the back of your pickup you want to be able<br>
+to connect anything onto it but you want it well fixed onto the  <br>
+truck!<br>
+<p>
+But I want to make it REL instead of TYPE as people think TYPE<br>
+refers to the object type of the desdtination object rather than the  <br>
+link.  (From messages on this list).<br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/Headings.html">http://info.cern.ch/hypertext/WWW/MarkUp/Headings.html</a></i><br>
+<i>&gt; 22. "(at least six)" -- how about exactly six? Though I've</i><br>
+<i>&gt; seen a lot of style guides that frown on anything more than 4.</i><br>
+<p>
+I agree.  I wuld frown ony anything over 3 in a hypertext document.<br>
+However, it is useful to generate a great big HTML document by<br>
+concatenating little ones, demoting their heading levels. You then  <br>
+print the big document. This generates up to 6 easily.  Maybe we  <br>
+should go to 9 but frown on &gt;4.<br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/SGML.html">http://info.cern.ch/hypertext/WWW/MarkUp/SGML.html</a></i><br>
+<i>&gt; 23. We should give at least one complete reference to the standard, </i><br>
+<p>
+Done.<br>
+<p>
+<i>&gt; 24. In the Archive section, we could metion comp.text.sgml,</i><br>
+<i>&gt; the SGMLs parser materials, and the ifi.uio.no archive.</i><br>
+<p>
+Link put in cruely.<br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/Elements/A.html">http://info.cern.ch/hypertext/WWW/MarkUp/Elements/A.html</a></i><br>
+<i>&gt; 25. All attribute values have to be quoted, including NAME.</i><br>
+<i>&gt; The example is wrong.</i><br>
+<p>
+I have cahnged NAME to ne a NAME -- ie doc-wide unique which it must   <br>
+be. Numberic ones are then not valid but I donb't generate them any  <br>
+more.  I think that we should stick to the intended ID system. In the  <br>
+future, we can think about IDs on many other elements.<br>
+<p>
+<i>&gt; 26. The TYPE attribute hardly seems worth mentioning. In the DTD,</i><br>
+<i>&gt; it's a NAME, not just any old string.</i><br>
+<p>
+I have made it REL as I said above and I think it is very important.<br>
+<p>
+<i>&gt; 27. We should look at modeling anchors as HyTime linkends</i><br>
+<i>&gt; and/or ilinks.</i><br>
+<p>
+Yes I agree when someone has time to get into that.<br>
+<p>
+<i>&gt; 28. We should look at modeling the LINK element as a HyTime</i><br>
+<i>&gt; construct as well.</i><br>
+Ditto.<br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/Elements/P.html">http://info.cern.ch/hypertext/WWW/MarkUp/Elements/P.html</a></i><br>
+<i>&gt; 29. I don't like the use of "exact representation" here:</i><br>
+OK we stick to "rendering" for that<br>
+<p>
+<i>&gt; 30. Where are P's allowed? In the DTD, they're allowed in:</i><br>
+<i>&gt; HTML, BODY, ADDRESS, BLOCKQUOTE, PRE but not in HEAD, A,</i><br>
+<i>&gt; CODE, SAMP, etc.</i><br>
+<p>
+That's right.  They are not in the CERN implementations allowed in  <br>
+&lt;DL&gt; or &lt;UL&gt; etc, but they would be useful in those.<br>
+Comments?<br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/Lists.html">http://info.cern.ch/hypertext/WWW/MarkUp/Lists.html</a></i><br>
+<i>&gt; 31. Ordered lists: Obsolete or Standard?</i><br>
+<p>
+Standard. Bother I thought we'd got rd of that! (The next editor will  <br>
+turn them into unordered lists at the moment but I can fix that)<br>
+ <br>
+<p>
+<i>&gt; 32. "The format is:" Here again, this is an example, but it's</i><br>
+<i>&gt; hardly a specification of the format of a UL element.</i><br>
+<p>
+Ok. example.<br>
+<p>
+<i>&gt; 33. What does this mean?</i><br>
+<i>&gt; The opening list tag  must be immediately</i><br>
+<i>&gt; followed by the first list element.</i><br>
+<p>
+(LI | (A|%text)+)  in SGML I suppose just as you say.<br>
+You can't<br>
+	&lt;UL&gt;and here they all are:<br>
+	&lt;LI&gt;The first..<br>
+	&lt;LI&gt;the second<br>
+	&lt;/UL&gt;<br>
+ <br>
+<p>
+<i>&gt; 34. The important difference between UL, MENU, and DIR is not</i><br>
+<i>&gt; how they are displayed, but their semantic meanings. A MENU</i><br>
+<i>&gt; is a list of things to choose from. A DIR is a list of names</i><br>
+<i>&gt; in a directory.</i><br>
+<p>
+Yes and no.  I too like logical definitions -- I am sold on semantic  <br>
+markup but HTML is to cover a vast range of data and semantics. MENU<br>
+These things are NOT necessarily what their names suggest -- many a  <br>
+selectable menu is set out as a DIR or a DL. The element names are<br>
+mnemonic only.  The blurb talks about how much text is in the  <br>
+paragraphs.<br>
+<p>
+<i>&gt; 35. We could also make this semantic distinction between PRE,</i><br>
+<i>&gt; XMP, and LISTING, were it not for the syntactic confusion</i><br>
+<i>&gt; surrounding XMP and LISTING.</i><br>
+<p>
+We coudl but we are deprecating XMP and LISTINg and PRE will do for<br>
+all.  You can only be very semantic in a very narrow application.<br>
+This is not one.<br>
+<p>
+<i>&gt; 36. Get rid of this:</i><br>
+Gone<br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/Elements/PRE.html">http://info.cern.ch/hypertext/WWW/MarkUp/Elements/PRE.html</a></i><br>
+<i>&gt; 37. Wording of the newline documentation:</i><br>
+<i>&gt; Line boundaries within the text are</i><br>
+Reworded with "render"<br>
+<p>
+<i>&gt; 38. Semantics of newlines in PRE. Given the current DTD, a newline</i><br>
+<i>&gt; after the PRE start tag or before the PRE end tag is not reported</i><br>
+<i>&gt; by an SGML parser.</i><br>
+<i>&gt; </i><br>
+<p>
+<i>&gt; I think I can cook up some magic SHORTREF declarations that will</i><br>
+<i>&gt; cause the SGML parser to report the newlines (possibly as P tags).</i><br>
+<i>&gt; [This would obviate the need for special newline processing code</i><br>
+<i>&gt; in libHTML]</i><br>
+<i>&gt; </i><br>
+<p>
+<i>&gt; In any case, I'd suggest that ALL NEWLINES REPORTED BY THE SGML</i><br>
+<i>&gt; PARSER IN THE PRE ELEMENT BE DISPLAYED AS LINE BREAKS. That only</i><br>
+<i>&gt; leaves the issue of which newlines are reported, which is governed</i><br>
+<i>&gt; by the SGML standard.</i><br>
+<p>
+... and with the issue of explaining the end result to the<br>
+simple HTML writer and to me without our needing to call on the<br>
+model of the SGML engine and application. Awaiting the results<br>
+of your tests with SHORTREF.<br>
+<p>
+<i>&gt; 39. I don't like the way this is worded:</i><br>
+<i>&gt; The &amp;#60;p&amp;#62; tag should not be used.</i><br>
+Ok done<br>
+<p>
+<i>&gt; 40. "... character character highlighing elements may be used."</i><br>
+<i>&gt; Ack! I don't recommend this! Hmmm... maybe only the B, I, and U</i><br>
+<i>&gt; elements. This certainly conflicts with the current DTD.</i><br>
+<p>
+Serious point here folks.  There was a great demand for B I U<br>
+for man pages and the like. Why prohibit anything other than TT.<br>
+or to keep it simple, allow anything and mention TT should not be  <br>
+used, and the constraints of fixed width may limit the ability to  <br>
+render some highlighting.<br>
+<p>
+I have introduced %htext noting that text always occurred with A.<br>
+I hope I have done it right.<br>
+ <br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/Highlighting.html">http://info.cern.ch/hypertext/WWW/MarkUp/Highlighting.html</a></i><br>
+<i>&gt; 41. These have status "Extra"</i><br>
+<i>&gt; Where not supported by implementations,</i><br>
+<i>&gt; like all tags, these should be ignored.&lt;p&gt;</i><br>
+<i>&gt; </i><br>
+<p>
+<i>&gt; This should be a warning to providers that some information may</i><br>
+<i>&gt; be lost on some browsers.</i><br>
+<i>&gt; </i><br>
+<p>
+<i>&gt; 42. (Definition of these and reference</i><br>
+<i>&gt; - Dan?)</i><br>
+<i>&gt; They come from TeXinfo.</i><br>
+Thanks<br>
+<p>
+<i>&gt; 43. I left the TeXinfo @file element out. I don't remember why.</i><br>
+<i>&gt; It might have been an oversight. Do we want it in there?</i><br>
+<p>
+No too sepcific. We have enough.<br>
+<p>
+<i>&gt; 44. Examples (TBD) see complete.html in my stuff.</i><br>
+<p>
+I repeat that I like your examples but I would like them split<br>
+into GOOD HTML documents describing bad HTML documents,<br>
+with links to the bad documents for testing only.<br>
+We don't want people to follow links to the only documentation to  <br>
+find their parser has core dumped :-)<br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/Tags.html#z41">http://info.cern.ch/hypertext/WWW/MarkUp/Tags.html#z41</a></i><br>
+<i>&gt; 45. The PLAINTEXT tag terminates the HTML entity. What</i><br>
+<i>&gt; follows is not SGML. In stead, there's an HTTP convention</i><br>
+<i>&gt; that what follows is a text/plain body.</i><br>
+OK -- in.<br>
+<p>
+<i>&gt; 46. "The text may contain any ISO Latin printable characters" --</i><br>
+<i>&gt; this conflicts with the DTD. I think a design that treats Latin</i><br>
+<i>&gt; characters as external data entities is cleaner than one that</i><br>
+<i>&gt; treats them as text characters, but I'm willing to go the</i><br>
+<i>&gt; other way.</i><br>
+<p>
+I'm glad.  Lets.  I think that a full 8-character base will be  <br>
+easier.  I think the text should be able to contain any latin 1.<br>
+<p>
+<i>&gt; 47. "including the</i><br>
+<i>&gt; tag opener, so long as it does not</i><br>
+<i>&gt; contain the closing tag in full."</i><br>
+<i>&gt; For Pete's sake, could we get this out of there once and for all?</i><br>
+OK OK OK :-) I hope "The text may contain any ISO Latin printable  <br>
+characters, but not the end tag opener. (See Historical note)" is OK<br>
+<p>
+<p>
+<i>&gt; 48. "The &lt;a  NAME="z22"&gt;XMP tag&lt;/a&gt;..." Use the term "element". The</i><br>
+<i>&gt; term "tag" doesn't include the content of the element.</i><br>
+Done.<br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/MarkUp.html">http://info.cern.ch/hypertext/WWW/MarkUp/MarkUp.html</a></i><br>
+<i>&gt; 49. "Special characters are represented</i><br>
+<i>&gt; by SGML entities"</i><br>
+<i>&gt; They're represented by numeric character references.</i><br>
+<i>&gt; The lt, gt, and amp entities are not in the DTD. They should</i><br>
+<i>&gt; be supported for historical reasons, but they are obsolete.</i><br>
+I would like them in the DTD. While people are still reading/writing<br>
+HTML they are useful. My mental ASCII table is in hex, not decimal,  <br>
+anyway.  Are they any overhead? Why the war against them? For the ISO<br>
+characters you wanted the opposite.  (Does your menatl ASCII table  <br>
+stop at 128? Mine too)<br>
+<p>
+Comments?<br>
+<p>
+<i>&gt; In  </i><br>
+<a href="http://info.cern.ch/hypertext/WWW/MarkUp/Connolly/Current/HTML.html">http://info.cern.ch/hypertext/WWW/MarkUp/Connolly/Current/HTML.html</a><br>
+<i>&gt; 50. I'd like to move the Abstract, Specification, and the reference  </i><br>
+to<br>
+<i>&gt; "Text and Markup" up into</i><br>
+<i>&gt; <a href="http://info.cern.ch/hypertext/WWW/MarkUp/MarkUp.html">http://info.cern.ch/hypertext/WWW/MarkUp/MarkUp.html</a></i><br>
+<i>&gt; That node would look like</i><br>
+<i>&gt; </i><br>
+<p>
+<i>&gt; &lt;H1&gt;HyperText Markup Language&lt;/H1&gt;</i><br>
+<i>&gt; &lt;H3&gt;Abstract&lt;/H3&gt;...</i><br>
+<i>&gt; &lt;H2&gt;Language Reference&lt;/H2&gt;</i><br>
+<i>&gt; 	&lt;A&gt;Text and Markup&lt;/A&gt;</i><br>
+<i>&gt; 	&lt;A&gt;The Elements&lt;/A&gt;</i><br>
+<i>&gt; 	&lt;A&gt;Implementors' Guide&lt;/A&gt;</i><br>
+<i>&gt; &lt;H2&gt;Specification&lt;/H2&gt;</i><br>
+<i>&gt; 	&lt;A&gt;the DTD&lt;/A&gt;</i><br>
+<i>&gt; &lt;H2&gt;Appendices&lt;/H2&gt;</i><br>
+<i>&gt; 	&lt;A&gt;futures&lt;/A&gt;</i><br>
+<i>&gt; 	&lt;A&gt;constraints&lt;/A&gt;</i><br>
+<i>&gt; </i><br>
+<p>
+<i>&gt; and this node would become "Implementors' Guide", with</i><br>
+<i>&gt; pointers to recommended, complete, tolerated, errors,</i><br>
+<i>&gt; libHTML, and SGMLs.</i><br>
+<i>&gt; </i><br>
+<p>
+<i>&gt; In  </i><br>
+<a href="http://info.cern.ch/hypertext/WWW/MarkUp/Connolly/Current/html.dtd">http://info.cern.ch/hypertext/WWW/MarkUp/Connolly/Current/html.dtd</a><br>
+<i>&gt; 51. include ISO Latin 1 character set in SGML declaration?</i><br>
+<i>&gt; </i><br>
+<p>
+<i>&gt; 52. Put PLAINTEXT back in HTML element (fell out by mistake.)</i><br>
+<i>&gt; </i><br>
+<p>
+<i>&gt; 53. LINK element?</i><br>
+<i>&gt; </i><br>
+<p>
+<i>&gt; 54. Get rid of H5 and H6?</i><br>
+<i>&gt; </i><br>
+<p>
+<i>&gt; 55. Get rid of link TYPE lement?</i><br>
+<i>&gt; </i><br>
+<p>
+<i>&gt; 56. Document BLOCKQUOTE in Elements reference.</i><br>
+<p>
+This BLOCKQUOTE... it should be one thing or the other.<br>
+If it cannot contain other paragraph styles then it should be a  <br>
+paragraph style like address, and not be able to contain address.<br>
+This is easy for everyone to implement.<br>
+<p>
+If it can contain ADDRESS then why not let it contain anything - in  <br>
+particular, headings. Trouble is, I can't represent that in RTF  <br>
+easily so than blows the NeXT and Mac browsers. So let's<br>
+make it <br>
+<p>
+&lt;!ELEMENT BLOCKQUOTE - - (%htext;|P)+&gt;<br>
+like ADDRESS, and bear it in mind for HTML3 which will have SECTION  <br>
+in, ie without the linear RTF constraint.<br>
+<p>
+<i>&gt; 57. EXPIRES attribute on HEAD?</i><br>
+<p>
+I toook it off .. its in HTTP2, as it applies to all formats not just  <br>
+HTML.<br>
+<i>&gt; 58. Get rid of NEXTID element?</i><br>
+ Nope .. needed to stop editors reusing deleted IDs. See above.<br>
+  <br>
+<p>
+<i>&gt; 59. Document URN, TITLE, METHODS attributes of A element.</i><br>
+Ooo yes. Done. Lots of "notes" attached for info only.<br>
+ <br>
+<p>
+<i>&gt; 60. Proposed Headers element (like a DL; for RFC822 message  </i><br>
+headers:<br>
+<i>&gt; &lt;HEADERS&gt;</i><br>
+<i>&gt; &lt;dt&gt;To&lt;dd&gt;connolly@convex.com</i><br>
+<i>&gt; &lt;dt&gt;Subject&lt;dd&gt;HTML todo list</i><br>
+<i>&gt; &lt;/HEADERS&gt;)</i><br>
+<p>
+<p>
+Hmmm.<br>
+1. In fact, &lt;DL COMPACT&gt; looks very similar and has less narrow a  <br>
+meaning.<br>
+2.In fact the headers inforation could rather be regarded as part of  <br>
+the  metainfo in the &lt;HEAD&gt; element. Many of the RFC822 things will  <br>
+in fact be outside the document in the HTTP layer.  This is a bit  <br>
+chick-and-egg. Here we are describing an SGML dtd for a spoecific  <br>
+format for a MIME_wrapped RFC822 body, and in it we want to put the  <br>
+RFC822 header. Hmmm.  Something has got muddled. But I understand  <br>
+what you mean: very often one quotes mail messages as text. Strictly,  <br>
+one shouldn't though. You shouldn't be able to edit the headers.<br>
+<p>
+Currently there is DL COMPACT which does that. It is implemented in  <br>
+www. I am torn betwen generality and the preacticality of getting  <br>
+something defined and outthe door and I thinkl the latter wins so  <br>
+let's put COMPACT as an attribute for DL and leave the HEADERs if you  <br>
+don't mind too much.<br>
+<p>
+<p>
+<i>&gt; 61. List STYLE attribute?</i><br>
+<p>
+No I don't think so -- see discussion #60<br>
+<p>
+<p>
+<i>&gt; 62. XMP and LISTING: CDATA or RCDATA?</i><br>
+CDATA is probably nearest to the original intention?<br>
+<p>
+This is your stuff dan I think:<br>
+<i>&gt; In  </i><br>
+<a href="http://info.cern.ch/hypertext/WWW/MarkUp/Connolly/Current/Text.html">http://info.cern.ch/hypertext/WWW/MarkUp/Connolly/Current/Text.html</a><br>
+<i>&gt; 63. Under "Parsing Content Into Data and Markup," improve the</i><br>
+<i>&gt; explanation of the MIXED, ELEMENT, EMPTY, CDATA, and RCDATA content</i><br>
+<i>&gt; types (PCDATA is the wrong term) and how it affects parsing.</i><br>
+<i>&gt; 64. Revise the section on the sample implementation, libHTML, and</i><br>
+<i>&gt; supported.html.</i><br>
+<i>&gt; </i><br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/Test/test.html">http://info.cern.ch/hypertext/WWW/Test/test.html</a></i><br>
+<i>&gt; 65. This node should be moved to the implementors' guide.</i><br>
+Same coments as above -- moved in &lt;PRE&gt;<br>
+<p>
+<i>&gt; In <a href="http://info.cern.ch/hypertext/WWW/MarkUp/Future.html">http://info.cern.ch/hypertext/WWW/MarkUp/Future.html</a></i><br>
+<i>&gt; 66. Delete the reference to the perl script.</i><br>
+done<br>
+ <br>
+<p>
+<i>&gt; 67. There are two references here to old versions of my spec.</i><br>
+<i>&gt; 68. Header: it's in there: HEAD</i><br>
+<i>&gt; 69. Highlighting: it's in there&gt; </i><br>
+<p>
+<i>&gt; 70. Fixed width with anchors: it's in there: PRE.</i><br>
+gone .. all gone!<br>
+<p>
+<i>&gt; (get rid of HP1 etc. in Elements reference)</i><br>
+No -- I will put that lot in another file though to keep it clean.<br>
+There are some people (here) who geenerate a lot of HPs.<br>
+ <br>
+<p>
+<i>&gt; 71. Entities: Latin chars are in there. What do we need bullets  </i><br>
+for?<br>
+We don't.<br>
+<p>
+<i>&gt; 72. Comments: the comment element is a bad idea. SGML comments are</i><br>
+<i>&gt; documented and supported.</i><br>
+<p>
+They are rather different in that a comment can surround a whole<br>
+nested stack of SGML elements, and could ne nested. I don't suppose  <br>
+SGML comments can?<br>
+<p>
+<i>&gt; 73. Link types: we should look at HyTime before we go much further</i><br>
+<i>&gt; on this.</i><br>
+Well, there is only 9 pages on hhypertext in HyTime (More Time than  <br>
+Hy) and in that I can't see any mention of link types.  As I said  <br>
+above (with a different metaphor), I think this should be a well  <br>
+defined and entrenched gate into uncharted terriory<br>
+<p>
+<i>&gt; In the midaswww-1.0 browser: [by the way: I've fixed all these in  </i><br>
+my copy]<br>
+<i>&gt; </i><br>
+<p>
+<i>&gt; 74. HREF's with quotes don't work</i><br>
+Foxed wth Tony's fix<br>
+<i>&gt; 75. Unrecognized tags are treated as data, rather than ignored.</i><br>
+<i>&gt; 76. numeric character references and entity references aren't  </i><br>
+supported.<br>
+Could you post diffs please for those Dan? Thanks.<br>
+<p>
+<i>&gt; 77. ETAGO doesn't end XMP, LISTING, PLAINTEXT unless it's the right</i><br>
+<i>&gt; GI. (e.g. &lt;XMP&gt;foo&lt;/foo&gt; blah : blah should not be in the XMP  </i><br>
+element.)<br>
+<i>&gt; </i><br>
+<p>
+<i>&gt; 78. local: acess scheme is wierd. I suggest we go with ftp: and</i><br>
+<i>&gt; local-file: to match MIME, and get rid of local: and file:</i><br>
+Covered in another messsage.  I am prepared to split<br>
+file to ftp: and local: even though there are many (decnet, afs,<br>
+etc) ways to get at files and the client may be the best judge of  <br>
+what will work for him.<br>
+<p>
+ Now, what about the SAVEDAS adddress so that from justthe content of  <br>
+the document hte partial UDIs can be resolved? I think that is a  <br>
+useful thing, and could be essentail. I will put that in as Standard.<br>
+ <br>
+<p>
+<i>&gt; Well, that's all I can think of. Good night.</i><br>
+I hope you slept well...<br>
+<p>
+I have made a provisional list of link relationships. Ihope<br>
+they show the utility of the attribute. They can always be ignored!<br>
+<p>
+<i>&gt; Dan</i><br>
+<p>
+Tim<br>
+ <br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0071.html">Thomas A. Fine: "Re: web roaming robot (was: strategy for HTML spec?)"</a>
+<li> <b>Previous message:</b> <a href="0069.html">murphy@dccs.upenn.edu: "Re: web roaming robot (was: strategy for HTML spec?)"</a>
+<li> <b>Maybe in reply to:</b> <a href="0043.html">Dan Connolly: "HTML todo list"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0072.html">Dan Connolly: "Re: HTML todo list"</a>
+</ul>

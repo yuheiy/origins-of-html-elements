@@ -2,12 +2,13 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された544ファイルを、29の取得元ホストごとに収録する。
+Rawに保存された547ファイルを、29の取得元ホストごとに収録する。
 
-## `1997.webhistory.org`（8ファイル）
+## `1997.webhistory.org`（9ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
+| [www.lists/www-talk.1993q1/0070.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0070.html) | WWW-Talk Jan-Mar 1993: Re: HTML todo list |
 | [www.lists/www-talk.1993q1/0182.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0182.html) | WWW-Talk Jan-Mar 1993: proposed new tag: IMG |
 | [www.lists/www-talk.1993q1/0183.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0183.html) | WWW-Talk Jan-Mar 1993: Re: proposed new tag: IMG |
 | [www.lists/www-talk.1993q1/0186.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0186.html) | — |
@@ -485,7 +486,7 @@ Rawに保存された544ファイルを、29の取得元ホストごとに収録
 |---|---|
 | [jordi/v3/js/jsguide/jsguide.pdf](../raw/www.uv.es/jordi/v3/js/jsguide/jsguide.pdf) | — |
 
-## `www.w3.org`（196ファイル）
+## `www.w3.org`（198ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -510,6 +511,7 @@ Rawに保存された544ファイルを、29の取得元ホストごとに収録
 | [History/19921103-hypertext/hypertext/WWW/MarkUp/HTMLConstraints.html](../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/HTMLConstraints.html) | HTML Design Constraints |
 | [History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html](../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) | Tags used in HTML |
 | [History/19921103-hypertext/hypertext/WWW/NeXT/Implementation/Features.html](../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/NeXT/Implementation/Features.html) | Change history for NextStep WorldWideWeb |
+| [History/1993/WWW/LibHTML/src/hypertext/HTML.dtd.html](../raw/www.w3.org/History/1993/WWW/LibHTML/src/hypertext/HTML.dtd.html) | PUBLIC DRAFT -- HTML |
 | [History/1994/WWW/WorkingNotes/1993_Workshop/TimNotes.html](../raw/www.w3.org/History/1994/WWW/WorkingNotes/1993_Workshop/TimNotes.html) | TimNotes -- 1993_Workshop |
 | [International/draft-duerst-ruby-01](../raw/www.w3.org/International/draft-duerst-ruby-01) | — |
 | [MarkUp/1995-archive/html-spec.html](../raw/www.w3.org/MarkUp/1995-archive/html-spec.html) | Hypertext Markup Language (HTML) |
@@ -528,6 +530,7 @@ Rawに保存された544ファイルを、29の取得元ホストごとに収録
 | [MarkUp/HTMLPlus/htmlplus_45.html](../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html) | Mathematical Equations |
 | [MarkUp/HTMLPlus/htmlplus_58.html](../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html) | Appendix I |
 | [MarkUp/draft-ietf-iiir-html-01.txt](../raw/www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt) | — |
+| [MarkUp/html-spec/ChangeLog](../raw/www.w3.org/MarkUp/html-spec/ChangeLog) | — |
 | [MarkUp/html3/divisions.html](../raw/www.w3.org/MarkUp/html3/divisions.html) | Divisions |
 | [MarkUp/html3/dochead.html](../raw/www.w3.org/MarkUp/html3/dochead.html) | The Head Element and Related Elements |
 | [MarkUp/html3/emphasis.html](../raw/www.w3.org/MarkUp/html3/emphasis.html) | Font Style Elements |

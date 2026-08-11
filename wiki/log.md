@@ -987,3 +987,13 @@ Rawソース索引を一つの長い表から取得元ホスト別の節へ再�
 追加したRawの取得記録は次のとおりである。`http://www.hixie.ch/specs/html/apps/web-apps-1`、リダイレクトなし、2026-08-11T10:27:39.881Z、`raw/www.hixie.ch/specs/html/apps/web-apps-1`；`https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/044780.html`、リダイレクトなし、2026-08-11T10:27:44.135Z、`raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/044780.html`。Raw索引を544ファイルで再生成した。
 
 初回探索と分離した敵対的検証では、2004年4月版が要求だけを示し`menu`の要素定義をまだ持たないこと、9月版の日付、編集主体、定義、ラベル有無による処理、11月の互換性説明の文脈、HTML 4.01での非推奨、2006年と2008年の後続定義、現行仕様の意味を再照合した。GUIメニューとの同名・用途類似を1992年の採用因果へ接続していないことも確認した。対象リントでは、`menu`の必須見出し順、フロントマター、17行の証拠表、READMEと統合ページの概要、要素ページ110ファイルのREADME網羅、二つの分類表各115要素、確度集計A 85・A− 17・B 12・C 1、未解決108ページ・113要素、全ローカルMarkdownリンク、Raw索引の544ファイル網羅と再生成一致、Markdown whitespaceを`合格`、現行意味への再定義経路の欠落を`修正済み`、1992年の担当者・要求・命名・具体的祖先と最初期二資料の時系列を`Research必要`として確認した。変更した知識ページは敵対的検証と対象リントに合格したため`完成`とした。
+
+## [2026-08-11] research | `a`と`base`の初期導入経路
+
+`a`と`base`を一体として再調査した。`a`では、1991年のWorldWideWeb実装にあるAnchorオブジェクトとHTMLの`A`への写像、WWWのノード間リンク要求より前へ遡る要素単位の採用因果、ならびに`A`、`HREF`、`NAME`の命名理由を確認できなかった。既存の確度B、系譜、未解決点は変更していない。
+
+`base`では、Berners-Leeが1993年1月14日に、文書内容だけから相対アドレスを解決する`SAVEDAS`アドレスを標準として入れる意向を示したことを確認した。その後のrevision 1.4 DTDは`BASE`も`SAVEDAS`も含まず、1993年6月のInternet-Draftで`BASE HREF`を確認できる。草案付録のrevision 1.3 `$Id`は1月6日を示すが、1月14日の標準化意向と後続revision 1.4の内容に反するため、`BASE HREF`の成立日には使えない。導入要求と採用意向は直接確認できる一方、最終構文への具体化とHTML外の祖先は未確認であり、確度Bを維持した。
+
+追加したRawの取得記録は次のとおりである。`http://1997.webhistory.org/www.lists/www-talk.1993q1/0070.html`、リダイレクト後URLは同一、2026-08-11T10:44:05.422Z、`raw/1997.webhistory.org/www.lists/www-talk.1993q1/0070.html`；`https://www.w3.org/History/1993/WWW/LibHTML/src/hypertext/HTML.dtd.html`、リダイレクト後URLは同一、2026-08-11T10:44:08.526Z、`raw/www.w3.org/History/1993/WWW/LibHTML/src/hypertext/HTML.dtd.html`；`https://www.w3.org/MarkUp/html-spec/ChangeLog`、リダイレクト後URLは同一、2026-08-11T10:47:49.047Z、`raw/www.w3.org/MarkUp/html-spec/ChangeLog`。Raw索引を547ファイルで再生成した。
+
+初回探索と分離した敵対的検証では、より早いDTD、競合するハイパーテキストシステム、各資料の日付、主体、要素名、引用の文脈を確認した。revision 1.4は保存DTDの`$Id`が1月20日、RCS ChangeLogが2月3日と異なるため差を維持し、未確認の外部系譜を接続していない。対象リントでは、`base`の必須見出し順、フロントマター、証拠表、READMEと統合ページの概要、要素ページ110ファイルのREADME網羅、二つの分類表各115要素、確度集計A 85・A− 17・B 12・C 1、全ローカルMarkdownリンク、Raw索引の547ファイル網羅と再生成一致、Markdown whitespaceを`合格`、`BASE HREF`を1月6日成立とした旧記述を`修正済み`、`a`の具体的祖先と命名、`base`の最終構文への具体化と外部祖先を`Research必要`として確認した。変更した知識ページは敵対的検証と対象リントに合格したため`完成`とした。

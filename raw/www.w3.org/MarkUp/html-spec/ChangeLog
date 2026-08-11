@@ -1,0 +1,368 @@
+
+RCS file: /afs/w3.org/hypertext/WWW/MarkUp/Repository/html-spec/html.dtd,v
+Working file: html.dtd
+head: 1.25
+branch:
+locks: strict
+access list:
+symbolic names:
+	python: 1.18
+	terry: 1.13.0.2
+	timbl-review: 1.13
+	connolly: 1.7.0.2
+	draft-iiir-html-01: 1.6
+comment leader: "# "
+keyword substitution: kv
+total revisions: 28;	selected revisions: 28
+description:
+formal specification of HTML
+----------------------------
+revision 1.25
+date: 1995/03/29 18:53:13;  author: connolly;  state: Exp;  lines: +4 -5
+Updated author info, fixed a typo in META comment
+----------------------------
+revision 1.24
+date: 1995/02/06 21:28:45;  author: connolly;  state: Exp;  lines: +134 -156
+Merge in some SDA changes from yuri@sq.com
+----------------------------
+revision 1.23
+date: 1995/01/28 05:59:34;  author: connolly;  state: Exp;  lines: +106 -93
+Spacing changes in DTD to meet production needs.
+Some parameter entity changes for errors that SGMLs doesn't detect.
+----------------------------
+revision 1.22
+date: 1994/11/30 23:45:40;  author: connolly;  state: Exp;  lines: +186 -27
+ o Integrated ICADD SDA attributes and APPINFO (Thanks
+   to Jeff Suttor)
+ o Updated catalog etc. with new FPIs (formal public
+   identifiers).
+   Old format: "-//IETF//DTD HTML//EN//2.0"
+   New format: "-//IETF//DTD 2.0 HTML//EN"
+ o Changed FUNCTION character syntax: uncommented the
+   real one, commented out the hack version.
+ o Added FPI's and public text for "Strict" versions of the
+   DTD (e.g. "-//IETF//DTD HTML Strict Level
+   1//EN" maps to html-1s.dtd)
+ o Changed FPI used to reference ISO latin 1 entities.
+ o Changed a bunch of + occurence indicators to * for clarity
+ o Changed some parameter entities to comply with SGML
+   tokenization rules.
+----------------------------
+revision 1.21
+date: 1994/11/15 19:54:38;  author: connolly;  state: Exp;  lines: +152 -52
+Added one-line comment for each element and attribute in the DTD.
+Removed some other comments
+
+ALT is no longer required in level 0: some images are completely
+inessential.
+
+Changed DL content model to (DT | DD)+
+
+ADDRESS content model is always (%text|P)*
+
+FORM ACTION attribute is #IMPLIED (defaults to address of document)
+
+Removed remaining references to World-Wide Web
+----------------------------
+revision 1.20
+date: 1994/09/26 16:10:19;  author: connolly;  state: Exp;  lines: +2 -2
+Fixed a typo in one of the Reommended sections
+----------------------------
+revision 1.19
+date: 1994/09/23 22:46:51;  author: connolly;  state: Exp;  lines: +294 -10
+* changed public text owner from ISBN... to IETF
+
+* Prescriptive --> Recommended
+
+* Obsolete --> Deprecated
+
+* 3 files --> 1 plus switches in html-0.dtd and html-1.dtd
+
+* DIR, MENU -(%block)
+
+* META is std.
+
+* no %body in A
+
+* ISOLat1 reference is now the HTML specific one
+----------------------------
+revision 1.18
+date: 1994/07/20 16:24:43;  author: connolly;  state: Exp;  lines: +2 -2
+Changed HTML.version to a parameter entity, added #fixed attribute
+on HTML element to report version to application
+----------------------------
+revision 1.17
+date: 1994/07/20 15:46:38;  author: connolly;  state: Exp;  lines: +12 -12
+* Changed public identifiers to use registered owner, courtesy
+	of Erik Naggum
+
+* IMG allowed in Level 0, with #REQUIRED alt attribute
+
+* Deleted editorial comments
+
+* DIR and MENU no longer obsolete
+
+* COMPACT attributed restored on %list elements
+
+* WIDTH attribute of PRE relegated to Level 1
+
+* NEXTID no longer obsolete
+
+* META VALUE attr changed to CONTENT
+
+* Added default values for some forms attributes
+----------------------------
+revision 1.16
+date: 1994/06/13 20:55:50;  author: connolly;  state: Exp;  lines: +13 -378
+Split HTML DTD into three parts:
+	html.dtd -- level 2 version, which includes
+		html-1.dtd -- level 1 version, which includes
+			html-2.dtd -- level 0 version
+----------------------------
+revision 1.15
+date: 1994/06/03 22:09:14;  author: connolly;  state: Exp;  lines: +1 -3
+backed out some HTML.phrase stuff cuz it excercises a bug
+in one of my tools.
+----------------------------
+revision 1.14
+date: 1994/06/03 20:02:52;  author: connolly;  state: Exp;  lines: +24 -15
+* Changed public identifier to W30
+
+* Started messing with Level0 feature test entities.
+----------------------------
+revision 1.13
+date: 1994/05/18 17:23:29;  author: connolly;  state: Exp;  lines: +23 -10
+diff -b -w -u -r1.5 html.decl
+diff -b -w -u -r1.12 html.dtd
+
+* Revised comments
+* Moved HTML.Version to top of html.dtd
+----------------------------
+revision 1.12
+date: 1994/05/17 21:07:53;  author: connolly;  state: Exp;  lines: +65 -45
+ISOlat1: changed entities from text entities (which get parsed
+redundantly) to CDATA entities, which matches the semantics
+of the implementation I'm developing.
+
+README.html:
+Removed references to doctype-mosaic.
+Changed public identifier to reference no particular version of the
+DTD (sneaky...)
+
+Added links to a few interesting things.
+
+
+html.decl:
+
+removed "255 1 UNUSED" stuff, as per somebody's suggestion...
+WEK or somebody... can't exactly remember.
+
+Added comment about RE vs SEPCHAR stuff...
+
+
+html.dtd:
+
+* Added comments in the HTML.Prescriptive marked section
+  moved bogus second public identifier to another file...
+
+* Removed bogus isindexatend, HTML.GO, HTML.aEndOmissable stuff
+
+* added bodyBlockOnly feature test
+
+* changed KEY, U to feature-test-controlled elements
+
+* added a @@ note about relative HREF's
+
+* changed BASE HREF attr to be required
+
+* changed amp, lt, etc. entities to be CDATA entities,
+so they don't get parsed at runtime.
+
+* moved obsolete elements after forms
+
+
+optional.html:
+updated w.r.t KEY, U
+----------------------------
+revision 1.11
+date: 1994/04/30 03:17:56;  author: connolly;  state: Exp;  lines: +32 -13
+Makefile:
+* doctype-mosaic.sgml is obsolete: The "default" version of
+the DTD parses everything now... (after a few tweaks here and there)
+
+html.dtd:
+* Changed BODY to allow %htext, making <P> start tags not necessary,
+but keeping <P> as a container. This means I don't really need
+a separate mosaid mode any more.
+
+* Moved several of the features that are incompatible with extant
+docs under a %HTML.Prescriptive feature set.
+
+* Added HTML.Version entity, for use by code generation tools.
+This entity varies according to the feature set used.
+
+* Changed the "default" mode of some features:
++<!ENTITY % HTML.anchorNameCDATA "INCLUDE"
++<!ENTITY % HTML.PLAINTEXT "INCLUDE"
++<!ENTITY % HTML.font-phrase "INCLUDE"
+
+* Changed several attribute names to coincide with their
+values, for a hacked version of attribute minimization
+support in libwww.
+
+* Added %block to ADDRESS content
+
+
+* Added a #DEFAULT entity so that undefined entities are legal
+(Hmmm...)
+----------------------------
+revision 1.10
+date: 1994/04/19 17:24:06;  author: connolly;  state: Exp;  lines: +2 -1
+added &quot;
+----------------------------
+revision 1.9
+date: 1994/04/14 01:23:26;  author: connolly;  state: Exp;  lines: +31 -10
+After testing a few more files, inc. some from ORA GNN.
+
+Added a few new feature test entities:
+> 	-- The GO element used in ORA GNN. What is this??? -->
+>
+> <!ENTITY % HTML.aEndOmissable "IGNORE"
+> 	-- infer </A> tags, as in ORA GNN stuff -->
+>
+> <!ENTITY % HTML.isindexAtEnd "IGNORE"
+> 	-- allow ISINDEX after HEAD and BODY, as in ORA GNN stuff -->
+
+NEXTID is "on" by default -- it doesn't hurt anything, I guess.
+
+ISINDEX is allowed in %body-content if HTML.forms is "on"
+@@ Hmmm... this means one must search the whole doc, not just
+the head, to see if it's an index. Bad.
+
+Expanded the BLOCKQUOTE content model to include all sorts
+of %block stuff -- not just P and ADDRESS.
+
+Fixed missing * in FORM content model.
+----------------------------
+revision 1.8
+date: 1994/04/09 01:02:10;  author: connolly;  state: Exp;  lines: +275 -128
+* Added feature test entities for stuff that's handled different ways
+by different HTML implementations or specifications.
+
+* Removed %headelement, %bodyelement, %oldstyle, in favor of
+using OMITTAG to infer <HEAD>, <BODY> tags.
+
+* Changed %URL to %URI, and cited specification
+
+* Revamped %linkattributes in light of feature test entities
+
+* Revamped HTML, HEAD, elements in light of feature test entities
+
+* Anchor names may or may not be ID's based on the HTML.anchorNameID
+feature-test entity.
+
+* Changed %inline to be composed of %phrase and %font, where
+%font is controlled by %HTML.font-phrase
+
+* Changed EM, CODE, SAMP, etc. from (#PCDATA) to (%htext)+
+
+* Added P, BR to %text
+
+* replaced %stext with %block and %htext
+
+* Changed BODY, A content models.
+
+* Added BR element
+
+* Changed DL content model to (DT*, DD?)+, changed DT, DD from EMPTY
+to containers with omissable end tags. This match all the cases I
+found during testing.
+
+* Changed OL, UL, etc. similarly
+
+* Replaced ISO latin 1 entity declarations with an entity reference
+
+* Added FORMs
+
+* Removed emacs local-variable cruft
+----------------------------
+revision 1.7
+date: 1994/04/01 19:21:25;  author: connolly;  state: Exp;  lines: +3 -98
+branches:  1.7.2;
+Extracted the DTD from the <!SGML .. ><!DOCTYPE [ ...DTD... ]>
+stuff, and put the SGML declaration in a separate file.
+
+The DTD can now be used in the more traditional:
+
+	<!DOCTYPE HTML SYSTEM "html.dtd">
+	<title>
+	<h1>
+	...
+
+style.
+----------------------------
+revision 1.6
+date: 1994/03/30 02:29:15;  author: connolly;  state: Exp;  lines: +211 -109
+DTD as released in draft-iiir-html-01.txt
+----------------------------
+revision 1.5
+date: 1994/03/30 02:28:06;  author: connolly;  state: Exp;  lines: +164 -148
+The DTD as I originally released it.
+----------------------------
+revision 1.4
+date: 1993/02/03 21:30:13;  author: connolly;  state: Exp;  lines: +148 -164
+checked in with -k by connolly at 1994/03/30 00:56:13
+----------------------------
+revision 1.3
+date: 1993/01/07 00:38:36;  author: connolly;  state: Exp;  lines: +66 -39
+checked in with -k by connolly at 1994/03/30 00:36:49
+----------------------------
+revision 1.2
+date: 1992/12/03 02:04:29;  author: connolly;  state: Exp;
+checked in with -k by connolly at 1994/03/30 00:20:44
+----------------------------
+revision 1.7.2.4
+date: 1994/04/07 00:33:25;  author: connolly;  state: Exp;  lines: +115 -57
+This DTD represents current practice as represented
+by a random sampling of docs, mostly from NCSA.
+
+Added forms
+Changed <A NAME= attr to NMTOKEN (yuk!)
+Rearranged lots of stuff.
+----------------------------
+revision 1.7.2.3
+date: 1994/04/04 23:58:38;  author: connolly;  state: Exp;  lines: +5 -4
+Fixed a couple wierdo's with ADDRESS and such.
+----------------------------
+revision 1.7.2.2
+date: 1994/04/01 20:30:17;  author: connolly;  state: Exp;  lines: +38 -95
+Changed P, LI, DT, DD from EMPTY to containers.
+
+Changed BODY, DL, etc. to have ELEMENT content.
+
+Changed lists to allow embeded lists.
+
+Removed NEXTID element -- should be a processing instruction.
+
+Note: The BR feature should be represented as an entity &br;
+that expands to a processing instruction <? break line>
+rather than an element <br>.
+
+The PRE style newline handling should be a different
+NOTATION.
+
+Changed content model of %inline elements to inlcude A.
+
+Changed content model of A to ANY.
+
+B, I, U, TT only allowed inside PRE. EM, STRONG, etc.
+not allowed inside PRE.
+
+ISOLat1 stuff moved to separate file.
+
+removed emacs local variables.
+----------------------------
+revision 1.7.2.1
+date: 1994/04/01 20:07:22;  author: connolly;  state: Exp;  lines: +5 -16
+took out a few obsolete features... moved them to html-compat-doc.sgml
+=============================================================================
