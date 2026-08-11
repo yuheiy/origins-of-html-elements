@@ -96,7 +96,7 @@ status: 完成
 - [`<output>`](elements/output.md): XFormsの非編集可能な値表示コントロールをHTMLフォームへ適応して2003年に提案され、Web Forms 2.0を経てHTML5へ統合された。
 - [`<p>`](elements/p.md): 1992年1月のBerners-Leeメールで空の段落マークとして確認でき、SGML由来という回顧はあるが、具体的な元語彙は未確認である。
 - [`<picture>`](elements/picture.md): 2007年の静止画用`picture`案を`video`型の複数ソース選択へ転用し、RICG、独立した`srcset`、`img`を描画主体とする構造を統合して2014年にWHATWG HTMLへ導入した。
-- [`<pre>`](elements/pre.md): 初期HTMLのコンピューター出力表示から、Unixマニュアルページのハイパーテキスト化要求による拡張を経た整形済みテキスト要素である。
+- [`<pre>`](elements/pre.md): 初期HTML案`TYPEWRITER`を装置ではなく内容を記述する`PRE`へ改名し、Unixマニュアルページ向けに拡張した整形済みテキスト要素である。
 - [`<progress>`](elements/progress.md): 2004年のProgressメータープレースホルダーを2006年に確定／不定なタスク完了要素へ具体化したが、それ以前のウィジェットからの採用は未確認である。
 - [`<q>`](elements/q.md): 1995年のHTML国際化草案が言語に応じた引用符の描画のため導入したが、HTML+ `Q`からの個別採用は未確認である。
 - [`<rp>`](elements/rp.md): ルビ非対応ユーザーエージェント向けの括弧を表す要素としてW3Cが提案・規範化し、既存Web上の`rp`を含む単純なルビマークアップとの互換性を保つため、2008年に`ruby`、`rt`とともにHTML5へ追加された。

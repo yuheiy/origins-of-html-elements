@@ -136,9 +136,9 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 
 HTMLへの採用因果または具体的祖先が弱いB／Cは、`a`、`address`、`base`、`blockquote`、`br`、`col`、`div`、`html`、`menu`、`noscript`、`p`、`small`、`title`の13要素である。`br`は導入理由を確認したがHTML+からの採用因果がなく、`menu`は2004年以降の再定義経路を確認した一方で1992年の導入理由と具体的祖先を確認できない。
 
-`HTML直前の祖先`に未確認部分を明記するのは、`a`、`address`、`aside`、`audio`、`base`、`blockquote`、`br`、`canvas`、`col`、`del`、`div`、`html`、`ins`、`menu`、`noscript`、`output`、`p`、`pre`、`progress`、`q`、`s`、`section`、`small`、`source`、`sub`、`sup`、`title`、`u`の28要素である。背景資料があるだけで、これらの欠落へ矢印を補ってはならない。
+`HTML直前の祖先`に未確認部分を明記するのは、`a`、`address`、`aside`、`audio`、`base`、`blockquote`、`br`、`canvas`、`col`、`del`、`div`、`html`、`ins`、`menu`、`noscript`、`output`、`p`、`progress`、`q`、`s`、`section`、`small`、`source`、`sub`、`sup`、`title`、`u`の27要素である。背景資料があるだけで、これらの欠落へ矢印を補ってはならない。
 
-名称、命名、改名、略称、タグ名または語彙の選択理由が明示的な未解決点として残るのは、`a`、`abbr`、`article`、`aside`、`base`、`bdi`、`bdo`、`col`、`del`、`details`、`dialog`、`hgroup`、`ins`、`legend`、`main`、`menu`、`object`、`p`、`pre`、`script`、`search`、`section`、`span`、`sub`、`summary`、`sup`、`td`、`th`、`time`、`title`、`video`、`wbr`の32要素である。語彙起源という目的に対しては、この集合を「由来確認済み」に数えない。
+名称、命名、改名、略称、タグ名または語彙の選択理由が明示的な未解決点として残るのは、`a`、`abbr`、`article`、`aside`、`base`、`bdi`、`bdo`、`col`、`del`、`details`、`dialog`、`hgroup`、`ins`、`legend`、`main`、`menu`、`object`、`p`、`script`、`search`、`section`、`span`、`sub`、`summary`、`sup`、`td`、`th`、`time`、`title`、`video`、`wbr`の31要素である。語彙起源という目的に対しては、この集合を「由来確認済み」に数えない。
 
 ### 3.2 追加調査の扱い
 
@@ -192,7 +192,9 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 
 [`body`](../elements/body.md)は、1992年11月の`DOCUMENT`版DTDについて、W3CのRCS ChangeLog、記録されたRepositoryパス、想定RCSパス、1992年保存ディレクトリと公開メールを照合した。公開履歴は12月3日のrevision 1.2から始まり、内部版本文または変更差分を回収できなかった。一度だけの探索を完了し、新しいRCS revisionまたは内部版DTDが現れるまで個別ページの問いを維持する。
 
-- [`pre`](../elements/pre.md)、[`iframe`](../elements/iframe.md): 個別ページが特定する配布物または同時代ベンダー資料。
+[`pre`](../elements/pre.md)は、1992年12月4日以前のConnolly案`TYPEWRITER`と、12月2日版のDTD・仕様で`PRE`へ改名したという配布告知を接続した。改名理由も、タイプライターという装置を規定せず整形済みという内容を記述するためだと確認できた。1991年WorldWideWeb保存ソースは`XMP`と`LISTING`を処理するが`PRE`を処理せず、日付のない機能履歴と後代の復元資料は異なる版の`PRE`対応を示すため、1991年初出とはしていない。一度だけの探索を完了し、`TYPEWRITER`より前の具体的祖先は新しい採用記録が現れるまで個別ページの問いとして維持する。
+
+- [`iframe`](../elements/iframe.md): 個別ページが特定する同時代ベンダー資料。
 
 #### 新しい一次資料が現れるまで保留する問題
 
