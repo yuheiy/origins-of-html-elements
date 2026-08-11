@@ -6,19 +6,19 @@ status: 完成
 
 ## 概要
 
-HTML+ table modelのcaptionからRFC 1942を経て標準化された要素で、HTML+のfigure用途とは区別する。
+HTML+の表モデルのキャプションからRFC 1942を経て標準化された要素で、HTML+の図用途とは区別する。
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、親が`table`である場合、そのtableのtitleを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/tables.html)（[公開版](https://html.spec.whatwg.org/multipage/tables.html#the-caption-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、親が`table`である場合、その表のタイトルを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/tables.html)（[公開版](https://html.spec.whatwg.org/multipage/tables.html#the-caption-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
-1993年HTML+ table modelは`CAPTION`をtableまたはfigureのcaptionとして定義した。RFC 1942は自身のtable modelがHTML+の初期作業とHTML 3 draftから発展したと明記し、HTML 3.2が広く実装されたsubsetを採録した。[HTML+ tables](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 3.2](https://www.w3.org/TR/REC-html32#table)
+1993年HTML+の表モデルは`CAPTION`を表または図のキャプションとして定義した。RFC 1942は自身の表モデルがHTML+の初期作業とHTML 3草案から発展したと明記し、HTML 3.2が広く実装された部分集合を採録した。[HTML+ tables](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 3.2](https://www.w3.org/TR/REC-html32#table)
 
 ## HTML直前の祖先
 
-HTML直前の祖先はHTML+ table modelである。後続table modelではtable captionとなった。 RFC 1942の明示的な発展関係により、同名要素の一致だけでなくtable modelとしての因果関係を確認できる。[HTML+ tables](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html) [HTML+ review](https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html)
+HTML直前の祖先はHTML+の表モデルである。後続表モデルでは表キャプションとなった。 RFC 1942の明示的な発展関係により、同名要素の一致だけでなく表モデルとしての因果関係を確認できる。[HTML+ tables](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html) [HTML+のレビュー](https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html)
 
 ## さらに上流の由来
 
@@ -28,25 +28,25 @@ RFC 1942はHTML+の単純モデルに対する後続拡張の一部をCALSにな
 
 ### 解釈
 
-HTML table modelは複数の既存table modelを研究したが、確認できる直接接続と一般的な設計影響を分ける。
+HTML表モデルは複数の既存表モデルを研究したが、確認できる直接接続と一般的な設計影響を分ける。
 
 ## 系譜
 
-HTML+ `CAPTION`（table用途） → RFC 1942 → HTML 3.2 `CAPTION` → 現行HTML `<caption>`
+HTML+ `CAPTION`（表用途） → RFC 1942 → HTML 3.2 `CAPTION` → 現行HTML `<caption>`
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1993-11-08 | [HTML+ §9](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)） | Internet-Draft | `CAPTION`を含む単純table modelを定義する。 | 2026-08-09 |
-| 1996-05 | [RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)） | Experimental RFC | table modelがHTML+とHTML 3 draftから発展したと明記する。 | 2026-08-09 |
-| 1997-01-14 | [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32#table)） | W3C Recommendation | 広く実装されたtable subsetとして`CAPTION`を採録する。 | 2026-08-09 |
+| 1993-11-08 | [HTML+ §9](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)） | Internet-Draft | `CAPTION`を含む単純表モデルを定義する。 | 2026-08-09 |
+| 1996-05 | [RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)） | Experimental RFC | 表モデルがHTML+とHTML 3草案から発展したと明記する。 | 2026-08-09 |
+| 1997-01-14 | [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32#table)） | W3C Recommendation | 広く実装された表部分集合として`CAPTION`を採録する。 | 2026-08-09 |
 
 ## 確度
 
 **A**
 
-RFC 1942がHTML+ table workからの発展を明記し、後続採録も確認できるため。
+RFC 1942がHTML+の表に関する作業からの発展を明記し、後続採録も確認できるため。
 
 ## 否定された仮説
 
@@ -54,4 +54,4 @@ RFC 1942がHTML+ table workからの発展を明記し、後続採録も確認�
 
 ## 未解決
 
-- HTML+でtableとfigureに共有された`CAPTION`から、現行`caption`と`figcaption`へ分岐した具体的経路は何か。
+- HTML+で表と図に共有された`CAPTION`から、現行`caption`と`figcaption`へ分岐した具体的経路は何か。

@@ -10,21 +10,21 @@ HTML+のDTDが一般テキストでも許可した`SUB`をHTML 3.0へ引き継�
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、subscriptを表す。単なる表示上の上下配置ではなく、表記規則上subscriptとなる内容に使う。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements)、2026-08-09確認）
+WHATWG HTML Living Standardでは、下付きを表す。単なる表示上の上下配置ではなく、表記規則上下付きとなる内容に使う。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements)、2026-08-09確認）
 
 ## HTMLへの導入
 
-1993年HTML+は数学式で`SUB`をsubscriptとして使用し、DTDでは一般テキストにも許可した。1994年9月、Dave RaggettはこのHTML+の設計を指してHTML 3.0でも同じ許可が有用だと述べ、1995年HTML 3.0は`SUB`を一般のfont-style elementとして定義した。別枝では、1995年9月のIETF国際化草案が一般テキストでもsubscriptが必要だという理由から`SUB`を導入し、RFC 2070へ至った。HTML 3.2も`SUB`を採録したが、どちらの枝から採用したかは明記しない。[HTML+ math](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html) [Raggettの回答](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html) [HTML 3.0 element](https://www.w3.org/MarkUp/html3/emphasis.html) [国際化草案](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01) [RFC 2070](https://www.rfc-editor.org/rfc/rfc2070.html) [HTML 3.2](https://www.w3.org/TR/REC-html32)
+1993年HTML+は数学式で`SUB`を下付きとして使用し、DTDでは一般テキストにも許可した。1994年9月、Dave RaggettはこのHTML+の設計を指してHTML 3.0でも同じ許可が有用だと述べ、1995年HTML 3.0は`SUB`を一般のフォントスタイル要素として定義した。別枝では、1995年9月のIETF国際化草案が一般テキストでも下付きが必要だという理由から`SUB`を導入し、RFC 2070へ至った。HTML 3.2も`SUB`を採録したが、どちらの枝から採用したかは明記しない。[HTML+ math](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html) [Raggettの回答](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html) [HTML 3.0 element](https://www.w3.org/MarkUp/html3/emphasis.html) [国際化草案](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01) [RFC 2070](https://www.rfc-editor.org/rfc/rfc2070.html) [HTML 3.2](https://www.w3.org/TR/REC-html32)
 
 ## HTML直前の祖先
 
-HTML+ DTDの`SUB`。Dave Raggettは、HTML+がordinary textで`SUB`を許可したことを明示し、HTML 3.0でも同じことが有用だと述べたため、HTML+からHTML 3.0への個別の設計継承を確認できる。HTML 3.0系列とIETF国際化系列の接続、およびHTML 3.2がどちらから採用したかは未確認である。
+HTML+ DTDの`SUB`。Dave Raggettは、HTML+が通常テキストで`SUB`を許可したことを明示し、HTML 3.0でも同じことが有用だと述べたため、HTML+からHTML 3.0への個別の設計継承を確認できる。HTML 3.0系列とIETF国際化系列の接続、およびHTML 3.2がどちらから採用したかは未確認である。
 
 ## さらに上流の由来
 
 ### 証拠
 
-HTML+の数学提案全体はLaTeXのapproachに着想を得たと明記するが、`SUB`という要素名自体をLaTeXから借りたとは述べない。[HTML+ math](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)
+HTML+の数学提案全体はLaTeXの手法に着想を得たと明記するが、`SUB`という要素名自体をLaTeXから借りたとは述べない。[HTML+ math](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)
 
 ### 解釈
 
@@ -44,12 +44,12 @@ HTML 3.0系列、国際化系列、HTML 3.2の間は個別採用因果が未確�
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1993-11-08 | [HTML+ §12](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)） | 一次仕様・提案 | 数学式で`SUB`をsubscriptとして使用する。 | 2026-08-09 |
-| 1994-09-09 | [Murray Maloney, “Re: HTML 3.0 Process”](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/340.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/340.html)） | HTML-WG mailing list（Calgary大学保存） | `SUB`／`SUP`をmathだけでなく一般テキストでも使えるinline要素にするよう提案する。 | 2026-08-10 |
-| 1994-09-12 | [Dave Raggett, “Re: HTML 3.0 Process”](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html)） | HTML-WG mailing list（Calgary大学保存） | HTML+ DTDがordinary textで`SUB`／`SUP`を許可し、HTML 3.0でも同じ設計が有用だと述べる。 | 2026-08-10 |
+| 1993-11-08 | [HTML+ §12](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)） | 一次仕様・提案 | 数学式で`SUB`を下付きとして使用する。 | 2026-08-09 |
+| 1994-09-09 | [Murray Maloney, “Re: HTML 3.0 Process”](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/340.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/340.html)） | HTML-WGメーリングリスト（Calgary大学保存） | `SUB`／`SUP`を数式だけでなく一般テキストでも使える行内要素にするよう提案する。 | 2026-08-10 |
+| 1994-09-12 | [Dave Raggett, “Re: HTML 3.0 Process”](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html)） | HTML-WGメーリングリスト（Calgary大学保存） | HTML+ DTDが通常テキストで`SUB`／`SUP`を許可し、HTML 3.0でも同じ設計が有用だと述べる。 | 2026-08-10 |
 | 1995 | [HTML 3.0 font style elements](../../raw/www.w3.org/MarkUp/html3/emphasis.html)（[公開元](https://www.w3.org/MarkUp/html3/emphasis.html)） | W3C保存の失効草案 | 一般テキスト用`SUB`を定義する。 | 2026-08-10 |
 | 1995-09-25 | [`draft-ietf-html-i18n-01`](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01)） | IETF Internet-Draft | 一般テキストの国際化要求から`SUB`を導入する。 | 2026-08-09 |
-| 1997-01 | [RFC 2070 §4.2](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)） | 一次仕様・提案 | 一般テキストでも必要なsubscriptとして追加する。 | 2026-08-09 |
+| 1997-01 | [RFC 2070 §4.2](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)） | 一次仕様・提案 | 一般テキストでも必要な下付きとして追加する。 | 2026-08-09 |
 | 1997-01-14 | [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32)） | 一次仕様・提案 | `SUB`を採録する。 | 2026-08-09 |
 
 ## 確度
@@ -60,10 +60,10 @@ HTML+ DTDの`SUB`をHTML 3.0の一般テキストでも許可する個別の設�
 
 ## 否定された仮説
 
-HTML+ math全体がLaTeXに着想を得たことから、`SUB`というタグ名もLaTeX由来だと推論すること。HTML 3.0とIETF国際化草案に同名要素があることだけから両系列を接続すること。
+HTML+の数式全体がLaTeXに着想を得たことから、`SUB`というタグ名もLaTeX由来だと推論すること。HTML 3.0とIETF国際化草案に同名要素があることだけから両系列を接続すること。
 
 ## 未解決
 
-- `SUB`という個別名称に先行するmarkup祖先。
+- `SUB`という個別名称に先行するマークアップ祖先。
 - IETF国際化草案がHTML+またはHTML 3.0の`SUB`を採用した記録はあるか。
 - HTML 3.2はHTML 3.0系列とIETF国際化系列のどちらから`SUB`を採用したか。
