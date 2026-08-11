@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された596ファイルを、32の取得元ホストごとに収録する。
+Rawに保存された599ファイルを、32の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（9ファイル）
 
@@ -217,7 +217,7 @@ Rawに保存された596ファイルを、32の取得元ホストごとに収録
 | [mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/README.first](../raw/ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/README.first) | — |
 | [mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd](../raw/ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd) | — |
 
-## `github.com`（68ファイル）
+## `github.com`（69ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -284,6 +284,7 @@ Rawに保存された596ファイルを、32の取得元ホストごとに収録
 | [whatwg/html/commit/f6a4d7fed33cd6ebcd2f2188302ed00b7aac1465](../raw/github.com/whatwg/html/commit/f6a4d7fed33cd6ebcd2f2188302ed00b7aac1465) | [] (0) SVG in text/html: Second try, based on more recent feedback. · whatwg/html@f6a4d7f · GitHub |
 | [whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00](../raw/github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00) | &lt;meter&gt; and &lt;progress&gt; (sorry for the big checkin, had svn issues) · whatwg/html@f8514de · GitHub |
 | [whatwg/html/commit/f98736ae6caf9250ffaed0df557e214f0bf5aebd](../raw/github.com/whatwg/html/commit/f98736ae6caf9250ffaed0df557e214f0bf5aebd) | Define a &lt;details&gt; element to act as a disclosure triangle widget. · whatwg/html@f98736a · GitHub |
+| [whatwg/html/commit/fd6901dbbe7c178cdde54e53f4f8aae8e6c28393](../raw/github.com/whatwg/html/commit/fd6901dbbe7c178cdde54e53f4f8aae8e6c28393) | [giow] (0) Revamp how dir='' is implemented; add dir=auto; update to … · whatwg/html@fd6901d · GitHub |
 | [whatwg/html/commit/fdfe6548265125712520f3e1b72812235e9a8123](../raw/github.com/whatwg/html/commit/fdfe6548265125712520f3e1b72812235e9a8123) | &lt;t&gt; becomes &lt;time&gt; · whatwg/html@fdfe654 · GitHub |
 | [whatwg/html/issues/10520](../raw/github.com/whatwg/html/issues/10520) | Timing of cloning for the `&lt;selectedoption&gt;` element · Issue #10520 · whatwg/html · GitHub |
 | [whatwg/html/issues/5811](../raw/github.com/whatwg/html/issues/5811) | Consider creating an HTML search element · Issue #5811 · whatwg/html · GitHub |
@@ -392,10 +393,11 @@ Rawに保存された596ファイルを、32の取得元ホストごとに収録
 | [Archives/Public/www-talk/1992NovDec/0155.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html) | www-talk from November to December 1992: The spec evolves... |
 | [Archives/Public/www-talk/1992NovDec/0159.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html) | www-talk from November to December 1992: Re: The spec evolves... |
 
-## `lists.whatwg.org`（38ファイル）
+## `lists.whatwg.org`（39ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
+| [pipermail/commit-watchers-whatwg.org/2010/012544.html](../raw/lists.whatwg.org/pipermail/commit-watchers-whatwg.org/2010/012544.html) | [html5] r5677 - [e] (0) Reword some &lt;ubi&gt; requirements and correct some typos. Fixing http://www [...] |
 | [pipermail/whatwg-whatwg.org/2004-August/001989.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html) | &lt;section&gt; and headings [was: Re: [whatwg] LABEL and radio/checkbox onclick] |
 | [pipermail/whatwg-whatwg.org/2004-August/002134.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html) | &lt;section&gt; and headings [was: Re: [whatwg] LABEL and radio/checkbox onclick] |
 | [pipermail/whatwg-whatwg.org/2004-August/002181.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002181.html) | [whatwg] Re: &lt;section&gt; and headings |
@@ -546,7 +548,7 @@ Rawに保存された596ファイルを、32の取得元ホストごとに収録
 |---|---|
 | [jordi/v3/js/jsguide/jsguide.pdf](../raw/www.uv.es/jordi/v3/js/jsguide/jsguide.pdf) | — |
 
-## `www.w3.org`（202ファイル）
+## `www.w3.org`（203ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -621,6 +623,7 @@ Rawに保存された596ファイルを、32の取得元ホストごとに収録
 | [TR/2008/WD-html5-diff-20080122/__index](../raw/www.w3.org/TR/2008/WD-html5-diff-20080122/__index) | HTML 5 differences from HTML 4 |
 | [TR/2008/WD-wai-aria-20080204/__index](../raw/www.w3.org/TR/2008/WD-wai-aria-20080204/__index) | Accessible Rich Internet Applications (WAI-ARIA) Version 1.0 |
 | [TR/2008/WD-wai-aria-20080806/__index](../raw/www.w3.org/TR/2008/WD-wai-aria-20080806/__index) | Accessible Rich Internet Applications (WAI-ARIA) Version 1.0 |
+| [TR/2010/WD-html-bidi-20100304/__index](../raw/www.w3.org/TR/2010/WD-html-bidi-20100304/__index) | Additional Requirements for Bidi in HTML |
 | [TR/2010/WD-html5-20101019/author/video.html](../raw/www.w3.org/TR/2010/WD-html5-20101019/author/video.html) | 4.8.6 The video element &mdash; HTML5 (Edition for Web Authors) |
 | [TR/2010/WD-html5-diff-20100304/__index](../raw/www.w3.org/TR/2010/WD-html5-diff-20100304/__index) | HTML5 differences from HTML4 |
 | [TR/2012/WD-html-main-element-20121217/__index](../raw/www.w3.org/TR/2012/WD-html-main-element-20121217/__index) | main element - an HTML5 extension specification |

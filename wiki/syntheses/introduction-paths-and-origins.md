@@ -150,7 +150,7 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 
 | 調査群 | 対象 | 探索範囲 |
 |---|---|---|
-| 初期WHATWGの版履歴 | [`bdi`](../elements/bdi.md)、[`track`](../elements/track.md) | 既知の初回収録、改名、再導入コミットの親版と、対応するWHATWGメール、旧Subversion履歴、提案を照合する |
+| 初期WHATWGの版履歴 | [`track`](../elements/track.md) | 既知の初回収録、改名、再導入コミットの親版と、対応するWHATWGメール、旧Subversion履歴、提案を照合する |
 | W3C／IETF草案間の変更 | [`legend`](../elements/legend.md)、[`bdo`](../elements/bdo.md)、[`span`](../elements/span.md)、[`noscript`](../elements/noscript.md)、[`object`](../elements/object.md)、[`col`](../elements/col.md)、[`style`](../elements/style.md) | 連続する草案間に限定して、CVS／RCS差分、Working Group議事録、編集者メールから追加、改名、機能統合、後続仕様への採録を探す |
 
 `mark`は、`m`の初出区間を2005年4月2日後〜4月13日までに限定し、2007年の名称議論と2008年の採用判断を確認したため、優先調査を完了した。初稿の提案者を示す公開記録は見つからず、個別ページの未解決点として維持する。
@@ -162,6 +162,8 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 `main`は、XHTML 2 `main`役割の初出区間、2012年の`maincontent`から`main`への改名区間、W3Cでの統合、2013年1月31日のWHATWG初回統合コミットを確認したため、優先調査を完了した。XHTML 2の標準Role Collectionへ`main`を加えた個人と、`maincontent`からの名称決定記録は公開資料から確認できず、個別ページの未解決点として維持する。
 
 同名または同機能の先行物を新たに見つけるだけでは完了とせず、HTML側の採用判断または変更判断まで確認できた場合にだけ系譜を更新する。
+
+`bdi`は、2010年3月4日のW3C Working Draftにある同名の分離属性案、`ubi`への改名、10月12日のBug 10807におけるIan Hicksonの同名要素案、11月5日のr5669による要素追加、11月9日のr5672による`dir=auto`の省略時既定値追加を接続したため、優先調査を完了した。r5677は分離アルゴリズムの実装要件を明確化した変更であり、`dir=auto`の追加ではない。最初の暫定属性名をWorking Draftの編集者と追加貢献者の誰が発案したかは特定できず、個別ページの未解決点として維持する。
 
 #### 欠落資料を一度だけ探索する問題
 
