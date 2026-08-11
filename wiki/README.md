@@ -10,7 +10,7 @@ status: 完成
 
 - [要素](elements/)は、現行要素ごとに現在の意味、HTMLへの導入、直前の祖先、上流の由来、証拠、確度、否定された仮説、未解決点をまとめる。
 - [共有系譜](lineages/)は、複数要素に共通する確認済みの採用経路や要求をまとめる。個別要素の結論と確度は要素ページを正本とする。
-- [統合](syntheses/introduction-paths-and-origins.md)は比較や横断分析を扱う。
+- [統合](syntheses/README.md)は比較や横断分析を扱う。
 - [Rawソース](raw-source-index.md)は、保存されたすべてのRawファイルをパス順に並べた索引である。
 - [ログ](log.md)は、Wikiに対する操作を追記専用で記録する。構造と運用のスキーマは[AGENTS.md](../AGENTS.md)を参照する。
 
@@ -139,21 +139,34 @@ status: 完成
 
 ## 共有系譜
 
-- [現行HTML要素の横断系譜](lineages/README.md): 確認済みの共有系統を一覧化し、個別採用を確認できない境界をまとめる。
-- [CALSとHTMLの表構造要素](lineages/cals-tables.md): CALSの行グループと表の取り込み要求から、IETF表草案、RFC 1942、HTML 4へ至る表構造の経路をまとめる。
-- [CERN-SGMLから初期HTMLリスト群への共有系譜](lineages/cern-sgml-lists.md): CERN-SGMLタグ集合から初期HTMLのリスト六要素を含む集合への採録と、個別対応を確認できない制約をまとめる。
-- [IETF HTML国際化草案の共有系譜](lineages/html-internationalization.md): IETF国際化草案から`q`、`sub`、`sup`、`span`、`bdo`へ至る経路と、スタイル要件が`span`へ合流した経路をまとめる。
-- [HTML+から現行HTML要素への共有系譜](lineages/html-plus.md): HTML+から文書修正機能、フォーム、表、図、クライアント側イメージマップの各要素群へ至る共有経路をまとめる。
-- [HTML句要素とTexinfo](lineages/texinfo.md): Texinfoのマクロ名からHTML句要素集合への命名経路と、`u`など個別対応を確認できない境界をまとめる。
-- [WHATWGの文書構造語彙の共有系譜](lineages/whatwg-sectioning.md): 典型的サイトのマークアップから意味的要素集合へ至る要求と、旧`header`を`hgroup`と新しい`header`へ分けた経路をまとめる。
-- [HTML 4のフォームラベルとグループ化](lineages/html4-form-accessibility.md): ラベル関連付けとグループ化の要求から`label`、`fieldset`、`legend`へ至る経路をまとめる。
-- [ARIAランドマークからネイティブHTML要素へ](lineages/aria-landmarks.md): XHTML／ARIAの`main`と`search`役割を、既存の`div role=...`から専用HTML要素へ置き換えた二つの経路をまとめる。
-- [ルビ注釈語彙の共有系譜](lineages/ruby.md): W3C／XHTMLのルビ語彙と、既存Web利用からHTML5の`ruby`、`rt`、`rp`へ至る別々の枝をまとめる。
-- [MathMLとSVGのHTMLパーサー統合](lineages/foreign-content.md): 既存XML語彙の`math`と`svg`ルートを`text/html`パーサーへ統合した経路をまとめる。
-- [`details`と`summary`の開閉UI系譜](lineages/details-summary.md): GUI開閉ウィジェットから`details`へ、流用キャプションから専用`summary`へ至る経路をまとめる。
-- [WHATWGメディア要素の共有モデル](lineages/media-elements.md): `video`、`audio`、`source`、`track`が別々の直接祖先から共通メディアモデルへ統合された経路をまとめる。
-- [レスポンシブ画像と`picture`／`source`](lineages/responsive-images.md): 複数の提案、実装、`srcset`、既存`img`処理を現行の`picture`構造へ統合した経路をまとめる。
+- [現行HTML要素の共有系譜](lineages/README.md): 共有された採用、要求、分岐、置換、共同変更を因果単位で案内する。
+- [AAP／CERNからHTML見出し群へ](lineages/aap-cern-headings.md): AAPとCERN SGMLから`h1`〜`h6`へ至る集合単位の採用を扱う。
+- [CERN-SGMLから初期HTMLリスト群への共有系譜](lineages/cern-sgml-lists.md): CERN-SGMLから初期HTMLのリスト六要素を含む集合への採用を扱う。
+- [`head`と`body`への文書分割](lineages/document-structure.md): 文書情報と本文を分離する要求から`head`／`body`へ至る変更を扱う。
+- [HTML句要素とTexinfo](lineages/texinfo.md): Texinfoのマクロ名からHTML句要素集合への命名経路を扱う。
+- [HTML+フォームからHTML 2.0へ](lineages/html-plus-forms.md): HTML+のフォーム五要素からHTML 2.0への集合単位の採用を扱う。
+- [フォームのラベル付けとグループ化](lineages/form-labels-and-groups.md): ラベル関連付けと欄のグループ化要求から`label`、`fieldset`、`legend`へ至る経路を扱う。
+- [HTML+から基本表モデルへ](lineages/html-plus-tables.md): HTML+と初期HTML 3草案から基本表五要素へ至る採用を扱う。
+- [CALSからHTML表の行グループへ](lineages/table-row-groups.md): CALSの三つの行グループをHTML向けに簡略化して採用した経路を扱う。
+- [HTML表の列と列グループ](lineages/table-columns.md): 列機能の統合と`COLGROUP`新設の経路を扱う。
+- [文書の削除と挿入](lineages/document-edits.md): HTML+の追加・削除から`del`／`ins`へ至る集合単位の経路を扱う。
+- [図とキャプション](lineages/figures-and-captions.md): HTML+の図構造とWHATWG提案から`figure`／`figcaption`へ至る経路を扱う。
+- [クライアント側イメージマップ](lineages/image-maps.md): 形状付きリンク要求から`map`／`area`へ至る経路を扱う。
+- [双方向テキストの埋め込みと上書き](lineages/bidirectional-text.md): Unicode低水準機構に対応する`span`／`bdo`とスタイル用途の合流を扱う。
+- [既存Webから意味的セクショニング要素へ](lineages/semantic-sectioning.md): `div`の疑似意味的用途からセクショニング要素群へ至る集合と個別枝を扱う。
+- [旧`header`から`hgroup`と新`header`へ](lineages/header-and-hgroup.md): 旧見出しコンテナーの改名とページヘッダー用要素の新設を扱う。
+- [ARIAランドマークからネイティブHTML要素へ](lineages/aria-landmarks.md): `main`と`search`のARIA役割を専用HTML要素へ置換した経路を扱う。
+- [ルビ注釈語彙の共有系譜](lineages/ruby.md): W3C／XHTMLのルビ語彙と既存Web利用からHTML5の三要素へ至る枝を扱う。
+- [MathMLとSVGのHTMLパーサー統合](lineages/foreign-content.md): 既存XML語彙の`math`と`svg`を`text/html`へ統合した経路を扱う。
+- [`details`と`summary`の開閉UI系譜](lineages/details-summary.md): GUI開閉慣習から`details`へ、流用キャプションから`summary`へ至る経路を扱う。
+- [WHATWGメディア要素の共有モデル](lineages/media-elements.md): `video`、`audio`、`source`が共通メディアモデルへ統合された経路を扱う。
+- [レスポンシブ画像と`picture`／`source`](lineages/responsive-images.md): コミュニティ提案、実装、既存要素を画像選択モデルへ統合した経路を扱う。
+- [`time`の一般化と`data`との併存](lineages/data-and-time.md): `time`から`data`への置換と再導入後の機能分担を扱う。
+- [カスタマイズ可能な`select`](lineages/customizable-select.md): 四つの現行要素を一体で変更した標準化経路を扱う。
 
 ## 統合
 
-- [HTML要素の導入経路と由来](syntheses/introduction-paths-and-origins.md): 現行115要素の導入経路と設計背景を分類し、語彙の直接起源とは区別したうえで、確度、系譜上の欠落、命名に関する追加調査対象を示す。
+- [統合分析](syntheses/README.md): 横断分析三ページの入口。
+- [HTML要素の導入経路](syntheses/introduction-paths.md): 現行115要素をHTMLへの導入経路で分類する。
+- [HTML要素の由来を支える証拠](syntheses/evidence-and-origins.md): 先行物、実装、既存Web、要求が由来を支える範囲を比較する。
+- [系譜調査の到達点と再開条件](syntheses/research-status.md): 確度、未解決点、調査の優先度と再開条件をまとめる。

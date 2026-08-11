@@ -20,7 +20,7 @@ forms、tables、追加phrase markupに属するHTML+要素候補について一
 
 ## [2026-08-09] ingest | HTML+要素群
 
-HTML+、RFC 1866、RFC 1942、RFC 2070、HTML 3.0、HTML 3.2、HTML 4を照合し、16要素へ統合した。[共有系譜](lineages/html-plus.md)
+HTML+、RFC 1866、RFC 1942、RFC 2070、HTML 3.0、HTML 3.2、HTML 4を照合し、16要素へ統合した。[共有系譜](lineages/README.md)
 
 `form`, `input`, `select`, `option`, `textarea`, `table`, `caption`, `tr`, `th`, `td`, `q`, `sub`, `sup`, `pre`をA、`abbr`, `s`をA−とした。`pre`はHTML+初出ではなく既存HTML要素の拡張、1993年の`TR`はrow separator、HTML+の`S`はpresentation-onlyだったことを個別ページへ反映した。
 
@@ -68,7 +68,7 @@ Texinfo系統11ページの現在の意味をWHATWG HTML Living Standard本文�
 
 ## [2026-08-09] research | 国際化・アクセシビリティ関連要素群
 
-`span`, `bdo`, `bdi`, `label`, `fieldset`, `legend`, `optgroup`, `main`, `search`について、RFC 2070、HTML 4草案、W3C i18n／ARIA資料、標準化議論、WHATWG issue／commitを照合した。[共有系譜](lineages/html-internationalization.md)
+`span`, `bdo`, `bdi`, `label`, `fieldset`, `legend`, `optgroup`, `main`, `search`について、RFC 2070、HTML 4草案、W3C i18n／ARIA資料、標準化議論、WHATWG issue／commitを照合した。[共有系譜](lineages/README.md)
 
 `span`, `bdo`, `bdi`, `main`, `search`をA、`label`, `fieldset`, `legend`, `optgroup`をBとして個別ページへ統合した。form系4要素はHTML 4が導入理由を明記する一方、具体的な先行toolkitまたはmarkupを確認できないためBとした。`optgroup`は1997年7月・9月草案にはなく、11月7日のProposed Recommendationを確認できる初出とした。
 
@@ -116,7 +116,7 @@ HTML 2.0のHTML版を誤って1993年資料として収録していた`html-1993
 
 ## [2026-08-09] research | CALS／高度なtable model
 
-`thead`, `tbody`, `tfoot`, `col`, `colgroup`について、HTML 3.0、RFC 1942、HTML 3.2、HTML 4、Living Standardを照合した。[共有系譜](lineages/cals-tables.md)
+`thead`, `tbody`, `tfoot`, `col`, `colgroup`について、HTML 3.0、RFC 1942、HTML 3.2、HTML 4、Living Standardを照合した。[共有系譜](lineages/README.md)
 
 RFC 1942がCALSにならったrow groupingとして集合単位で明記する`thead`, `tbody`, `tfoot`をA−、導入理由は確認できるが具体的祖先を確認できない`col`, `colgroup`をBとして個別ページへ統合した。`COL`のCALS接続はrelative widthの`*`表記に限定し、`COLGROUP`をCALSから直接採用したとは扱わなかった。
 
@@ -348,7 +348,7 @@ WHATWG公式Git履歴と同時代mailから、旧`header`を`hgroup`へ分離し
 
 2006年WHATWG image-caption議論、HTML+、DocBook、XHTML 2、仕様commit、2009年public-html、W3C Bug 7657／7669、ISSUE-83、変更提案を照合した。Simon PietersによるHTML+ `FIG`／`CAPTION`再利用案、Michel Fortinによる`figure`提案とuse cases、Ian Hicksonによる採用説明を確認し、[`figure`](elements/figure.md)をBからAへ変更した。DocBookとXHTML 2からの別系統の影響は未確認のままとした。
 
-`legend`から`dt`／`dd`への変更は`details`向け構文案の同時適用、`figcaption`への変更は意味、構造、旧IEとの互換性問題を解決するISSUE-83の要求だったことを確認した。[`figcaption`](elements/figcaption.md)と[HTML+共有系譜](lineages/html-plus.md)へ同じ経路を反映し、確度集計をA 65件、A− 17件、B 29件、C 4件へ更新した。
+`legend`から`dt`／`dd`への変更は`details`向け構文案の同時適用、`figcaption`への変更は意味、構造、旧IEとの互換性問題を解決するISSUE-83の要求だったことを確認した。[`figcaption`](elements/figcaption.md)と[図とキャプション](lineages/figures-and-captions.md)へ同じ経路を反映し、確度集計をA 65件、A− 17件、B 29件、C 4件へ更新した。
 
 ## [2026-08-10] lint | figureとfigcaptionの敵対的検証
 
@@ -1241,3 +1241,12 @@ A−の`dd`、`del`、`dl`、`dt`、`footer`、`head`、`ins`、`li`、`link`、
 初回整理と分離した敵対的検証では、各共有ページを対応する要素ページとRawへ戻して照合し、集合単位の説明を個別因果へ拡張せず、W3C RubyからHTML5、Opera `video`から他のメディア要素、メディア用`source`から`picture`、同じARIA語彙を持つ`main`と`search`の間へ新しい矢印を置かなかった。CALS行グループは現行三要素の個別対応を一次メールで確認できるため、横断索引に残っていた「個別要素名は未確認」という古い制約を修正した。`del`／`ins`からHTML+詳細ページへの誤った英語フラグメントも日本語見出しへ修正した。
 
 対象リントでは、新規7ページと変更した共有系譜・統合・READMEについて、フロントマター、見出し、自然な日本語、歴史的主張とRaw出典の対応、ローカルMarkdownリンクと見出し断片、重複タイトル、READMEの全125知識ページ網羅、確度集計A 87／A− 15／B 12／C 1、Raw索引621ファイルの網羅と再生成一致、Markdown whitespaceを`合格`、共有系譜の欠落、CALS制約、二つの見出し断片を`修正済み`とした。各詳細ページに明記した採用記録・命名・議論の欠落は`Research必要`として維持する。敵対的検証と対象リントに合格したため、変更した知識ページを`完成`とした。
+
+
+## [2026-08-12] research | 共有系譜と統合分析のゼロベース再構成
+
+現行115要素の要素ページを正本として、既存の共有系譜を資料名や作業年代ではなく、複数の現行要素を結ぶ採用、共通要求、分岐、置換、共同変更の因果単位で再設計した。HTML+、CALS、IETF国際化、WHATWG文書構造という大括りを廃し、初期文書構造、フォーム、基本表、行グループ、列モデル、文書修正、図、イメージマップ、双方向テキスト、セクショニング、ヘッダー分離等の独立ページへ再編した。既存要素ページから確認できる共有変更として、AAP／CERN見出し群、`head`／`body`、`data`／`time`、カスタマイズ可能な`select`を追加した。統合ページは、導入経路、由来を支える証拠、調査状況と再開条件の三つへ分け、各目的の正本を明確にした。新しいRawは追加せず、Raw索引は621ファイルのままである。
+
+初回整理と分離した敵対的検証では、新設した共有接続を各要素ページとRawへ戻して照合し、同じ仕様に共存するだけの`q`／`sub`／`sup`を国際化の共有系譜から除外した。`track`も`itext`からの単一要素の経路であり、`video`／`audio`／`source`の共有モデルへ便乗させない構成へ修正した。カスタマイズ可能な`select`は四要素の共通起源ではなく2025年の共同変更として限定し、表は領域名で束ねず基本表、行グループ、列モデルの三因果へ分離した。既存の要素別結論、確度、証拠表は変更していない。
+
+対象リントでは、全知識ページのフロントマター、ローカルMarkdownリンク、重複タイトル、READMEと各索引のページ網羅、確度集計A 87／A− 15／B 12／C 1、Raw索引621ファイルの再生成一致、Markdown whitespaceを`合格`、古い共有ページへの参照、過大な系譜集合、統合ページの責務混在を`修正済み`とした。各ページに残る個別採用、名称変更、欠落版の問いは`Research必要`として維持する。敵対的検証と対象リントに合格したため、変更した知識ページを`完成`とした。
