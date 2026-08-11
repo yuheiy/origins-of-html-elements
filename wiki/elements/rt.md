@@ -24,7 +24,7 @@ WHATWG HTML Living Standardでは、ルビ注釈のルビテキストコンポ�
 
 ### 証拠
 
-1997年のMartin Dürstによる`RUBY`属性案はHTMLで東アジアの発音注記を表すことを提案した。1998年W3C草案はこの案に大きく着想を得たと明記し、専用の`rt`をルビテキストとして提案した。2001年RecommendationがXHTML Rubyモジュールの同じ役割として規範化した。[1997年案](../../raw/www.w3.org/International/draft-duerst-ruby-01)（[公開元](https://www.w3.org/International/draft-duerst-ruby-01)） [1998年草案](../../raw/www.w3.org/TR/1998/WD-ruby-19981221/index.html)（[公開元](https://www.w3.org/TR/1998/WD-ruby-19981221/)） [2001年Recommendation](../../raw/www.w3.org/TR/2001/REC-ruby-20010531/index.html)（[公開元](https://www.w3.org/TR/2001/REC-ruby-20010531/)）
+1997年のMartin Dürstによる`RUBY`属性案はHTMLで東アジアの発音注記を表すことを提案した。1998年W3C草案はこの案に大きく着想を得たと明記し、専用の`rt`をルビテキストとして提案した。2001年RecommendationがXHTML Rubyモジュールの同じ役割として規範化した。[1997年案](../../raw/www.w3.org/International/draft-duerst-ruby-01)（[公開元](https://www.w3.org/International/draft-duerst-ruby-01)） [1998年草案](../../raw/www.w3.org/TR/1998/WD-ruby-19981221/__index)（[公開元](https://www.w3.org/TR/1998/WD-ruby-19981221/)） [2001年Recommendation](../../raw/www.w3.org/TR/2001/REC-ruby-20010531/__index)（[公開元](https://www.w3.org/TR/2001/REC-ruby-20010531/)）
 
 ### 解釈
 
@@ -43,8 +43,8 @@ W3C／XHTML枝からHTML5への接続は未確認である。
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
 | 1997-02-28 | [*Ruby in the Hypertext Markup Language*](../../raw/www.w3.org/International/draft-duerst-ruby-01)（[公開元](https://www.w3.org/International/draft-duerst-ruby-01)） | Internet-Draft | 後の要素モデルに先行する`RUBY`属性案。 | 2026-08-10 |
-| 1998-12-21 | [*Ruby*](../../raw/www.w3.org/TR/1998/WD-ruby-19981221/index.html)（[公開元](https://www.w3.org/TR/1998/WD-ruby-19981221/)） | W3C Working Draft | HTML拡張の`rt`をルビテキストとして提案。 | 2026-08-09 |
-| 2001-05-31 | [*Ruby Annotation*](../../raw/www.w3.org/TR/2001/REC-ruby-20010531/index.html)（[公開元](https://www.w3.org/TR/2001/REC-ruby-20010531/)） | W3C Recommendation | XHTMLモジュールの`rt`をルビテキストとして規範化。 | 2026-08-09 |
+| 1998-12-21 | [*Ruby*](../../raw/www.w3.org/TR/1998/WD-ruby-19981221/__index)（[公開元](https://www.w3.org/TR/1998/WD-ruby-19981221/)） | W3C Working Draft | HTML拡張の`rt`をルビテキストとして提案。 | 2026-08-09 |
+| 2001-05-31 | [*Ruby Annotation*](../../raw/www.w3.org/TR/2001/REC-ruby-20010531/__index)（[公開元](https://www.w3.org/TR/2001/REC-ruby-20010531/)） | W3C Recommendation | XHTMLモジュールの`rt`をルビテキストとして規範化。 | 2026-08-09 |
 | 2007-08-12 | [“My case for Ruby-elements”](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html)） | WHATWGメール | 編集者が`ruby`のパーサーと意味を調査済みで追加予定と説明。 | 2026-08-10 |
 | 2008-05-26 | [WHATWG HTML commit `f4efc736`](../../raw/github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)（[公開元](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)） | 仕様コミット | `rt`を含む単純構文の実利用を根拠に、三要素と`rt`開始タグのパーサー規則を追加。 | 2026-08-10 |
 | 2008-05-26 | [“Current HTML ruby markup usage”](../../raw/lists.w3.org/Archives/Public/public-html/2008May/0620.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2008May/0620.html)） | HTML WGメール／資料群追試 | DMOZ由来13万ページ標本で`rt`を含む意図的なルビマークアップを確認。 | 2026-08-10 |

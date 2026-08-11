@@ -1035,3 +1035,21 @@ Rawソース索引を一つの長い表から取得元ホスト別の節へ再�
 追加したRawの取得記録は次のとおりである。`https://lists.w3.org/Archives/Public/public-webapps/2015AprJun/0184.html`、リダイレクトなし、2026-08-11T12:00:42.681Z、`raw/lists.w3.org/Archives/Public/public-webapps/2015AprJun/0184.html`；`https://github.com/WICG/webcomponents/commit/c691d821bfab9bef5bf2a2c3f623402ac32b64d3`、リダイレクトなし、2026-08-11T12:00:47.221Z、`raw/github.com/WICG/webcomponents/commit/c691d821bfab9bef5bf2a2c3f623402ac32b64d3`；`https://github.com/WICG/webcomponents/commit/27e06d2a7e6390c5ca726afab4671cd48a121c9e`、リダイレクトなし、2026-08-11T12:00:51.827Z、`raw/github.com/WICG/webcomponents/commit/27e06d2a7e6390c5ca726afab4671cd48a121c9e`；`https://github.com/WICG/webcomponents/issues/128`、リダイレクトなし、2026-08-11T12:00:56.448Z、`raw/github.com/WICG/webcomponents/issues/128`；`https://github.com/WebKit/WebKit/commit/be43170fde964477f2e203e29cd419c2c3526ec3`、リダイレクトなし、2026-08-11T12:01:03.391Z、`raw/github.com/WebKit/WebKit/commit/be43170fde964477f2e203e29cd419c2c3526ec3`；`https://github.com/WebKit/WebKit/commit/2078001d3a7f34355de3cc104d8f4c948e3a3039`、リダイレクトなし、2026-08-11T12:01:08.764Z、`raw/github.com/WebKit/WebKit/commit/2078001d3a7f34355de3cc104d8f4c948e3a3039`；`https://github.com/chromium/chromium/commit/7478fc4939b1eb3e68510ed873d50b5b638dda1c`、リダイレクトなし、2026-08-11T12:01:13.945Z、`raw/github.com/chromium/chromium/commit/7478fc4939b1eb3e68510ed873d50b5b638dda1c`；`https://github.com/chromium/chromium/commit/071137e656e1ad78c5e8ce506346aa5d2eeef5f9`、リダイレクトなし、2026-08-11T12:01:20.713Z、`raw/github.com/chromium/chromium/commit/071137e656e1ad78c5e8ce506346aa5d2eeef5f9`。Raw索引を577ファイルで再生成した。
 
 初回探索と分離した敵対的検証では、2012年の`content`／`shadow`挿入点、2015年4月の詳細提案とメーリングリスト要約、改名論点、Slots Proposal初稿、最終化論点、WebKitとChromiumの実装、WHATWG DOMとHTMLのコミットを時系列で再照合した。Chromiumの10月コミットが要素を置く最初の段階にすぎず、主要な割り当て・描画実装は12月であること、WebKitの9月18日実装は9月21日の描画対応と分ける必要があること、`content`からの単純改名ではないことを確認した。対象リントでは、`slot`のフロントマター、必須見出し順、12行の証拠表、各歴史的主張と出典の対応、README概要、統合ページの由来説明・優先調査キュー、未解決集計、確度集計、要素ページ網羅、分類表、全ローカルMarkdownリンク、Raw索引の577ファイル網羅と再生成一致、Markdown whitespaceを`合格`、配布モデル、初稿、合意、実装とWHATWG統合の順序の欠落を`修正済み`、Shadow DOM v0とXBL等との直接採用を`Research必要`として確認した。変更した知識ページは敵対的検証と対象リントに合格したため`完成`とした。
+
+## [2026-08-11] schema | Raw保存名とアーカイブ自動判定
+
+末尾`/`のURLを通常の`index.html`というURL pathと区別するため、保存名を`__index`へ変更し、既存38ファイルとWiki内の参照を移行した。Raw取得器の`file|zip|tar`引数を廃止し、取得内容のマジックバイトとContent-Typeから通常ファイル、ZIP、tar系アーカイブを自動判定するよう変更した。
+
+対象リントでは、通常ファイル、ZIP、gzip圧縮tarの自動判定、末尾`/`とquery付き末尾`/`の保存名、余分なCLI引数の拒否、577 Rawファイルの索引網羅と決定的再生成、全ローカルMarkdownリンクを`合格`、既存保存名と利用契約を`修正済み`、`Research必要`はなしと確認した。Raw snapshotの内容とWikiの歴史的結論は変更していない。
+
+## [2026-08-11] schema | Rawファイル種別判定の明確化
+
+Raw取得器の自動判定規約を一意に解釈できるよう、入力となる先頭バイトと正規化した`Content-Type`、ZIP、tar、通常ファイルの判定順、各シグネチャと媒体型、分類後の保存処理を列挙した。実装、Raw snapshot、Wikiの歴史的結論は変更していない。
+
+対象リントでは、規約と`tools/add-raw-source.js`の条件、優先順位、展開前のpath検査、CLI構文の一致、Markdown whitespaceを`合格`、曖昧だった「取得したファイルの種類」を`修正済み`、`Research必要`はなしと確認した。
+
+## [2026-08-11] schema | Raw取得手順の簡素化
+
+Raw取得器の判定シグネチャ、媒体型、優先順位は利用者がコマンドを実行するために不要な実装詳細であるため、操作規約から削除した。利用契約を、URLだけを渡すこと、通常ファイル、ZIP、tarアーカイブを自動判定すること、通常ファイルはそのまま保存し、アーカイブは安全性の検査後に展開することへ限定した。
+
+対象リントでは、CLI構文、自動判定後の保存処理、Markdown whitespaceを`合格`、過剰な実装詳細を`修正済み`、`Research必要`はなしと確認した。実装、Raw snapshot、Wikiの歴史的結論は変更していない。

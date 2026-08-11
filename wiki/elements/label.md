@@ -14,7 +14,7 @@ WHATWG HTML Living StandardではUI上のキャプションを表す。`for`属�
 
 ## HTMLへの導入
 
-1996年3月8日のDavid Singer著、Dave Raggett編のフォームWorking Draftが`LABEL`を提案した。既存HTMLではラジオボタンやチェックボックスと隣接するラベルテキストの接続がマークアップになく、クリックしてもコントロールへ作用せず、音声ブラウザーが`NAME`と`VALUE`に頼る問題を解くためだった。1997年2月・4月のCougarフォーム草案は暗黙的な／明示的な関連付けを継続し、Cougarの公開記録は同草案をHTML 4.0の基礎となった草案の一つに挙げる。7月8日のHTML 4.0 First Public Working Draftが`LABEL`を採録した。[1996年草案](../../raw/www.w3.org/TR/WD-forms-960308.html)（[公開元](https://www.w3.org/TR/WD-forms-960308.html)） [1997年2月草案](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [1997年4月草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)） [Cougar概要](../../raw/www.w3.org/MarkUp/Cougar/index.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)）
+1996年3月8日のDavid Singer著、Dave Raggett編のフォームWorking Draftが`LABEL`を提案した。既存HTMLではラジオボタンやチェックボックスと隣接するラベルテキストの接続がマークアップになく、クリックしてもコントロールへ作用せず、音声ブラウザーが`NAME`と`VALUE`に頼る問題を解くためだった。1997年2月・4月のCougarフォーム草案は暗黙的な／明示的な関連付けを継続し、Cougarの公開記録は同草案をHTML 4.0の基礎となった草案の一つに挙げる。7月8日のHTML 4.0 First Public Working Draftが`LABEL`を採録した。[1996年草案](../../raw/www.w3.org/TR/WD-forms-960308.html)（[公開元](https://www.w3.org/TR/WD-forms-960308.html)） [1997年2月草案](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [1997年4月草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)） [Cougar概要](../../raw/www.w3.org/MarkUp/Cougar/__index)（[公開元](https://www.w3.org/MarkUp/Cougar/)）
 
 ## HTML直前の祖先
 
@@ -46,7 +46,7 @@ Raman／Raggettの音声フォームラベル作業（1995年、後年の同時�
 | 1997-06-10 | [T. V. Raman, “forms that work with screen readers”](../../raw/www.w3.org/mid/199706102148.OAA08302@labrador;list=w3c-wai-wg)（[公開元](https://www.w3.org/mid/199706102148.OAA08302@labrador;list=w3c-wai-wg)） | WAI Working Groupメール | RamanとRaggettが1995年秋に音声インターフェース向けフォーム拡張を作業し、入力とラベルの関連付け欠落を扱ったという当事者説明。 | 2026-08-10 |
 | 1997-06-12 | [Daniel Dardailler, “Re: forms that work with screen readers”](../../raw/www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg)（[公開元](https://www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg)） | WAI Working Groupメール | Raggettから聞いた説明として、過去のフォームラベル作業がCougarの`LABEL`へ入ったと記録する。 | 2026-08-10 |
 | 1997-07-08 | HTML 4.0 First Public Working Draft：[forms](../../raw/www.w3.org/TR/WD-html40-970708/interact/forms.html)・[changes](../../raw/www.w3.org/TR/WD-html40-970708/appendix/changes.html)（[公開元1](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)・[公開元2](https://www.w3.org/TR/WD-html40-970708/appendix/changes.html)） | W3C Working Draft | `LABEL`の定義、HTML 3.2フォームのラベル操作上の欠落、グラフィック／音声UAでの導入理由。 | 2026-08-09 |
-| 1997-08-22時点 | [Project: Cougar](../../raw/www.w3.org/MarkUp/Cougar/index.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） | W3Cプロジェクトページ | Cougar用に開発された`WD-forms`をHTML 4.0の基礎となった草案の一つに挙げる。 | 2026-08-10 |
+| 1997-08-22時点 | [Project: Cougar](../../raw/www.w3.org/MarkUp/Cougar/__index)（[公開元](https://www.w3.org/MarkUp/Cougar/)） | W3Cプロジェクトページ | Cougar用に開発された`WD-forms`をHTML 4.0の基礎となった草案の一つに挙げる。 | 2026-08-10 |
 | 1999-12-24 | [HTML 4.01](../../raw/www.w3.org/TR/html401/appendix/changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.9)） | W3C Recommendation | コントロールとの関連付けとフォームアクセシビリティ上の理由を再確認。 | 2026-08-09 |
 
 ## 確度

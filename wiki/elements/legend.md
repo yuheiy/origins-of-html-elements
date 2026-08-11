@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、親が`fieldset`ならその残りの内容�
 
 ## HTMLへの導入
 
-1997年2月3日と4月2日のフォームWorking Draftは、`FIELDSET`の直後に置く`CAPTION`でグループを命名し、音声を用いるブラウザーがグループ間を移動できる設計を提案した。Cougarの公開記録は4月草案をHTML 4.0の基礎となった草案の一つに挙げる。7月8日のHTML 4.0 First Public Working Draftは同じ`FIELDSET`のキャプションスロットを`LEGEND`へ置換し、非視覚UAでグループ文脈を伝える役割を継承したが、置換理由は記録しない。[1997年2月草案](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [1997年4月草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)） [Cougar概要](../../raw/www.w3.org/MarkUp/Cougar/index.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） [HTML 4.0 forms](../../raw/www.w3.org/TR/WD-html40-970708/interact/forms.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)）
+1997年2月3日と4月2日のフォームWorking Draftは、`FIELDSET`の直後に置く`CAPTION`でグループを命名し、音声を用いるブラウザーがグループ間を移動できる設計を提案した。Cougarの公開記録は4月草案をHTML 4.0の基礎となった草案の一つに挙げる。7月8日のHTML 4.0 First Public Working Draftは同じ`FIELDSET`のキャプションスロットを`LEGEND`へ置換し、非視覚UAでグループ文脈を伝える役割を継承したが、置換理由は記録しない。[1997年2月草案](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [1997年4月草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)） [Cougar概要](../../raw/www.w3.org/MarkUp/Cougar/__index)（[公開元](https://www.w3.org/MarkUp/Cougar/)） [HTML 4.0 forms](../../raw/www.w3.org/TR/WD-html40-970708/interact/forms.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)）
 
 ## HTML直前の祖先
 
@@ -44,7 +44,7 @@ Cougar向けフォームWorking Draft系列で`FIELDSET`のグループ名を担
 | 1997-02-03 | [*Design Issues for HTML Forms*](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） | W3C Working Draft | `FIELDSET`のキャプションとして`CAPTION`を定義し、グループ文脈と推奨外観を記録する。 | 2026-08-10 |
 | 1997-04-02 | [*Enhancing Interactive HTML documents*](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)） | W3C Working Draft | Scott Isaacsを著者とするCougar向けフォーム案が、`FIELDSET`のグループ名を担う`CAPTION`と音声を用いるブラウザー向けの役割を提案した。 | 2026-08-10 |
 | 1997-07-08 | HTML 4.0 First Public Working Draft：[forms](../../raw/www.w3.org/TR/WD-html40-970708/interact/forms.html)・[changes](../../raw/www.w3.org/TR/WD-html40-970708/appendix/changes.html)（[公開元1](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)・[公開元2](https://www.w3.org/TR/WD-html40-970708/appendix/changes.html)） | W3C Working Draft | `FIELDSET`のキャプション、非視覚UAでグループ文脈を伝える導入理由。 | 2026-08-09 |
-| 1997-08-22時点 | [Project: Cougar](../../raw/www.w3.org/MarkUp/Cougar/index.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） | W3Cプロジェクトページ | Cougar用に開発された`WD-forms`をHTML 4.0の基礎となった草案の一つに挙げる。 | 2026-08-10 |
+| 1997-08-22時点 | [Project: Cougar](../../raw/www.w3.org/MarkUp/Cougar/__index)（[公開元](https://www.w3.org/MarkUp/Cougar/)） | W3Cプロジェクトページ | Cougar用に開発された`WD-forms`をHTML 4.0の基礎となった草案の一つに挙げる。 | 2026-08-10 |
 | 1999-12-24 | [HTML 4.01](../../raw/www.w3.org/TR/html401/appendix/changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.9)） | W3C Recommendation | `FIELDSET`の命名と音声／グラフィックブラウザー上の改善を再確認。 | 2026-08-09 |
 
 ## 確度

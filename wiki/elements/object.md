@@ -43,7 +43,7 @@ HTML3 `INSERT`（1995年） → `OBJECT`への改名（1996-02-13） → W3C `OB
 | 1995-12-20 | [*Inserting multimedia objects into HTML3*](../../raw/www.w3.org/TR/WD-insert-951220.html)（[公開元](https://www.w3.org/TR/WD-insert-951220.html)） | W3C Working Draft | `IMG`とベンダー別案の限界、汎用`INSERT`、データ／コード／パラメーター／代替内容モデル。 | 2026-08-09 |
 | 1996-02-13（決定）、1996-03-08（公開版） | [*Inserting objects into HTML*](../../raw/www.w3.org/TR/WD-object-960308.html)（[公開元](https://www.w3.org/TR/WD-object-960308.html)） | W3C Working Draft | `INSERT`要素を`OBJECT`へ改名した直接記録と継続する設計。 | 2026-08-09 |
 | 1996-04-22 | [*Inserting objects into HTML*](../../raw/www.w3.org/TR/WD-object-960422)（[公開元](https://www.w3.org/TR/WD-object-960422)） | W3C Working Draft | エディター／著者、複数ベンダーのメディア仕組みを一般化する目的、代替内容。 | 2026-08-09 |
-| 1995〜1997 | [*Cougar — The next version of HTML*](../../raw/www.w3.org/MarkUp/Cougar/index.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） | W3C標準化ページ | オブジェクト草案を含む列挙された草案がHTML 4.0の基礎を形成した集合単位の関係。 | 2026-08-09 |
+| 1995〜1997 | [*Cougar — The next version of HTML*](../../raw/www.w3.org/MarkUp/Cougar/__index)（[公開元](https://www.w3.org/MarkUp/Cougar/)） | W3C標準化ページ | オブジェクト草案を含む列挙された草案がHTML 4.0の基礎を形成した集合単位の関係。 | 2026-08-09 |
 | 1999-12-24 | [HTML 4.01 §13](../../raw/www.w3.org/TR/html401/struct/objects.html)（[公開元](https://www.w3.org/TR/html401/struct/objects.html)） | W3C Recommendation | 汎用オブジェクト包含、限定的祖先としての`IMG`／`APPLET`、入れ子代替内容。 | 2026-08-09 |
 
 ## 確度

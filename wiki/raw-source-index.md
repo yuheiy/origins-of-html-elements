@@ -22,7 +22,7 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 
 | Rawファイル | 文書タイトル |
 |---|---|
-| [article/responsive-images-how-they-almost-worked-and-what-we-need/index.html](../raw/alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/index.html) | Responsive Images: How they Almost Worked and What We Need – A List Apart |
+| [article/responsive-images-how-they-almost-worked-and-what-we-need/__index](../raw/alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/__index) | Responsive Images: How they Almost Worked and What We Need – A List Apart |
 
 ## `api.github.com`（1ファイル）
 
@@ -40,13 +40,13 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 
 | Rawファイル | 文書タイトル |
 |---|---|
-| [2011/notes-on-adaptive-images-yet-again/index.html](../raw/brucelawson.co.uk/2011/notes-on-adaptive-images-yet-again/index.html) | Bruce Lawson's personal site  : Notes on Adaptive Images (yet again!) |
+| [2011/notes-on-adaptive-images-yet-again/__index](../raw/brucelawson.co.uk/2011/notes-on-adaptive-images-yet-again/__index) | Bruce Lawson's personal site  : Notes on Adaptive Images (yet again!) |
 
 ## `datatracker.ietf.org`（13ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
-| [doc/draft-ietf-html-specv3/index.html](../raw/datatracker.ietf.org/doc/draft-ietf-html-specv3/index.html) | draft-ietf-html-specv3-00 - HyperText Markup Language Specification Version 3.0 |
+| [doc/draft-ietf-html-specv3/__index](../raw/datatracker.ietf.org/doc/draft-ietf-html-specv3/__index) | draft-ietf-html-specv3-00 - HyperText Markup Language Specification Version 3.0 |
 | [doc/html/draft-ietf-html-i18n-00](../raw/datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00) | draft-ietf-html-i18n-00 |
 | [doc/html/draft-ietf-html-i18n-00.txt](../raw/datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00.txt) | draft-ietf-html-i18n-00 |
 | [doc/html/draft-ietf-html-i18n-01](../raw/datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01) | draft-ietf-html-i18n-01 |
@@ -293,6 +293,7 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 
 | Rawファイル | 文書タイトル |
 |---|---|
+| [multipage/__index](../raw/html.spec.whatwg.org/multipage/__index) | HTML Standard |
 | [multipage/acknowledgements.html](../raw/html.spec.whatwg.org/multipage/acknowledgements.html) | HTML Standard |
 | [multipage/canvas.html](../raw/html.spec.whatwg.org/multipage/canvas.html) | HTML Standard |
 | [multipage/custom-elements.html](../raw/html.spec.whatwg.org/multipage/custom-elements.html) | HTML Standard |
@@ -303,7 +304,6 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 | [multipage/grouping-content.html](../raw/html.spec.whatwg.org/multipage/grouping-content.html) | HTML Standard |
 | [multipage/iframe-embed-object.html](../raw/html.spec.whatwg.org/multipage/iframe-embed-object.html) | HTML Standard |
 | [multipage/image-maps.html](../raw/html.spec.whatwg.org/multipage/image-maps.html) | HTML Standard |
-| [multipage/index.html](../raw/html.spec.whatwg.org/multipage/index.html) | HTML Standard |
 | [multipage/indices.html](../raw/html.spec.whatwg.org/multipage/indices.html) | HTML Standard |
 | [multipage/input.html](../raw/html.spec.whatwg.org/multipage/input.html) | HTML Standard |
 | [multipage/interactive-elements.html](../raw/html.spec.whatwg.org/multipage/interactive-elements.html) | HTML Standard |
@@ -424,7 +424,7 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 
 | Rawファイル | 文書タイトル |
 |---|---|
-| [index.html__q__count=1&start=1372461305](../raw/ln.hixie.ch/index.html__q__count=1&start=1372461305) | Hixie's Natural Log: HTML 8000 |
+| [__index__q__count=1&start=1372461305](../raw/ln.hixie.ch/__index__q__count=1&start=1372461305) | Hixie's Natural Log: HTML 8000 |
 
 ## `marc.merlins.org`（1ファイル）
 
@@ -436,8 +436,8 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 
 | Rawファイル | 文書タイトル |
 |---|---|
-| [source/1996/04/30/microsoft-previews-internet-explorer-3-0-with-innovative-support-for-sharing-of-voice-applications-over-the-world-wide-web/index.html](../raw/news.microsoft.com/source/1996/04/30/microsoft-previews-internet-explorer-3-0-with-innovative-support-for-sharing-of-voice-applications-over-the-world-wide-web/index.html) | Microsoft Previews Internet Explorer 3.0 With Innovative Support For Sharing of Voice, Applications Over the World Wide Web - Source |
-| [source/1996/05/29/microsoft-internet-explorer-3-0-beta-now-available/index.html](../raw/news.microsoft.com/source/1996/05/29/microsoft-internet-explorer-3-0-beta-now-available/index.html) | Microsoft Internet Explorer 3.0 Beta Now Available - Source |
+| [source/1996/04/30/microsoft-previews-internet-explorer-3-0-with-innovative-support-for-sharing-of-voice-applications-over-the-world-wide-web/__index](../raw/news.microsoft.com/source/1996/04/30/microsoft-previews-internet-explorer-3-0-with-innovative-support-for-sharing-of-voice-applications-over-the-world-wide-web/__index) | Microsoft Previews Internet Explorer 3.0 With Innovative Support For Sharing of Voice, Applications Over the World Wide Web - Source |
+| [source/1996/05/29/microsoft-internet-explorer-3-0-beta-now-available/__index](../raw/news.microsoft.com/source/1996/05/29/microsoft-internet-explorer-3-0-beta-now-available/__index) | Microsoft Internet Explorer 3.0 Beta Now Available - Source |
 
 ## `platform.html5.org`（3ファイル）
 
@@ -457,7 +457,7 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 
 | Rawファイル | 文書タイトル |
 |---|---|
-| [mathml-core/index.html](../raw/w3c.github.io/mathml-core/index.html) | MathML Core |
+| [mathml-core/__index](../raw/w3c.github.io/mathml-core/__index) | MathML Core |
 | [svgwg/svg2-draft/struct.html](../raw/w3c.github.io/svgwg/svg2-draft/struct.html) | Document Structure — SVG 2 |
 
 ## `web.archive.org`（12ファイル）
@@ -468,11 +468,11 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 | [web/19970617232458id_/http%3A/home.netscape.com/eng/mozilla/2.0/handbook/javascript/script.html](../raw/web.archive.org/web/19970617232458id_/http%3A/home.netscape.com/eng/mozilla/2.0/handbook/javascript/script.html) | Navigator Scripting |
 | [web/20020504095301/http%3A/www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt](../raw/web.archive.org/web/20020504095301/http%3A/www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt) | — |
 | [web/20040708074642/http%3A/weblogs.mozillazine.org/hyatt/archives/2004_07.html](../raw/web.archive.org/web/20040708074642/http%3A/weblogs.mozillazine.org/hyatt/archives/2004_07.html) | Surfin' Safari |
-| [web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/index.html](../raw/web.archive.org/web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/index.html) | Web Applications 1.0 |
-| [web/20041210054847id_/http%3A/www.whatwg.org/specs/web-apps/current-work/index.html](../raw/web.archive.org/web/20041210054847id_/http%3A/www.whatwg.org/specs/web-apps/current-work/index.html) | Web Applications 1.0 |
-| [web/20050406023711id_/http%3A/whatwg.org/specs/web-apps/current-work/index.html](../raw/web.archive.org/web/20050406023711id_/http%3A/whatwg.org/specs/web-apps/current-work/index.html) | Web Applications 1.0 |
-| [web/20050413075549id_/http%3A/www.whatwg.org/specs/web-apps/current-work/index.html](../raw/web.archive.org/web/20050413075549id_/http%3A/www.whatwg.org/specs/web-apps/current-work/index.html) | Web Applications 1.0 |
-| [web/20050901000000/http%3A/www.whatwg.org/specs/web-apps/2005-09-01/index.html](../raw/web.archive.org/web/20050901000000/http%3A/www.whatwg.org/specs/web-apps/2005-09-01/index.html) | Web Applications 1.0 |
+| [web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/__index) | Web Applications 1.0 |
+| [web/20041210054847id_/http%3A/www.whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20041210054847id_/http%3A/www.whatwg.org/specs/web-apps/current-work/__index) | Web Applications 1.0 |
+| [web/20050406023711id_/http%3A/whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20050406023711id_/http%3A/whatwg.org/specs/web-apps/current-work/__index) | Web Applications 1.0 |
+| [web/20050413075549id_/http%3A/www.whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20050413075549id_/http%3A/www.whatwg.org/specs/web-apps/current-work/__index) | Web Applications 1.0 |
+| [web/20050901000000/http%3A/www.whatwg.org/specs/web-apps/2005-09-01/__index](../raw/web.archive.org/web/20050901000000/http%3A/www.whatwg.org/specs/web-apps/2005-09-01/__index) | Web Applications 1.0 |
 | [web/20060101000000id_/http%3A/code.google.com/webstats/2005-12/classes.html](../raw/web.archive.org/web/20060101000000id_/http%3A/code.google.com/webstats/2005-12/classes.html) | Google Code: Web Authoring Statistics: Classes |
 | [web/20060701000000id_/http%3A/developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html](../raw/web.archive.org/web/20060701000000id_/http%3A/developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html) | User Experience: Apple Human Interface Guidelines: View Controls |
 | [web/20060701000000id_/http%3A/mail.gnome.org/archives/usability/2006-June/msg00015.html](../raw/web.archive.org/web/20060701000000id_/http%3A/mail.gnome.org/archives/usability/2006-June/msg00015.html) | Re: [Usability] Using nouns or verbs for the disclosure widgets |
@@ -481,7 +481,7 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 
 | Rawファイル | 文書タイトル |
 |---|---|
-| [specs/web-apps/2005-09-01/index.html](../raw/whatwg.org/specs/web-apps/2005-09-01/index.html) | Web Applications 1.0 |
+| [specs/web-apps/2005-09-01/__index](../raw/whatwg.org/specs/web-apps/2005-09-01/__index) | Web Applications 1.0 |
 
 ## `wiki.whatwg.org`（1ファイル）
 
@@ -560,7 +560,7 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 | [History/1994/WWW/WorkingNotes/1993_Workshop/TimNotes.html](../raw/www.w3.org/History/1994/WWW/WorkingNotes/1993_Workshop/TimNotes.html) | TimNotes -- 1993_Workshop |
 | [International/draft-duerst-ruby-01](../raw/www.w3.org/International/draft-duerst-ruby-01) | — |
 | [MarkUp/1995-archive/html-spec.html](../raw/www.w3.org/MarkUp/1995-archive/html-spec.html) | Hypertext Markup Language (HTML) |
-| [MarkUp/Cougar/index.html](../raw/www.w3.org/MarkUp/Cougar/index.html) | Project: Cougar |
+| [MarkUp/Cougar/__index](../raw/www.w3.org/MarkUp/Cougar/__index) | Project: Cougar |
 | [MarkUp/HTMLPlus/htmlplus.ps](../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus.ps) | — |
 | [MarkUp/HTMLPlus/htmlplus_1.html](../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_1.html) | HTML+ (Hypertext markup format) |
 | [MarkUp/HTMLPlus/htmlplus_16.html](../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_16.html) | Presentation Only Tags |
@@ -576,12 +576,12 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 | [MarkUp/HTMLPlus/htmlplus_58.html](../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html) | Appendix I |
 | [MarkUp/draft-ietf-iiir-html-01.txt](../raw/www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt) | — |
 | [MarkUp/html-spec/ChangeLog](../raw/www.w3.org/MarkUp/html-spec/ChangeLog) | — |
+| [MarkUp/html3/__index](../raw/www.w3.org/MarkUp/html3/__index) | HTML 3.0 Draft (Expired!) Materials |
 | [MarkUp/html3/divisions.html](../raw/www.w3.org/MarkUp/html3/divisions.html) | Divisions |
 | [MarkUp/html3/dochead.html](../raw/www.w3.org/MarkUp/html3/dochead.html) | The Head Element and Related Elements |
 | [MarkUp/html3/emphasis.html](../raw/www.w3.org/MarkUp/html3/emphasis.html) | Font Style Elements |
 | [MarkUp/html3/html3.dtd](../raw/www.w3.org/MarkUp/html3/html3.dtd) | — |
 | [MarkUp/html3/html3.txt](../raw/www.w3.org/MarkUp/html3/html3.txt) | — |
-| [MarkUp/html3/index.html](../raw/www.w3.org/MarkUp/html3/index.html) | HTML 3.0 Draft (Expired!) Materials |
 | [MarkUp/html3/intro.html](../raw/www.w3.org/MarkUp/html3/intro.html) | Introduction to HTML 3.0 |
 | [MarkUp/html3/logical.html](../raw/www.w3.org/MarkUp/html3/logical.html) | Information Type Elements |
 | [MarkUp/html3/tables.html](../raw/www.w3.org/MarkUp/html3/tables.html) | Tables |
@@ -589,29 +589,29 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 | [People/Raggett/book4/ch02.html](../raw/www.w3.org/People/Raggett/book4/ch02.html) | Chapter 2 |
 | [People/Raggett/the-early-days-of-the-Web.html](../raw/www.w3.org/People/Raggett/the-early-days-of-the-Web.html) | My involvement with the early days of the Web |
 | [People/howcome/p/cascade.html](../raw/www.w3.org/People/howcome/p/cascade.html) | Cascading HTML Style Sheets -- A Proposal |
-| [TR/1998/REC-MathML-19980407/index.html](../raw/www.w3.org/TR/1998/REC-MathML-19980407/index.html) | Mathematical Markup Language (MathML) |
-| [TR/1998/WD-ruby-19981221/index.html](../raw/www.w3.org/TR/1998/WD-ruby-19981221/index.html) | Ruby |
+| [TR/1998/REC-MathML-19980407/__index](../raw/www.w3.org/TR/1998/REC-MathML-19980407/__index) | Mathematical Markup Language (MathML) |
+| [TR/1998/WD-ruby-19981221/__index](../raw/www.w3.org/TR/1998/WD-ruby-19981221/__index) | Ruby |
 | [TR/2000/WD-xforms-20001219/ui.html](../raw/www.w3.org/TR/2000/WD-xforms-20001219/ui.html) | XForms User Interface - W3C XForms 1.0 - Working Draft 20001219 |
-| [TR/2001/REC-SVG-20010904/index.html](../raw/www.w3.org/TR/2001/REC-SVG-20010904/index.html) | Scalable Vector Graphics (SVG) 1.0 Specification |
-| [TR/2001/REC-ruby-20010531/index.html](../raw/www.w3.org/TR/2001/REC-ruby-20010531/index.html) | Ruby Annotation |
+| [TR/2001/REC-SVG-20010904/__index](../raw/www.w3.org/TR/2001/REC-SVG-20010904/__index) | Scalable Vector Graphics (SVG) 1.0 Specification |
+| [TR/2001/REC-ruby-20010531/__index](../raw/www.w3.org/TR/2001/REC-ruby-20010531/__index) | Ruby Annotation |
 | [TR/2003/REC-xforms-20031014/slice8.html](../raw/www.w3.org/TR/2003/REC-xforms-20031014/slice8.html) | Form Controls |
-| [TR/2006/WD-xhtml-role-20060725/index.html](../raw/www.w3.org/TR/2006/WD-xhtml-role-20060725/index.html) | XHTML Role Attribute Module |
+| [TR/2006/WD-xhtml-role-20060725/__index](../raw/www.w3.org/TR/2006/WD-xhtml-role-20060725/__index) | XHTML Role Attribute Module |
 | [TR/2006/WD-xhtml2-20060726/mod-object.html](../raw/www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html) | XHTML 2.0 - XHTML Object Module |
-| [TR/2008/WD-html5-20080122/index.html](../raw/www.w3.org/TR/2008/WD-html5-20080122/index.html) | HTML 5 |
+| [TR/2008/WD-html5-20080122/__index](../raw/www.w3.org/TR/2008/WD-html5-20080122/__index) | HTML 5 |
 | [TR/2008/WD-html5-20080610/text-level.html](../raw/www.w3.org/TR/2008/WD-html5-20080610/text-level.html) | HTML 5 |
-| [TR/2008/WD-html5-diff-20080122/index.html](../raw/www.w3.org/TR/2008/WD-html5-diff-20080122/index.html) | HTML 5 differences from HTML 4 |
-| [TR/2008/WD-wai-aria-20080204/index.html](../raw/www.w3.org/TR/2008/WD-wai-aria-20080204/index.html) | Accessible Rich Internet Applications (WAI-ARIA) Version 1.0 |
-| [TR/2008/WD-wai-aria-20080806/index.html](../raw/www.w3.org/TR/2008/WD-wai-aria-20080806/index.html) | Accessible Rich Internet Applications (WAI-ARIA) Version 1.0 |
+| [TR/2008/WD-html5-diff-20080122/__index](../raw/www.w3.org/TR/2008/WD-html5-diff-20080122/__index) | HTML 5 differences from HTML 4 |
+| [TR/2008/WD-wai-aria-20080204/__index](../raw/www.w3.org/TR/2008/WD-wai-aria-20080204/__index) | Accessible Rich Internet Applications (WAI-ARIA) Version 1.0 |
+| [TR/2008/WD-wai-aria-20080806/__index](../raw/www.w3.org/TR/2008/WD-wai-aria-20080806/__index) | Accessible Rich Internet Applications (WAI-ARIA) Version 1.0 |
 | [TR/2010/WD-html5-20101019/author/video.html](../raw/www.w3.org/TR/2010/WD-html5-20101019/author/video.html) | 4.8.6 The video element &mdash; HTML5 (Edition for Web Authors) |
-| [TR/2010/WD-html5-diff-20100304/index.html](../raw/www.w3.org/TR/2010/WD-html5-diff-20100304/index.html) | HTML5 differences from HTML4 |
-| [TR/2012/WD-html-main-element-20121217/index.html](../raw/www.w3.org/TR/2012/WD-html-main-element-20121217/index.html) | main element - an HTML5 extension specification |
-| [TR/2012/WD-shadow-dom-20120522/index.html](../raw/www.w3.org/TR/2012/WD-shadow-dom-20120522/index.html) | Shadow DOM |
-| [TR/2013/WD-html-picture-element-20130226/index.html](../raw/www.w3.org/TR/2013/WD-html-picture-element-20130226/index.html) | The picture element |
-| [TR/2013/WD-html-templates-20130214/index.html](../raw/www.w3.org/TR/2013/WD-html-templates-20130214/index.html) | HTML Templates |
+| [TR/2010/WD-html5-diff-20100304/__index](../raw/www.w3.org/TR/2010/WD-html5-diff-20100304/__index) | HTML5 differences from HTML4 |
+| [TR/2012/WD-html-main-element-20121217/__index](../raw/www.w3.org/TR/2012/WD-html-main-element-20121217/__index) | main element - an HTML5 extension specification |
+| [TR/2012/WD-shadow-dom-20120522/__index](../raw/www.w3.org/TR/2012/WD-shadow-dom-20120522/__index) | Shadow DOM |
+| [TR/2013/WD-html-picture-element-20130226/__index](../raw/www.w3.org/TR/2013/WD-html-picture-element-20130226/__index) | The picture element |
+| [TR/2013/WD-html-templates-20130214/__index](../raw/www.w3.org/TR/2013/WD-html-templates-20130214/__index) | HTML Templates |
 | [TR/2013/WD-html51-20130528/text-level-semantics.html](../raw/www.w3.org/TR/2013/WD-html51-20130528/text-level-semantics.html) | 4.6 Text-level semantics — HTML 5.1 |
-| [TR/2013/WD-respimg-usecases-20130226/index.html](../raw/www.w3.org/TR/2013/WD-respimg-usecases-20130226/index.html) | Use Cases and Requirements for Standardizing Responsive Images |
+| [TR/2013/WD-respimg-usecases-20130226/__index](../raw/www.w3.org/TR/2013/WD-respimg-usecases-20130226/__index) | Use Cases and Requirements for Standardizing Responsive Images |
 | [TR/2014/REC-wai-aria-20140320/roles](../raw/www.w3.org/TR/2014/REC-wai-aria-20140320/roles) | The Roles Model \| Accessible Rich Internet Applications (WAI-ARIA) 1.0 |
-| [TR/2014/WD-shadow-dom-20140617/index.html](../raw/www.w3.org/TR/2014/WD-shadow-dom-20140617/index.html) | Shadow DOM |
+| [TR/2014/WD-shadow-dom-20140617/__index](../raw/www.w3.org/TR/2014/WD-shadow-dom-20140617/__index) | Shadow DOM |
 | [TR/PR-html40-971107/appendix/changes.html](../raw/www.w3.org/TR/PR-html40-971107/appendix/changes.html) | Changes between HTML 3.2 and HTML 4.0 |
 | [TR/PR-html40-971107/interact/forms.html](../raw/www.w3.org/TR/PR-html40-971107/interact/forms.html) | Forms in HTML documents |
 | [TR/PR-html40-971107/struct/text.html](../raw/www.w3.org/TR/PR-html40-971107/struct/text.html) | Paragraphs, Lines, and Phrases |
@@ -641,7 +641,7 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 | [TR/WD-style-960115](../raw/www.w3.org/TR/WD-style-960115) | HTML3 and Style Sheets |
 | [TR/WD-style-970324](../raw/www.w3.org/TR/WD-style-970324) | HTML and Style Sheets |
 | [TR/WD-tables-950925.html](../raw/www.w3.org/TR/WD-tables-950925.html) | HTML3 Tables |
-| [TR/html-bidi/index.html](../raw/www.w3.org/TR/html-bidi/index.html) | Additional Requirements for Bidi in HTML & CSS |
+| [TR/html-bidi/__index](../raw/www.w3.org/TR/html-bidi/__index) | Additional Requirements for Bidi in HTML & CSS |
 | [TR/html401/appendix/changes.html](../raw/www.w3.org/TR/html401/appendix/changes.html) | HTML 4 Changes |
 | [TR/html401/html40.zip/HTML4.cat](../raw/www.w3.org/TR/html401/html40.zip/HTML4.cat) | — |
 | [TR/html401/html40.zip/HTML4.decl](../raw/www.w3.org/TR/html401/html40.zip/HTML4.decl) | — |
@@ -723,20 +723,20 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 | [TR/html401/struct/text.html](../raw/www.w3.org/TR/html401/struct/text.html) | Paragraphs, Lines, and Phrases |
 | [Test/test_source.txt](../raw/www.w3.org/Test/test_source.txt) | Hypertext HTML formatting example |
 | [WAI/PF/report.html](../raw/www.w3.org/WAI/PF/report.html) | HTML4/CSS2 Accessibility Recommendations |
-| [community/respimg/2012/02/21/a-sample-picture-implementation/index.html](../raw/www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/index.html) | A sample picture implementation \| Responsive Images Community Group |
+| [community/respimg/2012/02/21/a-sample-picture-implementation/__index](../raw/www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/__index) | A sample picture implementation \| Responsive Images Community Group |
 | [html/wg/tracker/issues/83](../raw/www.w3.org/html/wg/tracker/issues/83) | ISSUE-83: Use of the dt and dd elements in figure and details content models - HTML Weekly Tracker |
 | [html/wg/wiki/ChangeProposals/DdDtFcaptionDlabel](../raw/www.w3.org/html/wg/wiki/ChangeProposals/DdDtFcaptionDlabel) | ChangeProposals/DdDtFcaptionDlabel - HTML WG Wiki |
 | [mid/199607311834.OAA09274@ebt-inc.ebt.com;list=www-html](../raw/www.w3.org/mid/199607311834.OAA09274@ebt-inc.ebt.com;list=www-html) | deprecated tags in Wilbur & Cougar from Arne Knudson on 1996-07-31 (www-html@w3.org from July 1996) |
 | [mid/199706102148.OAA08302@labrador;list=w3c-wai-wg](../raw/www.w3.org/mid/199706102148.OAA08302@labrador;list=w3c-wai-wg) | forms that work with screen readers from T. V. Raman on 1997-06-10 (w3c-wai-wg@w3.org from April to June 1997) |
 | [mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg](../raw/www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg) | Re: forms that work with screen readers from Daniel Dardailler on 1997-06-12 (w3c-wai-wg@w3.org from April to June 1997) |
 | [mid/5005BC08.7040705%2540intertwingly.net](../raw/www.w3.org/mid/5005BC08.7040705%2540intertwingly.net) | Working Group Decision on ISSUE-184 Add a data element from Sam Ruby on 2012-07-17 (public-html@w3.org from July 2012) |
-| [press-releases/1996/html-leadership/index.html](../raw/www.w3.org/press-releases/1996/html-leadership/index.html) | The W3 Consortium Takes Leadership Role in the Development of HTML \| 1996 \| Press releases \| W3C |
-| [submissions/2005/SUBM-web-forms2-20050411/index.html](../raw/www.w3.org/submissions/2005/SUBM-web-forms2-20050411/index.html) | Web Forms 2.0 |
+| [press-releases/1996/html-leadership/__index](../raw/www.w3.org/press-releases/1996/html-leadership/__index) | The W3 Consortium Takes Leadership Role in the Development of HTML \| 1996 \| Press releases \| W3C |
+| [submissions/2005/SUBM-web-forms2-20050411/__index](../raw/www.w3.org/submissions/2005/SUBM-web-forms2-20050411/__index) | Web Forms 2.0 |
 | [wiki/User%3ATantekelik/data_element](../raw/www.w3.org/wiki/User%3ATantekelik/data_element) | User:Tantekelik/data element - W3C Wiki |
 
 ## `www.whatwg.org`（2ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
-| [specs/web-apps/2006-01-01/index.html](../raw/www.whatwg.org/specs/web-apps/2006-01-01/index.html) | Web Applications 1.0 |
-| [specs/web-forms/2004-12-10-call-for-comments/index.html](../raw/www.whatwg.org/specs/web-forms/2004-12-10-call-for-comments/index.html) | Web Forms 2.0 |
+| [specs/web-apps/2006-01-01/__index](../raw/www.whatwg.org/specs/web-apps/2006-01-01/__index) | Web Applications 1.0 |
+| [specs/web-forms/2004-12-10-call-for-comments/__index](../raw/www.whatwg.org/specs/web-forms/2004-12-10-call-for-comments/__index) | Web Forms 2.0 |

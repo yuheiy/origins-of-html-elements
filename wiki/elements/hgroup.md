@@ -38,7 +38,7 @@ HTML5草案`header`（2005年） → `hgroup`への改名と副見出し用途�
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2005-09-01 | [Web Applications 1.0](../../raw/whatwg.org/specs/web-apps/2005-09-01/index.html)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-header)） | WHATWG保存Early Working Draft | 改名前の`header`とその見出しコンテナーとしての意味。 | 2026-08-09 |
+| 2005-09-01 | [Web Applications 1.0](../../raw/whatwg.org/specs/web-apps/2005-09-01/__index)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-header)） | WHATWG保存Early Working Draft | 改名前の`header`とその見出しコンテナーとしての意味。 | 2026-08-09 |
 | 2009-04-30 | [WHATWG HTML commit `7e9b2d1b`](../../raw/github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)（[公開元](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)） | 仕様コミット | `header`を`hgroup`へ改名し、副見出し用へ限定した変更。 | 2026-08-09 |
 
 ## 確度

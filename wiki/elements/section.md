@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、文書またはアプリケーション内�
 
 ## HTMLへの導入
 
-2004年8月26日のWHATWG議論でWeb Applications 1.0に定義済みであることが確認でき、見出しだけでは文書構造とアウトラインを確実に復元できない問題が議論された。9月23日版の最古の確認可能な保存草案は章等の文書セクションとして定義する。11月12日にHicksonは、既存マークアップを`section`で包んでも正しく、`div class="section"`を`section`へ置換できることをセクショニングモデルの要件として明記した。2005年9月1日草案は文書またはアプリケーションの汎用セクションとして定義する。[2004年8月の議論](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html)） [2004年保存草案](../../raw/web.archive.org/web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/index.html)（[公開元](https://web.archive.org/web/20041009144718id_/http://whatwg.org/specs/web-apps/current-work/#section)） [2004年11月の設計要求](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)） [2005年草案](../../raw/whatwg.org/specs/web-apps/2005-09-01/index.html)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-section)）
+2004年8月26日のWHATWG議論でWeb Applications 1.0に定義済みであることが確認でき、見出しだけでは文書構造とアウトラインを確実に復元できない問題が議論された。9月23日版の最古の確認可能な保存草案は章等の文書セクションとして定義する。11月12日にHicksonは、既存マークアップを`section`で包んでも正しく、`div class="section"`を`section`へ置換できることをセクショニングモデルの要件として明記した。2005年9月1日草案は文書またはアプリケーションの汎用セクションとして定義する。[2004年8月の議論](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html)） [2004年保存草案](../../raw/web.archive.org/web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/__index)（[公開元](https://web.archive.org/web/20041009144718id_/http://whatwg.org/specs/web-apps/current-work/#section)） [2004年11月の設計要求](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)） [2005年草案](../../raw/whatwg.org/specs/web-apps/2005-09-01/__index)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-section)）
 
 ## HTML直前の祖先
 
@@ -39,10 +39,10 @@ WHATWG HTML Living Standardでは、文書またはアプリケーション内�
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
 | 2004-08-26 | [`<section>` and headings](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html)） | WHATWGメーリングリスト | WA1で定義済みの`section`と、見出しだけからアウトラインを復元する問題。 | 2026-08-10 |
-| 2004-09-23 | [Web Applications 1.0](../../raw/web.archive.org/web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/index.html)（[公開元](https://web.archive.org/web/20041009144718id_/http://whatwg.org/specs/web-apps/current-work/#section)） | WHATWG保存Working Draft | `section`を章等の文書セクションとして定義した、最古の確認可能な保存草案。 | 2026-08-10 |
+| 2004-09-23 | [Web Applications 1.0](../../raw/web.archive.org/web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/__index)（[公開元](https://web.archive.org/web/20041009144718id_/http://whatwg.org/specs/web-apps/current-work/#section)） | WHATWG保存Working Draft | `section`を章等の文書セクションとして定義した、最古の確認可能な保存草案。 | 2026-08-10 |
 | 2004-11-12 | [Re: `<section>` and headings](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)） | WHATWGメーリングリスト | 既存マークアップを`section`で包み、`div class="section"`を`section`へ置換できることを設計要求としたこと。 | 2026-08-10 |
-| 2005-09-01 | [Web Applications 1.0](../../raw/whatwg.org/specs/web-apps/2005-09-01/index.html)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-section)） | WHATWG保存Early Working Draft | `section`の存在と、見出しを伴う汎用セクションという意味。 | 2026-08-09 |
-| 2008-01-22 | [HTML 5 differences from HTML 4](../../raw/www.w3.org/TR/2008/WD-html5-diff-20080122/index.html)（[公開元](https://www.w3.org/TR/2008/WD-html5-diff-20080122/#new-elements)） | W3C Working Draft | `section`をHTML 4にない文書マークアップとして列挙。 | 2026-08-09 |
+| 2005-09-01 | [Web Applications 1.0](../../raw/whatwg.org/specs/web-apps/2005-09-01/__index)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-section)） | WHATWG保存Early Working Draft | `section`の存在と、見出しを伴う汎用セクションという意味。 | 2026-08-09 |
+| 2008-01-22 | [HTML 5 differences from HTML 4](../../raw/www.w3.org/TR/2008/WD-html5-diff-20080122/__index)（[公開元](https://www.w3.org/TR/2008/WD-html5-diff-20080122/#new-elements)） | W3C Working Draft | `section`をHTML 4にない文書マークアップとして列挙。 | 2026-08-09 |
 
 ## 確度
 

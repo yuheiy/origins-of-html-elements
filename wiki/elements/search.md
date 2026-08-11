@@ -24,7 +24,7 @@ Carolyn MacLeodは2020年8月12日のWHATWG論点 #5811で、ARIAランドマー
 
 ### 証拠
 
-2006年XHTML Role Moduleの`search`からWAI-ARIA `search`ランドマークへ継承された系統を確認できる。[XHTML Role](../../raw/www.w3.org/TR/2006/WD-xhtml-role-20060725/index.html)（[公開元](https://www.w3.org/TR/2006/WD-xhtml-role-20060725/)） [WAI-ARIA FPWD](../../raw/www.w3.org/TR/2008/WD-wai-aria-20080204/index.html)（[公開元](https://www.w3.org/TR/2008/WD-wai-aria-20080204/#search)）
+2006年XHTML Role Moduleの`search`からWAI-ARIA `search`ランドマークへ継承された系統を確認できる。[XHTML Role](../../raw/www.w3.org/TR/2006/WD-xhtml-role-20060725/__index)（[公開元](https://www.w3.org/TR/2006/WD-xhtml-role-20060725/)） [WAI-ARIA FPWD](../../raw/www.w3.org/TR/2008/WD-wai-aria-20080204/__index)（[公開元](https://www.w3.org/TR/2008/WD-wai-aria-20080204/#search)）
 
 ### 解釈
 
@@ -38,8 +38,8 @@ XHTML Role `search` → WAI-ARIA `search`ランドマーク → `<div role="sear
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2006-07-25 | [XHTML Role Attribute Module](../../raw/www.w3.org/TR/2006/WD-xhtml-role-20060725/index.html)（[公開元](https://www.w3.org/TR/2006/WD-xhtml-role-20060725/)） | W3C Working Draft | HTML要素以前の`search`役割。 | 2026-08-09 |
-| 2008-02-04、2014-03-20 | WAI-ARIA 1.0：[FPWD](../../raw/www.w3.org/TR/2008/WD-wai-aria-20080204/index.html)・[Recommendation](../../raw/www.w3.org/TR/2014/REC-wai-aria-20140320/roles)（[公開元1](https://www.w3.org/TR/2008/WD-wai-aria-20080204/#search)・[公開元2](https://www.w3.org/TR/2014/REC-wai-aria-20140320/roles#search)） | W3C Working Draft／Recommendation | `search`をナビゲーション用ランドマークとして継承・標準化。 | 2026-08-09 |
+| 2006-07-25 | [XHTML Role Attribute Module](../../raw/www.w3.org/TR/2006/WD-xhtml-role-20060725/__index)（[公開元](https://www.w3.org/TR/2006/WD-xhtml-role-20060725/)） | W3C Working Draft | HTML要素以前の`search`役割。 | 2026-08-09 |
+| 2008-02-04、2014-03-20 | WAI-ARIA 1.0：[FPWD](../../raw/www.w3.org/TR/2008/WD-wai-aria-20080204/__index)・[Recommendation](../../raw/www.w3.org/TR/2014/REC-wai-aria-20140320/roles)（[公開元1](https://www.w3.org/TR/2008/WD-wai-aria-20080204/#search)・[公開元2](https://www.w3.org/TR/2014/REC-wai-aria-20140320/roles#search)） | W3C Working Draft／Recommendation | `search`をナビゲーション用ランドマークとして継承・標準化。 | 2026-08-09 |
 | 2020-08-12 | [WHATWG issue #5811](../../raw/github.com/whatwg/html/issues/5811)（[公開元](https://github.com/whatwg/html/issues/5811)） | 標準化論点 | `search`だけHTML上の対応物がないことと`div role=search`置換を提案。 | 2026-08-09 |
 | 2021-11-08 | WHATWG PR #7320 / 初期コミット：[PR](../../raw/github.com/whatwg/html/pull/7320)・[commit](../../raw/github.com/whatwg/html/commit/303b37ec277946798aef715ff3ade7944f2657c0)（[公開元1](https://github.com/whatwg/html/pull/7320)・[公開元2](https://github.com/whatwg/html/commit/303b37ec277946798aef715ff3ade7944f2657c0)） | 標準化PR／仕様コミット | `search`の仕様、ARIA意味をネイティブで表す導入理由、追加機能を持たないこと。 | 2026-08-09 |
 | 2023-03-24 | [WHATWG HTML merge commit](../../raw/github.com/whatwg/html/commit/c598ff023f081dd3f03b2e43177a632fb7dc92ec)（[公開元](https://github.com/whatwg/html/commit/c598ff023f081dd3f03b2e43177a632fb7dc92ec)） | Living Standard仕様コミット | PR #7320を統合し`search`をLiving Standardへ導入。 | 2026-08-09 |

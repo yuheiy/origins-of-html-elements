@@ -18,7 +18,7 @@ SVG 2ではSVG文書断片を含むルート要素である。断片は独立し
 
 ## HTML直前の祖先
 
-SVG名前空間の`svg` ルートである。SVG 1.0がSVG文書断片のルートとして定義し、HTMLコミットが同じルートを外来名前空間要素として生成する因果を直接示す。[SVG 1.0](../../raw/www.w3.org/TR/2001/REC-SVG-20010904/index.html)（[公開元](https://www.w3.org/TR/2001/REC-SVG-20010904/)）
+SVG名前空間の`svg` ルートである。SVG 1.0がSVG文書断片のルートとして定義し、HTMLコミットが同じルートを外来名前空間要素として生成する因果を直接示す。[SVG 1.0](../../raw/www.w3.org/TR/2001/REC-SVG-20010904/__index)（[公開元](https://www.w3.org/TR/2001/REC-SVG-20010904/)）
 
 ## さらに上流の由来
 
@@ -38,7 +38,7 @@ SVG 1.0 `svg` ルート（2001年） → HTMLパーサー統合（2008年） →
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2001-09-04 | [SVG 1.0](../../raw/www.w3.org/TR/2001/REC-SVG-20010904/index.html)（[公開元](https://www.w3.org/TR/2001/REC-SVG-20010904/)） | W3C Recommendation | SVG XML言語と文書断片ルート `svg`の定義。 | 2026-08-09 |
+| 2001-09-04 | [SVG 1.0](../../raw/www.w3.org/TR/2001/REC-SVG-20010904/__index)（[公開元](https://www.w3.org/TR/2001/REC-SVG-20010904/)） | W3C Recommendation | SVG XML言語と文書断片ルート `svg`の定義。 | 2026-08-09 |
 | 2008-04-05 | [WHATWG HTML commit `1ff9688a`](../../raw/github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7)（[公開元](https://github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7)） | 仕様コミット | `svg` ルートの`text/html`パーサーへの初回統合。 | 2026-08-09 |
 | 2008-04-15 | [WHATWG HTML commit `7387156d`](../../raw/github.com/whatwg/html/commit/7387156d67e9087106a62157bb4b6d3e47739fb2)（[公開元](https://github.com/whatwg/html/commit/7387156d67e9087106a62157bb4b6d3e47739fb2)） | 仕様コミット | SVG Working Groupの要請を理由とするパーサー対応の削除。 | 2026-08-09 |
 | 2009-03-25 | [WHATWG HTML commit `f6a4d7fe`](../../raw/github.com/whatwg/html/commit/f6a4d7fed33cd6ebcd2f2188302ed00b7aac1465)（[公開元](https://github.com/whatwg/html/commit/f6a4d7fed33cd6ebcd2f2188302ed00b7aac1465)） | 仕様コミット | 最近の意見に基づくSVG in `text/html`の再導入。 | 2026-08-09 |

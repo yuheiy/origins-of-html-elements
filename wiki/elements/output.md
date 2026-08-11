@@ -18,7 +18,7 @@ WHATWG HTML Living Standardでは、計算結果またはユーザー操作の�
 
 同年12月7日のXFormsとの比較議論で、Hicksonは動的な定型文テキストは内容でありデータモデルに属さないと回答し、HTML版`output`の内容とデータモデルの境界を要素単位で示した。DOM値をスクリプトで更新する位置付けは、宣言的機能をスクリプトへ移す仕様全体の方針が示す。[編集者回答](../../raw/lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html)（[公開元](https://lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html)）
 
-2004年Web Forms 2.0と2005年W3C Member Submissionが`output`を継続し、Web Forms 2.0全体は後にHTML5へ統合された。[Web Forms 2.0](../../raw/www.w3.org/submissions/2005/SUBM-web-forms2-20050411/index.html)（[公開元](https://www.w3.org/submissions/2005/SUBM-web-forms2-20050411/#the-output)） [HTML5差分](../../raw/www.w3.org/TR/2010/WD-html5-diff-20100304/index.html)（[公開元](https://www.w3.org/TR/2010/WD-html5-diff-20100304/#changes-2009-04-23)）
+2004年Web Forms 2.0と2005年W3C Member Submissionが`output`を継続し、Web Forms 2.0全体は後にHTML5へ統合された。[Web Forms 2.0](../../raw/www.w3.org/submissions/2005/SUBM-web-forms2-20050411/__index)（[公開元](https://www.w3.org/submissions/2005/SUBM-web-forms2-20050411/#the-output)） [HTML5差分](../../raw/www.w3.org/TR/2010/WD-html5-diff-20100304/__index)（[公開元](https://www.w3.org/TR/2010/WD-html5-diff-20100304/#changes-2009-04-23)）
 
 ## HTML直前の祖先
 
@@ -48,8 +48,8 @@ XForms `output`を含む機能集合 → 2003年HTMLフォーム案`output` → 
 | 2003-09 | [*XHTML Module: Extensions to Form Controls*](../../raw/www.hixie.ch/specs/html/forms/hfp.html)（[公開元](https://www.hixie.ch/specs/html/forms/hfp.html)） | Opera Working Draft | HTMLフォーム拡張の先行版には`output`要素がないこと | 2026-08-10 |
 | 2003-12-04 | [*Proposed XHTML Module: XForms Basic*](../../raw/www.hixie.ch/specs/html/forms/xforms-basic-1)（[公開元](https://www.hixie.ch/specs/html/forms/xforms-basic-1)） | Editor's Working Draft | XForms機能をHTMLフォームへ加える方針とHTML `output` | 2026-08-10 |
 | 2003-12-07 | [“Re: Proposal for Extensions to HTML4”](../../raw/lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html)（[公開元](https://lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html)） | www-フォーム・編集者回答 | 動的定型文テキストをデータモデルではなく内容として扱う設計判断 | 2026-08-10 |
-| 2005-04-11 | [*Web Forms 2.0*](../../raw/www.w3.org/submissions/2005/SUBM-web-forms2-20050411/index.html)（[公開元](https://www.w3.org/submissions/2005/SUBM-web-forms2-20050411/#the-output)） | W3C Member Submission | スクリプトで更新する`output`と計算例 | 2026-08-09 |
-| 2010-03-04 | [*HTML5 differences from HTML4*](../../raw/www.w3.org/TR/2010/WD-html5-diff-20100304/index.html)（[公開元](https://www.w3.org/TR/2010/WD-html5-diff-20100304/#changes-2009-04-23)） | W3C Working Draft | Web Forms 2.0のHTML5への統合 | 2026-08-09 |
+| 2005-04-11 | [*Web Forms 2.0*](../../raw/www.w3.org/submissions/2005/SUBM-web-forms2-20050411/__index)（[公開元](https://www.w3.org/submissions/2005/SUBM-web-forms2-20050411/#the-output)） | W3C Member Submission | スクリプトで更新する`output`と計算例 | 2026-08-09 |
+| 2010-03-04 | [*HTML5 differences from HTML4*](../../raw/www.w3.org/TR/2010/WD-html5-diff-20100304/__index)（[公開元](https://www.w3.org/TR/2010/WD-html5-diff-20100304/#changes-2009-04-23)） | W3C Working Draft | Web Forms 2.0のHTML5への統合 | 2026-08-09 |
 | 2026-08-09 | [*HTML Living Standard: The output element*](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開元](https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element)） | 現行仕様 | `output`の現行定義 | 2026-08-09 |
 
 ## 確度

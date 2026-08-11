@@ -15,7 +15,7 @@ IETF i18n draft-01 SUB / SUP → RFC 2070 SUB / SUP
 
 対象: [`q`](../elements/q.md)、[`sub`](../elements/sub.md)、[`sup`](../elements/sup.md)
 
-HTML+とHTML 3.0にも`Q`、`SUB`、`SUP`は存在する。HTML+からHTML 3.0への`SUB`／`SUP`の設計継承は確認できるが、国際化草案が三要素をそこから採用した記録はないため、HTML 3.0系列とIETF系列を矢印で結ばない。[HTML+ `Q`](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)） [HTML+ `SUB`／`SUP`](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)） [Raggettの回答](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html)） [HTML 3.0](../../raw/www.w3.org/MarkUp/html3/index.html)（[公開元](https://www.w3.org/MarkUp/html3/)）
+HTML+とHTML 3.0にも`Q`、`SUB`、`SUP`は存在する。HTML+からHTML 3.0への`SUB`／`SUP`の設計継承は確認できるが、国際化草案が三要素をそこから採用した記録はないため、HTML 3.0系列とIETF系列を矢印で結ばない。[HTML+ `Q`](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)） [HTML+ `SUB`／`SUP`](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)） [Raggettの回答](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html)） [HTML 3.0](../../raw/www.w3.org/MarkUp/html3/__index)（[公開元](https://www.w3.org/MarkUp/html3/)）
 
 ## 双方向テキストとスタイル
 

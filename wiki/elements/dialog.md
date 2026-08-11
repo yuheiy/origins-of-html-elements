@@ -42,7 +42,7 @@ CSS／JavaScript／WAI-ARIA製モーダルダイアログ、JavaScript製ライ�
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2008-01-22 | [HTML 5 differences from HTML 4](../../raw/www.w3.org/TR/2008/WD-html5-diff-20080122/index.html)（[公開元](https://www.w3.org/TR/2008/WD-html5-diff-20080122/#new-elements)） | W3C Working Draft | `dt`を話者、`dd`を音声とする会話用の旧`dialog`。 | 2026-08-09 |
+| 2008-01-22 | [HTML 5 differences from HTML 4](../../raw/www.w3.org/TR/2008/WD-html5-diff-20080122/__index)（[公開元](https://www.w3.org/TR/2008/WD-html5-diff-20080122/#new-elements)） | W3C Working Draft | `dt`を話者、`dd`を音声とする会話用の旧`dialog`。 | 2026-08-09 |
 | 2009-09-15 | [WHATWG HTML commit `9c490f21`](../../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)（[公開元](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)） | 仕様コミット | 会話用`dialog`を削除し、通常のHTMLによる会話マークアップへ置換。 | 2026-08-09 |
 | 2011-01-22 | [W3C HTML Issue 162](../../raw/lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html)（[公開元](https://lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html)） | 標準化論点 | CSS、JavaScript、WAI-ARIAで堅牢なモーダルダイアログを作る難しさ、既存Web UI実装、ネイティブ機構の提案。 | 2026-08-09 |
 | 2012-04-11 | [WHATWG HTML commit `2fb24fcf`](../../raw/github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9)（[公開元](https://github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9)） | 仕様コミット | アプリケーションUI用`dialog`、モーダル／非モーダルAPI、関連機構の導入。 | 2026-08-09 |

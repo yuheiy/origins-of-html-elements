@@ -28,7 +28,7 @@ Web Componentsの`Slots Proposal`と、それを仕様化したDOMのスロッ�
 
 ### 証拠
 
-2012年のShadow DOM草案は、ホストの子ノードをCSSセレクターで選ぶ`content`挿入点、複数のシャドウルート、より古いシャドウツリーを差し込む`shadow`挿入点を定義した。謝辞はXBL 1.0とXBL 2.0が機能的カプセル化という問題について仕様全体へ大きな影響を与えたとするが、挿入点の要素構文または配布アルゴリズムとの個別対応は示さない。[2012年草案](../../raw/www.w3.org/TR/2012/WD-shadow-dom-20120522/index.html)（[公開元](https://www.w3.org/TR/2012/WD-shadow-dom-20120522/)）
+2012年のShadow DOM草案は、ホストの子ノードをCSSセレクターで選ぶ`content`挿入点、複数のシャドウルート、より古いシャドウツリーを差し込む`shadow`挿入点を定義した。謝辞はXBL 1.0とXBL 2.0が機能的カプセル化という問題について仕様全体へ大きな影響を与えたとするが、挿入点の要素構文または配布アルゴリズムとの個別対応は示さない。[2012年草案](../../raw/www.w3.org/TR/2012/WD-shadow-dom-20120522/__index)（[公開元](https://www.w3.org/TR/2012/WD-shadow-dom-20120522/)）
 
 2015年4月の詳細提案は、Polymerの`core-elements`と`paper-elements`、Basic Web Components、QuickUIを調べ、セレクターが実質的に名前として使われること、既定`content`が後続の挿入点より先に内容を消費すること、派生部品が基底部品の挿入点を埋めにくいことを問題とした。Windows Presentation FoundationとCocoaを含むGUIクラスライブラリの継承モデルも検討し、名前付き挿入点を内容配布と継承時の差し込みに共用する案を示した。[詳細提案の保存コミット](../../raw/github.com/WICG/webcomponents/commit/c691d821bfab9bef5bf2a2c3f623402ac32b64d3)（[公開元](https://github.com/WICG/webcomponents/commit/c691d821bfab9bef5bf2a2c3f623402ac32b64d3)）
 
@@ -46,7 +46,7 @@ Shadow DOM v0の`content`／`shadow`挿入点 → 実在するWeb Componentsラ�
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2012-05-22 | [*Shadow DOM*](../../raw/www.w3.org/TR/2012/WD-shadow-dom-20120522/index.html)（[公開元](https://www.w3.org/TR/2012/WD-shadow-dom-20120522/)） | W3C First Public Working Draft | `content`と`shadow`の挿入点を定義し、XBL 1.0／2.0による仕様全体への影響を謝辞に記録するが、挿入点との個別対応は示さない。 | 2026-08-11 |
+| 2012-05-22 | [*Shadow DOM*](../../raw/www.w3.org/TR/2012/WD-shadow-dom-20120522/__index)（[公開元](https://www.w3.org/TR/2012/WD-shadow-dom-20120522/)） | W3C First Public Working Draft | `content`と`shadow`の挿入点を定義し、XBL 1.0／2.0による仕様全体への影響を謝辞に記録するが、挿入点との個別対応は示さない。 | 2026-08-11 |
 | 2015-04-21 | [「Imperative API for Node Distribution in Shadow DOM」](../../raw/lists.w3.org/Archives/Public/public-webapps/2015AprJun/0184.html)（[公開元](https://lists.w3.org/Archives/Public/public-webapps/2015AprJun/0184.html)） | Web標準化メーリングリスト | 実在するWeb Components APIとGUIフレームワークの調査を根拠に、セレクター式配布を名前付きスロットへ置き換える提案。 | 2026-08-11 |
 | 2015-04-27 | [Web Components issue 92](../../raw/github.com/WICG/webcomponents/issues/92)（[公開元](https://github.com/WICG/webcomponents/issues/92)） | 標準化論点 | `slot`という名称の理由と、旧`content`との配布モデルの差。 | 2026-08-11 |
 | 2015-04-30 | [WICG webcomponents commit `c691d821`](../../raw/github.com/WICG/webcomponents/commit/c691d821bfab9bef5bf2a2c3f623402ac32b64d3)（[公開元](https://github.com/WICG/webcomponents/commit/c691d821bfab9bef5bf2a2c3f623402ac32b64d3)） | 提案保存コミット | 実在する部品群とGUIクラスライブラリから配布・継承の問題を抽出した詳細提案。 | 2026-08-11 |

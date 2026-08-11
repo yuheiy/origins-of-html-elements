@@ -18,13 +18,13 @@ WHATWG HTML Living Standardでは、双方向テキストの整形において�
 
 ## HTML直前の祖先
 
-HTML直前の祖先はCSS `unicode-bidi:isolate`とW3C国際化グループの`ubi`属性案である。属性案から新要素へ変更した過程がBug 10807に直接記録されている。[W3C bidi requirements](../../raw/www.w3.org/TR/html-bidi/index.html)（[公開元](https://www.w3.org/TR/html-bidi/#bidi-isolation)） [Bug 10807](../../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=10807)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=10807)）
+HTML直前の祖先はCSS `unicode-bidi:isolate`とW3C国際化グループの`ubi`属性案である。属性案から新要素へ変更した過程がBug 10807に直接記録されている。[W3C bidi requirements](../../raw/www.w3.org/TR/html-bidi/__index)（[公開元](https://www.w3.org/TR/html-bidi/#bidi-isolation)） [Bug 10807](../../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=10807)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=10807)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-Unicode Bidi Algorithmの上位レベルプロトコル分離要求が背景にある。LRM／RLM挿入では検索やコピー＆ペーストを壊す問題もW3C資料が記録する。[W3C bidi requirements](../../raw/www.w3.org/TR/html-bidi/index.html)（[公開元](https://www.w3.org/TR/html-bidi/#bidi-isolation)）
+Unicode Bidi Algorithmの上位レベルプロトコル分離要求が背景にある。LRM／RLM挿入では検索やコピー＆ペーストを壊す問題もW3C資料が記録する。[W3C bidi requirements](../../raw/www.w3.org/TR/html-bidi/__index)（[公開元](https://www.w3.org/TR/html-bidi/#bidi-isolation)）
 
 ### 解釈
 
@@ -40,7 +40,7 @@ Unicode Bidi Algorithmの分離要求 → CSS `unicode-bidi:isolate`＋W3C `ubi`
 |---|---|---|---|---|
 | 2010-09-29〜2010-11-11 | [W3C Bug 10807](../../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=10807)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=10807)） | W3C HTML WG Bugzilla議論／WHATWGチェックイン記録 | `ubi`属性提案から`bdi`要素を選択し、r5669／r5677へ採録した経路。 | 2026-08-09 |
 | 2010-11-05 | [WHATWG HTML commit `29d7102e`（r5669）](../../raw/github.com/whatwg/html/commit/29d7102ea5d923f807d44a402eef6fafd8f35327)（[公開元](https://github.com/whatwg/html/commit/29d7102ea5d923f807d44a402eef6fafd8f35327)） | 仕様コミット | `bdi`の定義、利用者生成内容という要求、利用例、既定CSSを追加した完全な差分 | 2026-08-11 |
-| 2015-07-21 | [*Additional Requirements for Bidi in HTML & CSS*](../../raw/www.w3.org/TR/html-bidi/index.html)（[公開元](https://www.w3.org/TR/html-bidi/#bidi-isolation)） | W3C Working Group Note | 分離問題、`ubi`提案、実際には`bdi`が採用された歴史を記録。 | 2026-08-09 |
+| 2015-07-21 | [*Additional Requirements for Bidi in HTML & CSS*](../../raw/www.w3.org/TR/html-bidi/__index)（[公開元](https://www.w3.org/TR/html-bidi/#bidi-isolation)） | W3C Working Group Note | 分離問題、`ubi`提案、実際には`bdi`が採用された歴史を記録。 | 2026-08-09 |
 
 ## 確度
 

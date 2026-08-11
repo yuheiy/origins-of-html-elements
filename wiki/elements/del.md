@@ -22,13 +22,13 @@ HTML 4.0 Recommendationは`DEL`をHTML 3.2からの新要素に列挙し、文�
 
 ## HTML直前の祖先
 
-HTML 4の直前に確認できる先行要素はHTML 3.0 `DEL`である。W3CはHTML設計作業がHTML+とHTML 3.0草案を基礎としていると説明し、HTML 4編集者もFirst Public Working DraftをCougar草案から書き直したと記録するが、`DEL`個別の採録判断とCougar中間版は未確認である。[W3C声明](../../raw/www.w3.org/press-releases/1996/html-leadership/index.html)（[公開元](https://www.w3.org/press-releases/1996/html-leadership/)） [編集者告知](../../raw/lists.w3.org/Archives/Public/www-html/1997Jul/0079.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1997Jul/0079.html)）
+HTML 4の直前に確認できる先行要素はHTML 3.0 `DEL`である。W3CはHTML設計作業がHTML+とHTML 3.0草案を基礎としていると説明し、HTML 4編集者もFirst Public Working DraftをCougar草案から書き直したと記録するが、`DEL`個別の採録判断とCougar中間版は未確認である。[W3C声明](../../raw/www.w3.org/press-releases/1996/html-leadership/__index)（[公開元](https://www.w3.org/press-releases/1996/html-leadership/)） [編集者告知](../../raw/lists.w3.org/Archives/Public/www-html/1997Jul/0079.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1997Jul/0079.html)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-HTML+の`REMOVED`は法案修正で削除されたテキストを示し、HTML 3.0保存ページは同仕様がHTML+の先行作業に基づくと記録する。HTML+はこの機構をリビジョン履歴用ではないとするが、HTML 4は異なる文書版に対する変更理由と日時まで表すモデルへ広げた。[HTML+](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)） [HTML 3.0 materials](../../raw/www.w3.org/MarkUp/html3/index.html)（[公開元](https://www.w3.org/MarkUp/html3/)） [HTML 4.0 Working Draft](../../raw/www.w3.org/TR/WD-html40-970708/struct/text.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4)）
+HTML+の`REMOVED`は法案修正で削除されたテキストを示し、HTML 3.0保存ページは同仕様がHTML+の先行作業に基づくと記録する。HTML+はこの機構をリビジョン履歴用ではないとするが、HTML 4は異なる文書版に対する変更理由と日時まで表すモデルへ広げた。[HTML+](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)） [HTML 3.0 materials](../../raw/www.w3.org/MarkUp/html3/__index)（[公開元](https://www.w3.org/MarkUp/html3/)） [HTML 4.0 Working Draft](../../raw/www.w3.org/TR/WD-html40-970708/struct/text.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4)）
 
 ### 解釈
 
@@ -52,8 +52,8 @@ HTML 3.0 `DEL`（1995年） →［先行作業からHTML 4への集合単位の�
 | 1994-06-06 | [Dave Raggett, “Re: HTML 2.0 Call for Review”](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/2.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/2.html)） | 設計者メール | 表示用の`S`と論理用途の`ADDED`／`REMOVED`を区別する。 | 2026-08-10 |
 | 1995-02-22 | [HTML 3.0 DTD history](../../raw/www.w3.org/MarkUp/html3/html3.dtd)（[公開元](https://www.w3.org/MarkUp/html3/html3.dtd)） | W3C仕様草案 | Raggettが`INS`と`DEL`を法律文書用に追加した日と要求を記録する。 | 2026-08-10 |
 | 1995-03-28 | [HTML 3.0 Internet-Draft](../../raw/www.w3.org/MarkUp/html3/html3.txt)（[公開元](https://www.w3.org/MarkUp/html3/html3.txt)） | IETF仕様草案 | `DEL`を削除済みテキスト用、法律文書を例とする“New in 3.0”の要素として定義する。 | 2026-08-10 |
-| 1996-03-04 | [The W3 Consortium Takes Leadership Role in the Development of HTML](../../raw/www.w3.org/press-releases/1996/html-leadership/index.html)（[公開元](https://www.w3.org/press-releases/1996/html-leadership/)） | W3C声明 | 後続のHTML設計がHTML+とHTML 3.0草案を基礎とすると記録する。 | 2026-08-10 |
-| 1996-12-09（HTTP更新） | [HTML 3.0 Draft Materials](../../raw/www.w3.org/MarkUp/html3/index.html)（[公開元](https://www.w3.org/MarkUp/html3/)） | W3C保存ページ | HTML 3.0がHTML+の先行作業に基づくと明記する。 | 2026-08-10 |
+| 1996-03-04 | [The W3 Consortium Takes Leadership Role in the Development of HTML](../../raw/www.w3.org/press-releases/1996/html-leadership/__index)（[公開元](https://www.w3.org/press-releases/1996/html-leadership/)） | W3C声明 | 後続のHTML設計がHTML+とHTML 3.0草案を基礎とすると記録する。 | 2026-08-10 |
+| 1996-12-09（HTTP更新） | [HTML 3.0 Draft Materials](../../raw/www.w3.org/MarkUp/html3/__index)（[公開元](https://www.w3.org/MarkUp/html3/)） | W3C保存ページ | HTML 3.0がHTML+の先行作業に基づくと明記する。 | 2026-08-10 |
 | 1997-07-08 | [Dave Raggett, “HTML 4.0 draft available”](../../raw/lists.w3.org/Archives/Public/www-html/1997Jul/0079.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1997Jul/0079.html)） | 編集者告知の引用保存 | First Public Working DraftをCougar草案から書き直しし、HTML Working Groupの作業とwww-html議論の結果と説明する。 | 2026-08-10 |
 | 1997-07-08 | [HTML 4.0 Working Draft](../../raw/www.w3.org/TR/WD-html40-970708/struct/text.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4)） | W3C仕様草案 | `DEL`、`cite`、`datetime`、版間の削除、草案法令例。 | 2026-08-09 |
 | 1997-10-23 | [W3C HTML Working Group minutes](../../raw/lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html)（[公開元](https://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html)） | 標準化議事録 | `INS`／`DEL`の内容モデルを行内またはブロックの`%flow`とすることを決議する。 | 2026-08-10 |
