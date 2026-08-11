@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された555ファイルを、30の取得元ホストごとに収録する。
+Rawに保存された559ファイルを、30の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（9ファイル）
 
@@ -315,7 +315,7 @@ Rawに保存された555ファイルを、30の取得元ホストごとに収録
 |---|---|
 | [WEBMASTER/tags.txt](../raw/lib.ru/WEBMASTER/tags.txt) | HTML Referece Guide: Tags for Netscape 3.0 |
 
-## `lists.w3.org`（43ファイル）
+## `lists.w3.org`（44ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -325,6 +325,7 @@ Rawに保存された555ファイルを、30の取得元ホストごとに収録
 | [Archives/Public/public-html/2009Sep/0566.html](../raw/lists.w3.org/Archives/Public/public-html/2009Sep/0566.html) | Re: &lt;details&gt; from Ian Hickson on 2009-09-15 (public-html@w3.org from September 2009) |
 | [Archives/Public/public-html/2010Apr/0349.html](../raw/lists.w3.org/Archives/Public/public-html/2010Apr/0349.html) | Re: Change Proposals toward Issue-9: "how accessibility works for &lt;video&gt; is unclear" from Silvia Pfeiffer on 2010-04-12 (public-html@w3.org from April 2010) |
 | [Archives/Public/public-html/2011Apr/0212.html](../raw/lists.w3.org/Archives/Public/public-html/2011Apr/0212.html) | Working Group Decision on ISSUE-144 conforming-u from Sam Ruby on 2011-04-08 (public-html@w3.org from April 2011) |
+| [Archives/Public/public-html/2011Oct/0163.html](../raw/lists.w3.org/Archives/Public/public-html/2011Oct/0163.html) | revert request for http://html5.org/r/6783 dropping of time element, adding of data element from Steve Faulkner on 2011-10-30 (public-html@w3.org from October 2011) |
 | [Archives/Public/public-html/2012Apr/0026.html](../raw/lists.w3.org/Archives/Public/public-html/2012Apr/0026.html) | CfC: Adopt ISSUE-184 data-element Change Proposal by Amicable Consensus from Sam Ruby on 2012-04-04 (public-html@w3.org from April 2012) |
 | [Archives/Public/public-html/2012Oct/0109.html](../raw/lists.w3.org/Archives/Public/public-html/2012Oct/0109.html) | maincontent extension - data on use of id=main and id=content in web pages from Steve Faulkner on 2012-10-16 (public-html@w3.org from October 2012) |
 | [Archives/Public/public-html/2012Sep/0086.html](../raw/lists.w3.org/Archives/Public/public-html/2012Sep/0086.html) | maincontent element from Steve Faulkner on 2012-09-09 (public-html@w3.org from September 2012) |
@@ -363,7 +364,7 @@ Rawに保存された555ファイルを、30の取得元ホストごとに収録
 | [Archives/Public/www-talk/1992NovDec/0155.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html) | www-talk from November to December 1992: The spec evolves... |
 | [Archives/Public/www-talk/1992NovDec/0159.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html) | www-talk from November to December 1992: Re: The spec evolves... |
 
-## `lists.whatwg.org`（22ファイル）
+## `lists.whatwg.org`（23ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -388,6 +389,7 @@ Rawに保存された555ファイルを、30の取得元ホストごとに収録
 | [pipermail/whatwg-whatwg.org/2008-November/017596.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-November/017596.html) | [whatwg] Thoughts on HTML 5 |
 | [pipermail/whatwg-whatwg.org/2009-April/061491.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-April/061491.html) | [whatwg] About Descendent Tags |
 | [pipermail/whatwg-whatwg.org/2009-August/064204.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-August/064204.html) | [whatwg] Spec comments, sections 3.1-4.7 |
+| [pipermail/whatwg-whatwg.org/2011-March/030907.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2011-March/030907.html) | [whatwg] Embedding custom hierarchical data |
 | [pipermail/whatwg-whatwg.org/2012-April/077688.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html) | [whatwg] Dialogs and prompts |
 
 ## `ln.hixie.ch`（1ファイル）
@@ -499,12 +501,14 @@ Rawに保存された555ファイルを、30の取得元ホストごとに収録
 |---|---|
 | [jordi/v3/js/jsguide/jsguide.pdf](../raw/www.uv.es/jordi/v3/js/jsguide/jsguide.pdf) | — |
 
-## `www.w3.org`（198ファイル）
+## `www.w3.org`（200ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
+| [2011/11/03-html-wg-minutes.html](../raw/www.w3.org/2011/11/03-html-wg-minutes.html) | HTML WG f2f -- 03 Nov 2011 |
 | [Bugs/Public/show_bug.cgi__q__ctype=xml&id=15476](../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__ctype=xml&id=15476) | — |
 | [Bugs/Public/show_bug.cgi__q__id=10807](../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=10807) | 10807 &ndash; i18n comment 1 : new attribute: ubi |
+| [Bugs/Public/show_bug.cgi__q__id=13240](../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=13240) | 13240 &ndash; Consider replacing &lt;time&gt; with &lt;data&gt; |
 | [Bugs/Public/show_bug.cgi__q__id=17930](../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=17930) | 17930 &ndash; specify parsing of the template element |
 | [Bugs/Public/show_bug.cgi__q__id=7657](../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=7657) | 7657 &ndash; Redefining dt and dd |
 | [Bugs/Public/show_bug.cgi__q__id=7669](../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=7669) | 7669 &ndash; Redefining dt and dd, recommend new element as caption for Figure |

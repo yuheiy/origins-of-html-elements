@@ -1,0 +1,2754 @@
+<!doctype html>
+<html lang='en' xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <title>HTML WG f2f -- 03 Nov 2011</title>
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/StyleSheets/base.css" />
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/StyleSheets/public.css" />
+  <link type="text/css" rel="STYLESHEET" href="https://www.w3.org/2004/02/minutes-style.css" />
+  <meta content="HTML WG f2f" name="Title" />
+  <meta content="text/html; charset=utf-8" http-equiv=
+  "Content-Type" />
+</head>
+
+<body>
+  <p><a href="https://www.w3.org/"><img src="https://www.w3.org/Icons/w3c_home" alt="W3C" border="0" height=
+  "48" width="72" /></a></p>
+
+  <h1>HTML WG f2f</h1>
+
+  <h2>03 Nov 2011</h2>
+
+  <p><a href="https://www.w3.org/html/wg/wiki/TPAC_2011_Agenda#Thursday.2C_3_November_2011">
+  Agenda</a></p>
+
+  <h2>Contents</h2>
+
+  <ul>
+    <li>
+      <a href="#agenda">Topics</a>
+
+      <ol>
+        <li><a href="#item01">Intro</a></li>
+
+        <li><a href="#item02">Suggested topics for
+        discussion</a></li>
+
+        <li><a href="#item03">the &lt;time&gt; element</a></li>
+
+        <li><a href="#item04">Web &amp; TV</a></li>
+
+        <li><a href="#item05">HTML Decision Policy report</a></li>
+
+        <li><a href="#item06">test suite status report</a></li>
+
+        <li><a href="#item07">Change Proposal status</a></li>
+
+        <li><a href="#item08">Schedule status (AC report)</a></li>
+
+        <li><a href="#item09">Schedule status (from the chairs'
+        report to the AC)</a></li>
+
+        <li><a href="#item10">Last Week in HTML5</a></li>
+
+        <li><a href="#item11">Teleconferences</a></li>
+      </ol>
+    </li>
+
+    <li><a href="#ActionSummary">Summary of Action Items</a></li>
+  </ul>
+  <hr />
+
+  <div class="meeting">
+
+    <h3 id="item01">Intro</h3>
+
+    <p class='phone'><cite>paulc:</cite> will be doing things
+    un-conference style<br />
+    ... I propose we meet 9 to 5 both days</p>
+
+    <p class='phone'>[discussing room logistics]</p>
+
+    <p class='phone'><cite>paulc:</cite> MikeSmith and others will
+    need to be at the AC meeting from 10:45 to 11:15<br />
+    ... propose we have the joint meeting with the Web and TV IG
+    after lunch today<br />
+    ... several people have traveled to TPAC for the Web and TV
+    meeting<br />
+    ... we will plan 1 hour for that session</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; changes: sam:
+    Correct link to issue 174 change proposal &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-diffs/2011Nov/0016.html">http://lists.w3.org/Archives/Public/public-html-diffs/2011Nov/0016.html</a>&gt;</p>
+
+    <p class='phone'><cite>paulc:</cite> we are not planning to
+    have a phone bridge<br />
+    ... can skype people in</p>
+
+    <p class='phone'>[doing self-intros around the room]</p>
+
+    <h3 id="item02">Suggested topics for discussion</h3>
+
+    <p class='phone'><cite>tantek:</cite> &lt;time&gt; element</p>
+
+    <p class='phone'><cite>james_graham:</cite> practical
+    test-writing session</p>
+
+    <p class='phone'><cite>paulc:</cite> Test Writing: Just Do
+    It</p>
+
+    <p class='phone'><cite>plh:</cite> report from Kris Kruger on
+    Testing TF</p>
+
+    <p class='phone'><cite>giuseppe:</cite> Web on TV session</p>
+
+    <p class='phone'><cite>annevk:</cite> report on HTML Decision
+    Policy bar camp session</p>
+
+    <p class='phone'><cite>karl:</cite> Last Week in the HTML
+    WG</p>
+
+    <p class='phone'><cite>frank:</cite> canvas accessibility</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p>
+
+    <p class='phone'><cite>steve_faulkner:</cite> conveying
+    activity to the mailing list; reporting</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; bugmail: [Bug
+    14176] onerror: If the script is not same-origin,
+    window.onerror should be invoked with arguments ("Script
+    error.", "", 0) &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0228.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0228.html</a>&gt;
+    4** [Bug 14177] onerror: If the script is not same-origin,
+    window.onerror should be invoked with arguments ("Script
+    error.", "", 0) &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0227.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0227.html</a>&gt;
+    4** [Bug 14182] onerror: s</p>
+
+    <p class='phone'><cite>kris_kruger:</cite> feedback on the test
+    harness</p>
+
+    <p class='phone'><cite>MikeSmith:</cite> HTML.next</p>
+
+    <p class='phone'><cite>steve:</cite> where are we at with
+    change proposals; issue/CP status</p>
+
+    <p class='phone'><cite>sam:</cite> discuss reopen requests at
+    the same time?</p>
+
+    <p class='phone'><cite>janina:</cite> longdesc<br />
+    ... discuss the alternatives that have been proposed</p>
+
+    <p class='phone'><cite>adrianba:</cite> status of where we are
+    in the schedule, what the next steps are</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p>
+
+    <p class='phone'><cite>Stevef:</cite> &lt;dialog&gt;
+    element<br />
+    ... &lt;hgroup&gt; element</p>
+
+    <p class='phone'><cite>annevk:</cite> maybe the lack of
+    technical discussions being proposed indicates that we're
+    done</p>
+
+    <p class='phone'><cite>peter:</cite> URI/IRI</p>
+
+    <p class='phone'><cite>paulc:</cite> thanks tantek (yesterday's
+    bar camp)</p>
+
+    <p class='phone'><cite>tantek:</cite> &lt;time&gt; element was
+    recently dropped from the spec; goal of this session would be
+    to gather interested parties to write a change proposal</p>
+
+    <p class='phone'><cite>james_graham:</cite> test-writing
+    session: If you don't know how to write test cases, we'll teach
+    you</p>
+
+    <p class='phone'><cite>krisk:</cite> 1 full hour for test-suite
+    report</p>
+
+    <p class='phone'><cite>plh:</cite> people want to comment on
+    the decision policy rather than hear a summary of it</p>
+
+    <p class='irc'>&lt;<cite>tantek</cite>&gt; karlpro just denied
+    being Mr. Last Week</p>
+
+    <p class='irc'>&lt;<cite>karl</cite>&gt; Last Week/Month in
+    Open Web Techno <a href="https://www.w3.org/QA/archive/open_web/">http://www.w3.org/QA/archive/open_web/</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: Open Web -
+    W3C Blog - Category Archives (at www.w3.org)</p>
+
+    <p class='phone'><cite>karl:</cite> I've been writing a weekly
+    report on the HTML WG; I would like to hear suggestions on how
+    to improve it</p>
+
+    <p class='irc'>&lt;<cite>karl</cite>&gt; there is also the one
+    written by anne</p>
+
+    <p class='irc'>&lt;<cite>karl</cite>&gt; on whatwg blog</p>
+
+    <p class='phone'><cite>richardschwerdtfe:</cite> we have been
+    discussing hit testing<br />
+    ... for canvas<br />
+    ... get the bounds of objects in fallback content<br />
+    ... getting path info</p>
+
+    <p class='phone'><cite>Stevef:</cite> activity is occurring in
+    isolated bug reports, difficult to follow it all</p>
+
+    <p class='phone'><cite>MichaelC:</cite> would it be appropriate
+    to consider that a "project management" topic?</p>
+
+    <p class='phone'><cite>james_graham:</cite> discussion about
+    the test harness with Mozilla folks can take place outside the
+    f2f</p>
+
+    <p class='phone'><cite>Stevef:</cite> there are quite a few
+    issues that are sitting on the chairs' desk; would like to know
+    what's happening with them</p>
+
+    <p class='phone'><cite>cynthia:</cite> a11y API working
+    session<br />
+    ... would be helpful to make sure we have someone with a Mac at
+    that session</p>
+
+    <p class='phone'>11 people for &lt;time&gt; session</p>
+
+    <p class='phone'>11 people for writing test cases</p>
+
+    <p class='phone'>9 people for HTML Decision Policy bar-camp
+    session</p>
+
+    <p class='phone'>14 for reporting on WG activity</p>
+
+    <p class='phone'>15 for canvas accessibily</p>
+
+    <p class='phone'>18 for HTML.next</p>
+
+    <p class='phone'>7 for CP/Issue status</p>
+
+    <p class='phone'>6 for longdesc</p>
+
+    <p class='phone'>6 for dialog element</p>
+
+    <p class='phone'>7 for hgroup</p>
+
+    <p class='phone'>4 for issue-56 URI/IRI discussion</p>
+
+    <p class='phone'>2 for a11y API mappings discussion</p>
+
+    <p class='phone'>11 for schedule, status, next steps</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; bugmail: [Bug
+    12547] &lt;video&gt; MEDIA CONTROLLER requires readyState for
+    grouped multitrack &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0234.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0234.html</a>&gt;
+    4** [Bug 13995] &lt;track&gt; Don't check Content-Type for
+    &lt;track&gt; &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0233.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0233.html</a>&gt;
+    4** [Bug 11984] Simplify &lt;video&gt; for implementors and
+    authors by ignoring the Content-Type HTTP header &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/pu">http://lists.w3.org/Archives/Public/pu</a></p>
+
+    <p class='phone'>A. WG status</p>
+
+    <p class='phone'>B. HTML.Next</p>
+
+    <p class='phone'>C. Canvas accessibility</p>
+
+    <p class='phone'>D. Web and TV</p>
+
+    <p class='phone'>E. &lt;time&gt; element</p>
+
+    <p class='phone'>F. Testing HTML</p>
+
+    <p class='phone'>G. Issue discussion</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; maybe someone should
+    connect a computer to the screen upfront and type out the
+    schedule?</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; would be more
+    accessible too</p>
+
+    <p class='irc'>&lt;<cite>tantek</cite>&gt; to be clear,
+    &lt;time&gt; session is about a change proposal to add
+    &lt;time&gt;, as defined in the spec and inclusive of
+    additional granularity with rough consensus as documented here:
+    <a href="https://wiki.whatwg.org/wiki/Time#Date_granularity">http://wiki.whatwg.org/wiki/Time#Date_granularity</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: Time element
+    - WHATWG Wiki (at wiki.whatwg.org)</p>
+
+    <p class='phone'>H. a11y API mapping</p>
+
+    <p class='phone'>[working on schedule / time slots]</p>
+
+    <p class='irc'>&lt;<cite>myakura</cite>&gt; just a placeholder:
+    <a href="https://www.w3.org/html/wg/wiki/TPAC_2011_Agenda">http://www.w3.org/html/wg/wiki/TPAC_2011_Agenda</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: TPAC 2011
+    Agenda - HTML WG Wiki (at www.w3.org)</p>
+
+    <p class='irc'>&lt;<cite>krisk</cite>&gt; room claps for
+    krisk</p>
+
+    <p class='irc'>&lt;<cite>scribe</cite>&gt; scribe: krisk</p>
+
+    <p class='phone'>Canvas Accessibility Session</p>
+
+    <p class='phone'><cite>franko:</cite> Solution for providing
+    canvas accessibilty using 'sub dom'<br />
+    ... canvas UI's exist that have multiple UI elements<br />
+    ... screenreaders have no solution to track focus on each
+    element</p>
+
+    <p class='phone'><cite>rich:</cite> It<br />
+    ... not just about screenreaders it's also for magnifiers</p>
+
+    <p class='phone'><cite>shelly:</cite> keyboard users also need
+    to see the see focus rects</p>
+
+    <p class='phone'><cite>franko:</cite> context.setElementPath is
+    used to set an area</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: TPAC 2011
+    Agenda - HTML WG Wiki (at www.w3.org)</p>
+
+    <p class='phone'><cite>franko:</cite> call takes an element
+    param, which events can be set to the 'sub dom'</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; changes: hixie:
+    compat changes for &lt;textarea&gt;.value and .textLength
+    (whatwg r6815) &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-diffs/2011Nov/0017.html">http://lists.w3.org/Archives/Public/public-html-diffs/2011Nov/0017.html</a>&gt;</p>
+
+    <p class='phone'><cite>anne:</cite> given we are going to add
+    path objects at somepoint in the future<br />
+    ... ...wouldn't it be better to use path objects for this
+    problem</p>
+
+    <p class='phone'><cite>rich:</cite> calrification on anne's
+    suggest</p>
+
+    <p class='phone'><cite>anne:</cite> it's just re-usesable path
+    objects</p>
+
+    <p class='phone'><cite>msj:</cite> in many common 2d systems
+    you'll want to re-use paths</p>
+
+    <p class='phone'><cite>mjs:</cite> not clear that this use case
+    will have this ability</p>
+
+    <p class='phone'><cite>franko:</cite> we should have a longer
+    discussion about this<br />
+    ... we don't want to store a bitmap, rather a vectorize</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p>
+
+    <p class='phone'><cite>franko:</cite> Next part is about
+    hittesting<br />
+    ... want to make hittesting support easier of the author</p>
+
+    <p class='irc'>&lt;<cite>plh</cite>&gt; --&gt; <a href="https://www.w3.org/html/wg/wiki/TPAC2011">http://www.w3.org/html/wg/wiki/TPAC2011</a>
+    HTML WG TPAC 2011 agenda</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: TPAC2011 -
+    HTML WG Wiki (at www.w3.org)</p>
+
+    <p class='phone'><cite>franko:</cite> use case is a single
+    click (checkbox), or immediate action (button)<br />
+    ... attribute 'hittest' would solve this</p>
+
+    <p class='phone'><cite>mjs:</cite> why would you use the x and
+    y?</p>
+
+    <p class='phone'><cite>rich:</cite> you won't lose the x and
+    y?</p>
+
+    <p class='phone'><cite>mjs:</cite> seems simpler to always to
+    hittesting and just pass the information through</p>
+
+    <p class='phone'><cite>rich:</cite> Anne are you asking to
+    place the hittesting back on the canvas element?</p>
+
+    <p class='phone'><cite>Anne:</cite> Pointer events should solve
+    this - when you click on an element you should be able to send
+    events to sub elements</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; bugmail: [Bug
+    13983] WF2: It seems like textarea's raw value should always
+    normalize newlines to \n &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0241.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0241.html</a>&gt;
+    4** [Bug 14260] &lt;track&gt; "text tracks ready" and
+    HTMLMediaElement.readyState &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0240.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0240.html</a>&gt;
+    4** [Bug 13983] WF2: It seems like textarea's raw value should
+    always normalize newlines to \n &lt;11<a href=
+    "http://lists.w3.org/">http://lists.w3.org/</a></p>
+
+    <p class='phone'><cite>mjs:</cite> pointer events don't work in
+    this case, you would need to re-target the events</p>
+
+    <p class='phone'><cite>rich:</cite> are you supportive of
+    this?</p>
+
+    <p class='phone'><cite>mjs:</cite> I have just seen this
+    proposal - though initially it seems to only need the one mode
+    to satisfy the use case</p>
+
+    <p class='phone'><cite>rich:</cite> shows the first idea for
+    setPathForElement from draft spec</p>
+
+    <p class='phone'>* if someone can drop a link to the draft spec
+    for this that would be super</p>
+
+    <p class='phone'><cite>rich:</cite> All the events get passed
+    like a pointer event</p>
+
+    <p class='phone'><cite>shelly:</cite> why the z-index?</p>
+
+    <p class='phone'><cite>rich:</cite> explains why z-index is
+    needed to NOT set focus to a background object</p>
+
+    <p class='phone'><cite>mjs:</cite> it's not clear that z-index
+    will work</p>
+
+    <p class='phone'><cite>franko:</cite> simalar to how last draw
+    wins, setpath would do the same</p>
+
+    <p class='phone'><cite>shelly:</cite> seems much simpler to
+    have last draw win<br />
+    ... due to other bugs</p>
+
+    <p class='phone'><cite>anne:</cite> not sure how element fits
+    into this</p>
+
+    <p class='phone'><cite>franko:</cite> the elements in a subdom
+    have not size or position<br />
+    ... in IE9 you can give elements postion and size that map to
+    canvas that then will get pickd up by a screenreader</p>
+
+    <p class='phone'><cite>rich:</cite> you can also have the
+    keyboard and mouse handlers on the same element</p>
+
+    <p class='phone'><cite>anne:</cite> this is only accessibility
+    right? not css om?</p>
+
+    <p class='phone'><cite>franko:</cite> correct<br />
+    ... we have some more work to do onthis draft, though do we
+    think this is the right direction to solve canvas
+    accessibility?</p>
+
+    <p class='phone'><cite>rich:</cite> jonas (mozilla) suggest a
+    scroll into view, does that make sense?</p>
+
+    <p class='phone'><cite>anne:</cite> yes..</p>
+
+    <p class='phone'><cite>rich:</cite> do we need to add this to
+    this draft proposal?<br />
+    ... I could use some help on this from you anne</p>
+
+    <p class='phone'><cite>anne:</cite> yes...</p>
+
+    <p class='phone'><cite>rich:</cite> now on to focus
+    ring...<br />
+    ... Please take a peek at Focus management...</p>
+
+    <p class='phone'>drawSystemFocusRing/drawCustomFocusRing</p>
+
+    <p class='phone'><cite>rich:</cite> mjs can you take a peek at
+    this?<br />
+    ... this allows the system to do the right thing...<br />
+    ... customfocusring can be used to by magnifiers</p>
+
+    <p class='phone'><cite>mjs:</cite> it's not totally clear to
+    me</p>
+
+    <p class='phone'><cite>rich:</cite> we have one function
+    before, now we have two<br />
+    ... mjs do you see the subtle diff, I have two points of
+    feedback</p>
+
+    <p class='phone'><cite>mjs:</cite> one issue, if you used a
+    bitmap or from another canvas to create a custom focus
+    ring<br />
+    ... next issue, you could use a opacity and end up not drawing
+    a focus ring...<br />
+    ... but it defeats the purpose of path drawing...<br />
+    ... it also seems that these two methods are not needed</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; It seems
+    scrollPathIntoView() is already covered: <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#dom-context-2d-scrollpathintoview">
+    http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#dom-context-2d-scrollpathintoview</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: 4.8.11 The
+    canvas element HTML Standard (at www.whatwg.org)</p>
+
+    <p class='phone'><cite>mjs:</cite> how can we address the issue
+    when the author draws a focus ring that doesn't match the
+    magnifier<br />
+    ... the least path of resistance is to to auto set focus
+    ring</p>
+
+    <p class='phone'><cite>rich:</cite> it may not be critical to
+    have path for everything</p>
+
+    <p class='phone'><cite>franko:</cite> seems that this would
+    make it easier for dev, if a UA would autodraw focus ring</p>
+
+    <p class='phone'><cite>rich:</cite> seems like you want to have
+    a system foucs ring (to get system focus ring defaults)</p>
+
+    <p class='phone'><cite>mjs:</cite> my suggestion is that these
+    focus ring calls, calling these on the path would seem to work
+    simalar to css outline<br />
+    ... you need to deal with repainting when focus goes
+    away..<br />
+    ... you don't want to cache this...<br />
+    ... normally this done by a dirty rect that is then
+    repainted<br />
+    ... a UA can't do this correctly when other drawing has
+    occured</p>
+
+    <p class='phone'><cite>shelly:</cite> did we solve this with
+    the set path?</p>
+
+    <p class='phone'><cite>mjs:</cite> no</p>
+
+    <p class='phone'><cite>franko:</cite> doesn't seem that we are
+    optimizing for the main use case</p>
+
+    <p class='phone'><cite>mjs:</cite> you want to make this
+    general and not use this if they can't get focus rings correct
+    they will do their own focus ring painting<br />
+    ... which then will break magnifiers<br />
+    ... if you don't want to handle this complexity then you need
+    to just use normal elements</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; planet: Tantek:
+    "But then if we do not ever make &lt;time&gt;, how can we ever
+    have &lt;time&gt;?" #Merovingian #HTML5 #TPAC #TPAC2011
+    &lt;11<a href=
+    "http://tantek.com/2011/307/t3/make-time-have-time-merovingian-html5-tpac-tpac2011">http://tantek.com/2011/307/t3/make-time-have-time-merovingian-html5-tpac-tpac2011</a>&gt;
+    4** Tantek: proposed a "&lt;time&gt; element" session for the
+    HTML Working Group meeting. #TPAC #HTML5
+    irc://irc.w3.org:6665/html-wg &lt;11<a href=
+    "http://tantek.com/2011/307/t2/proposed-time-element-session-html-group-tpac-html5">http://tantek.com/2011/307/t2/proposed-time-element-session-html-group-tpac-html5</a>&gt;</p>
+
+    <p class='phone'><cite>franko:</cite> it seems that you could
+    add this to canvas and solve some of problems that canvas has
+    today</p>
+
+    <p class='irc'>&lt;<cite>richardschwerdtfe</cite>&gt; link to
+    draft proposal for hit testing: <a href=
+    "http://lists.w3.org/Archives/Public/public-html-a11y/2011Oct/att-0137/clickableregion.html">
+    http://lists.w3.org/Archives/Public/public-html-a11y/2011Oct/att-0137/clickableregion.html</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML Canvas
+    2D Context (at lists.w3.org)</p>
+
+    <p class='phone'><cite>mjs:</cite> canvas to canvas is a case
+    that doesn't seem to work with this proposal<br />
+    ... happy to look at a propsal that would solve this...</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; bugmail: [Bug
+    14688] New: fhfhgfhgfhgfhgfhgfhgfhgfhg giuhgiuhiuhi
+    hbkhikhiuhbi ihbihbjhbjhb &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0243.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0243.html</a>&gt;
+    4** [Bug 12715] When used to include data blocks (as opposed to
+    scripts), the data must be embedded inline &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0242.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0242.html</a>&gt;</p>
+
+    <p class='phone'><cite>franko:</cite> let's review what we have
+    now and write up another proposal<br />
+    ... I'd like write up how a UA could automatically take care of
+    focus ring drawing..</p>
+
+    <p class='phone'><cite>rich:</cite> thanks for the feedback
+    mjs</p>
+
+    <p class='phone'><cite>mjs:</cite> anyother comments about this
+    draft propsal</p>
+
+    <p class='phone'><cite>alex:</cite> seems odd that this is for
+    only certain elements which seems weird?<br />
+    ... is this for canvas only or any element?</p>
+
+    <p class='phone'><cite>franko:</cite> only canvas</p>
+
+    <p class='phone'><cite>alex:</cite> this is to solve the
+    special case for solving accessibility<br />
+    ... which doesn't map to other needs to handle special hit
+    testing</p>
+
+    <p class='phone'><cite>mjs:</cite> this enable to forward hit
+    testing to another sub dom</p>
+
+    <p class='phone'><cite>alex:</cite> this seems to lead to
+    badness where the the logical dom doesn't map to what is
+    visually shown</p>
+
+    <p class='phone'><cite>anne:</cite> I think alex makes a good
+    point...once we get 'components' then we can solve this
+    disconnect</p>
+
+    <p class='phone'><cite>mjs:</cite> three minutes left - not
+    enough time to discuss this complexity<br />
+    ... break time, starting again at 11:30am</p>
+
+    <p class='irc'>&lt;<cite>myakura</cite>&gt; Agenda: <a href="https://www.w3.org/html/wg/wiki/TPAC2011">http://www.w3.org/html/wg/wiki/TPAC2011</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: TPAC2011 -
+    HTML WG Wiki (at www.w3.org)</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; bugmail: [Bug
+    12547] &lt;video&gt; MEDIA CONTROLLER requires readyState for
+    grouped multitrack &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0244.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0244.html</a>&gt;</p>
+
+    <p class='phone'>Time Element...</p>
+
+    <h3 id="item03">the &lt;time&gt; element</h3>
+
+    <p class='phone'><cite>tantek:</cite> let's get started<br />
+    ... recently this was drop'd from the space<br />
+    ... spec<br />
+    ... Potential to add back a more powerful time element<br />
+    ... summary add back + more</p>
+
+    <p class='irc'>&lt;<cite>myakura</cite>&gt; <a href="https://www.w3.org/wiki/User:Tantekelik/time_element">http://www.w3.org/wiki/User:Tantekelik/time_element</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title:
+    User:Tantekelik/time element - W3C Wiki (at www.w3.org)</p>
+
+    <p class='phone'><cite>tantek:</cite> for year dates, month
+    days...etc...<br />
+    ... v-card4 expanded to include these uses<br />
+    ... addition to these obvious ones..two more exists</p>
+
+    <p class='phone'>time zone and duration</p>
+
+    <p class='phone'><cite>scribe:</cite> lots' of useage...<br />
+    ... apps can use this to deal this the lack of timezone
+    context</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p>
+
+    <p class='phone'><cite>tanket:</cite> Ask group - any use cases
+    missed?</p>
+
+    <p class='phone'><cite>mjs:</cite> can we see use cases of
+    each?</p>
+
+    <p class='phone'><cite>tanket:</cite> lets' take year
+    only...<br />
+    ... YYYY</p>
+
+    <p class='phone'><cite>tantek:</cite> wikipedia and copyright
+    uses a 'year only', e.g. 1999<br />
+    ... year month is used alot on bloging...</p>
+
+    <p class='phone'>Time element doesn't match HTML5 input types,
+    which is a mismatch</p>
+
+    <p class='phone'><cite>scribe:</cite> another example is credit
+    card dates</p>
+
+    <p class='phone'><cite>tantek:</cite> Month Day - e.g 12-25
+    (x-mas) or a birthday<br />
+    ... duration: use case is it's not possible to differential
+    from a time<br />
+    ... for example 2:30 is this 2:30pm or a movie that lasts two
+    and a half hours<br />
+    ... it's implemented by a few others and it seems to
+    work...<br />
+    ... since people are using this...<br />
+    ... generally do we want more specific or more generic
+    elements?<br />
+    ... div is very generic and could be a span or header, group,
+    etc..</p>
+
+    <p class='phone'>though we have gone down the more specific and
+    added many more specific elements that can be created by a
+    div</p>
+
+    <p class='phone'><cite>anne:</cite> not clear why we need
+    this..</p>
+
+    <p class='phone'><cite>tantek:</cite> people incorrectly parse
+    times and get the wrong information</p>
+
+    <p class='phone'><cite>james:</cite> you can still get this
+    wrong...<br />
+    ... for example a birthday on a page using a time element,
+    could be considered a publishing date</p>
+
+    <p class='irc'>&lt;<cite>karl</cite>&gt; performance on
+    querying the DOM? parsing all data elements instead of only
+    time?</p>
+
+    <p class='phone'><cite>tanket:</cite> this is not true...</p>
+
+    <p class='phone'><cite>james:</cite> the time element is not
+    going to solve this use case</p>
+
+    <p class='phone'><cite>mjs:</cite> I'd like to jump in and
+    comment</p>
+
+    <p class='phone'><cite>tantek:</cite> the search engine example
+    is a little vague</p>
+
+    <p class='phone'><cite>mjs:</cite> another use case is to
+    search for a date, what happend on 11/3/2011?<br />
+    ... it's possible that search engines could use a time element
+    for this use case<br />
+    ... not sure if this is a primary use case but, it is a use
+    case</p>
+
+    <p class='phone'><cite>tantek:</cite> I am drawing from example
+    of real use cases for search engines</p>
+
+    <p class='phone'><cite>james:</cite> we don't have a location
+    element for example...why not?</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; planet: Tantek:
+    #HTML5 time element discussion &lt;time&gt;11:30&lt;/time&gt;
+    &lt;time datetime=2011-11-03&gt;today&lt;/time&gt;: <a href="https://www.w3.org/html/wg/wiki/TPAC2011#Day_1">http://www.w3.org/html/wg/wiki/TPAC2011#Day_1</a>
+    &lt;11<a href=
+    "http://tantek.com/2011/307/t5/html5-time-element-discussion-today">http://tantek.com/2011/307/t5/html5-time-element-discussion-today</a>&gt;</p>
+
+    <p class='phone'><cite>tantek:</cite> we do in geolocation and
+    I encourage you to take a peek at these WGs</p>
+
+    <p class='phone'><cite>james:</cite> we're not adding a
+    location element though...</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p>
+
+    <p class='phone'><cite>tantek:</cite> we may...</p>
+
+    <p class='phone'><cite>mjs:</cite> we do have evidence that
+    search engines are doing this heuroistically</p>
+
+    <p class='irc'>&lt;<cite>karl</cite>&gt; we born with a date, a
+    location and a name</p>
+
+    <p class='phone'><cite>mjs:</cite> which they get wrong, so by
+    adding it s search engines<br />
+    ... calrification on james...</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; bugmail: [Bug
+    14526] WF2: When adding filenames to the data set, should there
+    be normalization of decomposed forms? &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0245.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0245.html</a>&gt;</p>
+
+    <p class='phone'><cite>mjs:</cite> question...</p>
+
+    <p class='phone'><cite>james:</cite> I'm claiming that time is
+    less useful than something claiming it's a heading</p>
+
+    <p class='phone'><cite>alex:</cite> how do we add new elements
+    into html that has good use case for searching..<br />
+    ... microformats has prove the use and if html doesn't add new
+    elements it won't have a future</p>
+
+    <p class='phone'><cite>tantek:</cite> We have highly
+    generalized neeeds and data shows that it's has a need<br />
+    ... for the time element<br />
+    ... we not asking to add new elements for tags that are highly
+    specialized (volcano)<br />
+    ... we are not adding alot of elements to html, so it's not a
+    slippery slope</p>
+
+    <p class='phone'><cite>mjs:</cite> asking for vote to not
+    having time element vs having time element</p>
+
+    <p class='phone'>1 vote to not have it...larger number of
+    people (7) would like to have time element</p>
+
+    <p class='phone'><cite>mjs:</cite> asking for data element vs
+    not having data element<br />
+    ... it seems that it's clear (not full working group) favor
+    having both elements &lt;time&gt; &lt;data&gt;</p>
+
+    <p class='phone'><cite>hixie:</cite> most of these use case are
+    irrelevant<br />
+    ... you don't need markup for this..<br />
+    ... all of this can be trivial found since they are ISO
+    standards and are easily parsed</p>
+
+    <p class='irc'>&lt;<cite>karl</cite>&gt; hixie: you don't need
+    markup for publishing data, you need markup for consuming
+    data</p>
+
+    <p class='phone'><cite>hixie:</cite> search engines do this
+    today pretty well...except year and length<br />
+    ... the ambiguity exists for other items...<br />
+    ... for example SF - all search engines know this is san
+    fran</p>
+
+    <p class='phone'><cite>tantek:</cite> we can use what people
+    publish to determine what we need<br />
+    ... time is being used and the pattern is that others will</p>
+
+    <p class='phone'><cite>hixie:</cite> they build it and it will
+    come is not a good strategy</p>
+
+    <p class='phone'><cite>tantek:</cite> I disagree it's worked
+    well for Microdata</p>
+
+    <p class='irc'>&lt;<cite>tcelik</cite>&gt; krisk
+    s/microdata/microformats</p>
+
+    <p class='phone'><cite>hixie:</cite> longdesc is a good example
+    gone wrong</p>
+
+    <p class='phone'><cite>tantek:</cite> why make a special case
+    for year? If lots of people are using this then we should
+    promote this to an element<br />
+    ... If people are intrested in time, then I'd like to hear
+    their specific needs</p>
+
+    <p class='phone'><cite>kimberly:</cite> TV has a use for
+    duration</p>
+
+    <p class='phone'><cite>mjs:</cite> some of these particular
+    specified date don't enable a date() object to be created<br />
+    ... we have a problem since an api exists to provide a date()
+    object from this tag</p>
+
+    <p class='phone'><cite>tantek:</cite> It's a perfectly
+    reasonable request to expect the api to do the right
+    thing<br />
+    ... doesn't seem like a difficult problem and should be easy to
+    reach consensus</p>
+
+    <p class='phone'><cite>mjs:</cite> any other questions?</p>
+
+    <p class='phone'><cite>alex:</cite> what about pre-gregoria and
+    gregoria?</p>
+
+    <p class='phone'><cite>tantek:</cite> I have not seen data to
+    justify adding this support</p>
+
+    <p class='phone'><cite>alex:</cite> I have seen this in history
+    examples</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; <a href="https://en.wikipedia.org/wiki/Proleptic_Gregorian_calendar">http://en.wikipedia.org/wiki/Proleptic_Gregorian_calendar</a></p>
+
+    <p class='phone'><cite>tantek:</cite> a workaround
+    exists...</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; ^^ article on
+    workaround</p>
+
+    <p class='phone'><cite>tantek:</cite> it we have more data then
+    we can add this support<br />
+    ... if you see it we can evaluate it as we gather more data</p>
+
+    <p class='phone'><cite>mjs:</cite> any other comments or time
+    in general?</p>
+
+    <p class='phone'>group agrees no more issues, meeting is over
+    and we'll meet again after lunch at 1:30</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p>
+
+    <p class='irc'>&lt;<cite>karl</cite>&gt; agenda: <a href="https://www.w3.org/html/wg/wiki/TPAC2011">http://www.w3.org/html/wg/wiki/TPAC2011</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: TPAC2011 -
+    HTML WG Wiki (at www.w3.org)</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p>
+
+    <p class='irc'>&lt;<cite>tcelik</cite>&gt; FYI re:
+    non-Gregorian proposal/research <a href="https://wiki.whatwg.org/wiki/Time_element#Calendar_scale">http://wiki.whatwg.org/wiki/Time_element#Calendar_scale</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: Time element
+    - WHATWG Wiki (at wiki.whatwg.org)</p>
+
+    <p class='irc'>&lt;<cite>karl</cite>&gt; s/Agenda: <a href="https://www.w3.org/html/wg/wiki/TPAC_2011_Agenda#Thursday.2C_3_November_2011/Agenda:">
+    http://www.w3.org/html/wg/wiki/TPAC_2011_Agenda#Thursday.2C_3_November_2011/Agenda:</a>
+    <a href="https://www.w3.org/html/wg/wiki/TPAC2011/">http://www.w3.org/html/wg/wiki/TPAC2011/</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: TPAC 2011
+    Agenda - HTML WG Wiki (at www.w3.org)</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; bugmail: [Bug
+    14689] New: xml-stylesheet with type=text/xsl needs to be
+    handled explicitly &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0246.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0246.html</a>&gt;</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; bugmail: [Bug
+    14688] fhfhgfhgfhgfhgfhgfhgfhgfhg giuhgiuhiuhi hbkhikhiuhbi
+    ihbihbjhbjhb &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0247.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0247.html</a>&gt;</p>
+
+    <p class='irc'>&lt;<cite>tcelik</cite>&gt; greetings</p>
+
+    <p class='irc'>&lt;<cite>tcelik</cite>&gt; rrsagent tcelik is
+    tantek</p>
+
+    <h3 id="item04">Web &amp; TV</h3>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; scribe: tcelik</p>
+
+    <p class='phone'>W3C Media Pipeline TF Requirements</p>
+
+    <p class='phone'>presentation</p>
+
+    <p class='phone'>November 1-4, 2011</p>
+
+    <p class='phone'><cite>Clarke:</cite> two task forces</p>
+
+    <p class='phone'>media task force</p>
+
+    <p class='phone'>home networking task force</p>
+
+    <p class='phone'>media *pipeline task force</p>
+
+    <p class='phone'>… scope of the MPTF is to support commercial
+    grade video in browsers or anything that supports HTML</p>
+
+    <p class='phone'>… set out to develop requirements in that
+    area</p>
+
+    <p class='phone'>… then identified gaps</p>
+
+    <p class='phone'>… good news is found very few gaps</p>
+
+    <p class='phone'>… most use cases adequately supported in HTML
+    or in current specification</p>
+
+    <p class='phone'>… we have some additional areas with ideas for
+    addressing things, not yet consensus</p>
+
+    <p class='phone'>"R1. Combined main + description audio
+    track"</p>
+
+    <p class='phone'>R1 = requirement one</p>
+
+    <p class='phone'>… each of these slides have use case, what
+    doesn't work, bugs filed, sections in spec, suggested
+    changes</p>
+
+    <p class='phone'><cite>Clarke:</cite> first use-case</p>
+
+    <p class='phone'>… in US/Canada different from Europe - playing
+    audio tracks</p>
+
+    <p class='phone'>… US/Canada premixed</p>
+
+    <p class='phone'>… other countries separate</p>
+
+    <p class='phone'>… we need to identify premix</p>
+
+    <p class='phone'>… right now HTML5 appears to only address
+    non-prefix</p>
+
+    <p class='phone'>… Suggestions:</p>
+
+    <p class='phone'>… define new category values</p>
+
+    <p class='irc'>&lt;<cite>MikeSmith</cite>&gt; bug 13357?</p>
+
+    <p class='phone'>… main+description</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; 11<a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=13357">http://www.w3.org/Bugs/Public/show_bug.cgi?id=13357</a>
+    b.lund, P2, NEW, 13&lt;video&gt;: Additional AudioTrack.kind
+    categories are needed to identify tracks where audio
+    descriptions are premixed with main dialogue.</p>
+
+    <p class='phone'>… translation+description</p>
+
+    <p class='phone'>Mark Vickers, Comcast (MV)</p>
+
+    <p class='phone'><cite>MV:</cite> you could make the category a
+    list</p>
+
+    <p class='phone'>… such as if you had main video and assigned
+    video</p>
+
+    <p class='phone'>Paul Cotton (PC) for the record this bug is
+    still marked as new</p>
+
+    <p class='phone'>… this = bug 13357</p>
+
+    <p class='phone'><cite>MV:</cite> we also reviewed this with
+    the a11y P&amp;F group on Tuesday</p>
+
+    <p class='phone'>… there was some discussion about that with
+    some people that were more expert on this</p>
+
+    <p class='phone'><cite>Janina:</cite> we agree that this is
+    information that needs to be avail to the consumer</p>
+
+    <p class='phone'>… how we achieve it is matter of
+    discussion</p>
+
+    <p class='phone'>John Foliot (JF)</p>
+
+    <p class='phone'>… the use case of supporting text descriptions
+    is very real</p>
+
+    <p class='phone'>… we would support additional kinds</p>
+
+    <p class='phone'><cite>Janina:</cite> you're going to want to
+    know for historical stuff if it is premixed</p>
+
+    <p class='phone'>… can't unmix it</p>
+
+    <p class='phone'>Frank Olivier: do you think we need these 9
+    categories only, or should we leave it open ended</p>
+
+    <p class='phone'>… so people can create their own
+    categories</p>
+
+    <p class='phone'><cite>Clarke:</cite> we should ask the a11y
+    group</p>
+
+    <p class='phone'><cite>JF:</cite> when we looked at the values
+    originally, these slipped past us. In theory I support multiple
+    / extensible kinds</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; what is wrong with
+    kind=alternative + label=... ?</p>
+
+    <p class='phone'>… what if we do if down the road we discover a
+    new kind</p>
+
+    <p class='phone'><cite>MV:</cite> There's an example on the
+    slides I wondered about.</p>
+
+    <p class='phone'>… there's a type for main video</p>
+
+    <p class='phone'>… and signed video</p>
+
+    <p class='phone'>… could be delivered separately or together as
+    well.</p>
+
+    <p class='phone'><cite>Russell:</cite> I was going to suggest
+    ...</p>
+
+    <p class='phone'><cite>Anne:</cite> what about using just
+    "alternate/alternative" and a label?</p>
+
+    <p class='phone'><cite>Janina:</cite> you need to distinguish
+    two situations</p>
+
+    <p class='irc'>&lt;<cite>dbaron</cite>&gt; participants in Web
+    and TV IG: <a href=
+    "https://www.w3.org/2000/09/dbwg/details?group=46300">https://www.w3.org/2000/09/dbwg/details?group=46300</a></p>
+
+    <p class='phone'>… a) audio+video premixed, can't undo that</p>
+
+    <p class='irc'>&lt;<cite>dbaron</cite>&gt; Participants in HTML
+    WG: <a href="https://www.w3.org/2000/09/dbwg/details?group=40318&amp;public=1">
+    http://www.w3.org/2000/09/dbwg/details?group=40318&amp;public=1</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: Participants
+    in the HTML Working Group - DBWG, the Working Groups Database
+    (at www.w3.org)</p>
+
+    <p class='phone'>… b) European practice, main audio, and then
+    describe-audio in separate channel</p>
+
+    <p class='phone'>… as long as it is clear to user if it is
+    premixed or not</p>
+
+    <p class='phone'><cite>Anne:</cite> premix just seems like just
+    an alternate</p>
+
+    <p class='phone'><cite>Maciej:</cite> you still need the device
+    that's doing the playback to know the nature of the
+    atlernative</p>
+
+    <p class='irc'>&lt;<cite>Kai</cite>&gt; help</p>
+
+    <p class='phone'>… if I said I want audio descriptions for
+    everything, then when the format is in a premix format, UA
+    needs to detect that so that it doesn't mix them up</p>
+
+    <p class='phone'>… there might be multiple combined resources
+    in the same track, should be able to express that</p>
+
+    <p class='phone'><cite>JF:</cite> Anne, we don't have a
+    labeling mechanism. We only have kind.</p>
+
+    <p class='irc'>&lt;<cite>Hixie</cite>&gt; when people say
+    @kind, what are they referring to?</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; Hixie: <a href="https://www.whatwg.org/specs/web-apps/current-work/#dom-TrackList-getKind-categories">
+    http://www.whatwg.org/specs/web-apps/current-work/#dom-TrackList-getKind-categories</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML
+    Standard (at www.whatwg.org)</p>
+
+    <p class='phone'><cite>Anne:</cite> the preselection mechanism
+    makes sense.</p>
+
+    <p class='phone'>Mark Watson (MW) Netflix</p>
+
+    <p class='phone'>… the labels are not useful because you can't
+    automatically intepret them, i18n etc.</p>
+
+    <p class='irc'>&lt;<cite>MikeSmith</cite>&gt; bug 12544?</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; 11<a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=12544">http://www.w3.org/Bugs/Public/show_bug.cgi?id=12544</a>
+    jfoliot, P3, NEW, 13&lt;video&gt; MEDIA CONTROLLER requires
+    track kind for in-band tracks</p>
+
+    <p class='phone'>… captions and subtitles</p>
+
+    <p class='phone'>… not available in other form, want to be able
+    to signal</p>
+
+    <p class='irc'>&lt;<cite>Hixie</cite>&gt; anne: well that's
+    confusing. That's an IDL attribute, not a content
+    attribute.</p>
+
+    <p class='phone'>… when those are available</p>
+
+    <p class='phone'><cite>Janina:</cite> Anne, you need to give us
+    2 examples</p>
+
+    <p class='phone'>… how is it marked when the described audio is
+    burned in, and separate track</p>
+
+    <p class='phone'>… one example is not enough</p>
+
+    <p class='phone'>… need to have two to understand how it
+    works</p>
+
+    <p class='phone'><cite>Anne:</cite> I was already convinced
+    earlier by Maciej</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; bugmail: [Bug
+    13986] Update vCard vocabulary to RFC6350 &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0248.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0248.html</a>&gt;</p>
+
+    <p class='phone'><cite>Janina:</cite> this is the
+    uncontroversial one</p>
+
+    <p class='phone'><cite>PC:</cite> as chair, question I ask is,
+    the bug does not include a complete change proposal</p>
+
+    <p class='phone'>… is there anybody in the room that are going
+    to carry this forward and write a change proposal</p>
+
+    <p class='phone'>… I want to know how this is going to work</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; Hixie: hmm yeah</p>
+
+    <p class='phone'>… editor handles the bug?</p>
+
+    <p class='phone'><cite>JF:</cite> This is obviously supporting
+    an a11y requirement, we could write a change proposal. just
+    requesting 2 values at this time.<br />
+    ... we could explore extensibility later</p>
+
+    <p class='phone'>Sam Ruby: Editor processes it by default</p>
+
+    <p class='phone'><cite>PC:</cite> Let's follow process then,
+    have the editor process it</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; Hixie: I guess
+    <a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-track-kind">
+    http://www.whatwg.org/specs/web-apps/current-work/#attr-track-kind</a>
+    is the one</p>
+
+    <p class='irc'>&lt;<cite>MikeSmith</cite>&gt; Hixie, are there
+    any new UA conformance requirements needed for this? any
+    browser implementation needed?</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML
+    Standard (at www.whatwg.org)</p>
+
+    <p class='phone'>… I encourage those who have specific proposal
+    to add it to the bug</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; Hixie: but that
+    doesn't make sense</p>
+
+    <p class='phone'>Bob from Cable Labs: what's being proposed is
+    two new kind categories</p>
+
+    <p class='phone'>… main+description</p>
+
+    <p class='phone'>… translation+description</p>
+
+    <p class='phone'>… do we need more?</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p>
+
+    <p class='phone'><cite>JF:</cite> there may be in the future.
+    at this point these 2 have emerged. a year from now?</p>
+
+    <p class='phone'>… 2 ways to approach. 1. let's propose these
+    for the spec now, 2. is there an extensibility issue?</p>
+
+    <p class='phone'><cite>Bob:</cite> Let's move forward with
+    these two kinds</p>
+
+    <p class='phone'>… and parallel with a broader solution</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; Hixie: I guess the
+    streams would expose those kind of values</p>
+
+    <p class='phone'><cite>JF:</cite> if you want to action the
+    a11y tf go ahead</p>
+
+    <p class='phone'>Giuseppe from Opera</p>
+
+    <p class='phone'>… kind can be main+description, plus something
+    else</p>
+
+    <p class='phone'><cite>JF:</cite> that goes back to question of
+    extensible</p>
+
+    <p class='phone'>… sounds like we have extensibility issue here
+    on the table</p>
+
+    <p class='phone'>… it's a worth while discussion</p>
+
+    <p class='phone'><cite>Giuseppe:</cite> we need specific
+    requests because we are not familiar</p>
+
+    <p class='phone'>… with the process in this group</p>
+
+    <p class='phone'><cite>PC:</cite> because bugs are first
+    processed by the editor<br />
+    ... 1. does the bug reflect the discussion here?</p>
+
+    <p class='phone'>… if it doesn't, add that info to the bug</p>
+
+    <p class='phone'>… because *that* is what will be taken into
+    consideration</p>
+
+    <p class='phone'><cite>Hixie:</cite> are we talking about the
+    'kind' attribute on … ?</p>
+
+    <p class='phone'><cite>JF:</cite> The object?</p>
+
+    <p class='phone'><cite>Hixie:</cite> these are very different
+    with different behaviors</p>
+
+    <p class='phone'><cite>Anne:</cite> it's about the object</p>
+
+    <p class='phone'><cite>Hixie:</cite> happy to add to the
+    object</p>
+
+    <p class='phone'>… only limitation is the formats the UA
+    supports</p>
+
+    <p class='phone'>… so far I added everything Ogg supports</p>
+
+    <p class='phone'>… happy to add what H264 supports</p>
+
+    <p class='phone'>… need documentation on that though first</p>
+
+    <p class='phone'>… please add a link to the relevant spec in
+    the bug and I'll add it.</p>
+
+    <p class='phone'><cite>MW:</cite> that's a backwards way of
+    thinking about it</p>
+
+    <p class='phone'>… notion of those not have to do with media
+    containers</p>
+
+    <p class='phone'>… backwards to wait for the media container
+    people</p>
+
+    <p class='phone'>… and then copy/paste those into the HTML</p>
+
+    <p class='phone'>… we don't want to go overboard</p>
+
+    <p class='phone'>… where there examples that are clearly in
+    use, even not on web</p>
+
+    <p class='phone'>… we should add it for the web.</p>
+
+    <p class='phone'><cite>Janina:</cite> are you Ian waiting for a
+    user agent on the web to support it.</p>
+
+    <p class='phone'>… we know what we want because we have 30
+    years of history on this in broadcast and broader media
+    distribution</p>
+
+    <p class='phone'>… we can be fairly confident there aren't
+    going to be different things</p>
+
+    <p class='phone'>… question is how to mark when they've been
+    combined into a single track, and how to mark when they're
+    separate tracks</p>
+
+    <p class='phone'><cite>Clarke:</cite> it's clear we need to
+    have bug processed by the editor, and we all add any comments
+    to the bug</p>
+
+    <p class='phone'>… next issue</p>
+
+    <p class='phone'>" R3. Handling of In-band Tracks"</p>
+
+    <p class='irc'>&lt;<cite>MikeSmith</cite>&gt; bug 13358?</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; 11<a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=13358">http://www.w3.org/Bugs/Public/show_bug.cgi?id=13358</a>
+    b.lund, P2, NEW, 13&lt;video&gt; also fire a 'change' event at
+    VideoTrackList, AudioTrackList, and TextTrackList objects when
+    their list of tracks changes</p>
+
+    <p class='irc'>&lt;<cite>MikeSmith</cite>&gt; bug 13359?</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; 11<a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=13359">http://www.w3.org/Bugs/Public/show_bug.cgi?id=13359</a>
+    b.lund, P2, NEW, 13A way is needed to identify the type of data
+    in a track element</p>
+
+    <p class='irc'>&lt;<cite>MikeSmith</cite>&gt; bug 14492?</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; 11<a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=14492">http://www.w3.org/Bugs/Public/show_bug.cgi?id=14492</a>
+    jan.lindquist, P2, NEW, 13&lt;video&gt; change event when
+    tracks are removed</p>
+
+    <p class='phone'>… use case: Playing in-band multiplexed media
+    streams (e.g. broadcast tv, live events and recorded movies)
+    with track elements that come and go over time (e.g. secondary
+    audio, subtitles, in different languages, application signaling
+    and content ratings&gt;)</p>
+
+    <p class='phone'>… what doesn't work: application doesn't know
+    type of data tracks or when tracks end.</p>
+
+    <p class='phone'>… submitted bugs: [x] LC1 Bug 13358</p>
+
+    <p class='phone'>…. [ ] LC1 Bug 13359</p>
+
+    <p class='phone'>… [ ] Bug 14492</p>
+
+    <p class='phone'>… sections: 4.8.10.12.2 sourcing in-band text
+    tracks</p>
+
+    <p class='phone'>… suggested changes:</p>
+
+    <p class='phone'>… * mapping of in-band tracks nedds to be done
+    in a standard way</p>
+
+    <p class='phone'><cite>scribe:</cite></p>
+
+    <p class='phone'><cite>FO:</cite> It would be good to do
+    enumeration of all the tracks in the file and what their
+    start/end times are</p>
+
+    <p class='phone'><cite>Hixie:</cite> the problem is that you
+    don't know if/when they're going to start or end if ever</p>
+
+    <p class='irc'>&lt;<cite>JF</cite>&gt; s/nedds to be done/needs
+    to be done</p>
+
+    <p class='phone'><cite>FO:</cite> but if it is not a live
+    stream...</p>
+
+    <p class='phone'><cite>Clarke:</cite> but it is (a live
+    stream)</p>
+
+    <p class='phone'><cite>Hixie:</cite> there appear to be two
+    issues here<br />
+    ... 1. multiple inband tracks video and audio tracks that come
+    and go</p>
+
+    <p class='phone'>… I'm trying to better understand why are
+    there so many tracks?</p>
+
+    <p class='phone'><cite>Clarke:</cite> multiple secondary audio
+    tracks, multilingual, application signalling</p>
+
+    <p class='phone'>… one way of dealing for example, something
+    similar to a current video channel, you choose to encode it as
+    a continuous stream, every time you get an ad you get new
+    tracks</p>
+
+    <p class='phone'><cite>Hixie:</cite> if you go from tv to ad to
+    tv, presumably you have one video, one audio stream, one
+    alternate for the other</p>
+
+    <p class='phone'><cite>Bob:</cite> one example is...</p>
+
+    <p class='phone'>… or go from one program to another, and the
+    translation tracks change</p>
+
+    <p class='phone'>… text tracks that come and go</p>
+
+    <p class='phone'>… timed text tracks are useful for interactive
+    TV signaling</p>
+
+    <p class='phone'>… in general over a long period like hours,
+    you would expect to see audio tracks show up and go away</p>
+
+    <p class='phone'><cite>Hixie:</cite> for metadata text tracks
+    that makes more sense</p>
+
+    <p class='phone'>Eric from Apple</p>
+
+    <p class='phone'>… when you change format, or change
+    characteristics of the audio, typically done with different
+    tracks. e.g. main program to ad</p>
+
+    <p class='phone'>… diff size or scaled, compressed with
+    different format</p>
+
+    <p class='phone'><cite>Hixie:</cite> each ad could be in a new
+    track?</p>
+
+    <p class='phone'><cite>Eric:</cite> yeah</p>
+
+    <p class='phone'><cite>Hixie:</cite> makes sense. I'll fix
+    that.</p>
+
+    <p class='phone'>Hixie. 2. the other one was the text track.
+    don't fully understand. you want the text tracks to fully say
+    what they are?</p>
+
+    <p class='phone'><cite>Bob:</cite> TV applications, e.g.
+    interactive TV app, ad insertion opportunity. if those are
+    inband tracks, no way to identify them as metadata tracks. no
+    way to identify to scripts that one contains one format and
+    another contains another format.</p>
+
+    <p class='phone'>… one way would be identifying them with a
+    mimetype</p>
+
+    <p class='phone'>… or other ways</p>
+
+    <p class='phone'>… idea, expose program description</p>
+
+    <p class='phone'>… javascript would have enough to look at the
+    tracks and figure out which are which</p>
+
+    <p class='phone'><cite>Hixie:</cite> can you reuse label?</p>
+
+    <p class='phone'><cite>Bob:</cite> that's non-standard</p>
+
+    <p class='phone'><cite>Hixie:</cite> we could make it</p>
+
+    <p class='phone'><cite>Bob:</cite> that would be the kind</p>
+
+    <p class='phone'><cite>Hixie:</cite> my concern is that this
+    usecase seems specific to one domain, very concerned about
+    adding a feature just for this one domain</p>
+
+    <p class='phone'><cite>Bob:</cite> not sure if domain
+    specific</p>
+
+    <p class='phone'><cite>Hixie:</cite> if you have a normal web
+    page, it has some out of band text tracks that are kind equals
+    metadata</p>
+
+    <p class='phone'>… you're doing it from script</p>
+
+    <p class='phone'>… so you don't need it</p>
+
+    <p class='phone'><cite>Bob:</cite> this is an inband track
+    problem<br />
+    ... they're not limited to...</p>
+
+    <p class='phone'><cite>Hixie:</cite> that track doesn't have
+    label right?</p>
+
+    <p class='phone'><cite>Bob:</cite> depends on media format</p>
+
+    <p class='phone'>… Ogg or Webm has an attribute where you can
+    specify a human readable string for the channel which would
+    logically go into the label</p>
+
+    <p class='phone'>… some tracks have labels, some done</p>
+
+    <p class='phone'><cite>Hixie:</cite> I'll have to look at that
+    more closely. That doesn't help me understand the problem.</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p>
+
+    <p class='phone'><cite>PC:</cite> Hixie, any other
+    questions?</p>
+
+    <p class='phone'><cite>Hixie:</cite> two issue I asked about
+    are enough</p>
+
+    <p class='phone'><cite>MV:</cite> it would be useful to thru
+    the mapping spec</p>
+
+    <p class='phone'><cite>Hixie:</cite> A link to that would be
+    very useful in the bug</p>
+
+    <p class='phone'><cite>MV:</cite> this is the mapping spec</p>
+
+    <p class='phone'>"Mapping from MPEG-2 Transport to HTML5"</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; changes: hixie:
+    Attempt to update to the latest vCard spec (whatwg r6816)
+    &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-diffs/2011Nov/0018.html">http://lists.w3.org/Archives/Public/public-html-diffs/2011Nov/0018.html</a>&gt;</p>
+
+    <p class='phone'><cite>Hixie:</cite> I don't think I've seen
+    that.</p>
+
+    <p class='phone'><cite>Bob:</cite> it's not on a wiki</p>
+
+    <p class='phone'><cite>PC:</cite> can we post it now</p>
+
+    <p class='phone'><cite>Hixie:</cite> you can attach it to the
+    bug</p>
+
+    <p class='phone'>… that would be great</p>
+
+    <p class='phone'><cite>Clarke:</cite> are there any opinions
+    about whether this mapping specification you want to refer to
+    separately or W3C would want to maintain?</p>
+
+    <p class='phone'>Adrian of Microsoft: short answer yes</p>
+
+    <p class='phone'>… I suggest sending it to the list</p>
+
+    <p class='phone'>… maybe posting it somewhere and sending a
+    pointer</p>
+
+    <p class='phone'>… have people on the mailing list discuss
+    it</p>
+
+    <p class='phone'><cite>Clarke:</cite> ok let's move to the next
+    one</p>
+
+    <p class='phone'>"R7. Additional Media Paramters"</p>
+
+    <p class='phone'>… this is the more controversial one
+    potentially</p>
+
+    <p class='irc'>&lt;<cite>MikeSmith</cite>&gt; issue-179</p>
+
+    <p class='phone'>… hopefully less controversial with how we're
+    approaching it</p>
+
+    <p class='irc'>&lt;<cite>MikeSmith</cite>&gt; issue-179?</p>
+
+    <p class='irc'>&lt;<cite>trackbot</cite>&gt; ISSUE-179 --
+    {audio,video} require param child (or equivalent) -- open</p>
+
+    <p class='irc'>&lt;<cite>trackbot</cite>&gt; <a href="https://www.w3.org/html/wg/tracker/issues/179">http://www.w3.org/html/wg/tracker/issues/179</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: ISSUE-179:
+    {audio,video} require param child (or equivalent) - HTML Weekly
+    Tracker (at www.w3.org)</p>
+
+    <p class='phone'>… Use case: Playing adaptive rate video via
+    video element.</p>
+
+    <p class='irc'>&lt;<cite>MikeSmith</cite>&gt; bug 13333?</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; 11<a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=13333">http://www.w3.org/Bugs/Public/show_bug.cgi?id=13333</a>
+    glenn, P2, RESOLVED WONTFIX, 13audio, video (and source)
+    elements require param children or equivalent</p>
+
+    <p class='phone'>… Currently deployed object element adaptive
+    rate video players allow application control of adaptive
+    play-out.</p>
+
+    <p class='irc'>&lt;<cite>MikeSmith</cite>&gt; bug 13625?</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; 11<a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=13625">http://www.w3.org/Bugs/Public/show_bug.cgi?id=13625</a>
+    b.lund, P2, NEW, 13There is no way to pass audio and video
+    content metadata to the user agent that is required in some
+    cases for playback.</p>
+
+    <p class='phone'>… Common parameters or other media should also
+    be considered.</p>
+
+    <p class='phone'>… what doesn't work: HTML5 spec has no API to
+    control adaptive video</p>
+
+    <p class='phone'><cite>Clarke:</cite> one idea suggested in
+    #htmlav club meeting yesterday was need to come up with
+    specific parameters to be passed</p>
+
+    <p class='phone'>… we don't think there is a need for new
+    functionality to HTML, but perhaps additional errors for more
+    specificity, or other events</p>
+
+    <p class='phone'>… for communication to media elements</p>
+
+    <p class='phone'><cite>MV:</cite> on this and the next few
+    bugs, issue 179 is mentioned</p>
+
+    <p class='phone'>… 179 proposed a general parm mechanism</p>
+
+    <p class='phone'>… discussion said to propose specific
+    parameters</p>
+
+    <p class='phone'>… so next few are proposing specific
+    parameters</p>
+
+    <p class='phone'>… but no one is against a generic param
+    mechanism</p>
+
+    <p class='phone'><cite>Anne:</cite> could you clarify what you
+    mean by passing data to the media elements.</p>
+
+    <p class='phone'>?</p>
+
+    <p class='phone'>… adaptive streaming sounds more like a
+    protocol issue more than what media element should handle</p>
+
+    <p class='phone'><cite>Clarke:</cite> there are certain
+    parameters that would be useful to media general problems</p>
+
+    <p class='phone'>… general idea of passing params is helpful
+    e.g. provide an experience where people watching get best
+    experience, to know the bandwidth</p>
+
+    <p class='phone'><cite>Anne:</cite> where do you pass params
+    to, who gets them, uses them</p>
+
+    <p class='phone'>?</p>
+
+    <p class='phone'><cite>scribe:</cite></p>
+
+    <p class='phone'><cite>Anne:</cite> I've heard two proposals so
+    far</p>
+
+    <p class='phone'>… 1 is to let protocol solve it</p>
+
+    <p class='phone'>… UA implements protocol, server does too,
+    they negotiate quality/bitrate</p>
+
+    <p class='phone'>… 2 is where page has open with server, and
+    gets passed bytes over that connection where they implement the
+    protocol at the application level and pass blobs to the video
+    element that would allow this sort of thing</p>
+
+    <p class='phone'>… at this stage it is inactionable</p>
+
+    <p class='phone'>… need more concrete proposal</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; bugmail: [Bug
+    13359] A way is needed to identify the type of data in a track
+    element &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0253.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0253.html</a>&gt;
+    4** [Bug 14690] New: &lt;a&gt; should be allowed as a child of
+    &lt;dl&gt; Current browsers allow this already. A semantic use
+    case is file downlads &lt;dl&gt;&lt;a
+    href="filename1.pdf"&gt;&lt;dt&gt;Filename&lt;/dt&gt;&lt;dd&gt;description
+    of
+    file&lt;/dd&gt;&lt;dd&gt;filetype&lt;/dd&gt;&lt;/a&gt;etc...&lt;/dl&gt;.
+    &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html">http://lists.w3.org/Archives/Public/public-html</a></p>
+
+    <p class='phone'><cite>Adrian:</cite> What Mark said was, the
+    idea of that request everybody now understands is a good one.
+    There's some work to do to figure out that concrete
+    suggestion.</p>
+
+    <p class='phone'>… should happen somewhere, think it should
+    happen in HTML Working Group</p>
+
+    <p class='phone'><cite>PC:</cite> current status of issue 179
+    that asks for the generic PARAM parameter</p>
+
+    <p class='phone'>… we have a counter change proposal to not do
+    that</p>
+
+    <p class='phone'><cite>PC:</cite> we haven't had the original
+    change proposal withdrawn</p>
+
+    <p class='phone'>… still time for counter proposals</p>
+
+    <p class='phone'><cite>PC:</cite> I want to know what are we
+    going to know with 179.</p>
+
+    <p class='phone'><cite>Adrian:</cite> I'll withdraw my
+    overgeneralization of everybody.</p>
+
+    <p class='phone'>… maybe almost everybody agrees now</p>
+
+    <p class='phone'>… I suspect that at end of issue 179 there
+    will be consensus for not making a change</p>
+
+    <p class='phone'>… because we have a better understanding how
+    to move forward.</p>
+
+    <p class='phone'><cite>MV:</cite> re 179, I spoke with Glenn
+    Adams. he is still interested in pursuing that. he is not able
+    to be here.<br />
+    ... the interest group does not have unified support for that
+    bug</p>
+
+    <p class='phone'>… we are coming in with Sylvia alternative
+    proposal</p>
+
+    <p class='phone'>… to discuss specific parameters</p>
+
+    <p class='phone'>… the whatwg link in this slide goes to a
+    survey/analysis of adaptive parameters across a wide variety of
+    systems</p>
+
+    <p class='phone'><cite>PC:</cite> I believe we have 2 change
+    proposals.</p>
+
+    <p class='phone'>… we haven't yet called for counters.</p>
+
+    <p class='phone'>… normally that runs 30 days</p>
+
+    <p class='phone'>… ended on Oct 28</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: Error (at
+    wiki.whatwg.org)</p>
+
+    <p class='phone'>… next automatic step would be to evaluate
+    whether we call for counter proposals</p>
+
+    <p class='phone'>… would be good to hear from as many WG
+    members where they stand on this.</p>
+
+    <p class='phone'>(silence)</p>
+
+    <p class='phone'><cite>Hixie:</cite> When Henry rejected the
+    bug, he rejected the generic concept</p>
+
+    <p class='phone'>… specific issues would be considered.</p>
+
+    <p class='phone'><cite>PC:</cite> new related bugs would be
+    treated as subtypes of this bug and treated as last call</p>
+
+    <p class='phone'>… e.g. we have cases where we as we refine the
+    question in a bug, the chairs are willing to enter into a
+    consideration that subtype bugs are then treated as ontime last
+    call bugs.</p>
+
+    <p class='phone'>… reach out to us and ask if you have any
+    questions about that and have a dialog with us.</p>
+
+    <p class='phone'><cite>Clarke:</cite> R7 was about passing
+    params</p>
+
+    <p class='phone'>… R8 is about getting feedback</p>
+
+    <p class='phone'>… R10 and R11 we consider parallel issues</p>
+
+    <p class='phone'>… specifically related to content
+    protection</p>
+
+    <p class='phone'>… "R111. Content Protection Feedback and
+    Errors"</p>
+
+    <p class='phone'>… we the people who know the specific events,
+    errors, params need to be passed and come to a consensus of a
+    subset of these that we would propose as changes.</p>
+
+    <p class='phone'><cite>MW:</cite> currently the errors on the
+    media element are rather limited</p>
+
+    <p class='phone'>… I'd like to learn more about the rational
+    for that</p>
+
+    <p class='phone'>… reason for more error codes where we have
+    customer service reps</p>
+
+    <p class='phone'>… trying to fix things</p>
+
+    <p class='phone'>…. we want web page be able to provide more
+    specific errors</p>
+
+    <p class='phone'>… to send back</p>
+
+    <p class='phone'><cite>Hixie:</cite> reason limited is baby
+    steps. reason object instead of number is to be able to add
+    things later</p>
+
+    <p class='phone'>… should be slow to add things because they we
+    get too far ahead of the implementations</p>
+
+    <p class='irc'>&lt;<cite>arnpro</cite>&gt; what do you think
+    about Dart? (google's new)</p>
+
+    <p class='phone'>… errors have some CORS aspects</p>
+
+    <p class='phone'>?? need 10</p>
+
+    <p class='phone'><cite>Hixie:</cite> that's a lot, please
+    prioritize</p>
+
+    <p class='phone'><cite>Clarke:</cite> if there is advice for
+    how to get this into HTML quickly that would be great.</p>
+
+    <p class='phone'>Clarke on R7</p>
+
+    <p class='phone'>… exposing information on available bit rates,
+    maybe set maximum</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p>
+
+    <p class='phone'>… exposing and setting parameters for fragment
+    selection</p>
+
+    <p class='phone'>… playlists want to prefetch segments to play
+    things seamlessly</p>
+
+    <p class='phone'>… in R8</p>
+
+    <p class='phone'>… common media error</p>
+
+    <p class='phone'>… additional events/info</p>
+
+    <p class='phone'>… DNS failure, TCP failure, TLS failure</p>
+
+    <p class='phone'>… stats such as packet drop rate</p>
+
+    <p class='phone'>… changes in the stream of events</p>
+
+    <p class='phone'><cite>MV:</cite> this is where the referenced
+    WHatWG wiki is good to look at</p>
+
+    <p class='phone'><cite>Clarke:</cite> R150</p>
+
+    <p class='phone'>R10</p>
+
+    <p class='phone'>… getting DRM system information</p>
+
+    <p class='phone'>… exchange DRM related messages</p>
+
+    <p class='phone'>… ref: OIPF DAE specification</p>
+
+    <p class='phone'>… R11. Content Protection Feedback and
+    Errors</p>
+
+    <p class='phone'><cite>Tantek:</cite> are the slides in the
+    respective bugs?</p>
+
+    <p class='phone'>Clarke no but they could be</p>
+
+    <p class='phone'>ACTION Clarke add contents from the slides of
+    the presentation to each specific bug</p>
+
+    <p class='irc'>&lt;<cite>trackbot</cite>&gt; Sorry, couldn't
+    find user - Clarke</p>
+
+    <p class='phone'><cite>MW:</cite> Different conclusions though,
+    might be components exposed through the web interface, pass
+    through for parameters is different than webarch that hides
+    platform/device specific things</p>
+
+    <p class='phone'>… re: content protection</p>
+
+    <p class='phone'>… some devices have content protection, some
+    dont'</p>
+
+    <p class='phone'>… my question to the group is: is it
+    acceptable to introduce this capability to the web platform
+    (pass thru), or some other strategy?</p>
+
+    <p class='phone'><cite>Anne:</cite> the last time this was
+    discussed on WHATWG list</p>
+
+    <p class='phone'>… least controversial suggestion was API feed
+    bits into the video stream</p>
+
+    <p class='phone'>… DRM would be implemented at the application
+    level</p>
+
+    <p class='phone'><cite>MW:</cite> you can't implement the DRM
+    in the JS</p>
+
+    <p class='phone'>… needs to be implemented in trusted execution
+    environment</p>
+
+    <p class='irc'>&lt;<cite>karl</cite>&gt; there is nothing
+    secure in life. useless pun.</p>
+
+    <p class='phone'><cite>MW:</cite> objective of DRM is not to
+    make it impossible but difficult, for some well defined values
+    of difficult</p>
+
+    <p class='phone'>… need these capabilities in the trusted
+    computing layers</p>
+
+    <p class='phone'>… below the video element</p>
+
+    <p class='phone'><cite>Anne:</cite> we are already at the place
+    where you have H264 decoding in JS</p>
+
+    <p class='phone'>… I was just stating the last thing that was
+    discussed on this topic that had some traction beyond we don't
+    want to go there.</p>
+
+    <p class='phone'>John Simmons of Microsoft: Echoing what Mark
+    said.</p>
+
+    <p class='phone'>… key takeaway</p>
+
+    <p class='phone'>… DRM systems are going to be used on video
+    delivered to devices</p>
+
+    <p class='phone'>… people who develop DRM understand those
+    constraints</p>
+
+    <p class='phone'>… e.g. can't implement in JS</p>
+
+    <p class='phone'>… key question is whether HTML will be able to
+    accomodate DRM protected content</p>
+
+    <p class='phone'>… or continue like silos today</p>
+
+    <p class='phone'>… which prevent large scale growth of internet
+    television that we'd like to see</p>
+
+    <p class='phone'><cite>MV:</cite> related to 179</p>
+
+    <p class='phone'>… there are these two proposals</p>
+
+    <p class='phone'>… 1. for parm</p>
+
+    <p class='phone'>… 2. not use it</p>
+
+    <p class='phone'>… data- and x- are supposed to be prohibited
+    from use</p>
+
+    <p class='phone'>… but no change proposal says use those</p>
+
+    <p class='phone'>… didn't make sense</p>
+
+    <p class='phone'>… details are in the issue 179 two alternate
+    proposals</p>
+
+    <p class='phone'>… can anyone comment?</p>
+
+    <p class='phone'><cite>PC:</cite> project change
+    proposal?<br />
+    ... original change proposal</p>
+
+    <p class='phone'><cite>MV:</cite> just above the blue box</p>
+
+    <p class='phone'>… furthermore the data-* mechanism etc.</p>
+
+    <p class='phone'>… can't be used</p>
+
+    <p class='phone'>… but then in Sylvia's counter proposals says
+    to use them.</p>
+
+    <p class='phone'>… does the quoted text need clarification</p>
+
+    <p class='phone'>… or is it just a misunderstanding?</p>
+
+    <p class='phone'><cite>Hixie:</cite> the data-* attributes are
+    intended to only be used by scripts in the page, not by the
+    user agent</p>
+
+    <p class='phone'>… if you have something the user agents would
+    use, then either we would add it to the language</p>
+
+    <p class='phone'>… or if it was experimental we would use x-*
+    syntax</p>
+
+    <p class='phone'>… e.g. webkit has x-webkit-*</p>
+
+    <p class='phone'><cite>Adrien:</cite> the misunderstanding was
+    how x- attribute might be used on the way to
+    standardization</p>
+
+    <p class='phone'>… e.g. like it's done with vendor prefixing in
+    CSS.</p>
+
+    <p class='phone'>… in order that those experimental
+    implementations don't drive actual content, we use a vendor
+    prefix</p>
+
+    <p class='phone'>… the proposed standard doesn't have a vendor
+    prefix</p>
+
+    <p class='phone'>… the vendor prefixes are a temporary measure
+    to experiment while standard is being agreed.</p>
+
+    <p class='phone'><cite>MV:</cite> concrete case is UPnP</p>
+
+    <p class='phone'>… available spec</p>
+
+    <p class='phone'>… but no support for it</p>
+
+    <p class='phone'>… slightly different model UPnP video vs.
+    regulary HTML video access</p>
+
+    <p class='phone'>… a separate group UPnP could publish use
+    x-upnp-* params, and encourage others to</p>
+
+    <p class='phone'><cite>Hixie:</cite> if they're writing an
+    actual standard they wouldn't use x-</p>
+
+    <p class='phone'>… just upnp-</p>
+
+    <p class='phone'><cite>MV:</cite> so ok for them to just use
+    upnp- ?</p>
+
+    <p class='phone'><cite>Hixie:</cite> I wouldn't recommend it,
+    would prefer to come to the group</p>
+
+    <p class='phone'><cite>MV:</cite> I agree primary idea is bring
+    these in</p>
+
+    <p class='phone'>bug 13625 (13635?) also tracks separate
+    attribute</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; 11<a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=13625">http://www.w3.org/Bugs/Public/show_bug.cgi?id=13625</a>
+    b.lund, P2, NEW, 13There is no way to pass audio and video
+    content metadata to the user agent that is required in some
+    cases for playback.</p>
+
+    <p class='phone'><cite>PC:</cite> I want to point people to the
+    conformance clause in HTML5<br />
+    ... It says you can conform by pointing to HTML5 and other set
+    of additional specifications</p>
+
+    <p class='phone'>… a vertical industry could say you conform to
+    HTML5 and this other specification</p>
+
+    <p class='phone'>… too many people believe you want to force
+    everything into the HTML5 spec.</p>
+
+    <p class='phone'>… I want to support Ian's view that if
+    something is generic we want that discussion and get that
+    in</p>
+
+    <p class='phone'>… or at least know about it</p>
+
+    <p class='phone'>… so that we can detect when something becomes
+    emergently generic</p>
+
+    <p class='phone'><cite>Hixie:</cite> I agree</p>
+
+    <p class='phone'>… the conformance section really it says
+    what's been true of any spec</p>
+
+    <p class='phone'><cite>MW:</cite> I wouldn't encourage people
+    to write extensions. we have an interest in strongly
+    discouraging separate extension. we don't want
+    fragmentation.</p>
+
+    <p class='phone'>… if you look at OIPF and HDTV you have 100s
+    of 1000s of pages of stuff</p>
+
+    <p class='phone'>… a uniform platform, that should be our
+    goal</p>
+
+    <p class='phone'><cite>Hixie:</cite> in practice as people do
+    start writing specs that start extending HTML in that way, it
+    probably means we failed, but in reality it might happen
+    anyway</p>
+
+    <p class='phone'><cite>PC:</cite> time check</p>
+
+    <p class='phone'>… have gone through all the material</p>
+
+    <p class='phone'>… several suggestions made</p>
+
+    <p class='phone'>… including Tantek's that all this slide
+    material be added to the associated bugs</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; bugmail: [Bug
+    13357] &lt;video&gt;: Additional AudioTrack.kind categories are
+    needed to identify tracks where audio descriptions are premixed
+    with main dialogue. &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0262.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0262.html</a>&gt;
+    4** [Bug 13239] Add support for in-page dialogs &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0261.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0261.html</a>&gt;
+    4** [Bug 12409] WF3: Automatic capitalization in input fields
+    &lt;11<a href=
+    "http://lists.w3.org/Archi">http://lists.w3.org/Archi</a></p>
+
+    <p class='phone'>… have we covered everything that the interest
+    group wanted to cover?</p>
+
+    <p class='phone'>… process discussion can be taken offline over
+    coffee</p>
+
+    <p class='phone'>… chairs are open to taking that stuff orally
+    or over email</p>
+
+    <p class='phone'><cite>MV:</cite> two things</p>
+
+    <p class='phone'>… 1. one more residue, that we're not
+    bringing. as FYI: need for a service discovery API</p>
+
+    <p class='phone'>… to allow discover of things thru like
+    zeroconf and UPnP</p>
+
+    <p class='phone'>… being discussed at DAP group</p>
+
+    <p class='phone'>… we didn't bring it to this group because it
+    is a whole new thingl</p>
+
+    <p class='phone'>… 2. we studied dozens and dozens of
+    use-cases</p>
+
+    <p class='phone'>… this is the residue that came out</p>
+
+    <p class='phone'>… testament to the spec, many applications
+    worked just fine with the spec</p>
+
+    <p class='phone'>…. other than these few areas</p>
+
+    <p class='phone'>… it's all right on track</p>
+
+    <p class='phone'>… a lot of verification</p>
+
+    <p class='phone'>… there was a huge amount of positive work
+    that we're not showing you because it all worked.</p>
+
+    <p class='phone'><cite>PC:</cite> any last comments?</p>
+
+    <p class='phone'>… thanks to the chairs of the IG for
+    approaching the chairs of the HTML WG so early</p>
+
+    <p class='phone'>… gave us a chance to coordinate chairs</p>
+
+    <p class='phone'>… WG meeting is now recessed until
+    15:30-0700</p>
+
+    <p class='irc'>&lt;br type=coffee/&gt;</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; wait</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; is the value
+    "coffee/"</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; or "coffee"</p>
+
+    <p class='phone'>anne - ask the parser ;)</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; bugmail: [Bug
+    13359] A way is needed to identify the type of data in a track
+    element &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0264.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0264.html</a>&gt;
+    4** [Bug 13550] type table in 4.10.7 should indicate control
+    type changes based on list attribute &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0263.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0263.html</a>&gt;
+    4** [Bug 14691] &lt;a&gt; should be allowed as a child of
+    &lt;dl&gt; Current browsers allow this already. A semantic use
+    cas</p>
+
+    <p class='irc'>&lt;<cite>hober</cite>&gt; ScribeNick: hober</p>
+
+    <p class='phone'><cite>rubys:</cite> this is the last session
+    of the day</p>
+
+    <h3 id="item05">HTML Decision Policy report</h3>
+
+    <p class='phone'><cite>paulc:</cite> these slides are from the
+    plenary day session<br />
+    ... I'll go through the slides and replay some of the Q&amp;A
+    that we had yesterday and this morning in the AC meeting<br />
+    ... we have bugs &amp; issues; editor responsible for bugs,
+    escalation procedure for others that produces issues<br />
+    ... chairs find consensus through the path described in the
+    decision policy<br />
+    ... v2 of the policy endorsed by the wg this summer<br />
+    ... chairs look at the reactions that change proposals
+    get<br />
+    ... [description of Enhanced Change Control]<br />
+    ... e.g. the &lt;time&gt; element discussion earlier, the
+    chairs have requested a revert; issue will be turned into
+    multiple proposed changes<br />
+    ... [paul displays &amp; describes diagram of the decision
+    process algorithm]<br />
+    ... feedback from ac meeting: decision policy isn't
+    approachable for new people<br />
+    ... chairs have informally discussed, working up a simple faq
+    would help</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p>
+
+    <p class='phone'><cite>paulc:</cite> the process is detailed
+    because the chairs don't want there to be any confusion<br />
+    ... issues can sometimes be reopened<br />
+    ... when writing up a decision the chairs describe the sorts of
+    triggers that could get the issue reopened<br />
+    ... interested in new information that wasn't part of the
+    original discussion<br />
+    ... Formal Objections are the escape valve of the w3c
+    process<br />
+    ... we have a webpage that lists our formal objections thus
+    far<br />
+    ... e.g. the polyglot document claims to be normative, there is
+    an FO on this<br />
+    ... received a comment that, given the importance of the
+    decision policy, changing it is akin to rechartering<br />
+    ... there is a bugilla component on the policy; we welcome
+    bugs<br />
+    ... maciej processed as many bugs as possible between v1 and v2
+    of the policy<br />
+    ... decision policy isn't an edict from the chairs; we welcome
+    feedback on it<br />
+    ... another comment: some find the wg to be a hostile place,
+    and that the way editors process bugs is unusual<br />
+    ... the chairs work very hard to make this a level playing
+    field in which people feel that they can present
+    arguments<br />
+    ... one person complained that they couldn't unsubscribe from
+    the mailing list<br />
+    ... dsinger &amp; others asked how is someone supposed to be
+    able to watch all of the many changes<br />
+    ... paul stepped through the &lt;time&gt; element changes,
+    showing the granularity of spec change; the editors are really
+    good about matching changes to specific bugs<br />
+    ... somewhat difficult to see what changed in the w3c document
+    because the svn commits are on the whatwg side</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; bugmail: [Bug
+    13570] why does input type=color support autocomplete?
+    &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0271.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0271.html</a>&gt;
+    4** [Bug 13550] type table in 4.10.7 should indicate control
+    type changes based on list attribute &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0270.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0270.html</a>&gt;
+    4** [Bug 13558] input type=email should support friendly names
+    &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011</a></p>
+
+    <p class='phone'><cite>paulc:</cite> not many contentious
+    changes slip through<br />
+    ... [discusses &lt;time&gt; element as an example]<br />
+    ... had questions over coffee about the relationship with the
+    whatwg, about the wg size, etc</p>
+
+    <h3 id="item06">test suite status report</h3>
+
+    <p class='phone'>The slides: <a href="https://www.w3.org/2011/Talks/TPAC/HTMLWG-DP/">http://www.w3.org/2011/Talks/TPAC/HTMLWG-DP/</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG
+    Decision Policy (at www.w3.org)</p>
+
+    <p class='phone'><cite>krisk:</cite> lots of growth over last
+    year in terms of submitted tests<br />
+    ... we're pretty far ahead relative to other groups<br />
+    ... [runs through slide describing the various sorts of tests
+    in the suite already]</p>
+
+    <p class='irc'>&lt;<cite>paulc</cite>&gt; Decision Policy
+    slides: <a href="https://www.w3.org/2011/Talks/TPAC/HTMLWG-DP/#%281%29">http://www.w3.org/2011/Talks/TPAC/HTMLWG-DP/#%281%29</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG
+    Decision Policy (at www.w3.org)</p>
+
+    <p class='phone'><cite>krisk:</cite> over 106K submitted
+    tests<br />
+    ... participation in tf is up since last tpac<br />
+    ... public-html-testsuite@w3.org is the list; much less traffic
+    than the main list<br />
+    ... please send jgraham feedback on the test harness<br />
+    ... [thanks to contributors]<br />
+    ... tf meets biweekly on irc</p>
+
+    <h3 id="item07">Change Proposal status</h3>
+
+    <p class='phone'><cite>stevef:</cite> there are a number of
+    issues that are waiting for the chairs to evaluate the
+    CPs<br />
+    ... when will the evaulations occur?</p>
+
+    <p class='phone'><cite>janina:</cite> at least one issue from
+    pf</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; <a href=
+    "http://intertwingly.net/tmp/wgstatus.html">http://intertwingly.net/tmp/wgstatus.html</a></p>
+
+    <p class='phone'><cite>paulc:</cite> [describes how issue
+    status page is organized]</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG
+    Status (at intertwingly.net)</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; ^^ displayed on
+    screen</p>
+
+    <p class='phone'><cite>rubys:</cite> we have reviewed one of
+    the CPs of ISSUE-30, there are two others, one is being
+    reviewed</p>
+
+    <p class='phone'><cite>paulc:</cite> chairs started to give
+    themselves action items for this review in the last 3 or 4
+    weeks<br />
+    ... all 3 of the chairs have been very busy<br />
+    ... we have to start to move to make the deadline dates in our
+    timeline</p>
+
+    <p class='phone'><cite>rubys:</cite> we're prioritizing
+    ISSUE-30</p>
+
+    <p class='phone'><cite>paulc:</cite> we've moved into a mode of
+    reviewing CPs so that the resultant surveys will be better</p>
+
+    <p class='phone'><cite>rubys:</cite> e.g. the issue-30 cp we
+    reviewed is much improved after incorporating feedback</p>
+
+    <p class='phone'><cite>janina:</cite> pf wants to highlight
+    issue-133</p>
+
+    <p class='phone'><cite>stevef:</cite> there should only be one
+    CP for issue-133</p>
+
+    <p class='phone'><cite>paulc:</cite> there are two</p>
+
+    <p class='phone'><cite>stevef:</cite> one was withdrawn</p>
+
+    <p class='phone'><cite>rubys:</cite> we'll issue a call for
+    consensus</p>
+
+    <p class='irc'>&lt;<cite>tantek</cite>&gt; &lt;aside&gt; Hixie,
+    re: search engines know SF is San Francisco, but they don't
+    however know MV is Mountain View &lt;/aside&gt;</p>
+
+    <p class='phone'><cite>paulc:</cite> we could issue the CfC
+    tonight<br />
+    ... &amp; maybe take it off of the discussion list tomorrow</p>
+
+    <p class='phone'><cite>stevef:</cite> is there an overall
+    timeline for these issues?</p>
+
+    <p class='phone'><cite>paulc:</cite> no, but we want to get
+    through them as fast as we can<br />
+    ... ~250 open bugs to be processed by 12/31<br />
+    ... [overview of early 2012 schedule]<br />
+    ... chairs are working to clear the backlog before the end of
+    the year</p>
+
+    <h3 id="item08">Schedule status (AC report)</h3>
+
+    <p class='phone'><cite>adrianb:</cite> there were 2 bugs
+    opened, one against microdata and one against rdfa<br />
+    ... based on TAG feedback that resulted in the html data tf
+    being formed<br />
+    ... is there an expectation that that tf will create feedback
+    for the wg<br />
+    ... if so, when will that happen</p>
+
+    <p class='irc'>&lt;<cite>adrianba</cite>&gt; TF -&gt; <a href="https://www.w3.org/wiki/Html-data-tf">http://www.w3.org/wiki/Html-data-tf</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: Html-data-tf
+    - W3C Wiki (at www.w3.org)</p>
+
+    <p class='irc'>&lt;<cite>adrianba</cite>&gt; bug 13100?</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; 11<a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=13100">http://www.w3.org/Bugs/Public/show_bug.cgi?id=13100</a>
+    mike+html-wg-mailbot, P1, RESOLVED WONTFIX, 13TAG issue on
+    HTML+RDFa and Microdata last call drafts</p>
+
+    <p class='irc'>&lt;<cite>adrianba</cite>&gt; bug 13101?</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; 11<a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=13101">http://www.w3.org/Bugs/Public/show_bug.cgi?id=13101</a>
+    mike, P1, RESOLVED NEEDSINFO, 13TAG issue on HTML+RDFa and
+    Microdata last call drafts</p>
+
+    <p class='phone'><cite>paulc:</cite> [checks tag agenda for
+    status of that tf]</p>
+
+    <p class='phone'><cite>rubys:</cite> we will hold that feedback
+    to the same schedule as other feedback</p>
+
+    <p class='phone'><cite>paulc:</cite> the editors are required
+    by our schedule to resolve all bugs by 12/31</p>
+
+    <p class='irc'>&lt;<cite>tcelik</cite>&gt; why are there two
+    bugs for this?</p>
+
+    <p class='phone'><cite>paulc:</cite> the bugs could just be
+    closed if the tf report doesn't come in on time</p>
+
+    <p class='phone'><cite>tcelik:</cite> one per component<br />
+    ... the bugs could be turned into issues at any time between
+    now and 1/14</p>
+
+    <p class='phone'>s/adrianb/adrianba/</p>
+
+    <p class='phone'><cite>rubys:</cite> we will remind the tag of
+    the schedule</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p><a name="action01" id=
+    "action01"></a>
+
+    <p class='irc'>&lt;<cite>scribe</cite>&gt;
+    <strong>ACTION:</strong> paulc to contact the TAG [noah, jeni]
+    to find out the status of the html data tf [recorded in
+    <a href="https://www.w3.org/2011/11/03-html-wg-minutes.html#action01">
+    http://www.w3.org/2011/11/03-html-wg-minutes.html#action01</a>]</p>
+
+    <p class='irc'>&lt;<cite>trackbot</cite>&gt; Created ACTION-205
+    - Contact the TAG [noah, jeni] to find out the status of the
+    html data tf [on Paul Cotton - due 2011-11-10].</p>
+
+    <p class='phone'><cite>tcelik:</cite> the bugs are talking
+    about what the w3c should or shouldn't do, not what this wg
+    should do</p>
+
+    <p class='phone'><cite>rubys:</cite> we will require concrete
+    change proposals</p>
+
+    <p class='phone'><cite>tcelik:</cite> a possible outcome is the
+    wg could choose to stop publishing one of these specs</p>
+
+    <p class='phone'><cite>rubys:</cite> a change proposal could
+    take such a form</p>
+
+    <p class='phone'><cite>tcelik:</cite> couldn't these specs be
+    done in a cg?</p>
+
+    <p class='phone'><cite>rubys:</cite> i don't know of any
+    proposal to stop any of these specs<br />
+    ... the bugs suggest merging the specs as one possible
+    outcome</p>
+
+    <p class='phone'><cite>tcelik:</cite> this is at w3c scope, not
+    wg scope</p>
+
+    <p class='phone'><cite>paulc:</cite> noah has asked to come to
+    our meeting tomorrow<br />
+    ... we can ask him for status then</p>
+
+    <h3 id="item09">Schedule status (from the chairs' report to the
+    AC)</h3>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; bugmail: [Bug
+    13558] input type=email should support friendly names
+    &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0276.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0276.html</a>&gt;
+    4** [Bug 13558] input type=email should support friendly names
+    &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0274.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0274.html</a>&gt;
+    4** [Bug 13570] why does input type=color support autocomplete?
+    &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0273.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0273.html</a>&gt;
+    4** [Bug 13570]</p>
+
+    <p class='phone'><cite>paulc:</cite> we will step through the
+    slides we presented to the AC this morning</p>
+
+    <p class='phone'><cite>MikeSmith:</cite> [explains what the AC
+    is]<br />
+    ... for 3 or 4 years we've done reports to the AC about the
+    WG's status<br />
+    ... last 2 presentations that we did focused on what we were
+    doing to get to LC<br />
+    ... we got to LC roughly on schedule<br />
+    ... ended LC round in August<br />
+    ... reminded AC we publish several documents, not just the
+    HTML5 spec</p>
+
+    <p class='phone'>[applause for MikeSmith's hard work publishing
+    our specs]</p>
+
+    <p class='phone'><cite>MikeSmith:</cite> [list of our
+    publications]<br />
+    ... told the AC about the author view of the spec (important to
+    the TAG)<br />
+    ... Hixie had to make many edits to the spec to make the author
+    view possible<br />
+    ... [goes through slide describing bug status &amp; stats]</p>
+
+    <p class='phone'><cite>paulc:</cite> the wgstatus page gives
+    you stats in fairly fine granularity<br />
+    ... [reads outstanding bug status from wgstatus page]</p>
+
+    <p class='phone'><cite>MikeSmith:</cite> [goes through AC
+    report slides re: last call issues, issues awaiting or that
+    have received new information, formal objections, etc.]</p>
+
+    <p class='irc'>&lt;<cite>MikeSmith</cite>&gt; q</p>
+
+    <p class='phone'>??: question for date for when new information
+    is required</p>
+
+    <p class='phone'><cite>rubys:</cite> escalation deadline is
+    1/14</p>
+
+    <p class='irc'>&lt;<cite>tcelik</cite>&gt; hober, slides:
+    <a href="https://www.w3.org/2011/Talks/TPAC/HTML5/">http://www.w3.org/2011/Talks/TPAC/HTML5/</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG
+    Update (at www.w3.org)</p>
+
+    <p class='irc'>&lt;<cite>MikeSmith</cite>&gt;
+    s/??/Cynthia_Shelley/</p>
+
+    <p class='phone'><cite>paulc:</cite> you want to add new info
+    as soon as possible<br />
+    ... I think the schedule was overly pessimistic<br />
+    ... we might come out of last call after the spring ac
+    meeting<br />
+    ... an AC rep asked about the relationship between html wg and
+    whatwg</p>
+
+    <p class='irc'>&lt;<cite>tcelik</cite>&gt; relation of HTML5 to
+    the WHATWG? isn't that an FAQ?</p>
+
+    <p class='phone'><cite>paulc:</cite> another ac rep asked about
+    what the decision policy would look like in several years<br />
+    ... the question might be better put 'how will work on
+    html.next proceed'<br />
+    ... jim bell from hp said nice things &amp; complimented
+    chairs/wg/etc</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; tcelik: <a href="https://wiki.whatwg.org/wiki/FAQ#WHATWG_and_the_W3C_HTML_WG">http://wiki.whatwg.org/wiki/FAQ#WHATWG_and_the_W3C_HTML_WG</a></p>
+
+    <p class='phone'><cite>rubys:</cite> we did get less flattering
+    comment about the approachability of the process</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: FAQ - WHATWG
+    Wiki (at wiki.whatwg.org)</p>
+
+    <h3 id="item10">Last Week in HTML5</h3>
+
+    <p class='irc'>&lt;<cite>tcelik</cite>&gt; Thanks Anne - I
+    thought I'd seen that somewhere.</p>
+
+    <p class='phone'><cite>paulc:</cite> sent out draft schedule
+    for tomorrow</p>
+
+    <p class='irc'>&lt;<cite>myakura</cite>&gt; Proposed Friday F2F
+    schedule from Paul Cotton on 2011-11-03 (public-html@w3.org
+    from November 2011) <a href=
+    "http://lists.w3.org/Archives/Public/public-html/2011Nov/0013.html">
+    http://lists.w3.org/Archives/Public/public-html/2011Nov/0013.html</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: Proposed
+    Friday F2F schedule from Paul Cotton on 2011-11-03
+    (public-html@w3.org from November 2011) (at lists.w3.org)</p>
+
+    <p class='phone'><cite>karl:</cite> a few months ago I
+    suggested to Ian Jacobs that I post weekly summaries of
+    activity in the html wg on the QA blog</p>
+
+    <p class='irc'>&lt;<cite>MikeSmith</cite>&gt; <a href="https://www.w3.org/QA/">http://www.w3.org/QA/</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: W3C Blog (at
+    www.w3.org)</p>
+
+    <p class='phone'><cite>karl:</cite> following html wg, the bug
+    tracker, whatwg, webapps, etc<br />
+    ... not following css or svg<br />
+    ... anne from opera is doing something similar on the whatwg
+    blog, following whatwg &amp; webapps</p>
+
+    <p class='irc'>&lt;<cite>anne</cite>&gt; <a href="https://blog.whatwg.org/">http://blog.whatwg.org/</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: The WHATWG
+    Blog (at blog.whatwg.org)</p>
+
+    <p class='phone'><cite>karl:</cite> thanks to the chairs for
+    well writen decisions with links to relevant bugs etc<br />
+    ... this blog takes about an afternoon each week<br />
+    ... i don't cover everything happening on the open web
+    platform</p>
+
+    <p class='irc'>&lt;<cite>MikeSmith</cite>&gt; <a href="https://www.w3.org/QA/archive/open_web/">http://www.w3.org/QA/archive/open_web/</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: Open Web -
+    W3C Blog - Category Archives (at www.w3.org)</p>
+
+    <p class='phone'><cite>karl:</cite> would love to know if this
+    is useful</p>
+
+    <p class='phone'><cite>cynthia:</cite> i find it useful</p>
+
+    <p class='phone'><cite>ArtB:</cite> I read it &amp; anne's as
+    well, both useful</p>
+
+    <p class='phone'><cite>rubys:</cite> lots of cross links
+    between the two</p>
+
+    <p class='phone'><cite>adrianba:</cite> proposal: in the telcon
+    agenda, the chairs could point at the most recent
+    post</p><a name="action02" id="action02"></a>
+
+    <p class='irc'>&lt;<cite>scribe</cite>&gt;
+    <strong>ACTION:</strong> rubys to ensure the weekly telcon
+    agendas contain a link to the latest post in karl's series
+    [recorded in <a href="https://www.w3.org/2011/11/03-html-wg-minutes.html#action02">http://www.w3.org/2011/11/03-html-wg-minutes.html#action02</a>]</p>
+
+    <p class='irc'>&lt;<cite>trackbot</cite>&gt; Created ACTION-206
+    - Ensure the weekly telcon agendas contain a link to the latest
+    post in karl's series [on Sam Ruby - due 2011-11-10].</p>
+
+    <p class='phone'><cite>stevef:</cite> please also post the
+    summaries to public-html</p>
+
+    <p class='phone'><cite>karl:</cite> ok, will post full text
+    &amp; link</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; planet: Tantek:
+    #TPAC2011: iterating on an HTML working group change proposal
+    for an enhanced #HTML5 &lt;time&gt; element: <a href="https://www.w3.org/wiki/User:Tantekelik/time_element">http://www.w3.org/wiki/User:Tantekelik/time_element</a>
+    &lt;11<a href=
+    "http://tantek.com/2011/307/t7/tpac2011-html-proposal-enhanced-html5-time-element">http://tantek.com/2011/307/t7/tpac2011-html-proposal-enhanced-html5-time-element</a>&gt;</p>
+
+    <p class='irc'>&lt;<cite>hober2</cite>&gt; ScribeNick:
+    hober2</p>
+
+    <p class='phone'>[various requests for subscription options,
+    twitter, rss, etc]</p>
+
+    <p class='phone'><cite>hadley:</cite> could it have its own
+    twitter account?</p>
+
+    <p class='phone'><cite>karl:</cite> yes</p>
+
+    <p class='irc'>&lt;<cite>tcelik</cite>&gt; +1 to what James is
+    saying</p>
+
+    <p class='phone'><cite>jgraham:</cite> these posts should have
+    some of the "inside baseball"<br />
+    ... developers can't keep up with the email lists</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; bugmail: [Bug
+    13558] input type=email should support friendly names
+    &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0279.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0279.html</a>&gt;
+    4** [Bug 13392] i18n-ISSUE-72: BOM as preferred encoding
+    declaration &lt;11<a href=
+    "http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0278.html">http://lists.w3.org/Archives/Public/public-html-bugzilla/2011Nov/0278.html</a>&gt;</p>
+
+    <p class='irc'>&lt;<cite>tcelik</cite>&gt; +1 to
+    transparency</p>
+
+    <p class='phone'><cite>rubys:</cite> don't want it to be a
+    sleep-inducing sanitized press release</p>
+
+    <h3 id="item11">Teleconferences</h3>
+
+    <p class='phone'><cite>cynthia:</cite> can we have more topical
+    discussions on the telcon?</p>
+
+    <p class='phone'><cite>rubys:</cite> yes, we have an "other
+    business" section for this</p><a name="action03" id=
+    "action03"></a>
+
+    <p class='irc'>&lt;<cite>karl</cite>&gt;
+    <strong>ACTION:</strong> karl to create a twitter account for
+    the Open Web last week [recorded in <a href="https://www.w3.org/2011/11/03-html-wg-minutes.html#action03">http://www.w3.org/2011/11/03-html-wg-minutes.html#action03</a>]</p>
+
+    <p class='irc'>&lt;<cite>trackbot</cite>&gt; Sorry, couldn't
+    find user - karl</p>
+
+    <p class='phone'><cite>rubys:</cite> we've never run over<br />
+    ... so we can use that time to help people get caught up with
+    what's going on</p>
+
+    <p class='phone'><cite>richardschwerdtfe:</cite> can you get
+    Hixie to call into the telecons?</p>
+
+    <p class='phone'><cite>rubys:</cite> no</p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: HTML WG f2f
+    -- 03 Nov 2011 (at www.w3.org)</p>
+
+    <p class='phone'><cite>rubys:</cite> different people have
+    different work styles [etc.]<br />
+    ... had a useful f2f discussion with Hixie today</p>
+
+    <p class='phone'><cite>MikeSmith:</cite> Hixie is available on
+    RIC, you can ping him if you have a question</p>
+
+    <p class='irc'>&lt;<cite>karl</cite>&gt; s/RIC/IRC/</p>
+
+    <p class='phone'><cite>rubys:</cite> we would need to convince
+    him that it would be worth it to join the call</p>
+
+    <p class='phone'>[discussion of timliness of pinging Hixie on
+    IRC]</p>
+
+    <p class='phone'><cite>mjs:</cite> there are people in the wg
+    who are more comfortable with different kinds of
+    interactions<br />
+    ... some prefer the mailing list, some irc, some telecons</p>
+
+    <p class='irc'>&lt;<cite>tcelik</cite>&gt; indeed. this is why
+    I publish my communication preferences: <a href=
+    "http://tantek.com/w/CommunicationProtocols">http://tantek.com/w/CommunicationProtocols</a></p>
+
+    <p class='irc'>&lt;<cite>pimpbot</cite>&gt; Title: tantek /
+    CommunicationProtocols (at tantek.com)</p>
+
+    <p class='phone'><cite>mjs:</cite> the chairs try to bridge
+    between these different kind of people</p>
+
+    <p class='phone'><cite>richardschwerdtfe:</cite> asked you for
+    a tech review 6 weeks ago</p>
+
+    <p class='phone'><cite>mjs:</cite> it's difficult to schedule a
+    detailed tech review, it needs large block of uninteruppted
+    time</p>
+
+    <p class='phone'><cite>rubys:</cite> the schedule has timeouts
+    so that we can proceed even if we don't hear back from
+    people</p>
+
+    <p class='phone'><cite>mjs:</cite> the decision policy goes
+    with the cp that draws the weakest objections, and i try to
+    make sure that apple's position is stated in surveys</p>
+
+    <p class='phone'>[bits i missed re: the chairs' role in
+    reviewing change proposals]</p>
+
+    <p class='phone'><cite>rubys:</cite> after you submit a
+    proposal, you can still change it</p>
+
+    <p class='irc'>&lt;<cite>MikeSmith</cite>&gt; scribe:
+    MikeSmith</p>
+
+    <p class='irc'>&lt;<cite>hober2</cite>&gt; richardschwerdtfe:
+    i'm trying to avoid a 11th hour counter change proposal</p>
+
+    <p class='phone'><cite>richardschwerdtfe:</cite> we tried to
+    reach Hixie and did didn't get any feedback<br />
+    ... Charles didn't hear back from him</p>
+
+    <p class='phone'><cite>sam:</cite> You got your response
+    today</p>
+
+    <p class='phone'><cite>richardschwerdtfe:</cite> but we don't
+    want to have to wait 6 weeks next time</p>
+
+    <p class='phone'><cite>mjs:</cite> you shouldn't wait six weeks
+    to submit it</p>
+
+    <p class='phone'><cite>sam:</cite> we are ajourned</p>
+  </div>
+
+  <h2><a name="ActionSummary" id="ActionSummary">Summary of Action
+  Items</a></h2><!-- Action Items -->
+  <strong>[NEW]</strong> <strong>ACTION:</strong> karl to create a
+  twitter account for the Open Web last week [recorded in <a href="https://www.w3.org/2011/11/03-html-wg-minutes.html#action03">http://www.w3.org/2011/11/03-html-wg-minutes.html#action03</a>]<br />
+
+  <strong>[NEW]</strong> <strong>ACTION:</strong> paulc to contact
+  the TAG [noah, jeni] to find out the status of the html data tf
+  [recorded in <a href="https://www.w3.org/2011/11/03-html-wg-minutes.html#action01">http://www.w3.org/2011/11/03-html-wg-minutes.html#action01</a>]<br />
+
+  <strong>[NEW]</strong> <strong>ACTION:</strong> rubys to ensure
+  the weekly telcon agendas contain a link to the latest post in
+  karl's series [recorded in <a href="https://www.w3.org/2011/11/03-html-wg-minutes.html#action02">http://www.w3.org/2011/11/03-html-wg-minutes.html#action02</a>]<br />

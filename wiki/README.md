@@ -47,7 +47,7 @@ status: 完成
 - [`<code>`](elements/code.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した論理的な文字強調要素で、同時代Texinfoの`@code`との対応を確認できる。
 - [`<col>`](elements/col.md): 1995年のHTML Tables草案が逐次表示用の列事前定義のため導入したが、`COL`自体のCALS由来は未確認である。
 - [`<colgroup>`](elements/colgroup.md): 1995年のHTML Tables草案が、旧`COL` グループ化モデルでグループ内を異なる幅にできない制約を解くため導入した。
-- [`<data>`](elements/data.md): 人間向けの表示内容と機械可読な値を結び付けるため、HTML Working Groupの変更提案、合意、決定を経て導入された。
+- [`<data>`](elements/data.md): `time`の機械可読値という用途を日付・時刻以外へ一般化する案として2011年に提案され、WHATWG追加とHTML Working Groupの合意・決定を経て導入された。
 - [`<datalist>`](elements/datalist.md): `datalist`は2004年のWeb Forms 2.0で、任意入力を許す`input`へ著者が指定した候補と、非対応UA向けの代替内容を与えるため導入された。
 - [`<dd>`](elements/dd.md): CERN-SGMLから初期HTMLへ入ったリスト集合の一つだが、`DD`個別の対応は明記されない。
 - [`<del>`](elements/del.md): HTML+ `REMOVED`からHTML 3.0 `DEL`、HTML 4への系列は集合単位で確認できるが、個別の改名と採録は未確認である。

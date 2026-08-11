@@ -88,7 +88,7 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 
 第二表では、`audio`をWHATWG `Audio`APIとゲーム音声、`button`をデスクトップのフォームUI、`data`と`time`を機械可読データ、`figcaption`を画像とキャプションの制作、`hgroup`を既存Webマークアップ、`iframe`と`source`をブラウザーベンダーの実装・提案、`mark`を文脈依存の強調、`meter`をスカラー量の測定、`noscript`をクライアント側スクリプティングの代替内容、`summary`を開閉UIに関連するものとして配置した。次表は、その配置までに確認できるHTML内部の前身と変更を示す。
 
-内部派生の根拠は、[`audio`統合前後](../../raw/platform.html5.org/history/webapps/r699.html)（[公開元](https://platform.html5.org/history/webapps/r699.html)）、[rich `button`草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)）、[`data`提案](../../raw/www.w3.org/wiki/User%3ATantekelik/data_element)（[公開元](https://www.w3.org/wiki/User:Tantekelik/data_element)）、[`figcaption`導入コミット](../../raw/github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)（[公開元](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)）、[`hgroup`改名コミット](../../raw/github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)（[公開元](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)）に置く。
+内部派生の根拠は、[`audio`統合前後](../../raw/platform.html5.org/history/webapps/r699.html)（[公開元](https://platform.html5.org/history/webapps/r699.html)）、[rich `button`草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)）、[`data`一般化提案](../../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=13240)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=13240)）と[初回追加コミット](../../raw/github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d)（[公開元](https://github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d)）、[`figcaption`導入コミット](../../raw/github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)（[公開元](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)）、[`hgroup`改名コミット](../../raw/github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)（[公開元](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)）に置く。
 
 残る枝は、[`iframe`草案](../../raw/www.w3.org/TR/WD-frames-970331)（[公開元](https://www.w3.org/TR/WD-frames-970331)）、[`m`から`mark`への変更](../../raw/github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)（[公開元](https://github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)）、[`gauge`から`meter`への履歴](../../raw/platform.html5.org/history/webapps/r15.html)（[公開元](https://platform.html5.org/history/webapps/r15.html)）、[`NOSCRIPT`草案](../../raw/www.w3.org/TR/WD-script-960709.html)（[公開元](https://www.w3.org/TR/WD-script-960709.html)）、[`source`導入コミット](../../raw/github.com/whatwg/html/commit/61af426a3ae6d68ffa00505b6883cbf870481b52)（[公開元](https://github.com/whatwg/html/commit/61af426a3ae6d68ffa00505b6883cbf870481b52)）、[`summary`導入コミット](../../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)（[公開元](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)）、[`t`初稿コミット](../../raw/github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583)（[公開元](https://github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583)）で確認できる。
 
@@ -96,7 +96,7 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 |---|---|
 | `audio` | スクリプト専用の`Audio`オブジェクトを、文書内にも置ける`video`共通メディアAPIへ統合 |
 | `button` | `input`の送信／リセット／スクリプトボタンを、HTML内容を持てる要素へ拡張 |
-| `data` | 表示内容と機械可読値を結ぶ欠落を、`time`等と比較して汎用要素化 |
+| `data` | `time`の表示内容と機械可読値を結ぶ用途を、日付・時刻以外へ汎用化 |
 | `figcaption` | HTML+以来の図のキャプションを、`legend`、`dt`／`dd`流用から専用要素へ変更 |
 | `hgroup` | セクション見出し用だった旧`header`を改名し、主見出しと副見出しのグループへ限定 |
 | `iframe` | `FRAME`のナビゲーションモデルと`IMG`型の文書の流れ内配置を組み合わせた浮動フレーム |
@@ -150,7 +150,7 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 
 | 調査群 | 対象 | 探索範囲 |
 |---|---|---|
-| 現代の公開履歴 | [`data`](../elements/data.md)、[`picture`](../elements/picture.md)、[`slot`](../elements/slot.md) | Open UI、Chromium、WHATWG、HTML Working Groupのissue、PR、commitから、旧名または初稿、設計モデル、HTML統合の順序を確定する |
+| 現代の公開履歴 | [`picture`](../elements/picture.md)、[`slot`](../elements/slot.md) | Chromium、WHATWG、HTML Working Groupのissue、PR、commitから、旧名または初稿、設計モデル、HTML統合の順序を確定する |
 | 初期WHATWGの版履歴 | [`mark`](../elements/mark.md)、[`meter`](../elements/meter.md)、[`time`](../elements/time.md)、[`main`](../elements/main.md)、[`bdi`](../elements/bdi.md)、[`track`](../elements/track.md) | 既知の初回収録、改名、再導入コミットの親版と、対応するWHATWGメール、旧Subversion履歴、提案を照合する |
 | W3C／IETF草案間の変更 | [`legend`](../elements/legend.md)、[`bdo`](../elements/bdo.md)、[`span`](../elements/span.md)、[`noscript`](../elements/noscript.md)、[`object`](../elements/object.md)、[`col`](../elements/col.md)、[`style`](../elements/style.md) | 連続する草案間に限定して、CVS／RCS差分、Working Group議事録、編集者メールから追加、改名、機能統合、後続仕様への採録を探す |
 

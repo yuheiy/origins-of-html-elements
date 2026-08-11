@@ -1,0 +1,3624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>13240 &ndash; Consider replacing &lt;time&gt; with &lt;data&gt;</title>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="data/assets/54486398487c111ba3305277d0702e66.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="style.css">
+
+
+
+    
+
+
+    
+
+
+    
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+                       title="Bugzilla" href="./search_plugin.cgi">
+    <link rel="shortcut icon" href="images/favicon.ico">
+  </head>
+
+  <body 
+        class="www-w3-org-Bugs-Public
+                 bz_bug
+                 bz_status_RESOLVED
+                 bz_product_HTML_WG
+                 bz_component_LC1_HTML5_spec
+                 bz_bug_13240 yui-skin-sam">
+
+  <div id="header"><div id="banner">
+  </div>
+
+    <div id="titles">
+      <span id="title">Bugzilla &ndash; Bug&nbsp;13240</span>
+
+        <span id="subtitle" class="subheader">Consider replacing &lt;time&gt; with &lt;data&gt;</span>
+
+        <span id="information" class="header_addl_info">Last modified: 2011-11-29 12:32:44 UTC</span>
+    </div>
+
+
+    
+  </div>
+
+  <div id="bugzilla-body"><div class="archivalnote"><p>This is an archived snapshot of W3C's public bugzilla bug tracker, decommissioned in April 2019. Please see the <a href="./">home page</a> for more details.</p></div>
+
+
+
+
+<form name="changeform" id="changeform" method="post" action="process_bug.cgi">
+
+  <input type="hidden" name="delta_ts" value="2011-11-29 12:32:44">
+  <input type="hidden" name="id" value="13240">
+  <input type="hidden" name="token" value="1554087800-icALgG7euzvfuk9UVNmANPiJzkKKYW4mxt1EslyYXcA">
+<div class="bz_short_desc_container edit_form">
+     <a href="show_bug.cgi?id=13240"><b>Bug&nbsp;13240</b></a> <span id="summary_container" class="bz_default_hidden">
+      - <span id="short_desc_nonedit_display">Consider replacing &lt;time&gt; with &lt;data&gt;</span>
+     </span>
+
+    <div id="summary_input"><span class="field_label "
+    id="field_label_short_desc">
+
+
+  <a 
+      title="The bug summary is a short sentence which succinctly describes what the bug is about."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#short_desc"
+  >Summary:</a>
+
+</span>Consider replacing &lt;time&gt; with &lt;data&gt;
+    </div>
+  </div>
+  
+  <table class="edit_form">
+    <tr>
+      
+      <td id="bz_show_bug_column_1" class="bz_show_bug_column">     
+        <table>
+          <tr>
+    <th class="field_label">
+      <a href="page.cgi?id=fields.html#bug_status">Status</a>:
+    </th>
+    <td id="bz_field_status">
+      <span id="static_bug_status">RESOLVED
+          FIXED
+      </span>
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_alias">
+
+
+  <a 
+      title="A short, unique name assigned to a bug in order to assist with looking it up and referring to it in other places in Bugzilla."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#alias"
+  >Alias:</a>
+
+</th>
+    <td>
+        None
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_product">
+
+
+  <a 
+      title="Bugs are categorised into Products and Components."
+      class="field_help_link"
+      href="describecomponents.cgi"
+  >Product:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_product" >HTML WG
+
+</td>
+    </tr>
+
+    
+    <tr class="bz_default_hidden"><th class="field_label "
+    id="field_label_classification">
+
+
+  <a 
+      title="Bugs are categorised into Classifications, Products and Components. classifications is the top-level categorisation."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#classification"
+  >Classification:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_classification" >Unclassified
+
+</td>
+    </tr>
+        
+    
+    
+    <tr><th class="field_label "
+    id="field_label_component">
+
+
+  <a 
+      title="Components are second-level categories; each belongs to a particular Product. Select a Product to narrow down this list."
+      class="field_help_link"
+      href="describecomponents.cgi?product=HTML WG"
+  >Component:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_component" >LC1 HTML5 spec
+
+  (<a href="buglist.cgi?component=LC1%20HTML5%20spec&amp;product=HTML%20WG&amp;bug_status=__open__"
+      target="_blank">show other bugs</a>)
+</td>
+    </tr>
+    <tr><th class="field_label "
+    id="field_label_version">
+
+
+  <a 
+      title="The version field defines the version of the software the bug was found in."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#version"
+  >Version:</a>
+
+</th>
+<td>unspecified
+  </td>
+    </tr>
+        
+    
+        
+    <tr><th class="field_label "
+    id="field_label_rep_platform">
+
+
+  <a 
+      title="The hardware platform the bug was observed on. Note: When searching, selecting the option &quot;All&quot; only finds bugs whose value for this field is literally the word &quot;All&quot;."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#rep_platform"
+  >Hardware:</a>
+
+</th>
+      <td class="field_value">PC
+        All
+      </td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          
+          <tr>
+      <th class="field_label">
+        <label  accesskey="i">
+          <a href="page.cgi?id=fields.html#importance"><u>I</u>mportance</a></label>:
+      </th>
+      <td>P2
+       critical
+      </td>
+    </tr>
+
+      <tr><th class="field_label "
+    id="field_label_target_milestone">
+
+
+  <a 
+      title="The Target Milestone field is used to define when the engineer the bug is assigned to expects to fix it."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#target_milestone"
+  >Target Milestone:</a>
+
+</th><td>---
+  </td>
+      </tr>
+          
+          <tr><th class="field_label "
+    id="field_label_assigned_to">
+
+
+  <a 
+      title="The person in charge of resolving the bug."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#assigned_to"
+  >Assignee:</a>
+
+</th>
+      <td><span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+      </td>
+    </tr>
+
+    <tr><th class="field_label "
+    id="field_label_qa_contact">
+
+
+  <a 
+      title="The person responsible for confirming this bug if it is unconfirmed, and for verifying the fix once the bug has been resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#qa_contact"
+  >QA Contact:</a>
+
+</th>
+      <td><span class="vcard"><span class="fn">HTML WG Bugzilla archive list</span>
+</span>
+      </td>
+    </tr>
+    
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          <tr><th class="field_label "
+    id="field_label_bug_file_loc">
+
+
+  <a 
+      title="Bugs can have a URL associated with them - for example, a pointer to a web site where the problem is seen."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#bug_file_loc"
+  >URL:</a>
+
+</th>
+    <td>
+      <span id="bz_url_input_area">
+      </span>
+    </td>
+  </tr>
+
+    <tr><th class="field_label "
+    id="field_label_status_whiteboard">
+
+
+  <a 
+      title="Each bug has a free-form single line text entry box for adding tags and status information."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#status_whiteboard"
+  >Whiteboard:</a>
+
+</th><td>  
+  </td>
+    </tr>
+
+    <tr><th class="field_label "
+    id="field_label_keywords">
+
+
+  <a 
+      title="You can add keywords from a defined list to bugs, in order to easily identify and group them."
+      class="field_help_link"
+      href="describekeywords.cgi"
+  >Keywords:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_keywords" >TrackerIssue
+
+</td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+          
+<tr><th class="field_label "
+    id="field_label_dependson">
+
+
+  <a 
+      title="The bugs listed here must be resolved before this bug can be resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#dependson"
+  >Depends on:</a>
+
+</th>
+
+  <td>
+    <span id="dependson_input_area">
+    </span>
+<a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED WONTFIX - Add 'update' boolean attribute to TIME element"
+   href="show_bug.cgi?id=14202">14202</a> 
+  </td>
+  </tr>
+  
+  <tr><th class="field_label "
+    id="field_label_blocked">
+
+
+  <a 
+      title="This bug must be resolved before the bugs listed in this field can be resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#blocked"
+  >Blocks:</a>
+
+</th>
+
+  <td>
+    <span id="blocked_input_area">
+    </span>
+<a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED WONTFIX - &lt;time&gt; In the section about the time element it is stated that it does not need the datetime attribute set if its textContent is a valid date or time string. So the selector here in the rendering section, time[datetime], ..."
+   href="show_bug.cgi?id=12581">12581</a> <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED WONTFIX - &lt;time&gt; Handling datetimes in microdata-to-RDF conversion"
+   href="show_bug.cgi?id=12718">12718</a> <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED WONTFIX - Time element specification phrasing error (Section 4.6.10)"
+   href="show_bug.cgi?id=12942">12942</a> 
+  </td>
+  </tr>
+
+    <tr>
+      <th>&nbsp;</th>
+
+      <td id="show_dependency_tree_or_graph">
+        Show dependency <a href="showdependencytree.cgi?id=13240&amp;hide_resolved=1">tree</a>
+
+          /&nbsp;<a href="showdependencygraph.cgi?id=13240">graph</a>
+      </td>
+    </tr>
+          
+        </table>
+      </td>
+      <td>
+        <div class="bz_column_spacer">&nbsp;</div>
+      </td>
+      
+      <td id="bz_show_bug_column_2" class="bz_show_bug_column">
+        <table>
+        <tr>
+    <th class="field_label">
+      Reported:
+    </th>
+    <td>2011-07-14 05:48 UTC by <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+    </td>
+  </tr>
+  
+  <tr>
+    <th class="field_label">
+      Modified:
+    </th>
+    <td>2011-11-29 12:32 UTC
+      (<a href="show_activity.cgi?id=13240">History</a>)
+    </td>
+  
+  </tr>
+<tr>
+      <th class="field_label">
+        <label  accesskey="a">
+          CC List:
+        </label>
+      </th>
+      <td>36 
+          users
+          <span id="cc_edit_area_showhide_container" class="bz_default_hidden">
+            (<a href="#" id="cc_edit_area_showhide">show</a>)
+          </span>
+        <div id="cc_edit_area">
+          <br>
+            <select id="cc" multiple="multiple" size="5" >
+                <option value="7xnm24bdza">7xnm24bdza</option>
+                <option value="annevk">annevk</option>
+                <option value="cmhjones">cmhjones</option>
+                <option value="eoconnor">eoconnor</option>
+                <option value="harou2">harou2</option>
+                <option value="hsivonen">hsivonen</option>
+                <option value="ian">ian</option>
+                <option value="ian">ian</option>
+                <option value="ivan.enderlin">ivan.enderlin</option>
+                <option value="jeni">jeni</option>
+                <option value="julian.reschke">julian.reschke</option>
+                <option value="keithbrunson">keithbrunson</option>
+                <option value="kennyluck">kennyluck</option>
+                <option value="mark">mark</option>
+                <option value="mathias">mathias</option>
+                <option value="me">me</option>
+                <option value="mike">mike</option>
+                <option value="mtanalin">mtanalin</option>
+                <option value="nicholas.stimpson">nicholas.stimpson</option>
+                <option value="patrick.arlt">patrick.arlt</option>
+                <option value="peter.winnberg">peter.winnberg</option>
+                <option value="philipj">philipj</option>
+                <option value="public-html-admin">public-html-admin</option>
+                <option value="public-html-wg-issue-tracking">public-html-wg-issue-tracking</option>
+                <option value="rgf748">rgf748</option>
+                <option value="richard">richard</option>
+                <option value="rubys">rubys</option>
+                <option value="samuel.l.milton">samuel.l.milton</option>
+                <option value="scorlosquet">scorlosquet</option>
+                <option value="shelleyp">shelleyp</option>
+                <option value="singpolyma">singpolyma</option>
+                <option value="therandshow">therandshow</option>
+                <option value="tiffany">tiffany</option>
+                <option value="umbrae">umbrae</option>
+                <option value="w3.org">w3.org</option>
+                <option value="xn--mlform-iua">xn--mlform-iua</option>
+            </select>
+        </div>
+          
+      </td>
+    </tr>
+
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_see_also">
+
+
+  <a 
+      title="This allows you to refer to bugs in other installations. You can enter a URL to a bug in the 'Add Bug URLs' field to note that that bug is related to this one. You can enter multiple URLs at once by separating them with whitespace. You should normally use this field to refer to bugs in other installations. For bugs in this installation, it is better to use the Depends on and Blocks fields."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#see_also"
+  >See Also:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_see_also" ><ul class="bug_urls">
+          <li><a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED WONTFIX - Consider replacing &lt;data value&gt; with a global attribute itemvalue=&quot;&quot;"
+   href="show_bug.cgi?id=14679">14679</a>
+          </li></ul>
+
+</td>
+    </tr> 
+
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+
+
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+          <hr id="bz_top_half_spacer">
+      </td>
+    </tr>
+  </table>
+
+  <table id="bz_big_form_parts">
+  <tr>
+  <td>
+
+    
+
+
+<br>
+<table id="attachment_table">
+  <tr id="a0">
+    <th colspan="2" class="left">
+      Attachments
+    </th>
+  </tr>
+
+
+
+  
+</table>
+<br>
+<div id="add_comment" class="bz_section_additional_comments">
+      <table>
+        <tr>
+          <td>
+            
+          </td>
+        </tr> 
+      </table>
+  </div>
+  </td>
+  <td>
+  </td>
+  </tr></table>
+
+  
+  <div id="comments">
+
+
+
+
+<!-- This auto-sizes the comments and positions the collapse/expand links 
+     to the right. -->
+<table class="bz_comment_table">
+<tr>
+<td>
+<div id="c0" class="bz_comment bz_first_comment">
+
+      <div class="bz_first_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c0">Description</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-14 05:48:50 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">There are several use cases for &lt;time&gt;:
+A. Easier styling of dates and times from CSS.
+B. A way to mark up the publication date/time for an article (e.g. for conversion to Atom).
+C. A way to mark up machine-readable times and dates for use in Microformats or microdata.
+
+Use cases A and B do not seem to have much traction.
+Use case C applies to more than just dates, and the lack of solution for stuff outside dates and times is being problematic to many communities.
+
+Proposal: we dump use cases A and B, and pivot &lt;time&gt; on use case C, changing it to &lt;data&gt; and making it like the &lt;abbr&gt; for machine-readable data, primarily for use by Microformats and HTML's microdata feature.</pre>
+    </div>
+
+    <div id="c1" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c1">Comment 1</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Henri Sivonen</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-14 14:33:56 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Is there any indication of interest on the part of the Microformat community to change Microformats to use HTML features that weren't in HTML 4.01? That is, does case C boil down to just Microdata?</pre>
+    </div>
+
+    <div id="c2" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c2">Comment 2</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Stephen Paul Weber</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-14 17:57:46 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">As a member of the microformats community I do use &lt;time&gt; for this in my hAtom.
+
+If it's going to be made more generic might I suggest a new global attribute instead of a new tag?  That way we can use it in these cases:
+
+&lt;a machineval=&quot;2010-01-01&quot; href=&quot;...&quot;&gt;2 minutes ago&lt;/a&gt;
+
+&lt;dd machineval=&quot;2010-01-01&quot;&gt;Wednesday&lt;/dd&gt;
+
+etc</pre>
+    </div>
+
+    <div id="c3" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c3">Comment 3</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-14 20:29:52 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">I'd rather not do a generic attribute because we saw when we were doing microdata's usability studies that that kind of pattern confuses authors. (It's one of the things RDFa does that confuses less advanced authors.) But there's no reason you couldn't use &lt;data&gt; in your examples:
+
+   &lt;a href=&quot;...&quot;&gt;&lt;data machineval=&quot;2010-01-01&quot;&gt;2 minutes ago&lt;/data&gt;&lt;/a&gt;
+
+   &lt;dd&gt;&lt;data machineval=&quot;2010-01-01&quot;&gt;Wednesday&lt;/data&gt;&lt;/dd&gt;
+
+(Probably with a different attribute name.)</pre>
+    </div>
+
+    <div id="c4" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c4">Comment 4</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Stephen Paul Weber</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-14 20:31:02 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Sure, you *can* use an extra tag in the example.  It's just very verbose and ugly :)</pre>
+    </div>
+
+    <div id="c5" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c5">Comment 5</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian Devlin</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-15 14:52:46 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">I think that changing it to &lt;data&gt; could make it too generic.
+
+If anything, changing it to &lt;datetime&gt; would make more sense since it can currently contain either.
+
+What other stuff outside dates and times are you referring to, out of interest?</pre>
+    </div>
+
+    <div id="c6" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c6">Comment 6</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Gordon Brander</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-15 15:48:17 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c5">comment #5</a>)
+<span class="quote">&gt; I think that changing it to &lt;data&gt; could make it too generic.</span >
+
+As a publisher (front-end developer who builds sites for large companies) I would like to second Ian. Prior to HTML5, we were using hAtom to mark up articles and blog posts. When we were using hAtom, I heard frequent questions from other developers here regarding the way dates were marked up. The abbr, title and value-title patterns were confusing to developers that hadn't read the spec.
+
+We have not had that problem with &lt;article&gt; + &lt;time&gt;. When training devs here on HTML5, folks immediately &quot;got&quot; what &lt;time&gt; was for. Also, having datetime be validate-able has meant it gets fixed if it's not properly formatted.</pre>
+    </div>
+
+    <div id="c7" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c7">Comment 7</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Martin Kadlec</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-15 19:32:04 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">As a developer, I'm really against this change. Firstly, I'm already using and used to this element. And secondly, 'time' says much more information than 'data'. + Opera already implemented time element and I would be really angry on their place If would I have to change the implementation so soon.</pre>
+    </div>
+
+    <div id="c8" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c8">Comment 8</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Divya Manian</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-15 19:34:55 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c0">comment #0</a>)
+<span class="quote">&gt; There are several use cases for &lt;time&gt;:
+&gt; Use cases A and B do not seem to have much traction.</span >
+
+I doubt any of HTML5 elements have much traction. 
+
+<span class="quote">&gt; Use case C applies to more than just dates, and the lack of solution for stuff
+&gt; outside dates and times is being problematic to many communities.</span >
+
+I can imagine a use case for phone numbers, and address.  My view is expanding the scope of the &lt;time&gt;/&lt;data&gt; element is a slippery slope. Of all elements in HTML5, time is the one that is least ambiguous. 
+
+<span class="quote">&gt; Proposal: we dump use cases A and B, and pivot &lt;time&gt; on use case C, changing
+&gt; it to &lt;data&gt; and making it like the &lt;abbr&gt; for machine-readable data, primarily
+&gt; for use by Microformats and HTML's microdata feature.</span >
+
+How would this look like?</pre>
+    </div>
+
+    <div id="c9" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c9">Comment 9</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Tiffany B. Brown</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-15 19:45:55 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text"><span class="quote">&gt; If anything, changing it to &lt;datetime&gt; would make more sense since it can
+&gt; currently contain either.</span >
+
+Agreeing that &lt;data&gt; is too generic. I think &lt;time&gt; or &lt;datetime&gt; makes the most semantic sense, and &lt;time&gt; is indeed implemented in at least one browser.</pre>
+    </div>
+
+    <div id="c10" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c10">Comment 10</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Henri Sivonen</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-16 19:46:46 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c3">comment #3</a>)
+<span class="quote">&gt;    &lt;dd&gt;&lt;data machineval=&quot;2010-01-01&quot;&gt;Wednesday&lt;/data&gt;&lt;/dd&gt;</span >
+
+For case C, how is this better than
+&lt;dd&gt;&lt;meta content=&quot;2010-01-01&quot; itemprop='...'&gt;Wednesday&lt;/dd&gt;
+?
+
+That is, if you throw away the string &quot;Wednesday&quot; for Microdata processing anyway, what's the use of the end tag?</pre>
+    </div>
+
+    <div id="c11" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c11">Comment 11</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Philip Jägenstedt</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-18 09:33:56 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Opera has already implemented and shipped support for &lt;time&gt;, so we're not ecstatic about throwing it away again.
+
+As Henri hints at, the only difference between &lt;data&gt; and &lt;meta&gt; here would be that with data the content being overridden would be explicit. Yet, that isn't part of the Microdata model, so why would it be better? Aesthetics?</pre>
+    </div>
+
+    <div id="c12" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c12">Comment 12</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">John Thomas</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-20 14:13:49 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">While I like the concept of a generic data element, I feel like this would be confusing given how many other things use the term &quot;data&quot; in html5. There's already a lot of confusion between microdata and data-* attributes + we have &quot;datablock&quot; script tags. Also, in all these other cases, the data is not only non-displayed but non-display-able w/o machine interpretation.
+
+But perhaps instead of a generic data-tag we should be thinking about more particular data-tags, such as &lt;integer&gt;, &lt;number&gt;, &lt;url&gt;, etc. Or perhaps we could allow the &#64;type attribute to be used on &lt;span&gt; elements to markup data-types.</pre>
+    </div>
+
+    <div id="c13" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c13">Comment 13</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Stephen Paul Weber</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-21 12:11:43 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">After some discussion and thought, I've changed my mind and decided I like the &lt;time&gt; tag, though I would not be fully opposed to &lt;datetime&gt;
+
+I had thought that I was against that because it smelled like another img/video/audio/object debacle, but I've realised since that unlike img/video/audio, time actually provides additional and very useful semantics over just &quot;data&quot;</pre>
+    </div>
+
+    <div id="c14" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c14">Comment 14</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-29 00:34:42 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">The problem with keeping &lt;time&gt; is that there's a bunch of similar cases that we're not handling at all currently (other than with &lt;meta&gt;) that are essentially identical but aren't &lt;time&gt;s:
+
+ - dimensionless numbers (2.3)
+ - numbers with units (5kg)
+ - enumerated values, like months (February) or days of the week (Monday)
+
+...etc. A new element for each of these is rather messy.
+
+For some reason, many people are really not liking the &lt;meta&gt; solution. I don't know why. (I often get people asking me how to mark up a number in microdata and when I say &lt;meta&gt; they seem unhappy.)</pre>
+    </div>
+
+    <div id="c15" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c15">Comment 15</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Philip Jägenstedt</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-29 09:23:33 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Assuming that this is only for microdata, what reasons do we have to think that &lt;data itemprop=country machineval=se&gt;Sweden&lt;/data&gt; is less confusing than &lt;span itemprop=country itemval=se&gt;Sweden&lt;/span&gt;? It seems like the former would be harder to massage into existing markup if there's already a suitable element wrapping &quot;Sweden&quot;, which will often be the case. It's also a lot less obvious how it affects microdata just from looking at it.
+
+AFAICT, none of the variants in <a href="https://blog.whatwg.org/usability-testing-html5">http://blog.whatwg.org/usability-testing-html5</a> tried to use attributes for overriding the content, I take it you're extrapolating from something else?
+
+(It would be quite nice to not use &lt;meta&gt; for microdata. The initial reaction is bound to be &quot;WTF?&quot; and you can't style the visible content based on it since it's a void element.)</pre>
+    </div>
+
+    <div id="c16" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c16">Comment 16</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-29 16:25:19 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Another datatype people want to mark up a lot are durations (number and unit, but the number is in a special form) and time ranges (two times).</pre>
+    </div>
+
+    <div id="c17" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c17">Comment 17</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Philip Jägenstedt</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-30 11:38:50 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">After <a href="https://plus.google.com/105458233028934590147/posts/Tmh8uzpGM9j">https://plus.google.com/105458233028934590147/posts/Tmh8uzpGM9j</a> I would actually agree that itemval is a bad idea, in particular because of the confusing nature of something like &lt;img src=foo itemprop=img itemval=bar&gt;. It would also make itemValue reflection a bit funky, you'd really have to look at the definition in order to understand which attribute it maps to.
+
+As for the use cases:
+
+ - pubdate can be relegated to data-pubdate for the &lt;10 people in the world who want to export HTML to Atom.
+
+ - HTMLTimeElement.valueAsDate isn't very useful anyway.
+
+ - Has the microformat community expressed any interest in moving away from HTML4?
+
+If microdata is the only serious use case, then machineval=&quot;&quot; seems a poor attribute name. &lt;data value=&quot;se&quot;&gt;Sweden&lt;/data&gt; is better IMO, mirroring &lt;option value=&quot;se&quot;&gt;Sweden&lt;/option&gt;. There's no reason to allow &lt;data&gt;Sweden&lt;/data&gt; at all, so itemValue could always reflect the value attribute, as opposed to HTMLTimeElement.itemValue which behaves either as .dateTime or .textContent.
+
+(Note that Opera is still &quot;not ecstatic&quot; about dropping &lt;time&gt;, I'm just trying to see the alternatives.)</pre>
+    </div>
+
+    <div id="c18" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c18">Comment 18</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Philip Jägenstedt</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-30 11:47:41 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">On a tangential note, with this change it might make sense to go back to only allowing &lt;meta&gt; and &lt;link&gt; in &lt;head&gt;. &lt;link itemprop&gt; for hidden URLs in the markup would be collateral damage there, but &lt;a itemprop&gt;&lt;/a&gt; would continue to fill that purpose.</pre>
+    </div>
+
+    <div id="c19" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c19">Comment 19</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Stephen Paul Weber</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-30 15:36:15 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">&lt;time&gt; *does* express something more useful than just &lt;data&gt; or &lt;meta&gt; in that it tells the UA that its contents are a datetime.  &lt;data&gt; would just tell the UA &quot;there is something here&quot; and would be semantically equivalent to &lt;span&gt;
+
+Thus, I support keeping &lt;time&gt; for the extra semantics
+But could be convinced that an extra global attr is a good idea
+
+Yet another meaningless tag makes no sense.</pre>
+    </div>
+
+    <div id="c20" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c20">Comment 20</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Philip Jägenstedt</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-30 22:58:07 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c19">comment #19</a>)
+<span class="quote">&gt; &lt;time&gt; *does* express something more useful than just &lt;data&gt; or &lt;meta&gt; in that
+&gt; it tells the UA that its contents are a datetime.</span >
+
+UA's don't actually make any use of this fact, though. It does allow validators to report errors in the date/time syntax, but with vocabulary-specific validation this would still be possible, see e.g. <a href="https://bugzilla.validator.nu/show_bug.cgi?id=851">http://bugzilla.validator.nu/show_bug.cgi?id=851</a></pre>
+    </div>
+
+    <div id="c21" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c21">Comment 21</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Philip Jägenstedt</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-31 09:35:41 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text"><a href="http://people.opera.com/philipj/time.html">http://people.opera.com/philipj/time.html</a>
+
+By this test, only Opera supports &lt;time&gt;. Other tested browsers were IE 10.0.1008.16421, Firefox 5.0 and Chromium 12.0.742.112.
+
+(Not an argument either way, just reporting my findings.)</pre>
+    </div>
+
+    <div id="c22" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c22">Comment 22</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Stephen Paul Weber</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-31 13:34:50 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">&quot;Uas don't currently use the semantics&quot; isn't a very good argument against the usefulness of the semantics, especially in something as new and fluid as HTML5.</pre>
+    </div>
+
+    <div id="c23" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c23">Comment 23</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Philip Jägenstedt</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-07-31 16:28:13 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">So what is it useful for, other than validation?</pre>
+    </div>
+
+    <div id="c24" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c24">Comment 24</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Philip Jägenstedt</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-08-03 15:27:31 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Correction: Opera doesn't have an official position, if we do Anne van Kesteren will say so.</pre>
+    </div>
+
+    <div id="c25" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c25">Comment 25</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-08-08 21:09:11 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">I'm definitely leaning towards doing this. The alternative seems to be to have a whole slew of elements for this kind of thing:
+
+   &lt;time datetime=&quot;2010-10-10&quot;&gt;
+   &lt;number value=10&gt;
+   &lt;scalar value=10 unit=kg&gt;
+   &lt;duration value=&quot;1h10m2.2s&quot;&gt;
+   &lt;timerange start=&quot;2010-01-01&quot; end=&quot;2010-02-02&quot;&gt;
+   &lt;enum value=&quot;spring&quot;&gt;
+
+...all of which pretty much do exactly the same thing: nothing.</pre>
+    </div>
+
+    <div id="c26" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c26">Comment 26</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Stephen Paul Weber</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-08-08 21:23:02 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c25">comment #25</a>)
+<span class="quote">&gt; I'm definitely leaning towards doing this. The alternative seems to be to have
+&gt; a whole slew of elements for this kind of thing:
+&gt; 
+&gt;    &lt;time datetime=&quot;2010-10-10&quot;&gt;
+&gt;    &lt;number value=10&gt;
+&gt;    &lt;scalar value=10 unit=kg&gt;
+&gt;    &lt;duration value=&quot;1h10m2.2s&quot;&gt;
+&gt;    &lt;timerange start=&quot;2010-01-01&quot; end=&quot;2010-02-02&quot;&gt;
+&gt;    &lt;enum value=&quot;spring&quot;&gt;
+&gt; 
+&gt; ...all of which pretty much do exactly the same thing: nothing.</span >
+
+Nothing except the one thing that matters: adding semantic value.
+
+If you don't care about the semantic value I would definitely say that an attribute solves the &quot;some sort of machine data here&quot; use case much better.
+
+I don't see how you can be against the extra semantic data here when the argument was the same (though much weaker, IMHO) for adding seperate &lt;video&gt; and &lt;audio&gt; instead of just adding JS APIs to &lt;object type=&quot;video/*&quot;&gt;</pre>
+    </div>
+
+    <div id="c27" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c27">Comment 27</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-08-08 22:00:46 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Adding the JS API to &lt;video&gt; and &lt;audio&gt; was for practical authoring reasons: overloading &lt;object&gt; would result in a far more buggy, more complicated API. It had nothing to do with semantics.
+
+Semantics on its own is not a use case.</pre>
+    </div>
+
+    <div id="c28" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c28">Comment 28</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael[tm] Smith</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-08-09 06:45:13 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c25">comment #25</a> from Hixie)
+<span class="quote">&gt; I'm definitely leaning towards doing this. The alternative seems to be to have
+&gt; a whole slew of elements for this kind of thing:
+&gt; 
+&gt;    &lt;time datetime=&quot;2010-10-10&quot;&gt;
+&gt;    &lt;number value=10&gt;
+&gt;    &lt;scalar value=10 unit=kg&gt;
+&gt;    &lt;duration value=&quot;1h10m2.2s&quot;&gt;
+&gt;    &lt;timerange start=&quot;2010-01-01&quot; end=&quot;2010-02-02&quot;&gt;
+&gt;    &lt;enum value=&quot;spring&quot;&gt;</span >
+
+If that's a complete list, that's not really much of a slew. It's six elements whose purposes are very clear from their name, versus one new element whose name does very little to make its purpose clear. And even if the above is not a complete list, I think the list of new elements to consider is still finite and would not be much larger than what you have above.
+
+<span class="quote">&gt; ...all of which pretty much do exactly the same thing: nothing.</span >
+
+If the expectation is that UAs would not ever be doing anything either with any of the elements suggested in that list or with the proposed &lt;data&gt; element, then I guess it matters a lot less which ends up being added.
+
+But as far as elements that UAs are actually expected to do something with, I think that experience with the &lt;input&gt; element has shown that adding a generic element with an attribute for subtyping it into multiple subtypes (now more than a dozen) brings a number of hidden costs and complications. The subtyping essentially makes it into multiple logical abstract &quot;elements&quot; anyway, and the subtyping-by-attribute mechanism just makes it look like there's less complexity around it than there actually is.
+
+I think subtyping in that way is a serious design mistake and an anti-pattern that should not be perpetuated further -- even for an element that does nothing in UAs. We'd be better off in the long run adding nothing at all than we would be adding something like that.</pre>
+    </div>
+
+    <div id="c29" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c29">Comment 29</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael[tm] Smith</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-08-09 06:47:54 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c25">comment #25</a>)
+<span class="quote">&gt; I'm definitely leaning towards doing this. The alternative seems to be to have
+&gt; a whole slew of elements for this kind of thing:
+&gt; 
+&gt;    &lt;time datetime=&quot;2010-10-10&quot;&gt;
+&gt;    &lt;number value=10&gt;
+&gt;    &lt;scalar value=10 unit=kg&gt;
+&gt;    &lt;duration value=&quot;1h10m2.2s&quot;&gt;
+&gt;    &lt;timerange start=&quot;2010-01-01&quot; end=&quot;2010-02-02&quot;&gt;
+&gt;    &lt;enum value=&quot;spring&quot;&gt;</span >
+
+I'd be interested in hearing how you would model a time range with the proposed &lt;data&gt; element.
+
+Something like &lt;date type=timerange start=2010-01-01 end=2010-02-02&gt; ?</pre>
+    </div>
+
+    <div id="c30" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c30">Comment 30</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Cameron Jones</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-08-11 12:58:07 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c25">comment #25</a>)
+<span class="quote">&gt; I'm definitely leaning towards doing this. The alternative seems to be to have
+&gt; a whole slew of elements for this kind of thing:
+&gt; 
+&gt;    &lt;time datetime=&quot;2010-10-10&quot;&gt;
+&gt;    &lt;number value=10&gt;
+&gt;    &lt;scalar value=10 unit=kg&gt;
+&gt;    &lt;duration value=&quot;1h10m2.2s&quot;&gt;
+&gt;    &lt;timerange start=&quot;2010-01-01&quot; end=&quot;2010-02-02&quot;&gt;
+&gt;    &lt;enum value=&quot;spring&quot;&gt;
+&gt; 
+&gt; ...all of which pretty much do exactly the same thing: nothing.</span >
+
+as a non-exhaustive set of examples they revel the implications of including such fine-grained tags. if these elements are included the same reasoning would be unable to exclude the entire raft of other elementary data types.
+
+any specification of these as distinct elements would have to content with a large overlap in common features, yet diverging implementation. this leads to problems such a requiring a &lt;timerange&gt; element to represent ranges in time, yet which is unable to represent generic ranges, of numbers, scalars, even durations.
+
+i believe a more generic solution, such as &lt;data&gt; is required in order to have a solution which is capable of representing every value without requiring every data type to be discovered, specified and implemented.
+
+in short, i think &lt;time&gt; and its relatives represent a non-scalable solution for a specification and does not leverage the ability for authoring creativity and innovation to drive the web forward.</pre>
+    </div>
+
+    <div id="c31" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c31">Comment 31</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Cameron Jones</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-08-11 13:00:14 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c26">comment #26</a>)
+<span class="quote">&gt; (In reply to <a href="show_bug.cgi?id=13240#c25">comment #25</a>)
+&gt; &gt; I'm definitely leaning towards doing this. The alternative seems to be to have
+&gt; &gt; a whole slew of elements for this kind of thing:
+&gt; &gt; 
+&gt; &gt;    &lt;time datetime=&quot;2010-10-10&quot;&gt;
+&gt; &gt;    &lt;number value=10&gt;
+&gt; &gt;    &lt;scalar value=10 unit=kg&gt;
+&gt; &gt;    &lt;duration value=&quot;1h10m2.2s&quot;&gt;
+&gt; &gt;    &lt;timerange start=&quot;2010-01-01&quot; end=&quot;2010-02-02&quot;&gt;
+&gt; &gt;    &lt;enum value=&quot;spring&quot;&gt;
+&gt; &gt; 
+&gt; &gt; ...all of which pretty much do exactly the same thing: nothing.
+&gt; 
+&gt; Nothing except the one thing that matters: adding semantic value.</span >
+
+but how much semantic value is there in knowing that there is a time, duration or a weight measurement on a page? what value does this have if the relation of what it refers to is not known? 
+
+these elements represent a bloated way of marking up a limited and inflexible set of units and without any real practical purpose for the author or the consumer. 
+
+what is the purpose of &lt;time&gt; markup anyway? a UA won't be able to provide any additional interfacing over such primitive datatypes. a resource consumer will face the same problem of context, it might be able to find all data values on a page but in isolation they are almost useless, and when distinguishable from regular text anyway like dates, times and SI values are anyway, there would seem to be little incentive for their markup anyway.
+
+given the parsability of the text representations of these data values, and the requirement of effort and overhead for authors to provide this information, it might be more prudent to allow &lt;data&gt; to provide disambiguation instead of declaration. 
+
+in this way, a text value of &quot;5kg&quot; would not require any additional effort for an author to declare, is backward compatible with all current documents, and yet when marked-up using &lt;data&gt; would allow for pedantic authors to define unambiguously that the 5kgs they refer to only applied at san jose during the 4th full moon of 2011 in the gregorian calendar, as gravitational force is bound in space over time. 
+
+a solution which fails to allow for complete unambiguous declaration is not a solution for data.</pre>
+    </div>
+
+    <div id="c32" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c32">Comment 32</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Cameron Jones</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-08-11 13:02:13 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c28">comment #28</a>)
+<span class="quote">&gt; But as far as elements that UAs are actually expected to do something with, I
+&gt; think that experience with the &lt;input&gt; element has shown that adding a generic
+&gt; element with an attribute for subtyping it into multiple subtypes (now more
+&gt; than a dozen) brings a number of hidden costs and complications. The subtyping
+&gt; essentially makes it into multiple logical abstract &quot;elements&quot; anyway, and the
+&gt; subtyping-by-attribute mechanism just makes it look like there's less
+&gt; complexity around it than there actually is.</span >
+
+It's true that there is a lot of complexity in &lt;input&gt; elements, and possibly some of them shouldn't be subtypes especially when viewed in conjunction with new form elements which are not input subtypes.
+
+However, there is a great deal of overlap through all input elements and if there is hidden complexity this also implies that there is a great deal of abstraction and are incredibly powerful elements. that the complexity is hidden just results in an interface which is easier to learn and use. 
+
+
+<span class="quote">&gt; I think subtyping in that way is a serious design mistake and an anti-pattern
+&gt; that should not be perpetuated further -- even for an element that does nothing in UAs. We'd be better off in the long run adding nothing at all than we would
+&gt; be adding something like that.</span >
+
+i disagree and on the contrary i think that subtyping is probably the most prudent mechanism for expanding the functionality of HTML without limiting it genericity or incurring duplication.</pre>
+    </div>
+
+    <div id="c33" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c33">Comment 33</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Cameron Jones</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-08-11 13:02:46 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c29">comment #29</a>)
+<span class="quote">&gt; I'd be interested in hearing how you would model a time range with the proposed
+&gt; &lt;data&gt; element.
+&gt; 
+&gt; Something like &lt;date type=timerange start=2010-01-01 end=2010-02-02&gt; ?</span >
+
+It is possible to declare a time intervals in ISO 8601, eg:
+
+&lt;data value=&quot;2007-03-01T13:00:00Z/2008-05-11T15:30:00Z&quot;&gt;label&lt;/data&gt;</pre>
+    </div>
+
+    <div id="c34" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c34">Comment 34</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Stephen Paul Weber</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-08-12 15:53:24 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c31">comment #31</a>)
+<span class="quote">&gt; (In reply to <a href="show_bug.cgi?id=13240#c26">comment #26</a>)
+&gt; &gt; Nothing except the one thing that matters: adding semantic value.
+&gt; 
+&gt; what is the purpose of &lt;time&gt; markup anyway? a UA won't be able to provide any
+&gt; additional interfacing over such primitive datatypes.</span >
+
+False.  I spent some time working at a company (MashLogic) trying to find ways of identifying times, weights, currency figures, and similar on pages.  Why?  So that we could present the values to the user in their preferred format.  See times in their local timezone, weights in their preferred system, etc.</pre>
+    </div>
+
+    <div id="c35" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c35">Comment 35</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-08-12 21:18:20 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">That's one reason why we originally added &lt;time&gt;, but it never seemed to get much author interest. We got more questions about how to avoid it than how to use it, if anything.
+
+I don't think the list I gave above is comprehensive. It's just what I could come up with in about 5 minutes off the top of my head.
+
+There are costs to many elements also. The microdata algorithms, for instance, would have to special-case them all. Validators would have to know all the various ways they can be used. There's the documentation, testing, and tutorial cost.
+
+I don't think the analogy to &lt;input&gt; works here, because this element would be non-interactive and wouldn't have multiple modes: it would just be one feature that could be used for many things. It's like how class=&quot;&quot; can be used for many different things, but it's still just one feature.
+
+Exactly what format you would use for various data types would depend on the vocabulary. For example if you had a data field that had to express a date range with error bars it could be:
+
+   &lt;data value=&quot;2010-03-12±4 ..  2011-01-05±3&quot;&gt;
+
+...or it could be:
+
+   &lt;data value=&quot;2010-03-08:2010-03-16 2011-01-02:2011-01-08&quot;&gt;
+
+It's really up to the author. And note that this data format wouldn't be possible with any of the elements I listed, so we'd have to add yet another one to the list...</pre>
+    </div>
+
+    <div id="c36" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c36">Comment 36</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-09-14 22:40:48 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Is there any data showing how people actually use &lt;time&gt; in practice? i.e. is it actually giving anyone any of its hypothetical benefits?</pre>
+    </div>
+
+    <div id="c37" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c37">Comment 37</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Henri Sivonen</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-09-19 12:00:55 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c36">comment #36</a>)
+<span class="quote">&gt; Is there any data showing how people actually use &lt;time&gt; in practice? i.e. is
+&gt; it actually giving anyone any of its hypothetical benefits?</span >
+
+Isn't it a bit early to get that data?</pre>
+    </div>
+
+    <div id="c38" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c38">Comment 38</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-09-19 22:26:37 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Sorry, I meant &lt;time&gt;-equivalents, such as those referenced in <a href="show_bug.cgi?id=13240#c34">comment 34</a>.</pre>
+    </div>
+
+    <div id="c39" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c39">Comment 39</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Leif Halvard Silli</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-10-12 11:58:44 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c25">comment #25</a>)
+<span class="quote">&gt; I'm definitely leaning towards doing this. The alternative seems to be to have
+&gt; a whole slew of elements for this kind of thing:
+&gt; 
+&gt;    &lt;time datetime=&quot;2010-10-10&quot;&gt;
+&gt;    &lt;number value=10&gt;
+&gt;    &lt;scalar value=10 unit=kg&gt;
+&gt;    &lt;duration value=&quot;1h10m2.2s&quot;&gt;
+&gt;    &lt;timerange start=&quot;2010-01-01&quot; end=&quot;2010-02-02&quot;&gt;
+&gt;    &lt;enum value=&quot;spring&quot;&gt;
+&gt; 
+&gt; ...all of which pretty much do exactly the same thing: nothing.</span >
+
+My immediate thought was that &lt;data&gt; would have to take different attributes - which could even be empty/boolean-ish, and which would be used depending on the kind of data:
+
+&lt;data datetime=&quot;2010-10-10&quot;&gt;10th of October&lt;/data&gt;
+&lt;data datetime=&quot;&quot;&gt;10th of October&lt;/data&gt;
+&lt;data scalar=10 unit=kg&gt;
+
+Or, eventually - in case of a generic &#64;value attribute - some kind of kind/type attribute to indicate the kind of data:
+
+&lt;data kind=time value=&quot;2010-10-10&quot;&gt;10th of October&lt;/data&gt;
+
+The only trouble I see is that we are then approaching &lt;object&gt; - in a literal/syntactic way:
+
+&lt;object type=time data=&quot;2010-10-10&quot;&gt;10th of October&lt;/object&gt;
+
+And since object&#64;data takes URLs, perhasp time as a URI is also a thought:
+   <a href="http://www.annodex.net/TR/draft-pfeiffer-temporal-fragments-03.html">http://www.annodex.net/TR/draft-pfeiffer-temporal-fragments-03.html</a>
+  <a href="http://placetime.com/instant/gregorian/">http://placetime.com/instant/gregorian/</a>
+
+Was differentiated attributes part of your thinking behind &lt;data&gt;, Mr Editor?</pre>
+    </div>
+
+    <div id="c40" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c40">Comment 40</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">KangHao Lu</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-10-12 14:33:36 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c38">comment #38</a>)
+<span class="quote">&gt; Sorry, I meant &lt;time&gt;-equivalents, such as those referenced in <a href="show_bug.cgi?id=13240#c34">comment 34</a>.</span >
+
+* twitter.com
+
+&lt;span data-long-form=&quot;true&quot; data-time=&quot;1318428815000&quot; class=&quot;_timestamp&quot;&gt;6 minutes ago&lt;/span&gt;
+
+* weibo.com
+
+&lt;strong date=&quot;1318425833&quot;&gt;(Chinese) 2 minutes ago&lt;/strong&gt;
+
+
+I think these sites use these markups as anchors for places to be updated as time goes. Not sure if this is closer to use case A. or C., but this seems like a CSS + Component Model thing if I understand the latter correctly.</pre>
+    </div>
+
+    <div id="c41" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c41">Comment 41</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-10-20 20:03:24 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c39">comment #39</a>)
+<span class="quote">&gt; 
+&gt; My immediate thought was that &lt;data&gt; would have to take different attributes -
+&gt; which could even be empty/boolean-ish, and which would be used depending on the
+&gt; kind of data: [...]
+&gt; 
+&gt; Was differentiated attributes part of your thinking behind &lt;data&gt;, Mr Editor?</span >
+
+No, Mr Contributor. :-) Having multiple attributes would lead to confusing questions about precedence, would make it hard to integrate into processing models such as microdata, and would lead to a huge number of attributes as we kept coming up with new types. I don't see much value in doing that. One attribute would likely be sufficient.
+
+(In reply to <a href="show_bug.cgi?id=13240#c40">comment #40</a>)
+<span class="quote">&gt; 
+&gt; &lt;span data-long-form=&quot;true&quot; data-time=&quot;1318428815000&quot; class=&quot;_timestamp&quot;&gt;6
+&gt; minutes ago&lt;/span&gt;
+&gt; 
+&gt; &lt;strong date=&quot;1318425833&quot;&gt;(Chinese) 2 minutes ago&lt;/strong&gt;</span >
+
+Looks like a &lt;data&gt; element would handle these pretty well.</pre>
+    </div>
+
+    <div id="c42" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c42">Comment 42</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Marat Tanalin | tanalin.com</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-10-22 23:47:41 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Dropping time is one of the most odd things I've ever heard as for HTML5 spec development. It's like dropping all semantic elements in favor of semanticless &lt;div&gt; and &lt;span&gt; elements. Completely pointless.
+
+Power of semantics is exactly in having individual elements for particular purposes. This at all cannot be bad since this is what semantics itself is about.
+
+I would humbly yet strongly recommend the editor to consider avoiding an initiatives like such harmful proposals as dropping particular semantic element in favor of something more abstract (and therefore _less_ semantic and useless).
+
+Quite the contrary, it makes sense to add more date-related elements, such as &lt;year&gt; and &lt;month&gt;.
+
+In general, there should be dedicated HTML element for _each_ _general_ class of things. This could make possible for robots to determine text sense more accurately and thus provide more relevant parsing results (search results in particular).
+
+For example, for search query like &quot;birth year of Some Man&quot;, search engine could prefer a year that is marked-up as &lt;year&gt; element instead of making _assumptions_ about whether a number (not marked-up as year) in an indexed text is a year or not.
+
+&lt;time&gt; element should be kept intact. Only thing to probably do here is maybe rename verbose and too usecase-narrow 'datetime' attribute to more compact and universal 'value' attribute.
+
+'value' attribute could be _consistently_ used in &lt;time&gt;, &lt;year&gt;, and &lt;month&gt; elements (as well as for other elements that are currently noninvented yet). For example:
+
+&lt;time value=&quot;2011-10-20&quot;&gt;October 20, 2011&lt;/time&gt;
+&lt;year value=&quot;2011&quot;&gt;'11&lt;/year&gt;
+&lt;month value=&quot;10&quot;&gt;October&lt;/month&gt;
+
+By the way, I would personally prefer to use &lt;date&gt; element for dates that has no time part while still using &lt;time&gt; element for dates that contain time part. For example:
+
+&lt;date value=&quot;2011-10-20&quot;&gt;October 20, 2011&lt;/date&gt;
+
+however:
+&lt;time value=&quot;2011-10-20T23:45:00Z&quot;&gt;October 20, 2011, 23:45&lt;/time&gt;
+
+By the way too, it makes sense to simplify syntax of 'value' ('datetime' currently) attribute to be more simple and similar MySQL datetimes:
+
+&lt;time value=&quot;2011-10-20 23:45&quot;&gt;October 20, 2011, 23:45&lt;/time&gt;
+
+Thanks.</pre>
+    </div>
+
+    <div id="c43" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c43">Comment 43</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Leif Halvard Silli</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-10-23 00:52:21 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c42">comment #42</a>)
+
+<span class="quote">&gt; In general, there should be dedicated HTML element for _each_ _general_ class
+&gt; of things. This could make possible for robots to determine text sense more
+&gt; accurately and thus provide more relevant parsing results (search results in
+&gt; particular).</span >
+
+In the case of the &lt;a&gt; element, we are able to use it for an unlimited amount of different kinds of URL schemes. It could be cool if we, in a similar fashion, could have a &lt;data&gt; element that was as flexiible as the &lt;a&gt; element is for links.</pre>
+    </div>
+
+    <div id="c44" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c44">Comment 44</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Marat Tanalin | tanalin.com</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-10-23 13:50:06 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c43">comment #43</a>)
+
+You are free to introduce new elements. However besides, not instead of existing (more appropriate in certain situations) ones.
+
+My main point is that if we have an element for an exact semantic purpose, then this element should be used in appropriate situations while more general element could be used for _rest of_ (not all) situations.
+
+If we cannot express _any_ sense with existing structural elements, then this at all is not a reason to drop all existing semantics altogether.
+
+There is no reasons to _replace_ &lt;time&gt; with &lt;data&gt; (this would be completely irrational). Instead, &lt;data&gt; could be an additional feature (if someone needs it) _not_ replacing existing (semantically more narrow and precise) &lt;time&gt; element, but covering _rest of_ situations instead.</pre>
+    </div>
+
+    <div id="c45" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c45">Comment 45</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">KangHao Lu</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-10-23 19:46:28 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c41">comment #41</a>)
+<span class="quote">&gt; (In reply to <a href="show_bug.cgi?id=13240#c40">comment #40</a>)
+&gt; &gt; 
+&gt; &gt; &lt;span data-long-form=&quot;true&quot; data-time=&quot;1318428815000&quot; class=&quot;_timestamp&quot;&gt;6
+&gt; &gt; minutes ago&lt;/span&gt;
+&gt; &gt; 
+&gt; &gt; &lt;strong date=&quot;1318425833&quot;&gt;(Chinese) 2 minutes ago&lt;/strong&gt;
+&gt; 
+&gt; Looks like a &lt;data&gt; element would handle these pretty well.</span >
+
+Maybe. 
+
+On the other hands, what are the uses cases for marking up dimensionless numbers, numbers with units or enumerated values. Are there existing HTML4-equivalnets?
+
+Here are some potential examples that might benefit from &lt;data&gt;.
+
+* weather.com[1]
+
+Some of the temperatures are marked up as, say, &lt;strong&gt;56</pre>
+    </div>
+
+    <div id="c46" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c46">Comment 46</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-10-28 23:14:08 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">The main use case for &lt;data&gt; is in cases involving microdata and microformats, where there is often a need to include a human-readable version of a computer-readable piece of data, be it a time, date, rating, etc.</pre>
+    </div>
+
+    <div id="c47" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c47">Comment 47</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ian 'Hixie' Hickson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-10-29 05:42:57 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">EDITOR'S RESPONSE: This is an Editor's Response to your comment. If you are satisfied with this response, please change the state of this bug to CLOSED. If you have additional information and would like the editor to reconsider, please reopen this bug. If you would like to escalate the issue to the full HTML Working Group, please add the TrackerRequest keyword to this bug, and suggest title and text for the tracker issue; or you may create a tracker issue yourself, if you are able to do so. For more details, see this document:
+   <a href="http://dev.w3.org/html5/decision-policy/decision-policy.html">http://dev.w3.org/html5/decision-policy/decision-policy.html</a>
+
+Status: Accepted
+Change Description: see diff given below
+Rationale: See <a href="show_bug.cgi?id=13240#c0">comment 0</a> for the basic rationale, and some of my other comments for details on particular decisions.</pre>
+    </div>
+
+    <div id="c48" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c48">Comment 48</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Mathias Bynens</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-10-29 06:46:22 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text"><span class="quote">&gt; Change Description: see diff given below
+&gt; Rationale: See <a href="show_bug.cgi?id=13240#c0">comment 0</a> for the basic rationale, and some of my other comments
+&gt; for details on particular decisions.</span >
+
+The diff can be found here: <a href="https://html5.org/tools/web-apps-tracker?from=6782&amp;to=6783">http://html5.org/tools/web-apps-tracker?from=6782&amp;to=6783</a></pre>
+    </div>
+
+    <div id="c49" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c49">Comment 49</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Peter Winnberg</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-10-29 08:24:50 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c47">comment #47</a>)
+<span class="quote">&gt; EDITOR'S RESPONSE: This is an Editor's Response to your comment. If you are
+&gt; satisfied with this response, please change the state of this bug to CLOSED. If
+&gt; you have additional information and would like the editor to reconsider, please
+&gt; reopen this bug. If you would like to escalate the issue to the full HTML
+&gt; Working Group, please add the TrackerRequest keyword to this bug, and suggest
+&gt; title and text for the tracker issue; or you may create a tracker issue
+&gt; yourself, if you are able to do so. For more details, see this document:
+&gt;    <a href="http://dev.w3.org/html5/decision-policy/decision-policy.html">http://dev.w3.org/html5/decision-policy/decision-policy.html</a>
+&gt; 
+&gt; Status: Accepted
+&gt; Change Description: see diff given below
+&gt; Rationale: See <a href="show_bug.cgi?id=13240#c0">comment 0</a> for the basic rationale, and some of my other comments
+&gt; for details on particular decisions.</span >
+
+(In reply to <a href="show_bug.cgi?id=13240#c47">comment #47</a>)
+<span class="quote">&gt; EDITOR'S RESPONSE: This is an Editor's Response to your comment. If you are
+&gt; satisfied with this response, please change the state of this bug to CLOSED. If
+&gt; you have additional information and would like the editor to reconsider, please
+&gt; reopen this bug. If you would like to escalate the issue to the full HTML
+&gt; Working Group, please add the TrackerRequest keyword to this bug, and suggest
+&gt; title and text for the tracker issue; or you may create a tracker issue
+&gt; yourself, if you are able to do so. For more details, see this document:
+&gt;    <a href="http://dev.w3.org/html5/decision-policy/decision-policy.html">http://dev.w3.org/html5/decision-policy/decision-policy.html</a>
+&gt; 
+&gt; Status: Accepted
+&gt; Change Description: see diff given below
+&gt; Rationale: See <a href="show_bug.cgi?id=13240#c0">comment 0</a> for the basic rationale, and some of my other comments
+&gt; for details on particular decisions.</span >
+
+Removing a element with semantics and replacing it with what basically is a clone of the span element is a step in the wrong direction. 
+
+A way to provide machine readable version of the data is already handled by RDFa without any new elements. Why not try to work together with them to try to find a generic mechanism to do this that works for both formats?
+
+In addtion to that, schema.org examples have no business in the W3C spec because microdata is not part of HTML5 ( just like RDFa isn't part of the spec ).</pre>
+    </div>
+
+    <div id="c50" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c50">Comment 50</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Marat Tanalin | tanalin.com</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-10-29 12:09:46 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c47">comment #47</a>)
+<span class="quote">&gt; Status: Accepted
+&gt; Change Description: see diff given below
+&gt; Rationale: See <a href="show_bug.cgi?id=13240#c0">comment 0</a> for the basic rationale, and some of my other comments
+&gt; for details on particular decisions.</span >
+
+Self-contained decision detached from reality and harming HTML5 semantics itself. Shocked.
+
+It's probably &lt;time&gt; to replace spec editor. Sorry.</pre>
+    </div>
+
+    <div id="c51" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c51">Comment 51</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Philip Jägenstedt</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-10-30 08:28:35 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text"><a href="https://foolip.org/microdatajs/live/">http://foolip.org/microdatajs/live/</a> has been updated to reflect this change if anyone wants to see &lt;data&gt; in action.</pre>
+    </div>
+
+    <div id="c52" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c52">Comment 52</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Patrick Arlt</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-10-31 17:48:18 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">So we create a &lt;time&gt; element that is used to markup times in a document, decide that it is to specific and replace is with a &lt;data&gt;element that can only be used to mark up time? this doesn't make much sense. Its much less semantic and will lead to confusion with the data-* attribute.
+
+There is also a fourth use case where you could easily access all &lt;time&gt; elements from javascript to transform them e.g. to human relative time while keeping a machine readable time in the datetime attribute.
+
+Why not just add a generic data attribute. Why take away something that is actively being used?</pre>
+    </div>
+
+    <div id="c53" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c53">Comment 53</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Samuel Milton</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-10-31 18:24:58 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">This leaves me confused. Our mission is to create the semantic web. And then we do the opposite. Totally agree with Patrick and Marat.</pre>
+    </div>
+
+    <div id="c54" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c54">Comment 54</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Mark</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-01 15:51:07 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">I just heard about this issue upon reading it at .NET magazine (<a href="http://www.netmagazine.com/node/1517">http://www.netmagazine.com/node/1517</a>).
+
+Frankly, I'm completely shocked that such a discussion would even arise. And then on top of that seeing that the vast majority of the posts here are definitely against such a change. Yet Hickson stands his ground despite what the community is saying. I thought this was essentially a &quot;community&quot; effort, was it not?
+
+I am a relatively inexperienced developer compared to many of the people who have posted their views on this issue here, so at least *listen* to what others here are saying!
+
+I counted at least 23 posts that were overtly for keeping the &lt;time&gt; element and only 5 that specifically mentioned being for dropping it for the &lt;data&gt; element (minus Ian's posts).</pre>
+    </div>
+
+    <div id="c55" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c55">Comment 55</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ben Buchanan</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-02 13:33:13 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c36">comment #36</a>)
+<span class="quote">&gt; Is there any data showing how people actually use &lt;time&gt; in practice? i.e. is
+&gt; it actually giving anyone any of its hypothetical benefits?</span >
+
+tl;dr: It's useful to show shortened or &quot;friendly&quot; versions of full timestamps. I would suggest either reverting this change, or adding a type attribute to fully replicate the time element.
+
+(Note: I am speaking personally in this comment and not in any official capacity on behalf of my employer)
+
+I can't offer broad data but I can say we've implemented the &lt;time&gt; element in production versions of several Atlassian products (Confluence, JIRA, Bamboo, BitBucket). It never occurred to me at least that such a useful element would get removed from the spec.
+
+The most common use case is retaining full timestamps in the DOM while still providing shortened, localised or &quot;friendly&quot; times (&quot;5 minutes ago&quot;), eg:
+
+&lt;time datetime=&quot;2011-11-02T16:23:30+11:00&quot;&gt;7 hours ago&lt;/time&gt;
+
+We've used this pattern on wiki editing diff pages, BitBucket change history pages, build activity screens, etc.
+
+The data element as proposed seems to lack the disambiguation of the time element... to achieve the same result we would have to add more markup, eg. in the form of microdata, or simply hope all data elements in the document happen to be a time. Since we have products working with user-generated content and an ecosystem of plugin developers, relying on such a broad convention would be poorly advised.
+
+So by this change we effectively lose the ability to simply, unambiguously mark up a time or date with a single element. We either add attributes to wrapper elements, or we rely on a weak convention of not using data for anything other than time - which suggests it should just stay &lt;time&gt; in the first place.
+
+I wouldn't object to the data element being *added* to the spec in addition to time, although I can't really see much use for it without some form of type attribute to allow different uses to coexist, eg:
+
+&lt;data type=&quot;datetime&quot; value=&quot;2011-11-02T16:23:30+11:00&quot;&gt;7 hours ago&lt;/data&gt;
+
+However to my mind time is such a common use case it seems appropriate to retain the specific element.</pre>
+    </div>
+
+    <div id="c56" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c56">Comment 56</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Philip Jägenstedt</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-02 14:40:45 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Ben, can you elaborate on what you actually *do* with the &lt;time&gt; element? Is it as a convenient styling hook, do you have scripts that operate on it, is it a convention for plugin developers to scrape dates from the markup (as opposed to giving them access to the backend representation), or something else? (I presume it is not just &quot;retaining full timestamps in the DOM&quot;, since having a value in an attribute by itself doesn't do anything.)</pre>
+    </div>
+
+    <div id="c57" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c57">Comment 57</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Julian Reschke</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-02 14:48:17 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c56">comment #56</a>)
+<span class="quote">&gt; Ben, can you elaborate on what you actually *do* with the &lt;time&gt; element? Is it
+&gt; ...</span >
+
+The same question applies to &lt;data&gt; as well, no?</pre>
+    </div>
+
+    <div id="c58" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c58">Comment 58</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Chris Dary</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-02 14:55:27 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Just to add to the &quot;&lt;time&gt; being used in production&quot; cases..
+
+We at Readability have been recommending &lt;time&gt; as the element to use to best describe an article's publication date since February: <a href="http://www.readability.com/publishers/guidelines">http://www.readability.com/publishers/guidelines</a>
+
+I don't have any statistics on how many publishers have followed these guidelines, but it's certainly non-zero. 
+
+I have other, more personal reasons to dislike this change (approachability of a generic &lt;data&gt; element to relatively new developers vs the very clear &lt;time&gt; element, etc), but on a logical level, I can say that it will make our job as a scraper a good deal harder in the future, particularly with the ambiguity of using class as the attribute to distinguish a data element. &lt;time&gt;, replete with the pubdate attribute, is as unambiguous as it gets.
+
+To be fair, we deal with terrible markup on a daily basis, so we'll be handling all sorts of uninformed markup anyway. But the clarity found in &lt;time&gt; with pubdate is something that would be very nice to have.</pre>
+    </div>
+
+    <div id="c59" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c59">Comment 59</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Philip Jägenstedt</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-02 15:04:47 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c57">comment #57</a>)
+<span class="quote">&gt; (In reply to <a href="show_bug.cgi?id=13240#c56">comment #56</a>)
+&gt; &gt; Ben, can you elaborate on what you actually *do* with the &lt;time&gt; element? Is it
+&gt; &gt; ...
+&gt; 
+&gt; The same question applies to &lt;data&gt; as well, no?</span >
+
+It's for marking up a human-readable and a machine-readable representation of the same thing for use with microformats, microdata or similar. This is what I thought the point of &lt;time&gt; was as well, but it seems unlikely that this is what people are actually using it for, thus the question.</pre>
+    </div>
+
+    <div id="c60" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c60">Comment 60</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">scor</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-02 15:08:28 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">As anyone tried to assess how widely is the &lt;time&gt; element currently used in the wild? I was about to submit a web grep at <a href="http://blekko.com/webgrep">http://blekko.com/webgrep</a> but looks like Jeni already submitted one and it's been approved: <a href="http://blekko.com/webgrep?page=view&amp;id=8638947e26c2cf16e32d3487fc187ac5">http://blekko.com/webgrep?page=view&amp;id=8638947e26c2cf16e32d3487fc187ac5</a>. So let's wait and see the results.</pre>
+    </div>
+
+    <div id="c61" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c61">Comment 61</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Marat Tanalin | tanalin.com</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-02 15:20:45 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c59">comment #59</a>)
+
+<span class="quote">&gt; It's for marking up a human-readable and a machine-readable representation of
+&gt; the same thing for use with microformats, microdata or similar. This is what I
+&gt; thought the point of &lt;time&gt; was as well, but it seems unlikely that this is
+&gt; what people are actually using it for, thus the question.</span >
+
+&lt;time&gt; element is _easy_ way to _add semantic sense_ to text without diving into verbose unusable microformat garbage oriented to narrow usecases.
+
+Markup (HTML) should never be confused with pseudo-markup (microformats).
+
+Pseudo-markup should be _supplement_ to true markup, not replacement for it. Otherwise, all semantic elements (H1, P, UL, etc.) could be removed in favor of more &quot;universal&quot; DIV -- that would be complete semantic absurd.</pre>
+    </div>
+
+    <div id="c62" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c62">Comment 62</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Philip Jägenstedt</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-02 15:32:29 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c61">comment #61</a>)
+
+<span class="quote">&gt; &lt;time&gt; element is _easy_ way to _add semantic sense_ to text without diving
+&gt; into verbose unusable microformat garbage oriented to narrow usecases.</span >
+
+For reference, I've uploaded a copy of the section on &lt;time&gt; as it was to <a href="http://people.opera.com/philipj/2011/10/28/the-time-element.html">http://people.opera.com/philipj/2011/10/28/the-time-element.html</a>
+
+It states that &quot;This element is intended as a way to encode modern dates and times in a machine-readable way&quot; and the first example is precisely about &quot;verbose unusable microformat garbage&quot;. It sounds like people are using it for something else, in which case the spec should be fixed to reflect that if &lt;time&gt; is brought back.</pre>
+    </div>
+
+    <div id="c63" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c63">Comment 63</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Peter Winnberg</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-02 16:05:07 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c62">comment #62</a>)
+<span class="quote">&gt; For reference, I've uploaded a copy of the section on &lt;time&gt; as it was to
+&gt; <a href="http://people.opera.com/philipj/2011/10/28/the-time-element.html">http://people.opera.com/philipj/2011/10/28/the-time-element.html</a>
+&gt; 
+&gt; It states that &quot;This element is intended as a way to encode modern dates and
+&gt; times in a machine-readable way&quot; and the first example is precisely about
+&gt; &quot;verbose unusable microformat garbage&quot;. It sounds like people are using it for
+&gt; something else, in which case the spec should be fixed to reflect that if
+&gt; &lt;time&gt; is brought back.</span >
+
+Nice to have the actual text so it's possible to see how it was definied.
+
+The time element could be used for creating a semantically rich web page. This could just be because that person thinks it is important to use the right elements to mark up the data (use elements that represent lists when the document contains lists and so on). It does not have to have anything to do with RDFa, microdata, or microformats. The data element cannot be used for this because it semantics for it is the same as the span element. It says that there is something here, but nothing about which type of data it is, just some data in a machine readable format with an unknown data type.
+
+What could the time element be used for, one example could be for converting a date/time with a time zone specified to the local time zone. It has already been suggested by others that the time elements</pre>
+    </div>
+
+    <div id="c64" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c64">Comment 64</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Julian Reschke</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-02 16:20:38 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c62">comment #62</a>)
+<span class="quote">&gt; (In reply to <a href="show_bug.cgi?id=13240#c61">comment #61</a>)
+&gt; 
+&gt; &gt; &lt;time&gt; element is _easy_ way to _add semantic sense_ to text without diving
+&gt; &gt; into verbose unusable microformat garbage oriented to narrow usecases.
+&gt; 
+&gt; For reference, I've uploaded a copy of the section on &lt;time&gt; as it was to
+&gt; <a href="http://people.opera.com/philipj/2011/10/28/the-time-element.html">http://people.opera.com/philipj/2011/10/28/the-time-element.html</a>
+&gt; ...</span >
+
+Thanks.
+
+Alternatively: &lt;<a href="https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-time-element">http://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-time-element</a>&gt;</pre>
+    </div>
+
+    <div id="c65" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c65">Comment 65</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Shelley Powers</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-03 00:02:47 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Posting a reminder that anytime anyone wants to check out the spec as it looked going into Last Call (May, 2011), a snapshot was made at that time and is posted on the front page of the HTML WG site. 
+
+Example for time:
+
+<a href="https://www.w3.org/TR/html5/text-level-semantics.html#the-time-element">http://www.w3.org/TR/html5/text-level-semantics.html#the-time-element</a></pre>
+    </div>
+
+    <div id="c66" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c66">Comment 66</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ben Buchanan</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-03 01:15:25 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c56">comment #56</a>)
+<span class="quote">&gt; Ben, can you elaborate on what you actually *do* with the &lt;time&gt; element? Is it
+&gt; as a convenient styling hook, do you have scripts that operate on it, is it a
+&gt; convention for plugin developers to scrape dates from the markup (as opposed to
+&gt; giving them access to the backend representation), or something else? (I
+&gt; presume it is not just &quot;retaining full timestamps in the DOM&quot;, since having a
+&gt; value in an attribute by itself doesn't do anything.)</span >
+
+Styling is not particularly the driver for using &lt;time&gt;; although it does give an efficient and convenient selector for style and scripting.
+
+Note that I didn't personally implement time in all our products so I can't provide the full deep dive of details... however one specific use case reported is BitBucket uses jQuery.localize to convert UTC timestamps to localized equivalents. 
+
+We anticipate plugin devs will make use of &lt;time&gt; but it's a bit too early to expect a swathe of usage - these things do take a while to settle in. &lt;time&gt; has not really been a stated or promoted convention, since semantic markup is basically self-explanatory to people who want to manipulate the DOM.
+
+To expand the thought a bit, we do have a pure-DOM plugin system alongside our more deeply-integrated/backend plugin system. The DOM system is commonly used for greasemonkey-style customisation by users (hence why people would use the DOM and not access backend data directly).
+
+We are in the process of converting our UI to HTML5 (doctype switch first) and &lt;time&gt; was a common early choice based on ease of implementation and solving a common problem (working with human- and machine-readable time information). I feel I should point out this use case should not be downplayed just because it sounds simple.  We used &lt;time&gt; because that's what it's for and we show a lot of times in our UI; and we want to have access to both the full timestamp and a human-readable version of that information.</pre>
+    </div>
+
+    <div id="c67" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c67">Comment 67</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Philip Jägenstedt</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-03 07:37:57 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Thanks Ben, I found an example of it at <a href="http://sandbox.onjira.com/browse/TST-1353">http://sandbox.onjira.com/browse/TST-1353</a>
+
+It looks like for giving plugins (scripts) access to the timestamps, &lt;data class=date value=&quot;...&quot;&gt; would do the exact same thing, but if &lt;time&gt; exists then it is of course the better match.</pre>
+    </div>
+
+    <div id="c68" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c68">Comment 68</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Nicholas Stimpson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-03 08:04:10 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c62">comment #62</a>)
+<span class="quote">&gt; (In reply to <a href="show_bug.cgi?id=13240#c61">comment #61</a>)
+&gt; 
+&gt; It states that &quot;This element is intended as a way to encode modern dates and
+&gt; times in a machine-readable way&quot; and the first example is precisely about
+&gt; &quot;verbose unusable microformat garbage&quot;. It sounds like people are using it for
+&gt; something else, in which case the spec should be fixed to reflect that if
+&gt; &lt;time&gt; is brought back.</span >
+
+I don't see a problem with that spec. The way the element is being actually
+used is much more like the examples at the bottom. The examples in the spec
+aren't prioritised are they?</pre>
+    </div>
+
+    <div id="c69" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c69">Comment 69</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Ben Buchanan</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-03 08:33:06 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c67">comment #67</a>)
+<span class="quote">&gt; It looks like for giving plugins (scripts) access to the timestamps, &lt;data
+&gt; class=date value=&quot;...&quot;&gt; would do the exact same thing, but if &lt;time&gt; exists
+&gt; then it is of course the better match.</span >
+
+You could also achieve the result with data- attributes, but both options rely on page-level convention instead of setting a standard. I think relying on a custom class or attribute is a retrograde step from having an element with universally defined semantics/purpose.
+
+I can see the value of adding the data element as a workhorse for microformats; I just think &lt;time&gt; is a common enough use case that a single, dedicated element is the way to go. Much as I like microformats, I don't think we should need one just to mark up a timestamp :)</pre>
+    </div>
+
+    <div id="c70" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c70">Comment 70</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Philip Jägenstedt</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-03 08:45:24 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c68">comment #68</a>)
+<span class="quote">&gt; (In reply to <a href="show_bug.cgi?id=13240#c62">comment #62</a>)
+&gt; &gt; (In reply to <a href="show_bug.cgi?id=13240#c61">comment #61</a>)
+&gt; &gt; 
+&gt; &gt; It states that &quot;This element is intended as a way to encode modern dates and
+&gt; &gt; times in a machine-readable way&quot; and the first example is precisely about
+&gt; &gt; &quot;verbose unusable microformat garbage&quot;. It sounds like people are using it for
+&gt; &gt; something else, in which case the spec should be fixed to reflect that if
+&gt; &gt; &lt;time&gt; is brought back.
+&gt; 
+&gt; I don't see a problem with that spec. The way the element is being actually
+&gt; used is much more like the examples at the bottom. The examples in the spec
+&gt; aren't prioritised are they?</span >
+
+Of course not, I'm just pointing out that the main reasons that &lt;time&gt; exists are not the reasons that people are using it for. To elaborate:
+
+1. No browser has implemented the CSS localization stuff. (I suggested dropping it in <a href="https://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2009-November/024106.html">http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2009-November/024106.html</a> but Hixie opted to keep it in <a href="https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2010-July/027289.html">http://lists.whatwg.org/pipermail/whatwg-whatwg.org/2010-July/027289.html</a>)
+
+2. People are barfing at the idea of using microformats or microdata and saying that &lt;data&gt; is useless.
+
+3. pubdate=&quot;&quot; was added in <a href="https://html5.org/r/3116">http://html5.org/r/3116</a> specifically to enable the conversion to an Atom feed. However, I'm virtually certain that no one has ever used it for that purpose because (a) no one seems to have noticed or cared that the conversion algorithm was removed and (b) when I tried implementing that algorithm in January I found and filed the kinds of bugs that seem to indicate that no one had done it before.
+
+If &lt;time&gt; belong in the spec then it should also match what people use it for. AFAICT, that is:
+
+1. Script and styling hook, kind of like &lt;header&gt; or &lt;aside&gt;
+2. Documentation purposes
+3. Semantics as a goal in itself</pre>
+    </div>
+
+    <div id="c71" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c71">Comment 71</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Sam Ruby</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-04 02:36:14 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Revert request is here:
+
+<a href="http://lists.w3.org/Archives/Public/public-html/2011Nov/0011.html">http://lists.w3.org/Archives/Public/public-html/2011Nov/0011.html</a>
+
+At this point, we are looking to create one or more issues and soliciting proposals on each.  We are looking for suggested title and text for the tracker issue(s).</pre>
+    </div>
+
+    <div id="c72" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c72">Comment 72</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Peter Winnberg</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-04 10:42:56 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c71">comment #71</a>)
+<span class="quote">&gt; Revert request is here:
+&gt; 
+&gt; <a href="http://lists.w3.org/Archives/Public/public-html/2011Nov/0011.html">http://lists.w3.org/Archives/Public/public-html/2011Nov/0011.html</a>
+&gt; 
+&gt; At this point, we are looking to create one or more issues and soliciting
+&gt; proposals on each.  We are looking for suggested title and text for the tracker
+&gt; issue(s).</span >
+
+(In reply to <a href="show_bug.cgi?id=13240#c71">comment #71</a>)
+<span class="quote">&gt; Revert request is here:
+&gt; 
+&gt; <a href="http://lists.w3.org/Archives/Public/public-html/2011Nov/0011.html">http://lists.w3.org/Archives/Public/public-html/2011Nov/0011.html</a>
+&gt; 
+&gt; At this point, we are looking to create one or more issues and soliciting
+&gt; proposals on each.  We are looking for suggested title and text for the tracker
+&gt; issue(s).</span >
+
+I added the TrackerRequest keyword so here are 2 issues I see along with suggested titles.
+
+&quot;Handling of machine-readable data in HTML5&quot; - This issue would include adding a data element, if the time element should be kept or not (and how it could be improved if it is kept in the spec), if the pubdate attribute should be kept, and if microdata can share some element/attribute with RDFa relating to machine-readable data.
+
+&quot;Keeping HTML5 neutral about Microdata/RDFa&quot; - Should the HTML5 specification contain things like schema.org microdata examples. And if that is OK should the spec also include RDFa examples of the same thing? Or maybe these examples should go in a separate document.</pre>
+    </div>
+
+    <div id="c73" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c73">Comment 73</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Sam Ruby</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-04 11:18:42 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c72">comment #72</a>)
+<span class="quote">&gt; 
+&gt; I added the TrackerRequest keyword so here are 2 issues I see along with
+&gt; suggested titles.
+&gt; 
+&gt; &quot;Handling of machine-readable data in HTML5&quot; - This issue would include adding
+&gt; a data element, if the time element should be kept or not (and how it could be
+&gt; improved if it is kept in the spec), if the pubdate attribute should be kept,
+&gt; and if microdata can share some element/attribute with RDFa relating to
+&gt; machine-readable data.</span >
+
+Can that be split into smaller issues?
+ 
+<span class="quote">&gt; &quot;Keeping HTML5 neutral about Microdata/RDFa&quot; - Should the HTML5 specification
+&gt; contain things like schema.org microdata examples. And if that is OK should the
+&gt; spec also include RDFa examples of the same thing? Or maybe these examples
+&gt; should go in a separate document.</span >
+
+Once the change is reverted, is that an issue that would apply to the document as it exists at that time?  See also the following decisions:
+
+<a href="http://lists.w3.org/Archives/Public/public-html/2011Mar/0586.html">http://lists.w3.org/Archives/Public/public-html/2011Mar/0586.html</a>
+<a href="http://lists.w3.org/Archives/Public/public-html/2010Jan/att-0218/issue-76-decision.html">http://lists.w3.org/Archives/Public/public-html/2010Jan/att-0218/issue-76-decision.html</a>
+
+- Sam Ruby</pre>
+    </div>
+
+    <div id="c74" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c74">Comment 74</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Peter Winnberg</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-06 08:24:17 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c73">comment #73</a>)
+<span class="quote">&gt; Can that be split into smaller issues?</span >
+
+Yes, I guess most of the discussion has been about the data element and the time element so maybe:
+
+&quot;Should HTML5 have a time element&quot;
+&quot;Should HTML5 have a data element&quot;
+
+This does not really cover the pubdate attribute or the atom conversion section. But on the other hand I don't really object to removing them.
+
+<span class="quote">&gt; <a href="http://lists.w3.org/Archives/Public/public-html/2011Mar/0586.html">http://lists.w3.org/Archives/Public/public-html/2011Mar/0586.html</a>
+&gt; <a href="http://lists.w3.org/Archives/Public/public-html/2010Jan/att-0218/issue-76-decision.html">http://lists.w3.org/Archives/Public/public-html/2010Jan/att-0218/issue-76-decision.html</a></span >
+
+My issue with the schema.org examples could be handled as a counter-proposal if someone tries to re-introduce them in the spec ( after the revert ).</pre>
+    </div>
+
+    <div id="c75" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c75">Comment 75</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Sam Ruby</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-06 12:52:17 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c74">comment #74</a>)
+<span class="quote">&gt; (In reply to <a href="show_bug.cgi?id=13240#c73">comment #73</a>)
+&gt; &gt; Can that be split into smaller issues?
+&gt; 
+&gt; Yes, I guess most of the discussion has been about the data element and the
+&gt; time element so maybe:
+&gt; 
+&gt; &quot;Should HTML5 have a time element&quot;
+&gt; &quot;Should HTML5 have a data element&quot;
+&gt; 
+&gt; This does not really cover the pubdate attribute or the atom conversion
+&gt; section. But on the other hand I don't really object to removing them.</span >
+
+If somebody would like to advocate the removal of pubdate, we would need a Change Proposal.  The question here is whether that should be handled separately from one of those two issues, or can be combined.
+
+The Atom conversion has not been a part of the W3C HTML spec for quite some time:
+
+<a href="http://lists.w3.org/Archives/Public/public-html/2010Jun/0000.html">http://lists.w3.org/Archives/Public/public-html/2010Jun/0000.html</a>
+
+<span class="quote">&gt; &gt; <a href="http://lists.w3.org/Archives/Public/public-html/2011Mar/0586.html">http://lists.w3.org/Archives/Public/public-html/2011Mar/0586.html</a>
+&gt; &gt; <a href="http://lists.w3.org/Archives/Public/public-html/2010Jan/att-0218/issue-76-decision.html">http://lists.w3.org/Archives/Public/public-html/2010Jan/att-0218/issue-76-decision.html</a>
+&gt; 
+&gt; My issue with the schema.org examples could be handled as a counter-proposal if
+&gt; someone tries to re-introduce them in the spec ( after the revert ).</span >
+
+Tantek has begun work on such a change proposal:
+
+<a href="http://lists.w3.org/Archives/Public/public-html/2011Nov/0026.html">http://lists.w3.org/Archives/Public/public-html/2011Nov/0026.html</a> =&gt;
+<a href="https://www.w3.org/wiki/User:Tantekelik/data_element">http://www.w3.org/wiki/User:Tantekelik/data_element</a>
+
+If the people interested in this topic can work together and a single Change Proposal emerges, we can issue a Call for Consensus on that proposal.  If a common proposal can't be reached, we will issue a call for Counter Proposals.</pre>
+    </div>
+
+    <div id="c76" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c76">Comment 76</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Cameron Jones</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-07 17:04:14 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=13240#c75">comment #75</a>)
+<span class="quote">&gt; If somebody would like to advocate the removal of pubdate, we would need a
+&gt; Change Proposal.  The question here is whether that should be handled
+&gt; separately from one of those two issues, or can be combined.
+&gt; </span >
+
+I advocate for the removal of pubdate for the same reasons given in the bug report, specifically <a href="show_bug.cgi?id=13240#c7">comment 7</a>. This is a minor change and should be regarded as a cleanup from the old atom integration. The change proposal will only include removal, not replacement.
+
+<a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED WONTFIX - Add 'update' boolean attribute to TIME element"
+   href="show_bug.cgi?id=14202#c7">http://www.w3.org/Bugs/Public/show_bug.cgi?id=14202#c7</a>
+
+
+(In reply to <a href="show_bug.cgi?id=13240#c73">comment #73</a>)
+<span class="quote">&gt; Can that be split into smaller issues?</span >
+
+I do not think this can be split into multiple bug items as the prerequisite question is for the use case of if\how to represent elementary data within html. &lt;time&gt; is an implementation of this for a single element type and so is superseded by any &lt;data&gt; discussion and resolution.
+
+as noted on public-html:
+
+&quot;The problem with having both &lt;time&gt; and &lt;data&gt; elements is their overwhelming overlap in functionality and implementation. If we need &lt;data&gt;, why do we need a special case for &lt;time&gt;?&quot;
+
+<a href="http://lists.w3.org/Archives/Public/public-html/2011Nov/0055.html">http://lists.w3.org/Archives/Public/public-html/2011Nov/0055.html</a></pre>
+    </div>
+
+    <div id="c77" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=13240#c77">Comment 77</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Sam Ruby</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2011-11-29 12:32:44 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text"><a href="https://www.w3.org/html/wg/tracker/issues/183">http://www.w3.org/html/wg/tracker/issues/183</a> - enhance-time
+<a href="https://www.w3.org/html/wg/tracker/issues/184">http://www.w3.org/html/wg/tracker/issues/184</a> - data-element
+<a href="https://www.w3.org/html/wg/tracker/issues/185">http://www.w3.org/html/wg/tracker/issues/185</a> - drop-pubdate</pre>
+    </div>
+
+
+  
+
+</td>
+<td>
+</td>
+</tr></table>
+  </div>
+        
+
+</form>
+
+<hr>
+<ul class="related_actions">
+    <li><a href="show_bug.cgi?format=multiple&amp;id=13240">Format For Printing</a></li>
+    <li>&nbsp;-&nbsp;<a href="show_bug.cgi?ctype=xml&amp;id=13240">XML</a></li>
+    <li>&nbsp;-&nbsp;<a href="enter_bug.cgi?cloned_bug_id=13240">Clone This Bug</a></li>
+    
+    <li>&nbsp;-&nbsp;<a href="#">Top of page </a></li>
+    </ul>
+
+<br>
+</div>
+
+    
+
+  </body>
+</html>
