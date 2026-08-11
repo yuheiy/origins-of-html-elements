@@ -34,10 +34,10 @@ status: 完成
 - [`<aside>`](elements/aside.md): 2004年の`sidebar`案から、配置を脇へ限定する誤解を避けるため`aside`となり、本文に関連するが主たる流れから外れた内容を表した。
 - [`<audio>`](elements/audio.md): `audio`は2007年3月23日、音声または音声ストリームを表し、`video`と共通のメディアAPIを持つ要素としてWHATWGへ追加された。
 - [`<b>`](elements/b.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した物理的な文字強調要素で、同時代Texinfoの`@b`との対応を確認できる。
-- [`<base>`](elements/base.md): 文書が取得元文脈を失っても相対アドレスを解決する要求から1993年の`BASE`へ至るが、中間の具体化は未確認である。
+- [`<base>`](elements/base.md): 1991年の未使用のBase Addressタグ案と1992年の採用決定から1993年の`BASE HREF`へ至るが、最終構文と名称の具体化は未確認である。
 - [`<bdi>`](elements/bdi.md): W3C国際化グループの双方向文字分離要求と`ubi`属性案を、WHATWGが2010年に新要素へ変更して採録したものである。
 - [`<bdo>`](elements/bdo.md): 文脈だけでは方向を解けないテキストへUnicode書字方向の上書きを指定するため、1995年の国際化草案が導入しRFC 2070が標準化した。
-- [`<blockquote>`](elements/blockquote.md): Dan Connollyが1992年にHTML DTDへ追加し、後にUsenetニュースの引用様式を有力な影響候補に挙げたが、同時代資料による祖先は未確認である。
+- [`<blockquote>`](elements/blockquote.md): HTMLより早いDocBook 1.0の同名要素と導入直前のDocBook検討は確認できるが、Connollyの後代の説明がUsenet説と競合するため直接祖先は未確定である。
 - [`<body>`](elements/body.md): Tim Berners-Leeは1992年6月にヘッダー／本文分離案を示し、Dan Connollyの7月公開DTDは`BODY`を混在内容回避用の本文コンテナーとして宣言した。
 - [`<br>`](elements/br.md): 1993年9月のNCSA Mosaic 2.0プレリリース3で改行タグとして確認できるが、HTML+案との前後関係と標準採用経路は未確認である。
 - [`<button>`](elements/button.md): `button`は1997年、既存の`input`による送信／リセット／スクリプト用ボタンと同じ動作を保ちながら、HTML内容を持つ豊かなボタンを作るためW3CのHTML 4へ導入された。

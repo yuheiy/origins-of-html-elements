@@ -337,6 +337,7 @@
 | [www.ietf.org/archive/id/draft-ietf-html-cda-00.txt](../raw/www.ietf.org/archive/id/draft-ietf-html-cda-00.txt) | — |
 | [www.ietf.org/archive/id/draft-ietf-html-clientsideimagemap-00.txt](../raw/www.ietf.org/archive/id/draft-ietf-html-clientsideimagemap-00.txt) | — |
 | [www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt](../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt) | — |
+| [www.oasis-open.org/docbook/sgml/1.0/docbk10.zip/docbook.dtd](../raw/www.oasis-open.org/docbook/sgml/1.0/docbk10.zip/docbook.dtd) | — |
 | [www.oasis-open.org/specs/a501.htm](../raw/www.oasis-open.org/specs/a501.htm) | OASIS Web Site: TR 9401:1995 - Entity Management |
 | [www.oasis-open.org/specs/a502.htm](../raw/www.oasis-open.org/specs/a502.htm) | OASIS Web Site: TM 9502:1995 - CALS Table Model DTD |
 | [www.rfc-editor.org/rfc/rfc1866.txt](../raw/www.rfc-editor.org/rfc/rfc1866.txt) | — |

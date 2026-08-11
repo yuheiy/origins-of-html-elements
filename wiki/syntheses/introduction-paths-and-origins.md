@@ -35,21 +35,20 @@ status: 完成
 
 ## 2. HTML内部の変遷を通して確認できる設計背景
 
-この節ではHTML+、IETF／W3C草案、WHATWG内部変更を独立した起源とせず、確認できる設計背景を整理する。現行115要素のうち114要素には、HTML以前またはHTML内部の先行語彙、設計材料、要求、実装、慣習のいずれかに関する史料がある。ただし、史料が設計時の参照や採用因果を示さず、導入後の互換性経路だけを示す場合も含むため、この数を起源判明数として使えない。`blockquote`だけは1992年のHTML上の出現より前の具体的背景も未確認である。八つの大分類は探索用の主題索引であり、複数の背景を持つ要素も便宜上一度だけ置く。
+この節ではHTML+、IETF／W3C草案、WHATWG内部変更を独立した起源とせず、確認できる設計背景を整理する。現行115要素のすべてに、HTML以前またはHTML内部の先行語彙、設計材料、要求、実装、慣習のいずれかに関する史料がある。ただし、史料が設計時の参照や採用因果を示さず、導入後の互換性経路または同名の先行語彙だけを示す場合も含むため、この数を起源判明数として使えない。従来唯一の例外としていた`blockquote`には、HTMLより早いファイル時刻を持つDocBook 1.0の同名要素と、導入者が直前にDocBook語彙を検討した記録が見つかったが、DocBookからの採用因果はUsenet説と競合して未確認のままである。八つの大分類は探索用の主題索引であり、複数の背景を持つ要素も便宜上一度だけ置く。
 
 下位節では表に示した設計背景と、HTML内部の派生を確認した根拠を詳述する。矢印は個別ページで確認できる範囲だけを要約し、外部材料から要素への採用が未確認な箇所を直接祖先として扱わない。
 
 | 設計背景の主題分類 | 関連が確認できる先行語彙・材料・要求・実装・慣習 | 現行要素 |
 |---|---|---|
 | 構造化文書・出版 | AAP／CERN-SGMLの見出し・リスト語彙、CALS行グループ、SGMLによる文書形式化、表・出版ツール、WorldWideWebエディターのAddressスタイル、クラス付き文書区分、逐次受信中のヘッダー境界、画像とキャプションの制作 | `address`、`body`、`caption`、`col`、`colgroup`、`dd`、`div`、`dl`、`dt`、`figcaption`、`figure`、`h1`、`h2`、`h3`、`h4`、`h5`、`h6`、`head`、`html`、`li`、`ol`、`p`、`table`、`tbody`、`td`、`tfoot`、`th`、`thead`、`title`、`tr`、`ul` |
-| 技術文書・編集・組版 | GNU Texinfoのマクロ名、端末／Unixマニュアル、法律・編集実務、LaTeXと数式組版、略語マークアップと発音要件、文脈依存の強調 | `abbr`、`b`、`cite`、`code`、`del`、`dfn`、`em`、`i`、`ins`、`kbd`、`mark`、`pre`、`s`、`samp`、`small`、`strong`、`sub`、`sup`、`u`、`var` |
+| 技術文書・編集・組版 | GNU Texinfoのマクロ名、DocBookの同名語彙候補、端末／Unixマニュアル、法律・編集実務、LaTeXと数式組版、略語マークアップと発音要件、文脈依存の強調 | `abbr`、`b`、`blockquote`、`cite`、`code`、`del`、`dfn`、`em`、`i`、`ins`、`kbd`、`mark`、`pre`、`s`、`samp`、`small`、`strong`、`sub`、`sup`、`u`、`var` |
 | ハイパーテキスト・ナビゲーション・メタデータ | WWWのハイパーテキストモデル、イメージマップ運用、HTTPメタデータ、ノード単位の関係、簡潔な選択肢リスト | `a`、`area`、`base`、`link`、`map`、`menu`、`meta` |
 | フォーム・データ入力・GUI | デスクトップのフォームUI、フォームのアクセシビリティと階層UI、SGML属性値の上限、開閉UI、進捗バー、スカラー量の測定、XForms／Open UI、既存Webのダイアログ実装 | `button`、`datalist`、`details`、`dialog`、`fieldset`、`form`、`input`、`label`、`legend`、`meter`、`optgroup`、`option`、`output`、`progress`、`select`、`selectedcontent`、`summary`、`textarea` |
 | ブラウザー実装・複合文書・マルチメディア | ブラウザーベンダーの画像・埋め込み・フレーム・メディア実装、既成のMathML／SVG語彙、ベンダー別埋め込み内容、WHATWG `Audio`API、時間指定テキスト、レスポンシブ画像実装 | `audio`、`canvas`、`embed`、`iframe`、`img`、`math`、`object`、`picture`、`source`、`svg`、`track`、`video` |
 | スクリプティング・スタイル・Webアプリケーション・コンポーネント | ブラウザーベンダーのクライアント側スクリプティング、非対応時の代替内容、スタイルシート、機械可読データ、Web Componentsのテンプレート／スロット | `data`、`noscript`、`script`、`slot`、`style`、`template`、`time` |
 | 国際化・文字方向・東アジア組版 | Unicode国際化、双方向文字関連仕様、ルビの既存Web実装、言語依存の引用符 | `bdi`、`bdo`、`q`、`rp`、`rt`、`ruby`、`span` |
 | 既存Web制作・コミュニティ・互換性 | 実サイトのセクショニングマークアップ、ARIA役割、コミュニティ提案、ポリフィル、ブラウザー互換マークアップ | `article`、`aside`、`br`、`footer`、`header`、`hgroup`、`hr`、`main`、`nav`、`search`、`section`、`wbr` |
-| HTML以前の設計背景は未確認 | 1992年のHTML上の導入までは確認できるが、それ以前の具体的な設計入力は特定できない | [`blockquote`](../elements/blockquote.md) |
 
 以下の2.1〜2.3は八つの大分類の下位分類ではない。第二表への割り当て根拠を、背景の確認経路ごとに整理する。
 
@@ -59,14 +58,15 @@ AAP／CERN-SGMLから見出し・リスト群、Texinfoのマクロ名から句�
 
 HTML+はフォーム、単純表、図、文書修正機能、クライアント側イメージマップを後続HTMLへ渡した。ほかに、ブラウザー実装から`img`、`embed`、`canvas`、`video`、既存Web／ARIA／コミュニティ実装から`main`、`ruby`群、`picture`、GUI慣習から`details`、外部仕様から`bdo`、`output`等へ至る枝を確認している。[HTML+の共有系譜](../lineages/html-plus.md)、[Andreessenの`IMG`提案](../../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0182.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html)）、[WebKit `CANVAS`実装](../../raw/github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c)（[公開元](https://github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c)）、[`main`提案](../../raw/lists.w3.org/Archives/Public/public-html/2012Sep/0086.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2012Sep/0086.html)）、[Picturefill](../../raw/www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/index.html)（[公開元](https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/)）、[Apple HIGの開閉用の三角形](../../raw/web.archive.org/web/20060701000000id_/http%3A/developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html)（[公開元](https://web.archive.org/web/20060701000000id_/http://developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html)）、[RFC 2070](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)）、[XForms UI](../../raw/www.w3.org/TR/2000/WD-xforms-20001219/ui.html)（[公開元](https://www.w3.org/TR/2000/WD-xforms-20001219/ui.html)）
 
-直接採用まで確認できないHTML外の設計入力は、次の15群に分かれる。
+直接採用まで確認できないHTML外の先行語彙または設計入力は、次の16群に分かれる。
 
-次表の37要素の根拠は、ハイパーテキストについては[Raggettらの回顧](../../raw/www.w3.org/People/Raggett/book4/ch02.html)（[公開元](https://www.w3.org/People/Raggett/book4/ch02.html)）、イメージマップについては[Seidmanの提案](../../raw/archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)（[公開元](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)）、SGML形式化については[ConnollyのDTD議論](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)）、表については[RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)）と[Raggettの回顧](../../raw/www.w3.org/People/Raggett/the-early-days-of-the-Web.html)（[公開元](https://www.w3.org/People/Raggett/the-early-days-of-the-Web.html)）に置く。
+次表の38要素の根拠は、ハイパーテキストについては[Raggettらの回顧](../../raw/www.w3.org/People/Raggett/book4/ch02.html)（[公開元](https://www.w3.org/People/Raggett/book4/ch02.html)）、イメージマップについては[Seidmanの提案](../../raw/archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)（[公開元](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)）、SGML形式化については[ConnollyのDTD議論](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)）、表については[RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)）と[Raggettの回顧](../../raw/www.w3.org/People/Raggett/the-early-days-of-the-Web.html)（[公開元](https://www.w3.org/People/Raggett/the-early-days-of-the-Web.html)）に置く。DocBook候補については、[DocBook 1.0 DTD](../../raw/www.oasis-open.org/docbook/sgml/1.0/docbk10.zip/docbook.dtd)（[公開元](https://www.oasis-open.org/docbook/sgml/1.0/docbk10.zip)）、[導入直前のDocBook検討](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)）、[導入者を含む再探索](../../raw/lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html)（[公開元](https://lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html)）を対応させる。
 
 フォームとSGML制約は[HTML+ Forms](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)）と[W3Cフォーム草案](../../raw/www.w3.org/TR/WD-forms-960308.html)（[公開元](https://www.w3.org/TR/WD-forms-960308.html)）、編集・技術文書・数式は[HTML+ Amendments](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)）、[HTML+ Preformatted Text](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html)）、[HTML+ Mathematics](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)）が直接説明する。HTTP、オブジェクト、Unicode、スタイル、進捗の背景はそれぞれ[`META`提案](../../raw/lists.w3.org/Archives/Public/www-html/1994Jun/0002.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1994Jun/0002.html)）、[`INSERT`草案](../../raw/www.w3.org/TR/WD-insert-951220.html)（[公開元](https://www.w3.org/TR/WD-insert-951220.html)）、[RFC 2070](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)）、[HTML 3.0 document head](../../raw/www.w3.org/MarkUp/html3/dochead.html)（[公開元](https://www.w3.org/MarkUp/html3/dochead.html)）、[`progress`の目的に関する説明](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-August/064204.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-August/064204.html)）で確認できる。
 
 | 由来のまとまり | 確認できる内容 | 現行要素 |
 |---|---|---|
+| DocBookの同名語彙候補 | HTMLより早いファイル時刻を持つDocBook 1.0の`BlockQuote`と、導入者が直前にDocBook語彙をHTMLの候補として検討した事実。要素単位の採用記録はなく、後代のUsenet説と競合する | `blockquote` |
 | WWWのハイパーテキストモデル | ノード間リンクを文中へ置くBerners-Lee独自のアンカー／`HREF`設計と、取得URLを失った文書の相対URL基準 | `a`、`base` |
 | イメージマップ運用 | サーバー側イメージマップとHTML+の形状付きリンクの制約を、クライアント側の領域と行き先へ分離 | `area`、`map` |
 | SGMLによるHTML文書の形式化 | SGMLパーサー用の文書要素、混在内容を避ける本文、SGML由来と回顧される段落、SGMLタグ対構文を用いたタイトル。個別の元DTDは不明 | `html`、`body`、`p`、`title` |
@@ -126,6 +126,8 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 ### 3.1 確度と未解決点
 
 現行115要素の確度はAが84要素、A−が17要素、Bが11要素、Cが3要素で、未評価はない。ただしAはHTMLへの導入と直前の系譜だけを評価するため、Aであっても語の命名理由やさらに上流の由来が確定したとは限らない。
+
+今回の再調査により、従来唯一「HTML以前の具体的背景は未確認」としていた`blockquote`では、DocBook 1.0の先行する同名語彙と導入直前のDocBook検討を確認した。ただしDocBookからHTMLへの要素単位の採用因果は、導入者自身のUsenet説と競合して解消できないため、確度Bと直前祖先未確認を維持する。`base`では、最初期のタグ案を1991年10月まで遡り、1992年11月の採用決定を確認したが、`BASE HREF`への最終具体化とHTML外の祖先は未確認である。
 
 108ページ、113要素に一つ以上の未解決点が残る。未解決がないのは`figcaption`と`optgroup`だけである。したがって、このページの主題分類は調査完了率として使えない。
 
