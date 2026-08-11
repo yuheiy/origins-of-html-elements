@@ -114,7 +114,7 @@ status: 完成
 - [`<source>`](elements/source.md): `source`は2007年3月23日、`video`でコーデック選択を行い複数の代替メディアリソースから選択する要素としてWHATWGへ追加された。
 - [`<span>`](elements/span.md): 1995年のIETF HTML国際化草案が`BIDI DIR`の方向埋め込みを移し、`LANG`／`DIR`を置く適切な要素がない行内テキスト用の汎用コンテナーへ拡張した。
 - [`<strong>`](elements/strong.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した論理的な文字強調要素で、同時代Texinfoの`@strong`との対応を確認できる。
-- [`<style>`](elements/style.md): 確認できる最初の`STYLE`は1995年4月25日のHTML 3.0草案にあり、文書内のスタイル上書きを`HEAD`へ置く。
+- [`<style>`](elements/style.md): HTML 3.0 DTDは1995年2月9日に既存`STYLE`を単純化したと記録し、Arena実装とHTML WG要件を経て4月の公開草案が文書内のスタイル上書きとして規定した。
 - [`<sub>`](elements/sub.md): HTML+のDTDが一般テキストでも許可した`SUB`をHTML 3.0へ引き継ぐ設計意図を、Dave Raggettの同時代メールで確認できる。
 - [`<summary>`](elements/summary.md): `summary`は2010年、`details`のキャプションを`legend`または`dt`／`dd`で表す方式を専用要素へ置換して導入された。
 - [`<sup>`](elements/sup.md): HTML+のDTDが一般テキストでも許可した`SUP`をHTML 3.0へ引き継ぐ設計意図を、Dave Raggettの同時代メールで確認できる。

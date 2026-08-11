@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="hypermail 3.0.0, see https://github.com/hypermail-project/hypermail/" />
+<title>HTML VWG Agenda from Dan Connolly on 1995-04-05 (www-html@w3.org from April 1995)</title>
+<meta name="Author" content="Dan Connolly (connolly&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;)" />
+<meta name="Subject" content="HTML VWG Agenda" />
+<meta name="Date" content="1995-04-05" />
+<link rel="stylesheet" title="Normal view" href="/assets/styles/public.css" />
+<link rel="help" href="/Help/" />
+<link rel="start" href="../" title="www-html@w3.org archives" />
+<script defer="defer" src="/assets/js/archives.js"></script>
+</head>
+<body class="message">
+<header class="head">
+<nav class="breadcrumb" id="upper">
+  <ul>
+    <li><a href="https://www.w3.org/">W3C home</a></li>
+    <li><a href="/">Mailing lists</a></li>
+    <li><a href="../../">Public</a></li>
+    <li><a href="../" rel="start">www-html@w3.org</a></li>
+    <li><a href="./" rel="contents">April 1995</a></li>
+  </ul>
+</nav>
+<h1>HTML VWG Agenda</h1>
+<!-- received="Wed Apr 5 22:01:13 1995" -->
+<!-- isoreceived="19950405220113" -->
+<!-- sent="Wed, 5 Apr 1995 22:01:03 +0500" -->
+<!-- isosent="19950405170103" -->
+<!-- name="Dan Connolly" -->
+<!-- email="connolly&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;" -->
+<!-- subject="HTML VWG Agenda" -->
+<!-- id="9504060201.AA02364@www18.w3.org" -->
+<!-- charset="UTF-8" -->
+<!-- inreplyto="199504052249.AA13028&#64;cpcug.org" -->
+<!-- expires="-1" -->
+<nav id="navbar">
+<ul class="links hmenu_container">
+<li>
+<span class="heading">This message</span>: <ul class="hmenu"><li><a href="#start" id="options1">Message body</a></li>
+<li><a href="mailto:www-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20HTML%20VWG%20Agenda&amp;In-Reply-To=%3C9504060201.AA02364%40www18.w3.org%3E&amp;References=%3C9504060201.AA02364%40www18.w3.org%3E">Respond</a></li>
+<li><a href="#options3">More options</a></li>
+</ul></li>
+<li>
+<span class="heading">Related messages</span>: <ul class="hmenu">
+<!-- unext="start" -->
+<li><a href="0050.html">Next message</a></li>
+<li><a href="0048.html">Previous message</a></li>
+<li><a href="0048.html">In reply to</a></li>
+<!-- unextthread="start" -->
+<!-- ureply="end" -->
+</ul></li>
+</ul>
+</nav>
+</header>
+<!-- body="start" -->
+<main class="mail">
+<ul class="headers" aria-label="message headers">
+<li><span class="from">
+<span class="heading">From</span>: Dan Connolly &lt;<a href="mailto:connolly&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20HTML%20VWG%20Agenda&amp;In-Reply-To=%3C9504060201.AA02364%40www18.w3.org%3E&amp;References=%3C9504060201.AA02364%40www18.w3.org%3E">connolly&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;</a>&gt;
+</span></li>
+<li><span class="date"><span class="heading">Date</span>: Wed, 5 Apr 1995 22:01:03 +0500</span></li>
+<li><span class="to"><span class="heading">To</span>: <a href="mailto:houser&#x40;&#0099;&#0112;&#0099;&#0117;&#0103;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20HTML%20VWG%20Agenda&amp;In-Reply-To=%3C9504060201.AA02364%40www18.w3.org%3E&amp;References=%3C9504060201.AA02364%40www18.w3.org%3E">houser&#x40;&#0099;&#0112;&#0099;&#0117;&#0103;&#0046;&#0111;&#0114;&#0103;</a>
+</span></li>
+<li><span class="cc"><span class="heading">Cc</span>: Multiple recipients of list &lt;<a href="mailto:www-html&#x40;&#0119;&#0119;&#0119;&#0049;&#0048;&#0046;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20HTML%20VWG%20Agenda&amp;In-Reply-To=%3C9504060201.AA02364%40www18.w3.org%3E&amp;References=%3C9504060201.AA02364%40www18.w3.org%3E">www-html&#x40;&#0119;&#0119;&#0119;&#0049;&#0048;&#0046;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;</a>&gt;
+</span></li>
+<li><span class="cc"><span class="heading">Cc</span>: <a href="mailto:html-wg&#x40;&#0111;&#0099;&#0108;&#0099;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20HTML%20VWG%20Agenda&amp;In-Reply-To=%3C9504060201.AA02364%40www18.w3.org%3E&amp;References=%3C9504060201.AA02364%40www18.w3.org%3E">html-wg&#x40;&#0111;&#0099;&#0108;&#0099;&#0046;&#0111;&#0114;&#0103;</a>
+</span></li>
+<li><span class="message-id"><span class="heading">Message-Id</span>: &lt;9504060201.AA02364&#x40;&#0119;&#0119;&#0119;&#0049;&#0056;&#0046;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;&gt;
+</span></li>
+</ul>
+<pre id="start" class="body">
+Walt Houser at the IETF writes:
+ &gt; &gt;I am now curious as to the new HTML 3.0.  I'm not quite clear what its 
+ &gt; &gt;new features are.  I hear there is a method to inserting a background on 
+ &gt; 
+ &gt; Dan or Dave, could you post the html wg agenda as it summarizes the proposed 
+ &gt; functionality quite succinctly.
+
+also at: <a href="http://www.w3.org/hypertext/WWW/MarkUp/html-spec/danvers-agenda">http://www.w3.org/hypertext/WWW/MarkUp/html-spec/danvers-agenda</a>
+
+================================================================
+Agenda for APP    html      Hypertext Markup Language WG
+
+Wednesday, April 5, 1995
+1530-1730  Afternoon Session
+
+For the first session, I'd just like to discuss the various proposed
+features, their complexity, and their maturity, and the market
+demand/activity. In the second session, I'd like to work toward
+deciding which features should go in which specs, and by when.
+
+05      Agenda check &amp; approval of last meeting's minutes
+
+15	Navigational idioms
+		(i.e. bookmarks, TOC, HOME, Banner)
+
+20      Forms and interactive applications
+	      -- file upload
+	      -- client-side image maps
+	      -- scripting (safe-tcl, java) (suggest: OUT OF SCOPE for HTML)
+
+20	Tables: what are we after?
+		-- enough to eliminate the current kludges in forms etc.
+		-- parity with word processors (current proposal is here)
+		-- CALS
+
+20      Math: what do we need? how much does it cost, once you've done tables?
+
+20	StyleSheets
+		suggest: out of scope for HTML, but we should provide
+		extensibility (e.g. ID, CLASS, STYLE)
+
+20      Internationalization: encodings, charsets, languages, and writing
+	systems.
+
+
+================================================================
+Thursday, April 6, 1995
+0930-1130   Morning Sesssion (mbone)
+
+
+10	HTML 2.0 terminology: user agent, character encoding, ...
+	conformance, closure.
+
+10      char set issues:
+	2.0: model defined, charsets other than ISO-8859-1 reserved
+	for future use, i.e. unspecified.
+
+	2.1 revision for more complete charset discussion? (e.g. Unicode)
+
+10      File upload: orthogonal to 2.0, might as well be part of 3.0.
+	Independendent specificaion is valuable.
+
+30	Table Deployment.
+	Is a 2.0+tables spec effort worth the effort?
+	If no 2.0+tables spec, what do we do with browsers that
+	implement 2.0+tables, but not 3.0?
+
+30      HTML 3.0 requirements. Suggestions:
+	enough tables to satisfy the needs of FORMs applications
+	Capture existing navigation idioms
+		(i.e. bookmarks, TOC, HOME, Banner)
+	parity with major word-processors.
+		(e.g. sufficiently rich tables, math)
+	extensibility in the direction of stylesheets
+		(i.e. ID, class attrs, STYLE element)
+	extensibility in the direction of non-western writing systems
+		(i.e. LANG attr. Is it enough? Can we defer this?)
+
+30	Liason activity: scripting languages, graphics formats,
+	Unicode, HyTime, MID, MIMESGML, etc.
+</pre>
+<p class="received"><span class="heading">Received on</span> Wednesday,  5 April 1995 22:01:13 UTC</p>
+</main>
+<!-- body="end" -->
+<footer class="foot">
+<nav id="navbarfoot">
+<ul class="links hmenu_container">
+<li><span class="heading">This message</span>: <span class="message_body"><a href="#start">Message body</a></span></li>
+<!-- lnext="start" -->
+<li><span class="heading">Next message</span>: <a href="0050.html">Bill Brooks: "Back to HTML! [was: What in the world happened to this list?]"</a></li>
+<li><span class="heading">Previous message</span>: <a href="0048.html">Walt Houser at the IETF: "HTML V3 Spec"</a></li>
+<li><span class="heading">In reply to</span>: <a href="0048.html">Walt Houser at the IETF: "HTML V3 Spec"</a></li>
+<!-- lnextthread="start" -->
+<!-- lreply="end" -->
+</ul>
+<ul class="links hmenu_container">
+<li id="options3"><span class="heading">Mail actions</span>: <ul class="hmenu"><li><a href="mailto:www-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20HTML%20VWG%20Agenda&amp;In-Reply-To=%3C9504060201.AA02364%40www18.w3.org%3E&amp;References=%3C9504060201.AA02364%40www18.w3.org%3E">respond to this message</a></li>
+<li><a href="mailto:www-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;">mail a new topic</a></li></ul></li>
+<li><span class="heading">Contemporary messages sorted</span>: <ul class="hmenu"><li><a href="index.html#msg49">by date</a></li>
+<li><a href="thread.html#msg49">by thread</a></li>
+<li><a href="subject.html#msg49">by subject</a></li>
+<li><a href="author.html#msg49">by author</a></li>
+</ul></li>
+<li><span class="heading">Help</span>: <ul class="hmenu">
+    <li><a href="/Help/" rel="help">how to use the archives</a></li>
+    <li><a href="https://www.w3.org/Search/Mail/Public/search?type-index=www-html&amp;index-type=t">search the archives</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<!-- trailer="footer" -->
+<p class="colophon">
+This archive was generated by <a href="https://github.com/hypermail-project/hypermail/">hypermail 3.0.0</a>: Thursday, 13 July 2023 18:04:04 UTC
+</p>
+</footer>
+</body>
+</html>

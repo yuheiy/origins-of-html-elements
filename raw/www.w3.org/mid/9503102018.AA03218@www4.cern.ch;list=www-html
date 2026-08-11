@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="hypermail 3.0.0, see https://github.com/hypermail-project/hypermail/" />
+<title>Style sheets in Arena from H&amp;kon W Lie on 1995-03-10 (www-html@w3.org from March 1995)</title>
+<meta name="Author" content="H&amp;kon W Lie (arena&#x40;&#0100;&#0120;&#0099;&#0101;&#0114;&#0110;&#0046;&#0099;&#0101;&#0114;&#0110;&#0046;&#0099;&#0104;)" />
+<meta name="Subject" content="Style sheets in Arena" />
+<meta name="Date" content="1995-03-10" />
+<link rel="stylesheet" title="Normal view" href="/assets/styles/public.css" />
+<link rel="help" href="/Help/" />
+<link rel="start" href="../" title="www-html@w3.org archives" />
+<script defer="defer" src="/assets/js/archives.js"></script>
+</head>
+<body class="message">
+<header class="head">
+<nav class="breadcrumb" id="upper">
+  <ul>
+    <li><a href="https://www.w3.org/">W3C home</a></li>
+    <li><a href="/">Mailing lists</a></li>
+    <li><a href="../../">Public</a></li>
+    <li><a href="../" rel="start">www-html@w3.org</a></li>
+    <li><a href="./" rel="contents">March 1995</a></li>
+  </ul>
+</nav>
+<h1>Style sheets in Arena</h1>
+<!-- received="Fri Mar 10 15:18:15 1995" -->
+<!-- isoreceived="19950310151815" -->
+<!-- sent="Fri, 10 Mar 1995 21:18:09 &ndash;&ndash;100" -->
+<!-- isosent="19950310221809" -->
+<!-- name="H&kon W Lie" -->
+<!-- email="arena&#x40;&#0100;&#0120;&#0099;&#0101;&#0114;&#0110;&#0046;&#0099;&#0101;&#0114;&#0110;&#0046;&#0099;&#0104;" -->
+<!-- subject="Style sheets in Arena" -->
+<!-- id="9503102018.AA03218@www4.cern.ch" -->
+<!-- charset="UTF-8" -->
+<!-- expires="-1" -->
+<nav id="navbar">
+<ul class="links hmenu_container">
+<li>
+<span class="heading">This message</span>: <ul class="hmenu"><li><a href="#start" id="options1">Message body</a></li>
+<li><a href="mailto:www-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20Style%20sheets%20in%20Arena&amp;In-Reply-To=%3C9503102018.AA03218%40www4.cern.ch%3E&amp;References=%3C9503102018.AA03218%40www4.cern.ch%3E">Respond</a></li>
+<li><a href="#options3">More options</a></li>
+</ul></li>
+<li>
+<span class="heading">Related messages</span>: <ul class="hmenu">
+<!-- unext="start" -->
+<li><a href="0096.html">Next message</a></li>
+<li><a href="0094.html">Previous message</a></li>
+<!-- unextthread="start" -->
+<!-- ureply="end" -->
+</ul></li>
+</ul>
+</nav>
+</header>
+<!-- body="start" -->
+<main class="mail">
+<ul class="headers" aria-label="message headers">
+<li><span class="from">
+<span class="heading">From</span>: H&amp;kon W Lie &lt;<a href="mailto:arena&#x40;&#0100;&#0120;&#0099;&#0101;&#0114;&#0110;&#0046;&#0099;&#0101;&#0114;&#0110;&#0046;&#0099;&#0104;?Subject=Re%3A%20Style%20sheets%20in%20Arena&amp;In-Reply-To=%3C9503102018.AA03218%40www4.cern.ch%3E&amp;References=%3C9503102018.AA03218%40www4.cern.ch%3E">arena&#x40;&#0100;&#0120;&#0099;&#0101;&#0114;&#0110;&#0046;&#0099;&#0101;&#0114;&#0110;&#0046;&#0099;&#0104;</a>&gt;
+</span></li>
+<li><span class="date"><span class="heading">Date</span>: Fri, 10 Mar 1995 21:18:09 --100</span></li>
+<li><span class="to"><span class="heading">To</span>: <a href="mailto:www-html&#x40;&#0119;&#0119;&#0119;&#0048;&#0046;&#0099;&#0101;&#0114;&#0110;&#0046;&#0099;&#0104;?Subject=Re%3A%20Style%20sheets%20in%20Arena&amp;In-Reply-To=%3C9503102018.AA03218%40www4.cern.ch%3E&amp;References=%3C9503102018.AA03218%40www4.cern.ch%3E">www-html&#x40;&#0119;&#0119;&#0119;&#0048;&#0046;&#0099;&#0101;&#0114;&#0110;&#0046;&#0099;&#0104;</a>
+</span></li>
+<li><span class="message-id"><span class="heading">Message-Id</span>: &lt;9503102018.AA03218&#x40;&#0119;&#0119;&#0119;&#0052;&#0046;&#0099;&#0101;&#0114;&#0110;&#0046;&#0099;&#0104;&gt;
+</span></li>
+</ul>
+<pre id="start" class="body">
+The latest prerelease of Arena -- W3O's testbed HTML3 browser --
+includes an experimental style sheet scheme. Using the proposed HTML3
+&lt;STYLE&gt; tag, users and authors can set presentation preferences. The
+current implementation is severely restricted, but shows
+potential. Comments are welcome.
+
+<a href="http://www.w3.org/hypertext/WWW/Arena/">http://www.w3.org/hypertext/WWW/Arena/</a>
+
+-h&amp;kon
+
+Hakon W Lie, WWW project CERN, CH-1211 Geneva 23
+<a href="http://www.w3.org/hypertext/WWW/People/howcome/">http://www.w3.org/hypertext/WWW/People/howcome/</a>
+</pre>
+<p class="received"><span class="heading">Received on</span> Friday, 10 March 1995 15:18:15 UTC</p>
+</main>
+<!-- body="end" -->
+<footer class="foot">
+<nav id="navbarfoot">
+<ul class="links hmenu_container">
+<li><span class="heading">This message</span>: <span class="message_body"><a href="#start">Message body</a></span></li>
+<!-- lnext="start" -->
+<li><span class="heading">Next message</span>: <a href="0096.html">Matt Heffron: "Re: FOOTNOTE element"</a></li>
+<li><span class="heading">Previous message</span>: <a href="0094.html">Jonsm@aol.com: "Re: Browsers and syntax error..."</a></li>
+<!-- lnextthread="start" -->
+<!-- lreply="end" -->
+</ul>
+<ul class="links hmenu_container">
+<li id="options3"><span class="heading">Mail actions</span>: <ul class="hmenu"><li><a href="mailto:www-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20Style%20sheets%20in%20Arena&amp;In-Reply-To=%3C9503102018.AA03218%40www4.cern.ch%3E&amp;References=%3C9503102018.AA03218%40www4.cern.ch%3E">respond to this message</a></li>
+<li><a href="mailto:www-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;">mail a new topic</a></li></ul></li>
+<li><span class="heading">Contemporary messages sorted</span>: <ul class="hmenu"><li><a href="index.html#msg95">by date</a></li>
+<li><a href="thread.html#msg95">by thread</a></li>
+<li><a href="subject.html#msg95">by subject</a></li>
+<li><a href="author.html#msg95">by author</a></li>
+</ul></li>
+<li><span class="heading">Help</span>: <ul class="hmenu">
+    <li><a href="/Help/" rel="help">how to use the archives</a></li>
+    <li><a href="https://www.w3.org/Search/Mail/Public/search?type-index=www-html&amp;index-type=t">search the archives</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<!-- trailer="footer" -->
+<p class="colophon">
+This archive was generated by <a href="https://github.com/hypermail-project/hypermail/">hypermail 3.0.0</a>: Thursday, 13 July 2023 18:04:04 UTC
+</p>
+</footer>
+</body>
+</html>

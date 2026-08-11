@@ -1,0 +1,726 @@
+<!-- $Id: styles.src,v 1.34 1997/07/08 09:49:52 lehors Exp $ -->
+<head>
+<title>Style Sheets in HTML documents</title>
+<LINK rel="prev" SRC="presentop.html">
+<LINK rel="next" SRC="graphics.html">
+<LINK rel="STYLESHEET" href="../style/default.css" type="text/css">
+</head>
+
+<body>
+<div class="navbar">
+<center><a href="presentop.html">previous</a> &nbsp; <a href="graphics.html">next</a> &nbsp; <a href="../contents.html">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center><hr>
+</div>
+
+<H1 align="center"><a name="stylesheets">Style Sheets</a><!-- Controlling
+the presentation of an HTML document --><a name="h-8.1">&nbsp;</a></H1>
+<div class="subtoc"><p><strong>Contents</strong>
+<ol>
+<li><a href="styles.html#h-8.1.1">Adding style to HTML</a>
+<ol>
+<li><a href="styles.html#h-8.1.1.1">Setting the default style sheet language</a>
+<li><a href="styles.html#h-8.1.1.2">Inline style information</a>
+<li><a href="styles.html#h-8.1.1.3">Header style information: the <samp class="einst2">STYLE</samp> element</a>
+<li><a href="styles.html#h-8.1.1.4">External style sheets</a>
+<li><a href="styles.html#h-8.1.1.5">Setting the default named style</a>
+</ol>
+<li><a href="styles.html#h-8.1.2">Inheritance and cascading</a>
+<li><a href="styles.html#h-8.1.3">Hiding the Content of Style Elements from non-conforming
+User Agents</a>
+<li><a href="styles.html#h-8.1.4">Specifying style through HTTP headers</a>
+</ol>
+</div>
+
+<p>Style sheets represent a major breakthrough in how Web page designers
+work, by expanding their ability to improve the appearence of their
+pages. In the scientific environments in which the Web was conceived,
+people are more concerned with the content of their documents than the
+presentation. As people from wider walks of life discovered the Web, the
+limitations of HTML became a source of continuing frustration. These
+authors were used to paper media where they had full control. They
+learned how to sidestep HTML's stylistic limitations. While the
+intentions have been good - to improve the presentation of Web pages -
+the techniques for doing so have had unfortunate side effects. These
+techniques work for some of the people, some of the time, but never for
+all of the people, all of the time, They include:
+
+<ul>
+<li>Using proprietary HTML extensions
+<li>Converting text into images
+<li>Using images for white space control
+<li>Use of tables for page layout
+<li>Writing a program instead of using HTML
+</ul>
+
+<p>These techniques considerably increase the complexity of Web pages,
+have limited flexibilty as well as suffering from interoperability
+problems, and creating hardships for people with disabilities.
+
+<p>Style sheets bring back the ease of control over presentation, and
+supercede the limited range of presentation mechanisms added to HTML
+over the last few years. Style sheets make it easy to specify the amount
+of white space between text lines, the amount lines are indented, the
+colors used for the text and the backgrounds, the font size and style,
+and a host of other details.
+
+<p>HTML 4.0 provides support for the following features:
+
+<dl>
+<dt><b>Flexible placement of Style Information</b>
+<dd>Placing style sheets in separate files makes them easy to reuse. Sometimes
+its useful to include rendering instructions within the document to which
+they apply, either grouped at the start of the document, or in attributes of
+the elements throughout the body of the document. To make it easier to manage
+style on a site basis, this specification describes how to use HTTP headers
+to set the style sheets to be applied to a document.
+
+<dt><b>Independence from specific style sheet languages</b>
+<dd>This specification doesn't tie HTML to any particular style sheet
+language. This allows for a range of such languages to be used, for
+instance simple ones for the majority of users and much more complex
+ones for the minority of users with highly specialized needs. The
+examples included below all use the CSS (Cascading Style Sheets)
+language <a rel="biblioentry"
+href="../references.html#ref-CSS1">[CSS1]</a>, but other style sheet
+languages would be possible.
+
+<dt><b>Cascading Style Sheets</b>
+<dd>This is the capability provided by some style sheet languages such
+as CSS to allow style information from several sources to be blended
+together. For instance, corporate style guidelines, styles common to a
+group of documents, and styles specific to a single document. By storing
+these separately, style sheets can be reused, simplifying authoring and
+making more effective use of network caching. The cascade defines an
+ordered sequence of style sheets where rules in later sheets have
+greater precedence than earlier ones. Not all style sheet languages
+support cascading.
+
+<dt><b>Media Dependencies</b>
+<dd>HTML allows you to specify documents in a media independent
+way. This allows people to access Web pages using a wide variety of
+devices and media, e.g. graphical displays for windows, macs, and
+X11, set-top boxes for television sets, specially adapted phones
+and pda based portable devices, speech-based browsers, and
+braille-based tactical devices.
+
+<p>Style sheets, by contrast, apply to specific media or media
+groups. A style sheet intended for screen use, may be applicable
+when printing, but is of little use for speech-based browsers. This
+specification allows you to define the broad categories of media a
+given style sheet is applicable to. This allows user agents to avoid
+retrieving inappropriate style sheets. Style sheet languages may
+include features for describing media dependencies within the same
+style sheet.
+
+<dt><b>Alternative Styles</b>
+<dd>Authors may wish to offer readers several alternative styles
+for viewing a document. For instance, a compact version with small
+fonts, and one with larger fonts for increased legibility. This
+specification allows you to specify such alternatives, including
+which one is the default. Users should be given the opportunity
+of selecting between these styles or switching off style sheets
+altogether.
+
+</dl>
+
+<div class="note">
+<P> <em>Note: This specification includes more
+detailed information about style sheets in sections on
+<a href="../appendix/notes.html#styles">performance issues
+and new media types</a>.</em>
+</div>
+
+
+<H2>Adding style to HTML<a name="h-8.1.1">&nbsp;</a></H2>
+
+<p>HTML documents may contain style sheet rules directly in them or they
+may import style sheets. 
+
+Any style sheet language may be used with HTML. A simple style sheet
+language may suffice for the needs of most users, but languages may be
+more suited to highly specialized needs. HTML does not depend on one
+specific style sheet language. For the purposes of this document,
+however, we will present examples that illustrate Cascading
+Style Sheets (<a rel="biblioentry"
+href="../references.html#ref-CSS1">[CSS1]</a>), abbreviated CSS.
+
+<h3><a name="default-style">Setting the default style sheet language</a><a name="h-8.1.1.1">&nbsp;</a></h3>
+
+<p>The syntax of a style rule is that of the style sheet language,
+not HTML. Since user agents that support style sheets must parse these
+rules, users must declare which style sheet languages are being employed.
+
+<P>Use the <a href="../struct/global.html#edef-META"><samp class="einst">META</samp></a> element to set the default
+style sheet language for a document. For example, to set the default
+to CSS, put the following declaration in the <a href="../struct/global.html#edef-HEAD"><samp
+class="einst">HEAD</samp></a> of your document:
+
+<pre>
+&lt;META http-equiv="Content-Style-Type" content="text/css"&gt;
+</pre>
+
+<P>The default style sheet language can also be set with HTTP
+headers. The above <a href="../struct/global.html#edef-META"><samp class="einst">META</samp></a> declaration is
+equivalent to the HTTP header:
+
+<PRE>
+Content-Style-Type: text/css
+</PRE>
+
+<P>If two or more <a href="../struct/global.html#edef-META"><samp class="einst">META</samp></a> declarations or HTTP
+headers specify the default style sheet language, the last one takes
+precedence. HTTP headers are considered as occuring earlier than the
+document <a href="../struct/global.html#edef-HEAD"><samp class="einst">HEAD</samp></a> for this purpose. In the
+absence of an explicit declaration, the default style sheet language is
+assumed to be CSS. We recommend that authoring tools provide an explicit
+declaration.
+
+<P>Conforming HTML parsers must be able to distinguish HTML from style
+sheet rules. HTML elements and attributes define the beginning of
+style sheet data. The end of style sheet data is defined as the end
+tag open delimiter (&lt;/) immediately followed by an SGML name start
+character ([a-zA-Z]). All style sheet data must be provided to user
+agent's appropriate style sheet handler.
+<!-- I think that ETAGO by itself is sufficient - you don't need the
+name start character -->
+
+<h3><a name="style-element">Inline style information</a><a name="h-8.1.1.2">&nbsp;</a></h3>
+
+<div class="adef-list">
+<P><em>Attribute definitions</em>
+
+<dl>
+<dt><a name="adef-style"><samp class="adef">style</samp></a> =
+ <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute specifies style information for the current element.
+</dl>
+</div>
+
+<P>The <a href="styles.html#adef-style"><samp class="ainst">style</samp></a> attribute specifies style
+information for a single element. The style information is specified
+using the <a href="#default-style">default style sheet language</a>. 
+
+<div class="example">
+<P>This example sets color and font size information for the text in a
+specific paragraph.
+
+<p><tt class=example>
+&lt;P type="text/css" style="font-size: 12pt;
+color: fuschia"&gt;Aren't style sheets wonderful?
+</tt>
+
+<P>Note the syntax of a CSS declaration: <em>name : value</em>.
+Property declarations are separated by a semi-colon.
+</div>
+
+<p>The <a href="styles.html#adef-style"><samp class="ainst">style</samp></a> attribute is appropriate
+when you want to apply a particular style to an individual
+HTML element. If the style will be reused for several elements,
+you should consider using the <samp class="edef">STYLE</samp></a>
+element. For the best flexibility, place styles in separate style
+sheets. 
+
+<h3><a name="style-group">Header style information</a>: the <a
+name="edef-STYLE"><samp class="edef">STYLE</samp></a> element<a name="h-8.1.1.3">&nbsp;</a></h3>
+
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="styles.html#edef-STYLE"><samp class="einst">STYLE</samp></a> - - CDATA      -- style info --&gt;
+&lt;!ATTLIST STYLE
+  %i18n;                           -- <a href="../struct/dirlang.html#adef-lang">lang</a>, <a href="../struct/dirlang.html#adef-dir">dir</a>, for use with title --
+  <a href="styles.html#adef-type-STYLE"><samp class="ainst-STYLE">type</samp></a>        CDATA      #REQUIRED -- Internet content type
+                                      for style language --
+  <a href="styles.html#adef-media"><samp class="ainst-STYLE">media</samp></a>       CDATA      #IMPLIED  -- designed for use with these media --
+  <a href="../struct/global.html#adef-title"><samp class="ainst-STYLE">title</samp></a>       CDATA      #IMPLIED  -- advisory title --
+  &gt;
+</pre>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+<div class="adef-list"><P>
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-type-STYLE"><samp class="adef">type</samp></a> =
+  <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute specifies the style sheet language of the 
+ element's contents, thus overriding the default style sheet
+ language. The style sheet language is specified as an Internet Media
+ Type (e.g., "text/css"). Internet Media Types are defined in <a
+ rel="biblioentry" href="../references.html#ref-MIMETYPES">[MIMETYPES]</a>.
+
+<dt><a name="adef-media"><samp class="adef">media</samp></a> =
+ <a href="../types.html#type-cdata"><em>cdata-list</em></a>
+<dd>This attribute specifies the intended destination medium for style
+ information. It may be a single media type or a comma-separated list.
+ Possible media types:
+
+<ul>
+<li><samp>screen:</samp> Output is intended for
+ non-paged computer screens. This is the default value.
+
+<li><samp>print:</samp> Output is intended for paged, opaque
+  material and for documents on screen viewed in print preview mode.
+
+<li><samp>projection:</samp> Output is intended for projectors.
+
+<li><samp>braille:</samp> Output is intended for braille tactile
+  feedback devices
+
+<li><samp>speech:</samp> Output is intended for a speech synthesizer.
+
+<li><samp>all:</samp> Applies to all devices.
+</ul>
+</dl>
+</div>
+
+<div class="aref-list">
+<P><em>Attributes defined elsewhere</em> </p>
+
+<ul>
+<li><a href="../struct/dirlang.html#adef-lang"><samp class="ainst">lang</samp></a>
+ (<a href="../struct/dirlang.html#language-info">language
+  information</a>), <a href="../struct/dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+ (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+</ul>
+</div>
+
+<P>The <a href="styles.html#edef-STYLE"><samp class="einst">STYLE</samp></a> element allows authors to put
+style sheet rules in the header of the document. HTML permits any number
+of <a href="styles.html#edef-STYLE"><samp class="einst">STYLE</samp></a> elements in the <a href="../struct/global.html#edef-HEAD"><samp
+class="einst">HEAD</samp></a> section of a document.
+
+<p>User agents that don't support style sheets, or don't support the
+specific style sheet language used by a <a href="styles.html#edef-STYLE"><samp class="einst">STYLE</samp></a>
+element <strong>must</strong> hide the contents of the <a href="styles.html#edef-STYLE"><samp
+class="einst">STYLE</samp></a> element. It is an error to render the content
+as part of the document's text. Some style sheet languages support
+syntax for <a href="#hiding">hiding the content</a> from non-conforming
+user agents.
+
+<P>Some style sheet implementations may allow a wider variety of rules
+in the <a href="styles.html#edef-STYLE"><samp class="einst">STYLE</samp></a> element than in the <a href="styles.html#adef-style"><samp
+class="ainst">style</samp></a> attribute. For example, with CSS, rules may
+be declared within a <a href="styles.html#edef-STYLE"><samp class="einst">STYLE</samp></a> element for:
+
+<ul>
+<li>All instances of a specific HTML element (e.g., all <a href="../struct/text.html#edef-P"><samp
+class="einst">P</samp></a> elements, all <a href="../struct/global.html#edef-H1"><samp class="einst">H1</samp></a>
+elements, etc.)
+
+<li>All instances of an HTML element belonging to a specific class
+(i.e., whose <a href="../struct/global.html#adef-class"><samp class="ainst">class</samp></a> attribute is set
+ to some value). 
+
+<li>Single instances of an HTML element (i.e., whose <a href="../struct/global.html#adef-id"><samp
+class="ainst">id</samp></a> attribute is set to some value).
+</ul>
+
+<P>Rules for style rule precedences and inheritance depend on the
+style sheet language.
+
+<div class="example">
+<P>The following CSS <a href="styles.html#edef-STYLE"><samp class="einst">STYLE</samp></a> declaration puts
+a border around every <a href="../struct/global.html#edef-H1"><samp class="einst">H1</samp></a> element in the
+document and centers it on the page.</p>
+
+<pre>
+&lt;HEAD&gt;
+ &lt;STYLE type="text/css"&gt;
+   H1 {border-width: 1; border: solid; text-align: center}
+ &lt;/STYLE&gt;
+&lt;/HEAD&gt;
+</pre>
+
+<P>To specify that this style information should only apply to <a href="../struct/global.html#edef-H1"><samp
+class="einst">H1</samp></a> elements of a specific class, we modify it as
+follows: 
+
+<pre>
+&lt;HEAD&gt;
+ &lt;STYLE type="text/css"&gt;
+   H1.myclass {border-width: 1; border: solid; text-align: center}
+ &lt;/STYLE&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+ &lt;H1 class="myclass"&gt; This H1 is affected by our style &lt;/H1&gt;
+ &lt;H1&gt; This one is not affected by our style &lt;/H1&gt;
+&lt;/BODY&gt;
+</pre>
+
+<P>Finally, to limit the scope of the style information to a single
+instance of <a href="../struct/global.html#edef-H1"><samp class="einst">H1</samp></a>, set
+the <a href="../struct/global.html#adef-id"><samp class="ainst">id</samp></a> attribute:
+
+<pre>
+&lt;HEAD&gt;
+ &lt;STYLE type="text/css"&gt;
+   H1.myid {border-width: 1; border: solid; text-align: center}
+ &lt;/STYLE&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+ &lt;H1 class="myclass"&gt; This H1 is not affected &lt;/H1&gt;
+ &lt;H1 id="myid"&gt; This H1 is affected by style &lt;/H1&gt;
+ &lt;H1&gt; This H1 is not affected &lt;/H1&gt;
+&lt;/BODY&gt;
+</pre>
+</div>
+
+<P>Although style information may be set for almost every HTML
+element, two elements are particularly useful in that they do not
+impose any predefined presentation. Since <a href="../struct/global.html#edef-DIV"><samp class="einst">DIV</samp></a>
+and <a href="../struct/global.html#edef-SPAN"><samp class="einst">SPAN</samp></a> elements define structure only,
+when combined with style sheets, they allow users to
+extend HTML indefinitely.
+
+<div class="example">
+<P> In the following example, we use the <a href="../struct/global.html#edef-SPAN"><samp class="einst">SPAN</samp></a>
+element to set the font style of the first few words of a paragraph to
+small caps.</p>
+
+<pre>
+&lt;HEAD&gt;
+ &lt;STYLE type="text/css"&gt;
+  SPAN.sc-ex { font-variant: small-caps }
+ &lt;/STYLE&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+  &lt;P&gt;&lt;SPAN id="sc-ex"&gt;The first&lt;/SPAN&gt; few words of
+  this paragraph are in small-caps.
+&lt;/BODY&gt;
+</pre>
+</div>
+
+<div class="example">
+<P>In the following example, we use <a href="../struct/global.html#edef-DIV"><samp class="einst">DIV</samp></a> and
+the <a href="../struct/global.html#adef-class"><samp class="ainst">class</samp></a> attribute to set the text
+justification for a series of paragraphs that make up the abstract
+section of a scientific article. This style information could be reused
+for other abstract sections by setting the <a href="../struct/global.html#adef-class"><samp
+class="ainst">class</samp></a> attribute elsewhere in the document.</p>
+
+<pre>
+&lt;HEAD&gt;
+ &lt;STYLE type="text/css"&gt;
+   DIV.Abstract { text-align: justify }
+ &lt;/STYLE&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+ &lt;DIV class="Abstract"&gt;
+   &lt;P&gt;The Chieftain product range is our market winner for
+     the coming year. This report sets out how to position
+     Chieftain against competing products.
+
+   &lt;P&gt;Chieftain replaces the Commander range, which will
+     remain on the price list until further notice.
+ &lt;/DIV&gt;
+&lt;/BODY&gt;
+</pre>
+</div>
+
+<h4><a name="media-types">Media types</a><a name="h-8.1.1.3.1">&nbsp;</a></h4>
+
+<p>HTML enables authors to design documents that do not depend on a
+specific presentational medium. Thus, users may browse the Web with a
+wide variety of user agents: graphical displays for personal computers
+and workstations, set-top boxes for televisions, specially adapted
+telephones and pda-based portable devices, speech-based browsers, and
+braille-based tactile devices.
+
+<P>The <a href="styles.html#adef-media"><samp class="ainst">media</samp></a> attribute specifies the intended
+output for a style rule. By setting the <a href="styles.html#adef-media"><samp class="ainst">media</samp></a>
+attribute, authors may allow user agents to avoid retrieving from the
+network style sheets that do not apply to a given device.
+
+<div class="example">
+<P>The following sample declarations all apply to the <a href="../struct/global.html#edef-H1"><samp
+class="einst">H1</samp></a> element. When displayed on a computer screen,
+all instances will be centered and blue. When printed, all instances
+will be centered. We specify a different style altogether for speech
+synthesizers.</P>
+
+<PRE>
+&lt;HEAD&gt;
+ &lt;STYLE type="text/css" media="screen"&gt;
+    H1 { color: blue}
+ &lt;/STYLE&gt;
+
+ &lt;STYLE type="text/css" media="screen, print"&gt;
+   H1 { text-align: center }
+ &lt;/STYLE&gt;
+
+ &lt;STYLE type="text/acss" media="speech"&gt;
+   H1 { cue-before: url(bell.aiff); cue-after: url(dong.wav)}
+ &lt;/STYLE&gt;
+&lt;/HEAD&gt;
+</PRE>
+</div>
+
+<P>Media control is particularly interesting when applied to external
+style sheets since user agents can save time by retrieving
+from the network only those style sheets that apply to the current
+device.
+
+<div class="example"><P> 
+The previous example may be rewritten to refer to external style
+sheets (instead of using the <a href="styles.html#edef-STYLE"><samp class="einst">STYLE</samp></a> element)
+in conjunction with the <samp class="ainst=LINK">media</samp>
+attribute. User agents may consult the <a href="styles.html#adef-media"><samp
+class="ainst">media</samp></a> attribute and retrieve only those style
+sheets appropriate for the destination medium.
+
+<PRE>
+&lt;HEAD&gt;
+&lt;LINK href="doc1-screen.css" rel="stylesheet" 
+     type="text/css" media="screen"&gt;
+&lt;LINK href="doc1-print.css" rel="stylesheet" 
+     type="text/css" media="print"&gt;
+&lt;LINK href="doc1-speech.css" rel="stylesheet"
+     type="text/css" media="speech"&gt; 
+&lt;/HEAD&gt;
+</PRE>
+</div>
+
+<P>See the following section on external style sheets for more
+information.
+
+<h3><a name="style-external">External style sheets</a><a name="h-8.1.1.4">&nbsp;</a></h3> 
+
+<p>Style sheets may be defined separately from an HTML document.
+This has the advantage of offering the ability:</p>
+
+<ul>
+<li>to share style sheets across a number of documents (and sites)
+<li>to change the style sheet without modifications to the document
+</ul>
+
+<p>When style sheets are enabled, users may be offered a choice of
+styles. Each style is potentially a cascade of several style sheets.
+Some style sheets (known as <dfn>persistent</dfn>) are applied
+independently of the user's choice (as long as it refers to the correct
+media type), while others (known as <dfn>alternate</dfn>) only apply to
+specific choices. A <dfn>default style</dfn> sheet is one that applies
+when the page is loaded, but which the user can disable in favor of an
+<dfn>alternate style</dfn> sheet.
+
+<P>Use the <a href="../struct/links.html#edef-LINK"><samp class="einst">LINK</samp></a> element to designate an
+external style sheet. You must set the following attributes:
+
+<ul>
+<li>Set the value of <a href="../struct/links.html#adef-href"><samp class="ainst-LINK">href</samp></a> to the location
+of the style sheet file. The value of <a href="../struct/links.html#adef-href"><samp class="ainst-LINK">href</samp></a>
+is a <a href="../types.html#type-url">URL</a>.
+<li>Set the value of the <a href="../struct/links.html#adef-rel"><samp class="ainst">rel</samp></a> attribute to
+indicate whether the style sheet is persistent (rel="stylesheet"),
+default (rel="stylesheet"), or alternate (rel="alternate
+stylesheet"). 
+<li>Set the value of the <a href="../struct/global.html#adef-title"><samp class="ainst">title</samp></a> attribute
+when the style sheet is a default style sheet, i.e., when it may be
+activated or deactivated by the user.
+</ul>
+
+<div class="example">
+<P>In this example, we first specify a persistent external style sheet
+in the file <tt>mystyle.css</tt>.
+
+<p><tt class=example>
+&lt;LINK href="mystyle.css" rel="stylesheet"&gt;
+</tt>
+
+<P>Setting the <a href="../struct/global.html#adef-title"><samp class="ainst">title</samp></a> attribute changes the
+style sheet from persistent to default; user agents should offer users
+the possibility of applying named styles, based upon the
+<a href="../struct/global.html#adef-title"><samp class="ainst">title</samp></a> attribute.
+
+<p><tt class=example>
+ &lt;LINK href="mystyle.css" title="Compact" rel="stylesheet"&gt;
+</tt>
+
+<P>Adding the keyword "alternate" to the <a href="../struct/links.html#adef-rel"><samp
+class="ainst">rel</samp></a> attribute makes this an alternate style
+sheet.
+
+<p><tt class=example>
+&lt;LINK href="mystyle.css" title="Medium" rel="alternate stylesheet"&gt;
+</tt>
+</div>
+
+<p>All alternate styles sharing the same title will be applied when
+the user (through the user agent) activates that style. Style sheets
+with different titles will not be applied in this case. However, style
+sheets that do not have the <a href="../struct/global.html#adef-title"><samp class="ainst">title</samp></a> attribute
+set will always apply (unless the user turns off style sheets altogether).
+
+<p>User agents should provide a means for users to view and pick
+from the list of alternative styles. We recommend that the
+value of the <a href="../struct/global.html#adef-title"><samp class="ainst">title</samp></a> attribute be used to
+name each choice. 
+
+<P><dfn>Cascading</dfn> style sheet languages such as CSS allow style
+information from several sources to be blended together. However, not
+all style sheet languages support cascading. To define a cascade you
+simply provide a sequence of <a href="../struct/links.html#edef-LINK"><samp class="einst">LINK</samp></a> and/or
+<a href="styles.html#edef-STYLE"><samp class="einst">STYLE</samp></a> elements. The style information is
+cascaded in the order the elements appear in the <a href="../struct/global.html#edef-HEAD"><samp
+class="einst">HEAD</samp></a>. A cascade can include style sheets applicable
+to different media. The user agent is then responsible to filtering out
+those style sheets which are inapplicable to the current situation.
+
+<div class="example">
+<P>In the following example, we define two alternate style sheets named
+"compact". If the user selects the "compact" style, both external
+style sheets will be applied, as well as the "common.css" style sheet,
+(always applied since its <a href="../struct/global.html#adef-title"><samp class="ainst-LINK">title</samp></a>
+attribute is not set). If the user selects the "big print" style, the
+files "bigprint.css" and "common.css" will be applied by the user
+agent, and the "compact" style sheets will not.</p>
+
+<p><tt class="example">
+&lt;LINK rel="alternate stylesheet" title="compact" href="small-base.css"&gt;<br>
+&lt;LINK rel="alternate stylesheet" title="compact" href="small-extras.css"&gt;<br>
+&lt;LINK rel="alternate stylesheet" title="big print" href="bigprint.css"&gt;<br>
+&lt;LINK rel=stylesheet href="common.css"&gt;
+</tt>
+</div>
+
+<div class="example">
+<p>Here is an example with both <a href="../struct/links.html#edef-LINK"><samp class="einst">LINK</samp></a>
+and <a href="styles.html#edef-STYLE"><samp class="einst">STYLE</samp></a> elements.</p>
+
+<pre>
+    &lt;LINK REL=stylesheet HREF="corporate.css"&gt;
+    &lt;LINK REL=stylesheet HREF="techreport.css"&gt;
+    &lt;STYLE TYPE="text/css"&gt;
+        p.special { color: rgb(230, 100, 180) }
+    &lt;/STYLE&gt;
+</pre>
+</div>
+
+<h3><a name="style-external">Setting the default named style</a><a name="h-8.1.1.5">&nbsp;</a></h3>
+
+<P>Use the <a href="../struct/global.html#edef-META"><samp class="einst">META</samp></a> element to set the default
+named style for a document. For example, to set the default named style in a
+document to "compact" (see the preceding example), include the following
+line in the <a href="../struct/global.html#edef-HEAD"><samp class="einst">HEAD</samp></a>:</p>
+
+<div class="example">
+<pre>
+&lt;META http-equiv="Default-Style" content="compact"&gt;
+</pre>
+</div>
+
+<P>The default style can also be set with HTTP
+headers. The above <a href="../struct/global.html#edef-META"><samp class="einst">META</samp></a> declaration is
+equivalent to the HTTP header:
+
+<div class="example">
+<PRE>
+Default-Style: "compact"
+</PRE>
+</div>
+
+<p>If two or more <a href="../struct/global.html#edef-META"><samp class="einst">META</samp></a> declarations or HTTP
+headers specify the default style, the last one takes precedence. HTTP
+headers are considered as occuring earlier than the document <a href="../struct/global.html#edef-HEAD"><samp
+class="einst">HEAD</samp></a> for this purpose.  In the absence of an
+explicit declaration, the default style is defined by the first <a href="../struct/links.html#edef-LINK"><samp
+class="einst">LINK</samp></a> element whose <a href="../struct/global.html#adef-title"><samp
+class="ainst-LINK">title</samp></a> has been set and whose <a href="../struct/links.html#adef-rel"><samp
+class="ainst-LINK">rel</samp></a> attribute has the value "stylesheet".
+<H2>Inheritance and cascading<a name="h-8.1.2">&nbsp;</a></h2>
+
+<p>When the user agent wants to render a document, it needs to find
+values for style properties, e.g. the font family, font style, size,
+line height, text color and so on. The exact mechanism depends on
+the style sheet language, but the following description is generally
+applicable:
+
+<p>The cascading mechanism is used when a number of style rules all
+apply directly to an element. The mechanism allows the user agent to
+sort the rules by specificity, to determine which rule to apply. If no
+rule can be found, the next step depends on whether the style property
+can be inherited or not. Not all properties can be inherited. For these
+properties the style sheet language provides default values for use when
+there are no explicit rules for a particular element.
+
+<p>If the property can be inherited, the user agent examines the
+immediately enclosing element to see if a rule applies to that. This
+process continues until an applicable rule is found. This mechanism
+allows style sheets to be specified compactly. For instance, you can
+specify the font family for all elements within the <a href="../struct/global.html#edef-BODY"><samp
+class="einst">BODY</samp></a> by a single rule that applies to the <a href="../struct/global.html#edef-BODY"><samp
+class="einst">BODY</samp></a> element.
+
+<h2><a name="hiding">Hiding the Content of Style Elements from non-conforming
+User Agents</a><a name="h-8.1.3">&nbsp;</a></h2>
+
+<p>Some style sheet languages support syntax intended to allow authors
+to hide the content of <a href="styles.html#edef-STYLE"><samp class="einst">STYLE</samp></a> elements
+from non-conforming user agents. 
+
+<div class="example">
+<P>This example illustrates for CSS how to comment out the content of
+<a href="styles.html#edef-STYLE"><samp class="einst">STYLE</samp></a> elements to ensure that older
+non-conforming user agents will not render them as text.</p> 
+
+<pre>
+&lt;STYLE type="text/css"&gt;
+&lt;!--
+   H1 { color: red }
+   P  { color: blue}
+   --&gt;
+&lt;/STYLE&gt;
+</pre>
+</div>
+
+<h2>Specifying style through HTTP headers<a name="h-8.1.4">&nbsp;</a></h2>
+
+<p>Sometimes its convenient to configure a Web server to specify the
+style sheet to be applied to a group of pages at a site. The HTTP
+<tt>Link</tt> header has the same effect as a <a href="../struct/links.html#edef-LINK"><samp
+class="einst">LINK</samp></a> element with the same attributes and values.
+Multiple <tt>Link</tt> headers correspond to multiple <a href="../struct/links.html#edef-LINK"><samp
+class="einst">LINK</samp></a> elements occurring in the same order. Thus,</p>
+
+<pre>
+Link: REL=stylesheet HREF="corporate.css"
+</pre>
+
+<p>corresponds to:
+
+<pre>
+&lt;LINK rel="stylesheet" href="corporate.css"&gt;
+</pre>
+
+<p>You can specify several alternative styles, using multiple <tt>Link</tt>
+headers, and then use the <a href="../struct/links.html#adef-rel"><samp class="ainst">rel</samp></a> attribute to
+determine the default style.
+
+<div class="example"><P>
+In the following example, "compact" is applied by default since 
+it omits the "alternate" keyword for the <a href="../struct/links.html#adef-rel"><samp
+class="ainst">rel</samp></a> attribute.
+<pre>
+Link: rel="stylesheet" title="compact" href="compact.css"
+Link: rel="alternate stylesheet" title="big print" href="bigprint.css"
+</pre>
+</div>
+
+<p>This should also work when HTML documents are being by transported
+via email. Some email agents can alter the ordering of <a
+rel="biblioentry" href="../references.html#ref-RFC822">[RFC822]</a>
+headers. To protect against this affecting the cascading order for
+style sheets specified by Link headers, you can use header
+concatenation to merge several instances of the same header field.
+The quote marks are only needed when the attribute values include
+whitespace. Use SGML entities to reference characters that are
+otherwise not permitted within HTTP or email headers, or that are
+likely to be affected by transit through gateways.
+
+<p><a href="../struct/links.html#edef-LINK"><samp class="einst">LINK</samp></a> and <a href="../struct/global.html#edef-META"><samp class="einst">META</samp></a>
+elements implied by HTTP headers are defined as occurring before any
+explicit <a href="../struct/links.html#edef-LINK"><samp class="einst">LINK</samp></a> and <a href="../struct/global.html#edef-META"><samp
+class="einst">META</samp></a> elements in the document's <a href="../struct/global.html#edef-HEAD"><samp
+class="einst">HEAD</samp></a>.   
+<div class="navbar">
+<hr><center><a href="presentop.html">previous</a> &nbsp; <a href="graphics.html">next</a> &nbsp; <a href="../contents.html">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center></div>
+</body>
+
+

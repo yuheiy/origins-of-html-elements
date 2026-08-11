@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された607ファイルを、33の取得元ホストごとに収録する。
+Rawに保存された612ファイルを、33の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（9ファイル）
 
@@ -558,7 +558,7 @@ Rawに保存された607ファイルを、33の取得元ホストごとに収録
 |---|---|
 | [jordi/v3/js/jsguide/jsguide.pdf](../raw/www.uv.es/jordi/v3/js/jsguide/jsguide.pdf) | — |
 
-## `www.w3.org`（206ファイル）
+## `www.w3.org`（211ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -661,8 +661,10 @@ Rawに保存された607ファイルを、33の取得元ホストごとに収録
 | [TR/WD-html40-970708/interact/forms.html](../raw/www.w3.org/TR/WD-html40-970708/interact/forms.html) | Forms in HTML documents |
 | [TR/WD-html40-970708/interact/scripts.html](../raw/www.w3.org/TR/WD-html40-970708/interact/scripts.html) | Scripts in HTML documents |
 | [TR/WD-html40-970708/present/frames.html](../raw/www.w3.org/TR/WD-html40-970708/present/frames.html) | Frames in HTML documents |
+| [TR/WD-html40-970708/present/styles.html](../raw/www.w3.org/TR/WD-html40-970708/present/styles.html) | Style Sheets in HTML documents |
 | [TR/WD-html40-970708/struct/text.html](../raw/www.w3.org/TR/WD-html40-970708/struct/text.html) | Paragraphs, Lines, and Phrases |
 | [TR/WD-html40-970917/interact/forms.html](../raw/www.w3.org/TR/WD-html40-970917/interact/forms.html) | Forms in HTML documents |
+| [TR/WD-html40-970917/present/styles.html](../raw/www.w3.org/TR/WD-html40-970917/present/styles.html) | Style Sheets in HTML documents |
 | [TR/WD-html40-970917/struct/objects.html](../raw/www.w3.org/TR/WD-html40-970917/struct/objects.html) | Objects, Images, and Applets in HTML documents |
 | [TR/WD-html40-970917/struct/tables.html](../raw/www.w3.org/TR/WD-html40-970917/struct/tables.html) | Tables in HTML documents |
 | [TR/WD-html40-970917/struct/text.html](../raw/www.w3.org/TR/WD-html40-970917/struct/text.html) | Paragraphs, Lines, and Phrases |
@@ -673,6 +675,7 @@ Rawに保存された607ファイルを、33の取得元ホストごとに収録
 | [TR/WD-script-960627.html](../raw/www.w3.org/TR/WD-script-960627.html) | HTML Scripting Model |
 | [TR/WD-script-960709.html](../raw/www.w3.org/TR/WD-script-960709.html) | HTML Scripting Model |
 | [TR/WD-script-970314](../raw/www.w3.org/TR/WD-script-970314) | Client-side Scripting and HTML |
+| [TR/WD-style-951122](../raw/www.w3.org/TR/WD-style-951122) | HTML3 and Style Sheets |
 | [TR/WD-style-960115](../raw/www.w3.org/TR/WD-style-960115) | HTML3 and Style Sheets |
 | [TR/WD-style-970324](../raw/www.w3.org/TR/WD-style-970324) | HTML and Style Sheets |
 | [TR/WD-tables-950925.html](../raw/www.w3.org/TR/WD-tables-950925.html) | HTML3 Tables |
@@ -765,6 +768,8 @@ Rawに保存された607ファイルを、33の取得元ホストごとに収録
 | [mid/199706102148.OAA08302@labrador;list=w3c-wai-wg](../raw/www.w3.org/mid/199706102148.OAA08302@labrador;list=w3c-wai-wg) | forms that work with screen readers from T. V. Raman on 1997-06-10 (w3c-wai-wg@w3.org from April to June 1997) |
 | [mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg](../raw/www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg) | Re: forms that work with screen readers from Daniel Dardailler on 1997-06-12 (w3c-wai-wg@w3.org from April to June 1997) |
 | [mid/5005BC08.7040705%2540intertwingly.net](../raw/www.w3.org/mid/5005BC08.7040705%2540intertwingly.net) | Working Group Decision on ISSUE-184 Add a data element from Sam Ruby on 2012-07-17 (public-html@w3.org from July 2012) |
+| [mid/9503102018.AA03218@www4.cern.ch;list=www-html](../raw/www.w3.org/mid/9503102018.AA03218@www4.cern.ch;list=www-html) | Style sheets in Arena from H&kon W Lie on 1995-03-10 (www-html@w3.org from March 1995) |
+| [mid/9504060201.AA02364@www18.w3.org;list=www-html](../raw/www.w3.org/mid/9504060201.AA02364@www18.w3.org;list=www-html) | HTML VWG Agenda from Dan Connolly on 1995-04-05 (www-html@w3.org from April 1995) |
 | [press-releases/1996/html-leadership/__index](../raw/www.w3.org/press-releases/1996/html-leadership/__index) | The W3 Consortium Takes Leadership Role in the Development of HTML \| 1996 \| Press releases \| W3C |
 | [submissions/2005/SUBM-web-forms2-20050411/__index](../raw/www.w3.org/submissions/2005/SUBM-web-forms2-20050411/__index) | Web Forms 2.0 |
 | [wiki/User%3ATantekelik/data_element](../raw/www.w3.org/wiki/User%3ATantekelik/data_element) | User:Tantekelik/data element - W3C Wiki |
