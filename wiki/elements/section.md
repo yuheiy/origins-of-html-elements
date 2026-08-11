@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、文書またはアプリケーション内�
 
 ## HTMLへの導入
 
-2004年8月26日のWHATWG議論でWeb Applications 1.0に定義済みであることが確認でき、見出しだけでは文書構造とアウトラインを確実に復元できない問題が議論された。9月23日版の最古の確認可能な保存草案は章等の文書セクションとして定義する。11月12日にHicksonは、既存マークアップを`section`で包んでも正しく、`div class="section"`を`section`へ置換できることをセクショニングモデルの要件として明記した。2005年9月1日草案は文書またはアプリケーションの汎用セクションとして定義する。[2004年8月の議論](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html) [2004年保存草案](https://web.archive.org/web/20041009144718id_/http://whatwg.org/specs/web-apps/current-work/#section) [2004年11月の設計要求](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html) [2005年草案](https://whatwg.org/specs/web-apps/2005-09-01/#the-section)
+2004年8月26日のWHATWG議論でWeb Applications 1.0に定義済みであることが確認でき、見出しだけでは文書構造とアウトラインを確実に復元できない問題が議論された。9月23日版の最古の確認可能な保存草案は章等の文書セクションとして定義する。11月12日にHicksonは、既存マークアップを`section`で包んでも正しく、`div class="section"`を`section`へ置換できることをセクショニングモデルの要件として明記した。2005年9月1日草案は文書またはアプリケーションの汎用セクションとして定義する。[2004年8月の議論](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/001989.html)） [2004年保存草案](../../raw/web.archive.org/web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/index.html)（[公開元](https://web.archive.org/web/20041009144718id_/http://whatwg.org/specs/web-apps/current-work/#section)） [2004年11月の設計要求](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)） [2005年草案](../../raw/whatwg.org/specs/web-apps/2005-09-01/index.html)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-section)）
 
 ## HTML直前の祖先
 
-既存Webで文書の区分を包んでいた`div class="section"`である。Hicksonはこのマークアップを`section`へ置換できることを設計要求として直接示した。XHTML 2等にも同名要素が存在するが、WHATWGがそこから採用したことを示す史料は確認できない。[設計要求](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)
+既存Webで文書の区分を包んでいた`div class="section"`である。Hicksonはこのマークアップを`section`へ置換できることを設計要求として直接示した。XHTML 2等にも同名要素が存在するが、WHATWGがそこから採用したことを示す史料は確認できない。[設計要求](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)）
 
 ## さらに上流の由来
 

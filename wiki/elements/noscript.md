@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、スクリプティングが有効なら何�
 
 ## HTMLへの導入
 
-確認したW3C草案では1996年6月27日版に`NOSCRIPT`はなく、7月9日版に定義がある。同版は、ユーザーエージェントがクライアント側スクリプティングまたは先行`SCRIPT`の言語を支援しない場合だけ内容を描画し、旧式ブラウザーへ更新呼びかけを提供する要素と説明する。エディターはDave Raggettである。[6月27日版](https://www.w3.org/TR/WD-script-960627.html) [7月9日版](https://www.w3.org/TR/WD-script-960709.html)
+確認したW3C草案では1996年6月27日版に`NOSCRIPT`はなく、7月9日版に定義がある。同版は、ユーザーエージェントがクライアント側スクリプティングまたは先行`SCRIPT`の言語を支援しない場合だけ内容を描画し、旧式ブラウザーへ更新呼びかけを提供する要素と説明する。エディターはDave Raggettである。[6月27日版](../../raw/www.w3.org/TR/WD-script-960627.html)（[公開元](https://www.w3.org/TR/WD-script-960627.html)） [7月9日版](../../raw/www.w3.org/TR/WD-script-960709.html)（[公開元](https://www.w3.org/TR/WD-script-960709.html)）
 
-Netscapeの著作権1996、Version 3.0の*JavaScript Guide*と、Netscape 3.0用HTML参照の保存複製は`NOSCRIPT`の実装と、JavaScript非対応または無効時に代替内容を表示する動作を記録する。ただし資料の公開日を固定できず、7月9日のW3C草案との前後関係は分からない。[JavaScript Guide保存複製](https://www.uv.es/jordi/v3/js/jsguide/jsguide.pdf) [HTML reference保存複製](https://lib.ru/WEBMASTER/tags.txt)
+Netscapeの著作権1996、Version 3.0の*JavaScript Guide*と、Netscape 3.0用HTML参照の保存複製は`NOSCRIPT`の実装と、JavaScript非対応または無効時に代替内容を表示する動作を記録する。ただし資料の公開日を固定できず、7月9日のW3C草案との前後関係は分からない。[JavaScript Guide保存複製](../../raw/www.uv.es/jordi/v3/js/jsguide/jsguide.pdf)（[公開元](https://www.uv.es/jordi/v3/js/jsguide/jsguide.pdf)） [HTML reference保存複製](../../raw/lib.ru/WEBMASTER/tags.txt)（[公開元](https://lib.ru/WEBMASTER/tags.txt)）
 
-1997年3月14日版は同じ設計を継承し、HTML 4.01はスクリプト無効・言語非対応・クライアント側スクリプト非対応時の代替内容コンテナーとして標準化した。[1997年草案](https://www.w3.org/TR/WD-script-970314) [HTML 4.01](https://www.w3.org/TR/html401/interact/scripts.html#edef-NOSCRIPT)
+1997年3月14日版は同じ設計を継承し、HTML 4.01はスクリプト無効・言語非対応・クライアント側スクリプト非対応時の代替内容コンテナーとして標準化した。[1997年草案](../../raw/www.w3.org/TR/WD-script-970314)（[公開元](https://www.w3.org/TR/WD-script-970314)） [HTML 4.01](../../raw/www.w3.org/TR/html401/interact/scripts.html)（[公開元](https://www.w3.org/TR/html401/interact/scripts.html#edef-NOSCRIPT)）
 
 ## HTML直前の祖先
 
@@ -28,7 +28,7 @@ Netscapeの著作権1996、Version 3.0の*JavaScript Guide*と、Netscape 3.0用
 
 ### 証拠
 
-1996年7月のW3C草案とNetscapeマニュアルはともに、JavaScriptまたはクライアント側スクリプティングを利用できない場合の代替内容という要求を直接説明する。[W3C草案](https://www.w3.org/TR/WD-script-960709.html) [Netscape manual保存複製](https://www.uv.es/jordi/v3/js/jsguide/jsguide.pdf)
+1996年7月のW3C草案とNetscapeマニュアルはともに、JavaScriptまたはクライアント側スクリプティングを利用できない場合の代替内容という要求を直接説明する。[W3C草案](../../raw/www.w3.org/TR/WD-script-960709.html)（[公開元](https://www.w3.org/TR/WD-script-960709.html)） [Netscape manual保存複製](../../raw/www.uv.es/jordi/v3/js/jsguide/jsguide.pdf)（[公開元](https://www.uv.es/jordi/v3/js/jsguide/jsguide.pdf)）
 
 ### 解釈
 

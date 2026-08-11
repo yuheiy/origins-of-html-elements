@@ -1,0 +1,105 @@
+<!-- received="Fri Feb 26 07:57:05 1993 PDT" -->
+<!-- sent="Thu, 25 Feb 1993 23:13 PDT" -->
+<!-- name="Tony Johnson" -->
+<!-- email="TONYJ@scs.slac.stanford.edu" -->
+<!-- subject="Re: proposed new tag: IMG" -->
+<!-- id="EAEA803710000191@SCS.SLAC.STANFORD.EDU" -->
+<!-- inreplyto="proposed new tag: IMG" -->
+<title>WWW-Talk Jan-Mar 1993: Re: proposed new tag: IMG</title>
+<h1>Re: proposed new tag: IMG</h1>
+Tony Johnson (<i>TONYJ@scs.slac.stanford.edu</i>)<br>
+<i>Thu, 25 Feb 1993 23:13 PDT</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#183">[ date ]</a><a href="index.html#183">[ thread ]</a><a href="subject.html#183">[ subject ]</a><a href="author.html#183">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0184.html">Guido.van.Rossum@cwi.nl: "Re: xmosaic experience"</a>
+<li> <b>Previous message:</b> <a href="0182.html">Marc Andreessen: "proposed new tag: IMG"</a>
+<li> <b>Maybe in reply to:</b> <a href="0182.html">Marc Andreessen: "proposed new tag: IMG"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0186.html">Tim Berners-Lee: "Re: proposed new tag: IMG"</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<i>&gt;I'd like to propose a new, optional HTML tag:</i><br>
+<i>&gt;</i><br>
+<i>&gt;        IMG</i><br>
+<i>&gt;</i><br>
+<i>&gt;Required argument is SRC="url".  </i><br>
+<i>&gt;</i><br>
+<i>&gt;This names a bitmap or pixmap file for the browser to attempt to pull</i><br>
+<i>&gt;over the network and interpret as an image, to be embedded in the text</i><br>
+<i>&gt;at the point of the tag's occurrence.</i><br>
+<i>&gt;</i><br>
+<i>&gt;An example is:</i><br>
+<i>&gt;</i><br>
+<i>&gt;       &lt;IMG SRC="<a href="file://foobar.com/foo/bar/blargh.xbm">file://foobar.com/foo/bar/blargh.xbm</a>"&gt; </i><br>
+<i>&gt;</i><br>
+<i>&gt;(There is no closing tag; this is just a standalone tag.)</i><br>
+<p>
+I have something very similar in Midas 2.0 (in use here at SLAC, and due for <br>
+public release any week now), except that all the names are different, and it <br>
+has an extra argument NAME="name". It has almost exactly the same <br>
+functionality as your proposed IMG tag. e.g.<br>
+<p>
+&lt;ICON name="NoEntry" href="<a href="http://note/foo/bar/NoEntry.xbm">http://note/foo/bar/NoEntry.xbm</a>"&gt;<br>
+<p>
+The idea of the name parameter was to allow the browser to have a set of <br>
+"built in" images. If the name matches a "built in" image it would use that <br>
+instead of having to go out and fetch the image. The name could also act as a <br>
+hint for "line mode" browsers as to what kind of a symbol to put in place of <br>
+the image.<br>
+<p>
+I don't much care about the parameter or tag names,  but it would be sensible <br>
+if we used the same things. I don't much care for abbreviations, ie why not <br>
+IMAGE= and SOURCE=. I somewhat prefer ICON since it imlies that the IMAGE <br>
+should be smallish, but maybe ICON is an overloaded word?<br>
+<p>
+<i>&gt;Browsers should be afforded flexibility as to which image formats they</i><br>
+<i>&gt;support.  Xbm and Xpm are good ones to support, for example.  If a</i><br>
+<i>&gt;browser cannot interpret a given format, it can do whatever it wants</i><br>
+<i>&gt;instead (X Mosaic will pop up a default bitmap as a placeholder).</i><br>
+<p>
+I was proposing to use the file extension (.xbm above) to tag what format the <br>
+image was in, but with the intention that in future, when HTTP2 comes along, <br>
+the same format negotiation technique would be used to access images.<br>
+<p>
+Xbm and Xpm sound resonable to me, but do they sound reasonable for non-X <br>
+based applications??<br>
+<p>
+While we are on the subject of new tags, I have another, somewhat similar tag, <br>
+which I would like to support in Midas 2.0. In principle it is:<br>
+<p>
+&lt;INCLUDE HREF="..."&gt;<br>
+<p>
+The intention here would be that the second document is to be included into <br>
+the first document at the place where the tag occured. In principle the <br>
+referenced document could be anything, but the main purpose was to allow <br>
+images (in this case arbitrary sized) to be embedded into documents. Again the <br>
+intention would be that when HTTP2 comes along the format of the included <br>
+document would be up for separate negotiation.<br>
+<p>
+An alternative I was considering was:<br>
+<p>
+&lt;A HREF="..." INCLUDE&gt;See photo&lt;/A&gt;<br>
+<p>
+I don't much like adding more functionality to the &lt;A&gt; tag, but the idea here <br>
+is to maintain compatibility with browsers that can not honour the INCLUDE <br>
+parameter. The intention is that browsers which do understand INCLUDE, replace <br>
+the anchor text (in this case "See photo") with the included document <br>
+(picture), while older or dumber browsers ignore the INCLUDE tag completely.<br>
+<p>
+Comments?????<br>
+<p>
+Tony<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0184.html">Guido.van.Rossum@cwi.nl: "Re: xmosaic experience"</a>
+<li> <b>Previous message:</b> <a href="0182.html">Marc Andreessen: "proposed new tag: IMG"</a>
+<li> <b>Maybe in reply to:</b> <a href="0182.html">Marc Andreessen: "proposed new tag: IMG"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0186.html">Tim Berners-Lee: "Re: proposed new tag: IMG"</a>
+</ul>

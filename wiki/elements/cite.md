@@ -14,19 +14,19 @@ WHATWG HTML Living Standardでは、引用または参照される創作物の�
 
 ## HTMLへの導入
 
-1992年11月19日、Dan ConnollyはHTML DTDの強調候補として既存の`HP1`〜`HP5`を問う一方、番号式より`em`, `tt`, `cite`を好むと提案した。Tim Berners-Leeは同日、番号式はほぼ役に立たないとして応答した。これは`cite`の確認可能な最初のHTML標準化上の提案であるが、実装初出や最終語彙を決めた記録ではない。[提案](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html) [応答](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)
+1992年11月19日、Dan ConnollyはHTML DTDの強調候補として既存の`HP1`〜`HP5`を問う一方、番号式より`em`, `tt`, `cite`を好むと提案した。Tim Berners-Leeは同日、番号式はほぼ役に立たないとして応答した。これは`cite`の確認可能な最初のHTML標準化上の提案であるが、実装初出や最終語彙を決めた記録ではない。[提案](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)） [応答](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)）
 
-1993年6月のHTML Internet-Draftは文字強調要素として`<cite>`を列挙し、その集合の要素名をTexinfoのマクロ名から派生したと明記した。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)
+1993年6月のHTML Internet-Draftは文字強調要素として`<cite>`を列挙し、その集合の要素名をTexinfoのマクロ名から派生したと明記した。[1993年HTML Internet-Draft](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)）
 
 ## HTML直前の祖先
 
-HTML側の直接史料は、列挙した要素名の派生元をTexinfoと明記している。同時代のGNU Texinfo 2.16マニュアルは`@cite`を対応するInfoファイルを持たない書籍名として定義しており、個別の対応も確認できる。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) [GNU Texinfo 2.16公式配布物](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)
+HTML側の直接史料は、列挙した要素名の派生元をTexinfoと明記している。同時代のGNU Texinfo 2.16マニュアルは`@cite`を対応するInfoファイルを持たない書籍名として定義しており、個別の対応も確認できる。[1993年HTML Internet-Draft](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） [GNU Texinfo 2.16公式配布物](../../raw/ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z/texinfo-2.16/texinfo2.texi)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-Texinfoはソフトウェアマニュアルを単一ソースから印刷物とInfo文書へ出力する文書システムであり、`@cite`はその語彙の一部だった。[GNU Texinfo 2.16公式配布物](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)
+Texinfoはソフトウェアマニュアルを単一ソースから印刷物とInfo文書へ出力する文書システムであり、`@cite`はその語彙の一部だった。[GNU Texinfo 2.16公式配布物](../../raw/ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z/texinfo-2.16/texinfo2.texi)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)）
 
 ### 解釈
 

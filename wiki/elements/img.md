@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは画像を表す。`src`、`srcset`、親が`pic
 
 ## HTMLへの導入
 
-Marc Andreessenは1993年2月25日、`www-talk`で`IMG SRC`を新しい任意HTMLタグとして提案し、X Mosaicで既に動作する必須機能だと記した。2月26日には各ブラウザーが独自構文を実装する前の統一を理由に挙げ、3月14日にNCSA Mosaic for X 0.10の機能として公開された。同年6月のHTML Internet-Draftが`IMG`を収録した。[提案](http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html) [理由](http://1997.webhistory.org/www.lists/www-talk.1993q1/0197.html) [Mosaic 0.10](http://1997.webhistory.org/www.lists/www-talk.1993q1/0262.html) [HTML草案](https://www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)
+Marc Andreessenは1993年2月25日、`www-talk`で`IMG SRC`を新しい任意HTMLタグとして提案し、X Mosaicで既に動作する必須機能だと記した。2月26日には各ブラウザーが独自構文を実装する前の統一を理由に挙げ、3月14日にNCSA Mosaic for X 0.10の機能として公開された。同年6月のHTML Internet-Draftが`IMG`を収録した。[提案](../../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0182.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html)） [理由](../../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0197.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q1/0197.html)） [Mosaic 0.10](../../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0262.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q1/0262.html)） [HTML草案](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)）
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ HTML直前の祖先は、Andreessenの`IMG`提案と同時に存在したNCSA X 
 
 ### 証拠
 
-同時代の議論ではMidas 2.0の`ICON`と`A REL="EMBED, PRESENT"`が先行・競合案として挙がったが、Andreessenがそこから`IMG`を派生させたとは記録されていない。[Midas `ICON`](http://1997.webhistory.org/www.lists/www-talk.1993q1/0183.html) [`A REL`](http://1997.webhistory.org/www.lists/www-talk.1993q1/0186.html)
+同時代の議論ではMidas 2.0の`ICON`と`A REL="EMBED, PRESENT"`が先行・競合案として挙がったが、Andreessenがそこから`IMG`を派生させたとは記録されていない。[Midas `ICON`](../../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0183.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q1/0183.html)） [`A REL`](../../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0186.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q1/0186.html)）
 
 ### 解釈
 

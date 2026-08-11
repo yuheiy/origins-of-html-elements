@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、CSSスタイルシートを文書へ埋め�
 
 ## HTMLへの導入
 
-1995年4月25日のHTML 3.0草案は、外部スタイルシートを`LINK REL=StyleSheet`で参照し、文書固有の上書きを`HEAD`内の`STYLE`へ置くと規定する。確認できる最初の出現はこの草案だが、提案者と採用以前の経路は確認できない。[HTML 3.0 introduction](https://www.w3.org/MarkUp/html3/intro.html) [HTML 3.0 document head](https://www.w3.org/MarkUp/html3/dochead.html)
+1995年4月25日のHTML 3.0草案は、外部スタイルシートを`LINK REL=StyleSheet`で参照し、文書固有の上書きを`HEAD`内の`STYLE`へ置くと規定する。確認できる最初の出現はこの草案だが、提案者と採用以前の経路は確認できない。[HTML 3.0 introduction](../../raw/www.w3.org/MarkUp/html3/intro.html)（[公開元](https://www.w3.org/MarkUp/html3/intro.html)） [HTML 3.0 document head](../../raw/www.w3.org/MarkUp/html3/dochead.html)（[公開元](https://www.w3.org/MarkUp/html3/dochead.html)）
 
-11月22日のIETF HTML WG Internet-Draft *HTML and Style Sheets*は、HTMLを新しい`STYLE`要素と同名属性で拡張すると明記し、文書内スタイルシート用の`STYLE`を`HEAD`へ置いた。同草案はHTML 2.0の`LINK`を基礎に`REL=stylesheet`を定義し、描画指示を個別要素、文書ヘッド内のグループ、または外部スタイルシートへ置いて、新しい描画フォームのたびにHTML自体を拡張しないことを目的とした。ただし、この説明はHTML 3.0草案より後であり、4月の導入原因を単独では証明しない。[IETF draft-ietf-html-style-00](https://datatracker.ietf.org/doc/html/draft-ietf-html-style-00)
+11月22日のIETF HTML WG Internet-Draft *HTML and Style Sheets*は、HTMLを新しい`STYLE`要素と同名属性で拡張すると明記し、文書内スタイルシート用の`STYLE`を`HEAD`へ置いた。同草案はHTML 2.0の`LINK`を基礎に`REL=stylesheet`を定義し、描画指示を個別要素、文書ヘッド内のグループ、または外部スタイルシートへ置いて、新しい描画フォームのたびにHTML自体を拡張しないことを目的とした。ただし、この説明はHTML 3.0草案より後であり、4月の導入原因を単独では証明しない。[IETF draft-ietf-html-style-00](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-style-00)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-style-00)）
 
-1996年1月版は`STYLE`を文書内行内スタイルシート用の新要素とし、属性名を`NOTATION`から`TYPE`へ変更した。HTML 3.2は将来のスタイルシート導入用プレースホルダーとして収録し、1997年のCougar向け草案を経てHTML 4が`HEAD`内のスタイル規則として規定した。[IETF draft-ietf-html-style-01](https://datatracker.ietf.org/doc/html/draft-ietf-html-style-01) [HTML 3.2](https://www.w3.org/TR/REC-html32) [HTML 4.01](https://www.w3.org/TR/html401/present/styles.html#style-group)
+1996年1月版は`STYLE`を文書内行内スタイルシート用の新要素とし、属性名を`NOTATION`から`TYPE`へ変更した。HTML 3.2は将来のスタイルシート導入用プレースホルダーとして収録し、1997年のCougar向け草案を経てHTML 4が`HEAD`内のスタイル規則として規定した。[IETF draft-ietf-html-style-01](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-style-01)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-style-01)） [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32)） [HTML 4.01](../../raw/www.w3.org/TR/html401/present/styles.html)（[公開元](https://www.w3.org/TR/html401/present/styles.html#style-group)）
 
 ## HTML直前の祖先
 
@@ -28,7 +28,7 @@ HTML 3.0 `STYLE`より前の具体的な要素、実装、または提案は未�
 
 ### 証拠
 
-HTML 3.0導入は、HTMLへの表現機能追加を抑え、利用者の好みやリソースの制約を考慮した描画をスタイルシートへ分離する要求を示す。1994年のCascading HTML Style Sheets提案は著者と読者のスタイルをカスケードするモデルと、外部シートを`LINK REL="style"`で結ぶ構文を提案した。[HTML 3.0 introduction](https://www.w3.org/MarkUp/html3/intro.html) [CSS proposal](https://www.w3.org/People/howcome/p/cascade.html)
+HTML 3.0導入は、HTMLへの表現機能追加を抑え、利用者の好みやリソースの制約を考慮した描画をスタイルシートへ分離する要求を示す。1994年のCascading HTML Style Sheets提案は著者と読者のスタイルをカスケードするモデルと、外部シートを`LINK REL="style"`で結ぶ構文を提案した。[HTML 3.0 introduction](../../raw/www.w3.org/MarkUp/html3/intro.html)（[公開元](https://www.w3.org/MarkUp/html3/intro.html)） [CSS proposal](../../raw/www.w3.org/People/howcome/p/cascade.html)（[公開元](https://www.w3.org/People/howcome/p/cascade.html)）
 
 ### 解釈
 

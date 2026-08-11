@@ -14,17 +14,17 @@ WHATWG HTML Living Standardでは、生の値を編集する複数行のプレ�
 
 ## HTMLへの導入
 
-1993年HTML+は複数行入力を`TEXTAREA`として定義した。RFC 1866はHTML+由来のフォーム資料として`TEXTAREA`を標準化した。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) [RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html)
+1993年HTML+は複数行入力を`TEXTAREA`として定義した。RFC 1866はHTML+由来のフォーム資料として`TEXTAREA`を標準化した。[HTML+ forms](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)） [RFC 1866](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html)）
 
 ## HTML直前の祖先
 
-HTML+は初期案の`INPUT TYPE=TEXT`では長い値がSGMLの属性リテラル長制限に触れるため、内容を持つ`TEXTAREA`へ分離したと説明する。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)
+HTML+は初期案の`INPUT TYPE=TEXT`では長い値がSGMLの属性リテラル長制限に触れるため、内容を持つ`TEXTAREA`へ分離したと説明する。[HTML+ forms](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-直接の設計要求はGUIウィジェットの模倣ではなく、長い複数行値を属性へ格納することによるSGML上の制約だった。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)
+直接の設計要求はGUIウィジェットの模倣ではなく、長い複数行値を属性へ格納することによるSGML上の制約だった。[HTML+ forms](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)）
 
 ### 解釈
 

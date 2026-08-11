@@ -14,17 +14,17 @@ WHATWG HTML Living Standardでは、親`colgroup`が親`table`を持つとき、
 
 ## HTMLへの導入
 
-確認できる最初期の公開仕様はDave Raggettによる1995年9月25日のW3C Working Draft `WD-tables-950925`である。大きな表を全データの受信前に表示するには列数と幅が必要だという設計課題に対し、表データより前に幅と配置既定値を指定する空要素`COL`を定義した。7月7日のIETFリビジョン00は幅を`COLW`、水平・垂直配置を`HSPEC`／`VSPEC`で扱っており、`COL`はまだない。10月3日のリビジョン01はW3C草案と同じ`COL`モデルを採る。RFC 1942はこの草案系列をExperimental RFCとして標準化し、HTML 4.0は5要素を含む表DTDブロックをRFC 1942のIETF表標準へ明示的に帰属させて採録した。[revision 00](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt) [W3C Working Draft](https://www.w3.org/TR/WD-tables-950925.html) [revision 01](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-01.txt) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 4.01 DTD](../../raw/www.w3.org/TR/html401/html40.zip/strict.dtd)（[公開元](https://www.w3.org/TR/html401/sgml/dtd.html)）
+確認できる最初期の公開仕様はDave Raggettによる1995年9月25日のW3C Working Draft `WD-tables-950925`である。大きな表を全データの受信前に表示するには列数と幅が必要だという設計課題に対し、表データより前に幅と配置既定値を指定する空要素`COL`を定義した。7月7日のIETFリビジョン00は幅を`COLW`、水平・垂直配置を`HSPEC`／`VSPEC`で扱っており、`COL`はまだない。10月3日のリビジョン01はW3C草案と同じ`COL`モデルを採る。RFC 1942はこの草案系列をExperimental RFCとして標準化し、HTML 4.0は5要素を含む表DTDブロックをRFC 1942のIETF表標準へ明示的に帰属させて採録した。[revision 00](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt)） [W3C Working Draft](../../raw/www.w3.org/TR/WD-tables-950925.html)（[公開元](https://www.w3.org/TR/WD-tables-950925.html)） [revision 01](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-01.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-01.txt)） [RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)） [HTML 4.01 DTD](../../raw/www.w3.org/TR/html401/html40.zip/strict.dtd)（[公開元](https://www.w3.org/TR/html401/sgml/dtd.html)）
 
 ## HTML直前の祖先
 
-未確認。HTML 3.0草案の`COLSPEC`属性と1995年7月の表の草案リビジョン00の`COLW`要素は列幅という同じ要求を扱うが、9月の`COL`へ変更・採用した因果を本文は明記しない。版間では幅専用の`COLW`と配置用の`HSPEC`／`VSPEC`が消え、`COL`が幅、範囲、配置既定値を担う機能再編を観察できる。CALSとの直接関係として草案とRFC 1942が明記するのも`WIDTH`値の`*`表記までであり、`COL`要素自体の由来ではない。[HTML 3.0 tables](https://www.w3.org/MarkUp/html3/tables.html) [revision 00](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt) [W3C Working Draft](https://www.w3.org/TR/WD-tables-950925.html) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html)
+未確認。HTML 3.0草案の`COLSPEC`属性と1995年7月の表の草案リビジョン00の`COLW`要素は列幅という同じ要求を扱うが、9月の`COL`へ変更・採用した因果を本文は明記しない。版間では幅専用の`COLW`と配置用の`HSPEC`／`VSPEC`が消え、`COL`が幅、範囲、配置既定値を担う機能再編を観察できる。CALSとの直接関係として草案とRFC 1942が明記するのも`WIDTH`値の`*`表記までであり、`COL`要素自体の由来ではない。[HTML 3.0 tables](../../raw/www.w3.org/MarkUp/html3/tables.html)（[公開元](https://www.w3.org/MarkUp/html3/tables.html)） [revision 00](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt)） [W3C Working Draft](../../raw/www.w3.org/TR/WD-tables-950925.html)（[公開元](https://www.w3.org/TR/WD-tables-950925.html)） [RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-RFC 1942は表モデル全体が既存SGML表モデル、ワード処理系、紙媒体の表配置研究から発展し、CALS表の取り込み簡略化を副目標としたと記す。また`COL`の相対幅に使う`*` 接尾辞はCALS表現からの取り込みを簡略化するためと明記する。これは`COL`要素そのものの祖先を特定する証拠ではない。[RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html)
+RFC 1942は表モデル全体が既存SGML表モデル、ワード処理系、紙媒体の表配置研究から発展し、CALS表の取り込み簡略化を副目標としたと記す。また`COL`の相対幅に使う`*` 接尾辞はCALS表現からの取り込みを簡略化するためと明記する。これは`COL`要素そのものの祖先を特定する証拠ではない。[RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)）
 
 ### 解釈
 

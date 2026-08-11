@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、内容によってラベル付けされた�
 
 ## HTMLへの導入
 
-W3C HTML Working Groupは1997年4月2日の*Enhancing HTML Forms*で新しい`BUTTON`を提案し、既存`INPUT`より多様で豊かなボタンを作るため内容にHTML断片を許した。7月8日のHTML 4.0初回公開草案が送信、リセット、スクリプト用ボタンとして収録し、HTML 4.0 Recommendationへ入った。[提案](https://www.w3.org/TR/WD-forms-970402) [HTML 4.0草案](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)
+W3C HTML Working Groupは1997年4月2日の*Enhancing HTML Forms*で新しい`BUTTON`を提案し、既存`INPUT`より多様で豊かなボタンを作るため内容にHTML断片を許した。7月8日のHTML 4.0初回公開草案が送信、リセット、スクリプト用ボタンとして収録し、HTML 4.0 Recommendationへ入った。[提案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)） [HTML 4.0草案](../../raw/www.w3.org/TR/WD-html40-970708/interact/forms.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)）
 
 ## HTML直前の祖先
 

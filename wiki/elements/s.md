@@ -14,9 +14,9 @@ WHATWG HTML Living Standardでは、もはや正確でない、または関係�
 
 ## HTMLへの導入
 
-1993年HTML+の`S`は表示だけを目的とする取り消し線だった。HTML 3.0にも存在したがHTML 3.2では欠落し、HTML 4で非推奨な`S`として再登場した。[HTML+ presentation tags](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_16.html) [HTML 3.0](https://www.w3.org/MarkUp/html3/emphasis.html) [HTML 3.2](https://www.w3.org/TR/REC-html32) [HTML 4.01 changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1)
+1993年HTML+の`S`は表示だけを目的とする取り消し線だった。HTML 3.0にも存在したがHTML 3.2では欠落し、HTML 4で非推奨な`S`として再登場した。[HTML+ presentation tags](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_16.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_16.html)） [HTML 3.0](../../raw/www.w3.org/MarkUp/html3/emphasis.html)（[公開元](https://www.w3.org/MarkUp/html3/emphasis.html)） [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32)） [HTML 4.01 changes](../../raw/www.w3.org/TR/html401/appendix/changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1)）
 
-2010年4月、Leif Halvard Silliは廃止だった`S`／`STRIKE`の再採録を提案し、削除済みではないが時間経過などで正確・関連しなくなった内容という意味を議論した。Ian Hicksonはその意味を要約し、9月29日に言語全体との一貫性から`STRIKE`ではなく`S`を選ぶと回答して、同日のリビジョン5561で`S`を追加した。[W3C Bug 9429](https://www.w3.org/Bugs/Public/show_bug.cgi?id=9429) [仕様コミット](https://github.com/whatwg/html/commit/40c807c2c3525301b13ac46ae2f2e77572efe486)
+2010年4月、Leif Halvard Silliは廃止だった`S`／`STRIKE`の再採録を提案し、削除済みではないが時間経過などで正確・関連しなくなった内容という意味を議論した。Ian Hicksonはその意味を要約し、9月29日に言語全体との一貫性から`STRIKE`ではなく`S`を選ぶと回答して、同日のリビジョン5561で`S`を追加した。[W3C Bug 9429](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-fbca4c889bfb6216)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=9429)） [仕様コミット](../../raw/github.com/whatwg/html/commit/40c807c2c3525301b13ac46ae2f2e77572efe486)（[公開元](https://github.com/whatwg/html/commit/40c807c2c3525301b13ac46ae2f2e77572efe486)）
 
 ## HTML直前の祖先
 
@@ -26,7 +26,7 @@ HTML4から継承されHTML5で廃止とされていた`S`／`STRIKE`である�
 
 ### 証拠
 
-1994年レビューは取り消し線が特に法律文書で有用と述べる。ただしHTML+には文書変更用の`ADDED`／`REMOVED`が別にあり、`S`はリビジョン意味ではなかった。2010年の議論も`DEL`とは異なり、内容が文書の一部として残るが、外部事情により正確または関連しなくなった場合を区別した。[HTML+のレビュー](https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html) [HTML+の変更マークアップ](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html) [W3C Bug 9429](https://www.w3.org/Bugs/Public/show_bug.cgi?id=9429)
+1994年レビューは取り消し線が特に法律文書で有用と述べる。ただしHTML+には文書変更用の`ADDED`／`REMOVED`が別にあり、`S`はリビジョン意味ではなかった。2010年の議論も`DEL`とは異なり、内容が文書の一部として残るが、外部事情により正確または関連しなくなった場合を区別した。[HTML+のレビュー](../../raw/www.w3.org/MarkUp/htmlplus_paper/htmlplus.html)（[公開元](https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html)） [HTML+の変更マークアップ](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)） [W3C Bug 9429](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-fbca4c889bfb6216)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=9429)）
 
 ### 解釈
 

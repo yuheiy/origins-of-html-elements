@@ -14,11 +14,11 @@ MathML Coreでは、文書内のMathMLマークアップの各インスタンス
 
 ## HTMLへの導入
 
-2008年4月5日のWHATWGコミットは、MathMLとSVGを`text/html`で扱う外来要素の内容構文解析基盤を追加し、`math`開始タグからMathML名前空間の要素を生成する規則を導入した。[仕様コミット](https://github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7)
+2008年4月5日のWHATWGコミットは、MathMLとSVGを`text/html`で扱う外来要素の内容構文解析基盤を追加し、`math`開始タグからMathML名前空間の要素を生成する規則を導入した。[仕様コミット](../../raw/github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7)（[公開元](https://github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7)）
 
 ## HTML直前の祖先
 
-MathML名前空間の`math` ルートである。1998年MathML 1.0が最上位要素として定義し、HTMLコミットが同じルートを外来名前空間要素として生成する因果を直接示す。[MathML 1.0](https://www.w3.org/TR/1998/REC-MathML-19980407/)
+MathML名前空間の`math` ルートである。1998年MathML 1.0が最上位要素として定義し、HTMLコミットが同じルートを外来名前空間要素として生成する因果を直接示す。[MathML 1.0](../../raw/www.w3.org/TR/1998/REC-MathML-19980407/index.html)（[公開元](https://www.w3.org/TR/1998/REC-MathML-19980407/)）
 
 ## さらに上流の由来
 

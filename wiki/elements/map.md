@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、`img`および子孫の`area`と組み合わ
 
 ## HTMLへの導入
 
-James L. Seidman（Spyglass）は1994年10月20日、`IMG USEMAP`、`MAP NAME`、`AREA`を提案した。サーバー側イメージマップのHTTP依存、余分なサーバー通信、クリック前に行き先を判断できないこと、サーバー依存形式を避け、マップの記述をHTMLとしてクライアントへ置くことが理由だった。[Seidman論文](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)
+James L. Seidman（Spyglass）は1994年10月20日、`IMG USEMAP`、`MAP NAME`、`AREA`を提案した。サーバー側イメージマップのHTTP依存、余分なサーバー通信、クリック前に行き先を判断できないこと、サーバー依存形式を避け、マップの記述をHTMLとしてクライアントへ置くことが理由だった。[Seidman論文](../../raw/archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)（[公開元](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)）
 
 ## HTML直前の祖先
 
-HTML直前の祖先は、HTML+の`FIG ISMAP`によるサーバー側方式と、`FIG`内`A SHAPE`によるクライアント側の形状付きリンクである。Seidman自身が後者を先行案として検討し、処理負担、代替内容、マップ配置の制約から短期解として変更した。[HTML+ Active Areas](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_36.html) [HTML+ Hypertext Buttons](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_37.html) [Seidman論文](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)
+HTML直前の祖先は、HTML+の`FIG ISMAP`によるサーバー側方式と、`FIG`内`A SHAPE`によるクライアント側の形状付きリンクである。Seidman自身が後者を先行案として検討し、処理負担、代替内容、マップ配置の制約から短期解として変更した。[HTML+ Active Areas](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_36.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_36.html)） [HTML+ Hypertext Buttons](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_37.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_37.html)） [Seidman論文](../../raw/archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)（[公開元](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)）
 
 ## さらに上流の由来
 

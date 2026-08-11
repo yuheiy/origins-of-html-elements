@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、既知範囲内のスカラー量の測定�
 
 ## HTMLへの導入
 
-WHATWG公式Gitの初回収録である2006年3月2日のソースにはWIP `gauge`が存在した。Ian Hicksonは3月29日のリビジョン15で同じ節を`meter`へ改名し、`min`, `max`, `value`, `low`, `high`, `optimum`とDOMインターフェースを具体化した。[初回Git収録](https://github.com/whatwg/html/commit/c3550d90867392905edbd91c94fec8c89fbfe648) [仕様化コミット](https://github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00)
+WHATWG公式Gitの初回収録である2006年3月2日のソースにはWIP `gauge`が存在した。Ian Hicksonは3月29日のリビジョン15で同じ節を`meter`へ改名し、`min`, `max`, `value`, `low`, `high`, `optimum`とDOMインターフェースを具体化した。10月27日の修正は残っていた`gauge`表記一件を`meter`へ直しており、コミットメッセージも取りこぼしの訂正としている。[初回Git収録](../../raw/github.com/whatwg/html/commit/c3550d90867392905edbd91c94fec8c89fbfe648)（[公開元](https://github.com/whatwg/html/commit/c3550d90867392905edbd91c94fec8c89fbfe648)） [仕様化コミット](../../raw/github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00)（[公開元](https://github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00)） [表記修正コミット](../../raw/github.com/whatwg/html/commit/cb22e823d93b27b01b73496e3cfe534ab6ee6509)（[公開元](https://github.com/whatwg/html/commit/cb22e823d93b27b01b73496e3cfe534ab6ee6509)）
 
 ## HTML直前の祖先
 
@@ -41,6 +41,7 @@ WHATWG Web Applications 1.0 `gauge` → 2006年リビジョン15 `meter` → HTM
 | 2006-03-02 | [WHATWG HTML commit `c3550d90`](../../raw/github.com/whatwg/html/commit/c3550d90867392905edbd91c94fec8c89fbfe648)（[公開元](https://github.com/whatwg/html/commit/c3550d90867392905edbd91c94fec8c89fbfe648)） | 仕様ソース・初回Git収録 | WIP `gauge`の初期意味と検討中の処理 | 2026-08-09 |
 | 2006-03-29 | [WHATWG HTML commit `f8514de7`（revision 15）](../../raw/github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00)（[公開元](https://github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00)） | 仕様コミット | `gauge`から`meter`への改名、意味・属性・DOMモデルの具体化 | 2026-08-09 |
 | 2006-03-28 | [*Web Applications 1.0*, revision 15](../../raw/platform.html5.org/history/webapps/r15.html)（[公開元](https://platform.html5.org/history/webapps/r15.html#the-meter)） | WHATWG保存仕様 | `meter`の同時代定義と`progress`との役割分離 | 2026-08-09 |
+| 2006-10-27 | [WHATWG HTML commit `cb22e823`](../../raw/github.com/whatwg/html/commit/cb22e823d93b27b01b73496e3cfe534ab6ee6509)（[公開元](https://github.com/whatwg/html/commit/cb22e823d93b27b01b73496e3cfe534ab6ee6509)） | 仕様コミット | 残っていた`gauge`表記一件を`meter`へ訂正 | 2026-08-11 |
 | 2026-08-09 | [*HTML Living Standard: The meter element*](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開元](https://html.spec.whatwg.org/multipage/form-elements.html#the-meter-element)） | 現行仕様 | `meter`の現行定義 | 2026-08-09 |
 
 ## 確度
@@ -56,5 +57,5 @@ WHATWG Web Applications 1.0 `gauge` → 2006年リビジョン15 `meter` → HTM
 ## 未解決
 
 - 初回Git収録より前に`gauge`を追加した草案、提案者、議論は確認できるか。
-- `gauge`から`meter`へ改名した理由は何か。
+- `gauge`から`meter`へ改名した設計上の理由は何か。2006年10月の変更は改名理由ではなく、残存表記の訂正である。
 - `low`, `high`, `optimum`の三領域モデルを提案した一次資料はあるか。

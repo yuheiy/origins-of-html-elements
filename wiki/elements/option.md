@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、`select`内の選択肢、または`datalist
 
 ## HTMLへの導入
 
-1993年HTML+は`SELECT`内の各候補を`OPTION`で表した。RFC 1866はHTML+由来のフォーム資料として`OPTION`を標準化した。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) [RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html)
+1993年HTML+は`SELECT`内の各候補を`OPTION`で表した。RFC 1866はHTML+由来のフォーム資料として`OPTION`を標準化した。[HTML+ forms](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)） [RFC 1866](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html)）
 
 ## HTML直前の祖先
 
-HTML直前の祖先はHTML+ `OPTION`である。HTML+は各代替を`OPTION`で表すと明記する。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)
+HTML直前の祖先はHTML+ `OPTION`である。HTML+は各代替を`OPTION`で表すと明記する。[HTML+ forms](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)）
 
 ## さらに上流の由来
 

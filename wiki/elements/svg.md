@@ -14,11 +14,11 @@ SVG 2ではSVG文書断片を含むルート要素である。断片は独立し
 
 ## HTMLへの導入
 
-2008年4月5日のWHATWGコミットは`svg`開始タグからSVG名前空間の外来要素を生成するパーサー基盤を追加した。4月15日にSVG Working Groupの要請を理由として削除され、2009年3月25日に「より最近の意見」に基づく再試行として導入し直された。[初回コミット](https://github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7) [削除コミット](https://github.com/whatwg/html/commit/7387156d67e9087106a62157bb4b6d3e47739fb2) [再導入コミット](https://github.com/whatwg/html/commit/f6a4d7fed33cd6ebcd2f2188302ed00b7aac1465)
+2008年4月5日のWHATWGコミットは`svg`開始タグからSVG名前空間の外来要素を生成するパーサー基盤を追加した。4月15日にSVG Working Groupの要請を理由として削除され、2009年3月25日に「より最近の意見」に基づく再試行として導入し直された。[初回コミット](../../raw/github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7)（[公開元](https://github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7)） [削除コミット](../../raw/github.com/whatwg/html/commit/7387156d67e9087106a62157bb4b6d3e47739fb2)（[公開元](https://github.com/whatwg/html/commit/7387156d67e9087106a62157bb4b6d3e47739fb2)） [再導入コミット](../../raw/github.com/whatwg/html/commit/f6a4d7fed33cd6ebcd2f2188302ed00b7aac1465)（[公開元](https://github.com/whatwg/html/commit/f6a4d7fed33cd6ebcd2f2188302ed00b7aac1465)）
 
 ## HTML直前の祖先
 
-SVG名前空間の`svg` ルートである。SVG 1.0がSVG文書断片のルートとして定義し、HTMLコミットが同じルートを外来名前空間要素として生成する因果を直接示す。[SVG 1.0](https://www.w3.org/TR/2001/REC-SVG-20010904/)
+SVG名前空間の`svg` ルートである。SVG 1.0がSVG文書断片のルートとして定義し、HTMLコミットが同じルートを外来名前空間要素として生成する因果を直接示す。[SVG 1.0](../../raw/www.w3.org/TR/2001/REC-SVG-20010904/index.html)（[公開元](https://www.w3.org/TR/2001/REC-SVG-20010904/)）
 
 ## さらに上流の由来
 

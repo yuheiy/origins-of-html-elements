@@ -14,17 +14,17 @@ WHATWG HTML Living Standardでは、それ自体には意味を持たず子を�
 
 ## HTMLへの導入
 
-確認できた最初期の公開仕様は1995年9月25日のIETF Internet-Draft `draft-ietf-html-i18n-01`である。同草案は、他に適切な要素がない箇所で`LANG`と双方向属性を保持する汎用コンテナーが必要だと述べ、その目的のため`SPAN`を導入した。Michael J Hannahは同年12月5日、スタイル草案の新`C`要素を廃し、国際化提案ですでに定義された`SPAN`へ`STYLE`属性を加えて使うことを提案した。1996年1月のW3Cスタイル草案は段落内のスタイル用にも`SPAN`を定義する。1997年1月のRFC 2070が国際化上の要素を標準化し、HTML 4.01はRFC 2070の統合と`SPAN`の新要素採録を記録する。[1995年国際化草案](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt) [style提案メール](https://lists.w3.org/Archives/Public/www-style/1995Dec/0039.html) [W3C スタイル草案](https://www.w3.org/TR/WD-style-960115) [RFC 2070 §4.2.2](https://www.rfc-editor.org/rfc/rfc2070.html#section-4.2.2) [HTML 4.01 changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1)
+確認できた最初期の公開仕様は1995年9月25日のIETF Internet-Draft `draft-ietf-html-i18n-01`である。同草案は、他に適切な要素がない箇所で`LANG`と双方向属性を保持する汎用コンテナーが必要だと述べ、その目的のため`SPAN`を導入した。Michael J Hannahは同年12月5日、スタイル草案の新`C`要素を廃し、国際化提案ですでに定義された`SPAN`へ`STYLE`属性を加えて使うことを提案した。1996年1月のW3Cスタイル草案は段落内のスタイル用にも`SPAN`を定義する。1997年1月のRFC 2070が国際化上の要素を標準化し、HTML 4.01はRFC 2070の統合と`SPAN`の新要素採録を記録する。[1995年国際化草案](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt)） [style提案メール](../../raw/lists.w3.org/Archives/Public/www-style/1995Dec/0039.html)（[公開元](https://lists.w3.org/Archives/Public/www-style/1995Dec/0039.html)） [W3C スタイル草案](../../raw/www.w3.org/TR/WD-style-960115)（[公開元](https://www.w3.org/TR/WD-style-960115)） [RFC 2070 §4.2.2](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html#section-4.2.2)） [HTML 4.01 changes](../../raw/www.w3.org/TR/html401/appendix/changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.1)）
 
 ## HTML直前の祖先
 
-Unicodeの書字方向埋め込みをHTMLマークアップへ移す設計と、`LANG`／`DIR`を保持する行内コンテナーという具体的要求が直前の設計源である。1995年草案は`SPAN DIR=LTR`／`RTL`と終了タグをLRE／RLE／PDFのマークアップ表現として例示し、RFC 2070もこの対応を継承する。[1995年草案](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt) [RFC 2070 §4.2.4](https://www.rfc-editor.org/rfc/rfc2070.html#section-4.2.4)
+Unicodeの書字方向埋め込みをHTMLマークアップへ移す設計と、`LANG`／`DIR`を保持する行内コンテナーという具体的要求が直前の設計源である。1995年草案は`SPAN DIR=LTR`／`RTL`と終了タグをLRE／RLE／PDFのマークアップ表現として例示し、RFC 2070もこの対応を継承する。[1995年草案](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt)） [RFC 2070 §4.2.4](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html#section-4.2.4)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-1995年草案とRFC 2070はUnicodeの文字意味に従い、高水準HTMLマークアップから低水準Unicode機構へ変換できるよう設計した。[1995年草案](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt) [RFC 2070](https://www.rfc-editor.org/rfc/rfc2070.html)
+1995年草案とRFC 2070はUnicodeの文字意味に従い、高水準HTMLマークアップから低水準Unicode機構へ変換できるよう設計した。[1995年草案](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01.txt)） [RFC 2070](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)）
 
 ### 解釈
 

@@ -14,9 +14,9 @@ WHATWG HTML Living Standardでは外部リソースを表し、リソース種�
 
 ## HTMLへの導入
 
-1995年12月20日のW3C Working Draft *Inserting multimedia objects into HTML3*は、HTML 2.0 `IMG`、Microsoft `DYNSRC`、Netscape `EMBED`、Sun `APP`／`APPLET`の各案では要求全体を満たせないとして、`IMG`の役割を包摂し、新メディアへ拡張可能で代替内容を持つ汎用`INSERT`を提案した。[INSERT草案](https://www.w3.org/TR/WD-insert-951220.html)
+1995年12月20日のW3C Working Draft *Inserting multimedia objects into HTML3*は、HTML 2.0 `IMG`、Microsoft `DYNSRC`、Netscape `EMBED`、Sun `APP`／`APPLET`の各案では要求全体を満たせないとして、`IMG`の役割を包摂し、新メディアへ拡張可能で代替内容を持つ汎用`INSERT`を提案した。[INSERT草案](../../raw/www.w3.org/TR/WD-insert-951220.html)（[公開元](https://www.w3.org/TR/WD-insert-951220.html)）
 
-1996年3月8日の後続草案は、旧`INSERT`草案の要素を各方面からの入力を受けて2月13日に改名し、文書名もWD-オブジェクトへ変えたと記録する。`OBJECT`はJavaアプレット、COM/OLEオブジェクト、プラグイン等を一つの一般機構で扱った。HTML 4は汎用オブジェクト包含の解決策として導入した。[OBJECT草案](https://www.w3.org/TR/WD-object-960308.html) [HTML 4.01](https://www.w3.org/TR/html401/struct/objects.html)
+1996年3月8日の後続草案は、旧`INSERT`草案の要素を各方面からの入力を受けて2月13日に改名し、文書名もWD-オブジェクトへ変えたと記録する。`OBJECT`はJavaアプレット、COM/OLEオブジェクト、プラグイン等を一つの一般機構で扱った。HTML 4は汎用オブジェクト包含の解決策として導入した。[OBJECT草案](../../raw/www.w3.org/TR/WD-object-960308.html)（[公開元](https://www.w3.org/TR/WD-object-960308.html)） [HTML 4.01](../../raw/www.w3.org/TR/html401/struct/objects.html)（[公開元](https://www.w3.org/TR/html401/struct/objects.html)）
 
 ## HTML直前の祖先
 
@@ -26,7 +26,7 @@ WHATWG HTML Living Standardでは外部リソースを表し、リソース種�
 
 ### 証拠
 
-`INSERT`草案はHTML 2.0 `IMG`のメディア上の制約を出発点とし、`DYNSRC`、`EMBED`、`APP`、`APPLET`を新しいメディアへ対処した既存案として列挙する。その上で各案が要求全体を満たさないため、単一で将来拡張可能な拡張を提案した。[INSERT草案](https://www.w3.org/TR/WD-insert-951220.html)
+`INSERT`草案はHTML 2.0 `IMG`のメディア上の制約を出発点とし、`DYNSRC`、`EMBED`、`APP`、`APPLET`を新しいメディアへ対処した既存案として列挙する。その上で各案が要求全体を満たさないため、単一で将来拡張可能な拡張を提案した。[INSERT草案](../../raw/www.w3.org/TR/WD-insert-951220.html)（[公開元](https://www.w3.org/TR/WD-insert-951220.html)）
 
 ### 解釈
 

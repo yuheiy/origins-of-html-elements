@@ -5,6 +5,8 @@
 | Rawファイル | 文書タイトル |
 |---|---|
 | [1997.webhistory.org/www.lists/www-talk.1993q1/0182.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0182.html) | WWW-Talk Jan-Mar 1993: proposed new tag: IMG |
+| [1997.webhistory.org/www.lists/www-talk.1993q1/0183.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0183.html) | WWW-Talk Jan-Mar 1993: Re: proposed new tag: IMG |
+| [1997.webhistory.org/www.lists/www-talk.1993q1/0186.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0186.html) | — |
 | [1997.webhistory.org/www.lists/www-talk.1993q1/0197.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0197.html) | WWW-Talk Jan-Mar 1993: Re: proposed new tag: IMG |
 | [1997.webhistory.org/www.lists/www-talk.1993q1/0257.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0257.html) | WWW-Talk Jan-Mar 1993: Re: proposed new tag: IMG |
 | [1997.webhistory.org/www.lists/www-talk.1993q1/0262.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0262.html) | WWW-Talk Jan-Mar 1993: NCSA Mosaic for X 0.10 released |
@@ -20,9 +22,11 @@
 | [datatracker.ietf.org/doc/html/draft-ietf-html-style-01](../raw/datatracker.ietf.org/doc/html/draft-ietf-html-style-01) | draft-ietf-html-style-01 |
 | [datatracker.ietf.org/doc/html/draft-ietf-html-tables-00](../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-00) | draft-ietf-html-tables-00 |
 | [datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt](../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt) | draft-ietf-html-tables-00 |
+| [datatracker.ietf.org/doc/html/draft-ietf-html-tables-01.txt](../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-01.txt) | draft-ietf-html-tables-01 |
 | [datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt](../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt) | draft-ietf-html-tables-02 |
 | [datatracker.ietf.org/doc/html/draft-ietf-html-tables-03](../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-03) | draft-ietf-html-tables-03 |
 | [datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt](../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt) | draft-ietf-html-tables-03 |
+| [developer.apple.com/documentation/coregraphics/cgcontext](../raw/developer.apple.com/documentation/coregraphics/cgcontext) | CGContext \| Apple Developer Documentation |
 | [developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Canvas.html](../raw/developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Canvas.html) | WebKit DOM Programming Topics: Drawing Content |
 | [documentation.help/HTMLREF/documentation.pdf](../raw/documentation.help/HTMLREF/documentation.pdf) | — |
 | [ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z/texinfo-2.16/C/ChangeLog](../raw/ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z/texinfo-2.16/C/ChangeLog) | — |
@@ -165,14 +169,17 @@
 | [github.com/alandipert/ncsa-mosaic/blob/master/CHANGES](../raw/github.com/alandipert/ncsa-mosaic/blob/master/CHANGES) | ncsa-mosaic/CHANGES at master · alandipert/ncsa-mosaic · GitHub |
 | [github.com/openui/open-ui/pull/1124](../raw/github.com/openui/open-ui/pull/1124) | [Customizable select] Rename selectedoption to selectedcontent by brechtDR · Pull Request #1124 · openui/open-ui · GitHub |
 | [github.com/whatwg/dom/commit/a2b04df51b4342d7617c128e80e5aa892889d2e0](../raw/github.com/whatwg/dom/commit/a2b04df51b4342d7617c128e80e5aa892889d2e0) | Shadow: define slots and slotables · whatwg/dom@a2b04df · GitHub |
+| [github.com/whatwg/html/blob/18322b5f67ea55395dad2183244a905174da971f/source](../raw/github.com/whatwg/html/blob/18322b5f67ea55395dad2183244a905174da971f/source) | html/source at 18322b5f67ea55395dad2183244a905174da971f · whatwg/html · GitHub |
 | [github.com/whatwg/html/blob/c3550d90867392905edbd91c94fec8c89fbfe648/source](../raw/github.com/whatwg/html/blob/c3550d90867392905edbd91c94fec8c89fbfe648/source) | html/source at c3550d90867392905edbd91c94fec8c89fbfe648 · whatwg/html · GitHub |
 | [github.com/whatwg/html/commit/155b9a55416464e4e80f848b9daf53bc1b7f41f4](../raw/github.com/whatwg/html/commit/155b9a55416464e4e80f848b9daf53bc1b7f41f4) | [acgiowt] (0) Rename SRT to VTT. · whatwg/html@155b9a5 · GitHub |
 | [github.com/whatwg/html/commit/172cccf47e97bee64f690347e0f303be31b7c67b](../raw/github.com/whatwg/html/commit/172cccf47e97bee64f690347e0f303be31b7c67b) | Define customizable &lt;select&gt; · whatwg/html@172cccf · GitHub |
 | [github.com/whatwg/html/commit/1a0c484e8f2f500dc854107dbdffdaf0b8f8576b](../raw/github.com/whatwg/html/commit/1a0c484e8f2f500dc854107dbdffdaf0b8f8576b) | [] (0) WF2: input.list; input.selectedOption, &lt;datalist&gt;; minor fixes… · whatwg/html@1a0c484 · GitHub |
 | [github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7](../raw/github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7) | [acgiowt] (2) MathML and SVG support in text/html: the parsing infras… · whatwg/html@1ff9688 · GitHub |
+| [github.com/whatwg/html/commit/29d7102ea5d923f807d44a402eef6fafd8f35327](../raw/github.com/whatwg/html/commit/29d7102ea5d923f807d44a402eef6fafd8f35327) | [giow] (0) Add a &lt;bdi&gt; element to safely let people insert user-gener… · whatwg/html@29d7102 · GitHub |
 | [github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9](../raw/github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9) | [giow] (0) Dialogs in web apps: &lt;dialog&gt;, inert='', &lt;form method=dial… · whatwg/html@2fb24fc · GitHub |
 | [github.com/whatwg/html/commit/303b37ec277946798aef715ff3ade7944f2657c0](../raw/github.com/whatwg/html/commit/303b37ec277946798aef715ff3ade7944f2657c0) | Add the &lt;search&gt; element · whatwg/html@303b37e · GitHub |
 | [github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059](../raw/github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059) | the figure element and associated trappings · whatwg/html@32bff0a · GitHub |
+| [github.com/whatwg/html/commit/33fc385dc0248f1464af8d8286da1cb55d52eb9c](../raw/github.com/whatwg/html/commit/33fc385dc0248f1464af8d8286da1cb55d52eb9c) | [ac] (0) Make &lt;wbr&gt; valid. · whatwg/html@33fc385 · GitHub |
 | [github.com/whatwg/html/commit/37bbc4fa05ac4f5a9401e8f2bc7b7e4b7a2fd08c](../raw/github.com/whatwg/html/commit/37bbc4fa05ac4f5a9401e8f2bc7b7e4b7a2fd08c) | [] (0) add &lt;audio&gt; · whatwg/html@37bbc4f · GitHub |
 | [github.com/whatwg/html/commit/3c157377135d05fbdd74f8c69199b47408bc6a9a](../raw/github.com/whatwg/html/commit/3c157377135d05fbdd74f8c69199b47408bc6a9a) | Add a new &lt;slot&gt; element for shadow trees · whatwg/html@3c15737 · GitHub |
 | [github.com/whatwg/html/commit/40c807c2c3525301b13ac46ae2f2e77572efe486](../raw/github.com/whatwg/html/commit/40c807c2c3525301b13ac46ae2f2e77572efe486) | [ac] (2) Adding the &lt;s&gt; element to the language. · whatwg/html@40c807c · GitHub |
@@ -198,6 +205,7 @@
 | [github.com/whatwg/html/commit/c3550d90867392905edbd91c94fec8c89fbfe648](../raw/github.com/whatwg/html/commit/c3550d90867392905edbd91c94fec8c89fbfe648) | Web Apps 1.0 initial checkin of working directory · whatwg/html@c3550d9 · GitHub |
 | [github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f](../raw/github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f) | [acgiow] (0) Change &lt;figure&gt; and &lt;details&gt; to use &lt;figcaption&gt; and &lt;s… · whatwg/html@c397495 · GitHub |
 | [github.com/whatwg/html/commit/c598ff023f081dd3f03b2e43177a632fb7dc92ec](../raw/github.com/whatwg/html/commit/c598ff023f081dd3f03b2e43177a632fb7dc92ec) | Add the &lt;search&gt; element · whatwg/html@c598ff0 · GitHub |
+| [github.com/whatwg/html/commit/cb22e823d93b27b01b73496e3cfe534ab6ee6509](../raw/github.com/whatwg/html/commit/cb22e823d93b27b01b73496e3cfe534ab6ee6509) | oops, s/gauge/meter/... · whatwg/html@cb22e82 · GitHub |
 | [github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9](../raw/github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9) | [cit] (2) &lt;ruby&gt; support. This isn't very compatible with IE, but it … · whatwg/html@f4efc73 · GitHub |
 | [github.com/whatwg/html/commit/f6a4d7fed33cd6ebcd2f2188302ed00b7aac1465](../raw/github.com/whatwg/html/commit/f6a4d7fed33cd6ebcd2f2188302ed00b7aac1465) | [] (0) SVG in text/html: Second try, based on more recent feedback. · whatwg/html@f6a4d7f · GitHub |
 | [github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00](../raw/github.com/whatwg/html/commit/f8514de7d2d2f408e0f695dd1af3dc110f556c00) | &lt;meter&gt; and &lt;progress&gt; (sorry for the big checkin, had svn issues) · whatwg/html@f8514de · GitHub |
@@ -207,6 +215,7 @@
 | [github.com/whatwg/html/issues/5811](../raw/github.com/whatwg/html/issues/5811) | Consider creating an HTML search element · Issue #5811 · whatwg/html · GitHub |
 | [github.com/whatwg/html/pull/10633](../raw/github.com/whatwg/html/pull/10633) | Define the `&lt;selectedcontent&gt;` element by josepharhar · Pull Request #10633 · whatwg/html · GitHub |
 | [github.com/whatwg/html/pull/7320](../raw/github.com/whatwg/html/pull/7320) | Add the &lt;search&gt; element by domenic · Pull Request #7320 · whatwg/html · GitHub |
+| [html.spec.whatwg.org/multipage/acknowledgements.html](../raw/html.spec.whatwg.org/multipage/acknowledgements.html) | HTML Standard |
 | [html.spec.whatwg.org/multipage/canvas.html](../raw/html.spec.whatwg.org/multipage/canvas.html) | HTML Standard |
 | [html.spec.whatwg.org/multipage/custom-elements.html](../raw/html.spec.whatwg.org/multipage/custom-elements.html) | HTML Standard |
 | [html.spec.whatwg.org/multipage/edits.html](../raw/html.spec.whatwg.org/multipage/edits.html) | HTML Standard |
@@ -235,6 +244,7 @@
 | [ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html) | html-wg-95q2: Re: HTML/CALS/ICADD Table Prop |
 | [ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html) | EMail Msg &lt;9309060010.AA01749@wintermute.ncsa.uiuc.edu&gt; |
 | [lib.ru/WEBMASTER/tags.txt](../raw/lib.ru/WEBMASTER/tags.txt) | HTML Referece Guide: Tags for Netscape 3.0 |
+| [lists.w3.org/Archives/Public/public-html-admin/2013Apr/0003.html](../raw/lists.w3.org/Archives/Public/public-html-admin/2013Apr/0003.html) | WG Decision on request to drop hgroup from HTML5 from Paul Cotton on 2013-04-02 (public-html-admin@w3.org from April 2013) |
 | [lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html](../raw/lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html) | Re: HTML-ISSUE-162 (modal ): Add a modal attribute to html5 to indicate a modal segment of the DOM (modal dialog) [HTML 5 spec] from Laura Carlson on 2011-01-22 (public-html-wg-issue-tracking@w3.org from January 2011) |
 | [lists.w3.org/Archives/Public/public-html/2008May/0620.html](../raw/lists.w3.org/Archives/Public/public-html/2008May/0620.html) | Current HTML ruby markup usage from Philip Taylor on 2008-05-26 (public-html@w3.org from May 2008) |
 | [lists.w3.org/Archives/Public/public-html/2009Sep/0566.html](../raw/lists.w3.org/Archives/Public/public-html/2009Sep/0566.html) | Re: &lt;details&gt; from Ian Hickson on 2009-09-15 (public-html@w3.org from September 2009) |
@@ -254,6 +264,7 @@
 | [lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html) | [whatwg] Timed tracks for &lt;video&gt; from Ian Hickson on 2010-07-23 (public-whatwg-archive@w3.org from July 2010) |
 | [lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html) | [whatwg] Declarative Inert DOM (e.g. the &lt;template&gt; element) from Rafael Weinstein on 2011-11-17 (public-whatwg-archive@w3.org from November 2011) |
 | [lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html](../raw/lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html) | Minutes [was: Agenda for 971023 HTML WG meeting] from Dan Connolly on 1997-10-23 (w3c-wai-hc@w3.org from October to December 1997) |
+| [lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0026.html](../raw/lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0026.html) | HTML4/CSS2 review from Daniel Dardailler on 1997-09-18 (w3c-wai-ig@w3.org from July to September 1997) |
 | [lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html](../raw/lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html) | FORM SELECT accessibility from MegaZone on 1997-09-27 (w3c-wai-ig@w3.org from July to September 1997) |
 | [lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html](../raw/lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html) | The Origin of Blockquote from Sean B. Palmer on 2017-08-28 (www-archive@w3.org from August 2017) |
 | [lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html](../raw/lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html) | Re: Proposal for Extensions to HTML4 from Ian Hickson on 2003-12-07 (www-forms@w3.org from December 2003) |
@@ -348,6 +359,7 @@
 | [www.w3.org/History/1991-WWW-NeXT/Implementation/WorldWideWeb.app/default.style](../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/WorldWideWeb.app/default.style) | — |
 | [www.w3.org/History/1991-WWW-NeXT/Implementation/test.html](../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/test.html) | Hypertext HTML formatting example |
 | [www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/LinkTypes.html](../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/LinkTypes.html) | HyperText Design Issues: Link types |
+| [www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/Topology.html](../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/Topology.html) | HyperText Design Issues: Topology |
 | [www.w3.org/History/19921103-hypertext/hypertext/WWW/LineMode/Defaults/Features.html](../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/LineMode/Defaults/Features.html) | Features added to www line-mode browser |
 | [www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Connolly/recommended.html](../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Connolly/recommended.html) | HTML Guide: Recommended Usage |
 | [www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html](../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html) | Future plans for HTML |
@@ -382,6 +394,7 @@
 | [www.w3.org/MarkUp/htmlplus_paper/htmlplus.html](../raw/www.w3.org/MarkUp/htmlplus_paper/htmlplus.html) | A Review of the HTML+ Document Format |
 | [www.w3.org/People/Raggett/book4/ch02.html](../raw/www.w3.org/People/Raggett/book4/ch02.html) | Chapter 2 |
 | [www.w3.org/People/Raggett/the-early-days-of-the-Web.html](../raw/www.w3.org/People/Raggett/the-early-days-of-the-Web.html) | My involvement with the early days of the Web |
+| [www.w3.org/People/howcome/p/cascade.html](../raw/www.w3.org/People/howcome/p/cascade.html) | Cascading HTML Style Sheets -- A Proposal |
 | [www.w3.org/TR/1998/REC-MathML-19980407/index.html](../raw/www.w3.org/TR/1998/REC-MathML-19980407/index.html) | Mathematical Markup Language (MathML) |
 | [www.w3.org/TR/1998/WD-ruby-19981221/index.html](../raw/www.w3.org/TR/1998/WD-ruby-19981221/index.html) | Ruby |
 | [www.w3.org/TR/2000/WD-xforms-20001219/ui.html](../raw/www.w3.org/TR/2000/WD-xforms-20001219/ui.html) | XForms User Interface - W3C XForms 1.0 - Working Draft 20001219 |
@@ -404,6 +417,7 @@
 | [www.w3.org/TR/2013/WD-html51-20130528/text-level-semantics.html](../raw/www.w3.org/TR/2013/WD-html51-20130528/text-level-semantics.html) | 4.6 Text-level semantics — HTML 5.1 |
 | [www.w3.org/TR/2013/WD-respimg-usecases-20130226/index.html](../raw/www.w3.org/TR/2013/WD-respimg-usecases-20130226/index.html) | Use Cases and Requirements for Standardizing Responsive Images |
 | [www.w3.org/TR/2014/REC-wai-aria-20140320/roles](../raw/www.w3.org/TR/2014/REC-wai-aria-20140320/roles) | The Roles Model \| Accessible Rich Internet Applications (WAI-ARIA) 1.0 |
+| [www.w3.org/TR/2014/WD-shadow-dom-20140617/index.html](../raw/www.w3.org/TR/2014/WD-shadow-dom-20140617/index.html) | Shadow DOM |
 | [www.w3.org/TR/PR-html40-971107/appendix/changes.html](../raw/www.w3.org/TR/PR-html40-971107/appendix/changes.html) | Changes between HTML 3.2 and HTML 4.0 |
 | [www.w3.org/TR/PR-html40-971107/interact/forms.html](../raw/www.w3.org/TR/PR-html40-971107/interact/forms.html) | Forms in HTML documents |
 | [www.w3.org/TR/PR-html40-971107/struct/text.html](../raw/www.w3.org/TR/PR-html40-971107/struct/text.html) | Paragraphs, Lines, and Phrases |
@@ -514,6 +528,7 @@
 | [www.w3.org/TR/html401/struct/objects.html](../raw/www.w3.org/TR/html401/struct/objects.html) | Objects, Images, and Applets in HTML documents |
 | [www.w3.org/TR/html401/struct/text.html](../raw/www.w3.org/TR/html401/struct/text.html) | Paragraphs, Lines, and Phrases |
 | [www.w3.org/Test/test_source.txt](../raw/www.w3.org/Test/test_source.txt) | Hypertext HTML formatting example |
+| [www.w3.org/WAI/PF/report.html](../raw/www.w3.org/WAI/PF/report.html) | HTML4/CSS2 Accessibility Recommendations |
 | [www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/index.html](../raw/www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/index.html) | A sample picture implementation \| Responsive Images Community Group |
 | [www.w3.org/html/wg/tracker/issues/83](../raw/www.w3.org/html/wg/tracker/issues/83) | ISSUE-83: Use of the dt and dd elements in figure and details content models - HTML Weekly Tracker |
 | [www.w3.org/html/wg/wiki/ChangeProposals/DdDtFcaptionDlabel](../raw/www.w3.org/html/wg/wiki/ChangeProposals/DdDtFcaptionDlabel) | ChangeProposals/DdDtFcaptionDlabel - HTML WG Wiki |

@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、段落を表す。 [HTML Living Standard](..
 
 ## HTMLへの導入
 
-確認できる最初期のHTML資料は1992年1月9日のBerners-Leeメールで、`P`を新しい段落を示すタグとして記録する。CERNの*Design Constraints*は、HTMLをスタイル指定された段落列へ写像し、編集後に要素へ一意に戻せる平坦モデルを設計要件として説明する。[Berners-Lee, “Re: Is there a paper which describes the www protocol?”](https://lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html) [*Design Constraints*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/HTMLConstraints.html)
+確認できる最初期のHTML資料は1992年1月9日のBerners-Leeメールで、`P`を新しい段落を示すタグとして記録する。CERNの*Design Constraints*は、HTMLをスタイル指定された段落列へ写像し、編集後に要素へ一意に戻せる平坦モデルを設計要件として説明する。[Berners-Lee, “Re: Is there a paper which describes the www protocol?”](../../raw/lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html)） [*Design Constraints*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/HTMLConstraints.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/HTMLConstraints.html)）
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ WHATWG HTML Living Standardでは、段落を表す。 [HTML Living Standard](..
 
 ### 証拠
 
-1988年Waterloo SCRIPT GMLにも段落用の`:P`が存在するが、WaterlooからCERNまたはHTMLへの採用を示さない。[Waterloo SCRIPT GML User’s Guide](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt) 1998年のRaggettらによる回顧は、初期HTMLがSGMLから用いた構造要素の例に`P`を含めるが、元となったDTDは指定しない。[Raggettほか, *A history of HTML*](../../raw/www.w3.org/People/Raggett/book4/ch02.html)（[公開元](https://www.w3.org/People/Raggett/book4/ch02.html)）
+1988年Waterloo SCRIPT GMLにも段落用の`:P`が存在するが、WaterlooからCERNまたはHTMLへの採用を示さない。[Waterloo SCRIPT GML User’s Guide](../../raw/web.archive.org/web/20020504095301/http%3A/www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)（[公開元](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)） 1998年のRaggettらによる回顧は、初期HTMLがSGMLから用いた構造要素の例に`P`を含めるが、元となったDTDは指定しない。[Raggettほか, *A history of HTML*](../../raw/www.w3.org/People/Raggett/book4/ch02.html)（[公開元](https://www.w3.org/People/Raggett/book4/ch02.html)）
 
 ### 解釈
 

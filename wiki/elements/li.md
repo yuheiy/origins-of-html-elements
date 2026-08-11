@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、リスト項目を表し、親が`ol`、`ul`
 
 ## HTMLへの導入
 
-1990年12月7日保存のWorldWideWebのテストファイルは、承認済みHTMLタグの説明中でCERN-SGMLタグ集合から一部をHTMLへ含めたと明記し、同じファイルで`LI`を`OL`と`UL`の項目に使う。Tim Berners-Leeは1991年10月29日のメールでも`LI`を`UL`または`OL`内のスタイルタグとして説明する。CERNの*Design Constraints*は`UL`内の`LI`を平坦文書モデルで許す限定的入れ子の例にする。[WorldWideWebのテストファイル](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html) [Berners-Lee, 1991年メール](https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html) [*Design Constraints*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/HTMLConstraints.html)
+1990年12月7日保存のWorldWideWebのテストファイルは、承認済みHTMLタグの説明中でCERN-SGMLタグ集合から一部をHTMLへ含めたと明記し、同じファイルで`LI`を`OL`と`UL`の項目に使う。Tim Berners-Leeは1991年10月29日のメールでも`LI`を`UL`または`OL`内のスタイルタグとして説明する。CERNの*Design Constraints*は`UL`内の`LI`を平坦文書モデルで許す限定的入れ子の例にする。[WorldWideWebのテストファイル](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)） [Berners-Lee, 1991年メール](../../raw/lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)） [*Design Constraints*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/HTMLConstraints.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/HTMLConstraints.html)）
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ CERN-SGMLタグ集合である。WorldWideWebのテストファイルはCERN-SGM
 
 ### 証拠
 
-1988年Waterloo SCRIPT GMLにも`:LI`が存在するが、WaterlooからCERNまたはHTMLへの採用因果は示さない。[Waterloo SCRIPT GML User’s Guide](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)
+1988年Waterloo SCRIPT GMLにも`:LI`が存在するが、WaterlooからCERNまたはHTMLへの採用因果は示さない。[Waterloo SCRIPT GML User’s Guide](../../raw/web.archive.org/web/20020504095301/http%3A/www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)（[公開元](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)）
 
 ### 解釈
 

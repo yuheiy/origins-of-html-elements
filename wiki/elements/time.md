@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、内容とその機械可読な形式を`date
 
 ## HTMLへの導入
 
-2006年10月26日のIan HicksonによるWHATWG仕様コミットは`<t> element, draft the first`として、日付と時刻を表す`<t>`、機械可読な`datetime`、DOM属性、具体例を追加した。[`<t>`初稿コミット](https://github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583)
+2006年10月26日のIan HicksonによるWHATWG仕様コミットは`<t> element, draft the first`として、日付と時刻を表す`<t>`、機械可読な`datetime`、DOM属性、具体例を追加した。[`<t>`初稿コミット](../../raw/github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583)（[公開元](https://github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583)）
 
-2006年11月23日のコミットは`<t> becomes <time>`と明記し、要素名、`datetime`、DOMインターフェース、例を一括して改名しつつ日付および時刻という意味を維持した。[改名コミット](https://github.com/whatwg/html/commit/fdfe6548265125712520f3e1b72812235e9a8123)
+2006年11月23日のコミットは`<t> becomes <time>`と明記し、要素名、`datetime`、DOMインターフェース、例を一括して改名しつつ日付および時刻という意味を維持した。[改名コミット](../../raw/github.com/whatwg/html/commit/fdfe6548265125712520f3e1b72812235e9a8123)（[公開元](https://github.com/whatwg/html/commit/fdfe6548265125712520f3e1b72812235e9a8123)）
 
-2011年10月29日に`time`は一時`data`へ置換されたが、11月18日に再導入され、内容と`datetime`内の機械可読な形式、月、日付、年なし日付、時刻、タイムゾーンオフセット、継続時間等が規定された。[削除コミット](https://github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d) [再導入コミット](https://github.com/whatwg/html/commit/92baa8333203ea5b97316bb1775331b216d55dab)
+2011年10月29日に`time`は一時`data`へ置換されたが、11月18日に再導入され、内容と`datetime`内の機械可読な形式、月、日付、年なし日付、時刻、タイムゾーンオフセット、継続時間等が規定された。[削除コミット](../../raw/github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d)（[公開元](https://github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d)） [再導入コミット](../../raw/github.com/whatwg/html/commit/92baa8333203ea5b97316bb1775331b216d55dab)（[公開元](https://github.com/whatwg/html/commit/92baa8333203ea5b97316bb1775331b216d55dab)）
 
 ## HTML直前の祖先
 
@@ -28,7 +28,7 @@ WHATWG草案の`<t>`要素である。2006年コミットが`<t>`から`<time>`�
 
 ### 証拠
 
-2006年10月のコミットは、`<t>`を日付と時刻と機械可読な`datetime`の組として具体化した。HTML外のマークアップ語彙やマイクロフォーマットから採用した記述はない。[`<t>`初稿コミット](https://github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583)
+2006年10月のコミットは、`<t>`を日付と時刻と機械可読な`datetime`の組として具体化した。HTML外のマークアップ語彙やマイクロフォーマットから採用した記述はない。[`<t>`初稿コミット](../../raw/github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583)（[公開元](https://github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583)）
 
 ### 解釈
 

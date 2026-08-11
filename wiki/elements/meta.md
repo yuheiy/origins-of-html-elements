@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、`title`、`base`、`link`、`style`、`scrip
 
 ## HTMLへの導入
 
-1993年7月のHTML草案と同年11月のHTML+ DTDには`META`がない。Fieldingは1994年6月1日、他のHTML+要素で定義されない文書メタ情報をサーバーやクライアントが抽出できるよう、空な`META`と`NAME`／`VALUE`、HTTPヘッダー生成を指示する`HEADER`属性を具体例・DTDとともに提案した。6月12日には`HTTP-EQUIV`／`NAME`／`CONTENT`へ整理したHTML 2.0仕様パッチを提示し、RFC 1866が同じモデルを採用した。[Fielding, “Re: meta information”](https://lists.w3.org/Archives/Public/www-html/1994Jun/0002.html) [Fielding, “Re: HTML 2.0 spec and the META element”](https://lists.w3.org/Archives/Public/www-html/1994Jun/0041.html) [RFC 1866](https://www.rfc-editor.org/rfc/rfc1866#section-5.2.5)
+1993年7月のHTML草案と同年11月のHTML+ DTDには`META`がない。Fieldingは1994年6月1日、他のHTML+要素で定義されない文書メタ情報をサーバーやクライアントが抽出できるよう、空な`META`と`NAME`／`VALUE`、HTTPヘッダー生成を指示する`HEADER`属性を具体例・DTDとともに提案した。6月12日には`HTTP-EQUIV`／`NAME`／`CONTENT`へ整理したHTML 2.0仕様パッチを提示し、RFC 1866が同じモデルを採用した。[Fielding, “Re: meta information”](../../raw/lists.w3.org/Archives/Public/www-html/1994Jun/0002.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1994Jun/0002.html)） [Fielding, “Re: HTML 2.0 spec and the META element”](../../raw/lists.w3.org/Archives/Public/www-html/1994Jun/0041.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1994Jun/0041.html)） [RFC 1866](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866#section-5.2.5)）
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ WHATWG HTML Living Standardでは、`title`、`base`、`link`、`style`、`scrip
 
 ### 証拠
 
-Fieldingの提案は、専用要素を増やさず任意の名前/値メタデータを扱う必要と、`Expires`などをHTML文書ヘッドからHTTP応答ヘッダーへ写像する必要を明記する。HTML 2.0パッチは専用の`TITLE`やURI関係用の`LINK`を優先する制約も加える。[Fielding, “Re: meta information”](https://lists.w3.org/Archives/Public/www-html/1994Jun/0002.html) [Fielding, “Re: HTML 2.0 spec and the META element”](https://lists.w3.org/Archives/Public/www-html/1994Jun/0041.html)
+Fieldingの提案は、専用要素を増やさず任意の名前/値メタデータを扱う必要と、`Expires`などをHTML文書ヘッドからHTTP応答ヘッダーへ写像する必要を明記する。HTML 2.0パッチは専用の`TITLE`やURI関係用の`LINK`を優先する制約も加える。[Fielding, “Re: meta information”](../../raw/lists.w3.org/Archives/Public/www-html/1994Jun/0002.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1994Jun/0002.html)） [Fielding, “Re: HTML 2.0 spec and the META element”](../../raw/lists.w3.org/Archives/Public/www-html/1994Jun/0041.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1994Jun/0041.html)）
 
 ### 解釈
 

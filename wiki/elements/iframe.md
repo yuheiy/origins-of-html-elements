@@ -14,21 +14,21 @@ WHATWG HTML Living Standardでは、その子ナビゲーション対象を表�
 
 ## HTMLへの導入
 
-Microsoftは1996年4月30日、IE3の表とフレーム向け新HTML拡張をW3Cへ提出したと発表し、5月29日のIE3ベータ発表で枠なしフレームと浮動フレームの対応を明記した。ただし、どちらも`IFRAME`という要素名を記していない。[Microsoft 4月発表](https://news.microsoft.com/source/1996/04/30/microsoft-previews-internet-explorer-3-0-with-innovative-support-for-sharing-of-voice-applications-over-the-world-wide-web/) [Microsoft 5月発表](https://news.microsoft.com/source/1996/05/29/microsoft-internet-explorer-3-0-beta-now-available/)
+Microsoftは1996年4月30日、IE3の表とフレーム向け新HTML拡張をW3Cへ提出したと発表し、5月29日のIE3ベータ発表で枠なしフレームと浮動フレームの対応を明記した。ただし、どちらも`IFRAME`という要素名を記していない。[Microsoft 4月発表](../../raw/news.microsoft.com/source/1996/04/30/microsoft-previews-internet-explorer-3-0-with-innovative-support-for-sharing-of-voice-applications-over-the-world-wide-web/index.html)（[公開元](https://news.microsoft.com/source/1996/04/30/microsoft-previews-internet-explorer-3-0-with-innovative-support-for-sharing-of-voice-applications-over-the-world-wide-web/)） [Microsoft 5月発表](../../raw/news.microsoft.com/source/1996/05/29/microsoft-internet-explorer-3-0-beta-now-available/index.html)（[公開元](https://news.microsoft.com/source/1996/05/29/microsoft-internet-explorer-3-0-beta-now-available/)）
 
-W3Cは1997年3月31日の*Implementing HTML Frames*で、`IFRAME`を複合文書のための新要素として提案し、HTML Working GroupでCougarへの統合候補として審議中だと記した。7月8日のHTML 4.0 Working Draftがこれを収録し、12月18日のRecommendationが通常のテキスト内へ外部文書を置く行内子ウィンドウとして標準化した。[frames草案](https://www.w3.org/TR/WD-frames-970331) [HTML 4 WD](https://www.w3.org/TR/WD-html40-970708/present/frames.html) [HTML 4 Recommendation](https://www.w3.org/TR/REC-html40-971218/present/frames.html#edef-IFRAME)
+W3Cは1997年3月31日の*Implementing HTML Frames*で、`IFRAME`を複合文書のための新要素として提案し、HTML Working GroupでCougarへの統合候補として審議中だと記した。7月8日のHTML 4.0 Working Draftがこれを収録し、12月18日のRecommendationが通常のテキスト内へ外部文書を置く行内子ウィンドウとして標準化した。[frames草案](../../raw/www.w3.org/TR/WD-frames-970331)（[公開元](https://www.w3.org/TR/WD-frames-970331)） [HTML 4 WD](../../raw/www.w3.org/TR/WD-html40-970708/present/frames.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/present/frames.html)） [HTML 4 Recommendation](../../raw/www.w3.org/TR/REC-html40-971218/present/frames.html)（[公開元](https://www.w3.org/TR/REC-html40-971218/present/frames.html#edef-IFRAME)）
 
 ## HTML直前の祖先
 
-1997年のW3Cフレーム草案は、`IFRAME`を`FRAME`に似ているが`FRAMESET`ではなく`BODY`内で使う要素とし、通常のフレームを文書の流れへ置き、`IMG`と同様に配置する設計を直接説明する。ただしMicrosoftの浮動フレーム実装からこのW3C要素へ採録された因果は示さない。[W3C frames草案](https://www.w3.org/TR/WD-frames-970331)
+1997年のW3Cフレーム草案は、`IFRAME`を`FRAME`に似ているが`FRAMESET`ではなく`BODY`内で使う要素とし、通常のフレームを文書の流れへ置き、`IMG`と同様に配置する設計を直接説明する。ただしMicrosoftの浮動フレーム実装からこのW3C要素へ採録された因果は示さない。[W3C frames草案](../../raw/www.w3.org/TR/WD-frames-970331)（[公開元](https://www.w3.org/TR/WD-frames-970331)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-W3C草案では`IFRAME`の属性の大半を`FRAME`から取り、`ALIGN`は`IMG`と同じ値と意味を持たせている。一方、既存の`OBJECT`でも複合文書を作れるため`IFRAME`は不要だという代替案も併記する。[W3C frames草案](https://www.w3.org/TR/WD-frames-970331)
+W3C草案では`IFRAME`の属性の大半を`FRAME`から取り、`ALIGN`は`IMG`と同じ値と意味を持たせている。一方、既存の`OBJECT`でも複合文書を作れるため`IFRAME`は不要だという代替案も併記する。[W3C frames草案](../../raw/www.w3.org/TR/WD-frames-970331)（[公開元](https://www.w3.org/TR/WD-frames-970331)）
 
-Microsoftの後代DHTML参照は`IFRAME`を浮動 `FRAME`と結び付ける一方、HTMLとスクリプトの双方でIE4から利用可能とする。この記述はIE3の浮動フレーム機能とリテラル `IFRAME`を接続せず、IE3発表との不一致を残す。[Microsoft DHTML reference保存複製](https://documentation.help/HTMLREF/documentation.pdf)
+Microsoftの後代DHTML参照は`IFRAME`を浮動 `FRAME`と結び付ける一方、HTMLとスクリプトの双方でIE4から利用可能とする。この記述はIE3の浮動フレーム機能とリテラル `IFRAME`を接続せず、IE3発表との不一致を残す。[Microsoft DHTML reference保存複製](../../raw/documentation.help/HTMLREF/documentation.pdf)（[公開元](https://documentation.help/HTMLREF/documentation.pdf)）
 
 ### 解釈
 

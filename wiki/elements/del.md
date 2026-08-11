@@ -14,21 +14,21 @@ WHATWG HTML Living Standardでは、文書から削除された部分を表す�
 
 ## HTMLへの導入
 
-HTML+は1993年11月8日に、法律文書や法案修正で削除部分を示すための`REMOVED`を定義した。Raggettは1994年にこれを表示用の`S`と区別した論理用途と説明し、HTML 3.0 DTDの履歴は1995年2月22日に`INS`と`DEL`を法律文書用に追加したと記録する。3月28日の公開草案は`DEL`を削除済みテキスト用の“New in 3.0”要素とした。[HTML+](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)） [Raggettの説明](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/2.html) [HTML 3.0 DTD](https://www.w3.org/MarkUp/html3/html3.dtd) [HTML 3.0 Internet-Draft](https://www.w3.org/MarkUp/html3/html3.txt)
+HTML+は1993年11月8日に、法律文書や法案修正で削除部分を示すための`REMOVED`を定義した。Raggettは1994年にこれを表示用の`S`と区別した論理用途と説明し、HTML 3.0 DTDの履歴は1995年2月22日に`INS`と`DEL`を法律文書用に追加したと記録する。3月28日の公開草案は`DEL`を削除済みテキスト用の“New in 3.0”要素とした。[HTML+](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)） [Raggettの説明](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/2.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/2.html)） [HTML 3.0 DTD](../../raw/www.w3.org/MarkUp/html3/html3.dtd)（[公開元](https://www.w3.org/MarkUp/html3/html3.dtd)） [HTML 3.0 Internet-Draft](../../raw/www.w3.org/MarkUp/html3/html3.txt)（[公開元](https://www.w3.org/MarkUp/html3/html3.txt)）
 
-1997年7月8日のHTML 4.0 First Public Working Draftは、別版に対して削除されたセクションをマークアップする`DEL`、変更理由を指す`cite`、変更日時の`datetime`を定義した。この版はDTDで行内内容だけを許しながら本文でブロックレベルの内容も許す不整合があったが、10月23日にHTML Working Groupが`INS`と`DEL`の内容モデルを`%flow`とすることを決議し、11月7日のProposed Recommendationが反映した。[First Public Working Draft](https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4) [Working Group議事録](https://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html) [Proposed Recommendation](https://www.w3.org/TR/PR-html40-971107/struct/text.html#h-9.4)
+1997年7月8日のHTML 4.0 First Public Working Draftは、別版に対して削除されたセクションをマークアップする`DEL`、変更理由を指す`cite`、変更日時の`datetime`を定義した。この版はDTDで行内内容だけを許しながら本文でブロックレベルの内容も許す不整合があったが、10月23日にHTML Working Groupが`INS`と`DEL`の内容モデルを`%flow`とすることを決議し、11月7日のProposed Recommendationが反映した。[First Public Working Draft](../../raw/www.w3.org/TR/WD-html40-970708/struct/text.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4)） [Working Group議事録](../../raw/lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html)（[公開元](https://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html)） [Proposed Recommendation](../../raw/www.w3.org/TR/PR-html40-971107/struct/text.html)（[公開元](https://www.w3.org/TR/PR-html40-971107/struct/text.html#h-9.4)）
 
-HTML 4.0 Recommendationは`DEL`をHTML 3.2からの新要素に列挙し、文書変更をマークアップする追加だったと記録する。[HTML 4.0 changes](https://www.w3.org/TR/REC-html40-971218/appendix/changes.html#h-A.1.1)
+HTML 4.0 Recommendationは`DEL`をHTML 3.2からの新要素に列挙し、文書変更をマークアップする追加だったと記録する。[HTML 4.0 changes](../../raw/www.w3.org/TR/REC-html40-971218/appendix/changes.html)（[公開元](https://www.w3.org/TR/REC-html40-971218/appendix/changes.html#h-A.1.1)）
 
 ## HTML直前の祖先
 
-HTML 4の直前に確認できる先行要素はHTML 3.0 `DEL`である。W3CはHTML設計作業がHTML+とHTML 3.0草案を基礎としていると説明し、HTML 4編集者もFirst Public Working DraftをCougar草案から書き直したと記録するが、`DEL`個別の採録判断とCougar中間版は未確認である。[W3C声明](https://www.w3.org/press-releases/1996/html-leadership/) [編集者告知](https://lists.w3.org/Archives/Public/www-html/1997Jul/0079.html)
+HTML 4の直前に確認できる先行要素はHTML 3.0 `DEL`である。W3CはHTML設計作業がHTML+とHTML 3.0草案を基礎としていると説明し、HTML 4編集者もFirst Public Working DraftをCougar草案から書き直したと記録するが、`DEL`個別の採録判断とCougar中間版は未確認である。[W3C声明](../../raw/www.w3.org/press-releases/1996/html-leadership/index.html)（[公開元](https://www.w3.org/press-releases/1996/html-leadership/)） [編集者告知](../../raw/lists.w3.org/Archives/Public/www-html/1997Jul/0079.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1997Jul/0079.html)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-HTML+の`REMOVED`は法案修正で削除されたテキストを示し、HTML 3.0保存ページは同仕様がHTML+の先行作業に基づくと記録する。HTML+はこの機構をリビジョン履歴用ではないとするが、HTML 4は異なる文書版に対する変更理由と日時まで表すモデルへ広げた。[HTML+](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)） [HTML 3.0 materials](https://www.w3.org/MarkUp/html3/) [HTML 4.0 Working Draft](https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4)
+HTML+の`REMOVED`は法案修正で削除されたテキストを示し、HTML 3.0保存ページは同仕様がHTML+の先行作業に基づくと記録する。HTML+はこの機構をリビジョン履歴用ではないとするが、HTML 4は異なる文書版に対する変更理由と日時まで表すモデルへ広げた。[HTML+](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)） [HTML 3.0 materials](../../raw/www.w3.org/MarkUp/html3/index.html)（[公開元](https://www.w3.org/MarkUp/html3/)） [HTML 4.0 Working Draft](../../raw/www.w3.org/TR/WD-html40-970708/struct/text.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/struct/text.html#h-7.3.4)）
 
 ### 解釈
 

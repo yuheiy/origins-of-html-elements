@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、明文化されていないが明示的に�
 
 ## HTMLへの導入
 
-1993年6月のHTML Internet-Draftに埋め込まれたHTML DTDはRCS識別子`html.dtd,v 1.3 93/01/06`を持ち、`inline` 実体に`U`を列挙するため、正式なDTDへの収録を1993年1月6日まで遡って確認できる。同草案本文は`U`を物理的な文字強調要素として列挙し、その集合の要素名をTexinfoのマクロ名から派生したと明記した。このRCS日付は実装初出や、それ以前の試作がなかったことを示すものではない。`U`は最終HTML 2.0には採録されず、HTML 3.2で非推奨フォントスタイル要素として再出現した。W3C HTML5では不適合となったが、HTML WGは2011年4月8日に`U`を適合とする提案を正式採択した。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) [RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html) [HTML 3.2](https://www.w3.org/TR/REC-html32) [HTML WG decision](https://lists.w3.org/Archives/Public/public-html/2011Apr/0212.html)
+1993年6月のHTML Internet-Draftに埋め込まれたHTML DTDはRCS識別子`html.dtd,v 1.3 93/01/06`を持ち、`inline` 実体に`U`を列挙するため、正式なDTDへの収録を1993年1月6日まで遡って確認できる。同草案本文は`U`を物理的な文字強調要素として列挙し、その集合の要素名をTexinfoのマクロ名から派生したと明記した。このRCS日付は実装初出や、それ以前の試作がなかったことを示すものではない。`U`は最終HTML 2.0には採録されず、HTML 3.2で非推奨フォントスタイル要素として再出現した。W3C HTML5では不適合となったが、HTML WGは2011年4月8日に`U`を適合とする提案を正式採択した。[1993年HTML Internet-Draft](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） [RFC 1866](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html)） [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32)） [HTML WG decision](../../raw/lists.w3.org/Archives/Public/public-html/2011Apr/0212.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2011Apr/0212.html)）
 
 ## HTML直前の祖先
 
-HTML草案は`U`を含む12要素を集合としてTexinfoのマクロ名由来と述べる。しかし1992年と1995年のGNU Texinfoマニュアルおよび1995年の実装には、下線用の`@u` コマンドを確認できない。このため`<u>`に対応する個別のTexinfoマクロは未確認である。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) [GNU Texinfo 2.16公式配布物](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z) [GNU Texinfo 3.7公式配布物](https://ftp.gnu.org/gnu/texinfo/texinfo37.tar-gz)
+HTML草案は`U`を含む12要素を集合としてTexinfoのマクロ名由来と述べる。しかし1992年と1995年のGNU Texinfoマニュアルおよび1995年の実装には、下線用の`@u` コマンドを確認できない。このため`<u>`に対応する個別のTexinfoマクロは未確認である。[1993年HTML Internet-Draft](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） [GNU Texinfo 2.16公式配布物](../../raw/ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z/texinfo-2.16/texinfo2.texi)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)） [GNU Texinfo 3.7公式配布物](../../raw/ftp.gnu.org/gnu/texinfo/texinfo37.tar-gz/texinfo-3.7/texinfo.tex)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo37.tar-gz)）
 
 ## さらに上流の由来
 

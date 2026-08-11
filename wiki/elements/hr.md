@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、物語の場面転換やセクション内�
 
 ## HTMLへの導入
 
-1993年7月の`draft-ietf-iiir-html-01`には`HR`がない。Marc Andreessenは同年9月5日にNCSA Mosaic 2.0プレリリース3をwww-talkで公開し、原配布物に由来する`CHANGES`は2.0プレリリース2から3への変更として`br`と`hr`をそれぞれ改行と水平罫線として追加したと記録する。1993年11月8日のHTML+ DTDは`HR`を収録する。誰がどの要求から考案し、NCSA実装からHTML+またはHTML 2.0へ採用されたかは確認できない。[1993年7月HTML Internet-Draft](https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt) [プレリリース3公開メールの保存複製](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html) [NCSA Mosaic `CHANGES`の保存複製](https://github.com/alandipert/ncsa-mosaic/blob/master/CHANGES#L660-L701) [HTML+ DTD](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html)
+1993年7月の`draft-ietf-iiir-html-01`には`HR`がない。Marc Andreessenは同年9月5日にNCSA Mosaic 2.0プレリリース3をwww-talkで公開し、原配布物に由来する`CHANGES`は2.0プレリリース2から3への変更として`br`と`hr`をそれぞれ改行と水平罫線として追加したと記録する。1993年11月8日のHTML+ DTDは`HR`を収録する。誰がどの要求から考案し、NCSA実装からHTML+またはHTML 2.0へ採用されたかは確認できない。[1993年7月HTML Internet-Draft](../../raw/www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)（[公開元](https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)） [プレリリース3公開メールの保存複製](../../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html)） [NCSA Mosaic `CHANGES`の保存複製](../../raw/github.com/alandipert/ncsa-mosaic/blob/master/CHANGES)（[公開元](https://github.com/alandipert/ncsa-mosaic/blob/master/CHANGES#L660-L701)） [HTML+ DTD](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html)）
 
 ## HTML直前の祖先
 

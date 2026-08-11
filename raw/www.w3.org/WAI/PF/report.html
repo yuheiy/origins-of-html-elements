@@ -1,0 +1,307 @@
+
+<!doctype html public "-//IETF//DTD HTML//EN">
+<HTML>
+
+<HEAD>
+
+<TITLE>HTML4/CSS2 Accessibility Recommendations</TITLE>
+
+<BASE HREF="https://www.w3.org/WAI/group/HC/guide.html">
+</HEAD>
+
+<BODY>
+
+<H1>Report of the HTML4/CSS2 Accessibility Review</H1>
+<HR>
+<P>
+<em>Last revised October 24. 1997</em>
+<P>
+
+This web page provides a guide to materials supporting the WAI review
+of HTML4 and CSS2 recommendations nominated by the HC Working Group
+and reviewed by the WAI Interest Group.
+
+<P>Pointers to detailed proposals is 
+included.  The recommendations are summarized very tersely here, 
+and decorated with
+a few links to influential source materials. 
+	
+<P> This page will be
+maintained to try to keep it within 24 hours of current with respect
+to current discussion during the period from October 15th to
+Nov 10th.
+
+<H2>How to use this document</H2>
+
+<P>
+Monitor this document at
+<a
+href="http://www.w3c.org/WAI/group/HC/report.html">
+&nbsp;http://www.w3c.org/WAI/group/HC/report.html</a> (corrected 24 Oct).
+<P>
+Where this document refers to messages in the email archives,
+please take advantage of the thread index to read related discussion
+before and after the cited message.
+<P>
+If discussing these proposals in the HTML or CSS working groups, please
+cross-post to <A HREF=mailto:w3c-wai-hc@w3.org>w3c-wai-hc@w3.org</A> 
+as well.
+
+<P>
+
+<H2>Review of the issues</H2>
+
+The five thread-starters have symbolic names to help keep the discussions
+straight.  Please use these naming conventions in your replies to
+facilitate dialog on the list-serve.  The threads are:
+<UL> 
+<LI><A HREF=#OPTION>OPTION</A> --   Making SELECT structures with lots of OPTIONs comprehensible
+<LI><A HREF=#TABLE>TABLE</A> -- Making TABLEs comprehensible
+<LI><A HREF=#DESC>DESC</A> --  Text associated with images
+<LI><A HREF=#REF>REF</A> --   Associating HTML contents with external documents
+<LI><A HREF=#MEDIA>MEDIA</A> --  Classifying user display and control
+</UL>
+
+<HR>
+<H3><A NAME=OPTION>OPTION</A> -- Making SELECT structures with lots of OPTIONs comprehensible.
+</H3>
+
+Suggested WAI recommendations from HC Working Group:
+
+<UL>
+<LI>
+<a href="select-proposal.html">A choice of two proposals</a> at the level of functionality 
+comparable to the original proposal.
+
+<li><A
+HREF=http://lists.w3.org/Archives/Public/w3c-wai-ig/1997OctDec/0004.html><B>OPTION</B>
+message</a> sent to the IG mailing list on Oct 16th.
+
+<li>Clarify what is actually critical for accessibility in this
+area by discussion with the Interest Group.
+
+
+<li><a
+	    href="http://lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html"> Original proposal</A> from Megazone.
+
+</ul>
+<HR>
+<H3>TABLE -- Making <a name="TABLE">TABLEs</a> comprehensible.</H3>
+
+
+Suggested WAI recommendations from HC Working Group:
+
+<UL>
+<li><A
+HREF=http://lists.w3.org/Archives/Public/w3c-wai-ig/1997OctDec/0005.html><B>TABLE</B>
+message</a> sent to the IG mailing list on Oct 16th.
+
+<LI>The
+<a href="http://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0003.html">
+&nbsp;baseline operational concept</a> in the HC mail archives should
+be regarded as having a rough consensus of support.  The
+implication is that the HTML should contain enough information
+for browsers to perform these functions.
+
+
+<LI>Seek table reformatting functions from browser providers; refer
+issue to WAI Browser Guidelines group for further work.
+
+<LI>add 
+<a href="http://lists.w3.org/Archives/Public/w3c-wai-hc/1997JulSep/0065.html">
+&nbsp;SCOPE attribute</a>.
+
+<LI>Clarify summary attribute to say that where there is a caption,
+the summary should be written as if it will be said after the caption.
+
+<LI>address classes of tables (read by columns, read by rows, etc.) in
+the markup guidelines using the existing CLASS attribute.
+Refer to WAI Markup Guidelines group for further development, in cooperation
+with the Browser Guidelines Working Group.
+
+<LI>Implement 
+<a href="http://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0063.html">
+&nbsp;LINK and
+META enhancements</a> in HTML4 
+to support experimentation by the WAI activities.</LI>
+
+<LI>Change the name of the AXES attribute to HEADERS. (added 24 Oct)</LI>
+
+</UL>
+
+<HR>
+<H3>DESC -- <a name="DESC">Text associated with images</a></H3>
+
+<EM>Background -- for reference: variety of practices integrating
+image descriptions and image alternatives with images in hypertext
+literature.  See the GL group area.</EM>
+
+Suggested WAI recommendations from HC Working Group:
+<UL>
+<li><A
+HREF=http://lists.w3.org/Archives/Public/w3c-wai-ig/1997OctDec/0006.html><B>DESC</B>
+message</a> sent to the IG mailing list on Oct 16th.
+
+<LI>Work with LONGDESC on IMG; normally inlined in the absense of
+image display</LI>
+<LI>ADD TITLE and LONGDESC to FRAME and IFRAME</LI>
+<LI>OBJECT contents scanned for links with AREA on them which
+function like a MAP entry when the image DATA of the object is
+displayed.</LI>
+</UL>
+
+<HR>
+
+<H3>REF -- Associating 
+<a name="REF">HTML contents with external</a> 
+resources.</H3>
+
+Uses or requirements:
+<UL>
+<LI>Data publishers may wish to link TABLE to a resource (URL)
+which clarifies data usage in the table.
+<LI>It is not safe to assume that all tables in one HTML document
+are to be associated with the same such data dictionary 
+(or rough equivalent).
+<LI>Audio output [in general, not just for persons with disabilities]
+ will want access to pronunciation dictionaries.
+<LI>Acronyms and foreign languages are other applications for
+such links.
+<LI>Stylesheets selectively applied to quotes etc.
+</UL>
+<p>
+Suggested WAI recommendations from HC Working Group:
+<UL>
+<li><A
+HREF=http://lists.w3.org/Archives/Public/w3c-wai-ig/1997OctDec/0007.html><B>REF</B>
+message</a> sent to the IG mailing list on Oct 16th.
+<LI>Seek review from RDF group
+<LI>Implement at least enough 
+
+<a href="http://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0063.html">
+&nbsp;LINK and
+META enhancements</a>  
+
+to ensure that dictionaries, including data dictionaries, can be
+TARGETed to an arbitrary HTML container element.
+
+</UL>
+
+<HR>
+<H3>
+MEDIA -- Classifying <a name="MEDIA">user display and control</a>
+</H3>
+
+Introduction to the 
+<a 
+href="http://www.access.digex.net/%7Easgilman/web-access/ACSS/status1.html#media">
+&nbsp;MEDIA types</a> issue.
+
+<p>
+Suggested WAI recommendations from HC Working Group:
+
+<UL>
+<li><A
+HREF=http://lists.w3.org/Archives/Public/w3c-wai-ig/1997OctDec/0008.html><B>MEDIA</B>
+message</a> sent to the IG mailing list on Oct 17th.
+<LI>add another top-level media type named either CONSOLE or TTY for
+character-grid and line-mode displays</LI>
+<LI>change wording around list of predefined MEDIA values to make
+the list extensible.  A browser _may_ ignore media indications that
+do not match this list.
+<LI>Refer further work on how browser should handle this to browser
+guidelines group.
+</UL>
+
+<HR>
+<H2>Lesser issues</H2>
+
+<EM>The following issues have been discussed in the HC group but appear to
+be straighforward or otherwise not meriting a lot of discussion in 
+the brief time we have for Interest Group review.</EM>
+
+
+<H3>Preserving the logical <A NAME="ORDER">reading order</A>
+of text.</H3>
+
+<P>
+<a href="http://trace.wisc.edu/text/guidelns/htmlgide/htmlgide.htm#layout.tables">
+&nbsp;Example of problems</a> as documented in the TRACE guidelines.
+<P>
+
+Suggested WAI recommendations from HC Working Group: 
+<UL>
+<LI>Browser functions to crack tables referred to Browser
+Guidelines WG for refinement.
+
+<LI>Explicit order-of-reading markup of text fragments referred
+to Markup Guidelines working group for consideration.  
+<a 
+href="http://www.access.digex.net/%7Easgilman/web-access/metainfo/extension.html">
+&nbsp; LINK and META enhancements</a> to be implemented in in
+HTML4 to give the guidelines group enough capability to work with.
+</UL>
+ <p>
+
+
+For background, search 
+<a href="http://lists.w3.org/Archives/Public/w3c-wai-hc/">
+&nbsp;The HC list archives</a> for "order".
+Browse both quarters; the thread runs over.
+
+<H3>Image used as list bullet</H3>
+
+The issue has to do with text alternatives to list bullets defined
+by an image file.
+
+<p>
+
+Suggested WAI recommendations from HC Working Group:
+<UL>
+<LI>No change required to HTML.
+<LI>Continue work with CSS group in Markup Guidelines activity of WAI.
+</UL>
+
+<H3>Controlling dynamic features </H3>
+
+<P>
+Gregg Vanderheiden copied over 
+<a 
+href="http://lists.w3.org/Archives/Public/w3c-wai-wg/1997JulSep/0243.html">
+&nbsp;a good summary</a> by Kelly Ford. 
+For more background search the webwatch-l 
+<a href="http://www.teleport.com/~kford/v01.n031">
+&nbsp;digest archive</a> for
+"dynamism".
+
+<p>
+Suggested WAI recommendations from HC Working Group:<br>
+Refer to Browser Guidelines and Markup Guidelines for further
+consideration.
+
+<hr>
+<H3> <A name="CSS2">CSS2 review</A></H3>
+
+The CSS2 spec being still under development, we haven't reached the
+same level of reviewing in this area.
+
+<P>The HC message <A
+HREF=http://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0104.html>Regarding
+CSS2</A> summarizes our position.
+
+<BR>
+<BR>
+<hr>
+<hr>
+ 
+
+<ADDRESS><P><a href="mailto:danield@w3.org">Daniel Dardailler</a>,
+Project Manager of
+the <A HREF="..">W3C Web Accessibility Initiative Working Group</A>
+<P><a href="mailto:asgilman@access.digex.net)">Al Gilman</a>,
+Chair of 
+the <A HREF="Overview.html">WAI HTML4/CSS2 (HC) Review Working Group</A>
+</P></ADDRESS>
+  
+</BODY>
+</HTML>

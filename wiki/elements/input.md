@@ -14,17 +14,17 @@ WHATWG HTML Living Standardでは、型を持つデータ入力欄を表し、�
 
 ## HTMLへの導入
 
-1993年HTML+は`INPUT`を`TYPE`で多様な入力欄を表す要素として定義した。RFC 1866はHTML 2.0フォームへ`INPUT`を採録し、フォーム資料のHTML+由来を明記する。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) [RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html)
+1993年HTML+は`INPUT`を`TYPE`で多様な入力欄を表す要素として定義した。RFC 1866はHTML 2.0フォームへ`INPUT`を採録し、フォーム資料のHTML+由来を明記する。[HTML+ forms](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)） [RFC 1866](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html)）
 
 ## HTML直前の祖先
 
-HTML直前の祖先はHTML+ `INPUT`である。RFC 1866の謝辞により、HTML+のフォームからHTML 2.0への因果関係も確認できる。[RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html)
+HTML直前の祖先はHTML+ `INPUT`である。RFC 1866の謝辞により、HTML+のフォームからHTML 2.0への因果関係も確認できる。[RFC 1866](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-HTML+の各種別はテキスト欄、チェックボックス、ラジオボタンなどのUI上の慣習を利用するが、個別のウィジェットを特定のGUIツールキットから借用したとは資料に書かれていない。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)
+HTML+の各種別はテキスト欄、チェックボックス、ラジオボタンなどのUI上の慣習を利用するが、個別のウィジェットを特定のGUIツールキットから借用したとは資料に書かれていない。[HTML+ forms](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)）
 
 ### 解釈
 

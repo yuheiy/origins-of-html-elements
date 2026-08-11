@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、音声または音声ストリームを表�
 
 ## HTMLへの導入
 
-2007年3月15日の`video`導入議論では、複数人が`audio`要素も必要だと提起した一方、Ian Hicksonは既存`Audio`APIがあり、画面内の位置を必要としない音声を要素にする利用例は不明だと回答した。3月23日、Hicksonはリビジョン689で`audio`、`HTMLAudioElement`、ゲームの効果音という主用途、`video`と共通のメディアモデルを追加した。4月12日のリビジョン730は、従来の独立した`Audio`セクションを新しい`HTMLAudioElement`のために削除し、`Audio(src)`が`HTMLAudioElement`を構築するよう変更した。[追加コミット](https://github.com/whatwg/html/commit/37bbc4fa05ac4f5a9401e8f2bc7b7e4b7a2fd08c) [置換コミット](https://github.com/whatwg/html/commit/8211497160124b53938eab1f94725a80b28a305f)
+2007年3月15日の`video`導入議論では、複数人が`audio`要素も必要だと提起した一方、Ian Hicksonは既存`Audio`APIがあり、画面内の位置を必要としない音声を要素にする利用例は不明だと回答した。3月23日、Hicksonはリビジョン689で`audio`、`HTMLAudioElement`、ゲームの効果音という主用途、`video`と共通のメディアモデルを追加した。4月12日のリビジョン730は、従来の独立した`Audio`セクションを新しい`HTMLAudioElement`のために削除し、`Audio(src)`が`HTMLAudioElement`を構築するよう変更した。[追加コミット](../../raw/github.com/whatwg/html/commit/37bbc4fa05ac4f5a9401e8f2bc7b7e4b7a2fd08c)（[公開元](https://github.com/whatwg/html/commit/37bbc4fa05ac4f5a9401e8f2bc7b7e4b7a2fd08c)） [置換コミット](../../raw/github.com/whatwg/html/commit/8211497160124b53938eab1f94725a80b28a305f)（[公開元](https://github.com/whatwg/html/commit/8211497160124b53938eab1f94725a80b28a305f)）
 
 ## HTML直前の祖先
 

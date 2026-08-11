@@ -14,9 +14,9 @@ WHATWG HTML Living Standardでは、他のコントロールに対する定義�
 
 ## HTMLへの導入
 
-2004年8月のWeb Forms 2.0意見で、`select`へ書き込み可能属性を加えてコンボボックスにする案に対し、Ian Hicksonは検討済みだが後方互換性がなく既存ページを壊すため採らないと回答した。同年12月10日のCall for Commentsは、任意値を許したままUAが候補を提示する`input list`を補完する新要素として`datalist`を定義し、候補を`option`で与える役割と非対応UA向け代替内容を持たせた。[設計議論](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/044441.html) [Web Forms 2.0](http://www.whatwg.org/specs/web-forms/2004-12-10-call-for-comments/#the-datalist)
+2004年8月のWeb Forms 2.0意見で、`select`へ書き込み可能属性を加えてコンボボックスにする案に対し、Ian Hicksonは検討済みだが後方互換性がなく既存ページを壊すため採らないと回答した。同年12月10日のCall for Commentsは、任意値を許したままUAが候補を提示する`input list`を補完する新要素として`datalist`を定義し、候補を`option`で与える役割と非対応UA向け代替内容を持たせた。[設計議論](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/044441.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/044441.html)） [Web Forms 2.0](../../raw/www.whatwg.org/specs/web-forms/2004-12-10-call-for-comments/index.html)（[公開元](http://www.whatwg.org/specs/web-forms/2004-12-10-call-for-comments/#the-datalist)）
 
-2008年10月7日のWHATWGリビジョン2295は、Web Forms 2.0由来であることをコミットメッセージに明記して、`input.list`、候補の取得元、`datalist`の意味、代替内容、`input`との接続をHTML5ソースへ実装した。[統合コミット](https://github.com/whatwg/html/commit/1a0c484e8f2f500dc854107dbdffdaf0b8f8576b)
+2008年10月7日のWHATWGリビジョン2295は、Web Forms 2.0由来であることをコミットメッセージに明記して、`input.list`、候補の取得元、`datalist`の意味、代替内容、`input`との接続をHTML5ソースへ実装した。[統合コミット](../../raw/github.com/whatwg/html/commit/1a0c484e8f2f500dc854107dbdffdaf0b8f8576b)（[公開元](https://github.com/whatwg/html/commit/1a0c484e8f2f500dc854107dbdffdaf0b8f8576b)）
 
 ## HTML直前の祖先
 
@@ -26,7 +26,7 @@ Web Forms 2.0で検討された書き込み可能 `select`案である。自由�
 
 ### 証拠
 
-2003年12月4日の*Proposed XHTML Module: XForms Basic*は`select`へ`editable`属性を加え、列挙した候補以外の値も入力できるコントロールを定義していた。2004年の意見では同じ構造の案が明示的に検討され、後方互換性を理由に棄却された。[2003年案](https://www.hixie.ch/specs/html/forms/xforms-basic-1#the-select-element) [設計議論](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/044441.html)
+2003年12月4日の*Proposed XHTML Module: XForms Basic*は`select`へ`editable`属性を加え、列挙した候補以外の値も入力できるコントロールを定義していた。2004年の意見では同じ構造の案が明示的に検討され、後方互換性を理由に棄却された。[2003年案](../../raw/www.hixie.ch/specs/html/forms/xforms-basic-1)（[公開元](https://www.hixie.ch/specs/html/forms/xforms-basic-1#the-select-element)） [設計議論](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/044441.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/044441.html)）
 
 ### 解釈
 

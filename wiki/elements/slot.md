@@ -14,7 +14,7 @@ WHATWG HTML Living Standardではスロットを定義し、主にシャドウ�
 
 ## HTMLへの導入
 
-2015年のWeb Components論点で`content`を`slot`へ改名する提案と配布モデルの単純化が議論された。2016年3月21日にWHATWG DOMがスロットとスロットへ割り当て可能なノードを定義し、同年4月20日にWHATWG HTMLがDOMの概念を参照する`slot`要素を追加した。[改名論点](https://github.com/WICG/webcomponents/issues/92) [DOMコミット](https://github.com/whatwg/dom/commit/a2b04df51b4342d7617c128e80e5aa892889d2e0) [HTMLコミット](https://github.com/whatwg/html/commit/3c157377135d05fbdd74f8c69199b47408bc6a9a)
+2015年のWeb Components論点で`content`を`slot`へ改名する提案と配布モデルの単純化が議論された。2016年3月21日にWHATWG DOMがスロットとスロットへ割り当て可能なノードを定義し、同年4月20日にWHATWG HTMLがDOMの概念を参照する`slot`要素を追加した。[改名論点](../../raw/github.com/WICG/webcomponents/issues/92)（[公開元](https://github.com/WICG/webcomponents/issues/92)） [DOMコミット](../../raw/github.com/whatwg/dom/commit/a2b04df51b4342d7617c128e80e5aa892889d2e0)（[公開元](https://github.com/whatwg/dom/commit/a2b04df51b4342d7617c128e80e5aa892889d2e0)） [HTMLコミット](../../raw/github.com/whatwg/html/commit/3c157377135d05fbdd74f8c69199b47408bc6a9a)（[公開元](https://github.com/whatwg/html/commit/3c157377135d05fbdd74f8c69199b47408bc6a9a)）
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ WHATWG DOMのスロット概念とWeb Componentsのスロット提案である�
 
 ### 証拠
 
-2012年と2014年のShadow DOM草案は`content`をシャドウツリーの挿入点として定義し、2015年論点が`content`から`slot`への接続を明示する。[2012年草案](https://www.w3.org/TR/2012/WD-shadow-dom-20120522/) [2014年草案](https://www.w3.org/TR/2014/WD-shadow-dom-20140617/)
+2012年と2014年のShadow DOM草案は`content`をシャドウツリーの挿入点として定義し、2015年論点が`content`から`slot`への接続を明示する。[2012年草案](../../raw/www.w3.org/TR/2012/WD-shadow-dom-20120522/index.html)（[公開元](https://www.w3.org/TR/2012/WD-shadow-dom-20120522/)） [2014年草案](../../raw/www.w3.org/TR/2014/WD-shadow-dom-20140617/index.html)（[公開元](https://www.w3.org/TR/2014/WD-shadow-dom-20140617/)）
 
 ### 解釈
 

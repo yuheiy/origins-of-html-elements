@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、文書を他のリソースへ結び付け�
 
 ## HTMLへの導入
 
-Berners-Leeの1992年*Future plans for HTML*は、列挙した改善から新しいDTDが生じるとしたうえで、局所的なアンカーとは異なる文書全体のリンクとして空の`LINK`を提案し、関連索引、用語集、親、著者、同時印刷・複製などの関係を用途に挙げる。1993年6月草案収録のRCS id `93/01/06`のDTDは`HEAD`内の空要素`LINK`を宣言し、本文は著者情報、索引、用語集、バージョン、ツリー構造などを典型用途とする。[Berners-Lee, *Future plans for HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html) [1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)
+Berners-Leeの1992年*Future plans for HTML*は、列挙した改善から新しいDTDが生じるとしたうえで、局所的なアンカーとは異なる文書全体のリンクとして空の`LINK`を提案し、関連索引、用語集、親、著者、同時印刷・複製などの関係を用途に挙げる。1993年6月草案収録のRCS id `93/01/06`のDTDは`HEAD`内の空要素`LINK`を宣言し、本文は著者情報、索引、用語集、バージョン、ツリー構造などを典型用途とする。[Berners-Lee, *Future plans for HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)） [1993年HTML Internet-Draft](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)）
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ Berners-Leeの1992年*Future plans for HTML*は、列挙した改善から新し
 
 ### 証拠
 
-初期WWWのリンク種別設計ノートは、ノード間の著者情報、部分／全体、索引、用語集などの型付き関係を必要としていた。*Future plans for HTML*はこれらを文書全体の`LINK`で表す案を明記する。[Berners-Lee, *Link Types*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/LinkTypes.html) [Berners-Lee, *Future plans for HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)
+初期WWWのリンク種別設計ノートは、ノード間の著者情報、部分／全体、索引、用語集などの型付き関係を必要としていた。*Future plans for HTML*はこれらを文書全体の`LINK`で表す案を明記する。[Berners-Lee, *Link Types*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/LinkTypes.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/LinkTypes.html)） [Berners-Lee, *Future plans for HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)）
 
 ### 解釈
 

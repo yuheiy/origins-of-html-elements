@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、順序を変えると文書の意味が変�
 
 ## HTMLへの導入
 
-1990年12月7日保存のWorldWideWebのテストファイルは、承認済みHTMLタグの説明中でCERN-SGMLタグ集合から一部をHTMLへ含めたと明記し、同じファイルで`OL`を使う。冒頭の`OL`と後段の順序付きリスト例はいずれも存在するが、後段には順序なしリストとして対応すると注記され、誤って`</UL>`で閉じられている。Tim Berners-Leeは1991年10月29日のメールでも`OL`をHTMLのスタイルタグとして列挙する。1992年1月資料では“NOT CURRENTLY USED”だったが、同年の*Future plans for HTML*は順序なしリストとの区別のため`OL`を戻し、Connollyが実装中だと記録する。[WorldWideWebのテストファイル](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html) [Berners-Lee, 1991年メール](https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html) [Berners-Lee, 1992年1月メール](https://lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html) [*Future plans for HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)
+1990年12月7日保存のWorldWideWebのテストファイルは、承認済みHTMLタグの説明中でCERN-SGMLタグ集合から一部をHTMLへ含めたと明記し、同じファイルで`OL`を使う。冒頭の`OL`と後段の順序付きリスト例はいずれも存在するが、後段には順序なしリストとして対応すると注記され、誤って`</UL>`で閉じられている。Tim Berners-Leeは1991年10月29日のメールでも`OL`をHTMLのスタイルタグとして列挙する。1992年1月資料では“NOT CURRENTLY USED”だったが、同年の*Future plans for HTML*は順序なしリストとの区別のため`OL`を戻し、Connollyが実装中だと記録する。[WorldWideWebのテストファイル](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)） [Berners-Lee, 1991年メール](../../raw/lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)） [Berners-Lee, 1992年1月メール](../../raw/lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html)） [*Future plans for HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)）
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ CERN-SGMLタグ集合である。WorldWideWebのテストファイルはCERN-SGM
 
 ### 証拠
 
-1988年Waterloo SCRIPT GMLにも`:OL`が存在するが、WaterlooからCERNまたはHTMLへの採用因果は示さない。[Waterloo SCRIPT GML User’s Guide](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)
+1988年Waterloo SCRIPT GMLにも`:OL`が存在するが、WaterlooからCERNまたはHTMLへの採用因果は示さない。[Waterloo SCRIPT GML User’s Guide](../../raw/web.archive.org/web/20020504095301/http%3A/www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)（[公開元](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)）
 
 ### 解釈
 

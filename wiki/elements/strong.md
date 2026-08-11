@@ -14,17 +14,17 @@ WHATWG HTML Living Standardでは、内容の強い重要性、深刻さ、ま�
 
 ## HTMLへの導入
 
-1993年6月のHTML Internet-Draftに埋め込まれたHTML DTDはRCS識別子`html.dtd,v 1.3 93/01/06`を持ち、`inline` 実体に`STRONG`を列挙するため、正式なDTDへの収録を1993年1月6日まで遡って確認できる。同草案本文は文字強調要素として`<strong>`を列挙し、その集合の要素名をTexinfoのマクロ名から派生したと明記する。このRCS日付は実装初出や、それ以前の試作がなかったことを示すものではない。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)
+1993年6月のHTML Internet-Draftに埋め込まれたHTML DTDはRCS識別子`html.dtd,v 1.3 93/01/06`を持ち、`inline` 実体に`STRONG`を列挙するため、正式なDTDへの収録を1993年1月6日まで遡って確認できる。同草案本文は文字強調要素として`<strong>`を列挙し、その集合の要素名をTexinfoのマクロ名から派生したと明記する。このRCS日付は実装初出や、それ以前の試作がなかったことを示すものではない。[1993年HTML Internet-Draft](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)）
 
 ## HTML直前の祖先
 
-HTML側の直接史料は、列挙した要素名の派生元をTexinfoと明記している。同時代のGNU Texinfo 2.16マニュアルは`@strong`を`@emph`より強い強調として定義しており、個別の対応も確認できる。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) [GNU Texinfo 2.16公式配布物](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)
+HTML側の直接史料は、列挙した要素名の派生元をTexinfoと明記している。同時代のGNU Texinfo 2.16マニュアルは`@strong`を`@emph`より強い強調として定義しており、個別の対応も確認できる。[1993年HTML Internet-Draft](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） [GNU Texinfo 2.16公式配布物](../../raw/ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z/texinfo-2.16/texinfo2.texi)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-Texinfoはソフトウェアマニュアルを単一ソースから印刷物とInfo文書へ出力する文書システムであり、`@strong`はその語彙の一部だった。[GNU Texinfo 2.16公式配布物](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)
+Texinfoはソフトウェアマニュアルを単一ソースから印刷物とInfo文書へ出力する文書システムであり、`@strong`はその語彙の一部だった。[GNU Texinfo 2.16公式配布物](../../raw/ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z/texinfo-2.16/texinfo2.texi)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)）
 
 ### 解釈
 

@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、最も近い`article`または`body` 祖先�
 
 ## HTMLへの導入
 
-確認できる最初期のHTML実装記録は、NeXT WorldWideWebバージョン0.5の変更履歴で、1991年2月1日に`Address` スタイルをHTML `ADDRESS` タグとして実装したと記す。保存ソースは`ADDRESS`の構文解析と直列化をスタイルシート上の`Address`段落スタイルへ対応させており、HTML要素の実装上の設計モデルを確認できる。1991年3月5日にはCERN Line Mode Browserも`ADDRESS`を処理して左揃えするようになった。ただし、`Address` スタイルがHTMLより前に独立して存在したか、なぜ`ADDRESS`という語彙を選んだかは記録されていない。[CERN/W3C, *Features and Bug Fixes*](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Features.html) [WorldWideWeb `ParseHTML.h`](https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h) [Line Mode Browser change history](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/LineMode/Defaults/Features.html)
+確認できる最初期のHTML実装記録は、NeXT WorldWideWebバージョン0.5の変更履歴で、1991年2月1日に`Address` スタイルをHTML `ADDRESS` タグとして実装したと記す。保存ソースは`ADDRESS`の構文解析と直列化をスタイルシート上の`Address`段落スタイルへ対応させており、HTML要素の実装上の設計モデルを確認できる。1991年3月5日にはCERN Line Mode Browserも`ADDRESS`を処理して左揃えするようになった。ただし、`Address` スタイルがHTMLより前に独立して存在したか、なぜ`ADDRESS`という語彙を選んだかは記録されていない。[CERN/W3C, *Features and Bug Fixes*](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/Features.html)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Features.html)） [WorldWideWeb `ParseHTML.h`](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h)） [Line Mode Browser change history](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/LineMode/Defaults/Features.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/LineMode/Defaults/Features.html)）
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ WHATWG HTML Living Standardでは、最も近い`article`または`body` 祖先�
 
 ### 証拠
 
-1991年のWorldWideWeb `ParseHTML.h`は、`addressStyle`の開始・終了タグを`ADDRESS`とし、スタイルシート上の`Address`段落スタイルを取得して、HTMLの構文解析と直列化の双方に使う。`default.style`は`Address`をHelvetica Obliqueの段落スタイルとして定義する。[`ParseHTML.h`](https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h) [`default.style`](https://www.w3.org/History/1991-WWW-NeXT/Implementation/WorldWideWeb.app/default.style)
+1991年のWorldWideWeb `ParseHTML.h`は、`addressStyle`の開始・終了タグを`ADDRESS`とし、スタイルシート上の`Address`段落スタイルを取得して、HTMLの構文解析と直列化の双方に使う。`default.style`は`Address`をHelvetica Obliqueの段落スタイルとして定義する。[`ParseHTML.h`](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h)） [`default.style`](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/WorldWideWeb.app/default.style)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/WorldWideWeb.app/default.style)）
 
 ### 解釈
 

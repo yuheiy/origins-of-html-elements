@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、`select`で現在選択されている`optio
 
 ## HTMLへの導入
 
-2024年7月のWHATWG論点は旧名`selectedoption`の複製モデルを前提に更新時機を議論し、同年9月の仕様PRはカスタマイズ可能な`select`のボタン内で選択中選択肢の内容を宣言的に複製する目的を明記した。Open UIでの名称議論を受けて11月に`selectedcontent`へ改名され、2025年7月21日のWHATWGコミットがカスタマイズ可能な`select`の一部としてHTMLへ追加した。[旧名issue](https://github.com/whatwg/html/issues/10520) [仕様PR](https://github.com/whatwg/html/pull/10633) [改名PR](https://github.com/openui/open-ui/pull/1124) [統合コミット](https://github.com/whatwg/html/commit/172cccf47e97bee64f690347e0f303be31b7c67b)
+2024年7月のWHATWG論点は旧名`selectedoption`の複製モデルを前提に更新時機を議論し、同年9月の仕様PRはカスタマイズ可能な`select`のボタン内で選択中選択肢の内容を宣言的に複製する目的を明記した。Open UIでの名称議論を受けて11月に`selectedcontent`へ改名され、2025年7月21日のWHATWGコミットがカスタマイズ可能な`select`の一部としてHTMLへ追加した。[旧名issue](../../raw/github.com/whatwg/html/issues/10520)（[公開元](https://github.com/whatwg/html/issues/10520)） [仕様PR](../../raw/github.com/whatwg/html/pull/10633)（[公開元](https://github.com/whatwg/html/pull/10633)） [改名PR](../../raw/github.com/openui/open-ui/pull/1124)（[公開元](https://github.com/openui/open-ui/pull/1124)） [統合コミット](../../raw/github.com/whatwg/html/commit/172cccf47e97bee64f690347e0f303be31b7c67b)（[公開元](https://github.com/whatwg/html/commit/172cccf47e97bee64f690347e0f303be31b7c67b)）
 
 ## HTML直前の祖先
 

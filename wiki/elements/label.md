@@ -24,7 +24,7 @@ Cougar向けフォームWorking Draft系列の`LABEL`である。1997年2月・4
 
 ### 証拠
 
-T. V. Ramanは1997年6月のメールで、1995年秋にDave Raggettと音声インターフェース向けHTMLフォーム拡張を作業し、当時のHTMLには入力欄とラベルの関連付けがなかったと説明した。Daniel DardaillerはRaggettから聞いた説明として、このフォーム作業の多くがCougarへ入り、「Label → LABEL」と対応したと記録した。[Ramanのメール](https://www.w3.org/mid/199706102148.OAA08302@labrador;list=w3c-wai-wg) [Dardaillerのメール](https://www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg)
+T. V. Ramanは1997年6月のメールで、1995年秋にDave Raggettと音声インターフェース向けHTMLフォーム拡張を作業し、当時のHTMLには入力欄とラベルの関連付けがなかったと説明した。Daniel DardaillerはRaggettから聞いた説明として、このフォーム作業の多くがCougarへ入り、「Label → LABEL」と対応したと記録した。[Ramanのメール](../../raw/www.w3.org/mid/199706102148.OAA08302@labrador;list=w3c-wai-wg)（[公開元](https://www.w3.org/mid/199706102148.OAA08302@labrador;list=w3c-wai-wg)） [Dardaillerのメール](../../raw/www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg)（[公開元](https://www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg)）
 
 ### 解釈
 

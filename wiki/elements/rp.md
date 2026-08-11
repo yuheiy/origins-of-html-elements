@@ -14,19 +14,19 @@ WHATWG HTML Living Standardでは、ルビ注釈を対応しないユーザー�
 
 ## HTMLへの導入
 
-2007年8月12日、Ian Hicksonは`ruby`の構文解析と意味的要求を既に調査しており追加予定だと説明した。2008年5月26日、`ruby`、`rt`、`rp`とパーサー規則をWHATWG HTMLへ同時追加し、`rp`を従来のユーザーエージェント用の括弧構文として定義した。コミットはIEの異常系まで再現せず、Web上で使われる`rp`入りの単純構文との互換性を優先した。[編集者回答](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html) [仕様コミット](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)
+2007年8月12日、Ian Hicksonは`ruby`の構文解析と意味的要求を既に調査しており追加予定だと説明した。2008年5月26日、`ruby`、`rt`、`rp`とパーサー規則をWHATWG HTMLへ同時追加し、`rp`を従来のユーザーエージェント用の括弧構文として定義した。コミットはIEの異常系まで再現せず、Web上で使われる`rp`入りの単純構文との互換性を優先した。[編集者回答](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html)） [仕様コミット](../../raw/github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)（[公開元](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)）
 
 ## HTML直前の祖先
 
-既存Web上の`ruby`、`rt`、`rp`による単純なマークアップである。HTML5コミットは`rp`を含む二つの実用構文を列挙し、その利用との互換性を採用判断とし、IE実装は厳密には再現しない比較対象とした。直後のDMOZ由来13万ページによる独立追試でも`rp`の意図的利用が確認されたが、編集者自身が使った資料群は特定できない。[独立追試](https://lists.w3.org/Archives/Public/public-html/2008May/0620.html)
+既存Web上の`ruby`、`rt`、`rp`による単純なマークアップである。HTML5コミットは`rp`を含む二つの実用構文を列挙し、その利用との互換性を採用判断とし、IE実装は厳密には再現しない比較対象とした。直後のDMOZ由来13万ページによる独立追試でも`rp`の意図的利用が確認されたが、編集者自身が使った資料群は特定できない。[独立追試](../../raw/lists.w3.org/Archives/Public/public-html/2008May/0620.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2008May/0620.html)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-1997年のMartin Dürstによる`RUBY`属性案は、ルビを行内表示するとき注釈を括弧で囲む実装方法を示した。1998年W3C草案はこの案に大きく着想を得たと明記し、括弧を構造化する`rp`を提案した。2001年Recommendationは`rp`を“ルビ括弧”と説明し、非対応ユーザーエージェント向け代替内容として規範化した。[1997年案](https://www.w3.org/International/draft-duerst-ruby-01) [1998年草案](https://www.w3.org/TR/1998/WD-ruby-19981221/) [2001年Recommendation](https://www.w3.org/TR/2001/REC-ruby-20010531/#simple)
+1997年のMartin Dürstによる`RUBY`属性案は、ルビを行内表示するとき注釈を括弧で囲む実装方法を示した。1998年W3C草案はこの案に大きく着想を得たと明記し、括弧を構造化する`rp`を提案した。2001年Recommendationは`rp`を“ルビ括弧”と説明し、非対応ユーザーエージェント向け代替内容として規範化した。[1997年案](../../raw/www.w3.org/International/draft-duerst-ruby-01)（[公開元](https://www.w3.org/International/draft-duerst-ruby-01)） [1998年草案](../../raw/www.w3.org/TR/1998/WD-ruby-19981221/index.html)（[公開元](https://www.w3.org/TR/1998/WD-ruby-19981221/)） [2001年Recommendation](../../raw/www.w3.org/TR/2001/REC-ruby-20010531/index.html)（[公開元](https://www.w3.org/TR/2001/REC-ruby-20010531/#simple)）
 
-RecommendationはJIS X 4052:2000のルビマークアップと協調して作られたが、JIS側は`rp`を許さないと記す。[謝辞](https://www.w3.org/TR/2001/REC-ruby-20010531/#acks)
+RecommendationはJIS X 4052:2000のルビマークアップと協調して作られたが、JIS側は`rp`を許さないと記す。[謝辞](../../raw/www.w3.org/TR/2001/REC-ruby-20010531/index.html)（[公開元](https://www.w3.org/TR/2001/REC-ruby-20010531/#acks)）
 
 ### 解釈
 

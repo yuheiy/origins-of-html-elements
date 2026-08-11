@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、URL解析に使う文書基準URLと、ハ�
 
 ## HTMLへの導入
 
-1992年11月のCERNタグ一覧は基底アドレス用タグの形式を未定・未使用としつつ、文書がメールされた場合や複数のアドレスで見える場合にも相対アドレスを正しく解決するという要素固有の要求を記録する。Berners-Leeの*Future plans for HTML*は、文書を保存したアドレスを持たせるタグ名として`SAVEDAS`を提案する。1993年6月草案に収録されたRCS id `93/01/06`のDTDは、URLの参照文脈となる`BASE HREF`を宣言する。[Berners-Lee, *HTML Tags*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) [Berners-Lee, *Future plans for HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html) [1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)
+1992年11月のCERNタグ一覧は基底アドレス用タグの形式を未定・未使用としつつ、文書がメールされた場合や複数のアドレスで見える場合にも相対アドレスを正しく解決するという要素固有の要求を記録する。Berners-Leeの*Future plans for HTML*は、文書を保存したアドレスを持たせるタグ名として`SAVEDAS`を提案する。1993年6月草案に収録されたRCS id `93/01/06`のDTDは、URLの参照文脈となる`BASE HREF`を宣言する。[Berners-Lee, *HTML Tags*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)） [Berners-Lee, *Future plans for HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)） [1993年HTML Internet-Draft](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)）
 
 ## HTML直前の祖先
 

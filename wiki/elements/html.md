@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、HTML文書のルートを表す。 [HTML Liv
 
 ## HTMLへの導入
 
-Dan Connollyが1992年6月6日に送ったDTDは`html`文書要素を宣言する。Connollyは11月19日のメールで、公開WWW実装以外のSGMLパーサーが最上位要素を推論できるよう`HTML`タグを自ら導入し、開始・終了タグを省略可能にしたと説明する。[Connolly, “MIME as a hypertext architecture”](https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0020.html) [Connolly, “HTML DTD issues”](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)
+Dan Connollyが1992年6月6日に送ったDTDは`html`文書要素を宣言する。Connollyは11月19日のメールで、公開WWW実装以外のSGMLパーサーが最上位要素を推論できるよう`HTML`タグを自ら導入し、開始・終了タグを省略可能にしたと説明する。[Connolly, “MIME as a hypertext architecture”](../../raw/lists.w3.org/Archives/Public/www-talk/1992MayJun/0020.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0020.html)） [Connolly, “HTML DTD issues”](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)）
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ Dan Connollyが1992年6月6日に送ったDTDは`html`文書要素を宣言す�
 
 ### 証拠
 
-1992年以前のCERN資料は通常のSGMLの枠組み用タグを送信せず、含めてもパーサーが無視すると記録しており、特定の直前祖先は示さない。[CERN, *Tags used in HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
+1992年以前のCERN資料は通常のSGMLの枠組み用タグを送信せず、含めてもパーサーが無視すると記録しており、特定の直前祖先は示さない。[CERN, *Tags used in HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)）
 
 ### 解釈
 

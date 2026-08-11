@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、別の文脈における関連性を理由�
 
 ## HTMLへの導入
 
-2005年9月1日草案には印付きまたは強調されたテキストを表す`m`があり、検索語に一致する箇所をサーバーが強調する例を示す。2008年2月17日、Ian Hicksonが`m`を`mark`へ改名し、引用中で後から注目させる箇所や文脈上の関連性を表す用例を追加した。[2005年草案](https://whatwg.org/specs/web-apps/2005-09-01/#the-m) [仕様コミット](https://github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)
+2005年9月1日草案には印付きまたは強調されたテキストを表す`m`があり、検索語に一致する箇所をサーバーが強調する例を示す。2008年2月17日、Ian Hicksonが`m`を`mark`へ改名し、引用中で後から注目させる箇所や文脈上の関連性を表す用例を追加した。[2005年草案](../../raw/whatwg.org/specs/web-apps/2005-09-01/index.html)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-m)） [仕様コミット](../../raw/github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)（[公開元](https://github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)）
 
 ## HTML直前の祖先
 

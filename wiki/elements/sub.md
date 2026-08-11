@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、下付きを表す。単なる表示上の�
 
 ## HTMLへの導入
 
-1993年HTML+は数学式で`SUB`を下付きとして使用し、DTDでは一般テキストにも許可した。1994年9月、Dave RaggettはこのHTML+の設計を指してHTML 3.0でも同じ許可が有用だと述べ、1995年HTML 3.0は`SUB`を一般のフォントスタイル要素として定義した。別枝では、1995年9月のIETF国際化草案が一般テキストでも下付きが必要だという理由から`SUB`を導入し、RFC 2070へ至った。HTML 3.2も`SUB`を採録したが、どちらの枝から採用したかは明記しない。[HTML+ math](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html) [Raggettの回答](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html) [HTML 3.0 element](https://www.w3.org/MarkUp/html3/emphasis.html) [国際化草案](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01) [RFC 2070](https://www.rfc-editor.org/rfc/rfc2070.html) [HTML 3.2](https://www.w3.org/TR/REC-html32)
+1993年HTML+は数学式で`SUB`を下付きとして使用し、DTDでは一般テキストにも許可した。1994年9月、Dave RaggettはこのHTML+の設計を指してHTML 3.0でも同じ許可が有用だと述べ、1995年HTML 3.0は`SUB`を一般のフォントスタイル要素として定義した。別枝では、1995年9月のIETF国際化草案が一般テキストでも下付きが必要だという理由から`SUB`を導入し、RFC 2070へ至った。HTML 3.2も`SUB`を採録したが、どちらの枝から採用したかは明記しない。[HTML+ math](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)） [Raggettの回答](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html)） [HTML 3.0 element](../../raw/www.w3.org/MarkUp/html3/emphasis.html)（[公開元](https://www.w3.org/MarkUp/html3/emphasis.html)） [国際化草案](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01)） [RFC 2070](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)） [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32)）
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ HTML+ DTDの`SUB`。Dave Raggettは、HTML+が通常テキストで`SUB`を許�
 
 ### 証拠
 
-HTML+の数学提案全体はLaTeXの手法に着想を得たと明記するが、`SUB`という要素名自体をLaTeXから借りたとは述べない。[HTML+ math](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)
+HTML+の数学提案全体はLaTeXの手法に着想を得たと明記するが、`SUB`という要素名自体をLaTeXから借りたとは述べない。[HTML+ math](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)）
 
 ### 解釈
 

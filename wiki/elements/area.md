@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、イメージマップ上の対応領域を�
 
 ## HTMLへの導入
 
-James L. Seidman（Spyglass）は1994年10月20日、`IMG USEMAP`、`MAP NAME`、`AREA SHAPE/COORDS/HREF/NOHREF`を提案した。サーバー側イメージマップのHTTP依存、余分な通信、事前意見不能、サーバー依存形式を避けることが理由だった。[Seidman論文](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)
+James L. Seidman（Spyglass）は1994年10月20日、`IMG USEMAP`、`MAP NAME`、`AREA SHAPE/COORDS/HREF/NOHREF`を提案した。サーバー側イメージマップのHTTP依存、余分な通信、事前意見不能、サーバー依存形式を避けることが理由だった。[Seidman論文](../../raw/archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)（[公開元](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)）
 
 ## HTML直前の祖先
 
-HTML直前の祖先は、HTML+の`FIG ISMAP`と`FIG`内`A SHAPE`である。Seidman自身がHTML+の形状付きリンクを先行案として検討し、その制約を避けるため各ホットゾーンを空要素`AREA`として表す案を示した。[HTML+](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_37.html) [Seidman論文](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)
+HTML直前の祖先は、HTML+の`FIG ISMAP`と`FIG`内`A SHAPE`である。Seidman自身がHTML+の形状付きリンクを先行案として検討し、その制約を避けるため各ホットゾーンを空要素`AREA`として表す案を示した。[HTML+](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_37.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_37.html)） [Seidman論文](../../raw/archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)（[公開元](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)）
 
 ## さらに上流の由来
 

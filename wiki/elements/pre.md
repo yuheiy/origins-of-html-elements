@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、要素ではなく組版上の慣習によ�
 
 ## HTMLへの導入
 
-`PRE`はHTML+初出ではない。HTML+自身は、初期HTMLでコンピューター出力を表示する要素だったものが、Unixマニュアルページをハイパーテキスト化する要求によって文字強調と埋め込みリンクを扱えるよう再設計されたと説明する。RFC 1866がHTML 2.0へ採録した。[HTML+ preformatted text](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html) [RFC 1866 §5.5.2](https://www.rfc-editor.org/rfc/rfc1866.html#section-5.5.2)
+`PRE`はHTML+初出ではない。HTML+自身は、初期HTMLでコンピューター出力を表示する要素だったものが、Unixマニュアルページをハイパーテキスト化する要求によって文字強調と埋め込みリンクを扱えるよう再設計されたと説明する。RFC 1866がHTML 2.0へ採録した。[HTML+ preformatted text](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html)） [RFC 1866 §5.5.2](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html#section-5.5.2)）
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ WHATWG HTML Living Standardでは、要素ではなく組版上の慣習によ�
 
 ### 証拠
 
-HTML+は整形済みコンピューター出力とプレーンテキストファイル、特にUnixマニュアルページを直接の要求として挙げる。[HTML+ preformatted text](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html)
+HTML+は整形済みコンピューター出力とプレーンテキストファイル、特にUnixマニュアルページを直接の要求として挙げる。[HTML+ preformatted text](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html)）
 
 ### 解釈
 

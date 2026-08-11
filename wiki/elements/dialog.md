@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、利用者がタスクを行うか情報を�
 
 ## HTMLへの導入
 
-2011年のW3C Issue 162は、デスクトップ／Web UIツールキットでモーダルダイアログが一般的である一方、CSS、JavaScript、WAI-ARIAによる堅牢な実装が難しいとしてネイティブ機構を提案した。2012年4月11日、Ian Hicksonはメーリングリストの議論と既存利用例調査に基づき、アプリケーションUI用`dialog`を`open`, `show()`, `showModal()`, `close()`, `form method=dialog`等とともにWHATWG HTMLソースへ追加した。[Issue 162](https://lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html) [編集者説明](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html) [仕様コミット](https://github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9)
+2011年のW3C Issue 162は、デスクトップ／Web UIツールキットでモーダルダイアログが一般的である一方、CSS、JavaScript、WAI-ARIAによる堅牢な実装が難しいとしてネイティブ機構を提案した。2012年4月11日、Ian Hicksonはメーリングリストの議論と既存利用例調査に基づき、アプリケーションUI用`dialog`を`open`, `show()`, `showModal()`, `close()`, `form method=dialog`等とともにWHATWG HTMLソースへ追加した。[Issue 162](../../raw/lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html)（[公開元](https://lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html)） [編集者説明](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html)） [仕様コミット](../../raw/github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9)（[公開元](https://github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9)）
 
 ## HTML直前の祖先
 

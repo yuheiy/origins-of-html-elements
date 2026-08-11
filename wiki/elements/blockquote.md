@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、別の出典から引用されたセクシ�
 
 ## HTMLへの導入
 
-Dan Connollyは1992年12月4日のメールで、既存コードを大きく変えず`html.dtd`へ加えられる新しい段落スタイルの例として`BLOCKQUOTE`を挙げる。1993年6月草案収録のRCS id `93/01/06`のDTDは、他のソースを引用する要素として宣言する。[Connolly, “Re: The spec evolves...”](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html) [1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)
+Dan Connollyは1992年12月4日のメールで、既存コードを大きく変えず`html.dtd`へ加えられる新しい段落スタイルの例として`BLOCKQUOTE`を挙げる。1993年6月草案収録のRCS id `93/01/06`のDTDは、他のソースを引用する要素として宣言する。[Connolly, “Re: The spec evolves...”](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html)） [1993年HTML Internet-Draft](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)）
 
 ## HTML直前の祖先
 

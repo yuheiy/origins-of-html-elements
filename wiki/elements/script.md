@@ -14,9 +14,9 @@ WHATWG HTML Living Standardでは、動的スクリプト、ユーザーエー�
 
 ## HTMLへの導入
 
-1996年1月24日のW3C Working Draft *HTML3 Scripting*は、Netscapeが定義しNavigator 2.0ベータへ実装した`SCRIPT`を形式化し、互換にする仕様だと明記した。クライアント側でのフォーム検査と計算、イベントに応じた埋め込みオブジェクトの制御、有効文書、複数スクリプティングシステムの差し替えを要求として挙げ、行内コードと外部ソースの両方を定義した。[HTML3 Scripting](https://www.w3.org/TR/WD-script-960124.html)
+1996年1月24日のW3C Working Draft *HTML3 Scripting*は、Netscapeが定義しNavigator 2.0ベータへ実装した`SCRIPT`を形式化し、互換にする仕様だと明記した。クライアント側でのフォーム検査と計算、イベントに応じた埋め込みオブジェクトの制御、有効文書、複数スクリプティングシステムの差し替えを要求として挙げ、行内コードと外部ソースの両方を定義した。[HTML3 Scripting](../../raw/www.w3.org/TR/WD-script-960124.html)（[公開元](https://www.w3.org/TR/WD-script-960124.html)）
 
-HTML 3.2は`SCRIPT`を将来のクライアント側スクリプト導入用プレースホルダーとして収録し、HTML 4は行内／外部スクリプト、イベント応答、動的な文書変更を本格的に規定した。[HTML 3.2](https://www.w3.org/TR/REC-html32) [HTML 4.01](https://www.w3.org/TR/html401/interact/scripts.html)
+HTML 3.2は`SCRIPT`を将来のクライアント側スクリプト導入用プレースホルダーとして収録し、HTML 4は行内／外部スクリプト、イベント応答、動的な文書変更を本格的に規定した。[HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32)） [HTML 4.01](../../raw/www.w3.org/TR/html401/interact/scripts.html)（[公開元](https://www.w3.org/TR/html401/interact/scripts.html)）
 
 ## HTML直前の祖先
 
@@ -26,7 +26,7 @@ Netscapeが定義しNavigator 2.0ベータへ実装した`SCRIPT`である。W3C
 
 ### 証拠
 
-W3C草案はNetscapeとSunのJavaScriptを先行する実装文脈として挙げ、クライアント側フォーム、イベント駆動の埋め込みオブジェクト、有効文書、スクリプトエンジンの交換可能性をHTML側の要求として列挙する。[HTML3 Scripting](https://www.w3.org/TR/WD-script-960124.html)
+W3C草案はNetscapeとSunのJavaScriptを先行する実装文脈として挙げ、クライアント側フォーム、イベント駆動の埋め込みオブジェクト、有効文書、スクリプトエンジンの交換可能性をHTML側の要求として列挙する。[HTML3 Scripting](../../raw/www.w3.org/TR/WD-script-960124.html)（[公開元](https://www.w3.org/TR/WD-script-960124.html)）
 
 ### 解釈
 

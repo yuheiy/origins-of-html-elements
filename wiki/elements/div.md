@@ -14,9 +14,9 @@ WHATWG HTML Living Standardでは、それ自体に特別な意味を持たず�
 
 ## HTMLへの導入
 
-1995年3月のHTML 3.0草案“Divisions”は、`DIV`を`CLASS`属性とともに使い、章、セクション、要約、付録等の異なるコンテナーを表すと定義した。確認した範囲でこれが最初期の仕様上の出現で、草案著者はDave Raggettである。[HTML 3.0 Divisions](https://www.w3.org/MarkUp/html3/divisions.html)
+1995年3月のHTML 3.0草案“Divisions”は、`DIV`を`CLASS`属性とともに使い、章、セクション、要約、付録等の異なるコンテナーを表すと定義した。確認した範囲でこれが最初期の仕様上の出現で、草案著者はDave Raggettである。[HTML 3.0 Divisions](../../raw/www.w3.org/MarkUp/html3/divisions.html)（[公開元](https://www.w3.org/MarkUp/html3/divisions.html)）
 
-HTML 3.2は`DIV`でHTML文書を区分の階層として構造化できると定義した。また、NetscapeがHTML 3.0 `DIV`を対応する前に`CENTER`を導入したと記録しており、HTML 3.0 `DIV`がHTML 3.2とブラウザー実装へ先行したことを確認できる。[HTML 3.2](https://www.w3.org/TR/REC-html32#div)
+HTML 3.2は`DIV`でHTML文書を区分の階層として構造化できると定義した。また、NetscapeがHTML 3.0 `DIV`を対応する前に`CENTER`を導入したと記録しており、HTML 3.0 `DIV`がHTML 3.2とブラウザー実装へ先行したことを確認できる。[HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32#div)）
 
 ## HTML直前の祖先
 
@@ -26,7 +26,7 @@ HTML 3.2は`DIV`でHTML文書を区分の階層として構造化できると定
 
 ### 証拠
 
-HTML 3.0草案は`class`付きの汎用コンテナーで文書区分の種類を表す設計を直接示す。HTML 3.2は同じ要素を区分階層用に継承する。[HTML 3.0](https://www.w3.org/MarkUp/html3/divisions.html) [HTML 3.2](https://www.w3.org/TR/REC-html32#div)
+HTML 3.0草案は`class`付きの汎用コンテナーで文書区分の種類を表す設計を直接示す。HTML 3.2は同じ要素を区分階層用に継承する。[HTML 3.0](../../raw/www.w3.org/MarkUp/html3/divisions.html)（[公開元](https://www.w3.org/MarkUp/html3/divisions.html)） [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32#div)）
 
 ### 解釈
 

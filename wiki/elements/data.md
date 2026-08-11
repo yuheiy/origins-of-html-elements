@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、内容と、その機械可読な表現で�
 
 ## HTMLへの導入
 
-HTML Working Groupの変更提案は、2011年11月の議論で`data`追加に概略合意があり、エディターが追加済みの定義をHTML5へ採用する提案だと記す。2012年4月のCall for Consensusと同年7月のWorking Group Decisionは、`data`要素の追加自体には合意があり、型システムを付けないモデルを採用したことを確認する。[提案](https://www.w3.org/wiki/User:Tantekelik/data_element) [CfC](https://lists.w3.org/Archives/Public/public-html/2012Apr/0026.html) [決定](https://www.w3.org/mid/5005BC08.7040705%2540intertwingly.net)
+HTML Working Groupの変更提案は、2011年11月の議論で`data`追加に概略合意があり、エディターが追加済みの定義をHTML5へ採用する提案だと記す。2012年4月のCall for Consensusと同年7月のWorking Group Decisionは、`data`要素の追加自体には合意があり、型システムを付けないモデルを採用したことを確認する。[提案](../../raw/www.w3.org/wiki/User%3ATantekelik/data_element)（[公開元](https://www.w3.org/wiki/User:Tantekelik/data_element)） [CfC](../../raw/lists.w3.org/Archives/Public/public-html/2012Apr/0026.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2012Apr/0026.html)） [決定](../../raw/www.w3.org/mid/5005BC08.7040705%2540intertwingly.net)（[公開元](https://www.w3.org/mid/5005BC08.7040705%2540intertwingly.net)）
 
 ## HTML直前の祖先
 

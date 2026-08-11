@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、文書のタイトルまたは名前を表�
 
 ## HTMLへの導入
 
-Tim Berners-Leeは1991年10月29日のメールで、`TITLE`はウィンドウ上部のバナー／名前または履歴リストに使うため設計され、本文中の文脈依存な`H1`と異なり、文脈外でも意味が通るべきだと説明する。[Berners-Lee, “Re: status. Re: X11 BROWSER for WWW”](https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)
+Tim Berners-Leeは1991年10月29日のメールで、`TITLE`はウィンドウ上部のバナー／名前または履歴リストに使うため設計され、本文中の文脈依存な`H1`と異なり、文脈外でも意味が通るべきだと説明する。[Berners-Lee, “Re: status. Re: X11 BROWSER for WWW”](../../raw/lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)）
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ Tim Berners-Leeは1991年10月29日のメールで、`TITLE`はウィンドウ�
 
 ### 証拠
 
-Waterloo GMLにもタイトルページ用の`TITLE`があるが、HTMLへの採用因果は示さない。[Waterloo SCRIPT GML User’s Guide](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt) 1998年のRaggettらによる回顧は、初期HTMLのSGML由来のタグ対構文を説明する例として`TITLE`を挙げるが、要素名の元となったDTDは指定しない。[Raggettほか, *A history of HTML*](../../raw/www.w3.org/People/Raggett/book4/ch02.html)（[公開元](https://www.w3.org/People/Raggett/book4/ch02.html)）
+Waterloo GMLにもタイトルページ用の`TITLE`があるが、HTMLへの採用因果は示さない。[Waterloo SCRIPT GML User’s Guide](../../raw/web.archive.org/web/20020504095301/http%3A/www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)（[公開元](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)） 1998年のRaggettらによる回顧は、初期HTMLのSGML由来のタグ対構文を説明する例として`TITLE`を挙げるが、要素名の元となったDTDは指定しない。[Raggettほか, *A history of HTML*](../../raw/www.w3.org/People/Raggett/book4/ch02.html)（[公開元](https://www.w3.org/People/Raggett/book4/ch02.html)）
 
 ### 解釈
 

@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、メディア要素の明示的な外部時�
 
 ## HTMLへの導入
 
-2010年5月4日、WHATWGエディターIan Hicksonはリビジョン5067でキャプション対応の第1段階として`track`を追加した。初版からメディア要素の子となる空要素で、5種類の`kind`と`HTMLTrackElement`を持っていた。7月23日の説明では、多数のメール、ブログ、提案を調査したうえで、Pfeifferの時刻同期リソース用`itext`が「現在の`track`とほぼ同じ」と述べ、`category`を`kind`、`language`を`srclang`へ改名して採用し、`default`は当時見送ったことを項目別に示した。[編集者説明](https://lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html)
+2010年5月4日、WHATWGエディターIan Hicksonはリビジョン5067でキャプション対応の第1段階として`track`を追加した。初版からメディア要素の子となる空要素で、5種類の`kind`と`HTMLTrackElement`を持っていた。7月23日の説明では、多数のメール、ブログ、提案を調査したうえで、Pfeifferの時刻同期リソース用`itext`が「現在の`track`とほぼ同じ」と述べ、`category`を`kind`、`language`を`srclang`へ改名して採用し、`default`は当時見送ったことを項目別に示した。[編集者説明](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html)）
 
 ## HTML直前の祖先
 

@@ -14,11 +14,11 @@ WHATWG HTML Living Standardではフォームコントロールまたは他の�
 
 ## HTMLへの導入
 
-1997年2月3日のScott Isaacs著、Dave Raggett編のフォームWorking Draftが`FIELDSET`／`CAPTION`を定義した。HTMLには音声を用いるユーザーエージェントが関連欄をグループとして閲覧するマークアップがなかったため、関連欄をまとめ、グループ間を移動できるようにすることが理由だった。4月2日版はこの構造をCougarへの採録候補として継続し、Cougarの公開記録は同草案をHTML 4.0の基礎となった草案の一つに挙げる。7月8日のHTML 4.0 First Public Working Draftが`FIELDSET`／`LEGEND`を採録した。[1997年2月草案](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [1997年4月草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)） [Cougar概要](../../raw/www.w3.org/MarkUp/Cougar/index.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） [HTML 4.0 forms](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)
+1997年2月3日のScott Isaacs著、Dave Raggett編のフォームWorking Draftが`FIELDSET`／`CAPTION`を定義した。HTMLには音声を用いるユーザーエージェントが関連欄をグループとして閲覧するマークアップがなかったため、関連欄をまとめ、グループ間を移動できるようにすることが理由だった。4月2日版はこの構造をCougarへの採録候補として継続し、Cougarの公開記録は同草案をHTML 4.0の基礎となった草案の一つに挙げる。7月8日のHTML 4.0 First Public Working Draftが`FIELDSET`／`LEGEND`を採録した。[1997年2月草案](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [1997年4月草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)） [Cougar概要](../../raw/www.w3.org/MarkUp/Cougar/index.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） [HTML 4.0 forms](../../raw/www.w3.org/TR/WD-html40-970708/interact/forms.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)）
 
 ## HTML直前の祖先
 
-Cougar向けフォームWorking Draft系列の`FIELDSET`／`CAPTION`である。1997年2月版は`FIELDSET`を`DIV`に似るが関連欄のグループ化に特化したコンテナーとして定義し、4月版とHTML 4 FPWDが要求と説明を継承した。Daniel Dardaillerは、RaggettからRamanとの過去のフォーム作業の多くがCougarへ入ったと聞いたとして、対応を「Grouping → FIELDSET」と記録した。[1997年2月草案](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [Dardaillerの同時代メール](https://www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg)
+Cougar向けフォームWorking Draft系列の`FIELDSET`／`CAPTION`である。1997年2月版は`FIELDSET`を`DIV`に似るが関連欄のグループ化に特化したコンテナーとして定義し、4月版とHTML 4 FPWDが要求と説明を継承した。Daniel Dardaillerは、RaggettからRamanとの過去のフォーム作業の多くがCougarへ入ったと聞いたとして、対応を「Grouping → FIELDSET」と記録した。[1997年2月草案](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [Dardaillerの同時代メール](../../raw/www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg)（[公開元](https://www.w3.org/mid/199706120733.JAA07828@www47.inria.fr;list=w3c-wai-wg)）
 
 ## さらに上流の由来
 
@@ -56,7 +56,7 @@ Cougarの`FIELDSET`は、先行草案のラベル付きグループを、視覚�
 
 ## 否定された仮説
 
-WAI HTML & CSS Review WGの勧告から`FIELDSET`がHTML 4へ入ったという説明。同WGはHTML 4 FPWD後の1997年9月に設置され、10月のレビュー報告にも`FIELDSET`導入要求はない。[設置メール](https://lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0026.html) [review report](https://www.w3.org/WAI/PF/report.html)
+WAI HTML & CSS Review WGの勧告から`FIELDSET`がHTML 4へ入ったという説明。同WGはHTML 4 FPWD後の1997年9月に設置され、10月のレビュー報告にも`FIELDSET`導入要求はない。[設置メール](../../raw/lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0026.html)（[公開元](https://lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0026.html)） [review report](../../raw/www.w3.org/WAI/PF/report.html)（[公開元](https://www.w3.org/WAI/PF/report.html)）
 
 特定のGUIツールキットまたは紙フォームから直接借用したという説明。1996年草案は当時一般的だったUIの慣習を明記するが、特定の採用元は示さない。
 

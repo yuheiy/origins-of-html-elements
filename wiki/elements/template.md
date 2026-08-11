@@ -14,19 +14,19 @@ WHATWG HTML Living Standardでは、スクリプトで複製して文書へ挿�
 
 ## HTMLへの導入
 
-2011年11月17日、Rafael Weinsteinは動的ページが利用前のDOM断片を不活性に保持するための`template`要素をWHATWGメーリングリストへ提案した。2012年1月9日にW3C WebAppsWGで仕様化作業が始まり、2013年2月14日のHTML Templates草案が不活性部分木とDocumentFragmentの複製を定義した。2013年6月28日、Ian Hicksonは`template`をWHATWG仕様へ統合したと記録した。WHATWGリビジョンr8000に対応する現行Gitコミットは`685a5e0b27e963f6b0a62a21cb95078171076e3b`であり、メッセージの`git-svn-id`が`webapps@8000`を直接保持する。[2011年提案](https://lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html) [仕様上のバグ報告](https://www.w3.org/Bugs/Public/show_bug.cgi?ctype=xml&id=15476) [草案](https://www.w3.org/TR/2013/WD-html-templates-20130214/) [統合記録](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930#c21) [WHATWGコミット](https://github.com/whatwg/html/commit/685a5e0b27e963f6b0a62a21cb95078171076e3b)
+2011年11月17日、Rafael Weinsteinは動的ページが利用前のDOM断片を不活性に保持するための`template`要素をWHATWGメーリングリストへ提案した。2012年1月9日にW3C WebAppsWGで仕様化作業が始まり、2013年2月14日のHTML Templates草案が不活性部分木とDocumentFragmentの複製を定義した。2013年6月28日、Ian Hicksonは`template`をWHATWG仕様へ統合したと記録した。WHATWGリビジョンr8000に対応する現行Gitコミットは`685a5e0b27e963f6b0a62a21cb95078171076e3b`であり、メッセージの`git-svn-id`が`webapps@8000`を直接保持する。[2011年提案](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html)） [仕様上のバグ報告](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-097b3e23f1d63c4f)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?ctype=xml&id=15476)） [草案](../../raw/www.w3.org/TR/2013/WD-html-templates-20130214/index.html)（[公開元](https://www.w3.org/TR/2013/WD-html-templates-20130214/)） [統合記録](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-0c92d5382e78f0b4)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930#c21)） [WHATWGコミット](../../raw/github.com/whatwg/html/commit/685a5e0b27e963f6b0a62a21cb95078171076e3b)（[公開元](https://github.com/whatwg/html/commit/685a5e0b27e963f6b0a62a21cb95078171076e3b)）
 
-この統合はW3C側のパッチをそのまま採用したものではない。HicksonはTony RossとRafael Weinsteinの文書を基にWHATWG仕様へ手作業で統合したと説明し、同日の記録でもr8000を両者の提案に基づく統合としている。[W3C Bug 17930 comments 18–21](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930#c18) [Ian Hickson, “HTML 8000”](https://ln.hixie.ch/?count=1&start=1372461305)
+この統合はW3C側のパッチをそのまま採用したものではない。HicksonはTony RossとRafael Weinsteinの文書を基にWHATWG仕様へ手作業で統合したと説明し、同日の記録でもr8000を両者の提案に基づく統合としている。[W3C Bug 17930 comments 18–21](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-0c92d5382e78f0b4)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930#c18)） [Ian Hickson, “HTML 8000”](../../raw/ln.hixie.ch/index.html-f3b5cae56f01b5e4)（[公開元](https://ln.hixie.ch/?count=1&start=1372461305)）
 
 ## HTML直前の祖先
 
-2011年のWHATWG `template`提案と、その設計を仕様化したW3C WebAppsWGのHTML Templates作業である。W3C Bug 17930のコメント21–22と、メッセージにSVNリビジョン`@8000`を保持するWHATWGコミットが、この作業をWHATWG HTMLへ統合したことを直接記録する。[2011年提案](https://lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html) [HTML Templates草案](https://www.w3.org/TR/2013/WD-html-templates-20130214/) [統合記録](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930#c21) [WHATWGコミット](https://github.com/whatwg/html/commit/685a5e0b27e963f6b0a62a21cb95078171076e3b)
+2011年のWHATWG `template`提案と、その設計を仕様化したW3C WebAppsWGのHTML Templates作業である。W3C Bug 17930のコメント21–22と、メッセージにSVNリビジョン`@8000`を保持するWHATWGコミットが、この作業をWHATWG HTMLへ統合したことを直接記録する。[2011年提案](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html)） [HTML Templates草案](../../raw/www.w3.org/TR/2013/WD-html-templates-20130214/index.html)（[公開元](https://www.w3.org/TR/2013/WD-html-templates-20130214/)） [統合記録](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-0c92d5382e78f0b4)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930#c21)） [WHATWGコミット](../../raw/github.com/whatwg/html/commit/685a5e0b27e963f6b0a62a21cb95078171076e3b)（[公開元](https://github.com/whatwg/html/commit/685a5e0b27e963f6b0a62a21cb95078171076e3b)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-2011年提案は、当時のクライアント側のテンプレート処理がJavaScript文字列、非表示のテキスト領域、非スクリプトMIMEタイプの`script`、コメント、`display: none`などを回避策として使っていたと説明する。これらの問題を解く標準構文として`template`を提案するが、特定ライブラリから採用したとは述べない。[2011年提案](https://lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html)
+2011年提案は、当時のクライアント側のテンプレート処理がJavaScript文字列、非表示のテキスト領域、非スクリプトMIMEタイプの`script`、コメント、`display: none`などを回避策として使っていたと説明する。これらの問題を解く標準構文として`template`を提案するが、特定ライブラリから採用したとは述べない。[2011年提案](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html)）
 
 ### 解釈
 
@@ -58,7 +58,7 @@ WHATWG `template`提案（2011年）→ W3C WebAppsWG仕様化作業／HTML Temp
 
 サーバー側テンプレート、XBL、または特定のJavaScriptライブラリを直接祖先とする説明。機能は似ているが採用因果を示す資料がない。
 
-W3C側のパッチが変更なしにWHATWGへ採用されたという説明。Hickson自身がRossとWeinsteinの文書を基に手作業で統合したと記録している。[W3C Bug 17930 comments 18–21](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930#c18)
+W3C側のパッチが変更なしにWHATWGへ採用されたという説明。Hickson自身がRossとWeinsteinの文書を基に手作業で統合したと記録している。[W3C Bug 17930 comments 18–21](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-0c92d5382e78f0b4)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17930#c18)）
 
 ## 未解決
 

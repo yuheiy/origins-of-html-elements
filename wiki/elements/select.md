@@ -14,17 +14,17 @@ WHATWG HTML Living Standardでは、選択肢の集合から選ぶためのコ�
 
 ## HTMLへの導入
 
-1993年HTML+は`SELECT`を候補集合を簡潔に示す選択リストとして定義した。RFC 1866はHTML+由来のフォーム資料として`SELECT`を標準化した。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) [RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html)
+1993年HTML+は`SELECT`を候補集合を簡潔に示す選択リストとして定義した。RFC 1866はHTML+由来のフォーム資料として`SELECT`を標準化した。[HTML+ forms](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)） [RFC 1866](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html)）
 
 ## HTML直前の祖先
 
-HTML直前の祖先はHTML+ `SELECT`である。HTML+はラジオボタン／チェックボックスをすべて表示する方式に対する簡潔UIとして説明する。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)
+HTML直前の祖先はHTML+ `SELECT`である。HTML+はラジオボタン／チェックボックスをすべて表示する方式に対する簡潔UIとして説明する。[HTML+ forms](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-HTML+は一般的な描画をプルダウンコンボリストと説明するが、特定GUIウィジェットを直接祖先とはしていない。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)
+HTML+は一般的な描画をプルダウンコンボリストと説明するが、特定GUIウィジェットを直接祖先とはしていない。[HTML+ forms](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)）
 
 ### 解釈
 

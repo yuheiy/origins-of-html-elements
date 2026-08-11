@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、共通ラベルを持つ`option`要素のグ
 
 ## HTMLへの導入
 
-1997年9月、MegaZoneは長い`SELECT`が視覚障害者に特に使いにくいという利用者意見を踏まえ、話題／下位話題へグループ化する`OPTGROUP`をWAIへ提案した。10月23日のHTML WG会議録は、WAI HCの提案として`SELECT`へ`OPTGROUP`を追加する案を記録する。10月24日草案への採録後、Dave Raggettは`label`と終了タグを持つ構文、および旧ブラウザーでは平坦リストとして読める代替内容を説明した。公開仕様で確認できる初出は11月7日のHTML 4.0 Proposed Recommendationである。[提案](https://lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html) [HTML WG会議録](https://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html) [仕様編集](https://lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0024.html) [HTML 4.0 PR](https://www.w3.org/TR/PR-html40-971107/interact/forms.html#edef-OPTGROUP)
+1997年9月、MegaZoneは長い`SELECT`が視覚障害者に特に使いにくいという利用者意見を踏まえ、話題／下位話題へグループ化する`OPTGROUP`をWAIへ提案した。10月23日のHTML WG会議録は、WAI HCの提案として`SELECT`へ`OPTGROUP`を追加する案を記録する。10月24日草案への採録後、Dave Raggettは`label`と終了タグを持つ構文、および旧ブラウザーでは平坦リストとして読める代替内容を説明した。公開仕様で確認できる初出は11月7日のHTML 4.0 Proposed Recommendationである。[提案](../../raw/lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html)（[公開元](https://lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html)） [HTML WG会議録](../../raw/lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html)（[公開元](https://lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html)） [仕様編集](../../raw/lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0024.html)（[公開元](https://lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0024.html)） [HTML 4.0 PR](../../raw/www.w3.org/TR/PR-html40-971107/interact/forms.html)（[公開元](https://www.w3.org/TR/PR-html40-971107/interact/forms.html#edef-OPTGROUP)）
 
 ## HTML直前の祖先
 
-MegaZoneによるWAI `OPTGROUP`提案である。提案は、多くのウィンドウシステムの入れ子のリストと、右向き矢印から下位リストを開くNetscapeブックマークを、階層的な選択リストの具体的な設計例として挙げる。[提案](https://lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html)
+MegaZoneによるWAI `OPTGROUP`提案である。提案は、多くのウィンドウシステムの入れ子のリストと、右向き矢印から下位リストを開くNetscapeブックマークを、階層的な選択リストの具体的な設計例として挙げる。[提案](../../raw/lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html)（[公開元](https://lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html)）
 
 ## さらに上流の由来
 

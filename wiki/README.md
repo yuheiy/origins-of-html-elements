@@ -135,7 +135,7 @@ status: 完成
 - [`<ul>`](elements/ul.md): CERN-SGMLから初期HTMLへ入ったリスト集合の一つだが、`UL`個別の対応は明記されない。
 - [`<var>`](elements/var.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した論理的な文字強調要素で、同時代Texinfoの`@var`との対応を確認できる。
 - [`<video>`](elements/video.md): `video`は2007年、Operaの実験実装と提案を受けてWHATWGへ導入された。
-- [`<wbr>`](elements/wbr.md): Netscape Navigator 1.1の任意改行要素として確認できるが、HTML5への再採録経路とHTML以前の祖先は未確認である。
+- [`<wbr>`](elements/wbr.md): Netscape Navigator 1.1の任意改行要素として確認でき、WHATWGが2010年に廃止扱いから適合要素へ変更したが、NetscapeからWHATWGへの因果は未確認である。
 
 ## 共有系譜
 
@@ -149,4 +149,4 @@ status: 完成
 
 ## 統合
 
-- [HTML要素の導入経路と由来](syntheses/introduction-paths-and-origins.md): HTML+等を含む現行HTMLへの導入経路と、HTML内部の変遷を通して遡れる具体的な由来による分類を分け、現行115要素の主経路と根拠を示す。
+- [HTML要素の導入経路と由来](syntheses/introduction-paths-and-origins.md): 現行115要素の導入経路と設計背景を分類し、語彙の直接起源とは区別したうえで、確度、系譜上の欠落、命名に関する追加調査対象を示す。

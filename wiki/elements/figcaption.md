@@ -14,9 +14,9 @@ WHATWG HTML Living Standardでは、親が`figure`である場合に、その残
 
 ## HTMLへの導入
 
-2009年9月のW3C Bug 7657と7669は、`dt`／`dd`を`dl`と異なる意味・構造で再利用する混乱、旧IEでのDOM互換性問題、不要な内容ラッパーを指摘し、`figure`専用キャプション要素を求めた。この問題はHTML WG ISSUE-83へ昇格し、2010年1月の変更提案では`fcaption`の代案として`figcaption`という名称も明示された。[Bug 7657](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7657) [Bug 7669](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7669) [変更提案](https://www.w3.org/html/wg/wiki/ChangeProposals/DdDtFcaptionDlabel)
+2009年9月のW3C Bug 7657と7669は、`dt`／`dd`を`dl`と異なる意味・構造で再利用する混乱、旧IEでのDOM互換性問題、不要な内容ラッパーを指摘し、`figure`専用キャプション要素を求めた。この問題はHTML WG ISSUE-83へ昇格し、2010年1月の変更提案では`fcaption`の代案として`figcaption`という名称も明示された。[Bug 7657](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-2867df8a72c94218)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7657)） [Bug 7669](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-e603fef40f4a1959)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7669)） [変更提案](../../raw/www.w3.org/html/wg/wiki/ChangeProposals/DdDtFcaptionDlabel)（[公開元](https://www.w3.org/html/wg/wiki/ChangeProposals/DdDtFcaptionDlabel)）
 
-2010年1月30日、WHATWGエディターIan Hicksonが`figure`のキャプション機構を専用`figcaption`へ変更し、キャプション以外のフロー内容を直接置く構造、定義、例を追加した。HTML WGはこの編集を受けてISSUE-83を円満な解決として閉じた。[仕様コミット](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f) [ISSUE-83](https://www.w3.org/html/wg/tracker/issues/83)
+2010年1月30日、WHATWGエディターIan Hicksonが`figure`のキャプション機構を専用`figcaption`へ変更し、キャプション以外のフロー内容を直接置く構造、定義、例を追加した。HTML WGはこの編集を受けてISSUE-83を円満な解決として閉じた。[仕様コミット](../../raw/github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)（[公開元](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)） [ISSUE-83](../../raw/www.w3.org/html/wg/tracker/issues/83)（[公開元](https://www.w3.org/html/wg/tracker/issues/83)）
 
 ## HTML直前の祖先
 
@@ -26,7 +26,7 @@ HTML5草案の`figure`＋`dt`／`dd` キャプション機構。2010年コミッ
 
 ### 証拠
 
-2006年、Simon PietersはHTML+ `FIG`／`CAPTION`を示してHTML5向けの再利用を提案し、Ian Hicksonは`caption`のパーサー問題と`fig`から`figure`への名称変更を除いて同意し、仕様へ追加したと説明した。このキャプション構造は`legend`、`dt`／`dd`を経て`figcaption`へ置換された。[Pietersの提案](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html) [Hicksonの総括](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)
+2006年、Simon PietersはHTML+ `FIG`／`CAPTION`を示してHTML5向けの再利用を提案し、Ian Hicksonは`caption`のパーサー問題と`fig`から`figure`への名称変更を除いて同意し、仕様へ追加したと説明した。このキャプション構造は`legend`、`dt`／`dd`を経て`figcaption`へ置換された。[Pietersの提案](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html)） [Hicksonの総括](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)）
 
 ### 解釈
 
@@ -36,7 +36,7 @@ HTML+のキャプション付き図構造をHTML5へ採用した後、パーサ�
 
 HTML+ `FIG`＋`CAPTION` → WHATWG HTML `figure`＋`legend` → `figure`＋`dt`／`dd` → `figure`＋`figcaption`（2010年） → 現行HTML `figcaption`
 
-最初の矢印は2006年の提案とHicksonの採用説明、中間の二矢印は2009年の公開メール、Bug 7657／7669、ISSUE-83、2010年の仕様コミットで確認できる。[2006年の総括](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html) [2009年の公開メール](https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html) [ISSUE-83](https://www.w3.org/html/wg/tracker/issues/83)
+最初の矢印は2006年の提案とHicksonの採用説明、中間の二矢印は2009年の公開メール、Bug 7657／7669、ISSUE-83、2010年の仕様コミットで確認できる。[2006年の総括](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)） [2009年の公開メール](../../raw/lists.w3.org/Archives/Public/public-html/2009Sep/0566.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html)） [ISSUE-83](../../raw/www.w3.org/html/wg/tracker/issues/83)（[公開元](https://www.w3.org/html/wg/tracker/issues/83)）
 
 ## 証拠
 

@@ -14,17 +14,17 @@ WHATWG HTML Living Standardでは、外部アプリケーションまたは対�
 
 ## HTMLへの導入
 
-NetscapeのAlex Edelsteinは1995年9月19日、John Giannandrea名義の`EMBED`拡張案をW3CとIETF HTML WGへ投稿した。任意オブジェクトをHTMLへ直接挿入してアプリケーション固有のプラグインに処理させ、`A REL`案よりコンテンツ開発者が理解・実装しやすくすることが理由だった。[Netscape提案](https://lists.w3.org/Archives/Public/www-html/1995Sep/0048.html)
+NetscapeのAlex Edelsteinは1995年9月19日、John Giannandrea名義の`EMBED`拡張案をW3CとIETF HTML WGへ投稿した。任意オブジェクトをHTMLへ直接挿入してアプリケーション固有のプラグインに処理させ、`A REL`案よりコンテンツ開発者が理解・実装しやすくすることが理由だった。[Netscape提案](../../raw/lists.w3.org/Archives/Public/www-html/1995Sep/0048.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1995Sep/0048.html)）
 
 ## HTML直前の祖先
 
-HTML直前の祖先はNetscape Navigator 2.0のプラグイン機構と、そのための空 `EMBED`実装である。1996年のIETF草案もNetscapeが当初`EMBED`を空要素として実装したと記録する。[Compound Documents draft](https://www.ietf.org/archive/id/draft-ietf-html-cda-00.txt)
+HTML直前の祖先はNetscape Navigator 2.0のプラグイン機構と、そのための空 `EMBED`実装である。1996年のIETF草案もNetscapeが当初`EMBED`を空要素として実装したと記録する。[Compound Documents draft](../../raw/www.ietf.org/archive/id/draft-ietf-html-cda-00.txt)（[公開元](https://www.ietf.org/archive/id/draft-ietf-html-cda-00.txt)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-1993年HTML Internet-Draftにはリンク関係としての`EMBED`があるが、Netscape提案はこれを代替として比較するだけで、要素をそこから派生させたとは述べない。[HTML Internet-Draft](https://www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)
+1993年HTML Internet-Draftにはリンク関係としての`EMBED`があるが、Netscape提案はこれを代替として比較するだけで、要素をそこから派生させたとは述べない。[HTML Internet-Draft](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)）
 
 ### 解釈
 

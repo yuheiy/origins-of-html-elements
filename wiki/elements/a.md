@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、`href`属性がある場合は内容をラ�
 
 ## HTMLへの導入
 
-確認できる最初期の実装記録は、Tim Berners-LeeのNeXT WorldWideWebバージョン0.4で、1991年1月30日にアンカーの作成と編集状態の処理を記したものである。1991年保存ソースでは、ノード内の領域であるAnchorオブジェクトをHTMLパーサーが`A`の`HREF`／`NAME`へ写像し、保存時に同じマークアップへ直列化する。1992年CERNタグ一覧は`A`を、テキストをリンクの始点、終点、または両方にする要素として定義する。`A`という要素名またはその設計モデルを選んだ理由までは記録しない。[CERN/W3C, *Features and Bug Fixes*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/NeXT/Implementation/Features.html) [*Anchor.h*](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Anchor.h) [*ParseHTML.h*](https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h) [Berners-Lee, *HTML Tags*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
+確認できる最初期の実装記録は、Tim Berners-LeeのNeXT WorldWideWebバージョン0.4で、1991年1月30日にアンカーの作成と編集状態の処理を記したものである。1991年保存ソースでは、ノード内の領域であるAnchorオブジェクトをHTMLパーサーが`A`の`HREF`／`NAME`へ写像し、保存時に同じマークアップへ直列化する。1992年CERNタグ一覧は`A`を、テキストをリンクの始点、終点、または両方にする要素として定義する。`A`という要素名またはその設計モデルを選んだ理由までは記録しない。[CERN/W3C, *Features and Bug Fixes*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/NeXT/Implementation/Features.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/NeXT/Implementation/Features.html)） [*Anchor.h*](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/Anchor.h)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Anchor.h)） [*ParseHTML.h*](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h)） [Berners-Lee, *HTML Tags*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)）
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ WHATWG HTML Living Standardでは、`href`属性がある場合は内容をラ�
 
 ### 証拠
 
-Berners-LeeのWWW設計資料は、情報をノードとリンクのウェブとして扱い、リンクをたどって情報へ到達するモデルを記録する。別の設計ノートはKMSとHyperCardの一方向リンク、ENQUIREの双方向リンクを比較するが、HTML `A`の採用元は指定しない。[Berners-Lee, *Information Management: A Proposal*](https://www.w3.org/History/1989/proposal.html) [Berners-Lee, *Topology*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/Topology.html) 1998年のDave Raggettらによる回顧は、SGML自体にはハイパーテキストリンクがなく、アンカー要素と`HREF`属性はBerners-Lee独自の発明だったと説明する。[Raggettほか, *A history of HTML*](../../raw/www.w3.org/People/Raggett/book4/ch02.html)（[公開元](https://www.w3.org/People/Raggett/book4/ch02.html)）
+Berners-LeeのWWW設計資料は、情報をノードとリンクのウェブとして扱い、リンクをたどって情報へ到達するモデルを記録する。別の設計ノートはKMSとHyperCardの一方向リンク、ENQUIREの双方向リンクを比較するが、HTML `A`の採用元は指定しない。[Berners-Lee, *Information Management: A Proposal*](../../raw/www.w3.org/History/1989/proposal.html)（[公開元](https://www.w3.org/History/1989/proposal.html)） [Berners-Lee, *Topology*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/Topology.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/Topology.html)） 1998年のDave Raggettらによる回顧は、SGML自体にはハイパーテキストリンクがなく、アンカー要素と`HREF`属性はBerners-Lee独自の発明だったと説明する。[Raggettほか, *A history of HTML*](../../raw/www.w3.org/People/Raggett/book4/ch02.html)（[公開元](https://www.w3.org/People/Raggett/book4/ch02.html)）
 
 ### 解釈
 

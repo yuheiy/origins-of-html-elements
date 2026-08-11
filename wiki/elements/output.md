@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、計算結果またはユーザー操作の�
 
 ## HTMLへの導入
 
-2003年9月の先行案には`output`がなく、Ian Hicksonは同年12月4日の*Proposed XHTML Module: XForms Basic*で追加した。XFormsの一部機能を既存HTMLフォームへ最小の影響で加え、その宣言的機能の大半をスクリプトで扱う設計方針のもと、`output`を`span`に似るがDOM上はフォームコントロールで、内容が値となり、スクリプトで更新でき、フォーム送信では送信対象となるコントロールにならない要素とした。[先行案](https://www.hixie.ch/specs/html/forms/hfp.html) [2003年12月案](https://www.hixie.ch/specs/html/forms/xforms-basic-1)
+2003年9月の先行案には`output`がなく、Ian Hicksonは同年12月4日の*Proposed XHTML Module: XForms Basic*で追加した。XFormsの一部機能を既存HTMLフォームへ最小の影響で加え、その宣言的機能の大半をスクリプトで扱う設計方針のもと、`output`を`span`に似るがDOM上はフォームコントロールで、内容が値となり、スクリプトで更新でき、フォーム送信では送信対象となるコントロールにならない要素とした。[先行案](../../raw/www.hixie.ch/specs/html/forms/hfp.html)（[公開元](https://www.hixie.ch/specs/html/forms/hfp.html)） [2003年12月案](../../raw/www.hixie.ch/specs/html/forms/xforms-basic-1)（[公開元](https://www.hixie.ch/specs/html/forms/xforms-basic-1)）
 
-同年12月7日のXFormsとの比較議論で、Hicksonは動的な定型文テキストは内容でありデータモデルに属さないと回答し、HTML版`output`の内容とデータモデルの境界を要素単位で示した。DOM値をスクリプトで更新する位置付けは、宣言的機能をスクリプトへ移す仕様全体の方針が示す。[編集者回答](https://lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html)
+同年12月7日のXFormsとの比較議論で、Hicksonは動的な定型文テキストは内容でありデータモデルに属さないと回答し、HTML版`output`の内容とデータモデルの境界を要素単位で示した。DOM値をスクリプトで更新する位置付けは、宣言的機能をスクリプトへ移す仕様全体の方針が示す。[編集者回答](../../raw/lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html)（[公開元](https://lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html)）
 
-2004年Web Forms 2.0と2005年W3C Member Submissionが`output`を継続し、Web Forms 2.0全体は後にHTML5へ統合された。[Web Forms 2.0](https://www.w3.org/submissions/2005/SUBM-web-forms2-20050411/#the-output) [HTML5差分](https://www.w3.org/TR/2010/WD-html5-diff-20100304/#changes-2009-04-23)
+2004年Web Forms 2.0と2005年W3C Member Submissionが`output`を継続し、Web Forms 2.0全体は後にHTML5へ統合された。[Web Forms 2.0](../../raw/www.w3.org/submissions/2005/SUBM-web-forms2-20050411/index.html)（[公開元](https://www.w3.org/submissions/2005/SUBM-web-forms2-20050411/#the-output)） [HTML5差分](../../raw/www.w3.org/TR/2010/WD-html5-diff-20100304/index.html)（[公開元](https://www.w3.org/TR/2010/WD-html5-diff-20100304/#changes-2009-04-23)）
 
 ## HTML直前の祖先
 
@@ -28,7 +28,7 @@ XFormsの`output`を含む機能集合。2003年案はXForms機能をHTMLフォ�
 
 ### 証拠
 
-2000年12月19日のXForms 1.0 Working Draftは、データ値を他の内容中へ表示し、利用者が変更できない`output` フォームコントロールを定義した。[XForms草案](https://www.w3.org/TR/2000/WD-xforms-20001219/ui.html#N1052)
+2000年12月19日のXForms 1.0 Working Draftは、データ値を他の内容中へ表示し、利用者が変更できない`output` フォームコントロールを定義した。[XForms草案](../../raw/www.w3.org/TR/2000/WD-xforms-20001219/ui.html)（[公開元](https://www.w3.org/TR/2000/WD-xforms-20001219/ui.html#N1052)）
 
 ### 解釈
 

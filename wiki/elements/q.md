@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、別の出典から引用した句内容を�
 
 ## HTMLへの導入
 
-1993年HTML+は`Q`を行内短い引用として定義した。1995年3月のHTML 3.0も同名・同用途の`Q`を“New in 3.0”として定義し、W3Cの保存ページはHTML 3.0全体がHTML+に基づくと説明するが、`Q`個別の採用は述べない。1995年8月15日の`draft-ietf-html-i18n-00`は、言語やプラットフォームによって異なる引用符を適切に描画するため`Q`を導入すると明記し、この改訂系列がRFC 2070へ至った。[HTML+ logical emphasis](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html) [HTML 3.0](https://www.w3.org/MarkUp/html3/logical.html) [HTML 3.0保存ページ](https://www.w3.org/MarkUp/html3/) [国際化草案](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00) [RFC 2070](https://www.rfc-editor.org/rfc/rfc2070.html)
+1993年HTML+は`Q`を行内短い引用として定義した。1995年3月のHTML 3.0も同名・同用途の`Q`を“New in 3.0”として定義し、W3Cの保存ページはHTML 3.0全体がHTML+に基づくと説明するが、`Q`個別の採用は述べない。1995年8月15日の`draft-ietf-html-i18n-00`は、言語やプラットフォームによって異なる引用符を適切に描画するため`Q`を導入すると明記し、この改訂系列がRFC 2070へ至った。[HTML+ logical emphasis](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)） [HTML 3.0](../../raw/www.w3.org/MarkUp/html3/logical.html)（[公開元](https://www.w3.org/MarkUp/html3/logical.html)） [HTML 3.0保存ページ](../../raw/www.w3.org/MarkUp/html3/index.html)（[公開元](https://www.w3.org/MarkUp/html3/)） [国際化草案](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00)） [RFC 2070](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)）
 
 ## HTML直前の祖先
 

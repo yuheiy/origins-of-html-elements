@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、見出しとそれに関連する内容を�
 
 ## HTMLへの導入
 
-2009年4月30日、Ian HicksonがWHATWG HTMLソースの旧`header`を`hgroup`へ改名した。コミットは副見出しの対応へ用途を限定する変更だと明記する。[仕様コミット](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)
+2009年4月30日、Ian HicksonがWHATWG HTMLソースの旧`header`を`hgroup`へ改名した。コミットは副見出しの対応へ用途を限定する変更だと明記する。[仕様コミット](../../raw/github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)（[公開元](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)）
 
 ## HTML直前の祖先
 
@@ -51,7 +51,7 @@ HTML5草案`header`（2005年） → `hgroup`への改名と副見出し用途�
 
 現行`header`から用途の類似だけで派生したという説明。確認できる祖先は2009年時点の旧`header`であり、コミットが示す具体的改名に限定する。
 
-2013年にW3C HTML 5系から削除されたことでWHATWG Living Standard上の`hgroup`も消滅し、後に同名要素として再導入されたという説明。削除はW3C分岐での決定であり、WHATWG系譜の断絶を示さない。[W3C HTML WG decision](https://lists.w3.org/Archives/Public/public-html-admin/2013Apr/0003.html)
+2013年にW3C HTML 5系から削除されたことでWHATWG Living Standard上の`hgroup`も消滅し、後に同名要素として再導入されたという説明。削除はW3C分岐での決定であり、WHATWG系譜の断絶を示さない。[W3C HTML WG decision](../../raw/lists.w3.org/Archives/Public/public-html-admin/2013Apr/0003.html)（[公開元](https://lists.w3.org/Archives/Public/public-html-admin/2013Apr/0003.html)）
 
 ## 未解決
 

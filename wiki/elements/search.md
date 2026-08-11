@@ -14,17 +14,17 @@ WHATWG HTML Living Standardでは、検索または絞り込み操作を行う�
 
 ## HTMLへの導入
 
-Carolyn MacLeodは2020年8月12日のWHATWG論点 #5811で、ARIAランドマークのうち`search`だけ対応HTML要素がないため、`<div role="search">`と同じ意味を持つネイティブ要素を提案した。Domenic Denicolaが2021年11月8日にPR #7320を作成し、2023年3月24日にLiving Standardへ統合された。[issue #5811](https://github.com/whatwg/html/issues/5811) [PR #7320](https://github.com/whatwg/html/pull/7320) [merge commit](https://github.com/whatwg/html/commit/c598ff023f081dd3f03b2e43177a632fb7dc92ec)
+Carolyn MacLeodは2020年8月12日のWHATWG論点 #5811で、ARIAランドマークのうち`search`だけ対応HTML要素がないため、`<div role="search">`と同じ意味を持つネイティブ要素を提案した。Domenic Denicolaが2021年11月8日にPR #7320を作成し、2023年3月24日にLiving Standardへ統合された。[issue #5811](../../raw/github.com/whatwg/html/issues/5811)（[公開元](https://github.com/whatwg/html/issues/5811)） [PR #7320](../../raw/github.com/whatwg/html/pull/7320)（[公開元](https://github.com/whatwg/html/pull/7320)） [merge commit](../../raw/github.com/whatwg/html/commit/c598ff023f081dd3f03b2e43177a632fb7dc92ec)（[公開元](https://github.com/whatwg/html/commit/c598ff023f081dd3f03b2e43177a632fb7dc92ec)）
 
 ## HTML直前の祖先
 
-`<div role="search">`が直接祖先である。論点とPRは、ARIAでしか表せなかった意味を備えるネイティブ要素の導入を理由として明記する。[論点 #5811](https://github.com/whatwg/html/issues/5811) [PR #7320](https://github.com/whatwg/html/pull/7320)
+`<div role="search">`が直接祖先である。論点とPRは、ARIAでしか表せなかった意味を備えるネイティブ要素の導入を理由として明記する。[論点 #5811](../../raw/github.com/whatwg/html/issues/5811)（[公開元](https://github.com/whatwg/html/issues/5811)） [PR #7320](../../raw/github.com/whatwg/html/pull/7320)（[公開元](https://github.com/whatwg/html/pull/7320)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-2006年XHTML Role Moduleの`search`からWAI-ARIA `search`ランドマークへ継承された系統を確認できる。[XHTML Role](https://www.w3.org/TR/2006/WD-xhtml-role-20060725/) [WAI-ARIA FPWD](https://www.w3.org/TR/2008/WD-wai-aria-20080204/#search)
+2006年XHTML Role Moduleの`search`からWAI-ARIA `search`ランドマークへ継承された系統を確認できる。[XHTML Role](../../raw/www.w3.org/TR/2006/WD-xhtml-role-20060725/index.html)（[公開元](https://www.w3.org/TR/2006/WD-xhtml-role-20060725/)） [WAI-ARIA FPWD](../../raw/www.w3.org/TR/2008/WD-wai-aria-20080204/index.html)（[公開元](https://www.w3.org/TR/2008/WD-wai-aria-20080204/#search)）
 
 ### 解釈
 

@@ -14,21 +14,21 @@ WHATWG HTML Living Standardでは、句内容の一つ以上の範囲へルビ�
 
 ## HTMLへの導入
 
-2007年8月12日、Lars GuntherがCJKと歴史文書の行間注釈を利用例としてRuby要素の追加予定を問い、Ian Hicksonは`ruby`の構文解析と意味的要求を既に調査しており追加予定だと答えた。[提案](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054625.html) [編集者回答](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html)
+2007年8月12日、Lars GuntherがCJKと歴史文書の行間注釈を利用例としてRuby要素の追加予定を問い、Ian Hicksonは`ruby`の構文解析と意味的要求を既に調査しており追加予定だと答えた。[提案](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054625.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054625.html)） [編集者回答](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html)）
 
-2008年5月26日、Hicksonが`ruby`、`rt`、`rp`とパーサー規則をWHATWG HTMLへ同時追加した。コミットはIEの異常系まで再現せず、Web上で使われる単純な四構文との互換性を優先した。[仕様コミット](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)
+2008年5月26日、Hicksonが`ruby`、`rt`、`rp`とパーサー規則をWHATWG HTMLへ同時追加した。コミットはIEの異常系まで再現せず、Web上で使われる単純な四構文との互換性を優先した。[仕様コミット](../../raw/github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)（[公開元](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)）
 
 ## HTML直前の祖先
 
-既存Web上の`ruby`、`rt`、`rp`による単純なマークアップである。HTML5コミットはその実利用との互換性を採用判断として明記し、IE実装は厳密には再現しない比較対象とした。直後の独立追試もDMOZ由来13万ページ標本で三要素の意図的利用を確認したが、編集者自身が使った資料群は特定できない。[独立追試](https://lists.w3.org/Archives/Public/public-html/2008May/0620.html)
+既存Web上の`ruby`、`rt`、`rp`による単純なマークアップである。HTML5コミットはその実利用との互換性を採用判断として明記し、IE実装は厳密には再現しない比較対象とした。直後の独立追試もDMOZ由来13万ページ標本で三要素の意図的利用を確認したが、編集者自身が使った資料群は特定できない。[独立追試](../../raw/lists.w3.org/Archives/Public/public-html/2008May/0620.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2008May/0620.html)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-1997年のMartin Dürst案は東アジアの発音注記をHTMLへ導入するため、既存行内要素の`RUBY`属性を提案した。1998年W3C草案は、この案に大きく着想を得たと明記しつつ、東アジア組版のルビをHTMLで構造化できない問題へ`ruby`、`rb`、`rt`、`rp`要素を提案した。[1997年案](https://www.w3.org/International/draft-duerst-ruby-01) [1998年草案](https://www.w3.org/TR/1998/WD-ruby-19981221/)
+1997年のMartin Dürst案は東アジアの発音注記をHTMLへ導入するため、既存行内要素の`RUBY`属性を提案した。1998年W3C草案は、この案に大きく着想を得たと明記しつつ、東アジア組版のルビをHTMLで構造化できない問題へ`ruby`、`rb`、`rt`、`rp`要素を提案した。[1997年案](../../raw/www.w3.org/International/draft-duerst-ruby-01)（[公開元](https://www.w3.org/International/draft-duerst-ruby-01)） [1998年草案](../../raw/www.w3.org/TR/1998/WD-ruby-19981221/index.html)（[公開元](https://www.w3.org/TR/1998/WD-ruby-19981221/)）
 
-2001年Recommendationは同語彙をXHTMLモジュールとして規範化し、JIS X 4052:2000の組版マークアップと協調して作ったこと、JIS側は`rp`を許さないことを記す。[2001年Recommendation](https://www.w3.org/TR/2001/REC-ruby-20010531/#acks)
+2001年Recommendationは同語彙をXHTMLモジュールとして規範化し、JIS X 4052:2000の組版マークアップと協調して作ったこと、JIS側は`rp`を許さないことを記す。[2001年Recommendation](../../raw/www.w3.org/TR/2001/REC-ruby-20010531/index.html)（[公開元](https://www.w3.org/TR/2001/REC-ruby-20010531/#acks)）
 
 ### 解釈
 

@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、利用者が追加情報またはコント�
 
 ## HTMLへの導入
 
-2006年7月6日、WHATWGエディターIan Hicksonが開閉三角形ウィジェットとして`details`を追加した。初稿は先頭`legend`を要約、残りを追加情報とし、差分内でApple HIGとGNOME使いやすさスレッドの具体的な開閉ウィジェットを参照した。[仕様コミット](https://github.com/whatwg/html/commit/f98736ae6caf9250ffaed0df557e214f0bf5aebd)
+2006年7月6日、WHATWGエディターIan Hicksonが開閉三角形ウィジェットとして`details`を追加した。初稿は先頭`legend`を要約、残りを追加情報とし、差分内でApple HIGとGNOME使いやすさスレッドの具体的な開閉ウィジェットを参照した。[仕様コミット](../../raw/github.com/whatwg/html/commit/f98736ae6caf9250ffaed0df557e214f0bf5aebd)（[公開元](https://github.com/whatwg/html/commit/f98736ae6caf9250ffaed0df557e214f0bf5aebd)）
 
 ## HTML直前の祖先
 

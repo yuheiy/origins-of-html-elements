@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、親が`fieldset`ならその残りの内容�
 
 ## HTMLへの導入
 
-1997年2月3日と4月2日のフォームWorking Draftは、`FIELDSET`の直後に置く`CAPTION`でグループを命名し、音声を用いるブラウザーがグループ間を移動できる設計を提案した。Cougarの公開記録は4月草案をHTML 4.0の基礎となった草案の一つに挙げる。7月8日のHTML 4.0 First Public Working Draftは同じ`FIELDSET`のキャプションスロットを`LEGEND`へ置換し、非視覚UAでグループ文脈を伝える役割を継承したが、置換理由は記録しない。[1997年2月草案](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [1997年4月草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)） [Cougar概要](../../raw/www.w3.org/MarkUp/Cougar/index.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） [HTML 4.0 forms](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)
+1997年2月3日と4月2日のフォームWorking Draftは、`FIELDSET`の直後に置く`CAPTION`でグループを命名し、音声を用いるブラウザーがグループ間を移動できる設計を提案した。Cougarの公開記録は4月草案をHTML 4.0の基礎となった草案の一つに挙げる。7月8日のHTML 4.0 First Public Working Draftは同じ`FIELDSET`のキャプションスロットを`LEGEND`へ置換し、非視覚UAでグループ文脈を伝える役割を継承したが、置換理由は記録しない。[1997年2月草案](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [1997年4月草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)） [Cougar概要](../../raw/www.w3.org/MarkUp/Cougar/index.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） [HTML 4.0 forms](../../raw/www.w3.org/TR/WD-html40-970708/interact/forms.html)（[公開元](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)）
 
 ## HTML直前の祖先
 
@@ -55,7 +55,7 @@ Cougarフォーム草案からHTML 4への採録と、`CAPTION`から`LEGEND`へ
 
 ## 否定された仮説
 
-WAI HTML & CSS Review WGの勧告から`LEGEND`がHTML 4へ入ったという説明。同WGはHTML 4 FPWD後の1997年9月に設置され、10月のレビュー報告にも`LEGEND`導入要求はない。[設置メール](https://lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0026.html) [review report](https://www.w3.org/WAI/PF/report.html)
+WAI HTML & CSS Review WGの勧告から`LEGEND`がHTML 4へ入ったという説明。同WGはHTML 4 FPWD後の1997年9月に設置され、10月のレビュー報告にも`LEGEND`導入要求はない。[設置メール](../../raw/lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0026.html)（[公開元](https://lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0026.html)） [review report](../../raw/www.w3.org/WAI/PF/report.html)（[公開元](https://www.w3.org/WAI/PF/report.html)）
 
 特定GUIツールキットの凡例や紙フォームの見出しから直接借用したという説明。1996年草案は当時一般的だったUIの慣習を明記するが、特定の採用元は示さない。
 

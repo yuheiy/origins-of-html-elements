@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、略語または頭字語を表し、任意�
 
 ## HTMLへの導入
 
-HTML+とHTML 3.0は`ABBREV`を略語、`ACRONYM`を頭字語として別々に定義した。1997年9月17日のHTML 4 Working Draftは`ACRONYM`だけを定義したが、11月7日のProposed Recommendationはこれを`ABBR`へ改名し、略語全般を扱う要素へ広げた。最終HTML 4.0は`ABBR`と`ACRONYM`を別要素として収録した。[HTML+ logical emphasis](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html) [HTML 3.0](https://www.w3.org/MarkUp/html3/logical.html) [HTML 4 Working Draft](https://www.w3.org/TR/WD-html40-970917/struct/text.html) [HTML 4 Proposed Recommendation](https://www.w3.org/TR/PR-html40-971107/struct/text.html) [HTML 4.0](https://www.w3.org/TR/REC-html40/struct/text.html#h-9.2.1)
+HTML+とHTML 3.0は`ABBREV`を略語、`ACRONYM`を頭字語として別々に定義した。1997年9月17日のHTML 4 Working Draftは`ACRONYM`だけを定義したが、11月7日のProposed Recommendationはこれを`ABBR`へ改名し、略語全般を扱う要素へ広げた。最終HTML 4.0は`ABBR`と`ACRONYM`を別要素として収録した。[HTML+ logical emphasis](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)） [HTML 3.0](../../raw/www.w3.org/MarkUp/html3/logical.html)（[公開元](https://www.w3.org/MarkUp/html3/logical.html)） [HTML 4 Working Draft](../../raw/www.w3.org/TR/WD-html40-970917/struct/text.html)（[公開元](https://www.w3.org/TR/WD-html40-970917/struct/text.html)） [HTML 4 Proposed Recommendation](../../raw/www.w3.org/TR/PR-html40-971107/struct/text.html)（[公開元](https://www.w3.org/TR/PR-html40-971107/struct/text.html)） [HTML 4.0](../../raw/www.w3.org/TR/REC-html40/struct/text.html)（[公開元](https://www.w3.org/TR/REC-html40/struct/text.html#h-9.2.1)）
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ HTML 4の1997年9月Working Draftにある`ACRONYM`。11月のProposed Recommend
 
 ### 証拠
 
-HTML+は`ABBREV`を標準的な役割を示すマークアップの一つとして、参照等を自動索引化できる文脈で説明する。1997年9月の公開コメントは、HTML 3.0の`ABBREV`とHTML 4草案の`ACRONYM`を対比し、発音で区別できない略語も含む一般要素を求めた。[HTML+ logical emphasis](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html) [Holger Wahlenのコメント](https://lists.w3.org/Archives/Public/www-html/1997Sep/0385.html)
+HTML+は`ABBREV`を標準的な役割を示すマークアップの一つとして、参照等を自動索引化できる文脈で説明する。1997年9月の公開コメントは、HTML 3.0の`ABBREV`とHTML 4草案の`ACRONYM`を対比し、発音で区別できない略語も含む一般要素を求めた。[HTML+ logical emphasis](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)） [Holger Wahlenのコメント](../../raw/lists.w3.org/Archives/Public/www-html/1997Sep/0385.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1997Sep/0385.html)）
 
 ### 解釈
 

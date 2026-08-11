@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、親`table`の列の集計（フッター）�
 
 ## HTMLへの導入
 
-確認できた最初期の提案はDave Raggettが1995年4月21日に送ったHTML表の提案である。Harvey Binghamが4月29日の返信に転載した提案は`THEAD`、`TBODY`、`TFOOT`をCALSから借用したと明記し、ページ分割出力でフッター行を反復する`TFOOT`を定義した。7月7日のIETF Internet-Draft `draft-ietf-html-tables-00`が公開仕様として引き継ぎ、1996年5月のRFC 1942を経てHTML 4.0が採録した。[1995年提案](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html) [1995年草案](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 4.01 DTD](../../raw/www.w3.org/TR/html401/html40.zip/strict.dtd)（[公開元](https://www.w3.org/TR/html401/sgml/dtd.html)）
+確認できた最初期の提案はDave Raggettが1995年4月21日に送ったHTML表の提案である。Harvey Binghamが4月29日の返信に転載した提案は`THEAD`、`TBODY`、`TFOOT`をCALSから借用したと明記し、ページ分割出力でフッター行を反復する`TFOOT`を定義した。7月7日のIETF Internet-Draft `draft-ietf-html-tables-00`が公開仕様として引き継ぎ、1996年5月のRFC 1942を経てHTML 4.0が採録した。[1995年提案](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)） [1995年草案](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt)） [RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)） [HTML 4.01 DTD](../../raw/www.w3.org/TR/html401/html40.zip/strict.dtd)（[公開元](https://www.w3.org/TR/html401/sgml/dtd.html)）
 
 ## HTML直前の祖先
 
-HTML直前の祖先はCALS表モデルの`TFOOT`要素である。OASIS TRP 9501:1995は1993年のMIL-M-28001Bを基準とし、各`TGROUP`が任意の`TFOOT`を持つ構造を記す。1995年4月のRaggett提案は三要素をCALSから借用したと明記し、BinghamはCALSの`TGROUP`を除き、局所`COLSPEC`を持たないHTML向け簡略化だと対照した。[OASIS TRP 9501:1995](../../raw/www.oasis-open.org/specs/a501.htm)（[公開元](https://www.oasis-open.org/specs/a501.htm)） [1995年提案](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)
+HTML直前の祖先はCALS表モデルの`TFOOT`要素である。OASIS TRP 9501:1995は1993年のMIL-M-28001Bを基準とし、各`TGROUP`が任意の`TFOOT`を持つ構造を記す。1995年4月のRaggett提案は三要素をCALSから借用したと明記し、BinghamはCALSの`TGROUP`を除き、局所`COLSPEC`を持たないHTML向け簡略化だと対照した。[OASIS TRP 9501:1995](../../raw/www.oasis-open.org/specs/a501.htm)（[公開元](https://www.oasis-open.org/specs/a501.htm)） [1995年提案](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)）
 
 ## さらに上流の由来
 

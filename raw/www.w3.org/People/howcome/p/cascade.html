@@ -1,0 +1,419 @@
+<HTML>
+<HEAD>
+<TITLE>
+Cascading HTML Style Sheets -- A Proposal
+</TITLE>
+<!-- Changed by: , 16-Oct-1994 -->
+</HEAD>
+<BODY>
+<H1>Cascading HTML style sheets -- a proposal</H1>
+<ADDRESS>
+<A HREF="https://www.w3.org/hypertext/WWW/People/howcome/">Håkon W Lie</A><BR>
+howcome@info.cern.ch<BR>
+10 Oct 1994
+</ADDRESS>
+<P>
+<HR>
+<NOTE ROLE="caution">
+v0.92 This document describes work in progress and is incomplete as a
+basis for implementation. Its primary purpose is to establish guiding
+principles and propose a level of functionality for HTML style
+sheets. Comments are solicited.</NOTE>
+<HR>
+</EM>
+
+<H2>Abstract</H2>
+
+This document proposes a style sheet scheme for HTML documents. The
+proposed scheme provides a simple mapping between HTML elements and
+presentation hints. Properties like font family and window size can be
+suggested by the style sheet, and it can also provide logic to make
+presentation decisions based on the user's environment; e.g. the size
+of the screen or the current date.
+
+<P>
+
+The style sheet scheme is designed so that style sheets can be
+cascaded; the user/browser specifies initial preferences and hands the
+remaining influence over to the style sheets referenced in the
+incoming document. This will provide publishers with stylistic
+influence without resorting to page description languages.
+
+<P>
+
+The scheme supports visual as well as non-visual media.
+
+</ABSTRACT>
+
+<H2>Introduction</H2>
+
+Style sheets are a part of the web today. Browsers, espesially the GUI
+variants, support ways for the user to specify presentation parameters
+like fonts and colors. There are several reasons why the current
+functionality is not sufficient:
+
+<UL>
+<LI>
+
+current style sheets are static, they seldom change within the
+lifetime of a browser process. This makes the visual environment
+sparse.
+
+<LI>
+
+current style sheets are implemented using platform-specific
+notations, e.g. X11 resources. While some may consider this to be a
+feature, it prohibits general mechanisms for passing styles over
+the web.
+
+<LI>
+
+the author of HTML documents has no influence over the
+presentation. Indeed, if conflicts arise the user should have the last
+word, but one should also allow the author to attach style hints.
+
+</UL>
+
+The last point has especially been a source of much frustration among
+professions that are used to be in control of paper-based
+publishing. This proposal tries to soften the tension between the
+author and the reader by: <DL><DT><DD>
+
+<STRONG>a)</STRONG> giving readers a
+richer visual (or auditory and tactile) environment while they retain
+control if necessary, and <BR><STRONG>b)</STRONG> providing authors
+and publishers with stylistic influence without resorting to page
+description languages.</DD></DL>
+
+<P>
+
+The proposed scheme is balanced in the sense that it provides author
+and reader with the same notation for specifying style. While the
+author (or publisher) often wants to give the documents a distinct
+look and feel, the user will set preferences to make all documents
+appear more similar. Designing a style sheet notation that fill both
+groups' needs is a challenge.
+
+
+<H2>The cascade</H2>
+
+The proposed scheme supplies the brower with an ordered list (cascade)
+of style sheets. The user supplies the initial sheet which may request
+total control of the presentation, but -- more likely -- hands most
+of the influence over to the style sheets referenced in the incoming
+document.
+
+<PRE>
+   &lt;LINK REL="style" HREF="http://NYT.com/style"&gt;
+</PRE>
+
+The LINK element is used to indicate the URL of the style
+sheet. Multiple style sheets can be referenced from the same document,
+and will be appended to the cascade and merged as they are
+encountered.
+
+<P>
+
+Style sheets can reference other style sheets, and the cascase can be
+infinitely long. Browsers will have to limit the length of the
+cascade. Fetching and processing the cascade is potentilally
+expensive, but caching will reduce the cost.
+
+<H2>Some simple examples</H2>
+
+Rather than providing a formal definition of the style sheet language,
+this proposal includes examples that indicate where work in progress
+is heading. The concepts of cascading and weighted influence is more
+important than the specific list of style values that can be set. (A
+reasonable list of such parameters can be found in <A
+HREF="http://gummo.stanford.edu/html/hypermail/.www-talk-1993q2.messages/443.html">Robert Raisch's stylesheet
+proposal</A>).
+
+<P>
+
+A one-statement style sheet that sets the font size of the <TT>h1</TT> element:
+<PRE>
+   h1.font.size = 24pt 100%
+</PRE>
+
+The percentage at the end of the line indicates what degree of
+influence that is requested (here 100%). If this is the initial style
+sheet (i.e. the one under user control), this request can be
+fulfilled, i.e. all headline elements will be rendered using
+<TT>helvetica</TT>. If the statement comes in a later style sheet, any
+unclaimed influence is granted.
+
+<PRE>
+  h2.font.size = 20pt 40%
+</PRE>
+
+Here, the requested influence is reduced to 40%. If a style sheet
+later in the cascade also requests influence over
+<TT>h2.font.size</TT>, up to 60% can be granted. When the document is
+rendered, a weighted average of the two requests is calculated, and
+the final font size is determined.
+
+<PRE>
+   30%
+   h1.font.family = times
+</PRE>
+
+This stylesheet first requests a default influence of 30% which is
+applied to all following statements unless otherwise specified. This
+leaves 70% of the influence to upcoming style sheets which may set
+other values. For continuous values, e.g. the font size, mixing
+influences is not problematic -- one simply calculates the weighted
+average if they differ. For discrete values, e.g. the font family, it
+may not be obvious how to mix 40% <TT>helvetica</TT> and 60%
+<TT>times</TT>. Some will argue that font families certainly can be
+parameterized and mixed, others that one should select the request
+with the highest influence. The issue deserves more research for which
+this proposal leaves room.
+
+<PRE>
+   40%
+   font.family = times
+   h1.font.family = helvetica 100%
+</PRE>
+
+The first statement sets the font family of <STRONG>all</STRONG>
+elements to times. An alternative syntax using well-known wildcard
+symbols is <TT>*.font.family = times</TT>.<P>
+
+The second statement overrides the font family value for the
+<TT>h1</TT> element and requests absolute control (100%) for this.
+<P>
+
+The order of the two statements above is irrelevant -- the more
+specific statements will override the more general ones.
+
+<PRE>
+   60%
+   AGE > 3d ? background.color = pale_yellow : background.color = white
+   DISPLAY_HEIGHT > 30cm ? http://NYT.com/style : http://LeMonde.fr/style
+</PRE>
+
+In this example, parameters from the user's environment is taken into
+account when determining the style sheet values. The C-style syntax of
+the first statement reads: If the document is older than three days,
+the background color should be pale yellow, else the backgound color
+should be white. The second statement references other style
+sheets. If the height of the display is less than 30 cm, the NYT style
+will inherit the remaining influence, otherwise the LeMonde style will
+be given these rights.
+
+<PRE>
+   RELEVANCE > 80 ? h1.font.size *= 1.5
+</PRE>
+
+In newspapers, the size of the headlines tell us how important the
+editor believes the article is. As digital agents and personalized
+information filters become available, the typography of HTML documents
+should also be influenced by the relevance of each document for each
+individual user. Given a relevance factor, the above statement
+multiplies the font size of <TT>h1</TT> by 1.5.
+
+<PRE>
+   http://NYT.com/style 30%
+   http://LeMonde.com/style 70%
+</PRE>
+
+This style sheet sets no parameters of its own. Instead, it references
+two other sheets and assigns them different weights. If no previous
+style sheets has claimed influence, the resulting presentation will be
+a mix of NYT (30%) and LeMonde (70%).
+
+<PRE>
+   speech.*.weight = 35db
+   speech.em.weight = 40db
+</PRE>
+
+Current browsers consider the computer screen to be the primary
+presentation target, but HTML -- different from the page description
+languages -- has the potential of supporting many output media,
+e.g. paper, speech and braille. Each medium has its own
+characteristics which may require different presentation parameters to
+be set. The example above sets values for the <TT>speech</TT> medium.
+while all previous statements by default set values for
+<STRONG>all</STRONG> media.
+
+<PRE>
+   align.style = left
+   head.align.style = center
+   print.head.align.style = right
+</PRE>
+
+Both HTML elements and media types have been grouped to allow for more
+general statements. In the above example, the first statement
+establishes a default left alignment for all elements in all
+media. The second statement changes the setting for headline elements
+(<TT>h1 .. h6</TT>) in all media. The last statement is more specific;
+it requests headlines to be right-aligned when printed. <TT>print</TT>
+is itself a group consisting of e.g. <TT>print_color</TT> and
+<TT>print_mono</TT>.
+
+<PRE>
+   font.size *= 2 100%
+</PRE>
+
+This single statement style sheet will, if given the influence, double
+the font size of all paragraphs. A style sheet like this could
+conveniently be merged in when the user selects "double font size"
+from a pulldown menu. One could easily duplicate the functionality of
+e.g. Mosaic's font options this way. Also, one can imagine far more
+powerful user interfaces that takes into account the advantages of
+cascading style sheets:
+<PRE>
+          User            Author
+   Font   o-----x--------------o 64%
+   Color  o-x------------------o 90%
+   Margin o-------------x------o 37%
+   Volume o---------x----------o 50%
+</PRE>
+
+Here, <TT>x</TT> represents the handles of slide bars. The output of this
+interaction is the percentage values that are attached to the
+statements in the user's style sheet.
+
+
+<H2>Unresolved issues</H2>
+<UL>
+
+<LI><TT>LINK</TT> elements are only allowed in the <TT>HEAD</TT> of
+the document. There should be a way of adding and subtracting style
+sheets from within the document. This would allow for the nesting of
+style sheets within a document.
+
+<LI>In its finest resolution, the current notation attaches style
+values to one HTML element. There should also be a way to specify style
+settings for attributes.
+
+<LI>The order of the statements in the style sheets is irrelevant; the
+more specific ones override the more general ones. A precise
+definition of the rules for this is needed. E.g., wwhich is the more
+general among <TT>print.head.font.size = 20pt</TT> and
+<TT>h1.font.size = 14pt</TT>.
+
+</UL>
+
+
+<H2>Limitations</H2>
+
+In order to keep the complexity low for both the style sheet writers
+and the browser programmers, the proposed scheme has many limitations.
+
+<UL>
+<LI> While a style sheet may look like a procedural program, it lacks
+many of the constructs of traditional programming languaguages, e.g.:
+compound statements, variables, and/or. Rather, the style sheets are
+declarations of constraints.
+
+<LI> Much due to the above point, some seemingly normal statements
+will not be allowed. Notably, all conditional statements must be
+resolved when the style sheet is read. The statement <TT>h1.font.size
+> 20pt ? h2.font.size = 15pt</TT> is illegal since the value of
+h1.font.size is allowed to change.
+
+<LI> Statements can not be granted groupwise influence. E.g., one
+cannot specify that statement A should always have the same influence
+as statement B.
+
+<LI> The notation is quite verbose. Fetching and parsing a cascade
+of complex style sheets is potentially expensive. Caching will reduce
+the cost.
+
+</UL>
+
+<H2>Implementation</H2>
+
+An implementation of the proposed scheme is planned. Most of the code
+can and should be put into the common code library so that browsers
+easily will be able to support style sheets.
+
+<H2>Acknowledgement</H2>
+
+The author wishes to thank Dave Raggett, Phill Hallam-Baker and Tim
+Berners-Lee for fruitful discussions. Also, Robert Raisch's earlier
+stylesheet proposal has been influential. All errors are my own.
+
+
+<H2>Appendix A</H2>
+
+<H3>A more complex example</H3>
+
+<PRE>
+#
+# This is an initial style sheet. It should provide fallback values
+# with low influence. Also, at the end, the user has added some
+# favorite settings
+#
+
+0%			# 0% impact, i.e. fallbacks
+
+# first, set some common defaults
+
+font.family = times	
+font.size = 12pt		# alternative units are px, mm, cm
+font.slant = normal
+font.weight = normal
+
+h1.font.size = font.size * 3
+h2.font.size = font.size * 2.5
+h3.font.size = font.size * 2
+
+strong.font.weight = bold
+em.font.slant = italics
+tt.font.spacing = proportional
+
+
+align.style = left		# paragraph alignment
+h1.align.style = center
+
+
+space.left = 0pt		# set the white space surrounding paragraphs
+space.right = 0pt
+space.above = 4pt
+space.below = 4pt
+space.first = space.left + 0.5cm 	# i.e. some extra indentation
+
+head.space.above = 15pt			# straying from the 4pt default above
+
+list.space.left = 1cm			# extra indentation for all lists
+list.space.first = 1cm
+
+# window-wide settings
+
+AGE > 3d ? window.background = pale_yellow : window.background = white
+
+window.foreground = black
+
+window.width = 400px
+window.height = REAL_HEIGHT - 50px
+
+window.margin.left = 2cm
+window.margin.right = 2cm
+window.margin.above = 2cm
+window.margin.below = 2cm
+
+#
+# paper works different
+#
+
+print.font.size = 10pt
+
+#
+# The user has redefined some of the default values below
+#
+
+100%	# first, redefine influence to dictatorship
+
+font.family = helvetica 
+
+#
+# after this, the rest of the influence is handed over to the style
+# sheets of the incoming documents
+# 
+</PRE>
+<A HREF="cascade-present.html">slides</A>
+</BODY>
+</HTML>

@@ -14,21 +14,21 @@ WHATWG HTML Living Standardでは、スクリプトがグラフ、ゲーム用�
 
 ## HTMLへの導入
 
-Richard Williamsonは2004年5月25日のWebKit変更セット6685で`CANVAS`タグの要素、パーサー、描画系、`getContext`の土台を追加し、翌26日の変更セット6693でビットマップ描画文脈と2D描画操作を実装した。AppleのDave Hyattは同年7月、Dashboardの時計の針等をHTMLで描くためAppleが要素を追加し、当時SVG/XHTMLは実装量、性能、複雑性の面で適さず、Canvasなら数日で実装できたと説明した。[Part 1](https://github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c) [Part 2](https://github.com/WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb) [Introducing the Canvas](https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913) [On Extending HTML](https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005928)
+Richard Williamsonは2004年5月25日のWebKit変更セット6685で`CANVAS`タグの要素、パーサー、描画系、`getContext`の土台を追加し、翌26日の変更セット6693でビットマップ描画文脈と2D描画操作を実装した。AppleのDave Hyattは同年7月、Dashboardの時計の針等をHTMLで描くためAppleが要素を追加し、当時SVG/XHTMLは実装量、性能、複雑性の面で適さず、Canvasなら数日で実装できたと説明した。[Part 1](../../raw/github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c)（[公開元](https://github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c)） [Part 2](../../raw/github.com/WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb)（[公開元](https://github.com/WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb)） [Introducing the Canvas](../../raw/web.archive.org/web/20040708074642/http%3A/weblogs.mozillazine.org/hyatt/archives/2004_07.html)（[公開元](https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913)） [On Extending HTML](../../raw/web.archive.org/web/20040708074642/http%3A/weblogs.mozillazine.org/hyatt/archives/2004_07.html)（[公開元](https://web.archive.org/web/20040708074642/http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005928)）
 
-WHATWGの仕様謝辞は、WilliamsonがSafariで最初の`canvas`実装を作り、その実装からキャンバス機能が設計されたと明記する。WHATWG仕様への収録はAppleの書簡が参照する2005年3月24日版まで確認できる。[WHATWG謝辞](https://html.spec.whatwg.org/multipage/acknowledgements.html#acknowledgments) [Apple書簡](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/010129.html)
+WHATWGの仕様謝辞は、WilliamsonがSafariで最初の`canvas`実装を作り、その実装からキャンバス機能が設計されたと明記する。WHATWG仕様への収録はAppleの書簡が参照する2005年3月24日版まで確認できる。[WHATWG謝辞](../../raw/html.spec.whatwg.org/multipage/acknowledgements.html)（[公開元](https://html.spec.whatwg.org/multipage/acknowledgements.html#acknowledgments)） [Apple書簡](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/010129.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/010129.html)）
 
 ## HTML直前の祖先
 
-Dashboard用のApple WebKit/Safari `CANVAS`実装である。WHATWGは、この最初の実装からキャンバス機能を設計したと明記する。提案の受領日や採録操作そのものは未確認だが、先行実装から仕様機能への因果関係は直接確認できる。[WHATWG謝辞](https://html.spec.whatwg.org/multipage/acknowledgements.html#acknowledgments)
+Dashboard用のApple WebKit/Safari `CANVAS`実装である。WHATWGは、この最初の実装からキャンバス機能を設計したと明記する。提案の受領日や採録操作そのものは未確認だが、先行実装から仕様機能への因果関係は直接確認できる。[WHATWG謝辞](../../raw/html.spec.whatwg.org/multipage/acknowledgements.html)（[公開元](https://html.spec.whatwg.org/multipage/acknowledgements.html#acknowledgments)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-WebKit変更セット6693では、`RenderCanvasImage`が`CGBitmapContextCreate`でビットマップの`CGContextRef`を作り、JavaScriptの`save`、`restore`、パス、色、線、変換、描画の各操作を`CGContextSaveGState`、`CGContextBeginPath`、`CGContextSetRGBStrokeColor`、`CGContextScaleCTM`などへ直接対応させている。AppleのCore Graphics文書は`CGContext`をQuartz 2Dの描画環境と定義する。[WebKit Part 2](https://github.com/WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb) [Apple `CGContext`](https://developer.apple.com/documentation/coregraphics/cgcontext)
+WebKit変更セット6693では、`RenderCanvasImage`が`CGBitmapContextCreate`でビットマップの`CGContextRef`を作り、JavaScriptの`save`、`restore`、パス、色、線、変換、描画の各操作を`CGContextSaveGState`、`CGContextBeginPath`、`CGContextSetRGBStrokeColor`、`CGContextScaleCTM`などへ直接対応させている。AppleのCore Graphics文書は`CGContext`をQuartz 2Dの描画環境と定義する。[WebKit Part 2](../../raw/github.com/WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb)（[公開元](https://github.com/WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb)） [Apple `CGContext`](../../raw/developer.apple.com/documentation/coregraphics/cgcontext)（[公開元](https://developer.apple.com/documentation/coregraphics/cgcontext)）
 
-Appleのキャンバス解説も、キャンバス描画APIがQuartzに似た描画機能を提供すると説明する。[Apple “Drawing Content”](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Canvas.html)
+Appleのキャンバス解説も、キャンバス描画APIがQuartzに似た描画機能を提供すると説明する。[Apple “Drawing Content”](../../raw/developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Canvas.html)（[公開元](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Canvas.html)）
 
 ### 解釈
 

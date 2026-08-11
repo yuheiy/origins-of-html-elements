@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、親`details`の残りの内容に対する�
 
 ## HTMLへの導入
 
-2010年1月30日、WHATWGエディターIan Hicksonが、`details`のキャプションを`dt`／`dd`または`legend`で表す方式から専用`summary`へ変更し、定義と内容モデルを追加した。[仕様コミット](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)
+2010年1月30日、WHATWGエディターIan Hicksonが、`details`のキャプションを`dt`／`dd`または`legend`で表す方式から専用`summary`へ変更し、定義と内容モデルを追加した。[仕様コミット](../../raw/github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)（[公開元](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)）
 
 ## HTML直前の祖先
 

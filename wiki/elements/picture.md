@@ -14,9 +14,9 @@ WHATWG HTML Living Standardでは、子の`img`が使う画像リソースを、
 
 ## HTMLへの導入
 
-Responsive Images Community Groupは2012年に提案中の`picture` マークアップを動かすPicturefillを公開した。2013年のHTML Working Group草案は同Community Groupとの共同開発を明記し、2014年6月17日のWHATWGコミットが上流の`picture`更新をHTML Living Standardへ統合した。[Picturefill](https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/) [HTML WG草案](https://www.w3.org/TR/2013/WD-html-picture-element-20130226/) [仕様コミット](https://github.com/whatwg/html/commit/a7716b7a2463323c7f25176f4b3768008d170204)
+Responsive Images Community Groupは2012年に提案中の`picture` マークアップを動かすPicturefillを公開した。2013年のHTML Working Group草案は同Community Groupとの共同開発を明記し、2014年6月17日のWHATWGコミットが上流の`picture`更新をHTML Living Standardへ統合した。[Picturefill](../../raw/www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/index.html)（[公開元](https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/)） [HTML WG草案](../../raw/www.w3.org/TR/2013/WD-html-picture-element-20130226/index.html)（[公開元](https://www.w3.org/TR/2013/WD-html-picture-element-20130226/)） [仕様コミット](../../raw/github.com/whatwg/html/commit/a7716b7a2463323c7f25176f4b3768008d170204)（[公開元](https://github.com/whatwg/html/commit/a7716b7a2463323c7f25176f4b3768008d170204)）
 
-導入理由は、解像度の切り替え、アートディレクション、区切り位置、画像形式等に応じた複数ソースの選択を宣言的に行い、従来のユーザーエージェントには`img`で代替内容を提供することだった。[要求文書](https://www.w3.org/TR/2013/WD-respimg-usecases-20130226/)
+導入理由は、解像度の切り替え、アートディレクション、区切り位置、画像形式等に応じた複数ソースの選択を宣言的に行い、従来のユーザーエージェントには`img`で代替内容を提供することだった。[要求文書](../../raw/www.w3.org/TR/2013/WD-respimg-usecases-20130226/index.html)（[公開元](https://www.w3.org/TR/2013/WD-respimg-usecases-20130226/)）
 
 ## HTML直前の祖先
 

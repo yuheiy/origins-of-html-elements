@@ -893,3 +893,31 @@ AGENTS.mdをWikiの単独の全仕様として維持しながら、依頼から�
 AGENTS.mdの構成整理と自然な日本語の出力規約の復元に伴う影響を、操作スキル、README、Raw索引、Rawソース用スクリプト、非規範的な設計背景、ログについて確認した。各スキルは引き続きAGENTS.md全文の対応操作を参照し、READMEはAGENTS.mdを構造と運用の正本として案内している。Raw索引は522ファイルから再生成して差分がなく、コマンド契約と生成物表示も一致したため、関連ファイルの修正は不要と判断した。
 
 対象リントでは、直接の参照元と参照先、操作名、Raw索引の再現性、ローカルMarkdownリンク、Markdownの空白、ログ形式を`合格`、`修正済み`はなし、`Research必要`はなしと確認した。
+
+## [2026-08-11] lint | Wiki全体の敵対的監査と語彙由来の調査課題
+
+全110要素ページ（現行115要素）、共有系譜、統合、README、Raw索引、ログを対象に、構造、参照、集計、状態に加え、導入経路と語彙由来の混同、因果関係、論拠の強さ、未解決点を敵対的に検査した。必須見出し順、フロントマター形式、証拠表、確度形式、READMEの要素ページ網羅、ローカルMarkdownリンク、Raw索引の522ファイルでの再現性を`合格`とした。確度は要素数換算でA 83、A− 17、B 12、C 3であり、29ページがHTML直前の祖先を未確認とし、未解決なしは`figcaption`と`optgroup`の2要素だけだった。
+
+歴史本文が公開URLだけを参照し、対応するRawリンクを後段の証拠表にだけ置いていた576参照を、既存Rawと公開元の組へ機械的に変更して`修正済み`とした。歴史的主張、系譜、確度、Rawソースは変更していない。
+
+Raw未収録の12資料を直接参照する15箇所が`a`、`canvas`、`col`、`fieldset`、`figure`、`hgroup`、`img`、`legend`、`slot`、`style`に残るため`Research必要`とし、10ページを`要検証`へ戻した。統合ページは、37要素について外部材料からの直接採用を未確認と明記する一方、`blockquote`以外の114要素で「HTML以前の由来」を確認できると総括し、設計材料、文化的背景、内部派生、語彙・構造の採用を同じ由来分類へ置いている。この総括は語彙の持込元が判明した範囲を過大に読ませるため`Research必要`とし、統合ページを`要検証`へ戻した。
+
+追加調査は、第一にB／Cの15要素と直前祖先未確認の29ページ、第二に未解決節で名称、命名、トークン、改名を明示的に問う33ページ、第三に初期CERN／NCSA、HTML+／Cougar、ベンダー実装、WHATWG編集履歴の各資料群を優先する。調査結果を再統合する際は、要素名・構造の直接採用、設計材料の参照、既存実装・Web慣習の形式化、HTML内部派生、新規命名、未確認を分け、広い文化分類を語彙由来の代用にしない。
+
+## [2026-08-11] research | 敵対的監査の全指摘と語彙由来の調査設計
+
+直前の全体リントで`Research必要`とした12資料をRawへ固定し、10要素ページに残っていた15箇所の外部直リンクをRawと公開元の組へ変更した。さらにWHATWG公式Git履歴を反証探索し、`bdi`を追加したr5669の完全な差分、`meter`への改名後に残った`gauge`表記を訂正したコミット、`wbr`を廃止要素扱いから適合要素へ変更したr4956をRawへ追加した。これにより`bdi`のr5669差分と`wbr`の適合化時点は解決し、`meter`の2006年10月の変更を改名理由と誤読しないよう限定した。Netscape `WBR`からWHATWGへの因果、`gauge`から`meter`への命名理由、`bdi`の名称提案元は確認できないため未解決に維持した。
+
+追加したRawの取得元URL、リダイレクト後URL、取得日時、保存先は次のとおりである。いずれも取得元とリダイレクト後URLは同一だった。`https://www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/Topology.html`、2026-08-11T08:54:00.247Z、`raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/Topology.html`；`https://html.spec.whatwg.org/multipage/acknowledgements.html`、08:54:02.048Z、`raw/html.spec.whatwg.org/multipage/acknowledgements.html`；`https://developer.apple.com/documentation/coregraphics/cgcontext`、08:54:03.091Z、`raw/developer.apple.com/documentation/coregraphics/cgcontext`；`https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-01.txt`、08:54:04.068Z、`raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-01.txt`；`https://lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0026.html`、08:54:04.561Z、`raw/lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0026.html`；`https://www.w3.org/WAI/PF/report.html`、08:54:05.282Z、`raw/www.w3.org/WAI/PF/report.html`；`https://github.com/whatwg/html/blob/18322b5f67ea55395dad2183244a905174da971f/source`、08:54:06.663Z、`raw/github.com/whatwg/html/blob/18322b5f67ea55395dad2183244a905174da971f/source`；`https://lists.w3.org/Archives/Public/public-html-admin/2013Apr/0003.html`、08:54:07.301Z、`raw/lists.w3.org/Archives/Public/public-html-admin/2013Apr/0003.html`；`http://1997.webhistory.org/www.lists/www-talk.1993q1/0183.html`、08:54:08.296Z、`raw/1997.webhistory.org/www.lists/www-talk.1993q1/0183.html`；`http://1997.webhistory.org/www.lists/www-talk.1993q1/0186.html`、08:54:08.984Z、`raw/1997.webhistory.org/www.lists/www-talk.1993q1/0186.html`；`https://www.w3.org/TR/2014/WD-shadow-dom-20140617/`、08:54:09.667Z、`raw/www.w3.org/TR/2014/WD-shadow-dom-20140617/index.html`；`https://www.w3.org/People/howcome/p/cascade.html`、08:54:10.545Z、`raw/www.w3.org/People/howcome/p/cascade.html`；`https://github.com/whatwg/html/commit/cb22e823d93b27b01b73496e3cfe534ab6ee6509`、08:58:36.752Z、`raw/github.com/whatwg/html/commit/cb22e823d93b27b01b73496e3cfe534ab6ee6509`；`https://github.com/whatwg/html/commit/29d7102ea5d923f807d44a402eef6fafd8f35327`、08:58:39.557Z、`raw/github.com/whatwg/html/commit/29d7102ea5d923f807d44a402eef6fafd8f35327`；`https://github.com/whatwg/html/commit/33fc385dc0248f1464af8d8286da1cb55d52eb9c`、08:58:41.924Z、`raw/github.com/whatwg/html/commit/33fc385dc0248f1464af8d8286da1cb55d52eb9c`。時刻だけを記した項目の日付はいずれも2026-08-11である。
+
+統合ページでは「114要素にHTML以前の由来を確認済み」という過大な総括を撤回し、先行語彙、設計材料、要求、実装、慣習を含む「設計背景」の索引へ限定した。語彙由来を、識別子の最初期出現、命名理由、意味・構造の設計モデル、HTMLへの採用因果、現行要素までの継続という五問へ分解し、B／Cの15要素、直前祖先に未確認部分がある33要素、命名関連の未解決がある35要素、A−の17要素を追加調査対象として列挙した。直前のリントにある29ページと33ページという集計は、現在の各節を厳密に再抽出した33要素と35要素で更新する。
+
+初回探索とは別に、より早い版、競合案、同名異義、廃止後の再採録を対象としてWHATWG履歴とNCSA Mosaic保存ソースを読み直した。新資料が直接示す範囲だけを結論へ反映し、未確認の因果は系譜へ追加していない。対象リントでは、110要素ページの必須見出し順、フロントマター、証拠表、全ローカルMarkdownリンク、歴史資料のRaw・公開元併記、READMEと統合の整合、両分類表で115要素が一度ずつ現れること、Raw索引の537ファイル網羅と再現性を`合格`、欠落Raw、過大な由来総括、`bdi`・`meter`・`wbr`の限定不足を`修正済み`、個別ページに明記した未解決点を今後の`Research必要`として確認した。変更ページは敵対的検証と対象リントに合格したため`完成`とした。
+
+## [2026-08-11] research | 前回調査から分離した敵対的再検証
+
+前回の結論を支持する探索と分離し、追加した15資料の本文、WHATWG公式Gitの対象コミットと各親版、競合案、否定された仮説を反証目的で読み直した。`bdi`は親版に要素がなくr5669が定義、利用例、既定CSSを追加すること、`meter`はr15の親版が`gauge`で同じ節を改名したこと、2006年10月の変更は残存表記一件だけの訂正であることを再確認した。`wbr`ではr4956の親版が同要素を廃止一覧へ置き、r4956が廃止一覧から除いて行折返し機会を表す適合要素へ変更することを確認した。
+
+再検証の結果、二つの問題を`修正済み`とした。第一に、統合ページは注意書きで設計背景へ限定した一方、見出しと分類表ではなお「由来」および「標準化へ戻した」と断定し、採用因果が欠ける要素まで起源判明と読める不整合が残っていた。第二に、`wbr`はr4956という直接差分を追加した後も、HTML5への再採録経路を未確認として確度Bに据え置かれていた。統合表を先行語彙、設計材料、要求、実装、慣習の主題索引へ限定し、`wbr`はWHATWG内の廃止要素から適合要素への直接経路に基づいて確度Aへ変更した。NetscapeからWHATWGへの因果、Netscape以前の祖先、名称選択は引き続き`Research必要`であり、確認済みの系譜へ接続していない。
+
+確度集計はA 84、A− 17、B 11、C 3へ更新した。B／Cの優先調査対象は14要素、`HTML直前の祖先`に未確認部分がある対象は32要素、命名関連の未解決は35要素、未解決を持つのは113要素である。対象リントでは、110要素ページの見出し順、フロントマター、証拠表、READMEの110ページ網羅、重複タイトル、全ローカルMarkdownリンク、歴史資料のRaw・公開元併記、二つの分類表に115要素が重複なく一度ずつ現れること、Raw索引の537ファイル網羅と再生成一致、状態、確度集計を`合格`とした。新しいRawは追加していない。変更したREADME、`wbr`、統合ページは敵対的検証と対象リントに合格したため`完成`とした。

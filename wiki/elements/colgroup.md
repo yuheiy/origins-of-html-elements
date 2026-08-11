@@ -14,17 +14,17 @@ WHATWG HTML Living Standardでは、親`table`内の一つ以上の列からな�
 
 ## HTMLへの導入
 
-1995年10月27日の`draft-ietf-html-tables-03`は`COLGROUP`を「新要素」と明記し、異なる幅と配置プロパティを持つ列集合を一つ以上の`COL`によってグループ化するため導入した。10月10日のリビジョン02には`COLGROUP`がなく、リビジョン03はグループ間の規則描画と、グループからセルへのプロパティ既定値もモデルに含めた。RFC 1942はこのモデルをExperimental RFCとして標準化し、HTML 4.0の変更付録も同じ導入理由を記して採録した。[revision 02](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt) [revision 03](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 4.01 changes](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.7)
+1995年10月27日の`draft-ietf-html-tables-03`は`COLGROUP`を「新要素」と明記し、異なる幅と配置プロパティを持つ列集合を一つ以上の`COL`によってグループ化するため導入した。10月10日のリビジョン02には`COLGROUP`がなく、リビジョン03はグループ間の規則描画と、グループからセルへのプロパティ既定値もモデルに含めた。RFC 1942はこのモデルをExperimental RFCとして標準化し、HTML 4.0の変更付録も同じ導入理由を記して採録した。[revision 02](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt)） [revision 03](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)） [RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)） [HTML 4.01 changes](../../raw/www.w3.org/TR/html401/appendix/changes.html)（[公開元](https://www.w3.org/TR/html401/appendix/changes.html#h-A.3.7)）
 
 ## HTML直前の祖先
 
-HTML直前の設計上の祖先はリビジョン02までの`COL`による列グループ化モデルである。旧モデルでは`SPAN`の対象列を同じ幅にする必要があり、リビジョン03は各列へ異なる幅と配置プロパティを与えられるコンテナーとして新`COLGROUP`を導入した。[revision 02](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt) [revision 03](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)
+HTML直前の設計上の祖先はリビジョン02までの`COL`による列グループ化モデルである。旧モデルでは`SPAN`の対象列を同じ幅にする必要があり、リビジョン03は各列へ異なる幅と配置プロパティを与えられるコンテナーとして新`COLGROUP`を導入した。[revision 02](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt)） [revision 03](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-1995年草案とRFC 1942は表モデル全体が既存SGML表モデル、ワード処理系、紙媒体の表配置研究から発展し、CALS表の取り込み簡略化を副目標としたと記す。しかしHTML外の`COLGROUP`個別祖先は特定しない。[1995年草案](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html)
+1995年草案とRFC 1942は表モデル全体が既存SGML表モデル、ワード処理系、紙媒体の表配置研究から発展し、CALS表の取り込み簡略化を副目標としたと記す。しかしHTML外の`COLGROUP`個別祖先は特定しない。[1995年草案](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)） [RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)）
 
 ### 解釈
 

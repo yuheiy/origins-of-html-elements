@@ -14,17 +14,17 @@ WHATWG HTML Living Standardでは、フォーム関連要素の集合を表し�
 
 ## HTMLへの導入
 
-1993年HTML+は`FORM`を入力欄群を含むフォームの範囲として定義した。RFC 1866はHTML 2.0フォームを標準化し、フォーム資料をHTML+仕様から導出したと明記する。[HTML+ Forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) [RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html)
+1993年HTML+は`FORM`を入力欄群を含むフォームの範囲として定義した。RFC 1866はHTML 2.0フォームを標準化し、フォーム資料をHTML+仕様から導出したと明記する。[HTML+ Forms](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)） [RFC 1866](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html)）
 
 ## HTML直前の祖先
 
-HTML直前の祖先はHTML+ `FORM`である。同名要素の一致だけでなく、RFC 1866自身がHTML+からフォーム資料を導出した因果関係を記録している。[RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html)
+HTML直前の祖先はHTML+ `FORM`である。同名要素の一致だけでなく、RFC 1866自身がHTML+からフォーム資料を導出した因果関係を記録している。[RFC 1866](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html)）
 
 ## さらに上流の由来
 
 ### 証拠
 
-HTML+はフォーム操作について既存のプラットフォーム慣習を参照し、1994年レビューはNCSA X Mosaicの先駆的実装に言及するが、特定GUIツールキットを`FORM`の祖先とはしていない。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) [HTML+のレビュー](https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html)
+HTML+はフォーム操作について既存のプラットフォーム慣習を参照し、1994年レビューはNCSA X Mosaicの先駆的実装に言及するが、特定GUIツールキットを`FORM`の祖先とはしていない。[HTML+ forms](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)） [HTML+のレビュー](../../raw/www.w3.org/MarkUp/htmlplus_paper/htmlplus.html)（[公開元](https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html)）
 
 ### 解釈
 

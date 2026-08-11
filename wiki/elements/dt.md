@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、説明リスト内の用語と説明グル�
 
 ## HTMLへの導入
 
-1990年12月7日保存のWorldWideWebのテストファイルは、承認済みHTMLタグの説明中でCERN-SGMLタグ集合から一部をHTMLへ含めたと明記し、同じファイルで`DL`、`DT`、`DD`による用語集を実例にする。Tim Berners-Leeは1991年10月29日のメールでも三要素をHTMLファイルに現れるスタイルタグとして説明する。[WorldWideWebのテストファイル](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html) [Berners-Lee, 1991年メール](https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)
+1990年12月7日保存のWorldWideWebのテストファイルは、承認済みHTMLタグの説明中でCERN-SGMLタグ集合から一部をHTMLへ含めたと明記し、同じファイルで`DL`、`DT`、`DD`による用語集を実例にする。Tim Berners-Leeは1991年10月29日のメールでも三要素をHTMLファイルに現れるスタイルタグとして説明する。[WorldWideWebのテストファイル](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)） [Berners-Lee, 1991年メール](../../raw/lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)）
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ CERN-SGMLタグ集合である。WorldWideWebのテストファイルはCERN-SGM
 
 ### 証拠
 
-1988年Waterloo SCRIPT GMLにも`:DT`が存在するが、WaterlooからCERNまたはHTMLへの採用因果は示さない。[Waterloo SCRIPT GML User’s Guide](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)
+1988年Waterloo SCRIPT GMLにも`:DT`が存在するが、WaterlooからCERNまたはHTMLへの採用因果は示さない。[Waterloo SCRIPT GML User’s Guide](../../raw/web.archive.org/web/20020504095301/http%3A/www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)（[公開元](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)）
 
 ### 解釈
 
