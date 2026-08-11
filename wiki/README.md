@@ -84,7 +84,7 @@ status: 完成
 - [`<map>`](elements/map.md): James L. Seidmanが1994年に`area`とともに提案したクライアント側イメージマップのコンテナーであり、HTML+のイメージマップ案を直接検討して設計された。
 - [`<mark>`](elements/mark.md): 2005年WHATWG草案の強調用`m`を、2008年に`mark`へ改名して導入された。
 - [`<math>`](elements/math.md): MathML 1.0で定義済みのMathML名前空間のルートを、2008年にHTMLの`text/html`パーサーから生成できる外来要素のルートとして統合したものである。
-- [`<menu>`](elements/menu.md): 1992年のWorldWideWebとLine Mode Browserで、`UL`より項目を詰めて表示するリストとして確認できるが、両史料の時系列と現行コマンド意味への再定義経路は未解決である。
+- [`<menu>`](elements/menu.md): 1992年の短い項目用リストとして確認でき、2004年にWebアプリケーションのメニューと共有コマンド状態のため再利用されたが、初期二史料の時系列、担当者、具体的祖先、命名理由は未解決である。
 - [`<meta>`](elements/meta.md): Roy Fieldingが1994年6月、専用HTML要素で定義されない名前/値型の文書メタデータと、必要に応じたHTTP応答ヘッダーへの写像を行う`META`を提案した。
 - [`<meter>`](elements/meter.md): `meter`は2006年、WHATWG Web Applications 1.0のWIP `gauge`を改名し、既知範囲のスカラー量の測定を表す要素として仕様化された。
 - [`<nav>`](elements/nav.md): 2004年の`navigation`から2005年の`nav`へ続き、典型的サイトマークアップからの集合単位の導入は確認できるが、個別対応と改名理由は不明である。

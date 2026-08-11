@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された542ファイルを、29の取得元ホストごとに収録する。
+Rawに保存された544ファイルを、29の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（8ファイル）
 
@@ -349,7 +349,7 @@ Rawに保存された542ファイルを、29の取得元ホストごとに収録
 | [Archives/Public/www-talk/1992NovDec/0155.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html) | www-talk from November to December 1992: The spec evolves... |
 | [Archives/Public/www-talk/1992NovDec/0159.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html) | www-talk from November to December 1992: Re: The spec evolves... |
 
-## `lists.whatwg.org`（21ファイル）
+## `lists.whatwg.org`（22ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -362,6 +362,7 @@ Rawに保存された542ファイルを、29の取得元ホストごとに収録
 | [pipermail/whatwg-whatwg.org/2004-December/045003.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-December/045003.html) | [whatwg] Web Forms 2.0 - File Upload Progress? |
 | [pipermail/whatwg-whatwg.org/2004-November/002362.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html) | [whatwg] Re: &lt;section&gt; and headings |
 | [pipermail/whatwg-whatwg.org/2004-November/002363.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002363.html) | &lt;section&gt; and headings [was: Re: [whatwg] LABEL and radio/checkbox onclick] |
+| [pipermail/whatwg-whatwg.org/2004-November/044780.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/044780.html) | [whatwg] Web Applications 1.0 and Menu Labels |
 | [pipermail/whatwg-whatwg.org/2004-November/date.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/date.html) | The whatwg November 2004 Archive by date |
 | [pipermail/whatwg-whatwg.org/2005-April/045650.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html) | [whatwg] Re: &lt;section&gt; and headings and other threads |
 | [pipermail/whatwg-whatwg.org/2005-September/004660.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-September/004660.html) | [whatwg] Status update |
@@ -444,10 +445,11 @@ Rawに保存された542ファイルを、29の取得元ホストごとに収録
 |---|---|
 | [index.php-ab175fe94c92f193](../raw/wiki.whatwg.org/index.php-ab175fe94c92f193) | Change Proposal: figure and details - WHATWG Wiki |
 
-## `www.hixie.ch`（2ファイル）
+## `www.hixie.ch`（3ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
+| [specs/html/apps/web-apps-1](../raw/www.hixie.ch/specs/html/apps/web-apps-1) | Web Applications Markup Language 1.0 |
 | [specs/html/forms/hfp.html](../raw/www.hixie.ch/specs/html/forms/hfp.html) | XHTML Module: Extensions to Form Controls |
 | [specs/html/forms/xforms-basic-1](../raw/www.hixie.ch/specs/html/forms/xforms-basic-1) | Proposed XHTML Module: XForms Basic |
 

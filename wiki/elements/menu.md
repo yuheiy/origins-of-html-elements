@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-1992年2月11日のHTTP保存日時を持つWorldWideWebテストソースで`MENU`と`LI`の実例を確認できる。一方、CERN Line Mode Browser変更履歴は2月12日より後、3月27日より前のバージョン1.2aで`MENU`と`DIR`を将来利用のため導入したと記録し、両資料の時系列は解消できていない。同年5月には検索結果生成に`MENU`が使われ、後続資料は`UL`より項目を詰め、通常1項目1行で表示するリストとする。初期の表示別リスト分類から現行のコマンド意味への再定義経路は未確認である。
+1992年2月11日のHTTP保存日時を持つWorldWideWebテストソースで`MENU`と`LI`の実例を確認できる。一方、CERN Line Mode Browser変更履歴は2月12日より後、3月27日より前のバージョン1.2aで`MENU`と`DIR`を将来利用のため導入したと記録し、両資料の時系列は解消できていない。同年5月には検索結果生成に`MENU`が使われ、後続資料は`UL`より項目を詰め、通常1項目1行で表示するリストとする。HTML 4.01で非推奨となった後、WHATWGはWebアプリケーション向けのメニューと共有コマンド状態という要求に対して既存要素を再利用し、2004年9月にはナビゲーションリンクとコマンドの構造化リストへ再定義した。初期導入の担当者、具体的祖先、命名理由は未確認である。
 
 ## 現在の意味
 
@@ -26,13 +26,15 @@ WHATWG HTML Living Standardでは、利用者が実行・起動できるコマ�
 
 1992年の直接史料が示すのは、`MENU`と`DIR`を将来利用のため同時に導入し、検索結果の選択肢とディレクトリ一覧に使い分け、後に`UL`、`MENU`、`DIR`を項目長と簡潔さで区別したリストモデルまでである。HTML+はこの表示別分類を拡張`UL`へ一般化する対象として扱った。[Line Mode Browser change history](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/LineMode/Defaults/Features.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/LineMode/Defaults/Features.html)） [1992年5月25日の`MENU`例](../../raw/lists.w3.org/Archives/Public/www-talk/1992MayJun/0009.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0009.html)） [1992年5月26日の`DIR`例](../../raw/lists.w3.org/Archives/Public/www-talk/1992MayJun/0012.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992MayJun/0012.html)） [Dave Raggett, *A Review of the HTML+ Document Format*](../../raw/www.w3.org/MarkUp/htmlplus_paper/htmlplus.html)（[公開元](https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html)）
 
+HTML 4.01は`MENU`と`DIR`を非推奨とした。2004年4月のWeb Applications Markup Language 1.0は、サイトごとに異なるメニューUIを避けるネイティブなポップアップ／コンテキストメニューと、メニュー項目やツールバーボタンなど複数の入口で無効状態を共有するコマンド更新を要求に挙げた。9月23日のWeb Applications 1.0は既存の`menu`をナビゲーションリンクとコマンドの構造化リストとして定義し、ラベルのないものは`ul`と同様に表示する一方、ラベル付きのものは文書内表示から隠してメニューとして構築した。11月に編集者Ian Hicksonは、例で既存のリンクを使った理由を既存マークアップからの変更を最小にするためと説明した。2006年のWHATWG草案と2008年のW3C初回草案は`menu`をコマンドのリストとし、`toolbar`型を明示した。現行仕様はこのコマンドリストを、`ul`の意味上の代替となるツールバーとして維持する。[HTML 4.01, §10.4](../../raw/www.w3.org/TR/html401/html40.zip/struct/lists.html)（[公開元](https://www.w3.org/TR/html401/struct/lists.html#h-10.4)） [Web Applications Markup Language 1.0](../../raw/www.hixie.ch/specs/html/apps/web-apps-1)（[公開元](http://www.hixie.ch/specs/html/apps/web-apps-1)） [Web Applications 1.0, 23 September 2004](../../raw/web.archive.org/web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/index.html)（[公開元](https://web.archive.org/web/20041009144718id_/http://whatwg.org/specs/web-apps/current-work/)） [Hickson, “Web Applications 1.0 and Menu Labels”](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/044780.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/044780.html)） [Web Applications 1.0, 28 March 2006](../../raw/platform.html5.org/history/webapps/r15.html)（[公開元](https://platform.html5.org/history/webapps/r15.html)） [HTML 5, 22 January 2008](../../raw/www.w3.org/TR/2008/WD-html5-20080122/index.html)（[公開元](https://www.w3.org/TR/2008/WD-html5-20080122/#the-menu)） [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開元](https://html.spec.whatwg.org/multipage/grouping-content.html#the-menu-element)）
+
 ### 解釈
 
-初期`MENU`はGUIウィジェットから採用されたとは確認できず、検索結果の選択肢を並べる用途を含む、短い項目のリストの変種だったと説明できる。現行のコマンドツールバー意味への経路は未解決である。
+初期`MENU`はGUIウィジェットから採用されたとは確認できず、検索結果の選択肢を並べる用途を含む、短い項目のリストの変種だったと説明できる。現行仕様における「コマンドを並べるツールバー」という意味は、この初期用途から連続的に確認できるものではなく、非推奨期間を経てWebアプリケーションの一貫したメニューUIとコマンド状態共有を実現するために再利用された第二の設計段階である。
 
 ## 系譜
 
-確認できる時系列は、WorldWideWebテストソースのHTML `MENU`（HTTP保存日時1992-02-11）、CERN Line Mode BrowserのHTML `MENU`（バージョン1.2a、同年2月12日より後）、初期HTML `MENU`の簡潔なリスト（1992）、HTML 2.0 `MENU` メニューリスト（1995）、現行HTML `<menu>` コマンドツールバーである。最初の二資料の時系列、実装から仕様への採用因果、意味の再定義経路は未確認のため矢印で接続しない。
+確認できる時系列は、WorldWideWebテストソースのHTML `MENU`（HTTP保存日時1992-02-11）、CERN Line Mode BrowserのHTML `MENU`（バージョン1.2a、同年2月12日より後）、初期HTML `MENU`の簡潔なリスト（1992）→HTML 2.0 `MENU`メニューリスト（1995）→HTML 4.01の非推奨`MENU`（1999）→Web Applications 1.0のナビゲーションリンクとコマンドの構造化リスト（2004）→現行HTML `<menu>`が表すコマンド用ツールバーである。最初の二資料の時系列と実装から仕様への採用因果は未確認のため、そこには矢印を置かない。
 
 ## 証拠
 
@@ -49,6 +51,12 @@ WHATWG HTML Living Standardでは、利用者が実行・起動できるコマ�
 | 1993-07-23（登録日） | [*Hypertext Markup Language (HTML)* version 1.2](../../raw/www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)（[公開元](https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)） | IETF Internet-Draft | `MENU`を`UL`より項目を詰めて表示するリストとして維持する。 | 2026-08-09 |
 | 1994 | [*A Review of the HTML+ Document Format*](../../raw/www.w3.org/MarkUp/htmlplus_paper/htmlplus.html)（[公開元](https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html)） | HTML+設計論文 | 旧`MENU`と`DIR`を拡張`UL`へ置き換える表示分類の一般化を説明する。 | 2026-08-11 |
 | 1995-11 | [RFC 1866: *Hypertext Markup Language - 2.0*](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866#section-5.6.4)） | IETF Standards Track RFC | `MENU`を通常1項目1行で`UL`より項目を詰めて表示するメニューリストとして標準化する。 | 2026-08-09 |
+| 1999-12-24 | [HTML 4.01, §10.4](../../raw/www.w3.org/TR/html401/html40.zip/struct/lists.html)（[公開元](https://www.w3.org/TR/html401/struct/lists.html#h-10.4)） | W3C Recommendation | `MENU`と`DIR`を非推奨とする。 | 2026-08-11 |
+| 2004-04-07 | [*Web Applications Markup Language 1.0*](../../raw/www.hixie.ch/specs/html/apps/web-apps-1)（[公開元](http://www.hixie.ch/specs/html/apps/web-apps-1)） | Ian Hickson編集の草案 | Webアプリケーション向けの一貫したネイティブなポップアップ／コンテキストメニューと、複数のUI入口で状態を共有するコマンド更新を要求に挙げる。 | 2026-08-11 |
+| 2004-09-23 | [*Web Applications 1.0*](../../raw/web.archive.org/web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/index.html)（[公開元](https://web.archive.org/web/20041009144718id_/http://whatwg.org/specs/web-apps/current-work/)） | WHATWG草案 | `menu`をナビゲーションリンクとコマンドの構造化リストに再定義し、ラベルの有無に応じて通常リストまたはメニューとして扱う。 | 2026-08-11 |
+| 2004-11-21 | [“Web Applications 1.0 and Menu Labels”](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/044780.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/044780.html)） | Ian HicksonによるWHATWGメール | メニュー例でリンクを使った理由を、既存マークアップからの変更を最小にし移行を容易にするためと説明する。 | 2026-08-11 |
+| 2006-03-28 | [*Web Applications 1.0*](../../raw/platform.html5.org/history/webapps/r15.html)（[公開元](https://platform.html5.org/history/webapps/r15.html)） | WHATWG草案 | `menu`をコマンドのリストとし、コンテキストメニュー用の`popup`とツールバー用の`toolbar`を区別する。 | 2026-08-11 |
+| 2008-01-22 | [*HTML 5*](../../raw/www.w3.org/TR/2008/WD-html5-20080122/index.html)（[公開元](https://www.w3.org/TR/2008/WD-html5-20080122/#the-menu)） | W3C First Public Working Draft | `menu`をコマンドのリストとして維持し、`context`、`toolbar`、既定の`list`状態を定義する。 | 2026-08-11 |
 
 ## 確度
 
@@ -64,4 +72,3 @@ WHATWG HTML Living Standardでは、利用者が実行・起動できるコマ�
 
 - Line Mode Browser 1.2から1.2aのソース差分、配布告知、開発メールから、`MENU`と`DIR`の変更担当者、`UL`と別要素にした要求、名称のソースを確認できるか。
 - `test_source.txt`のHTTP保存日時とLine Mode Browser 1.2aの導入区間の前後を、RCS履歴または配布アーカイブで解消できるか。
-- 初期の項目を詰めて表示するリストから、現行のコマンドツールバー／`ul`の意味上の代替へ再定義した仕様変更はどれか。

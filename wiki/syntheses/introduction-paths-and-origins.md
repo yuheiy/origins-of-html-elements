@@ -24,7 +24,7 @@ status: 完成
 | GNU Texinfo | 1993年HTML草案の文字強調集合がTexinfoのマクロ名から名前を得た | `b`、`i`、`em`、`strong`、`code`、`samp`、`kbd`、`var`、`dfn`、`cite`、集合単位のみ確認できる`u` |
 | CALS表モデル | CALSの行グループ構造をIETF表草案がHTMLへ取り込んだ | `thead`、`tbody`、`tfoot` |
 | 既成のXML語彙 | MathML／SVGの既存ルートをHTMLパーサーが外来要素の内容として統合した | `math`、`svg` |
-| CERN WorldWideWeb／初期HTML設計 | 最初期実装、設計メール、DTD、初期草案でHTML自身の基礎語彙として成立した | `a`、`address`、`base`、`blockquote`、`body`、`head`、`html`、`link`、`menu`、`meta`、`p`、`pre`、`title`。メタは少し後の個別提案、メニューは現行意味までの再定義経路に欠落がある |
+| CERN WorldWideWeb／初期HTML設計 | 最初期実装、設計メール、DTD、初期草案でHTML自身の基礎語彙として成立した | `a`、`address`、`base`、`blockquote`、`body`、`head`、`html`、`link`、`menu`、`meta`、`p`、`pre`、`title`。メタは少し後の個別提案、メニューは初期導入の担当者と具体的祖先が未確認である |
 | HTML+ | HTML向けの実験仕様でフォーム、表、修正機能、図、クライアント側イメージマップを先に組み立て、HTML 2〜4またはHTML5へ引き継がれた | `form`、`input`、`select`、`option`、`textarea`、`table`、`caption`、`tr`、`th`、`td`、`del`、`ins`、`figure`、`map`、`area` |
 | 1993年WWW Workshop | RFC化前の基礎HTMLへ`br`と`hr`を追加する決定を記録し、`hr`はハイフン列による区切りの置換と明示した。先行HTML+ `br`からの採用因果と後続仕様への編集経路は未確認である | `br`、`hr` |
 | IETF／W3Cの機能別HTML草案 | HTML 3、国際化、フォーム、表、フレーム、スタイル、スクリプティング、複合文書等の草案が要素を設計し、後続HTMLへ統合した | `abbr`、`button`、`col`、`colgroup`、`datalist`、`div`、`fieldset`、`iframe`、`label`、`legend`、`noscript`、`object`、`optgroup`、`q`、`span`、`style`、`sub`、`sup`。一部はより古い候補やベンダー枝との個別接続に欠落がある |
@@ -119,7 +119,7 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 | `figure` | HTML+のキャプション付き`FIG`と、既存Webで画像とキャプションを結び主たる流れから分離する利用例 |
 | `head` | 既存のヘッダー部分を包み、ストリーム受信中でもヘッダー終端を判定するラッパー要求 |
 | `link` | テキスト範囲へ局所化されない著者情報、部分／全体、索引等のノード単位の関係 |
-| `menu` | 検索結果の選択肢や短い項目を簡潔に並べる初期リストの変種 |
+| `menu` | 検索結果の選択肢や短い項目を簡潔に並べる初期リストの変種。2004年にWebアプリケーションのメニューと共有コマンド状態の要求へ再利用された |
 | `q` | 引用符を言語依存で描画する行内引用 |
 
 ## 3. 敵対的監査で残った弱点
@@ -128,13 +128,13 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 
 現行115要素の確度はAが85要素、A−が17要素、Bが12要素、Cが1要素で、未評価はない。ただしAはHTMLへの導入と直前の系譜だけを評価するため、Aであっても語の命名理由やさらに上流の由来が確定したとは限らない。
 
-今回の再調査により、`br`ではNCSA Mosaicより前のHTML+提案、基礎HTMLへの追加決定、Lynx実装を確認し、導入理由を固定して確度Bとした。`hr`では、ハイフン列による区切りを置き換える要素として基礎HTMLへ追加した直接記録を確認し、確度Aとした。HTML+ `br`からの採用因果、Workshop決定から各実装・後続仕様への編集経路は未確認である。先行調査で確認した`blockquote`のDocBook／Usenet競合と、`base`の`BASE HREF`への最終具体化およびHTML外の祖先も未解決のままである。
+今回の再調査により、`br`ではNCSA Mosaicより前のHTML+提案、基礎HTMLへの追加決定、Lynx実装を確認し、導入理由を固定して確度Bとした。`hr`では、ハイフン列による区切りを置き換える要素として基礎HTMLへ追加した直接記録を確認し、確度Aとした。HTML+ `br`からの採用因果、Workshop決定から各実装・後続仕様への編集経路は未確認である。`menu`では、HTML 4.01での非推奨を経て、2004年にWebアプリケーションのメニューと共有コマンド状態のため再利用された経路を確認したが、1992年の初期導入理由と具体的祖先は未確認である。先行調査で確認した`blockquote`のDocBook／Usenet競合と、`base`の`BASE HREF`への最終具体化およびHTML外の祖先も未解決のままである。
 
 108ページ、113要素に一つ以上の未解決点が残る。未解決がないのは`figcaption`と`optgroup`だけである。したがって、このページの主題分類は調査完了率として使えない。
 
 集合単位の採用しか確認できない、または中間経路が欠けるA−は、`dd`、`del`、`dl`、`dt`、`footer`、`head`、`ins`、`legend`、`li`、`link`、`nav`、`ol`、`output`、`q`、`style`、`u`、`ul`の17要素である。個別対応を集合レベルの資料から推定してはならない。
 
-HTMLへの採用因果または具体的祖先が弱いB／Cは、`a`、`address`、`base`、`blockquote`、`br`、`col`、`div`、`html`、`menu`、`noscript`、`p`、`small`、`title`の13要素である。`br`は導入理由を確認したがHTML+からの採用因果がなく、`menu`は最初期出現と当時の意味までしか確認できない。
+HTMLへの採用因果または具体的祖先が弱いB／Cは、`a`、`address`、`base`、`blockquote`、`br`、`col`、`div`、`html`、`menu`、`noscript`、`p`、`small`、`title`の13要素である。`br`は導入理由を確認したがHTML+からの採用因果がなく、`menu`は2004年以降の再定義経路を確認した一方で1992年の導入理由と具体的祖先を確認できない。
 
 `HTML直前の祖先`に未確認部分を明記するのは、`a`、`address`、`aside`、`audio`、`base`、`blockquote`、`br`、`canvas`、`col`、`del`、`div`、`html`、`ins`、`legend`、`menu`、`noscript`、`output`、`p`、`pre`、`progress`、`q`、`s`、`section`、`small`、`source`、`style`、`sub`、`sup`、`title`、`track`、`u`の31要素である。背景資料があるだけで、これらの欠落へ矢印を補ってはならない。
 
