@@ -1053,3 +1053,11 @@ Raw取得器の自動判定規約を一意に解釈できるよう、入力と�
 Raw取得器の判定シグネチャ、媒体型、優先順位は利用者がコマンドを実行するために不要な実装詳細であるため、操作規約から削除した。利用契約を、URLだけを渡すこと、通常ファイル、ZIP、tarアーカイブを自動判定すること、通常ファイルはそのまま保存し、アーカイブは安全性の検査後に展開することへ限定した。
 
 対象リントでは、CLI構文、自動判定後の保存処理、Markdown whitespaceを`合格`、過剰な実装詳細を`修正済み`、`Research必要`はなしと確認した。実装、Raw snapshot、Wikiの歴史的結論は変更していない。
+
+## [2026-08-11] research | `mark`の初出区間と改名理由
+
+初期WHATWGの版履歴とメールを再調査した。2005年4月2日付のWeb Applications 1.0には`m`がなく、4月13日付草案には印付きまたは強調されたテキストを表す`m`があるため、追加区間をこの間へ限定した。2005年5月11日の最初期フィードバックは、通常の読み方を変えず注意箇所を見つけやすくするものとして`m`を`strong`や`em`から区別した。2007年2月7日にNicholas Shanksが単文字名を避ける`mark`を提案し、`m`と`em`の口頭上の混同、`hi`の視覚依存、`mark`の説明可能性を比較した議論を経て、Ian Hicksonが2008年2月17日に`mark`への改名を採用した。これにより改名理由を解決し、`mark`を優先調査キューと命名未解決一覧から外した。初稿の提案者は確認できないため、追加区間とともに未解決として維持した。確度Aは変更していない。
+
+追加したRawの取得記録は次のとおりである。`https://web.archive.org/web/20050331083701id_/http://whatwg.org/specs/web-apps/current-work/`、リダイレクトなし、2026-08-11T12:26:46.240Z、`raw/web.archive.org/web/20050331083701id_/http%3A/whatwg.org/specs/web-apps/current-work/__index`；`https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-May/046219.html`、リダイレクトなし、2026-08-11T12:26:49.516Z、`raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-May/046219.html`；`https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-February/056266.html`、リダイレクトなし、2026-08-11T12:26:51.500Z、`raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-February/056266.html`。Raw索引を580ファイルで再生成した。
+
+初回探索と分離した敵対的検証では、2005年3月・4月のWHATWG月別メール配布物に`m`追加の提案がないこと、4月2日付草案と4月13日付草案の要素集合、5月11日のメールが既存定義への反応であること、2007年の廃止案、`b`、`u`、`em`、`strong`、定義済みclassという競合案、`hi`、`flag`、`attn`という名称候補、2008年メールと同日の仕様コミットを照合した。対象リントでは、`mark`のフロントマター、必須見出し順、6行の証拠表、各歴史的主張と出典の対応、README概要、統合ページの内部派生・命名未解決一覧・優先調査キュー、変更ページの全ローカルMarkdownリンク、Raw索引の580ファイル網羅と再生成一致、Markdown whitespaceを`合格`、初出区間と改名理由の欠落を`修正済み`、初稿の提案者を`Research必要`として確認した。変更した知識ページは敵対的検証と対象リントに合格したため`完成`とした。

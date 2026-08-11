@@ -90,7 +90,7 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 
 内部派生の根拠は、[`audio`統合前後](../../raw/platform.html5.org/history/webapps/r699.html)（[公開元](https://platform.html5.org/history/webapps/r699.html)）、[rich `button`草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)）、[`data`一般化提案](../../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=13240)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=13240)）と[初回追加コミット](../../raw/github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d)（[公開元](https://github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d)）、[`figcaption`導入コミット](../../raw/github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)（[公開元](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)）、[`hgroup`改名コミット](../../raw/github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)（[公開元](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)）に置く。
 
-残る枝は、[`iframe`草案](../../raw/www.w3.org/TR/WD-frames-970331)（[公開元](https://www.w3.org/TR/WD-frames-970331)）、[`m`から`mark`への変更](../../raw/github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)（[公開元](https://github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)）、[`gauge`から`meter`への履歴](../../raw/platform.html5.org/history/webapps/r15.html)（[公開元](https://platform.html5.org/history/webapps/r15.html)）、[`NOSCRIPT`草案](../../raw/www.w3.org/TR/WD-script-960709.html)（[公開元](https://www.w3.org/TR/WD-script-960709.html)）、[`source`導入コミット](../../raw/github.com/whatwg/html/commit/61af426a3ae6d68ffa00505b6883cbf870481b52)（[公開元](https://github.com/whatwg/html/commit/61af426a3ae6d68ffa00505b6883cbf870481b52)）、[`summary`導入コミット](../../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)（[公開元](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)）、[`t`初稿コミット](../../raw/github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583)（[公開元](https://github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583)）で確認できる。
+残る枝は、[`iframe`草案](../../raw/www.w3.org/TR/WD-frames-970331)（[公開元](https://www.w3.org/TR/WD-frames-970331)）、[`m`の名称議論](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-February/056266.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-February/056266.html)）と[`mark`への変更](../../raw/github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)（[公開元](https://github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)）、[`gauge`から`meter`への履歴](../../raw/platform.html5.org/history/webapps/r15.html)（[公開元](https://platform.html5.org/history/webapps/r15.html)）、[`NOSCRIPT`草案](../../raw/www.w3.org/TR/WD-script-960709.html)（[公開元](https://www.w3.org/TR/WD-script-960709.html)）、[`source`導入コミット](../../raw/github.com/whatwg/html/commit/61af426a3ae6d68ffa00505b6883cbf870481b52)（[公開元](https://github.com/whatwg/html/commit/61af426a3ae6d68ffa00505b6883cbf870481b52)）、[`summary`導入コミット](../../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)（[公開元](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)）、[`t`初稿コミット](../../raw/github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583)（[公開元](https://github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583)）で確認できる。
 
 | 要素 | HTML内で確認できる前身と変更 |
 |---|---|
@@ -100,7 +100,7 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 | `figcaption` | HTML+以来の図のキャプションを、`legend`、`dt`／`dd`流用から専用要素へ変更 |
 | `hgroup` | セクション見出し用だった旧`header`を改名し、主見出しと副見出しのグループへ限定 |
 | `iframe` | `FRAME`のナビゲーションモデルと`IMG`型の文書の流れ内配置を組み合わせた浮動フレーム |
-| `mark` | 検索結果等の文脈依存の強調用`m`を改名 |
+| `mark` | 2005年4月2日後〜4月13日までに追加された文脈依存の強調用`m`を、単文字名と`em`との混同を避ける提案に基づき改名 |
 | `meter` | Web Applications草案の`gauge`を、既知範囲のスカラー量の測定へ改名・具体化 |
 | `noscript` | クライアント側の`script`を実行できないUA向けの代替内容 |
 | `source` | `video`の単一`src`を、コーデック等が異なる複数候補からの選択へ分離 |
@@ -138,7 +138,7 @@ HTMLへの採用因果または具体的祖先が弱いB／Cは、`a`、`address
 
 `HTML直前の祖先`に未確認部分を明記するのは、`a`、`address`、`aside`、`audio`、`base`、`blockquote`、`br`、`canvas`、`col`、`del`、`div`、`html`、`ins`、`legend`、`menu`、`noscript`、`output`、`p`、`pre`、`progress`、`q`、`s`、`section`、`small`、`source`、`style`、`sub`、`sup`、`title`、`track`、`u`の31要素である。背景資料があるだけで、これらの欠落へ矢印を補ってはならない。
 
-名称、命名、改名、略称、タグ名または語彙の選択理由が明示的な未解決点として残るのは、`a`、`abbr`、`article`、`aside`、`base`、`bdi`、`bdo`、`col`、`del`、`details`、`dialog`、`hgroup`、`ins`、`legend`、`main`、`mark`、`menu`、`meter`、`object`、`p`、`pre`、`script`、`search`、`section`、`span`、`sub`、`summary`、`sup`、`td`、`th`、`time`、`title`、`video`、`wbr`の34要素である。語彙起源という目的に対しては、この集合を「由来確認済み」に数えない。
+名称、命名、改名、略称、タグ名または語彙の選択理由が明示的な未解決点として残るのは、`a`、`abbr`、`article`、`aside`、`base`、`bdi`、`bdo`、`col`、`del`、`details`、`dialog`、`hgroup`、`ins`、`legend`、`main`、`menu`、`meter`、`object`、`p`、`pre`、`script`、`search`、`section`、`span`、`sub`、`summary`、`sup`、`td`、`th`、`time`、`title`、`video`、`wbr`の33要素である。語彙起源という目的に対しては、この集合を「由来確認済み」に数えない。
 
 ### 3.2 追加調査の扱い
 
@@ -150,8 +150,10 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 
 | 調査群 | 対象 | 探索範囲 |
 |---|---|---|
-| 初期WHATWGの版履歴 | [`mark`](../elements/mark.md)、[`meter`](../elements/meter.md)、[`time`](../elements/time.md)、[`main`](../elements/main.md)、[`bdi`](../elements/bdi.md)、[`track`](../elements/track.md) | 既知の初回収録、改名、再導入コミットの親版と、対応するWHATWGメール、旧Subversion履歴、提案を照合する |
+| 初期WHATWGの版履歴 | [`meter`](../elements/meter.md)、[`time`](../elements/time.md)、[`main`](../elements/main.md)、[`bdi`](../elements/bdi.md)、[`track`](../elements/track.md) | 既知の初回収録、改名、再導入コミットの親版と、対応するWHATWGメール、旧Subversion履歴、提案を照合する |
 | W3C／IETF草案間の変更 | [`legend`](../elements/legend.md)、[`bdo`](../elements/bdo.md)、[`span`](../elements/span.md)、[`noscript`](../elements/noscript.md)、[`object`](../elements/object.md)、[`col`](../elements/col.md)、[`style`](../elements/style.md) | 連続する草案間に限定して、CVS／RCS差分、Working Group議事録、編集者メールから追加、改名、機能統合、後続仕様への採録を探す |
+
+`mark`は、`m`の初出区間を2005年4月2日後〜4月13日までに限定し、2007年の名称議論と2008年の採用判断を確認したため、優先調査を完了した。初稿の提案者を示す公開記録は見つからず、個別ページの未解決点として維持する。
 
 同名または同機能の先行物を新たに見つけるだけでは完了とせず、HTML側の採用判断または変更判断まで確認できた場合にだけ系譜を更新する。
 

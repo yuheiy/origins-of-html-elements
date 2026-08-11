@@ -82,7 +82,7 @@ status: 完成
 - [`<link>`](elements/link.md): 1992年のCERN設計ノートは、テキストへ局所化されたアンカーと区別して文書全体の関係を表す空の`LINK`を新DTD向けに提案し、1993年1月6日版DTDに同要素が現れる。
 - [`<main>`](elements/main.md): WAI-ARIA `main`ランドマークと`div role="main"`、`id=main/content`等の既存Web慣習を、2012年の提案がネイティブHTML要素へ形式化したものである。
 - [`<map>`](elements/map.md): James L. Seidmanが1994年に`area`とともに提案したクライアント側イメージマップのコンテナーであり、HTML+のイメージマップ案を直接検討して設計された。
-- [`<mark>`](elements/mark.md): 2005年WHATWG草案の強調用`m`を、2008年に`mark`へ改名して導入された。
+- [`<mark>`](elements/mark.md): 2005年4月2日後〜4月13日までに追加された`m`を、単文字名と`em`との混同を避ける2007年の提案に基づき2008年に`mark`へ改名した。
 - [`<math>`](elements/math.md): MathML 1.0で定義済みのMathML名前空間のルートを、2008年にHTMLの`text/html`パーサーから生成できる外来要素のルートとして統合したものである。
 - [`<menu>`](elements/menu.md): 1992年の短い項目用リストとして確認でき、2004年にWebアプリケーションのメニューと共有コマンド状態のため再利用されたが、初期二史料の時系列、担当者、具体的祖先、命名理由は未解決である。
 - [`<meta>`](elements/meta.md): Roy Fieldingが1994年6月、専用HTML要素で定義されない名前/値型の文書メタデータと、必要に応じたHTTP応答ヘッダーへの写像を行う`META`を提案した。

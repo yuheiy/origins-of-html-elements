@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された577ファイルを、32の取得元ホストごとに収録する。
+Rawに保存された580ファイルを、32の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（9ファイル）
 
@@ -390,7 +390,7 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 | [Archives/Public/www-talk/1992NovDec/0155.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html) | www-talk from November to December 1992: The spec evolves... |
 | [Archives/Public/www-talk/1992NovDec/0159.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html) | www-talk from November to December 1992: Re: The spec evolves... |
 
-## `lists.whatwg.org`（25ファイル）
+## `lists.whatwg.org`（27ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -406,12 +406,14 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 | [pipermail/whatwg-whatwg.org/2004-November/044780.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/044780.html) | [whatwg] Web Applications 1.0 and Menu Labels |
 | [pipermail/whatwg-whatwg.org/2004-November/date.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/date.html) | The whatwg November 2004 Archive by date |
 | [pipermail/whatwg-whatwg.org/2005-April/045650.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html) | [whatwg] Re: &lt;section&gt; and headings and other threads |
+| [pipermail/whatwg-whatwg.org/2005-May/046219.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-May/046219.html) | [whatwg] [WA1] Literals and Actions, comments on inline markup |
 | [pipermail/whatwg-whatwg.org/2005-September/004660.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-September/004660.html) | [whatwg] Status update |
 | [pipermail/whatwg-whatwg.org/2007-August/054625.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054625.html) | [whatwg] My case for Ruby-elements |
 | [pipermail/whatwg-whatwg.org/2007-August/054633.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html) | [whatwg] My case for Ruby-elements |
 | [pipermail/whatwg-whatwg.org/2007-February/009702.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-February/009702.html) | [whatwg] &lt;video&gt; element proposal |
 | [pipermail/whatwg-whatwg.org/2007-March/010129.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/010129.html) | [whatwg] Web Applications 1.0 Draft |
 | [pipermail/whatwg-whatwg.org/2007-March/052433.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-March/052433.html) | [whatwg] Video proposals |
+| [pipermail/whatwg-whatwg.org/2008-February/056266.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-February/056266.html) | [whatwg] The &lt;m&gt; element |
 | [pipermail/whatwg-whatwg.org/2008-November/017596.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-November/017596.html) | [whatwg] Thoughts on HTML 5 |
 | [pipermail/whatwg-whatwg.org/2009-April/061491.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-April/061491.html) | [whatwg] About Descendent Tags |
 | [pipermail/whatwg-whatwg.org/2009-August/064204.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-August/064204.html) | [whatwg] Spec comments, sections 3.1-4.7 |
@@ -460,7 +462,7 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 | [mathml-core/__index](../raw/w3c.github.io/mathml-core/__index) | MathML Core |
 | [svgwg/svg2-draft/struct.html](../raw/w3c.github.io/svgwg/svg2-draft/struct.html) | Document Structure — SVG 2 |
 
-## `web.archive.org`（12ファイル）
+## `web.archive.org`（13ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -470,6 +472,7 @@ Rawに保存された577ファイルを、32の取得元ホストごとに収録
 | [web/20040708074642/http%3A/weblogs.mozillazine.org/hyatt/archives/2004_07.html](../raw/web.archive.org/web/20040708074642/http%3A/weblogs.mozillazine.org/hyatt/archives/2004_07.html) | Surfin' Safari |
 | [web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/__index) | Web Applications 1.0 |
 | [web/20041210054847id_/http%3A/www.whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20041210054847id_/http%3A/www.whatwg.org/specs/web-apps/current-work/__index) | Web Applications 1.0 |
+| [web/20050331083701id_/http%3A/whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20050331083701id_/http%3A/whatwg.org/specs/web-apps/current-work/__index) | Web Applications 1.0 |
 | [web/20050406023711id_/http%3A/whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20050406023711id_/http%3A/whatwg.org/specs/web-apps/current-work/__index) | Web Applications 1.0 |
 | [web/20050413075549id_/http%3A/www.whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20050413075549id_/http%3A/www.whatwg.org/specs/web-apps/current-work/__index) | Web Applications 1.0 |
 | [web/20050901000000/http%3A/www.whatwg.org/specs/web-apps/2005-09-01/__index](../raw/web.archive.org/web/20050901000000/http%3A/www.whatwg.org/specs/web-apps/2005-09-01/__index) | Web Applications 1.0 |
