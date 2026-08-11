@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された604ファイルを、33の取得元ホストごとに収録する。
+Rawに保存された607ファイルを、33の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（9ファイル）
 
@@ -524,12 +524,14 @@ Rawに保存された604ファイルを、33の取得元ホストごとに収録
 | [specs/html/forms/hfp.html](../raw/www.hixie.ch/specs/html/forms/hfp.html) | XHTML Module: Extensions to Form Controls |
 | [specs/html/forms/xforms-basic-1](../raw/www.hixie.ch/specs/html/forms/xforms-basic-1) | Proposed XHTML Module: XForms Basic |
 
-## `www.ietf.org`（3ファイル）
+## `www.ietf.org`（5ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
 | [archive/id/draft-ietf-html-cda-00.txt](../raw/www.ietf.org/archive/id/draft-ietf-html-cda-00.txt) | — |
 | [archive/id/draft-ietf-html-clientsideimagemap-00.txt](../raw/www.ietf.org/archive/id/draft-ietf-html-clientsideimagemap-00.txt) | — |
+| [archive/id/draft-ietf-html-tables-04.txt](../raw/www.ietf.org/archive/id/draft-ietf-html-tables-04.txt) | — |
+| [archive/id/draft-ietf-html-tables-05.txt](../raw/www.ietf.org/archive/id/draft-ietf-html-tables-05.txt) | — |
 | [archive/id/draft-ietf-iiir-html-00.txt](../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt) | — |
 
 ## `www.oasis-open.org`（3ファイル）
@@ -556,7 +558,7 @@ Rawに保存された604ファイルを、33の取得元ホストごとに収録
 |---|---|
 | [jordi/v3/js/jsguide/jsguide.pdf](../raw/www.uv.es/jordi/v3/js/jsguide/jsguide.pdf) | — |
 
-## `www.w3.org`（205ファイル）
+## `www.w3.org`（206ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -662,6 +664,7 @@ Rawに保存された604ファイルを、33の取得元ホストごとに収録
 | [TR/WD-html40-970708/struct/text.html](../raw/www.w3.org/TR/WD-html40-970708/struct/text.html) | Paragraphs, Lines, and Phrases |
 | [TR/WD-html40-970917/interact/forms.html](../raw/www.w3.org/TR/WD-html40-970917/interact/forms.html) | Forms in HTML documents |
 | [TR/WD-html40-970917/struct/objects.html](../raw/www.w3.org/TR/WD-html40-970917/struct/objects.html) | Objects, Images, and Applets in HTML documents |
+| [TR/WD-html40-970917/struct/tables.html](../raw/www.w3.org/TR/WD-html40-970917/struct/tables.html) | Tables in HTML documents |
 | [TR/WD-html40-970917/struct/text.html](../raw/www.w3.org/TR/WD-html40-970917/struct/text.html) | Paragraphs, Lines, and Phrases |
 | [TR/WD-insert-951220.html](../raw/www.w3.org/TR/WD-insert-951220.html) | HTML3 Linking and Embedding Model |
 | [TR/WD-object-960308.html](../raw/www.w3.org/TR/WD-object-960308.html) | Inserting objects into HTML |

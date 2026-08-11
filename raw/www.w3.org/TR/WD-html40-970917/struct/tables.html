@@ -1,0 +1,2369 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="en">
+<!-- $Id: tables.src,v 1.53 1997/09/17 16:33:41 lehors Exp $ -->
+<HEAD>
+<META http-equiv="Content-Type" content=
+"text/html; charset=ISO-8859-1">
+<TITLE>Tables in HTML documents</TITLE>
+<LINK rel="previous" href="lists.html">
+<LINK rel="next" href="links.html">
+<LINK rel="contents" href="../cover.html#toc">
+<LINK rel="STYLESHEET" href="../style/default.css" type="text/css">
+</HEAD>
+<BODY>
+<div class="navbar">
+<center><a href="lists.html">previous</a> &nbsp; <a href="links.html">next</a> &nbsp; <a href="../cover.html#toc">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center><hr>
+</div>
+
+<H1 align="center"><a name="h-12">12</a> Tables</H1>
+<div class="subtoc"><p><strong>Contents</strong>
+<ol>
+<li><a href="tables.html#h-12.1">Elements for constructing tables</a>
+<ol>
+<li><a href="tables.html#h-12.1.1">The <samp class="einst2">TABLE</SAMP>
+element</a>
+<li><a href="tables.html#h-12.1.2">Table Captions: The <samp class="einst2">CAPTION</SAMP> element</a>
+<li><a href="tables.html#h-12.1.3">Groups of rows: the <samp class="einst2">THEAD</SAMP>, <samp class="einst2">TFOOT</SAMP>, and <samp class="einst2">TBODY</SAMP> elements</a>
+<li><a href="tables.html#h-12.1.4">Groups of columns: the <samp class="einst2">COLGROUP</SAMP> and <samp class="einst2">COL</SAMP> elements
+</a>
+<li><a href="tables.html#h-12.1.5">Table rows: The <samp class="einst2">TR</SAMP> element</a>
+<li><a href="tables.html#h-12.1.6">Table cells: The <samp class="einst2">TH</SAMP> and <samp class="einst2">TD</SAMP> elements</a>
+</ol>
+<li><a href="tables.html#h-12.2">Table formatting by visual user agents</a>
+<ol>
+<li><a href="tables.html#h-12.2.1">Horizontal and vertical alignment</a>
+<li><a href="tables.html#h-12.2.2">Borders and rules</a>
+<li><a href="tables.html#h-12.2.3">Cell margins</a>
+</ol>
+<li><a href="tables.html#h-12.3">Some sample tables</a>
+<ol>
+<li><a href="tables.html#h-12.3.1">Sample 1</a>
+<li><a href="tables.html#h-12.3.2">Sample 2</a>
+</ol>
+</ol>
+</div>
+
+<P>The HTML table model allows authors to arrange all types of data
+into rows and columns of cells. These cells may include text,
+preformatted text, images, links, forms, form fields, other tables,
+etc. Table cells may either contain "header" information (see the
+<a href="tables.html#edef-TH"><samp class="einst">TH</samp></a> element) or "data" (see the <a href="tables.html#edef-TD"><samp
+class="einst">TD</samp></a> element). Cells may span multiple rows and
+columns.</P>
+
+<P>Each table may have an associated caption (see the <a href="tables.html#edef-CAPTION"><SAMP
+class="einst">CAPTION</SAMP></a> element) that provides a short
+description of the table's purpose. A longer description should always
+be provided for the benefit of people using speech or Braille based
+browsers. The HTML 4.0 table model also allows authors to 
+label their tables so that non-visual user agents may communicate heading
+information about each cell to the user.</p>
+
+<P>Rows (see the <a href="tables.html#edef-TR"><samp class="einst">TR</samp></a> element) and columns
+may be grouped together to convey additional structural information
+and may be rendered by user agents in ways that emphasize this
+structure.
+
+<P>Table rows may be grouped into a head, foot and one or more body
+sections, using the <a href="tables.html#edef-THEAD"><SAMP class="einst">THEAD</SAMP></a>, <a href="tables.html#edef-TFOOT"><SAMP
+class="einst">TFOOT</SAMP></a> and <a href="tables.html#edef-TBODY"><SAMP class="einst">TBODY</SAMP></a>
+elements.  This can be exploited to support scrolling of body sections
+independently of the head and foot sections. When long tables are
+printed, the head and foot information may be repeated on each page
+that contains table data.</P>
+
+<P>Column properties may be declared in advance using the <a href="tables.html#edef-COL"><SAMP
+class="einst">COL</SAMP></a> and <a href="tables.html#edef-COLGROUP"><SAMP class="einst">COLGROUP</SAMP></a>
+elements. This makes it practical for user agents to begin rendering
+the table as data is downloaded without the need for a subsequent
+repaint when all of the data has arrived.</P>
+
+<P>Tables should not be used purely as a means to layout document
+content as this may present problems when rendering to non-visual
+media. Additionally, when used with graphics, these tables may force
+users to scroll horizontally to view a table designed on a system with
+a larger display. To minimize these problems, authors should use
+style sheets to control layout rather than tables.</P>
+
+<DIV class="note">
+<P><EM>Note: This specification includes more detailed information
+about tables in sections on <A href=
+"../appendix/notes.html#notes-tables">table design rationale and
+implementation issues</A>.</EM></P>
+</DIV>
+<H2><a name="h-12.1">12.1</a> Elements for constructing tables</H2>
+<H3><a name="h-12.1.1">12.1.1</a> The <A name="edef-TABLE"><SAMP class="edef">TABLE</SAMP></A>
+element</H3>
+
+<div class="dtd-fragment">
+<PRE class="dtd-fragment">
+&lt;!-- Only one CAPTION is allowed in each TABLE --&gt;
+&lt;!ELEMENT <a href="tables.html#edef-TABLE"><samp class="einst">TABLE</samp></a> - -
+     (CAPTION?, ((COL*|COLGROUP*), THEAD?, TFOOT?, TBODY+), CAPTION?)&gt;
+&lt;!ATTLIST TABLE                 -- table element --
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="tables.html#adef-summary"><samp class="ainst-TABLE">summary</samp></a>     CDATA      #IMPLIED  -- purpose/structure for speech o/p --
+  <a href="tables.html#adef-align-TABLE"><samp class="ainst-TABLE">align</samp></a>       <a href="../sgml/loosedtd.html#TAlign">%TAlign;</a>   #IMPLIED  -- table position relative to window --
+  <a href="../present/graphics.html#adef-bgcolor"><samp class="ainst-TABLE">bgcolor</samp></a>     <a href="../sgml/loosedtd.html#Color">%Color;</a>    #IMPLIED  -- background color for cells --
+  <a href="tables.html#adef-width-TABLE"><samp class="ainst-TABLE">width</samp></a>       CDATA      #IMPLIED  -- table width relative to window --
+  <a href="tables.html#adef-cols-TABLE"><samp class="ainst-TABLE">cols</samp></a>        NUMBER     #IMPLIED  -- used for immediate display mode --
+  <a href="tables.html#adef-border"><samp class="ainst-TABLE">border</samp></a>      CDATA      #IMPLIED  -- controls frame width around table --
+  <a href="tables.html#adef-frame"><samp class="ainst-TABLE">frame</samp></a>       <a href="../sgml/loosedtd.html#TFrame">%TFrame;</a>   #IMPLIED  -- which parts of table frame to include --
+  <a href="tables.html#adef-rules"><samp class="ainst-TABLE">rules</samp></a>       <a href="../sgml/loosedtd.html#TRules">%TRules;</a>   #IMPLIED  -- rulings between rows and cols --
+  <a href="tables.html#adef-cellspacing"><samp class="ainst-TABLE">cellspacing</samp></a> CDATA      #IMPLIED  -- spacing between cells --
+  <a href="tables.html#adef-cellpadding"><samp class="ainst-TABLE">cellpadding</samp></a> CDATA      #IMPLIED  -- spacing within cells --
+  &gt;
+</PRE>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<DIV class="adef-list">
+<P><EM>Attribute definitions</EM></P>
+
+<DL>
+<DT><A name="adef-summary"><SAMP class="adef">summary</SAMP></A> = <A
+href="../types.html#type-cdata"><EM>cdata</EM></A></DT>
+
+<DD>This attribute is used to provide a summary of the table's
+purpose and structure for user agents rendering to non-visual media
+such as speech and Braille.</DD>
+
+<DT><A name="adef-align-TABLE"><SAMP class="adef">align</SAMP></A>
+= <SAMP>left|center|right</SAMP></DT>
+
+<DD><STRONG>Deprecated.</STRONG> This attribute specifies the
+position of the table with respect to the document. Permitted
+values: 
+
+<UL>
+<LI><SAMP>left:</SAMP> The table is to the left of the document. 
+</LI>
+
+<LI><SAMP>center:</SAMP> The table is to the center of the
+document. </LI>
+
+<LI><SAMP>right:</SAMP> The table is to the right of the document.
+</LI>
+</UL>
+</DD>
+
+<DT><A name="adef-width-TABLE"><SAMP class="adef">width</SAMP></A>
+= <A href="../types.html#type-length"><EM>length</EM></A></DT>
+
+<DD><STRONG>Deprecated.</STRONG> This attribute specifies the
+desired width of the entire table and is intended for visual user
+agents. In the absence of this attribute, table width is determined
+by the user agent. </DD>
+
+<DT><A name="adef-cols-TABLE"><SAMP class="adef">cols</SAMP></A> =
+<EM>integer</EM></DT>
+
+<DD><STRONG>Deprecated.</STRONG> This attribute specifies the
+number of columns for the table. When specified, this attribute
+helps visual user agents render the table as soon as it receives
+incoming data, rather than having to wait for the entire table to
+determine the number of columns for certain.</DD>
+</DL>
+</DIV>
+
+<DIV class="aref-list">
+<P><EM>Attributes defined elsewhere</EM></P>
+
+<UL>
+<LI><a href="global.html#adef-id"><SAMP class="ainst">id</SAMP></a>, <a href="global.html#adef-class"><SAMP class="ainst">class</SAMP></a>
+(<A href="../struct/global.html#id-and-class">document-wide
+identifiers</A>) </LI>
+
+<LI><a href="dirlang.html#adef-lang"><SAMP class="ainst">lang</SAMP></a> (<A href=
+"../struct/dirlang.html#language-info">language information</A>),
+<a href="dirlang.html#adef-dir"><SAMP class="ainst">dir</SAMP></a> (<A href=
+"../struct/dirlang.html#bidirection">text direction</A>) </LI>
+
+<LI><a href="global.html#adef-title"><SAMP class="ainst">title</SAMP></a> (<A href=
+"../struct/global.html#titles">element titles</A>) </LI>
+
+<LI><a href="../present/styles.html#adef-style"><SAMP class="ainst">style</SAMP></a> (<A href=
+"../present/styles.html#style-element">inline style information
+</A>) </LI>
+
+<li><a href="../interact/scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>,
+  <a href="../interact/scripts.html#adef-ondblclick"><samp class="ainst">ondblclick</samp></a>,
+  <a href="../interact/scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>,
+  <a href="../interact/scripts.html#adef-onmouseup"><samp class="ainst">onmouseup</samp></a>,
+  <a href="../interact/scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>,
+  <a href="../interact/scripts.html#adef-onmousemove"><samp class="ainst">onmousemove</samp></a>,
+  <a href="../interact/scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>,
+  <a href="../interact/scripts.html#adef-onkeypress"><samp class="ainst">onkeypress</samp></a>,
+  <a href="../interact/scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>,
+  <a href="../interact/scripts.html#adef-onkeyup"><samp class="ainst">onkeyup</samp></a>
+ (<a href="../interact/scripts.html#events">intrinsic events</a>)</li>
+
+<LI><a href="../present/graphics.html#adef-bgcolor"><SAMP class="ainst">bgcolor</SAMP></a> (<A href=
+"../present/graphics.html#background-color">background color</A>) 
+</LI>
+
+<LI><a href="tables.html#adef-frame"><SAMP class="ainst">frame</SAMP></a>, 
+<a href="tables.html#adef-rules"><SAMP class="ainst-TABLE">rules</SAMP></a>, 
+<a href="tables.html#adef-border"><SAMP class="ainst-TABLE">border</SAMP></a> (<A href=
+"#borders">borders and rules</A>) </LI>
+
+<LI><a href="tables.html#adef-cellspacing"><SAMP class="ainst">cellspacing</SAMP></a>, 
+<a href="tables.html#adef-cellpadding"><SAMP class="ainst">cellpadding</SAMP></a> (<A href="#margins">cell margins</A>)</LI>
+</UL>
+</DIV>
+
+<P>The <a href="tables.html#edef-TABLE"><SAMP class="einst">TABLE</SAMP></a> element contains all other
+elements that specify caption, rows, content, and formatting.
+Authors should use the <a href="global.html#adef-title"><SAMP class="ainst">title</SAMP></a> attribute
+to provide a summary of the table for non-visual user agents,
+covering its purpose and structure.</P>
+
+<DIV class="note"><P>
+<EM><strong>Note.</strong> A new attribute for the table summary is needed
+because the caption for visual users is generally insufficient. The
+<a href="global.html#adef-title"><SAMP class="ainst">title</SAMP></a> attribute is inappropriate because
+browsers render this as a "tool tip" which is limited to a single
+line of text. In some user agents, long lines are clipped.</EM></P>
+</DIV>
+
+<H4>Calculating the number of rows and columns in a table<a name="h-12.1.1.1">&nbsp;</a></H4>
+
+<P>The number of rows in a table is equal to the number of <a href="tables.html#edef-TR"><SAMP
+class="einst">TR</SAMP></a> elements it contains. User agents should
+ignore rows that are implied by cells spanning rows beyond this
+number.</P>
+
+<P>There are several ways to determine the number of columns:</P>
+
+<UL>
+<LI>Count the number of columns as specified by <a href="tables.html#edef-COL"><SAMP
+class="einst">COL</SAMP></a> and <a href="tables.html#edef-COLGROUP"><SAMP class="einst">COLGROUP</SAMP></a>
+elements which can only occur at the start of the table (after the
+optional <a href="tables.html#edef-CAPTION"><samp class="einst">CAPTION</samp></a>). </LI>
+
+<LI>Scan each row in turn to compute the number of columns needed
+for each row, taking into account cells that span multiple rows
+and/or columns. Set the number of columns for the table to be the
+maximum number of columns from each row. For any row that has less
+than this number of columns, the end of that row should be padded
+with empty cells. The "end" of a row depends on the directionality
+of the table.</LI>
+
+<LI>Use the <a href="tables.html#adef-cols-TABLE"><SAMP class="ainst-TABLE">cols</SAMP></a> attribute on the <a href="tables.html#edef-TABLE"><SAMP
+class="einst">TABLE</SAMP></a> element. This is the weakest method
+since it doesn't provide any additional information about column
+widths. This may not matter, however, if the author uses style
+sheets to specify widths.</LI>
+</UL>
+
+<P>It is an error for these methods to return inconsistent values.
+In this situation we recommend user agents use the value determined
+on the basis of scanning the rows.</P>
+
+<DIV class="example">
+<P>All tables in these examples have three columns:</P>
+
+<PRE>
+&lt;TABLE&gt;
+  &lt;COL&gt;&lt;COL&gt;&lt;COL&gt;
+  <EM>...the rest of the table...</EM>
+&lt;/TABLE&gt;
+
+&lt;TABLE&gt;
+  &lt;COL span="3"&gt;
+  <EM>...the rest of the table...</EM>
+&lt;/TABLE&gt;
+
+&lt;TABLE&gt;
+&lt;TR&gt;
+  &lt;TD&gt;&lt;TD&gt;&lt;TD&gt;
+&lt;/TR&gt;
+&lt;/TABLE&gt;
+
+&lt;TABLE cols="3"&gt;
+  <EM>...the rest of the table...</EM>
+&lt;/TABLE&gt;
+</PRE>
+
+</DIV>
+
+<H4>Table directionality<a name="h-12.1.1.2">&nbsp;</a></H4>
+
+<P>The directionality of a table is specified by the <a href="dirlang.html#adef-dir"><SAMP
+class="ainst">dir</SAMP></a> attribute for the <a href="tables.html#edef-TABLE"><SAMP class="einst">TABLE</SAMP></a>
+element. For a left-to-right table (the default), column one is on the left
+side of the table and row one is at the top. For a right-to-left table,
+column one is one the right side and row one is at the top.</P>
+
+<P>Similarly, for left-to-right tables (the default), extra row
+cells are added to the right of the table, and for right-to-left
+tables, extra cells are added to the left side. <!--
+Make more general: dir inherited by block-level elements,
+most general is at TABLE level --></P>
+
+<P>When set for the <a href="tables.html#edef-TABLE"><SAMP class="einst">TABLE</SAMP></a> element, the
+<a href="dirlang.html#adef-dir"><SAMP class="ainst">dir</SAMP></a> attribute also affects the direction of
+text within table cells (since the <a href="dirlang.html#adef-dir"><SAMP class="ainst">dir</SAMP></a>
+attribute is inherited by block-level elements).</P>
+
+<DIV class="example">
+<P>To specify a right-to-left table, set the <a href="dirlang.html#adef-dir"><SAMP
+class="ainst">dir</SAMP></a> attribute as follows:</P>
+
+<PRE>
+&lt;TABLE dir="RTL"&gt;
+<EM>...the rest of the table...</EM>
+&lt;/TABLE&gt;
+</PRE>
+
+</DIV>
+
+<P>The direction of text in individual cells can be changed by setting
+the <a href="dirlang.html#adef-dir"><SAMP class="ainst">dir</SAMP></a> attribute in an element that
+defines the cell. Please consult the section on <A
+href="./dirlang.html#bidirection">bidirectional text</A> for more
+information on text direction issues.</P>
+
+<H3><a name="h-12.1.2">12.1.2</a> <A name="caption">Table Captions:</A> The <A
+name="edef-CAPTION"><SAMP class="edef">CAPTION</SAMP></A> element</H3>
+
+<div class="dtd-fragment">
+<PRE class="dtd-fragment">
+&lt;!ELEMENT <a href="tables.html#edef-CAPTION"><samp class="einst">CAPTION</samp></a> - - (<a href="../sgml/loosedtd.html#inline">%inline;</a>)*    -- table caption --&gt;
+&lt;!ENTITY % CAlign "(top|bottom|left|right)"&gt;
+
+&lt;!ATTLIST CAPTION               -- table caption --
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="tables.html#adef-align-CAPTION"><samp class="ainst-CAPTION">align</samp></a>       <a href="../sgml/loosedtd.html#CAlign">%CAlign;</a>   #IMPLIED  -- relative to table --
+  &gt;
+</PRE>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<DIV class="adef-list">
+<P><EM>Attribute definitions</EM></P>
+
+<DL>
+<DT><A name="adef-align-CAPTION"><SAMP class="adef">align</SAMP>
+</A> = <SAMP>top|bottom|left|right</SAMP></DT>
+
+<DD><STRONG>Deprecated:</STRONG> This attribute specifies the
+position of the caption with respect to the table. Possible values:
+
+
+<UL>
+<LI><SAMP>top:</SAMP> The caption is at the top of the table. This
+is the default value. </LI>
+
+<LI><SAMP>bottom:</SAMP> The caption is at the bottom of the table.
+</LI>
+
+<LI><SAMP>left:</SAMP> The caption is at the left of the table. 
+</LI>
+
+<LI><SAMP>right:</SAMP> The caption is at the right of the table.
+</LI>
+</UL>
+</DD>
+</DL>
+</DIV>
+
+<DIV class="aref-list">
+<P><EM>Attributes defined elsewhere</EM></P>
+
+<UL>
+<LI><a href="global.html#adef-id"><SAMP class="ainst">id</SAMP></a>, <a href="global.html#adef-class"><SAMP class="ainst">class</SAMP></a>
+(<A href="../struct/global.html#id-and-class">document-wide
+identifiers</A>) </LI>
+
+<LI><a href="dirlang.html#adef-lang"><SAMP class="ainst">lang</SAMP></a> (<A href=
+"../struct/dirlang.html#language-info">language information</A>),
+<a href="dirlang.html#adef-dir"><SAMP class="ainst">dir</SAMP></a> (<A href=
+"../struct/dirlang.html#bidirection">text direction</A>) </LI>
+
+<LI><a href="global.html#adef-title"><SAMP class="ainst">title</SAMP></a> (<A href=
+"../struct/global.html#titles">element titles</A>) </LI>
+
+<LI><a href="../present/styles.html#adef-style"><SAMP class="ainst">style</SAMP></a> (<A href=
+"../present/styles.html#style-element">inline style information
+</A>) </LI>
+
+<LI><a href="../interact/scripts.html#adef-onclick"><SAMP class="ainst">onclick</SAMP></a>, 
+<a href="../interact/scripts.html#adef-ondblclick"><SAMP class="ainst">ondblclick</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onmousedown"><SAMP class="ainst">onmousedown</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onmouseup"><SAMP class="ainst">onmouseup</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onmouseover"><SAMP class="ainst">onmouseover</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onmousemove"><SAMP class="ainst">onmousemove</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onmouseout"><SAMP class="ainst">onmouseout</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onkeypress"><SAMP class="ainst">onkeypress</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onkeydown"><SAMP class="ainst">onkeydown</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onkeyup"><SAMP class="ainst">onkeyup</SAMP></a> 
+(<A href="../interact/scripts.html#events">intrinsic events
+</A>)</LI>
+</UL>
+</DIV>
+
+<P>When present, the <a href="tables.html#edef-CAPTION"><SAMP class="einst">CAPTION</SAMP></a> element's
+text should describe the nature of the table. The <a href="tables.html#edef-CAPTION"><SAMP class="einst">CAPTION</SAMP></a> element may come either immediately after
+the <a href="tables.html#edef-TABLE"><SAMP class="einst">TABLE</SAMP></a> start tag or immediately
+before the end tag. A table may only contain one caption.</P>
+
+<P>Visual user agents allow sighted people to quickly grasp the
+structure of the table from the headings as well as the caption. A
+consequence of this is that captions will often be inadequate as a
+summary of the purpose and structure of the table from the
+perspective of people relying on non-visual user agents.</P>
+
+<P>Authors should therefore take care to provide additional
+information summarizing the purpose and structure of the table
+using the <a href="tables.html#adef-summary"><SAMP class="ainst">summary</SAMP></a> attribute of the <a href="tables.html#edef-TABLE"><SAMP
+class="einst">TABLE</SAMP></a> element. This is especially important
+for tables without captions.</P>
+
+<P>For instance,</P>
+
+<PRE class="example">
+&lt;TABLE summary="Number, type, and whether taken with sugar."&gt;
+&lt;CAPTION&gt;Cups of coffee consumed by each senator&lt;/CAPTION&gt;
+<EM>...the rest of the table...</EM>
+&lt;/TABLE&gt;
+</PRE>
+
+<P>Visual user agents should avoid clipping any part of the table
+including the caption, unless a means is provided to access all parts,
+e.g., by horizontal or vertical scrolling. We recommend that the caption
+text be wrapped to the same width as the table. (See also the
+section on <A href="../appendix/notes.html#layout">recommended
+layout algorithms</A>.)</P>
+
+<H3><a name="h-12.1.3">12.1.3</a> <A name="rowgroups">Groups of rows:</A> the <A
+name="edef-THEAD"><SAMP class="edef">THEAD</SAMP></A>, <A
+name="edef-TFOOT"><SAMP class="edef">TFOOT</SAMP></A>, and <A
+name="edef-TBODY"><SAMP class="edef">TBODY</SAMP></A> elements</H3>
+
+<div class="dtd-fragment">
+<PRE class="dtd-fragment">
+&lt;!ELEMENT <a href="tables.html#edef-THEAD"><samp class="einst">THEAD</samp></a> - O (TR)+ -- table header --&gt;
+&lt;!ELEMENT <a href="tables.html#edef-TFOOT"><samp class="einst">TFOOT</samp></a> - O (TR)+ -- table footer --&gt;
+</PRE>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>optional</strong></em></p>
+
+<div class="dtd-fragment">
+<PRE class="dtd-fragment">
+&lt;!ELEMENT <a href="tables.html#edef-TBODY"><samp class="einst">TBODY</samp></a> O O (TR)+ -- table body --&gt;
+</PRE>
+</div>
+<p><em>Start tag: <strong>optional</strong>, End tag: <strong>optional</strong></em></p>
+
+<div class="dtd-fragment">
+<PRE class="dtd-fragment">
+&lt;!ATTLIST (THEAD|TBODY|TFOOT)   -- table section --
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="../sgml/loosedtd.html#cellhalign">%cellhalign;</a>                     -- horizontal alignment in cells --
+  <a href="../sgml/loosedtd.html#cellvalign">%cellvalign;</a>                     -- vertical alignment in cells --
+  &gt;
+</PRE>
+</div>
+
+<DIV class="aref-list">
+<P><EM>Attributes defined elsewhere</EM></P>
+
+<UL>
+<LI><a href="global.html#adef-id"><SAMP class="ainst">id</SAMP></a>, <a href="global.html#adef-class"><SAMP class="ainst">class</SAMP></a>
+(<A href="../struct/global.html#id-and-class">document-wide
+identifiers</A>) </LI>
+
+<LI><a href="dirlang.html#adef-lang"><SAMP class="ainst">lang</SAMP></a> (<A href=
+"../struct/dirlang.html#language-info">language information</A>),
+<a href="dirlang.html#adef-dir"><SAMP class="ainst">dir</SAMP></a> (<A href=
+"../struct/dirlang.html#bidirection">text direction</A>) </LI>
+
+<LI><a href="global.html#adef-title"><SAMP class="ainst">title</SAMP></a> (<A href=
+"../struct/global.html#titles">element titles</A>) </LI>
+
+<LI><a href="../present/styles.html#adef-style"><SAMP class="ainst">style</SAMP></a> (<A href=
+"../present/styles.html#style-element">inline style information
+</A>) </LI>
+
+<LI><a href="../interact/scripts.html#adef-onclick"><SAMP class="ainst">onclick</SAMP></a>, 
+<a href="../interact/scripts.html#adef-ondblclick"><SAMP class="ainst">ondblclick</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onmousedown"><SAMP class="ainst">onmousedown</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onmouseup"><SAMP class="ainst">onmouseup</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onmouseover"><SAMP class="ainst">onmouseover</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onmousemove"><SAMP class="ainst">onmousemove</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onmouseout"><SAMP class="ainst">onmouseout</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onkeypress"><SAMP class="ainst">onkeypress</SAMP></a>,
+<a href="../interact/scripts.html#adef-onkeydown"><SAMP class="ainst">onkeydown</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onkeyup"><SAMP class="ainst">onkeyup</SAMP></a> 
+(<A href="../interact/scripts.html#events">intrinsic events
+</A>) </LI>
+
+<LI><a href="tables.html#adef-align-TD"><SAMP class="ainst-TD">align</SAMP></a>, 
+<a href="tables.html#adef-char"><SAMP class="ainst">char</SAMP></a>, 
+<a href="tables.html#adef-charoff"><SAMP class="ainst">charoff</SAMP></a>, 
+<a href="tables.html#adef-valign"><SAMP class="ainst">valign</SAMP></a> 
+(<A href="#alignment">cell alignment</A>)</LI>
+</UL>
+</DIV>
+
+<P>Table rows may be grouped into a head, foot and one or more body
+sections, using the <a href="tables.html#edef-THEAD"><SAMP class="einst">THEAD</SAMP></a>, <a href="tables.html#edef-TFOOT"><SAMP
+class="einst">TFOOT</SAMP></a> and <a href="tables.html#edef-TBODY"><SAMP class="einst">TBODY</SAMP></a>
+elements.  This enables user agents to support scrolling of body
+sections independently of the head and foot sections. When long tables
+are printed, the head and foot information may be repeated on each
+page that contains table data.</P>
+
+<P>When present, each <a href="tables.html#edef-THEAD"><SAMP class="einst">THEAD</SAMP></a>, <a href="tables.html#edef-TFOOT"><SAMP
+class="einst">TFOOT</SAMP></a>, and <a href="tables.html#edef-TBODY"><SAMP class="einst">TBODY</SAMP></a>
+instance must contain one or more rows (see <a href="tables.html#edef-TR"><SAMP
+class="einst">TR</SAMP></a>).
+</P>
+
+<DIV class="example">
+<P>This example illustrates the order and structure of table heads,
+feet, and bodies.</P>
+
+<PRE>
+&lt;TABLE&gt;
+&lt;THEAD&gt;
+     &lt;TR&gt; <EM>...header information...</EM>
+&lt;/THEAD&gt;
+&lt;TFOOT&gt;
+     &lt;TR&gt; <EM>...footer information...</EM>
+&lt;/TFOOT&gt;
+&lt;TBODY&gt;
+     &lt;TR&gt; <EM>...first row of block one data...</EM>
+     &lt;TR&gt; <EM>...second row of block one data...</EM>
+&lt;/TBODY&gt;
+&lt;TBODY&gt;
+     &lt;TR&gt; <EM>...first row of block two data...</EM>
+     &lt;TR&gt; <EM>...second row of block two data...</EM>
+     &lt;TR&gt; <EM>...third row of block two data...</EM>
+&lt;/TBODY&gt;
+&lt;/TABLE&gt;
+</PRE>
+
+</DIV>
+
+<P><a href="tables.html#edef-TFOOT"><SAMP class="einst">TFOOT</SAMP></a> must appear before <a href="tables.html#edef-TBODY"><SAMP
+class="einst">TBODY</SAMP></a> within a <a href="tables.html#edef-TABLE"><SAMP class="einst">TABLE</SAMP></a>
+definition so that user agents can render the foot before receiving
+all of the (potentially numerous) rows of data. The following
+summarizes which tags are required and which may be omitted:</P>
+
+<UL>
+<LI>The <a href="tables.html#edef-TBODY"><SAMP class="einst">TBODY</SAMP></a> start tag is always required
+except when the table contains only one body and no head or foot
+sections. The <a href="tables.html#edef-TBODY"><SAMP class="einst">TBODY</SAMP></a> end tag may always be
+safely omitted. </LI>
+
+<LI>The start tags for <a href="tables.html#edef-THEAD"><SAMP class="einst">THEAD</SAMP></a> and <a href="tables.html#edef-TFOOT"><SAMP
+class="einst">TFOOT</SAMP></a> are required when the head and foot
+sections are present respectively, but the corresponding end tags may
+always be safely omitted.</LI>
+</UL>
+
+<P>Conforming user agent parsers must obey these rules for reasons
+of backward compatibility.</P>
+
+<DIV class="example">
+<P>The table of the previous example could be shortened by removing
+certain end tags, as in:</P>
+
+<PRE>
+&lt;TABLE&gt;
+&lt;THEAD&gt;
+     &lt;TR&gt; <EM>...header information...</EM>
+&lt;TFOOT&gt;
+     &lt;TR&gt; <EM>...footer information...</EM>
+&lt;TBODY&gt;
+     &lt;TR&gt; <EM>...first row of block one data...</EM>
+     &lt;TR&gt; <EM>...second row of block one data...</EM>
+&lt;TBODY&gt;
+     &lt;TR&gt; <EM>...first row of block two data...</EM>
+     &lt;TR&gt; <EM>...second row of block two data...</EM>
+     &lt;TR&gt; <EM>...third row of block two data...</EM>
+&lt;/TABLE&gt;
+</PRE>
+
+</DIV>
+
+<H3><a name="h-12.1.4">12.1.4</a> <A name="colgroups">Groups of columns:</A> the <a href="tables.html#edef-COLGROUP"><SAMP class="einst">COLGROUP</SAMP></a> and <a href="tables.html#edef-COL"><SAMP class="einst">COL</SAMP></a> elements
+</H3>
+
+<H4>The <A name="edef-COLGROUP"><SAMP class="edef">COLGROUP</SAMP>
+</A> element<a name="h-12.1.4.1">&nbsp;</a></H4>
+
+<div class="dtd-fragment">
+<PRE class="dtd-fragment">
+&lt;!ELEMENT <a href="tables.html#edef-COLGROUP"><samp class="einst">COLGROUP</samp></a> - O (col)* -- table column group --&gt;
+&lt;!ATTLIST COLGROUP
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="tables.html#adef-span-COLGROUP"><samp class="ainst-COLGROUP">span</samp></a>        NUMBER     1         -- default number of columns in group --
+  <a href="tables.html#adef-width-COLGROUP"><samp class="ainst-COLGROUP">width</samp></a>       CDATA      #IMPLIED  -- default width for enclosed COLs --
+  <a href="../sgml/loosedtd.html#cellhalign">%cellhalign;</a>                     -- horizontal alignment in cells --
+  <a href="../sgml/loosedtd.html#cellvalign">%cellvalign;</a>                     -- vertical alignment in cells --
+  &gt;
+</PRE>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>optional</strong></em></p>
+
+<DIV class="adef-list">
+<P><EM>Attribute definitions</EM></P>
+
+<DL>
+<DT><A name="adef-span-COLGROUP"><SAMP class="adef">span</SAMP></A> = <EM>
+integer</EM></DT>
+
+<DD>When present, this attribute specifies the default number of
+columns in this group. User agents should ignore this attribute if the
+current column group contains one or more <a href="tables.html#edef-COL"><SAMP
+class="einst">COL</SAMP></a> element. The default value of this attribute
+is one.
+</DD>
+
+<DT><A name="adef-width-COLGROUP"><SAMP class="adef">width</SAMP>
+</A> = <A href="../types.html#type-length"><EM>length</EM></A></DT>
+
+<DD>This attribute specifies a default width for each column in the
+current column group. In addition to the standard pixel and
+percentage values, this attribute may take the special form "0*",
+which means that the width of each column in the group should be
+the minimum width necessary to hold the column's contents. This
+implies that a column's entire contents must be known before its
+width may be correctly set. If visual user agents render tables
+incrementally, then specifying "*0" will require a repaint when the
+end of the table is reached.</DD>
+</DL>
+</DIV>
+
+<DIV class="aref-list">
+<P><EM>Attributes defined elsewhere</EM></P>
+
+<UL>
+<LI><a href="global.html#adef-id"><SAMP class="ainst">id</SAMP></a>, <a href="global.html#adef-class"><SAMP class="ainst">class</SAMP></a>
+(<A href="../struct/global.html#id-and-class">document-wide
+identifiers</A>) </LI>
+
+<LI><a href="dirlang.html#adef-lang"><SAMP class="ainst">lang</SAMP></a> (<A href=
+"../struct/dirlang.html#language-info">language information</A>),
+<a href="dirlang.html#adef-dir"><SAMP class="ainst">dir</SAMP></a> (<A href=
+"../struct/dirlang.html#bidirection">text direction</A>) </LI>
+
+<LI><a href="global.html#adef-title"><SAMP class="ainst">title</SAMP></a> (<A href=
+"../struct/global.html#titles">element titles</A>) </LI>
+
+<LI><a href="../present/styles.html#adef-style"><SAMP class="ainst">style</SAMP></a> (<A href=
+"../present/styles.html#style-element">inline style information
+</A>) </LI>
+
+<LI><a href="../interact/scripts.html#adef-onclick"><SAMP class="ainst">onclick</SAMP></a>, 
+<a href="../interact/scripts.html#adef-ondblclick"><SAMP class="ainst">ondblclick</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onmousedown"><SAMP class="ainst">onmousedown</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onmouseup"><SAMP class="ainst">onmouseup</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onmouseover"><SAMP class="ainst">onmouseover</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onmousemove"><SAMP class="ainst">onmousemove</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onmouseout"><SAMP class="ainst">onmouseout</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onkeypress"><SAMP class="ainst">onkeypress</SAMP></a>,
+<a href="../interact/scripts.html#adef-onkeydown"><SAMP class="ainst">onkeydown</SAMP></a>, 
+<a href="../interact/scripts.html#adef-onkeyup"><SAMP class="ainst">onkeyup</SAMP></a> 
+(<A href="../interact/scripts.html#events">intrinsic events
+</A>) </LI>
+
+<LI><a href="tables.html#adef-align-TD"><SAMP class="ainst-TD">align</SAMP></a>, 
+<a href="tables.html#adef-char"><SAMP class="ainst">char</SAMP></a>, 
+<a href="tables.html#adef-charoff"><SAMP class="ainst">charoff</SAMP></a>, 
+<a href="tables.html#adef-valign"><SAMP class="ainst">valign</SAMP></a> 
+(<A href="#alignment">cell alignment</A>)</LI>
+</UL>
+</DIV>
+
+<P>A table must contain at least one column group. In the absence of
+any column group definitions, a table is considered to have one column
+group that includes all columns in the table. The <a href="tables.html#edef-COLGROUP"><SAMP
+class="einst">COLGROUP</SAMP></a> element creates an explicit column
+group. Each column group defined by <a href="tables.html#edef-COLGROUP"><SAMP
+class="einst">COLGROUP</SAMP></a> may contain zero or more <a href="tables.html#edef-COL"><SAMP
+class="einst">COL</SAMP></a> elements.</P>
+
+<P>The <SAMP class="ainst">width</SAMP> attribute of the <a href="tables.html#edef-COLGROUP"><SAMP
+class="einst">COLGROUP</SAMP></a> element specifies a default width for
+each column in a column group. The special value "0*" tells user
+agents to set every column in a group to its minimum width. This
+behavior may be overridden by the presence of a <a href="tables.html#edef-COL"><SAMP
+class="einst">COL</SAMP></a> element.</P>
+
+<DIV class="example">
+<P>The table in the following example contains two column groups.
+The first column group contains 10 columns and the second contains
+5 columns. The default width for each column in the first column
+group is 50 pixels. The width of each column in the second column
+group will be the minimum for the column.</P>
+
+<PRE>
+&lt;TABLE&gt;
+&lt;COLGROUP span="10" width="50"&gt;
+&lt;COLGROUP span="5" width="0*"&gt;
+&lt;THEAD&gt;
+&lt;TR&gt; ...
+&lt;/TABLE&gt;
+</PRE>
+
+</DIV>
+
+<H4>The <A name="edef-COL"><SAMP class="edef">COL</SAMP></A>
+element<a name="h-12.1.4.2">&nbsp;</a></H4>
+
+<div class="dtd-fragment">
+<PRE class="dtd-fragment">
+&lt;!ELEMENT <a href="tables.html#edef-COL"><samp class="einst">COL</samp></a> - O EMPTY -- table column --&gt;
+&lt;!ATTLIST COL                   -- column groups and properties --
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="tables.html#adef-span-COL"><samp class="ainst-COL">span</samp></a>        NUMBER     1         -- number of columns spanned by group --
+  <a href="tables.html#adef-width-COL"><samp class="ainst-COL">width</samp></a>       CDATA      #IMPLIED  -- column width specification --
+  <a href="../sgml/loosedtd.html#cellhalign">%cellhalign;</a>                     -- horizontal alignment in cells --
+  <a href="../sgml/loosedtd.html#cellvalign">%cellvalign;</a>                     -- vertical alignment in cells --
+  &gt;
+</PRE>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>forbidden</strong></em></p>
+
+<DIV class="adef-list">
+<P><EM>Attribute definitions</EM></P>
+
+<DL>
+<DT><A name="adef-span-COL"><SAMP class="adef">span</SAMP></A> = <EM>
+integer</EM></DT>
+
+<DD>This attribute is limited to integer values and has the
+following interpretation: 
+
+<UL>
+<LI>In the absence of a <a href="tables.html#adef-span-COL"><SAMP class="ainst-COL">span</SAMP></a> attribute,
+each <a href="tables.html#edef-COL"><SAMP class="einst">COL</SAMP></a> element represents one column. 
+</LI>
+
+<LI>If the <a href="tables.html#adef-span-COL"><SAMP class="ainst-COL">span</SAMP></a> attribute is set to N
+&gt; 0, the current <a href="tables.html#edef-COL"><SAMP class="einst">COL</SAMP></a> element spans N
+columns in the table. </LI>
+
+<LI>If the <a href="tables.html#adef-span-COL"><SAMP class="ainst-COL">span</SAMP></a> attribute is set to 0,
+the current <a href="tables.html#edef-COL"><SAMP class="einst">COL</SAMP></a> element spans the
+remaining columns in the table, including the current and final
+columns.</LI>
+</UL>
+</DD>
+
+<DT><A name="adef-width-COL"><SAMP class="adef">width</SAMP></A> =
+<A href="../types.html#type-length"><EM>length</EM></A></DT>
+
+<DD>This attribute specifies a default width for each column in the
+current column group. In addition to the standard pixel and
+percentage values, this attribute may take the special form "0*",
+which means that the width of the each column in the group should
+be the minimum width necessary to hold the column's contents. This
+implies that a column's entire contents must be known before its
+width may be correctly set. If visual user agents render tables
+incrementally, then specifying "*0" will require a repaint when the
+end of the table is reached. 
+
+<P>The attribute may also have the form "i*", where "i" is an
+integer. This is called a <DFN>relative width</DFN>. When allotting
+space to rows and columns, user agents allot absolute widths first,
+then divide up remaining available space among relative width rows
+or columns. Each relative width row or column receives a portion of
+the space proportional to the integer preceding the "*". The value
+"*" is equivalent to "1*".</P>
+</DD>
+</DL>
+</DIV>
+
+<DIV class="aref-list">
+<P><EM>Attributes defined elsewhere</EM></P>
+
+<UL>
+<LI><a href="global.html#adef-id"><SAMP class="ainst">id</SAMP></a>, <a href="global.html#adef-class"><SAMP class="ainst">class</SAMP></a>
+(<A href="../struct/global.html#id-and-class">document-wide
+identifiers</A>) </LI>
+
+<LI><a href="dirlang.html#adef-lang"><SAMP class="ainst">lang</SAMP></a> (<A href=
+"../struct/dirlang.html#language-info">language information</A>),
+<a href="dirlang.html#adef-dir"><SAMP class="ainst">dir</SAMP></a> (<A href=
+"../struct/dirlang.html#bidirection">text direction</A>) </LI>
+
+<LI><a href="global.html#adef-title"><SAMP class="ainst">title</SAMP></a> (<A href=
+"../struct/global.html#titles">element titles</A>) </LI>
+
+<LI><a href="../present/styles.html#adef-style"><SAMP class="ainst">style</SAMP></a> (<A href=
+"../present/styles.html#style-element">inline style information
+</A>) </LI>
+
+<LI><a href="../interact/scripts.html#adef-onclick"><SAMP class="ainst">onclick</SAMP></a>, <a href="../interact/scripts.html#adef-ondblclick"><SAMP class="ainst">ondblclick</SAMP></a>, <a href="../interact/scripts.html#adef-onmousedown"><SAMP class="ainst">onmousedown</SAMP></a>, <a href="../interact/scripts.html#adef-onmouseup"><SAMP
+class="ainst">onmouseup</SAMP></a>, <a href="../interact/scripts.html#adef-onmouseover"><SAMP class="ainst">onmouseover</SAMP></a>,
+<a href="../interact/scripts.html#adef-onmousemove"><SAMP class="ainst">onmousemove</SAMP></a>, <a href="../interact/scripts.html#adef-onmouseout"><SAMP
+class="ainst">onmouseout</SAMP></a>, <a href="../interact/scripts.html#adef-onkeypress"><SAMP class="ainst">onkeypress</SAMP></a>,
+<a href="../interact/scripts.html#adef-onkeydown"><SAMP class="ainst">onkeydown</SAMP></a>, <a href="../interact/scripts.html#adef-onkeyup"><SAMP class="ainst">onkeyup</SAMP></a>
+(<A href="../interact/scripts.html#events">intrinsic events </A>) </LI>
+
+<LI><a href="tables.html#adef-align-TD"><SAMP class="ainst-TD">align</SAMP></a>, <a href="tables.html#adef-char"><SAMP class="ainst">char</SAMP></a>,
+<a href="tables.html#adef-charoff"><SAMP class="ainst">charoff</SAMP></a>, <a href="tables.html#adef-valign"><SAMP class="ainst">valign</SAMP></a> (<A
+href="#alignment">cell alignment</A>)</LI>
+</UL>
+</DIV>
+
+<P>A <a href="tables.html#edef-COL"><SAMP class="einst">COL</SAMP></a> element does not define a column
+group in the same sense as <a href="tables.html#edef-COLGROUP"><SAMP class="einst">COLGROUP</SAMP></a>; it is
+simply a way to share attribute values among columns in a column
+group. Note that <a href="tables.html#edef-COL"><SAMP class="einst">COL</SAMP></a> elements are empty;
+they are only affected by attributes.</P>
+
+<P>The <a href="tables.html#adef-width-COL"><SAMP class="ainst-COL">width</SAMP></a> attribute for <a href="tables.html#edef-COL"><SAMP
+class="einst">COL</SAMP></a> affects the width of the columns associated
+with the element. If a <a href="tables.html#edef-COL"><SAMP class="einst">COL</SAMP></a> element spans
+several columns then its <a href="tables.html#adef-width-COL"><SAMP class="ainst-COL">width</SAMP></a>
+attribute specifies the width of each column in the span, not the
+width of the span as a whole.</P>
+
+<DIV class="example">
+<P>The table in this example contains two column groups. The first
+group contains three columns, the second contains two columns. The
+available horizontal space will be alloted as follows: First the
+user agent will allot 30 pixels to the first column. Then, the
+minimal space required for the second column will be alloted to it.
+The remaining horizontal space will be divided into six equal
+portions. Column three will receive two of these portions, column
+four will receive one, and column five will receive three.</P>
+
+<PRE>
+    
+&lt;TABLE&gt;
+&lt;COLGROUP&gt;
+   &lt;COL width="30"&gt;
+   &lt;COL width="0*"&gt;
+   &lt;COL width="2*"&gt;
+&lt;COLGROUP align="center"&gt;
+   &lt;COL width="1*"&gt;
+   &lt;COL width="3*" align="char" char=":"&gt;
+&lt;THEAD&gt;
+&lt;TR&gt; ...
+&lt;/TABLE&gt;
+</PRE>
+
+<P>We have set the value of the <a href="tables.html#adef-align-TD"><SAMP class="ainst-TD">align</SAMP></a>
+attribute in the second column group to "center". All cells in
+every column in this group will inherit this value, but may
+override it. In fact, the final <a href="tables.html#edef-COL"><SAMP class="einst">COL</SAMP></a> does
+just that, by specifying that every cell in the column it governs
+will be aligned along the ":" character.</P>
+</DIV>
+
+<H3><a name="h-12.1.5">12.1.5</a> <A name="rows">Table rows:</A> The <A name="edef-TR"><SAMP
+class="edef">TR</SAMP></A> element</H3>
+
+<div class="dtd-fragment">
+<PRE class="dtd-fragment">
+&lt;!ELEMENT <a href="tables.html#edef-TR"><samp class="einst">TR</samp></a> - O (TH|TD)+ -- table row --&gt;
+&lt;!ATTLIST TR                    -- table row --
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="../sgml/loosedtd.html#cellhalign">%cellhalign;</a>                     -- horizontal alignment in cells --
+  <a href="../sgml/loosedtd.html#cellvalign">%cellvalign;</a>                     -- vertical alignment in cells --
+  <a href="../present/graphics.html#adef-bgcolor"><samp class="ainst-TR">bgcolor</samp></a>     <a href="../sgml/loosedtd.html#Color">%Color;</a>    #IMPLIED  -- background color for row --
+  &gt;
+</PRE>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>optional</strong></em></p>
+
+<DIV class="aref-list">
+<P><EM>Attributes defined elsewhere</EM></P>
+
+<UL>
+<LI><a href="global.html#adef-id"><SAMP class="ainst">id</SAMP></a>, <a href="global.html#adef-class"><SAMP class="ainst">class</SAMP></a>
+(<A href="../struct/global.html#id-and-class">document-wide
+identifiers</A>) </LI>
+
+<LI><a href="dirlang.html#adef-lang"><SAMP class="ainst">lang</SAMP></a> (<A href=
+"../struct/dirlang.html#language-info">language information</A>),
+<a href="dirlang.html#adef-dir"><SAMP class="ainst">dir</SAMP></a> (<A href=
+"../struct/dirlang.html#bidirection">text direction</A>) </LI>
+
+<LI><a href="global.html#adef-title"><SAMP class="ainst">title</SAMP></a> (<A href=
+"../struct/global.html#titles">element titles</A>) </LI>
+
+<LI><a href="../present/styles.html#adef-style"><SAMP class="ainst">style</SAMP></a> (<A href=
+"../present/styles.html#style-element">inline style information
+</A>) </LI>
+
+<LI><a href="../interact/scripts.html#adef-onclick"><SAMP class="ainst">onclick</SAMP></a>, <a href="../interact/scripts.html#adef-ondblclick"><SAMP
+class="ainst">ondblclick</SAMP></a>, <a href="../interact/scripts.html#adef-onmousedown"><SAMP
+class="ainst">onmousedown</SAMP></a>, <a href="../interact/scripts.html#adef-onmouseup"><SAMP
+class="ainst">onmouseup</SAMP></a>, <a href="../interact/scripts.html#adef-onmouseover"><SAMP
+class="ainst">onmouseover</SAMP></a>, <a href="../interact/scripts.html#adef-onmousemove"><SAMP
+class="ainst">onmousemove</SAMP></a>, <a href="../interact/scripts.html#adef-onmouseout"><SAMP
+class="ainst">onmouseout</SAMP></a>, <a href="../interact/scripts.html#adef-onkeypress"><SAMP
+class="ainst">onkeypress</SAMP></a>, <a href="../interact/scripts.html#adef-onkeydown"><SAMP class="ainst">onkeydown</SAMP></a>,
+<a href="../interact/scripts.html#adef-onkeyup"><SAMP class="ainst">onkeyup</SAMP></a> (<A
+href="../interact/scripts.html#events">intrinsic events </A>) </LI>
+
+<LI><a href="tables.html#adef-align-TD"><SAMP class="ainst-TD">align</SAMP></a>, 
+<a href="tables.html#adef-char"><SAMP class="ainst">char</SAMP></a>, 
+<a href="tables.html#adef-charoff"><SAMP class="ainst">charoff</SAMP></a>, 
+<a href="tables.html#adef-valign"><SAMP class="ainst">valign</SAMP></a> 
+(<A href="#alignment">cell alignment</A>)</LI>
+</UL>
+</DIV>
+
+<P>The <a href="tables.html#edef-TR"><SAMP class="einst">TR</SAMP></a> elements acts as a container
+for a row of table cells. The end tag may be omitted.</P>
+
+<DIV class="example">
+<P>This sample table contains three rows, each begun by the <a href="tables.html#edef-TR"><SAMP
+class="einst">TR</SAMP></a> element:</P>
+
+<PRE>
+&lt;TABLE summary="number, type and whether taken with sugar"&gt;
+&lt;CAPTION&gt;Cups of coffee consumed by each senator&lt;/CAPTION&gt;
+&lt;TR&gt; <EM>...A header row...</EM>
+&lt;TR&gt; <EM>...First row of data...</EM>
+&lt;TR&gt; <EM>...Second row of data...</EM>
+<EM>...the rest of the table...</EM>
+&lt;/TABLE&gt;
+</PRE>
+
+</DIV>
+
+<H3><a name="h-12.1.6">12.1.6</a> <A name="cells">Table cells:</A> The <A name="edef-TH"><SAMP
+class="edef">TH</SAMP></A> and <A name="edef-TD"><SAMP class="edef">TD</SAMP></A> elements</H3>
+
+<div class="dtd-fragment">
+<PRE class="dtd-fragment">
+&lt;!ELEMENT (<a href="tables.html#edef-TH"><samp class="einst">TH</samp></a>|<a href="tables.html#edef-TD"><samp class="einst">TD</samp></a>) - O (<a href="../sgml/loosedtd.html#block">%block;</a>)+ -- table header cell, table data cell --&gt;
+&lt;!ATTLIST (TH|TD)               -- header or data cell --
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="tables.html#adef-abbr"><samp class="ainst-TH">abbr</samp></a>        CDATA      #IMPLIED  -- abbreviation for header cell --
+  <a href="tables.html#adef-axis"><samp class="ainst-TH">axis</samp></a>        CDATA      #IMPLIED  -- names groups of related headers--
+  <a href="tables.html#adef-axes"><samp class="ainst-TH">axes</samp></a>        IDREFS     #IMPLIED  -- list of id's for header cells --
+  <a href="tables.html#adef-nowrap"><samp class="ainst-TH">nowrap</samp></a>      (nowrap)   #IMPLIED  -- suppress word wrap --
+  <a href="../present/graphics.html#adef-bgcolor"><samp class="ainst-TH">bgcolor</samp></a>     <a href="../sgml/loosedtd.html#Color">%Color;</a>    #IMPLIED  -- cell background color --
+  <a href="tables.html#adef-rowspan"><samp class="ainst-TH">rowspan</samp></a>     NUMBER     1         -- number of rows spanned by cell --
+  <a href="tables.html#adef-colspan"><samp class="ainst-TH">colspan</samp></a>     NUMBER     1         -- number of cols spanned by cell --
+  <a href="../sgml/loosedtd.html#cellhalign">%cellhalign;</a>                     -- horizontal alignment in cells --
+  <a href="../sgml/loosedtd.html#cellvalign">%cellvalign;</a>                     -- vertical alignment in cells --
+  <a href="tables.html#adef-width-TH"><samp class="ainst-TH">width</samp></a>       <a href="../sgml/loosedtd.html#Pixels">%Pixels;</a>   #IMPLIED  -- suggested width for cell --
+  <a href="tables.html#adef-height-TH"><samp class="ainst-TH">height</samp></a>      <a href="../sgml/loosedtd.html#Pixels">%Pixels;</a>   #IMPLIED  -- suggested height for cell --
+  &gt;
+</PRE>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>optional</strong></em></p>
+
+<DIV class="adef-list">
+<P><EM>Attribute definitions</EM></P>
+
+<DL>
+<DT><A name="adef-abbr"><SAMP class="adef">abbr</SAMP></A> = <A
+href="../types.html#type-cdata"><EM>cdata</EM></A></DT>
+
+<DD>This attribute defines an abbreviated name for a header cell.
+The default abbreviation for a cell is its content.</DD>
+
+<DT><A name="adef-axis"><SAMP class="adef">axis</SAMP></A> = <A
+href="../types.html#type-cdata"><EM>cdata</EM></A></DT>
+
+<DD>This attribute provides a name for a group of related
+headers. This allows the table to be mapped to a hierarchy where
+the branches correspond to choosing a header from a group and
+the leaf nodes are data cells.</DD>
+
+<DT><A name="adef-axes"><SAMP class="adef">axes</SAMP></A> = <EM>
+id-list</EM></DT>
+
+<DD>The value of this attribute is a space-separated list of <a href="global.html#adef-id"><SAMP
+class="ainst">id</SAMP></a> values referencing header cells that relate
+to this cell. In the absence of this attribute, user agents may
+make other attempts to identify the pertinent header cells using
+the algorithm described below.</DD>
+
+<DT><A name="adef-rowspan"><SAMP class="adef">rowspan</SAMP></A> =
+<EM>integer</EM></DT>
+
+<DD>This attribute specifies the number of rows spanned by the
+current cell. The default value of this attribute is one ("1"). The
+value zero ("0") means that the cell spans all rows from the
+current row to the last row of the table. </DD>
+
+<DT><A name="adef-colspan"><SAMP class="adef">colspan</SAMP></A> =
+<EM>integer</EM></DT>
+
+<DD>This attribute specifies the number of columns spanned by the
+current cell. The default value of this attribute is one ("1"). The
+value zero ("0") means that the cell spans all columns from the
+current column to the last column of the table. </DD>
+
+<DT><A name="adef-nowrap"><SAMP class="adef">nowrap</SAMP></A></DT>
+
+<DD><STRONG>Deprecated.</STRONG> When present, this boolean
+attribute tells visual user agents to disable automatic text
+wrapping for this cell. <A href="../present/style.html">Style
+sheets</A> should be used instead of this attribute (e.g., the
+"white-space" property of <A rel="biblioentry" href=
+"../references.html#ref-CSS1">[CSS1]</A>. Note: if used carelessly,
+this attribute may result in excessively wide cells.</DD>
+
+<dt><a name="adef-width-TH"><samp class="adef">width</samp></a> = <a
+href="../langtop.html#type-length"><em>length</em></a>
+<dd><strong>Deprecated.</strong> This attribute supplies user agents
+with a recommended cell width. It takes pixel values.
+
+<dt><a name="adef-height-TH"><samp class="adef">height</samp></a> = <a
+href="../langtop.html#type-length"><em>length</em></a>
+<dd><strong>Deprecated.</strong> This attribute supplies user agents
+with a recommended cell height. It takes pixel values.
+</DL>
+</DIV>
+
+<DIV class="aref-list">
+<P><EM>Attributes defined elsewhere</EM></P>
+
+<UL>
+<LI><a href="global.html#adef-id"><SAMP class="ainst">id</SAMP></a>, <a href="global.html#adef-class"><SAMP class="ainst">class</SAMP></a>
+(<A href="../struct/global.html#id-and-class">document-wide
+identifiers</A>) </LI>
+
+<LI><a href="dirlang.html#adef-lang"><SAMP class="ainst">lang</SAMP></a> (<A href=
+"../struct/dirlang.html#language-info">language information</A>),
+<a href="dirlang.html#adef-dir"><SAMP class="ainst">dir</SAMP></a> (<A href=
+"../struct/dirlang.html#bidirection">text direction</A>) </LI>
+
+<LI><a href="global.html#adef-title"><SAMP class="ainst">title</SAMP></a> (<A href=
+"../struct/global.html#titles">element titles</A>) </LI>
+
+<LI><a href="../present/styles.html#adef-style"><SAMP class="ainst">style</SAMP></a> (<A href=
+"../present/styles.html#style-element">inline style information
+</A>) </LI>
+
+<LI><a href="../interact/scripts.html#adef-onclick"><SAMP class="ainst">onclick</SAMP></a>, <a href="../interact/scripts.html#adef-ondblclick"><SAMP class="ainst">ondblclick</SAMP></a>, <a href="../interact/scripts.html#adef-onmousedown"><SAMP class="ainst">onmousedown</SAMP></a>, <a href="../interact/scripts.html#adef-onmouseup"><SAMP
+class="ainst">onmouseup</SAMP></a>, <a href="../interact/scripts.html#adef-onmouseover"><SAMP class="ainst">onmouseover</SAMP></a>,
+<a href="../interact/scripts.html#adef-onmousemove"><SAMP class="ainst">onmousemove</SAMP></a>, <a href="../interact/scripts.html#adef-onmouseout"><SAMP
+class="ainst">onmouseout</SAMP></a>, <a href="../interact/scripts.html#adef-onkeypress"><SAMP class="ainst">onkeypress</SAMP></a>,
+<a href="../interact/scripts.html#adef-onkeydown"><SAMP class="ainst">onkeydown</SAMP></a>, <a href="../interact/scripts.html#adef-onkeyup"><SAMP class="ainst">onkeyup</SAMP></a>
+(<A href="../interact/scripts.html#events">intrinsic events </A>) </LI>
+
+<LI><a href="../present/graphics.html#adef-bgcolor"><SAMP class="ainst">bgcolor</SAMP></a> (<A href=
+"../present/graphics.html#background-color">background color</A>) 
+</LI>
+
+<LI><a href="tables.html#adef-align-TD"><SAMP class="ainst-TD">align</SAMP></a>, <a href="tables.html#adef-char"><SAMP class="ainst">char</SAMP></a>,
+<a href="tables.html#adef-charoff"><SAMP class="ainst">charoff</SAMP></a>, <a href="tables.html#adef-valign"><SAMP class="ainst">valign</SAMP></a> (<A
+href="#alignment">cell alignment</A>)</LI>
+</UL>
+</DIV>
+
+<P>The <a href="tables.html#edef-TH"><SAMP class="einst">TH</SAMP></a> element stores header
+information, while the <a href="tables.html#edef-TD"><SAMP class="einst">TD</SAMP></a> element stores
+data. This distinction enables user agents to render header and
+data cells distinctly, even in the absence of style sheets.</P>
+
+<P>Cells may be empty (i.e., contain no data).</P>
+
+<DIV class="example">
+<P>The following table contains four columns of data, each headed
+by a column description.</P>
+
+<PRE>
+&lt;TABLE summary="number, type and whether taken with sugar"&gt;
+&lt;CAPTION&gt;Cups of coffee consumed by each senator&lt;/CAPTION&gt;
+&lt;TR&gt;
+   &lt;TH&gt;Name&lt;/TH&gt;
+   &lt;TH&gt;Cups&lt;/TH&gt;
+   &lt;TH&gt;type&lt;/TH&gt;
+   &lt;TH&gt;Sugar?&lt;/TH&gt;
+&lt;TR&gt;
+   &lt;TD&gt;T. Sexton&lt;/TD&gt;
+   &lt;TD&gt;10&lt;/TD&gt;
+   &lt;TD&gt;Espresso&lt;/TD&gt;
+   &lt;TD&gt;No&lt;/TD&gt;
+&lt;TR&gt;
+   &lt;TD&gt;J. Dinnen&lt;/TD&gt;
+   &lt;TD&gt;5&lt;/TD&gt;
+   &lt;TD&gt;Decaf&lt;/TD&gt;
+   &lt;TD&gt;Yes&lt;/TD&gt;
+&lt;/TABLE&gt;
+</PRE>
+
+<P>Your user agent renders the beginning of this table as follows:
+</P>
+
+<TABLE summary="number, type and whether taken with sugar">
+<CAPTION>Cups of coffee consumed by each senator</CAPTION>
+
+<TR>
+<TH>Name</TH>
+<TH>Cups</TH>
+<TH>Type of Coffee</TH>
+<TH>Sugar?</TH>
+</TR>
+
+<TR>
+<TD>T. Sexton</TD>
+<TD>10</TD>
+<TD>Espresso</TD>
+<TD>No</TD>
+</TR>
+
+<TR>
+<TD>J. Dinnen</TD>
+<TD>5</TD>
+<TD>Decaf</TD>
+<TD>Yes</TD>
+</TR>
+</TABLE>
+
+<P>To help distinguish the cells of this table, we can set the
+<a href="tables.html#adef-border"><SAMP class="ainst">border</SAMP></a> attribute of the <a href="tables.html#edef-TABLE"><SAMP class="einst">TABLE</SAMP></a> element:</P>
+
+<PRE>
+&lt;TABLE border="border"&gt;
+<EM>...the rest of the table...</EM>
+&lt;/TABLE&gt;
+</PRE>
+
+<P>With a border, your user agent renders the beginning of this
+table as follows:</P>
+
+<TABLE border="border" summary=
+"number, type and whether taken with sugar">
+<CAPTION>Cups of coffee consumed by each senator</CAPTION>
+
+<TR>
+<TH>Name</TH>
+<TH>Cups</TH>
+<TH>type</TH>
+<TH>Sugar?</TH>
+</TR>
+
+<TR>
+<TD>T. Sexton</TD>
+<TD>10</TD>
+<TD>Espresso</TD>
+<TD>No</TD>
+</TR>
+
+<TR>
+<TD>J. Dinnen</TD>
+<TD>5</TD>
+<TD>Decaf</TD>
+<TD>Yes</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<H4>Labeling cells for Speech Synthesis<a name="h-12.1.6.1">&nbsp;</a></H4>
+
+<P>The <a href="tables.html#adef-axis"><SAMP class="ainst">axis</SAMP></a> and <a href="tables.html#adef-axes"><SAMP class="ainst">axes</SAMP></a>
+attributes allow tables to be rendered effectively to non-visual media such
+as speech and Braille based devices. They may also be used together with
+style sheets for controlling the presentation.</P>
+
+<DIV class="example">
+<P>In the following example table, the value of the <a href="tables.html#adef-axes"><SAMP class="ainst">axes</SAMP></a> attribute is set to reference the corresponding
+header cell for that column:</P>
+
+<PRE>
+&lt;TABLE border="border" summary="Number, type, and whether taken with sugar"&gt;
+&lt;CAPTION&gt;Cups of coffee consumed by each senator&lt;/CAPTION&gt;
+&lt;TR&gt;
+   &lt;TH id="t1"&gt;Name&lt;/TH&gt;
+   &lt;TH id="t2"&gt;Cups&lt;/TH&gt;
+   &lt;TH id="t3" abbr="Type"&gt;Type of Coffee&lt;/TH&gt;
+   &lt;TH id="t4"&gt;Sugar?&lt;/TH&gt;
+&lt;TR&gt;
+   &lt;TD axes="t1"&gt;T. Sexton&lt;/TD&gt;
+   &lt;TD axes="t2"&gt;10&lt;/TD&gt;
+   &lt;TD axes="t3"&gt;Espresso&lt;/TD&gt;
+   &lt;TD axes="t4"&gt;No&lt;/TD&gt;
+&lt;TR&gt;
+   &lt;TD axes="t1"&gt;J. Dinnen&lt;/TD&gt;
+   &lt;TD axes="t2"&gt;5&lt;/TD&gt;
+   &lt;TD axes="t3"&gt;Decaf&lt;/TD&gt;
+   &lt;TD axes="t4"&gt;Yes&lt;/TD&gt;
+&lt;/TABLE&gt;
+</PRE>
+
+<P>This markup could be rendered to speech as:</P>
+
+<PRE>
+Caption: Cups of coffee consumed by each senator
+Summary: Number, type, and whether taken with sugar
+
+Name: T. Sexton,   Cups: 10,   Type: Espresso,   Sugar: No
+Name: J. Dinnen,   Cups: 5,    Type: Decaf,      Sugar: Yes
+</PRE>
+
+<P>Note how the header "Type of Coffee" is abbreviated to "Type"
+using the <a href="tables.html#adef-abbr"><SAMP class="ainst">abbr</SAMP></a> attribute.</P>
+</DIV>
+
+<P>In the absence of the <a href="tables.html#adef-axes"><SAMP class="ainst">axes</SAMP></a> attribute,
+user agents may search for pertinent headers according to the following
+algorithm. The goal of the algorithm is to find an ordered list of
+headers. (In the following
+description of the algorithm the table directionality is assumed to
+be from left to right.)</P>
+
+<UL>
+<LI>The first step is to search left from the cell's position to
+find row header cells. The next is to search upwards to find column
+header cells. Search in a given direction stops when the edge of
+the table is reached or when a data cell is found after a header
+cell. </LI>
+
+<LI>Row headers are inserted into the list in the order they appear
+in the table, e.g., the leftmost headers are inserted before the
+header to their right. </LI>
+
+<LI>Column headers are inserted after row headers, in the order
+they appear in the table. The topmost header is inserted
+before the header below it. </LI>
+
+<LI>If a header cell has an <a href="tables.html#adef-axes"><SAMP class="ainst">axes</SAMP></a>
+attribute, then the headers referenced by this attribute are
+inserted into the list and the search stopped in the current direction.
+</LI>
+
+<LI><a href="tables.html#edef-TD"><SAMP class="einst">TD</SAMP></a> cells with <a href="tables.html#adef-axis"><SAMP class="ainst">axis</SAMP></a> attributes are treated as acting as header cells. </LI>
+</UL>
+
+<P>For more complex tables, it is preferable to map the table to a
+hierarchy, where each branch corresponds to choosing a header from
+a group. The leaf nodes correspond to data cells.</P>
+
+<P>The following presents the money spent on meals, hotels and transport in
+two locations (San Jose and Seattle) for successive days. The
+header groups are location, day, category and subtotal.</P>
+
+<P align="center"><IMG src="../images/table1.gif" alt="Image of a table listing travel expenses at two locations: San Jose and Seattle, by date, and category (meals, hotels and transport), shown with subtitles" width="399" height="207">
+</P>
+
+<P>The HTML markup for this table is:</P>
+
+<PRE>
+&lt;TABLE border="border"&gt;
+&lt;CAPTION&gt;
+  Travel Expense Report
+&lt;/CAPTION&gt;
+&lt;TR&gt;
+  &lt;TH&gt;&lt;/TH&gt;
+  &lt;TH id="a2" axis="category"&gt;Meals&lt;/TH&gt;
+  &lt;TH id="a3" axis="category"&gt;Hotels&lt;/TH&gt;
+  &lt;TH id="a4" axis="category"&gt;Transport&lt;/TH&gt;
+  &lt;TD id="a5" axis="subtotal"&gt;subtotal&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TH id="a6" axis="location"&gt;San Jose&lt;/TH&gt;
+  &lt;TH&gt;&lt;/TH&gt;
+  &lt;TH&gt;&lt;/TH&gt;
+  &lt;TH&gt;&lt;/TH&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TD id="a7" axis="day"&gt;25-Aug-97&lt;/TD&gt;
+  &lt;TD axes="a6 a7 a2"&gt;37.74&lt;/TD&gt;
+  &lt;TD axes="a6 a7 a3"&gt;112.00&lt;/TD&gt;
+  &lt;TD axes="a6 a7 a4"&gt;45.00&lt;/TD&gt;
+  &lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TD id="a8" axis="day"&gt;26-Aug-97&lt;/TD&gt;
+  &lt;TD axes="a6 a8 a2"&gt;27.28&lt;/TD&gt;
+  &lt;TD axes="a6 a8 a3"&gt;112.00&lt;/TD&gt;
+  &lt;TD axes="a6 a8 a4"&gt;45.00&lt;/TD&gt;
+  &lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TD id="a9" axis="subtotal"&gt;subtotal&lt;/TD&gt;
+  &lt;TD axes="a9 a6 a2"&gt;65.02&lt;/TD&gt;
+  &lt;TD axes="a9 a6 a3"&gt;224.00&lt;/TD&gt;
+  &lt;TD axes="a9 a6 a4"&gt;90.00&lt;/TD&gt;
+  &lt;TD axes="a9 a6"&gt;379.02&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TH id="a10" axis="location"&gt;Seattle&lt;/TH&gt;
+  &lt;TH&gt;&lt;/TH&gt;
+  &lt;TH&gt;&lt;/TH&gt;
+  &lt;TH&gt;&lt;/TH&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TD id="a11" axis="day"&gt;27-Aug-97&lt;/TD&gt;
+  &lt;TD axes="a10 a11 a2"&gt;96.25&lt;/TD&gt;
+  &lt;TD axes="a10 a11 a3"&gt;109.00&lt;/TD&gt;
+  &lt;TD axes="a10 a11 a4"&gt;36.00&lt;/TD&gt;
+  &lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TD id="a12" axis="day"&gt;28-Aug-97&lt;/TD&gt;
+  &lt;TD axes="a10 a12 a2"&gt;35.00&lt;/TD&gt;
+  &lt;TD axes="a10 a12 a3"&gt;109.00&lt;/TD&gt;
+  &lt;TD axes="a10 a12 a4"&gt;36.00&lt;/TD&gt;
+  &lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TD id="a13" axis="subtotal"&gt;subtotal&lt;/TD&gt;
+  &lt;TD axes="a13 a10 a2"&gt;131.25&lt;/TD&gt;
+  &lt;TD axes="a13 a10 a3"&gt;218.00&lt;/TD&gt;
+  &lt;TD axes="a13 a10 a4"&gt;72.00&lt;/TD&gt;
+  &lt;TD axes="a13 a10"&gt;421.25&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TH id="a14" axis="totals"&gt;Totals&lt;/TH&gt;
+  &lt;TD axes="a14 a2"&gt;196.27&lt;/TD&gt;
+  &lt;TD axes="a14 a3"&gt;442.00&lt;/TD&gt;
+  &lt;TD axes="a14 a4"&gt;162.00&lt;/TD&gt;
+  &lt;TD axes="a14"&gt;800.27&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE>
+
+<P>The <a href="tables.html#adef-axis"><SAMP class="ainst">axis</SAMP></a> attribute enables user
+agents to reconstruct the following hierarchy, which is shown below
+partially collapsed:</P>
+
+<PRE>
+  San Jose
+    25-Aug-97
+      Meals
+        37.74
+      Hotels
+        112.00
+      Transport
+        45.00
+      Subtotal
+    26-Aug-97
+      Meals
+        27.28
+      Hotels
+        112.00
+      Transport
+        45.00
+    Subtotal
+      Meals
+      Hotels
+      Transport
+      Subtotal
+  Seattle
+    27-Aug-97
+    28-Aug-97
+  Totals
+      Meals
+      Hotels
+      Transport
+      Subtotal
+</PRE>
+
+<P>User agents may offer the means to traverse the hierarchy and
+collapse and expand nodes in the hierarchy. The value of the <a href="tables.html#adef-axis"><SAMP
+class="ainst">axis</SAMP></a> attribute should be chosen meaningfully to
+describe the nodes in the hierarchy.</P>
+
+<P>When a large enough portion of the hierarchy is expanded and leaf
+nodes are being spoken, it may be desirable to preface it by speaking
+the branches leading to the leaves. So rather than saying:</P>
+
+<PRE>
+  25-Aug-97
+   Meals: 37.74
+   Hotels: 112.00
+   Transport: 45.00
+  26-Aug-97:
+    Meals: 27.28
+    Hotels: 112.00
+    Transport: 45.00
+</PRE>
+
+<P>a user agent may say instead:</P>
+
+<PRE>
+  25-Aug-97, Meals: 37.74
+  25-Aug-97, Hotels: 112.00
+  25-Aug-97, Transport: 45.00
+  26-Aug-97, Meals: 27.28
+  26-Aug-97, Hotels: 112.0
+  26-Aug-97, Transport: 45.0
+</PRE>
+
+<P>The ability to provide effective rendering to speech is valuable
+for multi-modal wireless browsers with limited display capabilities
+(e.g., Web-enabled pagers and phones) and for people with visual
+disabilities.</P>
+
+<H4>Cells that span several rows or columns<a name="h-12.1.6.2">&nbsp;</a></H4>
+
+<P>Cells may span several rows or columns. The number of rows or columns
+spanned by a cell is set by the <a href="tables.html#adef-rowspan"><SAMP class="ainst">rowspan</SAMP></a> and
+<a href="tables.html#adef-colspan"><SAMP class="ainst">colspan</SAMP></a> attributes for either the <a href="tables.html#edef-TH"><SAMP
+class="einst">TH</SAMP></a> or <a href="tables.html#edef-TD"><SAMP class="einst">TD</SAMP></a> elements.</P>
+
+<DIV class="example">
+<P>In this table definition, we specify that the cell in row four,
+column two should span a total of three columns, including the
+current row.</P>
+
+<PRE>
+&lt;TABLE border="border"&gt;
+&lt;CAPTION&gt;Cups of coffee consumed by each senator&lt;/CAPTION&gt;
+&lt;TR&gt;&lt;TH&gt;Name&lt;TH&gt;Cups&lt;TH&gt;Type of Coffee&lt;TH&gt;Sugar?
+&lt;TR&gt;&lt;TD&gt;T. Sexton&lt;TD&gt;10&lt;TD&gt;Espresso&lt;TD&gt;No
+&lt;TR&gt;&lt;TD&gt;J. Dinnen&lt;TD&gt;5&lt;TD&gt;Decaf&lt;TD&gt;Yes
+&lt;TR&gt;&lt;TD&gt;A. Soria&lt;TD colspan="3"&gt;&lt;em&gt;Not available&lt;/em&gt;
+&lt;/TABLE&gt;
+</PRE>
+
+<P>This table might be rendered by a visual user agent as follows:
+</P>
+
+<PRE>
+Cups of coffee consumed by each senator
+ --------------------------------------
+ |   Name  |Cups|Type of Coffee|Sugar?|
+ --------------------------------------
+ |T. Sexton|10  |Espresso      |No    |
+ --------------------------------------
+ |J. Dinnen|5   |Decaf         |Yes   |
+ --------------------------------------
+ |A. Soria |Not available             |
+ --------------------------------------
+</PRE>
+
+<P>In your user agent this appears as:</P>
+
+<TABLE border="border">
+<CAPTION>Cups of coffee consumed by each senator</CAPTION>
+
+<TR>
+<TH>Name</TH>
+<TH>Cups</TH>
+<TH>Type of Coffee</TH>
+<TH>Sugar? </TH>
+</TR>
+
+<TR>
+<TD>T. Sexton</TD>
+<TD>10</TD>
+<TD>Espresso</TD>
+<TD>No </TD>
+</TR>
+
+<TR>
+<TD>J. Dinnen</TD>
+<TD>5</TD>
+<TD>Decaf</TD>
+<TD>Yes </TD>
+</TR>
+
+<TR>
+<TD>A. Soria</TD>
+<TD colspan="3"><EM>Not available</EM> </TD>
+</TR>
+</TABLE>
+</DIV>
+
+<DIV class="example">
+<P>The next example illustrates how cell definitions that span more
+than one row or column affect the definition of later cells.
+Consider the following table definition:</P>
+
+<PRE>
+&lt;TABLE border="border"&gt;
+&lt;TR&gt;&lt;TD&gt;1 &lt;TD rowspan="2"&gt;2 &lt;TD&gt;3
+&lt;TR&gt;&lt;TD&gt;4 &lt;TD&gt;6
+&lt;TR&gt;&lt;TD&gt;7 &lt;TD&gt;8 &lt;TD&gt;9
+&lt;/TABLE&gt;
+</PRE>
+
+<P>This table might be rendered something like this:</P>
+
+<PRE>
+-------------
+| 1 | 2 | 3 | 
+----|   |----
+| 4 |   | 6 |
+----|---|----
+| 7 | 8 | 9 |
+-------------
+</PRE>
+
+<P>In your browser this appears as:</P>
+
+<TABLE border="border">
+<TR>
+<TD>1 </TD>
+<TD rowspan="2">2 </TD>
+<TD>3 </TD>
+</TR>
+
+<TR>
+<TD>4 </TD>
+<TD>6 </TD>
+</TR>
+
+<TR>
+<TD>7 </TD>
+<TD>8 </TD>
+<TD>9 </TD>
+</TR>
+</TABLE>
+
+<P>Since the cell labeled "2" spans two rows, it affects the
+positions of the cells defined in the following rows. Note that if
+cell "6" had not been defined in row two, an extra empty cell would
+have been added by the user agent to complete the row.</P>
+
+<P>Similarly, in the following table definition:</P>
+
+<PRE>
+&lt;TABLE border="border"&gt;
+&lt;TR&gt;&lt;TD&gt;1 &lt;TD&gt;2 &lt;TD&gt;3
+&lt;TR&gt;&lt;TD colspan="2"&gt;4 &lt;TD&gt;6
+&lt;TR&gt;&lt;TD&gt;7 &lt;TD&gt;8 &lt;TD&gt;9
+&lt;/TABLE&gt;
+</PRE>
+
+<P>cell "4" spans two columns, so cell "6" is placed in column
+three.</P>
+
+<PRE>
+-------------
+| 1 | 2 | 3 | 
+--------|----
+| 4     | 6 |
+--------|----
+| 7 | 8 | 9 |
+-------------
+</PRE>
+
+<P>In your browser this appears as:</P>
+
+<TABLE border="border">
+<TR>
+<TD>1 </TD>
+<TD>2 </TD>
+<TD>3 </TD>
+</TR>
+
+<TR>
+<TD colspan="2">4 </TD>
+<TD>6 </TD>
+</TR>
+
+<TR>
+<TD>7 </TD>
+<TD>8 </TD>
+<TD>9 </TD>
+</TR>
+</TABLE>
+</DIV>
+
+<DIV class="example">
+<P>This example illustrates how one might create overlapping cells.
+In this table, cell "5" spans two rows and cell "7" spans two
+columns, so there is overlap in the cell between "7" and "9":</P>
+
+<PRE>
+    
+&lt;TABLE border="border"&gt;
+&lt;TR&gt;&lt;TD&gt;1 &lt;TD&gt;2 &lt;TD&gt;3
+&lt;TR&gt;&lt;TD&gt;4 &lt;TD rowspan="2"&gt;5 &lt;TD&gt;6
+&lt;TR&gt;&lt;TD colspan="2"&gt;7 &lt;TD&gt;9
+&lt;/TABLE&gt;
+</PRE>
+
+<P>This table might be rendered as follows to convey the overlap:
+</P>
+
+<PRE>
+-------------
+| 1 | 2 | 3 | 
+-------------
+| 4 | 5 | 6 | 
+----|...|----
+| 7 :   | 9 | 
+-------------
+</PRE>
+
+<P>In your browser this appears as:</P>
+
+<TABLE border="border">
+<TR>
+<TD>1 </TD>
+<TD>2 </TD>
+<TD>3 </TD>
+</TR>
+
+<TR>
+<TD>4 </TD>
+<TD rowspan="2">5 </TD>
+<TD>6 </TD>
+</TR>
+
+<TR>
+<TD colspan="2">7 </TD>
+<TD>9 </TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>The rendering of overlapping cells is undefined. Rendering will
+vary between user agents.</P>
+
+<H2><a name="h-12.2">12.2</a> Table formatting by visual user agents</H2>
+
+<P><EM>The following description describes the HTML table
+attributes that tell visual user agents how to format tables. Style
+sheets will offer better control of visual table formatting. At the
+writing of this specification, <A rel="biblioentry" href=
+"../references.html#ref-CSS1">[CSS1]</A> did not offer mechanisms
+to control all aspects of visual table formatting.</EM></P>
+
+<P>This version of HTML includes mechanisms to control:</P>
+
+<UL>
+<LI><A href="#alignment">horizontal and vertical alignment</A> of
+cell contents </LI>
+
+<LI><A href="#borders">border styles</A> </LI>
+
+<LI>and <A href="#margins">cell margins</A></LI>
+</UL>
+
+<H3><a name="h-12.2.1">12.2.1</a> <A name="alignment">Horizontal and vertical alignment</A></H3>
+
+<P>The following attributes may be set for different table elements
+(see their definitions).</P>
+
+<div class="dtd-fragment">
+<PRE class="dtd-fragment">
+&lt;!-- horizontal alignment attributes for cell contents --&gt;
+&lt;!ENTITY % cellhalign
+  "<a href="tables.html#adef-align-TD"><samp class="ainst-TD">align</samp></a> (left|center|right|justify|char) #IMPLIED
+   <a href="tables.html#adef-char"><samp class="ainst">char</samp></a>       CDATA      #IMPLIED  -- alignment char, e.g. char=':' --
+   <a href="tables.html#adef-charoff"><samp class="ainst">charoff</samp></a>    CDATA      #IMPLIED  -- offset for alignment char --"
+  &gt;
+&lt;!-- vertical alignment attributes for cell contents --&gt;
+&lt;!ENTITY % cellvalign
+  "<a href="tables.html#adef-valign"><samp class="ainst">valign</samp></a> (top|middle|bottom|baseline) #IMPLIED"
+  &gt;
+</PRE>
+</div>
+
+<DIV class="adef-list">
+<P><EM>Attribute definitions</EM></P>
+
+<DL>
+<DT><A name="adef-align-TD"><SAMP class="adef">align</SAMP></A> =
+<SAMP>left|center|right|justify|char</SAMP></DT>
+
+<DD>This attribute specifies the alignment of data and the
+justification of text in a cell. Possible values: 
+
+<UL>
+<LI><SAMP>left:</SAMP> Left-flush data/Left-justify text. This is
+the default value for table data. </LI>
+
+<LI><SAMP>center:</SAMP> Center data/Center-justify text. This is
+the default value for table headers. </LI>
+
+<LI><SAMP>right:</SAMP> Right-flush data/Right-justify text. </LI>
+
+<LI><SAMP>justify:</SAMP> Double-justify text. </LI>
+
+<LI><SAMP>char:</SAMP>Align text around a specific character.</LI>
+</UL>
+</DD>
+
+<DT><A name="adef-valign"><SAMP class="adef">valign</SAMP></A> =
+<SAMP>top|middle|bottom|baseline</SAMP></DT>
+
+<DD>This attribute specifies the vertical position of data within a
+cell. Possible values: 
+
+<UL>
+<LI><SAMP>top:</SAMP> Cell data is flush with the top of the cell. 
+</LI>
+
+<LI><SAMP>middle:</SAMP> Cell data is centered vertically within
+the cell. This is the default value. </LI>
+
+<LI><SAMP>bottom:</SAMP> Cell data is flush with the bottom of the
+cell. </LI>
+
+<LI><SAMP>baseline:</SAMP> All cells in the same row as a cell
+whose <SAMP>valign</SAMP> attribute has this value should have
+their textual data positioned so that the first text line occurs on
+a baseline common to all cells in the row. This constraint does not
+apply to subsequent text lines in these cells.</LI>
+</UL>
+</DD>
+
+<DT><A name="adef-char"><SAMP class="adef">char</SAMP></A> = <A
+href="../types.html#type-cdata"><EM>cdata</EM></A></DT>
+
+<DD>This attribute specifies a character within a text fragment
+which will act as an axis for alignment. The default value for this
+attribute is the decimal point character for the current language
+as set by the <a href="dirlang.html#adef-lang"><SAMP class="ainst">lang</SAMP></a> attribute (e.g., the
+period (".") in English and the comma (",") in French). The value
+of this attribute is case-sensitive. </DD>
+
+<DT><A name="adef-charoff"><SAMP class="adef">charoff</SAMP></A> =
+<A href="../types.html#type-length"><EM>length</EM></A></DT>
+
+<DD>When present, this attribute specifies the offset to the first
+occurrence of the alignment character on each line. If a line
+doesn't include the alignment character, it should be horizontally
+shifted to end at the alignment position. 
+
+<P>When <a href="tables.html#adef-charoff"><SAMP class="ainst">charoff</SAMP></a> is used to set the
+offset of an alignment character, the direction of offset is
+determined by the current text direction (set by the <a href="dirlang.html#adef-dir"><SAMP class="ainst">dir</SAMP></a> attribute). In left-to-right texts (the
+default), offset is from the left margin. In right-to-left texts,
+offset is from the right margin.</P>
+</DD>
+</DL>
+</DIV>
+
+<DIV class="example">
+<P>The table in this example aligns a row of currency values along
+a decimal point. We set the alignment character to "." explicitly.
+</P>
+
+<PRE>
+&lt;TABLE border="border"&gt;
+&lt;COLGROUP&gt;
+&lt;COL&gt;&lt;COL align="char" char="."&gt;
+&lt;THEAD&gt;
+&lt;TR&gt;&lt;TH&gt;Vegetable &lt;TH&gt;Cost per kilo
+&lt;TBODY&gt;
+&lt;TR&gt;&lt;TD&gt;Lettuce        &lt;TD&gt;$1
+&lt;TR&gt;&lt;TD&gt;Silver carrots &lt;TD&gt;$10.50
+&lt;TR&gt;&lt;TD&gt;Golden turnips &lt;TD&gt;$100.30
+&lt;/TABLE&gt;
+</PRE>
+
+<P>The formatted table should look something like this:</P>
+
+<PRE>
+------------------------------
+|   Vegetable  |Cost per kilo|
+|--------------|-------------|
+|Lettuce       |        $1   |
+|--------------|-------------|
+|Silver carrots|       $10.50|
+|--------------|-------------|
+|Golden turnips|      $100.30|
+------------------------------
+</PRE>
+
+</DIV>
+
+<H4>Inheritance of alignment specifications<a name="h-12.2.1.1">&nbsp;</a></H4>
+
+<P>The alignment of cell contents can be specified on a cell by
+cell basis, or inherited from enclosing elements, such as the row,
+column or the table itself.</P>
+
+<P>The order of precedence (from highest to lowest) for the
+attributes <a href="tables.html#adef-align-TD"><SAMP class="ainst-TD">align</SAMP></a>, <a href="tables.html#adef-char"><SAMP class="ainst">char</SAMP></a>, and <a href="tables.html#adef-charoff"><SAMP class="ainst">charoff</SAMP></a> is the
+following:</P>
+
+<OL>
+<LI>An alignment attribute set on an element within a cell's data
+(e.g., <a href="text.html#edef-P"><SAMP class="einst">P</SAMP></a>). </LI>
+
+<LI>An alignment attribute set on a cell (<a href="tables.html#edef-TH"><SAMP
+class="einst">TH</SAMP></a> and <a href="tables.html#edef-TD"><SAMP class="einst">TD</SAMP></a>). </LI>
+
+<LI>An alignment attribute set on a column or column group (<a href="tables.html#edef-COL"><SAMP
+class="einst">COL</SAMP></a> and <a href="tables.html#edef-COLGROUP"><SAMP class="einst">COLGROUP</SAMP></a>).
+When a cell is part of a multi-column span, the alignment property
+is inherited from the cell definition at the beginning of the span.
+</LI>
+
+<LI>An alignment attribute set on a row or row group (<a href="tables.html#edef-TR"><SAMP
+class="einst">TR</SAMP></a>, <a href="tables.html#edef-THEAD"><SAMP class="einst">THEAD</SAMP></a>, <a href="tables.html#edef-TFOOT"><SAMP
+class="einst">TFOOT</SAMP></a>, and <a href="tables.html#edef-TBODY"><SAMP
+class="einst">TBODY</SAMP></a>). When a cell is part of a multi-row span,
+the alignment property is inherited from the cell definition at the
+beginning of the span.
+</LI>
+
+<LI>An alignment attribute set on the table (<a href="tables.html#edef-TABLE"><SAMP
+class="einst">TABLE</SAMP></a>). </LI>
+
+<LI>The default alignment value.</LI>
+</OL>
+
+<P>The order of precedence (from highest to lowest) for the
+attribute <a href="tables.html#adef-valign"><SAMP class="ainst">valign</SAMP></a> (as well as the other
+inherited attributes <a href="dirlang.html#adef-lang"><SAMP class="ainst">lang</SAMP></a>, <a href="dirlang.html#adef-dir"><SAMP class="ainst">dir</SAMP></a>, and <a href="../present/styles.html#adef-style"><SAMP class="ainst">style</SAMP></a>) is the
+following:</P>
+
+<OL>
+<LI>An attribute set on an element within a cell's data (e.g.,
+<a href="text.html#edef-P"><SAMP class="einst">P</SAMP></a>). </LI>
+
+<LI>An attribute set on a cell (<a href="tables.html#edef-TH"><SAMP class="einst">TH</SAMP></a> and
+<a href="tables.html#edef-TD"><SAMP class="einst">TD</SAMP></a>). </LI>
+
+<LI>An attribute set on a row or row group (<a href="tables.html#edef-TR"><SAMP class="einst">TR</SAMP></a>,
+<a href="tables.html#edef-THEAD"><SAMP class="einst">THEAD</SAMP></a>, <a href="tables.html#edef-TFOOT"><SAMP class="einst">TFOOT</SAMP></a>, and
+<a href="tables.html#edef-TBODY"><SAMP class="einst">TBODY</SAMP></a>). When a cell is part of a multi-row span,
+the attribute value is inherited from the cell definition at the beginning
+of the span. </LI>
+
+<LI>An attribute set on a column or column group (<a href="tables.html#edef-COL"><SAMP class="einst">COL</SAMP></a> and <a href="tables.html#edef-COLGROUP"><SAMP class="einst">COLGROUP</SAMP></a>). When a
+cell is part of a multi-column span, the attribute value is
+inherited from the cell definition at the beginning of the span. 
+</LI>
+
+<LI>An attribute set on the table (<a href="tables.html#edef-TABLE"><SAMP
+class="einst">TABLE</SAMP></a>). </LI>
+
+<LI>The default attribute value.</LI>
+</OL>
+
+<P>Furthermore, when rendering cells, horizontal alignment is
+determined by columns in preference to rows, while for vertical
+alignment, rows are given preference over columns.</P>
+
+<P>The default alignment for cells depends on the user agent.
+However, user agents should substitute the default attribute for
+the current directionality (i.e., not just "left" in all cases).
+</P>
+
+<P>User agents that do not support the "justify" value of the <a href="tables.html#adef-align-TD"><SAMP
+class="ainst-TD">align</SAMP></a> attribute should use the value of the
+inherited directionality in its place.</P>
+
+<H3><a name="h-12.2.2">12.2.2</a> <A name="borders">Borders and rules</A></H3>
+
+<EM><STRONG>Note.</STRONG>The HTML attributes for specifying
+borders and rules on tables are deprecated in favor of style
+sheets. For example, the "border" property in <A rel="biblioentry"
+href="../references.html#ref-CSS1">[CSS1]</A> may serve this
+purpose.</EM> 
+
+<P>The following attributes affect a table's external frame and
+internal rules.</P>
+
+<DIV class="adef-list">
+<P><EM>Attribute definitions</EM></P>
+
+<DL>
+<DT><A name="adef-frame"><SAMP class="adef">frame</SAMP></A> =
+<SAMP>void|above|below|hsides|lhs|rhs|vsides|box|border</SAMP></DT>
+
+<DD><STRONG>Deprecated.</STRONG> This attribute specifies which
+sides of the frame that surrounds a table will be visible. Possible
+values: 
+
+<UL>
+<LI><SAMP>void:</SAMP> No sides. This is the default value. </LI>
+
+<LI><SAMP>above:</SAMP> The top side only. </LI>
+
+<LI><SAMP>below:</SAMP> The bottom side only. </LI>
+
+<LI><SAMP>hsides:</SAMP> The top and bottom sides only. </LI>
+
+<LI><SAMP>vsides:</SAMP> The right and left sides only. </LI>
+
+<LI><SAMP>lhs:</SAMP> The left-hand side only. </LI>
+
+<LI><SAMP>rhs:</SAMP> The right-hand side only. </LI>
+
+<LI><SAMP>box:</SAMP> All four sides. </LI>
+
+<LI><SAMP>border:</SAMP> All four sides.</LI>
+</UL>
+</DD>
+
+<DT><A name="adef-rules"><SAMP class="adef">rules</SAMP></A> =
+<SAMP>none|groups|rows|cols|all</SAMP></DT>
+
+<DD><STRONG>Deprecated.</STRONG>This attribute specifies which
+rules will appear between cells within a table. The rendering
+of rules is user agent dependent. Possible values: 
+
+<UL>
+<LI><SAMP>none:</SAMP> No rules. This is the default value. </LI>
+
+<LI><SAMP>groups:</SAMP> Rules will appear between row groups (see
+<a href="tables.html#edef-THEAD"><SAMP class="einst">THEAD</SAMP></a>, <a href="tables.html#edef-TFOOT"><SAMP class="einst">TFOOT</SAMP></a>,
+and <a href="tables.html#edef-TBODY"><SAMP class="einst">TBODY</SAMP></a>) and column groups (see <a href="tables.html#edef-COLGROUP"><SAMP
+class="einst">COLGROUP</SAMP></a> and <a href="tables.html#edef-COL"><SAMP class="einst">COL</SAMP></a>)
+only.</LI>
+
+<LI><SAMP>rows:</SAMP> Rules will appear between rows only. </LI>
+
+<LI><SAMP>cols:</SAMP> Rules will appear between columns only. 
+</LI>
+
+<LI><SAMP>all:</SAMP> Rules will appear between all rows and
+columns.</LI>
+</UL>
+</DD>
+
+<DT><A name="adef-border"><SAMP class="adef">border</SAMP></A> = <A
+href="../types.html#type-cdata"><EM>cdata</EM></A></DT>
+
+<DD><STRONG>Deprecated</STRONG>This attributes specifies the width
+(in pixels only) of the frame around a table (see the Note below
+for more information about this attribute).</DD>
+</DL>
+</DIV>
+
+<DIV class="example">
+<P>In the following table, borders five pixels thick will be
+rendered on the left- and right-hand sides of the table and rules
+should be displayed between all columns.</P>
+
+<PRE>
+&lt;TABLE border="5" frame="vsides" rules="cols"&gt;
+&lt;TR&gt; &lt;TD&gt;1 &lt;TD&gt;2 &lt;TD&gt;3
+&lt;TR&gt; &lt;TD&gt;4 &lt;TD&gt;5 &lt;TD&gt;6
+&lt;TR&gt; &lt;TD&gt;7 &lt;TD&gt;8 &lt;TD&gt;9
+&lt;/TABLE&gt;
+</PRE>
+
+</DIV>
+
+<P>The following settings should be observed by user agents for
+backwards compatibility.</P>
+
+<UL>
+<LI>Setting <a href="tables.html#adef-border"><SAMP class="ainst-TABLE">border</SAMP></a>="0" implies
+<a href="tables.html#adef-frame"><SAMP class="ainst-TABLE">frame</SAMP></a>="void" and, unless otherwise
+specified, <a href="tables.html#adef-rules"><SAMP class="ainst-TABLE">rules</SAMP></a>="none". </LI>
+
+<LI>Other values of <a href="tables.html#adef-border"><SAMP class="ainst-TABLE">border</SAMP></a> imply
+<a href="tables.html#adef-frame"><SAMP class="ainst-TABLE">frame</SAMP></a>="border" and, unless
+otherwise specified, <a href="tables.html#adef-rules"><SAMP class="ainst-TABLE">rules</SAMP></a>="all". 
+</LI>
+
+<LI>The value "border" in the start tag of the <a href="tables.html#edef-TABLE"><SAMP class="einst">TABLE</SAMP></a> element should be interpreted as the value of the
+<a href="tables.html#adef-frame"><SAMP class="ainst-TABLE">frame</SAMP></a> attribute. It implies <a href="tables.html#adef-rules"><SAMP
+class="ainst-TABLE">rules</SAMP></a>="all" and some default (non-zero)
+value for the <a href="tables.html#adef-border"><SAMP class="ainst-TABLE">border</SAMP></a> attribute.
+</LI>
+</UL>
+
+<DIV class="example">
+<P>Thus, for example, the following definitions are equivalent:</P>
+
+<PRE>
+&lt;TABLE border="2"&gt;
+&lt;TABLE border="2" frame="border" rules="all"&gt;
+</PRE>
+
+<P>and the following definitions too:</P>
+
+<PRE>
+&lt;TABLE border&gt;
+&lt;TABLE frame="border" rules="all"&gt;
+</PRE>
+
+</DIV>
+
+<DIV class="note">
+<P><EM><strong>Note.</strong> The <a href="tables.html#adef-border"><SAMP class="ainst">border</SAMP></a>
+attribute also defines the border behavior for the <a href="objects.html#edef-OBJECT"><SAMP
+class="einst">OBJECT</SAMP></a> and <a href="objects.html#edef-IMG"><SAMP class="einst">IMG</SAMP></a>
+elements, but takes different values for those elements.</EM></P>
+</DIV>
+
+<H3><a name="h-12.2.3">12.2.3</a> <A name="margins">Cell margins</A></H3>
+
+<P>Two attributes control spacing between and within cells.</P>
+
+<DIV class="adef-list">
+<P><EM>Attribute definitions</EM></P>
+
+<DL>
+<DT><A name="adef-cellspacing"><SAMP class="adef">cellspacing</SAMP></A> =
+<A href="../types.html#type-length"><EM>length</EM> </A></DT>
+
+<DD>This attribute specifies how much space should be left between
+the table frame and the first or last cell border for each row or
+column, and between the cells in a table. </DD>
+
+<DT><A name="adef-cellpadding"><SAMP
+class="adef">cellpadding</SAMP></A> = <A
+href="../types.html#type-length"><EM>length</EM> </A></DT>
+
+<DD>This attribute specifies the amount of space between the border
+of the cell and its contents, on all sides of the contents.</DD>
+</DL>
+</DIV>
+
+<DIV class="example">
+<P>In the following table, the <a href="tables.html#adef-cellspacing"><SAMP class="ainst">cellspacing</SAMP></a>
+attribute specifies that cells will be separated from each other and from
+the table frame by twenty pixels. The <a href="tables.html#adef-cellpadding"><SAMP
+class="ainst">cellpadding</SAMP></a> attribute specifies that the top margin of
+the cell and the bottom margin of the cell will each be separated from the
+cell's contents by 10% of the available vertical space (the total being
+20%). Similarly, the left margin of the cell and the right margin of the
+cell will each be separated from the cell's contents by 10% of the
+available horizontal space (the total being 20%).</P>
+
+<PRE>
+&lt;TABLE&gt;
+&lt;TR cellspacing="20"&gt; &lt;TD&gt;Data1 &lt;TD cellpadding="20%"&gt;Data2 &lt;TD&gt;Data3
+&lt;/TABLE&gt;
+</PRE>
+
+</DIV>
+
+<P>If a table or given column has a fixed width, <a href="tables.html#adef-cellspacing"><SAMP
+class="ainst">cellspacing</SAMP></a> and <a href="tables.html#adef-cellpadding"><SAMP
+class="ainst">cellpadding</SAMP></a> may demand more space than
+assigned. We recommend that user agents give these attributes
+precedence over the <a href="tables.html#adef-width-TH"><SAMP class="ainst-TH">width</SAMP></a> attribute when a
+conflict occurs, but this is not a requirement.</P>
+
+<H2><a name="h-12.3">12.3</a> Some sample tables</H2>
+
+<P>The following table samples illustrate the interaction of all
+the table elements.</P>
+
+<H3><a name="h-12.3.1">12.3.1</a> Sample 1</H3>
+
+<DIV class="example">
+<P>In "ascii art", the following table:</P>
+
+<PRE>
+&lt;TABLE border="border"&gt;
+&lt;CAPTION&gt;A test table with merged cells&lt;/CAPTION&gt;
+&lt;TR&gt;&lt;TH rowspan=2&gt;&lt;TH colspan="2"&gt;Average
+    &lt;TH rowspan="2"&gt;other&lt;BR&gt;category&lt;TH&gt;Misc
+&lt;TR&gt;&lt;TH&gt;height&lt;TH&gt;weight
+&lt;TR&gt;&lt;TH align="left"&gt;males&lt;TD&gt;1.9&lt;TD&gt;0.003
+&lt;TR&gt;&lt;TH align="left" rowspan="2"&gt;females&lt;TD&gt;1.7&lt;TD&gt;0.002
+&lt;/TABLE&gt;
+</PRE>
+
+<P>would be rendered something like this:</P>
+
+<PRE>
+              A test table with merged cells
+    /--------------------------------------------------\
+    |          |      Average      |  other   |  Misc  |
+    |          |-------------------| category |--------|
+    |          |  height |  weight |          |        |
+    |-----------------------------------------|--------|
+    | males    | 1.9     | 0.003   |          |        |
+    |-----------------------------------------|--------|
+    | females  | 1.7     | 0.002   |          |        |
+    \--------------------------------------------------/
+</PRE>
+
+<P>On your browser, the table looks like this:</P>
+
+<TABLE border="border">
+<CAPTION>A test table with merged cells</CAPTION>
+
+<TR>
+<TH rowspan="2"></TH>
+<TH colspan="2">Average </TH>
+<TH rowspan="2">other<BR>
+category</TH>
+<TH>Misc </TH>
+</TR>
+
+<TR>
+<TH>height</TH>
+<TH>weight </TH>
+</TR>
+
+<TR>
+<TH align="left">males</TH>
+<TD>1.9</TD>
+<TD>0.003 </TD>
+</TR>
+
+<TR>
+<TH align="left" rowspan="2">females</TH>
+<TD>1.7</TD>
+<TD>0.002</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<H3><a name="h-12.3.2">12.3.2</a> Sample 2</H3>
+
+<P>This sample illustrates grouped rows and columns. The example is
+adapted from "Developing International Software", by Nadine Kano.
+</P>
+
+<DIV class="example">
+<P>In "ascii art", the following table:</P>
+
+<PRE>
+&lt;TABLE border="2" frame="hsides" rules="groups"&gt;
+&lt;CAPTION&gt;CODE-PAGE SUPPORT IN MICROSOFT WINDOWS&lt;/CAPTION&gt;
+&lt;COLGROUP align="center"&gt;
+&lt;COLGROUP align="left"&gt;
+&lt;COLGROUP align="center" span="2"&gt;
+&lt;COLGROUP align="center" span="3"&gt;
+&lt;THEAD valign="top"&gt;
+&lt;TR&gt;
+&lt;TH&gt;Code-Page&lt;br&gt;ID
+&lt;TH&gt;Name
+&lt;TH&gt;ACP
+&lt;TH&gt;OEMCP
+&lt;TH&gt;Windows&lt;br&gt;NT 3.1
+&lt;TH&gt;Windows&lt;br&gt;NT 3.51
+&lt;TH&gt;Windows&lt;br&gt;95
+&lt;TBODY&gt;
+&lt;TR&gt;&lt;TD&gt;1200&lt;TD&gt;Unicode (BMP of ISO/IEC-10646)&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;X&lt;TD&gt;X&lt;TD&gt;*
+&lt;TR&gt;&lt;TD&gt;1250&lt;TD&gt;Windows 3.1 Eastern European&lt;TD&gt;X&lt;TD&gt;&lt;TD&gt;X&lt;TD&gt;X&lt;TD&gt;X
+&lt;TR&gt;&lt;TD&gt;1251&lt;TD&gt;Windows 3.1 Cyrillic&lt;TD&gt;X&lt;TD&gt;&lt;TD&gt;X&lt;TD&gt;X&lt;TD&gt;X
+&lt;TR&gt;&lt;TD&gt;1252&lt;TD&gt;Windows 3.1 US (ANSI)&lt;TD&gt;X&lt;TD&gt;&lt;TD&gt;X&lt;TD&gt;X&lt;TD&gt;X
+&lt;TR&gt;&lt;TD&gt;1253&lt;TD&gt;Windows 3.1 Greek&lt;TD&gt;X&lt;TD&gt;&lt;TD&gt;X&lt;TD&gt;X&lt;TD&gt;X
+&lt;TR&gt;&lt;TD&gt;1254&lt;TD&gt;Windows 3.1 Turkish&lt;TD&gt;X&lt;TD&gt;&lt;TD&gt;X&lt;TD&gt;X&lt;TD&gt;X
+&lt;TR&gt;&lt;TD&gt;1255&lt;TD&gt;Hebrew&lt;TD&gt;X&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;X
+&lt;TR&gt;&lt;TD&gt;1256&lt;TD&gt;Arabic&lt;TD&gt;X&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;X
+&lt;TR&gt;&lt;TD&gt;1257&lt;TD&gt;Baltic&lt;TD&gt;X&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;X
+&lt;TR&gt;&lt;TD&gt;1361&lt;TD&gt;Korean (Johab)&lt;TD&gt;X&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;**&lt;TD&gt;X
+&lt;TBODY&gt;
+&lt;TR&gt;&lt;TD&gt;437&lt;TD&gt;MS-DOS United States&lt;TD&gt;&lt;TD&gt;X&lt;TD&gt;X&lt;TD&gt;X&lt;TD&gt;X
+&lt;TR&gt;&lt;TD&gt;708&lt;TD&gt;Arabic (ASMO 708)&lt;TD&gt;&lt;TD&gt;X&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;X
+&lt;TR&gt;&lt;TD&gt;709&lt;TD&gt;Arabic (ASMO 449+, BCON V4)&lt;TD&gt;&lt;TD&gt;X&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;X
+&lt;TR&gt;&lt;TD&gt;710&lt;TD&gt;Arabic (Transparent Arabic)&lt;TD&gt;&lt;TD&gt;X&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;X
+&lt;TR&gt;&lt;TD&gt;720&lt;TD&gt;Arabic (Transparent ASMO)&lt;TD&gt;&lt;TD&gt;X&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;X
+&lt;/TABLE&gt;
+</PRE>
+
+<P>would be rendered something like this:</P>
+
+<PRE>
+                  CODE-PAGE SUPPORT IN MICROSOFT WINDOWS
+===============================================================================
+Code-Page | Name                         | ACP  OEMCP | Windows Windows Windows
+    ID    |                              |            |  NT 3.1 NT 3.51    95
+-------------------------------------------------------------------------------
+   1200   | Unicode (BMP of ISO 10646)   |            |    X       X       *
+   1250   | Windows 3.1 Eastern European |  X         |    X       X       X
+   1251   | Windows 3.1 Cyrillic         |  X         |    X       X       X
+   1252   | Windows 3.1 US (ANSI)        |  X         |    X       X       X
+   1253   | Windows 3.1 Greek            |  X         |    X       X       X
+   1254   | Windows 3.1 Turkish          |  X         |    X       X       X
+   1255   | Hebrew                       |  X         |                    X
+   1256   | Arabic                       |  X         |                    X
+   1257   | Baltic                       |  X         |                    X
+   1361   | Korean (Johab)               |  X         |            **      X
+-------------------------------------------------------------------------------
+    437   | MS-DOS United States         |        X   |    X       X       X
+    708   | Arabic (ASMO 708)            |        X   |                    X
+    709   | Arabic (ASMO 449+, BCON V4)  |        X   |                    X
+    710   | Arabic (Transparent Arabic)  |        X   |                    X
+    720   | Arabic (Transparent ASMO)    |        X   |                    X
+===============================================================================
+</PRE>
+
+<P>On your user agent, this tables is rendered as follows:</P>
+
+<TABLE border="2" frame="hsides" rules="groups">
+<CAPTION>CODE-PAGE SUPPORT IN MICROSOFT WINDOWS</CAPTION>
+
+<COLGROUP align="center"></COLGROUP>
+
+<COLGROUP align="left"></COLGROUP>
+
+<COLGROUP align="center" span="2"></COLGROUP>
+
+<COLGROUP align="center" span="3"></COLGROUP>
+
+<THEAD valign="top">
+<TR>
+<TH>Code-Page<BR>
+ID </TH>
+<TH>Name </TH>
+<TH>ACP </TH>
+<TH>OEMCP </TH>
+<TH>Windows<BR>
+NT 3.1 </TH>
+<TH>Windows<BR>
+NT 3.51 </TH>
+<TH>Windows<BR>
+95 </TH>
+</TR>
+</THEAD>
+
+<TBODY>
+<TR>
+<TD>1200</TD>
+<TD>Unicode (BMP of ISO/IEC-10646)</TD>
+<TD></TD>
+<TD></TD>
+<TD>X</TD>
+<TD>X</TD>
+<TD>* </TD>
+</TR>
+
+<TR>
+<TD>1250</TD>
+<TD>Windows 3.1 Eastern European</TD>
+<TD>X</TD>
+<TD></TD>
+<TD>X</TD>
+<TD>X</TD>
+<TD>X </TD>
+</TR>
+
+<TR>
+<TD>1251</TD>
+<TD>Windows 3.1 Cyrillic</TD>
+<TD>X</TD>
+<TD></TD>
+<TD>X</TD>
+<TD>X</TD>
+<TD>X </TD>
+</TR>
+
+<TR>
+<TD>1252</TD>
+<TD>Windows 3.1 US (ANSI)</TD>
+<TD>X</TD>
+<TD></TD>
+<TD>X</TD>
+<TD>X</TD>
+<TD>X </TD>
+</TR>
+
+<TR>
+<TD>1253</TD>
+<TD>Windows 3.1 Greek</TD>
+<TD>X</TD>
+<TD></TD>
+<TD>X</TD>
+<TD>X</TD>
+<TD>X </TD>
+</TR>
+
+<TR>
+<TD>1254</TD>
+<TD>Windows 3.1 Turkish</TD>
+<TD>X</TD>
+<TD></TD>
+<TD>X</TD>
+<TD>X</TD>
+<TD>X </TD>
+</TR>
+
+<TR>
+<TD>1255</TD>
+<TD>Hebrew</TD>
+<TD>X</TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD>X </TD>
+</TR>
+
+<TR>
+<TD>1256</TD>
+<TD>Arabic</TD>
+<TD>X</TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD>X </TD>
+</TR>
+
+<TR>
+<TD>1257</TD>
+<TD>Baltic</TD>
+<TD>X</TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD>X </TD>
+</TR>
+
+<TR>
+<TD>1361</TD>
+<TD>Korean (Johab)</TD>
+<TD>X</TD>
+<TD></TD>
+<TD></TD>
+<TD>**</TD>
+<TD>X </TD>
+</TR>
+</TBODY>
+
+<TBODY>
+<TR>
+<TD>437</TD>
+<TD>MS-DOS United States</TD>
+<TD></TD>
+<TD>X</TD>
+<TD>X</TD>
+<TD>X</TD>
+<TD>X </TD>
+</TR>
+
+<TR>
+<TD>708</TD>
+<TD>Arabic (ASMO 708)</TD>
+<TD></TD>
+<TD>X</TD>
+<TD></TD>
+<TD></TD>
+<TD>X </TD>
+</TR>
+
+<TR>
+<TD>709</TD>
+<TD>Arabic (ASMO 449+, BCON V4)</TD>
+<TD></TD>
+<TD>X</TD>
+<TD></TD>
+<TD></TD>
+<TD>X </TD>
+</TR>
+
+<TR>
+<TD>710</TD>
+<TD>Arabic (Transparent Arabic)</TD>
+<TD></TD>
+<TD>X</TD>
+<TD></TD>
+<TD></TD>
+<TD>X </TD>
+</TR>
+
+<TR>
+<TD>720</TD>
+<TD>Arabic (Transparent ASMO)</TD>
+<TD></TD>
+<TD>X</TD>
+<TD></TD>
+<TD></TD>
+<TD>X</TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<P>This example illustrates how <a href="tables.html#edef-COLGROUP"><SAMP class="einst">COLGROUP</SAMP></a> can be
+used to group columns and set the default column alignment.  Similarly,
+<a href="tables.html#edef-TBODY"><SAMP class="einst">TBODY</SAMP></a> is used to group rows.  The <a href="tables.html#adef-frame"><SAMP
+class="ainst">frame</SAMP></a> and <a href="tables.html#adef-rules"><SAMP class="ainst">rules</SAMP></a> attributes
+tell the user agent which borders and rules to render.</P>
+</DIV>
+<div class="navbar">
+<hr><center><a href="lists.html">previous</a> &nbsp; <a href="links.html">next</a> &nbsp; <a href="../cover.html#toc">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center></div>
+</BODY>
+</HTML>
+
