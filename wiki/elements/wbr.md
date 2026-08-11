@@ -16,7 +16,7 @@ WHATWG HTML Living Standardでは、行を折り返してよい機会を表す�
 
 1995年4月25日のIETF HTML-WG mailは、Netscapeが`WBR` tagを提案済みであることをliteral名で記録する。copyright 1995のNetscape Communications文書は`WBR`をnew elementとし、`NOBR`区間内の例外的な改行位置、または長い語で改行可能な位置をNavigatorへ知らせるためと説明する。`BR`と異なり改行を強制しない。後代のNetscape 3.0用HTML referenceは初回実装版をNavigator 1.1と記す。[HTML-WG mail](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0278.html) [Netscape “Extensions to HTML”](https://marc.merlins.org/htmlearn/netscape/html_extensions.html) [Netscape HTML reference保存複製](https://lib.ru/WEBMASTER/tags.txt)
 
-`WBR`はHTML 4.01には収録されなかった。WHATWG sourceでは遅くとも2006年7月31日に既存のempty elementとして確認でき、2008年1月22日のW3C HTML5 First Public Working Draftもparserとserializationの規則で`wbr`をempty elementとして扱う。ただし、Netscape実装を再採録したと明記する資料は未確認である。[WHATWG commit](https://github.com/whatwg/html/commit/78910a0464b60b2d2b3a1864970f66a8bdb774f3) [HTML5 FPWD](https://www.w3.org/TR/2008/WD-html5-20080122/)
+`WBR`はHTML 4.01には収録されなかった。WHATWG sourceでは遅くとも2006年7月31日に既存の空要素として確認でき、2008年1月22日のW3C HTML5 First Public Working Draftもparserとserializationの規則で`wbr`を空要素として扱う。ただし、Netscape実装を再採録したと明記する資料は未確認である。[WHATWG commit](https://github.com/whatwg/html/commit/78910a0464b60b2d2b3a1864970f66a8bdb774f3) [HTML5 FPWD](https://www.w3.org/TR/2008/WD-html5-20080122/)
 
 ## HTML直前の祖先
 
@@ -45,8 +45,8 @@ WHATWG `wbr`（遅くとも2006-07-31、Netscape実装からの再採録因果�
 | 1995-04-25 | [Dave Raggett, “Re: More comments on the HTML 3.0 draft”](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0278.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0278.html)） | IETF HTML-WG mail保存版 | Netscapeの提案済み`WBR`に言及し、HTML 3.0側の競合案`&cbsp;`と`&shy;`を提示。 | 2026-08-10 |
 | 1995（正確な日付不明） | [Netscape Communications, “Extensions to HTML”](../../raw/marc.merlins.org/htmlearn/netscape/html_extensions.html)（[公開元](https://marc.merlins.org/htmlearn/netscape/html_extensions.html)） | vendor公式文書の保存複製 | `WBR`をNavigatorのnew elementとし、任意改行位置を指定する導入要求を説明。 | 2026-08-10 |
 | 公開日未確認 | [Netscape *HTML Reference Guide: Tags for Netscape 3.0*](../../raw/lib.ru/WEBMASTER/tags.txt)（[公開元](https://lib.ru/WEBMASTER/tags.txt)） | vendor公式referenceの保存複製 | `WBR`の初回実装版をNavigator 1.1と記録。 | 2026-08-10 |
-| 2006-07-31 | [WHATWG HTML commit `78910a0`](../../raw/github.com/whatwg/html/commit/78910a0464b60b2d2b3a1864970f66a8bdb774f3)（[公開元](https://github.com/whatwg/html/commit/78910a0464b60b2d2b3a1864970f66a8bdb774f3)） | 仕様source commit | `WBR`を既存のempty elementとして扱っており、この時点までのWHATWG仕様内の存在を確認できる。 | 2026-08-10 |
-| 2008-01-22 | [HTML 5 First Public Working Draft](../../raw/www.w3.org/TR/2008/WD-html5-20080122/index.html)（[公開元](https://www.w3.org/TR/2008/WD-html5-20080122/)） | W3C Working Draft | parserとserializationの規則で`wbr`をempty elementとして扱う。Netscapeからの採録理由は記さない。 | 2026-08-10 |
+| 2006-07-31 | [WHATWG HTML commit `78910a0`](../../raw/github.com/whatwg/html/commit/78910a0464b60b2d2b3a1864970f66a8bdb774f3)（[公開元](https://github.com/whatwg/html/commit/78910a0464b60b2d2b3a1864970f66a8bdb774f3)） | 仕様ソースのコミット | `WBR`を既存の空要素として扱っており、この時点までのWHATWG仕様内の存在を確認できる。 | 2026-08-10 |
+| 2008-01-22 | [HTML 5 First Public Working Draft](../../raw/www.w3.org/TR/2008/WD-html5-20080122/index.html)（[公開元](https://www.w3.org/TR/2008/WD-html5-20080122/)） | W3C Working Draft | parserとserializationの規則で`wbr`を空要素として扱う。Netscapeからの採録理由は記さない。 | 2026-08-10 |
 
 ## 確度
 

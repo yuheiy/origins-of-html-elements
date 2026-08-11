@@ -10,7 +10,7 @@ Richard WilliamsonがDashboard向けにWebKitへ`CANVAS`を初めて実装し、
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、scriptがgraph、game graphics、artなどを動的に描画できるresolution-dependent bitmap canvasを提供する。より適切な要素がある場合の代用にはせず、bitmapと同じ機能または目的を伝えるfallback contentを用意する必要がある。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/canvas.html)（[公開版](https://html.spec.whatwg.org/multipage/canvas.html#the-canvas-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、scriptがgraph、ゲーム用画像、artなどを動的に描画できる解像度依存のビットマップキャンバスを提供する。より適切な要素がある場合の代用にはせず、bitmapと同じ機能または目的を伝えるfallback contentを用意する必要がある。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/canvas.html)（[公開版](https://html.spec.whatwg.org/multipage/canvas.html#the-canvas-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,7 +38,7 @@ Dashboardの要求に対する軽量なHTML drawing extensionとして成立し�
 
 Quartz 2D `CGContext` bitmap context・drawing functions
 
-→（WebKit実装が直接呼び出す）Apple WebKit/Safari `CANVAS`実装 for Dashboard（2004年5月）
+→（WebKit実装が直接呼び出す）Apple WebKit/Safari `CANVAS`実装for Dashboard（2004年5月）
 
 →（WHATWG謝辞が「この最初の実装から設計」と明記）WHATWG Web Applications 1.0 `canvas`（遅くとも2005年3月24日）
 

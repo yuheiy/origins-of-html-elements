@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは外部resourceを表し、resource typeに応じてimageまたはchild navigableとして扱われる。`data`がresourceのURLを、`type`がMIME typeを指定し、resourceを表示できない場合はchildrenがfallback contentになる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/iframe-embed-object.html)（[公開版](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは外部resourceを表し、resource typeに応じてimageまたはchild navigableとして扱われる。`data`がresourceのURLを、`type`がMIMEタイプを指定し、resourceを表示できない場合はchildrenがfallback contentになる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/iframe-embed-object.html)（[公開版](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element)、2026-08-09確認）
 
 ## HTMLへの導入
 

@@ -10,7 +10,7 @@ MegaZoneが長い`SELECT`のaccessibilityを改善するため、windowing syste
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、共通labelを持つ`option`要素のgroupを表す。user agentはgroup内の選択肢の関連と他groupとの区別を示し、`disabled`でgroup全体を無効にできる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、共通labelを持つ`option`要素のgroupを表す。ユーザーエージェントはgroup内の選択肢の関連と他groupとの区別を示し、`disabled`でgroup全体を無効にできる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element)、2026-08-09確認）
 
 ## HTMLへの導入
 

@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、table内のcellのrowを表す。 [HTML Livi
 
 ## HTMLへの導入
 
-1993年HTML+ table modelは `TR` を1993年版ではrow separatorとして定義した。RFC 1942は自身のtable modelがHTML+の初期作業とHTML 3 draftから発展したと明記し、HTML 3.2が広く実装されたsubsetを採録した。[HTML+ tables](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 3.2](https://www.w3.org/TR/REC-html32#table)
+1993年HTML+ table modelは`TR`を1993年版ではrow separatorとして定義した。RFC 1942は自身のtable modelがHTML+の初期作業とHTML 3 draftから発展したと明記し、HTML 3.2が広く実装されたsubsetを採録した。[HTML+ tables](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 3.2](https://www.w3.org/TR/REC-html32#table)
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ HTML直前の祖先はHTML+ table modelである。1994年reviewまでにrow con
 
 ### 証拠
 
-RFC 1942はHTML+の単純モデルに対する後続拡張の一部をCALSにならったと説明する。この記述だけから `TR` の名称をCALSから直接コピーしたとはいえない。[RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html)
+RFC 1942はHTML+の単純モデルに対する後続拡張の一部をCALSにならったと説明する。この記述だけから`TR`の名称をCALSから直接コピーしたとはいえない。[RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html)
 
 ### 解釈
 

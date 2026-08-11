@@ -6,15 +6,15 @@ status: 完成
 
 ## 概要
 
-ruby非対応user agent向けの括弧を表す要素としてW3Cが提案・規範化し、既存Web上の`rp`を含む単純なruby markupとの互換性を保つため、2008年に`ruby`、`rt`とともにHTML5へ追加された。
+ruby非対応ユーザーエージェント向けの括弧を表す要素としてW3Cが提案・規範化し、既存Web上の`rp`を含む単純なruby markupとの互換性を保つため、2008年に`ruby`、`rt`とともにHTML5へ追加された。
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、ruby annotationをsupportしないuser agentに表示させるため、ruby text componentの周囲へ括弧等の内容を与える。`ruby`の子である場合は何も表さない。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rp-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、ruby annotationをsupportしないユーザーエージェントに表示させるため、ruby text componentの周囲へ括弧等の内容を与える。`ruby`の子である場合は何も表さない。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rp-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
-2007年8月12日、Ian Hicksonは`ruby`のparsingとsemantic requirementsを既に調査しており追加予定だと説明した。2008年5月26日、`ruby`、`rt`、`rp`とparser規則をWHATWG HTMLへ同時追加し、`rp`をlegacy user agent用の括弧構文として定義した。commitはIEの異常系まで再現せず、Web上で使われる`rp`入りの単純構文との互換性を優先した。[編集者回答](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html) [仕様commit](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)
+2007年8月12日、Ian Hicksonは`ruby`のparsingとsemantic requirementsを既に調査しており追加予定だと説明した。2008年5月26日、`ruby`、`rt`、`rp`とparser規則をWHATWG HTMLへ同時追加し、`rp`を従来のユーザーエージェント用の括弧構文として定義した。commitはIEの異常系まで再現せず、Web上で使われる`rp`入りの単純構文との互換性を優先した。[編集者回答](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html) [仕様commit](https://github.com/whatwg/html/commit/f4efc73617bb37e721828ba03fe3da1642ce40c9)
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ WHATWG HTML Living Standardでは、ruby annotationをsupportしないuser agent
 
 ### 証拠
 
-1997年のMartin Dürstによる`RUBY`属性案は、rubyをinline表示するときannotationを括弧で囲む実装方法を示した。1998年W3C草案はこの案に大きく着想を得たと明記し、括弧を構造化する`rp`を提案した。2001年Recommendationは`rp`を“ruby parenthesis”と説明し、非対応user agent向けfallbackとして規範化した。[1997年案](https://www.w3.org/International/draft-duerst-ruby-01) [1998年草案](https://www.w3.org/TR/1998/WD-ruby-19981221/) [2001年Recommendation](https://www.w3.org/TR/2001/REC-ruby-20010531/#simple)
+1997年のMartin Dürstによる`RUBY`属性案は、rubyをinline表示するときannotationを括弧で囲む実装方法を示した。1998年W3C草案はこの案に大きく着想を得たと明記し、括弧を構造化する`rp`を提案した。2001年Recommendationは`rp`を“ruby parenthesis”と説明し、非対応ユーザーエージェント向けfallbackとして規範化した。[1997年案](https://www.w3.org/International/draft-duerst-ruby-01) [1998年草案](https://www.w3.org/TR/1998/WD-ruby-19981221/) [2001年Recommendation](https://www.w3.org/TR/2001/REC-ruby-20010531/#simple)
 
 RecommendationはJIS X 4052:2000のruby markupと協調して作られたが、JIS側は`rp`を許さないと記す。[謝辞](https://www.w3.org/TR/2001/REC-ruby-20010531/#acks)
 

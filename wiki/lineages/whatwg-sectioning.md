@@ -6,11 +6,11 @@ status: 完成
 
 ## 共通要求
 
-2004年8月、WHATWG編集者Ian Hicksonは、`header`、`footer`、main content、投稿単位、`sidebar`等のsemantic element候補を挙げ、目的を`div`の最も一般的なpseudo-semantic用途を減らすことだと説明した。11月には`body`、`section`、`article`、`navigation`、`sidebar`をsectioning element集合とし、既存のheadingを保ったまま`div class="section"`を`section`へ、`div class="post"`を`article`へ置換できることを要件にした。[2004年8月の提案](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html)） [2004年11月の設計要求](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)）
+2004年8月、WHATWG編集者Ian Hicksonは、`header`、`footer`、main content、投稿単位、`sidebar`等の意味的要素候補を挙げ、目的を`div`の最も一般的な疑似意味的用途を減らすことだと説明した。11月には`body`、`section`、`article`、`navigation`、`sidebar`をsectioning element集合とし、既存のheadingを保ったまま`div class="section"`を`section`へ、`div class="post"`を`article`へ置換できることを要件にした。[2004年8月の提案](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html)） [2004年11月の設計要求](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)）
 
 2005年4月、Hicksonは更新したsectioning仕様の語彙が典型的siteのmarkup、特に`div`濫用の調査から直接得られたと説明した。この資料は集合全体の採用理由を示すが、各語彙に対応した調査対象を列挙しない。[2005年の調査説明](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html)）
 
-典型的siteのmarkup／`div`のpseudo-semantic用途 →［集合単位、個別対応は一部のみ確認］初期WHATWG semantic element集合
+典型的siteのmarkup／`div`の疑似意味的用途 →［集合単位、個別対応は一部のみ確認］初期WHATWG意味的要素集合
 
 ## 個別に確認できる枝
 

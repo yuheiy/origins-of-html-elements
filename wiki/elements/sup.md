@@ -34,7 +34,7 @@ HTML+の数学提案全体はLaTeXのapproachに着想を得たと明記する�
 
 HTML+ `SUP` → HTML 3.0 `SUP`
 
-IETF国際化草案 `SUP`（1995年） → RFC 2070 `SUP`
+IETF国際化草案`SUP`（1995年） → RFC 2070 `SUP`
 
 HTML 3.2 `SUP` → 現行HTML `<sup>`
 

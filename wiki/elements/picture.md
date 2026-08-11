@@ -10,13 +10,13 @@ Responsive Images Community Groupの提案とPicturefillを、HTML Working Group
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、子の`img`が使う画像resourceを、pixel density、viewport size、画像format等に応じて選べるよう複数のsourceを提供するcontainerである。`picture`自体は表示されず、子要素を表す。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/embedded-content.html)（[公開版](https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、子の`img`が使う画像resourceを、画素密度、ビューポートの寸法、画像format等に応じて選べるよう複数のsourceを提供するcontainerである。`picture`自体は表示されず、子要素を表す。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/embedded-content.html)（[公開版](https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
 Responsive Images Community Groupは2012年に提案中の`picture` markupを動かすPicturefillを公開した。2013年のHTML Working Group草案は同Community Groupとの共同開発を明記し、2014年6月17日のWHATWG commitがupstreamの`picture`更新をHTML Living Standardへ統合した。[Picturefill](https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/) [HTML WG草案](https://www.w3.org/TR/2013/WD-html-picture-element-20130226/) [仕様commit](https://github.com/whatwg/html/commit/a7716b7a2463323c7f25176f4b3768008d170204)
 
-導入理由は、resolution switching、art direction、breakpoint、画像format等に応じた複数sourceの選択を宣言的に行い、legacy user agentには`img`でfallbackすることだった。[要求文書](https://www.w3.org/TR/2013/WD-respimg-usecases-20130226/)
+導入理由は、resolution switching、art direction、breakpoint、画像format等に応じた複数sourceの選択を宣言的に行い、従来のユーザーエージェントには`img`でfallbackすることだった。[要求文書](https://www.w3.org/TR/2013/WD-respimg-usecases-20130226/)
 
 ## HTML直前の祖先
 

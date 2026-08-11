@@ -43,7 +43,7 @@ header／body分離案（1992-06-25）→ CERN header wrapper計画 → `HEADING
 | 1992-11-30（更新日） | [*Recommended HTML Usage*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Connolly/recommended.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Connolly/recommended.html)） | 当事者によるimplementors’ guide | `BODY`より前の非要素header partと、その構成要素を記録する。 | 2026-08-09 |
 | 1992-12-02（更新日） | [*Future plans for HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)） | CERN設計ノート | header wrapperと、その終端を早期に判定する設計上の利点を記録する。 | 2026-08-09 |
 | 1992-12-04 | [“The spec evolves...”](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html)） | www-talkへの当事者投稿 | ConnollyがDTDを変更して`HEAD/BODY` tagへ対応したと報告する。 | 2026-08-10 |
-| 1993-01-06（DTD RCS id） | [*Hypertext Markup Language (HTML)*収録DTD](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft内のDTD | `HEAD`とそのunordered content modelを宣言する。 | 2026-08-09 |
+| 1993-01-06（DTD RCS id） | [*Hypertext Markup Language (HTML)*収録DTD](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft内のDTD | `HEAD`とその順序なしの内容モデルを宣言する。 | 2026-08-09 |
 
 ## 確度
 

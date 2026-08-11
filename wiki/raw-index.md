@@ -1,8 +1,8 @@
-# Raw resources
+# Rawソース
 
-> このファイルは`scripts/generate-raw-index.js`による生成物である。直接編集せず、scriptを実行して再生成する。
+> このファイルは`scripts/generate-raw-index.js`による生成物である。直接編集せず、このスクリプトを実行して再生成する。
 
-| Resource | Document title |
+| Rawファイル | 文書タイトル |
 |---|---|
 | [1997.webhistory.org/www.lists/www-talk.1993q1/0182.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0182.html) | WWW-Talk Jan-Mar 1993: proposed new tag: IMG |
 | [1997.webhistory.org/www.lists/www-talk.1993q1/0197.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0197.html) | WWW-Talk Jan-Mar 1993: Re: proposed new tag: IMG |

@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-W3CのClient-side Scripting草案で、scriptまたはその言語に非対応のuser agentへ代替内容を示すため導入され、HTML 4へ入った要素である。Netscape Navigator 3.0の実装も確認できるが、W3C案との前後関係と採録因果は未確認である。
+W3CのClient-side Scripting草案で、scriptまたはその言語に非対応のユーザーエージェントへ代替内容を示すため導入され、HTML 4へ入った要素である。Netscape Navigator 3.0の実装も確認できるが、W3C案との前後関係と採録因果は未確認である。
 
 ## 現在の意味
 
@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、scriptingがenabledなら何も表さず、d
 
 ## HTMLへの導入
 
-確認したW3C草案では1996年6月27日版に`NOSCRIPT`はなく、7月9日版に定義がある。同版は、user agentがclient-side scriptingまたは先行`SCRIPT`の言語を支援しない場合だけ内容をrenderし、downlevel browserへupgrade invitationを提供する要素と説明する。editorはDave Raggettである。[6月27日版](https://www.w3.org/TR/WD-script-960627.html) [7月9日版](https://www.w3.org/TR/WD-script-960709.html)
+確認したW3C草案では1996年6月27日版に`NOSCRIPT`はなく、7月9日版に定義がある。同版は、ユーザーエージェントがclient-side scriptingまたは先行`SCRIPT`の言語を支援しない場合だけ内容をrenderし、downlevel browserへupgrade invitationを提供する要素と説明する。editorはDave Raggettである。[6月27日版](https://www.w3.org/TR/WD-script-960627.html) [7月9日版](https://www.w3.org/TR/WD-script-960709.html)
 
 Netscapeのcopyright 1996、Version 3.0の*JavaScript Guide*と、Netscape 3.0用HTML referenceの保存複製は`NOSCRIPT`の実装と、JavaScript非対応または無効時に代替内容を表示する動作を記録する。ただし資料の公開日を固定できず、7月9日のW3C草案との前後関係は分からない。[JavaScript Guide保存複製](https://www.uv.es/jordi/v3/js/jsguide/jsguide.pdf) [HTML reference保存複製](https://lib.ru/WEBMASTER/tags.txt)
 

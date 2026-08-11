@@ -18,7 +18,7 @@ WHATWG HTML Living Standardでは、他のページまたは同じページ内�
 
 ## HTML直前の祖先
 
-典型的siteのmarkup、特に`div`のpseudo-semantic用途を調べた集合レベルの既存Web慣習である。資料は`nav`個別のclassまたはmarkupを列挙しない。2004年の`navigation`案は同じ役割の先行名だが、`nav`への変更記録がないため矢印では接続しない。2005年12月のGoogle調査も既存`nav` classとの対応を示すが、草案より後の公表なので個別の採用因果は示さない。
+典型的siteのmarkup、特に`div`の疑似意味的用途を調べた集合レベルの既存Web慣習である。資料は`nav`個別のclassまたはmarkupを列挙しない。2004年の`navigation`案は同じ役割の先行名だが、`nav`への変更記録がないため矢印では接続しない。2005年12月のGoogle調査も既存`nav` classとの対応を示すが、草案より後の公表なので個別の採用因果は示さない。
 
 ## さらに上流の由来
 
@@ -32,7 +32,7 @@ WHATWG HTML Living Standardでは、他のページまたは同じページ内�
 
 ## 系譜
 
-典型的siteのmarkup／`div`のpseudo-semantic用途 →［集合単位、個別対応不明］WHATWG sectioning語彙
+典型的siteのmarkup／`div`の疑似意味的用途 →［集合単位、個別対応不明］WHATWG sectioning語彙
 
 WHATWG `navigation`案（2004年）　[名称変更の判断未確認]　Web Applications 1.0 `nav`（2005年） → 現行HTML `nav`
 

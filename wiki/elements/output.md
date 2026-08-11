@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、計算結果またはuser actionの結果を表す。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、計算結果またはユーザー操作の結果を表す。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -36,7 +36,7 @@ HTML版はXFormsのinstance-data bindingをそのまま移植せず、動的な�
 
 ## 系譜
 
-XForms `output`を含む機能集合 → 2003年HTML forms案 `output` → Web Forms 2.0 `output` → HTML5 `output` → 現行HTML `output`
+XForms `output`を含む機能集合 → 2003年HTML forms案`output` → Web Forms 2.0 `output` → HTML5 `output` → 現行HTML `output`
 
 最初の矢印は仕様全体の設計方針に基づく集合レベルの関係であり、`output`単独の採用判断は欠ける。
 

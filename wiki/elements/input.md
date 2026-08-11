@@ -10,11 +10,11 @@ HTML+ formsからHTML 2.0へ導出されたtyped input fieldで、各widget type
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、型を持つdata fieldを表し、通常はユーザーがデータを編集するためのform controlを伴う。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/input.html)（[公開版](https://html.spec.whatwg.org/multipage/input.html#the-input-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、型を持つデータ入力欄を表し、通常はユーザーがデータを編集するためのform controlを伴う。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/input.html)（[公開版](https://html.spec.whatwg.org/multipage/input.html#the-input-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
-1993年HTML+は `INPUT` を`TYPE`で多様な入力fieldを表す要素として定義した。RFC 1866はHTML 2.0 formsへ`INPUT`を採録し、forms materialのHTML+由来を明記する。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) [RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html)
+1993年HTML+は`INPUT`を`TYPE`で多様な入力fieldを表す要素として定義した。RFC 1866はHTML 2.0 formsへ`INPUT`を採録し、forms materialのHTML+由来を明記する。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) [RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html)
 
 ## HTML直前の祖先
 

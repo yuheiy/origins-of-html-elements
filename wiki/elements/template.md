@@ -26,7 +26,7 @@ WHATWG HTML Living Standardでは、scriptでcloneしてdocumentへ挿入でき�
 
 ### 証拠
 
-2011年提案は、当時のclient-side templatingがJavaScript文字列、hidden textarea、非script MIME typeの`script`、comment、`display: none`などを回避策として使っていたと説明する。これらの問題を解く標準構文として`template`を提案するが、特定libraryから採用したとは述べない。[2011年提案](https://lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html)
+2011年提案は、当時のclient-side templatingがJavaScript文字列、hidden textarea、非script MIMEタイプの`script`、comment、`display: none`などを回避策として使っていたと説明する。これらの問題を解く標準構文として`template`を提案するが、特定libraryから採用したとは述べない。[2011年提案](https://lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html)
 
 ### 解釈
 

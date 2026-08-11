@@ -32,7 +32,7 @@ Cougar向けforms Working Draft系列で`FIELDSET`のgroup名を担った`CAPTIO
 
 ## 系譜
 
-modern UIのlabelled group慣習 → W3C forms草案 `LGROUP`＋`IS`（1996年3月） → Cougar forms草案 `FIELDSET`＋`CAPTION`（1997年2月・4月） →［置換判断は未確認］HTML 4.0 FPWD `FIELDSET`＋`LEGEND`（1997年7月） → 現行HTML `<legend>`
+modern UIのlabelled group慣習 → W3C forms草案`LGROUP`＋`IS`（1996年3月） → Cougar forms草案`FIELDSET`＋`CAPTION`（1997年2月・4月） →［置換判断は未確認］HTML 4.0 FPWD `FIELDSET`＋`LEGEND`（1997年7月） → 現行HTML `<legend>`
 
 `LEGEND`の提案者、`CAPTION`からの置換理由、特定GUI toolkitは未確認である。
 

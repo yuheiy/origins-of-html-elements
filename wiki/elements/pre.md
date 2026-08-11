@@ -32,7 +32,7 @@ HTML+はpreformatted computer outputとplain text files、特にUnix manual page
 
 ## 系譜
 
-preformatted computer output → 初期HTML `PRE` → Unix manual pagesのhypertext化に伴う拡張 → HTML+ → HTML 2.0以降 `<pre>`
+preformatted computer output → 初期HTML `PRE` → Unix manual pagesのhypertext化に伴う拡張 → HTML+ → HTML 2.0以降`<pre>`
 
 ## 証拠
 

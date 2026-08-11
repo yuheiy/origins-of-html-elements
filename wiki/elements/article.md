@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、文書、ページ、アプリケーショ�
 
 ## HTMLへの導入
 
-2004年8月29日のWHATWG threadで、Hicksonは`entry`、`post`、`article`をsectionより大きくpageより小さいtext unitの候補として挙げ、目的を`div`の最も一般的なpseudo-semantic用途を減らすことだと説明した。11月12日には、既存markupの`div class="post"`を`article`へ置換できることをsectioning modelの要件として明記し、forum postやblog article等をmark upする要素を求めていると説明した。12月8日版の保存草案はWeblog post、magazine article、forum post等として定義し、2005年9月1日版もblog post等の独立したsectionとして定義する。[2004年8月の提案](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html) [2004年11月の設計要求](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html) [役割の説明](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002363.html) [2004年草案](https://web.archive.org/web/20041210054847id_/http://www.whatwg.org/specs/web-apps/current-work/#article) [2005年草案](https://whatwg.org/specs/web-apps/2005-09-01/#the-article)
+2004年8月29日のWHATWG threadで、Hicksonは`entry`、`post`、`article`をsectionより大きくpageより小さいtext unitの候補として挙げ、目的を`div`の最も一般的な疑似意味的用途を減らすことだと説明した。11月12日には、既存markupの`div class="post"`を`article`へ置換できることをsectioning modelの要件として明記し、forum postやblog article等をmark upする要素を求めていると説明した。12月8日版の保存草案はWeblog post、magazine article、forum post等として定義し、2005年9月1日版もblog post等の独立したsectionとして定義する。[2004年8月の提案](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html) [2004年11月の設計要求](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html) [役割の説明](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002363.html) [2004年草案](https://web.archive.org/web/20041210054847id_/http://www.whatwg.org/specs/web-apps/current-work/#article) [2005年草案](https://whatwg.org/specs/web-apps/2005-09-01/#the-article)
 
 ## HTML直前の祖先
 
@@ -40,7 +40,7 @@ WHATWG HTML Living Standardでは、文書、ページ、アプリケーショ�
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2004-08-29 | [`<section>` and headings](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html)） | WHATWG mailing list | Hicksonが`entry`／`post`／`article`をsectionより大きくpageより小さいtext unitの候補とし、一般的な`div`のpseudo-semantic用途を減らす目的を説明したこと。 | 2026-08-10 |
+| 2004-08-29 | [`<section>` and headings](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-August/002134.html)） | WHATWG mailing list | Hicksonが`entry`／`post`／`article`をsectionより大きくpageより小さいtext unitの候補とし、一般的な`div`の疑似意味的用途を減らす目的を説明したこと。 | 2026-08-10 |
 | 2004-11-12 | [Re: `<section>` and headings](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html)） | WHATWG mailing list | `div class="post"`を`article`へ置換できることを設計要求とし、forum postやblog articleを対象用途としたこと。 | 2026-08-10 |
 | 2004-12-08 | [Web Applications 1.0](../../raw/web.archive.org/web/20041210054847id_/http%3A/www.whatwg.org/specs/web-apps/current-work/index.html)（[公開元](https://web.archive.org/web/20041210054847id_/http://www.whatwg.org/specs/web-apps/current-work/#article)） | WHATWG保存Working Draft | `article`をWeblog post、magazine article、forum post等として定義したこと。 | 2026-08-10 |
 | 2005-09-01 | [Web Applications 1.0](../../raw/whatwg.org/specs/web-apps/2005-09-01/index.html)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-article)） | WHATWG保存Early Working Draft | `article`の存在と、独立したsectionという導入時の意味。 | 2026-08-09 |

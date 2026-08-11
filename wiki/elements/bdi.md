@@ -10,7 +10,7 @@ W3C i18n groupのbidi isolation要求と`ubi`属性案を、WHATWGが2010年に�
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、bidirectional text formattingにおいて周囲から分離するtext範囲を表す。`dir`はこの要素では`auto`が既定となり、親から継承しない。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdi-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、双方向テキストの整形において周囲から分離するtext範囲を表す。`dir`はこの要素では`auto`が既定となり、親から継承しない。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdi-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -49,7 +49,7 @@ Unicode Bidi Algorithmのisolation要求 → CSS `unicode-bidi:isolate`＋W3C `u
 
 ## 否定された仮説
 
-`bdo`の単純な別名または反対機能として導出する説明。Bug 10807はoverrideとisolationを別の問題として扱う。user-generated contentだけを唯一の由来とする説明も、著者作成textを含むuse casesより狭すぎる。
+`bdo`の単純な別名または反対機能として導出する説明。Bug 10807はoverrideとisolationを別の問題として扱う。user-generated contentだけを唯一の由来とする説明も、著者作成textを含む利用例より狭すぎる。
 
 ## 未解決
 

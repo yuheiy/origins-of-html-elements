@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、子のtext directionalityを明示的に制御し、`dir=ltr`または`dir=rtl`によってUnicode bidirectional algorithmの方向判定を上書きする。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdo-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、子のtext directionalityを明示的に制御し、`dir=ltr`または`dir=rtl`によってUnicode双方向アルゴリズムの方向判定を上書きする。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdo-element)、2026-08-09確認）
 
 ## HTMLへの導入
 

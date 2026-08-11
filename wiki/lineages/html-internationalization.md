@@ -9,7 +9,7 @@ status: 完成
 1995年8月15日の`draft-ietf-html-i18n-00`は言語やplatformに応じたquotation markのため`Q`を導入した。9月25日の`draft-ietf-html-i18n-01`は、一般テキストのsubscript／superscriptのため`SUB`／`SUP`を追加し、RFC 2070が三要素を標準化した。[IETF i18n draft-00](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-00)） [IETF i18n draft-01](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-i18n-01)） [RFC 2070](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)）
 
 ```text
-IETF i18n draft-00 Q → 後続草案 Q → RFC 2070 Q
+IETF i18n draft-00 Q → 後続草案Q → RFC 2070 Q
 IETF i18n draft-01 SUB / SUP → RFC 2070 SUB / SUP
 ```
 

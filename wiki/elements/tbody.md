@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、親`table`のdata bodyを構成するrowsのblockを表す。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/tables.html)（[公開版](https://html.spec.whatwg.org/multipage/tables.html#the-tbody-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、親`table`のデータ本体を構成するrowsのblockを表す。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/tables.html)（[公開版](https://html.spec.whatwg.org/multipage/tables.html#the-tbody-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -38,7 +38,7 @@ CALS table model `TBODY`（1993 baseline）→ Raggett HTML table proposal `TBOD
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1995-04-21（1995-04-29転載） | [Dave Raggett HTML table proposal／Harvey Bingham reply](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)） | HTML-WG mail archive | Raggettが三要素をCALSから借用したと明記し、BinghamがCALS `TGROUP`、局所`COLSPEC`、`ROW`とHTML案の構造差を対照する。 | 2026-08-10 |
+| 1995-04-21（1995-04-29転載） | [Dave Raggett HTML table proposal／Harvey Bingham reply](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)） | HTML-WGメールアーカイブ | Raggettが三要素をCALSから借用したと明記し、BinghamがCALS `TGROUP`、局所`COLSPEC`、`ROW`とHTML案の構造差を対照する。 | 2026-08-10 |
 | 1995-07-07 | [*HTML Tables* `draft-ietf-html-tables-00`](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt)） | IETF Internet-Draft | CALSのfeaturesを取り込んだhead/body/foot groupingとして`TBODY`を定義し、scrollingとpaged outputの用途を記す。 | 2026-08-09 |
 | 1995-10-19 | [OASIS Technical Memorandum TM 9502:1995, *CALS Table Model Document Type Definition*](../../raw/www.oasis-open.org/specs/a502.htm)（[公開元](https://www.oasis-open.org/specs/a502.htm)） | OASIS Technical Memorandum | 1995年6月30日のMIL-HDBK-28001 Example DTDから`TBODY`の`VALIGN`既定値を変更したと記し、CALS側の既存同名要素を`TGROUP`または`ENTRYTBL`のbodyとして定義する。 | 2026-08-10 |
 | 1995-11-21 | [OASIS Technical Research Paper 9501:1995, *Table Interoperability: Issues for the CALS Table Model*](../../raw/www.oasis-open.org/specs/a501.htm)（[公開元](https://www.oasis-open.org/specs/a501.htm)） | OASIS Technical Research Paper | CALS table modelの初公開を1990年、baselineを1993年のMIL-M-28001Bとし、各`TGROUP`が`TBODY`を持つ構造を記す。 | 2026-08-10 |

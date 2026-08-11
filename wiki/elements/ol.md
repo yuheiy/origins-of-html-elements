@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-1990年12月のWorldWideWeb test fileは、CERN-SGML tagsetから一部をHTMLへ含めたと明記し、`OL`をaccepted tag集合の実例として使う。ただし当時はunordered listとして実装され、個々のCERN-SGML tagとの対応も明記されない。1992年には一時未使用だったが、unordered listとの区別のため戻す設計判断を確認できる。
+1990年12月のWorldWideWebのテストファイルは、CERN-SGML tagsetから一部をHTMLへ含めたと明記し、`OL`をaccepted tag集合の実例として使う。ただし当時はunordered listとして実装され、個々のCERN-SGML tagとの対応も明記されない。1992年には一時未使用だったが、unordered listとの区別のため戻す設計判断を確認できる。
 
 ## 現在の意味
 
@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、順序を変えると文書の意味が変�
 
 ## HTMLへの導入
 
-1990年12月7日保存のWorldWideWeb test fileは、accepted HTML tagsの説明中でCERN-SGML tagsetから一部をHTMLへ含めたと明記し、同じfileで`OL`を使う。冒頭の`OL`と後段のordered list例はいずれも存在するが、後段にはunordered listとしてsupportすると注記され、誤って`</UL>`で閉じられている。Tim Berners-Leeは1991年10月29日のmailでも`OL`をHTMLのstyle tagとして列挙する。1992年1月資料では“NOT CURRENTLY USED”だったが、同年の*Future plans for HTML*はunordered listとの区別のため`OL`を戻し、Connollyが実装中だと記録する。[WorldWideWeb test file](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html) [Berners-Lee, 1991年mail](https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html) [Berners-Lee, 1992年1月mail](https://lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html) [*Future plans for HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)
+1990年12月7日保存のWorldWideWebのテストファイルは、accepted HTML tagsの説明中でCERN-SGML tagsetから一部をHTMLへ含めたと明記し、同じfileで`OL`を使う。冒頭の`OL`と後段のordered list例はいずれも存在するが、後段にはunordered listとしてsupportすると注記され、誤って`</UL>`で閉じられている。Tim Berners-Leeは1991年10月29日のmailでも`OL`をHTMLのstyle tagとして列挙する。1992年1月資料では“NOT CURRENTLY USED”だったが、同年の*Future plans for HTML*はunordered listとの区別のため`OL`を戻し、Connollyが実装中だと記録する。[WorldWideWebのテストファイル](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html) [Berners-Lee, 1991年mail](https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html) [Berners-Lee, 1992年1月mail](https://lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html) [*Future plans for HTML*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)
 
 ## HTML直前の祖先
 
-CERN-SGML tagsetである。WorldWideWeb test fileはCERN-SGMLから一部のtagをHTMLへ含めたと明記し、同じaccepted tag集合に`OL`を含む。ただし、CERN-SGML側の個別tagとの対応は明記せず、当時のWorldWideWebはordered表示を実装していなかった。
+CERN-SGML tagsetである。WorldWideWebのテストファイルはCERN-SGMLから一部のtagをHTMLへ含めたと明記し、同じaccepted tag集合に`OL`を含む。ただし、CERN-SGML側の個別tagとの対応は明記せず、当時のWorldWideWebはordered表示を実装していなかった。
 
 ## さらに上流の由来
 
@@ -39,10 +39,10 @@ CERN-SGML tags →［集合単位、個別対応は不明］WorldWideWeb accepte
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
 | 1988-10-18 | [*SCRIPT GML User’s Guide*](../../raw/web.archive.org/web/20020504095301/http%3A/www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)（[公開元](https://web.archive.org/web/20020504095301/http://www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt)） | Waterloo公式文書の保存版 | 先行GMLに`:OL`が存在する。HTMLへの採用因果は示さない。 | 2026-08-09 |
-| 1990-12-07（HTTP Last-Modified） | [WorldWideWeb `backup_of_test.html`](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)） | CERN/W3C保存の実装test file | CERN-SGML tagsetから一部をHTMLへ含めたと明記し、`OL`と`LI`の実例を使う。ordered listをunordered表示でsupportするという実装差と誤った`</UL>`も記録する。個別対応は指定しない。 | 2026-08-10 |
+| 1990-12-07（HTTP Last-Modified） | [WorldWideWeb `backup_of_test.html`](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)） | CERN/W3C保存の実装テストファイル | CERN-SGML tagsetから一部をHTMLへ含めたと明記し、`OL`と`LI`の実例を使う。ordered listをunordered表示でsupportするという実装差と誤った`</UL>`も記録する。個別対応は指定しない。 | 2026-08-10 |
 | 1991-10-29 | [“Re: status. Re: X11 BROWSER for WWW”](../../raw/lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html)） | www-talkへの当事者投稿 | `OL`をHTMLのstyle tagとして列挙する。 | 2026-08-09 |
 | 1992-01-09 | [“Re: Is there a paper which describes the www protocol?”](../../raw/lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html)） | www-talkへの当事者投稿 | `OL`をordered listとしつつ“NOT CURRENTLY USED”と記録する。 | 2026-08-09 |
-| 1992-11-13（更新日） | [*Tags used in HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)） | CERN公式HTML資料のhistorical snapshot | list opening tagsとして`UL`、`MENU`、`DIR`を列挙し、`OL`は列挙しない。 | 2026-08-09 |
+| 1992-11-13（更新日） | [*Tags used in HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)） | CERN公式HTML資料の歴史的スナップショット | list opening tagsとして`UL`、`MENU`、`DIR`を列挙し、`OL`は列挙しない。 | 2026-08-09 |
 | 1992-12-02（更新日） | [*Future plans for HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)） | CERN設計ノート | unordered listとの区別のため`OL`を戻し、Connollyが実装中だと記録する。 | 2026-08-09 |
 | 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | `OL`を順序が重要な番号付きlistとして説明し、DTDのlist集合へ含める。 | 2026-08-09 |
 

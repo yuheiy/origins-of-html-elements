@@ -32,7 +32,7 @@ HTML5草案の旧`header`。仕様commitが要素の改名を直接明記する�
 
 ## 系譜
 
-HTML5草案 `header`（2005年） → `hgroup`への改名とsubheading用途への限定（2009年） → 現行HTML `hgroup`
+HTML5草案`header`（2005年） → `hgroup`への改名とsubheading用途への限定（2009年） → 現行HTML `hgroup`
 
 ## 証拠
 

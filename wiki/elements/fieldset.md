@@ -14,7 +14,7 @@ WHATWG HTML Living Standardではform controlsまたは他の内容を一組に�
 
 ## HTMLへの導入
 
-1997年2月3日のScott Isaacs著、Dave Raggett編のforms Working Draftが`FIELDSET`／`CAPTION`を定義した。HTMLにはspeech-based user agentが関連fieldsをgroupとして閲覧するmarkupがなかったため、関連fieldsをまとめ、group間を移動できるようにすることが理由だった。4月2日版はこの構造をCougarへの採録候補として継続し、Cougarの公開記録は同草案をHTML 4.0の基礎となったdraftsの一つに挙げる。7月8日のHTML 4.0 First Public Working Draftが`FIELDSET`／`LEGEND`を採録した。[1997年2月草案](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [1997年4月草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)） [Cougar概要](../../raw/www.w3.org/MarkUp/Cougar/index.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） [HTML 4.0 forms](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)
+1997年2月3日のScott Isaacs著、Dave Raggett編のforms Working Draftが`FIELDSET`／`CAPTION`を定義した。HTMLにはspeech-basedユーザーエージェントが関連fieldsをgroupとして閲覧するmarkupがなかったため、関連fieldsをまとめ、group間を移動できるようにすることが理由だった。4月2日版はこの構造をCougarへの採録候補として継続し、Cougarの公開記録は同草案をHTML 4.0の基礎となったdraftsの一つに挙げる。7月8日のHTML 4.0 First Public Working Draftが`FIELDSET`／`LEGEND`を採録した。[1997年2月草案](../../raw/www.w3.org/TR/WD-forms-970203.html)（[公開元](https://www.w3.org/TR/WD-forms-970203.html)） [1997年4月草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)） [Cougar概要](../../raw/www.w3.org/MarkUp/Cougar/index.html)（[公開元](https://www.w3.org/MarkUp/Cougar/)） [HTML 4.0 forms](https://www.w3.org/TR/WD-html40-970708/interact/forms.html)
 
 ## HTML直前の祖先
 
@@ -32,7 +32,7 @@ Cougarの`FIELDSET`は、先行草案のlabelled groupを、視覚的な囲み�
 
 ## 系譜
 
-modern UIのlabelled group慣習＋speech navigation要求 → W3C forms草案 `LGROUP`＋`IS`（1996年3月） → Cougar forms草案 `FIELDSET`＋`CAPTION`（1997年2月・4月） → HTML 4.0 FPWD `FIELDSET`＋`LEGEND`（1997年7月） → 現行HTML `<fieldset>`
+modern UIのlabelled group慣習＋speech navigation要求 → W3C forms草案`LGROUP`＋`IS`（1996年3月） → Cougar forms草案`FIELDSET`＋`CAPTION`（1997年2月・4月） → HTML 4.0 FPWD `FIELDSET`＋`LEGEND`（1997年7月） → 現行HTML `<fieldset>`
 
 `LGROUP`から`FIELDSET`への名称変更理由と特定GUI toolkitは未確認である。
 

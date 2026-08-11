@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、それ自体には意味を持たず子を表すinline containerであり、`class`、`lang`、`dir`などのglobal attributesと組み合わせる場合に有用である。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-span-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、それ自体には意味を持たず子を表すinline containerであり、`class`、`lang`、`dir`などのグローバル属性と組み合わせる場合に有用である。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-span-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -32,9 +32,9 @@ Unicodeのdirectional embeddingをHTML markupへ移す設計と、`LANG`／`DIR`
 
 ## 系譜
 
-Unicode directional embedding＋`LANG`／`DIR`用inline container要求 → IETF国際化草案 `SPAN`（1995年） → RFC 2070 `SPAN`
+Unicode directional embedding＋`LANG`／`DIR`用inline container要求 → IETF国際化草案`SPAN`（1995年） → RFC 2070 `SPAN`
 
-style草案の`C`を廃して既存`SPAN`を再利用する提案（1995年）→ W3C style草案 `SPAN`（1996年）
+style草案の`C`を廃して既存`SPAN`を再利用する提案（1995年）→ W3C style草案`SPAN`（1996年）
 
 二つの確認済み枝 → HTML 4 `<span>` → 現行HTML `<span>`
 

@@ -46,7 +46,7 @@ HTML `BODY`（1992-07-15公開DTD）→ 内部版DTD `DOCUMENT`（1992-11-19の�
 | 1992-11-19 | “HTML DTD issues”／“Re: HTML DTD issues”：[提案](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)・[応答](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)（[公開元1](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)・[公開元2](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0072.html)） | www-talkへの当事者投稿 | Connollyが当時の内部版の`DOCUMENT`を`BODY`へ戻す案を示し、Berners-LeeがHeader/Body用語を支持する。 | 2026-08-09 |
 | 1992-12-01 | [“HTML providers: please grab sgmls and the DTD”](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0143.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0143.html)） | www-talkへの当事者投稿 | Connollyがmixed contentを避ける選択肢を比較し、`BODY`を使う案を実施したと説明する。 | 2026-08-10 |
 | 1992-12-04 | [“The spec evolves...”](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html)） | www-talkへの当事者投稿 | ConnollyがDTDを変更して`HEAD/BODY` tagへ対応したと報告する。 | 2026-08-10 |
-| 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | DTDで`BODY`とそのcontent modelを宣言する。 | 2026-08-09 |
+| 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | DTDで`BODY`とその内容モデルを宣言する。 | 2026-08-09 |
 
 ## 確度
 

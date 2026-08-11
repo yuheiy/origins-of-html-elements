@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、userがtaskを行うか情報を得るため
 
 ## HTMLへの導入
 
-2011年のW3C Issue 162は、desktop／Web UI toolkitでmodal dialogが一般的である一方、CSS、JavaScript、WAI-ARIAによるrobustな実装が難しいとしてnative mechanismを提案した。2012年4月11日、Ian Hicksonはmailing listの議論と既存use case調査に基づき、application UI用`dialog`を`open`, `show()`, `showModal()`, `close()`, `form method=dialog`等とともにWHATWG HTML sourceへ追加した。[Issue 162](https://lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html) [編集者説明](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html) [仕様commit](https://github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9)
+2011年のW3C Issue 162は、desktop／Web UI toolkitでmodal dialogが一般的である一方、CSS、JavaScript、WAI-ARIAによるrobustな実装が難しいとしてnative mechanismを提案した。2012年4月11日、Ian Hicksonはmailing listの議論と既存利用例調査に基づき、application UI用`dialog`を`open`, `show()`, `showModal()`, `close()`, `form method=dialog`等とともにWHATWG HTML sourceへ追加した。[Issue 162](https://lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html) [編集者説明](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html) [仕様commit](https://github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9)
 
 ## HTML直前の祖先
 
-CSS、JavaScript、WAI-ARIAで作られていたin-page modal dialogと、`alert()`／`confirm()`等のblocking promptである。Issue 162と導入時の編集者説明は、jQuery UI、YUI、Drupal overlay等の既存Web実装、browser promptの実装問題、JS製lightbox-style dialogを具体的なuse caseおよび置換対象として挙げる。単一libraryのAPIを移植したのではなく、実装群と要求をまとめたHTML機構である。
+CSS、JavaScript、WAI-ARIAで作られていたin-page modal dialogと、`alert()`／`confirm()`等のblocking promptである。Issue 162と導入時の編集者説明は、jQuery UI、YUI、Drupal overlay等の既存Web実装、browser promptの実装問題、JS製lightbox-style dialogを具体的な利用例および置換対象として挙げる。単一libraryのAPIを移植したのではなく、実装群と要求をまとめたHTML機構である。
 
 ## さらに上流の由来
 
@@ -36,7 +36,7 @@ conversation用HTML5 `dialog` → 削除（2009年）
 
 CSS／JavaScript／WAI-ARIA製modal dialog、JS lightbox、browser blocking prompt
 
-→（既存use case調査とmailing-list議論）application UI用`dialog`の導入（2012年） → 現行HTML `dialog`
+→（既存利用例調査とmailing-list議論）application UI用`dialog`の導入（2012年） → 現行HTML `dialog`
 
 ## 証拠
 
@@ -46,7 +46,7 @@ CSS／JavaScript／WAI-ARIA製modal dialog、JS lightbox、browser blocking prom
 | 2009-09-15 | [WHATWG HTML commit `9c490f21`](../../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)（[公開元](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)） | 仕様commit | conversation用`dialog`を削除し、通常のHTMLによる会話markupへ置換。 | 2026-08-09 |
 | 2011-01-22 | [W3C HTML Issue 162](../../raw/lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html)（[公開元](https://lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html)） | 標準化issue | CSS、JavaScript、WAI-ARIAでrobustなmodal dialogを作る難しさ、既存Web UI実装、native mechanismの提案。 | 2026-08-09 |
 | 2012-04-11 | [WHATWG HTML commit `2fb24fcf`](../../raw/github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9)（[公開元](https://github.com/whatwg/html/commit/2fb24fcf3f916236e8767e2cb72b23e5c75b77e9)） | 仕様commit | application UI用`dialog`、modal/non-modal API、関連機構の導入。 | 2026-08-09 |
-| 2012-04-11 | [Ian Hickson, “Dialogs and prompts”](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html)） | WHATWG mailing list・編集者説明 | 既存use caseと議論に基づく設計、browser promptの問題、JS lightbox-style dialog、非同期`showModal()`の採用理由。 | 2026-08-09 |
+| 2012-04-11 | [Ian Hickson, “Dialogs and prompts”](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html)） | WHATWG mailing list・編集者説明 | 既存利用例と議論に基づく設計、browser promptの問題、JS lightbox-style dialog、非同期`showModal()`の採用理由。 | 2026-08-09 |
 
 ## 確度
 

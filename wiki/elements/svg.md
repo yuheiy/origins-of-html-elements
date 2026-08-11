@@ -32,7 +32,7 @@ SVG 1.0は2次元vectorおよびvector／raster混合graphicsを記述するXML 
 
 ## 系譜
 
-SVG 1.0 `svg` root（2001年） → HTML parser統合（2008年） → 削除（2008年） → feedbackに基づく再導入（2009年） → 現行HTML文書内のforeign root `svg`
+SVG 1.0 `svg` root（2001年） → HTML parser統合（2008年） → 削除（2008年） → feedbackに基づく再導入（2009年） → 現行HTML文書内の外来要素のルート`svg`
 
 ## 証拠
 
@@ -57,4 +57,4 @@ HTML名前空間の新要素として発明されたという説明。parserが�
 
 - SVG Working Groupによる削除要請の本文はどれか。
 - 2009年commitがいう“more recent feedback”の出典は何か。
-- 再導入後、現行foreign content algorithmまでの主要改訂は何か。
+- 再導入後、現行外来要素の内容algorithmまでの主要改訂は何か。

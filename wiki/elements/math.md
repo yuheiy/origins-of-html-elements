@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-MathML 1.0で定義済みのMathML名前空間のrootを、2008年にHTMLの`text/html` parserから生成できるforeign rootとして統合したものである。
+MathML 1.0で定義済みのMathML名前空間のrootを、2008年にHTMLの`text/html` parserから生成できる外来要素のルートとして統合したものである。
 
 ## 現在の意味
 
@@ -14,7 +14,7 @@ MathML Coreでは、文書内のMathML markupの各instanceを包む唯一のtop
 
 ## HTMLへの導入
 
-2008年4月5日のWHATWG commitは、MathMLとSVGを`text/html`で扱うforeign content parsing infrastructureを追加し、`math` start tagからMathML名前空間の要素を生成する規則を導入した。[仕様commit](https://github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7)
+2008年4月5日のWHATWG commitは、MathMLとSVGを`text/html`で扱う外来要素の内容parsing infrastructureを追加し、`math` start tagからMathML名前空間の要素を生成する規則を導入した。[仕様commit](https://github.com/whatwg/html/commit/1ff9688ab0090e646f69d64e57c814ca44f584b7)
 
 ## HTML直前の祖先
 
@@ -32,7 +32,7 @@ MathML 1.0は数学のnotation、structure、contentをWebで扱うXML applicati
 
 ## 系譜
 
-MathML 1.0 `math` root（1998年） → HTML `text/html` parserで生成されるMathML `math` root（2008年） → 現行HTML文書内のforeign root `math`
+MathML 1.0 `math` root（1998年） → HTML `text/html` parserで生成されるMathML `math` root（2008年） → 現行HTML文書内の外来要素のルート`math`
 
 ## 証拠
 

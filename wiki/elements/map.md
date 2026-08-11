@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-James L. Seidmanが1994年に`area`とともに提案したclient-side image mapのcontainerであり、HTML+のimage map案を直接検討して設計された。
+James L. Seidmanが1994年に`area`とともに提案したクライアント側イメージマップのcontainerであり、HTML+のimage map案を直接検討して設計された。
 
 ## 現在の意味
 
@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、`img`および子孫の`area`と組み合わ
 
 ## HTMLへの導入
 
-James L. Seidman（Spyglass）は1994年10月20日、`IMG USEMAP`、`MAP NAME`、`AREA`を提案した。server-side image mapのHTTP依存、余分なserver transaction、click前のfeedback不能、server依存形式を避け、map descriptionをHTMLとしてclientへ置くことが理由だった。[Seidman論文](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)
+James L. Seidman（Spyglass）は1994年10月20日、`IMG USEMAP`、`MAP NAME`、`AREA`を提案した。サーバー側イメージマップのHTTP依存、余分なserver transaction、click前のfeedback不能、server依存形式を避け、map descriptionをHTMLとしてclientへ置くことが理由だった。[Seidman論文](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ HTML直前の祖先は、HTML+の`FIG ISMAP`によるserver-side方式と、`FIG
 
 ### 証拠
 
-既存のserver-side image mapとHTML+ shaped linksを設計上の背景として直接確認できる。
+既存のサーバー側イメージマップとHTML+ shaped linksを設計上の背景として直接確認できる。
 
 ### 解釈
 
@@ -42,7 +42,7 @@ HTML+ `FIG ISMAP`／`FIG`内`A SHAPE` → Seidman `MAP`＋`AREA`＋`IMG USEMAP`�
 | 1994-10-20 | [Seidman, “An HTML Extension to Support Client-Side Image Maps”](../../raw/archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)（[公開元](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)） | 会議論文／当事者提案 | `MAP`／`AREA`構文、server-side方式の問題、HTML+案を変更した理由。 | 2026-08-09 |
 | 1995-02-04相当（日付に内部矛盾） | [`draft-ietf-html-clientsideimagemap-00`](../../raw/www.ietf.org/archive/id/draft-ietf-html-clientsideimagemap-00.txt)（[公開元](https://www.ietf.org/archive/id/draft-ietf-html-clientsideimagemap-00.txt)） | IETF Internet-Draft | `MAP`／`AREA`／`USEMAP`をHTML extensionとして提案。 | 2026-08-09 |
 | 1996-08 | [RFC 1980](../../raw/www.rfc-editor.org/rfc/rfc1980.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1980.txt)） | Informational RFC | Seidman案の構文と目的をRFC化。 | 2026-08-09 |
-| 1997-01-14 | [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32)） | W3C Recommendation | `MAP`と`AREA`をclient-side image mapとして採録。 | 2026-08-09 |
+| 1997-01-14 | [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32)） | W3C Recommendation | `MAP`と`AREA`をクライアント側イメージマップとして採録。 | 2026-08-09 |
 
 ## 確度
 

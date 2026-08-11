@@ -6,15 +6,15 @@ status: 完成
 
 ## 概要
 
-James L. Seidmanが1994年に`map`とともに提案した、client-side image mapの個々の領域を表す要素である。
+James L. Seidmanが1994年に`map`とともに提案した、クライアント側イメージマップの個々の領域を表す要素である。
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、image map上の対応領域を持つtext付きhyperlink、またはlinkでないdead areaを表す。親を持つ`area`には祖先`map`が必要であり、`href`がある場合はhyperlinkとなる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/image-maps.html)（[公開版](https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、image map上の対応領域を持つtext付きhyperlink、またはlinkでない無効な領域を表す。親を持つ`area`には祖先`map`が必要であり、`href`がある場合はhyperlinkとなる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/image-maps.html)（[公開版](https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
-James L. Seidman（Spyglass）は1994年10月20日、`IMG USEMAP`、`MAP NAME`、`AREA SHAPE/COORDS/HREF/NOHREF`を提案した。server-side image mapのHTTP依存、余分な通信、事前feedback不能、server依存形式を避けることが理由だった。[Seidman論文](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)
+James L. Seidman（Spyglass）は1994年10月20日、`IMG USEMAP`、`MAP NAME`、`AREA SHAPE/COORDS/HREF/NOHREF`を提案した。サーバー側イメージマップのHTTP依存、余分な通信、事前feedback不能、server依存形式を避けることが理由だった。[Seidman論文](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ HTML直前の祖先は、HTML+の`FIG ISMAP`と`FIG`内`A SHAPE`である。Seid
 
 ### 証拠
 
-既存のserver-side image mapとHTML+ shaped linksを設計上の背景として直接確認できる。
+既存のサーバー側イメージマップとHTML+ shaped linksを設計上の背景として直接確認できる。
 
 ### 解釈
 

@@ -10,7 +10,7 @@ WAI-ARIA `search` landmarkと`div role="search"`をnative HTMLで表すためWHA
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、検索またはfiltering operationを行うform controlsその他の内容を含むdocument／applicationの一部を表す。検索結果そのものを提示するだけの用途には使わない。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、検索または絞り込み操作を行うform controlsその他の内容を含むdocument／applicationの一部を表す。検索結果そのものを提示するだけの用途には使わない。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element)、2026-08-09確認）
 
 ## HTMLへの導入
 

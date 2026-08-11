@@ -10,11 +10,11 @@ HTML+ formsからHTML 2.0へ導出されたform containerで、特定GUI toolkit
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、form-associated elementsの集合を通じて操作できるhyperlinkを表し、その一部はサーバーへ送信できる編集可能な値を表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/forms.html)（[公開版](https://html.spec.whatwg.org/multipage/forms.html#the-form-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、フォーム関連要素の集合を通じて操作できるhyperlinkを表し、その一部はサーバーへ送信できる編集可能な値を表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/forms.html)（[公開版](https://html.spec.whatwg.org/multipage/forms.html#the-form-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
-1993年HTML+は `FORM` を入力field群を含むformの範囲として定義した。RFC 1866はHTML 2.0 formsを標準化し、forms materialをHTML+ specificationから導出したと明記する。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) [RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html)
+1993年HTML+は`FORM`を入力field群を含むformの範囲として定義した。RFC 1866はHTML 2.0 formsを標準化し、forms materialをHTML+ specificationから導出したと明記する。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) [RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html)
 
 ## HTML直前の祖先
 

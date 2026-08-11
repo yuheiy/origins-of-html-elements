@@ -6,15 +6,15 @@ status: 完成
 
 ## 概要
 
-1993年7月のCERN/IETF HTML draftにはない。1993年9月5日公開のNCSA Mosaic 2.0 prerelease 3ではline break tagとして実装され、同月10日にDave Raggettが既存HTML+ draftの`BR`を`L`へ置き換える案を示した。両系列の前後関係、発案理由、発案者、HTML 2.0への採用経路は確認できない。
+1993年7月のCERN/IETF HTML draftにはない。1993年9月5日公開のNCSA Mosaic 2.0 prerelease 3では改行tagとして実装され、同月10日にDave Raggettが既存HTML+ draftの`BR`を`L`へ置き換える案を示した。両系列の前後関係、発案理由、発案者、HTML 2.0への採用経路は確認できない。
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、contentの一部であるline breakを表す。poemやaddressのように改行自体が内容である場合に限って使い、paragraphの分離には使わない。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-br-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、contentの一部である改行を表す。poemやaddressのように改行自体が内容である場合に限って使い、paragraphの分離には使わない。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-br-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
-1993年7月の`draft-ietf-iiir-html-01`には`BR`がない。Marc Andreessenは同年9月5日にNCSA Mosaic 2.0 prerelease 3をwww-talkで公開し、原配布物に由来する`CHANGES`は2.0 prerelease 2から3への変更として`br`と`hr`をそれぞれlinebreakとhorizontal ruleとして追加したと記録する。一方、Dave Raggettは9月10日に既存HTML+ draftのline break tag `BR`を`L`へ置き換える予定を述べており、NCSAとは別にHTML+系列にも`BR`が存在した。1993年11月8日のHTML+ DTDは結局`BR`をnormal text内の強制改行として収録する。既存HTML+ draftへ`BR`が入った日付、NCSA実装との前後・因果関係、HTML 2.0への採用経路は確認できない。[1993年7月HTML Internet-Draft](https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt) [prerelease 3公開mailの保存複製](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html) [NCSA Mosaic `CHANGES`の保存複製](https://github.com/alandipert/ncsa-mosaic/blob/master/CHANGES#L660-L701) [Raggett, “Your views on changes to HTML+”の保存複製](http://1997.webhistory.org/www.lists/www-talk.1993q3/0883.html) [HTML+ DTD](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html)
+1993年7月の`draft-ietf-iiir-html-01`には`BR`がない。Marc Andreessenは同年9月5日にNCSA Mosaic 2.0 prerelease 3をwww-talkで公開し、原配布物に由来する`CHANGES`は2.0 prerelease 2から3への変更として`br`と`hr`をそれぞれlinebreakとhorizontal ruleとして追加したと記録する。一方、Dave Raggettは9月10日に既存HTML+ draftの改行tag `BR`を`L`へ置き換える予定を述べており、NCSAとは別にHTML+系列にも`BR`が存在した。1993年11月8日のHTML+ DTDは結局`BR`をnormal text内の強制改行として収録する。既存HTML+ draftへ`BR`が入った日付、NCSA実装との前後・因果関係、HTML 2.0への採用経路は確認できない。[1993年7月HTML Internet-Draft](https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt) [prerelease 3公開mailの保存複製](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html) [NCSA Mosaic `CHANGES`の保存複製](https://github.com/alandipert/ncsa-mosaic/blob/master/CHANGES#L660-L701) [Raggett, “Your views on changes to HTML+”の保存複製](http://1997.webhistory.org/www.lists/www-talk.1993q3/0883.html) [HTML+ DTD](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html)
 
 ## HTML直前の祖先
 
@@ -44,7 +44,7 @@ WHATWG HTML Living Standardでは、contentの一部であるline breakを表す
 | 1993-09-05（公開日） | [NCSA Mosaic `CHANGES`](../../raw/github.com/alandipert/ncsa-mosaic/blob/master/CHANGES)（[公開元](https://github.com/alandipert/ncsa-mosaic/blob/master/CHANGES#L660-L701)） | NCSA配布物由来のchange logの保存複製 | 新しいHTML widgetへ`br`をlinebreak tagとして追加したと記録する。 | 2026-08-10 |
 | 1993-09-10 | [“Your views on changes to HTML+”](../../raw/1997.webhistory.org/www.lists/www-talk.1993q3/0883.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q3/0883.html)） | HTML+編集者によるwww-talk mailの保存複製 | Raggettが既存HTML+ draftの`BR`を`L`へ置き換える案を示し、この時点より前のHTML+系列に`BR`があったことを確認できる。 | 2026-08-10 |
 | 1993-11-08 | [HTML+ DTD](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html)） | 提案DTD | `BR`をnormal text内の強制改行として収録する。 | 2026-08-11 |
-| 1995-11 | [RFC 1866: *Hypertext Markup Language - 2.0*](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866#section-5.8)） | IETF Standards Track RFC | words間のline breakとして`BR`を標準化する。 | 2026-08-09 |
+| 1995-11 | [RFC 1866: *Hypertext Markup Language - 2.0*](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866#section-5.8)） | IETF Standards Track RFC | words間の改行として`BR`を標準化する。 | 2026-08-09 |
 
 ## 確度
 
@@ -58,6 +58,6 @@ WHATWG HTML Living Standardでは、contentの一部であるline breakを表す
 
 ## 未解決
 
-- NCSA Mosaic 2.0 prerelease 3で`BR`を追加した発案者、要求、source commitは確認できるか。
+- NCSA Mosaic 2.0 prerelease 3で`BR`を追加した発案者、要求、ソースのコミットは確認できるか。
 - 1993年6月1日版`htmlplus.dtd`の保存本文を回収し、`BR`が入った日付とNCSA実装との前後・因果関係を確認できるか。
 - NCSAまたはHTML+からHTML 2.0へ`BR`を採用した議論は残っているか。

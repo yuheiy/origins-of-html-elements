@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、raw valueを編集するmultiline plain-text controlを表し、要素内容はcontrolのdefault valueを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、生の値を編集する複数行のプレーンテキスト入力欄を表し、要素内容はcontrolのdefault valueを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/form-elements.html)（[公開版](https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -32,7 +32,7 @@ multiline text UIとの対応はあるが、要素を分離した直接理由は
 
 ## 系譜
 
-HTML+初期案 `INPUT TYPE=TEXT` → HTML+ `TEXTAREA` → HTML 2.0 `TEXTAREA` → 現行HTML `<textarea>`
+HTML+初期案`INPUT TYPE=TEXT` → HTML+ `TEXTAREA` → HTML 2.0 `TEXTAREA` → 現行HTML `<textarea>`
 
 ## 証拠
 

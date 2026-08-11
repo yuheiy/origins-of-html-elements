@@ -6,13 +6,13 @@ status: 完成
 
 ## 共有される命名経路
 
-1993年6月のHTML Internet-Draftは、character highlighting節に列挙した`TT`, `B`, `I`, `U`, `EM`, `STRONG`, `CODE`, `SAMP`, `KBD`, `VAR`, `DFN`, `CITE`の名前をTexinfo macro namesから派生したと明記する。[Tim Berners-Lee and Daniel W. Connolly, *Hypertext Markup Language (HTML)*, `draft-ietf-iiir-html-00`, June 1993](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)）
+1993年6月のHTML Internet-Draftは、文字強調節に列挙した`TT`, `B`, `I`, `U`, `EM`, `STRONG`, `CODE`, `SAMP`, `KBD`, `VAR`, `DFN`, `CITE`の名前をTexinfoのマクロ名から派生したと明記する。[Tim Berners-Lee and Daniel W. Connolly, *Hypertext Markup Language (HTML)*, `draft-ietf-iiir-html-00`, June 1993](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)）
 
 同時代のGNU Texinfo公式配布物では、`TT → @t`, `B → @b`, `I → @i`, `EM → @emph`, `STRONG → @strong`, `CODE → @code`, `SAMP → @samp`, `KBD → @kbd`, `VAR → @var`, `DFN → @dfn`, `CITE → @cite`の個別対応を確認できる。[GNU Texinfo 2.16](../../raw/ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z/texinfo-2.16/texinfo2.texi)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)） [GNU Texinfo 3.7](../../raw/ftp.gnu.org/gnu/texinfo/texinfo37.tar-gz/texinfo-3.7/texinfo.texi)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo37.tar-gz)）
 
 ```text
-[集合単位] GNU Texinfo macro names
-  → 1993年HTML draftのcharacter highlighting集合
+[集合単位] GNU Texinfoのマクロ名
+  → 1993年HTML draftの文字強調集合
 ```
 
 対象: [`b`](../elements/b.md)、[`i`](../elements/i.md)、[`em`](../elements/em.md)、[`strong`](../elements/strong.md)、[`code`](../elements/code.md)、[`samp`](../elements/samp.md)、[`kbd`](../elements/kbd.md)、[`var`](../elements/var.md)、[`dfn`](../elements/dfn.md)、[`cite`](../elements/cite.md)、[`u`](../elements/u.md)。`tt`は共有史料の対象だがobsolete／non-conformingなので現行要素の索引には含めない。

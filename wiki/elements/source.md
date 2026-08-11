@@ -10,11 +10,11 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、`picture`では複数の画像source set、`audio`／`video`では複数の代替media resourceを指定する、内容を持たず単独では何も表さない要素である。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/embedded-content.html)（[公開版](https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、`picture`では複数の画像候補集合、`audio`／`video`では複数の代替media resourceを指定する、内容を持たず単独では何も表さない要素である。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/embedded-content.html)（[公開版](https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
-2007年3月16日の`video`本格導入時にはresourceを単一の`src`属性で指定していた。3月23日、WHATWG editor Ian Hicksonはrevision 687でvideo codec negotiationのため`source`を追加し、複数候補を順に調べるresource selectionと`src`、`type`、`media`を導入した。同日に後から追加された`audio`は当初から`source`をcontent modelに含んだ。
+2007年3月16日の`video`本格導入時にはresourceを単一の`src`属性で指定していた。3月23日、WHATWG editor Ian Hicksonはrevision 687でvideo codec negotiationのため`source`を追加し、複数候補を順に調べるresource selectionと`src`、`type`、`media`を導入した。同日に後から追加された`audio`は当初から`source`を内容モデルに含んだ。
 
 ## HTML直前の祖先
 

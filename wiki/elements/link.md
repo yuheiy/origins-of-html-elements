@@ -28,7 +28,7 @@ Berners-Leeの1992年*Future plans for HTML*は、列挙した改善から新し
 
 ### 解釈
 
-`LINK`は、本文中のtext spanへ結び付かないnode-level relationをHTML documentのheadに記録するための要素として成立したと説明できる。
+`LINK`は、本文中のテキスト範囲へ結び付かないnode-level relationをHTML documentのheadに記録するための要素として成立したと説明できる。
 
 ## 系譜
 
@@ -38,7 +38,7 @@ WWWのdocument-wide typed-link要求 → 新DTD向けHTML `LINK`提案（1992）
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 1992（historical snapshot） | [*Link Types*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/LinkTypes.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/LinkTypes.html)） | CERN設計ノート | node間のpart、authorship、index、glossaryなどのtyped relationを記録する。 | 2026-08-09 |
+| 1992（歴史的スナップショット） | [*Link Types*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/LinkTypes.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/LinkTypes.html)） | CERN設計ノート | node間のpart、authorship、index、glossaryなどのtyped relationを記録する。 | 2026-08-09 |
 | 1992-12-02（更新日） | [*Future plans for HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Future.html)） | CERN設計ノート | localized anchorと異なるdocument-wide linkとして空の`LINK`を提案し、用途と属性を説明する。 | 2026-08-09 |
 | 1993-01-06（DTD RCS id） | [*Hypertext Markup Language (HTML)*収録DTD](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft内のDTD | `HEAD`内の`LINK`と`HREF`、`REL`、`REV`等の属性を宣言する。 | 2026-08-09 |
 | 1995-11 | [RFC 1866: *Hypertext Markup Language - 2.0*](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866#section-5.2.4)） | IETF Standards Track RFC | `LINK`を`HEAD`内のhyperlinkとして標準化し、典型的なdocument relationを列挙する。 | 2026-08-09 |

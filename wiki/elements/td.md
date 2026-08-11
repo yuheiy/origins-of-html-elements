@@ -6,15 +6,15 @@ status: 完成
 
 ## 概要
 
-HTML+ table modelのdata cellからRFC 1942を経て標準化された要素である。
+HTML+ table modelのデータセルからRFC 1942を経て標準化された要素である。
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、tableのdata cellを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/tables.html)（[公開版](https://html.spec.whatwg.org/multipage/tables.html#the-td-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、tableのデータセルを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/tables.html)（[公開版](https://html.spec.whatwg.org/multipage/tables.html#the-td-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
-1993年HTML+ table modelは `TD` をdata cellとして定義した。RFC 1942は自身のtable modelがHTML+の初期作業とHTML 3 draftから発展したと明記し、HTML 3.2が広く実装されたsubsetを採録した。[HTML+ tables](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 3.2](https://www.w3.org/TR/REC-html32#table)
+1993年HTML+ table modelは`TD`をデータセルとして定義した。RFC 1942は自身のtable modelがHTML+の初期作業とHTML 3 draftから発展したと明記し、HTML 3.2が広く実装されたsubsetを採録した。[HTML+ tables](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 3.2](https://www.w3.org/TR/REC-html32#table)
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ HTML直前の祖先はHTML+ table modelである。RFC 1942でtable modelの一�
 
 ### 証拠
 
-RFC 1942はHTML+の単純モデルに対する後続拡張の一部をCALSにならったと説明する。この記述だけから `TD` の名称をCALSから直接コピーしたとはいえない。[RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html)
+RFC 1942はHTML+の単純モデルに対する後続拡張の一部をCALSにならったと説明する。この記述だけから`TD`の名称をCALSから直接コピーしたとはいえない。[RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html)
 
 ### 解釈
 

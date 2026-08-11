@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、storyのscene changeやsection内のtopic transitionなど、paragraph-levelのthematic breakを表す。`select`内ではoption群のseparatorも表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-hr-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、storyの場面転換やsection内の話題の転換など、paragraph-levelの主題の区切りを表す。`select`内ではoption群のseparatorも表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-hr-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
@@ -32,7 +32,7 @@ WHATWG HTML Living Standardでは、storyのscene changeやsection内のtopic tr
 
 ## 系譜
 
-確認できる時系列は、NCSA Mosaic 2.0 prerelease 3のHTML `HR`（1993-09-05）、HTML+ `HR`（1993-11）、HTML 2.0 `HR`（1995）、現行HTML `<hr>`である。各段階の採用因果は未確認のため矢印で接続せず、初期のhorizontal ruleというpresentationと現行のthematic breakも同一視しない。
+確認できる時系列は、NCSA Mosaic 2.0 prerelease 3のHTML `HR`（1993-09-05）、HTML+ `HR`（1993-11）、HTML 2.0 `HR`（1995）、現行HTML `<hr>`である。各段階の採用因果は未確認のため矢印で接続せず、初期のhorizontal ruleというpresentationと現行の主題の区切りも同一視しない。
 
 ## 証拠
 
@@ -53,10 +53,10 @@ WHATWG HTML Living Standardでは、storyのscene changeやsection内のtopic tr
 
 ## 否定された仮説
 
-印刷上のhorizontal ruleまたは現行のthematic break semanticsを、外見・用途の類似だけからHTML `HR`の直接祖先とする説明。HTML+の後続版に同名要素があることだけからHTML+ → NCSA Mosaicとする説明も、pre3の採用を示す記録がないため採らない。
+印刷上のhorizontal ruleまたは現行の主題の区切りsemanticsを、外見・用途の類似だけからHTML `HR`の直接祖先とする説明。HTML+の後続版に同名要素があることだけからHTML+ → NCSA Mosaicとする説明も、pre3の採用を示す記録がないため採らない。
 
 ## 未解決
 
-- NCSA Mosaic 2.0 prerelease 3で`HR`を追加した発案者、要求、source commitは確認できるか。
+- NCSA Mosaic 2.0 prerelease 3で`HR`を追加した発案者、要求、ソースのコミットは確認できるか。
 - 1993年6月1日版`htmlplus.dtd`の保存本文を回収し、`HR`の収録有無とNCSA実装との前後・因果関係を確認できるか。
-- presentation用horizontal ruleから現行のthematic breakへの意味変更を決定した仕様議論はどれか。
+- presentation用horizontal ruleから現行の主題の区切りへの意味変更を決定した仕様議論はどれか。

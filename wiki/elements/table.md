@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、複数の次元を持つデータをtable形
 
 ## HTMLへの導入
 
-1993年HTML+ table modelは `TABLE` を表全体として定義した。RFC 1942は自身のtable modelがHTML+の初期作業とHTML 3 draftから発展したと明記し、HTML 3.2が広く実装されたsubsetを採録した。[HTML+ tables](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 3.2](https://www.w3.org/TR/REC-html32#table)
+1993年HTML+ table modelは`TABLE`を表全体として定義した。RFC 1942は自身のtable modelがHTML+の初期作業とHTML 3 draftから発展したと明記し、HTML 3.2が広く実装されたsubsetを採録した。[HTML+ tables](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html) [RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) [HTML 3.2](https://www.w3.org/TR/REC-html32#table)
 
 ## HTML直前の祖先
 
@@ -24,7 +24,7 @@ HTML直前の祖先はHTML+ table modelである。RFC 1942で大幅に拡張さ
 
 ### 証拠
 
-RFC 1942はHTML+の単純モデルに対する後続拡張の一部をCALSにならったと説明する。この記述だけから `TABLE` の名称をCALSから直接コピーしたとはいえない。[RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) Raggettは2004年の回顧で、CALS table modelはbrowser開発者には複雑すぎ、www-talkのHTML+議論で提案された単純な方式が選ばれたと説明する。[Raggett, *My involvement with the early days of the Web*](../../raw/www.w3.org/People/Raggett/the-early-days-of-the-Web.html)（[公開元](https://www.w3.org/People/Raggett/the-early-days-of-the-Web.html)）一方、Raggettらの1998年の回顧は、後のHTML 3 table draftがCALS modelとの衝突を受けて変更されたと記録する。[Raggettほか, *A history of HTML*](../../raw/www.w3.org/People/Raggett/book4/ch02.html)（[公開元](https://www.w3.org/People/Raggett/book4/ch02.html)）
+RFC 1942はHTML+の単純モデルに対する後続拡張の一部をCALSにならったと説明する。この記述だけから`TABLE`の名称をCALSから直接コピーしたとはいえない。[RFC 1942](https://www.rfc-editor.org/rfc/rfc1942.html) Raggettは2004年の回顧で、CALS table modelはbrowser開発者には複雑すぎ、www-talkのHTML+議論で提案された単純な方式が選ばれたと説明する。[Raggett, *My involvement with the early days of the Web*](../../raw/www.w3.org/People/Raggett/the-early-days-of-the-Web.html)（[公開元](https://www.w3.org/People/Raggett/the-early-days-of-the-Web.html)）一方、Raggettらの1998年の回顧は、後のHTML 3 table draftがCALS modelとの衝突を受けて変更されたと記録する。[Raggettほか, *A history of HTML*](../../raw/www.w3.org/People/Raggett/book4/ch02.html)（[公開元](https://www.w3.org/People/Raggett/book4/ch02.html)）
 
 ### 解釈
 

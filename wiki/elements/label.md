@@ -32,7 +32,7 @@ W3C forms草案は既存form controlsへ構造的なcaption関連を加え、poi
 
 ## 系譜
 
-W3C forms草案 `LABEL`（1996年3月） → Cougar forms草案 `LABEL`（1997年2月・4月） → HTML 4.0 FPWD `LABEL`（1997年7月） → 現行HTML `<label>`
+W3C forms草案`LABEL`（1996年3月） → Cougar forms草案`LABEL`（1997年2月・4月） → HTML 4.0 FPWD `LABEL`（1997年7月） → 現行HTML `<label>`
 
 Raman／Raggettのspeech-form label作業（1995年、後年の同時代説明）からCougarへの接続はDardaillerがRaggettの説明を伝えるが、1996年草案との編集経路は未確認なので矢印で結ばない。
 

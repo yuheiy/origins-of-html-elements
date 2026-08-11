@@ -10,7 +10,7 @@ Netscapeが定義しNavigator 2.0 betaへ実装した`SCRIPT`を、W3CのHTML3 S
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、動的script、user agentへのinstructions、data blocksを文書へ含める。利用者向けcontent自体は表さず、`type`でscriptやdata blockの種類を、`src`で外部scriptを指定できる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/scripting.html)（[公開版](https://html.spec.whatwg.org/multipage/scripting.html#the-script-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、動的script、ユーザーエージェントへのinstructions、データブロックを文書へ含める。利用者向けcontent自体は表さず、`type`でscriptやデータブロックの種類を、`src`で外部scriptを指定できる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/scripting.html)（[公開版](https://html.spec.whatwg.org/multipage/scripting.html#the-script-element)、2026-08-09確認）
 
 ## HTMLへの導入
 

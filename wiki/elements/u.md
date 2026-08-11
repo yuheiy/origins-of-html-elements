@@ -10,15 +10,15 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、明文化されていないが明示的にrenderされるnon-textual annotationを持つtext spanを表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-u-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、明文化されていないが明示的にrenderされる非テキスト注釈を持つテキスト範囲を表す。 [HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/text-level-semantics.html)（[公開版](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-u-element)、2026-08-09確認）
 
 ## HTMLへの導入
 
-1993年6月のHTML Internet-Draftに埋め込まれたHTML DTDはRCS識別子`html.dtd,v 1.3 93/01/06`を持ち、`inline` entityに`U`を列挙するため、formal DTDへの収録を1993年1月6日まで遡って確認できる。同draft本文は`U`をphysical character highlighting elementとして列挙し、その集合の要素名をTexinfo macro namesから派生したと明記した。このRCS日付は実装初出や、それ以前のprototypeがなかったことを示すものではない。`U`は最終HTML 2.0には採録されず、HTML 3.2でdeprecated font style elementとして再出現した。W3C HTML5ではnonconformingとなったが、HTML WGは2011年4月8日に`U`をconformingとする提案を正式採択した。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) [RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html) [HTML 3.2](https://www.w3.org/TR/REC-html32) [HTML WG decision](https://lists.w3.org/Archives/Public/public-html/2011Apr/0212.html)
+1993年6月のHTML Internet-Draftに埋め込まれたHTML DTDはRCS識別子`html.dtd,v 1.3 93/01/06`を持ち、`inline` entityに`U`を列挙するため、formal DTDへの収録を1993年1月6日まで遡って確認できる。同draft本文は`U`を物理的な文字強調elementとして列挙し、その集合の要素名をTexinfoのマクロ名から派生したと明記した。このRCS日付は実装初出や、それ以前のprototypeがなかったことを示すものではない。`U`は最終HTML 2.0には採録されず、HTML 3.2でdeprecated font style elementとして再出現した。W3C HTML5ではnonconformingとなったが、HTML WGは2011年4月8日に`U`をconformingとする提案を正式採択した。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) [RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html) [HTML 3.2](https://www.w3.org/TR/REC-html32) [HTML WG decision](https://lists.w3.org/Archives/Public/public-html/2011Apr/0212.html)
 
 ## HTML直前の祖先
 
-HTML draftは`U`を含む12要素を集合としてTexinfo macro names由来と述べる。しかし1992年と1995年のGNU Texinfoマニュアルおよび1995年の実装には、underline用の`@u` commandを確認できない。このため`<u>`に対応する個別のTexinfoマクロは未確認である。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) [GNU Texinfo 2.16公式配布物](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z) [GNU Texinfo 3.7公式配布物](https://ftp.gnu.org/gnu/texinfo/texinfo37.tar-gz)
+HTML draftは`U`を含む12要素を集合としてTexinfoのマクロ名由来と述べる。しかし1992年と1995年のGNU Texinfoマニュアルおよび1995年の実装には、underline用の`@u` commandを確認できない。このため`<u>`に対応する個別のTexinfoマクロは未確認である。[1993年HTML Internet-Draft](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00) [GNU Texinfo 2.16公式配布物](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z) [GNU Texinfo 3.7公式配布物](https://ftp.gnu.org/gnu/texinfo/texinfo37.tar-gz)
 
 ## さらに上流の由来
 
@@ -32,7 +32,7 @@ HTML draftは`U`を含む12要素を集合としてTexinfo macro names由来と�
 
 ## 系譜
 
-Texinfo macro names（HTML draftによる集合レベルの由来記述、`U`の対応マクロは不明） → 1993年HTML draft `U`
+Texinfoのマクロ名（HTML draftによる集合レベルの由来記述、`U`の対応マクロは不明） → 1993年HTML draft `U`
 
 HTML 3.2 `U` → HTML 4 `U`
 
@@ -45,7 +45,7 @@ W3C HTML5 nonconforming `U` → 2011年HTML WG決定によるconforming `U`
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
 | 1992-10-06 | [*Texinfo — The GNU Documentation Format*, Edition 2.16](../../raw/ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z/texinfo-2.16/texinfo2.texi)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)） | GNU公式配布物内マニュアル | 印刷用font commandsにunderline用`@u`を確認できない。 | 2026-08-09 |
-| 1993-01-06（埋込みDTDのRCS識別子）、1993-06（draft） | [*Hypertext Markup Language (HTML)*, draft-ietf-iiir-html-00](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft／埋込みDTD | `html.dtd,v 1.3 93/01/06`の`inline` entityに`U`があり、本文は`U`を含む12要素名をTexinfo macro names由来と一括して述べる。 | 2026-08-09 |
+| 1993-01-06（埋込みDTDのRCS識別子）、1993-06（draft） | [*Hypertext Markup Language (HTML)*, draft-ietf-iiir-html-00](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft／埋込みDTD | `html.dtd,v 1.3 93/01/06`の`inline` entityに`U`があり、本文は`U`を含む12要素名をTexinfoのマクロ名由来と一括して述べる。 | 2026-08-09 |
 | 1995-06-07 | *Texinfo — The GNU Documentation Format*, Edition 2.21、および同梱実装：[manual](../../raw/ftp.gnu.org/gnu/texinfo/texinfo37.tar-gz/texinfo-3.7/texinfo.texi)・[implementation](../../raw/ftp.gnu.org/gnu/texinfo/texinfo37.tar-gz/texinfo-3.7/texinfo.tex)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo37.tar-gz)） | GNU公式配布物内マニュアル・実装 | font commandsとcommand tableにunderline用`@u`を確認できない。 | 2026-08-09 |
 | 1995-11 | [RFC 1866](../../raw/www.rfc-editor.org/rfc/rfc1866.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1866.html)） | IETF Proposed Standard | HTML 2.0 DTDに`U`を含めない。除外理由は述べない。 | 2026-08-10 |
 | 1996-07-31 | [Arne Knudson, “Re: Cougar DTD -- Ugh!”](../../raw/www.w3.org/mid/199607311834.OAA09274@ebt-inc.ebt.com;list=www-html)（[公開元](https://www.w3.org/mid/199607311834.OAA09274@ebt-inc.ebt.com;list=www-html)） | W3C public mailing list | Wilbur／Cougar DTDへの`U`の再収録を批判し、underlineとlinkの混同を以前の除外理由として回顧する。WG決定ではない。 | 2026-08-10 |

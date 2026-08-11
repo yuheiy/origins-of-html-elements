@@ -59,15 +59,15 @@ const hosts = readdirSync(raw, { withFileTypes: true })
 const files = hosts.flatMap((host) => resourceFiles(path.join(raw, host), host)).sort();
 const rows = files.map((file) => `| [${tableCell(file)}](../raw/${file}) | ${tableCell(documentTitle(path.join(raw, ...file.split("/"))))} |`);
 const page = [
-  "# Raw resources",
+  "# Rawソース",
   "",
-  "> このファイルは`scripts/generate-raw-index.js`による生成物である。直接編集せず、scriptを実行して再生成する。",
+  "> このファイルは`scripts/generate-raw-index.js`による生成物である。直接編集せず、このスクリプトを実行して再生成する。",
   "",
-  "| Resource | Document title |",
+  "| Rawファイル | 文書タイトル |",
   "|---|---|",
   ...rows,
   "",
 ].join("\n");
 
 writeFileSync(output, page);
-console.log(`generated wiki/raw-index.md (${files.length} resources)`);
+console.log(`wiki/raw-index.mdを生成（${files.length}ファイル）`);

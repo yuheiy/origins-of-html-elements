@@ -10,7 +10,7 @@ Microsoft IE3のfloating-frame機能、Microsoftによるframe拡張集合のW3C
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、そのcontent navigableを表す。`src`はそこに含めるpageのURLを、`srcdoc`は埋め込むpageの内容を与え、`sandbox`などによって埋め込み文脈を制限できる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/iframe-embed-object.html)（[公開版](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、その子ナビゲーション対象を表す。`src`はそこに含めるpageのURLを、`srcdoc`は埋め込むpageの内容を与え、`sandbox`などによって埋め込み文脈を制限できる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/iframe-embed-object.html)（[公開版](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element)、2026-08-09確認）
 
 ## HTMLへの導入
 

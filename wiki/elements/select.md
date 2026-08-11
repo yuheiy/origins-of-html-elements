@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、選択肢の集合から選ぶためのcontr
 
 ## HTMLへの導入
 
-1993年HTML+は `SELECT` を候補集合をcompactに示すselection listとして定義した。RFC 1866はHTML+由来のforms materialとして`SELECT`を標準化した。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) [RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html)
+1993年HTML+は`SELECT`を候補集合をcompactに示すselection listとして定義した。RFC 1866はHTML+由来のforms materialとして`SELECT`を標準化した。[HTML+ forms](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html) [RFC 1866](https://www.rfc-editor.org/rfc/rfc1866.html)
 
 ## HTML直前の祖先
 
