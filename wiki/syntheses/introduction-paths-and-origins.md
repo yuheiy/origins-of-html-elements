@@ -150,7 +150,7 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 
 | 調査群 | 対象 | 探索範囲 |
 |---|---|---|
-| 現代の公開履歴 | [`selectedcontent`](../elements/selectedcontent.md)、[`data`](../elements/data.md)、[`picture`](../elements/picture.md)、[`slot`](../elements/slot.md) | Open UI、Chromium、WHATWG、HTML Working Groupのissue、PR、commitから、旧名または初稿、設計モデル、HTML統合の順序を確定する |
+| 現代の公開履歴 | [`data`](../elements/data.md)、[`picture`](../elements/picture.md)、[`slot`](../elements/slot.md) | Open UI、Chromium、WHATWG、HTML Working Groupのissue、PR、commitから、旧名または初稿、設計モデル、HTML統合の順序を確定する |
 | 初期WHATWGの版履歴 | [`mark`](../elements/mark.md)、[`meter`](../elements/meter.md)、[`time`](../elements/time.md)、[`main`](../elements/main.md)、[`bdi`](../elements/bdi.md)、[`track`](../elements/track.md) | 既知の初回収録、改名、再導入コミットの親版と、対応するWHATWGメール、旧Subversion履歴、提案を照合する |
 | W3C／IETF草案間の変更 | [`legend`](../elements/legend.md)、[`bdo`](../elements/bdo.md)、[`span`](../elements/span.md)、[`noscript`](../elements/noscript.md)、[`object`](../elements/object.md)、[`col`](../elements/col.md)、[`style`](../elements/style.md) | 連続する草案間に限定して、CVS／RCS差分、Working Group議事録、編集者メールから追加、改名、機能統合、後続仕様への採録を探す |
 

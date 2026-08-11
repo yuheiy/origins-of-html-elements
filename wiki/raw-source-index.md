@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された547ファイルを、29の取得元ホストごとに収録する。
+Rawに保存された555ファイルを、30の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（9ファイル）
 
@@ -17,6 +17,12 @@ Rawに保存された547ファイルを、29の取得元ホストごとに収録
 | [www.lists/www-talk.1993q1/0262.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0262.html) | WWW-Talk Jan-Mar 1993: NCSA Mosaic for X 0.10 released |
 | [www.lists/www-talk.1993q3/0143.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q3/0143.html) | WWW-Talk Jul-Sep 1993: XMosaic 1.2 and HTML+ |
 | [www.lists/www-talk.1993q3/0883.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q3/0883.html) | WWW-Talk Jul-Sep 1993: Your views on changes to HTML+ |
+
+## `api.github.com`（1ファイル）
+
+| Rawファイル | 文書タイトル |
+|---|---|
+| [repos/openui/open-ui/issues/571/comments__q__per_page=100](../raw/api.github.com/repos/openui/open-ui/issues/571/comments__q__per_page=100) | — |
 
 ## `archives.iw3c2.org`（1ファイル）
 
@@ -199,7 +205,7 @@ Rawに保存された547ファイルを、29の取得元ホストごとに収録
 | [mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/README.first](../raw/ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/README.first) | — |
 | [mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd](../raw/ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd) | — |
 
-## `github.com`（52ファイル）
+## `github.com`（59ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -207,7 +213,14 @@ Rawに保存された547ファイルを、29の取得元ホストごとに収録
 | [WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c](../raw/github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c) | Part 1 of the new &lt;CANVAS&gt; tag implementation. This patch · WebKit/WebKit@048bd7c · GitHub |
 | [WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb](../raw/github.com/WebKit/WebKit/commit/368b12910aa7b71c5f96fd2053b88132fa7264fb) | Part 2 of the new &lt;CANVAS&gt; tag implementation. This adds the · WebKit/WebKit@368b129 · GitHub |
 | [alandipert/ncsa-mosaic/blob/master/CHANGES](../raw/github.com/alandipert/ncsa-mosaic/blob/master/CHANGES) | ncsa-mosaic/CHANGES at master · alandipert/ncsa-mosaic · GitHub |
+| [chromium/chromium/commit/235b09a98c3b53c49e977df7a32fb851ee224936](../raw/github.com/chromium/chromium/commit/235b09a98c3b53c49e977df7a32fb851ee224936) | selectlist: Make &lt;selectedoption&gt; cloneNode all contents · chromium/chromium@235b09a · GitHub |
+| [chromium/chromium/commit/b4a390a758ddbef7de1d864eab7823d44d1c8c95](../raw/github.com/chromium/chromium/commit/b4a390a758ddbef7de1d864eab7823d44d1c8c95) | selectlist: add &lt;selectedoption&gt; element · chromium/chromium@b4a390a · GitHub |
+| [openui/open-ui/commit/0feb63d9eef0c1f755b228b3ec5cf803b0a9dd74](../raw/github.com/openui/open-ui/commit/0feb63d9eef0c1f755b228b3ec5cf803b0a9dd74) | Initial recommendations for part events (#103) · openui/open-ui@0feb63d · GitHub |
+| [openui/open-ui/commit/c136064d27e9e43dd9a6f620b149d32e22482d74](../raw/github.com/openui/open-ui/commit/c136064d27e9e43dd9a6f620b149d32e22482d74) | Rename selectedvalue to selectedoption (#833) · openui/open-ui@c136064 · GitHub |
+| [openui/open-ui/issues/702](../raw/github.com/openui/open-ui/issues/702) | [select] Don't reuse slot="" and ::part(); behavior="" is also strange · Issue #702 · openui/open-ui · GitHub |
+| [openui/open-ui/issues/808](../raw/github.com/openui/open-ui/issues/808) | Naming of the selected value element · Issue #808 · openui/open-ui · GitHub |
 | [openui/open-ui/pull/1124](../raw/github.com/openui/open-ui/pull/1124) | [Customizable select] Rename selectedoption to selectedcontent by brechtDR · Pull Request #1124 · openui/open-ui · GitHub |
+| [w3c/csswg-drafts/issues/9284](../raw/github.com/w3c/csswg-drafts/issues/9284) | "Single content, multiple renderings" feature for `&lt;selectlist&gt;` · Issue #9284 · w3c/csswg-drafts · GitHub |
 | [whatwg/dom/commit/a2b04df51b4342d7617c128e80e5aa892889d2e0](../raw/github.com/whatwg/dom/commit/a2b04df51b4342d7617c128e80e5aa892889d2e0) | Shadow: define slots and slotables · whatwg/dom@a2b04df · GitHub |
 | [whatwg/html/blob/18322b5f67ea55395dad2183244a905174da971f/source](../raw/github.com/whatwg/html/blob/18322b5f67ea55395dad2183244a905174da971f/source) | html/source at 18322b5f67ea55395dad2183244a905174da971f · whatwg/html · GitHub |
 | [whatwg/html/blob/c3550d90867392905edbd91c94fec8c89fbfe648/source](../raw/github.com/whatwg/html/blob/c3550d90867392905edbd91c94fec8c89fbfe648/source) | html/source at c3550d90867392905edbd91c94fec8c89fbfe648 · whatwg/html · GitHub |

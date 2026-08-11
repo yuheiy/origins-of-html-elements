@@ -108,7 +108,7 @@ status: 完成
 - [`<search>`](elements/search.md): WAI-ARIA `search`ランドマークと`div role="search"`をネイティブHTMLで表すためWHATWGが採用し、2023年にLiving Standardへ入れたコンテナーである。
 - [`<section>`](elements/section.md): 遅くとも2004年8月にはWHATWG Web Applications 1.0で定義され、見出しだけでは文書構造とアウトラインを確実に復元できない問題へのセクショニングモデルを担った。
 - [`<select>`](elements/select.md): HTML+のフォームからHTML 2.0へ導出された簡潔選択リストである。
-- [`<selectedcontent>`](elements/selectedcontent.md): カスタマイズ可能な`select`の選択内容を宣言表示する`selectedoption`案を、名称の曖昧さから改名して2025年にHTMLへ統合した。
+- [`<selectedcontent>`](elements/selectedcontent.md): Open UIの`selected-value`表示部をChromiumが子ノード複製用の`selectedoption`要素へ置き換え、二度の改名を経て2025年にHTMLへ統合した。
 - [`<slot>`](elements/slot.md): Shadow DOM v0の`content`挿入点をスロットとして再設計し、DOMのスロット概念を参照するHTML要素として2016年に導入された。
 - [`<small>`](elements/small.md): HTML 3.0の小さいフォント用要素を、WHATWGが2005年に細則や補足事項を表す意味へ再定義したが、最初の導入経路は未確認である。
 - [`<source>`](elements/source.md): `source`は2007年3月23日、`video`でコーデック選択を行い複数の代替メディアリソースから選択する要素としてWHATWGへ追加された。
