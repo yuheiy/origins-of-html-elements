@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="hypermail 3.0.0, see https://github.com/hypermail-project/hypermail/" />
+<title>Adaptive images from Dominique Hazael-Massieux on 2011-05-30 (public-html@w3.org from May 2011)</title>
+<meta name="Author" content="Dominique Hazael-Massieux (dom&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;)" />
+<meta name="Subject" content="Adaptive images" />
+<meta name="Date" content="2011-05-30" />
+<link rel="stylesheet" title="Normal view" href="/assets/styles/public.css" />
+<link rel="help" href="/Help/" />
+<link rel="start" href="../" title="public-html@w3.org archives" />
+<script defer="defer" src="/assets/js/archives.js"></script>
+</head>
+<body class="message">
+<header class="head">
+<nav class="breadcrumb" id="upper">
+  <ul>
+    <li><a href="https://www.w3.org/">W3C home</a></li>
+    <li><a href="/">Mailing lists</a></li>
+    <li><a href="../../">Public</a></li>
+    <li><a href="../" rel="start">public-html@w3.org</a></li>
+    <li><a href="./" rel="contents">May 2011</a></li>
+  </ul>
+</nav>
+<h1>Adaptive images</h1>
+<!-- received="Mon May 30 13:43:55 2011" -->
+<!-- isoreceived="20110530134355" -->
+<!-- sent="Mon, 30 May 2011 15:43:39 +0200" -->
+<!-- isosent="20110530134339" -->
+<!-- name="Dominique Hazael-Massieux" -->
+<!-- email="dom&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;" -->
+<!-- subject="Adaptive images" -->
+<!-- id="1306763027.2519.83.camel@altostratustier" -->
+<!-- charset="UTF-8" -->
+<!-- expires="-1" -->
+<nav id="navbar">
+<ul class="links hmenu_container">
+<li>
+<span class="heading">This message</span>: <ul class="hmenu"><li><a href="#start" id="options1">Message body</a></li>
+<li><a href="mailto:public-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20Adaptive%20images&amp;In-Reply-To=%3C1306763027.2519.83.camel%40altostratustier%3E&amp;References=%3C1306763027.2519.83.camel%40altostratustier%3E">Respond</a></li>
+<li><a href="#options3">More options</a></li>
+</ul></li>
+<li>
+<span class="heading">Related messages</span>: <ul class="hmenu">
+<!-- unext="start" -->
+<li><a href="0387.html">Next message</a></li>
+<li><a href="0385.html">Previous message</a></li>
+<!-- unextthread="start" -->
+<li><a href="0389.html">Next in thread</a></li>
+<li><a href="#replies">Replies</a></li>
+<!-- ureply="end" -->
+</ul></li>
+</ul>
+</nav>
+</header>
+<!-- body="start" -->
+<main class="mail">
+<ul class="headers" aria-label="message headers">
+<li><span class="from">
+<span class="heading">From</span>: Dominique Hazael-Massieux &lt;<a href="mailto:dom&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20Adaptive%20images&amp;In-Reply-To=%3C1306763027.2519.83.camel%40altostratustier%3E&amp;References=%3C1306763027.2519.83.camel%40altostratustier%3E">dom&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;</a>&gt;
+</span></li>
+<li><span class="date"><span class="heading">Date</span>: Mon, 30 May 2011 15:43:39 +0200</span></li>
+<li><span class="to"><span class="heading">To</span>: <a href="mailto:public-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20Adaptive%20images&amp;In-Reply-To=%3C1306763027.2519.83.camel%40altostratustier%3E&amp;References=%3C1306763027.2519.83.camel%40altostratustier%3E">public-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;</a>
+</span></li>
+<li><span class="message-id"><span class="heading">Message-ID</span>: &lt;1306763027.2519.83.camel&#x40;&#0097;&#0108;&#0116;&#0111;&#0115;&#0116;&#0114;&#0097;&#0116;&#0117;&#0115;&#0116;&#0105;&#0101;&#0114;&gt;
+</span></li>
+</ul>
+<pre id="start" class="body">
+Hi,
+
+CSS Media Queries (combined with &lt;meta name=viewport&gt;) provide a
+reasonable way to create layouts that adapt to the size of the screen of
+the device.
+
+But one aspect that remains difficult to manage in such an approach is
+handling of content images.
+
+Indeed, HTML currently allows to specify only one version of an image as
+an input source, which for raster images means a single resolution of
+image. Sending very large images to devices were the layout (or the
+screen resolution) wouldn't be able to fit them well is in most cases a
+waste of bandwidth. Conversely, sending very small images to very large
+screen doesn't take advantage of the underlying device capabilities.
+
+I've gotten requests many times for a mechanism by which an author could
+point to several sources for a given image that would be selected by the
+client depending on the screen size.
+
+There are server-side techniques to do that (e.g. tinySrc.net), but they
+rely on databases of devices that have to be maintained and which don't
+necessarily scale to all usage.
+
+A client-side mechanism similar to what media queries allow for layout
+would likely prove very useful.
+
+Some ideas on how this could be done:
+
+1. New &#64;srclist attribute point to list of sources
+        &lt;img src=default.jpg srclist=alternativeSizes alt=&quot;Picture of
+        Unicorn&quot;&gt;
+        &lt;sourcelist id=alternativeSizes&gt;
+        &lt;source src=&quot;big.jpg&quot; media=&quot;min-width: 600px&quot; width=&quot;600&quot;
+        height=&quot;400&quot;&gt;
+        &lt;source src=&quot;small.jpg&quot; media=&quot;max-width: 600px&quot; width=&quot;320&quot;
+        height=&quot;320&quot;&gt;
+        &lt;/sourcelist&gt;
+
+(&lt;sourcelist&gt; could maybe be replaced by another existing element?
+&lt;map&gt;? &lt;datalist&gt;? SVG's &lt;switch&gt;?)
+
+2. New image format that points to alternative resolutions
+        &lt;img src=&quot;image.list&quot; alt=&quot;Picture of Unicorn&gt;
+        
+        image.list:
+        Content-Type: image/list
+        
+        URI: big.jpg
+        media: (min-width: 600px)
+        
+        URI: small.jpg
+        media: (max-width: 600px)
+
+(maybe the images list could also be embedded in a &lt;script
+type='image/list'&gt;?)
+
+Advantage of #1 is that the author still gets to define the actual size
+of the images, which means no reflowing when the image get downloaded.
+
+#2 allows to avoid redefining over and over the alternative versions of
+an image.
+
+I guess that only #1 actually requires modifications to HTML; #2 would
+probably be more a matter of writing an IETF draft.
+
+Any suggestions or feedback on this?
+
+I'm planning on adding this message to the HTML.next [1] page once it's
+archived.
+
+Dom
+
+1. <a href="http://www.w3.org/wiki/HTML/next">http://www.w3.org/wiki/HTML/next</a>
+</pre>
+<p class="received"><span class="heading">Received on</span> Monday, 30 May 2011 13:43:55 UTC</p>
+</main>
+<!-- body="end" -->
+<footer class="foot">
+<nav id="navbarfoot">
+<ul class="links hmenu_container">
+<li><span class="heading">This message</span>: <span class="message_body"><a href="#start">Message body</a></span></li>
+<!-- lnext="start" -->
+<li><span class="heading">Next message</span>: <a href="0387.html">bugzilla@jessica.w3.org: "[Bug 12820] New: Hi guys, I am finding it frustrating that security  features prevent me from writing a useful app in HTML5 that will run solely  on the client machine. It seems that windows can talk to each other if their  is a parent / child relationship - UNLESS you load"</a></li>
+<li><span class="heading">Previous message</span>: <a href="0385.html">bugzilla@jessica.w3.org: "[Bug 12819] New: How do you decode this format on the server? There  seems to be no definition of the format, apart from the definition of how to  encode it. Expecting every implementer to reverse this algorithm seems prone  to mistakes."</a></li>
+<!-- lnextthread="start" -->
+<li><span class="heading">Next in thread</span>: <a href="0389.html">Simon Pieters: "Re: Adaptive images"</a></li>
+<li id="replies"><span class="heading">Reply</span>: <a href="0389.html">Simon Pieters: "Re: Adaptive images"</a></li>
+<li><span class="heading">Reply</span>: <a href="0390.html">Karl Dubost: "Re: Adaptive images"</a></li>
+<!-- lreply="end" -->
+</ul>
+<ul class="links hmenu_container">
+<li id="options3"><span class="heading">Mail actions</span>: <ul class="hmenu"><li><a href="mailto:public-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20Adaptive%20images&amp;In-Reply-To=%3C1306763027.2519.83.camel%40altostratustier%3E&amp;References=%3C1306763027.2519.83.camel%40altostratustier%3E">respond to this message</a></li>
+<li><a href="mailto:public-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;">mail a new topic</a></li></ul></li>
+<li><span class="heading">Contemporary messages sorted</span>: <ul class="hmenu"><li><a href="index.html#msg386">by date</a></li>
+<li><a href="thread.html#msg386">by thread</a></li>
+<li><a href="subject.html#msg386">by subject</a></li>
+<li><a href="author.html#msg386">by author</a></li>
+</ul></li>
+<li><span class="heading">Help</span>: <ul class="hmenu">
+    <li><a href="/Help/" rel="help">how to use the archives</a></li>
+    <li><a href="https://www.w3.org/Search/Mail/Public/search?type-index=public-html&amp;index-type=t">search the archives</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<!-- trailer="footer" -->
+<p class="colophon">
+This archive was generated by <a href="https://github.com/hypermail-project/hypermail/">hypermail 3.0.0</a>: Thursday, 13 July 2023 18:04:42 UTC
+</p>
+</footer>
+</body>
+</html>

@@ -57,7 +57,7 @@ status: 完成
 
 AAP／CERN-SGMLから見出し・リスト群、Texinfoのマクロ名から句要素群、CALSから表行グループ群へ至る関係は共有系譜で確認している。Texinfoは構造や意味の移植ではなく命名借用であるため、構造語彙の採用とは分ける。[共有系譜](../lineages/README.md)、[AAP Book DTD](../../raw/ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd)（[公開元](https://ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd)）、[1993年HTML Internet-Draft](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)）、[IETF 表草案](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt)）、[GNU Texinfo 2.16](../../raw/ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z/texinfo-2.16/texinfo2.texi)（[公開元](https://ftp.gnu.org/gnu/texinfo/texinfo-2_16.tar_z)）
 
-HTML+はフォーム、単純表、図、文書修正機能、クライアント側イメージマップを後続HTMLへ渡した。ほかに、ブラウザー実装から`img`、`embed`、`canvas`、`video`、既存Web／ARIA／コミュニティ実装から`main`、`ruby`群、`picture`、GUI慣習から`details`、外部仕様から`bdo`、`output`等へ至る枝を確認している。[HTML+の共有系譜](../lineages/html-plus.md)、[Andreessenの`IMG`提案](../../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0182.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html)）、[WebKit `CANVAS`実装](../../raw/github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c)（[公開元](https://github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c)）、[`main`提案](../../raw/lists.w3.org/Archives/Public/public-html/2012Sep/0086.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2012Sep/0086.html)）、[Picturefill](../../raw/www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/index.html)（[公開元](https://www.w3.org/community/respimg/2012/02/21/a-sample-picture-implementation/)）、[Apple HIGの開閉用の三角形](../../raw/web.archive.org/web/20060701000000id_/http%3A/developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html)（[公開元](https://web.archive.org/web/20060701000000id_/http://developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html)）、[RFC 2070](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)）、[XForms UI](../../raw/www.w3.org/TR/2000/WD-xforms-20001219/ui.html)（[公開元](https://www.w3.org/TR/2000/WD-xforms-20001219/ui.html)）
+HTML+はフォーム、単純表、図、文書修正機能、クライアント側イメージマップを後続HTMLへ渡した。ほかに、ブラウザー実装から`img`、`embed`、`canvas`、`video`、既存Web／ARIA／コミュニティ実装から`main`、`ruby`群、GUI慣習から`details`、外部仕様から`bdo`、`output`等へ至る枝を確認している。`picture`は2007年の同名案と`video`型構造を合成したコミュニティ提案へ、独立した`srcset`と既存`img`の処理を統合した複合経路である。[HTML+の共有系譜](../lineages/html-plus.md)、[Andreessenの`IMG`提案](../../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0182.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html)）、[WebKit `CANVAS`実装](../../raw/github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c)（[公開元](https://github.com/WebKit/WebKit/commit/048bd7c65c2595ed5c905c4e35431aec5d85897c)）、[`main`提案](../../raw/lists.w3.org/Archives/Public/public-html/2012Sep/0086.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2012Sep/0086.html)）、[Lawsonの`picture`草案](../../raw/brucelawson.co.uk/2011/notes-on-adaptive-images-yet-again/index.html)（[公開元](https://brucelawson.co.uk/2011/notes-on-adaptive-images-yet-again/)）、[Apple HIGの開閉用の三角形](../../raw/web.archive.org/web/20060701000000id_/http%3A/developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html)（[公開元](https://web.archive.org/web/20060701000000id_/http://developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html)）、[RFC 2070](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)）、[XForms UI](../../raw/www.w3.org/TR/2000/WD-xforms-20001219/ui.html)（[公開元](https://www.w3.org/TR/2000/WD-xforms-20001219/ui.html)）
 
 直接採用まで確認できないHTML外の先行語彙または設計入力は、次の16群に分かれる。
 
@@ -130,7 +130,7 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 
 今回の再調査により、`br`ではNCSA Mosaicより前のHTML+提案、基礎HTMLへの追加決定、Lynx実装を確認し、導入理由を固定して確度Bとした。`hr`では、ハイフン列による区切りを置き換える要素として基礎HTMLへ追加した直接記録を確認し、確度Aとした。HTML+ `br`からの採用因果、Workshop決定から各実装・後続仕様への編集経路は未確認である。`menu`では、HTML 4.01での非推奨を経て、2004年にWebアプリケーションのメニューと共有コマンド状態のため再利用された経路を確認したが、1992年の初期導入理由と具体的祖先は未確認である。`base`では1993年1月14日の`SAVEDAS`標準化意向と、その後のrevision 1.4 DTDに基底アドレス要素がないことを確認し、`BASE HREF`を同年6月草案までに絞ったが、両者の間の具体化記録とHTML外の祖先は未解決である。`blockquote`のDocBook／Usenet競合も未解決のままである。
 
-108ページ、113要素に一つ以上の未解決点が残る。未解決がないのは`figcaption`と`optgroup`だけである。したがって、このページの主題分類は調査完了率として使えない。
+106ページ、111要素に一つ以上の未解決点が残る。未解決がないのは`data`、`figcaption`、`optgroup`、`picture`である。したがって、このページの主題分類は調査完了率として使えない。
 
 集合単位の採用しか確認できない、または中間経路が欠けるA−は、`dd`、`del`、`dl`、`dt`、`footer`、`head`、`ins`、`legend`、`li`、`link`、`nav`、`ol`、`output`、`q`、`style`、`u`、`ul`の17要素である。個別対応を集合レベルの資料から推定してはならない。
 
@@ -138,7 +138,7 @@ HTMLへの採用因果または具体的祖先が弱いB／Cは、`a`、`address
 
 `HTML直前の祖先`に未確認部分を明記するのは、`a`、`address`、`aside`、`audio`、`base`、`blockquote`、`br`、`canvas`、`col`、`del`、`div`、`html`、`ins`、`legend`、`menu`、`noscript`、`output`、`p`、`pre`、`progress`、`q`、`s`、`section`、`small`、`source`、`style`、`sub`、`sup`、`title`、`track`、`u`の31要素である。背景資料があるだけで、これらの欠落へ矢印を補ってはならない。
 
-名称、命名、改名、略称、タグ名または語彙の選択理由が明示的な未解決点として残るのは、`a`、`abbr`、`article`、`aside`、`base`、`bdi`、`bdo`、`col`、`del`、`details`、`dialog`、`hgroup`、`ins`、`legend`、`main`、`mark`、`menu`、`meter`、`object`、`p`、`picture`、`pre`、`script`、`search`、`section`、`span`、`sub`、`summary`、`sup`、`td`、`th`、`time`、`title`、`video`、`wbr`の35要素である。語彙起源という目的に対しては、この集合を「由来確認済み」に数えない。
+名称、命名、改名、略称、タグ名または語彙の選択理由が明示的な未解決点として残るのは、`a`、`abbr`、`article`、`aside`、`base`、`bdi`、`bdo`、`col`、`del`、`details`、`dialog`、`hgroup`、`ins`、`legend`、`main`、`mark`、`menu`、`meter`、`object`、`p`、`pre`、`script`、`search`、`section`、`span`、`sub`、`summary`、`sup`、`td`、`th`、`time`、`title`、`video`、`wbr`の34要素である。語彙起源という目的に対しては、この集合を「由来確認済み」に数えない。
 
 ### 3.2 追加調査の扱い
 
@@ -150,7 +150,7 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 
 | 調査群 | 対象 | 探索範囲 |
 |---|---|---|
-| 現代の公開履歴 | [`picture`](../elements/picture.md)、[`slot`](../elements/slot.md) | Chromium、WHATWG、HTML Working Groupのissue、PR、commitから、旧名または初稿、設計モデル、HTML統合の順序を確定する |
+| 現代の公開履歴 | [`slot`](../elements/slot.md) | Chromium、WHATWG、HTML Working Groupのissue、PR、commitから、旧名または初稿、設計モデル、HTML統合の順序を確定する |
 | 初期WHATWGの版履歴 | [`mark`](../elements/mark.md)、[`meter`](../elements/meter.md)、[`time`](../elements/time.md)、[`main`](../elements/main.md)、[`bdi`](../elements/bdi.md)、[`track`](../elements/track.md) | 既知の初回収録、改名、再導入コミットの親版と、対応するWHATWGメール、旧Subversion履歴、提案を照合する |
 | W3C／IETF草案間の変更 | [`legend`](../elements/legend.md)、[`bdo`](../elements/bdo.md)、[`span`](../elements/span.md)、[`noscript`](../elements/noscript.md)、[`object`](../elements/object.md)、[`col`](../elements/col.md)、[`style`](../elements/style.md) | 連続する草案間に限定して、CVS／RCS差分、Working Group議事録、編集者メールから追加、改名、機能統合、後続仕様への採録を探す |
 

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="hypermail 3.0.0, see https://github.com/hypermail-project/hypermail/" />
+<title>handling fallback content for still images from Robert Burns on 2007-07-01 (public-html@w3.org from July 2007)</title>
+<meta name="Author" content="Robert Burns (rob&#x40;&#0114;&#0111;&#0098;&#0098;&#0117;&#0114;&#0110;&#0115;&#0046;&#0099;&#0111;&#0109;)" />
+<meta name="Subject" content="handling fallback content for still images" />
+<meta name="Date" content="2007-07-01" />
+<link rel="stylesheet" title="Normal view" href="/assets/styles/public.css" />
+<link rel="help" href="/Help/" />
+<link rel="start" href="../" title="public-html@w3.org archives" />
+<script defer="defer" src="/assets/js/archives.js"></script>
+</head>
+<body class="message">
+<header class="head">
+<nav class="breadcrumb" id="upper">
+  <ul>
+    <li><a href="https://www.w3.org/">W3C home</a></li>
+    <li><a href="/">Mailing lists</a></li>
+    <li><a href="../../">Public</a></li>
+    <li><a href="../" rel="start">public-html@w3.org</a></li>
+    <li><a href="./" rel="contents">July 2007</a></li>
+  </ul>
+</nav>
+<h1>handling fallback content for still images</h1>
+<!-- received="Sun Jul 01 21:56:02 2007" -->
+<!-- isoreceived="20070701215602" -->
+<!-- sent="Sun, 1 Jul 2007 16:55:55 -0500" -->
+<!-- isosent="20070701215555" -->
+<!-- name="Robert Burns" -->
+<!-- email="rob&#x40;&#0114;&#0111;&#0098;&#0098;&#0117;&#0114;&#0110;&#0115;&#0046;&#0099;&#0111;&#0109;" -->
+<!-- subject="handling fallback content for still images" -->
+<!-- id="5E43E679-9888-485C-B549-FE6F350120C6@robburns.com" -->
+<!-- charset="UTF-8" -->
+<!-- expires="-1" -->
+<nav id="navbar">
+<ul class="links hmenu_container">
+<li>
+<span class="heading">This message</span>: <ul class="hmenu"><li><a href="#start" id="options1">Message body</a></li>
+<li><a href="mailto:public-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20handling%20fallback%20content%20for%20still%20images&amp;In-Reply-To=%3C5E43E679-9888-485C-B549-FE6F350120C6%40robburns.com%3E&amp;References=%3C5E43E679-9888-485C-B549-FE6F350120C6%40robburns.com%3E">Respond</a></li>
+<li><a href="#options3">More options</a></li>
+</ul></li>
+<li>
+<span class="heading">Related messages</span>: <ul class="hmenu">
+<!-- unext="start" -->
+<li><a href="0070.html">Next message</a></li>
+<li><a href="0068.html">Previous message</a></li>
+<!-- unextthread="start" -->
+<li><a href="0082.html">Next in thread</a></li>
+<li><a href="#replies">Replies</a></li>
+<!-- ureply="end" -->
+</ul></li>
+</ul>
+</nav>
+</header>
+<!-- body="start" -->
+<main class="mail">
+<ul class="headers" aria-label="message headers">
+<li><span class="from">
+<span class="heading">From</span>: Robert Burns &lt;<a href="mailto:rob&#x40;&#0114;&#0111;&#0098;&#0098;&#0117;&#0114;&#0110;&#0115;&#0046;&#0099;&#0111;&#0109;?Subject=Re%3A%20handling%20fallback%20content%20for%20still%20images&amp;In-Reply-To=%3C5E43E679-9888-485C-B549-FE6F350120C6%40robburns.com%3E&amp;References=%3C5E43E679-9888-485C-B549-FE6F350120C6%40robburns.com%3E">rob&#x40;&#0114;&#0111;&#0098;&#0098;&#0117;&#0114;&#0110;&#0115;&#0046;&#0099;&#0111;&#0109;</a>&gt;
+</span></li>
+<li><span class="date"><span class="heading">Date</span>: Sun, 1 Jul 2007 16:55:55 -0500</span></li>
+<li><span class="to"><span class="heading">To</span>: HTMLWG WG &lt;<a href="mailto:public-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20handling%20fallback%20content%20for%20still%20images&amp;In-Reply-To=%3C5E43E679-9888-485C-B549-FE6F350120C6%40robburns.com%3E&amp;References=%3C5E43E679-9888-485C-B549-FE6F350120C6%40robburns.com%3E">public-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;</a>&gt;
+</span></li>
+<li><span class="message-id"><span class="heading">Message-Id</span>: &lt;5E43E679-9888-485C-B549-FE6F350120C6&#x40;&#0114;&#0111;&#0098;&#0098;&#0117;&#0114;&#0110;&#0115;&#0046;&#0099;&#0111;&#0109;&gt;
+</span></li>
+</ul>
+<pre id="start" class="body">
+I imagine there's already a a Wiki page on this, but I thought I'd  
+post this here first. Late, I'll add this to the appropriate page or  
+perhaps this warrants a new page.
+
+Problem: There's no simple and unified mechanism to display still  
+images in HTML with optional rich fallback content.
+
+Solutions:
+
+1) &lt;picture&gt;fallback&lt;/picture&gt;
+
+&lt;picture
+	src=&quot;picture.png&quot;
+	width=&quot;100%&quot;
+	height=&quot;500&quot;
+	alt=&quot;abbreviated fallback content&quot;
+ &gt;
+Some lengthy &lt;em&gt;or&lt;/em&gt; semantically rich fallback content
+&lt;/picture&gt;
+
+pro: as simple to use as &lt;img&gt; and if widely implemented would likely  
+be widely adopted by authors
+pro: requires no special CSS or scripting
+con: not yet implemented in any UA (as far as I know)
+
+&lt;object
+
+	type=&quot;image/png&quot;
+	data=&quot;picture.png&quot;
+	width=&quot;100%&quot;
+	height=&quot;500&quot;
+ &gt;
+	&lt;param
+		name=&quot;src&quot;
+		value=&quot;picture.png&quot; /
+	&gt;
+Fallback content
+&lt;/object&gt;
+
+pro: already works in existing UAs
+con: difficult for authors to use
+con: makes adding fallback content seem difficult to do since the  
+difficulty with dealing with &lt;object&gt; and &lt;param&gt; and MIME Types, etc  
+are all associated by authors with simply adding some fallback content
+
+&lt;img
+	src=picture.png
+	width=&quot;100%&quot;
+	height=&quot;500&quot;
+	alt=&quot;Fallback content&quot;
+ &gt;
+
+pros: works in existing UAs
+con: no semantically rich or media rich fallback is facilitated
+con: &#64;alt is typically expected to be a short fallback, so lengthy  
+fallback is not facilitated
+con: its not unified in the sense that images with fallback must be  
+embedded in a different manner than images without fallback and that  
+fallback for some embedded content (like &lt;object&gt;) is handled in a  
+simplified way while &lt;img&gt; requires more complicated tacked-on methods.
+
+for for lengthy or semantically rich fallback content
+&lt;img
+	src=picture.png
+	width=&quot;100%&quot;
+	height=&quot;500&quot;
+	alt=&quot;abbreviated fallback content&quot;
+	longdesc=&quot;#pictureLongDesc&quot;
+ &gt;
+&lt;p
+	id=&quot;pictureLongDesc&quot;
+	style=&quot;visibility: hidden;&quot;
+ &gt;
+Some lengthy &lt;em&gt;or&lt;/em&gt; semantically rich fallback content
+&lt;/p&gt;
+
+pros: works in existing UAs
+con: requires special CSS or scripting (or loads a separate page for  
+fallback if the &#64;longdesc points to another page)
+con: its not unified in the sense that images with fallback must be  
+embedded in a different manner than images without fallback and that  
+fallback for some embedded content (like &lt;object&gt;) is handled in a  
+simplified way while &lt;img&gt; requires more complicated tacked-on methods.
+
+Again, adding picture adds complexity to the language. But we're  
+already adding elements with much less need (as far as I can tell)  
+like &lt;canvas&gt;, &lt;video&gt;, and &lt;audio&gt; that can all be handled with  
+&lt;object&gt; without much added difficulty (especially when compared to  
+moving from &lt;img&gt; or &lt;picture&gt; to &lt;object&gt;).
+</pre>
+<p class="received"><span class="heading">Received on</span> Sunday,  1 July 2007 21:56:02 UTC</p>
+</main>
+<!-- body="end" -->
+<footer class="foot">
+<nav id="navbarfoot">
+<ul class="links hmenu_container">
+<li><span class="heading">This message</span>: <span class="message_body"><a href="#start">Message body</a></span></li>
+<!-- lnext="start" -->
+<li><span class="heading">Next message</span>: <a href="0070.html">Thomas Broyer: "Re: DI element [Re: html 5 and accessibility issue]"</a></li>
+<li><span class="heading">Previous message</span>: <a href="0068.html">Robert Burns: "Re: html 5 and accessibility issue - need of fallback content"</a></li>
+<!-- lnextthread="start" -->
+<li><span class="heading">Next in thread</span>: <a href="0082.html">Anne van Kesteren: "Re: handling fallback content for still images"</a></li>
+<li id="replies"><span class="heading">Reply</span>: <a href="0082.html">Anne van Kesteren: "Re: handling fallback content for still images"</a></li>
+<li><span class="heading">Reply</span>: <a href="0121.html">Maciej Stachowiak: "Re: handling fallback content for still images"</a></li>
+<li><span class="heading">Maybe reply</span>: <a href="0191.html">Thomas Broyer: "Re: handling fallback content for still images"</a></li>
+<li><span class="heading">Maybe reply</span>: <a href="0196.html">Sander Tekelenburg: "Re: handling fallback content for still images"</a></li>
+<li><span class="heading">Maybe reply</span>: <a href="0305.html">Jon Barnett: "Re: handling fallback content for still images"</a></li>
+<li><span class="heading">Maybe reply</span>: <a href="0350.html">Fabien Basmaison: "Re: handling fallback content for still images"</a></li>
+<!-- lreply="end" -->
+</ul>
+<ul class="links hmenu_container">
+<li id="options3"><span class="heading">Mail actions</span>: <ul class="hmenu"><li><a href="mailto:public-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;?Subject=Re%3A%20handling%20fallback%20content%20for%20still%20images&amp;In-Reply-To=%3C5E43E679-9888-485C-B549-FE6F350120C6%40robburns.com%3E&amp;References=%3C5E43E679-9888-485C-B549-FE6F350120C6%40robburns.com%3E">respond to this message</a></li>
+<li><a href="mailto:public-html&#x40;&#0119;&#0051;&#0046;&#0111;&#0114;&#0103;">mail a new topic</a></li></ul></li>
+<li><span class="heading">Contemporary messages sorted</span>: <ul class="hmenu"><li><a href="index.html#msg69">by date</a></li>
+<li><a href="thread.html#msg69">by thread</a></li>
+<li><a href="subject.html#msg69">by subject</a></li>
+<li><a href="author.html#msg69">by author</a></li>
+</ul></li>
+<li><span class="heading">Help</span>: <ul class="hmenu">
+    <li><a href="/Help/" rel="help">how to use the archives</a></li>
+    <li><a href="https://www.w3.org/Search/Mail/Public/search?type-index=public-html&amp;index-type=t">search the archives</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<!-- trailer="footer" -->
+<p class="colophon">
+This archive was generated by <a href="https://github.com/hypermail-project/hypermail/">hypermail 3.0.0</a>: Thursday, 13 July 2023 18:03:05 UTC
+</p>
+</footer>
+</body>
+</html>

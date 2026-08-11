@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された559ファイルを、30の取得元ホストごとに収録する。
+Rawに保存された569ファイルを、32の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（9ファイル）
 
@@ -18,6 +18,12 @@ Rawに保存された559ファイルを、30の取得元ホストごとに収録
 | [www.lists/www-talk.1993q3/0143.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q3/0143.html) | WWW-Talk Jul-Sep 1993: XMosaic 1.2 and HTML+ |
 | [www.lists/www-talk.1993q3/0883.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q3/0883.html) | WWW-Talk Jul-Sep 1993: Your views on changes to HTML+ |
 
+## `alistapart.com`（1ファイル）
+
+| Rawファイル | 文書タイトル |
+|---|---|
+| [article/responsive-images-how-they-almost-worked-and-what-we-need/index.html](../raw/alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/index.html) | Responsive Images: How they Almost Worked and What We Need – A List Apart |
+
 ## `api.github.com`（1ファイル）
 
 | Rawファイル | 文書タイトル |
@@ -29,6 +35,12 @@ Rawに保存された559ファイルを、30の取得元ホストごとに収録
 | Rawファイル | 文書タイトル |
 |---|---|
 | [www2/Proceedings/DDay/seidman/seidman.html](../raw/archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html) | An HTML Extension to Support Client-Side Image Maps |
+
+## `brucelawson.co.uk`（1ファイル）
+
+| Rawファイル | 文書タイトル |
+|---|---|
+| [2011/notes-on-adaptive-images-yet-again/index.html](../raw/brucelawson.co.uk/2011/notes-on-adaptive-images-yet-again/index.html) | Bruce Lawson's personal site  : Notes on Adaptive Images (yet again!) |
 
 ## `datatracker.ietf.org`（13ファイル）
 
@@ -205,7 +217,7 @@ Rawに保存された559ファイルを、30の取得元ホストごとに収録
 | [mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/README.first](../raw/ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/README.first) | — |
 | [mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd](../raw/ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd) | — |
 
-## `github.com`（59ファイル）
+## `github.com`（60ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -249,6 +261,7 @@ Rawに保存された559ファイルを、30の取得元ホストごとに収録
 | [whatwg/html/commit/8211497160124b53938eab1f94725a80b28a305f](../raw/github.com/whatwg/html/commit/8211497160124b53938eab1f94725a80b28a305f) | [ao] (3) Removed the entire Audio section in favour of the new HTMLAu… · whatwg/html@8211497 · GitHub |
 | [whatwg/html/commit/845c40c8035ddccb20301433b2f1225a1203e4de](../raw/github.com/whatwg/html/commit/845c40c8035ddccb20301433b2f1225a1203e4de) | [] (0) new &lt;video&gt; element section. This is SO far from complete it's… · whatwg/html@845c40c · GitHub |
 | [whatwg/html/commit/92baa8333203ea5b97316bb1775331b216d55dab](../raw/github.com/whatwg/html/commit/92baa8333203ea5b97316bb1775331b216d55dab) | [acgiowt] (1) the &lt;time&gt; element is dead, long live the &lt;time&gt; element · whatwg/html@92baa83 · GitHub |
+| [whatwg/html/commit/969543cd259a0cc41a0a5cbe97e0010c6999eb09](../raw/github.com/whatwg/html/commit/969543cd259a0cc41a0a5cbe97e0010c6999eb09) | [giow] (0) &lt;img srcset&gt; - first draft · whatwg/html@969543c · GitHub |
 | [whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7](../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7) | [acgiowt] (2) Parser changes: &lt;dc&gt;, &lt;ds&gt;, &lt;dialog&gt; are now treated di… · whatwg/html@9c490f2 · GitHub |
 | [whatwg/html/commit/a183c8997eb6f5647f9db27a9d3a52da86476d31](../raw/github.com/whatwg/html/commit/a183c8997eb6f5647f9db27a9d3a52da86476d31) | [giow] (0) Captions - Stage 1: the &lt;track&gt; element. · whatwg/html@a183c89 · GitHub |
 | [whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635](../raw/github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635) | [avgiowt] (2) Rename &lt;m&gt; to &lt;mark&gt; and dramatically increase the leve… · whatwg/html@a1b2ff7 · GitHub |
@@ -315,16 +328,19 @@ Rawに保存された559ファイルを、30の取得元ホストごとに収録
 |---|---|
 | [WEBMASTER/tags.txt](../raw/lib.ru/WEBMASTER/tags.txt) | HTML Referece Guide: Tags for Netscape 3.0 |
 
-## `lists.w3.org`（44ファイル）
+## `lists.w3.org`（49ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
 | [Archives/Public/public-html-admin/2013Apr/0003.html](../raw/lists.w3.org/Archives/Public/public-html-admin/2013Apr/0003.html) | WG Decision on request to drop hgroup from HTML5 from Paul Cotton on 2013-04-02 (public-html-admin@w3.org from April 2013) |
 | [Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html](../raw/lists.w3.org/Archives/Public/public-html-wg-issue-tracking/2011Jan/0014.html) | Re: HTML-ISSUE-162 (modal ): Add a modal attribute to html5 to indicate a modal segment of the DOM (modal dialog) [HTML 5 spec] from Laura Carlson on 2011-01-22 (public-html-wg-issue-tracking@w3.org from January 2011) |
+| [Archives/Public/public-html/2007Jul/0069.html](../raw/lists.w3.org/Archives/Public/public-html/2007Jul/0069.html) | handling fallback content for still images from Robert Burns on 2007-07-01 (public-html@w3.org from July 2007) |
+| [Archives/Public/public-html/2007Jul/0121.html](../raw/lists.w3.org/Archives/Public/public-html/2007Jul/0121.html) | Re: handling fallback content for still images from Maciej Stachowiak on 2007-07-02 (public-html@w3.org from July 2007) |
 | [Archives/Public/public-html/2008May/0620.html](../raw/lists.w3.org/Archives/Public/public-html/2008May/0620.html) | Current HTML ruby markup usage from Philip Taylor on 2008-05-26 (public-html@w3.org from May 2008) |
 | [Archives/Public/public-html/2009Sep/0566.html](../raw/lists.w3.org/Archives/Public/public-html/2009Sep/0566.html) | Re: &lt;details&gt; from Ian Hickson on 2009-09-15 (public-html@w3.org from September 2009) |
 | [Archives/Public/public-html/2010Apr/0349.html](../raw/lists.w3.org/Archives/Public/public-html/2010Apr/0349.html) | Re: Change Proposals toward Issue-9: "how accessibility works for &lt;video&gt; is unclear" from Silvia Pfeiffer on 2010-04-12 (public-html@w3.org from April 2010) |
 | [Archives/Public/public-html/2011Apr/0212.html](../raw/lists.w3.org/Archives/Public/public-html/2011Apr/0212.html) | Working Group Decision on ISSUE-144 conforming-u from Sam Ruby on 2011-04-08 (public-html@w3.org from April 2011) |
+| [Archives/Public/public-html/2011May/0386.html](../raw/lists.w3.org/Archives/Public/public-html/2011May/0386.html) | Adaptive images from Dominique Hazael-Massieux on 2011-05-30 (public-html@w3.org from May 2011) |
 | [Archives/Public/public-html/2011Oct/0163.html](../raw/lists.w3.org/Archives/Public/public-html/2011Oct/0163.html) | revert request for http://html5.org/r/6783 dropping of time element, adding of data element from Steve Faulkner on 2011-10-30 (public-html@w3.org from October 2011) |
 | [Archives/Public/public-html/2012Apr/0026.html](../raw/lists.w3.org/Archives/Public/public-html/2012Apr/0026.html) | CfC: Adopt ISSUE-184 data-element Change Proposal by Amicable Consensus from Sam Ruby on 2012-04-04 (public-html@w3.org from April 2012) |
 | [Archives/Public/public-html/2012Oct/0109.html](../raw/lists.w3.org/Archives/Public/public-html/2012Oct/0109.html) | maincontent extension - data on use of id=main and id=content in web pages from Steve Faulkner on 2012-10-16 (public-html@w3.org from October 2012) |
@@ -339,6 +355,8 @@ Rawに保存された559ファイルを、30の取得元ホストごとに収録
 | [Archives/Public/public-whatwg-archive/2009Apr/0423.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2009Apr/0423.html) | [whatwg] About Descendent Tags from Ian Hickson on 2009-04-30 (public-whatwg-archive@w3.org from April 2009) |
 | [Archives/Public/public-whatwg-archive/2010Jul/0449.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html) | [whatwg] Timed tracks for &lt;video&gt; from Ian Hickson on 2010-07-23 (public-whatwg-archive@w3.org from July 2010) |
 | [Archives/Public/public-whatwg-archive/2011Nov/0140.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html) | [whatwg] Declarative Inert DOM (e.g. the &lt;template&gt; element) from Rafael Weinstein on 2011-11-17 (public-whatwg-archive@w3.org from November 2011) |
+| [Archives/Public/public-whatwg-archive/2013Nov/0256.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2013Nov/0256.html) | Re: [whatwg] The src-N proposal from Simon Pieters on 2013-11-19 (public-whatwg-archive@w3.org from November 2013) |
+| [Archives/Public/public-whatwg-archive/2013Nov/0257.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2013Nov/0257.html) | Re: [whatwg] The src-N proposal from Tab Atkins Jr. on 2013-11-19 (public-whatwg-archive@w3.org from November 2013) |
 | [Archives/Public/w3c-wai-hc/1997OctDec/0160.html](../raw/lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html) | Minutes [was: Agenda for 971023 HTML WG meeting] from Dan Connolly on 1997-10-23 (w3c-wai-hc@w3.org from October to December 1997) |
 | [Archives/Public/w3c-wai-ig/1997JulSep/0026.html](../raw/lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0026.html) | HTML4/CSS2 review from Daniel Dardailler on 1997-09-18 (w3c-wai-ig@w3.org from July to September 1997) |
 | [Archives/Public/w3c-wai-ig/1997JulSep/0031.html](../raw/lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html) | FORM SELECT accessibility from MegaZone on 1997-09-27 (w3c-wai-ig@w3.org from July to September 1997) |
@@ -364,7 +382,7 @@ Rawに保存された559ファイルを、30の取得元ホストごとに収録
 | [Archives/Public/www-talk/1992NovDec/0155.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html) | www-talk from November to December 1992: The spec evolves... |
 | [Archives/Public/www-talk/1992NovDec/0159.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html) | www-talk from November to December 1992: Re: The spec evolves... |
 
-## `lists.whatwg.org`（23ファイル）
+## `lists.whatwg.org`（25ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -391,6 +409,8 @@ Rawに保存された559ファイルを、30の取得元ホストごとに収録
 | [pipermail/whatwg-whatwg.org/2009-August/064204.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-August/064204.html) | [whatwg] Spec comments, sections 3.1-4.7 |
 | [pipermail/whatwg-whatwg.org/2011-March/030907.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2011-March/030907.html) | [whatwg] Embedding custom hierarchical data |
 | [pipermail/whatwg-whatwg.org/2012-April/077688.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html) | [whatwg] Dialogs and prompts |
+| [pipermail/whatwg-whatwg.org/2012-May/035746.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-May/035746.html) | [whatwg] &lt;img srcset&gt; for responsive bitmapped content images |
+| [pipermail/whatwg-whatwg.org/2014-January/084111.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2014-January/084111.html) | [whatwg] Simplified &lt;picture&gt; element draft |
 
 ## `ln.hixie.ch`（1ファイル）
 

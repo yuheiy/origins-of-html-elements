@@ -95,7 +95,7 @@ status: 完成
 - [`<option>`](elements/option.md): HTML+のフォームからHTML 2.0へ導出された選択候補要素である。
 - [`<output>`](elements/output.md): XFormsの非編集可能な値表示コントロールをHTMLフォームへ適応して2003年に提案され、Web Forms 2.0を経てHTML5へ統合された。
 - [`<p>`](elements/p.md): 1992年1月のBerners-Leeメールで空の段落マークとして確認でき、SGML由来という回顧はあるが、具体的な元語彙は未確認である。
-- [`<picture>`](elements/picture.md): Responsive Images Community Groupの提案とPicturefillを、HTML Working Groupの拡張草案を経てWHATWG HTMLへ統合した要素である。
+- [`<picture>`](elements/picture.md): 2007年の静止画用`picture`案を`video`型の複数ソース選択へ転用し、RICG、独立した`srcset`、`img`を描画主体とする構造を統合して2014年にWHATWG HTMLへ導入した。
 - [`<pre>`](elements/pre.md): 初期HTMLのコンピューター出力表示から、Unixマニュアルページのハイパーテキスト化要求による拡張を経た整形済みテキスト要素である。
 - [`<progress>`](elements/progress.md): 2004年のProgressメータープレースホルダーを2006年に確定／不定なタスク完了要素へ具体化したが、それ以前のウィジェットからの採用は未確認である。
 - [`<q>`](elements/q.md): 1995年のHTML国際化草案が言語に応じた引用符の描画のため導入したが、HTML+ `Q`からの個別採用は未確認である。

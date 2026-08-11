@@ -1,0 +1,1412 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Responsive Images: How they Almost Worked and What We Need &#8211; A List Apart</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel='dns-prefetch' href='//widgets.wp.com' />
+<link rel='dns-prefetch' href='//0.gravatar.com' />
+<link rel='dns-prefetch' href='//1.gravatar.com' />
+<link rel='dns-prefetch' href='//2.gravatar.com' />
+<link rel='preconnect' href='//i0.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="A List Apart &raquo; Feed" href="https://alistapart.com/main/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://alistapart.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Falistapart.com%2Farticle%2Fresponsive-images-how-they-almost-worked-and-what-we-need%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://alistapart.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Falistapart.com%2Farticle%2Fresponsive-images-how-they-almost-worked-and-what-we-need%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='ala-style-css' href='https://alistapart.com/wp-content/themes/ala/style.css?ver=1757090064' media='all' />
+<link rel='stylesheet' id='ala-prism-style-css' href='https://alistapart.com/wp-content/themes/ala/js/prism/prism.css?ver=1.0' media='all' />
+<style id="jetpack_likes-inline-css">
+#jp-post-flair{padding-top:.5em}#content div.sharedaddy,#main div.sharedaddy,div.sharedaddy{clear:both}div.sharedaddy h3.sd-title{display:inline-block;font-size:9pt;font-weight:700;line-height:1.2;margin:0 0 1em}div.sharedaddy h3.sd-title:before{border-top:1px solid #dcdcde;content:"";display:block;margin-bottom:1em;min-width:30px;width:100%}div.jetpack-likes-widget-wrapper{min-height:50px;position:relative;width:100%}div.jetpack-likes-widget-wrapper .sd-link-color{font-size:12px}div.jetpack-comment-likes-widget-wrapper{min-height:31px;position:relative;width:100%}div.jetpack-comment-likes-widget-wrapper iframe{margin-bottom:0}#likes-other-gravatars{background-color:#fff;border:1px solid #dcdcde;border-radius:4px;box-shadow:none;display:none;height:auto;max-height:240px;min-width:220px;overflow:auto;padding:9px 12px 10px;position:absolute;z-index:1000}#likes-other-gravatars *{line-height:normal}#likes-other-gravatars .likes-text{color:#101517;font-size:12px;font-weight:500;padding-bottom:8px}#likes-other-gravatars :is(li,ul){list-style-type:none;margin:0;padding:0;text-indent:0}#likes-other-gravatars li:before{content:""}#likes-other-gravatars ul.wpl-avatars{display:block;max-height:190px;overflow:auto}#likes-other-gravatars ul.wpl-avatars li{float:none;height:28px;margin:0 0 4px;width:196px}#likes-other-gravatars ul.wpl-avatars li a{align-items:center;border-bottom:none!important;display:flex;gap:8px;margin:0 2px 0 0;text-decoration:none}#likes-other-gravatars ul.wpl-avatars li a span{color:#2c3338;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#likes-other-gravatars ul.wpl-avatars li a img{background:none;border:none;border-radius:50%;box-sizing:border-box;margin:0!important;padding:1px!important;position:static}div.sd-box{border-top:1px solid #00000021}.jetpack-likes-widget-loaded iframe,.jetpack-likes-widget-loading .likes-widget-placeholder,.jetpack-likes-widget-unloaded .likes-widget-placeholder{display:block}.jetpack-likes-widget-loaded .likes-widget-placeholder,.jetpack-likes-widget-loading iframe,.jetpack-likes-widget-unloaded iframe{display:none}.comment-likes-widget,.entry-content .post-likes-widget,.post-likes-widget{border-width:0;margin:0}.comment-likes-widget-placeholder,.post-likes-widget-placeholder{border-width:0;margin:0;position:relative}.comment-likes-widget-placeholder{display:flex;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;height:18px;position:absolute}.comment-likes-widget-placeholder:before{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath fill='%232ea2cc' d='m12 2 2.582 6.953L22 9.257l-5.822 4.602L18.18 21 12 16.89 5.82 21l2.002-7.14L2 9.256l7.418-.304'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:16px 16px;color:#2ea2cc;content:"";display:inline-block;height:16px;padding-right:5px;position:relative;top:3px;width:16px}.post-likes-widget-placeholder .button{display:none}:is(.comment-likes-widget-placeholder,.post-likes-widget-placeholder) .loading{color:#999;font-size:12px}.comment-likes-widget-placeholder .loading{align-self:center;color:#4e4e4e;margin-top:4px;padding-left:5px}div.sharedaddy.sd-like-enabled .sd-like h3{display:none}div.sharedaddy.sd-like-enabled .sd-like .post-likes-widget{float:none;position:absolute;top:0;width:100%}.comment-likes-widget{width:100%}.cs-rating,.pd-rating{display:block!important}.sd-gplus .sd-title{display:none}@media print{.jetpack-likes-widget-wrapper{display:none}}
+/*# sourceURL=https://alistapart.com/wp-content/plugins/jetpack/_inc/build/likes/style.min.css */
+</style>
+<link rel='stylesheet' id='sharedaddy-css' href='https://alistapart.com/wp-content/plugins/jetpack/modules/sharedaddy/sharing.css?ver=16.1' media='all' />
+<link rel='stylesheet' id='social-logos-css' href='https://alistapart.com/wp-content/plugins/jetpack/_inc/build/social-logos/social-logos.css?ver=16.1' media='all' />
+<script id="jquery-core-js" src="https://alistapart.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://alistapart.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<link rel="https://api.w.org/" href="https://alistapart.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://alistapart.com/wp-json/wp/v2/article/15228" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://alistapart.com/xmlrpc.php?rsd" />
+
+<link rel="canonical" href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/" />
+	<style>img#wpstats{display:none}</style>
+		<link rel="pingback" href="https://alistapart.com/xmlrpc.php"><meta name="description" content="With a mobile-first responsive design approach, if any part of the process breaks down, your user can still receive a representative image and avoid an unnecessarily large request on a device that may have limited bandwidth. But with several newer browsers implementing an &quot;image prefetching&quot; feature that allows images to be fetched before parsing the&hellip;" />
+		<style type="text/css">
+						.site-title,
+			.site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+
+						</style>
+		
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Responsive Images: How they Almost Worked and What We Need" />
+<meta property="og:url" content="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/" />
+<meta property="og:description" content="With a mobile-first responsive design approach, if any part of the process breaks down, your user can still receive a representative image and avoid an unnecessarily large request on a device that …" />
+<meta property="article:published_time" content="2012-01-31T14:00:00+00:00" />
+<meta property="article:modified_time" content="2012-01-31T14:00:00+00:00" />
+<meta property="og:site_name" content="A List Apart" />
+<meta property="og:image" content="https://i0.wp.com/alistapart.com/wp-content/uploads/2013/01/ALA343_respimages_300.png?fit=646%2C1163&#038;quality=80&#038;ssl=1" />
+<meta property="og:image:width" content="646" />
+<meta property="og:image:height" content="1163" />
+<meta property="og:image:alt" content="Responsive Images: How they Almost Worked and What We Need" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@alistapart" />
+<meta name="twitter:text:title" content="Responsive Images: How they Almost Worked and What We Need" />
+<meta name="twitter:image" content="https://i0.wp.com/alistapart.com/wp-content/uploads/2013/01/ALA343_respimages_300.png?fit=646%2C1163&#038;quality=80&#038;ssl=1&#038;w=640" />
+<meta name="twitter:image:alt" content="Responsive Images: How they Almost Worked and What We Need" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="icon" href="https://i0.wp.com/alistapart.com/wp-content/uploads/2019/03/cropped-icon_navigation-laurel-512.jpg?fit=32%2C32&#038;quality=89&#038;ssl=1" sizes="32x32" />
+<link rel="icon" href="https://i0.wp.com/alistapart.com/wp-content/uploads/2019/03/cropped-icon_navigation-laurel-512.jpg?fit=192%2C192&#038;quality=89&#038;ssl=1" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://i0.wp.com/alistapart.com/wp-content/uploads/2019/03/cropped-icon_navigation-laurel-512.jpg?fit=180%2C180&#038;quality=89&#038;ssl=1" />
+<meta name="msapplication-TileImage" content="https://i0.wp.com/alistapart.com/wp-content/uploads/2019/03/cropped-icon_navigation-laurel-512.jpg?fit=270%2C270&#038;quality=89&#038;ssl=1" />
+<style id="wp-custom-css">
+/*2025-05-20 Tonci https://wp.me/p9MPsk-1eo#comment-44317*/
+
+.ala-share div.sharedaddy .sd-social-icon .sd-content ul li[class*="share-"] a.sd-button
+{
+	max-width:unset!important;
+}
+
+.mailpoet_page-template-default .ala-author, .mailpoet_page-template-default .entry-meta
+{
+	display:none;
+}
+
+/*before 2025-05-13*/
+.ala-editors-note a {
+	text-decoration: underline;
+}
+i, em, cite {
+	font-weight: inherit;
+}
+
+code, kbd, tt, var {
+    font-size: .9375em;
+    text-transform: none;
+}
+.ala-opening-quote figure.quote blockquote p {
+	display: inline;
+}
+.ala-opening-quote figure.quote blockquote::before, .ala-opening-quote figure.quote blockquote::after {
+	content: "";
+}
+.ala-opening-quote figure.quote blockquote > p:first-child::before {
+	content: "“";
+}
+.ala-opening-quote figure.quote blockquote > p:first-child::after {
+	content: "”";
+}
+
+@media only screen and (max-width: 47.9375em) {
+	/* ----------------------	RESPONSIVE TABLES	---------------------- */
+	figure:not(.not-rwd) table {
+	    display: block;
+	    width: 100%;
+	    border-bottom: 1px solid #bfbfbf;
+	}
+
+	figure:not(.not-rwd) table caption {
+		display: block;
+	}
+
+	figure:not(.not-rwd) table thead {
+		display: none;
+		visibility: hidden;
+	}
+
+	figure:not(.not-rwd) table tbody, figure:not(.not-rwd) table tr, figure:not(.not-rwd) table th, figure:not(.not-rwd) table td {
+		border: 0;
+		display: block;
+		padding: 0;
+		text-align: left;
+		white-space: normal;
+	}
+
+	figure:not(.not-rwd) table tr {
+		margin: 1em 0;
+	}
+	
+	figure:not(.not-rwd) .gist table {
+		display: table;
+	}
+
+	figure:not(.not-rwd) .gist table tr {
+		display: table-row;
+		margin-bottom: 0;
+	}
+
+	figure:not(.not-rwd) .gist table td {
+		display: table-cell;
+	}
+
+	table th[data-title]:before,
+	table td[data-title]:before {
+		content: attr(data-title) ": ";
+		font-weight: bold;
+		font-family: "Franklin ITC", sans-serif;
+	}
+
+	table th:not([data-title]) {
+		font-weight: bold;
+		font-family: "Franklin ITC", sans-serif;
+	}
+
+	table td:empty {
+		display: none;
+	}
+	.main-content > figure:not(.not-rwd) table tbody tr:nth-child(odd) td {
+     	background: none; 
+	}
+
+.col-1 tr :nth-child(1):not(code), .col-2 tr :nth-child(2):not(code), .col-3 tr :nth-child(3):not(code):not(span), .col-4 tr :nth-child(4):not(code) {
+		border: none;
+	}
+
+	caption {
+		border: none;
+		border-bottom: 1px solid #bfbfbf;
+	}
+
+	.main-content > figure table th, .main-content > figure table td {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+	
+	figure.not-rwd {
+		overflow: auto;
+	}
+	
+	.entry-content>figure table tbody tr:nth-child(2n+1) td, .entry-content>table tbody tr:nth-child(2n+1) td {
+    background: transparent;
+}
+}
+
+
+/* Author archives - add margin below list of authors / kathrynwp */
+body.author .ala-sidebar-author {
+    margin-bottom: 35px;
+}
+
+</style>
+</head>
+
+<body class="wp-singular article-template-default single single-article postid-15228 wp-custom-logo wp-theme-ala article-responsive-images-how-they-almost-worked-and-what-we-need" itemscope itemtype="http://schema.org/Article">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header">
+		<div class="site-branding">
+			<a href="https://alistapart.com/" class="custom-logo-link" rel="home"><img width="960" height="98" src="https://i0.wp.com/alistapart.com/wp-content/uploads/2019/03/ala-logo-big.png?fit=960%2C98&amp;quality=80&amp;ssl=1" class="custom-logo" alt="A List Apart" decoding="async" fetchpriority="high" srcset="https://i0.wp.com/alistapart.com/wp-content/uploads/2019/03/ala-logo-big.png?w=960&amp;quality=80&amp;ssl=1 960w, https://i0.wp.com/alistapart.com/wp-content/uploads/2019/03/ala-logo-big.png?resize=300%2C31&amp;quality=80&amp;ssl=1 300w, https://i0.wp.com/alistapart.com/wp-content/uploads/2019/03/ala-logo-big.png?resize=768%2C78&amp;quality=80&amp;ssl=1 768w" sizes="(max-width: 960px) 100vw, 960px" /></a>				<p class="site-title"><a href="https://alistapart.com/" rel="home"  itemscope itemtype="http://schema.org/ImageObject">A List Apart</a></p>
+								<p class="site-description">For people who make websites</p>
+					</div><!-- .site-branding -->
+
+		<nav id="site-navigation" class="main-navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="screen-reader-text">Primary Menu</span></button>
+			<div class="menu-site-header-container"><ul id="primary-menu" class="menu"><li id="menu-item-6000493" class="ala-home-url menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6000493"><a href="https://alistapart.com" itemprop="url"><span itemprop="name">Home</span></a></li>
+<li id="menu-item-6000494" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-6000494"><a href="https://alistapart.com/articles/" itemprop="url"><span itemprop="name">Articles</span></a></li>
+<li id="menu-item-6000495" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6000495"><a href="https://alistapart.com/events/" itemprop="url"><span itemprop="name">Events</span></a></li>
+<li id="menu-item-6000496" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6000496"><a href="https://alistapart.com/topics/" itemprop="url"><span itemprop="name">Topics</span></a></li>
+<li id="menu-item-6000497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6000497"><a href="https://alistapart.com/about/contribute/" itemprop="url"><span itemprop="name">Write for Us</span></a></li>
+</ul></div>
+			<form role="search" method="get" class="search-form" action="https://alistapart.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>		</nav><!-- #site-navigation -->
+
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+			
+<article id="post-15228" class="post-15228 article type-article status-publish has-post-thumbnail hentry category-interaction-design category-layout-grids category-responsive-design issue-pricing-strategy-for-creatives-responsive-images-how-they-almost-worked-and">
+
+	<figure class="hero-wide" itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+		
+			<div class="post-thumbnail">
+				<img width="646" height="1163" src="https://alistapart.com/wp-content/uploads/2013/01/ALA343_respimages_300.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Responsive Images: How they Almost Worked and What We Need" itemprop="contentUrl" decoding="async" srcset="https://i0.wp.com/alistapart.com/wp-content/uploads/2013/01/ALA343_respimages_300.png?w=646&amp;quality=80&amp;ssl=1 646w, https://i0.wp.com/alistapart.com/wp-content/uploads/2013/01/ALA343_respimages_300.png?resize=167%2C300&amp;quality=80&amp;ssl=1 167w, https://i0.wp.com/alistapart.com/wp-content/uploads/2013/01/ALA343_respimages_300.png?resize=569%2C1024&amp;quality=80&amp;ssl=1 569w" sizes="(max-width: 646px) 100vw, 646px" />			</div><!-- .post-thumbnail -->
+
+					<a class="ala-issue-number" href="https://alistapart.com/issue/343"><span class="ala-issue-number__badge">Issue №</span>
+				<span itemprop="issueNumber">343</span></a>
+			
+	</figure>
+
+	<header class="entry-header">
+		
+		<h1 class="entry-title" itemprop="headline">Responsive Images: How they Almost Worked and What We Need</h1>		<div class="entry-meta">
+			<span class="byline"> by <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="url fn n" href="https://alistapart.com/author/matmarquis/" itemprop="url"> <span itemprop="name">Mat Marquis</span></a></span></span><span class="posted-on"><time class="entry-date published updated" datetime="2012-01-31T09:00:00-05:00">January 31, 2012</time></span>			<div class="entry-topic">
+				<span class="cat-links">Published in <a href="https://alistapart.com/blog/topic/interaction-design/" rel="category tag">Interaction Design</a>, <a href="https://alistapart.com/blog/topic/layout-grids/" rel="category tag">Layout &amp; Grids</a>, <a href="https://alistapart.com/blog/topic/responsive-design/" rel="category tag">Responsive Design</a></span>			</div>
+		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	
+		<div class="ala-editors-note"><b>A note from the editors:</b> Since this article ran in Issue No. 343, author Mat Marquis has established and is chairing a <a href="http://www.w3.org/community/respimg/">Responsive Images Community Group</a> for the W3C. All are invited to participate.</div>
+		
+	
+	
+	<div class="entry-content">
+		<p>It’s our job, as designers and developers, to pick apart even the seemingly most simple tasks to find ways to improve them. When Ethan Marcotte coined “<a href="http://www.alistapart.com/articles/responsive-web-design/">responsive web design,</a>” he said that a responsive website is made up of three things: a flexible grid, flexible images and media, and media queries. In doing so, he opened up a world of new and exciting things to obsess over. I chose flexible images.</p>		<div class="aside-breaker"><span>Article Continues Below</span></div>
+		<div class="ala-single-sidebar-wrapper">
+			<span class="screen-reader-text">Article Continues Below</span>
+			<aside class="ala-single-sidebar-minutiae">
+				<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/#comments" class="ala-comment-bubble" >77 Comments</a>					<div class="ala-share">
+					<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 id="section1" class="sd-title">Share this:<a class="subhead-anchor" href="#section1">#section1</a></h3><div class="sd-content"><ul><li class="share-bluesky"><a rel="nofollow noopener noreferrer"
+				data-shared="sharing-bluesky-15228"
+				class="share-bluesky sd-button share-icon no-text"
+				href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/?share=bluesky"
+				target="_blank"
+				aria-labelledby="sharing-bluesky-15228"
+				>
+				<span id="sharing-bluesky-15228" hidden>Share on Bluesky (Opens in new window)</span>
+				<span>Bluesky</span>
+			</a></li><li class="share-mastodon"><a rel="nofollow noopener noreferrer"
+				data-shared="sharing-mastodon-15228"
+				class="share-mastodon sd-button share-icon no-text"
+				href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/?share=mastodon"
+				target="_blank"
+				aria-labelledby="sharing-mastodon-15228"
+				>
+				<span id="sharing-mastodon-15228" hidden>Share on Mastodon (Opens in new window)</span>
+				<span>Mastodon</span>
+			</a></li><li class="share-threads"><a rel="nofollow noopener noreferrer"
+				data-shared="sharing-threads-15228"
+				class="share-threads sd-button share-icon no-text"
+				href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/?share=threads"
+				target="_blank"
+				aria-labelledby="sharing-threads-15228"
+				>
+				<span id="sharing-threads-15228" hidden>Share on Threads (Opens in new window)</span>
+				<span>Threads</span>
+			</a></li><li class="share-end"></li></ul></div></div></div>					</div>
+										<section id="custom_html-6" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><a href="https://www.patreon.com/alistapart" class="patreon-bubble">Become a patron</a></div></section>					
+						<div class="minutiae-block translation-block">
+			<h3 class="ala-single-sidebar-translations-header">
+				Translations			</h3>
+			<ul class="ala-single-sidebar-translations">
+									<li>
+						<a href="http://goo.gl/LGu1s">
+							Italian						</a>
+					</li>
+								</ul>
+		</div>
+					</aside>
+
+			<aside class="ala-single-sidebar-1">
+				<section id="block-2" class="widget widget_block"><div class="banner">
+	<a href="https://sps.northwestern.edu/ala">
+	<img decoding="async" class="banner-logo" src="https://alistapart.com/wp-content/uploads/2026/03/IDS_700x200_Logo-300x86.jpg" alt="Northwestern Information Design and Strategy, School Of Professional Studies" />
+<p><br />Ready to advance in content strategy, UX/UI, data communication, or learning design? Explore Northwestern’s online MS in Information Design & Strategy.</p>
+	</a>
+</div>
+
+
+<div class="banner ala-banner">
+	<a href="https://abookapart.com/">				<img decoding="async" src="https://alistapart.com/wp-content/uploads/2019/03/logo_a-book-apart-color.png" alt="A Book Apart Logo" class="banner-logo" />
+		<p>A Book Apart:<br> Brief books for people who make websites.</p>		
+		</a>
+</div></section>			</aside>
+
+		</div>
+		
+<p>It’s easy enough to style images so that they scale to fit within a parent container by adding <code>img { max-width: 100%; }</code> to one’s stylesheet. To use this effectively, though, the image must be large enough to scale up to whatever size we can reasonably expect on the largest possible display. This can mean a great deal of overhead. At best it’s just wasteful. At worst, the mobile browser stuffs its hands in its pockets and goes to sulk in the corner, leaving the page partially rendered. A handful of full-bleed images designed for a 13” display could bring a mobile device on an Edge connection to its knees.</p>
+<p>Unfortunately, we can’t test bandwidth in any reliable way—not yet, at least. Testing would likely mean introducing a significant download to measure against, which is a lot like setting something on fire to see exactly how flammable it is. What we <strong>can</strong> determine with some reliability is the size of a device’s screen—and while we can’t necessarily use screen size to make assumptions about bandwidth, it does directly correlate to what we’re trying to accomplish: while a browser’s window size may change, we’ll never need an image larger than the user’s screen.</p>
+<p>While we were working on the new <a href="http://www.bostonglobe.com">Boston Globe</a> website, we devised a technique to mitigate the size of requests for users that may have limited bandwidth. Before I describe it here, I should really warn you up front: it broke. But we planned for that.</p>
+<h2 id="section2">How responsive images worked<a class="subhead-anchor" href="#section2">#section2</a></h2>
+<p><a href="https://github.com/scottjehl/Responsive-Images">Scott Jehl</a> brilliantly masterminded <a href="http://filamentgroup.com/">Filament Group’s</a> “responsive images” technique. We began with the core philosophy that the technique should err on the side of mobile. With a mobile-first approach, if any part of the process should break down the user should still receive a representative image—even if it’s a bit smaller—and avoid an unnecessarily large request on a device that may have limited bandwidth. Progressive enhancement writ large.</p>
+<p>There are three key components to our responsive images script: the markup, the JavaScript, and a server-side redirect rule.</p>
+<p>We started with, perhaps unsurprisingly, an image tag:</p>
+<pre id="snippet1"><code>&lt;img src="mobile-size.gif"></code></pre>
+<p>With that as our basis, we’re ensuring that we default to a mobile-sized image. We store the path to the larger image in a data attribute for easy access via JS:</p>
+<pre id="snippet2"><code>&lt;img src="images/mobile-size.jpg" data-fullsrc="images/desktop-size.jpg"></code></pre>
+<p>Now that we have both sources in our markup, we need a way to conditionally load the appropriate source. To do that we need to know the size of the user’s screen. Fortunately, there’s a relatively simple way to determine a device’s screen size through JavaScript by way of a <a >property</a> in the browsers’ <code>window</code> object: <code>window.screen.width</code>, though even that <a href="http://tripleodeon.com/2011/12/first-understand-your-screen/">isn’t entirely reliable</a>.</p>
+<p>Here’s where we run up against a major challenge: we need to communicate this size to the server in time to defer the request for the image’s original <code>src</code>, if necessary. The server needs to know the client’s screen size before our images are displayed.</p>
+<p>We eventually settled on setting the screen size in a cookie. A cookie set in the head of a document would be ready in time for the parsing of the document’s body, and included along with image requests.</p>
+<p>I assume that you’re cringing at the idea of cookie-dependent functionality, and I understand—I do. Some of our first iterations involved <code>&lt;noscript></code> tags and <code>document.write</code>. I still have nightmares about dynamically-injected <code>base</code> tags. These were desperate times, and we left no stone unturned.</p>
+<p>Our JavaScript’s second task was far more simple: if the screen was above the size we specified, we swapped the <code>img</code> tag’s original <code>src</code> for the path contained in the <code>data-fullsrc</code> attribute and displayed the larger image in place of the smaller one.</p>
+<p>Since the screen size was now available to the server, we toyed with a server-side solution that would automatically resize the original image to suit the screen. We decided against this for several reasons:</p>
+<ul>
+<li>We wanted to keep server-side dependency to an absolute minimum, and only implement something that could be easily recreated in various server environments.</li>
+<li>Rather than simply resizing an existing image, we felt it was more important to have the flexibility to crop and zoom the larger image in a way that fully optimizes it for display on a smaller screen.</li>
+<li>Any of the back-end solutions we experimented with involved scaling a large image down to suit the screen size, which creeped us right out. If the screen’s width was reported incorrectly or if the front-end scripting should break down, we would run the risk of subjecting users to a massive and unnecessary download.</li>
+</ul>
+<p>The <code>src</code>-swapping part of the JavaScript handles the lion’s share of the work, but larger-screened devices still make redundant requests—first for the mobile image, then the full-size image. This results in a pretty jarring visual effect as well: the smaller image may be visible before the larger one snaps into place. Since the original <code>src</code> is fetched as the browser parses the <code>img</code> tag, we can’t really dodge that request from the client side. What we can do is mitigate those requests on the server side.</p>
+<p>We wrote some simple Apache rewrite rules to intercept requests for an image and check for the cookie we set earlier. If the breakpoint conditions we specified were met, we redirected the request for the mobile-sized image to a 1—1 spacer gif. This kept the size of the redundant request low—especially once cached by the browser—and prevented the mobile-sized image from displaying before we swapped it for the full-size image. Since we didn’t want to apply this logic to every image site-wide, we later introduced a second rule that allowed us to flag images as responsive: the logic above only kicks in if the image’s filename contains “.r.”</p>
+<pre id="snippet3"><code>&lt;img src="images/mobile-size.r.jpg" data-fullsrc="images/desktop-size.jpg"></code></pre>
+<p>Thanks to our mobile-first approach, we had ourselves a pretty scrappy little technique. If any part of the equation should fail, no users would be penalized for their context. A failure on the client side—if cookies or JavaScript were unavailable, for example—would result in a smaller, but perfectly representative image. A failure on the server side would mean a request for the smaller image prior to the full-size image, but in a context where we could at least assume greater bandwidth. No one would be left without images regardless of their device, browser, and features.</p>
+<p>This is fortunate really, since within a month or so of launching BostonGlobe.com our responsive image approach broke.</p>
+<h2 id="section3">What went wrong<a class="subhead-anchor" href="#section3">#section3</a></h2>
+<p>Several newer browsers have implemented an “image prefetching” feature that allows images to be fetched before parsing the document’s body. While it’s hard to argue with a quicker overall loading scheme, it goes against the parsing behavior we’ve come to understand. For our purposes, this feature also invalidates all our methods for communicating the screen size to the server before the images are loaded and breaks our server-side redirect. You can see this on BostonGlobe.com right now: without that redirect you’ll briefly see the mobile-size image before the full-size image is loaded, but it may take sharp eyes and a few page refreshes. Fortunately, this additional overhead is only incurred on desktop browsers, where bandwidth is generally less of a concern.</p>
+<h2 id="section4">So, now what?<a class="subhead-anchor" href="#section4">#section4</a></h2>
+<p>Long after the Boston Globe site launched, we continued to iterate on our approach. Jason Grigsby has done an incredible job documenting the details of those trials and tribulations in a <a href="http://www.cloudfour.com/responsive-imgs/">series</a> of <a href="http://www.cloudfour.com/responsive-imgs-part-2/">blog</a> <a href="http://www.cloudfour.com/responsive-imgs-part-3-future-of-the-img-tag/">posts</a>.</p>
+<p>This brings us to the present day, with some of the brightest minds on the web looking for something—anything—that will get the job done. Some think that it isn’t a solvable problem right now, and are placing their bets on user agent detection as a temporary solution. While this is a perfectly viable answer in the short term, I maintain that it’s untenable going forward: with the ever-expanding range of mobile phones and tablets in circulation, we could never hope to maintain a reasonable list of browsers and devices for long.</p>
+<p>I believe that the ultimate solution shouldn’t hinge on scripting or CSS—and certainly nothing like UA detection, cookies, custom scripting on the front end, or any server-side shenanigans. Our aim is to represent and serve content appropriately, and for that reason I believe that this should be solved in markup.</p>
+<p>The <code>img</code> tag isn’t going to cut it for this, though. It’s effective at conveying the hilarious antics of house cats, but it isn’t well suited to complex logic. It does one thing, and it does it well: it takes a single image source, and it puts it on your screen. If we were to modify this behavior at the browser level, we would never be able to guarantee our changes wouldn’t introduce issues in older browsers. We also know from experience that <code>img</code> doesn’t leave us much (if any) room to polyfill this new behavior.</p>
+<p>What we need is a new markup pattern—one that allows us to specify multiple source files, but still specify universally-recognized markup as “fallback content” for browsers that don’t recognize the new tag. This should sound familiar, as this pattern already exists: the <code>video</code> and <code>audio</code> tags.</p>
+<p>We know that a <code>video</code> tag can contain references to multiple sources, and that we can specify fallback content within the tag that’s only visible to browsers that don’t support <code>video</code> natively—usually a Flash-based video. What you may not know is that there’s already a way to use media queries to determine which video source to use, though browser support is a little spotty.</p>
+<pre id="snippet4"><code>&lt;video&gt;
+        &lt;source src="high-res.webm" media="min-width:800px" />
+        &lt;source src="low-res.webm" />
+        &lt;img src="poster.jpg" />
+&lt;/video&gt;</code></pre>
+<p>From there, it doesn’t take much imagination to see how we could use a pattern like this.</p>
+<pre id="snippet5"><code>&lt;picture>
+        &lt;source src="high-res.jpg" media="min-width: 800px" />
+        &lt;source src="mobile.jpg" />
+        &lt;!-- Fallback content: --&gt;
+        &lt;img src="mobile.jpg" />
+&lt;/picture></code></pre>
+<p>We could have a limitless number of options by using source media queries—higher resolution images for high-res displays over a certain size, for example. If we could reliably detect connection speed, one day we may be able to add <code>media=“connection-speed: edge”</code> or <code>media=“min-speed: 200kbps”</code> to our source elements. If these source elements are implemented per the HTML5 spec, a request will only be sent for the ones that match our media query. What we get is a single, highly-tailored request, with conditional flexibility limited only by a constantly growing roster of media queries.</p>
+<p>Once we’ve established that markup as our foundation, we may be able to polyfill the expected behavior for browsers that don’t yet support it. While it’s likely that the polyfills would still involve more than one request, starting with a tried-and-true fallback pattern would allow us to apply polyfills at our discretion.</p>
+<h2 id="section5">While we’re at it, I’d also like a pony<a class="subhead-anchor" href="#section5">#section5</a></h2>
+<p>As things stand now, a number of developers—myself included—are talking with WHATWG and various browser teams about the details of this new element. A frustrated group of developers pitching a need for a new element is certainly nothing new; we’re not the first, and I’m certain we won’t be the last. In fact, we’re not even the first to reach the exact same conclusion on image delivery: after brainstorming, we learned that a solution much like our own was posted to the W3C’s public mailing list in <a href="http://lists.w3.org/Archives/Public/public-html/2007Jul/0121.html">July of 2007</a>—similar right down to the semantics. This subject has come up multiple times on the WHATWG and W3C discussion lists and quietly died out each time, but never during such a radical shift in browsing context as we’ve experienced over the past year or so, and never in such an exciting context as responsive web design. </p>
+<p>While we can’t guarantee that a <code>picture</code> element—or something similar, semantics aside—will ever see the light of day, we’ve recognized that there is a need for such a markup pattern at present, and tremendous potential to such an approach in the future. I’d love to hear your thoughts.</p>
+<div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-158094726-15228-6a7b0b92b7d94' data-src='https://widgets.wp.com/likes/?ver=16.1#blog_id=158094726&amp;post_id=15228&amp;origin=alistapart.com&amp;obj_id=158094726-15228-6a7b0b92b7d94' data-name='like-post-frame-158094726-15228-6a7b0b92b7d94' data-title='Like or Reblog'><h3 id="section6" class="sd-title">Like this:<a class="subhead-anchor" href="#section6">#section6</a></h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class="loading"><svg class="jetpack-spinner" width="18" height="18" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="50" cy="50" r="46" fill="none" stroke="#ddd" stroke-width="8"/><path d="M 50 4 A 46 46 0 0 1 96 50" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" dur="1.4s" from="0 50 50" to="360 50 50" repeatCount="indefinite"/></path></svg><span class="screen-reader-text">Loading…</span></span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>		<div class="ala-single-sidebar-wrapper sidebar-related">
+			<aside id="related" class="ala-single-sidebar-related">
+				<div class="ala-sidebar-content" >
+									<section class="ala-sb-rel__latest">
+						<h3 class="ala-sb-rel__latest__title">
+							Recently by Mat Marquis						</h3>
+						<article>
+							<h3 class="ala-sb-rel__latest__entry-title">
+								<a href="https://alistapart.com/article/responsive-images/">Responsive Images								</a></h3>
+							<div class="ala-sb-rel__latest__entry-content">The `img` element remains one of the biggest challenges for website performance, especially in responsive designs. In this excerpt from Image Performance, Mat Marquis tells us why, but he also shines a light on the solution.</php></div>
+						</article>
+					</section>
+										<section class="ala-sb-rel__category">
+						<h3 class="ala-sb-rel__cat__title">
+							Further reading about							<a href="https://alistapart.com/blog/topic/interaction-design/">Interaction Design</a>
+						</h3>
+													<article>
+								<h3 class="ala-sb-rel__cat__entry-title">
+									<a href="https://alistapart.com/blog/post/successful-or-unsuccessful-the-post-good-design-vocabulary/">“Successful” or “Unsuccessful”: the Post-“Good Design” Vocabulary									</a></h3>
+								<div class="ala-sb-rel__cat__entry-content">In a world where AI can generate good-looking work instantly, “good” can’t carry the weight it used to carry in design conversations. What <em>can</em> carry that weight are language and actions that reflect what design has always been at its best: goals-aligned, research-informed, constraints-aware, and outcomes-focused. Returning ALA author Justin Dauer explains.</div>
+							</article>
+														<article>
+								<h3 class="ala-sb-rel__cat__entry-title">
+									<a href="https://alistapart.com/article/personalization-pyramid/">Personalization Pyramid: A Framework for Designing with User Data									</a></h3>
+								<div class="ala-sb-rel__cat__entry-content">Implement personalized digital experiences that are intentional, ethical, and technologically sound.</div>
+							</article>
+												</section>
+									</div>
+			</aside>
+		</div>
+			</div><!-- .entry-content -->
+	</article><!-- #post-15228 -->
+
+				<footer class="ala-author">
+					<div class="ala-author__content clear">
+						<a name="panelist0"></a>
+													<h4 class="ala-author__about">About the Author</h4>
+													<div class="ala-author__avatar">
+							<img width="150" height="150" src="https://i0.wp.com/alistapart.com/wp-content/uploads/2012/01/photo_128647.png?resize=150%2C150&amp;quality=80&amp;ssl=1" class="avatar avatar-150 photo wp-post-image" alt="" />						</div>
+
+						<h3 class="ala-author__name">Mat Marquis</h3>
+						<div class="ala-author__description">Mat Marquis <a href="http://twitter.com/wilto">tweets</a> prolifically, makes websites for a living at <a href="http://bocoup.com/">Bocoup</a>, and chairs the <a href="http://ricg.io/">Responsive Issues Community Group</a>. He’s also a technical advisor at <cite>A List Apart</cite> and a former member of the <a href="http://jquerymobile.com/">jQuery Mobile</a> team.</div>
+					</div>
+											<aside class="ala-author__more">
+							<h3 class="ala-author__more_title">More from this author</h3>
+															<h4 class="ala-author__article">
+									<a href="https://alistapart.com/article/responsive-images/">Responsive Images									</a>
+								</h4>
+																<h4 class="ala-author__article">
+									<a href="https://alistapart.com/article/javascript-for-web-designers/">JavaScript for Web Designers: DOM Scripting									</a>
+								</h4>
+																<h4 class="ala-author__article">
+									<a href="https://alistapart.com/blog/post/front-end-dev-talk/">It’s Time We #FEDtalk									</a>
+								</h4>
+																<h4 class="ala-author__article">
+									<a href="https://alistapart.com/article/container-queries-once-more-unto-the-breach/">Container Queries: Once More Unto the Breach									</a>
+								</h4>
+																<h4 class="ala-author__article">
+									<a href="https://alistapart.com/blog/post/10-years-ago-in-ala-attribute-anarchy/">10 Years Ago in ALA: Attribute Anarchy									</a>
+								</h4>
+														</aside>
+								<aside class="ala-author-book clear">
+			<figure class="ala-author-book__cover">
+
+				<a class="ala-author-book__purchase-url" href="https://abookapart.com/products/image-performance">
+					<img width="194" height="300" src="https://i0.wp.com/alistapart.com/wp-content/uploads/2012/01/aba-image-performance.png?fit=194%2C300&amp;quality=80&amp;ssl=1" class="ala-author-book__cover" alt="" decoding="async" srcset="https://i0.wp.com/alistapart.com/wp-content/uploads/2012/01/aba-image-performance.png?w=550&amp;quality=80&amp;ssl=1 550w, https://i0.wp.com/alistapart.com/wp-content/uploads/2012/01/aba-image-performance.png?resize=194%2C300&amp;quality=80&amp;ssl=1 194w" sizes="(max-width: 194px) 100vw, 194px" />				</a>
+			</figure>
+
+			<article class="ala-author-book__description">
+							<h4 class="ala-author__also">Also from this author</h4>
+								<h2><a class="ala-author-book__purchase-url" href="https://abookapart.com/products/image-performance">Image Performance  <span class="ala-author-book__author-name">by Mat Marquis</span></a></h2>
+
+				<div class="ala-author-book__description__body">To solve the most critical performance problems with the biggest impact, start with images. Responsive Issues Community Group (RICG) chair Mat Marquis helps us make smart decisions about images and shows us the swiftest way to improve a website’s performance: from understanding compression methods used by common image formats, to responsive image markup patterns and their usage, to handling content delivery for the best user experience. Get up to speed&mdash;and speed up your site.</div>
+
+				<a class="ala-author-book__purchase-url--cta" href="https://abookapart.com/products/image-performance"><span>➝</span> Buy now</a>
+			</article>
+		</aside>
+							</footer>
+									<aside class="widget-area pre-footer-widget-area pre-footer-single">
+						<section id="custom_html-4" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="pre-footer-email-signup">
+	<strong>Get our latest articles in your inbox.</strong> <a href="https://alistapart.com/email-signup">Sign up for email alerts</a>.
+</div>
+</div></section>					</aside><!-- .pre-footer-widget-area -->
+					
+					<div class="comment-area-wrap two-column-layout">
+						
+<div id="comments" class="comments-area column-content">
+
+			<h2 class="comments-title">
+			77 Reader Comments		</h2><!-- .comments-title -->
+
+		
+	<nav class="navigation comment-navigation" aria-label="Comments">
+		<h2 class="screen-reader-text">Comments navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-1/#comments" >Older comments</a></div></div>
+	</nav>
+		<ol class="comment-list">
+					<li id="comment-19227" class="comment even thread-even depth-1">
+			<article id="div-comment-19227" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/95e6ae41d446c49665eb0d628610e8e42b69624306e65e5bcc02899de3dc589e?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/95e6ae41d446c49665eb0d628610e8e42b69624306e65e5bcc02899de3dc589e?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://anselm-hannemann.com/" class="url" rel="ugc external nofollow">anselmh</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19227"><time datetime="2012-02-04T06:12:58-05:00">February 4, 2012 at 6:12 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>@my ad: As far as I understood you&#8217;re talking about a solution to solve the responsive image problem inside CSS, too. This is something you can read in my proposal here: &#8220;see blog article&#8221;:<a href="http://novolo.de/blog/2012/01/19/what-happened-to-responsive-assets/" rel="nofollow ugc">http://novolo.de/blog/2012/01/19/what-happened-to-responsive-assets/</a>.<br />
+I like the idea of being responsive in either way — informational elements in HTML, non-informational/styling-elements in CSS.</p>
+<p>Is that what you&#8217;ve been thinking of? If not, please clarify so we can sort this out.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19228" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-19228" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/ffcf832c9834a0064aaf8834fee406cb397ab4f46fe788630c3888781b28cc94?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/ffcf832c9834a0064aaf8834fee406cb397ab4f46fe788630c3888781b28cc94?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn">my ad</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19228"><time datetime="2012-02-04T13:18:28-05:00">February 4, 2012 at 1:18 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>@anselmh Yes, I would like to see the solution come through CSS as I think it is the best way to approach it for the long term. Adding in javascript workarounds seems messy to me as we look into the future and think it only serves as a crutch to the bigger issues. </p>
+<p>Thinking this through over the morning I&#8217;ve found various issues with my original thought and what could be solutions or could lead to complications. Below is a breakdown of how it could work changing around how a few things are currently structured.</p>
+<p>Through the img tag you would nolonger specify an full path to the asset as it is currently structured. ie, img src=&#8221;folder/logo.jpg&#8221;</p>
+<p>This would be handled through the CSS file using &#8216;path&#8217; or some other specifier. So the document would now look as follows.</p>
+<p>HTML:</p>
+<p>img src=&#8221;logo.jpg&#8221;</p>
+<p>CSS:</p>
+<p>img &#123; path: desktop; &#125; </p>
+<p>This would lead the logo.jpg to be pulled from an image folder named &#8216;desktop&#8217; and retrieve the full size asset.</p>
+<p>This can be changed using media queries to pull the different size assets from a different source folder as follows.</p>
+<p>@media screen and (max-width: 480px) &#123;<br />
+  img &#123; path: mobile; &#125;<br />
+  &#125;</p>
+<p>If a person doesn&#8217;t like to have all images coming out of one directory you could pull images out of various folders through a class element.</p>
+<p>img.company &#123; path: company; &#125;<br />
+img.products &#123; path: products; &#125;</p>
+<p>resulting in &#8211; img class&#8221;company&#8221; src=&#8221;logo.jpg&#8221;</p>
+<p>and so on.</p>
+<p>You could specify where the assets are coming from depending on the different scenarios that are being designed for. As we look ahead screen sizes and resolutions are going to keep multiplying and we&#8217;ll very soon be taking into account televisions adding more complexities.</p>
+<p>Using this approach front end devs that are not concerned with responsive design can still use the traditional path structure without specifying path: ; in the CSS &#8211; img src=&#8221;folder/logo.jpg&#8221; and it would work as expected.</p>
+<p>The part that I&#8217;m not fond about is having to create various sizes of the same image however this also opens up a number of design opportunities as you can customize images depending on which display it is being viewed on. </p>
+<p>I see this providing designers a lot of potential to customize how a page would look and deliver images to that specific device instead of needing to use the same image for every instance and simply scaling it. </p>
+<p>This approach keeps the current responsive principles and allows for additional customization but my favorite part of this solution is it only adds one piece of code and leaves the rest of the styled elements via CSS as is.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19229" class="comment even thread-even depth-1">
+			<article id="div-comment-19229" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/ffcf832c9834a0064aaf8834fee406cb397ab4f46fe788630c3888781b28cc94?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/ffcf832c9834a0064aaf8834fee406cb397ab4f46fe788630c3888781b28cc94?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn">my ad</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19229"><time datetime="2012-02-04T15:19:08-05:00">February 4, 2012 at 3:19 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I should clarify when I say &#8216;I would like to see the solution come through CSS&#8217;. Ideally the best solution would be native HTML enhanced by CSS. The HTML would be a fall back to an enhanced CSS solution.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19230" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-19230" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/28ed21b2e89c16c1d0a5a16e143113ba6549892e5187e1dc42afb66c01d1dbf6?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/28ed21b2e89c16c1d0a5a16e143113ba6549892e5187e1dc42afb66c01d1dbf6?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://aaronbrewer.net/" class="url" rel="ugc external nofollow">spaceribs</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19230"><time datetime="2012-02-07T15:41:28-05:00">February 7, 2012 at 3:41 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I still think that that there should be an all emcompassing <media> tag that would allow the browser to gracefully degrade from &lt;video&gt; to <img /> to any other element you could use for that area (and dependent on a standard media attribute). It seems like the video tag is only scratching the surface of the power of graceful degradation via HTML, why stop there? What about using a shorter headline or paragraph text if the viewport is smaller? Why not give us the option of giving a html alternative for an image versus relying on basic text in an alt tag?</p>
+<p>Too many tags, not enough scalability.</media></p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19231" class="comment even thread-even depth-1">
+			<article id="div-comment-19231" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/2ba7a7eb64c58ac92db25b19306d996f5ce3cf7b3c54751aa3bb27026a2c0c49?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/2ba7a7eb64c58ac92db25b19306d996f5ce3cf7b3c54751aa3bb27026a2c0c49?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn">JoeSnellPDX</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19231"><time datetime="2012-02-08T13:45:49-05:00">February 8, 2012 at 1:45 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>As our mobile-large screen responsive evolution presses on at warp speed&#8230; those on the crest of the wave are held back by seemingly simple technological hurdles.  We have to remember the large screen in the equation as brand channels will begin to immerge with one feed -> mobile-large screen.  </p>
+<p>Our frustrations are but a small slice in time.  What may seem like a solution today, may be an obstacle in only a matter of months.</p>
+<p>I so love your suggested solution.  It absolutely makes sense &#8211; today&#8230; and is evolution enabled.</p>
+<p>Well said and good luck in persuading the powers that be to enable these markup improvements.</p>
+<p>Responsive image nirvana.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19232" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-19232" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/3ce3b4f72ebea57826075b7edd5a257aeb80aa87c6bf180825ad45371eaa1557?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/3ce3b4f72ebea57826075b7edd5a257aeb80aa87c6bf180825ad45371eaa1557?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn">NatCk</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19232"><time datetime="2012-02-09T01:49:52-05:00">February 9, 2012 at 1:49 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Commenter #11 asked about this but I didn&#8217;t see a response from Mat. Any thoughts on this approach?</p>
+<p><a href="http://adaptive-images.com/" rel="nofollow ugc">http://adaptive-images.com/</a></p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19233" class="comment even thread-even depth-1">
+			<article id="div-comment-19233" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/6d0d97bb8745bda5e4737e30d031438f8550c9e5464a50b621e24e21f70d08eb?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/6d0d97bb8745bda5e4737e30d031438f8550c9e5464a50b621e24e21f70d08eb?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://www.infamia.com" class="url" rel="ugc external nofollow">eglue</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19233"><time datetime="2012-02-09T17:38:09-05:00">February 9, 2012 at 5:38 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>This is excellent article in the way it expresses what developers go through in battling how things change and evolve on the web and whereby most designers don&#8217;t ever really get the intricacies that developers have to deal with. </p>
+<p>I think it&#8217;s not enough for designers to just study design, they need to study structure and code as well. The reverse is equally important but I think there&#8217;s plenty of momentum lately for developers to understand the importance of great design. Full disclosure, as a former developer, I may be biased in who I think needs to work harder. 🙂  Nevertheless, nice article!</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19234" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-19234" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/33d95a37028a042f92f23cdc3658079c91a9bf7a91201dec171bf26e3ba556c1?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/33d95a37028a042f92f23cdc3658079c91a9bf7a91201dec171bf26e3ba556c1?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn">timtowles</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19234"><time datetime="2012-02-09T20:45:10-05:00">February 9, 2012 at 8:45 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I&#8217;d like to propose a new tag: IMG<br />
+<a href="http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html" rel="nofollow ugc">http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html</a></p>
+<p>heh.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19235" class="comment even thread-even depth-1">
+			<article id="div-comment-19235" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/8f6ad3442226e9f9727e97fa7011eaa8de0d3a19ed520ad2029297d60bab9e95?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/8f6ad3442226e9f9727e97fa7011eaa8de0d3a19ed520ad2029297d60bab9e95?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn">joyblack</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19235"><time datetime="2012-02-10T02:37:11-05:00">February 10, 2012 at 2:37 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I think it&#8217;s a good method. Not all people can think of ideas as great as the ones mentioned above.</p>
+<p><a href="http://fantasycoinhq.3dcartstores.com" rel="nofollow ugc">http://fantasycoinhq.3dcartstores.com</a></p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19236" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-19236" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/8f6ad3442226e9f9727e97fa7011eaa8de0d3a19ed520ad2029297d60bab9e95?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/8f6ad3442226e9f9727e97fa7011eaa8de0d3a19ed520ad2029297d60bab9e95?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn">joyblack</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19236"><time datetime="2012-02-10T02:41:33-05:00">February 10, 2012 at 2:41 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>fantasy, coins, gold, silver, copper, D&#38;D, role, playing, currency, money, campaign</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19237" class="comment even thread-even depth-1">
+			<article id="div-comment-19237" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/d50549d21a31d3683f5fa0a93f74c62abefb236f761766eae761a7ceb0b290d5?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/d50549d21a31d3683f5fa0a93f74c62abefb236f761766eae761a7ceb0b290d5?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://web5.me" class="url" rel="ugc external nofollow">Marc Diethelm</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19237"><time datetime="2012-02-10T11:01:43-05:00">February 10, 2012 at 11:01 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>All these approaches put to much of a burden on developers! They&#8217;re clunky, prone to breakage and force the use of more markup. But maybe worst of all they force you to define fixed dimensions where you switch the image and to maintain multiple versions of the image!<br />
+I&#8217;m really quite astonished that no one so far has mentioned that JPEG 2000 together with the JPIP protocol handles this use case already&#8230; Store the image on the server in the maximum resolution you want to offer, but just download a size appropriate for the user&#8217;s display. Open source JPIP servers are available&#8230; (Djatoka for instance can serve &#8216;regular&#8217; formats from a jp2 file, providing a fallback.) Better native support for JPEG 2000 in browsers would be nice of course.</p>
+<p>Some experiments need to be done on how best to use inline JPEG 2000 for responsive images. I suppose one approach could be sending a scaling factor (or max size) with a cookie and do some URI rewriting on the server side to get the desired image size. CSS can still be used to downscale the image for a perfect fit. It&#8217;s not optimal, but the main point is to just work with one image and let the server handle the scaling.</p>
+<p>Yes, JPEG 2000 requires encoders/decoders that are complex and more computationally &#8216;demanding&#8217;. But there has to be a tradeoff somewhere.</p>
+<p>And let&#8217;s not forget that JPEG 2000 offers many other useful features.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19238" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-19238" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/d50549d21a31d3683f5fa0a93f74c62abefb236f761766eae761a7ceb0b290d5?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/d50549d21a31d3683f5fa0a93f74c62abefb236f761766eae761a7ceb0b290d5?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://web5.me" class="url" rel="ugc external nofollow">Marc Diethelm</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19238"><time datetime="2012-02-10T12:00:07-05:00">February 10, 2012 at 12:00 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I wrote the comment above in a hurry and forgot to clarify that of course no browser currently implements the JPIP protocol. However I still think using a JPEG 2000 server over HTTP could be a very interesting method towards solving the problem of responsive images. And it would certainly help push native implementations of the JPEG 2000 standard.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19239" class="comment even thread-even depth-1">
+			<article id="div-comment-19239" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/a351234ef07b56fbc86378612c7b9620386e17971c3bea79aac01f6fffcc7cc7?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/a351234ef07b56fbc86378612c7b9620386e17971c3bea79aac01f6fffcc7cc7?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn">JCOELHO</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19239"><time datetime="2012-02-10T13:33:36-05:00">February 10, 2012 at 1:33 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>What about an approach of using the CSS media type to control the image source? No JavaScript involved, but it does assume that mobile devices come up with a media type of handheld. You probably can&#8217;t use the img tag, but maybe a div tag. Then again it changes the function of the div tag and is not semantically correct. A change to the markup to support images like videos would still be the best option.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19240" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-19240" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/153e50b5e6e4c8bbba38fe2f6b9159e415401e3e3f991e7ee8888f8e2184c391?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/153e50b5e6e4c8bbba38fe2f6b9159e415401e3e3f991e7ee8888f8e2184c391?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://webconsultant.co.nz" class="url" rel="ugc external nofollow">yeosteve</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19240"><time datetime="2012-02-11T14:36:57-05:00">February 11, 2012 at 2:36 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I&#8217;ve been experimenting with this, . I watched the resources as I expanded the window and the  different image for the widest display isn&#8217;t requested until that CSS is triggered by the window reaching each specified width.  (I cused different images so I could see the change easily).</p>
+<p>No Javascript at all.</p>
+<p>.rightBox&#123;</p>
+<p>  display:none;<br />
+    width:40%;<br />
+    background-size:contain;<br />
+    background-repeat:no-repeat;<br />
+    float:right;<br />
+    overflow:auto<br />
+&#125;</p>
+<p>@media  screen and (orientation:landscape)  and (min-width:480px)&#123; </p>
+<p>  .rightBox&#123;<br />
+display:block;<br />
+    height:40%;<br />
+    background-image:url(&#8216;../images/mobile/sevenstep.jpg&#8217;);<br />
+  &#125;<br />
+&#125;</p>
+<p>@media  screen and (orientation:landscape)  and (min-width:1024px)&#123; </p>
+<p>  .rightBox&#123;<br />
+display:block;<br />
+    height:40%;<br />
+    background-image:url(&#8216;../images/full/planning.jpg&#8217;);<br />
+  &#125;<br />
+&#125;</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19241" class="comment even thread-even depth-1">
+			<article id="div-comment-19241" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/58c78d1235e58c70656244099635ed84aaafe4baace20b5aadacd95752c3f8c6?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/58c78d1235e58c70656244099635ed84aaafe4baace20b5aadacd95752c3f8c6?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://andersonschmitt.com" class="url" rel="ugc external nofollow">Anderson Schmitt</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19241"><time datetime="2012-02-13T13:25:09-05:00">February 13, 2012 at 1:25 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I agree, a picture tag was perfect to solve this problem, we have a solution for this, but this solution is not easy to implement, and, at this time, we have to care about many device sizes more and more. Hey W3C, look this post! 😛</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19242" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-19242" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/95e6ae41d446c49665eb0d628610e8e42b69624306e65e5bcc02899de3dc589e?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/95e6ae41d446c49665eb0d628610e8e42b69624306e65e5bcc02899de3dc589e?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://anselm-hannemann.com/" class="url" rel="ugc external nofollow">anselmh</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19242"><time datetime="2012-02-14T04:12:51-05:00">February 14, 2012 at 4:12 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>@Marc Diethelm: This is entirely the best solution. I&#8217;ve written about it as the &#8220;perfect solution&#8221; in my blog post. The problem is, that JPEG2000 isn&#8217;t that good of a format for graphics. So we would need ideally WebP/WebM to be able to progressively download and serve responsive images. Until that is implemented in all browsers (haha!) you will still need another approach, so that&#8217;s why we proposed the HTML5 solution for interim.</p>
+<p>@JCOELHO, @yeosteve: A CSS only solution wouldn&#8217;t work as it&#8217;s not semantic and doesn&#8217;t work valid. It still should be possible to do via CSS for non-semantic (styling/layout) purposes, too. Mailing list of W3C didn&#8217;t care about this very much 😉</p>
+<p>@Anserson Schmitt: We (Mat and I) are currently discussing on WHATWG lists and if we have a solution over there, it will move to the W3C list. So be sure we do our best W3C cares about this problem 🙂</p>
+<p>@ NatCk: adaptive-images.com is only a polyfill solution and uses some technique not very good for a standard-solution.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19243" class="comment even thread-even depth-1">
+			<article id="div-comment-19243" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/589ead2e04c5d2e5a69de273cbb02aed6458a0ffda041fdc9e0885c9684a29e1?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/589ead2e04c5d2e5a69de273cbb02aed6458a0ffda041fdc9e0885c9684a29e1?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://about.me/IDisposable" class="url" rel="ugc external nofollow">IDisposable</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19243"><time datetime="2012-02-15T20:01:43-05:00">February 15, 2012 at 8:01 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Since we&#8217;re talking about changing the browser&#8217;s behavior anyway, why not actually make it offer up the information to properly solve this problem server-side?  Let&#8217;s have the browser send the information that is available to the &#8220;css media queries&#8221;:<a href="http://www.w3.org/TR/css3-mediaqueries/" rel="nofollow ugc">http://www.w3.org/TR/css3-mediaqueries/</a> in the HTTP GET request headers caused by the one-and-only <img src="whatever.png" /> tag or CSS url(&#8220;whatever.png&#8221;).  </p>
+<p>To wit:<br />
+X-Media: &#8220;screen color:24 resolution:120dpi orientation:portrait device:640&#215;480 viewport:500&#215;300&#8221;</p>
+<p>(obviously, the aspect-ratio and device-aspect-ratio can be computed, color-index seems meh)</p>
+<p>The nice thing about this is that it is really up to the user-agent&#8217;s current needs to determine what should be displayed, thus what should be requested.  If someone zooms in, the user-agent can ask for a bigger version.  If they switch to print view, we can ask for the monochrome version in higher DPI and all is warm and fuzzy. If the server doesn&#8217;t care, it serves up the one-true-image. If the server cares, it can serve specific versions.  Cache logic can be driven by the standard content-negotiation logic (and left non-cached until it is).</p>
+<p>The best part of ALL of this is that the CSS can just reference an  image, the html can just include a img tag, etc&#8230; and the browser&#8217;s request can be driven by what it knows already about the size/placement/device of the image.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19244" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-19244" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/ee1d3b24405cb217a789ed0535cec7e155acaf01becd06a06721edd28f4700aa?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/ee1d3b24405cb217a789ed0535cec7e155acaf01becd06a06721edd28f4700aa?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://scrambledbrains.net" class="url" rel="ugc external nofollow">lunalot</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19244"><time datetime="2012-02-22T13:00:49-05:00">February 22, 2012 at 1:00 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Use JavaScript stylesheet manipulation. All responsive images should be rendered in an <img /> with a token classname, such as &#8216;responsive&#8217;, and should have fallback &#8216;src&#8217; value. In &lt;head&gt;, JS will add a stylesheet rule to &#8216;display:none&#8217; all such elements (to avoid requesting the wrong image resource), then will determine the appropriate screen size category. Script block at the bottom of the page will alter &#8216;src&#8217; values of all responsive <img />s according to screen size category, per some naming convention, and then update stylesheet rule to &#8216;display:inline&#8217; all such elements.</p>
+<p>This may cause flicker, more noticeable when HTML is generated/delivered slowly. This can be mitigated by encapsulating the responsive <img /> in some server-side component that also emits a script block right after each <img /> to do the &#8216;src&#8217; attribute manipulation and displaying.</p>
+<p>The &#8216;resize&#8217; event will be handled to perform this logic in case different images need to be re-rendered (can be short-circuited if new image would have lower quality).</p>
+<p>If UA doesn&#8217;t support JS or doesn&#8217;t support stylesheet manipulation, there will be flicker or simply the fallback content is rendered.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19245" class="comment even thread-even depth-1">
+			<article id="div-comment-19245" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/b36c2f623a7dced0acd31b85ec27531beb807f2031ba694b65bcb3fd68c86d66?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/b36c2f623a7dced0acd31b85ec27531beb807f2031ba694b65bcb3fd68c86d66?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://linkedin.com/in/katskies" class="url" rel="ugc external nofollow">katerpiddah</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19245"><time datetime="2012-02-27T02:33:41-05:00">February 27, 2012 at 2:33 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Is there a reason why you can&#8217;t just use images as the source in the video tag with the image MIME type, as in the following example??</p>
+<p>&lt;video&gt;<source src="high-res.jpg" media="min-width:800px" type="image/jpeg"/><source src="low-res.jpg" type="image/jpeg"/><img src="poster.jpg" /><br />
+&lt;/video&gt;</p>
+<p>Thanks.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19246" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-19246" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/6409d759af86020c4a40b7dbfe3ff80002edcde5b20e0c2e783bfaeda58e9b66?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/6409d759af86020c4a40b7dbfe3ff80002edcde5b20e0c2e783bfaeda58e9b66?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://www.sminfosoft.com" class="url" rel="ugc external nofollow">sminfosoft10</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19246"><time datetime="2012-02-29T01:10:28-05:00">February 29, 2012 at 1:10 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>This one is an inspiration personally to uncover out rather more related to this subject. I must confess your information extended my sentiments as well as I am going to proper now take your feed to stay updated on every coming blog posts you would possibly possibly create. You are worthy of thanks for a job perfectly carried out!</p>
+<p>&#8220;Web Design Company&#8221;:<a href="http://www.sminfosoft.com" rel="nofollow ugc">http://www.sminfosoft.com</a><br />
+&#8220;Technology News&#8221;:<a href="http://update-technologynews.blogspot.in/" rel="nofollow ugc">http://update-technologynews.blogspot.in/</a></p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19247" class="comment even thread-even depth-1">
+			<article id="div-comment-19247" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/20f1e11876f0f7ebdfbe197122b449ddf59b5fc80f9055fb3c54a7425d3a96d8?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/20f1e11876f0f7ebdfbe197122b449ddf59b5fc80f9055fb3c54a7425d3a96d8?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn">lerouxb</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19247"><time datetime="2012-03-26T06:31:53-04:00">March 26, 2012 at 6:31 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>What do you think of my responsive images proposal?<br />
+<a href="http://opensores.za.net/2012/responsive-images/" rel="nofollow ugc">http://opensores.za.net/2012/responsive-images/</a></p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19248" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-19248" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/c5f99b54568a35207f2eb247c3b6bdb7813ae23410405a3c2cd0222154ff1474?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/c5f99b54568a35207f2eb247c3b6bdb7813ae23410405a3c2cd0222154ff1474?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://www.linkedin.com/in/stephanfowler" class="url" rel="ugc external nofollow">stephanfowler</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19248"><time datetime="2012-07-03T19:52:23-04:00">July 3, 2012 at 7:52 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>The &#8220;Responsive Content&#8221;:<a href="http://stephanfowler.github.com/responsive-content/" rel="nofollow ugc">http://stephanfowler.github.com/responsive-content/</a> jQuery plugin is an approach which works in a &#8220;coarse grained&#8221; way, ajax-loading an entire HTML fragment into the page, given current window width (and pixel density). It can be used to tell the server to supply appropriately sized image src URLs etc. </p>
+<p>It&#8217;s a fork of Github&#8217;s Pjax loader. It does not rely on User Agent or cookies &#8211; just window width.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19249" class="comment even thread-even depth-1">
+			<article id="div-comment-19249" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/c5f99b54568a35207f2eb247c3b6bdb7813ae23410405a3c2cd0222154ff1474?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/c5f99b54568a35207f2eb247c3b6bdb7813ae23410405a3c2cd0222154ff1474?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://www.linkedin.com/in/stephanfowler" class="url" rel="ugc external nofollow">stephanfowler</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19249"><time datetime="2012-07-04T05:27:56-04:00">July 4, 2012 at 5:27 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Correstion. Correct url:<br />
+<a href="http://responsivecontent.net/" rel="nofollow ugc">http://responsivecontent.net/</a></p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19250" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-19250" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/56661a90aa38a5e4835a40533d32e89bafe85515a6197250184339460665eecc?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/56661a90aa38a5e4835a40533d32e89bafe85515a6197250184339460665eecc?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://www.facebook.com/Wils.Jessica" class="url" rel="ugc external nofollow">Jessica Wilson</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19250"><time datetime="2013-04-03T01:57:06-04:00">April 3, 2013 at 1:57 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>But, Do I Need <a href="http://ifuturzcom.wordpress.com/2013/04/01/responsive-website-using-html5-and-css/" rel="nofollow">Responsive Website</a> For Growth of My Business?</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19251" class="comment even thread-even depth-1">
+			<article id="div-comment-19251" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/5381d4d6c6eb574bdc7cffaf470c220fe2f1664b531455911b4b39c914f03336?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/5381d4d6c6eb574bdc7cffaf470c220fe2f1664b531455911b4b39c914f03336?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn">DanMcRae</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19251"><time datetime="2013-04-09T09:53:34-04:00">April 9, 2013 at 9:53 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>How do would you appreciate these 2 solutions to download only the small images when needed (Smartphone, iPhone, Android)<br />
+1) Use $_SERVER(&#8216;HTTP_USER_AGENT&#8217;) in the server script to detect that it is not a PC<br />
+2) Have a main page that detects the screen size and pass it in the URI for subsequent pages.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19252" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-19252" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/1f3df1586ef5cb9385405de2ef88cf6cb0cab6e727a5e85cb5e9d29bcfd607eb?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/1f3df1586ef5cb9385405de2ef88cf6cb0cab6e727a5e85cb5e9d29bcfd607eb?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="https://www.facebook.com/nishu.kakkar" class="url" rel="ugc external nofollow">Nishu Kakkar</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19252"><time datetime="2013-08-07T13:15:14-04:00">August 7, 2013 at 1:15 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>A great solution to &lt;video&gt;-like functionality. Wondering if a similar functionality can make <img /> element accept multiple sources like video does.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-19253" class="comment even thread-even depth-1">
+			<article id="div-comment-19253" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/?s=120&#038;d=identicon&#038;r=pg' srcset='https://secure.gravatar.com/avatar/?s=240&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-120 photo avatar-default' height='120' width='120' loading='lazy' decoding='async'/>						<b class="fn"><a href="http://t.co/Z6Eqva5LLl" class="url" rel="ugc external nofollow">Ara T. Howard</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-2/#comment-19253"><time datetime="2013-10-11T01:08:36-04:00">October 11, 2013 at 1:08 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>@dojo4 we developed something similar, but make the choice about which images to download not based on screen width, but on bandwidth &#8211; <a href="https://github.com/ahoward/jquery.bires" rel="nofollow ugc">https://github.com/ahoward/jquery.bires</a></p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	<nav class="navigation comment-navigation" aria-label="Comments">
+		<h2 class="screen-reader-text">Comments navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need/comment-page-1/#comments" >Older comments</a></div></div>
+	</nav>		<div class="comments-off">
+			<h3 class="comments-off-title"> Got something to say?</h3>
+			<p class="no-comments">We have turned off comments, but you can see what folks had to say before we did so.</p>
+		</div>
+		
+</div><!-- #comments -->
+	<div class="column-sidebar ala-posts">
+		<h2 class="section-title">More from ALA</h2>
+				<article id="post-7175656" class="home-post-content post-7175656 article type-article status-publish hentry">
+
+				<header class="entry-header">
+					<h4 class="home-post-title"><a href="https://alistapart.com/article/designed-for-a-dead-language/" rel="bookmark">Designed for a Dead Language</a></h4>					<div class="entry-meta">
+						<span class="byline"> by <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="url fn n" href="https://alistapart.com/author/shrey-shah/" itemprop="url"> <span itemprop="name">Shrey Shah</span></a></span></span>					</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+				<div class="entry-content">
+					Every language app in your pocket inherited a teaching method built for Latin. Understanding why that happened is a more useful design lesson than anything the apps themselves can teach you.				</div><!-- .entry-content -->
+				<footer class="footer-meta entry-meta">
+					<span class="cat-links">Uncategorized</span><span class="posted-on"><time class="entry-date published" datetime="2026-06-30T12:22:27-04:00">June 30, 2026</time><time class="updated" datetime="2026-07-01T07:38:26-04:00">July 01, 2026</time></span>				</footer><!-- .entry-meta -->
+
+
+			</article><!-- #post-## -->
+
+						<article id="post-7175547" class="home-post-content post-7175547 article type-article status-publish hentry category-accessibility category-community category-user-experience category-user-research category-workflow-tools tag-a11y tag-accessibility tag-creative tag-empathy tag-heuristics tag-personas tag-process tag-product-design tag-software-design tag-usability tag-web-design tag-websites">
+
+				<header class="entry-header">
+					<h4 class="home-post-title"><a href="https://alistapart.com/article/good-designers-bad-websites-a-proposal/" rel="bookmark">Good designers, bad websites: a proposal</a></h4>					<div class="entry-meta">
+						<span class="byline"> by <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="url fn n" href="https://alistapart.com/author/alan-dalton/" itemprop="url"> <span itemprop="name">Alan Dalton</span></a></span></span>					</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+				<div class="entry-content">
+					Designers are good people. Some designs exclude people anyway. Alan Dalton offers a practical fix: accessibility personas that help you recognize problems while you're designing, not after. Homework included.				</div><!-- .entry-content -->
+				<footer class="footer-meta entry-meta">
+					<span class="cat-links"><a href="https://alistapart.com/blog/topic/accessibility/" rel="category tag">Accessibility</a></span><span class="posted-on"><time class="entry-date published" datetime="2026-04-23T08:57:21-04:00">April 23, 2026</time><time class="updated" datetime="2026-04-23T08:57:22-04:00">April 23, 2026</time></span>				</footer><!-- .entry-meta -->
+
+
+			</article><!-- #post-## -->
+
+						<article id="post-7175385" class="home-post-content post-7175385 post type-post status-publish format-standard hentry category-business category-career category-creativity category-design category-industry category-interaction-design category-process category-project-management category-state-of-the-web category-usability category-user-experience category-user-research category-web-strategy">
+
+				<header class="entry-header">
+					<h4 class="home-post-title"><a href="https://alistapart.com/blog/post/successful-or-unsuccessful-the-post-good-design-vocabulary/" rel="bookmark">“Successful” or “Unsuccessful”: the Post-“Good Design” Vocabulary</a></h4>					<div class="entry-meta">
+						<span class="byline"> by <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="url fn n" href="https://alistapart.com/author/justindauer/" itemprop="url"> <span itemprop="name">Justin Dauer</span></a></span></span>					</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+				<div class="entry-content">
+									</div><!-- .entry-content -->
+				<footer class="footer-meta entry-meta">
+					<span class="cat-links"><a href="https://alistapart.com/blog/topic/business/" rel="category tag">Business</a></span><span class="posted-on"><time class="entry-date published" datetime="2026-01-28T08:52:11-05:00">January 28, 2026</time><time class="updated" datetime="2026-01-28T08:52:12-05:00">January 28, 2026</time></span>				</footer><!-- .entry-meta -->
+
+
+			</article><!-- #post-## -->
+
+						<article id="post-7175220" class="home-post-content post-7175220 article type-article status-publish hentry category-community category-industry category-state-of-the-web category-web-strategy">
+
+				<header class="entry-header">
+					<h4 class="home-post-title"><a href="https://alistapart.com/article/design-for-amiability-lessons-from-vienna/" rel="bookmark">Design for Amiability: Lessons from Vienna</a></h4>					<div class="entry-meta">
+						<span class="byline"> by <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="url fn n" href="https://alistapart.com/author/markbernstein/" itemprop="url"> <span itemprop="name">Mark Bernstein</span></a></span></span>					</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+				<div class="entry-content">
+					Computing was born in a Viennese café. Between 1928 and 1934, while Hitler plotted and Europe crumbled, a motley crew of mathematicians, philosophers, architects, and economists gathered weekly to puzzle out the limits of reason—and invented Computer Science in the process. What made their collaboration possible wasn't just brilliance (though they had plenty). It was amiability: the careful design of a social space where difficult people could disagree without destroying each other. Longtime A List Apart contributing author Mark Bernstein mines this forgotten history for lessons that might just save today's embattled web from its worst impulses. Spoiler: it involves better coffee service and the looming threat of public humiliation.				</div><!-- .entry-content -->
+				<footer class="footer-meta entry-meta">
+					<span class="cat-links"><a href="https://alistapart.com/blog/topic/community/" rel="category tag">Community</a></span><span class="posted-on"><time class="entry-date published" datetime="2025-10-15T11:35:00-04:00">October 15, 2025</time><time class="updated" datetime="2025-10-15T12:42:51-04:00">October 15, 2025</time></span>				</footer><!-- .entry-meta -->
+
+
+			</article><!-- #post-## -->
+
+						<article id="post-7175161" class="home-post-content post-7175161 article type-article status-publish hentry category-design category-design-systems-design category-web-strategy category-workflow-tools tag-creativity tag-design tag-process tag-working">
+
+				<header class="entry-header">
+					<h4 class="home-post-title"><a href="https://alistapart.com/article/design-dialects-breaking-the-rules-not-the-system/" rel="bookmark">Design Dialects: Breaking the Rules, Not the System</a></h4>					<div class="entry-meta">
+						<span class="byline"> by <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="url fn n" href="https://alistapart.com/author/michel-ferreira/" itemprop="url"> <span itemprop="name">Michel Ferreira</span></a></span></span>					</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+				<div class="entry-content">
+					Design systems aren't component libraries—they’re living languages. Rigid adherence to visual rules creates brittle systems that break under contextual pressure. Fluent systems bend without breaking.				</div><!-- .entry-content -->
+				<footer class="footer-meta entry-meta">
+					<span class="cat-links"><a href="https://alistapart.com/blog/topic/design/" rel="category tag">Design</a></span><span class="posted-on"><time class="entry-date published" datetime="2025-09-26T12:48:12-04:00">September 26, 2025</time><time class="updated" datetime="2025-10-16T08:51:39-04:00">October 16, 2025</time></span>				</footer><!-- .entry-meta -->
+
+
+			</article><!-- #post-## -->
+
+			
+	
+</div><!-- .home-post-wrap clear -->
+
+					</div>
+					
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+</div><!-- #content -->
+
+	<div class="widget-area header-widget">
+		<section id="block-3" class="widget widget_block"><div class="banner">
+	<a href="https://sps.northwestern.edu/ala">
+	<img decoding="async" class="banner-logo" src="https://alistapart.com/wp-content/uploads/2026/03/IDS_700x200_Logo-300x86.jpg" alt="Northwestern Information Design and Strategy, School Of Professional Studies" />
+<p><br />Ready to advance in content strategy, UX/UI, data communication, or learning design? Explore Northwestern’s online MS in Information Design & Strategy.</p>
+	</a>
+</div></section>	</div><!-- .header-widget -->
+	
+<footer id="colophon" class="site-footer" itemscope itemtype="https://schema.org/WebPage">
+	<nav class="footer-navigation footer navigation-top"  itemscope itemtype="http://schema.org/SiteNavigationElement">
+		<div class="menu-footer-pages-container"><ul id="footer-top-left-menu" class="footer-top-left-menu"><li id="menu-item-6000544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6000544"><a href="https://alistapart.com/about/" itemprop="url">About</a></li>
+<li id="menu-item-6000545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6000545"><a href="https://alistapart.com/authors/" itemprop="url">Authors</a></li>
+<li id="menu-item-6000546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6000546"><a href="https://alistapart.com/about/masthead/" itemprop="url">Masthead</a></li>
+<li id="menu-item-6000547" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6000547"><a href="https://alistapart.com/about/style-guide/" itemprop="url">Style Guide</a></li>
+<li id="menu-item-6000548" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6000548"><a href="https://alistapart.com/contact/" itemprop="url">Contact</a></li>
+<li id="menu-item-6000549" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6000549"><a href="https://alistapart.com/about/sponsor/" itemprop="url">Sponsorships</a></li>
+</ul></div><div class="menu-footer-social-container"><ul id="footer-top-right-menu" class="footer-top-right-menu"><li id="menu-item-6000550" class="footer-menu-title menu-item menu-item-type-custom menu-item-object-custom menu-item-6000550"><a itemprop="url">Follow us:</a></li>
+<li id="menu-item-7171602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7171602"><a href="https://alistapart.com/about/rss-feed/" itemprop="url">RSS</a></li>
+<li id="menu-item-7174935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7174935"><a href="https://alistapart.com/email-signup/" itemprop="url">Email</a></li>
+<li id="menu-item-6000553" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6000553"><a href="https://www.facebook.com/alistapart" itemprop="url">Facebook</a></li>
+<li id="menu-item-6000554" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6000554"><a href="https://www.twitter.com/alistapart" itemprop="url">Twitter</a></li>
+</ul></div>	</nav>
+			<div class="widget-area footer-widget-area-wrap">
+			<div class="widget-area footer-widget-area">
+				<section id="custom_html-7" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="footer-promo">
+	<a href="https://abookapart.com">
+							<img data-recalc-dims="1" src="https://i0.wp.com/alistapart.com/wp-content/uploads/2019/04/promo_aba_2.jpg?w=960&#038;quality=89&#038;ssl=1" alt="A Book Apart. Brief books for people who design, write, and code.">
+		<div class="footer-promo-copy">
+				<p class="promo-title">A Book Apart</p>
+				<p>Brief books for people who design, write, and code.</p>
+				<p>Bundle books and save!</p>
+				<p class="arrow">Shop now</p>
+						</div>
+			</a>
+</div>
+
+</div></section>			</div>
+		</div>
+
+		
+	<div class="site-info-wrap">
+		<div class="site-info">
+			<p>
+				ISSN 1534-0295 &middot; Copyright &copy; <span itemprop="copyrightYear"> 1998–2026</span> <span itemprop="copyrightHolder"> A List Apart &amp; Our Authors</span>			</p>
+
+			<p>
+				<a href="https://wordpress.com/website-builder/?partner_domain=alistapart.com&#038;utm_source=Automattic&#038;utm_medium=colophon&#038;utm_campaign=Concierge%20Referral&#038;utm_term=alistapart.com" class="imprint" target="_blank" rel="nofollow">Designed with WordPress.</a> <a href="https://pressable.com/?utm_source=Automattic&#038;utm_medium=rpc&#038;utm_campaign=Concierge%20Referral&#038;utm_term=alistapart.com" class="imprint" target="_blank" rel="nofollow">Hosted by Pressable.</a>			</p>
+		</div><!-- .site-info -->
+	</div><!-- .site-info-wrap -->
+
+	<nav class="footer-navigation footer navigation-bottom">
+		<ul id="footer-bottom-left-menu" class="footer-bottom-left-menu"><li id="menu-item-6000555" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6000555"><a href="https://alistapart.com/about/copyright/" itemprop="url">Permissions &#038; Copyright</a></li>
+<li id="menu-item-6000556" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-6000556"><a rel="privacy-policy" href="https://alistapart.com/about/privacy-policy/" itemprop="url">Privacy Policy</a></li>
+<li id="menu-item-6000558" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6000558"><a href="https://webtype.com/" itemprop="url">Fonts by Webtype</a></li>
+</ul><ul id="footer-bottom-right-menu" class="footer-bottom-right-menu"><li id="menu-item-6000559" class="aea menu-item menu-item-type-custom menu-item-object-custom menu-item-6000559"><a href="http://aneventapart.com/" itemprop="url"><span class="screen-reader-text">An Event Apart</span></a></li>
+<li id="menu-item-6000560" class="aba menu-item menu-item-type-custom menu-item-object-custom menu-item-6000560"><a href="http://abookapart.com/" itemprop="url"><span class="screen-reader-text">A Book Apart</span></a></li>
+</ul>	</nav>
+</footer><!-- #colophon -->
+</div><!-- #page -->
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/ala/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+				<meta
+					id="bilmur"
+					property="bilmur:data"
+					content=""
+					data-provider="wp.cloud"
+					data-service="pressable.com"
+					data-custom-props="{&quot;wpcomsp&quot;:&quot;1&quot;,&quot;woo_active&quot;:&quot;0&quot;}"
+					data-site-tz="America/New_York"
+				>
+					<div style="display:none">
+			<div class="grofile-hash-map-3d2342126c0fa6c0a2e8fcf2e86ae76e">
+		</div>
+		<div class="grofile-hash-map-bda59af85daee514a40710a14b9aa875">
+		</div>
+		<div class="grofile-hash-map-488c65932c8920d7458d57e7b6468fc1">
+		</div>
+		<div class="grofile-hash-map-1618dc80ddadf1722abfd6ed5be58e10">
+		</div>
+		<div class="grofile-hash-map-8b6ca3828228f940fe59cad18d28b105">
+		</div>
+		<div class="grofile-hash-map-f76c98905f0df4357ba210a1f430edd8">
+		</div>
+		<div class="grofile-hash-map-476c4b47f2c3f9fbfb230414f93ae24d">
+		</div>
+		<div class="grofile-hash-map-beb60297147afca521d12ec4dbaac8de">
+		</div>
+		<div class="grofile-hash-map-bfc2a5290afcd0a39e6d3847d66a2eb7">
+		</div>
+		<div class="grofile-hash-map-8078fa95835415e7e895b857f6ce39ce">
+		</div>
+		<div class="grofile-hash-map-cc6cfd5f02c7320283664af46d766e78">
+		</div>
+		<div class="grofile-hash-map-e324c3e67722797e173a9cc8bf256634">
+		</div>
+		<div class="grofile-hash-map-1c6fd28c6afaa7fdaf49daf8cf4ae6c1">
+		</div>
+		<div class="grofile-hash-map-271a3b15fe64293d1d1047b64cfdaa09">
+		</div>
+		<div class="grofile-hash-map-0e9d2742bdeed4dca7403c2ced24f605">
+		</div>
+		<div class="grofile-hash-map-eae506d073374fcb310c4c28b4da22dd">
+		</div>
+		<div class="grofile-hash-map-d0587e59c306ea61ffff5d219d459bfc">
+		</div>
+		<div class="grofile-hash-map-a24a5fa8750bbc8ef2c8bf20933c4a8d">
+		</div>
+		<div class="grofile-hash-map-05bdcb21f4cef168206d3c5ab852b6de">
+		</div>
+		<div class="grofile-hash-map-4aeedfa0fb6db68d3dbd1812518adef0">
+		</div>
+		<div class="grofile-hash-map-29ba5cce48b012dc8719aa7d4fc0325c">
+		</div>
+		</div>
+		<script data-wp-strategy="defer" defer id="bilmur-js" src="https://s0.wp.com/wp-content/js/bilmur.min.js?m=202633&#038;ver=1"></script>
+<script id="ala-navigation-js" src="https://alistapart.com/wp-content/themes/ala/js/navigation.js?ver=20151215"></script>
+<script id="ala-prism-js" src="https://alistapart.com/wp-content/themes/ala/js/prism/prism.js?ver=1.0"></script>
+<script id="ala-skip-link-focus-fix-js" src="https://alistapart.com/wp-content/themes/ala/js/skip-link-focus-fix.js?ver=20151215"></script>
+<script id="sidebar-related-js" src="https://alistapart.com/wp-content/themes/ala/js/sidebar-related.js?ver=1"></script>
+<script id="grofiles-cards-js" src="https://secure.gravatar.com/js/gprofiles.js?ver=202633"></script>
+<script id="wpgroho-js-extra">
+var WPGroHo = {"my_hash":""};
+//# sourceURL=wpgroho-js-extra
+</script>
+<script id="wpgroho-js" src="https://alistapart.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=16.1"></script>
+<script id="jetpack-stats-js-before">
+_stq = window._stq || [];
+_stq.push([ "view", {"v":"ext","blog":"158094726","post":"15228","tz":"-4","srv":"alistapart.com","hp":"atomic","ac":"3","amp":"0","j":"1:16.1"} ]);
+_stq.push([ "clickTrackerInit", "158094726", "15228" ]);
+//# sourceURL=jetpack-stats-js-before
+</script>
+<script data-wp-strategy="defer" defer fetchpriority="low" id="jetpack-stats-js" src="https://stats.wp.com/e-202633.js"></script>
+<script id="jetpack_likes_queuehandler-js" src="https://alistapart.com/wp-content/plugins/jetpack/_inc/build/likes/queuehandler.min.js?ver=16.1"></script>
+<script id="sharing-js-js-extra">
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+//# sourceURL=sharing-js-js-extra
+</script>
+<script id="sharing-js-js" src="https://alistapart.com/wp-content/plugins/jetpack/_inc/build/sharedaddy/sharing.min.js?ver=16.1"></script>
+<script id="sharing-js-js-after">
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-bluesky' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-bluesky' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcombluesky', 'menubar=1,resizable=1,width=600,height=400' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-mastodon' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-mastodon' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcommastodon', 'menubar=1,resizable=1,width=460,height=400' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-threads' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-threads' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomthreads', 'menubar=1,resizable=1,width=600,height=400' );
+						return false;
+					}
+				} );
+			} )();
+//# sourceURL=sharing-js-js-after
+</script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://alistapart.com/wp-includes/js/wp-emoji-release.min.js?ver=7.0.3"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://alistapart.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+	<iframe src='https://widgets.wp.com/likes/master.html?ver=20260811#ver=20260811' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+	<div id='likes-other-gravatars' role="dialog" aria-hidden="true" tabindex="-1"><div class="likes-text"><span>%d</span></div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+			<script type="text/javascript">
+			(function() {
+			var t   = document.createElement( 'script' );
+			t.type  = 'text/javascript';
+			t.async = true;
+			t.id    = 'gauges-tracker';
+			t.setAttribute( 'data-site-id', '606492000b21314ec4b22148' );
+			t.src = '//secure.gaug.es/track.js';
+			var s = document.getElementsByTagName( 'script' )[0];
+			s.parentNode.insertBefore( t, s );
+			})();
+		</script>
+		</body>
+</html>
