@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された580ファイルを、32の取得元ホストごとに収録する。
+Rawに保存された587ファイルを、32の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（9ファイル）
 
@@ -390,7 +390,7 @@ Rawに保存された580ファイルを、32の取得元ホストごとに収録
 | [Archives/Public/www-talk/1992NovDec/0155.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html) | www-talk from November to December 1992: The spec evolves... |
 | [Archives/Public/www-talk/1992NovDec/0159.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html) | www-talk from November to December 1992: Re: The spec evolves... |
 
-## `lists.whatwg.org`（27ファイル）
+## `lists.whatwg.org`（34ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -403,11 +403,18 @@ Rawに保存された580ファイルを、32の取得元ホストごとに収録
 | [pipermail/whatwg-whatwg.org/2004-December/045003.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-December/045003.html) | [whatwg] Web Forms 2.0 - File Upload Progress? |
 | [pipermail/whatwg-whatwg.org/2004-November/002362.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002362.html) | [whatwg] Re: &lt;section&gt; and headings |
 | [pipermail/whatwg-whatwg.org/2004-November/002363.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002363.html) | &lt;section&gt; and headings [was: Re: [whatwg] LABEL and radio/checkbox onclick] |
+| [pipermail/whatwg-whatwg.org/2004-November/044733.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/044733.html) | [whatwg] Status bars and progress indicators |
 | [pipermail/whatwg-whatwg.org/2004-November/044780.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/044780.html) | [whatwg] Web Applications 1.0 and Menu Labels |
 | [pipermail/whatwg-whatwg.org/2004-November/date.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/date.html) | The whatwg November 2004 Archive by date |
+| [pipermail/whatwg-whatwg.org/2004-September/044484.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-September/044484.html) | [whatwg] Status bars and progress indicators |
+| [pipermail/whatwg-whatwg.org/2004-September/044544.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-September/044544.html) | [whatwg] Status bars and progress indicators |
 | [pipermail/whatwg-whatwg.org/2005-April/045650.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-April/045650.html) | [whatwg] Re: &lt;section&gt; and headings and other threads |
 | [pipermail/whatwg-whatwg.org/2005-May/046219.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-May/046219.html) | [whatwg] [WA1] Literals and Actions, comments on inline markup |
 | [pipermail/whatwg-whatwg.org/2005-September/004660.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2005-September/004660.html) | [whatwg] Status update |
+| [pipermail/whatwg-whatwg.org/2006-March/048362.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-March/048362.html) | [whatwg] A better name than &lt;gauge&gt; for the element that shows a measurement |
+| [pipermail/whatwg-whatwg.org/2006-March/048364.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-March/048364.html) | [whatwg] Status bars and progress indicators |
+| [pipermail/whatwg-whatwg.org/2006-March/048367.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-March/048367.html) | [whatwg] Status bars and progress indicators |
+| [pipermail/whatwg-whatwg.org/2006-March/048383.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-March/048383.html) | [whatwg] several messages on alternative spellings for &lt;gauge&gt;/&lt;meter&gt; |
 | [pipermail/whatwg-whatwg.org/2007-August/054625.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054625.html) | [whatwg] My case for Ruby-elements |
 | [pipermail/whatwg-whatwg.org/2007-August/054633.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html) | [whatwg] My case for Ruby-elements |
 | [pipermail/whatwg-whatwg.org/2007-February/009702.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-February/009702.html) | [whatwg] &lt;video&gt; element proposal |
