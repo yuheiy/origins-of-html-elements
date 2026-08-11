@@ -140,10 +140,37 @@ HTMLへの採用因果または具体的祖先が弱いB／Cは、`a`、`address
 
 名称、命名、改名、略称、タグ名または語彙の選択理由が明示的な未解決点として残るのは、`a`、`abbr`、`article`、`aside`、`base`、`bdi`、`bdo`、`col`、`del`、`details`、`dialog`、`hgroup`、`ins`、`legend`、`main`、`mark`、`menu`、`meter`、`object`、`p`、`picture`、`pre`、`script`、`search`、`section`、`span`、`sub`、`summary`、`sup`、`td`、`th`、`time`、`title`、`video`、`wbr`の35要素である。語彙起源という目的に対しては、この集合を「由来確認済み」に数えない。
 
-### 3.2 追加調査の優先順位
+### 3.2 追加調査の扱い
 
-1. B／Cの13要素では、確認済みの最初期版より前のDTD、仕様差分、実装ソース、設計ノート、メーリングリストを探し、誰が何を解決するためにHTMLへ入れたかを確定する。
-2. 直前祖先に欠落がある31要素では、候補となる先行語彙または実装とHTML側の採録記録を別々に探し、同名・同機能という類似だけの接続を排除する。
-3. 命名が未解決の35要素では、初出差分の前後、issue／bug、レビュー、提案者の同時代メールを調べ、識別子の提案者、旧名、代案、選択理由を記録する。語の一般的な英語語源は、HTMLでその語を選んだ証拠がある場合だけ上流へ接続する。
-4. A−の17要素では、集合単位の採用記述を要素単位へ分解できる同時代DTD差分、編集者メモ、対応表を探す。見つからなければA−のままとし、集合から個別の因果を推定しない。
-5. すべての探索で、より早い版、競合案、廃止後の再採録、同名異義の語彙を反証候補として確認する。成果がなくても、確認可能な最初期出現と探索対象を個別ページの具体的な未解決問いとして維持する。
+B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と重要性を示すが、互いに重複し、資料の現存可能性も異なるため、その件数順には調査しない。追加調査は、探索範囲を具体的な版、リポジトリ、論点、配布物へ限定できるかによって次の三段階で扱う。ここで保留しても個別ページの未解決点は削除せず、新しい一次資料が得られたときに再開する。
+
+#### 優先して調査する問題
+
+公開された変更履歴の中で初出または変更区間を限定できる問題は、提案、差分、レビュー、実装の前後関係を要素単位で確認できる可能性が高い。
+
+| 調査群 | 対象 | 探索範囲 |
+|---|---|---|
+| 現代の公開履歴 | [`selectedcontent`](../elements/selectedcontent.md)、[`data`](../elements/data.md)、[`picture`](../elements/picture.md)、[`slot`](../elements/slot.md) | Open UI、Chromium、WHATWG、HTML Working Groupのissue、PR、commitから、旧名または初稿、設計モデル、HTML統合の順序を確定する |
+| 初期WHATWGの版履歴 | [`mark`](../elements/mark.md)、[`meter`](../elements/meter.md)、[`time`](../elements/time.md)、[`main`](../elements/main.md)、[`bdi`](../elements/bdi.md)、[`track`](../elements/track.md) | 既知の初回収録、改名、再導入コミットの親版と、対応するWHATWGメール、旧Subversion履歴、提案を照合する |
+| W3C／IETF草案間の変更 | [`legend`](../elements/legend.md)、[`bdo`](../elements/bdo.md)、[`span`](../elements/span.md)、[`noscript`](../elements/noscript.md)、[`object`](../elements/object.md)、[`col`](../elements/col.md)、[`style`](../elements/style.md) | 連続する草案間に限定して、CVS／RCS差分、Working Group議事録、編集者メールから追加、改名、機能統合、後続仕様への採録を探す |
+
+同名または同機能の先行物を新たに見つけるだけでは完了とせず、HTML側の採用判断または変更判断まで確認できた場合にだけ系譜を更新する。
+
+#### 欠落資料を一度だけ探索する問題
+
+次の問題は欠落区間または資料名が具体的だが、周辺史料をすでに反復して調査している。一般的なキーワード探索を繰り返さず、指定した配布物、RCS履歴、保存ソースだけを対象とし、回収できなければ現存する公開資料の限界として保留する。
+
+- [`br`](../elements/br.md): 1993年6月1日版`htmlplus.dtd`と、HTML+、WWW Workshop、Lynx、NCSA Mosaic、HTML 2.0の間を結ぶ要素単位の記録。
+- [`base`](../elements/base.md): 1993年のrevision 1.4から6月草案までに`SAVEDAS`を`BASE HREF`へ具体化したDTD／RCS差分またはメール。
+- [`menu`](../elements/menu.md): Line Mode Browser 1.2から1.2aの配布物、RCS履歴、開発メールと、`test_source.txt`の保存日時を位置付ける記録。
+- [`address`](../elements/address.md)、[`body`](../elements/body.md)、[`pre`](../elements/pre.md)、[`iframe`](../elements/iframe.md): 個別ページが特定する初期ソース、内部DTD、配布物、または同時代ベンダー資料。
+
+#### 新しい一次資料が現れるまで保留する問題
+
+- [`blockquote`](../elements/blockquote.md)のDocBook説とUsenet説は、同時代の採用記録がなく導入者の後代の説明も競合するため、新しいメール、DTDリビジョン、私信が得られるまで確定しない。
+- [`a`](../elements/a.md)、[`html`](../elements/html.md)、[`p`](../elements/p.md)、[`title`](../elements/title.md)の具体的なHTML外祖先は、採用記録を置く候補資料または保存先を特定できるまで広範な類似探索を再開しない。
+- フォーム群や表群等に残る「特定のGUI、文書体系、実装から影響を受けたか」という開放的な問いは、候補を名指す同時代資料が見つかった場合だけ調査対象へ戻す。
+- 集合単位の資料しかないA−は、要素単位の対応表、編集者メモ、版差の所在を新たに特定できない限り、集合から個別の因果を推定せずA−を維持する。
+- `b`／`i`等の現行意味への再解釈、資料の日付表記の不一致、確度Aの要素に残る一般的な命名補遺は、HTMLへの導入と直前系譜の調査とは別の補助課題として扱う。
+
+すべての再開調査で、より早い版、競合案、廃止後の再採録、同名異義の語彙を反証候補として確認する。成果がなくても、確認可能な最初期出現と探索対象を個別ページの具体的な未解決問いとして維持する。
