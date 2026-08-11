@@ -6,9 +6,6 @@ import { existsSync, mkdirSync, mkdtempDisposableSync, renameSync, writeFileSync
 import { tmpdir } from "node:os";
 import path from "node:path";
 
-const [nodeMajor, nodeMinor] = process.versions.node.split(".").map(Number);
-if (nodeMajor < 24 || (nodeMajor === 24 && nodeMinor < 12)) throw new Error("Node.js 24.12.0 or newer is required");
-
 const [source, kind = "file", extra] = process.argv.slice(2);
 if (!source || extra || !["file", "zip", "tar"].includes(kind)) {
   console.error(`usage: ${process.argv[1]} <URL> [file|zip|tar]`);
@@ -50,7 +47,7 @@ writeFileSync(download, Buffer.from(await response.arrayBuffer()));
 
 let candidate = download;
 if (kind !== "file") {
-  candidate = path.join(temporary.path, "resource");
+  candidate = path.join(temporary.path, "source");
   mkdirSync(candidate);
   const command = kind === "zip" ? "unzip" : "tar";
   const listArgs = kind === "zip" ? ["-Z1", download] : ["-tf", download];

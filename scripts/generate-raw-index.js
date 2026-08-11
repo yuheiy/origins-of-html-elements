@@ -3,8 +3,6 @@
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
-const [nodeMajor, nodeMinor] = process.versions.node.split(".").map(Number);
-if (nodeMajor < 24 || (nodeMajor === 24 && nodeMinor < 12)) throw new Error("Node.js 24.12.0 or newer is required");
 if (process.argv.length !== 2) {
   console.error(`usage: ${process.argv[1]}`);
   process.exit(2);
@@ -14,12 +12,12 @@ const repository = path.join(import.meta.dirname, "..");
 const raw = path.join(repository, "raw");
 const output = path.join(repository, "wiki", "raw-index.md");
 
-function resourceFiles(directory, prefix = "") {
+function sourceFiles(directory, prefix = "") {
   const files = [];
   for (const entry of readdirSync(directory, { withFileTypes: true }).sort((a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0)) {
     const relative = path.posix.join(prefix, entry.name);
     const absolute = path.join(directory, entry.name);
-    if (entry.isDirectory()) files.push(...resourceFiles(absolute, relative));
+    if (entry.isDirectory()) files.push(...sourceFiles(absolute, relative));
     else if (entry.isFile()) files.push(relative);
   }
   return files;
@@ -56,7 +54,7 @@ const hosts = readdirSync(raw, { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
   .map((entry) => entry.name)
   .sort();
-const files = hosts.flatMap((host) => resourceFiles(path.join(raw, host), host)).sort();
+const files = hosts.flatMap((host) => sourceFiles(path.join(raw, host), host)).sort();
 const rows = files.map((file) => `| [${tableCell(file)}](../raw/${file}) | ${tableCell(documentTitle(path.join(raw, ...file.split("/"))))} |`);
 const page = [
   "# Rawソース",
