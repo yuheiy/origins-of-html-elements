@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された603ファイルを、33の取得元ホストごとに収録する。
+Rawに保存された604ファイルを、33の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（9ファイル）
 
@@ -556,7 +556,7 @@ Rawに保存された603ファイルを、33の取得元ホストごとに収録
 |---|---|
 | [jordi/v3/js/jsguide/jsguide.pdf](../raw/www.uv.es/jordi/v3/js/jsguide/jsguide.pdf) | — |
 
-## `www.w3.org`（204ファイル）
+## `www.w3.org`（205ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -661,6 +661,7 @@ Rawに保存された603ファイルを、33の取得元ホストごとに収録
 | [TR/WD-html40-970708/present/frames.html](../raw/www.w3.org/TR/WD-html40-970708/present/frames.html) | Frames in HTML documents |
 | [TR/WD-html40-970708/struct/text.html](../raw/www.w3.org/TR/WD-html40-970708/struct/text.html) | Paragraphs, Lines, and Phrases |
 | [TR/WD-html40-970917/interact/forms.html](../raw/www.w3.org/TR/WD-html40-970917/interact/forms.html) | Forms in HTML documents |
+| [TR/WD-html40-970917/struct/objects.html](../raw/www.w3.org/TR/WD-html40-970917/struct/objects.html) | Objects, Images, and Applets in HTML documents |
 | [TR/WD-html40-970917/struct/text.html](../raw/www.w3.org/TR/WD-html40-970917/struct/text.html) | Paragraphs, Lines, and Phrases |
 | [TR/WD-insert-951220.html](../raw/www.w3.org/TR/WD-insert-951220.html) | HTML3 Linking and Embedding Model |
 | [TR/WD-object-960308.html](../raw/www.w3.org/TR/WD-object-960308.html) | Inserting objects into HTML |

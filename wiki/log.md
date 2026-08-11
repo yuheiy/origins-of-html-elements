@@ -1127,3 +1127,11 @@ W3Cの連続するスクリプティング草案、HTML 4.0 First Public Working
 追加したRawの取得記録は次のとおりである。`https://www.w3.org/TR/WD-html40-970708/interact/scripts.html`、リダイレクトなし、2026-08-11T15:08:18.447Z、`raw/www.w3.org/TR/WD-html40-970708/interact/scripts.html`。Raw索引を603ファイルで再生成した。
 
 初回探索と分離した敵対的検証では、Netscape由来を明記する1996年1月草案、6月27日版、7月9日版、1997年3月版、HTML 4.0 FPWD、HTML 4.01、Netscape Navigator 2.0 handbook、Navigator 3.0のJavaScript GuideとHTML Referenceを再照合した。Navigator 2.0を直接祖先とする説明は、当時のW3C草案に`NOSCRIPT`がなくNetscape参照がNavigator 3.0の機能とするため否定した。W3C公開メール検索と保存済みNetscape資料では、6月27日から7月9日までの提案者、Navigator 3.0 betaの初回実装日、W3C案との採録因果を確認できなかった。対象リントでは、`noscript`のフロントマター、必須見出し順、8行の証拠表、歴史的主張と出典の対応、README概要、統合ページの確度集計・直前祖先一覧・優先調査キュー、変更ページのローカルMarkdownリンク、Raw索引の603ファイル網羅と再生成一致、Markdown whitespaceを`合格`、草案間の追加区間と一般化を`修正済み`、提案者、実装日、採録因果を`Research必要`として確認した。変更した知識ページは敵対的検証と対象リントに合格したため`完成`とした。
+
+## [2026-08-12] research | `object`の改名、設計入力、HTML 4統合
+
+1995年12月の`INSERT`草案、1996年3月・4月の`OBJECT`草案、Cougar標準化ページ、1997年9月のHTML 4.0 Working Draftを再調査した。3月草案は、著者らが各方面の入力を受けて2月13日に要素群を改名し、文書名をWD-insertからWD-objectへ変更したと直接記録する。4月草案はJavaとActiveXを同じ`CLASSID`、`CODEBASE`、`PARAM`機構で表し、`USEMAP`をSpyglassのクライアント側画像マップ形式から採ったと明記する。HTML 4.0草案は、`IMG`と`APPLET`が将来のメディア型、Java以外のアプレット、アクセシビリティへ対処できないため、`OBJECT`を汎用包含要素として導入し、`APPLET`を非推奨とした。これにより改名からHTML 4への要素単位の採録まで接続し、`object`を優先調査キューから外した。確度Aは維持した。
+
+追加したRawの取得記録は次のとおりである。`https://www.w3.org/TR/WD-html40-970917/struct/objects.html`、リダイレクトなし、2026-08-11T15:14:33.179Z、`raw/www.w3.org/TR/WD-html40-970917/struct/objects.html`。`https://www.w3.org/TR/WD-html40-970708/struct/objects.html`は404であり、Rawへ追加していない。Raw索引を604ファイルで再生成した。
+
+初回探索と分離した敵対的検証では、`INSERT`草案と3月・4月の`OBJECT`草案の差分、草案の著者・出典注記、W3C公開`www-html`メール、IETFメール検索、HTML 4.0草案の要素定義とRCS識別子を照合した。JavaやActiveXを扱う例は相互運用範囲の証拠であって各属性の構文起源を示すとは限らないため、Spyglass由来が明記された`USEMAP`以外をベンダー案からの直接採用とは記述していない。公開メールからは2月13日の改名議論本文とHTML 4統合の個別合意記録を確認できなかった。対象リントでは、`object`のフロントマター、必須見出し順、6行の証拠表、歴史的主張と出典の対応、README概要、統合ページの優先調査キュー、変更ページのローカルMarkdownリンク、Raw索引の604ファイル網羅と再生成一致、Markdown whitespaceを`合格`、HTML 4への要素単位の採録と`USEMAP`の帰属を`修正済み`、改名議論、他の構文起源、統合合意を`Research必要`として確認した。変更した知識ページは敵対的検証と対象リントに合格したため`完成`とした。

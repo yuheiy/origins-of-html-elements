@@ -1,0 +1,1446 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en">
+<!-- $Id: objects.src,v 1.17 1997/09/17 11:48:44 lehors Exp $ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Objects, Images, and Applets in HTML documents</title>
+<LINK rel="previous" href="links.html">
+<LINK rel="next" href="../present/styles.html">
+<LINK rel="contents" href="../cover.html#toc">
+<LINK rel="STYLESHEET" href="../style/default.css" type="text/css">
+</head>
+<body>
+<div class="navbar">
+<center><a href="links.html">previous</a> &nbsp; <a href="../present/styles.html">next</a> &nbsp; <a href="../cover.html#toc">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center><hr>
+</div>
+
+<H1 align="center"><a name="h-14">14</a> Objects, Images, and Applets</H1>
+<div class="subtoc"><p><strong>Contents</strong>
+<ol>
+<li><a href="objects.html#h-14.1">Including an image: the <samp class="einst2">IMG</samp> element</a>
+<li><a href="objects.html#h-14.2">Generic inclusion: the <samp class="einst2">OBJECT</samp> element</a>
+<ol>
+<li><a href="objects.html#h-14.2.1">Rules for rendering objects</a>
+<li><a href="objects.html#h-14.2.2">Object initialization: the <samp class="einst2">PARAM</samp> element</a>
+<li><a href="objects.html#h-14.2.3">URLs other than HTTP URLs</a>
+<li><a href="objects.html#h-14.2.4">Object declarations and
+instantiations</a>
+</ol>
+<li><a href="objects.html#h-14.3">Including an applet: the <samp class="einst2">APPLET</samp> element</a>
+<li><a href="objects.html#h-14.4">Including HTML in another HTML
+document</a>
+<li><a href="objects.html#h-14.5">Image maps</a>
+<ol>
+<li><a href="objects.html#h-14.5.1">Client-side image maps</a>
+<li><a href="objects.html#h-14.5.2">Server-side image maps</a>
+</ol>
+<li><a href="objects.html#h-14.6">Visual presentation of images, objects, and
+applets</a>
+<ol>
+<li><a href="objects.html#h-14.6.1">Width and height</a>
+<li><a href="objects.html#h-14.6.2">White space around images and objects</a>
+<li><a href="objects.html#h-14.6.3">Borders</a>
+<li><a href="objects.html#h-14.6.4">Alignment</a>
+</ol>
+<li><a href="objects.html#h-14.7">How to specify alternate text</a>
+</ol>
+</div>
+
+<P>HTML's multimedia features allow authors to include images, applets
+(programs that run on the user's machine), video clips, and other HTML
+documents in their pages.
+
+<P>Previous versions of HTML allowed authors to include images (via
+<a href="objects.html#edef-IMG"><samp class="einst">IMG</samp></a>) and applets (via <a href="objects.html#edef-APPLET"><samp
+class="einst">APPLET</samp></a>). These elements have several limitations:
+
+<ul>
+
+<li>They fail to solve the more general problem of how to include
+new and future media types.
+
+<li>The <a href="objects.html#edef-APPLET"><samp class="einst">APPLET</samp></a> element is based on
+proprietary technology and only works for java applets. This element
+is deprecated in favor of <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a>.
+
+<li>They pose accessibility problems.
+
+</ul>
+
+<P>To address these issues, HTML 4.0 introduces the <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> element, which offers an all-purpose
+solution to generic object inclusion. The <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> element allows HTML authors to specify
+everything required by an object for its presentation by a user agent:
+source code, initial values, and run-time data.  In this
+specification, the term "object" is used to describe the things that
+people want to place in HTML documents, but other terms for these
+things are: components, applets, plug-ins, media handlers, etc.
+
+<P>The new <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> element thus subsumes
+some of the tasks carried out by existing elements. Consider the
+following chart of functionalities:</P>
+
+<table border>
+<THEAD>
+<TR><TH><strong>Type of inclusion</strong>
+    <TH><strong>Specific element</strong>
+    <TH><strong>Generic element</strong></TR>
+<TBODY>
+<TR><TD>Image
+    <TD><a href="objects.html#edef-IMG"><samp class="einst">IMG</samp></a>
+    <TD><a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a>
+<TR><TD>Applet
+    <TD><a href="objects.html#edef-APPLET"><samp class="einst">APPLET</samp></a> <strong>(Deprecated.)</strong>
+    <TD><a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a>
+<TR><TD>Another HTML document
+    <TD><a href="../present/frames.html#edef-IFRAME"><samp class="einst">IFRAME</samp></a>
+    <TD><a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a>
+</table>
+
+<P>The chart indicates that each type of inclusion has a specific and
+a general solution. The generic <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> element
+will serve as the solution for implementing future media types.
+
+<p>To include images, authors may continue to use the <a href="objects.html#edef-IMG"><samp
+class="einst">IMG</samp></a> element as well.
+
+<P>To include applets, authors should use the <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> element as the <a href="objects.html#edef-APPLET"><samp
+class="einst">APPLET</samp></a> element is deprecated.
+
+<P>To include one HTML document in another, authors may use either the
+new <a href="../present/frames.html#edef-IFRAME"><samp class="einst">IFRAME</samp></a> element or the <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> element. In both cases, the embedded
+document remains independent of the main document. Visual user agents
+may present the embedded document in a distinct window within the main
+document. 
+
+<P>Images and other included objects may have hyperlinks associated
+with them, both through the standard <a href="./links.html">linking
+mechanisms</a>, but also via <a href="#include-maps"> <em>image
+maps</em></a>.  An image map specifies active geometric regions of an
+included object and assigns a link to each region. When activated,
+these links may cause a document to be retrieved, may run a program on
+the server, etc.
+
+<P>In the following sections, we discuss the various mechanisms
+available to authors for multimedia inclusions and creating image maps
+for those inclusions.
+
+<H2><a name="h-14.1">14.1</a> <a name="include-images">Including an image:</a> the <a
+name="edef-IMG"><samp class="edef">IMG</samp></a> element</h2>
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!-- To avoid problems with text-only UAs you need to provide
+     a description with ALT, and avoid server-side image maps --&gt;
+&lt;!ELEMENT <a href="objects.html#edef-IMG"><samp class="einst">IMG</samp></a> - O EMPTY            --  Embedded image --&gt;
+&lt;!ATTLIST IMG
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="objects.html#adef-src-IMG"><samp class="ainst-IMG">src</samp></a>         <a href="../sgml/loosedtd.html#URL">%URL;</a>      #REQUIRED -- URL of image to embed --
+  <a href="objects.html#adef-alt"><samp class="ainst-IMG">alt</samp></a>         CDATA      #REQUIRED -- short description --
+  <samp class="ainst-IMG">longdesc</samp>    <a href="../sgml/loosedtd.html#URL">%URL;</a>      #IMPLIED  -- link to long description --
+  <a href="objects.html#adef-align-IMG"><samp class="ainst-IMG">align</samp></a>       <a href="../sgml/loosedtd.html#IAlign">%IAlign;</a>   #IMPLIED  -- vertical or horizontal alignment --
+  <a href="objects.html#adef-height-IMG"><samp class="ainst-IMG">height</samp></a>      <a href="../sgml/loosedtd.html#Pixels">%Pixels;</a>   #IMPLIED  -- suggested height in pixels --
+  <a href="objects.html#adef-width-IMG"><samp class="ainst-IMG">width</samp></a>       <a href="../sgml/loosedtd.html#Pixels">%Pixels;</a>   #IMPLIED  -- suggested width in pixels --
+  <a href="objects.html#adef-border-IMG"><samp class="ainst-IMG">border</samp></a>      <a href="../sgml/loosedtd.html#Pixels">%Pixels;</a>   #IMPLIED  -- suggested link border width --
+  <a href="objects.html#adef-hspace"><samp class="ainst-IMG">hspace</samp></a>      <a href="../sgml/loosedtd.html#Pixels">%Pixels;</a>   #IMPLIED  -- suggested horizontal gutter --
+  <a href="objects.html#adef-vspace"><samp class="ainst-IMG">vspace</samp></a>      <a href="../sgml/loosedtd.html#Pixels">%Pixels;</a>   #IMPLIED  -- suggested vertical gutter --
+  <a href="objects.html#adef-usemap"><samp class="ainst-IMG">usemap</samp></a>      <a href="../sgml/loosedtd.html#URL">%URL;</a>      #IMPLIED  -- use client-side image map --
+  <a href="objects.html#adef-ismap"><samp class="ainst-IMG">ismap</samp></a>       (ismap)    #IMPLIED  -- use server-side image map --
+  &gt;
+</pre>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>forbidden</strong></em></p>
+
+<div class="adef-list"><P>
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-src-IMG"><samp class="adef">src</samp></a>  = <a href="../lang.html#type-url"><em>url</em></a>
+<dd>This attribute specifies the location of the image resource. Examples
+of widely recognized image formats include GIF, JPEG, and PNG.
+
+</dl>
+</div>
+
+<div class="aref-list"><P>
+<em>Attributes defined elsewhere</em> 
+<ul>
+<li><a href="global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="global.html#adef-class"><samp class="ainst">class</samp></a>
+    (<a href="../struct/global.html#id-and-class">document-wide
+	   identifiers</a>) 
+<li><a href="objects.html#adef-alt"><samp class="ainst">alt</samp></a> (<a
+		href="#alternate-text">alternate text</a>)
+<li><a href="dirlang.html#adef-lang"><samp class="ainst">lang</samp></a> (<a
+    href="../struct/dirlang.html#language-info">language
+    information</a>), <a href="dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+    (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+<li><a href="global.html#adef-title"><samp class="ainst">title</samp></a> (<a
+	     href="../struct/global.html#titles">element
+	     titles</a>) 
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a> (<a 
+    href="../present/styles.html#style-element">inline style
+    information</a>) 
+<li><a href="../interact/scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>, <a href="../interact/scripts.html#adef-ondblclick"><samp
+class="ainst">ondblclick</samp></a>, <a href="../interact/scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>, <a href="../interact/scripts.html#adef-onmouseup"><samp
+class="ainst">onmouseup</samp></a>, <a href="../interact/scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>, <a href="../interact/scripts.html#adef-onmousemove"><samp
+class="ainst">onmousemove</samp></a>, <a href="../interact/scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>, <a href="../interact/scripts.html#adef-onkeypress"><samp
+class="ainst">onkeypress</samp></a>, <a href="../interact/scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>, <a href="../interact/scripts.html#adef-onkeyup"><samp
+class="ainst">onkeyup</samp></a> (<a
+href="../interact/scripts.html#events">intrinsic events</a>)
+<li><a href="objects.html#adef-ismap"><samp class="ainst">ismap</samp></a>, <a href="objects.html#adef-usemap"><samp
+class="ainst">usemap</samp></a> (<a
+href="#client-side-maps">client side image maps</a>)
+<li><a href="objects.html#adef-align-IMG"><samp class="ainst-IMG">align</samp></a>, <a href="objects.html#adef-height-IMG"><samp class="ainst-IMG">height</samp></a>, <a href="objects.html#adef-width-IMG"><samp
+	      class="ainst-IMG">width</samp></a>,
+<a href="objects.html#adef-border-IMG"><samp class="ainst-IMG">border</samp></a>, <a href="objects.html#adef-hspace"><samp class="ainst">hspace</samp></a>,
+<a href="objects.html#adef-vspace"><samp class="ainst">vspace</samp></a> (<a href="#visual">visual presentation
+of objects, images, and applets</a>)
+</ul>
+</div>
+
+<P>The <a href="objects.html#edef-IMG"><samp class="einst">IMG</samp></a> element embeds an image in the
+current document at the location of the element's definition. The
+<a href="objects.html#edef-IMG"><samp class="einst">IMG</samp></a> element has no content; it is replaced
+inline by the image designated by the <a href="objects.html#adef-src-IMG"><samp
+class="ainst-IMG">src</samp></a> attribute.
+
+<div class="example"><P>
+In an earlier example, we defined a link to a family photo. Here, we
+insert the photo directly into the current document:
+
+<pre>
+&lt;BODY&gt;
+I just returned from vacation! Here's a photo of my family at the lake:
+&lt;IMG src="http://www.somecompany.com/People/Ian/vacation/family.png"
+     alt="A photo of my family at the lake."&gt;
+&lt;/BODY&gt;
+</pre>
+
+<P>This inclusion also be achieved with the <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> element as follows:
+
+<pre>
+&lt;BODY&gt;
+I just returned from vacation! Here's a photo of my family at the lake:
+&lt;OBJECT data="http://www.somecompany.com/People/Ian/vacation/family.png"
+        type="image/png"&gt;
+A photo of my family at the lake.
+&lt;/OBJECT&gt;
+&lt;/BODY&gt;
+</pre>
+</div>
+
+<P>The <a href="objects.html#adef-alt"><samp class="ainst">alt</samp></a> attribute specifies
+alternate text that is rendered when the image cannot be displayed
+(see below for information on <a href="#alternate-text">how to specify
+alternate text</a> ). User agents must render alternate next when they
+cannot support images, they cannot support a certain image type or
+when they are configured not to display images.
+
+<P>Please consult the section on the <a href="#visual">visual
+presentation of objects, images, and applets</a> for information about
+image size, alignment, and borders.
+
+<h2><a name="h-14.2">14.2</a> <a name="include-objects">Generic inclusion:</a> the <a
+name="edef-OBJECT"><samp class="edef">OBJECT</samp></a> element</h2>
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> - - (PARAM | <a href="../sgml/loosedtd.html#inline">%inline;</a> | <a href="../sgml/loosedtd.html#blocklevel">%blocklevel;</a>)* -- generic embedded object --&gt;
+&lt;!ATTLIST OBJECT
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="objects.html#adef-declare"><samp class="ainst-OBJECT">declare</samp></a>     (declare)  #IMPLIED  -- declare but don't instantiate flag --
+  <a href="objects.html#adef-classid"><samp class="ainst-OBJECT">classid</samp></a>     <a href="../sgml/loosedtd.html#URL">%URL;</a>      #IMPLIED  -- identifies an implementation --
+  <a href="objects.html#adef-codebase-OBJECT"><samp class="ainst-OBJECT">codebase</samp></a>    <a href="../sgml/loosedtd.html#URL">%URL;</a>      #IMPLIED  -- some systems need an additional URL --
+  <a href="objects.html#adef-data"><samp class="ainst-OBJECT">data</samp></a>        <a href="../sgml/loosedtd.html#URL">%URL;</a>      #IMPLIED  -- reference to object's data --
+  <a href="objects.html#adef-type-OBJECT"><samp class="ainst-OBJECT">type</samp></a>     <a href="../sgml/loosedtd.html#ContentType">%ContentType;</a> #IMPLIED  -- Internet content type for data --
+  <a href="objects.html#adef-codetype"><samp class="ainst-OBJECT">codetype</samp></a> <a href="../sgml/loosedtd.html#ContentType">%ContentType;</a> #IMPLIED  -- Internet content type for code --
+  <a href="objects.html#adef-archive"><samp class="ainst-OBJECT">archive</samp></a>     <a href="../sgml/loosedtd.html#URL">%URL;</a>      #IMPLIED  -- space separated archive list --
+  <a href="objects.html#adef-standby"><samp class="ainst-OBJECT">standby</samp></a>     CDATA      #IMPLIED  -- message to show while loading --
+  <a href="objects.html#adef-align-IMG"><samp class="ainst-IMG">align</samp></a>       <a href="../sgml/loosedtd.html#IAlign">%IAlign;</a>   #IMPLIED  -- vertical or horizontal alignment --
+  <a href="objects.html#adef-height-IMG"><samp class="ainst-IMG">height</samp></a>      <a href="../sgml/loosedtd.html#Length">%Length;</a>   #IMPLIED  -- suggested height --
+  <a href="objects.html#adef-width-IMG"><samp class="ainst-IMG">width</samp></a>       <a href="../sgml/loosedtd.html#Length">%Length;</a>   #IMPLIED  -- suggested width --
+  <a href="objects.html#adef-border-IMG"><samp class="ainst-IMG">border</samp></a>      <a href="../sgml/loosedtd.html#Length">%Length;</a>   #IMPLIED  -- suggested link border width --
+  <a href="objects.html#adef-hspace"><samp class="ainst-IMG">hspace</samp></a>      <a href="../sgml/loosedtd.html#Length">%Length;</a>   #IMPLIED  -- suggested horizontal gutter --
+  <a href="objects.html#adef-vspace"><samp class="ainst-IMG">vspace</samp></a>      <a href="../sgml/loosedtd.html#Length">%Length;</a>   #IMPLIED  -- suggested vertical gutter --
+  <a href="objects.html#adef-usemap"><samp class="ainst-OBJECT">usemap</samp></a>      <a href="../sgml/loosedtd.html#URL">%URL;</a>      #IMPLIED  -- reference to image map --
+  <a href="objects.html#adef-shapes"><samp class="ainst-OBJECT">shapes</samp></a>      (shapes)   #IMPLIED  -- object has shaped hypertext links --
+  <a href="../interact/forms.html#adef-name-INPUT"><samp class="ainst-INPUT">name</samp></a>        CDATA      #IMPLIED  -- submit as part of form --
+  <a href="../interact/forms.html#adef-tabindex"><samp class="ainst-OBJECT">tabindex</samp></a>    NUMBER     #IMPLIED  -- position in tabbing order --
+  &gt;
+</pre>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<div class="adef-list"><P>
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-classid"><samp class="adef">classid</samp></a>  = <a
+href="../lang.html#type-url"><em>url</em></a> 
+<dd> This attribute specifies the location of a object's implementation
+via a URL.
+
+<dt><a name="adef-codebase-OBJECT"><samp class="adef">codebase</samp></a>  =
+<a href="../lang.html#type-url"><em>url</em></a> 
+<dd>This attribute specifies the base path used to resolve relative
+URLs specified by <a href="objects.html#adef-classid"><samp class="ainst">classid</samp></a> (i.e., it gives
+the base URL when the object requires code). If this
+attribute is not specified, its default value is the base URL of the
+current document. Not all objects require this
+attribute. 
+
+
+<dt><a name="adef-codetype"><samp class="adef">codetype</samp></a> = <a href="../lang.html#type-cdata"><em>cdata</em></a>
+<dd> This attribute specifies the Internet Media Type
+(see <a rel="biblioentry"
+href="../references.html#ref-MIMETYPES">[MIMETYPES]</a>) of data
+expected by the object specified by <a href="objects.html#adef-classid"><samp
+class="ainst">classid</samp></a>. This attribute is optional but
+recommended when <a href="objects.html#adef-classid"><samp class="ainst">classid</samp></a> is specified since
+it allows the user agent to avoid loading information for unsupported
+media types. If no explicit value is given for this attribute, it
+defaults to the value of the <a href="../interact/forms.html#adef-type"><samp class="ainst">type</samp></a> attribute.
+
+<dt><a name="adef-data"><samp class="adef">data</samp></a> = <a href="../lang.html#type-url"><em>url</em></a>
+<dd>This attribute specifies the location of the data to be rendered.
+
+<dt><a name="adef-type-OBJECT"><samp class="adef">type</samp></a> = <a href="../lang.html#type-cdata"><em>cdata</em></a>
+<dd> This attribute specifies the Internet Media Type
+(see <a rel="biblioentry" href="../references.html#ref-MIMETYPES">[MIMETYPES]</a>) for the data
+specified by <a href="objects.html#adef-data"><samp class="ainst">data</samp></a>. This attribute is optional but
+recommended when <a href="objects.html#adef-data"><samp class="ainst">data</samp></a> is specified since it
+allows the user agent to avoid loading information for unsupported
+media types. If no explicit value is given for this attribute, the user
+agent should attempt to determine the type of the data to be rendered.
+
+<dt><a name="adef-declare"><samp class="adef">declare</samp></a>
+<dd>When present, this boolean attribute makes the current <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a>
+definition a declaration only. The object must be instantiated by a
+subsequent <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> definition referring to this
+declaration. 
+
+<dt><a name="adef-standby"><samp class="adef">standby</samp></a> = <a href="../lang.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute specifies a message that a user agent may render
+while loading the object's implementation and data. 
+
+</dl>
+</div>
+
+<div class="aref-list"><P>
+<em>Attributes defined elsewhere</em> 
+<ul>
+<li><a href="global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="global.html#adef-class"><samp class="ainst">class</samp></a>
+    (<a href="../struct/global.html#id-and-class">document-wide
+	   identifiers</a>) 
+<li><a href="dirlang.html#adef-lang"><samp class="ainst">lang</samp></a> (<a
+    href="../struct/dirlang.html#language-info">language
+    information</a>), <a href="dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+    (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+<li><a href="global.html#adef-title"><samp class="ainst">title</samp></a> (<a
+	     href="../struct/global.html#titles">element
+	     titles</a>) 
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a> (<a 
+    href="../present/styles.html#style-element">inline style
+    information</a>) 
+<li><a href="../interact/scripts.html#adef-onclick"><samp class="ainst">onclick</samp></a>, <a href="../interact/scripts.html#adef-ondblclick"><samp
+class="ainst">ondblclick</samp></a>, <a href="../interact/scripts.html#adef-onmousedown"><samp class="ainst">onmousedown</samp></a>, <a href="../interact/scripts.html#adef-onmouseup"><samp
+class="ainst">onmouseup</samp></a>, <a href="../interact/scripts.html#adef-onmouseover"><samp class="ainst">onmouseover</samp></a>, <a href="../interact/scripts.html#adef-onmousemove"><samp
+class="ainst">onmousemove</samp></a>, <a href="../interact/scripts.html#adef-onmouseout"><samp class="ainst">onmouseout</samp></a>, <a href="../interact/scripts.html#adef-onkeypress"><samp
+class="ainst">onkeypress</samp></a>, <a href="../interact/scripts.html#adef-onkeydown"><samp class="ainst">onkeydown</samp></a>, <a href="../interact/scripts.html#adef-onkeyup"><samp
+class="ainst">onkeyup</samp></a> (<a
+href="../interact/scripts.html#events">intrinsic events</a>)
+<li><a href="../interact/forms.html#adef-tabindex"><samp class="ainst">tabindex</samp></a> (<a
+href="../interact/forms.html#tabbing-navigation">tabbing navigation</a>)
+<li><a href="objects.html#adef-shapes"><samp class="ainst">shapes</samp></a>, <a href="objects.html#adef-usemap"><samp class="ainst">usemap</samp></a> (<a
+href="#client-side-maps">client side image maps</a>)
+<li><a href="../interact/forms.html#adef-name-INPUT"><samp class="ainst-INPUT">name</samp></a> (<a
+	      href="../interact/forms.html#submit-format">submitting
+	      objects with forms</a>)
+<li><a href="objects.html#adef-align-IMG"><samp class="ainst-IMG">align</samp></a>, <a href="objects.html#adef-height-IMG"><samp class="ainst-IMG">height</samp></a>, <a href="objects.html#adef-width-IMG"><samp
+	      class="ainst-IMG">width</samp></a>,
+<a href="objects.html#adef-border-IMG"><samp class="ainst-IMG">border</samp></a>, <a href="objects.html#adef-hspace"><samp class="ainst">hspace</samp></a>,
+<a href="objects.html#adef-vspace"><samp class="ainst">vspace</samp></a> (<a href="#visual">visual presentation
+of objects, images, and applets</a>)
+</ul>
+</div>
+
+<P>Most user agents have built-in mechanisms for rendering common data
+types such as text, GIF images, colors, fonts, and a handful of
+graphic elements. To render data types they don't support natively,
+user agents generally run external applications. The <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> element allows authors to control whether
+objects should be rendered externally or by some program, specified by
+the author, that renders the object within the user agent.
+
+<P>In the most general case, an author may need to specify 
+three types of information:
+
+<ul>
+<li>The implementation of the included object. For instance, if the
+included object is a clock applet, the author must indicate the
+location of the applet's executable code.
+
+<li>The data to be rendered. For instance, if the included object is a
+program that renders font data, the author must indicate the location
+of that data.
+
+<li>Additional values required by the object at run-time. For example,
+some applets may require initial values for parameters.
+					
+</ul>
+
+<P>The <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> element allows authors to
+specify all three types of data, but authors may not have to specify
+all three at once.  For example, some objects may not require data
+(e.g., a self-contained applet that performs a small
+animation). Others may not require run-time initialization. Still
+others may not require additional implementation information, i.e.,
+the user agent itself may already know how to render that type of data
+(e.g., GIF images).
+
+<P>Authors specify an object's implementation and the location of the
+data to be rendered via the <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a>
+element. To specify run-time values, however, authors use the <a href="objects.html#edef-PARAM"><samp
+class="einst">PARAM</samp></a> element, which is discussed in the section
+on <a href="#object-init">object initialization.</a>
+
+<H3><a name="h-14.2.1">14.2.1</a> Rules for rendering objects</H3>
+<P>A user agent must interpret an <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a>
+element according to the following precedence rules:
+
+<ol>
+<li>The user agent must first try to render the object.
+
+<li>If the user agent is not able to render
+the object for whatever reason (configured not to, lack of
+resources, wrong architecture, etc.), it must try to render its
+contents.
+</ol>
+
+<div class="example"><P>
+In the following example, we insert an analog clock applet in a
+document via the <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> element. The
+applet, written in the Python language, requires no additional data or
+run-time values. The <a href="objects.html#adef-classid"><samp class="ainst">classid</samp></a> attribute
+specifies the location of the applet:
+
+<PRE>    
+&lt;OBJECT classid="http://www.miamachina.it/analogclock.py"&gt;
+&lt;/OBJECT&gt;
+</pre>
+
+<P>Authors should complete this declaration by including alternate
+text as the contents of <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> in case the
+user agent cannot render the clock. 
+
+<PRE>    
+&lt;OBJECT classid="http://www.miamachina.it/analogclock.py"&gt;
+An animated clock.
+&lt;/OBJECT&gt;
+</pre>
+
+<P>Note that the clock will be rendered as soon as the user agent
+interprets this <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> declaration. It is
+possible to delay rendering of an object by first
+<em>declaring</em> the object (described below).
+</div>
+
+<P>One significant consequence of the <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> element's design is that it offers a
+mechanism for specifying alternate object renderings; each embedded
+<a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> declaration may specify alternate
+content types. If a user agent cannot render the outermost <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a>, it tries to render the contents, which
+may be another <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> element, etc.
+
+<div class="example"><P>
+In the following example, we embed several <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> declarations to illustrate how alternate
+renderings work. A user agent will attempt to render the first <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> element it can, in the following order:
+(1) an Earth applet written in the Python language, (2) an MPEG
+animation of the Earth, (3) a GIF image of the Earth, (4) alternate text.
+
+<pre>
+                    &lt;!-- First, try the Python applet --&gt;
+&lt;OBJECT title="The Earth as seen from space" 
+        classid="http://www.observer.mars/TheEarth.py"&gt;
+                    &lt;!-- Else, try the MPEG video --&gt;
+  &lt;OBJECT data="TheEarth.mpeg" type="application/mpeg"&gt;
+                    &lt;!-- Else, try the GIF image --&gt;
+    &lt;OBJECT data="TheEarth.gif"&gt;
+                    &lt;!-- Else render the text --&gt;
+     The &lt;STRONG&gt;Earth&lt;/STRONG&gt; as seen from space.
+    &lt;/OBJECT&gt;
+  &lt;/OBJECT&gt;
+&lt;/OBJECT&gt;
+</pre>
+
+<P>The outermost declaration specifies an applet that requires no data
+or initial values. The second declaration specifies an MPEG animation
+and, since it does not define the location of an implementation to
+handle MPEG, relies on the user agent to handle the animation.  We
+also set the <a href="../interact/forms.html#adef-type"><samp class="ainst">type</samp></a> attribute so that a user
+agent that knows it cannot render MPEG will not bother to retrieve
+"TheEarth.mpeg" from the network. The third declaration specifies the
+location of a GIF file and furnishes alternate text in case all other
+mechanisms fail.
+</div>
+
+<div class="note"><P>
+<em><strong>Inline vs. external data.</strong> Data to be rendered may
+be supplied in two ways: inline and from an external resource. While
+the former method will generally lead to faster rendering, it is not
+convenient when rendering large quantities of data.</em>
+</div>
+
+<P>Please consult the section on the <a href="#visual">visual
+presentation of objects, images, and applets</a> for information about
+object size, alignment, and borders.
+
+<h3><a name="h-14.2.2">14.2.2</a> <a name="object-init">Object initialization:</a> the <a name="edef-PARAM"><samp
+class="edef">PARAM</samp></a> element</h3>
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="objects.html#edef-PARAM"><samp class="einst">PARAM</samp></a> - O EMPTY          -- named property value --&gt;
+&lt;!ATTLIST PARAM
+  <a href="global.html#adef-id"><samp class="ainst">id</samp></a>          ID         #IMPLIED  -- document-wide unique id --
+  <a href="objects.html#adef-name-PARAM"><samp class="ainst-PARAM">name</samp></a>        CDATA      #REQUIRED -- property name --
+  <a href="objects.html#adef-value-PARAM"><samp class="ainst-PARAM">value</samp></a>       CDATA      #IMPLIED  -- property value --
+  <a href="objects.html#adef-valuetype"><samp class="ainst-PARAM">valuetype</samp></a> (DATA|REF|OBJECT) DATA -- How to interpret value --
+  <a href="objects.html#adef-type-PARAM"><samp class="ainst-PARAM">type</samp></a>        CDATA      #IMPLIED  -- Internet media type --
+  &gt;
+</pre>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>forbidden</strong></em></p>
+
+<div class="adef-list"><P>
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-name-PARAM"><samp class="adef">name</samp></a> = <a href="../lang.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute defines the name of a run-time parameter name,
+assumed to be known by the inserted object. Whether the property name
+is case-sensitive depends on the object. 
+
+<dt><a name="adef-value-PARAM"><samp class="adef">value</samp></a> = <a href="../lang.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute specifies the value of a run-time parameter
+specified by <a href="objects.html#adef-name-PARAM"><samp class="ainst-PARAM">name</samp></a>.
+Property values have no meaning to HTML; their meaning is determined
+by the object in question. 
+
+<dt><a name="adef-valuetype"><samp class="adef">valuetype</samp></a> =
+<samp>data|ref|object</samp>
+<dd>This attribute specifies the type of the <samp>value</samp>
+attribute. Possible values:
+<ul>
+<li><samp>data:</samp> The value specified by <samp
+class="ainst">value</samp> will be passed directly to the object's 
+implementation as a string, after resolving any embedded character or
+numeric character entities. This is the default value for this
+attribute (and may appear alone in the start tag of the element).
+<li><samp>ref:</samp> The value specified by <samp
+class="ainst">value</samp> is a URL that designates a resource
+where run-time values are stored. The URL must be passed to the
+object <strong>as is</strong>, i.e., unresolved.
+<li><samp>object:</samp> The value specified by <samp
+class="ainst">value</samp> is a fragment URL that designates
+an  <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> declaration in the same
+document. In this case, the <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a>
+definition must be identifiable by its <a href="global.html#adef-id"><samp class="ainst">id</samp></a>
+attribute. 
+</ul>
+
+<dt><a name="adef-type-PARAM"><samp class="adef">type</samp></a>  = <a href="../lang.html#type-cdata"><em>cdata</em></a>
+<dd> This attribute specifies the Internet Media Type (see
+<a rel="biblioentry"
+href="../references.html#ref-MIMETYPES">[MIMETYPES]</a>) of the resource
+designated by the <samp class="ainst">value</samp> attribute
+<strong>only</strong> in the case where <a href="objects.html#adef-valuetype"><samp
+class="ainst">valuetype</samp></a> is set to "ref". This attribute thus
+specifies for the user agent, the type of values that will be found at
+the URL designated by <samp class="ainst">value</samp>. 
+</dl>
+</div>
+
+<div class="aref-list"><P>
+<em>Attributes defined elsewhere</em> 
+<ul>
+<li><a href="global.html#adef-id"><samp class="ainst">id</samp></a>
+    (<a href="../struct/global.html#id-and-class">document-wide
+	   identifiers</a>) 
+</ul>
+</div>
+
+<P>The <a href="objects.html#edef-PARAM"><samp class="einst">PARAM</samp></a> element specifies a set of
+values that may be required by an object at run-time.  Any
+number of of <a href="objects.html#edef-PARAM"><samp class="einst">PARAM</samp></a> elements may appear at
+the beginning of an <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> declaration, in
+any order. The syntax of names and values is assumed to be understood
+by the object's implementation. Names and values are passed to the
+object on its standard input. This specification does
+not specify how user agents should interpret parameter names that appear
+twice.
+
+<div class="example"><P>
+To illustrate the use of <a href="objects.html#edef-PARAM"><samp class="einst">PARAM</samp></a>, we
+returning to the clock example. suppose that the applet is able to
+handle two run-time parameters that define its initial height and
+width. We can set the initial dimensions to 40x40 pixels with two <a href="objects.html#edef-PARAM"><samp
+class="einst">PARAM</samp></a> elements.
+
+<PRE>    
+&lt;OBJECT classid="http://www.miamachina.it/analogclock.py"&gt;
+&lt;PARAM name="height" value="40" valuetype="data"&gt;
+&lt;PARAM name="width" value="40" valuetype="data"&gt;
+This user agent cannot render Python applications.
+&lt;/OBJECT&gt;
+</pre>
+
+<P>Since the default <a href="objects.html#adef-valuetype"><samp class="ainst">valuetype</samp></a> for a <a href="objects.html#edef-PARAM"><samp
+class="einst">PARAM</samp></a> element is "data", we could replace the
+above declarations with either:
+
+<PRE> 
+&lt;PARAM name="height" value="40"&gt;
+&lt;PARAM name="width"  value="40"&gt;
+</pre>   
+
+<P>or:
+
+<PRE> 
+&lt;PARAM name="height" value="40" data&gt;
+&lt;PARAM name="width"  value="40" data&gt;
+</pre>   
+</div>
+
+<div class="example"><P>
+In the following example, run-time data for the object's
+"Init_values" parameter is specified as an external resource (a GIF file).
+The value of the <a href="objects.html#adef-valuetype"><samp class="ainst">valuetype</samp></a> attribute
+is thus set to "ref" and the <samp class="ainst">value</samp> is a
+URL designating the resource.
+
+<pre>
+&lt;OBJECT classid="http://www.gifstuff.com/gifappli"
+       standby="Loading Elvis..."&gt;
+&lt;PARAM name="Init_values"
+       value="./images/elvis.gif"&gt;
+       valuetype="ref"&gt;
+&lt;/OBJECT&gt;
+</pre>
+
+<P>Note that we have also set the <a href="objects.html#adef-standby"><samp class="ainst-OBJECT">standby</samp></a>
+attribute so that the user agent may display a message while the rendering
+mechanism loads.
+</div>
+
+
+<h3><a name="h-14.2.3">14.2.3</a> URLs other than HTTP URLs</h3>
+<P>The location of an object's implementation is given by a URL. As we
+discussed in the section on <a
+href="../htmlweb.html#htmlurl">URLs</a>, the first segment of an
+absolute URL specifies the protocol used to transfer the data
+designated by the URL. For HTML documents, this protocol is generally
+"http". Some applets might employ other protocols. For
+instance, when specifying a Java applet, you may use URLs
+that begin with "java" and for ActiveX applets, you may use "clsid".
+
+<div class="example"><P>
+In the following example, we insert a Java applet into an HTML document. 
+
+<pre>
+&lt;OBJECT classid="java:program.start"&gt;
+&lt;/OBJECT&gt;
+</pre>
+</div>
+
+<!-- This example isn't good because the value of "codebase"
+doesn't refer to java. Thus, how can the user agent decide
+whether to retrieve the applet based on the codetype? It may look
+at the URL, on the other hand ... -->
+
+<P>By setting the <a href="objects.html#adef-codetype"><samp class="ainst">codetype</samp></a> attribute, a
+user agent can decide whether to retrieve the Java application based
+on its ability to do so. 
+
+<pre>
+&lt;OBJECT codetype="application/octet-stream"
+        classid="java:program.start"&gt;
+&lt;/OBJECT&gt;
+</pre>
+
+<P>Some rendering schemes require additional information to identify
+their implementation and must be told where to find that
+information. You may give path information to the object's implementation
+via the <a href="objects.html#adef-codebase-APPLET"><samp class="ainst-APPLET">codebase</samp></a> attribute.
+
+<pre>
+&lt;OBJECT codetype="application/octet-stream"
+        classid="java:program.start"&gt;
+        codebase="http://foooo.bar.com/java/myimplementation/"
+&lt;/OBJECT&gt;
+</pre>
+
+<div class="example"><P>
+The following example specifies (with the <a href="objects.html#adef-classid"><samp
+class="ainst">classid</samp></a> attribute) an ActiveX object
+via a URL that begins with the protocol information "clsid". The <a href="objects.html#adef-data"><samp
+class="ainst-OBJECT">data</samp></a> attribute locates the data to render
+(another clock).
+
+<pre>
+&lt;OBJECT classid="clsid:663C8FEF-1EF9-11CF-A3DB-080036F12502"
+        data="http://www.acme.com/ole/clock.stm"&gt;
+This application is not supported.
+&lt;/OBJECT&gt;
+</pre>
+</div>
+
+<H3><a name="h-14.2.4">14.2.4</a> <a name="object-declare">Object declarations and
+instantiations</a></h3>
+
+The preceding examples have only illustrated isolated object
+definitions. When a document is to contain more than one instance of
+the same object, it is possible to separate the declaration of the
+object from its instantiations. Doing so has several advantages:
+
+<ul>
+<li>Data may be retrieved from the network by the user agent <em>one
+time</em> (during the declaration) and reused for each instantiation.
+<li>It is possible to instantiate an object from a location other
+than the object's declaration, for example, from a link.
+<li>It is possible to specify objects as run-time data for other
+objects. 
+</ul>
+
+<P>To declare an object so that it is not executed when
+read by the user agent, set the boolean <a href="objects.html#adef-declare"><samp
+class="ainst">declare</samp></a> attribute in the <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> element. At the same time, you must
+identify the declaration by setting the <a href="global.html#adef-id"><samp class="ainst">id</samp></a>
+attribute in the <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> element to a
+unique value. Later instantiations of the object will refer to this
+identifier.
+
+<P>A declared <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> must appear in a
+document before the first instance of that <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a>.
+
+<P>An object defined with the <a href="objects.html#adef-declare"><samp
+class="ainst">declare</samp></a> attribute is instantiated every time the
+<a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> is referenced thereafter.
+
+<div class="example"><P>
+In the following example, we declare an <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> and
+cause it so be instantiated by referring to it from a link. Thus, the
+object can be activated by clicking on some highlighted text, for
+example. 
+
+<pre>
+&lt;OBJECT declare
+        id="earth_declaration" 
+        data="TheEarth.mpeg" 
+        type="application/mpeg"&gt;
+   The &lt;STRONG&gt;Earth&lt;/STRONG&gt; as seen from space.
+&lt;/OBJECT&gt;
+<em>...later in the document...</em>
+A neat &lt;A href="#earth_declaration"&gt; animation of The Earth!&lt;/A&gt;
+</pre>
+</div>
+
+<div class="example"><P>
+The following example illustrates how to specify run-time values that are other
+objects. In this example, we send text (a poem, in fact) to a 
+hypothetical mechanism for viewing poems. The object
+recognizes a run-time parameter named "font" (say, for rendering the
+poem text in a certain font). The value for this parameter is itself an
+object that inserts (but does not render) the font object. The
+relationship between the font object and the poem viewer object is
+achieved by (1) assigning the <a href="global.html#adef-id"><samp class="ainst">id</samp></a> 
+"tribune" to the font object declaration and (2)
+referring to it from the <a href="objects.html#edef-PARAM"><samp class="einst">PARAM</samp></a> element of
+the poem viewer object (with <a href="objects.html#adef-valuetype"><samp class="ainst">valuetype</samp></a> and
+<samp class="ainst">value</samp>).
+
+<pre>
+&lt;OBJECT declare
+     id="tribune"
+     type="application/x-webfont"
+     data="tribune.gif"&gt;
+&lt;/OBJECT&gt;
+<em>...view the poem in KublaKhan.txt here...</em>
+&lt;OBJECT classid="http://foo.bar.com/poem_viewer" 
+           data="KublaKhan.txt"&gt;
+&lt;PARAM name="font" valuetype="object" value="#tribune"&gt;
+&lt;P&gt;You're missing a really cool poem viewer ...
+&lt;/OBJECT&gt;
+</pre>
+</div>
+
+
+<p>User agents that don't support the <a href="objects.html#adef-declare"><samp
+class="ainst">declare</samp></a> attribute must render the contents of the
+<a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> declaration.
+
+<h2><a name="h-14.3">14.3</a> <a name="include-applets">Including an applet</a>: the <a
+name="edef-APPLET"><samp class="edef">APPLET</samp></a> element</h2>
+<strong>APPLET is deprecated.</strong>
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="objects.html#edef-APPLET"><samp class="einst">APPLET</samp></a> - - (PARAM | <a href="../sgml/loosedtd.html#inline">%inline;</a>)* -- Java applet --&gt;
+&lt;!ATTLIST APPLET
+  <a href="../sgml/loosedtd.html#coreattrs">%coreattrs;</a>                      -- <a href="global.html#adef-id">id</a>, <a href="global.html#adef-class">class</a>, <a href="../present/styles.html#adef-style">style</a>, <a href="global.html#adef-title">title</a> --
+  <a href="objects.html#adef-codebase-APPLET"><samp class="ainst-APPLET">codebase</samp></a>    <a href="../sgml/loosedtd.html#URL">%URL;</a>      #IMPLIED   -- optional base URL for applet --
+  <a href="objects.html#adef-archive"><samp class="ainst-APPLET">archive</samp></a>     CDATA      #IMPLIED   -- comma separated archive list --
+  <a href="objects.html#adef-code"><samp class="ainst-APPLET">code</samp></a>        CDATA      #IMPLIED   -- applet class file --
+  <a href="objects.html#adef-object"><samp class="ainst-APPLET">object</samp></a>      CDATA      #IMPLIED   -- serialized applet file --
+  <a href="objects.html#adef-alt"><samp class="ainst-APPLET">alt</samp></a>         CDATA      #IMPLIED   -- short description --
+  <a href="objects.html#adef-name-APPLET"><samp class="ainst-APPLET">name</samp></a>        CDATA      #IMPLIED   -- allows applets to find each other --
+  <a href="objects.html#adef-width-APPLET"><samp class="ainst-APPLET">width</samp></a>       <a href="../sgml/loosedtd.html#Pixels">%Pixels;</a>   #REQUIRED  -- suggested width in pixels --
+  <a href="objects.html#adef-height-APPLET"><samp class="ainst-APPLET">height</samp></a>      <a href="../sgml/loosedtd.html#Pixels">%Pixels;</a>   #REQUIRED  -- suggested height in pixels --
+  <a href="objects.html#adef-align-IMG"><samp class="ainst-IMG">align</samp></a>       <a href="../sgml/loosedtd.html#IAlign">%IAlign;</a>   #IMPLIED   -- vertical or horizontal alignment --
+  <a href="objects.html#adef-hspace"><samp class="ainst-IMG">hspace</samp></a>      <a href="../sgml/loosedtd.html#Pixels">%Pixels;</a>   #IMPLIED   -- suggested horizontal gutter --
+  <a href="objects.html#adef-vspace"><samp class="ainst-IMG">vspace</samp></a>      <a href="../sgml/loosedtd.html#Pixels">%Pixels;</a>   #IMPLIED   -- suggested vertical gutter --
+  &gt;
+</pre>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+      
+<div class="adef-list"><P>
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-codebase-APPLET"><samp class="adef">codebase</samp></a> = <a href="../lang.html#type-url"><em>url</em></a>
+<dd>This attribute specifies the base URL for the applet. If this attribute is
+not specified, then the base URL for the applet is the same as for the
+current document. Values for this attribute may only refer to subdirectories
+of the directory containing the current document. 
+
+<dt><a name="adef-code"><samp class="adef">code</samp></a> = <a href="../lang.html#type-cdata"><em>cdata</em></a>
+
+<dd>This attribute specifies the name of the resource that contains
+the applet's compiled applet subclass. The value must be a relative
+URL with respect to the applet base URL. 
+
+<dt><a name="adef-name-APPLET"><samp class="adef">name</samp></a> = <a href="../lang.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute specifies a name for the applet instance,
+    which makes it possible for applets on the same page
+    to find (and communicate with) each other.
+
+<dt><a name="adef-width-APPLET"><samp class="adef">width</samp></a> =
+<a href="../lang.html#type-length"><em>length</em></a> <dd>This
+attribute specifies the initial width of the applet display area (not
+counting any windows or dialogs that the applet brings up).
+
+<dt><a name="adef-height-APPLET"><samp class="adef">height</samp></a> = <a href="../lang.html#type-length"><em>length</em></a>
+<dd>This attribute specifies the initial height of the applet display
+	    area (not counting any windows or dialogs that the applet
+	    brings up).
+
+<dt><a name="adef-archive"><samp class="adef">archive</samp></a> = <a href="../lang.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute specifies the names of one or more comma-separated
+archives containing classes and other resources that will be
+"preloaded". The classes are loaded using an instance of an
+AppletClassLoader with the given <a href="objects.html#adef-codebase-APPLET"><samp
+class="ainst-APPLET">codebase</samp></a>. Preloading resources can significantly
+improve the performance of applets.
+
+<dt><a name="adef-object"><samp class="adef">object</samp></a> = <a href="../lang.html#type-cdata"><em>cdata</em></a>
+<dd> This attribute gives the name of the resource that contains a
+serialized representation of an applet. The applet will be
+"deserialized". The <samp>init()</samp> method will not be invoked; but its
+<samp>start()</samp> method will. Attributes valid when the original
+object was serialized are not restored. Any attributes passed to this 
+applet instance will be available to the Applet.
+</dl>
+</div>
+
+<div class="aref-list"><P>
+<em>Attributes defined elsewhere</em> 
+<ul>
+<li><a href="global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="global.html#adef-class"><samp class="ainst">class</samp></a>
+    (<a href="../struct/global.html#id-and-class">document-wide
+	   identifiers</a>) 
+<li><a href="global.html#adef-title"><samp class="ainst">title</samp></a> (<a
+	     href="../struct/global.html#titles">element
+	     titles</a>) 
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a> (<a 
+    href="../present/styles.html#style-element">inline style
+    information</a>) 
+<li><a href="objects.html#adef-alt"><samp class="ainst">alt</samp></a> (<a
+		href="#alternate-text">alternate text</a>)
+<li><a href="objects.html#adef-align-IMG"><samp class="ainst-IMG">align</samp></a>, 
+<a href="objects.html#adef-width-IMG"><samp class="ainst-IMG">width</samp></a>, <a href="objects.html#adef-height-IMG"><samp class="ainst-IMG">height</samp></a>,
+<a href="objects.html#adef-hspace"><samp class="ainst">hspace</samp></a>,
+<a href="objects.html#adef-vspace"><samp class="ainst">vspace</samp></a> (<a href="#visual">visual presentation
+of objects, images, and applets</a>)
+</ul>
+</div>
+
+<p>This element, supported by all Java-enabled browsers, allows
+designers to embed a Java applet in an HTML document. It has been
+deprecated in favor of the <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> element.
+
+<P>The content of the <a href="objects.html#edef-APPLET"><samp class="einst">APPLET</samp></a> acts as
+alternate information for user agents that don't support this element or
+are currently configured not to support applets. The content must be
+ignored otherwise.
+
+<div class="example"><P> 
+In the following example, the <a href="objects.html#edef-APPLET"><samp class="einst">APPLET</samp></a>
+element includes a Java applet in the document. Since no <a href="objects.html#adef-codebase-APPLET"><samp
+class="ainst-APPLET">codebase</samp></a> is supplied, the applet is
+assumed to be in the same directory as the current document.
+
+<pre>
+&lt;APPLET code="Bubbles.class" width="500" height="500"&gt;
+Java applet that draws animated bubbles.
+&lt;/APPLET&gt;
+</PRE>
+
+<P>This example may be rewritten as follows with <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> as follows:
+
+<PRE>
+&lt;OBJECT codetype="application/octet-stream"
+        classid="java:Bubbles.class"
+        width="500" height="500"&gt;
+Java applet that draws animated bubbles.
+&lt;/OBJECT&gt;
+</pre>
+</div>
+
+<P>Initial values may be supplied to the applet via the <a href="objects.html#edef-PARAM"><samp
+	  class="einst">PARAM</samp></a> element.
+
+<div class="example"><P>
+The following sample Java applet:
+<pre>
+&lt;APPLET code="AudioItem" width="15" height="15"&gt;
+&lt;PARAM name="snd" value="Hello.au|Welcome.au"&gt;
+Java applet that plays a welcoming sound.
+&lt;/APPLET&gt;
+</pre>
+
+<P>may be rewritten as follows with <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a>:
+
+<pre>
+&lt;OBJECT codetype="application/octet-stream"
+        classid="AudioItem" 
+        width="15" height="15"&gt;
+&lt;PARAM name="snd" value="Hello.au|Welcome.au"&gt;
+Java applet that plays a welcoming sound.
+&lt;/OBJECT&gt;
+</pre>
+</div>
+
+
+<h2><a name="h-14.4">14.4</a> <a name="include-files">Including HTML in another HTML
+document</a></h2> 
+
+Sometimes, rather than linking to another HTML document, it is helpful
+to include it directly into a primary HTML document. Authors may use
+either the <a href="../present/frames.html#edef-IFRAME"><samp class="einst">IFRAME</samp></a> element or the <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> element for this purpose. The <a href="../present/frames.html#edef-IFRAME"><samp
+class="einst">IFRAME</samp></a> element differs from the <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> element, however, in that it may be a
+target frame (see the section on <a
+href="../present/frames.html#target-info">specifying target frame
+information</a> for details).
+
+<P>An embedded document is entirely independent of the document in
+which it is embedded. For instance, relative URLs within the embedded
+document resolve according to the base URL of the embedded document,
+not that of the main document. Also, an embedded document does not
+inherit style information from the main document. An embedded document
+is only rendered within another document (e.g., in a subwindow); it
+remains otherwise independent.
+
+<div class="example"><P>
+For instance, the following line includes the contents of
+<tt>embed_me.html</tt> at the location where the <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> definition occurs.
+<pre>
+<em>...text before...</em>
+&lt;OBJECT data="embed_me.html"&gt;
+Warning: embed_me.html could not be included.
+&lt;/OBJECT&gt;
+<em>...text after...</em>
+</pre>
+
+<P>Recall that the contents of <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> must
+only be rendered if the file specified by the <a href="objects.html#adef-data"><samp
+class="ainst">data</samp></a> attribute cannot be loaded.
+</div>
+
+<P>The behavior of a user agent in cases where a file includes itself
+is not defined.
+
+<h2><a name="h-14.5">14.5</a> <a name="include-maps">Image maps</a></h2> 
+
+Image maps allow authors to specify regions of an image or object and
+assign a specific action to each region (e.g., retrieve a document,
+run a program, etc.) When the region is activated by the user, the
+action is executed.
+
+<P>An image map is created by associating an object with 
+a specification of sensitive geometric areas on the object.
+
+<P>There are two types of image maps:
+
+<ul>
+<li><em>Server-side.</em> When a user activates a region of a
+server-side image map with a mouse, the pixel coordinates of the click
+are sent to the server where the document is housed. The server
+interprets the coordinates and performs some action.
+<li><em>Client-side.</em> When a user activates a region of a
+client-side image map with a mouse, the pixel coordinates are
+interpreted by the user agent. The user agent selects a link that
+was specified for the activated region and follows it.
+</ul>
+
+<P>Client-side image maps are preferred over server-side image
+maps. 
+
+<h3><a name="h-14.5.1">14.5.1</a> <a name="client-side-maps">Client-side image maps</a></h3> 
+
+<P>HTML 4.0 has two mechanisms for specifying client-side image maps:
+
+<ol>
+<li>An element employs an image map that is defined outside the
+element itself. In this case, the <a href="objects.html#edef-MAP"><samp class="einst">MAP</samp></a> and
+<a href="objects.html#edef-AREA"><samp class="einst">AREA</samp></a> elements define the image map. This
+method is available for the <a href="objects.html#edef-IMG"><samp class="einst">IMG</samp></a>, <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a>, and <a href="../interact/forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> elements.
+
+<li>An element's content contains the image map. This method is only
+available for the <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> element. 
+</ol>
+
+<P>For an <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> image map, the two methods
+are mutually exclusive. The presence of either the <a href="objects.html#adef-usemap"><samp
+class="ainst">usemap</samp></a> attribute or the <a href="objects.html#adef-shapes"><samp
+class="ainst">shapes</samp></a> attribute for an <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> implies that the object being included is
+an image.
+
+<P>Furthermore, when the <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> element has
+an associated client-side image map, user agents may implement user
+interaction with the <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> solely in terms
+of the client-side image map. This allows user agents (such as an
+audio browser or robot) to interact with the <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> without having to process it; the user
+agent may even elect not to retrieve (or process) the object. When an
+<a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> has an associated image map, authors
+should not expect that the object will be retrieved or processed by
+every user agent.
+
+<H4>Alternate access to image maps<a name="h-14.5.1.1">&nbsp;</a></H4>
+<p>User agents and authors should offer textual alternates to
+graphical image maps for cases when graphics are not available or the
+user cannot access them.
+
+<P>When <a href="objects.html#edef-MAP"><samp class="einst">MAP</samp></a> and <a href="objects.html#edef-AREA"><samp
+class="einst">AREA</samp></a> are used, authors are required to provide
+alternate text for each active region by way of the <a href="objects.html#adef-alt"><samp
+class="ainst">alt</samp></a> attribute (see below for information on <a
+href="#alternate-text">how to specify alternate text</a>). User agents
+may use this alternate text to create substitute textual links. These
+links may be activated in a variety of ways (keyboard, voice
+activation, etc.).
+
+<P>In the case of an <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> with the <a href="objects.html#adef-shapes"><samp
+class="ainst-OBJECT">shapes</samp></a> attribute set, authors are required
+to specify links within the content of the <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> itself. Each link defines both the
+geometry of an active region and the destination program, document, or
+other resource.  When the <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> element
+can be displayed, its content is ignored except for the definitions of
+the regions. When the <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> cannot be
+displayed, its contents are rendered normally, including the
+links. Thus, authors are not required to specify alternate text via an
+<a href="objects.html#adef-alt"><samp class="ainst">alt</samp></a> attribute. This technique also allows
+richer alternate content that what may be achieved with <a href="objects.html#edef-AREA"><samp
+class="einst">AREA</samp></a> and its <a href="objects.html#adef-alt"><samp class="ainst">alt</samp></a>
+attribute.
+
+<h4>Client-side image maps with <a name="edef-MAP"><samp
+class="edef">MAP</samp></a>, <a name="edef-AREA"><samp
+class="edef">AREA</samp></a>, and <a href="objects.html#adef-usemap"><samp class="ainst">usemap</samp></a><a name="h-14.5.1.2">&nbsp;</a></H4>
+
+<P>All elements that may specify a client-side image map that is
+external to the element must identify by name the <a href="objects.html#edef-MAP"><samp
+class="einst">MAP</samp></a> element that defines the image map. The <a href="objects.html#adef-usemap"><samp
+class="ainst">usemap</samp></a> attribute links an element to its image map.
+
+<div class="adef-list"><P>
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-usemap"><samp class="adef">usemap</samp></a> = <a href="../lang.html#type-url"><em>url</em></a>
+<dd>This attribute specifies the location of a map defined by <a href="objects.html#edef-MAP"><samp
+class="einst">MAP</samp></a> and <a href="objects.html#edef-AREA"><samp class="einst">AREA</samp></a>.
+</dl>
+</div>
+
+<P>Here are the DTD fragments for <a href="objects.html#edef-MAP"><samp class="einst">MAP</samp></a> and
+<a href="objects.html#edef-AREA"><samp class="einst">AREA</samp></a>.
+
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="objects.html#edef-MAP"><samp class="einst">MAP</samp></a> - - (AREA)+ -- client-side image map --&gt;
+&lt;!ATTLIST MAP
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="../interact/forms.html#adef-name-INPUT"><samp class="ainst-INPUT">name</samp></a>        CDATA      #IMPLIED
+  &gt;
+</pre>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+<div class="dtd-fragment">
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="objects.html#edef-AREA"><samp class="einst">AREA</samp></a> - O EMPTY -- client-side image map area --&gt;
+&lt;!ATTLIST AREA
+  <a href="../sgml/loosedtd.html#attrs">%attrs;</a>                          -- <a href="../sgml/loosedtd.html#coreattrs">%coreattrs</a>, <a href="../sgml/loosedtd.html#i18n">%i18n</a>, <a href="../sgml/loosedtd.html#events">%events</a> --
+  <a href="objects.html#adef-shape"><samp class="ainst-AREA">shape</samp></a>       <a href="../sgml/loosedtd.html#Shape">%Shape;</a>    rect      -- controls interpretation of coords --
+  <a href="objects.html#adef-coords"><samp class="ainst-AREA">coords</samp></a>      <a href="../sgml/loosedtd.html#Coords">%Coords;</a>   #IMPLIED  -- comma separated list of values --
+  <a href="links.html#adef-href"><samp class="ainst-AREA">href</samp></a>        <a href="../sgml/loosedtd.html#URL">%URL;</a>      #IMPLIED  -- this region acts as hypertext link --
+  <a href="../present/frames.html#adef-target"><samp class="ainst-AREA">target</samp></a>      CDATA      #IMPLIED  -- where to render linked resource -- 
+  <a href="objects.html#adef-nohref"><samp class="ainst-AREA">nohref</samp></a>      (nohref)   #IMPLIED  -- this region has no action --
+  <a href="objects.html#adef-alt"><samp class="ainst-AREA">alt</samp></a>         CDATA      #REQUIRED -- short description --
+  <a href="../interact/forms.html#adef-tabindex"><samp class="ainst-AREA">tabindex</samp></a>    NUMBER     #IMPLIED  -- position in tabbing order --
+  <a href="../interact/forms.html#adef-accesskey"><samp class="ainst-AREA">accesskey</samp></a>   CDATA      #IMPLIED  -- accessibility key character --
+  &gt;
+</pre>
+</div>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>forbidden</strong></em></p>
+
+<div class="adef-list"><P>
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-shape"><samp class="adef">shape</samp></a> =
+<samp>default|rect|circle|poly</samp>
+<dd>This attribute specifies the shape of a region. Possible values:
+<ul>
+<li><samp>default:</samp> Specifies the entire region.
+<li><samp>rect:</samp> Define a rectangular region.
+<li><samp>circle:</samp> Define a circular region.
+<li><samp>poly:</samp> Define a polygonal region.
+</ul>
+
+<dt><a name="adef-coords"><samp class="adef">coords</samp></a> =
+<em>length-list</em>
+<dd>This attribute specifies the position a shape on the screen. The
+number and order of values depends on the shape being defined. Possible
+combinations:
+<ul>
+<li><samp>rect:</samp> left-x, top-y, right-x, bottom-y.
+<li><samp>circle:</samp> center-x, center-y, radius.
+<li><samp>poly:</samp> x1, y1, x2, y2, ..., xN, yN.
+</ul>
+
+<P>Coordinates are relative to the top, left corner of the object. All
+values are <a href="../lang.html#type-length">lengths</a> (they may
+be pixel values or percentages of the image size).
+
+<dt><a name="adef-nohref"><samp class="adef">nohref</samp></a>
+<dd>When set, this boolean attribute specifies that a region has no
+associated link. 
+</dl>
+</div>
+
+<div class="aref-list"><P>
+<em>Attributes defined elsewhere</em> 
+<ul>
+<li><a href="global.html#adef-id"><samp class="ainst">id</samp></a>, <a href="global.html#adef-class"><samp class="ainst">class</samp></a>
+    (<a href="../struct/global.html#id-and-class">document-wide
+	   identifiers</a>) 
+<li><a href="global.html#adef-title"><samp class="ainst">title</samp></a> (<a
+	     href="../struct/global.html#titles">element
+	     titles</a>) 
+<li><a href="dirlang.html#adef-lang"><samp class="ainst">lang</samp></a> (<a
+    href="../struct/dirlang.html#language-info">language
+    information</a>), <a href="dirlang.html#adef-dir"><samp class="ainst">dir</samp></a> 
+    (<a href="../struct/dirlang.html#bidirection">text direction</a>)
+<li><a href="global.html#adef-title"><samp class="ainst">title</samp></a> (<a
+	     href="../struct/global.html#titles">element
+	     titles</a>) 
+<li><a href="../present/styles.html#adef-style"><samp class="ainst">style</samp></a> (<a 
+    href="../present/styles.html#style-element">inline style
+    information</a>) 
+<li><a href="../interact/forms.html#adef-name-INPUT"><samp class="ainst-INPUT">name</samp></a> (<a
+	      href="../interact/forms.html#submit-format">submitting
+	      objects with forms</a>)
+<li><a href="objects.html#adef-alt"><samp class="ainst">alt</samp></a> (<a
+		href="#alternate-text">alternate text</a>)
+<li><a href="links.html#adef-href"><samp class="ainst">href</samp></a> (<a href="links.html#edef-A">
+anchor reference</a>)
+<a href="../present/frames.html#adef-target"><samp class="ainst">target</samp></a> (<a
+href="../present/frames.html#target-info">frame target
+information</a>)
+<li><a href="../interact/forms.html#adef-tabindex"><samp class="ainst">tabindex</samp></a> (<a
+href="../interact/forms.html#tabbing-navigation">tabbing navigation</a>)
+<li><a href="../interact/forms.html#adef-accesskey"><samp class="ainst">accesskey</samp></a> (<a
+href="../interact/forms.html#access-keys">access keys</a>)
+<li><a href="objects.html#adef-shape"><samp class="ainst">shape</samp></a>, <a href="objects.html#adef-coords"><samp
+class="ainst">coords</samp></a> (<a href="#include-maps">image maps</a>)
+</ul>
+</div>
+
+<div class="example"><P>
+
+In the following example, we create a client-side image map for the
+<a href="objects.html#edef-IMG"><samp class="einst">IMG</samp></a> element with <a href="objects.html#edef-MAP"><samp
+class="einst">MAP</samp></a> and <a href="objects.html#edef-AREA"><samp class="einst">AREA</samp></a>. We
+associate the image and the image map by (1) naming the image map with
+the <a href="../interact/forms.html#adef-name-INPUT"><samp class="ainst-INPUT">name</samp></a> attribute of the <a href="objects.html#edef-MAP"><samp
+class="einst">MAP</samp></a> element and (2) designating that map
+by setting the <a href="objects.html#adef-usemap"><samp class="ainst">usemap</samp></a>
+attribute on the <a href="objects.html#edef-IMG"><samp class="einst">IMG</samp></a> element.
+
+<pre>
+&lt;IMG src="navbar1.gif" usemap="#map1"&gt;&lt;/IMG&gt;
+
+&lt;MAP name="map1"&gt;
+ &lt;AREA href="guide.html" 
+          alt="Access Guide" 
+          shape="rect" 
+          coords="0,0,118,28"&gt;
+ &lt;AREA href="search.html" 
+          alt="Search" 
+          shape="rect" 
+          coords="184,0,276,28"&gt;
+ &lt;AREA href="shortcut.html" 
+          alt="Go" 
+          shape="circ"
+          coords="184,200,60"&gt;
+ &lt;AREA href="top10.html" 
+          alt="Top Ten" 
+          shape="poly" 
+          coords="276,0,373,28,50,50,276,0"&gt;
+&lt;/MAP&gt;
+</pre>
+
+<P>If two or more defined regions overlap, the region defined first takes
+precedence (i.e., responds to user input).
+</div>
+
+<div class="note"><P>
+<em>Note: <a href="objects.html#edef-MAP"><samp class="einst">MAP</samp></a> is not backwards compatible with HTML
+2.0 user agents.</em>
+</div>
+
+<H4>Client-side image maps for <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a>
+with <a href="objects.html#adef-shapes"><samp class="ainst-OBJECT">shapes</samp></a><a name="h-14.5.1.3">&nbsp;</a></H4>
+
+<div class="adef-list"><P>
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-shapes"><samp class="adef">shapes</samp></a>
+<dd>When set, this boolean attribute specifies that the element
+has an image map and that its contents
+must contain the geometric descriptions of the active regions.
+</dl>
+</div>
+
+<P>The second way to specify a client-side image map for an <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> element is for the author to set the <a href="objects.html#adef-shapes"><samp
+class="ainst-OBJECT">shapes</samp></a> attribute and then to define the
+image map within the element's content. Each region of the image map
+is specified by a link (the <a href="links.html#edef-A"><samp class="einst">A</samp></a> element) that
+has an associated geometric shape (via the <a href="objects.html#adef-shape"><samp
+class="ainst">shape</samp></a> attribute). The presence of the <a href="objects.html#adef-shapes"><samp
+class="ainst">shapes</samp></a> attribute implies that user agents must
+parse the contents of the element to look for anchors.
+
+
+<div class="example"><P>
+In the following example, we create a client-side image map for the
+<a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a> element by associating URLs with
+regions specified by a series of <a href="links.html#edef-A"><samp class="einst">A</samp></a> elements.
+<pre>
+&lt;OBJECT data="navbar.gif" shapes&gt;
+ &lt;A href="guide.html" shape="rect" coords="0,0,118,28"&gt;Access Guide&lt;/a&gt; |
+ &lt;A href="shortcut.html" shape="rect" coords="118,0,184,28"&gt;Go&lt;/A&gt; |
+ &lt;A href="search.html" shape="circ" coords="184,200,60"&gt;Search&lt;/A&gt; |
+ &lt;A href="top10.html" shape="poly" coords="276,0,373,28,50,50,276,0"&gt;Top Ten&lt;/A&gt;
+&lt;/OBJECT&gt;
+</pre>
+</div>
+
+<h3><a name="h-14.5.2">14.5.2</a> Server-side image maps</h3>
+Server-side image maps may be interesting in cases where the image
+map is too complicated for a client-side image map.
+
+<P>It is only possible to define a server-side image map for the <a href="objects.html#edef-IMG"><samp
+class="einst">IMG</samp></a> and <a href="../interact/forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> elements
+(using <a href="objects.html#edef-MAP"><samp class="einst">MAP</samp></a> and <a href="objects.html#edef-AREA"><samp
+class="einst">AREA</samp></a>).
+
+<P>In the case of <a href="objects.html#edef-IMG"><samp class="einst">IMG</samp></a>, the <a href="objects.html#edef-IMG"><samp
+class="einst">IMG</samp></a> must be enclosed by an <a href="links.html#edef-A"><samp
+class="einst">A</samp></a> element. 
+
+<P>In the case of <a href="../interact/forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>, the <a href="../interact/forms.html#edef-INPUT"><samp
+class="einst">INPUT</samp></a> must be of type "image". 
+
+<P>In both cases, the boolean attribute <a name="adef-ismap"><samp
+class="adef">ismap</samp></a> on the element must be set.
+
+<P>When the user activates the link by clicking on the image, the screen
+coordinates are sent directly to the server where the document
+resides. Screen coordinates are expressed as screen pixel values relative
+to the image. For normative information about the definition of a pixel and
+how to scale it, please consult <a rel="biblioentry"
+href="../references.html#ref-CSS1">[CSS1]</a>.
+
+<div class="example"><P> 
+In the following example, the active region defines a server-side
+link. Thus, a click anywhere on the image will cause the click's
+coordinates to be sent to the server.
+<pre>
+  &lt;A href="http://www.acme.com/cgi-bin/competition"&gt;
+        &lt;IMG src="game.gif" ismap&gt;&lt;/A&gt;
+</pre>
+</div>
+
+<P>The location clicked is passed to the server as follows. The user agent
+derives a new URL from the URL specified by the <a href="links.html#adef-href"><samp
+class="ainst">href</samp></a> attribute of the <a href="links.html#edef-A"><samp class="einst">A</samp></a>
+element, by appending `?' followed by the x and y coordinates, separated by
+a comma. The link is then followed using the new URL. For instance, in the
+given example, if the user clicks at at the location x=10, y=27 then the
+derived URL is "http://www.acme.com/cgi-bin/competition?10,27".
+
+<h2><a name="h-14.6">14.6</a> <a name="visual">Visual presentation of images, objects, and
+applets</a></h2>
+
+<em>All <a href="objects.html#edef-IMG"><samp class="einst">IMG</samp></a> and <a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a>
+attributes that concern visual alignment and presentation have been
+deprecated in favor of style sheets.</em> 
+
+<H3><a name="h-14.6.1">14.6.1</a> <a name="img-wh">Width and height</a></H3> 
+
+<P>When specified, the <a name="adef-height-IMG"><samp
+class="adef">height</samp></a> and <a name="adef-width-IMG"><samp
+class="adef">width</samp></a> attributes for the <a href="objects.html#edef-IMG"><samp
+class="einst">IMG</samp></a>, <a href="objects.html#edef-APPLET"><samp class="einst">APPLET</samp></a>, and <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a> elements tell user agents to override the
+natural image size and scale the image to this width and height.
+
+<p> Both attributes take values of type <a
+href="../lang.html#type-length"><em>length</em></a>. User agents
+should do their best to scale an object or image to match the 
+width and height specified by the author.
+
+<P>At the same time, the <a href="objects.html#adef-height-IMG"><samp class="ainst-IMG">height</samp></a> and <a href="objects.html#adef-width-IMG"><samp
+class="ainst-IMG">width</samp></a> attributes give user agents an idea of the
+size of an image or object so that they may reserve space for it and
+continue rendering the document while waiting for the image data.
+
+<H3><a name="h-14.6.2">14.6.2</a> White space around images and objects</H3>
+
+<p>The <a name="adef-vspace"><samp class="adef">vspace</samp></a> and
+<a name="adef-hspace"><samp class="adef">hspace</samp></a> attributes
+specify the amount of white space to be inserted to the left and right
+(hspace) and above and below (vspace) an <a href="objects.html#edef-IMG"><samp
+class="einst">IMG</samp></a>, <a href="objects.html#edef-APPLET"><samp class="einst">APPLET</samp></a>, <a href="objects.html#edef-OBJECT"><samp
+class="einst">OBJECT</samp></a>.  The default value for these attributes is
+not specified, but is generally a small, non-zero length. Both
+attributes take values of type <a
+href="../lang.html#type-length"><em>length</em></a>.
+
+<H3><a name="h-14.6.3">14.6.3</a> Borders</H3>
+
+<P>An image or object may be surrounded by a border (e.g., when a
+border is specified by the user or when the image is the content of an
+<a href="links.html#edef-A"><samp class="einst">A</samp></a> element). 
+
+<P>The <a name="adef-border-IMG"><samp class="adef">border</samp></a>
+attribute specifies the width of this border in pixels. The default
+value for this attribute depends on the user agent.
+
+<h3><a name="h-14.6.4">14.6.4</a> <a name="alignment">Alignment</a></h3> 
+
+<P>The <a name="adef-align-IMG"><samp class="adef">align</samp></a>
+attribute specifies the position of an <a href="objects.html#edef-IMG"><samp class="einst">IMG</samp></a>,
+<a href="objects.html#edef-OBJECT"><samp class="einst">OBJECT</samp></a>, or <a href="objects.html#edef-APPLET"><samp
+class="einst">APPLET</samp></a> with respect to its context.
+
+<P>The following values for <a href="objects.html#adef-align-IMG"><samp class="ainst-IMG">align</samp></a>
+concern the object's position with respect to surrounding text:
+
+<ul>
+<li><samp>bottom:</samp> means that the bottom of the object should be
+vertically aligned with the current baseline. This is the default
+value. 
+<li><samp>middle:</samp> means that the center of the object should be
+vertically aligned with the current baseline.
+<li><samp>top:</samp> means that the top of the object should be
+vertically aligned with the top of the current text line.
+</ul>
+
+<P>Two other values, <samp>left</samp> and <samp>right</samp>, cause
+the image to float to the current left or right margin. They are
+discussed in the section on <a
+href="../present/graphics.html#floating">floating objects</a>.
+
+<div class="note"><P>
+<em><strong>Differing interpretations of align.</strong>
+User agents vary in their interpretation of the <a href="objects.html#adef-align-IMG"><samp
+class="ainst-IMG">align</samp></a> attribute. Some only take into account what
+has occurred on the text line prior to the element, some take into
+account the text on both sides of the element.</em>
+</div>
+
+<h2><a name="h-14.7">14.7</a> <a name="alternate-text">How to specify alternate text</a></h2>
+<div class="adef-list"><P>
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-alt"><samp class="adef">alt</samp></a>  = <a href="../lang.html#type-cdata"><em>cdata</em></a>
+<dd>For user agents that cannot display images, forms, or applets,
+this attribute specifies alternate text. The language of the alternate
+text is specified by the <a href="dirlang.html#adef-lang"><samp class="ainst">lang</samp></a> attribute.
+</dl>
+</div>
+
+<P>Several non-textual elements (<a href="objects.html#edef-IMG"><samp class="einst">IMG</samp></a>, <a href="objects.html#edef-AREA"><samp
+class="einst">AREA</samp></a>, <a href="objects.html#edef-APPLET"><samp class="einst">APPLET</samp></a>, and
+<a href="../interact/forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>) require authors to specify alternate
+text to serve as content when the element cannot be rendered
+normally. Specifying alternate text assists users without graphic
+display terminals, users whose browsers don't support forms,
+visually impaired users, those who use speech synthesizers, those who
+have configured their graphical user agents not to display images,
+etc.
+
+<P>The <a href="objects.html#adef-alt"><samp class="ainst">alt</samp></a> attribute must be specified for
+the <a href="objects.html#edef-IMG"><samp class="einst">IMG</samp></a> and <a href="objects.html#edef-AREA"><samp class="einst">AREA</samp></a>
+elements. It is optional for the <a href="../interact/forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> and
+<a href="objects.html#edef-APPLET"><samp class="einst">APPLET</samp></a> elements.
+
+<P>While alternate text may be very helpful, it must be handled with
+care. Authors should observe the following guidelines:
+
+<ul>
+<li>Do not specify meaningless alternate text when including images
+intended to <em>format</em> a page. In this case, the alternate text
+should be the empty string (""). In any case, authors should not use
+images to format pages; style sheets should be used instead.
+
+<li>Do not specify meaningless alternate text (e.g., "dummy
+text"). Not only will this frustrate users, it will slow down user
+agents that must convert text to speech or braille output.
+</ul>
+
+<P>Implementors should consult the section on <a
+href="../appendix/notes.html#altgen">generating alternate text</a> for
+information about how to handle cases of omitted alternate text.
+
+<div class="navbar">
+<hr><center><a href="links.html">previous</a> &nbsp; <a href="../present/styles.html">next</a> &nbsp; <a href="../cover.html#toc">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center></div>
+</body>
+</html>
