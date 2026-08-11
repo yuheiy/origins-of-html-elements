@@ -1119,3 +1119,11 @@ WHATWGの版履歴、時間指定テキスト提案、編集者のフィード�
 1995年のHTML国際化草案、スタイル議論、W3Cスタイル草案、RFC 2070を再調査した。8月15日の国際化草案revision 00はUnicode方向埋め込みを専用`BIDI DIR`で表したが、9月25日のrevision 01はこの機能を`SPAN DIR`へ移し、`LANG`と双方向属性を置く適切な要素がない行内範囲用の汎用コンテナーへ拡張した。12月5日にMichael J Hannahがスタイル草案の新`C`要素を廃して国際化`SPAN`を再利用する案を提出し、翌年1月のW3Cスタイル草案とRFC 2070を経てHTML 4へ統合された。これにより直前祖先と国際化・スタイル両枝を接続し、優先調査を完了した。確度Aは維持した。新しいRawは追加せず、Raw索引は602ファイルのままである。
 
 初回探索と分離した敵対的検証では、revision 00の`BIDI DIR`とrevision 01の`SPAN DIR`、汎用コンテナーの用途説明、DTD、Unicode LRE／RLE／PDFとの対応を比較した。スタイル枝では、新`C`を残す案や全要素の`STYLE`属性という代替案を含む1995年12月の議論と1996年1月草案を照合し、`SPAN`をCSS専用の発明とはしていない。IETF Datatrackerの版履歴、IETFメールアーカイブ、W3C公開`www-html`メール検索では、`BIDI DIR`からの変更と`SPAN`名を決めた個人または草案外の具体的な議論を確認できなかった。対象リントでは、`span`のフロントマター、必須見出し順、5行の証拠表、歴史的主張と出典の対応、README概要、統合ページの命名未解決一覧・優先調査キュー、Raw索引の602ファイル網羅、Markdown whitespaceを`合格`、直前祖先と導入経路を`修正済み`、命名者と草案外の議論を`Research必要`として確認した。変更した知識ページは敵対的検証と対象リントに合格したため`完成`とした。
+
+## [2026-08-12] research | `noscript`の追加区間と代替内容への一般化
+
+W3Cの連続するスクリプティング草案、HTML 4.0 First Public Working Draft、Netscape Navigator資料を再調査した。1996年1月24日のW3C草案はCharlie Kindelの初稿を介してNetscapeのJavaScript拡張から派生し、Navigator 2.0 betaの`SCRIPT`を正式化すると明記するが、`NOSCRIPT`は定義しない。6月27日版にも存在せず、7月9日版が旧式ブラウザーへの更新呼びかけとして初めて定義した。1997年3月版はこの説明を維持したが、7月8日のHTML 4.0 FPWDはスクリプトが実行されない場合の一般的な代替内容コンテナーへ説明を変更し、動的データを取得するリンクの例を追加した。これにより草案間の追加区間と機能一般化を確認し、`noscript`を優先調査キューから外した。Navigator 3.0実装との前後・採録因果を確認できないため確度Bは維持した。
+
+追加したRawの取得記録は次のとおりである。`https://www.w3.org/TR/WD-html40-970708/interact/scripts.html`、リダイレクトなし、2026-08-11T15:08:18.447Z、`raw/www.w3.org/TR/WD-html40-970708/interact/scripts.html`。Raw索引を603ファイルで再生成した。
+
+初回探索と分離した敵対的検証では、Netscape由来を明記する1996年1月草案、6月27日版、7月9日版、1997年3月版、HTML 4.0 FPWD、HTML 4.01、Netscape Navigator 2.0 handbook、Navigator 3.0のJavaScript GuideとHTML Referenceを再照合した。Navigator 2.0を直接祖先とする説明は、当時のW3C草案に`NOSCRIPT`がなくNetscape参照がNavigator 3.0の機能とするため否定した。W3C公開メール検索と保存済みNetscape資料では、6月27日から7月9日までの提案者、Navigator 3.0 betaの初回実装日、W3C案との採録因果を確認できなかった。対象リントでは、`noscript`のフロントマター、必須見出し順、8行の証拠表、歴史的主張と出典の対応、README概要、統合ページの確度集計・直前祖先一覧・優先調査キュー、変更ページのローカルMarkdownリンク、Raw索引の603ファイル網羅と再生成一致、Markdown whitespaceを`合格`、草案間の追加区間と一般化を`修正済み`、提案者、実装日、採録因果を`Research必要`として確認した。変更した知識ページは敵対的検証と対象リントに合格したため`完成`とした。

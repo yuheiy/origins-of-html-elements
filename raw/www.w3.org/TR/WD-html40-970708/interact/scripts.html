@@ -1,0 +1,711 @@
+<!-- $Id: scripts.src,v 1.29 1997/07/08 09:48:55 lehors Exp $ -->
+<head>
+<title>Scripts in HTML documents</title>
+<LINK rel="prev" SRC="forms.html">
+<LINK rel="next" SRC="../sgml/sgmltop.html">
+<LINK rel="STYLESHEET" href="../style/default.css" type="text/css">
+</head>
+<body>
+<div class="navbar">
+<center><a href="forms.html">previous</a> &nbsp; <a href="../sgml/sgmltop.html">next</a> &nbsp; <a href="../contents.html">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center><hr>
+</div>
+
+<H1 align="center"><a name="scripts">Scripts</a><!-- Animated Documents and
+Smart Forms --><a name="h-9.2">&nbsp;</a></H1>
+<div class="subtoc"><p><strong>Contents</strong>
+<ol>
+<li><a href="scripts.html#h-9.2.1">Designing documents for user agents that support scripting</a>
+<ol>
+<li><a href="scripts.html#h-9.2.1.1">The <samp class="einst2">SCRIPT</samp> element</a>
+<li><a href="scripts.html#h-9.2.1.2">Specifying the scripting language</a>
+<li><a href="scripts.html#h-9.2.1.3">Syntax of script content</a>
+<li><a href="scripts.html#h-9.2.1.4">Intrinsic events</a>
+<li><a href="scripts.html#h-9.2.1.5">Dynamic modification of documents</a>
+</ol>
+<li><a href="scripts.html#h-9.2.2">Designing documents for user agents that don't support scripting</a>
+<ol>
+<li><a href="scripts.html#h-9.2.2.1">The <samp class="einst2">NOSCRIPT</samp>
+    element</a>
+<li><a href="scripts.html#h-9.2.2.2">Commenting out scripts</a>
+</ol>
+</ol>
+</div>
+
+A client-side <dfn>script</dfn> is a program that may accompany an
+HTML document or be embedded directly in it. The program executes on
+the client's machine when the document loads, or at some other time
+such as when a link is activated.  HTML's support for scripts is
+independent of the scripting language.
+
+<P>Scripts offer authors a means to extend HTML document in highly
+	active and interactive ways. For example:
+
+<ul>
+<li>Scripts may be evaluated as a document loads to modify the
+	  contents of the document dynamically.
+<li>Scripts may accompany a form to process input as it is
+	  entered. Designers may dynamically fill out parts of a form
+	  based on the values of other fields. They may also
+          ensure that input data conforms
+	  to predetermined ranges of values, that fields are mutually
+	  consistent, etc.
+<li>Scripts may be triggered by events that affect the document, such
+	  as loading, unloading, element focus, mouse movement, etc.
+<li>Scripts may be linked to form controls (e.g., buttons) to produce
+	  graphical user interface elements.
+</ul>
+
+<P>There are two types of scripts authors may attach to an HTML document:
+
+<ul>
+<li>Those that are executed one time when the document is loaded by
+the user agent. Scripts that appear within a <a href="scripts.html#edef-SCRIPT"><samp
+class="einst">SCRIPT</samp></a> element are executed when the document is
+loaded. For user agents that cannot or will not handle scripts,
+authors may include alternate content via the <a href="scripts.html#edef-NOSCRIPT"><samp
+class="einst">NOSCRIPT</samp></a> element.  
+
+<li>Those that are executed every time a specific event occurs. These
+scripts may be assigned to a number of elements via the <a
+href="#events">intrinsic event</a> attributes.
+</ul>
+
+<div class="note"><P>
+<em>Note: This specification includes more detailed information about
+scripting in sections on <a
+href="../appendix/notes.html#notes-scripting">script macros</a>.</em>
+</div>
+
+
+<h2>Designing documents for user agents that support scripting<a name="h-9.2.1">&nbsp;</a></h2>
+<p>The following sections discuss issues that concern user agents that
+      support scripting.
+
+<h3>The <a name="edef-SCRIPT"><samp class="edef">SCRIPT</samp></a> element<a name="h-9.2.1.1">&nbsp;</a></h3>
+<pre class="dtd-fragment">
+    
+&lt;!ELEMENT <a href="scripts.html#edef-SCRIPT"><samp class="einst">SCRIPT</samp></a> - - CDATA      -- script statements --&gt;
+&lt;!ATTLIST SCRIPT
+  <a href="scripts.html#adef-type-SCRIPT"><samp class="ainst-SCRIPT">type</samp></a>        CDATA      #IMPLIED  -- Internet content type for
+                                      script language --
+  <a href="scripts.html#adef-language"><samp class="ainst-SCRIPT">language</samp></a>    CDATA      #IMPLIED  -- predefined script language name --
+  <a href="scripts.html#adef-src-SCRIPT"><samp class="ainst-SCRIPT">src</samp></a>         %URL       #IMPLIED  -- URL for an external script --
+  &gt;
+</pre>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+<div class="adef-list"><P>
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-type-SCRIPT"><samp class="adef">type</samp></a> = <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd>This attribute specifies the scripting language of the contents of
+	    this element. The value must be an Internet Media
+	    Type. There is no default value for this attribute.
+
+<dt><a name="adef-language"><samp class="adef">language</samp></a> = <a href="../types.html#type-cdata"><em>cdata</em></a>
+<dd><strong>Deprecated.</strong>This attribute specifies the scripting
+	    language of the contents of this element. Its value is an
+	    identifier for the language, but since these identifiers
+	    are not standard, this attribute has been deprecated in
+	    favor of <a href="forms.html#adef-type"><samp class="ainst">type</samp></a>. 
+
+<dt><a name="adef-src-SCRIPT"><samp class="adef">src</samp></a> = <a href="../types.html#type-url"><em>url</em></a>
+<dd>This attribute specifies the location of an external script.
+</dl>
+</div>
+
+<P>The <a href="scripts.html#edef-SCRIPT"><samp class="einst">SCRIPT</samp></a> element places a script
+within a document. This element may appear any number of times in the
+	<a href="../struct/global.html#edef-HEAD"><samp class="einst">HEAD</samp></a> or <a href="../struct/global.html#edef-BODY"><samp
+	  class="einst">BODY</samp></a> of an HTML document. 
+
+<P>The script may be defined within the contents of the <a href="scripts.html#edef-SCRIPT"><samp
+class="einst">SCRIPT</samp></a> element or in an external file. If the
+<a href="forms.html#adef-src"><samp class="ainst">src</samp></a> attribute is not set, user agents
+must interpret the contents of the element as the script. If the
+<a href="forms.html#adef-src"><samp class="ainst">src</samp></a> has a URL value, user agents must
+ignore the element's contents and retrieve the script via the URL.
+
+<P>Scripts are evaluated by <em>script engines</em> that must be known
+	to a user agent. 
+
+<h3>Specifying the scripting language<a name="h-9.2.1.2">&nbsp;</a></h3>
+<p>As HTML does not rely on a specific scripting language, document
+      authors must explicitly tell user agents the language of each
+      script. This may be done either through a default declaration or
+      a local declaration.
+
+<P>Documents that contain neither a default scripting language
+declaration nor a local one for a <a href="scripts.html#edef-SCRIPT"><samp class="einst">SCRIPT</samp></a>
+element are incorrect. User agents may still try to interpret the
+script but are not required to.
+
+<h4><a name="default-script">The default scripting language</a><a name="h-9.2.1.2.1">&nbsp;</a></h4>
+
+<p>To specify the default scripting language for all scripts in a
+document include the following <a href="../struct/global.html#edef-META"><samp class="einst">META</samp></a>
+declaration in the <a href="../struct/global.html#edef-HEAD"><samp class="einst">HEAD</samp></a> of a document:
+
+<pre>
+&lt;META http-equiv="Content-Script-Type" content="type"&gt;
+</pre>
+
+<P>where "type" is an Internet Media Type (see <a rel="biblioentry"
+href="../references.html#ref-MIMETYPES">[MIMETYPES]</a>) naming the
+scripting language. Examples of values include "text/tcl",
+"text/javascript", "text/vbscript". See <a rel="biblioentry"
+href="../references.html#ref-MIMETYPES">[MIMETYPES]</a> for a
+complete list of valid scripting language types.
+
+<p>In the absence of a <a href="../struct/global.html#edef-META"><samp class="einst">META</samp></a> declaration,
+the default can be set by a "Content-Script-Type" HTTP header.
+
+<pre>
+    Content-Script-Type: type
+</pre>
+
+<p>where "type" is again an Internet Media Type naming the scripting
+	language. 
+
+<P>When several HTTP headers and <a href="../struct/global.html#edef-META"><samp class="einst">META</samp></a>
+elements occur, the last one defines the default scripting
+language. For our purposes, HTTP headers are considered to occur
+earlier than the document HEAD.
+	
+<h4>Local declaration of a scripting language<a name="h-9.2.1.2.2">&nbsp;</a></h4>
+<p>It is also possible to specify the scripting language in each <a href="scripts.html#edef-SCRIPT"><samp
+	class="einst">SCRIPT</samp></a> element via the <a href="forms.html#adef-type"><samp
+	class="ainst">type</samp></a> attribute. 
+
+In the absence of a default scripting language specification, this
+      attribute must be set on each <a href="scripts.html#edef-SCRIPT"><samp
+	class="einst">SCRIPT</samp></a> element. When a default scripting
+      language has been specified, the <a href="forms.html#adef-type"><samp class="ainst">type</samp></a>
+      attribute overrides it. 
+
+<div class="example"><P>
+In this example, we declare the default scripting language to be
+	"text/tcl". We include one <a href="scripts.html#edef-SCRIPT"><samp class="einst">SCRIPT</samp></a>
+	in the header, whose script is located in an external file and
+	is in the scripting language "text/vbscript". We also include
+	one <a href="scripts.html#edef-SCRIPT"><samp class="einst">SCRIPT</samp></a> in the body, which
+	contains its own script written in "text/javascript".
+<pre>
+&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;META http-equiv="Content-Script-Type" content="text/tcl"&gt;
+&lt;SCRIPT type="text/vbscript" src="http://someplace.com/progs/vbcalc"&gt;
+&lt;/SCRIPT&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;SCRIPT type="text/javascript"&gt;
+<em>...some JavaScript...</em>
+&lt;/SCRIPT&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
+</div>
+
+<h4>References to HTML elements from a script<a name="h-9.2.1.2.3">&nbsp;</a></h4>
+<p>Each scripting language has its own conventions for referring to HTML
+objects from within a script. This specification does not define a
+      standard mechanism for referring to HTML objects.
+
+<P>However, scripts should refer to an element according to its
+assigned name. Scripting engines should observe the following
+precedence rules when identifying an element: a <samp
+class="ainst">name</samp> attribute takes precedence over a <a href="../struct/global.html#adef-id"><samp
+class="ainst">id</samp></a> if both are set. Otherwise, one or the other
+may be used.
+
+<h3>Syntax of script content<a name="h-9.2.1.3">&nbsp;</a></h3>
+<p>The content of the <a href="scripts.html#edef-SCRIPT"><samp class="einst">SCRIPT</samp></a> element is a
+script, and as such, must not be evaluated by the user agent as HTML
+markup. The user agent must pass it on as data to a script engine.
+
+<P>HTML parsers must be able to recognize script data as beginning 
+immediately after the  start tag and ending as soon as
+	the ETAGO ("&lt;/") delimiters are followed by a name
+	character ([a-zA-Z]). The script data does not necessarily end
+	with the &lt;/SCRIPT&gt; end tag, but is terminated by any 
+        "&lt;/" followed by a name character.
+
+<P>Consequently, any HTML markup that is meant to be sent to a script
+engine (which may do whatever it wants with the markup) must be
+"escaped" so as not to confuse the HTML parser. Designers of each
+scripting language should recommend language-specific support for
+resolving this issue.
+
+
+<div class="illegal-example"><P>
+<span class="example-title">ILLEGAL EXAMPLE:</span><br>
+The following code is invalid due the to presence of the
+	"&lt;/EM&gt;" characters found inside of the <a href="scripts.html#edef-SCRIPT"><samp
+	  class="einst">SCRIPT</samp></a> element:
+
+<pre>
+    &lt;SCRIPT type="text/javascript"&gt;
+      document.write ("&lt;EM&gt;This won't work&lt;/EM&gt;")
+    &lt;/SCRIPT&gt;
+</pre>
+
+<p>A conforming parser must treat the "&lt;/EM&gt;" data as the end of
+	script data, which is clearly not what the author intended.
+
+<p>In JavaScript, this code can be expressed legally by
+ensuring that the apparent ETAGO delimiter does not appear
+immediately before an SGML name start character:
+
+<pre>
+    &lt;SCRIPT type="text/javascript"&gt;
+      document.write ("&lt;EM&gt;This will work&lt;\/EM&gt;")
+    &lt;/SCRIPT&gt;
+</pre>
+
+<p>In Tcl, one may accomplish this as follows:
+
+<pre>
+    &lt;SCRIPT type="text/tcl"&gt;
+      document write "&lt;EM&gt;This will work&lt;\/EM&gt;"
+    &lt;/SCRIPT&gt;
+</pre>
+
+<p>In VBScript, the problem may be avoided with the <tt>Chr()</tt>
+function:
+
+<pre>    
+    "&lt;EM&gt;This will work&lt;\" &amp; Chr(47) + "EM&gt;"
+</pre>
+</div>
+<!-- " -->
+
+<h3><a name="events">Intrinsic events</a><a name="h-9.2.1.4">&nbsp;</a></h3>
+<div class="adef-list"><P>
+<em>Attribute definitions</em><dl>
+
+<dt><a name="adef-onload"><samp class="adef">onload</samp></a> = <em>script</em>
+<dd>The <samp>onload</samp> event occurs when the user agent finishes
+	    loading a window or all frames within a <a href="../present/frames.html#edef-FRAMESET"><samp
+	      class="einst">FRAMESET</samp></a>. This attribute may 
+	    be used with <a href="../struct/global.html#edef-BODY"><samp class="einst">BODY</samp></a> and <a href="../present/frames.html#edef-FRAMESET"><samp
+	      class="einst">FRAMESET</samp></a> elements.
+
+<dt><a name="adef-onunload"><samp class="adef">onunload</samp></a> = <em>script</em>
+<dd>The <samp>onunload</samp> event occurs when the user agent removes
+	    a document from a window or frame. This attribute may 
+	    be used with <a href="../struct/global.html#edef-BODY"><samp class="einst">BODY</samp></a> and <a href="../present/frames.html#edef-FRAMESET"><samp
+	      class="einst">FRAMESET</samp></a> elements.
+
+<dt><a name="adef-onclick"><samp class="adef">onclick</samp></a> = <em>script</em>
+<dd>The <samp>onclick</samp> event occurs when the pointing device button
+	    is clicked over an element. This attribute may be used with most
+	    elements.
+
+<dt><a name="adef-ondblclick"><samp class="adef">ondblclick</samp></a> = <em>script</em>
+<dd>The <samp>ondblclick</samp> event occurs when the pointing device button
+	    is double clicked over an element. This attribute may be used with
+	    most elements.
+
+<dt><a name="adef-onmousedown"><samp class="adef">onmousedown</samp></a> = <em>script</em>
+<dd>The <samp>onmousedown</samp> event occurs when the pointing device button
+	    is pressed over an element. This attribute may be used with most
+	    elements.
+
+<dt><a name="adef-onmouseup"><samp class="adef">onmouseup</samp></a> = <em>script</em>
+<dd>The <samp>onmouseup</samp> event occurs when the pointing device button
+	    is released over an element. This attribute may be used with most
+	    elements.
+
+<dt><a name="adef-onmouseover"><samp class="adef">onmouseover</samp></a> = <em>script</em>
+<dd>The <samp>onmouseover</samp> event occurs when the pointing device
+	    is moved over an element. This attribute may be used with most
+	    elements.
+
+<dt><a name="adef-onmousemove"><samp class="adef">onmousemove</samp></a> = <em>script</em>
+<dd>The <samp>onmousemove</samp> event occurs when the pointing device
+	    is moved over an element. This attribute may be used with most
+	    elements.
+
+<dt><a name="adef-onmouseout"><samp class="adef">onmouseout</samp></a> = <em>script</em>
+<dd>The <samp>onmouseout</samp> event occurs when the pointing device
+	    is moved away from an element. This attribute may be used with
+	    most elements.
+
+<dt><a name="adef-onfocus"><samp class="adef">onfocus</samp></a> = <em>script</em>
+<dd>The <samp>onfocus</samp> event occurs when an element receives
+	    focus either by the pointing device or by tabbing
+	    navigation. This attribute may be used with the following
+	    elements: <a href="forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a>, <a href="forms.html#edef-INPUT"><samp
+	      class="einst">INPUT</samp></a>, <a href="forms.html#edef-SELECT"><samp
+	      class="einst">SELECT</samp></a>, <a href="forms.html#edef-TEXTAREA"><samp
+	      class="einst">TEXTAREA</samp></a>, and <a href="forms.html#edef-BUTTON"><samp
+	      class="einst">BUTTON</samp></a>.
+
+<dt><a name="adef-onblur"><samp class="adef">onblur</samp></a> = <em>script</em>
+<dd>The <samp>onblur</samp> event occurs when an element loses
+	    focus either by the pointing device or by tabbing
+	    navigation. It may be used with the same elements as
+	    <samp>onfocus</samp>. 
+
+<dt><a name="adef-onkeypress"><samp class="adef">onkeypress</samp></a> = <em>script</em>
+<dd>The <samp>onkeypress</samp> event occurs when a key is pressed and released
+	    over an element. This attribute may be used with most elements.
+
+<dt><a name="adef-onkeydown"><samp class="adef">onkeydown</samp></a> = <em>script</em>
+<dd>The <samp>onkeydown</samp> event occurs when a key is pressed
+	    down over an element. This attribute may be used with most elements.
+
+<dt><a name="adef-onkeyup"><samp class="adef">onkeyup</samp></a> = <em>script</em>
+<dd>The <samp>onkeyup</samp> event occurs when a key is released
+	    over an element. This attribute may be used with most elements.
+
+<dt><a name="adef-onsubmit"><samp class="adef">onsubmit</samp></a> = <em>script</em>
+<dd>The <samp>onsubmit</samp> event occurs when a form is submitted. It
+	    only applies to the <a href="forms.html#edef-FORM"><samp class="einst">FORM</samp></a> element.
+
+<dt><a name="adef-onreset"><samp class="adef">onreset</samp></a> =
+<em>script</em> 
+<dd>The <samp>onreset</samp> event occurs when a form
+is reset. It only applies to the <a href="forms.html#edef-FORM"><samp class="einst">FORM</samp></a>
+element.
+
+<dt><a name="adef-onselect"><samp class="adef">onselect</samp></a> = <em>script</em>
+<dd>The <samp>onselect</samp> event occurs when a user selects some
+	    text in a text field. This attribute may be used with the
+	    <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a> and <a href="forms.html#edef-TEXTAREA"><samp
+	      class="einst">TEXTAREA</samp></a> elements. 
+
+<dt><a name="adef-onchange"><samp class="adef">onchange</samp></a> = <em>script</em>
+<dd>The <samp>onchange</samp> event occurs when a control loses the
+	    input focus <em>and</em> its value has been modified since
+	    gaining focus. This attribute applies to the following
+	    elements: <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>, <a href="forms.html#edef-SELECT"><samp
+	      class="einst">SELECT</samp></a>, and <a href="forms.html#edef-TEXTAREA"><samp
+	      class="einst">TEXTAREA</samp></a>. 
+</dl>
+</div>
+
+<P>It is possible to associate an action with a certain number of events
+      that occur when a user interacts with a user agent. Each of the
+	"intrinsic events" listed above takes a value that is a
+	script. The script is executed whenever the event occurs for that
+	element. 
+
+<P>Control elements such as <a href="forms.html#edef-INPUT"><samp class="einst">INPUT</samp></a>, <a href="forms.html#edef-SELECT"><samp
+class="einst">SELECT</samp></a>, <a href="forms.html#edef-BUTTON"><samp class="einst">BUTTON</samp></a>, <a href="forms.html#edef-TEXTAREA"><samp
+class="einst">TEXTAREA</samp></a>, and <a href="forms.html#edef-LABEL"><samp class="einst">LABEL</samp></a>
+all respond to certain intrinsic events. When these elements do not
+	appear within a form, they may be used to augment the
+	graphical user interface of the document.
+
+<P>For instance, designers may want to include press buttons in their
+documents that do not submit a form but still communicate with a
+server when they are activated. 
+
+<P>The following examples show some possible control and user
+	interface behavior based on intrinsic events.
+
+<div class="example"><P>
+In the following example, userName is a required text field. When a
+user attempts to leave the field, the OnBlur event calls a JavaScript
+function to confirm that userName has an acceptable value.
+
+<pre>
+&lt;INPUT NAME="userName" onBlur="validUserName(this.value)"&gt;
+</pre>
+
+<p>Here is another JavaScript example:
+
+<pre>
+&lt;INPUT NAME="num"
+    onChange="if (!checkNum(this.value, 1, 10)) 
+        {this.focus();this.select();} else {thanks()}"
+    VALUE="0"&gt;
+</pre>
+</div>
+
+<div class="example"><P>
+Here is a VBScript example of an event handler for a text field:
+<pre>
+    &lt;INPUT name="edit1" size="50"&gt;    
+    &lt;SCRIPT type="text/vbscript"&gt;
+      Sub edit1_changed()
+        If edit1.value = "abc" Then
+          button1.enabled = True
+        Else
+          button1.enabled = False
+        End If
+      End Sub
+    &lt;/SCRIPT&gt;
+</pre>
+
+<p>Here is the same example using Tcl:
+
+<pre>
+    &lt;INPUT name="edit1" size="50"&gt;
+    &lt;SCRIPT type="text/tcl"&gt;
+      proc edit1_changed {} {
+        if {[edit value] == abc} {
+          button1 enable 1
+        } else {
+          button1 enable 0
+        }
+      }
+      edit1 onChange edit1_changed
+    &lt;/SCRIPT&gt;
+</pre>
+</div>
+
+<div class="example"><P>
+Here is a JavaScript example for event binding within a script. First,
+	here's a simple click handler: 
+
+<pre>    
+&lt;BUTTON type="button" name="mybutton" value="10"&gt;
+&lt;SCRIPT type="text/javascript"&gt;
+      function my_onclick() {
+         . . .
+      }
+    document.form.mybutton.onclick = my_onclick
+ &lt;/SCRIPT&gt;
+ &lt;/BUTTON&gt;
+</pre>
+
+<p>Here's a more interesting window handler:
+
+<pre>    
+&lt;SCRIPT type="text/javascript"&gt;
+      function my_onload() {
+         . . .
+      }
+
+      var win = window.open("some/other/URL")
+      if (win) win.onload = my_onload
+&lt;/SCRIPT&gt;
+</pre>
+
+
+<p>In Tcl this looks like:
+
+<pre>
+ &lt;SCRIPT type="text/tcl"&gt;
+     proc my_onload {} {
+       . . .
+     }
+     set win [window open "some/other/URL"]
+     if {$win != ""} {
+         $win onload my_onload
+     }
+ &lt;/SCRIPT&gt;
+</pre>
+</div>
+
+<div class="note"><P>
+<em>Note that "document.write" or
+equivalent statements in intrinsic event handlers create and write to
+a new document rather than modifying the current one.</em>
+</div>
+
+
+<h4>Parsing of intrinsic event scripts<a name="h-9.2.1.4.1">&nbsp;</a></h4>
+<p>The script attributes for intrinsic events are defined as CDATA. The
+SGML processing of CDATA attribute values requires that (1) entity
+replacement occur within the attribute value; and (2) that the attribute
+value be delimited by matching pairs of double quotes (") or single
+      quotes ('). 
+
+<P>Given these lexical restrictions, the delimiters ('), ("), "&amp;", 
+and "&amp;#" may not occur freely in the value of a script attribute. To
+resolve this issue, we recommend that script event handler
+attributes always use (") delimiters and that occurrences of (") and
+"&amp;" inside an event handler attribute be written as follows:
+
+<pre>
+    '"'  should be written as "&amp;quot;" or as "&amp;#34;"
+    '&'  should be written as "&amp;amp;"  or as "&amp;#38;"
+</pre>
+
+<!-- " -->
+
+<div class="example"><P>
+Thus, for example, one could write:
+<pre>
+ &lt;INPUT name="num" value="0"
+ onChange="if (compare(this.value, &amp;quot;help&amp;quot;)) {gethelp()}"&gt;
+</pre>
+
+<P>SGML permits (') to be included in attribute strings
+quoted by ("), and vice versa. The following is therefore correct:
+<!-- " ' -->
+<pre>
+"this is 'fine'" and 'so is "this"'
+</pre>
+
+<h3>Dynamic modification of documents<a name="h-9.2.1.5">&nbsp;</a></h3>
+Scripts that are executed when a document is loaded may be able to
+	modify the document's contents dynamically. The ability to do
+	so depends on the scripting language itself (e.g., the
+	"document.write" statement in the HTML object model supported
+	by some vendors).
+
+<p>The dynamic modification of a document may be modeled as follows:
+
+<ol>
+<li>All <a href="scripts.html#edef-SCRIPT"><samp class="einst">SCRIPT</samp></a> elements are evaluated in
+	    order as the document is loaded. 
+<li>All script constructs within a given <a href="scripts.html#edef-SCRIPT"><samp
+	      class="einst">SCRIPT</samp></a> element that generate SGML
+	    CDATA are evaluted. Their combined generated text is
+	    inserted in the document in place of the <a href="scripts.html#edef-SCRIPT"><samp
+	      class="einst">SCRIPT</samp></a> element.
+<li>The generated CDATA is re-evaluated. 
+</ol>
+
+<P>HTML documents are constrained to conform to the HTML DTD both
+before and after processing any <a href="scripts.html#edef-SCRIPT"><samp class="einst">SCRIPT</samp></a>
+	  elements.
+
+<div class="example"><P>
+The following example illustrates how scripts may modify
+a document dynamically. The following script:
+
+<pre>
+ &lt;TITLE&gt;Test Document&lt;/TITLE&gt;
+ &lt;SCRIPT type="text/javascript"&gt;
+     document.write("&lt;p&gt;&lt;b&gt;Hello World!&lt;\/b&gt;")
+ &lt;/SCRIPT&gt;
+</pre>
+
+<p>Has the same effect as this HTML markup:
+
+<pre>
+ &lt;TITLE&gt;Test Document&lt;/TITLE&gt;
+ &lt;P&gt;&lt;B&gt;Hello World!&lt;/B&gt;
+</pre>
+</div>
+
+<h2>Designing documents for user agents that don't support scripting<a name="h-9.2.2">&nbsp;</a></h2>
+The following sections discuss issues about lack of support for scripting
+that authors should also consider when designing good HTML documents.
+
+<h3>The <a name="edef-NOSCRIPT"><samp class="edef">NOSCRIPT</samp></a>
+    element<a name="h-9.2.2.1">&nbsp;</a></h3>
+<pre class="dtd-fragment">
+&lt;!ELEMENT <a href="scripts.html#edef-NOSCRIPT"><samp class="einst">NOSCRIPT</samp></a> - - (%block)>
+</pre>
+<p><em>Start tag: <strong>required</strong>, End tag: <strong>required</strong></em></p>
+
+The <a href="scripts.html#edef-NOSCRIPT"><samp class="einst">NOSCRIPT</samp></a> element allows authors to
+      provide alternate content when a script is not executed. 
+The content of a <a href="scripts.html#edef-NOSCRIPT"><samp class="einst">NOSCRIPT</samp></a> element should only
+rendered by a script-aware user agent in the following cases:
+
+<ul>
+<li>The user agent is configured not to evaluate scripts.
+<li>The user agent doesn't support a scripting language invoked by a
+	  <a href="scripts.html#edef-SCRIPT"><samp class="einst">SCRIPT</samp></a> element earlier in the
+	  document. 
+</ul>
+
+<P>User agents that do not support client-side scripts must
+	render this element's contents.
+
+<div class="example"><P>
+In the following example, a user agent that executes the <a href="scripts.html#edef-SCRIPT"><samp
+	  class="einst">SCRIPT</samp></a> will include some dynamically
+	created data in the document. If the user agent doesn't
+	support scripts, the user may still retrieve the data through
+	a link.
+<pre>
+&lt;SCRIPT type="text/tcl"&gt;
+ <em>...some Tcl script to insert data...</em>
+&lt;/SCRIPT&gt;
+&lt;NOSCRIPT&gt;
+ &lt;P&gt;To access the data, click &lt;A href="http://someplace.com/data"&gt;here.&lt;/A&gt;
+&lt;/NOSCRIPT&gt;
+</pre>
+</div>
+
+
+<h3>Commenting out scripts<a name="h-9.2.2.2">&nbsp;</a></h3>
+User agents that don't recognize the <a href="scripts.html#edef-SCRIPT"><samp class="einst">SCRIPT</samp></a>
+element will likely render that element's contents as text. Some
+scripting engines, including those for languages JavaScript, 
+VBScript, and Tcl allow the script statements to be enclosed in an
+SGML comment. User agents that don't recognize the <a href="scripts.html#edef-SCRIPT"><samp
+class="einst">SCRIPT</samp></a> element will thus ignore the comment while
+smart scripting engines will understand that the script in comments
+should be executed.
+
+<P>Another solution to the problem is to keep scripts in
+external documents and refer to them with the <a href="forms.html#adef-src"><samp
+class="ainst">src</samp></a> attribute.
+
+<div class="example"><P>
+<strong>Commenting scripts in JavaScript</strong><BR> 
+The JavaScript engine allows the string "&lt;!--" to occur at the
+start of a SCRIPT element, and ignores further characters until the
+end of the line. JavaScript interprets "//" as starting a comment
+extending to the end of the current line. This is needed to hide the
+string "--&gt;" from the JavaScript parser.
+
+<pre>
+&lt;SCRIPT type="text/javascript"&gt;
+&lt;!--  to hide script contents from old browsers
+  function square(i) {
+    document.write("The call passed ", i ," to the function.","&lt;BR&gt;")
+    return i * i
+  }
+  document.write("The function returned ",square(5),".")
+// end hiding contents from old browsers  --&gt;
+&lt;/SCRIPT&gt;
+</pre>
+</div>
+
+<div class="example"><P>
+<strong>Commenting scripts in VBScript</strong><BR> 
+In VBScript, a single quote character causes the rest of the
+current line to be treated as a comment. It can therefore be used
+to hide the string "-->" from VBScript, for instance:
+
+<pre>
+   &lt;SCRIPT type="text/vbscript"&gt;
+     &lt;!--
+       Sub foo()
+        ...
+       End Sub
+     ' --&gt;
+    &lt;/SCRIPT&gt;
+</pre>
+</div>
+
+<div class="example"><P>
+<strong>Commenting scripts in TCL</strong><BR> 
+In Tcl, the "#" character comments out the rest of the line:
+
+<pre>
+&lt;SCRIPT type="text/tcl"&gt;
+&lt;!--  to hide script contents from old browsers
+  proc square {i} {
+    document write "The call passed $i to the function.&lt;BR&gt;"
+    return [expr $i * $i]
+  }
+  document write "The function returned [square 5]."
+# end hiding contents from old browsers  --&gt;
+&lt;/SCRIPT&gt;
+</pre>
+</div>
+
+<div class="note"><P> 
+<em>Note: Some browsers close comments on the first "&gt;" character,
+so to hide script content from such browsers, you can transpose
+operands for relational and shift operators (e.g., use "y &lt; x"
+rather than "x &gt; y") or use scripting language-dependent escapes
+for "&gt;".</em>
+</div>
+
+<div class="navbar">
+<hr><center><a href="forms.html">previous</a> &nbsp; <a href="../sgml/sgmltop.html">next</a> &nbsp; <a href="../contents.html">contents</a> &nbsp; <a href="../index/elements.html">elements</a> &nbsp; <a href="../index/attribs.html">attributes</a>
+</center></div>
+</body>
