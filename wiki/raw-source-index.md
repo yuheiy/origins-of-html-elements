@@ -381,7 +381,7 @@ Rawに保存された547ファイルを、29の取得元ホストごとに収録
 
 | Rawファイル | 文書タイトル |
 |---|---|
-| [index.html-f3b5cae56f01b5e4](../raw/ln.hixie.ch/index.html-f3b5cae56f01b5e4) | Hixie's Natural Log: HTML 8000 |
+| [index.html__q__count=1&start=1372461305](../raw/ln.hixie.ch/index.html__q__count=1&start=1372461305) | Hixie's Natural Log: HTML 8000 |
 
 ## `marc.merlins.org`（1ファイル）
 
@@ -444,7 +444,7 @@ Rawに保存された547ファイルを、29の取得元ホストごとに収録
 
 | Rawファイル | 文書タイトル |
 |---|---|
-| [index.php-ab175fe94c92f193](../raw/wiki.whatwg.org/index.php-ab175fe94c92f193) | Change Proposal: figure and details - WHATWG Wiki |
+| [index.php__q__title=Change_Proposal%3A_figure_and_details&oldid=4382](../raw/wiki.whatwg.org/index.php__q__title=Change_Proposal%3A_figure_and_details&oldid=4382) | Change Proposal: figure and details - WHATWG Wiki |
 
 ## `www.hixie.ch`（3ファイル）
 
@@ -490,12 +490,12 @@ Rawに保存された547ファイルを、29の取得元ホストごとに収録
 
 | Rawファイル | 文書タイトル |
 |---|---|
-| [Bugs/Public/show_bug.cgi-097b3e23f1d63c4f](../raw/www.w3.org/Bugs/Public/show_bug.cgi-097b3e23f1d63c4f) | — |
-| [Bugs/Public/show_bug.cgi-0c92d5382e78f0b4](../raw/www.w3.org/Bugs/Public/show_bug.cgi-0c92d5382e78f0b4) | 17930 &ndash; specify parsing of the template element |
-| [Bugs/Public/show_bug.cgi-2867df8a72c94218](../raw/www.w3.org/Bugs/Public/show_bug.cgi-2867df8a72c94218) | 7657 &ndash; Redefining dt and dd |
-| [Bugs/Public/show_bug.cgi-80b585f9e6881aac](../raw/www.w3.org/Bugs/Public/show_bug.cgi-80b585f9e6881aac) | 10807 &ndash; i18n comment 1 : new attribute: ubi |
-| [Bugs/Public/show_bug.cgi-e603fef40f4a1959](../raw/www.w3.org/Bugs/Public/show_bug.cgi-e603fef40f4a1959) | 7669 &ndash; Redefining dt and dd, recommend new element as caption for Figure |
-| [Bugs/Public/show_bug.cgi-fbca4c889bfb6216](../raw/www.w3.org/Bugs/Public/show_bug.cgi-fbca4c889bfb6216) | 9429 &ndash; Unobsolete the &lt;strike&gt; element - instead suggest how to use it |
+| [Bugs/Public/show_bug.cgi__q__ctype=xml&id=15476](../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__ctype=xml&id=15476) | — |
+| [Bugs/Public/show_bug.cgi__q__id=10807](../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=10807) | 10807 &ndash; i18n comment 1 : new attribute: ubi |
+| [Bugs/Public/show_bug.cgi__q__id=17930](../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=17930) | 17930 &ndash; specify parsing of the template element |
+| [Bugs/Public/show_bug.cgi__q__id=7657](../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=7657) | 7657 &ndash; Redefining dt and dd |
+| [Bugs/Public/show_bug.cgi__q__id=7669](../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=7669) | 7669 &ndash; Redefining dt and dd, recommend new element as caption for Figure |
+| [Bugs/Public/show_bug.cgi__q__id=9429](../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=9429) | 9429 &ndash; Unobsolete the &lt;strike&gt; element - instead suggest how to use it |
 | [History/1989/proposal.html](../raw/www.w3.org/History/1989/proposal.html) | The original proposal of the WWW, HTMLized |
 | [History/1991-WWW-NeXT/Implementation/Anchor.h](../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/Anchor.h) | — |
 | [History/1991-WWW-NeXT/Implementation/Features.html](../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/Features.html) | Change history for NextStep WorldWideWeb |

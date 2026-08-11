@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import { execFileSync } from "node:child_process";
-import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, mkdtempDisposableSync, renameSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
@@ -20,7 +19,7 @@ function outputFor(source) {
   if (!pathname || pathname.endsWith("/")) pathname += "index.html";
   const parts = pathname.split("/");
   if (parts.some((part) => !part || part === "." || part === ".." || part.includes("\\"))) throw new Error(`unsafe URL path: ${source}`);
-  if (url.search) pathname += `-${createHash("sha256").update(source).digest("hex").slice(0, 16)}`;
+  if (url.search) pathname += `__q__${encodeURIComponent(url.search.slice(1)).replace(/[!'()*]/g, (character) => `%${character.charCodeAt(0).toString(16).toUpperCase()}`).replaceAll("%3D", "=").replaceAll("%26", "&")}`;
   return path.posix.join(host, pathname);
 }
 

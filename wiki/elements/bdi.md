@@ -14,11 +14,11 @@ WHATWG HTML Living Standardでは、双方向テキストの整形において�
 
 ## HTMLへの導入
 
-2010年のW3C Bug 10807でAharon LaninはCSS `unicode-bidi:isolate`をHTMLへ公開する`ubi`属性を提案した。Ian Hicksonは一般解として`bdi`要素を選び、2010年11月5日のWHATWGリビジョンr5669が「双方向文字上の影響を持ちうる利用者生成内容を安全に挿入する」要素として追加した。差分は要素定義、利用例、既定CSSの`unicode-bidi:isolate`を同時に追加している。[W3C Bug 10807](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-80b585f9e6881aac)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=10807)） [r5669のGit複製](../../raw/github.com/whatwg/html/commit/29d7102ea5d923f807d44a402eef6fafd8f35327)（[公開元](https://github.com/whatwg/html/commit/29d7102ea5d923f807d44a402eef6fafd8f35327)）
+2010年のW3C Bug 10807でAharon LaninはCSS `unicode-bidi:isolate`をHTMLへ公開する`ubi`属性を提案した。Ian Hicksonは一般解として`bdi`要素を選び、2010年11月5日のWHATWGリビジョンr5669が「双方向文字上の影響を持ちうる利用者生成内容を安全に挿入する」要素として追加した。差分は要素定義、利用例、既定CSSの`unicode-bidi:isolate`を同時に追加している。[W3C Bug 10807](../../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=10807)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=10807)） [r5669のGit複製](../../raw/github.com/whatwg/html/commit/29d7102ea5d923f807d44a402eef6fafd8f35327)（[公開元](https://github.com/whatwg/html/commit/29d7102ea5d923f807d44a402eef6fafd8f35327)）
 
 ## HTML直前の祖先
 
-HTML直前の祖先はCSS `unicode-bidi:isolate`とW3C国際化グループの`ubi`属性案である。属性案から新要素へ変更した過程がBug 10807に直接記録されている。[W3C bidi requirements](../../raw/www.w3.org/TR/html-bidi/index.html)（[公開元](https://www.w3.org/TR/html-bidi/#bidi-isolation)） [Bug 10807](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-80b585f9e6881aac)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=10807)）
+HTML直前の祖先はCSS `unicode-bidi:isolate`とW3C国際化グループの`ubi`属性案である。属性案から新要素へ変更した過程がBug 10807に直接記録されている。[W3C bidi requirements](../../raw/www.w3.org/TR/html-bidi/index.html)（[公開元](https://www.w3.org/TR/html-bidi/#bidi-isolation)） [Bug 10807](../../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=10807)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=10807)）
 
 ## さらに上流の由来
 
@@ -38,7 +38,7 @@ Unicode Bidi Algorithmの分離要求 → CSS `unicode-bidi:isolate`＋W3C `ubi`
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
-| 2010-09-29〜2010-11-11 | [W3C Bug 10807](../../raw/www.w3.org/Bugs/Public/show_bug.cgi-80b585f9e6881aac)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=10807)） | W3C HTML WG Bugzilla議論／WHATWGチェックイン記録 | `ubi`属性提案から`bdi`要素を選択し、r5669／r5677へ採録した経路。 | 2026-08-09 |
+| 2010-09-29〜2010-11-11 | [W3C Bug 10807](../../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=10807)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=10807)） | W3C HTML WG Bugzilla議論／WHATWGチェックイン記録 | `ubi`属性提案から`bdi`要素を選択し、r5669／r5677へ採録した経路。 | 2026-08-09 |
 | 2010-11-05 | [WHATWG HTML commit `29d7102e`（r5669）](../../raw/github.com/whatwg/html/commit/29d7102ea5d923f807d44a402eef6fafd8f35327)（[公開元](https://github.com/whatwg/html/commit/29d7102ea5d923f807d44a402eef6fafd8f35327)） | 仕様コミット | `bdi`の定義、利用者生成内容という要求、利用例、既定CSSを追加した完全な差分 | 2026-08-11 |
 | 2015-07-21 | [*Additional Requirements for Bidi in HTML & CSS*](../../raw/www.w3.org/TR/html-bidi/index.html)（[公開元](https://www.w3.org/TR/html-bidi/#bidi-isolation)） | W3C Working Group Note | 分離問題、`ubi`提案、実際には`bdi`が採用された歴史を記録。 | 2026-08-09 |
 
