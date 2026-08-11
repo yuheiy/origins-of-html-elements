@@ -1,0 +1,224 @@
+MICROSOFT INTERNET EXPLORER 3.0 ALPHA
+RELEASE NOTES
+
+
+INTRODUCTION
+
+Microsoft Internet Explorer 3.0 Alpha is a "sneak preview" of the 
+next version of Internet Explorer. Its next-generation features 
+include programmability support through ActiveX Controls and 
+Scripting, frames, DocObj hosting, and enhanced HTML table 
+support.
+
+This alpha release of Internet Explorer is intended primarily for 
+application developers who wish to experiment with the new 
+programmability features. As a browser, it is stable enough for 
+limited use, but the user interface is somewhat incomplete and 
+several functions are not yet available. As such, those wishing 
+to use IE 3.0 simply as a browser may prefer to wait until the 
+first beta version is released later this April.
+
+(For instructions on how to run IE 2.0 and IE 3.0 Alpha side by 
+side, see "Side-By-Side Operation With IE 2.0," below.)
+
+
+NEW FEATURES
+
+For further information on how to take advantage of the 
+following, see http://www.microsoft.com/ie/appdev/default.htm.
+
+o ActiveX Controls and Scripting support. These features open up 
+a new world of live, programmable Internet content.
+
+o HTML frame support. Pages making use of HTML frames can now be 
+viewed using Internet Explorer 3.0. Unlike other browsers, IE 3.0 
+also permits "borderless" frames, allowing more sophisticated 
+designs.
+
+o In-place DocObj activation. For example, if you install 
+Microsoft Office95 on your computer, open a Web page with IE 3.0, 
+and click a link to a Word or Excel document, that document will 
+appear right in the IE 3.0 window and can be viewed and edited in 
+place.
+
+o Enhanced HTML table support. Internet Explorer 3.0 is the first 
+browser to support new features from the HTML 3.0 table 
+specification such as row and column grouping, the ability to 
+turn off horizontal or vertical rules, aligning baselines of text 
+in adjacent cells, and selectable table borders. IE 3.0 also 
+introduces the ability to assign each table cell a separate 
+background image.
+
+
+SIDE-BY-SIDE OPERATION WITH IE 2.0
+
+To run IE 3.0 side-by-side with IE 2.0, perform the following 
+steps before installing IE 3.0:
+
+1) Locate "iexplore.exe" on your system. (Start/Find/Files or Folders)
+2) Rename iexplore.exe (to "ie20.exe", for example)
+3) (optional) Place a shortcut to "ie20.exe" on your desktop, for 
+easier access.
+
+To return to using IE 2.0, first uninstall IE 3.0 (Start Menu => 
+Settings => Control Panel => Add/Remove Programs), then reinstall 
+IE 2.0 from the Microsoft Web site 
+(http://www.microsoft.com/windows/ie/ie.htm).
+
+
+KNOWN ISSUES
+
+IE 2.0 Features Not Fully Supported In This Release
+===================================================
+o SSL security
+o HTTP Keep-Alive
+o Gopher protocol
+o FTP operation over proxy
+o Newsreading
+o mailto: and news: protocols
+o Progressive JPEG display
+o "flying flag" progress animation
+o New Window, Open, and Page Setup commands on File menu
+o Playing of .MID files
+o Downloading to user-specified directory (downloads are always 
+placed in temp directory)
+o Automatic warning that user should disable file and print 
+sharing over TCP/IP connection.
+o Printing pages that contain frames is not supported.
+
+
+Setup
+=====
+o IE 3.0 does not inherit cache from IE 2.0.
+
+o By default, IE 3.0 will be installed into the same directory 
+that IE 2.0 is currently installed in.
+
+o (Windows NT only) If user has "Command Extensions" enabled, 
+setup will give an error that the .INF file cannot be found.
+
+
+Uninstall
+=========
+o Uninstall will not remove the cache directory even though 
+uninstall asks if you want to remove it.
+
+
+User Interface
+==============
+o The "combined Address Bar and Toolbar" design is temporary. 
+Subsequent versions of IE 3.0 will feature a redesigned user 
+interface with a full-width Address Bar, allowing long URL's to 
+be viewed and typed more easily.
+
+o IE 3.0 has two Options commands, one under the Explore menu and 
+one under the View menu. This will be simplified in future 
+versions. 
+
+o When a UNC path (\\servername\share\...) is typed into the 
+Address Bar, the prefix "http://" will be incorrectly prepended. 
+The workaround is to always use the "file:" prefix. (Example: 
+file:\\foo\bar\test.htm.)
+
+o Opening the Favorites folder will show Favorites in place, but 
+if you then open Favorites subfolders, they will be shown in new 
+windows.
+
+o Right clicking on a server-side Image map and choosing "Open in
+new window" results in a new window, but shows an error message 
+instead of the image.
+
+o When maximizing window immediately after opening browser or 
+clicking on link, content doesn't maximize. Workaround: Minimize 
+IE application, then re-maximize.
+
+o When typing a URL ending in a directory name into Address Bar, 
+a slash is not always appended.
+
+
+HTML/Graphics Display
+=====================
+o HTML frames cannot currently be resized.
+
+o Refresh of a page does not always successfully refresh the 
+images contained on that page.
+
+
+Caching, History, and Favorites
+===============================
+o UNC addresses (\\servername\share\...) cannot be added to 
+Favorites.
+
+o Cache maintenance in unavailable through the User Interface. 
+The IE30 cache is located under the subdirectory "Temporary 
+Internet Files" of your windows directory. To clear the cache, 
+quit Internet Explorer 3.0 and delete this subdirectory.
+
+
+HTTP
+====
+o Redirected POST requests should be turned into GET's. This 
+happens the first time a given request is performed, but not the 
+second time.
+
+o Relative paths containing forward slashes do not work.
+
+
+Stability
+=========
+o IE 3.0 may crash after prolonged use with multiple open 
+Internet Explorer windows.
+
+o Refreshing a page with a frame assigned an invalid path may 
+result in a crash.
+
+o Shutting down IE 3.0 before page is done loading may cause a GP 
+fault on exit.
+
+Windows NT specific notes
+=========================
+All notes for Win95 apply. In addition....
+
+a) RISC platforms are not supported yet.
+
+b) NT SUR Beta 1 has a bug in the shell that does correctly return 
+the result of launching an application. This has several results, 
+all of which will be fixed in the next Beta of NT.
+
+o Using FILE: or any UNC or local file reference in the address bar 
+  will hang IE 3.0. There may also be problems with repainting. 
+  Exiting IE and restarting with an HTTP address will relieve the 
+  immediate problem, but will not prevent it from recurring. 
+o Following a link to a FILE: reference will have the same result.
+o Double clicking on a file that invokes IE will have the same result.
+o Start/Run on a file that invokes IE will have the same result.
+o Any relative or absolute FILE: reference will have the same result.
+
+Workaround: Open IE. Then drag a file and drop it onto the client area.
+This will succeed provided there are no FILE: references in the given file.
+
+c) The conversion of IE 3.0 from ANSI to Unicode is not yet complete.  
+This manifests itself in several ways. 
+
+o Error messages may complain of a URL by saying, 
+	"Could not open |||||||||@|$|||%||||$ "  
+  This is a typical of an ANSI/Unicode conversion problem.
+o File type management: New types cannot be defined. 
+  Existing types do not show actions.
+o Favorites. FILE: and folder references may be saved, 
+  but they are incomplete and will generate a garbled message 
+  that the URL could not be opened. HTTP Favorites are OK.
+
+d) Internet Component Download fails on NT if the WINTRUST.DLL
+component is not installed in \Windows\System32. (this is not a problem
+if you install the the full Microsoft ActiveX Development Kit, but
+it may cause problems if you install Internet Explorer 3.0 without
+the Trust Verification services.
+
+e) Command Extensions on SUR Beta 1 blocks IE setup.  If you have
+command extensions enabled on SUR Beta 1 (Build 1234) then setup
+will not work properly.  It is necessary to disable command
+extensions to install.  Change
+HKEY_CURRENT_USER\Software\Microsoft\Command Processsor
+EnableExtensions to 0 to disable command extensions.  You can set
+it back to 1 to re-enable extensions after IE is installed.

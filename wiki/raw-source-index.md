@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された618ファイルを、35の取得元ホストごとに収録する。
+Rawに保存された621ファイルを、36の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（10ファイル）
 
@@ -30,6 +30,14 @@ Rawに保存された618ファイルを、35の取得元ホストごとに収録
 | Rawファイル | 文書タイトル |
 |---|---|
 | [repos/openui/open-ui/issues/571/comments__q__per_page=100](../raw/api.github.com/repos/openui/open-ui/issues/571/comments__q__per_page=100) | — |
+
+## `archive.org`（3ファイル）
+
+| Rawファイル | 文書タイトル |
+|---|---|
+| [download/msie-30-a-1/IE30.TXT](../raw/archive.org/download/msie-30-a-1/IE30.TXT) | — |
+| [download/msie-30-a-1/MSIE30A1.EXE](../raw/archive.org/download/msie-30-a-1/MSIE30A1.EXE) | — |
+| [download/msie30b2-ja/Microsoft%20Internet%20Explorer%203.0%20For%20Windows%2095%20Beta%202%20%5BJapanese%5D%20%5B1996-7%5D%20%5BEXE%5D.rar](../raw/archive.org/download/msie30b2-ja/Microsoft%20Internet%20Explorer%203.0%20For%20Windows%2095%20Beta%202%20%5BJapanese%5D%20%5B1996-7%5D%20%5BEXE%5D.rar) | — |
 
 ## `archives.iw3c2.org`（1ファイル）
 

@@ -71,7 +71,7 @@ status: 完成
 - [`<hr>`](elements/hr.md): 1993年7月末のWWW Workshopで、ハイフン列による区切りを置き換える水平罫線として基礎HTMLへの追加が決まり、LynxとNCSA Mosaicが実装した。
 - [`<html>`](elements/html.md): Dan ConnollyがSGMLパーサーに最上位要素を推論させるため1992年に導入したが、HTML以前の具体的祖先は未確認である。
 - [`<i>`](elements/i.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した物理的な文字強調要素で、同時代Texinfoの`@i`との対応を確認できる。
-- [`<iframe>`](elements/iframe.md): Microsoft IE3の浮動フレーム実装とW3Cの`IFRAME`案は確認できるが、Microsoft提出からW3C案への要素単位の採用は未確認である。
+- [`<iframe>`](elements/iframe.md): Microsoft IE3 beta 2の`IFRAME`実装と後続するW3C案は確認できるが、Microsoft提出からW3C案への要素単位の採用は未確認である。
 - [`<img>`](elements/img.md): Marc AndreessenがNCSA X Mosaicへ実装し、1993年に提案した行内画像要素である。
 - [`<input>`](elements/input.md): HTML+のフォームからHTML 2.0へ導出された型付き入力欄で、各ウィジェット種別の由来は未確認である。
 - [`<ins>`](elements/ins.md): HTML+ `ADDED`からHTML 3.0 `INS`、HTML 4への系列は集合単位で確認できるが、個別の改名と採録は未確認である。
