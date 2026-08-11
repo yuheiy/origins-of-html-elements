@@ -59,3 +59,5 @@ ENQUIRE、NeXTのHyperText機能、KMS、HyperCard、SGML／HyTimeを、名称�
 
 - `A`という要素名と`HREF`／`NAME`のマークアップを選んだ判断を記録する1990年の設計資料またはソース履歴は残っているか。
 - ENQUIREまたはNeXT WorldWideWebの内部リンクモデルからHTMLへの直列化への具体的な写像を示す資料はあるか。
+
+CERNの復元資料は、WorldWideWebについて発見できたソースが0.15を示す一系統だけであり、版番号とコード内の日付にも不整合があると報告する。[CERN, *Inside the Code*](../../raw/worldwideweb.cern.ch/code/__index)（[公開元](https://worldwideweb.cern.ch/code/)）公開されている初期設計ノート、保存ソース、実装履歴、当事者の回顧まで再監査したため、以後は0.4以前のソースまたはRCS履歴、1990年の設計記録、あるいはBerners-Leeが採用元を明記した同時代資料が新たに公開された場合にだけHTML外祖先の調査を再開する。

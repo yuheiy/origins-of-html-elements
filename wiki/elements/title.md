@@ -58,3 +58,5 @@ HTMLへの設計目的は当事者資料で確認できるが、具体的な先�
 
 - HTML `TITLE`が参照した具体的なSGML/GML語彙を示す初期設計資料はあるか。
 - ノードプロパティとしての設計に影響した具体的なハイパーテキストシステムまたは文書体系はあるか。
+
+Waterloo GML、WWWの設計ノート、WorldWideWeb保存ソース、1991年の用途説明、当事者の回顧まで再監査したが、一般的なタイトル語彙とWWW固有のノード名用途を結ぶ採用記録はない。CERNの復元資料も、発見できたWorldWideWebソースが一系統だけだと報告する。[CERN, *Inside the Code*](../../raw/worldwideweb.cern.ch/code/__index)（[公開元](https://worldwideweb.cern.ch/code/)）以後は1991年10月29日以前の設計記録またはソース履歴、Berners-Leeが元の文書体系またはハイパーテキストシステムを名指す同時代資料が新たに公開された場合にだけ再開する。

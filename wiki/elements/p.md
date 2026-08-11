@@ -59,3 +59,5 @@ Waterlooの`:P`との同名・同用途だけから直接系譜を結ぶ説明�
 
 - 初期HTML `P`が参照した具体的なSGML/GML語彙を示す記録はあるか。
 - 空区切りからコンテナー要素へ変わった時期と理由は何か。
+
+Waterloo GML、初期HTMLの公開設計ノート、WorldWideWeb保存ソース、当事者の回顧まで再監査したが、段落語彙の類似またはSGMLからの集合単位の影響を越える採用記録はない。CERNの復元資料も、発見できたWorldWideWebソースが一系統だけだと報告する。[CERN, *Inside the Code*](../../raw/worldwideweb.cern.ch/code/__index)（[公開元](https://worldwideweb.cern.ch/code/)）以後は1992年1月9日以前のHTMLソースまたは設計記録、Berners-Leeが元のSGML/GML語彙を名指す同時代資料が新たに公開された場合にだけHTML外祖先の調査を再開する。空区切りからコンテナー要素への変更は別の版差問題として維持する。
