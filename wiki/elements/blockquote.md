@@ -60,5 +60,7 @@ DocBookを確定した直接祖先とする説明。HTMLより早い同名DTD、
 
 ## 未解決
 
-- 1992年11月19日のDocBook検討から12月4日の`BLOCKQUOTE`追加までに、要素単位の採用判断を示すメール、DTDリビジョン、私信は残っているか。
-- DocBook説とUsenetニュース式引用説のどちらかを支持または反証する同時代資料はあるか。
+- 1992年11月19日のDocBook検討から12月4日の`BLOCKQUOTE`追加までに、要素単位の採用判断を示すConnollyのConvexメール、W3Cへ移されたRCSの`,v`全版、11月23日の`shar`アーカイブ、または`docbook@ora.com`の1991〜1992年アーカイブは公開されるか。[Palmer, “The Origin of Blockquote”](../../raw/lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html)（[公開元](https://lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html)）
+- それらの同時代資料は、DocBook説とUsenetニュース式引用説のどちらかを支持または反証するか。
+
+2017年の公開再探索ログとその後の公開スレッドまで再監査したが、要素単位の採用記録は提示されなかった。以後は上記資料のいずれかが新たに公開された場合にだけ再開する。
