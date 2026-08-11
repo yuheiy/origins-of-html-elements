@@ -10,7 +10,7 @@ status: 完成
 
 - [要素](elements/)は、現行要素ごとに現在の意味、HTMLへの導入、直前の祖先、上流の由来、証拠、確度、否定された仮説、未解決点をまとめる。
 - [共有系譜](lineages/)は、複数要素に共通する確認済みの採用経路や要求をまとめる。個別要素の結論と確度は要素ページを正本とする。
-- synthesisページは比較や横断分析を扱う。現在、該当するページはない。
+- [統合](syntheses/origin-based-classification.md)は比較や横断分析を扱う。
 - [Raw resources](raw-index.md)は、保存された全Raw fileへのpath順のindexである。
 - [操作Log](log.md)はWikiに対する操作をappend-onlyで記録する。構造と運用の規範は[AGENTS.md](../AGENTS.md)を参照する。
 
@@ -26,7 +26,7 @@ status: 完成
 
 ## 要素
 
-- [`<a>`](elements/a.md): 1991年のNeXT WorldWideWeb実装でHTML `A`とAnchor objectの対応を確認できるが、特定の先行hypertext systemからの採用は未確認である。
+- [`<a>`](elements/a.md): 1991年のNeXT WorldWideWeb実装でHTML `A`とAnchor objectの対応を確認でき、Raggettらはanchor／`HREF`をBerners-Lee独自の設計と回顧するが、`A` tokenの選択は未確認である。
 - [`<abbr>`](elements/abbr.md): HTML 4初期草案の`ACRONYM`が1997年に`ABBR`へ改名されたが、HTML+ `ABBREV`の影響は未確認である。
 - [`<address>`](elements/address.md): 1991年のNeXT WorldWideWebでeditorの`Address` paragraph styleとHTML `ADDRESS`の相互変換を確認できるが、直前祖先と命名理由は未確認である。
 - [`<area>`](elements/area.md): James L. Seidmanが1994年に`map`とともに提案した、client-side image mapの個々の領域を表す要素である。
@@ -37,7 +37,7 @@ status: 完成
 - [`<base>`](elements/base.md): 文書が取得元contextを失ってもrelative addressを解決する要求から1993年の`BASE`へ至るが、中間の具体化は未確認である。
 - [`<bdi>`](elements/bdi.md): W3C i18n groupのbidi isolation要求と`ubi`属性案を、WHATWGが2010年に新要素へ変更して採録したものである。
 - [`<bdo>`](elements/bdo.md): 文脈だけでは方向を解けないtextへUnicode directional overrideを指定するため、1995年の国際化草案が導入しRFC 2070が標準化した。
-- [`<blockquote>`](elements/blockquote.md): Dan Connollyが1992年に新しいparagraph styleとしてHTML DTDへ追加したが、HTML以前の具体的祖先は未確認である。
+- [`<blockquote>`](elements/blockquote.md): Dan Connollyが1992年にHTML DTDへ追加し、後にUsenet newsの引用様式を有力な影響候補に挙げたが、同時代資料による祖先は未確認である。
 - [`<body>`](elements/body.md): Tim Berners-Leeは1992年6月にheader／body分離案を示し、Dan Connollyの7月公開DTDは`BODY`をmixed content回避用の本文containerとして宣言した。
 - [`<br>`](elements/br.md): 1993年9月のNCSA Mosaic 2.0 prerelease 3でline break tagとして確認できるが、HTML+案との前後関係と標準採用経路は未確認である。
 - [`<button>`](elements/button.md): `button`は1997年、既存の`input`によるsubmit／reset／script用buttonと同じ動作を保ちながら、HTML内容を持つ豊かなbuttonを作るためW3CのHTML 4へ導入された。
@@ -94,7 +94,7 @@ status: 完成
 - [`<optgroup>`](elements/optgroup.md): 長い`SELECT`のaccessibility改善策としてMegaZoneがnested list型のgroupingを提案し、WAIとHTML WGの検討を経てHTML 4へ入った。
 - [`<option>`](elements/option.md): HTML+ formsからHTML 2.0へ導出されたselection candidate要素である。
 - [`<output>`](elements/output.md): XFormsの非editableな値表示controlをHTML formsへ適応して2003年に提案され、Web Forms 2.0を経てHTML5へ統合された。
-- [`<p>`](elements/p.md): 1992年1月のBerners-Lee mailで、新しいparagraphを示す空のmarkとして確認できる。
+- [`<p>`](elements/p.md): 1992年1月のBerners-Lee mailで空のparagraph markとして確認でき、SGML由来という回顧はあるが、具体的な元vocabularyは未確認である。
 - [`<picture>`](elements/picture.md): Responsive Images Community Groupの提案とPicturefillを、HTML Working Groupのextension draftを経てWHATWG HTMLへ統合した要素である。
 - [`<pre>`](elements/pre.md): 初期HTMLのcomputer output表示から、Unix manual pagesのhypertext化要求による拡張を経たpreformatted text要素である。
 - [`<progress>`](elements/progress.md): 2004年のProgress meters placeholderを2006年にdeterminate／indeterminateなtask completion要素へ具体化したが、それ以前のwidgetからの採用は未確認である。
@@ -119,7 +119,7 @@ status: 完成
 - [`<summary>`](elements/summary.md): `summary`は2010年、`details`のcaptionを`legend`または`dt`／`dd`で表す方式を専用要素へ置換して導入された。
 - [`<sup>`](elements/sup.md): HTML+のDTDが一般テキストでも許可した`SUP`をHTML 3.0へ引き継ぐ設計意図を、Dave Raggettの同時代メールで確認できる。
 - [`<svg>`](elements/svg.md): SVG 1.0で定義済みのSVG名前空間のrootを、2008年にHTML parserへ統合し、一度削除した後、feedbackを受けて2009年に再導入したものである。
-- [`<table>`](elements/table.md): HTML+の単純table modelからRFC 1942を経て標準化されたtable containerである。
+- [`<table>`](elements/table.md): CALSの縮小移植ではなくbrowser向けの単純なHTML+案として選ばれ、RFC 1942を経て標準化されたtable containerである。
 - [`<tbody>`](elements/tbody.md): CALSの`TBODY`を1995年のRaggett案がHTMLへ取り込み、IETF草案とRFC 1942を経てHTML 4が標準化した。
 - [`<td>`](elements/td.md): HTML+ table modelのdata cellからRFC 1942を経て標準化された要素である。
 - [`<template>`](elements/template.md): 利用前のHTML fragmentをinert DOM subtreeとして保持・複製するため2011年に提案され、Web Components作業を経て2013年にWHATWG HTMLへ統合された。
@@ -128,7 +128,7 @@ status: 完成
 - [`<th>`](elements/th.md): HTML+ table modelのheader cellからRFC 1942を経て標準化された要素である。
 - [`<thead>`](elements/thead.md): CALSの`THEAD`を1995年のRaggett案がHTMLへ取り込み、IETF草案とRFC 1942を経てHTML 4が標準化した。
 - [`<time>`](elements/time.md): 2006年にWHATWG草案の`<t>`から改名され、2011年の`data`への置換と約3週間後の再導入を経て現行設計へ続く。
-- [`<title>`](elements/title.md): 1991年10月のTim Berners-Leeのmailで、nodeを文脈外で識別しwindow nameやhistory listに使うため設計された要素として確認できる。
+- [`<title>`](elements/title.md): SGMLのtag-pair構文を用いつつ、nodeを文脈外で識別してwindow名やhistoryへ使うWWW固有のpropertyとして1991年に確認できる。
 - [`<tr>`](elements/tr.md): HTML+作業中にrow separatorからrow containerへ変化し、RFC 1942を経て標準化された要素である。
 - [`<track>`](elements/track.md): `track`は2010年、media elementへ外部字幕、caption、description、chapter、metadataを関連づけるtimed track機構として導入された。
 - [`<u>`](elements/u.md): 1993年のTexinfo由来とする集合記述に個別対応がなく、HTML 3.2での再出現と2011年のconforming化の間にも系譜の欠落が残る。
@@ -146,3 +146,7 @@ status: 完成
 - [HTML+から現行HTML要素への共有系譜](lineages/html-plus.md): HTML+からdocument amendments、forms、tables、figures、client-side image mapsの各要素群へ至る共有経路をまとめる。
 - [HTML phrase elementsとTexinfo](lineages/texinfo.md): Texinfo macro namesからHTML phrase要素集合への命名経路と、`u`など個別対応を確認できない境界をまとめる。
 - [初期WHATWG sectioning語彙の共有系譜](lineages/whatwg-sectioning.md): 典型的siteのmarkupと`div`のpseudo-semantic用途から初期WHATWG semantic element集合へ至る要求と、個別に確認できる枝をまとめる。
+
+## 統合
+
+- [HTML要素のHTML以前の供給源と上流文化](syntheses/origin-based-classification.md): HTML+等を含む直接供給段階とHTML外まで遡った由来を分け、現行要素を直接採用57、外部材料のHTML化37、内部派生12、固有要求8、上流未確認1へ整理する。

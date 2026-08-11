@@ -24,11 +24,11 @@ WHATWG HTML Living Standardでは、`href`属性がある場合は内容をlabel
 
 ### 証拠
 
-Berners-LeeのWWW設計資料は、情報をnodeとlinkのwebとして扱い、linkをたどって情報へ到達するmodelを記録する。別の設計ノートはKMSとHyperCardのone-way link、ENQUIREのtwo-way linkを比較するが、HTML `A`の採用元は指定しない。[Berners-Lee, *Information Management: A Proposal*](https://www.w3.org/History/1989/proposal.html) [Berners-Lee, *Topology*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/Topology.html)
+Berners-LeeのWWW設計資料は、情報をnodeとlinkのwebとして扱い、linkをたどって情報へ到達するmodelを記録する。別の設計ノートはKMSとHyperCardのone-way link、ENQUIREのtwo-way linkを比較するが、HTML `A`の採用元は指定しない。[Berners-Lee, *Information Management: A Proposal*](https://www.w3.org/History/1989/proposal.html) [Berners-Lee, *Topology*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/DesignIssues/Topology.html) 1998年のDave Raggettらによる回顧は、SGML自体にはhypertext linkがなく、anchor要素と`HREF`属性はBerners-Lee独自の発明だったと説明する。[Raggettほか, *A history of HTML*](../../raw/www.w3.org/People/Raggett/book4/ch02.html)（[公開元](https://www.w3.org/People/Raggett/book4/ch02.html)）
 
 ### 解釈
 
-`A`はWWWのnode間linkをtextへ埋め込むHTML上の表現として導入されたと説明できる。特定の先行systemから要素単位で派生したとは説明できない。
+`A`はWWWのnode間linkをtextへ埋め込むHTML上の表現としてBerners-Leeが設計したと説明できる。当事者に近い後代の回顧も既存SGML語彙からの採用ではなく独自設計とするが、`A`というtokenの選択やENQUIREの内部modelとの実装上の連続までは説明しない。
 
 ## 系譜
 
@@ -43,6 +43,7 @@ WWWのnode／link設計（1989–1990）→ NeXT WorldWideWebのAnchor objectと
 | 1991-09-04／09-27（HTTP Last-Modified） | *Anchor.h*／*ParseHTML.h*：[Anchor object](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/Anchor.h)・[HTML parser／serializer](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h)（[公開元1](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Anchor.h)・[公開元2](https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h)） | W3C保存のWorldWideWeb実装source | node内のAnchor objectとHTML `A`の`HREF`／`NAME`を相互に写像する。 | 2026-08-09 |
 | 1992-11-13（更新日） | [*HTML Tags*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)） | CERN公式HTML資料のhistorical snapshot | `A`の`HREF`と`NAME`によりlinkの始点・終点を表す初期HTMLの機能を定義する。 | 2026-08-09 |
 | 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | anchorをlinkの始点・終点として定義し、`A`と属性をDTDへ収録する。 | 2026-08-09 |
+| 1998 | [Dave Raggettほか, *A history of HTML*](../../raw/www.w3.org/People/Raggett/book4/ch02.html)（[公開元](https://www.w3.org/People/Raggett/book4/ch02.html)） | 初期Web当事者による回顧 | SGMLにhypertext linkはなく、anchor要素と`HREF`属性はBerners-Lee独自の発明だったと説明する。 | 2026-08-11 |
 
 ## 確度
 

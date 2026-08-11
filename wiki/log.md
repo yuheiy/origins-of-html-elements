@@ -681,3 +681,71 @@ elementの概要は各elementページだけを正本とし、`wiki/README.md`�
 `wiki/README.md`の要素概要は、人間が一覧から調査済みの起点、経路、主要な未解決点を判断して読むページを選ぶために必要だという指示を受け、Page contractへ戻した。同期負担とのtrade-offとして、elementページの`概要`を全文複製せず、確認済みの起点または経路と、解釈を左右する未解決点だけを一行に編集する契約とした。主要な結論の変更で概要が不正確になる場合は同じ変更で更新し、Lintでも正確性を確認する。
 
 全110 elementページの現行`概要`を旧README文と突き合わせて再検討し、73件を索引用に書き直し、既に短く役割を満たす37件を維持した。複数文の`概要`をそのまま再掲した項目はない。対象Lintは、110 element概要と7 lineage概要の網羅、115要素の集計、1,645ローカルMarkdown link、518 Raw fileのindex再現性、script構文、whitespaceを`合格`、人間向け概要を失ったREADME契約を`修正済み`、`Research必要`はなしと確認した。Wikiの歴史的結論とRaw snapshotは変更していない。
+
+## [2026-08-11] query | HTML要素の由来別分類
+
+HTML直前の供給源とさらに上流の祖先を軸に、代表的な現行要素を、既成markup語彙、HTML実験枝、browser実装、既存Web慣習、GUI部品、外部標準、HTML内部再設計の七型へ整理するsynthesisを追加した。分類は排他的な系譜や確度評価ではなく、既存element／lineageページを横断して読むための解釈とし、初期Web基礎語彙など収まりの悪い要素は無理に含めなかった。
+
+対象Lintは、synthesisのfrontmatter、証拠と解釈の分離、READMEのページ案内と概要、Raw参照、内部相対リンク、Markdown whitespace、Raw indexの再現性を`合格`、`修正済み`と`Research必要`はなしと確認した。Raw snapshot、element／lineageの歴史的結論、確度集計は変更していない。
+
+## [2026-08-11] query | 由来別分類の要素展開
+
+由来別分類の代表例欄を、系譜をおおよそ置ける現行要素をできるだけ省略しない一覧へ拡張した。Texinfo系列は構造や意味全体の移植ではなくmacro namesからの命名借用であるため、既成markup語彙の移植から独立させ、分類を八型へ更新した。複数経路を持つ要素は重複掲載し、接続に欠落があるものは表内で注記し、上流を置けない初期Web語彙等は分類外に列挙した。
+
+対象Lintは、synthesisの証拠と解釈の分離、README概要との整合、現行115要素名との照合、Raw参照、内部相対リンク、Markdown whitespace、Raw indexの再現性を`合格`、`修正済み`と`Research必要`はなしと確認した。Raw snapshot、element／lineageの歴史的結論、確度集計は変更していない。
+
+## [2026-08-11] query | 供給源と上流文化の分離
+
+由来別分類で一つの表へ混在していたHTML直前の供給源とさらに上流の文化を、独立した二つの分類へ分離した。供給源表はTexinfo、HTML+、vendor実装、既存Web markup、外部仕様、HTML内部機構等の主経路に現行115要素を一度ずつ配置し、文化表は構造化文書、技術執筆、編集、hypertext、GUI、multimedia、国際化、Web authoring、platform自己修正等への重複所属を許した。
+
+対象Lintは、二分類の役割分離、供給源表による115要素の一意な網羅、文化表と要素索引の語彙照合、synthesisの証拠と解釈の分離、README概要、Raw参照、内部相対リンク、Markdown whitespace、Raw indexの再現性を`合格`、`修正済み`と`Research必要`はなしと確認した。Raw snapshot、element／lineageの歴史的結論、確度集計は変更していない。
+
+## [2026-08-11] query | HTML以前の由来への再編
+
+CERNの初期HTML、HTML+、IETF／W3CのHTML草案、WHATWGを別々の供給源とせず、一続きのHTML内部史として分類を再編した。第一表はAAP／CERN-SGML／CALS、Texinfo、外部仕様、vendor実装、既存Web利用、GUI慣習というHTML以前・HTML外の具体的供給源と、そこまで接続できないHTML内生要素へ115要素を一度ずつ配置した。第二表はHTML内部の標準化段階を除き、文書、技術執筆、編集、hypertext、GUI、multimedia、国際化、Web authoring等の上流文化だけを扱う形へ限定した。
+
+対象Lintは、HTML内部史と外部供給源の分離、供給源表による115要素の一意な網羅、文化表による115要素の網羅、README概要、synthesisの証拠と解釈の分離、Raw参照、内部相対リンク、Markdown whitespace、Raw indexの再現性を`合格`、`修正済み`と`Research必要`はなしと確認した。Raw snapshot、element／lineageの歴史的結論、確度集計は変更していない。
+
+## [2026-08-11] query | HTML内部の直接供給源の併記
+
+HTML以前の由来へ再編する前に用いていた、CERN初期HTML、HTML+、IETF／W3C草案、WHATWG内部変更等を独立した供給源として扱う分類を復元した。既存のHTML外供給源表と上流文化表は維持し、標準化経路、HTML外の祖先、文化的背景をそれぞれ読む三表構成とした。
+
+対象Lintは、三分類の役割分離、直接供給源表とHTML外供給源表による現行115要素の一意な網羅、文化表による115要素の網羅、README概要、synthesisの証拠と解釈の分離、Raw参照、内部相対リンク、Markdown whitespace、Raw indexの再現性を`合格`、`修正済み`と`Research必要`はなしと確認した。Raw snapshot、element／lineageの歴史的結論、確度集計は変更していない。
+
+## [2026-08-11] research | HTML内生要素の外部設計入力
+
+HTML外の具体的供給源へ接続できなかった58要素を、個別elementページと保存済み一次資料へ戻って再調査した。RFC 1942が表設計に既存SGML table、word processor、紙媒体を、HTML+がformsにplatform conventionsとSGML制約、`PRE`にUnix manual pages、文書変更markupに法律文書と法案修正、数学proposalにLaTeXを明記し、W3C forms草案がlabelled groupにmodern UIとspeech navigationを明記することを再確認した。新規Rawは不要だった。
+
+外部の語彙・構造からの採用が確認できる「供給源」と、設計時に明示的に参照されたが採用因果を結べない「設計材料」を分離した。58要素を、外部の設計材料まで確認できる33要素、既存HTML／Web機構から内部派生した12要素、HTML固有の要求・用途まで確認できる7要素、上流の具体物が未確認の6要素へ四分割した。GML、SGML、出版語彙に同名・同用途の候補がある`blockquote`、`body`、`html`、`p`、`title`等は、採用記録がないため供給源へ昇格させなかった。
+
+敵対的検証では、最下段の候補について保存済み初期HTML、HTML+、IETF／W3C草案、RFCを横断検索し、類似語彙からの採用を示す記録と分類を覆す早い系譜がないことを確認した。対象Lintは、直接供給源表とHTML外供給源表による現行115要素の一意な網羅、四分類内の58要素の一意性、文化表による115要素の網羅、README概要、frontmatter、Raw参照、内部相対リンク、Markdown whitespace、Raw indexの518 resourceでの再現性を`合格`、`修正済み`と`Research必要`はなしと確認した。element／lineageの歴史的結論、確度、Raw snapshotは変更していない。
+
+## [2026-08-11] research | HTML内生四分類の上流
+
+HTML内生とした58要素を四分類ごとにさらに遡り、synthesisへ全要素を省略しない上流表を追加した。外部材料群はhypertext、image map、SGML形式化、表、forms、法律・編集、HTTP metadata、embedded content、Unix manual、progress UI、Unicode、style sheet、LaTeXへ分解し、内部派生12要素と固有要求8要素は要素ごとの起点と変更を記録した。保存済みLiving Standardで現行定義が変わらないことも確認した。
+
+Raggettらの回顧から、`a`のanchor／`HREF`がBerners-Lee独自の設計であること、`P`が初期HTMLで用いられたSGML要素に含まれること、`TITLE`がSGML tag-pair構文の例であることを追加した。Raggett本人の回顧とRFC 1942を合わせ、HTML+の単純tableは複雑なCALSの縮小移植ではなく別案として選ばれ、後のHTML 3／RFC段階でCALS要求を取り込んだ二段階として限定した。`html`、`body`はSGML処理を具体的材料とし、`head`はHTML固有のstreaming wrapper要求へ移した結果、四分類は外部材料37、内部派生12、固有要求8、上流未確認1となった。
+
+`blockquote`はConnollyによる1992年12月4日の導入よりDocBook 1.1 betaが後発で、Texinfo、LaTeX、FrameMaker MML、MidasWWWも直接祖先として確定しなかった。Connollyが後に挙げたUsenet news style quotingは有力仮説として残したが、後代の不確かな回想なので系譜へ昇格させなかった。反証探索では、`P`／`TITLE`を特定DTDへ結ぶ同時代資料、HTML+単純tableをCALS派生とする資料、`blockquote`を先行語彙へ結ぶ資料を探し、結論を覆す証拠は得られなかった。
+
+追加Rawは、`https://www.w3.org/People/Raggett/book4/ch02.html`（final同一、retrieved `2026-08-10T23:19:21.237Z`）、`https://www.w3.org/People/Raggett/the-early-days-of-the-Web.html`（final同一、retrieved `2026-08-10T23:19:21.554Z`）、`https://lists.w3.org/Archives/Public/public-webhistory/2017Sep/0000.html`（final同一、retrieved `2026-08-10T23:19:49.964Z`）、`https://lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html`（final同一、retrieved `2026-08-10T23:26:11.980Z`）の4件である。
+
+対象Lintは、変更した5 elementページの見出し順、frontmatter、証拠表、確度、README概要、synthesisの証拠と解釈、直接供給源表とHTML外供給源表の115要素一意網羅、四分類の58要素一意性、文化表の115要素網羅、ローカルリンク、Markdown whitespace、Raw indexの522 resourceでの再現性を`合格`、`修正済み`と`Research必要`はなしと確認した。新資料を加えたページは敵対的検証後に`完成`へ戻し、確度は変更していない。
+
+## [2026-08-11] query | 由来別分類synthesisの再構成
+
+追加調査後に重複していた証拠の概説、HTML内生四分類の要約、詳細表を統合し、読み順を「HTML内の直接供給段階」「HTML外まで遡れる供給源」「HTML内で成立した58要素の上流」「さらに上流の文化」へ再構成した。分類軸の違いを冒頭へ集約し、確認済み供給源の根拠を供給源表の直後へ移し、重複していたstyle sheetの行を一行へ整理した。歴史的結論、要素の所属、根拠は変更していない。README概要は新構成とも整合するため変更しなかった。
+
+対象Lintは、frontmatter、章立て、直接供給源表とHTML外供給源表の各115要素一意網羅、HTML内生四分類の37・12・8・1要素と58要素の一意性、文化表の115要素網羅、1,718ローカルMarkdown link、Markdown whitespace、Raw indexの522 resourceでの再現性を`合格`、重複説明と重複行を`修正済み`、`Research必要`はなしと確認した。
+
+## [2026-08-11] query | 「HTML内で成立」分類の解体
+
+追加調査で58要素の由来を四分できたことを反映し、「HTML内で成立」を共通の由来を表す親分類から外した。HTML外まで遡った分類を、外部の語彙・構造・実装から直接採用した57要素、外部材料をHTML独自の要素へ具体化した37要素、既存HTML／Web機構から内部派生した12要素、HTML固有の要求から新規設計した8要素、上流未確認の1要素という並列の五分類へ変更した。「HTML内で成立」は、後四群が外部からの直接採用ではないという証拠状態の説明にだけ残した。README概要も五分類へ同期した。
+
+対象Lintは、frontmatter、章立て、直接供給段階表と由来表の各115要素一意網羅、五分類の57・37・12・8・1要素の一意性、文化表の115要素網羅、1,718ローカルMarkdown link、Markdown whitespace、Raw indexの522 resourceでの再現性を`合格`、分類階層を`修正済み`、`Research必要`はなしと確認した。歴史的結論、要素の所属、Raw snapshot、確度は変更していない。
+
+## [2026-08-11] query | 二つの供給源表の粒度統一
+
+「HTML内の直接供給段階」と「HTML外まで遡った由来」の間で、分類軸と無関係に生じていた供給源の結合と名称差を解消した。第二表のAAP／CERN-SGML／CALSをAAP／CERN-SGMLとCALS table modelへ、外部仕様の集合を既成のXML vocabularyと外部・隣接仕様の提案へ分離し、GUI分類の名称も統一した。両表に共通する八つのHTML外供給源は、名称、粒度、要素集合を同一にした。HTML内部の供給段階を第二表で上流由来へ組み替える差だけは、分類軸に由来するため維持した。README概要はこの粒度変更後も正確なため変更しなかった。
+
+対象Lintは、共通八分類の要素集合がAAP／CERN-SGML 12、GNU Texinfo 11、CALS table model 3、既成のXML vocabulary 2、browser vendor 8、既存Web 13、外部・隣接仕様7、GUI 1で表間一致すること、合計57要素、両表の115要素一意網羅、1,718ローカルMarkdown link、Markdown whitespace、Raw indexの522 resourceでの再現性を`合格`、表間の不要な粒度差を`修正済み`、`Research必要`はなしと確認した。歴史的結論、要素の所属、Raw snapshot、確度は変更していない。

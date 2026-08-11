@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-Dan Connollyが1992年12月4日のmailで、新しいparagraph styleとしてHTML DTDへ追加すると説明し、1993年1月6日版DTDで確認できる。HTML以前の具体的祖先は確認できない。
+Dan Connollyが1992年12月4日のmailで、新しいparagraph styleとしてHTML DTDへ追加すると説明し、1993年1月6日版DTDで確認できる。Connollyは後にUsenet newsの引用様式から影響された可能性を挙げたが、HTML以前の具体的祖先は確定できない。
 
 ## 現在の意味
 
@@ -24,11 +24,11 @@ Dan Connollyは1992年12月4日のmailで、既存codeを大きく変えず`html
 
 ### 証拠
 
-確認できる資料からは、HTMLより前の具体的な系譜を結べない。
+Connollyは2017年、DocBook等からの影響を問われ、よりありそうなのはUsenet news style quotingの影響だと回想した。ただし自身も当時のarchiveを探索中で、確定的な記憶または同時代記録としては提示していない。[Connolly, “Re: Provenance of the blockquote element”](../../raw/lists.w3.org/Archives/Public/public-webhistory/2017Sep/0000.html)（[公開元](https://lists.w3.org/Archives/Public/public-webhistory/2017Sep/0000.html)）同じ探索の記録では、DocBook 1.1 betaの`blockquote`は1993年1月19日でHTML側の初出後、Texinfoには`@quotation`等があるが同名ではなく、LaTeX、FrameMaker MML、MidasWWWも候補を確定できなかった。[Palmer, “The Origin of Blockquote”](../../raw/lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html)（[公開元](https://lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html)）
 
 ### 解釈
 
-なし。
+Usenetの返信引用は有力な出発仮説だが、同時代資料または具体的なmarkupから`BLOCKQUOTE`への採用を確認できない。DocBook、SGML Annex E系の`LQ`、LaTeX、Texinfo、CERN SGMLは候補として比較されているが、Connolly自身の回顧もいずれかを確定しない。
 
 ## 系譜
 
@@ -41,6 +41,8 @@ HTML DTDへの`BLOCKQUOTE`追加説明（1992-12-04）→ HTML DTD `BLOCKQUOTE`�
 | 1992-11-13（更新日） | [*Tags used in HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)） | CERN公式HTML資料のhistorical snapshot | 当時のHTML tag一覧に`BLOCKQUOTE`を確認できない。 | 2026-08-09 |
 | 1992-12-04 | [“Re: The spec evolves...”](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html)） | www-talkへの当事者投稿 | Connollyが新しいparagraph styleとして`BLOCKQUOTE`をDTDへ追加すると説明する。 | 2026-08-09 |
 | 1993-06 | [*Hypertext Markup Language (HTML)*](../../raw/www.ietf.org/archive/id/draft-ietf-iiir-html-00.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-iiir-html-00)） | IETF Internet-Draft | `BLOCKQUOTE`の引用用途、typical rendering、例、DTD宣言を記録する。 | 2026-08-09 |
+| 2017-08-28 | [Sean B. Palmer, “The Origin of Blockquote”](../../raw/lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html)（[公開元](https://lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html)） | 導入者を含む史料再探索log | HTML側の初出、後発のDocBook beta、Texinfo、LaTeX、FrameMaker MML、MidasWWWを比較するが、先行する直接祖先を確定できない。 | 2026-08-11 |
+| 2017-09-11 | [Dan Connolly, “Re: Provenance of the blockquote element”](../../raw/lists.w3.org/Archives/Public/public-webhistory/2017Sep/0000.html)（[公開元](https://lists.w3.org/Archives/Public/public-webhistory/2017Sep/0000.html)） | 導入者による回顧 | Usenet news style quotingの影響を有力候補として挙げるが、当時の記録による確定ではない。 | 2026-08-11 |
 
 ## 確度
 
@@ -50,9 +52,9 @@ HTMLへ加えた主体と設計意図は当事者資料で確認できるが、H
 
 ## 否定された仮説
 
-名称と引用用途の類似だけから、先行SGML/GMLの`BLOCKQUOTE`または印刷上のblock quotationを直接祖先とする説明。
+名称と引用用途の類似だけから、DocBook、SGML Annex E系、CERN SGML、LaTeX、Texinfoまたは印刷上のblock quotationを直接祖先とする説明。Usenet news style quotingも導入者の後代の推測としては残すが、確定系譜にはしない。
 
 ## 未解決
 
 - 1992年タグ一覧から1993年draftまでの提案、change record、www-talk議論に`BLOCKQUOTE`の導入判断は残っているか。
-- 同名または対応する先行要素からの採用因果を示す資料はあるか。
+- Usenetの返信引用、DocBook、SGML Annex E系、LaTeX、TexinfoまたはCERN SGMLからの採用因果を示す同時代資料はあるか。

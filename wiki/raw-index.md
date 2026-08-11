@@ -244,6 +244,7 @@
 | [lists.w3.org/Archives/Public/public-html/2012Oct/0109.html](../raw/lists.w3.org/Archives/Public/public-html/2012Oct/0109.html) | maincontent extension - data on use of id=main and id=content in web pages from Steve Faulkner on 2012-10-16 (public-html@w3.org from October 2012) |
 | [lists.w3.org/Archives/Public/public-html/2012Sep/0086.html](../raw/lists.w3.org/Archives/Public/public-html/2012Sep/0086.html) | maincontent element from Steve Faulkner on 2012-09-09 (public-html@w3.org from September 2012) |
 | [lists.w3.org/Archives/Public/public-html/2013Jan/0033.html](../raw/lists.w3.org/Archives/Public/public-html/2013Jan/0033.html) | &lt;main&gt; has landed from Robin Berjon on 2013-01-11 (public-html@w3.org from January 2013) |
+| [lists.w3.org/Archives/Public/public-webhistory/2017Sep/0000.html](../raw/lists.w3.org/Archives/Public/public-webhistory/2017Sep/0000.html) | Re: Provenance of the blockquote element from Dan Connolly on 2017-09-11 (public-webhistory@w3.org from September 2017) |
 | [lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0187.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0187.html) | [whatwg] HTML5: Deprecate the SMALL element from Henrik Lied on 2005-04-12 (public-whatwg-archive@w3.org from April 2005) |
 | [lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0190.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0190.html) | [whatwg] HTML5: Deprecate the SMALL element from Ian Hickson on 2005-04-12 (public-whatwg-archive@w3.org from April 2005) |
 | [lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html) | [whatwg] image captions from Simon Pieters on 2006-04-22 (public-whatwg-archive@w3.org from April 2006) |
@@ -254,6 +255,7 @@
 | [lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2011Nov/0140.html) | [whatwg] Declarative Inert DOM (e.g. the &lt;template&gt; element) from Rafael Weinstein on 2011-11-17 (public-whatwg-archive@w3.org from November 2011) |
 | [lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html](../raw/lists.w3.org/Archives/Public/w3c-wai-hc/1997OctDec/0160.html) | Minutes [was: Agenda for 971023 HTML WG meeting] from Dan Connolly on 1997-10-23 (w3c-wai-hc@w3.org from October to December 1997) |
 | [lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html](../raw/lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html) | FORM SELECT accessibility from MegaZone on 1997-09-27 (w3c-wai-ig@w3.org from July to September 1997) |
+| [lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html](../raw/lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html) | The Origin of Blockquote from Sean B. Palmer on 2017-08-28 (www-archive@w3.org from August 2017) |
 | [lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html](../raw/lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html) | Re: Proposal for Extensions to HTML4 from Ian Hickson on 2003-12-07 (www-forms@w3.org from December 2003) |
 | [lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0024.html](../raw/lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0024.html) | [Fwd: Re: WAI proposed enhancements] from Dan Connolly on 1997-10-25 (www-html-editor@w3.org from October to December 1997) |
 | [lists.w3.org/Archives/Public/www-html/1994Jun/0002.html](../raw/lists.w3.org/Archives/Public/www-html/1994Jun/0002.html) | Re: meta information from Roy T. Fielding on 1994-06-02 (www-html@w3.org from June 1994) |
@@ -378,6 +380,8 @@
 | [www.w3.org/MarkUp/html3/logical.html](../raw/www.w3.org/MarkUp/html3/logical.html) | Information Type Elements |
 | [www.w3.org/MarkUp/html3/tables.html](../raw/www.w3.org/MarkUp/html3/tables.html) | Tables |
 | [www.w3.org/MarkUp/htmlplus_paper/htmlplus.html](../raw/www.w3.org/MarkUp/htmlplus_paper/htmlplus.html) | A Review of the HTML+ Document Format |
+| [www.w3.org/People/Raggett/book4/ch02.html](../raw/www.w3.org/People/Raggett/book4/ch02.html) | Chapter 2 |
+| [www.w3.org/People/Raggett/the-early-days-of-the-Web.html](../raw/www.w3.org/People/Raggett/the-early-days-of-the-Web.html) | My involvement with the early days of the Web |
 | [www.w3.org/TR/1998/REC-MathML-19980407/index.html](../raw/www.w3.org/TR/1998/REC-MathML-19980407/index.html) | Mathematical Markup Language (MathML) |
 | [www.w3.org/TR/1998/WD-ruby-19981221/index.html](../raw/www.w3.org/TR/1998/WD-ruby-19981221/index.html) | Ruby |
 | [www.w3.org/TR/2000/WD-xforms-20001219/ui.html](../raw/www.w3.org/TR/2000/WD-xforms-20001219/ui.html) | XForms User Interface - W3C XForms 1.0 - Working Draft 20001219 |
