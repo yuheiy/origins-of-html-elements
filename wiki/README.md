@@ -77,7 +77,7 @@ status: 完成
 - [`<ins>`](elements/ins.md): HTML+ `ADDED`からHTML 3.0 `INS`、HTML 4への系列は集合単位で確認できるが、個別の改名と採録は未確認である。
 - [`<kbd>`](elements/kbd.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した論理的な文字強調要素で、同時代Texinfoの`@kbd`との対応を確認できる。
 - [`<label>`](elements/label.md): 1996年のW3Cフォーム草案が、フォームコントロールとラベルテキストを構造的に関連付け、グラフィック／音声ブラウザーでの操作と説明を改善するため`LABEL`を提案した。
-- [`<legend>`](elements/legend.md): `LGROUP`／`IS`から`FIELDSET`／`CAPTION`を経てHTML 4の`LEGEND`へ変化したが、最後の改名判断は未確認である。
+- [`<legend>`](elements/legend.md): `LGROUP`／`IS`から`FIELDSET`／`CAPTION`を経て、表用`CAPTION`とのエラー回復実装上の衝突を避けるためHTML 4の`LEGEND`へ改名された。
 - [`<li>`](elements/li.md): CERN-SGMLから初期HTMLへ入ったリスト集合の一つだが、`LI`個別の対応は明記されない。
 - [`<link>`](elements/link.md): 1992年のCERN設計ノートは、テキストへ局所化されたアンカーと区別して文書全体の関係を表す空の`LINK`を新DTD向けに提案し、1993年1月6日版DTDに同要素が現れる。
 - [`<main>`](elements/main.md): XHTML 2からWAI-ARIAへ続く`main`役割と既存Web慣習を2012年の提案が要素化し、2013年にWHATWGが汎用的な主要内容コンテナーとして統合した。`maincontent`からの正確な改名記録は未解決である。
