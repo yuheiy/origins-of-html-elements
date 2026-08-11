@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org" />
+<title>XHTML 2.0 - XHTML Role Access Module</title>
+<link rel="start" type="text/html" href="Overview.html" />
+<link rel="contents" type="text/html" href="Overview.html#toc" />
+<link rel="prev" type="text/html" href="mod-object.html" />
+<link rel="next" type="text/html" href="mod-ruby.html" />
+<link rel="stylesheet" type="text/css" href="xhtml.css" />
+<link rel="stylesheet" type="text/css" href="https://www.w3.org/StyleSheets/TR/W3C-WD.css" />
+</head>
+<body>
+<div class="navbar">[<a accesskey="P" href="mod-object.html">previous</a>] &#160; [<a accesskey="N" href="mod-ruby.html">next</a>] &#160;[<a accesskey="T" href="Overview.html#toc">table of
+contents</a>] &#160;[<a accesskey="E" href="elements.html">elements</a>] &#160;[<a accesskey="A" href="attributes.html">attributes</a>] 
+
+<hr />
+</div>
+
+<h1><a id="s_rolemodule" name="s_rolemodule">25.</a> XHTML Role Access Module</h1>
+
+<div class='subtoc'>
+<p><strong>Contents</strong></p>
+
+<ul class='toc'>
+<li class='tocline'>25.1. <a href="#sec_25.1." class="tocxref">The access element</a></li>
+
+<li class='tocline'>25.2. <a href="#col_Role" class="tocxref">Role Collection</a></li>
+</ul>
+</div>
+
+<p>This section is <em>normative</em>.</p>
+
+<p>This module defines the <a class="csref" href="mod-role.html#col_Role">Role</a> attribute collection and the <a class="eref" href="mod-role.html#edef_role_access">access</a> element.</p>
+
+<table class="moduledef" border="1" summary="Elements and Attributes in Text Module">
+<thead>
+<tr>
+<th>Element</th>
+<th>Attributes</th>
+<th>Content Model</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a class="eref" href="mod-role.html#edef_role_access">access</a></td>
+<td><a class="csref" href="mod-attribute-collections.html#col_Common">Common</a>, <a class="aref" href="mod-role.html#adef_role_key">key</a>, <a class="aref" href="mod-role.html#adef_role_targetid">
+targetid</a>, <a class="aref" href="mod-role.html#adef_role_targetrole">targetrole</a></td>
+<td class="content">EMPTY</td>
+</tr>
+</tbody>
+</table>
+
+<!-- INCLUDING ELEMENT modules/role/access.mhtml -->
+<h2><a id="sec_25.1." name="sec_25.1.">25.1.</a> The <a class="edef" id="edef_role_access">access</a> element</h2>
+
+<p>The <a class="eref" href="mod-role.html#edef_role_access">access</a> element assigns an accessibility mapping to elements within a document. Actuating the shortcut results in the element gaining
+focus.</p>
+
+<div class="adef-list">
+<p><em>Attributes</em></p>
+
+<!-- INCLUDING ATTRIBUTE modules/attributes/Common.mhtml -->
+<dl class='attrDef'>
+<dt>The <a class="csref" href="mod-attribute-collections.html#col_Common">Common</a> collection</dt>
+
+<dd>A collection of other attribute collections, including: <a class="csref" href="mod-bidi.html#col_Bi-directional">Bi-directional</a>, <a class="csref" href="mod-core.html#col_Core">Core</a>, <a
+class="csref" href="mod-edit.html#col_Edit">Edit</a>, <a class="csref" href="mod-embedding.html#col_Embedding">Embedding</a>, <a class="csref" href="mod-xml-events.html#col_Events">Events</a>, <a
+class="csref" href="mod-xforms.html#col_Forms">Forms</a>, <a class="csref" href="mod-hyperAttributes.html#col_Hypertext">Hypertext</a>, <a class="csref" href="mod-i18n.html#col_I18N">I18N</a>, <a
+class="csref" href="mod-csImgMap.html#col_Map">Map</a>, and <a class="csref" href="mod-metaAttributes.html#col_Metainformation">Metainformation</a>.</dd>
+</dl>
+
+<!-- END OF ATTRIBUTE FILE modules/attributes/Common.mhtml --><!-- INCLUDING ATTRIBUTE modules/attributes/key.mhtml -->
+<dl class='attrDef'>
+<dt><a class="adef" id="adef_role_key"><span class="adef">key</span></a> = <span class="datatype"><a href="abstraction.html#dt_Character">Character</a></span></dt>
+
+<dd>This attribute assigns a key mapping to an access shortcut. <a class="xdef" id="s_rolemodule_xref_0">An access key</a> is a single character from the document character set. <strong>
+Note.</strong> Authors should consider the input method of the expected reader when specifying an accesskey. 
+
+<p> <a class="xdef" id="s_rolemodule_xref_1">Pressing an access key defined in an access element gives focus to the next element in navigation order from the current focus that has the referenced
+role value.</a></p>
+
+<p>The invocation of access keys depends on the implementation. For instance, on some systems one may have to press the "alt" key in addition to the access key. On other systems, one generally has to
+press the "cmd" key in addition to the access key.</p>
+
+<p>The rendering of access keys depends on the user agent. We recommend that authors include the access key in label text or wherever the access key is to apply. User agents should render the value
+of an access key in such a way as to emphasize its role and to distinguish it from other characters (e.g., by underlining it).</p>
+</dd>
+</dl>
+
+<!-- END OF ATTRIBUTE FILE modules/attributes/key.mhtml --><!-- INCLUDING ATTRIBUTE modules/attributes/targetid.mhtml -->
+<dl class='attrDef'>
+<dt><a class="adef" id="adef_role_targetid"><span class="adef">targetid</span></a> = <span class="datatype"><a href="abstraction.html#dt_IDREF">IDREF</a></span></dt>
+
+<dd>The optional <a class="aref" href="mod-role.html#adef_role_targetid">targetid</a> attribute specifies an <span class="datatype"><a href="abstraction.html#dt_IDREF">IDREF</a></span> of the target
+element for the associted event (i.e., the node to which the event should be delivered).</dd>
+</dl>
+
+<!-- END OF ATTRIBUTE FILE modules/attributes/targetid.mhtml --><!-- INCLUDING ATTRIBUTE modules/attributes/targetrole.mhtml -->
+<dl class='attrDef'>
+<dt><a class="adef" id="adef_role_targetrole"><span class="adef">targetrole</span></a> = <span class="datatype"><a href="abstraction.html#dt_QName">QName</a></span></dt>
+
+<dd>The <a class="aref" href="mod-role.html#adef_role_targetrole">targetrole</a> attribute specifies a <span class="datatype"><a href="abstraction.html#dt_QName">QName</a></span> that maps to an
+element with a <a class="aref" href="mod-role.html#adef_role_role">role</a> attribute with the same value.</dd>
+</dl>
+
+<!-- END OF ATTRIBUTE FILE modules/attributes/targetrole.mhtml --></div>
+
+<p><span class="must">If a <a class="aref" href="mod-role.html#adef_role_targetid">targetid</a> and a <a class="aref" href="mod-role.html#adef_role_targetrole">targetrole</a> are both specified for
+an element, the <a class="aref" href="mod-role.html#adef_role_targetid">targetid</a> attribute value must take precedence.</span></p>
+
+<div class="example">
+<p>Access element that focuses into a field</p>
+
+<pre>
+&lt;access key="s" 
+        title="Social Security Number" 
+        targetrole="ss:number" /&gt;
+</pre>
+</div>
+
+<div class="example">
+<p>Accessing a table of contents</p>
+
+<pre>
+&lt;access key="c"
+        title="Table of Contents" 
+        targetrole="toc" /&gt;
+</pre>
+</div>
+
+<div class="example">
+<p>Access that moves to the main content</p>
+
+<pre>
+&lt;access key="m"
+        title="Main content" 
+        targetrole="main" /&gt;
+</pre>
+</div>
+
+<div class="example">
+<p>Access element that goes to a specific element</p>
+
+<pre>
+&lt;access key="u" 
+        title="Username" 
+        targetid="username" /&gt;
+</pre>
+</div>
+
+<!-- END OF ELEMENT FILE modules/role/access.mhtml -->
+<h2><a id="col_Role" name="col_Role">25.2.</a> Role Collection</h2>
+
+<!-- INCLUDING ATTRIBUTE modules/attributes/role.mhtml -->
+<dl class='attrDef'>
+<dt><a class="adef" id="adef_role_role"><span class="adef">role</span></a> = <span class="datatype"><a href="abstraction.html#dt_QName">QName</a></span></dt>
+
+<dd>This attribute describes the relationship the current element (and its contents) has to the value of the <a class="aref" href="mod-metaAttributes.html#adef_metaAttributes_about">about</a>
+attribute or its default value. It is used by applications and assistive technologies to determine the purpose of UI widgets. In the case of a web page it may be declarative as a function of
+particular elements or it may be an attribute which is configurable by the page author. Additionally, role information may be used to define each action which may be performed on an element. This
+allows a user to make informed decisions on which actions may be taken on an element and activate the selected action in a device independent way. 
+
+<div class="example">
+<p>Example</p>
+
+<pre>
+&lt;nl role="wai:sitemap"&gt;
+    &lt;li href="downloads"&gt;Downloads&lt;/li&gt;
+    &lt;li href="docs"&gt;Documentation&lt;/li&gt;
+    &lt;li href="news"&gt;News&lt;/li&gt;
+&lt;/nl&gt;
+</pre>
+</div>
+
+<p>Additional roles may be defined through the use of this attribute. Roles shall be defined as qnames referencing RDF definitions for them. The RDF definition can be used define what the object is,
+how you would interact with it, how it relates to other elements, and what other objects it is like or sub classes. This defines the basis for taxonomies defined amongst common sets of document
+elements. For example, dynamic web content often recreates GUI widgets using combinations of web page elements, style sheets, and script thus applying different meaning to the elements. This has
+benefits for the intraction between web content, user agents, and assistive technologies by providing for a discoverable interaction model. For example, this model can be used to allow a screen
+reader to provide a speech interface based on real semantics. The user agent could use the information to create device navigation mappings.</p>
+
+<p>Authors may use the following relationship names, listed here with their conventional interpretations. User agents, search engines, etc. may interpret these relationships in a variety of ways. For
+example, user agents may provide access to linked documents through a navigation bar.</p>
+
+<p>Users may extend this collection of relationships. However, extensions must be defined in their own namespace, and the relationship names must be referenced in documents as qualified names (e.g.,
+dc:creator for the Dublin Core "creator" relationship).</p>
+
+<p>The following attributes will be standard. They are designed to define pertinent parts of a document for the purpose of accessibility. User agents may incorporate device equivalents, such as key
+mappings in the case of a desktop user agent, to navigate to these sections of a document.</p>
+
+<dl>
+<dt>main</dt>
+
+<dd>This defines the main content of a document.</dd>
+
+<dt>secondary</dt>
+
+<dd>This is any unique section of the document. In the case of a portal, this may include but not be limited to: show times; current weather; or stocks to watch.</dd>
+
+<dt>navigation</dt>
+
+<dd>This is the navigation bar on a web document. This is typically a list of links to other pages on the site or other areas of the same document.</dd>
+
+<dt>banner</dt>
+
+<dd>A banner is usually defined as the advertisement at the top of a web page. The banner content typically contains the site or company logo and other key advertisements for the site.</dd>
+
+<dt>contentinfo</dt>
+
+<dd>This is information about the content on the page. For example, footnotes, copyrights, links to privacy statements, etc. would belong here.</dd>
+
+<dt>note</dt>
+
+<dd>The content is parenthetic or ancillary to the main content of the resource.</dd>
+
+<dt>seealso</dt>
+
+<dd>Indicates that the element contains content that is related to the main content of the page.</dd>
+
+<dt>search</dt>
+
+<dd>This is the search section of a web document. This is typically a form used to submit search requests about the site or is a more general Internet wide search service.</dd>
+</dl>
+</dd>
+</dl>
+
+<!-- END OF ATTRIBUTE FILE modules/attributes/role.mhtml -->
+<hr />
+<div class="navbar">[<a href="mod-object.html">previous</a>] &#160; [<a href="mod-ruby.html">next</a>] &#160; [<a href="Overview.html#toc">table of contents</a>] &#160;[<a href=
+"elements.html">elements</a>] &#160;[<a href="attributes.html">attributes</a>]</div>
+</body>
+</html>
+

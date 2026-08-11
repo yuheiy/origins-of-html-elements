@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された590ファイルを、32の取得元ホストごとに収録する。
+Rawに保存された596ファイルを、32の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（9ファイル）
 
@@ -217,7 +217,7 @@ Rawに保存された590ファイルを、32の取得元ホストごとに収録
 | [mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/README.first](../raw/ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/README.first) | — |
 | [mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd](../raw/ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd) | — |
 
-## `github.com`（67ファイル）
+## `github.com`（68ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -262,6 +262,7 @@ Rawに保存された590ファイルを、32の取得元ホストごとに収録
 | [whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d](../raw/github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d) | [acgiowt] (2) Drop &lt;time&gt; and replace it with &lt;data&gt;. Drop the Atom c… · whatwg/html@70b0ce4 · GitHub |
 | [whatwg/html/commit/7387156d67e9087106a62157bb4b6d3e47739fb2](../raw/github.com/whatwg/html/commit/7387156d67e9087106a62157bb4b6d3e47739fb2) | [] (0) Remove SVG support from the parser based on a request from the… · whatwg/html@7387156 · GitHub |
 | [whatwg/html/commit/753f385d6eb176f4cc7075ba9f41ed3190848b10](../raw/github.com/whatwg/html/commit/753f385d6eb176f4cc7075ba9f41ed3190848b10) | [co] (2) the &lt;video&gt; element and assorted related changes · whatwg/html@753f385 · GitHub |
+| [whatwg/html/commit/7761b993b22765dbd26ca229d8d89bcb5044392c](../raw/github.com/whatwg/html/commit/7761b993b22765dbd26ca229d8d89bcb5044392c) | [cgiowt] (3) Match reality · whatwg/html@7761b99 · GitHub |
 | [whatwg/html/commit/77883ac94547e66273da7450487ac298b6bb625d](../raw/github.com/whatwg/html/commit/77883ac94547e66273da7450487ac298b6bb625d) | [e] (0) Attempt to resolve the terminology confusion of heading vs he… · whatwg/html@77883ac · GitHub |
 | [whatwg/html/commit/78910a0464b60b2d2b3a1864970f66a8bdb774f3](../raw/github.com/whatwg/html/commit/78910a0464b60b2d2b3a1864970f66a8bdb774f3) | &lt;wbr&gt; is an empty element. · whatwg/html@78910a0 · GitHub |
 | [whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4](../raw/github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4) | [ac] (0) Rename &lt;header&gt; to &lt;hgroup&gt; and restrict it just to supporti… · whatwg/html@7e9b2d1 · GitHub |
@@ -335,7 +336,7 @@ Rawに保存された590ファイルを、32の取得元ホストごとに収録
 |---|---|
 | [WEBMASTER/tags.txt](../raw/lib.ru/WEBMASTER/tags.txt) | HTML Referece Guide: Tags for Netscape 3.0 |
 
-## `lists.w3.org`（50ファイル）
+## `lists.w3.org`（51ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -376,6 +377,7 @@ Rawに保存された590ファイルを、32の取得元ホストごとに収録
 | [Archives/Public/www-html/1995Sep/0048.html](../raw/lists.w3.org/Archives/Public/www-html/1995Sep/0048.html) | A proposal for addition to HTML 3.0: EMBED from Alex Edelstein on 1995-09-20 (www-html@w3.org from September 1995) |
 | [Archives/Public/www-html/1997Jul/0079.html](../raw/lists.w3.org/Archives/Public/www-html/1997Jul/0079.html) | Re: HTML 4.0 draft available from Arnoud on 1997-07-09 (www-html@w3.org from July 1997) |
 | [Archives/Public/www-html/1997Sep/0385.html](../raw/lists.w3.org/Archives/Public/www-html/1997Sep/0385.html) | Why is it still "ACRONYM"? from Holger Wahlen on 1997-09-29 (www-html@w3.org from September 1997) |
+| [Archives/Public/www-html/2005Sep/0003.html](../raw/lists.w3.org/Archives/Public/www-html/2005Sep/0003.html) | RE: XHTML2: Proposal for total separation of semantics from structure from Mark Birbeck on 2005-09-02 (www-html@w3.org from September 2005) |
 | [Archives/Public/www-style/1995Dec/0039.html](../raw/lists.w3.org/Archives/Public/www-style/1995Dec/0039.html) | Re: draft-ietf-html-style-00.txt from Michael J Hannah on 1995-12-05 (www-style@w3.org from December 1995) |
 | [Archives/Public/www-talk/1991SepOct/0003.html](../raw/lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html) | www-talk from September to October 1991: Re: status. Re: X11 BROWSER for WWW |
 | [Archives/Public/www-talk/1992JanFeb/0000.html](../raw/lists.w3.org/Archives/Public/www-talk/1992JanFeb/0000.html) | www-talk from January to February 1992: Re: Is there a paper which describes the www protocol? |
@@ -390,7 +392,7 @@ Rawに保存された590ファイルを、32の取得元ホストごとに収録
 | [Archives/Public/www-talk/1992NovDec/0155.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html) | www-talk from November to December 1992: The spec evolves... |
 | [Archives/Public/www-talk/1992NovDec/0159.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html) | www-talk from November to December 1992: Re: The spec evolves... |
 
-## `lists.whatwg.org`（36ファイル）
+## `lists.whatwg.org`（38ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -429,6 +431,8 @@ Rawに保存された590ファイルを、32の取得元ホストごとに収録
 | [pipermail/whatwg-whatwg.org/2011-March/030907.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2011-March/030907.html) | [whatwg] Embedding custom hierarchical data |
 | [pipermail/whatwg-whatwg.org/2012-April/077688.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html) | [whatwg] Dialogs and prompts |
 | [pipermail/whatwg-whatwg.org/2012-May/035746.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-May/035746.html) | [whatwg] &lt;img srcset&gt; for responsive bitmapped content images |
+| [pipermail/whatwg-whatwg.org/2012-November/037800.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-November/037800.html) | [whatwg] main element parsing behaviour |
+| [pipermail/whatwg-whatwg.org/2012-November/080251.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-November/080251.html) | [whatwg] A plea to Hixie to adopt &lt;main&gt; |
 | [pipermail/whatwg-whatwg.org/2014-January/084111.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2014-January/084111.html) | [whatwg] Simplified &lt;picture&gt; element draft |
 
 ## `ln.hixie.ch`（1ファイル）
@@ -542,7 +546,7 @@ Rawに保存された590ファイルを、32の取得元ホストごとに収録
 |---|---|
 | [jordi/v3/js/jsguide/jsguide.pdf](../raw/www.uv.es/jordi/v3/js/jsguide/jsguide.pdf) | — |
 
-## `www.w3.org`（200ファイル）
+## `www.w3.org`（202ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -608,6 +612,8 @@ Rawに保存された590ファイルを、32の取得元ホストごとに収録
 | [TR/2001/REC-SVG-20010904/__index](../raw/www.w3.org/TR/2001/REC-SVG-20010904/__index) | Scalable Vector Graphics (SVG) 1.0 Specification |
 | [TR/2001/REC-ruby-20010531/__index](../raw/www.w3.org/TR/2001/REC-ruby-20010531/__index) | Ruby Annotation |
 | [TR/2003/REC-xforms-20031014/slice8.html](../raw/www.w3.org/TR/2003/REC-xforms-20031014/slice8.html) | Form Controls |
+| [TR/2004/WD-xhtml2-20040722/__index](../raw/www.w3.org/TR/2004/WD-xhtml2-20040722/__index) | XHTML 2.0 |
+| [TR/2005/WD-xhtml2-20050527/mod-role.html](../raw/www.w3.org/TR/2005/WD-xhtml2-20050527/mod-role.html) | XHTML 2.0 - XHTML Role Access Module |
 | [TR/2006/WD-xhtml-role-20060725/__index](../raw/www.w3.org/TR/2006/WD-xhtml-role-20060725/__index) | XHTML Role Attribute Module |
 | [TR/2006/WD-xhtml2-20060726/mod-object.html](../raw/www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html) | XHTML 2.0 - XHTML Object Module |
 | [TR/2008/WD-html5-20080122/__index](../raw/www.w3.org/TR/2008/WD-html5-20080122/__index) | HTML 5 |

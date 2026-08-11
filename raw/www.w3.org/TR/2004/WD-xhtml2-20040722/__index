@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org" />
+<title>XHTML 2.0</title>
+<link rel="stylesheet" type="text/css" href="xhtml.css" />
+<link rel="stylesheet" type="text/css" href="https://www.w3.org/StyleSheets/TR/W3C-WD.css" />
+<link rel="next" type="text/html" href="introduction.html" />
+<link rel="start" type="text/html" href="Overview.html" />
+<link rel="contents" type="text/html" href="Overview.html#toc" />
+</head>
+<body>
+<div class="navbar">[<a href="introduction.html">next</a>]&#160;[<a href="#toc">table of contents</a>]&#160;[<a href="elements.html">elements</a>] &#160;[<a href="attributes.html">attributes</a>] 
+
+<hr />
+</div>
+
+<div class="head"><a href="https://www.w3.org/"><img height="48" width="72" src="https://www.w3.org/Icons/w3c_home" alt="W3C" /></a> 
+
+<h1><a id="title" name="title">XHTML&#8482; 2.0</a></h1>
+
+<h2><a id="subtitle" name="subtitle">W3C Working Draft 22 July 2004</a></h2>
+
+<dl>
+<dt>This version:</dt>
+
+<dd><a href="https://www.w3.org/TR/2004/WD-xhtml2-20040722">http://www.w3.org/TR/2004/WD-xhtml2-20040722</a></dd>
+
+<dt>Latest version:</dt>
+
+<dd><a href="https://www.w3.org/TR/xhtml2">http://www.w3.org/TR/xhtml2</a></dd>
+
+<dt>Previous version:</dt>
+
+<dd><a href="https://www.w3.org/TR/2003/WD-xhtml2-20030506">http://www.w3.org/TR/2003/WD-xhtml2-20030506</a></dd>
+
+<dt>Diff-marked version:</dt>
+
+<dd><a href="xhtml2-diff.html">xhtml2-diff.html</a></dd>
+
+<dt>Editors:</dt>
+
+<dd>Jonny Axelsson, Opera Software</dd>
+
+<dd>Beth Epperson, Netscape/<abbr title="America Online">AOL</abbr></dd>
+
+<dd><a href="https://www.w3.org/People/mimasa/">Masayasu Ishikawa</a>, <abbr title="World Wide Web Consortium">W3C</abbr></dd>
+
+<dd><a href="mailto:shane@aptest.com">Shane McCarron</a>, <a href="http://www.aptest.com">Applied Testing and Technology</a></dd>
+
+<dd>Ann Navarro, WebGeek, <abbr title="Incorporated">Inc.</abbr></dd>
+
+<dd><a href="http://www.cwi.nl/~steven/">Steven Pemberton</a>, <abbr title="Centrum voor Wiskunde en Informatica" xml:lang="nl">CWI</abbr> (<abbr title="HyperText Markup Language">HTML</abbr> Working
+Group Chair)</dd>
+</dl>
+
+<p>This document is also available in these non-normative formats: <a href="xhtml2.html">Single XHTML file</a>, <a href="xhtml2.ps">PostScript version</a>, <a href="xhtml2.pdf">PDF version</a>, <a
+href="xhtml2.zip">ZIP archive</a>, and <a href="xhtml2.tgz">Gzip'd TAR archive</a>.</p>
+
+<p class="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> &#169;2004 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">
+W3C</abbr></a><sup>&#174;</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="http://www.ercim.org/"><acronym title="European 
+Research Consortium for Informatics and Mathematics">ERCIM</acronym></a> , <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-software">software licensing</a> rules apply.</p>
+</div>
+
+<hr />
+<h2><a id="abstract" name="abstract">Abstract</a></h2>
+
+<p>XHTML 2 is a general-purpose markup language designed for representing documents for a wide range of purposes across the World Wide Web. To this end it does not attempt to be all things to all
+people, supplying every possible markup idiom, but to supply a generally useful set of elements.</p>
+
+<h2><a id="status" name="status">Status of This Document</a></h2>
+
+<p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current W3C publications and the latest revision of
+this technical report can be found in the <a href="https://www.w3.org/TR/">W3C technical reports index</a> at http://www.w3.org/TR/.</em></p>
+
+<p>This document is the sixth public <a href="https://www.w3.org/2004/02/Process-20040205/tr.html#RecsWD">Working Draft</a> of this specification. It should in no way be considered stable, and should
+not be normatively referenced for any purposes whatsoever. This version includes an early implementation of XHTML 2.0 in RELAX NG [<a class="nref" href="references.html#ref_RELAXNG">RELAXNG</a>], but
+<em>does not</em> include the implementations in DTD or XML Schema form. Those will be included in subsequent versions, once the content of this language stabilizes. This version also <em>does
+not</em> address the issues revolving around the use of [<a class="nref" href="references.html#ref_XLINK">XLINK</a>] by XHTML 2.0. Those issues are being worked independent of the evolution of this
+specification. Those issues should, of course, be resolved as quickly as possible, and the resolution will be reflected in a future draft. Finally, the Working Group is actively working to resolve
+many of the issues that have been submitted by the public, but not all of them have been addressed yet. If your particular issue has not yet been addressed, please be patient - there are many issues,
+and some are more complex than others.</p>
+
+<p>Formal issues and error reports on this specification shall be submitted to <a href="mailto:www-html-editor@w3.org">www-html-editor@w3.org</a> (<a href= 
+"http://lists.w3.org/Archives/Public/www-html-editor/">archive</a>). It is inappropriate to send discussion email to this address. Public discussion may take place on <a href=
+"mailto:www-html@w3.org">www-html@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/www-html/">archive</a>). To subscribe send an email to <a href="mailto:www-html-request@w3.org">
+www-html-request@w3.org</a> with the word <em>subscribe</em> in the subject line.</p>
+
+<p>This document has been produced by the <a href="https://www.w3.org/MarkUp/Group/">W3C HTML Working Group</a> (<em><a href="http://cgi.w3.org/MemberAccess/AccessRequest">members only</a></em>) as
+part of the <a href="https://www.w3.org/MarkUp/Activity">W3C HTML Activity</a>. The goals of the HTML Working Group are discussed in the <a href="https://www.w3.org/2002/05/html/charter">HTML Working
+Group charter</a>.</p>
+
+<p>This document was produced under the <a href="https://www.w3.org/TR/2002/NOTE-patent-practice-20020124">24 January 2002 CPP</a> as amended by the <a href="https://www.w3.org/2004/02/05-pp-transition">W3C Patent Policy Transition Procedure</a>. The Working Group maintains a <a rel="disclosure" href="https://www.w3.org/MarkUp/2002/Disclosures">public list
+of patent disclosures</a> relevant to this document; that page also includes instructions for disclosing a patent. An individual who has actual knowledge of a patent which the individual believes
+contains Essential Claim(s) with respect to this specification should disclose the information in accordance with <a href="https://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section
+6 of the W3C Patent Policy</a>.</p>
+
+<p>Publication as a Working Draft does not imply endorsement by the W3C Membership. This is a draft document and may be updated, replaced or obsoleted by other documents at any time. It is
+inappropriate to cite this document as other than "work in progress."</p>
+
+<h1><a id="toc" name="toc">Quick Table of Contents</a></h1>
+
+<div class="toc">
+<ul class='toc'>
+<li class='tocline'>1. <a href="introduction.html#s_intro" class="tocxref">Introduction</a></li>
+
+<li class='tocline'>2. <a href="terms.html#a_terms" class="tocxref">Terms and Definitions</a></li>
+
+<li class='tocline'>3. <a href="conformance.html#s_conform" class="tocxref">Conformance Definition</a></li>
+
+<li class='tocline'>4. <a href="xhtml2-doctype.html#s_doctype" class="tocxref">The XHTML 2.0 Document Type</a></li>
+
+<li class='tocline'>5. <a href="abstraction.html#s_abstraction" class="tocxref">Module Definition Conventions</a></li>
+
+<li class='tocline'>6. <a href="mod-attribute-collections.html#s_attribute-collectionsmodule" class="tocxref">XHTML Attribute Collections</a></li>
+
+<li class='tocline'>7. <a href="mod-document.html#s_documentmodule" class="tocxref">XHTML Document Module</a></li>
+
+<li class='tocline'>8. <a href="mod-structural.html#s_structuralmodule" class="tocxref">XHTML Structural Module</a></li>
+
+<li class='tocline'>9. <a href="mod-text.html#s_textmodule" class="tocxref">XHTML Text Module</a></li>
+
+<li class='tocline'>10. <a href="mod-hypertext.html#s_hypertextmodule" class="tocxref">XHTML Hypertext Module</a></li>
+
+<li class='tocline'>11. <a href="mod-list.html#s_listmodule" class="tocxref">XHTML List Module</a></li>
+
+<li class='tocline'>12. <a href="mod-core.html#s_coremodule" class="tocxref">XHTML Core Attributes Module</a></li>
+
+<li class='tocline'>13. <a href="mod-hyperAttributes.html#s_hyperAttributesmodule" class="tocxref">XHTML Hypertext Attributes Module</a></li>
+
+<li class='tocline'>14. <a href="mod-i18n.html#s_i18nmodule" class="tocxref">XHTML I18N Attribute Module</a></li>
+
+<li class='tocline'>15. <a href="mod-bidi.html#s_bidimodule" class="tocxref">XHTML Bi-directional Text Attribute Module</a></li>
+
+<li class='tocline'>16. <a href="mod-edit.html#s_editmodule" class="tocxref">XHTML Edit Attributes Module</a></li>
+
+<li class='tocline'>17. <a href="mod-embedding.html#s_embeddingmodule" class="tocxref">XHTML Embedding Attributes Module</a></li>
+
+<li class='tocline'>18. <a href="mod-csImgMap.html#s_csImgMapmodule" class="tocxref">XHTML Image Map Attributes Module</a></li>
+
+<li class='tocline'>19. <a href="mod-metaAttributes.html#s_metaAttributesmodule" class="tocxref">XHTML Metainformation Attributes Module</a></li>
+
+<li class='tocline'>20. <a href="mod-meta.html#s_metamodule" class="tocxref">XHTML Metainformation Module</a></li>
+
+<li class='tocline'>21. <a href="mod-object.html#s_objectmodule" class="tocxref">XHTML Object Module</a></li>
+
+<li class='tocline'>22. <a href="mod-ruby.html#s_rubymodule" class="tocxref">Ruby Module</a></li>
+
+<li class='tocline'>23. <a href="mod-scripting.html#s_scriptingmodule" class="tocxref">XHTML Scripting Module</a></li>
+
+<li class='tocline'>24. <a href="mod-styleAttribute.html#s_styleAttributemodule" class="tocxref">XHTML Style Attribute Module</a></li>
+
+<li class='tocline'>25. <a href="mod-styleSheet.html#s_styleSheetmodule" class="tocxref">XHTML Style Sheet Module</a></li>
+
+<li class='tocline'>26. <a href="mod-tables.html#s_tablesmodule" class="tocxref">XHTML Tables Module</a></li>
+
+<li class='tocline'>27. <a href="mod-xforms.html#s_xformsmodule" class="tocxref">XForms Module</a></li>
+
+<li class='tocline'>28. <a href="mod-xml-events.html#s_xml-eventsmodule" class="tocxref">XML Events Module</a></li>
+
+<li class='tocline'>A. <a href="xhtml2-changes.html#a_changes" class="tocxref">Changes from XHTML 1.1</a></li>
+
+<li class='tocline'>B. <a href="xhtml20_relax.html#a_xhtml20_relaxng" class="tocxref">XHTML 2.0 RELAX NG Definition</a></li>
+
+<li class='tocline'>C. <a href="relax_module_defs.html#a_relaxng_module_defs" class="tocxref">XHTML RELAX NG Module Implementations</a></li>
+
+<li class='tocline'>D. <a href="xhtml20_schema.html#a_xhtml20_schema" class="tocxref">XHTML 2.0 Schema</a></li>
+
+<li class='tocline'>E. <a href="schema_module_defs.html#a_schema_module_defs" class="tocxref">XHTML Schema Module Implementations</a></li>
+
+<li class='tocline'>F. <a href="xhtml20_dtd.html#a_xhtml20_dtd" class="tocxref">XHTML 2.0 Document Type Definition</a></li>
+
+<li class='tocline'>G. <a href="dtd_module_defs.html#a_dtd_module_defs" class="tocxref">XHTML DTD Module Implementations</a></li>
+
+<li class='tocline'>H. <a href="xhtml2-style.html#a_stylesheet" class="tocxref">Stylesheet for XHTML 2</a></li>
+
+<li class='tocline'>I. <a href="elements.html#a_elements" class="tocxref">List of Elements</a></li>
+
+<li class='tocline'>J. <a href="attributes.html#a_attributes" class="tocxref">List of Attributes</a></li>
+
+<li class='tocline'>K. <a href="xref.html#a_xref" class="tocxref">Cross-reference Index</a></li>
+
+<li class='tocline'>L. <a href="references.html#a_refs" class="tocxref">References</a></li>
+
+<li class='tocline'>M. <a href="acknowledgements.html#a_acks" class="tocxref">Acknowledgements</a></li>
+</ul>
+</div>
+
+<h1><a id="issueList" name="issueList">List of Issues</a></h1>
+
+<div class="issue">
+<ol class='issue'>
+<li class='issue'><a href='xhtml2-doctype.html#s_doctype_issue_0'>[PR #7336] Identifying XHTML version in ansence of DTDs</a></li>
+
+<li class='issue'><a href='mod-attribute-collections.html#s_attribute-collectionsmodule_issue_0'>[PR #7442] xml:id</a></li>
+
+<li class='issue'><a href='mod-document.html#s_documentmodule_issue_0'> Need a normative definition for the version attribute</a></li>
+
+<li class='issue'><a href='mod-text.html#s_textmodule_issue_0'>[PR #6554] [XHTML2] Comments on WD 5: make white space preservation part of the standard values for the code and kbd elements?</a></li>
+
+<li class='issue'><a href='mod-object.html#s_objectmodule_issue_0'>[PR #7642] Efficient param's</a></li>
+
+<li class='issue'><a href='xhtml20_dtd.html#a_xhtml20_dtd_issue_0'>[PR #634] Fw: Character entities in HTML and MathML</a></li>
+
+<li class='issue'><a href='xhtml20_dtd.html#a_xhtml20_dtd_issue_1'>[PR #670] Entity management: do we still need it?</a></li>
+
+<li class='issue'><a href='xhtml20_dtd.html#a_xhtml20_dtd_issue_2'>[PR #671] Character entities: do we still need them?</a></li>
+</ol>
+</div>
+
+<h1><a id="contents" name="contents">Full Table of Contents</a></h1>
+
+<div class="toc">
+<ul class='toc'>
+<li class='tocline'>1. <a href="introduction.html#s_intro" class="tocxref">Introduction</a> 
+
+<ul class="toc">
+<li class='tocline'>1.1. <a href="introduction.html#s_intro_whatisxhtml2" class="tocxref">What is XHTML 2?</a> 
+
+<ul class="toc">
+<li class='tocline'>1.1.1. <a href="introduction.html#aims" class="tocxref">Design Aims</a></li>
+
+<li class='tocline'>1.1.2. <a href="introduction.html#backCompat" class="tocxref">Backwards compatibility</a></li>
+
+<li class='tocline'>1.1.3. <a href="introduction.html#presentation" class="tocxref">XHTML 2 and Presentation</a></li>
+
+<li class='tocline'>1.1.4. <a href="introduction.html#s_intro_linking" class="tocxref">XHTML 2 and Linking</a></li>
+</ul>
+</li>
+
+<li class='tocline'>1.2. <a href="introduction.html#s_intro_differences" class="tocxref">Major Differences with XHTML 1</a></li>
+
+<li class='tocline'>1.3. <a href="introduction.html#s_intro_whatismod" class="tocxref">What are the XHTML 2 Modules?</a></li>
+</ul>
+</li>
+
+<li class='tocline'>2. <a href="terms.html#a_terms" class="tocxref">Terms and Definitions</a></li>
+
+<li class='tocline'>3. <a href="conformance.html#s_conform" class="tocxref">Conformance Definition</a> 
+
+<ul class="toc">
+<li class='tocline'>3.1. <a href="conformance.html#doccont" class="tocxref">Document Conformance</a> 
+
+<ul class="toc">
+<li class='tocline'>3.1.1. <a href="conformance.html#strict" class="tocxref">Strictly Conforming Documents</a></li>
+</ul>
+</li>
+
+<li class='tocline'>3.2. <a href="conformance.html#s_conform_user_agent" class="tocxref">XHTML Family User Agent Conformance</a></li>
+</ul>
+</li>
+
+<li class='tocline'>4. <a href="xhtml2-doctype.html#s_doctype" class="tocxref">The XHTML 2.0 Document Type</a> 
+
+<ul class="toc">
+<li class='tocline'>4.1. <a href="xhtml2-doctype.html#sec_4.1." class="tocxref">Issues</a></li>
+</ul>
+</li>
+
+<li class='tocline'>5. <a href="abstraction.html#s_abstraction" class="tocxref">Module Definition Conventions</a> 
+
+<ul class="toc">
+<li class='tocline'>5.1. <a href="abstraction.html#sec_5.1." class="tocxref">Module Structure</a></li>
+
+<li class='tocline'>5.2. <a href="abstraction.html#abstraction_abstract_definition" class="tocxref">Abstract Module Definitions</a></li>
+
+<li class='tocline'>5.3. <a href="abstraction.html#sec_5.3." class="tocxref">Syntactic Conventions</a></li>
+
+<li class='tocline'>5.4. <a href="abstraction.html#s_common_types" class="tocxref">Content Types</a></li>
+
+<li class='tocline'>5.5. <a href="abstraction.html#s_common_attrtypes" class="tocxref">Attribute Types</a></li>
+</ul>
+</li>
+
+<li class='tocline'>6. <a href="mod-attribute-collections.html#s_attribute-collectionsmodule" class="tocxref">XHTML Attribute Collections</a> 
+
+<ul class="toc">
+<li class='tocline'>6.1. <a href="mod-attribute-collections.html#sec_6.1." class="tocxref">Issues</a></li>
+</ul>
+</li>
+
+<li class='tocline'>7. <a href="mod-document.html#s_documentmodule" class="tocxref">XHTML Document Module</a> 
+
+<ul class="toc">
+<li class='tocline'>7.1. <a href="mod-document.html#sec_7.1." class="tocxref">The html element</a></li>
+
+<li class='tocline'>7.2. <a href="mod-document.html#sec_7.2." class="tocxref">The head element</a></li>
+
+<li class='tocline'>7.3. <a href="mod-document.html#sec_7.3." class="tocxref">The title element</a></li>
+
+<li class='tocline'>7.4. <a href="mod-document.html#sec_7.4." class="tocxref">The body element</a></li>
+</ul>
+</li>
+
+<li class='tocline'>8. <a href="mod-structural.html#s_structuralmodule" class="tocxref">XHTML Structural Module</a> 
+
+<ul class="toc">
+<li class='tocline'>8.1. <a href="mod-structural.html#sec_8.1." class="tocxref">The address element</a></li>
+
+<li class='tocline'>8.2. <a href="mod-structural.html#sec_8.2." class="tocxref">The blockcode element</a></li>
+
+<li class='tocline'>8.3. <a href="mod-structural.html#sec_8.3." class="tocxref">The blockquote element</a></li>
+
+<li class='tocline'>8.4. <a href="mod-structural.html#sec_8.4." class="tocxref">The div element</a></li>
+
+<li class='tocline'>8.5. <a href="mod-structural.html#sec_8.5." class="tocxref">The heading elements</a></li>
+
+<li class='tocline'>8.6. <a href="mod-structural.html#sec_8.6." class="tocxref">The p element</a></li>
+
+<li class='tocline'>8.7. <a href="mod-structural.html#sec_8.7." class="tocxref">The pre element</a></li>
+
+<li class='tocline'>8.8. <a href="mod-structural.html#sec_8.8." class="tocxref">The section element</a></li>
+
+<li class='tocline'>8.9. <a href="mod-structural.html#sec_8.9." class="tocxref">The separator element</a></li>
+</ul>
+</li>
+
+<li class='tocline'>9. <a href="mod-text.html#s_textmodule" class="tocxref">XHTML Text Module</a> 
+
+<ul class="toc">
+<li class='tocline'>9.1. <a href="mod-text.html#sec_9.1." class="tocxref">The abbr element</a></li>
+
+<li class='tocline'>9.2. <a href="mod-text.html#sec_9.2." class="tocxref">The cite element</a></li>
+
+<li class='tocline'>9.3. <a href="mod-text.html#sec_9.3." class="tocxref">The code element</a></li>
+
+<li class='tocline'>9.4. <a href="mod-text.html#sec_9.4." class="tocxref">The dfn element</a></li>
+
+<li class='tocline'>9.5. <a href="mod-text.html#sec_9.5." class="tocxref">The em element</a></li>
+
+<li class='tocline'>9.6. <a href="mod-text.html#sec_9.6." class="tocxref">The kbd element</a></li>
+
+<li class='tocline'>9.7. <a href="mod-text.html#sec_9.7." class="tocxref">The l element</a></li>
+
+<li class='tocline'>9.8. <a href="mod-text.html#sec_9.8." class="tocxref">The quote element</a></li>
+
+<li class='tocline'>9.9. <a href="mod-text.html#sec_9.9." class="tocxref">The samp element</a></li>
+
+<li class='tocline'>9.10. <a href="mod-text.html#sec_9.10." class="tocxref">The span element</a></li>
+
+<li class='tocline'>9.11. <a href="mod-text.html#sec_9.11." class="tocxref">The strong element</a></li>
+
+<li class='tocline'>9.12. <a href="mod-text.html#sec_9.12." class="tocxref">The sub element</a></li>
+
+<li class='tocline'>9.13. <a href="mod-text.html#sec_9.13." class="tocxref">The sup element</a></li>
+
+<li class='tocline'>9.14. <a href="mod-text.html#sec_9.14." class="tocxref">The var element</a></li>
+
+<li class='tocline'>9.15. <a href="mod-text.html#sec_9.15." class="tocxref">Issues</a></li>
+</ul>
+</li>
+
+<li class='tocline'>10. <a href="mod-hypertext.html#s_hypertextmodule" class="tocxref">XHTML Hypertext Module</a> 
+
+<ul class="toc">
+<li class='tocline'>10.1. <a href="mod-hypertext.html#sec_10.1." class="tocxref">The a element</a></li>
+</ul>
+</li>
+
+<li class='tocline'>11. <a href="mod-list.html#s_listmodule" class="tocxref">XHTML List Module</a> 
+
+<ul class="toc">
+<li class='tocline'>11.1. <a href="mod-list.html#sec_11.1." class="tocxref">Definition lists: the dl, di, dt, and dd elements</a></li>
+
+<li class='tocline'>11.2. <a href="mod-list.html#sec_11.2." class="tocxref">The nl element</a></li>
+
+<li class='tocline'>11.3. <a href="mod-list.html#sec_11.3." class="tocxref">The ol, and ul elements</a></li>
+
+<li class='tocline'>11.4. <a href="mod-list.html#sec_11.4." class="tocxref">The li element</a></li>
+
+<li class='tocline'>11.5. <a href="mod-list.html#sec_11.5." class="tocxref">The label element</a></li>
+</ul>
+</li>
+
+<li class='tocline'>12. <a href="mod-core.html#s_coremodule" class="tocxref">XHTML Core Attributes Module</a> 
+
+<ul class="toc">
+<li class='tocline'>12.1. <a href="mod-core.html#col_Core" class="tocxref">Core Attribute Collection</a></li>
+</ul>
+</li>
+
+<li class='tocline'>13. <a href="mod-hyperAttributes.html#s_hyperAttributesmodule" class="tocxref">XHTML Hypertext Attributes Module</a> 
+
+<ul class="toc">
+<li class='tocline'>13.1. <a href="mod-hyperAttributes.html#col_Hypertext" class="tocxref">Hypertext Attribute Collection</a></li>
+</ul>
+</li>
+
+<li class='tocline'>14. <a href="mod-i18n.html#s_i18nmodule" class="tocxref">XHTML I18N Attribute Module</a> 
+
+<ul class="toc">
+<li class='tocline'>14.1. <a href="mod-i18n.html#col_I18N" class="tocxref">I18N Attribute Collection</a></li>
+</ul>
+</li>
+
+<li class='tocline'>15. <a href="mod-bidi.html#s_bidimodule" class="tocxref">XHTML Bi-directional Text Attribute Module</a> 
+
+<ul class="toc">
+<li class='tocline'>15.1. <a href="mod-bidi.html#col_Bi-directional" class="tocxref">Bi-directional Text Collection</a> 
+
+<ul class="toc">
+<li class='tocline'>15.1.1. <a href="mod-bidi.html#sec_15.1.1." class="tocxref">Inheritance of text direction information</a></li>
+
+<li class='tocline'>15.1.2. <a href="mod-bidi.html#sec_15.1.2." class="tocxref">The effect of style sheets on bidirectionality</a></li>
+
+<li class='tocline'>15.1.3. <a href="mod-bidi.html#sec_15.1.3." class="tocxref">15.1.1. Inheritance of text direction information</a></li>
+
+<li class='tocline'>15.1.4. <a href="mod-bidi.html#sec_15.1.4." class="tocxref">15.1.2. The effect of style sheets on bidirectionality</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li class='tocline'>16. <a href="mod-edit.html#s_editmodule" class="tocxref">XHTML Edit Attributes Module</a> 
+
+<ul class="toc">
+<li class='tocline'>16.1. <a href="mod-edit.html#col_Edit" class="tocxref">Edit Collection</a></li>
+</ul>
+</li>
+
+<li class='tocline'>17. <a href="mod-embedding.html#s_embeddingmodule" class="tocxref">XHTML Embedding Attributes Module</a> 
+
+<ul class="toc">
+<li class='tocline'>17.1. <a href="mod-embedding.html#col_Embedding" class="tocxref">Embedding Attribute Collection</a></li>
+</ul>
+</li>
+
+<li class='tocline'>18. <a href="mod-csImgMap.html#s_csImgMapmodule" class="tocxref">XHTML Image Map Attributes Module</a> 
+
+<ul class="toc">
+<li class='tocline'>18.1. <a href="mod-csImgMap.html#col_Map" class="tocxref">Image Map Attribute Collection</a></li>
+</ul>
+</li>
+
+<li class='tocline'>19. <a href="mod-metaAttributes.html#s_metaAttributesmodule" class="tocxref">XHTML Metainformation Attributes Module</a> 
+
+<ul class="toc">
+<li class='tocline'>19.1. <a href="mod-metaAttributes.html#col_Metainformation" class="tocxref">Metadata Attribute Collection</a></li>
+
+<li class='tocline'>19.2. <a href="mod-metaAttributes.html#sec_19.2." class="tocxref">Properties</a></li>
+
+<li class='tocline'>19.3. <a href="mod-metaAttributes.html#sec_19.3." class="tocxref">Mapping Lexical Content</a></li>
+</ul>
+</li>
+
+<li class='tocline'>20. <a href="mod-meta.html#s_metamodule" class="tocxref">XHTML Metainformation Module</a> 
+
+<ul class="toc">
+<li class='tocline'>20.1. <a href="mod-meta.html#sec_20.1." class="tocxref">Literals and Resources</a></li>
+
+<li class='tocline'>20.2. <a href="mod-meta.html#sec_20.2." class="tocxref">Document Properties</a> 
+
+<ul class="toc">
+<li class='tocline'>20.2.1. <a href="mod-meta.html#sec_20.2.1." class="tocxref">Literals</a></li>
+
+<li class='tocline'>20.2.2. <a href="mod-meta.html#sec_20.2.2." class="tocxref">Resources</a></li>
+
+<li class='tocline'>20.2.3. <a href="mod-meta.html#sec_20.2.3." class="tocxref">Making Use of External Lists of Properties</a></li>
+</ul>
+</li>
+
+<li class='tocline'>20.3. <a href="mod-meta.html#sec_20.3." class="tocxref">Properties of Other Resources</a> 
+
+<ul class="toc">
+<li class='tocline'>20.3.1. <a href="mod-meta.html#sec_20.3.1." class="tocxref">Resources Within the Containing Document</a></li>
+
+<li class='tocline'>20.3.2. <a href="mod-meta.html#sec_20.3.2." class="tocxref">External Resources</a></li>
+</ul>
+</li>
+
+<li class='tocline'>20.4. <a href="mod-meta.html#sec_20.4." class="tocxref">Chaining Metadata</a></li>
+
+<li class='tocline'>20.5. <a href="mod-meta.html#sec_20.5." class="tocxref">The link element</a> 
+
+<ul class="toc">
+<li class='tocline'>20.5.1. <a href="mod-meta.html#sec_20.5.1." class="tocxref">Forward and reverse links</a></li>
+
+<li class='tocline'>20.5.2. <a href="mod-meta.html#sec_20.5.2." class="tocxref">Links and search engines</a></li>
+</ul>
+</li>
+
+<li class='tocline'>20.6. <a href="mod-meta.html#sec_20.6." class="tocxref">The meta element</a> 
+
+<ul class="toc">
+<li class='tocline'>20.6.1. <a href="mod-meta.html#sec_20.6.1." class="tocxref">meta and search engines</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li class='tocline'>21. <a href="mod-object.html#s_objectmodule" class="tocxref">XHTML Object Module</a> 
+
+<ul class="toc">
+<li class='tocline'>21.1. <a href="mod-object.html#sec_21.1." class="tocxref">The object element</a> 
+
+<ul class="toc">
+<li class='tocline'>21.1.1. <a href="mod-object.html#sec_21.1.1." class="tocxref">Defining terminology</a></li>
+
+<li class='tocline'>21.1.2. <a href="mod-object.html#sec_21.1.2." class="tocxref">Basic Information for Object Handlers</a></li>
+
+<li class='tocline'>21.1.3. <a href="mod-object.html#sec_21.1.3." class="tocxref">Rules for processing objects</a></li>
+</ul>
+</li>
+
+<li class='tocline'>21.2. <a href="mod-object.html#sec_21.2." class="tocxref">The param element</a> 
+
+<ul class="toc">
+<li class='tocline'>21.2.1. <a href="mod-object.html#sec_21.2.1." class="tocxref">Referencing object data</a></li>
+
+<li class='tocline'>21.2.2. <a href="mod-object.html#sec_21.2.2." class="tocxref">Object element declarations and instantiations</a></li>
+</ul>
+</li>
+
+<li class='tocline'>21.3. <a href="mod-object.html#sec_21.3." class="tocxref">The standby element</a></li>
+
+<li class='tocline'>21.4. <a href="mod-object.html#sec_21.4." class="tocxref">Issues</a></li>
+</ul>
+</li>
+
+<li class='tocline'>22. <a href="mod-ruby.html#s_rubymodule" class="tocxref">Ruby Module</a></li>
+
+<li class='tocline'>23. <a href="mod-scripting.html#s_scriptingmodule" class="tocxref">XHTML Scripting Module</a> 
+
+<ul class="toc">
+<li class='tocline'>23.1. <a href="mod-scripting.html#sec_23.1." class="tocxref">The script element</a> 
+
+<ul class="toc">
+<li class='tocline'>23.1.1. <a href="mod-scripting.html#sec_23.1.1." class="tocxref">Rules for processing scripts</a></li>
+
+<li class='tocline'>23.1.2. <a href="mod-scripting.html#sec_23.1.2." class="tocxref">Specifying the scripting language</a></li>
+
+<li class='tocline'>23.1.3. <a href="mod-scripting.html#sec_23.1.3." class="tocxref">Declaration of a scripting language</a></li>
+
+<li class='tocline'>23.1.4. <a href="mod-scripting.html#sec_23.1.4." class="tocxref">Dynamic modification of documents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li class='tocline'>24. <a href="mod-styleAttribute.html#s_styleAttributemodule" class="tocxref">XHTML Style Attribute Module</a> 
+
+<ul class="toc">
+<li class='tocline'>24.1. <a href="mod-styleAttribute.html#col_Style" class="tocxref">Style Attribute Collection</a></li>
+</ul>
+</li>
+
+<li class='tocline'>25. <a href="mod-styleSheet.html#s_styleSheetmodule" class="tocxref">XHTML Style Sheet Module</a> 
+
+<ul class="toc">
+<li class='tocline'>25.1. <a href="mod-styleSheet.html#sec_25.1." class="tocxref">The style element</a> 
+
+<ul class="toc">
+<li class='tocline'>25.1.1. <a href="mod-styleSheet.html#styleSheet_external" class="tocxref">External style sheets</a></li>
+
+<li class='tocline'>25.1.2. <a href="mod-styleSheet.html#sec_25.1.2." class="tocxref">Preferred and alternate style sheets</a></li>
+
+<li class='tocline'>25.1.3. <a href="mod-styleSheet.html#sec_25.1.3." class="tocxref">Specifying external style sheets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li class='tocline'>26. <a href="mod-tables.html#s_tablesmodule" class="tocxref">XHTML Tables Module</a> 
+
+<ul class="toc">
+<li class='tocline'>26.1. <a href="mod-tables.html#sec_26.1." class="tocxref">The caption element</a> 
+
+<ul class="toc">
+<li class='tocline'>26.1.1. <a href="mod-tables.html#sec_26.1.1." class="tocxref">Caption Clipping</a></li>
+</ul>
+</li>
+
+<li class='tocline'>26.2. <a href="mod-tables.html#sec_26.2." class="tocxref">The col and colgroup elements</a> 
+
+<ul class="toc">
+<li class='tocline'>26.2.1. <a href="mod-tables.html#column-calc" class="tocxref">Calculating the number of columns in a table</a></li>
+</ul>
+</li>
+
+<li class='tocline'>26.3. <a href="mod-tables.html#sec_26.3." class="tocxref">The summary element</a></li>
+
+<li class='tocline'>26.4. <a href="mod-tables.html#sec_26.4." class="tocxref">The table element</a> 
+
+<ul class="toc">
+<li class='tocline'>26.4.1. <a href="mod-tables.html#sec_26.4.1." class="tocxref">Visual Rendering</a></li>
+
+<li class='tocline'>26.4.2. <a href="mod-tables.html#table-directionality" class="tocxref">Table directionality</a></li>
+
+<li class='tocline'>26.4.3. <a href="mod-tables.html#non-visual-rendering" class="tocxref">Table rendering by non-visual user agents</a></li>
+
+<li class='tocline'>26.4.4. <a href="mod-tables.html#sec_26.4.4." class="tocxref">Sample table</a></li>
+</ul>
+</li>
+
+<li class='tocline'>26.5. <a href="mod-tables.html#sec_26.5." class="tocxref">The tbody element</a></li>
+
+<li class='tocline'>26.6. <a href="mod-tables.html#sec_26.6." class="tocxref">The td and th elements</a> 
+
+<ul class="toc">
+<li class='tocline'>26.6.1. <a href="mod-tables.html#sec_26.6.1." class="tocxref">Cells that span several rows or columns</a></li>
+</ul>
+</li>
+
+<li class='tocline'>26.7. <a href="mod-tables.html#sec_26.7." class="tocxref">The thead and tfoot elements</a></li>
+
+<li class='tocline'>26.8. <a href="mod-tables.html#sec_26.8." class="tocxref">The tr element</a></li>
+</ul>
+</li>
+
+<li class='tocline'>27. <a href="mod-xforms.html#s_xformsmodule" class="tocxref">XForms Module</a> 
+
+<ul class="toc">
+<li class='tocline'>27.1. <a href="mod-xforms.html#col_Forms" class="tocxref">Forms Attribute Collection</a></li>
+</ul>
+</li>
+
+<li class='tocline'>28. <a href="mod-xml-events.html#s_xml-eventsmodule" class="tocxref">XML Events Module</a> 
+
+<ul class="toc">
+<li class='tocline'>28.1. <a href="mod-xml-events.html#col_Events" class="tocxref">Events</a></li>
+</ul>
+</li>
+
+<li class='tocline'>A. <a href="xhtml2-changes.html#a_changes" class="tocxref">Changes from XHTML 1.1</a></li>
+
+<li class='tocline'>B. <a href="xhtml20_relax.html#a_xhtml20_relaxng" class="tocxref">XHTML 2.0 RELAX NG Definition</a> 
+
+<ul class="toc">
+<li class='tocline'>
+<ul class="toc">
+<li class='tocline'>B.0.1. <a href="xhtml20_relax.html#a_rmodule_RELAX_NG_XHTML_2.0_Driver" class="tocxref">RELAX NG XHTML 2.0 Driver</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li class='tocline'>C. <a href="relax_module_defs.html#a_relaxng_module_defs" class="tocxref">XHTML RELAX NG Module Implementations</a> 
+
+<ul class="toc">
+<li class='tocline'>C.1. <a href="relax_module_defs.html#a_relaxng_special" class="tocxref">XHTML Module Implementations</a> 
+
+<ul class="toc">
+<li class='tocline'>C.1.1. <a href="relax_module_defs.html#a_rmodule_Attribute_Collections" class="tocxref">Attribute Collections</a></li>
+
+<li class='tocline'>C.1.2. <a href="relax_module_defs.html#a_rmodule_Document" class="tocxref">Document</a></li>
+
+<li class='tocline'>C.1.3. <a href="relax_module_defs.html#a_rmodule_Structural" class="tocxref">Structural</a></li>
+
+<li class='tocline'>C.1.4. <a href="relax_module_defs.html#a_rmodule_Text" class="tocxref">Text</a></li>
+
+<li class='tocline'>C.1.5. <a href="relax_module_defs.html#a_rmodule_Hypertext" class="tocxref">Hypertext</a></li>
+
+<li class='tocline'>C.1.6. <a href="relax_module_defs.html#a_rmodule_List" class="tocxref">List</a></li>
+
+<li class='tocline'>C.1.7. <a href="relax_module_defs.html#a_rmodule_Core_Attributes" class="tocxref">Core Attributes</a></li>
+
+<li class='tocline'>C.1.8. <a href="relax_module_defs.html#a_rmodule_Hypertext_Attributes" class="tocxref">Hypertext Attributes</a></li>
+
+<li class='tocline'>C.1.9. <a href="relax_module_defs.html#a_rmodule_I18N_Attribute" class="tocxref">I18N Attribute</a></li>
+
+<li class='tocline'>C.1.10. <a href="relax_module_defs.html#a_rmodule_Bi-directional_Text_Attribute" class="tocxref">Bi-directional Text Attribute</a></li>
+
+<li class='tocline'>C.1.11. <a href="relax_module_defs.html#a_rmodule_Edit_Attributes" class="tocxref">Edit Attributes</a></li>
+
+<li class='tocline'>C.1.12. <a href="relax_module_defs.html#a_rmodule_Embedding_Attributes" class="tocxref">Embedding Attributes</a></li>
+
+<li class='tocline'>C.1.13. <a href="relax_module_defs.html#a_rmodule_Image_Map_Attributes" class="tocxref">Image Map Attributes</a></li>
+
+<li class='tocline'>C.1.14. <a href="relax_module_defs.html#a_rmodule_Metainformation_Attributes" class="tocxref">Metainformation Attributes</a></li>
+
+<li class='tocline'>C.1.15. <a href="relax_module_defs.html#a_rmodule_Metainformation" class="tocxref">Metainformation</a></li>
+
+<li class='tocline'>C.1.16. <a href="relax_module_defs.html#a_rmodule_Object" class="tocxref">Object</a></li>
+
+<li class='tocline'>C.1.17. <a href="relax_module_defs.html#a_rmodule_Scripting" class="tocxref">Scripting</a></li>
+
+<li class='tocline'>C.1.18. <a href="relax_module_defs.html#a_rmodule_Style_Attribute" class="tocxref">Style Attribute</a></li>
+
+<li class='tocline'>C.1.19. <a href="relax_module_defs.html#a_rmodule_Style_Sheet" class="tocxref">Style Sheet</a></li>
+
+<li class='tocline'>C.1.20. <a href="relax_module_defs.html#a_rmodule_Tables" class="tocxref">Tables</a></li>
+</ul>
+</li>
+
+<li class='tocline'>C.2. <a href="relax_module_defs.html#a_relaxngsupport" class="tocxref">XHTML RELAX NG Support Modules</a> 
+
+<ul class="toc">
+<li class='tocline'>C.2.1. <a href="relax_module_defs.html#a_rmodule_Datatypes" class="tocxref">Datatypes</a></li>
+
+<li class='tocline'>C.2.2. <a href="relax_module_defs.html#a_rmodule_Events" class="tocxref">Events</a></li>
+
+<li class='tocline'>C.2.3. <a href="relax_module_defs.html#a_rmodule_Param" class="tocxref">Param</a></li>
+
+<li class='tocline'>C.2.4. <a href="relax_module_defs.html#a_rmodule_Caption" class="tocxref">Caption</a></li>
+</ul>
+</li>
+
+<li class='tocline'>C.3. <a href="relax_module_defs.html#a_relaxng_external" class="tocxref">RELAX NG External Modules</a> 
+
+<ul class="toc">
+<li class='tocline'>C.3.1. <a href="relax_module_defs.html#a_rmodule_Ruby" class="tocxref">Ruby</a></li>
+
+<li class='tocline'>C.3.2. <a href="relax_module_defs.html#a_rmodule_Ruby_Driver_for_Full_Ruby_Markup" class="tocxref">Ruby Driver for Full Ruby Markup</a></li>
+
+<li class='tocline'>C.3.3. <a href="relax_module_defs.html#a_rmodule_XML_Events" class="tocxref">XML Events</a></li>
+
+<li class='tocline'>C.3.4. <a href="relax_module_defs.html#a_rmodule_XML_Schema_instance" class="tocxref">XML Schema instance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li class='tocline'>D. <a href="xhtml20_schema.html#a_xhtml20_schema" class="tocxref">XHTML 2.0 Schema</a></li>
+
+<li class='tocline'>E. <a href="schema_module_defs.html#a_schema_module_defs" class="tocxref">XHTML Schema Module Implementations</a></li>
+
+<li class='tocline'>F. <a href="xhtml20_dtd.html#a_xhtml20_dtd" class="tocxref">XHTML 2.0 Document Type Definition</a> 
+
+<ul class="toc">
+<li class='tocline'>F.1. <a href="xhtml20_dtd.html#sec_F.1." class="tocxref">Issues</a></li>
+</ul>
+</li>
+
+<li class='tocline'>G. <a href="dtd_module_defs.html#a_dtd_module_defs" class="tocxref">XHTML DTD Module Implementations</a> 
+
+<ul class="toc">
+<li class='tocline'>G.1. <a href="dtd_module_defs.html#a_xhtml_framework" class="tocxref">XHTML Modular Framework</a></li>
+
+<li class='tocline'>G.2. <a href="dtd_module_defs.html#a_dtdspecial" class="tocxref">XHTML Module Implementations</a></li>
+
+<li class='tocline'>G.3. <a href="dtd_module_defs.html#a_dtdsupport" class="tocxref">XHTML DTD Support Modules</a></li>
+</ul>
+</li>
+
+<li class='tocline'>H. <a href="xhtml2-style.html#a_stylesheet" class="tocxref">Stylesheet for XHTML 2</a></li>
+
+<li class='tocline'>I. <a href="elements.html#a_elements" class="tocxref">List of Elements</a></li>
+
+<li class='tocline'>J. <a href="attributes.html#a_attributes" class="tocxref">List of Attributes</a></li>
+
+<li class='tocline'>K. <a href="xref.html#a_xref" class="tocxref">Cross-reference Index</a></li>
+
+<li class='tocline'>L. <a href="references.html#a_refs" class="tocxref">References</a> 
+
+<ul class="toc">
+<li class='tocline'>L.1. <a href="references.html#a_normrefs" class="tocxref">Normative References</a></li>
+
+<li class='tocline'>L.2. <a href="references.html#a_inforefs" class="tocxref">Informative References</a></li>
+</ul>
+</li>
+
+<li class='tocline'>M. <a href="acknowledgements.html#a_acks" class="tocxref">Acknowledgements</a></li>
+</ul>
+</div>
+
+<hr />
+<div class="navbar">[<a href="introduction.html">next</a>]&#160;[<a href="#toc">table of contents</a>]</div>
+<script type="application/javascript" src="https://www.w3.org/scripts/TR/fixup.js"></script></body>
+</html>
+

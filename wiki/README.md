@@ -80,7 +80,7 @@ status: 完成
 - [`<legend>`](elements/legend.md): `LGROUP`／`IS`から`FIELDSET`／`CAPTION`を経てHTML 4の`LEGEND`へ変化したが、最後の改名判断は未確認である。
 - [`<li>`](elements/li.md): CERN-SGMLから初期HTMLへ入ったリスト集合の一つだが、`LI`個別の対応は明記されない。
 - [`<link>`](elements/link.md): 1992年のCERN設計ノートは、テキストへ局所化されたアンカーと区別して文書全体の関係を表す空の`LINK`を新DTD向けに提案し、1993年1月6日版DTDに同要素が現れる。
-- [`<main>`](elements/main.md): WAI-ARIA `main`ランドマークと`div role="main"`、`id=main/content`等の既存Web慣習を、2012年の提案がネイティブHTML要素へ形式化したものである。
+- [`<main>`](elements/main.md): XHTML 2からWAI-ARIAへ続く`main`役割と既存Web慣習を2012年の提案が要素化し、2013年にWHATWGが汎用的な主要内容コンテナーとして統合した。`maincontent`からの正確な改名記録は未解決である。
 - [`<map>`](elements/map.md): James L. Seidmanが1994年に`area`とともに提案したクライアント側イメージマップのコンテナーであり、HTML+のイメージマップ案を直接検討して設計された。
 - [`<mark>`](elements/mark.md): 2005年4月2日後〜4月13日までに追加された`m`を、単文字名と`em`との混同を避ける2007年の提案に基づき2008年に`mark`へ改名した。
 - [`<math>`](elements/math.md): MathML 1.0で定義済みのMathML名前空間のルートを、2008年にHTMLの`text/html`パーサーから生成できる外来要素のルートとして統合したものである。
