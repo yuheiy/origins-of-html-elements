@@ -42,7 +42,7 @@ HTML+の`ADDED`とHTML 3.0の`INS`は要求と役割が対応するが、集合�
 
 HTML 3.0 `INS`（1995年） →［先行作業からHTML 4への集合単位の継承。個別採録は未確認］HTML 4.0 `INS`（1997年） → 現行HTML `<ins>`
 
-共有経路の詳細: [HTML+から現行HTML要素への共有系譜](../lineages/html-plus.md#document-amendments)
+共有経路の詳細: [HTML+から現行HTML要素への共有系譜](../lineages/html-plus.md#文書修正機能)
 
 ## 証拠
 

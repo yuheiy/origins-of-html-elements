@@ -2,7 +2,7 @@
 status: 完成
 ---
 
-# 初期WHATWGセクショニング語彙の共有系譜
+# WHATWGの文書構造語彙の共有系譜
 
 ## 共通要求
 
@@ -19,6 +19,20 @@ status: 完成
 - WHATWG `sidebar`案 → `aside`。2004年の役割と2005年の定義が連続し、編集者は後に、ページの側部だけに用途を限定すると誤解されないため`sidebar`を最終名にしなかったと説明した。正確な改名日は未確認である。[2004年の役割](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002363.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-November/002363.html)） [名称の説明](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-November/017596.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-November/017596.html)）
 
 `footer`と`nav`は集合単位の調査由来だけを確認できる。2004年の`navigation`案と2005年の`nav`は意味が対応するが、名称変更の判断を示す史料がないため矢印で接続しない。
+
+## 見出しグループとページヘッダーの分離
+
+2005年草案の旧`header`はセクションの見出しを表すコンテナーだった。2009年4月30日、WHATWGはこの要素を`hgroup`へ改名して副見出し用途へ限定し、その30分後に、見出し、目次、検索フォーム、ロゴ、ナビゲーション等をまとめる新しい`header`を導入した。編集者は、従来の`header`では既存Webのページヘッダー相当を表せないという同月の問題提起へ応じた変更だと説明した。[2005年草案](../../raw/whatwg.org/specs/web-apps/2005-09-01/__index)（[公開元](https://whatwg.org/specs/web-apps/2005-09-01/#the-header)） [`hgroup`への改名](../../raw/github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)（[公開元](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)） [新`header`の導入](../../raw/github.com/whatwg/html/commit/a729fd0c57b9a8cc7ed783a03e72cfc74549c9db)（[公開元](https://github.com/whatwg/html/commit/a729fd0c57b9a8cc7ed783a03e72cfc74549c9db)） [編集者の説明](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2009Apr/0423.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2009Apr/0423.html)）
+
+```text
+旧WHATWG header
+  → hgroup（見出しグループへ限定）
+
+既存Webのページ／セクションヘッダーを表す要求
+  → 新しいWHATWG header
+```
+
+対象: [`header`](../elements/header.md)、[`hgroup`](../elements/hgroup.md)
 
 ## 接続しない境界
 

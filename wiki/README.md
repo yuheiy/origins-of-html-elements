@@ -144,8 +144,15 @@ status: 完成
 - [CERN-SGMLから初期HTMLリスト群への共有系譜](lineages/cern-sgml-lists.md): CERN-SGMLタグ集合から初期HTMLのリスト六要素を含む集合への採録と、個別対応を確認できない制約をまとめる。
 - [IETF HTML国際化草案の共有系譜](lineages/html-internationalization.md): IETF国際化草案から`q`、`sub`、`sup`、`span`、`bdo`へ至る経路と、スタイル要件が`span`へ合流した経路をまとめる。
 - [HTML+から現行HTML要素への共有系譜](lineages/html-plus.md): HTML+から文書修正機能、フォーム、表、図、クライアント側イメージマップの各要素群へ至る共有経路をまとめる。
-- [HTML phrase elementsとTexinfo](lineages/texinfo.md): Texinfoのマクロ名からHTML句要素集合への命名経路と、`u`など個別対応を確認できない境界をまとめる。
-- [初期WHATWGセクショニング語彙の共有系譜](lineages/whatwg-sectioning.md): 典型的サイトのマークアップと`div`の疑似意味的用途から初期WHATWG意味的要素集合へ至る要求と、個別に確認できる枝をまとめる。
+- [HTML句要素とTexinfo](lineages/texinfo.md): Texinfoのマクロ名からHTML句要素集合への命名経路と、`u`など個別対応を確認できない境界をまとめる。
+- [WHATWGの文書構造語彙の共有系譜](lineages/whatwg-sectioning.md): 典型的サイトのマークアップから意味的要素集合へ至る要求と、旧`header`を`hgroup`と新しい`header`へ分けた経路をまとめる。
+- [HTML 4のフォームラベルとグループ化](lineages/html4-form-accessibility.md): ラベル関連付けとグループ化の要求から`label`、`fieldset`、`legend`へ至る経路をまとめる。
+- [ARIAランドマークからネイティブHTML要素へ](lineages/aria-landmarks.md): XHTML／ARIAの`main`と`search`役割を、既存の`div role=...`から専用HTML要素へ置き換えた二つの経路をまとめる。
+- [ルビ注釈語彙の共有系譜](lineages/ruby.md): W3C／XHTMLのルビ語彙と、既存Web利用からHTML5の`ruby`、`rt`、`rp`へ至る別々の枝をまとめる。
+- [MathMLとSVGのHTMLパーサー統合](lineages/foreign-content.md): 既存XML語彙の`math`と`svg`ルートを`text/html`パーサーへ統合した経路をまとめる。
+- [`details`と`summary`の開閉UI系譜](lineages/details-summary.md): GUI開閉ウィジェットから`details`へ、流用キャプションから専用`summary`へ至る経路をまとめる。
+- [WHATWGメディア要素の共有モデル](lineages/media-elements.md): `video`、`audio`、`source`、`track`が別々の直接祖先から共通メディアモデルへ統合された経路をまとめる。
+- [レスポンシブ画像と`picture`／`source`](lineages/responsive-images.md): 複数の提案、実装、`srcset`、既存`img`処理を現行の`picture`構造へ統合した経路をまとめる。
 
 ## 統合
 
