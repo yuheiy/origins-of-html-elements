@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された587ファイルを、32の取得元ホストごとに収録する。
+Rawに保存された590ファイルを、32の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（9ファイル）
 
@@ -390,7 +390,7 @@ Rawに保存された587ファイルを、32の取得元ホストごとに収録
 | [Archives/Public/www-talk/1992NovDec/0155.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html) | www-talk from November to December 1992: The spec evolves... |
 | [Archives/Public/www-talk/1992NovDec/0159.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html) | www-talk from November to December 1992: Re: The spec evolves... |
 
-## `lists.whatwg.org`（34ファイル）
+## `lists.whatwg.org`（36ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -415,6 +415,8 @@ Rawに保存された587ファイルを、32の取得元ホストごとに収録
 | [pipermail/whatwg-whatwg.org/2006-March/048364.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-March/048364.html) | [whatwg] Status bars and progress indicators |
 | [pipermail/whatwg-whatwg.org/2006-March/048367.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-March/048367.html) | [whatwg] Status bars and progress indicators |
 | [pipermail/whatwg-whatwg.org/2006-March/048383.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-March/048383.html) | [whatwg] several messages on alternative spellings for &lt;gauge&gt;/&lt;meter&gt; |
+| [pipermail/whatwg-whatwg.org/2006-October/049786.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-October/049786.html) | [whatwg] Joe Clark's Criticisms of the WHATWG and HTML 5 |
+| [pipermail/whatwg-whatwg.org/2006-October/049823.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-October/049823.html) | [whatwg] Element name expressiveness |
 | [pipermail/whatwg-whatwg.org/2007-August/054625.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054625.html) | [whatwg] My case for Ruby-elements |
 | [pipermail/whatwg-whatwg.org/2007-August/054633.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-August/054633.html) | [whatwg] My case for Ruby-elements |
 | [pipermail/whatwg-whatwg.org/2007-February/009702.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2007-February/009702.html) | [whatwg] &lt;video&gt; element proposal |
@@ -469,7 +471,7 @@ Rawに保存された587ファイルを、32の取得元ホストごとに収録
 | [mathml-core/__index](../raw/w3c.github.io/mathml-core/__index) | MathML Core |
 | [svgwg/svg2-draft/struct.html](../raw/w3c.github.io/svgwg/svg2-draft/struct.html) | Document Structure — SVG 2 |
 
-## `web.archive.org`（13ファイル）
+## `web.archive.org`（14ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -484,6 +486,7 @@ Rawに保存された587ファイルを、32の取得元ホストごとに収録
 | [web/20050413075549id_/http%3A/www.whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20050413075549id_/http%3A/www.whatwg.org/specs/web-apps/current-work/__index) | Web Applications 1.0 |
 | [web/20050901000000/http%3A/www.whatwg.org/specs/web-apps/2005-09-01/__index](../raw/web.archive.org/web/20050901000000/http%3A/www.whatwg.org/specs/web-apps/2005-09-01/__index) | Web Applications 1.0 |
 | [web/20060101000000id_/http%3A/code.google.com/webstats/2005-12/classes.html](../raw/web.archive.org/web/20060101000000id_/http%3A/code.google.com/webstats/2005-12/classes.html) | Google Code: Web Authoring Statistics: Classes |
+| [web/20060216040621id_/http%3A/whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20060216040621id_/http%3A/whatwg.org/specs/web-apps/current-work/__index) | Web Applications 1.0 |
 | [web/20060701000000id_/http%3A/developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html](../raw/web.archive.org/web/20060701000000id_/http%3A/developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html) | User Experience: Apple Human Interface Guidelines: View Controls |
 | [web/20060701000000id_/http%3A/mail.gnome.org/archives/usability/2006-June/msg00015.html](../raw/web.archive.org/web/20060701000000id_/http%3A/mail.gnome.org/archives/usability/2006-June/msg00015.html) | Re: [Usability] Using nouns or verbs for the disclosure widgets |
 

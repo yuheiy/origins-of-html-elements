@@ -90,7 +90,7 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 
 内部派生の根拠は、[`audio`統合前後](../../raw/platform.html5.org/history/webapps/r699.html)（[公開元](https://platform.html5.org/history/webapps/r699.html)）、[rich `button`草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)）、[`data`一般化提案](../../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=13240)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=13240)）と[初回追加コミット](../../raw/github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d)（[公開元](https://github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d)）、[`figcaption`導入コミット](../../raw/github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)（[公開元](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)）、[`hgroup`改名コミット](../../raw/github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)（[公開元](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)）に置く。
 
-残る枝は、[`iframe`草案](../../raw/www.w3.org/TR/WD-frames-970331)（[公開元](https://www.w3.org/TR/WD-frames-970331)）、[`m`の名称議論](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-February/056266.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-February/056266.html)）と[`mark`への変更](../../raw/github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)（[公開元](https://github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)）、[`gauge`提案](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-September/044484.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-September/044484.html)）と[`meter`初稿の報告](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-March/048383.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-March/048383.html)）、[`NOSCRIPT`草案](../../raw/www.w3.org/TR/WD-script-960709.html)（[公開元](https://www.w3.org/TR/WD-script-960709.html)）、[`source`導入コミット](../../raw/github.com/whatwg/html/commit/61af426a3ae6d68ffa00505b6883cbf870481b52)（[公開元](https://github.com/whatwg/html/commit/61af426a3ae6d68ffa00505b6883cbf870481b52)）、[`summary`導入コミット](../../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)（[公開元](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)）、[`t`初稿コミット](../../raw/github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583)（[公開元](https://github.com/whatwg/html/commit/6bdcd9dc9da3f21cb61f0f8c123ed2d252cd2583)）で確認できる。
+残る枝は、[`iframe`草案](../../raw/www.w3.org/TR/WD-frames-970331)（[公開元](https://www.w3.org/TR/WD-frames-970331)）、[`m`の名称議論](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-February/056266.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-February/056266.html)）と[`mark`への変更](../../raw/github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)（[公開元](https://github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)）、[`gauge`提案](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-September/044484.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-September/044484.html)）と[`meter`初稿の報告](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-March/048383.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-March/048383.html)）、[`NOSCRIPT`草案](../../raw/www.w3.org/TR/WD-script-960709.html)（[公開元](https://www.w3.org/TR/WD-script-960709.html)）、[`source`導入コミット](../../raw/github.com/whatwg/html/commit/61af426a3ae6d68ffa00505b6883cbf870481b52)（[公開元](https://github.com/whatwg/html/commit/61af426a3ae6d68ffa00505b6883cbf870481b52)）、[`summary`導入コミット](../../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)（[公開元](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)）、[`t`の用途説明](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-October/049786.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-October/049786.html)）と[`time`改名コミット](../../raw/github.com/whatwg/html/commit/fdfe6548265125712520f3e1b72812235e9a8123)（[公開元](https://github.com/whatwg/html/commit/fdfe6548265125712520f3e1b72812235e9a8123)）で確認できる。
 
 | 要素 | HTML内で確認できる前身と変更 |
 |---|---|
@@ -105,7 +105,7 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 | `noscript` | クライアント側の`script`を実行できないUA向けの代替内容 |
 | `source` | `video`の単一`src`を、コーデック等が異なる複数候補からの選択へ分離 |
 | `summary` | `details`のキャプションに`legend`や`dt`を流用する方式を専用要素へ置換 |
-| `time` | 機械可読な日付と時刻用の単文字`<t>`を改名 |
+| `time` | Microformats、CSS、出版、既存Webの要求から具体化した単文字`<t>`を、ソース上の可読性を理由に`time`へ改名 |
 
 ### 2.3 個別の設計要求・実装との関係を確認できる8要素
 
@@ -150,12 +150,14 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 
 | 調査群 | 対象 | 探索範囲 |
 |---|---|---|
-| 初期WHATWGの版履歴 | [`time`](../elements/time.md)、[`main`](../elements/main.md)、[`bdi`](../elements/bdi.md)、[`track`](../elements/track.md) | 既知の初回収録、改名、再導入コミットの親版と、対応するWHATWGメール、旧Subversion履歴、提案を照合する |
+| 初期WHATWGの版履歴 | [`main`](../elements/main.md)、[`bdi`](../elements/bdi.md)、[`track`](../elements/track.md) | 既知の初回収録、改名、再導入コミットの親版と、対応するWHATWGメール、旧Subversion履歴、提案を照合する |
 | W3C／IETF草案間の変更 | [`legend`](../elements/legend.md)、[`bdo`](../elements/bdo.md)、[`span`](../elements/span.md)、[`noscript`](../elements/noscript.md)、[`object`](../elements/object.md)、[`col`](../elements/col.md)、[`style`](../elements/style.md) | 連続する草案間に限定して、CVS／RCS差分、Working Group議事録、編集者メールから追加、改名、機能統合、後続仕様への採録を探す |
 
 `mark`は、`m`の初出区間を2005年4月2日後〜4月13日までに限定し、2007年の名称議論と2008年の採用判断を確認したため、優先調査を完了した。初稿の提案者を示す公開記録は見つからず、個別ページの未解決点として維持する。
 
 `meter`は、2004年の`gauge`提案と編集者の採用応答、2006年の改名議論と`meter`初稿、三領域モデルの提案と合意を確認したため、優先調査を完了した。提案者、導入理由、改名理由、`low`、`high`、`optimum`の成立過程がすべて一次資料でつながったため、個別ページの未解決点も解消した。
+
+`time`は、2005年の`date`／`time`候補、2006年2月16日後〜3月2日までの`<t>`追加区間、同年の用途説明と改名提案、2011年の削除・再導入議論を確認したため、優先調査を完了した。二候補を`<t>`へまとめた編集記録と最初に単文字名を選んだ理由は公開資料から確認できず、個別ページの未解決点として維持する。
 
 同名または同機能の先行物を新たに見つけるだけでは完了とせず、HTML側の採用判断または変更判断まで確認できた場合にだけ系譜を更新する。
 

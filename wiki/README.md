@@ -127,7 +127,7 @@ status: 完成
 - [`<tfoot>`](elements/tfoot.md): CALSの`TFOOT`を1995年のRaggett案がHTMLへ取り込み、IETF草案とRFC 1942を経てHTML 4が標準化した。
 - [`<th>`](elements/th.md): HTML+の表モデルのヘッダーセルからRFC 1942を経て標準化された要素である。
 - [`<thead>`](elements/thead.md): CALSの`THEAD`を1995年のRaggett案がHTMLへ取り込み、IETF草案とRFC 1942を経てHTML 4が標準化した。
-- [`<time>`](elements/time.md): 2006年にWHATWG草案の`<t>`から改名され、2011年の`data`への置換と約3週間後の再導入を経て現行設計へ続く。
+- [`<time>`](elements/time.md): Microformats、CSS、出版等の要求から2006年に具体化された`<t>`を、可読性の提案に基づき改名し、2011年の`data`への置換と両要素の併存を経て現行設計へ続く。`<t>`の正確な追加記録と単文字名の理由は未解決である。
 - [`<title>`](elements/title.md): SGMLのタグ対構文を用いつつ、ノードを文脈外で識別してウィンドウ名や履歴へ使うWWW固有のプロパティとして1991年に確認できる。
 - [`<tr>`](elements/tr.md): HTML+作業中に行区切りから行コンテナーへ変化し、RFC 1942を経て標準化された要素である。
 - [`<track>`](elements/track.md): `track`は2010年、メディア要素へ外部字幕、キャプション、説明、章、メタデータを関連づける時間指定トラック機構として導入された。
