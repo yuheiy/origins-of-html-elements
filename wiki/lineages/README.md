@@ -6,7 +6,7 @@ status: 完成
 
 ## 確認済みの共有系統
 
-| 共通の上流または要求 | 確認済みの経路 | 現行要素 | 制約 | 主な一次資料 |
+| 共通する由来または要求 | 確認済みの経路 | 現行要素 | 制約 | 主な一次資料 |
 |---|---|---|---|---|
 | CERN-SGML tagset | ［集合単位］CERN-SGML tags → 初期HTML accepted tag集合 | [`ul`](../elements/ul.md)、[`ol`](../elements/ol.md)、[`li`](../elements/li.md)、[`dl`](../elements/dl.md)、[`dt`](../elements/dt.md)、[`dd`](../elements/dd.md) | 採録されたCERN-SGMLの個々のtagは列挙されない。1990年の`OL`はunordered表示で、後に一時不使用となる。 | [1990年WorldWideWeb test file](../../raw/www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)（[公開元](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Test/backup_of_test.html)） |
 | AAP tag setのheading語彙 | AAP headings → CERN SGML guide → 初期HTML | [`h1`〜`h6`](../elements/h1-h6.md) | AAP BK-1は5 identifiers、HTMLは6段階であり、個別番号対応ではなく集合単位の関係である。 | [AAP Book DTD](../../raw/ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd)（[公開元](https://ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd)） / [CERN, *Tags used in HTML*](../../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)（[公開元](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)） |

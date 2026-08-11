@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-HTML+ formsからHTML 2.0へ導出されたtyped input fieldで、各widget typeの上流は未確認である。
+HTML+ formsからHTML 2.0へ導出されたtyped input fieldで、各widget typeの由来は未確認である。
 
 ## 現在の意味
 

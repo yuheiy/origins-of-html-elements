@@ -58,4 +58,4 @@ SMIL `video`をHTML `video`の直接祖先とする説明。Ian HicksonはSMIL `
 ## 未解決
 
 - Opera添付提案の完全な本文、実験実装のsource、実装日は確認できるか。
-- Operaが`video`という名称とAPIを選んだ、さらに上流のsourceはあるか。
+- Operaが`video`という名称とAPIを選ぶ際に参照した先行sourceはあるか。

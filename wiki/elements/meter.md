@@ -51,7 +51,7 @@ WHATWG Web Applications 1.0 `gauge` → 2006年revision 15 `meter` → HTML5 `me
 
 ## 否定された仮説
 
-特定OSのmeter widget、CSS progress bar、または計器一般から直接採用されたとは確認できないため、外見と名称だけで上流へ結ばない。
+特定OSのmeter widget、CSS progress bar、または計器一般から直接採用されたとは確認できないため、外見と名称だけで由来へ結ばない。
 
 ## 未解決
 

@@ -10,7 +10,7 @@ status: 完成
 
 - [要素](elements/)は、現行要素ごとに現在の意味、HTMLへの導入、直前の祖先、上流の由来、証拠、確度、否定された仮説、未解決点をまとめる。
 - [共有系譜](lineages/)は、複数要素に共通する確認済みの採用経路や要求をまとめる。個別要素の結論と確度は要素ページを正本とする。
-- [統合](syntheses/origin-based-classification.md)は比較や横断分析を扱う。
+- [統合](syntheses/introduction-paths-and-origins.md)は比較や横断分析を扱う。
 - [Raw resources](raw-index.md)は、保存された全Raw fileへのpath順のindexである。
 - [操作Log](log.md)はWikiに対する操作をappend-onlyで記録する。構造と運用の規範は[AGENTS.md](../AGENTS.md)を参照する。
 
@@ -73,7 +73,7 @@ status: 完成
 - [`<i>`](elements/i.md): 1993年HTML draftがTexinfo macro names由来と明記したphysical character highlighting要素で、同時代Texinfoの`@i`との対応を確認できる。
 - [`<iframe>`](elements/iframe.md): Microsoft IE3のfloating-frame実装とW3Cの`IFRAME`案は確認できるが、Microsoft提出からW3C案への要素単位の採用は未確認である。
 - [`<img>`](elements/img.md): Marc AndreessenがNCSA X Mosaicへ実装し、1993年に提案したinline image要素である。
-- [`<input>`](elements/input.md): HTML+ formsからHTML 2.0へ導出されたtyped input fieldで、各widget typeの上流は未確認である。
+- [`<input>`](elements/input.md): HTML+ formsからHTML 2.0へ導出されたtyped input fieldで、各widget typeの由来は未確認である。
 - [`<ins>`](elements/ins.md): HTML+ `ADDED`からHTML 3.0 `INS`、HTML 4への系列は集合単位で確認できるが、個別の改名と採録は未確認である。
 - [`<kbd>`](elements/kbd.md): 1993年HTML draftがTexinfo macro names由来と明記したlogical character highlighting要素で、同時代Texinfoの`@kbd`との対応を確認できる。
 - [`<label>`](elements/label.md): 1996年のW3C forms草案が、form controlとlabel textを構造的に関連付け、graphic／speech browserでの操作と説明を改善するため`LABEL`を提案した。
@@ -149,4 +149,4 @@ status: 完成
 
 ## 統合
 
-- [HTML要素のHTML以前の供給源と上流文化](syntheses/origin-based-classification.md): HTML+等を含む直接供給段階とHTML外まで遡った由来を分け、現行要素を直接採用57、外部材料のHTML化37、内部派生12、固有要求8、上流未確認1へ整理する。
+- [HTML要素の導入経路と由来](syntheses/introduction-paths-and-origins.md): HTML+等を含む現行HTMLへの導入経路と、HTML内の変遷を遡って具体的な由来を八つにまとめた分類を分け、現行115要素の主経路と根拠を示す。

@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-2010年1月、HTML5草案の`figure` captionを`dt`／`dd`で表す方式が意味、構造、後方互換性の問題を指摘され、専用の`figcaption`へ変更された。さらに上流では、HTML+ `FIG`／`CAPTION`をWHATWGの`figure` caption構造へ採用した因果を確認できる。
+2010年1月、HTML5草案の`figure` captionを`dt`／`dd`で表す方式が意味、構造、後方互換性の問題を指摘され、専用の`figcaption`へ変更された。さらに遡ると、HTML+ `FIG`／`CAPTION`をWHATWGの`figure` caption構造へ採用した因果を確認できる。
 
 ## 現在の意味
 

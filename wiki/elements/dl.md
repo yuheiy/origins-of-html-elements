@@ -57,4 +57,4 @@ Waterloo、CERN、HTMLの同名`DL`だけからWaterloo → CERN → HTMLの系�
 ## 未解決
 
 - CERN SGML guideのどの`DL`定義をHTMLへ対応させたかを示すtag単位の記録はあるか。
-- CERN-SGMLより上流のglossary markupとの採用関係を確認できるか。
+- CERN-SGML以前のglossary markupとの採用関係を確認できるか。

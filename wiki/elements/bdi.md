@@ -24,7 +24,7 @@ HTML直前の祖先はCSS `unicode-bidi:isolate`とW3C i18n groupの`ubi`属性�
 
 ### 証拠
 
-Unicode Bidi Algorithmのhigher-level protocol isolation要求が上流にある。LRM／RLM挿入では検索やcopy-and-pasteを壊す問題もW3C資料が記録する。[W3C bidi requirements](https://www.w3.org/TR/html-bidi/#bidi-isolation)
+Unicode Bidi Algorithmのhigher-level protocol isolation要求が背景にある。LRM／RLM挿入では検索やcopy-and-pasteを壊す問題もW3C資料が記録する。[W3C bidi requirements](https://www.w3.org/TR/html-bidi/#bidi-isolation)
 
 ### 解釈
 

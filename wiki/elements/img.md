@@ -28,7 +28,7 @@ HTML直前の祖先は、Andreessenの`IMG`提案と同時に存在したNCSA X 
 
 ### 解釈
 
-さらに上流の特定systemは未確認である。MidasやViolaWWWの先行存在を、因果関係なしに系譜へ加えない。
+それ以前の特定systemは未確認である。MidasやViolaWWWの先行存在を、因果関係なしに系譜へ加えない。
 
 ## 系譜
 
@@ -55,5 +55,5 @@ Midas `ICON`、ViolaWWW、`A REL="EMBED, PRESENT"`を`IMG`の直接祖先とす�
 
 ## 未解決
 
-- Andreessenが`IMG`を考案する際に参照した、さらに上流の画像埋込みsystemはあるか。
+- Andreessenが`IMG`を考案する際に参照した、先行する画像埋込みsystemはあるか。
 - Midas `ICON`、ViolaWWW等の先行実装と`IMG`の因果関係を示す史料はあるか。

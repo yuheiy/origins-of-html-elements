@@ -28,7 +28,7 @@ HTML+はpreformatted computer outputとplain text files、特にUnix manual page
 
 ### 解釈
 
-さらに上流にはcomputer outputとUnix manual pageの技術文書文化がある。これはHTML+自身が用途と再設計要求を説明するため、単なる外見の類似ではない。
+さらに遡るとcomputer outputとUnix manual pageの技術文書文化がある。これはHTML+自身が用途と再設計要求を説明するため、単なる外見の類似ではない。
 
 ## 系譜
 

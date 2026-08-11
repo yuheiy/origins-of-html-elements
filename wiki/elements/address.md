@@ -28,7 +28,7 @@ WHATWG HTML Living Standardでは、最も近い`article`または`body` ancesto
 
 ### 解釈
 
-初期HTML `ADDRESS`は、WorldWideWeb editorの`Address` paragraph styleをHTMLへ保存し、HTMLから復元するための要素として実装されたと説明できる。ただし、これは実装内の設計対応であり、styleまたは要素名のさらに上流の由来を示さない。
+初期HTML `ADDRESS`は、WorldWideWeb editorの`Address` paragraph styleをHTMLへ保存し、HTMLから復元するための要素として実装されたと説明できる。ただし、これは実装内の設計対応であり、styleまたは要素名のさらに前の由来を示さない。
 
 ## 系譜
 

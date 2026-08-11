@@ -32,7 +32,7 @@ WHATWG HTML Living Standardでは、phrasing contentの一つ以上の範囲へr
 
 ### 解釈
 
-Dürstの属性案からW3Cの構造要素modelへ進んだ上流と、IE実装を背景にした既存Web markupからHTML5へ入った直前経路を分けて捉える必要がある。両者の語彙は連続するが、W3C RecommendationからHTML5への直接採用は確認できない。
+Dürstの属性案からW3Cの構造要素modelへ進んだ経路と、IE実装を背景にした既存Web markupからHTML5へ入った直前経路を分けて捉える必要がある。両者の語彙は連続するが、W3C RecommendationからHTML5への直接採用は確認できない。
 
 ## 系譜
 

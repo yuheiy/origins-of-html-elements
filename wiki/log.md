@@ -749,3 +749,45 @@ Raggettらの回顧から、`a`のanchor／`HREF`がBerners-Lee独自の設計�
 「HTML内の直接供給段階」と「HTML外まで遡った由来」の間で、分類軸と無関係に生じていた供給源の結合と名称差を解消した。第二表のAAP／CERN-SGML／CALSをAAP／CERN-SGMLとCALS table modelへ、外部仕様の集合を既成のXML vocabularyと外部・隣接仕様の提案へ分離し、GUI分類の名称も統一した。両表に共通する八つのHTML外供給源は、名称、粒度、要素集合を同一にした。HTML内部の供給段階を第二表で上流由来へ組み替える差だけは、分類軸に由来するため維持した。README概要はこの粒度変更後も正確なため変更しなかった。
 
 対象Lintは、共通八分類の要素集合がAAP／CERN-SGML 12、GNU Texinfo 11、CALS table model 3、既成のXML vocabulary 2、browser vendor 8、既存Web 13、外部・隣接仕様7、GUI 1で表間一致すること、合計57要素、両表の115要素一意網羅、1,718ローカルMarkdown link、Markdown whitespace、Raw indexの522 resourceでの再現性を`合格`、表間の不要な粒度差を`修正済み`、`Research必要`はなしと確認した。歴史的結論、要素の所属、Raw snapshot、確度は変更していない。
+
+## [2026-08-11] query | HTML内部史を畳んだ由来別分類
+
+第二表の分類軸から、外部材料の具体化、HTML内部派生、HTML固有要求という関係分類を外し、HTML+、IETF／W3C草案、WHATWG内部変更を経路として畳んだ後に確認できる最上流の供給源、実務、UI、設計要求、実装上の制約で全要素を整理した。既存の具体的供給源群に加え、15の設計入力群、WHATWG `Audio` API、scripting fallback、machine-readable data、画像とcaption、contextual highlight、scalar measurement、8要素の個別要求を起点として独立させた。内部派生12要素は確認済みの経路に従って各起点へ配置し、起点を特定できない`blockquote`だけを例外として明示した。README概要を新しい分類軸へ同期し、歴史的結論、Raw snapshot、element／lineageの確度は変更していない。
+
+対象Lintは、synthesisのfrontmatterと章立て、直接供給段階表と内部史を畳んだ由来表による現行115要素の一意な網羅と要素集合の一致、README概要、ローカルMarkdown link、Markdown whitespace、Raw indexの522 resourceでの再現性を`合格`、関係分類と起点分類の混在を`修正済み`、`Research必要`はなしと確認した。
+
+## [2026-08-11] query | 由来別分類の大分類化
+
+第二表の37の具体的起点を、構造化文書・出版、技術文書・編集・組版、hypertext・navigation・metadata、form・data entry・GUI、browser実装・compound document・multimedia、scripting・style・Web application・component、国際化・文字方向・東アジア組版、既存Web authoring・community・互換性の八大分類へ集約した。具体的な供給源、実務、UI、設計要求、実装上の制約は中央列と第三節に維持し、第四節の文化表と異なり、各要素は導入を最も直接説明する大分類へ一度だけ配置した。起点未特定の`blockquote`は独立行を維持し、README概要を新しい粒度へ同期した。歴史的結論、具体的起点、Raw snapshot、element／lineageの確度は変更していない。
+
+対象Lintは、synthesisのfrontmatterと章立て、直接供給段階表12行と内部史を畳んだ由来表9行による現行115要素の一意な網羅と要素集合の一致、README概要、ローカルMarkdown link、Markdown whitespace、Raw indexの522 resourceでの再現性を`合格`、細分化されすぎた第二表を`修正済み`、`Research必要`はなしと確認した。
+
+## [2026-08-11] query | 由来別分類と根拠の役割分離
+
+第二表の八大分類が上流領域の一覧を兼ねるため、同じ領域を重複所属で再分類していた「さらに上流の文化」表と「分類間の関係」を削除した。第三節は独立した分類ではなく第二表の根拠であることを明確にし、確認済み供給源の概説を移して、HTML外の具体的起点、HTML内部派生の畳み込み、個別の要求・実装上の起点、起点未特定の順に整理した。ページタイトルを「HTML要素の供給段階と由来」へ変更し、冒頭を二軸の説明へ限定してREADME概要を同期した。歴史的結論、第二表の所属、具体的起点、Raw snapshot、element／lineageの確度は変更していない。
+
+対象Lintは、synthesisのfrontmatter、見出し構造、直接供給段階表12行と内部史を畳んだ由来表9行による現行115要素の一意な網羅と要素集合の一致、READMEのtitleと概要、ローカルMarkdown link、Markdown whitespace、Raw indexの522 resourceでの再現性を`合格`、重複する文化分類と第三節の役割不明瞭を`修正済み`、`Research必要`はなしと確認した。
+
+## [2026-08-11] query | 分類表の導入と根拠の統合
+
+第一表と第二表の後に置いていた分類方針と網羅範囲の説明を、各節の冒頭で表の読み方を先に示す導入文へ再構成した。独立していた「第二表の根拠と経路」は第二節へ統合し、HTML外の具体的起点、HTML内部派生の畳み込み、個別の要求・実装上の起点、起点未特定を`2.1`から`2.4`の下位節にした。分類、具体的起点、歴史的結論、README概要、Raw snapshot、element／lineageの確度は変更していない。
+
+対象Lintは、synthesisのfrontmatter、二つの大見出しと第二節の下位見出し構造、各表直前の導入、直接供給段階表12行と内部史を畳んだ由来表9行による現行115要素の一意な網羅と要素集合の一致、README概要、ローカルMarkdown link、Markdown whitespace、Raw indexの522 resourceでの再現性を`合格`、表後に残っていた説明と第二・第三節の分離を`修正済み`、`Research必要`はなしと確認した。
+
+## [2026-08-11] query | 導入経路と由来への用語統一
+
+日本語として馴染みにくかった「供給段階」「供給源」「起点」「畳み込む」を、文脈に応じて「導入経路」「導入元」「由来」「遡る」「前身」「引き継ぐ」へ置き換えた。ページタイトルを「HTML要素の導入経路と由来」とし、第一節を現行HTMLまでの導入経路、第二節をHTML内の変遷を遡った由来として区別した。表見出し、導入文、下位見出し、README概要も同じ語彙へ同期した。分類、要素の所属、具体的な由来、歴史的結論、Raw snapshot、element／lineageの確度は変更していない。
+
+対象Lintは、synthesisのfrontmatter、見出しと本文の用語整合、導入経路表12行と由来表9行による現行115要素の一意な網羅と要素集合の一致、READMEのtitleと概要、ローカルMarkdown link、Markdown whitespace、Raw indexの522 resourceでの再現性を`合格`、不自然な比喩語を`修正済み`、`Research必要`はなしと確認した。
+
+## [2026-08-11] lint | Wiki全体の系譜用語
+
+Raw、生成Raw index、過去Logを除くWikiを対象に、「供給」「起点」「畳み込む」と、同種の比喩として通常文に現れる「上流」を検査した。完全一致する前三語は由来分類synthesisとREADME以外に残っていなかった。29 elementページ、README、共有系譜索引の通常文にあった「上流」を、文脈に応じて「由来」「背景」「以前」「先行する祖先」「さらに遡ると」へ変更した。Schemeがelementページへ要求する`## さらに上流の由来`見出しと、それを案内するREADMEの説明は規範との整合のため維持した。歴史的結論、系譜、確度、状態、Raw snapshotは変更していない。
+
+対象Lintは、変更した29 elementページのfrontmatterと必須見出し順、synthesisの見出しと用語、共有系譜索引、導入経路表12行と由来表9行による現行115要素の一意な網羅と要素集合の一致、README概要、ローカルMarkdown link、Markdown whitespace、Raw indexの522 resourceでの再現性を`合格`、通常文の比喩的な系譜用語を`修正済み`、`Research必要`はなしと確認した。
+
+## [2026-08-11] query | 導入経路と由来のsynthesisファイル名
+
+内容が由来別分類だけでなくHTMLへの導入経路も扱うことを明示するため、`wiki/syntheses/origin-based-classification.md`を`wiki/syntheses/introduction-paths-and-origins.md`へ改名し、READMEの案内と統合一覧のリンクを更新した。本文、分類、歴史的結論、状態は変更していない。
+
+対象Lintは、新旧path、READMEの参照、synthesisのfrontmatterとtitle、Markdown whitespaceを`合格`、内容より狭かったファイル名を`修正済み`、`Research必要`はなしと確認した。

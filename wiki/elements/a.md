@@ -14,7 +14,7 @@ WHATWG HTML Living Standardでは、`href`属性がある場合は内容をlabel
 
 ## HTMLへの導入
 
-確認できる最初期の実装記録は、Tim Berners-LeeのNeXT WorldWideWeb version 0.4で、1991年1月30日にanchorの作成と編集状態の処理を記したものである。1991年保存sourceでは、node内の領域であるAnchor objectをHTML parserが`A`の`HREF`／`NAME`へ写像し、保存時に同じmarkupへ直列化する。1992年CERNタグ一覧は`A`を、textをlinkの始点、終点、または両方にする要素として定義する。`A`という要素名または上流のmodelを選んだ理由までは記録しない。[CERN/W3C, *Features and Bug Fixes*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/NeXT/Implementation/Features.html) [*Anchor.h*](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Anchor.h) [*ParseHTML.h*](https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h) [Berners-Lee, *HTML Tags*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
+確認できる最初期の実装記録は、Tim Berners-LeeのNeXT WorldWideWeb version 0.4で、1991年1月30日にanchorの作成と編集状態の処理を記したものである。1991年保存sourceでは、node内の領域であるAnchor objectをHTML parserが`A`の`HREF`／`NAME`へ写像し、保存時に同じmarkupへ直列化する。1992年CERNタグ一覧は`A`を、textをlinkの始点、終点、または両方にする要素として定義する。`A`という要素名またはその設計modelを選んだ理由までは記録しない。[CERN/W3C, *Features and Bug Fixes*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/NeXT/Implementation/Features.html) [*Anchor.h*](https://www.w3.org/History/1991-WWW-NeXT/Implementation/Anchor.h) [*ParseHTML.h*](https://www.w3.org/History/1991-WWW-NeXT/Implementation/ParseHTML.h) [Berners-Lee, *HTML Tags*](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
 
 ## HTML直前の祖先
 

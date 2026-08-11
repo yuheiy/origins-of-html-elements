@@ -28,7 +28,7 @@ HTML draftは`U`を含む12要素を集合としてTexinfo macro names由来と�
 
 ### 解釈
 
-なし。個別マクロが判明するまで、underline typographyや別の組版システムを上流へ接続しない。
+なし。個別マクロが判明するまで、underline typographyや別の組版システムを由来として接続しない。
 
 ## 系譜
 

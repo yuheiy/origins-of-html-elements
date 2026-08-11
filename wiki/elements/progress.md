@@ -61,7 +61,7 @@ placeholderより前の接続は未確認のため矢印で補わない。
 
 **A**
 
-2004年WHATWG草案の具体的なProgress meters placeholderが、2006年の仕様commitで正式な`progress`要素へ直接具体化されたことを確認できる。placeholderより上流の具体的祖先は未確認である。
+2004年WHATWG草案の具体的なProgress meters placeholderが、2006年の仕様commitで正式な`progress`要素へ直接具体化されたことを確認できる。placeholder以前の具体的祖先は未確認である。
 
 ## 否定された仮説
 
