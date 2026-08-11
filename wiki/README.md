@@ -10,7 +10,7 @@ status: 完成
 
 - [要素](elements/)は、現行要素ごとに現在の意味、HTMLへの導入、直前の祖先、上流の由来、証拠、確度、否定された仮説、未解決点をまとめる。
 - [共有系譜](lineages/)は、複数要素に共通する確認済みの採用経路や要求をまとめる。個別要素の結論と確度は要素ページを正本とする。
-- [統合](syntheses/README.md)は比較や横断分析を扱う。
+- [概観](overviews/README.md)は要素ページと共有系譜を横断する分類、比較、調査状況を扱う。
 - [Rawソース](raw-source-index.md)は、保存されたすべてのRawファイルをパス順に並べた索引である。
 - [ログ](log.md)は、Wikiに対する操作を追記専用で記録する。構造と運用のスキーマは[AGENTS.md](../AGENTS.md)を参照する。
 
@@ -164,9 +164,9 @@ status: 完成
 - [`time`の一般化と`data`との併存](lineages/data-and-time.md): `time`から`data`への置換と再導入後の機能分担を扱う。
 - [カスタマイズ可能な`select`](lineages/customizable-select.md): 四つの現行要素を一体で変更した標準化経路を扱う。
 
-## 統合
+## 概観
 
-- [統合分析](syntheses/README.md): 横断分析三ページの入口。
-- [HTML要素の導入経路](syntheses/introduction-paths.md): 現行115要素をHTMLへの導入経路で分類する。
-- [HTML要素の由来を支える証拠](syntheses/evidence-and-origins.md): 先行物、実装、既存Web、要求が由来を支える範囲を比較する。
-- [系譜調査の到達点と再開条件](syntheses/research-status.md): 確度、未解決点、調査の優先度と再開条件をまとめる。
+- [概観ページ](overviews/README.md): 横断的な見取り図三ページの入口。
+- [HTML要素の導入経路](overviews/introduction-paths.md): 現行115要素をHTMLへの導入経路で分類する。
+- [HTML要素の由来を支える証拠](overviews/evidence-and-origins.md): 先行物、実装、既存Web、要求が由来を支える範囲を比較する。
+- [系譜調査の到達点と再開条件](overviews/research-status.md): 確度、未解決点、調査の優先度と再開条件をまとめる。
