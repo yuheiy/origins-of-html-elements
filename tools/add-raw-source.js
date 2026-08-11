@@ -37,7 +37,7 @@ const output = outputFor(source);
 const target = path.join(raw, ...output.split("/"));
 if (existsSync(target)) throw new Error(`target already exists: raw/${output}`);
 
-using temporary = mkdtempDisposableSync(path.join(tmpdir(), "add-raw-"));
+using temporary = mkdtempDisposableSync(path.join(tmpdir(), "add-raw-source-"));
 const download = path.join(temporary.path, "download");
 const response = await fetch(source);
 if (!response.ok) throw new Error(`fetch failed (${response.status}): ${source}`);

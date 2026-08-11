@@ -10,7 +10,7 @@ if (process.argv.length !== 2) {
 
 const repository = path.join(import.meta.dirname, "..");
 const raw = path.join(repository, "raw");
-const output = path.join(repository, "wiki", "raw-index.md");
+const output = path.join(repository, "wiki", "raw-source-index.md");
 
 function sourceFiles(directory, prefix = "") {
   const files = [];
@@ -54,18 +54,25 @@ const hosts = readdirSync(raw, { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
   .map((entry) => entry.name)
   .sort();
-const files = hosts.flatMap((host) => sourceFiles(path.join(raw, host), host)).sort();
-const rows = files.map((file) => `| [${tableCell(file)}](../raw/${file}) | ${tableCell(documentTitle(path.join(raw, ...file.split("/"))))} |`);
-const page = [
-  "# Rawソース",
-  "",
-  "> このファイルは`scripts/generate-raw-index.js`による生成物である。直接編集せず、このスクリプトを実行して再生成する。",
+const sources = hosts.map((host) => ({ host, files: sourceFiles(path.join(raw, host)).sort() }));
+const fileCount = sources.reduce((total, source) => total + source.files.length, 0);
+const sections = sources.flatMap(({ host, files }) => [
+  `## \`${host}\`（${files.length}ファイル）`,
   "",
   "| Rawファイル | 文書タイトル |",
   "|---|---|",
-  ...rows,
+  ...files.map((file) => `| [${tableCell(file)}](../raw/${host}/${file}) | ${tableCell(documentTitle(path.join(raw, host, ...file.split("/"))))} |`),
   "",
+]);
+const page = [
+  "# Rawソース索引",
+  "",
+  "> このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。",
+  "",
+  `Rawに保存された${fileCount}ファイルを、${sources.length}の取得元ホストごとに収録する。`,
+  "",
+  ...sections,
 ].join("\n");
 
 writeFileSync(output, page);
-console.log(`wiki/raw-index.mdを生成（${files.length}ファイル）`);
+console.log(`generated wiki/raw-source-index.md (${fileCount} files)`);
