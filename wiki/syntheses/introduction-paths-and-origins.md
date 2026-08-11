@@ -190,7 +190,9 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 
 [`address`](../elements/address.md)は、W3Cの1991年WorldWideWeb保存ツリー、バックアップ履歴、スタイル群、CERNの復元資料と、同名候補であるWaterloo SCRIPT GMLを照合した。CERNの復元プロジェクトも発見できた唯一のソースが0.15を示すと報告しており、2月1日の`Address`スタイル実装より前の版または個別の採用記録は回収できなかった。一度だけの探索を完了し、新しい初期ソース、RCS履歴、同時代の採用記録が現れるまで個別ページの問いを維持する。
 
-- [`body`](../elements/body.md)、[`pre`](../elements/pre.md)、[`iframe`](../elements/iframe.md): 個別ページが特定する内部DTD、配布物、または同時代ベンダー資料。
+[`body`](../elements/body.md)は、1992年11月の`DOCUMENT`版DTDについて、W3CのRCS ChangeLog、記録されたRepositoryパス、想定RCSパス、1992年保存ディレクトリと公開メールを照合した。公開履歴は12月3日のrevision 1.2から始まり、内部版本文または変更差分を回収できなかった。一度だけの探索を完了し、新しいRCS revisionまたは内部版DTDが現れるまで個別ページの問いを維持する。
+
+- [`pre`](../elements/pre.md)、[`iframe`](../elements/iframe.md): 個別ページが特定する配布物または同時代ベンダー資料。
 
 #### 新しい一次資料が現れるまで保留する問題
 
