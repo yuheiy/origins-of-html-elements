@@ -1,0 +1,202 @@
+<HTML>
+<HEAD>
+<TITLE>TimNotes -- 1993_Workshop</TITLE>
+<NEXTID N="z7">
+</HEAD>
+<BODY>
+<H1>Tim's notes on <A
+NAME="z2" HREF="../Overview.html#z45">W5</A>  July 1993</H1>Here are my notes -- someone on the
+net asked for them.  I have separately
+recorded the <A
+NAME="z1" HREF="../../Library/Bugs.html#z1">wish list for libwww</A>
+which I came away with.  There were
+many sessions were I didn't take
+notes.  (Who was the official note-taker
+and where are the results?)
+<H2>Brainstorming wall</H2>The workshop started with a brainstorming
+in which we covered the wall with
+issues which neeed addressing.  Here
+is a dump of the wall.  Later some
+of the issues were tackled by groups
+of varying (often time-varying!)
+size.  This was a general direction
+poll, also to help us understand
+where each other are coming from
+<H3>Organizational issues</H3>
+<UL>
+<LI>Consortium
+<LI>Maintenance -- cooperative development
+<LI>Licensing Software
+<LI>Net funding policy statements
+<LI>Design Authority, design pressures
+<LI>Copyright Issues
+</UL>
+<H3>BIZ</H3>
+<UL>
+<LI>Business issues
+</UL>
+<H3>Resource Discovery</H3>
+<UL>
+<LI>Knowbots
+<LI>Global Indexes, Resource discovery
+<LI>Notification of changes
+</UL>
+<H3>HTML</H3>
+<UL>
+<LI>Styles
+<LI>Multiple DTDs
+<LI>Whether to talk about PDF etc
+<LI>Format parameters to negotiate (colours
+etc) Client profile. See later <A
+NAME="z5" HREF="http://www.bsdi.com/HTTP:TNG/MIME-ClientProfile.html">notes
+by Tony Sanders</A> .
+<LI>Forms and User input
+<LI>Define Implementation leveles fo
+respecially HTML
+<LI>Isochronous protocols and sync for
+multimedia
+<LI>Discipline-specific descriptions
+of HTML for certain areas
+<LI>non-latin charcter sets
+<LI>Link relationship values
+<LI>Libwww
+<LI>Progress feedback -- what does that
+mean?
+</UL>
+<H3>Annotation, news</H3>
+<UL>
+<LI>Mail -- to author for example
+<LI>Context
+<LI>Versions
+<LI>Authoring tools, editors,
+<LI>2400 baud optimisation
+<LI>"Speculative parallelism" (thanks
+Simon)
+</UL>
+<H3>HTTP</H3>
+<UL>
+<LI>Timescales and Impl. levels
+<LI>z39.50 re;ationships
+<LI>Authenticaion, Access control and
+confidentiality.
+<LI>Semantics of HTTP
+<LI>Reeverse link building
+<LI>State
+<LI>performance
+</UL>
+<H3>URNS, Naming, URLs</H3>
+<UL>
+<LI>Exec Links
+<LI>Billing  (*action for research)
+<LI>Caching -- client and gateway (*action
+for research)
+<LI>IOnteractive sessions?  MuDD?
+<LI>Reliabiliity and redundancy -- acion
+for development!
+<LI>(These notes skip all the group work
+now)
+</UL>
+<H2>Last Day</H2>I gave two soapbox microsermons (or
+was it 3?):
+<DL>
+<DT>ISMAP
+<DD> The functionality of specifying
+that a document is clickable mapstyle
+should be in the HTTP header not
+in the HTML of a referring document.
+<DT>Next and Previous
+<DD> Browser writers
+should be aware of different semantics
+of navigation buttons.  General discussion
+-- awareness, needed, no rules to
+be laid down here.
+</DL>
+
+<H3>MetaInformation</H3>We need  to be able to specify the
+same information either in HTML and/or
+in a separete HTTP header, as it
+can logically be put at either level
+(like email message heading and envelope).<P>
+We need a mapping between the RFC822/MIME
+style and SGML attribute formats
+in the general case.<P>
+Certainly, WWW_Link: is a header
+which should allow the same information
+to be specified as the &lt;LINK> tag.
+<H2>Annotations:</H2>
+<H3>Marc's presentation &amp; general discussions:</H3>Marc Andreessen presented the current
+annotation system. <P>
+Disrtribution methods: Private, Public
+and group annotations and Newsgroups.
+Send message around or just a list
+of things who have new annotations?
+NNTP is reaching scaling limits..[<A
+NAME="z6" HREF="JoshOsborne.html">
+Note from Josh Osbourne</A> ]. Retraction
+might be a useful function.<P>
+How to determine the primary publishing
+name of the document whenit is published
+in a number of domains?<P>
+Finding annotations in edited documents
+--regular promlem.<P>
+How to change HTTP POST for group
+annotation?
+<H3>Later small group discussion defined
+relevenat part of HTTP protocol.</H3>
+<UL>
+<LI>REPLY is no longer a method. 
+<LI>POST and PUT exist.
+<LI>DELETE added. 
+<LI>POST and PUT have body parts terminated
+by either length: or Message-Boundary
+methods, but not CR LF . CR LF method.
+<LI>GET can always get annotations, from
+any server. Need reply code saying
+"I have only got you annotations,
+not the document".
+</UL>See <A
+NAME="z3" HREF="../../Protocols/HTTP/Methods.html">current spec</A> which I have updated
+since.
+<H2>Conclusions</H2>Personally I found it was great to
+meet real people behind the mail.
+Perhaps everyone had a few surprises
+here, as people's net and real-life
+profiles are sometime a little different!<P>
+I went expecting W5 to be a bit of
+a zoo, with such a large range of
+issues, and it was, but it was an
+interesting and useful zoo.  I myself
+was torn between chairing meetings
+I was in and jumping in technically
+with both boots on, wanting always
+to do both.  Next time, we should
+perhaps make sure chairpeople are
+appointed specifically to run groups,
+rather than just suggest one be elected.
+We will also have enough of an idea
+of what people want to discuss to
+prepare an agenda beforehand.  Many
+people (I for one) generally wanted
+to be in all of the groups at once,
+though some were quite content to
+focus one one issue. The total productivity
+was greater with groups.  The HTML+
+discussions were like an episode
+in a long series.  There is a lot
+of work in defining such a DTD.<P>
+I got a lot of things out of it.
+I was glad to see the support for
+a consortium.  I was glad to get
+lots of <A
+NAME="z4" HREF="../../Library/Bugs.html#z1">feedback on libwww</A> , and
+offers of help.  It was useful to
+pin down HTTP annotation and front-end
+update functionality enough or us
+to do away and implement. And lots
+of small things cleared up.  I am
+very grateful to Dale for hosting
+it not to mention feeding us and
+clothing us!
+<ADDRESS><A
+NAME="0" HREF="http://www.w3.org./hypertext/TBL_Disclaimer.html">Tim BL</A></A><P></BODY>
+</HTML>

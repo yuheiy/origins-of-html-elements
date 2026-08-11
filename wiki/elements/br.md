@@ -6,7 +6,7 @@ status: 完成
 
 ## 概要
 
-1993年7月のCERN/IETF HTML草案にはない。1993年9月5日公開のNCSA Mosaic 2.0プレリリース3では改行タグとして実装され、同月10日にDave Raggettが既存のHTML+草案の`BR`を`L`へ置き換える案を示した。両系列の前後関係、発案理由、発案者、HTML 2.0への採用経路は確認できない。
+1993年7月のCERN/IETF HTML草案にはないが、Dave Raggettの7月12日版HTML+提案は、詩や住所のように意味を持つ改行を表す`BR`を定義した。7月末のWWW Workshopでは`BR`を基礎HTMLへ追加することが決まり、8月25日のLynx 2.0.11と9月5日のNCSA Mosaic 2.0プレリリース3で実装を確認できる。HTML+からWorkshop決定への要素単位の採用因果、発案者、HTML 2.0までの経路は未確認である。
 
 ## 現在の意味
 
@@ -14,32 +14,36 @@ WHATWG HTML Living Standardでは、内容の一部である改行を表す。�
 
 ## HTMLへの導入
 
-1993年7月の`draft-ietf-iiir-html-01`には`BR`がない。Marc Andreessenは同年9月5日にNCSA Mosaic 2.0プレリリース3をwww-talkで公開し、原配布物に由来する`CHANGES`は2.0プレリリース2から3への変更として`br`と`hr`をそれぞれ改行と水平罫線として追加したと記録する。一方、Dave Raggettは9月10日に既存のHTML+草案の改行タグ`BR`を`L`へ置き換える予定を述べており、NCSAとは別にHTML+系列にも`BR`が存在した。1993年11月8日のHTML+ DTDは結局`BR`を通常のテキスト内の強制改行として収録する。既存のHTML+草案へ`BR`が入った日付、NCSA実装との前後・因果関係、HTML 2.0への採用経路は確認できない。[1993年7月HTML Internet-Draft](../../raw/www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)（[公開元](https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)） [プレリリース3公開メールの保存複製](../../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html)） [NCSA Mosaic `CHANGES`の保存複製](../../raw/github.com/alandipert/ncsa-mosaic/blob/master/CHANGES)（[公開元](https://github.com/alandipert/ncsa-mosaic/blob/master/CHANGES#L660-L701)） [Raggett, “Your views on changes to HTML+”の保存複製](../../raw/1997.webhistory.org/www.lists/www-talk.1993q3/0883.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q3/0883.html)） [HTML+ DTD](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_58.html)）
+1993年7月の`draft-ietf-iiir-html-01`には`BR`がない。Dave Raggettの7月12日版HTML+提案は、通常の空白処理と異なり意味を持つ改行が詩や住所にあることを理由として、現在の左余白から新しい行を始める空要素`BR`を定義する。7月28〜30日のWWW Workshopを記録したTony Sandersの同時代メモは、RFC化前の基礎HTMLへ`BR`と`HR`を追加することが決まり、ブラウザー実装者は実装すべきだと記す。ただしSanders自身が、このメモは確定一覧ではなく、合意とは自身が全員も同意したと理解したという意味だと限定している。Tim Berners-Leeの会合メモはHTML実装レベルとHTML+討議を記録するが、`BR`と`HR`の個別決定を列挙しない。8月25日のLynx 2.0.11公開告知は、現在のスタイルを保って改行する`BR`を追加したと記録する。Marc Andreessenは9月5日にNCSA Mosaic 2.0プレリリース3を公開し、原配布物に由来する`CHANGES`も`br`を改行タグとして追加したと記録する。したがってNCSAを最初の提案または実装とはみなさない。HTML+の検討はWorkshopの目的だったが、先行するHTML+ `BR`を基礎HTMLへ採用したと要素単位で明記する資料はなく、HTML 2.0までの編集経路も未確認である。[1993年7月HTML Internet-Draft](../../raw/www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)（[公開元](https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)） [Raggett, *HTML+ (Hypertext markup language)*](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus.ps)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus.ps)） [Sanders, “WWWWW Notes”](../../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/459.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/459.html)） [Berners-Lee, *Tim's notes on W5 July 1993*](../../raw/www.w3.org/History/1994/WWW/WorkingNotes/1993_Workshop/TimNotes.html)（[公開元](https://www.w3.org/History/1994/WWW/WorkingNotes/1993_Workshop/TimNotes.html)） [Montulli, “Lynx 2.0.11 now available!”](../../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/774.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/774.html)） [プレリリース3公開メールの保存複製](../../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html)） [NCSA Mosaic `CHANGES`の保存複製](../../raw/github.com/alandipert/ncsa-mosaic/blob/master/CHANGES)（[公開元](https://github.com/alandipert/ncsa-mosaic/blob/master/CHANGES#L660-L701)）
 
 ## HTML直前の祖先
 
-未確認。NCSA Mosaic 2.0プレリリース3と既存HTML+草案の双方で`BR`を確認できるが、両者の前後・因果関係や、さらに先行するマークアップ、ブラウザー、テキスト整形コマンドから採用したことを示す資料は確認できない。
+未確認。基礎HTMLへの追加決定より先にHTML+ `BR`が存在したことは確認できるが、Workshop記録はHTML+からの要素単位の採用を明記せず、さらに先行するマークアップやテキスト整形コマンドからHTML+へ採用したことも示さない。
 
 ## さらに上流の由来
 
 ### 証拠
 
-確認できる直接史料はNCSA Mosaicの実装とHTML+草案の存在までであり、それ以前の系譜や両者間の関係を示さない。
+HTML+提案は、通常の空白を折り畳む文書でも詩や住所では改行が意味を持つため、`BR`で改行を明示すると説明する。[Raggett, *HTML+ (Hypertext markup language)*](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus.ps)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus.ps)）
 
 ### 解釈
 
-なし。
+`BR`は単なる余白調整ではなく、文書内容として意味を持つ改行を通常テキスト内へ残す要求に応じた要素として提案された。HTML+から基礎HTMLへの採用経路は、この要求の一致だけでは確定できない。
 
 ## 系譜
 
-確認できる時系列は、NCSA Mosaic 2.0プレリリース3のHTML `BR`（1993-09-05）、9月10日時点で既存と記されたHTML+ `BR`、HTML+ Internet-Draft `BR`（1993-11）、HTML 2.0 `BR`（1995）、現行HTML `<br>`である。NCSAとHTML+の前後関係を含め、各段階の採用因果は未確認のため矢印で接続しない。
+確認できる時系列は、HTML+ `BR`（1993-07-12）、WWW Workshopでの基礎HTMLへの追加決定（同年7月28〜30日）、Lynx 2.0.11のHTML `BR`（同年8月25日）、NCSA Mosaic 2.0プレリリース3のHTML `BR`（同年9月5日）、HTML+ Internet-Draft `BR`（同年11月）、HTML 2.0 `BR`（1995）、現行HTML `<br>`である。Workshop決定からLynxおよびNCSA実装への前後関係は確認できるが、実装ごとの採用因果、HTML+からWorkshop決定、WorkshopからHTML 2.0への接続は未確認のため矢印で結ばない。
 
 ## 証拠
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
+| 1993-07-12 | [*HTML+ (Hypertext markup language)*](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus.ps)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus.ps)） | HTML+提案のW3C保存PostScript | 詩や住所で意味を持つ改行を表す空要素`BR`を定義し、DTDにも収録する。HTTP `Last-Modified`は1993-07-13である。 | 2026-08-11 |
 | 1993-07-14 | [“XMosaic 1.2 and HTML+”](../../raw/1997.webhistory.org/www.lists/www-talk.1993q3/0143.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q3/0143.html)） | NCSA開発者によるwww-talkメールの保存複製 | AndreessenがMosaic 1.2ではHTML+対応をまだ実装していないと述べる。後のプレリリース3がHTML+を採用したことまでは示さない。 | 2026-08-10 |
-| 1993-07-23（登録日） | [*Hypertext Markup Language (HTML)* revision 01](../../raw/www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)（[公開元](https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)） | IETF Internet-Draft | 本文とDTDに`BR`がなく、NCSA追加前の比較点となる。 | 2026-08-09 |
+| 1993-07-23（登録日） | [*Hypertext Markup Language (HTML)* revision 01](../../raw/www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)（[公開元](https://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt)） | IETF Internet-Draft | 本文とDTDに`BR`がなく、HTML+提案とWorkshop決定前後の基礎HTML草案を示す比較点となる。 | 2026-08-09 |
+| 1993-07-28〜30（会合）、1993-08-10（投稿） | [“WWWWW Notes”](../../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/459.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/459.html)） | WWW Workshop参加者による同時代メモ | RFC化前の基礎HTMLへ`BR`と`HR`を追加し、ブラウザー実装者へ実装を促す決定を記録する。著者は確定一覧ではないと限定している。 | 2026-08-11 |
+| 1993-07-28〜30 | [*Tim's notes on W5 July 1993*](../../raw/www.w3.org/History/1994/WWW/WorkingNotes/1993_Workshop/TimNotes.html)（[公開元](https://www.w3.org/History/1994/WWW/WorkingNotes/1993_Workshop/TimNotes.html)） | Berners-Leeによる会合メモ | HTML実装レベルとHTML+討議を記録するが`BR`と`HR`の個別決定を列挙せず、Sandersメモを確定議事録とみなせないことを示す。 | 2026-08-11 |
+| 1993-08-25 | [“Lynx 2.0.11 now available!”](../../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/774.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/774.html)） | Lynx開発者による公開告知 | 現在のスタイルを保って改行する`BR`を追加したと記録し、NCSA Mosaicプレリリース3より早い確認済み実装を示す。 | 2026-08-11 |
 | 1993-09-05 | [“NCSA Mosaic for X 2.0 prerelease 3 available”](../../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html)） | NCSA開発者によるwww-talk公開メールの保存複製 | Marc Andreessenがプレリリース3のソースと二値を公開し、新HTMLウィジェットを主要変更として挙げる。 | 2026-08-10 |
 | 1993-09-05（公開日） | [NCSA Mosaic `CHANGES`](../../raw/github.com/alandipert/ncsa-mosaic/blob/master/CHANGES)（[公開元](https://github.com/alandipert/ncsa-mosaic/blob/master/CHANGES#L660-L701)） | NCSA配布物由来の変更ログの保存複製 | 新しいHTMLウィジェットへ`br`を改行タグとして追加したと記録する。 | 2026-08-10 |
 | 1993-09-10 | [“Your views on changes to HTML+”](../../raw/1997.webhistory.org/www.lists/www-talk.1993q3/0883.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q3/0883.html)） | HTML+編集者によるwww-talkメールの保存複製 | Raggettが既存のHTML+草案の`BR`を`L`へ置き換える案を示し、この時点より前のHTML+系列に`BR`があったことを確認できる。 | 2026-08-10 |
@@ -48,16 +52,16 @@ WHATWG HTML Living Standardでは、内容の一部である改行を表す。�
 
 ## 確度
 
-**C**
+**B**
 
-確認可能な初期実装・草案と当時の意味は固定できるが、NCSAとHTML+の前後・因果関係、導入理由、発案者、具体的祖先、標準採用経路を確認できないため。
+基礎HTMLへの追加決定と、意味を持つ改行を明示する設計要求は確認できるが、具体的な先行物から基礎HTML `BR`への要素単位の採用因果、発案者、HTML 2.0までの編集経路を確認できないため。
 
 ## 否定された仮説
 
-印刷・タイプライター・ワードプロセッサーの強制改行、SGMLのレコード終端、または後代の現行用途を、類似だけからHTML `BR`の直接祖先とする説明。HTML+の同名要素だけからHTML+ → NCSA Mosaicとする説明も、Mosaic 1.2のHTML+非対応は確認できるが、プレリリース3の採用を示す記録がないため採らない。
+NCSA Mosaicを`BR`の最初の提案または実装とする説明。7月12日版HTML+の提案と8月25日のLynx実装が先行する。印刷・タイプライター・ワードプロセッサーの強制改行、SGMLのレコード終端、または後代の現行用途を、類似だけからHTML `BR`の直接祖先とする説明も採らない。HTML+の同名要素とWorkshopでの検討対象だったことだけからHTML+ → 基礎HTMLまたは個別ブラウザーとする説明は、要素単位の採用記録がないため保留する。
 
 ## 未解決
 
-- NCSA Mosaic 2.0プレリリース3で`BR`を追加した発案者、要求、ソースのコミットは確認できるか。
-- 1993年6月1日版`htmlplus.dtd`の保存本文を回収し、`BR`が入った日付とNCSA実装との前後・因果関係を確認できるか。
-- NCSAまたはHTML+からHTML 2.0へ`BR`を採用した議論は残っているか。
+- 1993年6月1日版`htmlplus.dtd`の保存本文を回収し、7月12日より早い`BR`の収録と発案者を確認できるか。
+- HTML+ `BR`からWWW Workshopの基礎HTML `BR`、またはWorkshop決定からLynxおよびNCSA Mosaicの実装へ至る要素単位の採用記録は残っているか。
+- Workshop決定またはHTML+からHTML 2.0へ`BR`を採用した編集記録は残っているか。

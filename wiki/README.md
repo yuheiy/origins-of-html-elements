@@ -39,7 +39,7 @@ status: 完成
 - [`<bdo>`](elements/bdo.md): 文脈だけでは方向を解けないテキストへUnicode書字方向の上書きを指定するため、1995年の国際化草案が導入しRFC 2070が標準化した。
 - [`<blockquote>`](elements/blockquote.md): HTMLより早いDocBook 1.0の同名要素と導入直前のDocBook検討は確認できるが、Connollyの後代の説明がUsenet説と競合するため直接祖先は未確定である。
 - [`<body>`](elements/body.md): Tim Berners-Leeは1992年6月にヘッダー／本文分離案を示し、Dan Connollyの7月公開DTDは`BODY`を混在内容回避用の本文コンテナーとして宣言した。
-- [`<br>`](elements/br.md): 1993年9月のNCSA Mosaic 2.0プレリリース3で改行タグとして確認できるが、HTML+案との前後関係と標準採用経路は未確認である。
+- [`<br>`](elements/br.md): 1993年7月のHTML+で意味を持つ改行として提案され、同月末に基礎HTMLへの追加が決まったが、HTML+からの要素単位の採用因果は未確認である。
 - [`<button>`](elements/button.md): `button`は1997年、既存の`input`による送信／リセット／スクリプト用ボタンと同じ動作を保ちながら、HTML内容を持つ豊かなボタンを作るためW3CのHTML 4へ導入された。
 - [`<canvas>`](elements/canvas.md): Richard WilliamsonがDashboard向けにWebKitへ`CANVAS`を初めて実装し、その実装からWHATWGのキャンバス機能が設計されたことを、WebKit変更履歴とWHATWG自身の謝辞で確認できる。
 - [`<caption>`](elements/caption.md): HTML+の表モデルのキャプションからRFC 1942を経て標準化された要素で、HTML+の図用途とは区別する。
@@ -68,7 +68,7 @@ status: 完成
 - [`<head>`](elements/head.md): 1992年のヘッダー／本文分離案から`HEADING`案を経て1993年の`HEAD`へ至るが、最終トークンの選定記録は未回収である。
 - [`<header>`](elements/header.md): 2005年の見出しグループ用`header`を2009年に`hgroup`へ移し、直後に見出し、検索、ナビゲーション等をまとめる現行系統を新設した。
 - [`<hgroup>`](elements/hgroup.md): 2009年4月、WHATWGエディターIan Hicksonが当時のHTML5 `header`を`hgroup`へ改名し、副見出しを支える用途へ限定して導入した。
-- [`<hr>`](elements/hr.md): 1993年7月のCERN/IETF HTML草案にはなく、1993年9月5日に公開されたNCSA Mosaic 2.0プレリリース3の変更ログで水平罫線タグとして追加されたことを確認できる。
+- [`<hr>`](elements/hr.md): 1993年7月末のWWW Workshopで、ハイフン列による区切りを置き換える水平罫線として基礎HTMLへの追加が決まり、LynxとNCSA Mosaicが実装した。
 - [`<html>`](elements/html.md): Dan ConnollyがSGMLパーサーに最上位要素を推論させるため1992年に導入したが、HTML以前の具体的祖先は未確認である。
 - [`<i>`](elements/i.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した物理的な文字強調要素で、同時代Texinfoの`@i`との対応を確認できる。
 - [`<iframe>`](elements/iframe.md): Microsoft IE3の浮動フレーム実装とW3Cの`IFRAME`案は確認できるが、Microsoft提出からW3C案への要素単位の採用は未確認である。

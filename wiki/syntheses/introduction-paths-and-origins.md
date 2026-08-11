@@ -26,8 +26,9 @@ status: 完成
 | 既成のXML語彙 | MathML／SVGの既存ルートをHTMLパーサーが外来要素の内容として統合した | `math`、`svg` |
 | CERN WorldWideWeb／初期HTML設計 | 最初期実装、設計メール、DTD、初期草案でHTML自身の基礎語彙として成立した | `a`、`address`、`base`、`blockquote`、`body`、`head`、`html`、`link`、`menu`、`meta`、`p`、`pre`、`title`。メタは少し後の個別提案、メニューは現行意味までの再定義経路に欠落がある |
 | HTML+ | HTML向けの実験仕様でフォーム、表、修正機能、図、クライアント側イメージマップを先に組み立て、HTML 2〜4またはHTML5へ引き継がれた | `form`、`input`、`select`、`option`、`textarea`、`table`、`caption`、`tr`、`th`、`td`、`del`、`ins`、`figure`、`map`、`area` |
+| 1993年WWW Workshop | RFC化前の基礎HTMLへ`br`と`hr`を追加する決定を記録し、`hr`はハイフン列による区切りの置換と明示した。先行HTML+ `br`からの採用因果と後続仕様への編集経路は未確認である | `br`、`hr` |
 | IETF／W3Cの機能別HTML草案 | HTML 3、国際化、フォーム、表、フレーム、スタイル、スクリプティング、複合文書等の草案が要素を設計し、後続HTMLへ統合した | `abbr`、`button`、`col`、`colgroup`、`datalist`、`div`、`fieldset`、`iframe`、`label`、`legend`、`noscript`、`object`、`optgroup`、`q`、`span`、`style`、`sub`、`sup`。一部はより古い候補やベンダー枝との個別接続に欠落がある |
-| ブラウザーベンダーの実装・提案 | `img`、`embed`、`script`、`canvas`、`video`は先行実装または提案から標準化への接続を確認できる。`wbr`はWHATWG内の適合化を確認できるがNetscapeからWHATWGへの接続がなく、`br`と`hr`はベンダー実装から現行標準までの因果に欠落がある | `img`、`embed`、`script`、`canvas`、`video`、`br`、`hr`、`wbr` |
+| ブラウザーベンダーの実装・提案 | `img`、`embed`、`script`、`canvas`、`video`は先行実装または提案から標準化への接続を確認できる。`wbr`はWHATWG内の適合化を確認できるがNetscapeからWHATWGへの接続がない | `img`、`embed`、`script`、`canvas`、`video`、`wbr` |
 | 既存Webマークアップ／ARIA／コミュニティ実装 | 実サイトのマークアップ、ARIA役割、JavaScript UI、コミュニティ提案、ポリフィルを標準要素へ引き上げた | `article`、`aside`、`dialog`、`footer`、`header`、`main`、`nav`、`picture`、`ruby`、`rt`、`rp`、`search`、`section` |
 | 外部・隣接仕様の提案 | 国際化、XForms、時間指定テキスト、Web Components、Open UI等の作業からHTMLへ機構または要素を統合した | `bdi`、`bdo`、`output`、`selectedcontent`、`slot`、`template`、`track` |
 | HTML／WHATWG内部の既存機構 | 既存要素、API、プレースホルダー、旧語彙を分解、改名、専用化、再定義した | `audio`、`data`、`figcaption`、`hgroup`、`mark`、`meter`、`progress`、`s`、`small`、`source`、`summary`、`time` |
@@ -48,7 +49,7 @@ status: 完成
 | ブラウザー実装・複合文書・マルチメディア | ブラウザーベンダーの画像・埋め込み・フレーム・メディア実装、既成のMathML／SVG語彙、ベンダー別埋め込み内容、WHATWG `Audio`API、時間指定テキスト、レスポンシブ画像実装 | `audio`、`canvas`、`embed`、`iframe`、`img`、`math`、`object`、`picture`、`source`、`svg`、`track`、`video` |
 | スクリプティング・スタイル・Webアプリケーション・コンポーネント | ブラウザーベンダーのクライアント側スクリプティング、非対応時の代替内容、スタイルシート、機械可読データ、Web Componentsのテンプレート／スロット | `data`、`noscript`、`script`、`slot`、`style`、`template`、`time` |
 | 国際化・文字方向・東アジア組版 | Unicode国際化、双方向文字関連仕様、ルビの既存Web実装、言語依存の引用符 | `bdi`、`bdo`、`q`、`rp`、`rt`、`ruby`、`span` |
-| 既存Web制作・コミュニティ・互換性 | 実サイトのセクショニングマークアップ、ARIA役割、コミュニティ提案、ポリフィル、ブラウザー互換マークアップ | `article`、`aside`、`br`、`footer`、`header`、`hgroup`、`hr`、`main`、`nav`、`search`、`section`、`wbr` |
+| 既存Web制作・コミュニティ・互換性 | 実サイトのセクショニングマークアップ、ARIA役割、コミュニティ提案、ポリフィル、初期Webの意味を持つ改行とハイフン列による区切り、ブラウザー互換マークアップ | `article`、`aside`、`br`、`footer`、`header`、`hgroup`、`hr`、`main`、`nav`、`search`、`section`、`wbr` |
 
 以下の2.1〜2.3は八つの大分類の下位分類ではない。第二表への割り当て根拠を、背景の確認経路ごとに整理する。
 
@@ -125,17 +126,17 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 
 ### 3.1 確度と未解決点
 
-現行115要素の確度はAが84要素、A−が17要素、Bが11要素、Cが3要素で、未評価はない。ただしAはHTMLへの導入と直前の系譜だけを評価するため、Aであっても語の命名理由やさらに上流の由来が確定したとは限らない。
+現行115要素の確度はAが85要素、A−が17要素、Bが12要素、Cが1要素で、未評価はない。ただしAはHTMLへの導入と直前の系譜だけを評価するため、Aであっても語の命名理由やさらに上流の由来が確定したとは限らない。
 
-今回の再調査により、従来唯一「HTML以前の具体的背景は未確認」としていた`blockquote`では、DocBook 1.0の先行する同名語彙と導入直前のDocBook検討を確認した。ただしDocBookからHTMLへの要素単位の採用因果は、導入者自身のUsenet説と競合して解消できないため、確度Bと直前祖先未確認を維持する。`base`では、最初期のタグ案を1991年10月まで遡り、1992年11月の採用決定を確認したが、`BASE HREF`への最終具体化とHTML外の祖先は未確認である。
+今回の再調査により、`br`ではNCSA Mosaicより前のHTML+提案、基礎HTMLへの追加決定、Lynx実装を確認し、導入理由を固定して確度Bとした。`hr`では、ハイフン列による区切りを置き換える要素として基礎HTMLへ追加した直接記録を確認し、確度Aとした。HTML+ `br`からの採用因果、Workshop決定から各実装・後続仕様への編集経路は未確認である。先行調査で確認した`blockquote`のDocBook／Usenet競合と、`base`の`BASE HREF`への最終具体化およびHTML外の祖先も未解決のままである。
 
 108ページ、113要素に一つ以上の未解決点が残る。未解決がないのは`figcaption`と`optgroup`だけである。したがって、このページの主題分類は調査完了率として使えない。
 
 集合単位の採用しか確認できない、または中間経路が欠けるA−は、`dd`、`del`、`dl`、`dt`、`footer`、`head`、`ins`、`legend`、`li`、`link`、`nav`、`ol`、`output`、`q`、`style`、`u`、`ul`の17要素である。個別対応を集合レベルの資料から推定してはならない。
 
-HTMLへの採用因果または具体的祖先が弱いB／Cは、`a`、`address`、`base`、`blockquote`、`br`、`col`、`div`、`hr`、`html`、`menu`、`noscript`、`p`、`small`、`title`の14要素である。特に`br`、`hr`、`menu`は最初期出現と当時の意味までは確認できるが、導入理由と具体的祖先が確認できない。
+HTMLへの採用因果または具体的祖先が弱いB／Cは、`a`、`address`、`base`、`blockquote`、`br`、`col`、`div`、`html`、`menu`、`noscript`、`p`、`small`、`title`の13要素である。`br`は導入理由を確認したがHTML+からの採用因果がなく、`menu`は最初期出現と当時の意味までしか確認できない。
 
-`HTML直前の祖先`に未確認部分を明記するのは、`a`、`address`、`aside`、`audio`、`base`、`blockquote`、`br`、`canvas`、`col`、`del`、`div`、`hr`、`html`、`ins`、`legend`、`menu`、`noscript`、`output`、`p`、`pre`、`progress`、`q`、`s`、`section`、`small`、`source`、`style`、`sub`、`sup`、`title`、`track`、`u`の32要素である。背景資料があるだけで、これらの欠落へ矢印を補ってはならない。
+`HTML直前の祖先`に未確認部分を明記するのは、`a`、`address`、`aside`、`audio`、`base`、`blockquote`、`br`、`canvas`、`col`、`del`、`div`、`html`、`ins`、`legend`、`menu`、`noscript`、`output`、`p`、`pre`、`progress`、`q`、`s`、`section`、`small`、`source`、`style`、`sub`、`sup`、`title`、`track`、`u`の31要素である。背景資料があるだけで、これらの欠落へ矢印を補ってはならない。
 
 名称、命名、改名、略称、タグ名または語彙の選択理由が明示的な未解決点として残るのは、`a`、`abbr`、`article`、`aside`、`base`、`bdi`、`bdo`、`col`、`del`、`details`、`dialog`、`hgroup`、`ins`、`legend`、`main`、`mark`、`menu`、`meter`、`object`、`p`、`picture`、`pre`、`script`、`search`、`section`、`span`、`sub`、`summary`、`sup`、`td`、`th`、`time`、`title`、`video`、`wbr`の35要素である。語彙起源という目的に対しては、この集合を「由来確認済み」に数えない。
 

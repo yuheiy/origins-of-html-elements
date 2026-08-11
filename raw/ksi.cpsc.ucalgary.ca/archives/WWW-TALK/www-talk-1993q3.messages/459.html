@@ -1,0 +1,378 @@
+<TITLE>EMail Msg &lt;9308102156.AA06138@austin.BSDI.COM&gt;</TITLE>
+<H1>WWWWW Notes</H1><ADDRESS>Tony Sanders &lt;sanders@bsdi.com&gt;</ADDRESS>
+<UL><LI><B>Mail folder: </B><A HREF="../www-talk-1993q3.index.html#459.html">WWW Talk Jul-Oct 1993</A><LI><B>Next message: </B><A HREF="460.html">Marc Andreessen: &quot;arg to Mosaic question&quot;</A><LI><B>Previous message: </B><A HREF="458.html">Bob Stayton: &quot;Re: LINKs&quot;</A><LI><B>Reply: </B><A HREF="461.html">Nathan Torkington: &quot;Re: WWWWW Notes&quot;</A><LI><B>Reply: </B><A HREF="461.html">Nathan Torkington: &quot;Re: WWWWW Notes&quot;</A></UL>
+<PRE>Errors-To: sanders@bsdi.com
+Errors-To: sanders@bsdi.com
+Message-id: <A HREF="459.html">&lt;9308102156.AA06138@austin.BSDI.COM&gt;</A>
+To: www-talk@nxoc01.cern.ch
+Subject: WWWWW Notes
+Errors-To: sanders@bsdi.com
+Reply-To: sanders@bsdi.com
+Organization: Berkeley Software Design, Inc.
+Date: Tue, 10 Aug 1993 16:56:28 -0500
+From: Tony Sanders &lt;sanders@bsdi.com&gt;
+Status: RO
+</PRE><PRE>
+Looks like I'm going to be the first to put my foot in my mouth and offend
+a bunch of people by posting my WWWWW notes.  Hopefully, these will give
+people who weren't there and idea about what went on, spur those who took
+better notes to publish, and refresh some attendees memories about what
+we did (esp those of you who took off Thursday night to the bar :-).
+
+These are available online at:
+    &lt;<A HREF="http://www.bsdi.com/HTTP:TNG/WWWWW-notes.etx">http://www.bsdi.com/HTTP:TNG/WWWWW-notes.etx</A>&gt;
+I'll be making corrections to the online version as time passes.
+
+Enjoy,
+
+--sanders
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+
+Notes from WWWWW
+================
+
+July 28, 29, 30
+---------------
+
+  The overall workshop was very positive.  There was clearly a lot of stuff
+  that can be done to enhance the functionality of the Web.  In fact,
+  there was so much to talk about we couldn't even begin to cover it all
+  (the official note takers should have a complete list).  The overall
+  consensus was to stick to talking about problems we could solve during
+  the three days of the workshop, this task alone was probably too big
+  a scope for three days.
+
+  There were several &quot;tracks&quot; of discussion going on simultaneously so
+  my notes only cover topics I attended.  These are not complete notes
+  but I wanted to post this to give everyone an idea about what went on
+  until the official note takers have time to compile their notes (which
+  are no doubt more extensive and correct than mine).
+
+  The ultimate goal was to define HTML and HTTP/1.0 at a fine enough
+  level that we could issue RFC's and have a stable base to build on.
+
+  Other goals were to study the HTML+ proposed RFC and define what could
+  be done and what could not (it was agreed that we should define
+  implementation levels and outline what features must be supported at
+  each level).  I cleverly avoid much of this discussion as it was
+  probably the most frustrating part of the workshop (so many features,
+  so little time).
+
+  Also, Tim Berners-Lee used a few well spent moments on his soap-box
+  about how to do things like ISMAP and ISINDEX correctly (which I will
+  cover in these notes).  We also talked about how to define Style Guides
+  so authors could provide hints to browsers about how to render their
+  documents best.  A new annotation protocol was also designed.
+
+  Finally, we discussed the eventuality of having a Consortium take over
+  certain management functions and overseeing WWW development.
+
+
+Accomplishments
+---------------
+
+    * A base Level 0 HTML and HTTP/1.0 was defined
+    * Consortium goals/responsibilities were outlined
+    * New Annotation Protocol defined
+    * Some consensus about Style Guides was reached
+    * Lots of bugs worked about HTML+
+    * How to do client profile was defined (a mini-proposal is included)
+    * Scanned images of all attendees (except marca) online :-)
+
+
+Remaining Issues
+----------------
+
+  These are the issues still unresolved in this document (some because
+  they aren't resolved and some because I don't understand what was
+  really agreed upon due to poor notes).
+
+    * Accept-Encoding:, It's not clear to me that this is the best
+      solution.  See MIME Proposal_
+    * How Boundary for PUT and POST are going to be implemented.
+    * Exact syntax for WWW-Link and mappings from all the things
+      in &lt;HEAD&gt;...&lt;/HEAD&gt; to HTTP/1.0 headers.  Also, it's not clear
+      which takes precedence in case of conflict.  I think TimBL
+      will address these issues in the official spec.
+    * The &lt;LINK REL=&quot;Style&quot; HREF=&quot;...&quot;&gt; for style guides (in my print-out
+      it has &lt;LINK STYLE=&quot;...&quot;&gt;).
+
+  Probably others.  Please open discussions on www-talk@info.cern.ch.
+
+
+Details
+-------
+
+First, there seemed to be a lot of confusion over the names of various things.
+
+    * HTTP/0.9, this is the protocol that only implements GET.
+    * HTTP/1.0 is also known as HTTP2.  This is the HTTP spec that defines
+      RFC822/MIME headers for HTTP objects.
+    * HTML is the simple, existing HTML spec
+    * HTML+ is the new and under development extended spec.
+
+Also, I would like to point out that when I say something like
+&quot;it was agreed&quot;, this means I agreed and that I thought everyone
+else agreed also.  Feel free to post corrections.
+
+
+Defined Implementation Levels -- HTML: Level 0
+----------------------------------------------
+
+It was decided to add the following items to the HTML spec before it
+goes out for RFC.  Browser writers should be implementing these features
+RSN.  This is not the definitive list, I don't know who owns the problem
+for sure.  Whoever is going to own this should speak up so people doing
+implementations can ask questions.
+
+&lt;BR&gt;
+    I forget what this was supposed to be, I think it means force a line
+    break.
+
+&lt;HR&gt;
+    Horizontal rule, replaces use of ---------------------
+
+&amp;nbsp
+    Other entities will added also, wait for the spec for details
+    nbsp means non-breakable white space
+
+allow nested lists (DL NL DL)
+    ala NCSA Mosaic
+
+&lt;IMG ALT=&quot;text to display if you can't display the image&quot; SRC=&quot;&quot; ISMAP&gt;
+    (ISMAP is depreciate, see below about &quot;Accepted: SPACEJUMP&quot;)
+
+Allow &lt;DT&gt;'s without &lt;DD&gt;'s
+    e.g., &lt;DL&gt;&lt;DT&gt;one&lt;DT&gt;two&lt;DT&gt;three&lt;/DL&gt;
+
+White Space is to be folded
+    This means &quot;foo  bar&quot; should render the same as &quot;foo bar&quot;.
+
+&lt;OPINION&gt;
+Browsers should also implement at least &quot;Made&quot;, &quot;Precedes&quot;, &quot;UseIndex&quot;,
+&quot;Annotation&quot;, &quot;Subdocument&quot;, &quot;Supersedes&quot;, &quot;History&quot; REL and REV
+values for use in &lt;LINK&gt;.  Support for &lt;BASE&gt; would be real nice also.
+&lt;/OPINION&gt;
+
+
+ISMAP
+-----
+
+  ISMAP is being depreciated (though it's still the only way to make this
+  work for HTTP/0.9) in favor of using &quot;Accepted: SPACEJUMP&quot; in the HTTP/1.0
+  headers.  Tim Berners-Lee suggested this in one of his soap-box talks.
+  Several arguments ensued (though I was already converted) but it was
+  finally agreed that the attributes of an object should not be specified
+  in the link to that object if at all possible.
+
+  Also, a new HTTP/1.0 header WWW-Link: was proposed to allow Index search
+  redirection in the Object header.  For example, to specify an index
+  redirect for an image that is searchable:
+
+  HTTP/1.0 200 Document follows
+  Date: Tuesday, 10-Aug-93 19:33:11 GMT
+  Server: plexus/2.2.1
+  WWW-Link: REL=&quot;UseIndex&quot; HREF=&quot;<A HREF="http://www.bsdi.com/image-decoder/">http://www.bsdi.com/image-decoder/</A>&quot;
+  Public: SPACEJUMP, GET
+  Allowed: SPACEJUMP, GET
+  MIME-version: 1.0
+  Last-modified: Saturday, 07-Aug-93 21:14:42 GMT
+  Content-type: image/gif
+
+  Tim will hopefully make this clearer in the HTTP spec.
+
+
+Defined Implementation Levels -- HTTP/1.0: Level 0
+--------------------------------------------------
+
+  Browsers/servers should support at least the following HTTP/1.0 object
+  headers:
+
+    Accept:
+    Accept-Encoding:		** See MIME Proposal_
+    User-Agent:
+    Allowed: [SPACEJUMP, GET, PUT, TEXTSEARCH, ...]
+    Public: [SPACEJUMP, GET, PUT, TEXTSEARCH, ...]
+    WWW-Link: REL=&quot;...&quot; HREF=&quot;...&quot;
+    Content-Type:
+
+  Where possible support:
+
+    From: [email address]
+
+  Most of this should eventually be handled by libwww.
+
+
+Consortium
+----------
+
+  The basic idea was that TimBL and CERN can't own the problem of
+  developing hypertext for the rest of the world so he proposed
+  setting up a Consortium to own the problem.  Here are some of the
+  items that were discussed.
+
+    Issues:
+
+    * What do you get for being a member?
+      o Representation
+      o Training
+      o Workshops/Conferences
+    * How do vendors contribute?
+      o Funding (money)
+      o Provide Technical Expertise (time)
+
+    What the Consortium might do:
+
+    * Manage funds (this was a point of argument)
+    * Publicity/PR for the Web
+    * Run conferences
+    * Sets future development directions
+    * Coordinates information exchange (I want to know about XYX, who's
+      working on stuff like this)
+    * Provides a Stamp of Approval
+      o Reference Implementation
+      o Guidelines
+      o Testing (ugh)
+      o Defines Implementation Levels
+    * Isolate funding from the design process
+
+
+Proposed Annotation Protocol
+----------------------------
+
+  It was decided that annotations could be implemented using the existing
+  defined HTTP/1.0 methods (GET/PUT/POST/DELETE).  The only thing that
+  really needed to be worked out was how PUT and POST should work.
+
+  The spec will be changed to reflect the following (again, until
+  the spec is updated this information is FYI only).
+
+  PUT and POST will support using Length: and MIME boundary's.
+
+  I don't understand how we are going to implement boundary's for sure.
+  I propose we stick with MIME and make it part of the content-type, e.g.:
+
+    Content-Type: www/annotation; boundary=&quot;string&quot;
+
+    TEXT ... TEXT
+    --string--
+
+  Any comments?
+
+Style Guides (Rendering Guides?)
+--------------------------------
+
+  Rob Raisch had a proposal for Style Guides.  The basic idea is
+  to define a format for specifying rendering hints to the browser
+  external to the document (so you can easily swap them around).
+
+  Issues discussed included details of cacheing the style guide.
+
+  Sorry, I don't have a pointer to the proposal.  Perhaps someone
+  can post one that knows where it is.
+
+  I think everyone pretty much agreed that this would be a good thing
+  to do and that in reality it wasn't going to be to hard to implement.
+
+  &lt;LINK REL=&quot;Style&quot; HREF=&quot;...&quot;&gt; was proposed to point to the style guide.
+
+  I think code to deal with style guides is supposed to end up in libwww
+  at some point.
+
+  This feature can be introduced at anything without breaking anything
+  so it was not part of the Level 0 Implementation Goals.
+
+
+Client Profiles
+---------------
+
+  The idea of the client profile is to allow the server to send back
+  data in the most appropriate format.  This is part of format
+  negotiation.  The general idea is to send more hints along with the
+  request in the Accept: field.  For example:
+
+    Accept: image/gif; class=color; depth=8;
+            width=1024; height=768; xdpi=85; ydpi=85
+
+  This tells the server that you have a color display with 256 unique colors
+  and it's 1024x768 at 85dpi (aspect ratio is 1:1).  The problem this
+  solves is rendering 24 bit images on mono displays is pretty ugly
+  so it would be nice if the server happens to have the image data
+  in mono then it could just send it.
+
+  I have a proposal for HTTP defined MIME types and associated client
+  profile information online_ at:
+    &lt;<A HREF="http://www.bsdi.com/HTTP:TNG/MIME-ClientProfile.html">http://www.bsdi.com/HTTP:TNG/MIME-ClientProfile.html</A>&gt;
+
+HTML+
+-----
+
+  Oh boy, what I can say about this.  I'll just say that lots of
+  changes were proposed and you will have to wait for details from
+  the official note takers.  To be fair, most of the changes are
+  really needed and a lot of work was done to make the spec most
+  consistent.
+
+  I think the only way to resolve some of the problems (short of
+  endless arguments) is to do a prototype implementation to play
+  around with.
+
+
+Misc Issues
+===========
+
+Authoring Tools
+---------------
+
+  The general impression I got was that doing Authoring Tools right
+  was going to be difficult in practice and nobody jumped on the
+  opportunity to write one.  It's a massive User Interface nightmare.
+  Given that there isn't a consensus on the perfect text based editor
+  I feel sorry for the poor guy that first publishes one of these :-)
+
+  I think we all agreed that authoring tools are needed, it was just
+  that nobody wanted to do it.  Oh well.
+
+
+libwww2 ownership
+-----------------
+
+  TimBL wanted to setup something so that people that want to do
+  development on libwww2 could have access to something like a CVS
+  tree over the net.  I signed up to add support for PUT to Plexus
+  and back-end it with CVS.  Should be trivial as soon as I get
+  some free time.
+
+
+Z39.50
+------
+
+  There was a discussion about the overlap of Z39.50 and HTTP/1.0.
+  I got the impression that we wanted to keep HTTP/1.0 but that it should
+  be possible (some claimed trivial) for browsers to support Z39.50 as
+  well for talking to Z39.50 servers.
+
+  The best argument for HTTP is the 0.9 protocol can be trivially implemented,
+  even using simple shell scripts.
+
+  It was claimed that Z39.50 was trivial also, but attempts to write down
+  a request on the white board failed (though we did get a better
+  understanding of the protocol).
+
+  It does seem pretty clear that the two protocols are getting closer
+  in functionality.
+
+  Arguments for Z39.50 is it already has billing and authentication
+  support (though it wasn't clear to me that there were really any
+  working Z39.50 implementations that did this).  At any rate, HTTP
+  should be able to use nearly identical authentication protocols if
+  anyone cares to implement them.
+
+--sanders_
+
+.. _online <A HREF="http://www.bsdi.com/HTTP:TNG/MIME-ClientProfile.html">http://www.bsdi.com/HTTP:TNG/MIME-ClientProfile.html</A>
+.. _sanders <A HREF="http://www.bsdi.com/hyplan/sanders.html">http://www.bsdi.com/hyplan/sanders.html</A>
+.. _Proposal <A HREF="http://www.bsdi.com/HTTP:TNG/MIME-ClientProfile.html">http://www.bsdi.com/HTTP:TNG/MIME-ClientProfile.html</A>
+
+</PRE>

@@ -242,6 +242,8 @@
 | [ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html) | EMail Msg &lt;9409121257.AA14263@dragget.hpl.hp.com&gt; |
 | [ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0278.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0278.html) | html-wg-95q2: Re: More comments on the HTML 3.0 draft |
 | [ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html) | html-wg-95q2: Re: HTML/CALS/ICADD Table Prop |
+| [ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/459.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/459.html) | EMail Msg &lt;9308102156.AA06138@austin.BSDI.COM&gt; |
+| [ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/774.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/774.html) | EMail Msg &lt;9308260107.AA23088@stat1.cc.ukans.edu&gt; |
 | [ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html) | EMail Msg &lt;9309060010.AA01749@wintermute.ncsa.uiuc.edu&gt; |
 | [lib.ru/WEBMASTER/tags.txt](../raw/lib.ru/WEBMASTER/tags.txt) | HTML Referece Guide: Tags for Netscape 3.0 |
 | [lists.w3.org/Archives/Public/public-html-admin/2013Apr/0003.html](../raw/lists.w3.org/Archives/Public/public-html-admin/2013Apr/0003.html) | WG Decision on request to drop hgroup from HTML5 from Paul Cotton on 2013-04-02 (public-html-admin@w3.org from April 2013) |
@@ -367,9 +369,11 @@
 | [www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/HTMLConstraints.html](../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/HTMLConstraints.html) | HTML Design Constraints |
 | [www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html](../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html) | Tags used in HTML |
 | [www.w3.org/History/19921103-hypertext/hypertext/WWW/NeXT/Implementation/Features.html](../raw/www.w3.org/History/19921103-hypertext/hypertext/WWW/NeXT/Implementation/Features.html) | Change history for NextStep WorldWideWeb |
+| [www.w3.org/History/1994/WWW/WorkingNotes/1993_Workshop/TimNotes.html](../raw/www.w3.org/History/1994/WWW/WorkingNotes/1993_Workshop/TimNotes.html) | TimNotes -- 1993_Workshop |
 | [www.w3.org/International/draft-duerst-ruby-01](../raw/www.w3.org/International/draft-duerst-ruby-01) | — |
 | [www.w3.org/MarkUp/1995-archive/html-spec.html](../raw/www.w3.org/MarkUp/1995-archive/html-spec.html) | Hypertext Markup Language (HTML) |
 | [www.w3.org/MarkUp/Cougar/index.html](../raw/www.w3.org/MarkUp/Cougar/index.html) | Project: Cougar |
+| [www.w3.org/MarkUp/HTMLPlus/htmlplus.ps](../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus.ps) | — |
 | [www.w3.org/MarkUp/HTMLPlus/htmlplus_1.html](../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_1.html) | HTML+ (Hypertext markup format) |
 | [www.w3.org/MarkUp/HTMLPlus/htmlplus_16.html](../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_16.html) | Presentation Only Tags |
 | [www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html](../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html) | Logical Emphasis |

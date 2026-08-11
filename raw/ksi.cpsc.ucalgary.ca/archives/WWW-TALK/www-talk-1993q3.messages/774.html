@@ -1,0 +1,136 @@
+<TITLE>EMail Msg &lt;9308260107.AA23088@stat1.cc.ukans.edu&gt;</TITLE>
+<H1>Lynx 2.0.11 now available!</H1><ADDRESS>montulli@stat1.cc.ukans.edu (Lou Montulli)</ADDRESS>
+<UL><LI><B>Mail folder: </B><A HREF="../www-talk-1993q3.index.html#774.html">WWW Talk Jul-Oct 1993</A><LI><B>Next message: </B><A HREF="775.html">Tony Sanders: &quot;Re: WWW Usage (sample from two hosts) &quot;</A><LI><B>Previous message: </B><A HREF="773.html">Charles Henrich: &quot;Re: impact of move to http/1.0&quot;</A></UL>
+<PRE>From: montulli@stat1.cc.ukans.edu (Lou Montulli)
+Message-id: <A HREF="774.html">&lt;9308260107.AA23088@stat1.cc.ukans.edu&gt;</A>
+Subject: Lynx 2.0.11 now available!
+To: lynx-dev@ukanaix.cc.ukans.edu
+Date: Wed, 25 Aug 93 20:07:42 CDT
+Cc: www-announce@nxoc01.cern.ch, www-talk@nxoc01.cern.ch
+Priority: 1
+X-Mailer: ELM [version 2.3 PL2]
+Status: RO
+</PRE><PRE>
+
+Lynx Ver. 2.0.11 is now available for anonymous ftp from
+ FTP2.cc.ukans.edu    as   /pub/lynx/lynx2-0-11.tar.Z
+
+( ftp://ftp2.cc.ukans.edu/pub/lynx/lynx2-0-11.tar.Z )
+
+Lynx is a distributed hypertext browser with full World Wide Web
+and Gopher capibilities.  For an explanation of features and a demo, 
+telnet to &quot;kufacts.cc.ukans.edu&quot; and login as &quot;www&quot;.
+
+This release of Lynx has been compiled by me on the following platforms:
+
+ o  IBM (AIX 3.2)
+ o  DEC Ultrix
+ o  DEC Alpha OSF/1
+ o  Sun 4
+ o  NeXT (Mine is an older version of NeXTStep, but it should work 
+         with newer ones too.)
+
+Binaries for the following platforms are available:
+
+ o  IBM (AIX 3.2, will work with 3.1 as well)
+ o  Ultrix
+ o  Alpha OSF/1
+ o  Sun 4
+ 
+ * see VMS note below
+
+A listserv list has been created for the distribution of
+Lynx related information and updates.
+  o  Lynx-Dev@ukanaix.cc.ukans.edu
+ 
+Send a subscribe request to listserv@ukanaix.cc.ukans.edu to
+be added to the list.  All new releases will be anounced on this
+list.  Please do not send subscribe requests to the the Lynx-Dev
+list directly.
+
+*VMS NOTE*
+Lynx 2.0.11 has not yet been ported to VMS!  After this release I will
+begin work on the VMS version.  Since the WWW Library has not
+been ported to VMS since about 9 versions ago it is becoming increasingly
+difficult to support VMS features.  Expect the VMS version of Lynx 2.0.11
+soon after the WWW Library is ported.  (Port requests can be sent to
+www-bug@info.cern.ch :)  For the time being, VMS users will have to 
+continue useing Lynx version 2.0.10.
+
+The following new features have been added:
+
+o updated help and converted it to HTML.  Made a new help location and
+  server.  The new default help file is 
+  <A HREF="http://kufacts.cc.ukans.edu/lynx_help/lynx_help_main.html">http://kufacts.cc.ukans.edu/lynx_help/lynx_help_main.html</A>
+o Added the ability to edit local HTML files. 
+  I recommend using Marc Andressen's html_mode.el emacs macro
+  package with this.
+o Lynx now reloads local HTML files and re-renders them after editing.
+o Added document reload command.  CTRL-R when pressed will reload
+  the document into memory and redisplay it, clearing the screen.
+  This is very useful when editing documents, outside of Lynx while 
+  using Lynx for rendering.
+o Added source view mode.  '\' when pressed will reload the document
+  and display the HTML source.  When '\' is pressed again the rendered
+  document will be redisplayed
+o Added the ALT atribute to the IMG tag.  If ALT is present within
+  the IMG tag then the value is printed instead of [IMAGE].  The value
+  can be set to empty by using ALT like this: &lt;IMG ALT=&quot;&quot;&gt;
+  Please use the alt attribute in every &lt;img&gt; tag you create!
+o Added binary file transfer ability.  When binary files are selected
+  the user is prompted for a file name to save to.  The default directory
+  is the one the user started in.  This should work for most ftp sites
+  and their contents.
+o Added Nested Lists, up to six levels, with different bullets
+  for each level.
+o added BR (linebreak) tag!
+  The &lt;br&gt; tag inserts a line break and maintains the current style!
+  The &lt;br&gt; tag may be used anywhere.
+o Due to the fact that nearly everyone seems to use &lt;p&gt; to mean
+  two returns within the same style. I have changed
+  the &lt;p&gt; tag to reflect this interpretation.  &lt;p&gt; can be used
+  anywhere and will mean insert two returns.  (i.e. two &lt;br&gt; tags)
+o added HR (horizontal rule tag!)
+  The &lt;hr&gt; tag puts a horizontal line seperating two bodies of text.
+  The &lt;hr&gt; tag may be used anywhere.
+o Made the default Mime type for unknown file types on ftp servers
+  to be text/plain.  Previously the WWWLibrary had the default
+  as application/octet-stream which meant that most files could not
+  be viewed.
+o Changed the ADDRESS style to be more like XMosaic
+  Left flush, newline top and bottom
+o The Statusline now displays the URL when retrieving files.
+o All spaces, tabs and returns are now collapsed down do one
+  space.
+o added '*' (stars) to unordered lists and numbers to ordered
+  lists.
+o changed dir lists to be more like menu lists.
+o all emphasis, physical and symantic, now have _underlines_
+  around them to show emphasis.
+
+A partial list of bugs that have been fixed
+
+o fixed incompatibilites with the NCSA HTTP/.9 server.
+o files coming from HTTP/.9 servers are recognized by their
+  file extensions
+o fixed bug whiched caused certain links beginning at the
+  begining of a line to be bad.
+o fixed bug in LibWWW that caused it not to be able to convert to
+  www/source.
+o fixed bug in LibWWW that caused most binary file transfers to fail
+o fixed bug in LibWWW which caused a segmentation fault when some
+  anchors were left unterminated.
+o a few other small bugs.
+
+
+:lou
+-- 
+  **************************************************************************
+  *           T H E   U N I V E R S I T Y   O F   K A N S A S              *
+  *         Lou  MONTULLI @ Ukanaix.cc.ukans.edu                           *
+  *                         Kuhub.cc.ukans.edu      ACS Computing Services *
+  *     913/864-0436        Ukanvax.bitnet             Lawrence, KS 66044  *
+  *             UNIX! Cool! I know that!  Jurassic Park - The Movie        *
+  **************************************************************************
+
+</PRE>
