@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された617ファイルを、34の取得元ホストごとに収録する。
+Rawに保存された618ファイルを、35の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（10ファイル）
 
@@ -524,6 +524,12 @@ Rawに保存された617ファイルを、34の取得元ホストごとに収録
 | Rawファイル | 文書タイトル |
 |---|---|
 | [index.php__q__title=Change_Proposal%3A_figure_and_details&oldid=4382](../raw/wiki.whatwg.org/index.php__q__title=Change_Proposal%3A_figure_and_details&oldid=4382) | Change Proposal: figure and details - WHATWG Wiki |
+
+## `worldwideweb.cern.ch`（1ファイル）
+
+| Rawファイル | 文書タイトル |
+|---|---|
+| [code/__index](../raw/worldwideweb.cern.ch/code/__index) | Inside the Code — WorldWideWeb NeXT Application |
 
 ## `www.hixie.ch`（3ファイル）
 

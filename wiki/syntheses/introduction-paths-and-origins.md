@@ -188,7 +188,9 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 
 [`menu`](../elements/menu.md)は、Line Mode Browser 1.2から1.2aの配布物、RCS履歴、1992年1月から4月の公開メール、W3Cの1992年保存ディレクトリ、Tim Berners-Leeの保存フロッピー、旧FTP移転目録を照合した。現存公開ソース配布物は2.11以降であり、1.2aの担当者と`test_source.txt`の2月11日というHTTP保存日時を位置付ける記録は回収できなかった。一度だけの探索を完了し、新しい1.2系配布物、RCS履歴、開発メールが現れるまで個別ページの問いを維持する。
 
-- [`address`](../elements/address.md)、[`body`](../elements/body.md)、[`pre`](../elements/pre.md)、[`iframe`](../elements/iframe.md): 個別ページが特定する初期ソース、内部DTD、配布物、または同時代ベンダー資料。
+[`address`](../elements/address.md)は、W3Cの1991年WorldWideWeb保存ツリー、バックアップ履歴、スタイル群、CERNの復元資料と、同名候補であるWaterloo SCRIPT GMLを照合した。CERNの復元プロジェクトも発見できた唯一のソースが0.15を示すと報告しており、2月1日の`Address`スタイル実装より前の版または個別の採用記録は回収できなかった。一度だけの探索を完了し、新しい初期ソース、RCS履歴、同時代の採用記録が現れるまで個別ページの問いを維持する。
+
+- [`body`](../elements/body.md)、[`pre`](../elements/pre.md)、[`iframe`](../elements/iframe.md): 個別ページが特定する内部DTD、配布物、または同時代ベンダー資料。
 
 #### 新しい一次資料が現れるまで保留する問題
 
