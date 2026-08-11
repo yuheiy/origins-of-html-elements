@@ -939,3 +939,7 @@ Raw未収録の12資料を直接参照する15箇所が`a`、`canvas`、`col`、
 追加したRawの取得記録は次のとおりである。`https://www.w3.org/MarkUp/HTMLPlus/htmlplus.ps`、リダイレクトなし、2026-08-11T09:47:27.486Z、`raw/www.w3.org/MarkUp/HTMLPlus/htmlplus.ps`；`https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/459.html`、リダイレクトなし、2026-08-11T09:47:31.930Z、`raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/459.html`；`https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/774.html`、リダイレクトなし、2026-08-11T09:47:35.935Z、`raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/774.html`；`https://www.w3.org/History/1994/WWW/WorkingNotes/1993_Workshop/TimNotes.html`、リダイレクトなし、2026-08-11T09:54:52.472Z、`raw/www.w3.org/History/1994/WWW/WorkingNotes/1993_Workshop/TimNotes.html`。Raw索引を542ファイルで再生成した。
 
 初回探索と分離した敵対的検証では、7月12日版HTML+に`HR`がないこと、Sandersが自身のメモを確定一覧ではないと限定すること、Tim Berners-Leeの会合メモはHTML実装レベルとHTML+討議を記録するが`BR`と`HR`の個別決定を列挙しないこと、LynxとNCSAの公開日および各要素の意味を確認した。対象リントでは、`br`と`hr`の必須見出し順、フロントマター、証拠表、READMEと統合ページの概要、全ローカルMarkdownリンク、二つの分類表で115要素が重複なく一度ずつ現れること、確度集計A 85・A− 17・B 12・C 1、Raw索引の542ファイル網羅と再生成一致、Markdown whitespaceを`合格`、NCSAを最初の提案・実装としていた結論、証拠表の日付順、集計と分類を`修正済み`、明示した採用・編集経路と発案者を`Research必要`として確認した。変更ページは敵対的検証と対象リントに合格したため`完成`とした。
+
+## [2026-08-11] lint | 導入経路統合ページの優先順位集計
+
+`br`と`hr`の再調査後も追加調査の優先順位に残っていた旧集計を、本文の現行一覧に合わせてB／Cの14要素から13要素、直前祖先に欠落がある32要素から31要素へ修正した。確度集計、各一覧の要素数、二つの分類表の115要素、ローカルリンク、状態、Markdown whitespaceを`合格`、旧集計2箇所を`修正済み`、本文に列挙済みの採用因果、直前祖先、命名に関する未解決点を`Research必要`として確認した。歴史的結論は変更していないため、統合ページの状態は`完成`を維持した。
