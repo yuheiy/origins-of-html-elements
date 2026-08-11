@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された599ファイルを、32の取得元ホストごとに収録する。
+Rawに保存された602ファイルを、33の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（9ファイル）
 
@@ -217,7 +217,7 @@ Rawに保存された599ファイルを、32の取得元ホストごとに収録
 | [mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/README.first](../raw/ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/README.first) | — |
 | [mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd](../raw/ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/text-processing/sgml/AAP/aapbook.dtd) | — |
 
-## `github.com`（69ファイル）
+## `github.com`（70ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -242,6 +242,7 @@ Rawに保存された599ファイルを、32の取得元ホストごとに収録
 | [w3c/csswg-drafts/issues/9284](../raw/github.com/w3c/csswg-drafts/issues/9284) | "Single content, multiple renderings" feature for `&lt;selectlist&gt;` · Issue #9284 · w3c/csswg-drafts · GitHub |
 | [whatwg/dom/commit/a2b04df51b4342d7617c128e80e5aa892889d2e0](../raw/github.com/whatwg/dom/commit/a2b04df51b4342d7617c128e80e5aa892889d2e0) | Shadow: define slots and slotables · whatwg/dom@a2b04df · GitHub |
 | [whatwg/html/blob/18322b5f67ea55395dad2183244a905174da971f/source](../raw/github.com/whatwg/html/blob/18322b5f67ea55395dad2183244a905174da971f/source) | html/source at 18322b5f67ea55395dad2183244a905174da971f · whatwg/html · GitHub |
+| [whatwg/html/blob/26110c20e505c17533e1a8e876d726b7a0aa3484/source](../raw/github.com/whatwg/html/blob/26110c20e505c17533e1a8e876d726b7a0aa3484/source) | html/source at 26110c20e505c17533e1a8e876d726b7a0aa3484 · whatwg/html · GitHub |
 | [whatwg/html/blob/c3550d90867392905edbd91c94fec8c89fbfe648/source](../raw/github.com/whatwg/html/blob/c3550d90867392905edbd91c94fec8c89fbfe648/source) | html/source at c3550d90867392905edbd91c94fec8c89fbfe648 · whatwg/html · GitHub |
 | [whatwg/html/commit/155b9a55416464e4e80f848b9daf53bc1b7f41f4](../raw/github.com/whatwg/html/commit/155b9a55416464e4e80f848b9daf53bc1b7f41f4) | [acgiowt] (0) Rename SRT to VTT. · whatwg/html@155b9a5 · GitHub |
 | [whatwg/html/commit/172cccf47e97bee64f690347e0f303be31b7c67b](../raw/github.com/whatwg/html/commit/172cccf47e97bee64f690347e0f303be31b7c67b) | Define customizable &lt;select&gt; · whatwg/html@172cccf · GitHub |
@@ -393,7 +394,7 @@ Rawに保存された599ファイルを、32の取得元ホストごとに収録
 | [Archives/Public/www-talk/1992NovDec/0155.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0155.html) | www-talk from November to December 1992: The spec evolves... |
 | [Archives/Public/www-talk/1992NovDec/0159.html](../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0159.html) | www-talk from November to December 1992: Re: The spec evolves... |
 
-## `lists.whatwg.org`（39ファイル）
+## `lists.whatwg.org`（40ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -430,6 +431,7 @@ Rawに保存された599ファイルを、32の取得元ホストごとに収録
 | [pipermail/whatwg-whatwg.org/2008-November/017596.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-November/017596.html) | [whatwg] Thoughts on HTML 5 |
 | [pipermail/whatwg-whatwg.org/2009-April/061491.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-April/061491.html) | [whatwg] About Descendent Tags |
 | [pipermail/whatwg-whatwg.org/2009-August/064204.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-August/064204.html) | [whatwg] Spec comments, sections 3.1-4.7 |
+| [pipermail/whatwg-whatwg.org/2010-December/029512.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2010-December/029512.html) | [whatwg] Timed tracks: feedback compendium |
 | [pipermail/whatwg-whatwg.org/2011-March/030907.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2011-March/030907.html) | [whatwg] Embedding custom hierarchical data |
 | [pipermail/whatwg-whatwg.org/2012-April/077688.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-April/077688.html) | [whatwg] Dialogs and prompts |
 | [pipermail/whatwg-whatwg.org/2012-May/035746.html](../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2012-May/035746.html) | [whatwg] &lt;img srcset&gt; for responsive bitmapped content images |
@@ -463,6 +465,12 @@ Rawに保存された599ファイルを、32の取得元ホストごとに収録
 | [history/webapps/r15.html](../raw/platform.html5.org/history/webapps/r15.html) | Web Applications 1.0 |
 | [history/webapps/r699.html](../raw/platform.html5.org/history/webapps/r699.html) | Web Applications 1.0 |
 | [history/webapps/r791.html](../raw/platform.html5.org/history/webapps/r791.html) | Web Applications 1.0 |
+
+## `raw.githubusercontent.com`（1ファイル）
+
+| Rawファイル | 文書タイトル |
+|---|---|
+| [whatwg/html/26110c20e505c17533e1a8e876d726b7a0aa3484/source](../raw/raw.githubusercontent.com/whatwg/html/26110c20e505c17533e1a8e876d726b7a0aa3484/source) | — |
 
 ## `tdg.docbook.org`（1ファイル）
 

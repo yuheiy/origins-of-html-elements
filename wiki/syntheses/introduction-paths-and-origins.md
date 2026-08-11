@@ -130,13 +130,13 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 
 今回の再調査により、`br`ではNCSA Mosaicより前のHTML+提案、基礎HTMLへの追加決定、Lynx実装を確認し、導入理由を固定して確度Bとした。`hr`では、ハイフン列による区切りを置き換える要素として基礎HTMLへ追加した直接記録を確認し、確度Aとした。HTML+ `br`からの採用因果、Workshop決定から各実装・後続仕様への編集経路は未確認である。`menu`では、HTML 4.01での非推奨を経て、2004年にWebアプリケーションのメニューと共有コマンド状態のため再利用された経路を確認したが、1992年の初期導入理由と具体的祖先は未確認である。`base`では1993年1月14日の`SAVEDAS`標準化意向と、その後のrevision 1.4 DTDに基底アドレス要素がないことを確認し、`BASE HREF`を同年6月草案までに絞ったが、両者の間の具体化記録とHTML外の祖先は未解決である。`blockquote`のDocBook／Usenet競合も未解決のままである。
 
-105ページ、110要素に一つ以上の未解決点が残る。未解決がないのは`data`、`figcaption`、`meter`、`optgroup`、`picture`である。したがって、このページの主題分類は調査完了率として使えない。
+104ページ、109要素に一つ以上の未解決点が残る。未解決がないのは`data`、`figcaption`、`meter`、`optgroup`、`picture`、`track`である。したがって、このページの主題分類は調査完了率として使えない。
 
 集合単位の採用しか確認できない、または中間経路が欠けるA−は、`dd`、`del`、`dl`、`dt`、`footer`、`head`、`ins`、`legend`、`li`、`link`、`nav`、`ol`、`output`、`q`、`style`、`u`、`ul`の17要素である。個別対応を集合レベルの資料から推定してはならない。
 
 HTMLへの採用因果または具体的祖先が弱いB／Cは、`a`、`address`、`base`、`blockquote`、`br`、`col`、`div`、`html`、`menu`、`noscript`、`p`、`small`、`title`の13要素である。`br`は導入理由を確認したがHTML+からの採用因果がなく、`menu`は2004年以降の再定義経路を確認した一方で1992年の導入理由と具体的祖先を確認できない。
 
-`HTML直前の祖先`に未確認部分を明記するのは、`a`、`address`、`aside`、`audio`、`base`、`blockquote`、`br`、`canvas`、`col`、`del`、`div`、`html`、`ins`、`legend`、`menu`、`noscript`、`output`、`p`、`pre`、`progress`、`q`、`s`、`section`、`small`、`source`、`style`、`sub`、`sup`、`title`、`track`、`u`の31要素である。背景資料があるだけで、これらの欠落へ矢印を補ってはならない。
+`HTML直前の祖先`に未確認部分を明記するのは、`a`、`address`、`aside`、`audio`、`base`、`blockquote`、`br`、`canvas`、`col`、`del`、`div`、`html`、`ins`、`legend`、`menu`、`noscript`、`output`、`p`、`pre`、`progress`、`q`、`s`、`section`、`small`、`source`、`style`、`sub`、`sup`、`title`、`u`の30要素である。背景資料があるだけで、これらの欠落へ矢印を補ってはならない。
 
 名称、命名、改名、略称、タグ名または語彙の選択理由が明示的な未解決点として残るのは、`a`、`abbr`、`article`、`aside`、`base`、`bdi`、`bdo`、`col`、`del`、`details`、`dialog`、`hgroup`、`ins`、`legend`、`main`、`menu`、`object`、`p`、`pre`、`script`、`search`、`section`、`span`、`sub`、`summary`、`sup`、`td`、`th`、`time`、`title`、`video`、`wbr`の32要素である。語彙起源という目的に対しては、この集合を「由来確認済み」に数えない。
 
@@ -150,7 +150,6 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 
 | 調査群 | 対象 | 探索範囲 |
 |---|---|---|
-| 初期WHATWGの版履歴 | [`track`](../elements/track.md) | 既知の初回収録、改名、再導入コミットの親版と、対応するWHATWGメール、旧Subversion履歴、提案を照合する |
 | W3C／IETF草案間の変更 | [`legend`](../elements/legend.md)、[`bdo`](../elements/bdo.md)、[`span`](../elements/span.md)、[`noscript`](../elements/noscript.md)、[`object`](../elements/object.md)、[`col`](../elements/col.md)、[`style`](../elements/style.md) | 連続する草案間に限定して、CVS／RCS差分、Working Group議事録、編集者メールから追加、改名、機能統合、後続仕様への採録を探す |
 
 `mark`は、`m`の初出区間を2005年4月2日後〜4月13日までに限定し、2007年の名称議論と2008年の採用判断を確認したため、優先調査を完了した。初稿の提案者を示す公開記録は見つからず、個別ページの未解決点として維持する。
@@ -164,6 +163,8 @@ B／C、直前祖先の欠落、命名、A−の各一覧は問題の種類と�
 同名または同機能の先行物を新たに見つけるだけでは完了とせず、HTML側の採用判断または変更判断まで確認できた場合にだけ系譜を更新する。
 
 `bdi`は、2010年3月4日のW3C Working Draftにある同名の分離属性案、`ubi`への改名、10月12日のBug 10807におけるIan Hicksonの同名要素案、11月5日のr5669による要素追加、11月9日のr5672による`dir=auto`の省略時既定値追加を接続したため、優先調査を完了した。r5677は分離アルゴリズムの実装要件を明確化した変更であり、`dir=auto`の追加ではない。最初の暫定属性名をWorking Draftの編集者と追加貢献者の誰が発案したかは特定できず、個別ページの未解決点として維持する。
+
+`track`は、2010年5月4日の初回収録コミットと`track`定義のない親版、Silvia Pfeifferの`itext`提案への編集者応答、4月の`track`／`trackgroup`案、12月の編集者説明を照合した。初版から空要素であり、`trackgroup`の属性集約は各`track`へ属性を置く方式で表し、相互排他的な複数グループは用途が不明確として採らなかったことを確認したため、優先調査と個別ページの未解決点を完了した。
 
 #### 欠落資料を一度だけ探索する問題
 

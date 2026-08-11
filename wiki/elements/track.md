@@ -14,11 +14,13 @@ WHATWG HTML Living Standardでは、メディア要素の明示的な外部時�
 
 ## HTMLへの導入
 
-2010年5月4日、WHATWGエディターIan Hicksonはリビジョン5067でキャプション対応の第1段階として`track`を追加した。初版からメディア要素の子となる空要素で、5種類の`kind`と`HTMLTrackElement`を持っていた。7月23日の説明では、多数のメール、ブログ、提案を調査したうえで、Pfeifferの時刻同期リソース用`itext`が「現在の`track`とほぼ同じ」と述べ、`category`を`kind`、`language`を`srclang`へ改名して採用し、`default`は当時見送ったことを項目別に示した。[編集者説明](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html)）
+2010年4月30日の親版には`track`の要素定義も`HTMLTrackElement`もなく、5月4日にWHATWGエディターIan Hicksonがリビジョン5067でキャプション対応の第1段階として追加した。初版からメディア要素の子となる空要素で、5種類の`kind`と`HTMLTrackElement`を持っていた。[初出直前版](../../raw/raw.githubusercontent.com/whatwg/html/26110c20e505c17533e1a8e876d726b7a0aa3484/source)（[公開元](https://github.com/whatwg/html/blob/26110c20e505c17533e1a8e876d726b7a0aa3484/source)）、[追加コミット](../../raw/github.com/whatwg/html/commit/a183c8997eb6f5647f9db27a9d3a52da86476d31)（[公開元](https://github.com/whatwg/html/commit/a183c8997eb6f5647f9db27a9d3a52da86476d31)）
+
+7月23日の説明では、多数のメール、ブログ、提案を調査したうえで、Pfeifferの時刻同期リソース用`itext`が「現在の`track`とほぼ同じ」と述べ、`category`を`kind`、`language`を`srclang`へ改名して採用し、`default`は当時見送ったことを項目別に示した。12月24日の説明は、4月案の`trackgroup`が担った関連属性のグループ化を、`link`と同様に各`track`へ属性を置く方式で表現したとする。複数の相互排他的グループには用途が明確でないとし、字幕とキャプションを一つの選択一覧にして一つまたはゼロを選ぶ既定UIを意図していた。[7月の編集者説明](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html)）、[12月の編集者説明](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2010-December/029512.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2010-December/029512.html)）
 
 ## HTML直前の祖先
 
-Silvia Pfeifferが2009年7月に提案した、時刻同期テキスト資源を`video`へ関連付ける共通`itext`要素である。Hicksonは2010年7月、現在の`track`がその提案と「ほぼ同じ」と述べ、属性ごとの採否を説明した。2010年4月の別の`track`／`trackgroup`変更提案は、空でない`track`や内部`source`構想など最終仕様と異なり、直接採用は確認できない。
+Silvia Pfeifferが2009年7月に提案した、時刻同期テキスト資源を`video`へ関連付ける共通`itext`要素である。Hicksonは2010年7月、現在の`track`がその提案と「ほぼ同じ」と述べ、属性ごとの採否を説明した。2010年4月の別の`track`／`trackgroup`変更提案は空でない`track`や内部`source`構想など最終仕様と異なる。後の編集者説明は、`trackgroup`の属性集約機能を各`track`の属性で表し、相互排他的な複数グループは用途が不明確として採らなかったことを示すが、4月案全体を直接採用したとは述べない。
 
 ## さらに上流の由来
 
@@ -43,9 +45,11 @@ Silvia Pfeiffer `itext`提案（2009年）
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
 | 2010-04-12 | [“Re: Change Proposals toward Issue-9”](../../raw/lists.w3.org/Archives/Public/public-html/2010Apr/0349.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2010Apr/0349.html)） | W3C public-html・変更提案議論 | `track`／`trackgroup`案、外部トラックと帯域内トラックの共通API、当時案の内容モデル。 | 2026-08-09 |
+| 2010-04-30 | [WHATWG HTML `26110c20`（revision 5067の親版）](../../raw/raw.githubusercontent.com/whatwg/html/26110c20e505c17533e1a8e876d726b7a0aa3484/source)（[公開元](https://github.com/whatwg/html/blob/26110c20e505c17533e1a8e876d726b7a0aa3484/source)） | 仕様ソース | `track`の要素定義と`HTMLTrackElement`がまだ存在しない初出直前版。 | 2026-08-11 |
 | 2010-05-04 | [WHATWG HTML commit `a183c899`（revision 5067）](../../raw/github.com/whatwg/html/commit/a183c8997eb6f5647f9db27a9d3a52da86476d31)（[公開元](https://github.com/whatwg/html/commit/a183c8997eb6f5647f9db27a9d3a52da86476d31)） | 仕様コミット | キャプション対応の第1段階として空な`track`、5種類の`kind`、`HTMLTrackElement`を追加。 | 2026-08-09 |
 | 2010-07-23（引用された`itext`提案は2009-07-31） | [“Timed tracks for `<video>`”](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2010Jul/0449.html)） | WHATWGメーリングリスト・編集者説明 | 外部字幕・キャプションの導入要求、`itext`と`track`の直接関係、`category`→`kind`、`language`→`srclang`など提案項目の採否、SRTを基礎にしたキャプション形式。 | 2026-08-09 |
 | 2010-10-19 | [*HTML5: The track element*](../../raw/www.w3.org/TR/2010/WD-html5-20101019/author/video.html)（[公開元](https://www.w3.org/TR/2010/WD-html5-20101019/author/video.html#the-track-element)） | W3C Working Draft | 外部時間指定トラックを指定する空要素と、5種類の`kind`、初期WebSRTとの関係。 | 2026-08-09 |
+| 2010-12-24 | [“Timed tracks: feedback compendium”](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2010-December/029512.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2010-December/029512.html)） | WHATWGメーリングリスト・編集者説明 | `trackgroup`の属性集約を各`track`の属性で表したこと、複数の相互排他的グループを採らなかった理由、既定UIの意図。 | 2026-08-11 |
 | 2010-12-25 | [WHATWG HTML commit `155b9a55`](../../raw/github.com/whatwg/html/commit/155b9a55416464e4e80f848b9daf53bc1b7f41f4)（[公開元](https://github.com/whatwg/html/commit/155b9a55416464e4e80f848b9daf53bc1b7f41f4)） | 仕様コミット | WebSRTをWebVTTへ改名。 | 2026-08-09 |
 | 2011-11-28 | [WHATWG HTML commit `5e99b278`](../../raw/github.com/whatwg/html/commit/5e99b278578b666141bc487c77b8d5c56669a30b)（[公開元](https://github.com/whatwg/html/commit/5e99b278578b666141bc487c77b8d5c56669a30b)） | 仕様コミット | WebVTT本文をHTML仕様から除き、独立WebVTT仕様を参照する構成へ変更。 | 2026-08-09 |
 | 2026-08-09 | [WHATWG HTML Living Standard, “The track element”](../../raw/html.spec.whatwg.org/multipage/media.html)（[公開元](https://html.spec.whatwg.org/multipage/media.html#the-track-element)） | 現行仕様 | `track`の現行定義。 | 2026-08-09 |
@@ -58,8 +62,8 @@ Silvia Pfeiffer `itext`提案（2009年）
 
 ## 否定された仮説
 
-SRT、WebSRT、TTML、SMIL、または2010年4月の変更提案を`track`要素そのものの直接祖先とする説明。SRTはキャプション形式枝の基礎であり、4月案は最終仕様と異なる。`itext`については編集者が直接の関係を説明したため、否定対象から外した。
+SRT、WebSRT、TTML、SMIL、または2010年4月の変更提案全体を`track`要素そのものの直接祖先とする説明。SRTはキャプション形式枝の基礎である。4月案の`trackgroup`が担う機能の一部を別構造で表したことは確認できるが、空でない`track`と内部`source`を含む案全体の採用は確認できない。`itext`については編集者が直接の関係を説明したため、否定対象から外した。
 
 ## 未解決
 
-- 2010年4月案の`trackgroup`を採用せず、空な`track`の列へまとめた決定記録は残っているか。
+なし。
