@@ -112,7 +112,7 @@ status: 完成
 - [`<slot>`](elements/slot.md): Shadow DOM v0のセレクター式挿入点を、実在する部品ライブラリとGUI継承モデルを踏まえた名前付き割り当てへ再設計し、2015年の提案・実装後にWHATWGへ統合した。
 - [`<small>`](elements/small.md): HTML 3.0の小さいフォント用要素を、WHATWGが2005年に細則や補足事項を表す意味へ再定義したが、最初の導入経路は未確認である。
 - [`<source>`](elements/source.md): `source`は2007年3月23日、`video`でコーデック選択を行い複数の代替メディアリソースから選択する要素としてWHATWGへ追加された。
-- [`<span>`](elements/span.md): 1995年9月のIETF HTML国際化草案が`LANG`／`DIR`を置く適切な要素がない行内テキストのために導入した汎用コンテナーである。
+- [`<span>`](elements/span.md): 1995年のIETF HTML国際化草案が`BIDI DIR`の方向埋め込みを移し、`LANG`／`DIR`を置く適切な要素がない行内テキスト用の汎用コンテナーへ拡張した。
 - [`<strong>`](elements/strong.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した論理的な文字強調要素で、同時代Texinfoの`@strong`との対応を確認できる。
 - [`<style>`](elements/style.md): 確認できる最初の`STYLE`は1995年4月25日のHTML 3.0草案にあり、文書内のスタイル上書きを`HEAD`へ置く。
 - [`<sub>`](elements/sub.md): HTML+のDTDが一般テキストでも許可した`SUB`をHTML 3.0へ引き継ぐ設計意図を、Dave Raggettの同時代メールで確認できる。
