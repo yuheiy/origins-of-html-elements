@@ -8,6 +8,8 @@ status: 完成
 
 Simon PietersはHTML+の`FIG`／`CAPTION`を明示してHTML5向けの再利用を提案し、Michel Fortinは`figure`／`caption`構造と実在する発行者の利用例を提示した。Ian Hicksonは、`CAPTION`の表パーサー上の問題から`legend`を使い、`fig`を`figure`へ変えた点を除いてHTML+案に同意した。キャプションは後に`dt`／`dd`を経て専用`figcaption`へ置換された。[HTML+ Figures](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html)） [Pieters案](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html)） [Fortin案](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006May/0002.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006May/0002.html)） [Hicksonの総括](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)） [`figcaption`導入コミット](../../raw/github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)（[公開元](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)）
 
+HTMLへの採用過程でさらに上流の設計材料として確認できるのは、ニュースサイト、科学・技術出版物、Wikipedia等のWebページで、制作者が画像とキャプションを一組にして配置・マークアップしていた慣習である。Hicksonは、`div class="image-caption"`に画像と段落を置く提案例を、仕様の構造と基本的に同じだがクラス名を要素名へ変えたものだと説明している。出版一般は意味の背景にあるが、文書ソフトウェアから構造や名称を採用した因果は確認できない。[Hicksonの総括](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)）
+
 ```text
 HTML+ FIG / CAPTION＋WHATWGの図とキャプション要求
   → figure / legend

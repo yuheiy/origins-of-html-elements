@@ -14,14 +14,14 @@ HTML外の先行物、既存Web、実装、UI慣習、標準化要求が、ど�
 
 | 設計背景の主題分類 | 関連が確認できる先行語彙・材料・要求・実装・慣習 | 現行要素 |
 |---|---|---|
-| 構造化文書・出版 | AAP／CERN-SGMLの見出し・リスト語彙、CALS行グループ、SGMLによる文書形式化、表・出版ツール、WorldWideWebエディターのAddressスタイル、クラス付き文書区分、逐次受信中のヘッダー境界、画像とキャプションの制作 | `address`、`body`、`caption`、`col`、`colgroup`、`dd`、`div`、`dl`、`dt`、`figcaption`、`figure`、`h1`、`h2`、`h3`、`h4`、`h5`、`h6`、`head`、`html`、`li`、`ol`、`p`、`table`、`tbody`、`td`、`tfoot`、`th`、`thead`、`title`、`tr`、`ul` |
+| 構造化文書・出版 | AAP／CERN-SGMLの見出し・リスト語彙、CALS行グループ、SGMLによる文書形式化、表・出版ツール、WorldWideWebエディターのAddressスタイル、クラス付き文書区分、逐次受信中のヘッダー境界 | `address`、`body`、`caption`、`col`、`colgroup`、`dd`、`div`、`dl`、`dt`、`h1`、`h2`、`h3`、`h4`、`h5`、`h6`、`head`、`html`、`li`、`ol`、`p`、`table`、`tbody`、`td`、`tfoot`、`th`、`thead`、`title`、`tr`、`ul` |
 | 技術文書・編集・組版 | GNU Texinfoのマクロ名、DocBookの同名語彙候補、端末／Unixマニュアル、法律・編集実務、LaTeXと数式組版、略語マークアップと発音要件、文脈依存の強調 | `abbr`、`b`、`blockquote`、`cite`、`code`、`del`、`dfn`、`em`、`i`、`ins`、`kbd`、`mark`、`pre`、`s`、`samp`、`small`、`strong`、`sub`、`sup`、`u`、`var` |
 | ハイパーテキスト・ナビゲーション・メタデータ | WWWのハイパーテキストモデル、イメージマップ運用、HTTPメタデータ、ノード単位の関係、簡潔な選択肢リスト | `a`、`area`、`base`、`link`、`map`、`menu`、`meta` |
 | フォーム・データ入力・GUI | デスクトップのフォームUI、フォームのアクセシビリティと階層UI、SGML属性値の上限、開閉UI、進捗バー、スカラー量の測定、XForms／Open UI、既存Webのダイアログ実装 | `button`、`datalist`、`details`、`dialog`、`fieldset`、`form`、`input`、`label`、`legend`、`meter`、`optgroup`、`option`、`output`、`progress`、`select`、`selectedcontent`、`summary`、`textarea` |
 | ブラウザー実装・複合文書・マルチメディア | ブラウザーベンダーの画像・埋め込み・フレーム・メディア実装、既成のMathML／SVG語彙、ベンダー別埋め込み内容、WHATWG `Audio`API、時間指定テキスト、レスポンシブ画像実装 | `audio`、`canvas`、`embed`、`iframe`、`img`、`math`、`object`、`picture`、`source`、`svg`、`track`、`video` |
 | スクリプティング・スタイル・Webアプリケーション・コンポーネント | ブラウザーベンダーのクライアント側スクリプティング、非対応時の代替内容、スタイルシート、機械可読データ、Web Componentsのテンプレート／スロット | `data`、`noscript`、`script`、`slot`、`style`、`template`、`time` |
 | 国際化・文字方向・東アジア組版 | Unicode国際化、双方向文字関連仕様、ルビの既存Web実装、言語依存の引用符 | `bdi`、`bdo`、`q`、`rp`、`rt`、`ruby`、`span` |
-| 既存Web制作・コミュニティ・互換性 | 実サイトのセクショニングマークアップ、ARIA役割、コミュニティ提案、ポリフィル、初期Webの意味を持つ改行とハイフン列による区切り、ブラウザー互換マークアップ | `article`、`aside`、`br`、`footer`、`header`、`hgroup`、`hr`、`main`、`nav`、`search`、`section`、`wbr` |
+| 既存Web制作・コミュニティ・互換性 | 実サイトのセクショニングマークアップ、画像とキャプションを一組にするマークアップ・表示慣習、ARIA役割、コミュニティ提案、ポリフィル、初期Webの意味を持つ改行とハイフン列による区切り、ブラウザー互換マークアップ | `article`、`aside`、`br`、`figcaption`、`figure`、`footer`、`header`、`hgroup`、`hr`、`main`、`nav`、`search`、`section`、`wbr` |
 
 以下の三節は八つの大分類の下位分類ではない。第二表への割り当て根拠を、背景の確認経路ごとに整理する。
 
@@ -58,7 +58,7 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 
 ### 確認できる背景まで遡ったHTML内部派生12要素
 
-第二表では、`audio`をWHATWG `Audio`APIとゲーム音声、`button`をデスクトップのフォームUI、`data`と`time`を機械可読データ、`figcaption`を画像とキャプションの制作、`hgroup`を既存Webマークアップ、`iframe`と`source`をブラウザーベンダーの実装・提案、`mark`を文脈依存の強調、`meter`をスカラー量の測定、`noscript`をクライアント側スクリプティングの代替内容、`summary`を開閉UIに関連するものとして配置した。次表は、その配置までに確認できるHTML内部の前身と変更を示す。
+第二表では、`audio`をWHATWG `Audio`APIとゲーム音声、`button`をデスクトップのフォームUI、`data`と`time`を機械可読データ、`figcaption`を既存Webで画像とキャプションを一組にするマークアップ・表示慣習、`hgroup`を既存Webマークアップ、`iframe`と`source`をブラウザーベンダーの実装・提案、`mark`を文脈依存の強調、`meter`をスカラー量の測定、`noscript`をクライアント側スクリプティングの代替内容、`summary`を開閉UIに関連するものとして配置した。次表は、その配置までに確認できるHTML内部の前身と変更を示す。
 
 内部派生の根拠は、[`audio`統合前後](../../raw/platform.html5.org/history/webapps/r699.html)（[公開元](https://platform.html5.org/history/webapps/r699.html)）、[rich `button`草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)）、[`data`一般化提案](../../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=13240)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=13240)）と[初回追加コミット](../../raw/github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d)（[公開元](https://github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d)）、[`figcaption`導入コミット](../../raw/github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)（[公開元](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)）、[`hgroup`改名コミット](../../raw/github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)（[公開元](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)）に置く。
 
