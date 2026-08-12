@@ -1268,3 +1268,13 @@ A−の`dd`、`del`、`dl`、`dt`、`footer`、`head`、`ins`、`li`、`link`、
 移行として、AGENTS.mdのページ種別、README要件、クエリーと調査の操作手順、Wiki READMEの読み方案内と一覧、`overviews/README.md`の表題と説明を「概観」に統一した。「概観」はやや文語的だが、単なる要約に限定せず横断的な見取り図を含められる点を優先した。歴史的結論、証拠、系譜、確度、状態、Raw資料、ファイルパスは変更していない。
 
 対象リントでは、現行スキーマとWikiから旧称「俯瞰」がなくなったこと、`overviews/`の全4ページ、ローカルMarkdownリンク、Markdown whitespaceを`合格`、日本語名称を`修正済み`、`Research必要`はなしと確認した。
+
+## [2026-08-12] research | `figure`へのDocBook／XHTML 2影響
+
+`figure`の未解決点について、2006年4月から11月までのWHATWG図キャプション議論、Hicksonの意見総括、導入コミットと親差分、DocBook V4.5、XHTML 2.0 Working Draftを再調査した。図キャプション議論にあるDocBook参照は、fantasaiが`h6`をDocBook `simplesect`のような末端見出しとして使う案を示した一件だけで、Hicksonは見出し処理を複雑にするとして退けていた。XHTML 2は`object`の子`caption`を定義していたが、図キャプション議論、意見総括、導入差分には設計材料として現れない。両者からの別系統の採用説を否定された仮説として確定し、`figure`の未解決点を「なし」とした。確度AとHTML+／Fortinからの確認済み系譜は変更していない。
+
+追加したRawの取得記録は、取得元URL`https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0040.html`、最終URL`https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0040.html`、取得日時2026-08-12T03:00:11.941Z、保存先`raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0040.html`である。Raw索引を622ファイルで再生成した。
+
+初回探索と分離した敵対的検証では、W3C公式検索で2006年およびWHATWG全期間を対象に`figure`、`caption`、`DocBook`、`simplesect`、`XHTML 2`の組合せを再検索した。`simplesect`と図の組合せは原提案とそれを引用した総括だけで、DocBook `figure`、XHTML 2からの影響、より早い別系統、後代の訂正を示す記録は見つからなかった。同名、同用途、時間的先行を採用因果へ読み替えず、DocBook案の拒否とXHTML 2参照の欠如を確認済み系譜へ接続しなかった。
+
+対象リントでは、`figure`と共有系譜「図とキャプション」のフロントマター、必須見出し順、14行の証拠表、歴史的主張と出典の対応、README概要、直接の参照先と参照元、全ローカルMarkdownリンク、確度集計A 87／A− 15／B 12／C 1、Raw索引622ファイルの網羅と再生成一致、Markdown whitespaceを`合格`、DocBook提案の文脈、XHTML 2との境界、未解決点を`修正済み`、`Research必要`はなしと確認した。変更した知識ページは敵対的検証と対象リントに合格したため`完成`とした。

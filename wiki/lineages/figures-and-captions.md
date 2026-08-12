@@ -19,4 +19,4 @@ HTML+ FIG / CAPTION＋WHATWGの図とキャプション要求
 
 ## 境界
 
-表用の現行[`caption`](../elements/caption.md)はこの系譜の対象ではない。DocBookまたはXHTML 2からの採用因果も確認できない。
+表用の現行[`caption`](../elements/caption.md)はこの系譜の対象ではない。DocBookへの同時代の言及は、図キャプションに`h6`を使いDocBook `simplesect`のような末端見出しとして扱う提案だが、Hicksonが見出し処理を複雑にするとして退けた。[fantasaiの提案](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0040.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0040.html)） [Hicksonの総括](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)）。XHTML 2 `object`／`caption`も図キャプション議論、総括、導入差分に設計材料として現れず、いずれからも採用因果を確認できない。[XHTML 2 Object Module](../../raw/www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html)（[公開元](https://www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html)） [導入差分](../../raw/github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059)（[公開元](https://github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059)）

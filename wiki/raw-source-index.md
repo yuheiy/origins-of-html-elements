@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された621ファイルを、36の取得元ホストごとに収録する。
+Rawに保存された622ファイルを、36の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（10ファイル）
 
@@ -349,7 +349,7 @@ Rawに保存された621ファイルを、36の取得元ホストごとに収録
 |---|---|
 | [WEBMASTER/tags.txt](../raw/lib.ru/WEBMASTER/tags.txt) | HTML Referece Guide: Tags for Netscape 3.0 |
 
-## `lists.w3.org`（51ファイル）
+## `lists.w3.org`（52ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -371,6 +371,7 @@ Rawに保存された621ファイルを、36の取得元ホストごとに収録
 | [Archives/Public/public-webhistory/2017Sep/0000.html](../raw/lists.w3.org/Archives/Public/public-webhistory/2017Sep/0000.html) | Re: Provenance of the blockquote element from Dan Connolly on 2017-09-11 (public-webhistory@w3.org from September 2017) |
 | [Archives/Public/public-whatwg-archive/2005Apr/0187.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0187.html) | [whatwg] HTML5: Deprecate the SMALL element from Henrik Lied on 2005-04-12 (public-whatwg-archive@w3.org from April 2005) |
 | [Archives/Public/public-whatwg-archive/2005Apr/0190.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2005Apr/0190.html) | [whatwg] HTML5: Deprecate the SMALL element from Ian Hickson on 2005-04-12 (public-whatwg-archive@w3.org from April 2005) |
+| [Archives/Public/public-whatwg-archive/2006Apr/0040.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0040.html) | [whatwg] image captions from fantasai on 2006-04-06 (public-whatwg-archive@w3.org from April 2006) |
 | [Archives/Public/public-whatwg-archive/2006Apr/0109.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html) | [whatwg] image captions from Simon Pieters on 2006-04-22 (public-whatwg-archive@w3.org from April 2006) |
 | [Archives/Public/public-whatwg-archive/2006May/0002.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006May/0002.html) | [whatwg] image captions from Michel Fortin on 2006-05-03 (public-whatwg-archive@w3.org from May 2006) |
 | [Archives/Public/public-whatwg-archive/2006Nov/0422.html](../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html) | [whatwg] many messages regarding image captions from Ian Hickson on 2006-11-28 (public-whatwg-archive@w3.org from November 2006) |

@@ -18,7 +18,9 @@ WHATWG HTML Living Standardでは、任意のキャプションを伴い、自�
 
 翌28日にHicksonが公開した意見総括は、Fortinが`figure`を提案しニュース、科学・技術出版物、Wikipedia等の実例を示したことに同意し、PietersがHTML+の`FIG`／`CAPTION`を示して再利用を提案した箇所では、`caption`のパーサー問題と`fig`ではなく`figure`を使う点を除いて同意し、仕様へ追加したと明記する。`caption`は表構文解析を壊すため再利用できず、同じキャプション概念を表しパーサーで扱える既存`legend`を選んだとも説明している。[PietersによるHTML+案](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html)） [Fortinの`figure`提案](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006May/0002.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006May/0002.html)） [WHATWGフィードバック総括](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)）
 
-同じメールに現れるDocBook参照は`h6`をDocBook `simplesect`のように使う別提案への言及で、Hicksonは見出し処理を複雑にするとして退けており、`figure`の採用根拠ではない。2006年7月のXHTML 2 Working Draftは`object`の子`caption`を定義していたが、意見総括はXHTML 2を参照しない。この二者から`figure`を採用した因果は確認できない。[WHATWGフィードバック総括](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)） [XHTML 2 Object Module](../../raw/www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html)（[公開元](https://www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html)）
+fantasaiは図キャプションを`h6`で表し、一般に`h6`をDocBook `simplesect`のような末端見出しとして使えるようにする案を出した。Hicksonは見出し処理を複雑にするとしてこの案を退け、後に`figure`／`legend`を採用したため、DocBook参照は採用された図構造の根拠ではない。[fantasaiの提案](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0040.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0040.html)） [WHATWGフィードバック総括](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)）
+
+2006年7月のXHTML 2 Working Draftは`object`の子`caption`を定義していたが、2006年4月から11月までの図キャプション議論、Hicksonの意見総括、導入差分にはXHTML 2を設計材料とした記録がない。したがってXHTML 2からWHATWG `figure`への独立した採用因果は確認できない。[XHTML 2 Object Module](../../raw/www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html)（[公開元](https://www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html)） [WHATWGフィードバック総括](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)） [仕様コミットと親との差分](../../raw/github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059)（[公開元](https://github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059)）
 
 2009年9月15日、Jeremy Keithが`details`のラベルと本文へ`dt`／`dd`を再利用する案を示すと、Hicksonは採用を明言し、同時に`figure`にも適用したと説明した。ただしHickson自身も`figure`での`dt`／`dd`は`legend`より直感的でないと述べており、メールは`figure`固有の要求ではなく、`details`へ出された構文案を`figure`にも揃えた経緯を示す。[公開メール](../../raw/lists.w3.org/Archives/Public/public-html/2009Sep/0566.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html)） [仕様コミットと親との差分](../../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)（[公開元](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)）
 
@@ -53,6 +55,7 @@ DocBook `figure`／`title`とXHTML 2 `object`／`caption`は、WHATWG `figure`�
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
 | 1993-11-08 | [HTML+ “Figures”](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html)） | 失効したInternet-Draft | `FIG`と子`CAPTION`の先行存在。WHATWGへの採用因果は示さない。 | 2026-08-10 |
+| 2006-04-06 | [fantasai, “image captions”](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0040.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0040.html)） | WHATWGメーリングリスト | 図キャプションを`h6`で表し、`h6`をDocBook `simplesect`のような末端見出しとして使う案を提示した。後の総括でHicksonはこの案を退けた。 | 2026-08-12 |
 | 2006-04-22 | [Simon Pieters, image caption proposal](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html)） | WHATWGメーリングリスト | HTML+ `FIG`／`CAPTION`を明示して、`fig`、`caption`、`img`によるHTML5向け再利用案を提示した。 | 2026-08-10 |
 | 2006-05-03 | [Michel Fortin, formal `figure` proposal](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006May/0002.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006May/0002.html)） | WHATWGメーリングリスト | `figure`、任意の`caption`、例示的な内容の構造と、主たる流れから分離可能な意味を提案した。 | 2026-08-10 |
 | 2006-07-26 | [XHTML 2.0 Working Draft](../../raw/www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html)（[公開元](https://www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html)） | W3C Working Draft | `object`が任意の先頭子`caption`を持つ先行構造。`figure`要素は定義せず、WHATWGへの採用因果も示さない。 | 2026-08-10 |
@@ -77,10 +80,10 @@ HTML+ `FIG`／`CAPTION`とFortinの具体的提案・利用例からWHATWG `figu
 
 HTML+ `FIG`からの採用を名称と構造の類似だけに基づく仮説として退ける説明。Hicksonの同時代メールがHTML+案への同意と仕様への追加を明記するため、この仮説は直接証拠のある系譜へ移した。
 
-DocBook `figure`またはXHTML 2 `object`から直接採用したという説明。DocBookへの同時代メール中の言及は見出し処理に関する別提案であり、XHTML 2は意見総括に現れない。XHTML 2の2006年草案も`figure`要素ではなく`object`の子として`caption`を定義していたため、両者は採用系譜へ接続しない。
+DocBook `figure`またはXHTML 2 `object`から直接採用したという説明。図キャプション議論に現れる唯一のDocBook参照は、`h6`をDocBook `simplesect`のように扱う提案であり、Hicksonが見出し処理を複雑にするとして明示的に退けた。XHTML 2は同時期に`object`の子`caption`を定義していたが、図キャプション議論、意見総括、導入差分のいずれにも設計材料として現れないため、両者は採用系譜へ接続しない。
 
 `legend`から`dt`／`dd`への変更が`figure`固有の要件から生じたという説明。公開メールが直接示すのは、`details`へ出された再利用案を受諾した際にHicksonが`figure`も同じ構造へ変更したことまでであり、`figure`固有の要求は示さない。
 
 ## 未解決
 
-- DocBookまたはXHTML 2が、確認済みのHTML+／Fortin系統とは別に2006年WHATWG `figure`の設計へ影響したことを示す同時代記録はあるか。
+なし。
