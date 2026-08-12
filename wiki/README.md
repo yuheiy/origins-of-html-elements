@@ -32,7 +32,7 @@ status: 完成
 - [`<area>`](elements/area.md): James L. Seidmanが1994年に`map`とともに提案した、クライアント側イメージマップの個々の領域を表す要素である。
 - [`<article>`](elements/article.md): 2004年に`entry`、`post`、`article`が検討され、既存の`div class="post"`を置換する独立セクションとして2005年のWHATWG草案へ入った。
 - [`<aside>`](elements/aside.md): 2004年の`sidebar`案から、配置を脇へ限定する誤解を避けるため`aside`となり、本文に関連するが主たる流れから外れた内容を表した。
-- [`<audio>`](elements/audio.md): `audio`は2007年3月23日、音声または音声ストリームを表し、`video`と共通のメディアAPIを持つ要素としてWHATWGへ追加された。
+- [`<audio>`](elements/audio.md): ゲーム等のWebアプリケーション向けに効果音を再生するスクリプト専用`Audio`を、文書内にも置ける`video`共通メディア要素へ統合した。
 - [`<b>`](elements/b.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した物理的な文字強調要素で、同時代Texinfoの`@b`との対応を確認できる。
 - [`<base>`](elements/base.md): 1991年の未使用のBase Addressタグ案、1992年の採用決定、1993年1月の`SAVEDAS`標準化意向から同年3月の`BASE HREF`へ至るが、最終構文と名称の具体化は未確認である。
 - [`<bdi>`](elements/bdi.md): W3C国際化グループの双方向文字分離要求と`ubi`属性案を、WHATWGが2010年に新要素へ変更して採録したものである。
@@ -97,7 +97,7 @@ status: 完成
 - [`<p>`](elements/p.md): 1992年1月のBerners-Leeメールで空の段落マークとして確認でき、SGML由来という回顧はあるが、具体的な元語彙は未確認である。
 - [`<picture>`](elements/picture.md): 2007年の静止画用`picture`案を`video`型の複数ソース選択へ転用し、RICG、独立した`srcset`、`img`を描画主体とする構造を統合して2014年にWHATWG HTMLへ導入した。
 - [`<pre>`](elements/pre.md): 初期HTML案`TYPEWRITER`を装置ではなく内容を記述する`PRE`へ改名し、Unixマニュアルページ向けに拡張した整形済みテキスト要素である。
-- [`<progress>`](elements/progress.md): 2004年のProgressメータープレースホルダーを2006年に確定／不定なタスク完了要素へ具体化したが、それ以前のウィジェットからの採用は未確認である。
+- [`<progress>`](elements/progress.md): 画像等で自作された非アクセシブルなWeb進捗バーを、意味と確定／不定状態を持ちプラットフォーム固有に表示できる要素へ置き換えた。
 - [`<q>`](elements/q.md): 1995年のHTML国際化草案が言語に応じた引用符の描画のため導入し、HTML WGがRFC 2070どおりHTML 4へ採ると決議したが、HTML+ `Q`からの個別採用は未確認である。
 - [`<rp>`](elements/rp.md): ルビ非対応ユーザーエージェント向けの括弧を表す要素としてW3Cが提案・規範化し、既存Web上の`rp`を含む単純なルビマークアップとの互換性を保つため、2008年に`ruby`、`rt`とともにHTML5へ追加された。
 - [`<rt>`](elements/rt.md): W3Cのルビ語彙で注釈テキストを表す要素として提案・規範化され、既存Web上の`rt`を含む単純なルビマークアップとの互換性を保つため、2008年に`ruby`、`rp`とともにHTML5へ追加された。
@@ -111,12 +111,12 @@ status: 完成
 - [`<selectedcontent>`](elements/selectedcontent.md): Open UIの`selected-value`表示部をChromiumが子ノード複製用の`selectedoption`要素へ置き換え、二度の改名を経て2025年にHTMLへ統合した。
 - [`<slot>`](elements/slot.md): Shadow DOM v0のセレクター式挿入点を、実在する部品ライブラリとGUI継承モデルを踏まえた名前付き割り当てへ再設計し、2015年の提案・実装後にWHATWGへ統合した。
 - [`<small>`](elements/small.md): HTML 3.0の小さいフォント用要素を、WHATWGが2005年に細則や補足事項を表す意味へ再定義したが、最初の導入経路は未確認である。
-- [`<source>`](elements/source.md): `source`は2007年3月23日、`video`でコーデック選択を行い複数の代替メディアリソースから選択する要素としてWHATWGへ追加された。
+- [`<source>`](elements/source.md): 単一コーデックへ統一できないWebメディア環境に対し、UAが再生可能な複数候補を選べるよう単一`src`版`video`を拡張した。
 - [`<span>`](elements/span.md): 1995年のIETF HTML国際化草案が`BIDI DIR`の方向埋め込みを移し、`LANG`／`DIR`を置く適切な要素がない行内テキスト用の汎用コンテナーへ拡張した。
 - [`<strong>`](elements/strong.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した論理的な文字強調要素で、同時代Texinfoの`@strong`との対応を確認できる。
 - [`<style>`](elements/style.md): HTML 3.0 DTDは1995年2月9日に既存`STYLE`を単純化したと記録し、Arena実装とHTML WG要件を経て4月の公開草案が文書内のスタイル上書きとして規定した。
 - [`<sub>`](elements/sub.md): LaTeX・TeXを直接の設計材料としたHTML+数学モデルの`SUB`を、一般テキストでも使えるようHTML 3.0へ引き継いだ。
-- [`<summary>`](elements/summary.md): `summary`は2010年、`details`のキャプションを`legend`または`dt`／`dd`で表す方式を専用要素へ置換して導入された。
+- [`<summary>`](elements/summary.md): GUI開閉ウィジェットの追加情報を要約するラベル役を継承し、`details`の流用キャプションを2010年に専用要素へ置換した。
 - [`<sup>`](elements/sup.md): LaTeX・TeXを直接の設計材料としたHTML+数学モデルの`SUP`を、一般テキストでも使えるようHTML 3.0へ引き継いだ。
 - [`<svg>`](elements/svg.md): SVG 1.0で定義済みのSVG名前空間のルートを、2008年にHTMLパーサーへ統合し、一度削除した後、意見を受けて2009年に再導入したものである。
 - [`<table>`](elements/table.md): 技術出版の表要求を集めてHTML+内で単純なブラウザー向けモデルとして設計され、後にCALSの交換要件を部分的に取り込んでRFC 1942へ至った。

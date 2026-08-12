@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された644ファイルを、39の取得元ホストごとに収録する。
+Rawに保存された645ファイルを、39の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（19ファイル）
 
@@ -530,7 +530,7 @@ Rawに保存された644ファイルを、39の取得元ホストごとに収録
 | [mathml-core/__index](../raw/w3c.github.io/mathml-core/__index) | MathML Core |
 | [svgwg/svg2-draft/struct.html](../raw/w3c.github.io/svgwg/svg2-draft/struct.html) | Document Structure — SVG 2 |
 
-## `web.archive.org`（17ファイル）
+## `web.archive.org`（18ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -538,6 +538,7 @@ Rawに保存された644ファイルを、39の取得元ホストごとに収録
 | [web/19970617232458id_/http%3A/home.netscape.com/eng/mozilla/2.0/handbook/javascript/script.html](../raw/web.archive.org/web/19970617232458id_/http%3A/home.netscape.com/eng/mozilla/2.0/handbook/javascript/script.html) | Navigator Scripting |
 | [web/20020504095301/http%3A/www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt](../raw/web.archive.org/web/20020504095301/http%3A/www.uga.edu/~ucns/stddocs/script-gmlref-tso.txt) | — |
 | [web/20040708074642/http%3A/weblogs.mozillazine.org/hyatt/archives/2004_07.html](../raw/web.archive.org/web/20040708074642/http%3A/weblogs.mozillazine.org/hyatt/archives/2004_07.html) | Surfin' Safari |
+| [web/20040803041815id_/http%3A/whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20040803041815id_/http%3A/whatwg.org/specs/web-apps/current-work/__index) | Web Applications Markup Language 1.0 |
 | [web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20041009144718id_/http%3A/whatwg.org/specs/web-apps/current-work/__index) | Web Applications 1.0 |
 | [web/20041210054847id_/http%3A/www.whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20041210054847id_/http%3A/www.whatwg.org/specs/web-apps/current-work/__index) | Web Applications 1.0 |
 | [web/20050331083701id_/http%3A/whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20050331083701id_/http%3A/whatwg.org/specs/web-apps/current-work/__index) | Web Applications 1.0 |

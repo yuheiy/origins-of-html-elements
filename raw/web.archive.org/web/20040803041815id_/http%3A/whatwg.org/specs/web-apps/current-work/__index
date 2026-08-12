@@ -1,0 +1,796 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="en-GB-hixie">
+ <head>
+  <title>Web Applications Markup Language 1.0</title>
+
+  <link href="/style/specification" rel="stylesheet" type="text/css">
+
+  <link href="/images/icon" rel="icon">
+
+  <style type="text/css">
+  </style>
+
+ <body class="draft">
+  <div class="head">
+   <p><a class="logo" href="http://www.whatwg.org/" rel="home"><img
+    alt="WHATWG" src="/images/logo"></a></p>
+
+   <h1 id="web-applications">Web Applications Markup Language 1.0</h1>
+
+   <h2 class="no-num no-toc" id="working">Working Draft 21 July 2004</h2>
+
+   <dl>
+    <dt>This version:
+
+    <dd><a
+     href="http://www.whatwg.org/specs/web-apps/current-work/">http://www.whatwg.org/specs/web-apps/current-work/</a>
+
+    <dt>Latest version:
+
+    <dd><a
+     href="http://www.whatwg.org/specs/web-apps/current-work/">http://www.whatwg.org/specs/web-apps/current-work/</a>
+    <!--
+    <dt>Previous versions:</dt>
+    <dd><a href="http://www.whatwg.org/specs/web-apps/2004-00-00-call-for-comments/">http://www.whatwg.org/specs/web-apps/2004-00-00-call-for-comments/</a></dd>
+-->
+
+    <dt>Editor:
+
+    <dd>Ian Hickson, Opera Software, ian@hixie.ch
+   </dl>
+
+   <p class="copyright">&copy; Copyright 2004 Opera Software.</p>
+  </div>
+
+  <hr>
+
+  <h2 class="no-num no-toc" id="abstract">Abstract</h2>
+
+  <p>This specification introduces features to HTML and the DOM that ease the
+   authoring of Web-based applications. Additions include the context menus,
+   a vector graphics canvas, inline popup windows, server-sent events, and
+   more.
+
+  <div class="critical">
+   <h2 class="no-num no-toc" id="status">Status of this document</h2>
+
+   <p><strong>This is a work in progress!</strong> This document is changing
+    on a daily if not hourly basis in response to comments and as a general
+    part of its development process. Comments are very welcome, please send
+    them to <a href="mailto:whatwg@whatwg.org">whatwg@whatwg.org</a>. Thank
+    you.</p>
+
+   <p>It is very wrong to cite this as anything other than a work in
+    progress. Do not implement this in a production product. It is not ready
+    yet! At all!</p>
+  </div>
+
+  <p>This document is the result of a loose collaboration between interested
+   parties in the context of the <a href="http://www.whatwg.org/">Web
+   Hypertext Application Technology Working Group</a>. To become involved in
+   the development of this document, please send comments to the address
+   given above. <strong>Your input will be taken into consideration.</strong>
+
+  <p>This is a working draft and may therefore be updated, replaced or
+   rendered obsolete by other documents at any time. It is inappropriate to
+   use Working Drafts as reference material or to cite them as other than
+   "work in progress".
+
+  <p>This draft may contain namespaces that use the <code>uuid:</code> URI
+   scheme. These are temporary and will be changed before this specification
+   is ready to be implemented.
+
+  <p>To find the latest version of this working draft, please follow the
+   "Latest version" link above.
+
+  <h2 class="no-num no-toc" id="contents">Table of contents</h2>
+  <!--begin-toc-->
+
+  <ul class="toc">
+   <li><a href="#introduction"><span class="secno">1. </span>Introduction</a>
+    
+    <ul class="toc">
+     <li><a href="#requirements"><span class="secno">1.1. </span>Requirements
+      and ideas</a>
+
+     <li><a href="#relationship"><span class="secno">1.2. </span>Relationship
+      to HTML 4.01 and XHTML 1.1</a>
+
+     <li><a href="#relationship0"><span class="secno">1.3.
+      </span>Relationship to XHTML2</a>
+
+     <li><a href="#relationship1"><span class="secno">1.4.
+      </span>Relationship to Web Forms 2.0</a>
+
+     <li><a href="#relationship2"><span class="secno">1.5.
+      </span>Relationship to CSS3 UI</a>
+
+     <li><a href="#conformance"><span class="secno">1.6. </span>Conformance
+      requirements</a>
+    </ul>
+
+   <li><a href="#focus"><span class="secno">2. </span>Focus</a>
+    <ul class="toc">
+     <li><a href="#the-documentfocus"><span class="secno">2.1. </span>The
+      <dfn id="documentfocus"><code>DocumentFocus</code></dfn> Interface</a>
+    </ul>
+
+   <li><a href="#things"><span class="secno">3. </span>Things that you can't
+    do with this specification because they are better handled using other
+    technologies that are further described herein</a>
+    <ul class="toc">
+     <li><a href="#localisation"><span class="secno">3.1.
+      </span>Localisation</a>
+    </ul>
+
+   <li><a href="#references">References</a>
+
+   <li><a href="#acknowledgements">Acknowledgements</a>
+  </ul>
+  <!--end-toc-->
+
+  <hr>
+
+  <h2 id="introduction"><span class="secno">1. </span>Introduction</h2>
+
+  <p>The World Wide Web's markup language has always been HTML. HTML was
+   primarily designed as a language for semantically describing scientific
+   documents, although its general design and adaptations over the years has
+   enabled it to be used to describe a number of other types of documents.
+
+  <p>The main area that has not been adequately addressed by HTML is a vague
+   subject referred to as Web Applications. This specification attempts to
+   rectify this.
+
+  <p>The scope of this specification is not to describe an entire operating
+   system. In particular, office productivity applications, image
+   manipulation, and other applications that users would be expected to use
+   with high-end workstations on a daily basis are out of scope. This
+   specification is targetted specifically at applications that would be
+   expected to be used by users on an occasional basis, or regularly but from
+   disparate locations. For instance online purchasing systems, searching
+   systems, games (especially multiplayer online games), public telephone
+   books or address books, communications software (E-mail clients, instant
+   messaging clients, discussion software), etc.
+
+  <p>For sophisticated cross-platform applications, there already exist
+   several proprietary solutions (such as Mozilla's XUL and Macromedia's
+   Flash). These solutions are evolving faster than any standards process
+   could follow, and the requirements are evolving even faster. These systems
+   are also significantly more complicated to specify, and are orders of
+   magnitude more difficult to achieve interoperability with, than the
+   solutions described in this document. Platform-specific solutions for such
+   sophisticated applications (for example the MacOS X Core APIs) are even
+   further ahead.
+
+  <h3 id="requirements"><span class="secno">1.1. </span>Requirements and
+   ideas</h3>
+
+  <p>HTML, CSS, DOM, and JavaScript provide enough power that Web developers
+   have managed to base entire businesses on them. What is required are
+   extensions to these technologies to provide much-needed features such as:
+
+  <ul>
+   <li>Native pop-up menus and context menus.
+
+   <li>Inline markup for pop-up windows, for example for dialog boxes or tool
+    palettes, so that dialogs need not be defined in separate files.
+
+   <li>Command updating: applications that have several access points for the
+    same feature, for instance a menu item and a tool-bar button, would
+    benefit from having to disable such commands only once, instead of having
+    to keep each access point synchronized with the feature's availability at
+    all times. Similarly menu items or tool-bar buttons that represent a
+    toggle state could automatically stay synchronized whenever toggled.
+
+   <li>Server-sent events: triggering DOM3 Events from the server-side, for
+    example for tickers or status updates.
+
+   <li>Client-server communications methods that do not require page loads,
+    enabling on-demand data retrieval (where the UA automatically fetches
+    data from the server as required), remote procedure calls (where script
+    can invoke code on the server side and get an XML fragment in return),
+    etc.
+
+   <li>More device-independent DOM events: The DOM event set needs
+    device-independent events, such as events that fire when a button or link
+    is activated, whether via the mouse or the keyboard.
+    <code>DOMActivate</code> is a start, but it lacks equivalent HTML
+    attributes, and additional events may be needed.
+   <!--
+   <li>Richer widget set: the existing HTML controls are quite
+   limited, some controls for commonly used types such as date
+   controls and range controls would be useful.</li>
+-->
+
+   <li>Sortable and multicolumn tree views and list views with rich
+    formatting.
+
+   <li>Ability to define custom widgets cleanly, for example using XBL and
+    APIs to query and control focus state, widget state, the position and
+    state of input devices, etc.
+
+   <li>Rich text editing: an underlying architecture upon which
+    domain-specific editors can be created, including things like control
+    over the caret position.
+
+   <li>A predefined HTML editor based on the rich text editing architecture.
+
+   <li>Drag and drop APIs.
+
+   <li>Text selection manipulation APIs.
+
+   <li>Clipboard APIs (if the security and privacy concerns can be
+    addressed).
+   <!--
+   <li>Flexible box model: The existing box model in CSS is designed
+   largely for documents rather than user interface. We need a new
+   box model designed for user interface which would relieve author
+   complaints about other aspects of CSS and also reduce the need
+   for tables for layout.</li>
+-->
+  </ul>
+
+  <p>Some less important features would be good to have as well:
+
+  <ul>
+   <li>Window-based state management (so that new windows don't interfere
+    with existing sessions), for example implemented as a per-domain,
+    per-window "file system". This would allow multiple instances of the same
+    application (from the same site) to run without the instances overwriting
+    each other's cookies.
+
+   <li>Elements for semantics commonly found in applications, such as
+    &lt;byline&gt;, &lt;footer&gt;, &lt;section&gt;, &lt;navigation&gt;, etc.
+
+   <li>Markup to denote mutually exclusive sections (as in the commonly seen
+    wizard interfaces).
+   <!--
+   <li>An improved CSS object model, for example with better APIs
+   for animation, simpler ways to navigate the rendered content, a
+   way to find the position of an element, methods to list the
+   elements under a coordinate, etc.</li>
+-->
+
+   <li>Better defined user authentication state handling. (Being able to "log
+    out" of sites reliably, for instance, or being able to integrate the HTTP
+    authentication model into the Web page.)
+  </ul>
+
+  <p>Several of the features in these two lists have been supported in
+   non-standard ways by some user agents for some time.
+
+  <h3 id="relationship"><span class="secno">1.2. </span>Relationship to HTML
+   4.01 and XHTML 1.1</h3>
+
+  <p>This specification adds a number of features to HTML. For XML-based
+   documents, these are added to the XHTML 1.x namespace. This ensures
+   backwards compatibility with, and a simple migration path from, existing
+   HTML and XHTML content.
+
+  <h3 id="relationship0"><span class="secno">1.3. </span>Relationship to
+   XHTML2</h3>
+
+  <p>XHTML2 <a href="#refsXHTML2">[XHTML2]</a> updates HTML with better
+   features for hyperlinks, multimedia content, annotating document edits,
+   and introduces elements for better describing the semantics of human
+   literary works such as poems.
+
+  <p>Unfortunately, it lacks elements to express the semantics of many of the
+   non-document types of content most often seen on the Web. For instance,
+   the very popular forum sites, auction sites, search engines, online shops,
+   and the like, do not fit the document metaphor well.
+
+  <p><em>This</em> specification aims to extend HTML so that it is more
+   suitable in these contexts.
+
+  <p>XHTML2 and this specification therefore address the needs of two
+   different authoring scenarios, and are expected to be used side by side.
+   XHTML2 is optimised for <em>documents</em> &mdash; for example help files,
+   essays, articles &mdash; whereas this specification is optimised for
+   applications.
+
+  <h3 id="relationship1"><span class="secno">1.4. </span>Relationship to Web
+   Forms 2.0</h3>
+
+  <p>This specification is designed to complement Web Forms 2.0. <a
+   href="#refsWF2">[WF2]</a> Where Web Forms concentrates on input controls,
+   data validation, and form submission, this specification concentrates on
+   client-side user interface features needed to create modern applications.
+
+  <h3 id="relationship2"><span class="secno">1.5. </span>Relationship to CSS3
+   UI</h3>
+
+  <p>The CSS3 UI specification <a href="#refsCSS3UI">[CSS3UI]</a> introduces
+   a number of properties suitable for Web-based application development.
+   This specification expands on those properties and specifies their
+   interaction with scripting-based environments and the DOM.
+
+  <h3 id="conformance"><span class="secno">1.6. </span>Conformance
+   requirements</h3>
+
+  <p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+   document are to be interpreted as described in <a
+   href="#refsRFC2119">[RFC2119]</a>.
+
+  <p>Diagrams, examples, and notes are non-normative. All other content in
+   this specification is normative.
+
+  <p>This specification includes by reference all of the HTML4, XHTML1.1,
+   DOM2 HTML, DOM3 Core, and DOM3 Events specifications (<a
+   href="#refsHTML4">[HTML4]</a>, <a href="#refsXHTML1">[XHTML1]</a>, <a
+   href="#refsDOM2HTML">[DOM2HTML]</a>, <a
+   href="#refsDOM3CORE">[DOM3CORE]</a>, <a
+   href="#refsDOM3EVENTS">[DOM3EVENTS]</a>). Compliant UAs must implement all
+   the requirements of those specifications to claim compliance to this one.
+
+  <p>Implementations may optionally implement only one of HTML4 and XHTML1.1.
+
+  <p>Implementations that do not support scripting (or which have their
+   scripting features disabled) are exempt from supporting the events and DOM
+   interfaces mentioned in this specification. For the parts of this
+   specification that are defined in terms of an events model or in terms of
+   the DOM, such user agents must still act as if events and the DOM were
+   supported.
+
+  <p>HTML documents that use the new features described in this specification
+   and that are served over HTTP must be sent as <code>text/html</code> and
+   must use the following DOCTYPE: <code>&lt;!DOCTYPE html PUBLIC
+   "-//WHATWG//NONSGML HTML5//EN"&gt;</code>. <span class="issue">The DOCTYPE
+   will change before this specification is finalised.</span>
+
+  <p>XML documents using elements from the XHTML namespace that use the new
+   features described in this specification and that are served over HTTP
+   must be sent using an XML MIME type such as <code>application/xml</code>
+   or <code>application/xhtml+xml</code> and must not be served as
+   <code>text/html</code>. <a href="#refsRFC3023">[RFC3023]</a>
+
+  <p>These XML documents may contain a <code>DOCTYPE</code> if desired, but
+   this is not required.
+
+  <p class="note"> Documents that use the new features described in this
+   specification cannot be strictly conforming XHTML or HTML4 documents,
+   since they contain features not defined in those specifications.
+
+  <h2 id="focus"><span class="secno">2. </span>Focus</h2>
+
+  <h3 id="the-documentfocus"><span class="secno">2.1. </span>The <dfn
+   id="documentfocus0"><code>DocumentFocus</code></dfn> Interface</h3>
+
+  <p>The <code><a href="#documentfocus0">DocumentFocus</a></code> interface
+   contains methods for moving focus around the document.
+
+  <pre class="idl">
+interface DocumentFocus {
+  void moveFocusForward()
+  void moveFocusBackward()
+  void moveFocusUp()
+  void moveFocusRight()
+  void moveFocusDown()
+  void moveFocusLeft()
+};
+</pre>
+
+  <p>The <dfn id="movefocusforward"><code>moveFocusForward</code></dfn>
+   method uses <code>'nav-index'</code> and <code>'user-can-focus'</code>
+   properties to find the next focussable element and focusses it.
+
+  <p>The <dfn id="movefocusbackward"><code>moveFocusBackward</code></dfn>
+   method uses <code>'nav-index'</code> and <code>'user-can-focus'</code>
+   properties to find the previous focussable element and focusses it.
+
+  <p>The <dfn id="movefocusup"><code>moveFocusUp</code></dfn> method uses
+   <code>'nav-up'</code> and <code>'user-can-focus'</code> properties to find
+   an appropriate focussable element and focusses it.
+
+  <p>In a similar manner, the <dfn
+   id="movefocusright"><code>moveFocusRight</code></dfn>, <dfn
+   id="movefocusdown"><code>moveFocusDown</code></dfn>, and <dfn
+   id="movefocusleft"><code>moveFocusLeft</code></dfn> methods use the
+   <code>'nav-right'</code>, <code>'nav-down'</code>, and
+   <code>'nav-left'</code> properties (respectively), and the
+   <code>'user-can-focus'</code> property, to find an appropriate focussable
+   element and focus it.
+
+  <h2 id="things"><span class="secno">3. </span>Things that you can't do with
+   this specification because they are better handled using other
+   technologies that are further described herein</h2>
+
+  <p>There are certain features that are not handled by this specification
+   because a client side markup language is not the right level for them.
+   This section covers some of the more common requests.
+
+  <h3 id="localisation"><span class="secno">3.1. </span>Localisation</h3>
+
+  <p>If you wish to create localised versions of an HTML application, the
+   best solution is to preprocess the files on the server, and then use HTTP
+   content negotation to serve the appropriate language.
+  <!-- <p>XXX example here</p> -->
+
+  <h2 class="no-num" id="references">References</h2>
+
+  <p>XXX
+
+  <h2 class="no-num" id="acknowledgements">Acknowledgements</h2>
+
+  <p>Thanks to H&aring;kon Wium Lie, David Hyatt and Brendan Eich for their
+   important support. Thanks to Matthew Mastracci and Steven Garrity for
+   their useful and substantial comments.
+
+  <p>Thanks also to Mark Nottingham, and the Microsoft blogging community for
+   some ideas, to the attendees of the W3C Workshop on Web Applications and
+   Compound Documents for inspiration, and to the #mozilla crew, the #opera
+   crew, and the #mrt crew for their ideas and support.
+  <!--
+ !  menus
+
+<hyatt> the ability to get the current focused element in a window hierarchy
+<hyatt> and the current focused window
+<hyatt> the ability to programmatically move the focus 
+<hyatt> to next/prev
+
+wizards
+tabbed interface
+
+Application object? http://longhorn.msdn.microsoft.com/lhsdk/ref/ns/msavalon.windows/c/application/application.aspx
+
+<Hixie> <input type="text" menu="foo" icon="g.png"/> <menu id="foo"> <menuitem icon="g.png" onclick="engine('google')">Google</menuitem> ... </menu>
+
+> One more aspect I want you think about - for "user interface systems" in
+> general: The windowing system.
+>   Different kinds of windows ("document", "browser (file-system/network or
+> otherwise)", "palette", "application modal dialog", "system modal dialog"),
+> the rules for layering them (appropriately flexible to allow different
+> implementations, e.g. MacOS vs. X-Windows), and simplifications for handheld
+> devices (which are sometimes single window devices anyway, but sometimes
+> they are one "normal" window plus sometimes one "dialog" window on top.
+
+window.open for dialogs
+
+
+Thus, they lack things like proper windows, tree 
+widgets, menu bars, rich text areas and so forth. This is what I would 
+like XUL to solve. - Paul Prescod
+
+ block level element to indicate that a section is for navigation of
+ the site:
+
+    <navigation>
+     <h>...</h>
+     <ol>
+      <li><a href="">...</a></li>
+     </ol>
+    </navigation>
+
+ sub-navigation attribute?
+
+
+Sites often have this structure:
+
+   <header>
+    <p>Welcome to...</p>
+    <h1>The Site</h1>
+    <h2>Home of the stuff</h2>
+   </header>
+
+Pages often have:
+
+   <footer>
+    <p>navigation</p>
+    <p>copyright</p>
+    <p>colophon</p>
+   </footer>
+
+Other new block level elements:
+
+   <article>/<post>/<message>/<content> - for a blog post, news article, forum message, etc 
+   <section> - section
+   <h> - section header
+
+Olav:
+> <product> to indicate something you can buy, like a cd on amazon
+> or a biker jacket at harleydavidson.com
+
+
+Drop downs often have a title for when there is no selection.
+
+http://www.w3.org/mid/BAY1-F150PNOkJvX41K000418e1@hotmail.com
+
+http://crew.tweakers.net/crisp/newlayout/index.html
+http://crew.tweakers.net/crisp/newlayout/list_topics.html
+http://crew.tweakers.net/crisp/newlayout/list_messages.html
+http://crew.tweakers.net/crisp/newlayout/list_messages_mod.html
+
+http://mail.mozilla.org/private/gui-toolkit/2004-April/000041.html
+
+> > > A standard for rich edit widgets would also be of interest to me.
+> >
+> > As in WYSIWIG editing? Of the bold/italic/underline/larger/smaller kind?
+> > 
+> > Or do you mean as in the bare bones to be able to build an editor on top
+> > of? As in something that basically just gives you a cursor and the ability
+> > to tell where the selection is and some way to hook into the Undo
+> > functionality?
+> 
+> I have use cases for both...I have a more desperate business need for
+> the latter (and have build apps using the gross APIs out there today)
+> but there are a lot of circumstances where an editor that already has
+> all standard HTML editing behaviour would be fine.
+
+- Paul Prescod
+
+ * a way of selecting rows, so that you can declaratively have buttons
+   outside the template that move a "selected row" around. => web apps
+
+
+Calendar with list of days that have events (think: blog calendars)
+
+Find object at (x,y)
+Find mouse position
+
+Styling scrollbars:
+
+   ::scrollbars { ... }
+
+
+table of contents?
+
+
+http://www.gadgetopia.com/2004/05/04/FileIconTag.html
+
+
+on going back
+on going forward
+on came from back
+on came from forward
+better state serialisation for going back/forward
+
+
+some sort of markup to tell google _not_ to index a particular part of the site
+
+drop down menu with URIs to replace the silly <select> hacks.
+
+http://www.cs.tut.fi/~jkorpela/html/em.html
+
+negative tabindex should make element untabbable.
+  http://bugzilla.mozilla.org/show_bug.cgi?id=244143
+
+http://www.w3.org/mid/40c6ab00.477995270@smtp.bjoern.hoehrmann.de
+Content-Style-Type, Content-Script-Type should be defaulted
+<style>, <script> should also default
+
+<htmlarea>, <xmlarea>...
+
+> 3) Extensible syntax highlighting (coloring). I am aware that a ton of
+> code editors don't even do this well. The ability to load a syntax
+> definition file and have it color a block of code would do wonders for
+> making the web a more friendly place to script.
+ - Ryan Johnson
+
+toolbars, status bars. - Didier PH Martin
+
+Roman Ivanov:
+
+   * methods/properties for setting and getting selection (especially
+   in TextArea), such as .selectionStart, .selectionEnd and
+   .setSelectionRange() in Mozilla.
+
+   * methods/properties for scrolling managing, especially in
+   TextArea, such as .scrollTop and .scrollHeight in Mozilla and -
+   it's important - .scrollIntoView() for ranges like in MSIE.
+
+   * standard for inbrowser WYSIWYG richtext editing, like
+   contentEditable/designMode in Mozilla/MSIE.
+
+
+Robert Bateman:
+
+   I've looked thru as many of the examples from around the web as I can find and
+   don't see an obvious way to do date calculations.
+
+   What I'm trying to do is populate an xsd:date field with now() plus 5 days as
+   it's default value.  The field in question is a proposed "due date" for a
+   work order.
+
+   I've seen that I can get a "difference" between two dates, but no
+   calculations.
+
+
+Wladimir Palant pointed out problems with chunking with server-sent-events
+
+Shaun Inman suggested putting XMLHttpRequest into the spec
+
+
+
+> 2.  Some method of integration to allow Web apps to respond
+>      to the browser's Cut, Copy, Paste, and Select All menu
+>      items and keyboard equivalents. These work automatically
+>      for text fields in any Web application; it would be
+>      great if apps could make them work for stocks, address
+>      book cards, message attachments, transactions, photos,
+>      and so on too.
+>
+>      I'd add Undo and Redo to that list, but unfortunately
+>      IE6 doesn't have Undo and Redo menu items.
+ - mpt
+
+
+
+>> maybe except for the server sent events and the clipboard
+>> api (but even in those cases it might be possible).
+>
+> Clipboard API I don't really want to see, given the problems IE's
+> implementation of such brought up. A better standardised drag-and-drop
+> interface would be great though, as doing it with mouse events and IE's
+> proprietary events is annoying-to-impossible to get right all the time.
+>
+> I really like the idea of server-side events, though I would prefer to
+> have them set up by a scripting call rather than an HTML element.
+ - Andrew Clover
+
+
+    <html application="application">
+
+...would, instead of showing the Web page itself, the first time, show
+(inline in the browser):
+
+  :::: Security Warning :::::::::::::::::::::::::::::::::::::
+  ::                                                       ::
+  ::  The Web page at this domain:                         ::
+  ::                                                       ':
+  ::     paypcl.com                                        
+  ::                                                       
+  ::  ...wishes to launch an application in a separate     
+  ::  window. Do you trust this domain?                    
+  ::                                                       
+  ::  [x] Remember this decision.                          
+  ::                                                       
+  ::      (( Trust paypcl.com ))  ( Display as Web page )  
+  ::                                                      
+  :::::.
+- (spurred on by Jose Dinuncio)
+
+
+breadcrumb navigation markup
+other markup:
+   http://www.stuffandnonsense.co.uk/archives/whats_in_a_name_pt2.html
+
+
+common icons: http://www.intersmash.com/300images/
+
+
+namespace of HTML4 in DOM and CSS
+
+Content-ScriptType and Content-STyle-Type defaults
+
+http://www.gadgetopia.com/2004/06/18/DoYouWantToSaveYourChanges.html#Comments
+
+http://www.mojavelinux.com/cooker/demos/domTT/index.html
+
+http://www.mozilla.org/projects/ui/accessibility/dynamic-accessibility.html
+
+http://blog.colorstudy.com/ianb/weblog/2004/06/23.html
+http://daringfireball.net/2004/06/location_field
+
+http://www.joelonsoftware.com/items/2004/06/17.html
+http://www.joelonsoftware.com/items/2004/06/18.html
+
+=> contentEditable.
+
+listview/gridview API
+http://www.activewidgets.com/grid/
+
+> I would rather have it that changing the dom attribute 'value' or typing
+> in the textarea, would also change the contents of the textnode in the
+> textarea.
+>
+> In that way the dom level 2 traversal and range specification would not
+> be useless for textarea's.
+> 
+> The same goes for input text controls and probably also for other form
+> controls.
+ - martijnw
+
+
+"window" is not defined. In particular, "window.document" is not defined.
+
+
+1. point to an xml instance and cause the page to be filled in
+2. serialise the site to a version of that xml instance
+
+<menu>
+ <li state="bar"/>
+</menu>
+<button state="bar"/>
+<state id="bar" label="" disabled="" value=""/>
+
+<input state="foo"/>
+<input state="foo"/>
+<input state="foo 2"/>
+<input state="foo 2"/>
+<state id="foo" model="x" ref="cat:orderLine[$v1]/cat:foo"/>
+
+<instance src=""/>
+
+<instance id="x">
+
+<Order xmlns="urn:oasis:names:tc:ubl:Order:1.0:0.70" xmlns:cat="urn:oasis:names:tc:ubl:CommonAggregateTypes:1.0:0.70">
+  <cat:ID/>
+  <cat:IssueDate/>
+  <cat:LineExtensionTotalAmount currencyID="USD"/>
+  <cat:BuyerParty>
+    <cat:ID/>
+    <cat:PartyName>
+      <cat:Name/>
+    </cat:PartyName>
+    <cat:Address>
+      <cat:ID/>
+      <cat:Street/>
+      <cat:CityName/>
+      <cat:PostalZone/>
+      <cat:CountrySub-Entity/>
+    </cat:Address>
+    <cat:BuyerContact>
+      <cat:ID/>
+      <cat:Name/>
+    </cat:BuyerContact>
+  </cat:BuyerParty>
+  <cat:SellerParty>
+    <cat:ID/>
+    <cat:PartyName>
+      <cat:Name/>
+    </cat:PartyName>
+    <cat:Address>
+      <cat:ID/>
+      <cat:Street/>
+      <cat:CityName/>
+      <cat:CountrySub-Entity/>
+    </cat:Address>
+  </cat:SellerParty>
+  <cat:DeliveryTerms>
+    <cat:ID/>
+    <cat:SpecialTerms/>
+  </cat:DeliveryTerms>
+  <cat:OrderLine>
+    <cat:BuyersID/>
+    <cat:SellersID/>
+    <cat:LineExtensionAmount currencyID=""/>
+    <cat:Quantity unitCode="">1</cat:Quantity>
+    <cat:Item>
+      <cat:ID/>
+      <cat:Description>Enter description here</cat:Description>
+      <cat:SellersItemIdentification>
+        <cat:ID>Enter part number here</cat:ID>
+      </cat:SellersItemIdentification>
+      <cat:BasePrice>
+        <cat:PriceAmount currencyID="">0.00</cat:PriceAmount>
+      </cat:BasePrice>
+    </cat:Item>
+  </cat:OrderLine>
+</Order> 
+
+</instance>
+
+
+
+
+  <h2>Tree and List Widgets</h2>
+
+  <p>XXX</p>
+
+  <h3>Introduction</h3>
+
+  <pre>XXX</pre>
+
+   click item to go uri
+   doube click to submit form with value
+   sort list by any column
+   specify column headers, column sort types
+   specify data inline, or out of band
+   data can be linear or a one way tree
+   rows can have an icon associated with them
+   rows can have overlays associated with them
+
+-->

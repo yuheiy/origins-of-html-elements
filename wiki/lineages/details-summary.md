@@ -10,12 +10,12 @@ status: 完成
 
 ## キャプションの専用化
 
-2009年にキャプション構造は`legend`から`dt`／`dd`へ変わり、2010年に専用`summary`へ置換された。この最後の変更が現行二要素を直接結ぶ。[2009年の変更](../../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)（[公開元](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)） [`summary`導入コミット](../../raw/github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)（[公開元](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)）
+参照されたGNOMEの同時代議論は、開閉ラベルを単なる説明でなく開示される値の要約にするよう求めていた。2009年にHTMLのキャプション構造は`legend`から`dt`／`dd`へ変わり、2010年に専用`summary`へ置換された。この最後の変更が現行二要素を直接結ぶ。ただし、GNOMEの表現からタグ名を借用した記録はない。[GNOMEの開閉UI議論](../../raw/web.archive.org/web/20060701000000id_/http%3A/mail.gnome.org/archives/usability/2006-June/msg00015.html)（[公開元](https://web.archive.org/web/20060701000000id_/http://mail.gnome.org/archives/usability/2006-June/msg00015.html)） [2009年の変更](../../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)（[公開元](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)） [`summary`導入コミット](../../raw/github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)（[公開元](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)）
 
 対象: [`details`](../elements/details.md)、[`summary`](../elements/summary.md)
 
 ```text
-GUI開閉ウィジェット＋fieldset / legendのキャプション構造
+追加情報を要約するGUI開閉ラベル＋fieldset / legendのキャプション構造
   → details / legend
   → details / dt / dd
   → details / summary
