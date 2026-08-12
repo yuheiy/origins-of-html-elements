@@ -23,7 +23,7 @@ HTML外の先行物、既存Web、実装、UI慣習、標準化要求が、ど�
 | 国際化・文字方向・東アジア組版 | Unicode国際化、双方向文字関連仕様、ルビの既存Web実装、言語依存の引用符 | `bdi`、`bdo`、`q`、`rp`、`rt`、`ruby`、`span` |
 | 既存Web制作・コミュニティ・互換性 | 実サイトのセクショニングマークアップ、画像とキャプションを一組にするマークアップ・表示慣習、ARIA役割、コミュニティ提案、ポリフィル、初期Webの意味を持つ改行とハイフン列による区切り、ブラウザー互換マークアップ | `article`、`aside`、`br`、`figcaption`、`figure`、`footer`、`header`、`hgroup`、`hr`、`main`、`nav`、`search`、`section`、`wbr` |
 
-`figure`と`figcaption`は、HTML標準化の直接の材料を優先して「既存Web制作・コミュニティ・互換性」へ一度だけ置いた。ただしFortinは、科学・技術出版物で画像とキャプションをfigureとして扱う慣習が`figure`という提案名の理由だと明記しているため、「構造化文書・出版」も`figure`の意味と名称、`figcaption`のキャプション概念の上流背景である。出版慣習から個々のWeb実践へ伝わった具体的な経路は確認できない。[WHATWGフィードバック総括](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)）
+`figure`と`figcaption`は、HTML標準化の直接の材料を優先して「既存Web制作・コミュニティ・互換性」へ一度だけ置いた。ただしFortinは、科学・技術出版物で画像とキャプションをfigureとして扱う慣習が`figure`という提案名の理由だと明記しているため、「構造化文書・出版」も`figure`の意味と名称、`figcaption`のキャプション概念の上流背景である。初期HTMLではワードプロセッサー、LaTeX、SGMLツールからの変換が一般的な伝達路となり、2000年代の個別例ではMediaWiki、ニュース発行テンプレート、学術誌の複数形式出版工程が図とキャプションをWebへ出力した。各個別システムが先行する出版・SGML語彙を参照した因果は未確認である。[HTML+解説](../../raw/www.w3.org/MarkUp/htmlplus_paper/htmlplus.html)（[公開元](https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html)） [WHATWGフィードバック総括](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)） [`figure`要素ページ](../elements/figure.md)
 
 以下の三節は八つの大分類の下位分類ではない。第二表への割り当て根拠を、背景の確認経路ごとに整理する。
 

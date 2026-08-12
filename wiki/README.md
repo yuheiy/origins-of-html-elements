@@ -61,7 +61,7 @@ status: 完成
 - [`<embed>`](elements/embed.md): NetscapeがNavigator 2.0のプラグイン機構のために提案・実装した空要素である。
 - [`<fieldset>`](elements/fieldset.md): 当時一般的だったUIのラベル付きグループと音声ナビゲーション要求から`LGROUP`／`IS`、`FIELDSET`／`CAPTION`を経てHTML 4の`FIELDSET`／`LEGEND`へ至った。
 - [`<figcaption>`](elements/figcaption.md): 2010年1月、HTML5草案の`figure` キャプションを`dt`／`dd`で表す方式が意味、構造、後方互換性の問題を指摘され、専用の`figcaption`へ変更された。
-- [`<figure>`](elements/figure.md): 出版の図版・キャプション慣習を意味と名称の上流とし、HTML+ `FIG`／`CAPTION`と既存Webの実例調査・提案を受けて2006年に採用された。出版からWeb実践への伝播経路は未確認である。
+- [`<figure>`](elements/figure.md): 出版の図版・キャプション慣習を意味と名称の上流とし、HTML+ `FIG`／`CAPTION`と既存Webの実例調査・提案を受けて2006年に採用された。一般的な伝達路として文書変換ツール、個別の制作単位としてMediaWiki、ニュース発行テンプレート、学術誌の複数形式出版工程を確認できるが、各システムが参照した先行語彙は不明である。
 - [`<footer>`](elements/footer.md): 2004年からWHATWGの意味的要素集合に現れ、典型的サイトマークアップからの集合単位の導入は確認できるが、`footer`個別の対応は不明である。
 - [`<form>`](elements/form.md): HTML+のフォームからHTML 2.0へ導出されたフォームコンテナーで、特定GUIツールキットとの直接関係は未確認である。
 - [`<h1>`〜`<h6>`](elements/h1-h6.md): `h1`〜`h6`は、AAPタグセットの見出し定義がCERN SGMLガイドを経て初期HTMLへ保持された、共通の直接史料を持つ6段階の見出し要素群である。

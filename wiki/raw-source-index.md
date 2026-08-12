@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された622ファイルを、36の取得元ホストごとに収録する。
+Rawに保存された627ファイルを、37の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（10ファイル）
 
@@ -463,6 +463,12 @@ Rawに保存された622ファイルを、36の取得元ホストごとに収録
 |---|---|
 | [htmlearn/netscape/html_extensions.html](../raw/marc.merlins.org/htmlearn/netscape/html_extensions.html) | Extensions to HTML |
 
+## `meta.wikimedia.org`（1ファイル）
+
+| Rawファイル | 文書タイトル |
+|---|---|
+| [w/index.php__q__title=Image_pages%252FData_syntax&oldid=153854](../raw/meta.wikimedia.org/w/index.php__q__title=Image_pages%252FData_syntax&oldid=153854) | Image pages/Data syntax - Meta-Wiki |
+
 ## `news.microsoft.com`（2ファイル）
 
 | Rawファイル | 文書タイトル |
@@ -503,7 +509,7 @@ Rawに保存された622ファイルを、36の取得元ホストごとに収録
 | [mathml-core/__index](../raw/w3c.github.io/mathml-core/__index) | MathML Core |
 | [svgwg/svg2-draft/struct.html](../raw/w3c.github.io/svgwg/svg2-draft/struct.html) | Document Structure — SVG 2 |
 
-## `web.archive.org`（14ファイル）
+## `web.archive.org`（17ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -519,8 +525,11 @@ Rawに保存された622ファイルを、36の取得元ホストごとに収録
 | [web/20050901000000/http%3A/www.whatwg.org/specs/web-apps/2005-09-01/__index](../raw/web.archive.org/web/20050901000000/http%3A/www.whatwg.org/specs/web-apps/2005-09-01/__index) | Web Applications 1.0 |
 | [web/20060101000000id_/http%3A/code.google.com/webstats/2005-12/classes.html](../raw/web.archive.org/web/20060101000000id_/http%3A/code.google.com/webstats/2005-12/classes.html) | Google Code: Web Authoring Statistics: Classes |
 | [web/20060216040621id_/http%3A/whatwg.org/specs/web-apps/current-work/__index](../raw/web.archive.org/web/20060216040621id_/http%3A/whatwg.org/specs/web-apps/current-work/__index) | Web Applications 1.0 |
+| [web/20060427035338id_/http%3A/medicine.plosjournals.org%3A80/perlserv/__index__q__request=get-document%2526doi=10.1371%2Fjournal.pmed.0020228](../raw/web.archive.org/web/20060427035338id_/http%3A/medicine.plosjournals.org%3A80/perlserv/__index__q__request=get-document%2526doi=10.1371%2Fjournal.pmed.0020228) | PLoS Medicine: Using Search Engines to Find Online Medical Information |
+| [web/20060630125301id_/http%3A/www.cnn.com%3A80/2006/WORLD/meast/06/27/iran.us.reut/index.html](../raw/web.archive.org/web/20060630125301id_/http%3A/www.cnn.com%3A80/2006/WORLD/meast/06/27/iran.us.reut/index.html) | CNN.com - Iran sees 'no need' for nuke talks - Jun 27, 2006 |
 | [web/20060701000000id_/http%3A/developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html](../raw/web.archive.org/web/20060701000000id_/http%3A/developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html) | User Experience: Apple Human Interface Guidelines: View Controls |
 | [web/20060701000000id_/http%3A/mail.gnome.org/archives/usability/2006-June/msg00015.html](../raw/web.archive.org/web/20060701000000id_/http%3A/mail.gnome.org/archives/usability/2006-June/msg00015.html) | Re: [Usability] Using nouns or verbs for the disclosure widgets |
+| [web/20060822150415id_/http%3A/en.wikipedia.org/wiki/Amerindians](../raw/web.archive.org/web/20060822150415id_/http%3A/en.wikipedia.org/wiki/Amerindians) | Indigenous peoples of the Americas - Wikipedia, the free encyclopedia |
 
 ## `whatwg.org`（1ファイル）
 
@@ -582,7 +591,7 @@ Rawに保存された622ファイルを、36の取得元ホストごとに収録
 |---|---|
 | [jordi/v3/js/jsguide/jsguide.pdf](../raw/www.uv.es/jordi/v3/js/jsguide/jsguide.pdf) | — |
 
-## `www.w3.org`（212ファイル）
+## `www.w3.org`（213ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -695,6 +704,7 @@ Rawに保存された622ファイルを、36の取得元ホストごとに収録
 | [TR/WD-html40-970917/struct/text.html](../raw/www.w3.org/TR/WD-html40-970917/struct/text.html) | Paragraphs, Lines, and Phrases |
 | [TR/WD-insert-951220.html](../raw/www.w3.org/TR/WD-insert-951220.html) | HTML3 Linking and Embedding Model |
 | [TR/WD-object-960308.html](../raw/www.w3.org/TR/WD-object-960308.html) | Inserting objects into HTML |
+| [TR/WD-object-960311.html](../raw/www.w3.org/TR/WD-object-960311.html) | Inserting objects into HTML |
 | [TR/WD-object-960422](../raw/www.w3.org/TR/WD-object-960422) | Inserting objects into HTML |
 | [TR/WD-script-960124.html](../raw/www.w3.org/TR/WD-script-960124.html) | HTML3 Scripting Model |
 | [TR/WD-script-960627.html](../raw/www.w3.org/TR/WD-script-960627.html) | HTML Scripting Model |

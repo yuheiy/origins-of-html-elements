@@ -10,7 +10,7 @@ status: 完成
 
 ## 現在の意味
 
-WHATWG HTML Living Standardでは、任意のキャプションを伴い、自己完結していて、通常は文書の主たる流れから一単位として参照されるフロー内容を表す。最初の子`figcaption`があれば内容のキャプションとなる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-figure-element)、2026-08-09確認）
+WHATWG HTML Living Standardでは、任意のキャプションを伴い、自己完結していて、通常は文書の主たる流れから一単位として参照されるフロー内容を表す。最初の子`figcaption`があれば内容のキャプションとなる。[HTML Living Standard](../../raw/html.spec.whatwg.org/multipage/grouping-content.html)（[公開版](https://html.spec.whatwg.org/multipage/grouping-content.html#the-figure-element)、2026-08-12確認）
 
 ## HTMLへの導入
 
@@ -38,9 +38,15 @@ HTML+の`FIG`／`CAPTION`と、Michel Fortinが2006年に提案した`figure`構
 
 HTML+は`FIG`に画像ソース、子`CAPTION`、テキスト代替内容をまとめていた。Pietersはこの構造をHTML5用に`fig`コンテナー、子`caption`、子`img`として示し、Hicksonは`caption`のパーサー問題と要素名を除いて採用した。Fortinの提案と利用例調査は、画像とキャプションを明示的に結び、主たる流れから分離できる図構造への要求を示した。Fortinはさらに、科学・技術出版物で画像とキャプションをfigureとして扱う慣習を挙げ、それが自身の`figure`提案名の理由だと説明した。[HTML+ Figures](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html)） [WHATWGフィードバック総括](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)）
 
+RaggettはHTML+解説で、HTML+が情報提供者の要求に応えて浮動する図の周囲へのテキスト回り込みを追加したこと、著者がFrameMaker、Microsoft Word、LaTeXからのフィルターやSGML制作・変換ツールを利用できたことを説明した。1996年のW3C草案も、キャプション付きで段組み間やページ上下へ浮動するfigureを、長く実証されてきた文書レイアウトの慣用と位置づけ、`FIG`を提案した。[A Review of the HTML+ Document Format](../../raw/www.w3.org/MarkUp/htmlplus_paper/htmlplus.html)（[公開元](https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html)） [Inserting objects into HTML](../../raw/www.w3.org/TR/WD-object-960311.html)（[公開元](https://www.w3.org/TR/WD-object-960311.html)）
+
+2003年のMeta-Wiki上の設計案では、画像ページに任意のキャプションを保存する要求と、キャプション付き画像をブロックレベルの`div`として出力する実装案が議論された。2006年のWikipedia保存ページでは、MediaWikiが`thumb`／`thumbcaption`クラスを持つブロックとして右寄せ画像とキャプションを出力している。したがってWikipediaについては、執筆者コミュニティの画像データをMediaWikiが一貫したHTML構造へ変換する経路を確認できる。[Image pages/Data syntax](../../raw/meta.wikimedia.org/w/index.php__q__title=Image_pages%252FData_syntax&oldid=153854)（[公開元](https://meta.wikimedia.org/w/index.php?title=Image_pages%2FData_syntax&oldid=153854)） [2006年のWikipedia保存ページ](../../raw/web.archive.org/web/20060822150415id_/http%3A/en.wikipedia.org/wiki/Amerindians)（[公開元](https://web.archive.org/web/20060822150415/http://en.wikipedia.org/wiki/Amerindians)）
+
+2006年のCNN保存ページは、右寄せ用コンテナー内に画像と`cnnStoryCaption`を置く発行者固有のテンプレートを示す。2005年公開のPLOS Medicine記事の保存ページは、各図を`figureFM`ブロックに置き、番号付きキャプションと本文からの参照を結び、同じ記事について図一覧、印刷用PDF、画面用PDF、XMLを提供している。ニュース発行者のテンプレートと学術誌の複数形式出版工程が、図とキャプションをWebへ反復的に出力する媒体だったことは直接観察できる。[2006年のCNN保存ページ](../../raw/web.archive.org/web/20060630125301id_/http%3A/www.cnn.com%3A80/2006/WORLD/meast/06/27/iran.us.reut/index.html)（[公開元](https://web.archive.org/web/20060630125301/http://www.cnn.com/2006/WORLD/meast/06/27/iran.us.reut/index.html)） [2006年のPLOS保存ページ](../../raw/web.archive.org/web/20060427035338id_/http%3A/medicine.plosjournals.org%3A80/perlserv/__index__q__request=get-document%2526doi=10.1371%2Fjournal.pmed.0020228)（[公開元](https://web.archive.org/web/20060427035338/http://medicine.plosjournals.org/perlserv/?request=get-document%26doi=10.1371/journal.pmed.0020228)）
+
 ### 解釈
 
-出版における図版とキャプションの慣習は`figure`の意味と名称の上流にあり、Web制作者による画像・キャプションのマークアップと表示慣習がHTML標準化の直接の設計材料になった。WHATWG案はHTML+構造をそのまま複製せず、Fortinによる`figure`という綴りと収集されたWeb上の利用例を取り込み、HTMLパーサーの制約から`caption`を`legend`へ置き換えた設計である。ただし、出版慣習から個々のWeb実践へ伝わった具体的な経路と、DocBookまたはXHTML 2からの追加影響は確認できない。
+出版における図版とキャプションの慣習は`figure`の意味と名称の上流にあり、Web制作者による画像・キャプションのマークアップと表示慣習がHTML標準化の直接の設計材料になった。WHATWG案はHTML+構造をそのまま複製せず、Fortinによる`figure`という綴りと収集されたWeb上の利用例を取り込み、HTMLパーサーの制約から`caption`を`legend`へ置き換えた設計である。出版からWebへの一般的な伝達路として、初期HTMLではワードプロセッサーやLaTeXからの変換、SGML制作ツール、情報提供者の要求を受けたHTML+設計が確認できる。2000年代の個別例では、MediaWikiの画像キャプション機構と生成HTML、CNNの発行テンプレート、PLOSの複数形式出版工程が、制作者の図・キャプション情報をWeb上の反復可能な構造へした。ただし、これら三つの個別システムが特定の印刷語彙、SGML語彙、またはHTML+を参照して設計されたという因果は確認できない。
 
 ## 系譜
 
@@ -55,10 +61,16 @@ DocBook `figure`／`title`とXHTML 2 `object`／`caption`は、WHATWG `figure`�
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
 | 1993-11-08 | [HTML+ “Figures”](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html)） | 失効したInternet-Draft | `FIG`と子`CAPTION`の先行存在。WHATWGへの採用因果は示さない。 | 2026-08-10 |
+| 日付不記載 | [A Review of the HTML+ Document Format](../../raw/www.w3.org/MarkUp/htmlplus_paper/htmlplus.html)（[公開元](https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html)） | W3C保存HTML | HTML+が情報提供者の要求に応えて浮動図の回り込みを追加したことと、FrameMaker、Microsoft Word、LaTeX、SGMLツールからHTMLを制作・変換する経路。個別サイトへの伝播は示さない。 | 2026-08-12 |
+| 1996-03-11 | [Inserting objects into HTML](../../raw/www.w3.org/TR/WD-object-960311.html)（[公開元](https://www.w3.org/TR/WD-object-960311.html)） | W3C Working Draft | キャプション付きで浮動するfigureを長く実証された文書レイアウトの慣用と明記し、`FIG`を提案した。HTML+より後代であり、HTML+への影響は示さない。 | 2026-08-12 |
+| 2003-05-12 | [Image pages/Data syntax](../../raw/meta.wikimedia.org/w/index.php__q__title=Image_pages%252FData_syntax&oldid=153854)（[公開元](https://meta.wikimedia.org/w/index.php?title=Image_pages%2FData_syntax&oldid=153854)） | Meta-Wiki設計議論の固定版 | 画像キャプションを保存する要求と、キャプション付き画像をブロックレベルの`div`として生成する実装案。出版慣習からの採用は述べない。 | 2026-08-12 |
+| 2005-08-02／2006-04-27保存 | [PLOS Medicine記事](../../raw/web.archive.org/web/20060427035338id_/http%3A/medicine.plosjournals.org%3A80/perlserv/__index__q__request=get-document%2526doi=10.1371%2Fjournal.pmed.0020228)（[公開元](https://web.archive.org/web/20060427035338/http://medicine.plosjournals.org/perlserv/?request=get-document%26doi=10.1371/journal.pmed.0020228)） | 学術誌Webページの保存版 | `figureFM`内の番号付き図・キャプション、本文からの図参照、図一覧、印刷用／画面用PDF、XMLの提供。提供XMLの内容と設計上の参照元は確認できない。 | 2026-08-12 |
 | 2006-04-06 | [fantasai, “image captions”](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0040.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0040.html)） | WHATWGメーリングリスト | 図キャプションを`h6`で表し、`h6`をDocBook `simplesect`のような末端見出しとして使う案を提示した。後の総括でHicksonはこの案を退けた。 | 2026-08-12 |
 | 2006-04-22 | [Simon Pieters, image caption proposal](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Apr/0109.html)） | WHATWGメーリングリスト | HTML+ `FIG`／`CAPTION`を明示して、`fig`、`caption`、`img`によるHTML5向け再利用案を提示した。 | 2026-08-10 |
 | 2006-05-03 | [Michel Fortin, formal `figure` proposal](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006May/0002.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006May/0002.html)） | WHATWGメーリングリスト | `figure`、任意の`caption`、例示的な内容の構造と、主たる流れから分離可能な意味を提案した。 | 2026-08-10 |
+| 2006-06-28／2006-06-30保存 | [CNN記事](../../raw/web.archive.org/web/20060630125301id_/http%3A/www.cnn.com%3A80/2006/WORLD/meast/06/27/iran.us.reut/index.html)（[公開元](https://web.archive.org/web/20060630125301/http://www.cnn.com/2006/WORLD/meast/06/27/iran.us.reut/index.html)） | ニュースWebページの保存版 | 発行者固有の右寄せコンテナー内に画像と`cnnStoryCaption`を出力するテンプレート。制作システム名と先行語彙は示さない。 | 2026-08-12 |
 | 2006-07-26 | [XHTML 2.0 Working Draft](../../raw/www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html)（[公開元](https://www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html)） | W3C Working Draft | `object`が任意の先頭子`caption`を持つ先行構造。`figure`要素は定義せず、WHATWGへの採用因果も示さない。 | 2026-08-10 |
+| 2006-08-22保存 | [Wikipedia記事](../../raw/web.archive.org/web/20060822150415id_/http%3A/en.wikipedia.org/wiki/Amerindians)（[公開元](https://web.archive.org/web/20060822150415/http://en.wikipedia.org/wiki/Amerindians)） | Wikiページの保存版 | MediaWikiが右寄せサムネイルと`thumbcaption`を一つのブロックとして反復出力していた。 | 2026-08-12 |
 | 2006-10-01 | [DocBook V4.5](../../raw/tdg.docbook.org/tdg/4.5/figure)（[公開元](https://tdg.docbook.org/tdg/4.5/figure)） | OASIS Standard／公式要素参照 | `figure`を必須`title`を持つ正式オブジェクトとして定義する。WHATWGへの採用因果は示さない。 | 2026-08-10 |
 | 2006-11-27 | [WHATWG HTML commit `32bff0ac`](../../raw/github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059)（[公開元](https://github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059)） | 仕様コミット／親差分 | Ian Hicksonによる`figure`の追加、埋め込み内容とキャプションのモデル、`legend`の再利用。 | 2026-08-10 |
 | 2006-11-28 | [“many messages regarding image captions”](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)） | WHATWG意見総括／W3C保存メール | Fortinの`figure`提案と発行者利用例、科学・技術出版物のfigure慣習を提案名の理由とする説明、PietersによるHTML+案の提示、Hicksonによる採用回答、`caption`を避け`legend`を使うパーサー上の理由。DocBookへの別件の言及は採用せず、XHTML 2は参照しない。 | 2026-08-10 |
@@ -86,4 +98,4 @@ DocBook `figure`またはXHTML 2 `object`から直接採用したという説明
 
 ## 未解決
 
-科学・技術出版物のfigure／キャプション慣習は、ニュースサイト、科学・技術系Webページ、Wikipedia等で観察された画像・キャプションのマークアップと表示慣習へ、どの媒体、制作工程、ツール、または制作者コミュニティを通じて伝わったか。
+CNNの発行テンプレート、PLOSの複数形式出版工程、MediaWikiの画像・キャプション機構は、それぞれどの先行する印刷語彙、SGML語彙、制作システム、またはHTML+の設計を参照して成立したか。設計者または実装者による採用記録、テンプレート／変換器のソース、PLOSが提供していたXMLの保存版が特定された場合に再開する。
