@@ -40,7 +40,7 @@ status: 完成
 - [`<blockquote>`](elements/blockquote.md): HTMLより早いDocBook 1.0の同名要素と導入直前のDocBook検討は確認できるが、Connollyの後代の説明がUsenet説と競合するため直接祖先は未確定である。
 - [`<body>`](elements/body.md): Tim Berners-Leeは1992年6月にヘッダー／本文分離案を示し、Dan Connollyの7月公開DTDは`BODY`を混在内容回避用の本文コンテナーとして宣言した。
 - [`<br>`](elements/br.md): 1993年7月のHTML+で意味を持つ改行として提案され、同月末に基礎HTMLへの追加が決まったが、HTML+からの要素単位の採用因果は未確認である。
-- [`<button>`](elements/button.md): `button`は1997年、既存の`input`による送信／リセット／スクリプト用ボタンと同じ動作を保ちながら、HTML内容を持つ豊かなボタンを作るためW3CのHTML 4へ導入された。
+- [`<button>`](elements/button.md): 1996年、JavaScript互換の単純な`input type=button`を画像とテキストを内容に持てる押しボタンへ拡張するW3C案として現れ、HTML 4へ導入された。
 - [`<canvas>`](elements/canvas.md): Richard WilliamsonがDashboard向けにWebKitへ`CANVAS`を初めて実装し、その実装からWHATWGのキャンバス機能が設計されたことを、WebKit変更履歴とWHATWG自身の謝辞で確認できる。
 - [`<caption>`](elements/caption.md): 技術出版の表題要求を受けたHTML+の`TT`案が共有`CAPTION`へ一般化され、RFC 1942を経て標準化された。
 - [`<cite>`](elements/cite.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した論理的な文字強調要素で、同時代Texinfoの`@cite`との対応を確認できる。
@@ -73,7 +73,7 @@ status: 完成
 - [`<i>`](elements/i.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した物理的な文字強調要素で、同時代Texinfoの`@i`との対応を確認できる。
 - [`<iframe>`](elements/iframe.md): Microsoft IE3 beta 2の`IFRAME`実装と後続するW3C案は確認できるが、Microsoft提出からW3C案への要素単位の採用は未確認である。
 - [`<img>`](elements/img.md): Marc AndreessenがNCSA X Mosaicへ実装し、1993年に提案した行内画像要素である。
-- [`<input>`](elements/input.md): HTML+のフォームからHTML 2.0へ導出された型付き入力欄で、各ウィジェット種別の由来は未確認である。
+- [`<input>`](elements/input.md): 1992年の「キーボードデータ用のアンカー」案を、Protek Pilot等の業務用フォーム経験を背景にHTML+が型付きコントロールへ展開し、HTML 2.0へ導出した。
 - [`<ins>`](elements/ins.md): HTML+ `ADDED`からHTML 3.0 `INS`、HTML 4への系列は集合単位で確認できるが、個別の改名と採録は未確認である。
 - [`<kbd>`](elements/kbd.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した論理的な文字強調要素で、同時代Texinfoの`@kbd`との対応を確認できる。
 - [`<label>`](elements/label.md): 1996年のW3Cフォーム草案が、フォームコントロールとラベルテキストを構造的に関連付け、グラフィック／音声ブラウザーでの操作と説明を改善するため`LABEL`を提案した。
@@ -92,7 +92,7 @@ status: 完成
 - [`<object>`](elements/object.md): 画像、アプレット、プラグイン等を別々の機構で扱う制約に対し、W3Cが汎用`INSERT`として提案し、1996年に`OBJECT`へ改名した要素である。
 - [`<ol>`](elements/ol.md): CERN-SGML由来の集合に含まれ、当初は順序なしリストとして実装された後、1992年に順序なしリストとの区別のため戻された。
 - [`<optgroup>`](elements/optgroup.md): 長い`SELECT`のアクセシビリティ改善策としてMegaZoneが入れ子のリスト型のグループ化を提案し、WAIとHTML WGの検討を経てHTML 4へ入った。
-- [`<option>`](elements/option.md): HTML+のフォームからHTML 2.0へ導出された選択候補要素である。
+- [`<option>`](elements/option.md): 1993年1月の`CHOICE`、6月の`ITEM`を経てHTML+で`OPTION`となった選択候補で、改名判断は未確認である。
 - [`<output>`](elements/output.md): XFormsの非編集可能な値表示コントロールをHTMLフォームへ適応して2003年に提案され、Web Forms 2.0を経てHTML5へ統合された。
 - [`<p>`](elements/p.md): 1992年1月のBerners-Leeメールで空の段落マークとして確認でき、SGML由来という回顧はあるが、具体的な元語彙は未確認である。
 - [`<picture>`](elements/picture.md): 2007年の静止画用`picture`案を`video`型の複数ソース選択へ転用し、RICG、独立した`srcset`、`img`を描画主体とする構造を統合して2014年にWHATWG HTMLへ導入した。
@@ -107,7 +107,7 @@ status: 完成
 - [`<script>`](elements/script.md): Netscapeが定義しNavigator 2.0ベータへ実装した`SCRIPT`を、W3CのHTML3 Scripting草案が形式化した要素である。
 - [`<search>`](elements/search.md): WAI-ARIA `search`ランドマークと`div role="search"`をネイティブHTMLで表すためWHATWGが採用し、2023年にLiving Standardへ入れたコンテナーである。
 - [`<section>`](elements/section.md): 遅くとも2004年8月にはWHATWG Web Applications 1.0で定義され、見出しだけでは文書構造とアウトラインを確実に復元できない問題へのセクショニングモデルを担った。
-- [`<select>`](elements/select.md): HTML+のフォームからHTML 2.0へ導出された簡潔選択リストである。
+- [`<select>`](elements/select.md): 関連プロジェクトに見た一つ選択・複数選択メニューをRaggettがHTMLへ翻案し、HTML+からHTML 2.0へ導出した。
 - [`<selectedcontent>`](elements/selectedcontent.md): Open UIの`selected-value`表示部をChromiumが子ノード複製用の`selectedoption`要素へ置き換え、二度の改名を経て2025年にHTMLへ統合した。
 - [`<slot>`](elements/slot.md): Shadow DOM v0のセレクター式挿入点を、実在する部品ライブラリとGUI継承モデルを踏まえた名前付き割り当てへ再設計し、2015年の提案・実装後にWHATWGへ統合した。
 - [`<small>`](elements/small.md): HTML 3.0の小さいフォント用要素を、WHATWGが2005年に細則や補足事項を表す意味へ再定義したが、最初の導入経路は未確認である。

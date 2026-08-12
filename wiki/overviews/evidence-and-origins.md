@@ -46,7 +46,7 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 | イメージマップ運用 | サーバー側イメージマップとHTML+の形状付きリンクの制約を、クライアント側の領域と行き先へ分離 | `area`、`map` |
 | SGMLによるHTML文書の形式化 | SGMLパーサー用の文書要素、混在内容を避ける本文、SGML由来と回顧される段落、SGMLタグ対構文を用いたタイトル。個別の元DTDは不明 | `html`、`body`、`p`、`title` |
 | 技術出版とCALS交換要件 | 出版関係者へ要求を問い、HTML+内で新設した単純な基本表モデル。後の列・行・セルモデルはCALSの交換要件を部分的に取り込んだが、CALSの縮小移植ではない | `table`、`caption`、`tr`、`th`、`td`、`col`、`colgroup` |
-| デスクトップのフォームUI | プラットフォーム上のフォーカス移動、テキスト欄、チェックボックス、ラジオボタン、プルダウンコンボリスト、候補項目 | `form`、`input`、`select`、`option` |
+| 業務用ハイパーテキストとフォームUI | HyperCardに触発されたProtek Pilotの豊富なフォーム、初期Web検索、プラットフォーム上のフォーカス移動、テキスト欄、チェックボックス、ラジオボタン、一つ選択・複数選択メニューをHTML+のフォーム群へ組み替えた経路 | `form`、`input`、`select`、`option` |
 | フォームのアクセシビリティと階層UI | 音声インターフェース、ラベル付きグループ、ウィンドウシステムの入れ子のリスト、ブックマークの下位リスト、自由入力と候補提示 | `label`、`fieldset`、`legend`、`optgroup`、`datalist` |
 | SGML属性値の上限 | 複数行値を`INPUT`属性へ置く方式を、内容を持つ専用要素へ分離 | `textarea` |
 | 法律・編集・細則 | 法案修正の追加・削除、法律文書の取り消し線、実在Webの法的説明／著作権表示 | `del`、`ins`、`s`、`small` |
@@ -60,16 +60,16 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 
 ### 確認できる背景まで遡ったHTML内部派生12要素
 
-第二表では、`audio`をWHATWG `Audio`APIとゲーム音声、`button`をデスクトップのフォームUI、`data`と`time`を機械可読データ、`figcaption`を既存Webで画像とキャプションを一組にするマークアップ・表示慣習、`hgroup`を既存Webマークアップ、`iframe`と`source`をブラウザーベンダーの実装・提案、`mark`を文脈依存の強調、`meter`をスカラー量の測定、`noscript`をクライアント側スクリプティングの代替内容、`summary`を開閉UIに関連するものとして配置した。次表は、その配置までに確認できるHTML内部の前身と変更を示す。
+第二表では、`audio`をWHATWG `Audio`APIとゲーム音声、`button`をJavaScript互換の単純ボタンとデスクトップのフォームUI、`data`と`time`を機械可読データ、`figcaption`を既存Webで画像とキャプションを一組にするマークアップ・表示慣習、`hgroup`を既存Webマークアップ、`iframe`と`source`をブラウザーベンダーの実装・提案、`mark`を文脈依存の強調、`meter`をスカラー量の測定、`noscript`をクライアント側スクリプティングの代替内容、`summary`を開閉UIに関連するものとして配置した。次表は、その配置までに確認できるHTML内部の前身と変更を示す。
 
-内部派生の根拠は、[`audio`統合前後](../../raw/platform.html5.org/history/webapps/r699.html)（[公開元](https://platform.html5.org/history/webapps/r699.html)）、[rich `button`草案](../../raw/www.w3.org/TR/WD-forms-970402)（[公開元](https://www.w3.org/TR/WD-forms-970402)）、[`data`一般化提案](../../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=13240)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=13240)）と[初回追加コミット](../../raw/github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d)（[公開元](https://github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d)）、[`figcaption`導入コミット](../../raw/github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)（[公開元](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)）、[`hgroup`改名コミット](../../raw/github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)（[公開元](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)）に置く。
+内部派生の根拠は、[`audio`統合前後](../../raw/platform.html5.org/history/webapps/r699.html)（[公開元](https://platform.html5.org/history/webapps/r699.html)）、[最初期のrich `button`草案](../../raw/www.w3.org/TR/WD-forms-960308.html)（[公開元](https://www.w3.org/TR/WD-forms-960308.html)）、[`data`一般化提案](../../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=13240)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=13240)）と[初回追加コミット](../../raw/github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d)（[公開元](https://github.com/whatwg/html/commit/70b0ce45a26937a3f26eeb72b146261ff6210a1d)）、[`figcaption`導入コミット](../../raw/github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)（[公開元](https://github.com/whatwg/html/commit/c397495115b089ec52dbec45021159051134445f)）、[`hgroup`改名コミット](../../raw/github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)（[公開元](https://github.com/whatwg/html/commit/7e9b2d1b87f50e2da6d6a8cb8fe2d6fcbae6cae4)）に置く。
 
 残る枝は、[`iframe`草案](../../raw/www.w3.org/TR/WD-frames-970331)（[公開元](https://www.w3.org/TR/WD-frames-970331)）、[`m`の名称議論](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-February/056266.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2008-February/056266.html)）と[`mark`への変更](../../raw/github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)（[公開元](https://github.com/whatwg/html/commit/a1b2ff77457cf198c77975b98f245985d3ba5635)）、[`gauge`提案](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-September/044484.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2004-September/044484.html)）と[`meter`初稿の報告](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-March/048383.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-March/048383.html)）、[`NOSCRIPT`草案](../../raw/www.w3.org/TR/WD-script-960709.html)（[公開元](https://www.w3.org/TR/WD-script-960709.html)）、[`source`導入コミット](../../raw/github.com/whatwg/html/commit/61af426a3ae6d68ffa00505b6883cbf870481b52)（[公開元](https://github.com/whatwg/html/commit/61af426a3ae6d68ffa00505b6883cbf870481b52)）、[`summary`導入コミット](../../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)（[公開元](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)）、[`t`の用途説明](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-October/049786.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2006-October/049786.html)）と[`time`改名コミット](../../raw/github.com/whatwg/html/commit/fdfe6548265125712520f3e1b72812235e9a8123)（[公開元](https://github.com/whatwg/html/commit/fdfe6548265125712520f3e1b72812235e9a8123)）で確認できる。
 
 | 要素 | HTML内で確認できる前身と変更 |
 |---|---|
 | `audio` | スクリプト専用の`Audio`オブジェクトを、文書内にも置ける`video`共通メディアAPIへ統合 |
-| `button` | `input`の送信／リセット／スクリプトボタンを、HTML内容を持てる要素へ拡張 |
+| `button` | JavaScript互換の単純な`input type=button`と送信／リセットボタンを、画像とテキストを内容に持てる要素へ拡張 |
 | `data` | `time`の表示内容と機械可読値を結ぶ用途を、日付・時刻以外へ汎用化 |
 | `figcaption` | HTML+以来の図のキャプションを、`legend`、`dt`／`dd`流用から専用要素へ変更 |
 | `hgroup` | セクション見出し用だった旧`header`を改名し、主見出しと副見出しのグループへ限定 |
