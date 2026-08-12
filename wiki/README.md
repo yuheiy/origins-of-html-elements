@@ -27,7 +27,7 @@ status: 完成
 ## 要素
 
 - [`<a>`](elements/a.md): 1991年のNeXT WorldWideWeb実装でHTML `A`とAnchorオブジェクトの対応を確認でき、Raggettらはアンカー／`HREF`をBerners-Lee独自の設計と回顧するが、`A` トークンの選択は未確認である。
-- [`<abbr>`](elements/abbr.md): HTML 4初期草案の`ACRONYM`が1997年に`ABBR`へ改名されたが、HTML+ `ABBREV`の影響は未確認である。
+- [`<abbr>`](elements/abbr.md): HTML 4初期草案の`ACRONYM`が、頭字語より広い略語カテゴリを求める公開コメントの直後に`ABBR`へ改名されたが、採択記録は未確認である。
 - [`<address>`](elements/address.md): 1991年のNeXT WorldWideWebでエディターの`Address`段落スタイルとHTML `ADDRESS`の相互変換を確認できるが、直前祖先と命名理由は未確認である。
 - [`<area>`](elements/area.md): James L. Seidmanが1994年に`map`とともに提案した、クライアント側イメージマップの個々の領域を表す要素である。
 - [`<article>`](elements/article.md): 2004年に`entry`、`post`、`article`が検討され、既存の`div class="post"`を置換する独立セクションとして2005年のWHATWG草案へ入った。
@@ -54,7 +54,7 @@ status: 完成
 - [`<details>`](elements/details.md): `details`は2006年、GUIの開閉三角形/ウィジェットをHTMLで表す要素としてWHATWGへ導入された。
 - [`<dfn>`](elements/dfn.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した論理的な文字強調要素で、同時代Texinfoの`@dfn`との対応を確認できる。
 - [`<dialog>`](elements/dialog.md): CSS、JavaScript、WAI-ARIA製モーダルの問題を解くネイティブな非同期機構として2012年に導入され、2009年に削除された会話用の同名要素とは断絶する。
-- [`<div>`](elements/div.md): HTML 3.0草案で、`class`とともに章、セクション、要約、付録等を表す汎用コンテナーとして確認でき、HTML 3.2へ継承された。
+- [`<div>`](elements/div.md): 1995年2月9日に汎用クラスと固定バナー用として追加され、複数の区分モデル候補から単一`DIV`案がHTML WGの合意となったが、外部DTDからの採用は未確認である。
 - [`<dl>`](elements/dl.md): CERN-SGMLから初期HTMLへ入ったリスト集合の一つだが、`DL`個別の対応は明記されない。
 - [`<dt>`](elements/dt.md): CERN-SGMLから初期HTMLへ入ったリスト集合の一つだが、`DT`個別の対応は明記されない。
 - [`<em>`](elements/em.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した論理的な文字強調要素で、同時代Texinfoの`@emph`との対応を確認できる。
@@ -98,7 +98,7 @@ status: 完成
 - [`<picture>`](elements/picture.md): 2007年の静止画用`picture`案を`video`型の複数ソース選択へ転用し、RICG、独立した`srcset`、`img`を描画主体とする構造を統合して2014年にWHATWG HTMLへ導入した。
 - [`<pre>`](elements/pre.md): 初期HTML案`TYPEWRITER`を装置ではなく内容を記述する`PRE`へ改名し、Unixマニュアルページ向けに拡張した整形済みテキスト要素である。
 - [`<progress>`](elements/progress.md): 2004年のProgressメータープレースホルダーを2006年に確定／不定なタスク完了要素へ具体化したが、それ以前のウィジェットからの採用は未確認である。
-- [`<q>`](elements/q.md): 1995年のHTML国際化草案が言語に応じた引用符の描画のため導入したが、HTML+ `Q`からの個別採用は未確認である。
+- [`<q>`](elements/q.md): 1995年のHTML国際化草案が言語に応じた引用符の描画のため導入し、HTML WGがRFC 2070どおりHTML 4へ採ると決議したが、HTML+ `Q`からの個別採用は未確認である。
 - [`<rp>`](elements/rp.md): ルビ非対応ユーザーエージェント向けの括弧を表す要素としてW3Cが提案・規範化し、既存Web上の`rp`を含む単純なルビマークアップとの互換性を保つため、2008年に`ruby`、`rt`とともにHTML5へ追加された。
 - [`<rt>`](elements/rt.md): W3Cのルビ語彙で注釈テキストを表す要素として提案・規範化され、既存Web上の`rt`を含む単純なルビマークアップとの互換性を保つため、2008年に`ruby`、`rp`とともにHTML5へ追加された。
 - [`<ruby>`](elements/ruby.md): W3Cのルビ語彙とIE実装が存在する中、既存Webとの互換性のため2008年に`rt`、`rp`とともにHTML5へ追加されたが、W3C語彙からの直接採用は未確認である。
@@ -115,9 +115,9 @@ status: 完成
 - [`<span>`](elements/span.md): 1995年のIETF HTML国際化草案が`BIDI DIR`の方向埋め込みを移し、`LANG`／`DIR`を置く適切な要素がない行内テキスト用の汎用コンテナーへ拡張した。
 - [`<strong>`](elements/strong.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した論理的な文字強調要素で、同時代Texinfoの`@strong`との対応を確認できる。
 - [`<style>`](elements/style.md): HTML 3.0 DTDは1995年2月9日に既存`STYLE`を単純化したと記録し、Arena実装とHTML WG要件を経て4月の公開草案が文書内のスタイル上書きとして規定した。
-- [`<sub>`](elements/sub.md): HTML+のDTDが一般テキストでも許可した`SUB`をHTML 3.0へ引き継ぐ設計意図を、Dave Raggettの同時代メールで確認できる。
+- [`<sub>`](elements/sub.md): LaTeX・TeXを直接の設計材料としたHTML+数学モデルの`SUB`を、一般テキストでも使えるようHTML 3.0へ引き継いだ。
 - [`<summary>`](elements/summary.md): `summary`は2010年、`details`のキャプションを`legend`または`dt`／`dd`で表す方式を専用要素へ置換して導入された。
-- [`<sup>`](elements/sup.md): HTML+のDTDが一般テキストでも許可した`SUP`をHTML 3.0へ引き継ぐ設計意図を、Dave Raggettの同時代メールで確認できる。
+- [`<sup>`](elements/sup.md): LaTeX・TeXを直接の設計材料としたHTML+数学モデルの`SUP`を、一般テキストでも使えるようHTML 3.0へ引き継いだ。
 - [`<svg>`](elements/svg.md): SVG 1.0で定義済みのSVG名前空間のルートを、2008年にHTMLパーサーへ統合し、一度削除した後、意見を受けて2009年に再導入したものである。
 - [`<table>`](elements/table.md): 技術出版の表要求を集めてHTML+内で単純なブラウザー向けモデルとして設計され、後にCALSの交換要件を部分的に取り込んでRFC 1942へ至った。
 - [`<tbody>`](elements/tbody.md): CALSの`TBODY`を1995年のRaggett案がHTMLへ取り込み、IETF草案とRFC 1942を経てHTML 4が標準化した。

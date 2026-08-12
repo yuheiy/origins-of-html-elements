@@ -37,7 +37,7 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 
 次表の38要素の根拠は、ハイパーテキストについては[Raggettらの回顧](../../raw/www.w3.org/People/Raggett/book4/ch02.html)（[公開元](https://www.w3.org/People/Raggett/book4/ch02.html)）、イメージマップについては[Seidmanの提案](../../raw/archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)（[公開元](https://archives.iw3c2.org/www2/Proceedings/DDay/seidman/seidman.html)）、SGML形式化については[ConnollyのDTD議論](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)）、表については[技術出版関係者への要求照会](../../raw/1997.webhistory.org/www.lists/www-talk.1993q2/0271.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q2/0271.html)）、[最初のHTML+表提案](../../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/548.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/548.html)）、[CALSとの対応と差異](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)）、[RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)）に置く。DocBook候補については、[DocBook 1.0 DTD](../../raw/www.oasis-open.org/docbook/sgml/1.0/docbk10.zip/docbook.dtd)（[公開元](https://www.oasis-open.org/docbook/sgml/1.0/docbk10.zip)）、[導入直前のDocBook検討](../../raw/lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)（[公開元](https://lists.w3.org/Archives/Public/www-talk/1992NovDec/0068.html)）、[導入者を含む再探索](../../raw/lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html)（[公開元](https://lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html)）を対応させる。
 
-フォームとSGML制約は[HTML+ Forms](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)）と[W3Cフォーム草案](../../raw/www.w3.org/TR/WD-forms-960308.html)（[公開元](https://www.w3.org/TR/WD-forms-960308.html)）、編集・技術文書・数式は[HTML+ Amendments](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)）、[HTML+ Preformatted Text](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html)）、[HTML+ Mathematics](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)）が直接説明する。HTTP、オブジェクト、Unicode、スタイル、進捗の背景はそれぞれ[`META`提案](../../raw/lists.w3.org/Archives/Public/www-html/1994Jun/0002.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1994Jun/0002.html)）、[`INSERT`草案](../../raw/www.w3.org/TR/WD-insert-951220.html)（[公開元](https://www.w3.org/TR/WD-insert-951220.html)）、[RFC 2070](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)）、[HTML 3.0 document head](../../raw/www.w3.org/MarkUp/html3/dochead.html)（[公開元](https://www.w3.org/MarkUp/html3/dochead.html)）、[`progress`の目的に関する説明](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-August/064204.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-August/064204.html)）で確認できる。
+フォームとSGML制約は[HTML+ Forms](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_41.html)）と[W3Cフォーム草案](../../raw/www.w3.org/TR/WD-forms-960308.html)（[公開元](https://www.w3.org/TR/WD-forms-960308.html)）、編集・技術文書・数式は[HTML+ Amendments](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_22.html)）、[HTML+ Preformatted Text](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_44.html)）、[HTML+ Mathematics](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)）、[HTML 3数学案の設計議論](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html)）が直接説明する。略語と文書区分については、[`ACRONYM`の一般化要求](../../raw/lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0003.html)（[公開元](https://lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0003.html)）と[`DIV`競合案の整理](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q1.messages/0681.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q1.messages/0681.html)）までを確認し、採択因果や外部DTDとの接続は保留している。HTTP、オブジェクト、Unicode、スタイル、進捗の背景はそれぞれ[`META`提案](../../raw/lists.w3.org/Archives/Public/www-html/1994Jun/0002.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1994Jun/0002.html)）、[`INSERT`草案](../../raw/www.w3.org/TR/WD-insert-951220.html)（[公開元](https://www.w3.org/TR/WD-insert-951220.html)）、[RFC 2070](../../raw/www.rfc-editor.org/rfc/rfc2070.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc2070.html)）、[HTML 3.0 document head](../../raw/www.w3.org/MarkUp/html3/dochead.html)（[公開元](https://www.w3.org/MarkUp/html3/dochead.html)）、[`progress`の目的に関する説明](../../raw/lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-August/064204.html)（[公開元](https://lists.whatwg.org/pipermail/whatwg-whatwg.org/2009-August/064204.html)）で確認できる。
 
 | 由来のまとまり | 確認できる内容 | 現行要素 |
 |---|---|---|
@@ -56,7 +56,7 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 | Web上の進捗バー | 画像等による非アクセシブルな表示を、プラットフォーム固有で意味を持つタスクの進捗へ置換 | `progress` |
 | Unicode国際化 | 行内範囲へ言語／方向を付け、Unicode機構へ変換できるコンテナー | `span` |
 | スタイルシート | 表現をHTML構造から分離し、著者と読者のスタイルを調停する仕組み | `style` |
-| LaTeXと数式組版 | LaTeXの手法に着想を得たHTML+の数式を一般テキストでも使える上下付きへ拡張 | `sub`、`sup` |
+| LaTeXと数式組版 | LaTeX・TeXのマニュアルと変換要求を直接の設計材料とし、`_`／`^`短縮記法も検討したHTML+の数式を、一般テキストでも使える上下付きへ拡張 | `sub`、`sup` |
 
 ### 確認できる背景まで遡ったHTML内部派生12要素
 
@@ -87,11 +87,11 @@ HTML+はフォーム、単純表、図、文書修正機能、クライアント
 
 | 要素 | 確認できる設計要求または実装上の背景 |
 |---|---|
-| `abbr` | 標準役割を索引化する`ABBREV`系と、発音方式に依存しない一般的な略語マークアップの要求 |
+| `abbr` | 標準役割を索引化する`ABBREV`系と、頭字語より広い自然言語上の略語カテゴリを求めた改名直前の公開コメント。採択因果は未確認 |
 | `address` | NeXT WorldWideWebエディターの`Address`段落スタイルとHTMLへの直列化の対応 |
-| `div` | `class`で章、セクション、要約等を区別する汎用区分コンテナー |
+| `div` | `DIVn`、見出し必須区分、`DIV`／`SECT`分離等の候補から、`class`で章、セクション、要約等を区別する単一の汎用コンテナーを選んだ内部設計 |
 | `figure` | 出版の図版・キャプション慣習を意味と名称の上流に持つHTML+の`FIG`と、既存Webで画像とキャプションを結び主たる流れから分離する利用例 |
 | `head` | 既存のヘッダー部分を包み、ストリーム受信中でもヘッダー終端を判定するラッパー要求 |
 | `link` | テキスト範囲へ局所化されない著者情報、部分／全体、索引等のノード単位の関係 |
 | `menu` | 検索結果の選択肢や短い項目を簡潔に並べる初期リストの変種。2004年にWebアプリケーションのメニューと共有コマンド状態の要求へ再利用された |
-| `q` | 引用符を言語依存で描画する行内引用 |
+| `q` | 言語・プラットフォーム別の引用符と入れ子規則を内容から分離して描画する行内引用 |

@@ -1338,3 +1338,13 @@ HTML+ `FORM`の成立を、1992年の`INPUT`案、1993年1月の`QUERYFORM`案�
 初回探索と分離した敵対的検証では、1992年の`INPUT`案、1993年1月・6月・11月のフォーム構造、Mosaicの実装時期、1996年・1997年の`BUTTON`草案、HTML 4初回草案を時系列で照合した。1996年草案はNCSA Mosaicが基本フォームマークアップを加えたと回顧するが、Mosaic自身の1993年7月の未実装報告と9月の実装報告より`INPUT`、`SELECT`、`CHOICE`／`ITEM`案の方が早いため、Mosaic起源説を否定した。特定GUIツールキット、同名外部語彙、JavaScript実装を、外見や機能の類似だけで祖先へ接続しなかった。WhitescarverのWeb以前の実装、Raggettが参照した関連プロジェクト、`ITEM`から`OPTION`への改名、1996年`BUTTON`案以前の草稿は未解決として残した。
 
 対象リントでは、4要素ページ、HTML+フォーム共有系譜、概観、READMEについて、フロントマター、必須見出し順、歴史的主張と同段落または同じ証拠行のRaw出典、確認済みの矢印だけからなる系譜、確度、主要結論、直接参照、全ローカルMarkdownリンク、確度集計A 87／A− 15／B 12／C 1、全115要素の完成状態、Raw索引641ファイルの網羅、Markdown whitespaceを`合格`、初期フォームの時系列、Mosaicとの前後関係、`button`初出、README概要、残る優先対象数を`修正済み`、具体的な欠落資料を`Research必要`として確認した。敵対的検証と対象リントに合格したため、変更した知識ページを`完成`とした。
+
+## [2026-08-12] research | 文書・組版語彙のHTML外背景
+
+`abbr`、`q`、`sub`、`sup`、`div`を、HTML+または初期W3C草案の同名要素で止めず、同時代の設計要求とHTML外の慣習まで再調査した。`abbr`では、HTML 4初期草案の`ACRONYM`に対し、頭字語より広い自然言語上の略語カテゴリを求めた1997年9月と10月の公開コメントが、Proposed Recommendationでの`ABBR`への変更に先行することを確認した。ただし編集者の採択応答はないため、コメントから改名への因果は確定しなかった。`q`では、言語・プラットフォームごとに異なり入れ子で交替する引用符という組版慣習が国際化草案の直接の設計要求であり、HTML WGがRFC 2070どおりの動作をHTML 4へ採ると決議したことを確認した。`sub`と`sup`では、HTML+数学案がLaTeXの手法に着想を得ただけでなく、HTML 3数学案がLaTeX・TeXマニュアルの調査とLaTeXからの変換要求を設計材料とし、`_`と`^`の短縮記法を検討したことを確認した。`div`では初出を1995年3月から2月9日へ訂正し、`DIVn`、見出し必須区分、`DIV`／`SECT`分離等の候補から、利用者向けの単純さを理由に単一`DIV`へ合意した設計過程を記録した。
+
+追加したRawの取得記録は次のとおりである。取得元URL`https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q1.messages/0681.html`、最終URL同左、取得日時2026-08-12T04:37:57.376Z、保存先`raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q1.messages/0681.html`；取得元URL`https://lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0003.html`、最終URL同左、取得日時2026-08-12T04:38:38.207Z、保存先`raw/lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0003.html`；取得元URL`https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q1.messages/0687.html`、最終URL同左、取得日時2026-08-12T04:44:31.934Z、保存先`raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q1.messages/0687.html`である。Raw索引を644ファイルで再生成した。
+
+初回探索と分離した敵対的検証では、HTML+以前および各変更直前の草案、DTD、HTML WG議論、編集者宛コメント、競合案を再検索した。`abbr`の公開コメントと改名は時期と要求が一致するが、採択応答がないため系譜の矢印を結ばなかった。`div`はHTML内部の候補と合意までを確定し、同名のSGML語彙や区分構造の類似から特定DTDを祖先としなかった。`q`は1995年国際化系列の設計理由を1993年HTML+の理由へ遡及せず、`sub`／`sup`ではLaTeXのモデルと短縮記法への影響をタグ名の由来へ拡張しなかった。確認できない採択記録、HTML+以前の具体的語彙、`div`候補の外部源は未解決として残した。
+
+対象リントでは、5要素ページ、概観、READMEについて、フロントマター、必須見出し順、歴史的主張と同段落または同じ証拠行のRaw出典、確認済みの矢印だけからなる系譜、確度、主要結論、直接参照、全ローカルMarkdownリンク、確度集計A 87／A− 15／B 12／C 1、全115要素の完成状態、Raw索引644ファイルの網羅と再生成一致、Markdown whitespaceを`合格`、`div`初出、`q`のRFC 2070採用、LaTeX・TeXの影響範囲、README概要、残る優先対象数を`修正済み`、採択応答と外部語彙への欠落を`Research必要`として確認した。敵対的検証と対象リントに合格したため、変更した知識ページを`完成`とした。

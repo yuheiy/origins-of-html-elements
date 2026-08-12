@@ -24,11 +24,11 @@ HTML 4の1997年9月Working Draftにある`ACRONYM`。11月のProposed Recommend
 
 ### 証拠
 
-HTML+は`ABBREV`を標準的な役割を示すマークアップの一つとして、参照等を自動索引化できる文脈で説明する。1997年9月の公開コメントは、HTML 3.0の`ABBREV`とHTML 4草案の`ACRONYM`を対比し、発音で区別できない略語も含む一般要素を求めた。[HTML+ logical emphasis](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)） [Holger Wahlenのコメント](../../raw/lists.w3.org/Archives/Public/www-html/1997Sep/0385.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1997Sep/0385.html)）
+HTML+は`ABBREV`を標準的な役割を示すマークアップの一つとして、参照等を自動索引化できる文脈で説明する。1997年9月の公開コメントは、HTML 3.0の`ABBREV`とHTML 4草案の`ACRONYM`を対比し、発音で区別できない略語も含む一般要素を求めた。10月4日の編集者宛コメントも、acronymは単語として発音する略語であり、一般的な略語要素には`ABBREV`が明確だとして置換を求めた。[HTML+ logical emphasis](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_18.html)） [Holger Wahlenのコメント](../../raw/lists.w3.org/Archives/Public/www-html/1997Sep/0385.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1997Sep/0385.html)） [Robin Lionheartの編集コメント](../../raw/lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0003.html)（[公開元](https://lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0003.html)）
 
 ### 解釈
 
-公開コメントは`ABBR`への一般化と整合する背景だが、エディターが提案を採用したという記録はない。HTML+／HTML 3.0の`ABBREV`を直接祖先とはしない。
+`ABBR`への変更は、頭字語より広い自然言語上の略語カテゴリを必要とする二つの公開コメントと時期・内容が一致する。ただしエディターの採択応答がないため、言語上の区分を設計要求、HTML 4草案内の`ACRONYM`を直接祖先とし、コメントから変更への矢印は結ばない。HTML+／HTML 3.0の`ABBREV`も直接祖先とはしない。
 
 ## 系譜
 
@@ -46,6 +46,7 @@ HTML 3.0 `ABBREV`からHTML 4草案の変更への接続は未確認のため矢
 | 1995-04-25 | [HTML 3.0 draft](../../raw/www.w3.org/MarkUp/html3/logical.html)（[公開元](https://www.w3.org/MarkUp/html3/logical.html)） | 一次仕様・提案 | `ABBREV`と`ACRONYM`を別々の新要素として定義する。 | 2026-08-10 |
 | 1997-09-17 | [HTML 4.0 Working Draft](../../raw/www.w3.org/TR/WD-html40-970917/struct/text.html)（[公開元](https://www.w3.org/TR/WD-html40-970917/struct/text.html)） | W3C Working Draft | `ACRONYM`だけを定義し、略語専用マークアップは含まないと明記する。 | 2026-08-10 |
 | 1997-09-29 | [Holger Wahlen, “Why is it still \"ACRONYM\"?”](../../raw/lists.w3.org/Archives/Public/www-html/1997Sep/0385.html)（[公開元](https://lists.w3.org/Archives/Public/www-html/1997Sep/0385.html)） | W3C公開メーリングリスト | HTML 3.0の`ABBREV`とHTML 4草案の`ACRONYM`を対比し、略語全般を扱う要素への一般化を提案する。エディターの採択は確認できない。 | 2026-08-10 |
+| 1997-10-04 | [Robin Lionheart, “<ACRONYM> is a misleading misnomer, use <ABBREV> instead”](../../raw/lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0003.html)（[公開元](https://lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0003.html)） | HTML編集者宛コメント | acronymの言語上の範囲は一般的な略語より狭いとして、`ACRONYM`を`ABBREV`へ置換するよう提案する。 | 2026-08-12 |
 | 1997-11-07 | [HTML 4.0 Proposed Recommendation](../../raw/www.w3.org/TR/PR-html40-971107/struct/text.html)（[公開元](https://www.w3.org/TR/PR-html40-971107/struct/text.html)） | W3C Proposed Recommendation | `ABBR`を定義し、以前のHTML版とHTML 4初期草案ではこの要素を`ACRONYM`と呼んだと明記する。 | 2026-08-10 |
 | 1997-12-18 | [HTML 4.0](../../raw/www.w3.org/TR/REC-html40/struct/text.html)（[公開元](https://www.w3.org/TR/REC-html40/struct/text.html#h-9.2.1)） | W3C Recommendation | `ABBR`と`ACRONYM`を別々の句要素として標準化する。 | 2026-08-10 |
 
@@ -61,5 +62,5 @@ HTML 3.0の`ABBREV`を単純に短縮して`ABBR`へ改名したという説明�
 
 ## 未解決
 
-- HTML 3.0 `ABBREV`や1997年9月の一般化提案が、HTML 4 Proposed Recommendationの変更へ影響したことを示すエディター記録はあるか。
+- HTML 3.0 `ABBREV`や1997年9月・10月の一般化提案が、HTML 4 Proposed Recommendationの変更へ影響したことを示すエディター記録はあるか。
 - Proposed Recommendationで`ACRONYM`を`ABBR`へ改名した後、最終HTML 4.0で両要素を併存させた編集判断は何か。

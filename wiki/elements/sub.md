@@ -24,11 +24,11 @@ HTML+ DTDの`SUB`。Dave Raggettは、HTML+が通常テキストで`SUB`を許�
 
 ### 証拠
 
-HTML+の数学提案全体はLaTeXの手法に着想を得たと明記するが、`SUB`という要素名自体をLaTeXから借りたとは述べない。[HTML+ math](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)）
+HTML+の数学提案はLaTeXの手法に着想を得たと明記し、HTML 3数学案の同時代メールは、LaTeX・TeXマニュアルの長期調査、LaTeXからの変換を容易にする設計、下付きの短縮記法としてLaTeXと同じ`_`を使う案を記録する。[HTML+ math](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_45.html)） [Maloney, “Re: HTML 3.0 Process”](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/340.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/340.html)） [Raggett, “Re: HTML 3.0 Process”](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html)）
 
 ### 解釈
 
-数学・科学組版は背景となる文脈だが、タグ名の個別由来と数学モデル全体への影響を区別する。
+LaTeX・TeXは一般的な背景候補ではなく、`SUB`を含むHTML数学モデルと短縮記法の直接の設計材料である。ただしLaTeXの記法は`_`であり、`SUB`というタグ名自体の借用元にはならない。
 
 ## 系譜
 
@@ -60,7 +60,7 @@ HTML+ DTDの`SUB`をHTML 3.0の一般テキストでも許可する個別の設�
 
 ## 否定された仮説
 
-HTML+の数式全体がLaTeXに着想を得たことから、`SUB`というタグ名もLaTeX由来だと推論すること。HTML 3.0とIETF国際化草案に同名要素があることだけから両系列を接続すること。
+LaTeXの影響を`SUB`というタグ名の由来まで拡張すること。確認できるのは数式モデル、変換要求、`_`短縮記法への影響である。HTML 3.0とIETF国際化草案に同名要素があることだけから両系列を接続すること。
 
 ## 未解決
 

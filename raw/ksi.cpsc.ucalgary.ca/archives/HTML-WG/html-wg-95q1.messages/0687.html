@@ -1,0 +1,127 @@
+<!-- received="Sun Mar 19 14:41:07 1995 MDT" -->
+<!-- sent="19 Mar 1995 19:39:52 +0000 (GMT)" -->
+<!-- name="Peter Flynn" -->
+<!-- email="pflynn@curia.ucc.ie" -->
+<!-- subject="Re: Enhancements for HTML 2.1" -->
+<!-- id="199503191939.TAA24217@curia.ucc.ie" -->
+<!-- inreplyto="9503190741.AA11059@trystero.art.com" -->
+<title>html-wg-95q1: Re: Enhancements for HTML 2.1</title>
+<h1>Re: Enhancements for HTML 2.1</h1>
+Peter Flynn (<i>pflynn@curia.ucc.ie</i>)<br>
+<i>19 Mar 1995 19:39:52 +0000 (GMT)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="index.html#687">[ date ]</a><a href="thread.html#687">[ thread ]</a><a href="subject.html#687">[ subject ]</a><a href="author.html#687">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0688.html">Nitin Borwankar: "Another approach to agent architecture [ was Re: agents .. ]"</a>
+<li> <b>Previous message:</b> <a href="0686.html">Larry Masinter: "Re: Enhancements for HTML 2.1"</a>
+<li> <b>In reply to:</b> <a href="0681.html">Joe English: "Re: Enhancements for HTML 2.1"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0699.html">Gavin Nicol: "Re: Enhancements for HTML 2.1"</a>
+<li> <b>Reply:</b> <a href="0699.html">Gavin Nicol: "Re: Enhancements for HTML 2.1"</a>
+<!-- reply="end" -->
+</ul>
+<!-- body="start" -->
+<i>   &gt; | Tables - must have, work still to do</i><br>
+<p>
+What's waiting here?<br>
+<p>
+<i>   &gt; | Styles - no consensus yet</i><br>
+<p>
+Regardless of how they get referenced, we need an explicit statement<br>
+of how you describe styles. Just saying "like you do X resources"<br>
+isn't enough for the average (ie non-X) user.<br>
+<p>
+<i>   &gt; | HyTime links - no consensus reached</i><br>
+<p>
+IMHO HyTime goes on the list for HTML4...it's just too much/too big to<br>
+get into HTML3 st this stage.<br>
+<p>
+<i>   &gt; | Client-side scripting - no proposal yet</i><br>
+<p>
+I don't know enough about the thoughts in this to comment.<br>
+<p>
+<i>   &gt; | Full SGML in the client - no proposal yet</i><br>
+<p>
+Fine once we get enough bandwidth to handle the extra requests. See my<br>
+sketch proposal below, but this should be HTML4.<br>
+<p>
+<i>   &gt; | Unicode support - no consensus reached</i><br>
+<p>
+No shit? I thought this one had been put to bed.<br>
+<p>
+<i>   &gt; | client side image map - no consensus reached</i><br>
+<p>
+I say go for the arrangement as it stands in HTML3 unless there is<br>
+some major tech flaw.<br>
+<p>
+	   no objections, but there may still be disagreement<br>
+	   on whether CLASS should have predefinable semantics or not;<br>
+	   (I believe it should not, though a list of suggested values <br>
+	   for various elements a la link relations is a good idea.)<br>
+<p>
+Yes: suggestions (even strong ones) but not compulsion yet.<br>
+<p>
+   Footnotes -- OK, but should there be a separate FN element,<br>
+   or should these be specified with &lt;NOTE ROLE=footnote&gt;?  <br>
+   (I say the FN element should be reintroduced.)<br>
+<p>
+Yes. Footnotes are a part of the author's text, whereas other forms of<br>
+note may be things added by an editor. I believe these are<br>
+sufficiently different to warrant separate handling.<br>
+<p>
+   DIV element -- I believe there was consensus on this.<br>
+   Other proposals included:  multiple ranked &lt;DIVn&gt; elements;<br>
+   requiring an &lt;Hn&gt; as the first element in any division;<br>
+   separate recursive &lt;DIV&gt; and &lt;SECT&gt; elements, where &lt;DIV&gt;<br>
+   was free-form and &lt;SECT&gt; required a heading; and<br>
+   something really heinous-looking in the old HTML+ DTD :-)<br>
+<p>
+Stick with &lt;div class="chapter"&gt; etc for the moment. Going for<br>
+fully-fledged &lt;div0&gt; &lt;div1&gt; etc is probably too much for the user<br>
+community. <br>
+<p>
+Q. Do we get to allow users to put text as direct content of &lt;li&gt;,<br>
+&lt;dd&gt; etc without the need for an internal &lt;p&gt;?<br>
+<p>
+OK: SGML. Some thoughts. If we can get to the stage of browser makers<br>
+distributing a half doz. assorted popular DTDs with their product, we<br>
+can go for &lt;!doctype foo public "foo//bar//blort"&gt; and have the<br>
+browser pick up the DTD and SGML Decl. from local disk, engage<br>
+whatever parsing code is embedded, and validate the doc.<br>
+<p>
+Pro: it pleases the formal SGML community<br>
+Con: heavy cycle overhead<br>
+<p>
+If foo.dtd is not on disk, the browser looks for it in the same<br>
+directory on the same server where it got the file. If not there, then<br>
+in one of some popular repositories. Once found, add it to local disk.<br>
+<p>
+Repeat the process for a style file, if that's the way we go (I think<br>
+it should be, rather than embedding style directives in the header).<br>
+<p>
+Overall, a heavy hit on bandwidth and processing. Can we devise some<br>
+way to insert a "guarantee" that the current file just retrieved is<br>
+indeed conformant with the DTD it claims to follow in its DOCTYPE? In<br>
+other words, can we get SGML editors to insert a "none genuine without<br>
+my signature" block in the file? Then there's no need for validating,<br>
+just follow the style directives for display. Only go get the DTD if<br>
+it's not one you already have. This way, uncertified instances cause<br>
+browser delay, which makes users pressurise authors to use whatever<br>
+form of prevalidation guarantee we settle on.<br>
+<p>
+But I'm jumping the gun...let's get HTML3 out the door.<br>
+<p>
+///Peter<br>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0688.html">Nitin Borwankar: "Another approach to agent architecture [ was Re: agents .. ]"</a>
+<li> <b>Previous message:</b> <a href="0686.html">Larry Masinter: "Re: Enhancements for HTML 2.1"</a>
+<li> <b>In reply to:</b> <a href="0681.html">Joe English: "Re: Enhancements for HTML 2.1"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0699.html">Gavin Nicol: "Re: Enhancements for HTML 2.1"</a>
+<li> <b>Reply:</b> <a href="0699.html">Gavin Nicol: "Re: Enhancements for HTML 2.1"</a>
+<!-- reply="end" -->
+</ul>

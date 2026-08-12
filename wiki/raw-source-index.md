@@ -2,7 +2,7 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された641ファイルを、39の取得元ホストごとに収録する。
+Rawに保存された644ファイルを、39の取得元ホストごとに収録する。
 
 ## `1997.webhistory.org`（19ファイル）
 
@@ -337,13 +337,15 @@ Rawに保存された641ファイルを、39の取得元ホストごとに収録
 | [multipage/tables.html](../raw/html.spec.whatwg.org/multipage/tables.html) | HTML Standard |
 | [multipage/text-level-semantics.html](../raw/html.spec.whatwg.org/multipage/text-level-semantics.html) | HTML Standard |
 
-## `ksi.cpsc.ucalgary.ca`（13ファイル）
+## `ksi.cpsc.ucalgary.ca`（15ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
 | [archives/HTML-WG/html-archive.messages/2.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/2.html) | EMail Msg &lt;9406101612.AA07777@ulua.hal.com&gt; |
 | [archives/HTML-WG/html-archive.messages/340.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/340.html) | EMail Msg &lt;9409091612.aa09611@dali.scocan.sco.COM&gt; |
 | [archives/HTML-WG/html-archive.messages/361.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html) | EMail Msg &lt;9409121257.AA14263@dragget.hpl.hp.com&gt; |
+| [archives/HTML-WG/html-wg-95q1.messages/0681.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q1.messages/0681.html) | html-wg-95q1: Re: Enhancements for HTML 2.1 |
+| [archives/HTML-WG/html-wg-95q1.messages/0687.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q1.messages/0687.html) | html-wg-95q1: Re: Enhancements for HTML 2.1 |
 | [archives/HTML-WG/html-wg-95q1.messages/0869.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q1.messages/0869.html) | html-wg-95q1: Re: HTML table model suggestion |
 | [archives/HTML-WG/html-wg-95q2.messages/0278.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0278.html) | html-wg-95q2: Re: More comments on the HTML 3.0 draft |
 | [archives/HTML-WG/html-wg-95q2.messages/0432.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html) | html-wg-95q2: Re: HTML/CALS/ICADD Table Prop |
@@ -361,7 +363,7 @@ Rawに保存された641ファイルを、39の取得元ホストごとに収録
 |---|---|
 | [WEBMASTER/tags.txt](../raw/lib.ru/WEBMASTER/tags.txt) | HTML Referece Guide: Tags for Netscape 3.0 |
 
-## `lists.w3.org`（52ファイル）
+## `lists.w3.org`（53ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -397,6 +399,7 @@ Rawに保存された641ファイルを、39の取得元ホストごとに収録
 | [Archives/Public/w3c-wai-ig/1997JulSep/0031.html](../raw/lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0031.html) | FORM SELECT accessibility from MegaZone on 1997-09-27 (w3c-wai-ig@w3.org from July to September 1997) |
 | [Archives/Public/www-archive/2017Aug/0006.html](../raw/lists.w3.org/Archives/Public/www-archive/2017Aug/0006.html) | The Origin of Blockquote from Sean B. Palmer on 2017-08-28 (www-archive@w3.org from August 2017) |
 | [Archives/Public/www-forms/2003Dec/0010.html](../raw/lists.w3.org/Archives/Public/www-forms/2003Dec/0010.html) | Re: Proposal for Extensions to HTML4 from Ian Hickson on 2003-12-07 (www-forms@w3.org from December 2003) |
+| [Archives/Public/www-html-editor/1997OctDec/0003.html](../raw/lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0003.html) | &lt;ACRONYM&gt; is a misleading misnomer, use &lt;ABBREV&gt; instead from Robin Lionheart on 1997-10-04 (www-html-editor@w3.org from October to December 1997) |
 | [Archives/Public/www-html-editor/1997OctDec/0024.html](../raw/lists.w3.org/Archives/Public/www-html-editor/1997OctDec/0024.html) | [Fwd: Re: WAI proposed enhancements] from Dan Connolly on 1997-10-25 (www-html-editor@w3.org from October to December 1997) |
 | [Archives/Public/www-html/1994Jun/0002.html](../raw/lists.w3.org/Archives/Public/www-html/1994Jun/0002.html) | Re: meta information from Roy T. Fielding on 1994-06-02 (www-html@w3.org from June 1994) |
 | [Archives/Public/www-html/1994Jun/0041.html](../raw/lists.w3.org/Archives/Public/www-html/1994Jun/0041.html) | Re: HTML 2.0 spec and the META element from Roy T. Fielding on 1994-06-12 (www-html@w3.org from June 1994) |
