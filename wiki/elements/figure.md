@@ -36,11 +36,11 @@ HTML+の`FIG`／`CAPTION`と、Michel Fortinが2006年に提案した`figure`構
 
 ### 証拠
 
-HTML+は`FIG`に画像ソース、子`CAPTION`、テキスト代替内容をまとめていた。Pietersはこの構造をHTML5用に`fig`コンテナー、子`caption`、子`img`として示し、Hicksonは`caption`のパーサー問題と要素名を除いて採用した。Fortinの提案と利用例調査は、画像とキャプションを明示的に結び、主たる流れから分離できる図構造への要求を示した。[HTML+ Figures](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html)） [WHATWGフィードバック総括](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)）
+HTML+は`FIG`に画像ソース、子`CAPTION`、テキスト代替内容をまとめていた。Pietersはこの構造をHTML5用に`fig`コンテナー、子`caption`、子`img`として示し、Hicksonは`caption`のパーサー問題と要素名を除いて採用した。Fortinの提案と利用例調査は、画像とキャプションを明示的に結び、主たる流れから分離できる図構造への要求を示した。Fortinはさらに、科学・技術出版物で画像とキャプションをfigureとして扱う慣習を挙げ、それが自身の`figure`提案名の理由だと説明した。[HTML+ Figures](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_35.html)） [WHATWGフィードバック総括](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)）
 
 ### 解釈
 
-WHATWG案はHTML+構造をそのまま複製せず、Fortinによる`figure`という綴りと収集されたWeb上の利用例を取り込み、HTMLパーサーの制約から`caption`を`legend`へ置き換えた設計である。DocBookまたはXHTML 2からの追加影響は確認できない。
+出版における図版とキャプションの慣習は`figure`の意味と名称の上流にあり、Web制作者による画像・キャプションのマークアップと表示慣習がHTML標準化の直接の設計材料になった。WHATWG案はHTML+構造をそのまま複製せず、Fortinによる`figure`という綴りと収集されたWeb上の利用例を取り込み、HTMLパーサーの制約から`caption`を`legend`へ置き換えた設計である。ただし、出版慣習から個々のWeb実践へ伝わった具体的な経路と、DocBookまたはXHTML 2からの追加影響は確認できない。
 
 ## 系譜
 
@@ -61,7 +61,7 @@ DocBook `figure`／`title`とXHTML 2 `object`／`caption`は、WHATWG `figure`�
 | 2006-07-26 | [XHTML 2.0 Working Draft](../../raw/www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html)（[公開元](https://www.w3.org/TR/2006/WD-xhtml2-20060726/mod-object.html)） | W3C Working Draft | `object`が任意の先頭子`caption`を持つ先行構造。`figure`要素は定義せず、WHATWGへの採用因果も示さない。 | 2026-08-10 |
 | 2006-10-01 | [DocBook V4.5](../../raw/tdg.docbook.org/tdg/4.5/figure)（[公開元](https://tdg.docbook.org/tdg/4.5/figure)） | OASIS Standard／公式要素参照 | `figure`を必須`title`を持つ正式オブジェクトとして定義する。WHATWGへの採用因果は示さない。 | 2026-08-10 |
 | 2006-11-27 | [WHATWG HTML commit `32bff0ac`](../../raw/github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059)（[公開元](https://github.com/whatwg/html/commit/32bff0ac1cc9a040ec4d45fdea206b4e9ce09059)） | 仕様コミット／親差分 | Ian Hicksonによる`figure`の追加、埋め込み内容とキャプションのモデル、`legend`の再利用。 | 2026-08-10 |
-| 2006-11-28 | [“many messages regarding image captions”](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)） | WHATWG意見総括／W3C保存メール | Fortinの`figure`提案と発行者利用例、PietersによるHTML+案の提示、Hicksonによる採用回答、`caption`を避け`legend`を使うパーサー上の理由。DocBookへの別件の言及は採用せず、XHTML 2は参照しない。 | 2026-08-10 |
+| 2006-11-28 | [“many messages regarding image captions”](../../raw/lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)（[公開元](https://lists.w3.org/Archives/Public/public-whatwg-archive/2006Nov/0422.html)） | WHATWG意見総括／W3C保存メール | Fortinの`figure`提案と発行者利用例、科学・技術出版物のfigure慣習を提案名の理由とする説明、PietersによるHTML+案の提示、Hicksonによる採用回答、`caption`を避け`legend`を使うパーサー上の理由。DocBookへの別件の言及は採用せず、XHTML 2は参照しない。 | 2026-08-10 |
 | 2009-09-15 | [“Re: `<details>`”](../../raw/lists.w3.org/Archives/Public/public-html/2009Sep/0566.html)（[公開元](https://lists.w3.org/Archives/Public/public-html/2009Sep/0566.html)） | W3C public-htmlメーリングリスト | `details`へ出された`dt`／`dd`案をHicksonが受諾し、同時に`figure`にも適用したこと、`figure`では`legend`より直感的でないと認識していたこと。 | 2026-08-10 |
 | 2009-09-15 | [WHATWG HTML commit `9c490f21`](../../raw/github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)（[公開元](https://github.com/whatwg/html/commit/9c490f21ae094de128e5bc6d3111640014a195c7)） | 仕様コミット／親差分 | `figure`と`details`を`legend`から`dt`／`dd`へ変更した。 | 2026-08-10 |
 | 2009-09-17–2010-03-30 | [W3C Bug 7657](../../raw/www.w3.org/Bugs/Public/show_bug.cgi__q__id=7657)（[公開元](https://www.w3.org/Bugs/Public/show_bug.cgi?id=7657)） | Bugzilla | `dt`／`dd`再利用による意味・構造上の混乱、IE 6／7のDOM互換性問題、ISSUE-83への昇格、修正後の解決。 | 2026-08-10 |
@@ -86,4 +86,4 @@ DocBook `figure`またはXHTML 2 `object`から直接採用したという説明
 
 ## 未解決
 
-なし。
+科学・技術出版物のfigure／キャプション慣習は、ニュースサイト、科学・技術系Webページ、Wikipedia等で観察された画像・キャプションのマークアップと表示慣習へ、どの媒体、制作工程、ツール、または制作者コミュニティを通じて伝わったか。
