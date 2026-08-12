@@ -2,13 +2,17 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された627ファイルを、37の取得元ホストごとに収録する。
+Rawに保存された639ファイルを、39の取得元ホストごとに収録する。
 
-## `1997.webhistory.org`（10ファイル）
+## `1997.webhistory.org`（18ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
 | [www.lists/www-talk.1993q1/0070.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0070.html) | WWW-Talk Jan-Mar 1993: Re: HTML todo list |
+| [www.lists/www-talk.1993q1/0079.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0079.html) | WWW-Talk Jan-Mar 1993: INPUT tag (was: Searching) |
+| [www.lists/www-talk.1993q1/0083.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0083.html) | WWW-Talk Jan-Mar 1993: Re: INPUT tag (was: Searching) |
+| [www.lists/www-talk.1993q1/0085.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0085.html) | WWW-Talk Jan-Mar 1993: QueryForms and Input tag |
+| [www.lists/www-talk.1993q1/0095.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0095.html) | WWW-Talk Jan-Mar 1993: Re: EDI for forms? |
 | [www.lists/www-talk.1993q1/0182.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0182.html) | WWW-Talk Jan-Mar 1993: proposed new tag: IMG |
 | [www.lists/www-talk.1993q1/0183.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0183.html) | WWW-Talk Jan-Mar 1993: Re: proposed new tag: IMG |
 | [www.lists/www-talk.1993q1/0186.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0186.html) | — |
@@ -16,7 +20,11 @@ Rawに保存された627ファイルを、37の取得元ホストごとに収録
 | [www.lists/www-talk.1993q1/0245.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0245.html) | WWW-Talk Jan-Mar 1993: World-Wide Web documentation in paper form |
 | [www.lists/www-talk.1993q1/0257.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0257.html) | WWW-Talk Jan-Mar 1993: Re: proposed new tag: IMG |
 | [www.lists/www-talk.1993q1/0262.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0262.html) | WWW-Talk Jan-Mar 1993: NCSA Mosaic for X 0.10 released |
+| [www.lists/www-talk.1993q2/0015.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q2/0015.html) | WWW-Talk Apr-Jun 1993: Re WWW ideas |
+| [www.lists/www-talk.1993q2/0557.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q2/0557.html) | WWW-Talk Apr-Jun 1993: Re: HTML+ Forms |
 | [www.lists/www-talk.1993q3/0143.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q3/0143.html) | WWW-Talk Jul-Sep 1993: XMosaic 1.2 and HTML+ |
+| [www.lists/www-talk.1993q3/0816.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q3/0816.html) | WWW-Talk Jul-Sep 1993: Fill-out form support |
+| [www.lists/www-talk.1993q3/0875.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q3/0875.html) | WWW-Talk Jul-Sep 1993: Re: Submitting input-form data to server |
 | [www.lists/www-talk.1993q3/0883.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q3/0883.html) | WWW-Talk Jul-Sep 1993: Your views on changes to HTML+ |
 
 ## `alistapart.com`（1ファイル）
@@ -328,7 +336,7 @@ Rawに保存された627ファイルを、37の取得元ホストごとに収録
 | [multipage/tables.html](../raw/html.spec.whatwg.org/multipage/tables.html) | HTML Standard |
 | [multipage/text-level-semantics.html](../raw/html.spec.whatwg.org/multipage/text-level-semantics.html) | HTML Standard |
 
-## `ksi.cpsc.ucalgary.ca`（10ファイル）
+## `ksi.cpsc.ucalgary.ca`（12ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -337,8 +345,10 @@ Rawに保存された627ファイルを、37の取得元ホストごとに収録
 | [archives/HTML-WG/html-archive.messages/361.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html) | EMail Msg &lt;9409121257.AA14263@dragget.hpl.hp.com&gt; |
 | [archives/HTML-WG/html-wg-95q2.messages/0278.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0278.html) | html-wg-95q2: Re: More comments on the HTML 3.0 draft |
 | [archives/HTML-WG/html-wg-95q2.messages/0432.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html) | html-wg-95q2: Re: HTML/CALS/ICADD Table Prop |
+| [archives/WWW-TALK/www-talk-1992.messages/371.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1992.messages/371.html) | EMail Msg &lt;9211272055.AA12117@njitgw.njit.edu&gt; |
 | [archives/WWW-TALK/www-talk-1993q2.messages/428.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/428.html) | EMail Msg &lt;9306021337.AA01357@www3.cern.ch&gt; |
 | [archives/WWW-TALK/www-talk-1993q2.messages/429.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/429.html) | EMail Msg &lt;199306021622.AA27852@ora.com&gt; |
+| [archives/WWW-TALK/www-talk-1993q2.messages/548.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/548.html) | EMail Msg &lt;9306181218.AA29318@manuel.hpl.hp.com&gt; |
 | [archives/WWW-TALK/www-talk-1993q3.messages/459.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/459.html) | EMail Msg &lt;9308102156.AA06138@austin.BSDI.COM&gt; |
 | [archives/WWW-TALK/www-talk-1993q3.messages/774.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/774.html) | EMail Msg &lt;9308260107.AA23088@stat1.cc.ukans.edu&gt; |
 | [archives/WWW-TALK/www-talk-1993q3.messages/821.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q3.messages/821.html) | EMail Msg &lt;9309060010.AA01749@wintermute.ncsa.uiuc.edu&gt; |
@@ -490,6 +500,12 @@ Rawに保存された627ファイルを、37の取得元ホストごとに収録
 |---|---|
 | [whatwg/html/26110c20e505c17533e1a8e876d726b7a0aa3484/source](../raw/raw.githubusercontent.com/whatwg/html/26110c20e505c17533e1a8e876d726b7a0aa3484/source) | — |
 
+## `research.ibm.com`（1ファイル）
+
+| Rawファイル | 文書タイトル |
+|---|---|
+| [publications/formplus-a-form-authoring-toolkit](../raw/research.ibm.com/publications/formplus-a-form-authoring-toolkit) | FormPlus: A form authoring toolkit for COMPSAC 1990 - IBM Research |
+
 ## `suika.suikawiki.org`（1ファイル）
 
 | Rawファイル | 文書タイトル |
@@ -548,6 +564,12 @@ Rawに保存された627ファイルを、37の取得元ホストごとに収録
 | Rawファイル | 文書タイトル |
 |---|---|
 | [code/__index](../raw/worldwideweb.cern.ch/code/__index) | Inside the Code — WorldWideWeb NeXT Application |
+
+## `www.hcibib.org`（1ファイル）
+
+| Rawファイル | 文書タイトル |
+|---|---|
+| [sam/1.html](../raw/www.hcibib.org/sam/1.html) | GUIDELINES FOR DESIGNING USER INTERFACE SOFTWARE : 1. Data Entry |
 
 ## `www.hixie.ch`（3ファイル）
 

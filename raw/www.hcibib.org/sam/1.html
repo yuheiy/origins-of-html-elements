@@ -1,0 +1,4789 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<meta name="generator" content="genfile 1 genfile.ini" />
+<meta name="start-date" content="2002-03-22" />
+<meta name="accesses" content="<!--#exec cmd="../bin/count.pl .1.html" -->" />
+<meta name="description" content="guidelines for design of user interface software in six functional areas: data entry, data display, sequence control, user guidance, data transmission, and data protection" />
+<meta name="keywords" content="user interface design; usability; standards; guidelines; mitre; human factors; human-computer interaction; man-machine interface; data entry; form design; data display; screen design; dialog design; sequence control; user guidance; help; documentation; data transmission; e-mail; email; data protection" />
+<!--#config timefmt="%Y-%m-%d"-->
+<!--#config sizefmt="bytes"-->
+<meta name="robots" content="index,nofollow" />
+	<title>
+		GUIDELINES FOR DESIGNING USER INTERFACE SOFTWARE : 1. Data Entry
+	</title>
+	
+<style type="text/css">
+<!--
+	h1 {color: ; padding: 5px; border: thick solid; background: #CCCCCC}
+	h2 {color: ; padding: 3px; border: thin solid; background: #CCCCCC}
+	h3 {color: ; border: solid 1px; background: #EEEEEE}
+	h3.example {color: #009966; margin-top:0}
+	pre {margin-top: 0; margin-bottom: 0; margin-left: .25in; color:#669966}
+	p.quote {font: italic; margin-left: .25in }
+	body {font-family: sans-serif}
+-->
+</style>
+
+
+</head>
+<body bgcolor="#FFFFFF">
+<table summary='Title' bgcolor='#DDDDCC' width='100%' border='0' cellpadding='5' cellspacing='0'>
+	<tr>
+		
+		<td align='center'>
+			<div style='font-size: 125%'><b>GUIDELINES FOR DESIGNING USER INTERFACE SOFTWARE</b></div>
+			<div style='font-size: 90%'>ESD-TR-86-278</div>
+		</td>
+		
+	</tr>
+	<tr>
+	<td align='center' style='font-size: 80%'>
+by
+<font size='3'>
+<b>Sidney L. Smith</b>
+</font>
+ and 
+<font size='3'>
+<b>Jane N. Mosier</b>
+</font>
+	</td>
+	</tr>
+</table>
+<div align='center'>
+<table summary='Navigation Menu' border='0' cellpadding='2' cellspacing='0'><tr valign='top'>
+<td>
+<a name='top' accesskey='k' href='#endnav'><img src='2x2.gif' border='0' height='1' width='1' alt='skip navigation' /></a>
+</td>
+<td align='center'><a href="index.html" title="Introduction"><font size='1'>Introduction</font></a></td>
+<td valign='middle'>|</td>
+<td align='center' bgcolor="#DDDDCC" style='font-size: 80%'><b title="1. Data Entry">Data Entry</b></td>
+<td valign='middle'>|</td>
+<td align='center'><a href="2.html" title="2. Data Display"><font size='1'>Data Display</font></a></td>
+<td valign='middle'>|</td>
+<td align='center'><a href="3.html" title="3. Sequence Control"><font size='1'>Sequence Control</font></a></td>
+<td valign='middle'>|</td>
+<td align='center'><a href="4.html" title="4. User Guidance"><font size='1'>User Guidance</font></a></td>
+<td valign='middle'>|</td>
+<td align='center'><a href="5.html" title="5. Data Transmission"><font size='1'>Data Transmission</font></a></td>
+<td valign='middle'>|</td>
+<td align='center'><a href="6.html" title="6. Data Protection"><font size='1'>Data Protection</font></a></td>
+<td valign='middle'>|</td>
+<td align='center'><a href="contents.html" title="Table of Contents with All Guidelines"><font size='1'>Table of Contents</font></a></td>
+</tr></table></div>
+
+<a name="endnav"></a>
+<h1>1 DATA ENTRY</h1>
+<p>
+Data entry refers to user actions involving input of data to a computer,
+and computer responses to such inputs.  The simplest kind of data entry
+consists merely of pointing at something -- selecting an item or
+designating a position on a computer-generated display.  In more
+complicated modes of data entry, a user may have to control the format
+of data inputs as well as their contents.  Thus questions of format
+control in text entry/editing and graphic interaction may properly be
+considered questions of data entry.
+</p>
+<p>
+Note, however, that user inputs which initiate or interrupt transactions
+-- such as command entries, or control entries selected from a displayed
+menu or by function keys -- pose rather different questions of design.
+Such control entries are discussed in Section 3 of these guidelines.
+</p>
+<p>
+Data can be entered into a computer in a variety of different ways.
+Users might designate position or direction by pointing at a display.
+Users might enter numbers, letters, or more extended textual material by
+keyed inputs, or in some applications by spoken inputs.  Data might be
+keyed into displayed forms or tables, into constrained message formats,
+or as free text.  In graphic interaction users might draw pictures or
+manipulate displayed graphic elements.  These different types of data
+entry all merit consideration here.
+</p>
+<p>
+The computer will also play a role in the data entry process, guiding
+users who need help, checking data entries to detect errors, and
+providing other kinds of data processing aids.  A designer of user
+interface software must be concerned about computer processing logic as
+well as data input by the user.
+</p>
+<p>
+Data entry is heavily emphasized in clerical jobs, and many other jobs
+involve data entry to some degree.  Because data entry is so common, and
+because inefficiencies caused by poorly designed data entry transactions
+are so apparent, many published recommendations for good user interface
+design deal with data entry questions.  Human factors specialists can
+probably give better advice about data entry than about any other
+functional area of user interface design.
+</p>
+<p>
+Data entry requires hardware, and the proper design of input devices has
+received considerable attention, including concern for standardization
+of keyboard layouts.  Future advances in hardware design may well
+influence data entry tasks, as suggested by current advocacy of voice
+input.
+</p>
+<p>
+But the major need in today's information systems is for improving the
+logic of data entry, and it is there that design guidance should prove
+most helpful.  Thus the guidelines presented here deal with data entry
+functions, insofar as possible, without regard to their hardware
+implementation.
+</p>
+<p>
+The general objectives of designing data entry functions are to
+establish consistency of data entry transactions, minimize input actions
+and memory load on the user, ensure compatibility of data entry with
+data display, and provide flexibility of user control of data entry.
+Stated in such general terms, these principles do not provide helpful
+guidance to designers.  Somehow these general ideas must be converted
+into more specific guidelines.
+</p>
+<p>
+The process of converting general principles into more detailed
+guidelines will lead to a considerable proliferation of ideas.  With
+regard to minimizing input actions, one guideline might be that a user
+should not have to enter the same data twice.  Probably every designer
+knows that, even if it is sometimes forgotten.  A related guideline
+might be that a user should not have to enter data already entered by
+another user.  That seems to make good sense, although one could imagine
+occasional exceptions when cross validation of data inputs is required.
+</p>
+<p>
+How can duplicative data entry be avoided in practice?  The solution
+lies in designing the user interface (programming the computer) to
+maintain context.  Thus when a user identifies a data category of
+interest, say a squadron of aircraft, the computer should be able to
+access all previously entered data relevant to that squadron and not
+require the user to enter such data again.
+</p>
+<p>
+In repetitive data entry transactions the user should have some means of
+establishing context.  One method is to allow users to define default
+entries for selected data items, in effect telling the computer that
+those items will stay the same until the default value is changed or
+removed.  If a user enters one item of data about a particular squadron,
+it should be possible to enter other items thereafter without having to
+re-identify that squadron.
+</p>
+<p>
+Context should also be preserved to speed correction of input errors.
+One significant advantage of on-line data entry is the opportunity for
+immediate computer validation of user inputs, with timely feedback so
+that a user can correct errors while the data are still fresh in mind
+and while documented source data are still at hand.  Here the computer
+should preserve the context of each data entry transaction, saving
+correct items so that the user does not have to enter those again while
+changing incorrect items.
+</p>
+<p>
+Preservation of context is, of course, important in all aspects of
+user-system interaction, with implications for data display, sequence
+control and user guidance, as well as for data entry.  The importance of
+context is emphasized again in the discussion of those other functional
+areas.
+</p>
+<p>
+Another important design concept is flexibility.  It is easy to say that
+the interface should adapt flexibly to user needs, but the specific
+means of achieving such flexibility must be spelled out in design
+guidelines.  For data entry functions it is important that the pacing of
+inputs be controlled flexibly by the user.  Tasks where the pacing of
+user inputs is set by a machine are stressful and error-prone.
+</p>
+<p>
+Aside from flexibility in pacing, users will often benefit from having
+some flexible choice in the ordering of inputs.  What is needed for
+interface design is some sort of suspense file to permit flexible
+ordering of data entries, including temporary omission of unknown items,
+backup to correct mistaken entries, cancellation of incomplete
+transactions, etc.
+</p>
+<p>
+As noted above, users may also benefit from flexibility in defining
+default options to simplify data entry during a sequence of
+transactions.  Some systems include only those defaults anticipated by
+the designers, which may not prove helpful to the user in a particular
+instance.  Thus the concept of flexibility is related to maintaining
+context, and is related also to many other aspects of interface design.
+</p>
+<p>
+The guidelines proposed here deal with data entry in terms of specific
+functions, covering different kinds of data entry and different kinds of
+computer processing support.  Some topics, such as "abbreviation", which
+pertain to all data entry are covered in an initial group of guidelines
+dealing generally with the subject.  A summary of the functional
+coverage in this section is presented on the next page.  These
+guidelines recommend specific ways to accomplish the fundamental design
+objectives for data entry.
+</p>
+<h4>Objectives</h4>
+<p>
+Consistency of data entry transactions
+Minimal entry actions by user
+Minimal memory load on user
+Compatibility of data entry with data display
+Flexibility for user control of data entry
+</p><h2><a name="1.0">1.0    General</a></h2>
+<p>
+Data entry refers to user actions involving input of data to a computer,
+and computer responses to such inputs.
+</p>
+<h3><a name="1.0_1">1.0/1      Data Entered Only Once</a></h3>
+<p>
+Ensure that a user need enter any particular data only once, and that
+the computer can access those data if needed thereafter for the same
+task or for different tasks.
+</p>
+<h4>Comment</h4>
+<p>
+In effect, this recommendation urges integrated and flexible software
+design so that different programs can access previously entered data as
+needed.  Requiring re-entry of data would impose duplicative effort on
+users and increase the possibility of entry errors.
+</p>
+<h4>See also</h4>
+<p>
+<a title="User Review of Prior Entries" href="1.html#1.8_9">1.8/9</a>
+</p>
+<h3><a name="1.0_2">1.0/2      Entry via Primary Display</a></h3>
+<p>
+When data entry is a significant part of a user's task, entered data
+should appear on the user's primary display.
+</p>
+<h4>Example</h4>
+<p>
+As a negative example, entry via typewriter is acceptable only if the
+typewriter itself, under computer control, is the primary display
+medium.
+</p>
+<h4>Comment</h4>
+<p>
+When the primary display is basically formatted for other purposes, such
+as a graphic display for process control, a separate window on the
+display may have to be reserved for data entry.
+</p>
+<h3><a name="1.0_3">1.0/3      Feedback During Data Entry</a></h3>
+<p>
+Provide displayed feedback for all user actions during data entry;
+display keyed entries stroke by stroke.
+</p>
+<h4>Exception</h4>
+<p>
+For reasons of data protection, it may not be desirable to display
+passwords and other secure entries.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#eg">EG 6.3.7</a><li><a href="index.html#ms">MS 5.15.2.1.2 5.15.2.2.3</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Feedback for Control Entries" href="3.html#3.0_14">3.0/14</a>
+&nbsp;|&nbsp;
+<a title="Consistent Feedback" href="4.html#4.2_1">4.2/1</a>
+</p>
+<h3><a name="1.0_4">1.0/4      +  Fast Response</a></h3>
+<p>
+Ensure that the computer will acknowledge data entry actions rapidly, so
+that users are not slowed or paced by delays in computer response; for
+normal operation, delays in displayed feedback should not exceed 0.2
+seconds.
+</p>
+<h4>Example</h4>
+<p>
+A key press should be followed by seemingly immediate display of its
+associated symbol, or by some other appropriate display change.
+</p>
+<h4>Comment</h4>
+<p>
+This recommendation is intended to ensure efficient operation in
+routine, repetitive data entry tasks.  Longer delays may be tolerable in
+special circumstances, perhaps to reduce variability in computer
+response, or perhaps in cases where data entry comprises a relatively
+small portion of the user's task.
+</p>
+<h4>Comment</h4>
+<p>
+Note that this guideline refers to acknowledgment, rather than final
+processing of entries which may be deferred pending an explicit ENTER
+action.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#eg">EG Table 2</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Appropriate Computer Response Time" href="3.html#3.0_18">3.0/18</a>
+&nbsp;|&nbsp;
+<a title="Control Availability" href="3.html#3.0_19">3.0/19</a>
+</p>
+<h3><a name="1.0_5">1.0/5      Single Method for Entering Data</a></h3>
+<p>
+Design the data entry transactions and associated displays so that a
+user can stay with one method of entry, and not have to shift to
+another.
+</p>
+<h4>Example</h4>
+<p>
+Minimize shifts from lightpen to keyboard entry and then back again.
+</p>
+<h4>Example</h4>
+<p>
+As a negative example, a user should not have to shift from one keyboard
+to another, or move from one work station to another, to accomplish
+different data entry tasks.
+</p>
+<h4>Comment</h4>
+<p>
+This, like other guidelines here, assumes a task-oriented user, busy or
+even overloaded, who needs efficiency of data entry.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.11</a><li><a href="index.html#eg">EG 6.1.1</a><li><a href="index.html#foley_wallace_1974">Foley Wallace 1974</a><li><a href="index.html#shneiderman_1982">Shneiderman 1982</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Cursor Control at Keyboard" href="1.html#1.1_14">1.1/14</a>
+</p>
+<h3><a name="1.0_6">1.0/6      Defined Display Areas for Data Entry</a></h3>
+<p>
+Where data entry on an electronic display is permitted only in certain
+areas, as in form filling, provide clear visual definition of the entry
+fields.
+</p>
+<h4>Example</h4>
+<p>
+Data entry fields might be underlined, or perhaps highlighted by reverse
+video.
+</p>
+<h4>Exception</h4>
+<p>
+For general text entry of variable (unrestricted) length, no field
+delimiters are needed.  In effect, keyed text entries can replace
+nothing (null characters).
+</p>
+<h4>Comment</h4>
+<p>
+Display formats with field delimiters provide explicit user guidance as
+to the location and extent of data entry fields.  Where delimiters
+extend throughout an entry field, as in underlining, then any keyed data
+entries should replace the delimiter characters on the display.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.2.1</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Marking Field Boundaries" href="1.html#1.4_10">1.4/10</a>
+</p>
+<h3><a name="1.0_7">1.0/7      Consistent Method for Data Change</a></h3>
+<p>
+In keyed data entry, always allow users to change previous entries if
+necessary (including displayed default values) by delete and insert
+actions; if data change is sometimes made by direct character
+substitution ("typeover"), then that option should also be consistently
+available.
+</p>
+<h4>Example</h4>
+<p>
+Form filling may require typeover to replace displayed characters such
+as underscores that act as field delimiters.
+</p>
+<h4>Comment</h4>
+<p>
+Text editing on an electronic display can be handled with or without
+typeover; there seems to be no published research on the relative
+efficiency of user performance under these two conditions.
+</p>
+<h4>Comment</h4>
+<p>
+Using typeover, there is some risk of user confusion in replacement of
+an old value with a new one, during the transitional period when the
+item being changed is seen as a composite beginning with the new value
+and ending with the old.  Some designers do not permit overtyping for
+that reason.
+</p>
+<h4>Comment</h4>
+<p>
+In some applications it may help the user to key a new entry directly
+above or below display of the prior entry it will replace, if that is
+done consistently.  Here the user can compare values before confirming
+entry of the new data and deletion of the old.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.10</a><li><a href="index.html#keister_gallaway_1983">Keister Gallaway 1983</a></li></ul>
+<h3><a name="1.0_8">1.0/8      User-Paced Data Entry</a></h3>
+<p>
+Allow users to pace their data entry, rather than having the pace being
+controlled by computer processing or external events.
+</p>
+<h4>Comment</h4>
+<p>
+The timing of user-paced data entry will fluctuate depending upon a
+user's momentary needs, attention span and time available.  At maximum
+speed, user-paced performance is more accurate than that achieved by
+machine pacing.
+</p>
+<h4>Comment</h4>
+<p>
+When user pacing does not seem feasible, as in some real-time process
+control applications, reconsider the general approach to task allocation
+and interface design.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.2.1.1</a><li><a href="index.html#bertelson_boons_renkin_1965">Bertelson Boons Renkin 1965</a></li></ul>
+<h3><a name="1.0_9">1.0/9      Explicit ENTER Action</a></h3>
+<p>
+Always require a user to take an explicit ENTER action to initiate
+processing of entered data; do not initiate processing as a side effect
+of some other action.
+</p>
+<h4>Example</h4>
+<p>
+As a negative example, returning to a menu of control options should not
+by itself result in computer processing of data just keyed onto a
+display.
+</p>
+<h4>Exception</h4>
+<p>
+In routine, repetitive data entry transactions, successful completion of
+one entry may automatically lead to initiation of the next, as in keying
+ZIP codes at an automated post office.
+</p>
+<h4>Comment</h4>
+<p>
+Deferring processing until after an explicit ENTER action will permit a
+user to review data and correct errors before computer processing,
+particularly helpful when data entry is complex and/or difficult to
+reverse.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.2.1.4</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Combined Entry of Related Data" href="1.html#1.4_1">1.4/1</a>
+&nbsp;|&nbsp;
+<a title="Flexible Interrupt" href="1.html#1.4_2">1.4/2</a>
+&nbsp;|&nbsp;
+<a title="Control by Explicit User Action" href="3.html#3.0_5">3.0/5</a>
+&nbsp;|&nbsp;
+<a title="Explicit User Actions" href="4.html#4.0_2">4.0/2</a>
+&nbsp;|&nbsp;
+<a title="Control by Explicit User Action" href="6.html#6.0_9">6.0/9</a>
+&nbsp;|&nbsp;
+<a title="Explicit User Actions" href="6.html#6.3_5">6.3/5</a>
+</p>
+<h3><a name="1.0_10">1.0/10     +  ENTER Key Labeling</a></h3>
+<p>
+Label an ENTER key explicitly to indicate its function.
+</p>
+<h4>Example</h4>
+<p>
+As a negative example, the ENTER key should not be labeled in terms of
+mechanism, such as CR or RETURN or XMIT.
+</p>
+<h4>Comment</h4>
+<p>
+For a novice computer user, the label should perhaps be even more
+explicit, such as ENTER DATA.  Ideally, one consistent ENTER label would
+be adopted for all systems and so become familiar to all users.
+</p>
+<h4>Comment</h4>
+<p>
+Some other label might serve as well, if it were used consistently.  In
+some current systems the ENTER key is labeled GO or DO, implying a
+generalized command to the computer, "Go off and do it."
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#pr">PR 3.3.9</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Compatibility with User Expectations" href="3.html#3.0_16">3.0/16</a>
+&nbsp;|&nbsp;
+<a title="Clear Control Labels" href="4.html#4.0_10">4.0/10</a>
+</p>
+<h3><a name="1.0_11">1.0/11     Explicit CANCEL Action</a></h3>
+<p>
+Require a user to take an explicit action in order to cancel a data
+entry; data cancellation should not be accomplished as a side effect of
+some other action.
+</p>
+<h4>Example</h4>
+<p>
+As a negative example, casual interruptions of a data entry sequence,
+such as paging through forms, or detouring to HELP displays, should not
+have the effect of erasing partially completed data entries.
+</p>
+<h4>Comment</h4>
+<p>
+If a requested sequence control action implies a more definite
+interruption, such as a LOG-OFF command, or a command to return to a
+menu display, then the user should be asked to confirm that action and
+alerted to the loss of any data entries that would result.
+</p>
+<h4>See also</h4>
+<p>
+<a title="" href="3.html#3.3">3.3</a>
+</p>
+<h3><a name="1.0_12">1.0/12     Feedback for Completion of Data Entry</a></h3>
+<p>
+Ensure that the computer will acknowledge completion of a data entry
+transaction with a confirmation message, if data entry was successful,
+or else with an error message.
+</p>
+<h4>Exception</h4>
+<p>
+In a sequence of routine, repetitive data entry transactions, successful
+completion of one entry might result simply in regeneration of the
+initial (empty) data entry display, in order to speed the next entry in
+the sequence.
+</p>
+<h4>Comment</h4>
+<p>
+Successful data entry should not be signaled merely by automatic erasure
+of entered data from the display, except possibly in the case of
+repetitive data entries.  For single data entry transactions, it may be
+better to leave entered data on the display until the user takes an
+explicit action to clear the display.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.5.4</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Feedback During Data Entry" href="1.html#1.0_3">1.0/3</a>
+&nbsp;|&nbsp;
+<a title="Feedback for Control Entries" href="3.html#3.0_14">3.0/14</a>
+&nbsp;|&nbsp;
+<a title="Consistent Feedback" href="4.html#4.2_1">4.2/1</a>
+</p>
+<h3><a name="1.0_13">1.0/13     +  Feedback for Repetitive Data Entries</a></h3>
+<p>
+For a repetitive data entry task that is accomplished as a continuing
+series of transactions, indicate successful entry by regenerating the
+data entry display, automatically removing the just-entered data in
+preparation for the next entry.
+</p>
+<h4>Comment</h4>
+<p>
+Automatic erasure of entered data represents an exception to the general
+principle of control by explicit user action.  The interface designer
+may adopt this approach, in the interests of efficiency, for data entry
+transactions that task analysis indicates will be performed
+repetitively.
+</p>
+<h4>Comment</h4>
+<p>
+In addition to erasure of entered data, a message confirming successful
+data entry might be displayed.  Such a message may reassure uncertain
+users, especially in system applications where computer performance is
+unreliable.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#eg">EG 4.2.10</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Feedback During Data Entry" href="1.html#1.0_3">1.0/3</a>
+&nbsp;|&nbsp;
+<a title="Feedback for Control Entries" href="3.html#3.0_14">3.0/14</a>
+&nbsp;|&nbsp;
+<a title="Consistent Feedback" href="4.html#4.2_1">4.2/1</a>
+</p>
+<h3><a name="1.0_14">1.0/14     +  Feedback when Changing Data</a></h3>
+<p>
+If a user requests change (or deletion) of a data item that is not
+currently being displayed, offer the user the option of displaying the
+old value before confirming the change.
+</p>
+<h4>Exception</h4>
+<p>
+Expert users may sometimes wish to implement data changes without
+displayed feedback, as in "global replace" transactions, accepting the
+attendant risk.
+</p>
+<h4>Comment</h4>
+<p>
+Displayed feedback will help prevent inadvertent data change, and is
+particularly useful in protecting delete actions.  Like other
+recommendations intended to reduce error, it assumes that accuracy of
+data entry is worth extra effort by the user.  For some tasks, that may
+not be true.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Displaying Data to be Changed" href="6.html#6.3_16">6.3/16</a>
+</p>
+<h3><a name="1.0_15">1.0/15     Keeping Data Items Short</a></h3>
+<p>
+For coded data, numbers, etc., keep data entries short, so that the
+length of an individual item will not exceed 5-7 characters.
+</p>
+<h4>Example</h4>
+<p>
+Coded data may include such items as badge numbers, payroll numbers,
+mail stops, equipment and part numbers, etc.
+</p>
+<h4>Comment</h4>
+<p>
+For coded data, lengthy items may exceed a user's memory span, inducing
+errors in both data entry and data review.  The nine-digit ZIP codes
+proposed by the US Postal Service will prove difficult to remember
+accurately.
+</p>
+<h4>Comment</h4>
+<p>
+Proper names, meaningful words, and other textual material are not coded
+data.  Such items can be remembered more easily, and the length
+restriction recommended here need not apply.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 1.5.2</a><li><a href="index.html#eg">EG 6.3.3</a></li></ul>
+<h3><a name="1.0_16">1.0/16     +  Partitioning Long Data Items</a></h3>
+<p>
+When a long data item must be entered, it should be partitioned into
+shorter symbol groups for both entry and display.
+</p>
+<h4>Example</h4>
+<p>
+A 10-digit telephone number can be entered as three groups,
+NNN-NNN-NNNN.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 1.4.1</a><li><a href="index.html#ms">MS 5.15.3.1.7 5.15.3.5.7 5.15.3.5.8</a><li><a href="index.html#wright_1977">Wright 1977</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Partitioning Long Data Items" href="2.html#2.2_14">2.2/14</a>
+</p>
+<h3><a name="1.0_17">1.0/17     Optional Abbreviation</a></h3>
+<p>
+Allow optional abbreviation of lengthy data items to minimize data entry
+keying by expert users, when that can be done without ambiguity.
+</p>
+<h4>Comment</h4>
+<p>
+Novice and/or occasional users may prefer to make full-form entries,
+while experienced users will learn and benefit from appropriate
+abbreviations.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.4.1</a><li><a href="index.html#eg">EG 6.3.5</a><li><a href="index.html#ms">MS 5.15.2.2.7</a></li></ul>
+<h3><a name="1.0_18">1.0/18     +  Distinctive Abbreviation</a></h3>
+<p>
+When defining abbreviations or other codes to shorten data entry, choose
+them to be distinctive in order to avoid confusing similarity with one
+another.
+</p>
+<h4>Example</h4>
+<p>
+BOS vs. LAS is good; but LAX vs. LAS risks confusion.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 3.1</a><li><a href="index.html#ms">MS 5.15.2.1.10</a></li></ul>
+<h3><a name="1.0_19">1.0/19     +  Simple Abbreviation Rule</a></h3>
+<p>
+When defining abbreviations, follow some simple abbreviation rule and
+ensure that users understand that rule.
+</p>
+<h4>Example</h4>
+<p>
+Simple truncation is probably the best rule when that can be done
+without ambiguity.
+</p>
+<h4>Comment</h4>
+<p>
+When encoding abbreviations for data entry the user must know what the
+rule is.  Truncation provides novice users with a straightforward and
+highly successful method for generating abbreviations, and is a rule
+that can be easily explained.  Moreover, truncation works at least as
+well, and often better than, more complicated rules, such as word
+contraction with omission of vowels.
+</p>
+<h4>Comment</h4>
+<p>
+Designers of military systems may wish to consult the relevant standard
+for abbreviations, MIL-STD-12D.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ehrenreich_1985">Ehrenreich 1985</a><li><a href="index.html#ehrenreich_porcu_1982">Ehrenreich Porcu 1982</a><li><a href="index.html#hirsh-pasek_nudelman_schneider_1982">Hirsh-Pasek Nudelman Schneider 1982</a><li><a href="index.html#moses_ehrenreich_1981">Moses Ehrenreich 1981</a></li></ul>
+<h3><a name="1.0_20">1.0/20     +  Minimal Exceptions to Abbreviation Rule</a></h3>
+<p>
+Use special abbreviations (i.e., those not formed by consistent rule)
+only when they are required for clarity.
+</p>
+<h4>Comment</h4>
+<p>
+Special abbreviations will sometimes be needed to distinguish between
+words whose abbreviations by rule are identical, or when abbreviation by
+rule forms another word, or when the special abbreviation is already
+familiar to system users.  If more than 10 percent of abbreviations are
+special cases, consider changing the abbreviation rule.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#moses_ehrenreich_1981">Moses Ehrenreich 1981</a></li></ul>
+<h3><a name="1.0_21">1.0/21     +  Minimal Deviation from Abbreviation Rule</a></h3>
+<p>
+When an abbreviation must deviate from the consistent rule, minimize the
+extent of deviation.
+</p>
+<h4>Example</h4>
+<p>
+In abbreviation by truncation, letters in the truncated form should be
+changed one at a time until a unique abbreviation is achieved.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#moses_ehrenreich_1981">Moses Ehrenreich 1981</a></li></ul>
+<h3><a name="1.0_22">1.0/22     +  Fixed Abbreviation Length</a></h3>
+<p>
+Make abbreviations the same length, the shortest possible that will
+ensure unique abbreviations.
+</p>
+<h4>Comment</h4>
+<p>
+Desirable length will depend upon the vocabulary size of words to be
+abbreviated.  For a vocabulary of 75 words, 4-letter abbreviations might
+suffice.  For smaller vocabularies, still shorter abbreviations might be
+used.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#moses_ehrenreich_1981">Moses Ehrenreich 1981</a></li></ul>
+<h3><a name="1.0_23">1.0/23     +  Clarifying Unrecognized Abbreviations</a></h3>
+<p>
+When the computer cannot recognize an abbreviated data entry, question
+the user as necessary to resolve any ambiguity.
+</p>
+<h4>Example</h4>
+<p>
+This may occur when a user enters a misremembered abbreviation.
+</p>
+<h3><a name="1.0_24">1.0/24     Prompting Data Entry</a></h3>
+<p>
+Provide prompting for the required formats and acceptable values for
+data entries.
+</p>
+<h4>Example</h4>
+<p>
+(Good)
+</p><pre>| Vehicle type: __  |
+| c = Car           |
+| t = Truck         |
+| b = Bus           |
+</pre>
+<p>
+(Bad)
+</p><pre>| Vehicle type:  __ |
+</pre><h4>Exception</h4>
+<p>
+Prompting may not be needed by skilled users and indeed may hinder
+rather than help their performance in situations where display output is
+slow (as with Teletype displays); for such users prompting might be
+provided as an optional aid.
+</p>
+<h4>Comment</h4>
+<p>
+Prompting is particularly needed for coded data entries.  Menu selection
+may be appropriate for that purpose, because menu selection does not
+require the user to remember codes but merely to choose among displayed
+alternatives.  Other methods of prompting include labeling data fields,
+such as
+</p><pre> | Vehicle type (c/t/b):  __ |
+</pre>
+<p>
+
+and/or providing optional guidance displays.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#gade_fields_maisano_marshall_alderman_1981">Gade Fields Maisano Marshall Alderman 1981</a><li><a href="index.html#seibel_1972">Seibel 1972</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Data Field Labels" href="1.html#1.4_5">1.4/5</a>
+&nbsp;|&nbsp;
+<a title="Prompting Entries" href="4.html#4.4_7">4.4/7</a>
+&nbsp;|&nbsp;
+<a title="" href="3.html#3.1.3">3.1.3</a>
+</p>
+<h3><a name="1.0_25">1.0/25     Character Entry via Single Keystroke</a></h3>
+<p>
+Allow users to enter each character of a data item with a single stroke
+of an appropriately labeled key.
+</p>
+<h4>Example</h4>
+<p>
+As a negative example, when a keyboard is intended primarily for numeric
+input, with several letters grouped on each key such as a telephone
+keypad, do not require a user to make alphabetic entries by double
+keying.
+</p>
+<h4>Comment</h4>
+<p>
+Devices that involve complex keying methods for alphabetic entry (e.g.,
+pressing more than one key, simultaneously or successively) require
+special user training and risk frequent data entry errors.
+</p>
+<h4>Comment</h4>
+<p>
+When hardware limitations such as those of a telephone keypad seem to
+require double keying of alphabetic entries, try to limit data codes so
+that only single-keyed (numeric) entries are required.  Alternatively,
+consider providing software to interrogate the user to resolve any
+ambiguities resulting from single-keyed alphabetic entries.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#butterbaugh_rockwell_1982">Butterbaugh Rockwell 1982</a><li><a href="index.html#smith_goodwin_1971a">Smith Goodwin 1971a</a></li></ul>
+<h3><a name="1.0_26">1.0/26     +  Minimal Shift Keying</a></h3>
+<p>
+Design data entry transactions to minimize the need for shift keying.
+</p>
+<h4>Comment</h4>
+<p>
+Shift keying can be considered a form of double keying, which imposes a
+demand for extra user attention.  Keyboard designers should put
+frequently used characters where they can be easily keyed.  Conversely,
+software designers should avoid frequent use of characters requiring
+shift keying.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#eg">EG 6.3.12</a></li></ul>
+<h3><a name="1.0_27">1.0/27     Upper and Lower Case Equivalent</a></h3>
+<p>
+For coded data entry, treat upper and lower case letters as equivalent.
+</p>
+<h4>Comment</h4>
+<p>
+For data codes, users find it difficult to remember whether upper or
+lower case letters are required, and so the software design should not
+try to make such a distinction.  For text entry, however, conventional
+use of capitalized letters should be maintained.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Upper and Lower Case Equivalent in Search" href="1.html#1.3_10">1.3/10</a>
+&nbsp;|&nbsp;
+<a title="Upper and Lower Case Equivalent" href="3.html#3.0_12">3.0/12</a>
+</p>
+<h3><a name="1.0_28">1.0/28     Decimal Point Optional</a></h3>
+<p>
+Allow optional entry or omission of a decimal point at the end of an
+integer as equivalent alternatives.
+</p>
+<h4>Example</h4>
+<p>
+An entry of "56." should be processed as equivalent to an entry of "56",
+and vice versa.
+</p>
+<h4>Comment</h4>
+<p>
+If a decimal point is required for data processing, the computer should
+probably be programmed to append one as needed.  Most users will forget
+to do it.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#keister_gallaway_1983">Keister Gallaway 1983</a></li></ul>
+<h3><a name="1.0_29">1.0/29     Leading Zeros Optional</a></h3>
+<p>
+For general numeric data, allow optional entry or omission of leading
+zeros as equivalent alternatives.
+</p>
+<h4>Example</h4>
+<p>
+If a user enters "56" in a field that is four characters long, the
+system should recognize that entry rather than requiring an entry of
+"0056".
+</p>
+<h4>Exception</h4>
+<p>
+Special cases may represent exceptions to this rule, such as entry of
+serial numbers or other numeric identifiers.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.2.3</a><li><a href="index.html#eg">EG 6.3.11</a></li></ul>
+<h3><a name="1.0_30">1.0/30     Single and Multiple Blanks Equivalent</a></h3>
+<p>
+Treat single and multiple blank characters as equivalent in data entry;
+do not require users to count blanks.
+</p>
+<h4>Comment</h4>
+<p>
+People cannot be relied upon to pay careful attention to such details.
+The computer should handle them automatically, e.g., ensuring that two
+spaces follow every period in text entry (if that is the desired
+convention), and spacing other data items in accord with whatever format
+has been defined.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Ignoring Blanks in Command Entry" href="3.html#3.1.5_17">3.1.5/17</a>
+</p>
+<h3><a name="1.0_31">1.0/31     Aids for Entering Hierarchic Data</a></h3>
+<p>
+If a user must enter hierarchic data, where some items will be
+subordinate to others, provide computer aids to help the user specify
+relations in the hierarchic structure.
+</p>
+<h4>Comment</h4>
+<p>
+For simple data structures, question-and-answer dialogues or form
+filling may suffice to maintain necessary data relations.  For more
+complex data structures, such as those involved in graphic data entry,
+special techniques may be needed to help users specify the relations
+among data entries.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Aids for Entering Hierarchic Data" href="1.html#1.6_18">1.6/18</a>
+&nbsp;|&nbsp;
+<a title="Aids for Entering Hierarchic Data" href="1.html#1.8_12">1.8/12</a>
+</p>
+<h3><a name="1.0_32">1.0/32     Speech Input</a></h3>
+<p>
+Consider spoken data input only when data entry cannot be accomplished
+through more reliable methods such as keyed entry or pointing.
+</p>
+<h4>Example</h4>
+<p>
+Postal workers whose hands are occupied sorting packages might speak ZIP
+codes into a speech recognition device rather than keying entries.
+</p>
+<h4>Comment</h4>
+<p>
+Current speech recognition devices are not well developed and tend to be
+error prone.  Thus there should be some good reason for choosing speech
+input over more conventional data entry methods.  Speech input might be
+appropriate if a user cannot use his/her hands, perhaps because of a
+physical handicap or because the user's hands are needed to accomplish
+other tasks.  Speech input may also be appropriate if a user does not
+have access to a suitable keyboard, as might be the case if data were
+being entered by telephone.
+</p>
+<h3><a name="1.0_33">1.0/33     +  Limited Vocabulary for Speech Input</a></h3>
+<p>
+Structure the vocabulary used for spoken data entry so that only a few
+options are needed for any transaction.
+</p>
+<h4>Comment</h4>
+<p>
+To increase the likelihood that a user's valid entries are correctly
+identified by the system, the user's vocabulary should be predictable.
+This does not necessarily mean that the vocabulary must be small, though
+recognition systems that can only accommodate small vocabularies are
+more prevalent and less expensive.  A vocabulary is predictable when a
+user's choice of inputs at any given time is small, so that the system
+will be more likely to make a correct match in interpreting an entry.
+</p>
+<h3><a name="1.0_34">1.0/34     +  Phonetically Distinct Vocabulary for Speech Input</a></h3>
+<p>
+Ensure that the spoken entries needed for any transaction are
+phonetically distinct from one another.
+</p>
+<h4>Comment</h4>
+<p>
+Words which are easily distinguished by one speech recognition system
+may be confused by another.  Thus system testing should be performed in
+order to determine what sounds a particular system tends to confuse, and
+what sounds it can distinguish reliably.
+</p>
+<h3><a name="1.0_35">1.0/35     +  Easy Error Correction for Speech Input</a></h3>
+<p>
+Provide feedback and simple error correction procedures for speech
+input, so that when a spoken entry has not been correctly recognized by
+the computer, the user can cancel that entry and speak again.
+</p>
+<h4>Comment</h4>
+<p>
+Simple error correction is particularly important with spoken data
+entry, since speech recognition systems are prone to error except under
+carefully controlled conditions.
+</p>
+<h3><a name="1.0_36">1.0/36     +  Alternative Entries for Speech Input</a></h3>
+<p>
+When speech input is the only form of data entry available, allow
+alternatives for critical entries, so that if the system cannot
+recognize an entry after repeated attempts another entry can be
+substituted.
+</p>
+<h4>Example</h4>
+<p>
+"Exit" might be defined as an acceptable substitute for "Finished".
+</p>
+<h4>Comment</h4>
+<p>
+Because speech recognition systems are affected by normal variations in
+a user's voice, and by changes in the acoustic environment, a spoken
+entry that was accepted yesterday might not be accepted today.  Thus for
+important entries a user should be able to use an alternative word.
+</p>
+<h4>Comment</h4>
+<p>
+Spelling a word letter-by-letter is not an acceptable alternative, since
+speech recognition systems may have trouble correctly identifying
+similar sounding letters.
+</p>
+<h3><a name="1.0_37">1.0/37     +  PAUSE and CONTINUE Options for Speech Input</a></h3>
+<p>
+Provide PAUSE and CONTINUE options for speech input, so that a user can
+stop speaking without having to log off the system.
+</p>
+<h4>Example</h4>
+<p>
+A user may wish to stop speaking data for a time in order to answer a
+telephone, or to speak with a fellow worker.  Users should not have to
+log off the system every time they wish to say something that is not
+intended as an entry.
+</p>
+<h4>See also</h4>
+<p>
+<a title="PAUSE and CONTINUE Options" href="3.html#3.3_8">3.3/8</a>
+&nbsp;|&nbsp;
+<a title="Indicating PAUSE Status" href="3.html#3.3_9">3.3/9</a>
+</p><h2><a name="1.1">1.1    Position Designation</a></h2>
+<p>
+Position designation refers to user selection and entry of a position on
+a display, or of a displayed item.
+</p>
+<h3><a name="1.1_1">1.1/1      Distinctive Cursor</a></h3>
+<p>
+For position designation on an electronic display, provide a movable
+cursor with distinctive visual features (shape, blink, etc.).
+</p>
+<h4>Exception</h4>
+<p>
+When position designation involves only selection among displayed
+alternatives, highlighting selected items might be used instead of a
+separately displayed cursor.
+</p>
+<h4>Comment</h4>
+<p>
+When choosing a cursor shape, consider the general content of the
+display.  For instance, an underscore cursor would be difficult to see
+on a display of underscored text, or on a graphical display containing
+many other lines.
+</p>
+<h4>Comment</h4>
+<p>
+If the cursor is changed to denote different functions (e.g., to signal
+deletion rather than entry), then each different cursor should be
+distinguishable from the others.
+</p>
+<h4>Comment</h4>
+<p>
+If multiple cursors are used on the same display (e.g., one for
+alphanumeric entry and one for line drawing), then each cursor should be
+distinguishable from the others.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#whitfield_ball_bird_1983">Whitfield Ball Bird 1983</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Distinctive Multiple Cursors" href="1.html#1.1_17">1.1/17</a>
+&nbsp;|&nbsp;
+<a title="Distinctive Cursor" href="4.html#4.0_9">4.0/9</a>
+</p>
+<h3><a name="1.1_2">1.1/2      +  Nonobscuring Cursor</a></h3>
+<p>
+Design the cursor so that it does not obscure any other character
+displayed in the position designated by the cursor.
+</p>
+<h4>Example</h4>
+<p>
+A block cursor might employ brightness inversion ("reverse video") to
+show any other character that it may be marking.
+</p>
+<h3><a name="1.1_3">1.1/3      +  Precise Pointing</a></h3>
+<p>
+When fine accuracy of positioning is required, as in some forms of
+graphic interaction, design the displayed cursor to include a point
+designation feature.
+</p>
+<h4>Example</h4>
+<p>
+A cross may suffice (like cross-hairs in a telescope), or perhaps a
+notched or V-shaped symbol (like a gun sight).
+</p>
+<h4>Comment</h4>
+<p>
+Precise pointing will also require a cursor control device capable of
+precise manipulation.  Touch displays, for example, will not permit
+precise pointing.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.2.1.8.2</a><li><a href="index.html#whitfield_ball_bird_1983">Whitfield Ball Bird 1983</a></li></ul>
+<h3><a name="1.1_4">1.1/4      Explicit Activation</a></h3>
+<p>
+Require users to take a separate, explicit action, distinct from cursor
+positioning, for the actual entry (enabling, activation) of a designated
+position.
+</p>
+<h4>Exception</h4>
+<p>
+For line drawing or tracking tasks the need for rapid, continuous entry
+may override the need to reduce entry errors.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.2.5.4</a><li><a href="index.html#albert_1982">Albert 1982</a><li><a href="index.html#foley_wallace_1974">Foley Wallace 1974</a><li><a href="index.html#whitfield_ball_bird_1983">Whitfield Ball Bird 1983</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Confirming Cursor Position" href="1.html#1.6_4">1.6/4</a>
+&nbsp;|&nbsp;
+<a title="Dual Activation for Pointing" href="3.html#3.1.3_6">3.1.3/6</a>
+</p>
+<h3><a name="1.1_5">1.1/5      Fast Acknowledgement of Entry</a></h3>
+<p>
+Ensure that the computer will acknowledge entry of a designated position
+within 0.2 seconds.
+</p>
+<h4>Example</h4>
+<p>
+Almost any consistently provided display change will suffice to
+acknowledge pointing actions, such as brightening or flashing a selected
+character.
+</p>
+<h4>Comment</h4>
+<p>
+In some applications it may be desirable to provide an explicit message
+indicating that a selection has been made.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#eg">EG Table 2</a><li><a href="index.html#ms">MS 5.15.8</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Feedback During Data Entry" href="1.html#1.0_3">1.0/3</a>
+&nbsp;|&nbsp;
+<a title="Fast Response" href="4.html#4.2_2">4.2/2</a>
+&nbsp;|&nbsp;
+<a title="Indicating Item Selection" href="4.html#4.2_10">4.2/10</a>
+</p>
+<h3><a name="1.1_6">1.1/6      Stable Cursor</a></h3>
+<p>
+Ensure that the displayed cursor will be stable, i.e., that it will
+remain where it is placed until moved by the user (or by the computer)
+to another position.
+</p>
+<h4>Comment</h4>
+<p>
+Some special applications, such as aided tracking, may benefit from
+computer-controlled cursor movement.  The intent of the recommendation
+here is to avoid unwanted "drift".
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#eg">EG 6.1</a></li></ul>
+<h3><a name="1.1_7">1.1/7      Responsive Cursor Control</a></h3>
+<p>
+For arbitrary position designation, moving a cursor from one position to
+another, design the cursor control to permit both fast movement and
+accurate placement.
+</p>
+<h4>Comment</h4>
+<p>
+Ideally, when the user moves a pointing device the displayed cursor
+should appear to move instantly.  Rough positioning should take no more
+than 0.5 seconds for full screen traversal.  Fine positioning may
+require incremental stepping of the cursor, or a control device
+incorporating a large control/display ratio for small displacements, or
+a selectable vernier mode of control use.  For any given cursor control
+action, the rate of cursor movement should be constant, i.e., should not
+change with time.
+</p>
+<h4>Comment</h4>
+<p>
+Slow visual feedback of cursor movement can be particularly irritating
+when a user is repeatedly pressing a cursor control key, or perhaps
+holding the key down.  In that case, slow feedback will cause the user
+to misjudge location and move the cursor too far.
+</p>
+<h3><a name="1.1_8">1.1/8      Consistent Incremental Positioning</a></h3>
+<p>
+When cursor positioning is incremental by discrete steps, design the
+step size of cursor movement to be consistent horizontally (i.e., in
+both right and left directions), and consistent vertically (in both up
+and down directions).
+</p>
+<h4>Comment</h4>
+<p>
+Horizontal and vertical step sizes need not be the same, and in general
+will not be.
+</p>
+<h3><a name="1.1_9">1.1/9      +  Variable Step Size</a></h3>
+<p>
+When character size is variable, design the incremental cursor
+positioning to vary correspondingly, with a step size matching the size
+of currently selected characters.
+</p>
+<h3><a name="1.1_10">1.1/10     +  Proportional Spacing</a></h3>
+<p>
+If proportional spacing is used for displayed text, provide computer
+logic to make necessary adjustments automatically when the cursor is
+being positioned for data entry or data change.
+</p>
+<h4>Example</h4>
+<p>
+Automatic proportional spacing is useful for cursor control when editing
+text composed for typesetting.
+</p>
+<h4>Exception</h4>
+<p>
+Manual override may help a user in special cases where automatic spacing
+is not wanted.
+</p>
+<h4>Comment</h4>
+<p>
+Without automatic computer aids, a user probably will not handle
+proportional spacing accurately.
+</p>
+<h3><a name="1.1_11">1.1/11     Continuous Cursor Positioning</a></h3>
+<p>
+For continuous position designation, such as needed for line drawing,
+provide a continuously operable control (e.g., joystick) rather than
+requiring a user to take incremental, discrete key actions.
+</p>
+<h4>See also</h4>
+<p>
+<a title="" href="1.html#1.6.2">1.6.2</a>
+</p>
+<h3><a name="1.1_12">1.1/12     Direct Pointing</a></h3>
+<p>
+When position designation is the sole or primary means of data entry, as
+in selection among displayed alternatives, provide cursor placement by
+direct pointing (e.g., with a touch display or lightpen) rather than
+incremental stepping or slewing controls (e.g., keys, joystick, etc.).
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.2.5.1</a><li><a href="index.html#albert_1982">Albert 1982</a><li><a href="index.html#goodwin_1975">Goodwin 1975</a><li><a href="index.html#shinar_stern_bubis_ingram_1985">Shinar Stern Bubis Ingram 1985</a></li></ul>
+<h3><a name="1.1_13">1.1/13     +  Large Pointing Area for Option Selection</a></h3>
+<p>
+In selection of displayed alternatives, design the acceptable area for
+pointing (i.e., cursor placement) to be as large as consistently
+possible, including at least the area of the displayed label plus a
+half-character distance around the label.
+</p>
+<h4>Comment</h4>
+<p>
+The larger the effective target area, the easier the pointing action
+will be, and the less risk of error in selecting the wrong label by
+mistake.  Some researchers have recommended a target separation on the
+display of no less than 6 mm.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.12</a><li><a href="index.html#eg">EG 2.3.13 6.1.3</a><li><a href="index.html#whitfield_ball_bird_1983">Whitfield Ball Bird 1983</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Large Pointing Area for Option Selection" href="3.html#3.1.3_5">3.1.3/5</a>
+</p>
+<h3><a name="1.1_14">1.1/14     Cursor Control at Keyboard</a></h3>
+<p>
+When position designation is required in a task emphasizing keyed data
+entry, provide cursor control by some device integral to the keyboard
+(function keys, joystick, "cat", etc.).
+</p>
+<h4>Comment</h4>
+<p>
+Separately manipulated devices (lightpen, "mouse", etc.) will tend to
+slow the user.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#foley_wallace_1974">Foley Wallace 1974</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Single Method for Entering Data" href="1.html#1.0_5">1.0/5</a>
+</p>
+<h3><a name="1.1_15">1.1/15     Compatible Control of Cursor Movement</a></h3>
+<p>
+Ensure that control actions for cursor positioning are compatible with
+movements of the displayed cursor, in terms of control function and
+labeling.
+</p>
+<h4>Example</h4>
+<p>
+For cursor control by key action, a key labeled with a left-pointing
+arrow should move the cursor leftward on the display; for cursor control
+by joystick, leftward movement of the control (or leftward pressure)
+should result in leftward movement of the cursor; etc.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Compatibility with User Expectations" href="3.html#3.0_16">3.0/16</a>
+</p>
+<h3><a name="1.1_16">1.1/16     Minimal Use of Multiple Cursors</a></h3>
+<p>
+Employ multiple cursors on a single display only when they are justified
+by careful task analysis.
+</p>
+<h4>Example</h4>
+<p>
+Multiple cursors might be useful to mark a user's place when
+manipulating data in multiple display windows.
+</p>
+<h4>Example</h4>
+<p>
+In graphic interaction, one cursor might be used for line drawing and a
+different cursor for alphanumeric data entry (labels, etc.).
+</p>
+<h4>Comment</h4>
+<p>
+Multiple cursors may confuse a user, and so require special
+consideration if advocated in USI design.
+</p>
+<h3><a name="1.1_17">1.1/17     +  Distinctive Multiple Cursors</a></h3>
+<p>
+If multiple cursors are used, make them visually distinctive from one
+another.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Distinctive Cursor" href="1.html#1.1_1">1.1/1</a>
+</p>
+<h3><a name="1.1_18">1.1/18     +  Distinctive Control of Multiple Cursors</a></h3>
+<p>
+If multiple cursors are controlled by a single device, provide a clear
+signal to the user to indicate which cursor is currently under control.
+</p>
+<h3><a name="1.1_19">1.1/19     +  Compatible Control of Multiple Cursors</a></h3>
+<p>
+If multiple cursors are controlled by different devices, ensure that
+their separate controls are compatible in operation.
+</p>
+<h4>Example</h4>
+<p>
+Assume that one cursor is moved upward on a display by forward motion of
+a joystick.  Then a second cursor should also be moved upward by forward
+motion -- perhaps by forward motion of a second joystick or by forward
+motion of a thumbwheel or other device.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#morrill_davies_1961">Morrill Davies 1961</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Compatibility with User Expectations" href="3.html#3.0_16">3.0/16</a>
+</p>
+<h3><a name="1.1_20">1.1/20     Consistent HOME Position</a></h3>
+<p>
+When there is a predefined HOME position for the cursor, which is
+usually the case, define that position consistently on all displays of a
+given type.
+</p>
+<h4>Example</h4>
+<p>
+HOME might be in the upper left corner of a text display, or at the
+first field in a form-filling display, or at the center of a graphic
+display.
+</p>
+<h4>Comment</h4>
+<p>
+The HOME position of the cursor should also be consistent in the
+different "windows" or sections of a partitioned display.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.2.1.8.3</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Consistent Cursor Positioning" href="4.html#4.4_16">4.4/16</a>
+</p>
+<h3><a name="1.1_21">1.1/21     Consistent Cursor Placement</a></h3>
+<p>
+On the initial appearance of a data entry display, ensure that the
+cursor will appear automatically at some consistent and useful location.
+</p>
+<h4>Example</h4>
+<p>
+In a form-filling display, the cursor should be placed in the first
+entry field.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.1.4</a><li><a href="index.html#ms">MS 5.15.4.3.6</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Automatic Cursor Placement" href="1.html#1.4_28">1.4/28</a>
+&nbsp;|&nbsp;
+<a title="Consistent Cursor Positioning" href="4.html#4.4_16">4.4/16</a>
+</p>
+<h3><a name="1.1_22">1.1/22     Easy Cursor Movement to Data Fields</a></h3>
+<p>
+If a cursor must be positioned sequentially in predefined areas, such as
+displayed data entry fields, ensure that this can be accomplished by
+simple user action.
+</p>
+<h4>Example</h4>
+<p>
+Programmable tab keys are customarily used for this purpose.
+</p>
+<h4>Comment</h4>
+<p>
+Automatic cursor advance is generally not desirable.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.4.3.6</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Minimal Cursor Positioning" href="1.html#1.4_26">1.4/26</a>
+</p>
+<h3><a name="1.1_23">1.1/23     Display Format Protection</a></h3>
+<p>
+When there are areas of a display in which data entries cannot be made
+(blank spaces, protected field labels, etc.), make those areas
+insensitive to pointing actions, i.e., prevent the cursor from entering
+those areas.
+</p>
+<h4>Exception</h4>
+<p>
+When a user may have to modify display formats, then this automatic
+format protection can be provided as a general default option subject to
+user override.
+</p>
+<h4>Comment</h4>
+<p>
+Automatic format protection will generally make cursor positioning
+easier for a user, since the cursor will not have to be stepped through
+blank areas, and much routine cursor control can be accomplished with
+only casual reference to the display.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 1.8.13</a><li><a href="index.html#eg">EG 7.5</a><li><a href="index.html#ms">MS 5.15.4.3.12</a><li><a href="index.html#pr">PR 3.3.2</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Protected Labels" href="1.html#1.4_7">1.4/7</a>
+&nbsp;|&nbsp;
+<a title="Protection of Displayed Data" href="2.html#2.0_10">2.0/10</a>
+&nbsp;|&nbsp;
+<a title="Protecting Display Formats" href="6.html#6.2_5">6.2/5</a>
+</p>
+<h3><a name="1.1_24">1.1/24     Data Entry Independent of Cursor Placement</a></h3>
+<p>
+Ensure that an ENTER action for multiple data items results in entry of
+all items, regardless of where the cursor is placed on the display.
+</p>
+<h4>Comment</h4>
+<p>
+A user may choose to move the cursor back to correct earlier data items,
+and may not move the cursor forward again.  The computer should ignore
+cursor placement in such cases.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Data Entry Independent of Cursor Placement" href="6.html#6.3_7">6.3/7</a>
+</p><h2><a name="1.2">1.2    Direction Designation</a></h2>
+<p>
+Direction designation refers to user entry of directional data (azimuth,
+bearing, heading, etc.) on a display.
+</p>
+<h3><a name="1.2_1">1.2/1      Analog Entry of Estimated Direction</a></h3>
+<p>
+When direction designation is based on graphic representation, provide
+some analog means of entry, such as vector rotation on the display
+and/or a suitably designed rotary switch.
+</p>
+<h4>Example</h4>
+<p>
+A rotary switch might be used to indicate heading estimations for
+displayed radar trails.
+</p>
+<h4>Exception</h4>
+<p>
+When approximate direction designation will suffice, for just eight
+cardinal points, keyed entry can be used.
+</p>
+<h4>Comment</h4>
+<p>
+For matching the directional elements in a graphic display, an entry
+device providing a visual analog will prove both faster and more
+accurate.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#smith_1962a">Smith 1962a</a></li></ul>
+<h3><a name="1.2_2">1.2/2      Keyed Entry of Quantified Direction</a></h3>
+<p>
+When designation of direction is based on already quantified data, allow
+keyed entry.
+</p>
+<h4>Example</h4>
+<p>
+A heading entry might be made from a verbal report in which the
+direction has already been expressed numerically.
+</p><h2><a name="1.3">1.3    Text</a></h2>
+<p>
+Text entry refers to the initial entry and subsequent editing of textual
+material, including messages.
+</p>
+<h3><a name="1.3_1">1.3/1      Adequate Display Capacity</a></h3>
+<p>
+Ensure that display capacity, i.e., number of lines and line length, is
+adequate to support efficient performance of text entry/editing tasks.
+</p>
+<h4>Example</h4>
+<p>
+For text editing where the page format of subsequent printed output is
+critical, the user's terminal should be able to display full pages of
+text in final output form, which might require a display capacity of
+50-60 lines or more.
+</p>
+<h4>Example</h4>
+<p>
+For general text editing where a user might need to make large changes
+in text, i.e., sometimes moving paragraphs and sections, a display
+capacity of at least 20 lines should be provided.
+</p>
+<h4>Example</h4>
+<p>
+Where text editing will be limited to local changes, i.e., correcting
+typos and minor rewording, as few as seven lines of text might be
+displayed.
+</p>
+<h4>Comment</h4>
+<p>
+A single line of displayed text should not be used for text editing.
+During text editing, a user will need to see some displayed context in
+order to locate and change various text entries.  Displaying only a
+small portion of text will make a user spend more time moving forward
+and back in a displayed document to see other parts, will increase load
+on the user's memory, and will cause users to make more errors.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#elkerton_williges_pittman_roach_1982">Elkerton Williges Pittman Roach 1982</a><li><a href="index.html#neal_darnell_1984">Neal Darnell 1984</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Text Displayed as Printed" href="1.html#1.3_27">1.3/27</a>
+</p>
+<h3><a name="1.3_2">1.3/2      Editing Capabilities During Text Entry</a></h3>
+<p>
+Allow users to do at least some simple editing during text entry without
+having to invoke a separate edit mode.
+</p>
+<h4>Example</h4>
+<p>
+While entering text, users will need at least some capability for text
+selection (by cursor movement) and deletion.
+</p>
+<h4>Comment</h4>
+<p>
+The intent of this guideline is not to endorse modeless over moded text
+editors.  In fact, when experienced users perform editing tasks, a moded
+editor may offer some advantages.  However if a moded editor is
+provided, users should be able to do some simple editing such as
+correcting typographical errors and making simple word changes without
+having to invoke that editor.
+</p>
+<h4>Comment</h4>
+<p>
+When users will compose text on-line, consider providing a modeless
+editor rather than a moded editor.  Modeless editors offer some
+advantages for text composition, when users will frequently alternate
+between text entry and editing.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#poller_garter_1984">Poller Garter 1984</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="User Changes to Displayed Data" href="2.html#2.0_9">2.0/9</a>
+</p>
+<h3><a name="1.3_3">1.3/3      Free Cursor Movement</a></h3>
+<p>
+For text editing, allow users to move the cursor freely over a displayed
+page of text to specify items for change, and to make changes directly
+to the text.
+</p>
+<h4>Comment</h4>
+<p>
+Free cursor movement and changes made directly to the text are
+characteristics usually associated with so-called screen-based editors
+and not associated with line- or command-based editors.  Screen-based
+editors are preferred by users and are potentially more efficient.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.3.8.2</a><li><a href="index.html#gould_1981">Gould 1981</a><li><a href="index.html#roberts_moran_1983">Roberts Moran 1983</a><li><a href="index.html#shneiderman_1982">Shneiderman 1982</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Panning with Free Cursor Movement" href="2.html#2.7.2_8">2.7.2/8</a>
+</p>
+<h3><a name="1.3_4">1.3/4      +  Control Entries Distinct from Text</a></h3>
+<p>
+If control entries are made by keying onto the display, such as by keyed
+menu selections or commands, ensure that they will be distinguishable
+from displayed text.
+</p>
+<h4>Example</h4>
+<p>
+Keyed control entries might be made only in a reserved window in the
+display.
+</p>
+<h4>Comment</h4>
+<p>
+The intent here is to help ensure that a user will not inadvertently
+enter controls as text, or vice versa.  If a command entry is keyed into
+the body of a text display, perhaps at the end of the last sentence,
+then a user cannot be certain whether the computer will interpret the
+command as a text entry or as a control entry.
+</p>
+<h4>Comment</h4>
+<p>
+In applications where the screen cannot display all possible format
+features (e.g., special fonts), format codes representing those features
+are usually displayed within the text.  It is not practical in such
+cases to display format codes in a separate window, since a displayed
+code must mark the text that will be affected by the code.  These codes
+should therefore be highlighted in some way to distinguish them from
+text.
+</p>
+<h4>Comment</h4>
+<p>
+One way of avoiding the problem altogether is to use function keys
+rather than command entry to control text editing.  To provide a general
+range of text editing functions, however, many keys will be needed.  A
+practical design approach might be to adopt double-keying logic for all
+keys on a standard (QWERTY) keyboard, where control-F means FILE a
+document, control-G means GET a document, etc., and providing
+appropriate extra labels for those keys.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Text Distinct from Annotation" href="1.html#1.3_26">1.3/26</a>
+</p>
+<h3><a name="1.3_5">1.3/5      Natural Units of Text</a></h3>
+<p>
+Allow users to specify segments of text in whatever units are natural
+for entry/editing.
+</p>
+<h4>Example</h4>
+<p>
+For unformatted ("free") text, natural units will be characters, words,
+phrases, sentences, paragraphs, and pages; for specially formatted text,
+such as computer program listings, allow specification of other logical
+units, including lines, subsections, sections, etc.
+</p>
+<h3><a name="1.3_6">1.3/6      +  Control Entry Based on Units of Text</a></h3>
+<p>
+Allow users to specify units of text as modifiers for control entries.
+</p>
+<h4>Example</h4>
+<p>
+Consider two alternative control sequences to delete a four-character
+word:
+
+</p><pre>  (Good)  DELETE WORD
+</pre>
+<p>
+
+</p><pre>  (Bad)   DELETE DELETE DELETE DELETE
+</pre><h4>Comment</h4>
+<p>
+Control entries, whether accomplished by function key, menu selection,
+or command entry, will be easier and more powerful when a user can
+specify text in natural units, rather than having to repeat an entry for
+each text character.
+</p>
+<h4>Comment</h4>
+<p>
+When units of text are modifiers for all control entries, the syntax for
+those control entries will be easier to learn.  Whether a control action
+is to MOVE or to DELETE, the modifiers to specify text are the same.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.3.8.4.1 5.15.3.8.4.2</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Consistent User Actions" href="3.html#3.0_6">3.0/6</a>
+&nbsp;|&nbsp;
+<a title="Standard Procedures" href="4.html#4.0_1">4.0/1</a>
+</p>
+<h3><a name="1.3_7">1.3/7      +  Highlighting Specified Text</a></h3>
+<p>
+When text has been specified to become the subject of control entries,
+highlight that segment of text in some way to indicate its boundaries.
+</p>
+<h4>Comment</h4>
+<p>
+Text may be specified for various purposes -- for underlining or
+bolding, moving, copying, or deleting.  Highlighting provides the user
+with direct feedback on the extent and content of specified text,
+reducing the likelihood of specification errors.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Indicating Item Selection" href="4.html#4.2_10">4.2/10</a>
+</p>
+<h3><a name="1.3_8">1.3/8      +  Cursor Movement by Units of Text</a></h3>
+<p>
+Allow users to move the cursor by specific units of text, as well as one
+character at a time.
+</p>
+<h4>Comment</h4>
+<p>
+The time necessary to position a cursor is directly related to the
+number of control actions required.  Incremental cursor movement by
+character will therefore be inefficient when moving the cursor over
+large units of text.
+</p>
+<h4>Comment</h4>
+<p>
+Cursor positioning will be easier if appropriate function keys can be
+provided.  A SENTENCE key that allows a user to move directly to the
+next displayed sentence will be more convenient than some double-keying
+logic such as CONTROL-S.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Responsive Cursor Control" href="1.html#1.1_7">1.1/7</a>
+</p>
+<h3><a name="1.3_9">1.3/9      String Search</a></h3>
+<p>
+Allow users to specify a string of text and request the computer to
+advance (or back up) the cursor automatically to the next (or last
+previous) occurrence of that string.
+</p>
+<h4>Comment</h4>
+<p>
+Novice users may prefer to move through a displayed document by units of
+text, such as by word or paragraph.  More experienced users, however,
+may sometimes wish to specify cursor placement directly.  An automatic
+string search capability will generally speed cursor placement in
+comparison with incremental positioning, particularly when moving over
+large portions of a document.
+</p>
+<h4>Comment</h4>
+<p>
+Expert users may also wish to incorporate special characters in string
+search, including format control characters such as those for tabbing,
+bolding, etc.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#elkerton_williges_pittman_roach_1982">Elkerton Williges Pittman Roach 1982</a></li></ul>
+<h3><a name="1.3_10">1.3/10     +  Upper and Lower Case Equivalent in Search</a></h3>
+<p>
+Unless otherwise specified by a user, treat upper and lower case letters
+as equivalent in searching text.
+</p>
+<h4>Example</h4>
+<p>
+"STRING", "String", and "string" should all be recognized/accepted by
+the computer when searching for that word.
+</p>
+<h4>Comment</h4>
+<p>
+In searching for words, users will generally be indifferent to any
+distinction between upper and lower case.  The computer should not
+compel a distinction that users do not care about and may find difficult
+to make.  In situations when case actually is important, allow users to
+specify case as a selectable option in string search.
+</p>
+<h4>Comment</h4>
+<p>
+It may also be useful for the computer to ignore such other features as
+bolding, underlining, parentheses and quotes when searching text.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Upper and Lower Case Equivalent" href="1.html#1.0_27">1.0/27</a>
+&nbsp;|&nbsp;
+<a title="Upper and Lower Case Equivalent" href="3.html#3.0_12">3.0/12</a>
+</p>
+<h3><a name="1.3_11">1.3/11     +  Specifying Case in Search</a></h3>
+<p>
+When case is important, allow users to specify case as a selectable
+option in string search.
+</p>
+<h4>Example</h4>
+<p>
+When searching a document in which all the headings are capitalized, a
+user might wish to find a string only when it appears in a heading.
+</p>
+<h4>Comment</h4>
+<p>
+Users may also wish to specify features such as bolding, underlining,
+and quotes when searching text.
+</p>
+<h3><a name="1.3_12">1.3/12     +  Global Search and Replace</a></h3>
+<p>
+When systematic editing changes will be made throughout a long document,
+consider providing a "global search and replace" capability in which the
+computer will replace all occurrences of one text string with another.
+</p>
+<h4>Comment</h4>
+<p>
+Global search and replace could be designed in two different ways.  One
+user might want the computer to make all changes automatically.  Another
+user might want to review and confirm each change.  Ideally, both
+options should be available.
+</p>
+<h3><a name="1.3_13">1.3/13     +  Case in Global Search and Replace</a></h3>
+<p>
+If a global search and replace capability is provided, ensure that each
+time a string is replaced the case of the new string matches the case of
+the old string, unless otherwise specified by the user.
+</p>
+<h4>Example</h4>
+<p>
+If a word is replacing the first word in a sentence, the first letter of
+the new word should be capitalized; if it is replacing a word that is
+entirely in lower case, then the new word should also be in lower case.
+</p>
+<h4>Comment</h4>
+<p>
+On occasion, however, a user might wish to replace an erroneous
+lower-case word ("Mitre") with a correctly capitalized version
+("MITRE").
+</p>
+<h3><a name="1.3_14">1.3/14     Automatic Pagination Aids</a></h3>
+<p>
+Provide automatic pagination for text entry/editing, allowing users to
+specify the page size.
+</p>
+<h4>Exception</h4>
+<p>
+For short documents, automatic pagination may not be needed.
+</p>
+<h3><a name="1.3_15">1.3/15     +  User Control of Pagination</a></h3>
+<p>
+When automatic pagination is provided, allow users to override that
+pagination in order to specify page numbers at any point in a document.
+</p>
+<h4>Example</h4>
+<p>
+A user might wish to number the first page of a document "23", or
+perhaps skip a page number in the middle of a document.
+</p>
+<h4>Comment</h4>
+<p>
+When producing a large document, a user may wish to split it into
+several separate text files for convenience in editing, and hence need
+to control the page numbering of those component sections.  In general,
+a user will want flexibility in assembling different computer files to
+create a composite document.
+</p>
+<h3><a name="1.3_16">1.3/16     +  Controlling Integrity of Text Units</a></h3>
+<p>
+When automatic pagination is provided, allow users to specify the number
+of lines in a paragraph that will be allowed to stand alone at the top
+or bottom of a page (i.e., the size of "widows" and "orphans"), and to
+specify any text that should not be divided between two pages, such as
+inserted lists or tables.
+</p>
+<h3><a name="1.3_17">1.3/17     Automatic Line Break</a></h3>
+<p>
+For entry/editing of unformatted text, provide an automatic line break
+("carriage return") when text reaches the right margin, with provision
+for user override.
+</p>
+<h4>Comment</h4>
+<p>
+For specially formatted text, such as computer program listings, users
+may need to control line structure themselves and hence need to override
+any automatic line break.  Even when entering unformatted text, a user
+will sometimes wish to specify a new line at some particular point, if
+only for esthetic reasons.
+</p>
+<h3><a name="1.3_18">1.3/18     +  Consistent Word Spacing</a></h3>
+<p>
+Unless otherwise specified by the user, ensure that entered text is
+left-justified to maintain constant spacing between words, leaving right
+margins ragged if that is the result.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Consistent Word Spacing" href="2.html#2.1_8">2.1/8</a>
+</p>
+<h3><a name="1.3_19">1.3/19     Hyphenation by Users</a></h3>
+<p>
+In the entry/editing of text, ensure that automatic pagination and line
+breaks by the computer keep words intact, and introduce hyphenation only
+where specified by users.
+</p>
+<h4>Comment</h4>
+<p>
+Where compound words have been hyphenated by a user, the computer might
+break the compound after a hyphen, for pagination or line breaks, unless
+otherwise specified by the user.  Compound words formed with slashes
+(e.g., "entry/ editing") might be treated in a similar manner.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Minimal Hyphenation" href="2.html#2.1_9">2.1/9</a>
+</p>
+<h3><a name="1.3_20">1.3/20     Format Control by User</a></h3>
+<p>
+Provide easy means for users to specify required format control features
+during text entry/editing, e.g., to specify margin and tab settings.
+</p>
+<h4>Example</h4>
+<p>
+One convenient method of margin and tab control is to allow users to
+mark settings on a displayed "ruler" that extends the width of a page
+and is continuously displayed at the top of the screen.
+</p>
+<h4>Comment</h4>
+<p>
+Required format features will vary depending on the application.  For
+instance, font size may be quite important when composing text for
+typesetting but unnecessary when editing computer programs.  The intent
+of this guideline is that all required format features should be easy to
+control, and should take priority in interface design.  Any format
+features which are provided but are optional for the user's task should
+not be made easy to use at the expense of required format features.
+</p>
+<h3><a name="1.3_21">1.3/21     Establishing Predefined Formats</a></h3>
+<p>
+When text formats must follow predefined standards, provide the standard
+format automatically; do not rely on users to remember and specify
+proper formats.
+</p>
+<h4>Example</h4>
+<p>
+Standard formats might be required for letters, memos, or other
+transmitted messages.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Automatic Text Formatting" href="5.html#5.1_6">5.1/6</a>
+</p>
+<h3><a name="1.3_22">1.3/22     +  Storing User-Defined Formats</a></h3>
+<p>
+When text formats cannot be predicted in advance, allow users to specify
+and store for future use the formats that might be needed for particular
+applications.
+</p>
+<h4>Example</h4>
+<p>
+A special format might be adopted for generating a particular report at
+periodic intervals.
+</p>
+<h3><a name="1.3_23">1.3/23     Moving Text</a></h3>
+<p>
+Allow users to select and move text segments from one place to another
+within a document.
+</p>
+<h4>Comment</h4>
+<p>
+A user should not have to re-enter (i.e., rekey) text that is already
+available to the computer.
+</p>
+<h4>Comment</h4>
+<p>
+One convenient method of allowing the user to both move and copy text is
+to provide a "cut and paste" facility in which the "cut" text remains in
+a storage buffer and can be "pasted" more than once.  For copying, the
+user can cut text, paste it back into its original location, and paste
+it again at a new location.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Data Entered Only Once" href="1.html#1.0_1">1.0/1</a>
+</p>
+<h3><a name="1.3_24">1.3/24     Storing Frequently Used Text</a></h3>
+<p>
+Allow users to label and store frequently used text segments, and later
+to recall (copy into current text) stored segments identified by their
+assigned labels.
+</p>
+<h4>Example</h4>
+<p>
+Much text processing involves repetitive elements specific to different
+applications, such as signature blocks, technical terms, long names,
+formulas or equations.
+</p>
+<h3><a name="1.3_25">1.3/25     Necessary Data Displayed</a></h3>
+<p>
+Ensure that whatever information a user needs for text entry/ editing is
+available for display, as an annotation to displayed text.
+</p>
+<h4>Example</h4>
+<p>
+A user might wish to see format control characters, such as tab and
+margin settings.
+</p>
+<h4>Comment</h4>
+<p>
+Required annotation will vary with the application.  Some annotation may
+be so commonly needed that it should be continuously displayed -- e.g.,
+document name, page number, indication of control mode (if any), etc.
+Other annotation might be displayed only at user request -- such as
+document status (date last changed, last printed, etc.) which might be
+displayed in an optional window overlay, and format control characters
+which might be visible in an optional display mode.
+</p>
+<h3><a name="1.3_26">1.3/26     +  Text Distinct from Annotation</a></h3>
+<p>
+Ensure that annotations to displayed text are distinguishable from the
+text itself.
+</p>
+<h4>Example</h4>
+<p>
+Continuous annotation might be displayed in the top and/or bottom lines
+of a page, separated from the text by blank lines; optional annotation
+might be displayed in window overlays.
+</p>
+<h4>Comment</h4>
+<p>
+This recommendation refers to text annotations added by users, such as
+marginal notes on printed displays.  Other annotation such as format
+control characters might be shown in a special display mode where text
+has been expanded to permit annotation between lines.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Control Entries Distinct from Text" href="1.html#1.3_4">1.3/4</a>
+</p>
+<h3><a name="1.3_27">1.3/27     Text Displayed as Printed</a></h3>
+<p>
+Allow users to display text exactly as it will be printed.
+</p>
+<h4>Comment</h4>
+<p>
+Accurate display is particularly necessary when the format of printed
+output is important, as when printing letters, tables, etc.
+</p>
+<h4>Comment</h4>
+<p>
+Ideally, text displays should be able to represent all the features that
+are provided in printed output, including upper and lower case,
+underlining, bolding, subscripting, superscripting, special symbols, and
+different styles and sizes of type.  When those features are important,
+the necessary display capability should be provided.
+</p>
+<h4>Comment</h4>
+<p>
+For special formatting features that are not frequently used, it may be
+sufficient to use extra symbols to note text features that cannot be
+directly displayed.  In that case, care should be taken that such
+annotation does not disturb the spacing of displayed text.  This may
+require two display modes, one to show text spacing as it will be
+printed and the other to show annotations to the text.
+</p>
+<h4>Comment</h4>
+<p>
+A corollary to this recommendation is that changes made to displayed
+text should appear as a user makes them.  Some line-based editors show
+changes only after a document has been filed and later recalled for
+display, which does not represent good user interface design.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#foley_van_dam_1982">Foley Van Dam 1982</a><li><a href="index.html#gould_1981">Gould 1981</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Adequate Display Capacity" href="1.html#1.3_1">1.3/1</a>
+</p>
+<h3><a name="1.3_28">1.3/28     Flexible Printing Options</a></h3>
+<p>
+In printing text, allow users to select among available output formats
+(line spacing, margin size, etc.) and to specify the parts of a document
+to be printed; do not require that an entire document be printed.
+</p>
+<h4>Example</h4>
+<p>
+Permit a user to print just those portions of a document that have been
+changed, perhaps specifying just the first page, or page 17, or the last
+five pages, etc.
+</p>
+<h4>Comment</h4>
+<p>
+This is particularly important when long documents will be edited.  A
+user should not be required to print an entire 50-page document just
+because of a change to one page.
+</p>
+<h3><a name="1.3_29">1.3/29     Information on Printing Status</a></h3>
+<p>
+Inform users concerning the status of requests for printouts.
+</p>
+<h4>Example</h4>
+<p>
+The computer should acknowledge print requests immediately, and might
+provide a subsequent message to indicate when a printout has been
+completed if the printer is remote (unobservable) from the user's work
+station.
+</p>
+<h4>Example</h4>
+<p>
+If there is a queue of documents waiting for printout, a user should be
+able to get an estimate as to when a particular document will be
+printed.
+</p>
+<h4>Comment</h4>
+<p>
+If a user is responsible for operating a local printer, the computer
+might display messages to alert the user of potential malfunctions,
+e.g., if its paper supply is exhausted, if the paper is not correctly
+loaded, etc.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Feedback for Control Entries" href="3.html#3.0_14">3.0/14</a>
+&nbsp;|&nbsp;
+<a title="Feedback for Print Requests" href="4.html#4.2_5">4.2/5</a>
+</p>
+<h3><a name="1.3_30">1.3/30     Auditory Signals for Alerting Users</a></h3>
+<p>
+During text entry/editing, provide an auditory signal whenever it is
+necessary to draw a user's attention to the display.
+</p>
+<h4>Comment</h4>
+<p>
+A touch typist entering text from written copy will often not be looking
+at the display screen, and therefore may not notice visual indicators of
+errors or mode changes unless they are accompanied by auditory signals.
+</p>
+<h4>Comment</h4>
+<p>
+Note that in a group environment an auditory signal may distract other
+workers, and may embarrass the user whose error has been thus
+advertised.  In such a work setting, consider allowing users to disable
+the auditory signal.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Auditory Coding" href="2.html#2.6_39">2.6/39</a>
+</p>
+<h3><a name="1.3_31">1.3/31     Protecting Text During Page Overruns</a></h3>
+<p>
+When a user is inserting text into a document that has already been
+paginated, ensure that no text is lost if the user inserts more text
+than a page can hold.
+</p>
+<h4>Comment</h4>
+<p>
+It is difficult for a user to keep track of page size, particularly if
+the size of the display screen is less than the full page specified for
+printed text, which is often the case.  A user will often not know when
+more text has been inserted into a page than there is room for.  The
+computer should accommodate text insertions with automatic repagination.
+</p>
+<h3><a name="1.3_32">1.3/32     Confirming Actions in DELETE Mode</a></h3>
+<p>
+If a DELETE mode is used, highlight any text specified by a user for
+deletion and require the user to confirm the DELETE action before the
+computer will process it.
+</p>
+<h4>Comment</h4>
+<p>
+Requiring a user to confirm actions in DELETE mode is particularly
+important when the control entries for cursor positioning (e.g., WORD,
+SENTENCE, PARAGRAPH, PAGE) are also used to specify text for deletion,
+which is often the case.  Users will associate the specification of text
+units primarily with cursor positioning, which is the most frequent
+action in text editing.  In a DELETE mode, after specifying text units
+for deletion, a user may press a PARAGRAPH key intending to move to the
+next paragraph but accidentally delete the next paragraph.  Confirmation
+of DELETE actions will tend to prevent such errors.
+</p>
+<h4>Comment</h4>
+<p>
+An alternative approach to this problem is not to provide a continuing
+DELETE mode, but instead require double keying to accomplish deletions.
+In a DELETE mode, a user might press a DELETE key followed by unlimited
+repetitions of a WORD key (or keys specifying other units of text).
+With double keying, the user would have to press DELETE before each
+selection of a text unit to be deleted.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Control Entry Based on Units of Text" href="1.html#1.3_6">1.3/6</a>
+&nbsp;|&nbsp;
+<a title="User Confirmation of Destructive Actions" href="6.html#6.0_18">6.0/18</a>
+&nbsp;|&nbsp;
+<a title="User Confirmation of Destructive Actions" href="6.html#6.3_19">6.3/19</a>
+</p>
+<h3><a name="1.3_33">1.3/33     Reversible Actions</a></h3>
+<p>
+Design text editing logic so that any user action is immediately
+reversible.
+</p>
+<h4>Example</h4>
+<p>
+If a user centers a heading and then decides it would look better flush
+against the left margin, an UNDO action should reverse the centering and
+move the heading back to its original location.
+</p>
+<h4>Example</h4>
+<p>
+If a user underlines a paragraph of text and then decides it should be
+in all capital letters instead, an UNDO action should reverse the
+underlining.  The user should not be required to delete the paragraph
+and retype it just to erase the underscoring.
+</p>
+<h4>Comment</h4>
+<p>
+Reversible actions are particularly important in a text editing
+environment because text formatting often involves experimentation with
+features such as underscoring, bolding, and spacing.  If users know that
+they can reverse whatever they do, they will feel more free to delete
+text and experiment with formatting features.
+</p>
+<h4>Comment</h4>
+<p>
+An UNDO capability is currently available in some interface designs.  In
+some applications, however, this capability is provided through the use
+of an UNDO key which can only reverse the most recent control action.
+For text editing, users must be able to reverse such formatting features
+as centering and bolding at any time.  Therefore, if control actions are
+to be made reversible, an UNDO action should be able to reverse more
+than the most recent command, perhaps by requiring the user to specify
+which command to undo, and/or to place the cursor at the location of the
+format feature that is to be reversed.
+</p>
+<h4>Comment</h4>
+<p>
+When text segments have been deleted, it should be possible to retrieve
+more than the most recent deletion.  Some systems do this by storing all
+deletions in a special file.  Deleted text which the user wishes to
+retrieve can then be moved from the deletion file to the file in which
+the user is presently working.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#lee_lochovsky_1983">Lee Lochovsky 1983</a><li><a href="index.html#nicherson_pew_1971">Nicherson Pew 1971</a><li><a href="index.html#shneiderman_1982">Shneiderman 1982</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="UNDO to Reverse Control Actions" href="3.html#3.5_10">3.5/10</a>
+&nbsp;|&nbsp;
+<a title="Reversible Control Actions (UNDO)" href="6.html#6.0_21">6.0/21</a>
+</p>
+<h3><a name="1.3_34">1.3/34     User Confirmation of Editing Changes</a></h3>
+<p>
+When a user signals completion of document editing, allow the user to
+confirm that changes should be made to the original document, or else to
+choose alternative options.
+</p>
+<h4>Comment</h4>
+<p>
+A user will generally wish to replace the original document with its
+edited version.  However, sometimes a user may decide that editing
+mistakes have been made, and wish to discard the new version while
+saving the original.  Or a user might wish to save the new version as a
+separate document, while saving the original unchanged.  Such decisions
+can be made best at the end of an editing session, when the user knows
+what has been accomplished, rather than before a session is begun.
+</p>
+<h4>Comment</h4>
+<p>
+During text editing, the computer should always retain a copy of the
+original document until the user confirms that it should be changed.
+The original document should not be changed automatically as the user
+enters each editing change.
+</p>
+<h4>See also</h4>
+<p>
+<a title="User Confirmation of Destructive Actions" href="6.html#6.0_18">6.0/18</a>
+&nbsp;|&nbsp;
+<a title="User Confirmation of Destructive Actions" href="6.html#6.3_19">6.3/19</a>
+</p><h2><a name="1.4">1.4    Data Forms</a></h2>
+<p>
+Data forms permit entry of predefined items into labeled fields of
+specially formatted displays.
+</p>
+<h4>Good and Bad Examples</h4>
+<p>
+These sample displays represent a possible form for entry and review of
+visa application data.  In the good form, data entries are bolded to
+help distinguish them from labels and field delimiters.  Fields are
+ordered consistently in relation to a (supposed) paper application form,
+and formatted to facilitate both data entry and data review.
+</p>
+<p>
+The bad display is annotated to indicate violations of several of the
+design guidelines proposed here for data forms.  The data entries in the
+bad display were invented to suggest what a user might have produced, if
+confused by inadequate labeling and the absence of field delimiters.
+</p>
+<h4>Good Sample Data Form</h4>
+<p>
+</p><pre>|-----------------------------------------------------|
+|                  VISA APPLICATION                   |
+|                                                     |
+| NAME: Jones, Andrew David_______      VISA: 356 478 |
+|       LAST, FIRST MIDDLE                            |
+|                                                     |
+| BIRTH COUNTRY: UK    DATE:  3/22/25                 |
+|                            MM DD YY                 |
+|                                                     |
+|   NATIONALITY: UK    PASSPORT: Z196284__            |
+|                                                     |
+|       ADDRESS: 5 Fairview Lane_________________     |
+|                Loughborough, LE11 3RG__________     |
+|                England_________________________     |
+|                                                     |
+| OTHER TRAVELERS ON THIS VISA                        |
+|                               BIRTH                 |
+| NAME:                         COUNTRY:  DATE:       |
+| Jones, Sandra Jean________    UK        10/11/28    |
+| Jones, Cynthia Leigh______    FR         6/12/68<   |
+| __________________________    __        __/__/__    |
+| __________________________    __        __/__/__    |
+| LAST, FIRST MIDDLE                      MM DD YY    |
+|                                                     |
+| * Press ENTER when done.                            |
+|-----------------------------------------------------|
+</pre><h4>Bad Sample Data Form</h4>
+<p>
+</p><pre>|-----------------------------------------------------|
+| Name Andrew D. Jones          Visa Number 356478    |
+|                                                     |
+| Birthplace London             Nationality English   |
+|                                                     |
+| Passport Z196284              Birthdate Mar. 22,    |
+|                                                     |
+| Address  1925                                       |
+|         5 Fairview Lane, Loughborough, L            |
+|         E11 3RG, England                            |
+|                                                     |
+| Other travelers on this visa                        |
+| Traveler's Name             Date of Birth - Place   |
+| Sandra J. Jones                  Oct. 11, - 1928    |
+| Birmingham                                          |
+| Cynthia L. Jones                 June 12, - 1968    |
+| Paris, France#                                      |
+|                                                     |
+|                                                     |
+|                                                     |
+|                                                     |
+|                                                     |
+|                                                     |
+|                                                     |
+| Press ENTER when done                               |
+|-----------------------------------------------------|
+</pre><p>
+This bad data form display violates in some degree several design
+guidelines in this section:
+
+1.4/3   Minimal use of delimiters
+1.4/6   Consistent labeling
+1.4/10  Marking field boundaries
+1.4/11  Prompting field length
+1.4/15  Explicit tabbing to data fields
+1.4/16  Distinctive label format
+1.4/18  Label punctuation as entry cue
+1.4/19  Informative labels
+1.4/20  Data format cueing in labels
+1.4/25  Form compatible with source documents
+
+This bad data form also violates various design guidelines pertaining to
+data display, as noted at the end of Section 2.2.
+</p>
+<h3><a name="1.4_1">1.4/1      Combined Entry of Related Data</a></h3>
+<p>
+In a form-filling dialogue, when a user is entering logically related
+items, require just one explicit entry action at the end of the
+transaction sequence, rather than separate entry of each item.
+</p>
+<h4>Comment</h4>
+<p>
+Depending on form design, this practice might involve entering the
+entire form, or entry by page or section of a longer form.  Form design
+should indicate to users just where explicit entry is required.
+</p>
+<h4>Comment</h4>
+<p>
+Single entry of grouped data will generally permit faster input than
+item-by-item entry, and should prove more accurate as well.  This
+practice permits user review and possible data correction prior to
+entry, and also helps the user understand at what point grouped data are
+processed.  It will also permit efficient cross validation of related
+data items by the computer.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Explicit ENTER Action" href="1.html#1.0_9">1.0/9</a>
+&nbsp;|&nbsp;
+<a title="Single Entry of Related Data" href="6.html#6.3_6">6.3/6</a>
+&nbsp;|&nbsp;
+<a title="Cross Validation of Related Data" href="6.html#6.3_18">6.3/18</a>
+</p>
+<h3><a name="1.4_2">1.4/2      Flexible Interrupt</a></h3>
+<p>
+When multiple data items are entered as a single transaction, as in form
+filling, allow the user to REVIEW, CANCEL, or BACKUP and change any item
+before taking a final ENTER action.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.10</a><li><a href="index.html#foley_wallace_1974">Foley Wallace 1974</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Explicit ENTER Action" href="1.html#1.0_9">1.0/9</a>
+&nbsp;|&nbsp;
+<a title="CANCEL Option" href="3.html#3.3_3">3.3/3</a>
+&nbsp;|&nbsp;
+<a title="BACKUP Option" href="3.html#3.3_4">3.3/4</a>
+&nbsp;|&nbsp;
+<a title="REVIEW Option" href="3.html#3.3_5">3.3/5</a>
+&nbsp;|&nbsp;
+<a title="Command Editing" href="3.html#3.5_2">3.5/2</a>
+&nbsp;|&nbsp;
+<a title="User Review and Editing of Entries" href="6.html#6.0_10">6.0/10</a>
+&nbsp;|&nbsp;
+<a title="Editing Data Before Entry" href="6.html#6.3_8">6.3/8</a>
+</p>
+<h3><a name="1.4_3">1.4/3      Minimal Use of Delimiters</a></h3>
+<p>
+Whenever possible, allow entry of multiple data items without keying
+special separator or delimiter characters, e.g., hyphens, dollar signs,
+etc.
+</p>
+<h4>Example</h4>
+<p>
+See sample displays in this section.
+</p>
+<h4>Comment</h4>
+<p>
+This can be accomplished either by keying into predefined entry fields
+or by separating sequentially keyed items with blank spaces.  In this
+context, tabbing from field to field is not considered to be keying a
+special delimiter character.
+</p>
+<h4>Comment</h4>
+<p>
+When data items contain internal blanks, design the entry fields with a
+predefined structure so that users will not have to key any internal
+delimiters.
+</p>
+<h3><a name="1.4_4">1.4/4      +  Standard Delimiter Character</a></h3>
+<p>
+When a field delimiter must be used for data entry, adopt a standard
+character to be employed consistently for that purpose.
+</p>
+<h4>Example</h4>
+<p>
+A slash (/) may be a good choice.
+</p>
+<h4>Comment</h4>
+<p>
+Choose a special delimiter character that does not require shift keying.
+It will also be necessary to choose a character that does not occur as
+part of any data entry (except possibly for entry of running text where
+its occurrence would not be ambiguous).
+</p>
+<h3><a name="1.4_5">1.4/5      Data Field Labels</a></h3>
+<p>
+For each data field, display an associated label to help users
+understand what entries can be made.
+</p>
+<h4>Example</h4>
+<p>
+(Good)
+</p><pre>| NAME: __ __ __ __ __ __ __ __ __ __ __  |
+|                                         |
+| ORGANIZATION:  __ __/__ __              |
+|                                         |
+| PHONE:  __ __ __-__ __ __ __            |
+</pre>
+<p>
+
+(Bad)
+</p><pre>| NAME, ORGANIZATION AND PHONE        |
+|                                     |
+| __ __ __ __ __ __ __ __ __ __ __ __ |
+|                                     |
+| __ __ __ __                         |
+|                                     |
+| __ __ __ __ __ __ __                |
+</pre><h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.1.7</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Prompting Data Entry" href="1.html#1.0_24">1.0/24</a>
+&nbsp;|&nbsp;
+<a title="Clear Data Labels" href="4.html#4.0_11">4.0/11</a>
+</p>
+<h3><a name="1.4_6">1.4/6      +  Consistent Labeling</a></h3>
+<p>
+Make field labels consistent; always employ the same label to indicate
+the same kind of data entry.
+</p>
+<h4>Example</h4>
+<p>
+A field labeled NAME should always require name entry, and not sometimes
+require something different like elevation (cited from an actual
+system).
+</p>
+<h4>Example</h4>
+<p>
+See sample displays in this section.
+</p>
+<h3><a name="1.4_7">1.4/7      +  Protected Labels</a></h3>
+<p>
+Protect field labels from keyed entry, by making the cursor skip over
+them automatically when a user is spacing or tabbing.
+</p>
+<h4>Exception</h4>
+<p>
+When a user must change a displayed form, including changes to field
+labels, then that user must be able to override label protection.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 1.8.13</a><li><a href="index.html#pr">PR 3.3.2 4.8.1</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Display Format Protection" href="1.html#1.1_23">1.1/23</a>
+&nbsp;|&nbsp;
+<a title="Protection of Displayed Data" href="2.html#2.0_10">2.0/10</a>
+&nbsp;|&nbsp;
+<a title="Protecting Display Formats" href="6.html#6.2_5">6.2/5</a>
+&nbsp;|&nbsp;
+<a title="Protection from Data Change" href="6.html#6.3_2">6.3/2</a>
+</p>
+<h3><a name="1.4_8">1.4/8      +  Labels Close to Data Fields</a></h3>
+<p>
+Ensure that labels are sufficiently close to be associated with their
+proper data fields, but are separated from data fields by at least one
+space.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 1.9.5</a><li><a href="index.html#eg">EG 2.3.8</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Labels Close to Data Fields" href="2.html#2.2_9">2.2/9</a>
+</p>
+<h3><a name="1.4_9">1.4/9      +  Standard Symbol for Prompting Entry</a></h3>
+<p>
+Choose a standard symbol for input prompting and reserve that symbol
+only for that use.
+</p>
+<h4>Example</h4>
+<p>
+In the examples here, and also in many printed forms, a colon serves to
+prompt inputs, as
+
+</p><pre>  (Good)  | TIME: ________ |
+</pre>
+<p>
+
+</p><pre>  (Bad)   | TIME ________  |
+</pre><h4>Comment</h4>
+<p>
+Consistent use of a symbol for input prompting in data entry forms, in
+menus, in command entry lines, etc., will help to cue users that an
+input is required.  A standard symbol used in addition to other
+formatting cues will help to alert a user to differences between labels
+and displayed data, between messages requiring input and messages for
+information only.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.5.2</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Standard Symbol for Prompting Entry" href="3.html#3.1.3_15">3.1.3/15</a>
+&nbsp;|&nbsp;
+<a title="Standard Symbol for Prompting Entry" href="4.html#4.4_10">4.4/10</a>
+</p>
+<h3><a name="1.4_10">1.4/10     Marking Field Boundaries</a></h3>
+<p>
+Display special characters or other consistent means of highlighting to
+clearly delineate each data field.
+</p>
+<h4>Example</h4>
+<p>
+An underscore might be used for this purpose, perhaps broken to indicate
+the number of symbols required in an entry, as
+
+</p><pre>  (Good)  | Enter account number:  __ __ __ __ __ |
+</pre>
+<p>
+
+</p><pre>  (Bad)   | Enter account number:                 |
+</pre><h4>Example</h4>
+<p>
+See sample displays in this section.
+</p>
+<h4>Comment</h4>
+<p>
+Such implicit prompts help reduce data entry errors by the user.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.2.1</a><li><a href="index.html#eg">EG 6.3 6.3.1</a><li><a href="index.html#ms">MS 5.15.4.3.4</a><li><a href="index.html#pr">PR 4.8.1</a><li><a href="index.html#savage_habinek_blackstad_1982">Savage Habinek Blackstad 1982</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Defined Display Areas for Data Entry" href="1.html#1.0_6">1.0/6</a>
+&nbsp;|&nbsp;
+<a title="Visually Distinctive Data Fields" href="2.html#2.2_2">2.2/2</a>
+&nbsp;|&nbsp;
+<a title="Cues for Prompting Data Entry" href="4.html#4.4_15">4.4/15</a>
+</p>
+<h3><a name="1.4_11">1.4/11     +  Prompting Field Length</a></h3>
+<p>
+Provide cues in field delineation to indicate when a fixed or maximum
+length is specified for a data entry.
+</p>
+<h4>Example</h4>
+<p>
+</p><pre> (Good) | Enter ID: __ __ __ __ __ __ __ __ __ |
+</pre>
+<p>
+
+</p><pre> (Bad)  | Enter ID (9 characters):             |
+</pre><h4>Example</h4>
+<p>
+See sample displays in this section.
+</p>
+<h4>Comment</h4>
+<p>
+Prompting by delineation is more effective than simply telling the user
+how long an entry should be.  In the example cited here, underscoring
+gives a direct visual cue as to the number of characters to be entered,
+and the user does not have to count them.
+</p>
+<h4>Comment</h4>
+<p>
+Similar implicit cues should be provided when data entry is prompted by
+auditory displays.  Tone codes can be used to indicate the type and
+length of data entries.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.2.1</a><li><a href="index.html#eg">EG 6.3</a><li><a href="index.html#ms">MS 5.15.4.3.7</a><li><a href="index.html#pr">PR 4.8.2</a><li><a href="index.html#smith_goodwin_1970">Smith Goodwin 1970</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Cues for Prompting Data Entry" href="4.html#4.4_15">4.4/15</a>
+</p>
+<h3><a name="1.4_12">1.4/12     +  Marking Required and Optional Data Fields</a></h3>
+<p>
+In designing form displays, distinguish clearly and consistently between
+required and optional entry fields.
+</p>
+<h4>Example</h4>
+<p>
+Field delineation cues may be used for this purpose, perhaps a broken
+underscore to indicate required entries and a dotted underscore to
+indicate optional entries, as
+
+</p><pre>  | LICENSE NUMBER:  __ __ __ __ __ __ |
+  |                                    |
+  | MAKE:  . . . . . . . . . . . . . . |
+  |                                    |
+  | YEAR/MODEL:  . . . . . . . . . . . |
+</pre><h4>Example</h4>
+<p>
+Alternatively, it might be preferable to distinguish required versus
+optional entry fields by coding their labels, perhaps displaying in
+parentheses the labels of optional fields.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.6</a><li><a href="index.html#ms">MS 5.15.4.3.4</a><li><a href="index.html#pr">PR 4.8.6</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Cues for Prompting Data Entry" href="4.html#4.4_15">4.4/15</a>
+</p>
+<h3><a name="1.4_13">1.4/13     +  Field Markers Not Entered with Data</a></h3>
+<p>
+When item length is variable, so that a data entry does not completely
+replace the markers in a field, ignore any remaining field markers in
+computer processing.
+</p>
+<h4>Comment</h4>
+<p>
+A user should not be expected to erase any field markers.  Extra markers
+should not be processed as part of a data entry if they are not erased.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.2.2</a><li><a href="index.html#eg">EG 6.3.2</a><li><a href="index.html#ms">MS 5.15.4.3.9</a><li><a href="index.html#stewart_1980">Stewart 1980</a></li></ul>
+<h3><a name="1.4_14">1.4/14     +  Automatic Justification of Variable-Length Entries</a></h3>
+<p>
+When item length is variable, provide automatic justification in
+computer processing; a user should not have to justify an entry either
+right or left.
+</p>
+<h4>Example</h4>
+<p>
+Assuming field delineation by underscore, the following entries should
+all be considered equivalent
+
+</p><pre>  | Address:  40 Dalton Road_______ |
+</pre>
+<p>
+
+</p><pre>  | Address:  _______40 Dalton Road |
+</pre>
+<p>
+
+</p><pre>  | Address:  ___40 Dalton Road____ |
+</pre><h4>Comment</h4>
+<p>
+If a data entry is shorter than its field length, its position when
+entered in that field should not matter.  The computer can impose its
+own justification rules when storing and subsequently displaying such
+data for review.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.2.2</a><li><a href="index.html#eg">EG 6.3.2</a></li></ul>
+<h3><a name="1.4_15">1.4/15     Explicit Tabbing to Data Fields</a></h3>
+<p>
+Require users to take explicit keying ("tabbing") action to move from
+one data entry field to the next; the computer should not provide such
+tabbing automatically.
+</p>
+<h4>Example</h4>
+<p>
+See sample displays in this section.
+</p>
+<h4>Comment</h4>
+<p>
+Automatic tabbing may cause cascading of errors, if a skilled typist
+keys a series of items without looking at the display and has
+accidentally overrun one of the earlier data fields.  An acceptable
+solution here is to design each field to end with an extra (blank)
+character space; software should be designed to prevent keying into a
+blank space, and an auditory signal should be provided to alert the user
+when that is attempted.  This will permit consistent use of tab keying
+by the user to move accurately from one field to the next, even for
+touch typists.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.4.3.6</a><li><a href="index.html#pr">PR 4.9.1</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Easy Cursor Movement to Data Fields" href="1.html#1.1_22">1.1/22</a>
+</p>
+<h3><a name="1.4_16">1.4/16     Distinctive Label Format</a></h3>
+<p>
+Make labels for data fields distinctive, so that they will not be
+readily confused with data entries, labeled control options, guidance
+messages, or other displayed material.
+</p>
+<h4>Example</h4>
+<p>
+Labels might be displayed in capital letters always followed by a colon.
+Or labels might be displayed in dim characters, with data entries
+brighter.
+</p>
+<h4>Example</h4>
+<p>
+See sample displays in this section.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.1.1</a><li><a href="index.html#ms">MS 5.15.4.3.5</a><li><a href="index.html#pr">PR 3.3.2</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Distinctive Label Format" href="2.html#2.2_8">2.2/8</a>
+&nbsp;|&nbsp;
+<a title="Distinctive Format for User Guidance" href="4.html#4.0_8">4.0/8</a>
+</p>
+<h3><a name="1.4_17">1.4/17     +  Consistent Label Format</a></h3>
+<p>
+When data fields are distributed across a display, adopt a consistent
+format for relating labels to delineated entry areas.
+</p>
+<h4>Example</h4>
+<p>
+The label might always be to the left of the field; or the label might
+always be immediately above and left-justified with the beginning of the
+field.
+</p>
+<h4>Comment</h4>
+<p>
+Such consistent practice will help the user distinguish labels from data
+in distributed displays.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Consistent Format for User Guidance" href="4.html#4.0_7">4.0/7</a>
+</p>
+<h3><a name="1.4_18">1.4/18     +  Label Punctuation as Entry Cue</a></h3>
+<p>
+The label for each entry field should end with a special symbol,
+signifying that an entry may be made.
+</p>
+<h4>Example</h4>
+<p>
+A colon is recommended for this purpose, as
+</p><pre>  | NAME:  __ __ __ __ __ __ __ __ __ __ __ |
+</pre><h4>Example</h4>
+<p>
+See sample displays in this section.
+</p>
+<h4>Comment</h4>
+<p>
+Choose a symbol that can be reserved exclusively for prompting user
+entries, or at least is rarely used for any other purpose.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.5</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Cues for Prompting Data Entry" href="4.html#4.4_15">4.4/15</a>
+</p>
+<h3><a name="1.4_19">1.4/19     Informative Labels</a></h3>
+<p>
+In labeling data fields, employ descriptive wording, or else standard,
+predefined terms, codes and/or abbreviations; avoid arbitrary codes.
+</p>
+<h4>Example</h4>
+<p>
+Employ descriptive labels such as STANDARD and MODIFIED, rather than
+abstract codes such as SET A and SET B; MALE and FEMALE, rather than
+GROUP 1 and GROUP 2.
+</p>
+<h4>Example</h4>
+<p>
+(Good)
+</p><pre>| WEEK: __ MONTH: __ __ YEAR: __ __                   |
+|                                                     |
+| SOCIAL SECURITY NO:  __ __ __ - __ __ - __ __ __ __ |
+</pre>
+<p>
+
+(Bad)
+</p><pre>| DATECODE: __ __ __ __ __          |
+|                                   |
+| SSAN:  __ __ __ __ __ __ __ __ __ |
+</pre><h4>Example</h4>
+<p>
+See sample displays in this section.
+</p>
+<h4>Comment</h4>
+<p>
+Do not create new jargon.  If in doubt, pretest all proposed wording
+with a sample of qualified users.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.1.6</a><li><a href="index.html#pr">PR 4.5.6</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Familiar Wording" href="2.html#2.0_12">2.0/12</a>
+&nbsp;|&nbsp;
+<a title="Clear Data Labels" href="4.html#4.0_11">4.0/11</a>
+</p>
+<h3><a name="1.4_20">1.4/20     Data Format Cueing in Labels</a></h3>
+<p>
+Include in a field label additional cueing of data format when that
+seems helpful.
+</p>
+<h4>Example</h4>
+<p>
+</p><pre>| DATE (MM/DD/YY): __ __/__ __/__ __ |
+</pre><h4>Example</h4>
+<p>
+See sample displays in this section.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.1.8</a><li><a href="index.html#ms">MS 5.15.4.3.5</a><li><a href="index.html#pr">PR 4.8.9</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Clear Data Labels" href="4.html#4.0_11">4.0/11</a>
+</p>
+<h3><a name="1.4_21">1.4/21     +  Labeling Units of Measurement</a></h3>
+<p>
+When a measurement unit is consistently associated with a particular
+data field, include that unit as part of the field label rather than
+requiring a user to enter it.
+</p>
+<h4>Example</h4>
+<p>
+</p><pre>| COST: $ __ __ __ __ |
+</pre><h4>Example</h4>
+<p>
+</p><pre>| SPEED (MPH): __ __ __ |
+</pre><h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.2.6</a><li><a href="index.html#ms">MS 5.15.4.3.10</a><li><a href="index.html#pr">PR 4.8.11</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Labeling Units of Measurement" href="2.html#2.2_10">2.2/10</a>
+&nbsp;|&nbsp;
+<a title="Clear Data Labels" href="4.html#4.0_11">4.0/11</a>
+</p>
+<h3><a name="1.4_22">1.4/22     +  Familiar Units of Measurement</a></h3>
+<p>
+Employ units of measurement that are familiar to the user.
+</p>
+<h4>Example</h4>
+<p>
+(Good)
+</p><pre>| SPEED LIMIT: __ __ miles per hour   |
+</pre>
+<p>
+
+(Bad)
+</p><pre>| SPEED LIMIT: __ __ feet per second  |
+</pre>
+<p>
+
+(Good)
+</p><pre>| FUEL USE: __ __.__ miles per gallon |
+</pre>
+<p>
+
+(Bad)
+</p><pre>| FUEL USE: .__ __ gallons per minute |
+</pre><h4>Comment</h4>
+<p>
+If data must be converted to unfamiliar units, the computer should
+handle that automatically.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.3</a><li><a href="index.html#ms">MS 5.15.2.1.7</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Task-Oriented Wording" href="4.html#4.0_17">4.0/17</a>
+</p>
+<h3><a name="1.4_23">1.4/23     +  Alternative Units of Measurement</a></h3>
+<p>
+When alternative measurement units are acceptable, provide space in the
+data field so that a user can designate the units actually entered.
+</p>
+<h4>Example</h4>
+<p>
+</p><pre>| DISTANCE: __ __ __ __ (MI/KM) __ __ |
+</pre><h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.4.3.10</a><li><a href="index.html#pr">PR 4.8.11</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Clear Data Labels" href="4.html#4.0_11">4.0/11</a>
+</p>
+<h3><a name="1.4_24">1.4/24     Form Compatible for Data Entry and Display</a></h3>
+<p>
+When forms are used for reviewing displayed data as well as for data
+entry, make the form for data entry compatible with that for display
+output; use the same item labels and ordering for both.
+</p>
+<h4>Comment</h4>
+<p>
+When a display format optimized for data entry seems unsuited for data
+display, or vice versa, some compromise format should be designed,
+taking into account the relative functional importance of data entry and
+data review in the user's task.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.3.1.1.a</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Form Compatible for Data Entry and Display" href="2.html#2.2_12">2.2/12</a>
+&nbsp;|&nbsp;
+<a title="Consistent Format" href="2.html#2.5_1">2.5/1</a>
+&nbsp;|&nbsp;
+<a title="Consistent Display Format" href="4.html#4.0_6">4.0/6</a>
+</p>
+<h3><a name="1.4_25">1.4/25     +  Form Compatible with Source Documents</a></h3>
+<p>
+When data entry involves transcription from source documents, ensure
+that form-filling displays match (or are compatible with) those
+documents, in terms of item ordering, data grouping, etc.
+</p>
+<h4>Example</h4>
+<p>
+See sample displays in this section.
+</p>
+<h4>Comment</h4>
+<p>
+If paper forms are not optimal for data entry, consider revising the
+layout of the paper form.
+</p>
+<h4>Comment</h4>
+<p>
+If data entries must follow an arbitrary sequence of external
+information (e.g., keying telephoned reservation data), employ some form
+of command language dialogue instead of form filling, to identify each
+item as it is entered so that the user does not have to remember and
+re-order items.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 1.8.9</a><li><a href="index.html#ms">MS 5.15.3.1.1.b 5.15.4.3.3</a><li><a href="index.html#pr">PR 4.8.3 4.8.5 4.10.7</a><li><a href="index.html#stewart_1980">Stewart 1980</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Consistent Format" href="2.html#2.5_1">2.5/1</a>
+&nbsp;|&nbsp;
+<a title="Data Grouped by Sequence of Use" href="2.html#2.5_14">2.5/14</a>
+&nbsp;|&nbsp;
+<a title="Sequence Compatible with Source Documents" href="3.html#3.1.1_4">3.1.1/4</a>
+&nbsp;|&nbsp;
+<a title="Consistent Display Format" href="4.html#4.0_6">4.0/6</a>
+</p>
+<h3><a name="1.4_26">1.4/26     Minimal Cursor Positioning</a></h3>
+<p>
+When designing displays for form-filling data entry, minimize user
+actions required for cursor movement from one field to the next.
+</p>
+<h4>Comment</h4>
+<p>
+Placing all required fields before any optional fields will sometimes
+make data entry more efficient.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.1.3</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Easy Cursor Movement to Data Fields" href="1.html#1.1_22">1.1/22</a>
+</p>
+<h3><a name="1.4_27">1.4/27     +  Data Items in Logical Order</a></h3>
+<p>
+If no source document or external information is involved, then design
+forms so that data items are ordered in the sequence in which a user
+will think of them.
+</p>
+<h4>Comment</h4>
+<p>
+The software designer will need to work with prospective system users to
+determine what represents a logical sequence of data entries.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#pr">PR 4.8.5</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Data Grouped by Sequence of Use" href="2.html#2.5_14">2.5/14</a>
+</p>
+<h3><a name="1.4_28">1.4/28     Automatic Cursor Placement</a></h3>
+<p>
+When a form for data entry is displayed, the computer should place the
+cursor automatically at the beginning of the first entry field.
+</p>
+<h4>Exception</h4>
+<p>
+If a data form is regenerated following an entry error, the cursor
+should be placed in the first field in which an error has been detected.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.1.4</a><li><a href="index.html#pr">PR 4.9.1</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Consistent Cursor Placement" href="1.html#1.1_21">1.1/21</a>
+&nbsp;|&nbsp;
+<a title="Automatic Cursor Placement" href="3.html#3.1.3_29">3.1.3/29</a>
+&nbsp;|&nbsp;
+<a title="Consistent Cursor Positioning" href="4.html#4.4_16">4.4/16</a>
+</p><h2><a name="1.5">1.5    Tables</a></h2>
+<p>
+Tables permit data entry and display in row-column format, facilitating
+comparison of related data sets.
+</p>
+<h3><a name="1.5_1">1.5/1      Tables for Related Data Sets</a></h3>
+<p>
+When sets of data items must be entered sequentially, in a repetitive
+series, provide a tabular display format where data sets can be keyed
+row by row.
+</p>
+<h4>Exception</h4>
+<p>
+When the items in each data set exceed the capacity of a single row,
+tabular entry will usually not be desirable, unless there is a simple
+means for horizontal scrolling.
+</p>
+<h4>Comment</h4>
+<p>
+Row-by-row entry facilitates comparison of related data items, and
+permits potential use of a DITTO key for easy duplication of repeated
+entries.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#pr">PR 4.8.4</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Labels for Multipage Tables" href="2.html#2.7.2_4">2.7.2/4</a>
+</p>
+<h3><a name="1.5_2">1.5/2      Distinctive Labels</a></h3>
+<p>
+Design distinctive formats for column headers and row labels, so that
+users can distinguish them from data entries.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Distinctive Format for User Guidance" href="4.html#4.0_8">4.0/8</a>
+</p>
+<h3><a name="1.5_3">1.5/3      +  Informative Labels</a></h3>
+<p>
+Ensure that column headers and row labels are worded informatively, so
+that they will help guide data entry.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Clear Data Labels" href="4.html#4.0_11">4.0/11</a>
+</p>
+<h3><a name="1.5_4">1.5/4      Tabbing within Rows</a></h3>
+<p>
+During tabular data entry, allow users to tab directly from one data
+field to the next, so that the cursor can move freely back and forth
+within a row (i.e., across columns).
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.3.8.4.3</a></li></ul>
+<h3><a name="1.5_5">1.5/5      +  Tabbing within Columns</a></h3>
+<p>
+During tabular data entry, allow users to tab directly from one data
+field to the next, so that the cursor can move freely up and down a
+column (i.e., across rows).
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.3.8.4.3</a></li></ul>
+<h3><a name="1.5_6">1.5/6      Automatic Justification of Entries</a></h3>
+<p>
+Provide automatic justification of tabular data entries; a user should
+not have to enter blanks or other extraneous formatting characters to
+achieve proper justification.
+</p>
+<h4>Example</h4>
+<p>
+As a negative example, if a user enters "56" in a field four characters
+long, the system should not interpret "56 __ __" as "5600".
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.2.2.5</a></li></ul>
+<h3><a name="1.5_7">1.5/7      +  Justification of Numeric Entries</a></h3>
+<p>
+Allow users to make numeric entries in tables without concern for
+justification; the computer should right-justify integers, or else
+justify with respect to a decimal point if present.
+</p>
+<h4>Example</h4>
+<p>
+A dollars-and-cents entry made at the beginning of a field
+</p><pre>| 14.37 __ __ |
+</pre>
+<p>
+should automatically be justified to the right
+</p><pre>| __ __ 14.37 |
+</pre>
+<p>
+when later displayed.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#pr">PR 4.8.10</a></li></ul>
+<h3><a name="1.5_8">1.5/8      +  Maintaining Significant Zeros</a></h3>
+<p>
+When a user must enter numeric values that will later be displayed,
+maintain all significant zeros; zeros should not be arbitrarily removed
+after a decimal point if they affect the meaning of the number in terms
+of significant digits.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 1.4.3</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Maintaining Significant Zeros" href="2.html#2.3_17">2.3/17</a>
+</p>
+<h3><a name="1.5_9">1.5/9      Aiding Entry of Duplicative Data</a></h3>
+<p>
+For entry of tabular data, when entries are frequently repeated, provide
+users with some easy means to copy duplicated data.
+</p>
+<h4>Example</h4>
+<p>
+Perhaps a DITTO key might be provided.
+</p>
+<h4>Comment</h4>
+<p>
+A DITTO capability will speed data entry, and should prove more accurate
+than requiring users to rekey duplicated data.
+</p>
+<h3><a name="1.5_10">1.5/10     Row Scanning Cues</a></h3>
+<p>
+For long tables, those with many rows, provide some extra visual cue to
+help a user scan a row accurately across columns.
+</p>
+<h4>Example</h4>
+<p>
+A blank line might be inserted after every fifth row; or perhaps adding
+dots between columns in every fifth row might suffice.
+</p>
+<h4>Example</h4>
+<p>
+As an alternative, provide a displayed ruler which a user can move from
+one row to another.
+</p>
+<h4>Comment</h4>
+<p>
+Visual aids for scanning rows are probably needed more when a user is
+reviewing and changing displayed data than for initial data entry.  Such
+aids should be provided consistently, however, so that display formats
+for both data entry and review will be compatible.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Row Scanning Cues" href="2.html#2.3_14">2.3/14</a>
+</p><h2><a name="1.6">1.6    Graphics</a></h2>
+<p>
+Graphics permit entry of data specially formatted to show spatial,
+temporal, or other relations among data sets.
+</p>
+<h3><a name="1.6_1">1.6/1      Pointing</a></h3>
+<p>
+When graphic data entry involves frequent pointing on a display surface,
+design the user interface so that actions for display control and
+sequence control are also accomplished by pointing, in order to minimize
+shifts from one entry device to another.
+</p>
+<h4>Example</h4>
+<p>
+In drawing a flow chart, a user should be able to link predecessor and
+successor elements directly by pointing at them, or by drawing lines
+between them, rather than by separately keyed entries.
+</p>
+<h4>Exception</h4>
+<p>
+Alphabetic entry for titles, labels, and other annotation of graphic
+displays will be accomplished more quickly by conventional keyboard
+input than by pointing.
+</p>
+<h4>Comment</h4>
+<p>
+This recommendation implies extensive use of menus in the margins of a
+graphic display to permit direct selection of data attributes and
+control options by pointing.  If screen capacity is too limited to
+permit simultaneous display of both graphic data and menus, then the
+designer might provide temporary superposition of menu windows on
+displayed data, or might provide some separate display device to show
+current options for control entry.  Control entry via keyboard and/or
+function keys will be less satisfactory.
+</p>
+<h4>Comment</h4>
+<p>
+If pointing is performed on some separate input device, such as a stylus
+on a digitizing tablet, then associated control actions should also be
+implemented via that device.
+</p>
+<h4>Comment</h4>
+<p>
+For graphics software, a pointing action by a user can accomplish
+several different logical functions: specifying a displayed element
+("pick" function); selecting a system-defined object, attribute or
+action ("button" or "choice" function); or indicating a location in the
+conceptual drawing space ("locator" function).  A designer must
+distinguish among these functions, although most users will not.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#foley_wallace_1974">Foley Wallace 1974</a><li><a href="index.html#foley_van_dam_1982">Foley Van Dam 1982</a><li><a href="index.html#foley_wallace_chan_1984">Foley Wallace Chan 1984</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Single Method for Entering Data" href="1.html#1.0_5">1.0/5</a>
+&nbsp;|&nbsp;
+<a title="" href="1.html#1.1">1.1</a>
+</p>
+<h3><a name="1.6_2">1.6/2      +  Distinctive Cursor</a></h3>
+<p>
+Indicate the current cursor position by displaying some distinctive
+cursor symbol at that point.
+</p>
+<h4>Comment</h4>
+<p>
+The cursor may take various forms on a graphics display.  Many designers
+recommend a plus-sign for this purpose, representing abbreviated
+cross-hairs whose intersection can mark a position with reasonable
+precision.  In some applications it may help to extend those cross-hairs
+the full height and width of the display.  In some applications it may
+help to display a cursor incorporating the current values of various
+attributes (color, size, etc.) that can be selected by a user.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#foley_wallace_chan_1984">Foley Wallace Chan 1984</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Distinctive Cursor" href="1.html#1.1_1">1.1/1</a>
+&nbsp;|&nbsp;
+<a title="Displaying Current Attributes" href="1.html#1.6_12">1.6/12</a>
+</p>
+<h3><a name="1.6_3">1.6/3      +  Easy Cursor Positioning</a></h3>
+<p>
+Provide users an easy, accurate means of positioning a displayed cursor
+to point at different display elements and/or display locations.
+</p>
+<h4>Comment</h4>
+<p>
+Cursor positioning is a frequent user action during graphic data entry;
+an easy means for controlling cursor movement will be essential for
+efficient performance.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Responsive Cursor Control" href="1.html#1.1_7">1.1/7</a>
+</p>
+<h3><a name="1.6_4">1.6/4      Confirming Cursor Position</a></h3>
+<p>
+For most graphics data entry, pointing should be a dual action, first
+positioning a cursor at a desired position, and then confirming that
+position to the computer.
+</p>
+<h4>Exception</h4>
+<p>
+An exception to this recommendation would be the freehand drawing of
+continuous lines ("path specification"), where a computer must store and
+display a series of cursor positions as they are input by the user; when
+the user initiates such a line-drawing sequence, a new data point might
+be recorded automatically whenever the cursor has been moved a certain
+distance (e.g., 1 mm) or when a certain time has elapsed (e.g., 0.5 s).
+</p>
+<h4>Comment</h4>
+<p>
+During graphics data entry, a cursor will almost always be somewhere on
+the display, but not necessarily at a location intended by the user.  In
+effect, a user needs some way to move the cursor around and some
+separate action to signal the computer when its position should be
+recorded.
+</p>
+<h4>Comment</h4>
+<p>
+An interesting case of position confirmation is "rubberbanding", which
+is a technique to aid line drawing.  With rubberbanding, a user can
+designate the starting point for a line, then move the cursor to various
+possible end points while the computer continuously shows the line that
+would result if that end point were confirmed by the user.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#foley_wallace_1974">Foley Wallace 1974</a><li><a href="index.html#foley_wallace_chan_1984">Foley Wallace Chan 1984</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Explicit Activation" href="1.html#1.1_4">1.1/4</a>
+&nbsp;|&nbsp;
+<a title="Rubberbanding" href="1.html#1.6.2_2">1.6.2/2</a>
+</p>
+<h3><a name="1.6_5">1.6/5      Zooming for Precise Positioning</a></h3>
+<p>
+When data entry requires exact placement of graphic elements, users
+should be allowed to request expansion of the critical display area
+("zooming") to make the positioning task easier.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#foley_wallace_1974">Foley Wallace 1974</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Enlargement for Symbol Drawing" href="1.html#1.6.2_11">1.6.2/11</a>
+&nbsp;|&nbsp;
+<a title="Zooming for Display Expansion" href="2.html#2.4_15">2.4/15</a>
+</p>
+<h3><a name="1.6_6">1.6/6      Selecting Graphic Elements</a></h3>
+<p>
+Provide users some means for designating and selecting displayed graphic
+elements for manipulation.
+</p>
+<h4>Example</h4>
+<p>
+Designation might be by pointing, in the case of a discrete element, or
+might require some sort of outlining action to delineate portions of a
+complex figure.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Natural Units of Text" href="1.html#1.3_5">1.3/5</a>
+</p>
+<h3><a name="1.6_7">1.6/7      +  Highlighting Selected Elements</a></h3>
+<p>
+When a user has selected (i.e., pointed at) a displayed graphic element,
+highlight that element in some way so that the user can anticipate the
+consequences of any proposed action involving that selection.
+</p>
+<h4>Example</h4>
+<p>
+A dotted border might be displayed around a selected element, or perhaps
+a selected element might be displayed with video inversion to
+distinguish it from other elements.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#foley_wallace_chan_1984">Foley Wallace Chan 1984</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Highlighting Specified Text" href="1.html#1.3_7">1.3/7</a>
+&nbsp;|&nbsp;
+<a title="Highlighting Critical Data" href="2.html#2.6_1">2.6/1</a>
+&nbsp;|&nbsp;
+<a title="Indicating Item Selection" href="4.html#4.2_10">4.2/10</a>
+</p>
+<h3><a name="1.6_8">1.6/8      Changing Position (Translation)</a></h3>
+<p>
+When editing graphic data, allow users to reposition selected elements
+on the display.
+</p>
+<h4>Comment</h4>
+<p>
+Repositioning displayed elements, whether done by "dragging" or
+"cut-and-paste", will usually prove easier than deleting an element and
+then recreating it from scratch in the desired location.  A capability
+for moving elements will aid initial data entry as well as any
+subsequent editing of graphic data.
+</p>
+<h4>Comment</h4>
+<p>
+If an element is moved visibly by dragging across the display, it is
+probably not necessary to depict it in complete detail in all of its
+intermediate positions.  It might suffice to show it in simplified
+outline until its new position has been confirmed by the user (or
+perhaps until it remains in one position for a fixed interval of time),
+at which point its details could be filled in again by the computer.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Moving Text" href="1.html#1.3_23">1.3/23</a>
+</p>
+<h3><a name="1.6_9">1.6/9      Deleting Elements</a></h3>
+<p>
+When editing graphic data, allow users to delete selected elements from
+the display.
+</p>
+<h4>Comment</h4>
+<p>
+Deletion/erasure will help when mistakes are made during data entry, as
+well as in any subsequent editing of graphic data.  Deletion should be
+implemented as a reversible action.  A general UNDO capability might
+suffice to reverse deletions.  A more extended reversibility might be
+provided by saving deleted elements in a computer scrap basket from
+which they can be retrieved any time during a work session in case a
+deletion is discovered to be a mistake.
+</p>
+<h3><a name="1.6_10">1.6/10     Selecting from Displayed Attributes</a></h3>
+<p>
+During graphic data entry, allow users to specify attributes for
+displayed elements -- e.g., text font, plotting symbol, line type, color
+-- by selecting from displayed samples illustrating the available
+options.
+</p>
+<h4>Example</h4>
+<p>
+For line drawing a user might select from displayed samples of thick or
+thin, solid or broken, etc.
+</p>
+<h4>Comment</h4>
+<p>
+A display of available attributes will serve as a helpful reminder to
+the user, and will eliminate the need to assign distinctive verbal
+labels to the various options.
+</p>
+<h4>Comment</h4>
+<p>
+Samples of some attributes may be difficult to display.  In complex
+graphics, for example, specification of line type might involve
+selection among "brushes", each of which has a "tip" defining the size
+and shape of the drawing area (a group of pixels) that the user can
+manipulate.  Brushes might have squared tips to draw sharp lines, or
+rounded tips to draw lines with softer edges.  By analogy with artistic
+painting, a "smear" brush might be provided to average or blend colors
+along its path.  Selective erasure might be accomplished with a brush
+applying (returning to) the color of the display background.
+</p>
+<h4>Comment</h4>
+<p>
+In most applications, the current selection of data attributes should
+remain in effect until a new selection is made.  In some cases, e.g.,
+following selection of an "erase" attribute, it may help the user if a
+selected attribute reverts automatically to a default value at the
+completion of a transaction sequence.
+</p>
+<h3><a name="1.6_11">1.6/11     +  Selecting Colors</a></h3>
+<p>
+If users may select colors as an attribute of graphic elements, allow
+them to specify colors directly by pointing at displayed samples, rather
+than requiring them to name the colors.
+</p>
+<h4>Exception</h4>
+<p>
+If only a few colors are available, their names can probably be used
+reliably.
+</p>
+<h4>Comment</h4>
+<p>
+If many colors are available, users with normal vision can choose from
+displayed samples more reliably than from a list of color names.  For
+color-blind users, however, it might be helpful to add names/labels to
+the displayed samples.
+</p>
+<h4>Comment</h4>
+<p>
+For more elaborate graphic art, it may be helpful to allow users to mix
+their own colors by sequential selection (i.e., cursor placement),
+either in a displayed palette or directly in a graphic image.  Such
+color mixing could permit user control of saturation, brightness, and
+opacity/transparency, as well as hues.
+</p>
+<h3><a name="1.6_12">1.6/12     +  Displaying Current Attributes</a></h3>
+<p>
+During graphic data entry/editing, display the selected attributes that
+will affect current actions for ready reference by the user.
+</p>
+<h4>Example</h4>
+<p>
+When graphic attributes -- plotting symbols, character size, line type,
+color, etc. -- are chosen from displayed menus, it might suffice to
+highlight the currently selected menu options; alternatively, current
+selections might be shown in some sort of "reminder" window.
+</p>
+<h4>Example</h4>
+<p>
+A few attributes might be shown by the displayed cursor, i.e., by
+changing cursor shape, size or color depending upon current attribute
+selections.
+</p>
+<h4>Example</h4>
+<p>
+If rubberbanding is provided to aid line drawing, then that process
+itself would show the currently selected line type.
+</p>
+<h4>Comment</h4>
+<p>
+Users may forget what options have been chosen.  Displayed reminders
+will be particularly important in situations where the consequences of a
+mistaken user action are difficult to reverse, e.g., where it may be
+hard to erase a wrongly drawn line.
+</p>
+<h4>Comment</h4>
+<p>
+In some applications, display cues may not be adequate to convey
+attribute information completely.  There may not be sufficient room on
+the display.  Or the attributes may derive from underlying models whose
+characteristics are too complex for simple display representation.  In
+such cases, users should be able to request auxiliary display of such
+information to determine the operative context for current actions.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Rubberbanding" href="1.html#1.6.2_2">1.6.2/2</a>
+&nbsp;|&nbsp;
+<a title="Displayed Context" href="3.html#3.0_9">3.0/9</a>
+&nbsp;|&nbsp;
+<a title="Distinctive Cursor" href="4.html#4.0_9">4.0/9</a>
+&nbsp;|&nbsp;
+<a title="Displayed Context" href="4.html#4.4_13">4.4/13</a>
+&nbsp;|&nbsp;
+<a title="" href="3.html#3.4">3.4</a>
+</p>
+<h3><a name="1.6_13">1.6/13     Changing Attributes</a></h3>
+<p>
+When entering or editing graphic data, allow users to change display
+attributes -- e.g., line type, cross-hatching, color -- for selected
+graphic elements.
+</p>
+<h4>Example</h4>
+<p>
+If a figure was created initially with dashed lines, then a user should
+be able to select the figure, or portions of it, and change the dashed
+lines to solid lines by specifying that alternative attribute.
+</p>
+<h4>Comment</h4>
+<p>
+If it is easy to change attributes, reversing earlier data entry
+decisions, then the process of composing graphic displays will be
+generally easier.
+</p>
+<h4>Comment</h4>
+<p>
+Another approach to changing an attribute might be to rely on general
+editing capabilities, i.e., to delete the element in question (perhaps
+using an UNDO command for an element just created) and then redraw it.
+But a capability for specifying attribute change directly, without
+element deletion and reentry, will often be helpful.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Selecting Graphic Elements" href="1.html#1.6_6">1.6/6</a>
+</p>
+<h3><a name="1.6_14">1.6/14     +  Consistent Method for Attribute Selection</a></h3>
+<p>
+When editing graphic data, allow users to change display attributes by
+whatever means were used to select those attributes in the first place.
+</p>
+<h4>Example</h4>
+<p>
+If line type is selected initially from a menu of displayed attributes,
+then changing a line type should also be accomplished via menu
+selection.
+</p>
+<h4>Comment</h4>
+<p>
+Many editing changes will be made during data entry, rather than as
+separate later actions, and thus it is important that entry and editing
+actions be consistent.
+</p>
+<h3><a name="1.6_15">1.6/15     Easy Storage and Retrieval</a></h3>
+<p>
+Provide easy means for saving and retrieving graphic displays or their
+component elements at different stages in their creation.
+</p>
+<h4>Comment</h4>
+<p>
+A user should not have to create a graphic image more than once.  Once a
+graphic element has been created, a user should be able to save it for
+possible re-use.
+</p>
+<h4>Comment</h4>
+<p>
+As a protective measure, a user might wish to save different versions of
+a graphic display at successive stages during its creation, in order to
+return to an earlier state if later results seem unsatisfactory.  During
+creation, the elements added to a graphic display can be interrelated in
+complex ways, and thus stepwise deletion of unwanted elements could
+prove a difficult process.  An UNDO command might be helpful for
+deleting some of the most recently added elements.  But storage and
+subsequent retrieval of interim versions of the display may be more
+helpful for a foresighted user.
+</p>
+<h3><a name="1.6_16">1.6/16     +  Naming Displays and Elements</a></h3>
+<p>
+Allow users to name graphic displays or designated elements, in order to
+aid storage and retrieval or manipulation during graphic data
+entry/editing; and provide means for a user to review a current
+"catalog" of named elements.
+</p>
+<h4>Comment</h4>
+<p>
+Standard displays and graphic components might be assigned names
+automatically by the computer, but users will still need a capability to
+assign their own names to interim versions of displays in creation, or
+to various elements of those displays.  In either case, users may forget
+what names have been assigned; some "catalog" of currently named
+elements will serve as a helpful reminder.
+</p>
+<h4>Comment</h4>
+<p>
+For currently displayed material, pointing may be more convenient than
+naming for the designation of selected elements; but names will
+certainly aid the retrieval of stored material.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#gardan_lucas_1984">Gardan Lucas 1984</a></li></ul>
+<h3><a name="1.6_17">1.6/17     Automatic Data Registration</a></h3>
+<p>
+Provide automatic registration or alignment of computer-generated
+graphic data, so that variable data are shown properly with respect to
+fixed background or map data at any display scale.
+</p>
+<h4>Comment</h4>
+<p>
+When users are required to enter data via some separate device such as a
+graphics tablet, rather than directly on the display surface, it may be
+necessary for a user to participate in some computer-prompted procedure
+for ensuring data registration.  Such a procedure may prove error-prone,
+however, and should be considered an undesirable expedient.
+</p>
+<h3><a name="1.6_18">1.6/18     Aids for Entering Hierarchic Data</a></h3>
+<p>
+When graphic data must be entered in an organized hierarchic structure,
+in different sections and at different levels of increasing detail,
+provide computer aids for that purpose.
+</p>
+<h4>Example</h4>
+<p>
+For entering map data, a user might have to specify different levels of
+data storage for a city's name and location, its municipal boundaries,
+its major road patterns, its street names and house numbers, etc.;
+computer aids could help that process.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Aids for Entering Hierarchic Data" href="1.html#1.0_31">1.0/31</a>
+&nbsp;|&nbsp;
+<a title="Aids for Entering Hierarchic Data" href="1.html#1.8_12">1.8/12</a>
+&nbsp;|&nbsp;
+<a title="Zooming for Display Expansion" href="2.html#2.4_15">2.4/15</a>
+</p>
+<h3><a name="1.6_19">1.6/19     Automatic Data Validation</a></h3>
+<p>
+When graphic data represent relations among real objects, provide
+appropriate computer logic based on models of physical probability to
+validate data entries.
+</p>
+<h4>Example</h4>
+<p>
+If data indicate that a military land unit has been reported in the
+middle of a lake, the computer should call that discrepancy to the
+user's attention.
+</p>
+<h4>Comment</h4>
+<p>
+If inconsistencies of data entry cannot be resolved immediately, the
+computer might keep track of unresolved questions pending receipt of
+further data.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Automatic Data Validation" href="1.html#1.7_1">1.7/1</a>
+</p><h2><a name="1.6.1">1.6.1  Graphics - Plotting Data</a></h2>
+<p>
+Plotting data to show their relations in various graphic formats can be
+aided greatly by appropriate software.
+</p>
+<h3><a name="1.6.1_1">1.6.1/1    Automated Data Plotting</a></h3>
+<p>
+When complex graphic data must be entered quickly, provide computer aids
+to automate that process.
+</p>
+<h4>Example</h4>
+<p>
+Prestored geographic data and background maps, along with automated
+entry ("posting") of flight plan data and track data, will permit fast
+and accurate generation of graphic displays for air traffic control, far
+beyond the capabilities of manual entry by a user.
+</p>
+<h4>Comment</h4>
+<p>
+Users can create simple graphics or edit stored graphic material fairly
+quickly, but they can create complex graphic displays only much more
+slowly.  A variety of computer aids can be provided to help enter
+graphic data.  Entry of detailed drawings and/or photographic imagery
+can be accomplished via a video camera and high-resolution digitizer,
+perhaps with facilities for a user to edit that process.
+</p>
+<h3><a name="1.6.1_2">1.6.1/2    Plotting Stored Data</a></h3>
+<p>
+Provide automated plotting of computer-stored data at user request, with
+provision for subsequent editing by a user.
+</p>
+<h4>Example</h4>
+<p>
+A computer might plot the data values from two arrays in a line graph,
+or three-dimensional data in XYZ coordinates.
+</p>
+<h4>Comment</h4>
+<p>
+In many applications, data intended for graphic display will already be
+stored in the computer.  In such cases a user might specify the graphic
+format required and edit elements in the resulting display output,
+without actually having to re-enter the data.  When users do have to
+enter data for graphic display, they might choose form filling or
+tabular entry for efficiency in the initial input of data and then
+invoke graphic capabilities for subsequent data editing.  In either
+case, it is important that previously entered data should be accessible
+for graphic processing.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Automatic Generation of Routine Data" href="1.html#1.8_7">1.8/7</a>
+&nbsp;|&nbsp;
+<a title="Automatic Computation of Derived Data" href="1.html#1.8_8">1.8/8</a>
+</p>
+<h3><a name="1.6.1_3">1.6.1/3    Predefined Graphic Formats</a></h3>
+<p>
+When graphic data must be plotted in predefined standard formats,
+provide templates or skeletal displays for those formats to aid data
+entry.
+</p>
+<h4>Example</h4>
+<p>
+Sample displays might be stored in the computer to aid in creating
+standard graphs such as bar graphs, or standard diagrams such as
+organization charts, or page layouts for typesetting, or maps drawn to
+different scales or with different projections.
+</p>
+<h4>Comment</h4>
+<p>
+In many applications, it may help to provide flexibility so that general
+prestored formats can be modified by a user and then saved for
+subsequent use.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Easy Storage and Retrieval" href="1.html#1.6_15">1.6/15</a>
+</p>
+<h3><a name="1.6.1_4">1.6.1/4    Aids for Graph Construction</a></h3>
+<p>
+When graphs must be constructed for data plotting, provide computer aids
+for that purpose.
+</p>
+<h4>Example</h4>
+<p>
+Construction aids might include stored templates of different kinds of
+graphs, prompts to guide users in the definition of scale axes, and aids
+for format control such as automatic centering of axis labels if
+requested by a user.
+</p>
+<h4>Comment</h4>
+<p>
+Computer aids for graph construction should be designed to allow
+flexibility in their use.  A user should be allowed to position labels
+and other graphic elements at will, except where operational
+requirements may impose fixed formats.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#foley_van_dam_1982">Foley Van Dam 1982</a></li></ul>
+<h3><a name="1.6.1_5">1.6.1/5    +  Aids for Scaling</a></h3>
+<p>
+Provide computer aids to help users specify appropriate scales for
+graphic data entry.
+</p>
+<h4>Comment</h4>
+<p>
+The computer should handle scaling automatically, subject to review and
+change by a user.  The computer might provide a general template for the
+plotting scale and prompt the user as necessary to define the scale more
+exactly, including specification of the origin, linear or logarithmic
+axes, scale intervals, minimum and maximum values, and labels for axes.
+</p>
+<h4>Comment</h4>
+<p>
+In the process of defining scales the computer might impose rules to
+ensure that the resulting graphic displays are designed to permit
+effective information assimilation by their users, e.g., displaying
+scales with conventional direction, so that numbers increase in value
+from left to right, or from bottom to top.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#foley_wallace_1974">Foley Wallace 1974</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Scaling Conventions" href="2.html#2.4.1_1">2.4.1/1</a>
+</p>
+<h3><a name="1.6.1_6">1.6.1/6    Computer Derivation of Graphic Data</a></h3>
+<p>
+When graphic data can be derived from data already available in the
+computer, provide machine aids for that purpose.
+</p>
+<h4>Example</h4>
+<p>
+A computer might fit a smoothed curve through plotted data values,
+filter out points when drawing a densely defined curve, rescale graphs,
+invert graphs by exchanging X- and Y-values, convert graphs to show
+cumulative curves, calculate and display various statistical measures of
+data distribution, produce a contour plot from gridded data with linear
+interpolation, plot map contours from latitude-longitude coordinates,
+calculate bearings, distances, and areas on maps, plot perspective views
+of objects defined in plan views, plot specified cross-sections of
+displayed objects, calculate a parts list for a designed assembly,
+identify critical paths and float time in network scheduling charts,
+etc.
+</p>
+<h4>Comment</h4>
+<p>
+The machine capacity for generating graphic data by computation will far
+exceed a user's capabilities in both speed and accuracy.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Automatic Computation of Derived Data" href="1.html#1.8_8">1.8/8</a>
+</p><h2><a name="1.6.2">1.6.2  Graphics - Drawing</a></h2>
+<p>
+Drawing lines and figures to produce pictorial data of various kinds can
+be aided greatly by appropriate software.
+</p>
+<h3><a name="1.6.2_1">1.6.2/1    Drawing Lines</a></h3>
+<p>
+When line drawing is required, provide users with aids for drawing
+straight line segments.
+</p>
+<h4>Comment</h4>
+<p>
+Some applications may require drawing continuous lines freehand.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#foley_van_dam_1982">Foley Van Dam 1982</a></li></ul>
+<h3><a name="1.6.2_2">1.6.2/2    Rubberbanding</a></h3>
+<p>
+When lines must be drawn at arbitrary positions, lengths and angles,
+provide a rubberbanding capability, in which the computer displays a
+tentative line extending from a designated start point to whatever is
+the currently proposed end point.
+</p>
+<h4>Comment</h4>
+<p>
+This technique permits users to enter or change a line segment rapidly
+and with confidence by designating its starting point and then simply
+moving the cursor to the desired end-point, thus placing the
+"rubberband" line in its intended position.  A similar capability should
+be provided to aid entry/editing of specified outline figures.  A
+rectangle might be rubberbanded by fixing one corner and moving the
+opposite corner.  A circle might be rubberbanded to desired size by
+fixing its center and changing the extension of its radius.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#foley_van_dam_1982">Foley Van Dam 1982</a><li><a href="index.html#foley_wallace_chan_1984">Foley Wallace Chan 1984</a></li></ul>
+<h3><a name="1.6.2_3">1.6.2/3    Aiding Line Connection</a></h3>
+<p>
+When line segments must join or intersect, which is true in most
+drawing, provide computer logic to aid such connection.
+</p>
+<h4>Comment</h4>
+<p>
+An effective computer logic to aid line connection is to provide a
+so-called "gravity field" surrounding each line segment, so that if a
+line-drawing cursor is moved within that field the cursor's new line
+will be extended automatically to intersect the already-displayed line.
+Note that a "gravity field" need not itself be displayed; users will
+soon learn to infer its extent by its effect in aiding cursor placement.
+Because users often seek to join line segments at their ends, it may
+help to enlarge the zone of attraction at the end of each displayed line
+to facilitate such end-to-end connection.
+</p>
+<h4>Comment</h4>
+<p>
+The concept of "gravity field" can also be used to align drawn line
+segments with points in a reference grid, as well as with each other.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#foley_van_dam_1982">Foley Van Dam 1982</a><li><a href="index.html#gardan_lucas_1984">Gardan Lucas 1984</a></li></ul>
+<h3><a name="1.6.2_4">1.6.2/4    Grid Reference for Alignment</a></h3>
+<p>
+When graphic elements are created with vertical and horizontal
+alignment, provide a reference grid that can be requested by a user to
+aid that alignment.
+</p>
+<h4>Comment</h4>
+<p>
+A reference grid might be displayed merely as a visual aid.  In some
+instances, however, where repeated graphic elements must be aligned in
+regular fashion, it may be helpful to use a grid to position graphic
+elements automatically at its intersections.  An example might be the
+construction of organization charts with repeating rows of boxes
+connected by line segments.  "Grid gravity" might be provided
+automatically during graphic entry, based on "gravity field" connection
+of drawn lines to grid points, or might be invoked as a separate editing
+command by a user.
+</p>
+<h4>Comment</h4>
+<p>
+A grid suitable for aiding data entry may not prove equally helpful for
+subsequent interpretation of data on the completed display.  Therefore,
+after a graphic image has been composed, the user should decide whether
+or not to include the reference grid in the finished display.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#foley_wallace_chan_1984">Foley Wallace Chan 1984</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Aids for Scale Interpolation" href="2.html#2.4.1_11">2.4.1/11</a>
+</p>
+<h3><a name="1.6.2_5">1.6.2/5    +  Changing Grid Intervals</a></h3>
+<p>
+When a reference grid is displayed to aid graphic data entry, allow
+users to change the grid intervals in either or both directions.
+</p>
+<h4>Comment</h4>
+<p>
+For different applications, a user may wish to work with a fine grid or
+a coarse grid, depending on the quantizing interval of the data being
+plotted.  Some designers recommend a standard grid resolution of 1/20 of
+graph height or width, but such a standard will not be optimum for every
+application.
+</p>
+<h3><a name="1.6.2_6">1.6.2/6    Constraint for Vertical and Horizontal Lines</a></h3>
+<p>
+When graphic elements are created with vertical and horizontal lines,
+allow users to specify appropriate constraints during line drawing.
+</p>
+<h4>Comment</h4>
+<p>
+Here computer logic is invoked to interpret casual freehand gestures by
+a user as if they were carefully drawn -- the electronic equivalent of a
+draftsman's T-square.  Thus a roughly vertical motion by a user could
+create an exactly vertical line in computer storage and display.
+</p>
+<h4>Comment</h4>
+<p>
+In applications where orthogonal lines predominate, it may be helpful to
+make constrained drawing the norm, while allowing users to specify
+free-form drawing as an exception.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#foley_van_dam_1982">Foley Van Dam 1982</a><li><a href="index.html#gardan_lucas_1984">Gardan Lucas 1984</a></li></ul>
+<h3><a name="1.6.2_7">1.6.2/7    Specifying Line Relations</a></h3>
+<p>
+For precise drawing, allow users to draw lines by specifying their
+geometric relations with other lines.
+</p>
+<h4>Example</h4>
+<p>
+In computer-aided design, a user might wish to create a new line by
+declaring it parallel with (or perpendicular to) an existing line.
+</p>
+<h3><a name="1.6.2_8">1.6.2/8    Drawing Figures</a></h3>
+<p>
+When a user must draw figures, provide computer aids for that purpose.
+</p>
+<h4>Example</h4>
+<p>
+A user might select from a stored set of standard forms -- rectangles,
+circles, etc. -- and edit those to create figures or the component
+elements of figures, rather than having to draw each figure from
+scratch.
+</p>
+<h4>Example</h4>
+<p>
+Computer logic might be provided to allow a user to create a rectangle
+simply by designating two opposite corners, or a circle by first
+specifying its center and then any point on its circumference, with
+rubberbanding to show the result of any current selection.
+</p>
+<h4>Comment</h4>
+<p>
+Much graphic construction can either be aided in some way (by templates,
+tracing techniques, grid gravity, etc.), or can employ machine
+generation of computed or stored forms, often followed by user editing
+of those forms.  A great many different figures can be created by
+combining simple elements or by specifying geometric parameters (e.g.,
+conic sections).  Computer aids that allow such shortcuts can speed
+figure drawing and make the process more accurate.  In some
+applications, such as constructing organization charts, figures may
+repeat a number of standard elements.  In such cases computer aids can
+be provided to make the production of figures almost routine.
+</p>
+<h4>Comment</h4>
+<p>
+Some capability for freehand drawing may be needed, particularly in the
+creation of graphic art, but freehand drawing will not provide
+sufficient precision for many applications.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#gardan_lucas_1984">Gardan Lucas 1984</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Predefined Graphic Formats" href="1.html#1.6.1_3">1.6.1/3</a>
+</p>
+<h3><a name="1.6.2_9">1.6.2/9    +  Alternative Methods for Drawing Figures</a></h3>
+<p>
+In applications requiring a general capability for drawing figures,
+provide a choice of methods for specifying graphic elements.
+</p>
+<h4>Example</h4>
+<p>
+A straight line might usually be created by specifying two points, but
+sometimes it might be easier to specify one point plus a constraint that
+the line be parallel (perpendicular, tangent) to some other line.
+</p>
+<h4>Example</h4>
+<p>
+A circle might usually be created by specifying its center and a point
+on its circumference; but sometimes it might be easier to specify a
+circle by other means -- e.g., by two ends of its diameter, or by three
+points on its circumference, or by its center plus a constraint that it
+be tangent to some other figure, or by inscribing it within a square.
+</p>
+<h4>Example</h4>
+<p>
+An ellipse might usually be created by specifying two foci and a point
+on its perimeter, but sometimes it might be easier to specify its center
+and draw its long and short axes, or it might be inscribed within a
+rectangle.
+</p>
+<h4>Example</h4>
+<p>
+A regular polygon might usually be created by specifying the end points
+of one edge and the number of sides, but it also might be specified by
+its center and one vertex and the number of its sides.
+</p>
+<h4>Comment</h4>
+<p>
+These examples are from the demanding realm of computer-aided design.
+Simpler kinds of graphic entry may not require such capabilities.
+</p>
+<h4>Comment</h4>
+<p>
+In the use of various figure-drawing aids, it may be helpful if the
+computer can provide step-by-step prompts for each procedure, e.g., "Now
+indicate center point", "Now indicate radius", etc.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#gardan_lucas_1984">Gardan Lucas 1984</a></li></ul>
+<h3><a name="1.6.2_10">1.6.2/10   Changing Size</a></h3>
+<p>
+When editing graphic data, allow users to change the size of any
+selected element on the display.
+</p>
+<h4>Comment</h4>
+<p>
+Scaling displayed elements to different sizes, expanding or shrinking
+them, will usually prove easier than deleting an element and then
+recreating it from scratch in the desired size.  A capability for
+changing the scale of a displayed element will aid initial data entry as
+well as any subsequent editing of graphic data.
+</p>
+<h4>Comment</h4>
+<p>
+Depending on the application, it may be helpful to provide a continuous
+sizing capability, or else incremental sizing to various defined scales.
+</p>
+<h3><a name="1.6.2_11">1.6.2/11   +  Enlargement for Symbol Drawing</a></h3>
+<p>
+In applications where users may create special symbols, provide a
+capability for drawing (or changing) a symbol in large scale, with
+automatic reduction by the computer to the needed size.
+</p>
+<h4>Example</h4>
+<p>
+Enlargement might aid in specifying shapes to be used for plotting
+points or for map symbols, or in designing icons or the letters in a
+font.
+</p>
+<h4>Comment</h4>
+<p>
+When drawing symbols in large scale, a rough sketch may suffice,
+requiring less dexterity from a user.  The desirable degree of scale
+expansion will depend upon symbol complexity, and can probably be
+determined by testing.  Some designers recommend a 20x20 grid to provide
+an enlarged pixel representation, on which a user can add or delete
+pixels to create a symbol.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Zooming for Precise Positioning" href="1.html#1.6_5">1.6/5</a>
+</p>
+<h3><a name="1.6.2_12">1.6.2/12   Copying Elements</a></h3>
+<p>
+Allow users to copy a selected graphic element in order to duplicate it
+elsewhere or create a repeating pattern.
+</p>
+<h4>Comment</h4>
+<p>
+Many graphic displays contain repeating elements; copying an element
+already created may prove quicker than redrawing that element from
+scratch.
+</p>
+<h4>Comment</h4>
+<p>
+In creating patterns, a user will often need to specify a reference
+point in the original element and then specify where that point should
+be placed for each copy of that element.
+</p>
+<h4>Comment</h4>
+<p>
+In some special applications, it might help to provide an optional kind
+of copying capability called "instancing", in which a user can choose to
+copy a graphic element from a stored template, and then all copies (or
+instances) will be changed automatically whenever that original template
+is changed.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Easy Storage and Retrieval" href="1.html#1.6_15">1.6/15</a>
+</p>
+<h3><a name="1.6.2_13">1.6.2/13   Rotating Elements</a></h3>
+<p>
+When editing graphic data that depict objects, allow users to rotate a
+selected element on the display, in order to show it in different
+orientations.
+</p>
+<h4>Comment</h4>
+<p>
+Rotation of a displayed element will usually prove easier than deleting
+an element and then recreating it from scratch in the desired
+orientation.  A capability for rotating an element will aid initial data
+entry as well as any subsequent editing of graphic data.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Rotation" href="2.html#2.4.6_5">2.4.6/5</a>
+</p>
+<h3><a name="1.6.2_14">1.6.2/14   Reflection of Elements</a></h3>
+<p>
+When users must create symmetric graphic elements, provide a means for
+specifying a reflection (mirror image) of existing elements.
+</p>
+<h4>Comment</h4>
+<p>
+Many graphic displays contain symmetric figures where if one side has
+been drawn the other side might be created quickly as a reflected copy
+of the first, perhaps with some subsequent modification by the user.
+</p>
+<h4>Comment</h4>
+<p>
+Users will need some means for specifying the desired reflection plane,
+which for practical purposes should probably be constrained to a choice
+between left-right and up-down reflection.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#gardan_lucas_1984">Gardan Lucas 1984</a></li></ul>
+<h3><a name="1.6.2_15">1.6.2/15   Grouping Elements</a></h3>
+<p>
+Allow users to designate a group of elements to which graphic editing
+operations will be applied in common.
+</p>
+<h4>Example</h4>
+<p>
+A user might carefully position two elements with respect to each other,
+and then wish to move both of them together while preserving their
+relative positions.
+</p>
+<h4>Comment</h4>
+<p>
+Grouping elements might be a temporary action, intended for just a few
+successive editing operations, or it might be specified more permanently
+via some sort of "make group" command.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Selecting Graphic Elements" href="1.html#1.6_6">1.6/6</a>
+</p>
+<h3><a name="1.6.2_16">1.6.2/16   Merging Elements</a></h3>
+<p>
+In the special case when a drawn object can be created by the junction
+or disjunction of other graphic elements, provide computer aids for
+merging those elements by boolean combination.
+</p>
+<h4>Example</h4>
+<p>
+In showing the junction of two objects comprising the components of some
+more complex object, a computer might calculate and draw their
+intersection, automatically dealing with overlapped data sets and
+concealed contours.
+</p>
+<h4>Comment</h4>
+<p>
+This technique can represent the intersection of solid objects and also
+the result of drilling holes in an object.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#gardan_lucas_1984">Gardan Lucas 1984</a></li></ul>
+<h3><a name="1.6.2_17">1.6.2/17   Filling Enclosed Areas</a></h3>
+<p>
+When area coding is required, provide aids to allow users to fill an
+enclosed area with a selected attribute (color, shading or
+cross-hatching) by a simple specification action, rather than by having
+to trace over the area involved.
+</p>
+<h4>Example</h4>
+<p>
+For many applications, it may suffice if a user can simply point at one
+of several displayed attributes (color patches, brightness levels,
+hatching patterns) and then point at the area to be filled.
+</p>
+<h4>Comment</h4>
+<p>
+A user might wish to shade the bars of a bar chart, or the wedges in a
+pie chart, or the various components of a drawn diagram or picture.
+</p>
+<h3><a name="1.6.2_18">1.6.2/18   Automatic Figure Completion</a></h3>
+<p>
+In applications where design rules have been previously defined, provide
+computer aids to complete automatically any details of graphic data
+entry covered by those rules.
+</p>
+<h4>Example</h4>
+<p>
+The computer might automatically add dimensional annotation to drafted
+figures.
+</p>
+<h4>Example</h4>
+<p>
+When drawing or editing a polygon, the computer might automatically
+maintain closure if additional vertices are specified, rather than
+requiring the user to close the figure manually.
+</p>
+<h4>Example</h4>
+<p>
+In computer-aided design, if the flanges of connected components are
+designed with arcs of standard radius, then a user might draw those
+joints square and ask the computer to round them.
+</p>
+<h4>Example</h4>
+<p>
+A computer might create perspective drawings automatically from plan and
+elevation data, with hidden parts eliminated.
+</p>
+<h4>Example</h4>
+<p>
+In drawing flow charts, a computer might automatically add the arrow to
+a connecting line, depending upon the direction in which the line was
+drawn (or the sequence in which its points were designated).
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#gardan_lucas_1984">Gardan Lucas 1984</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Computer Derivation of Graphic Data" href="1.html#1.6.1_6">1.6.1/6</a>
+</p>
+<h3><a name="1.6.2_19">1.6.2/19   Stored Models</a></h3>
+<p>
+When drawings are variations on a common theme, consider providing a
+computer model that will allow users to create particular instances by
+entering appropriate parameters.
+</p>
+<h4>Example</h4>
+<p>
+An aerodynamic model might be invoked to help create (and evaluate) an
+aircraft wing design.
+</p>
+<h4>Example</h4>
+<p>
+For designing a workplace for human use, it might be helpful to store a
+body model from which the computer could draw automatically a sample
+user of any specified size percentile, and then move body parts of the
+displayed sample user to ensure that all controls are within reach.
+</p>
+<h4>Comment</h4>
+<p>
+Different kinds of models might be needed, including models based on
+geometric, surface, and solid relations, as well as even more complex
+logical models.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#foley_van_dam_1982">Foley Van Dam 1982</a><li><a href="index.html#gardan_lucas_1984">Gardan Lucas 1984</a></li></ul><h2><a name="1.7">1.7    Data Validation</a></h2>
+<p>
+Data validation refers to checking entries for correct content and/or
+format, as defined by software logic.
+</p>
+<h3><a name="1.7_1">1.7/1      Automatic Data Validation</a></h3>
+<p>
+Provide software for automatic data validation to check any item whose
+entry and/or correct format or content is required for subsequent data
+processing.
+</p>
+<h4>Example</h4>
+<p>
+If a date is entered as "February 31", the computer should generate an
+error message asking for a revised entry.
+</p>
+<h4>Comment</h4>
+<p>
+Do not rely on a user always to make correct entries.  Computer aids for
+checking data entries will improve accuracy.
+</p>
+<h4>Comment</h4>
+<p>
+Some data entries, of course, may not need checking, or may not be
+susceptible to computer checking, such as free text entries in a COMMENT
+field.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.2.1.5</a><li><a href="index.html#pr">PR 4.12.4</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Validating Data Changes" href="6.html#6.3_17">6.3/17</a>
+&nbsp;|&nbsp;
+<a title="Cross Validation of Related Data" href="6.html#6.3_18">6.3/18</a>
+</p>
+<h3><a name="1.7_2">1.7/2      Accepting Correct Entries</a></h3>
+<p>
+Ensure that every possible correct data entry will be accepted and
+processed properly by the computer.
+</p>
+<h4>Example</h4>
+<p>
+As a negative example, on 1 June 1983, after several previous months of
+successful use, the computers controlling Massachusetts automobile
+emission inspections failed; it was discovered that they would not
+accept a "June" entry.
+</p>
+<h4>Comment</h4>
+<p>
+This guideline states the obvious, and might seem unnecessary except for
+occasional design lapses such as that cited in the example.
+</p>
+<h3><a name="1.7_3">1.7/3      Non-Disruptive Error Messages</a></h3>
+<p>
+If data validation detects a probable error, display an error message to
+the user at the completion of data entry; do not interrupt an ongoing
+transaction.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Non-Disruptive Error Messages" href="4.html#4.3_10">4.3/10</a>
+</p>
+<h3><a name="1.7_4">1.7/4      Deferral of Required Data Entry</a></h3>
+<p>
+If a user wishes to defer entry of a required data item, require the
+user to enter a special symbol in the data field to indicate that the
+item has been temporarily omitted rather than ignored.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.4.3.11</a><li><a href="index.html#pr">PR 4.8.7 4.12.2</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Explicit User Actions" href="4.html#4.0_2">4.0/2</a>
+</p>
+<h3><a name="1.7_5">1.7/5      +  Reminder of Deferred Entry</a></h3>
+<p>
+If a user has deferred entry of required data but then requests
+processing of entries, signal that omission to the user and allow
+immediate entry of missing items or perhaps further deferral.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 5.2.4</a><li><a href="index.html#ms">MS 5.15.4.3.11 5.15.7.5.c</a><li><a href="index.html#pr">PR 4.8.7</a></li></ul>
+<h3><a name="1.7_6">1.7/6      Timely Validation of Sequential Transactions</a></h3>
+<p>
+In a repetitive data entry task, validate the data for one transaction
+and allow the user to correct errors before beginning another
+transaction.
+</p>
+<h4>Comment</h4>
+<p>
+This is particularly important when the task requires transcription from
+source documents, so that a user can detect and correct entry errors
+while the relevant document is still at hand.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Immediate Data Correction" href="3.html#3.5_12">3.5/12</a>
+&nbsp;|&nbsp;
+<a title="Immediate Error Correction" href="6.html#6.3_9">6.3/9</a>
+</p>
+<h3><a name="1.7_7">1.7/7      Optional Item-by-Item Validation</a></h3>
+<p>
+For novice users, consider providing optional item-by-item data
+validation within a multiple-entry transaction.
+</p>
+<h4>Comment</h4>
+<p>
+This capability, which might be termed an "interim ENTER", may sometimes
+help a novice user who is uncertain about the requirements imposed on
+each data item.  But item-by-item processing may slow skilled users.
+Providing such a capability as an optional feature would help novices
+without hindering more experienced users.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#eg">EG 6.3.9 7.1</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Non-Disruptive Error Messages" href="4.html#4.3_10">4.3/10</a>
+</p><h2><a name="1.8">1.8    Other Data Processing</a></h2>
+<p>
+Other data processing aids may be provided to facilitate data entry.
+</p>
+<h3><a name="1.8_1">1.8/1      Default Values</a></h3>
+<p>
+When likely default values can be defined for the data entries in a
+particular task, offer those default values to speed data entry.
+</p>
+<h3><a name="1.8_2">1.8/2      +  Defaults for Sequential Entries</a></h3>
+<p>
+If a series of default values have been defined for a data entry
+sequence, allow a user to default all entries or to default until the
+next required entry.
+</p>
+<h4>Comment</h4>
+<p>
+Where a set of default values has been defined, a user may not wish to
+specify that each default value should be accepted for each data field
+individually.  It might be quicker to accept the set of defaults by a
+single action.
+</p>
+<h3><a name="1.8_3">1.8/3      +  User Definition of Default Values</a></h3>
+<p>
+When interface designers cannot predict what default values will be
+helpful, permit users (or perhaps a system administrator) to define,
+change or remove default values for any data entry field.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.6.8</a></li></ul>
+<h3><a name="1.8_4">1.8/4      +  Display of Default Values</a></h3>
+<p>
+On initiation of a data entry transaction, display currently defined
+default values in their appropriate data fields.
+</p>
+<h4>Comment</h4>
+<p>
+Do not expect users to remember them.
+</p>
+<h4>Comment</h4>
+<p>
+It may be helpful to mark default values in some way to distinguish them
+from new data entries.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.1.10</a><li><a href="index.html#ms">MS 5.15.6.7</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Prompting Entries" href="4.html#4.4_7">4.4/7</a>
+&nbsp;|&nbsp;
+<a title="Displaying Default Values" href="6.html#6.3_15">6.3/15</a>
+</p>
+<h3><a name="1.8_5">1.8/5      +  Easy Confirmation to Enter Default Values</a></h3>
+<p>
+Provide users with some simple means to confirm acceptance of a
+displayed default value for entry.
+</p>
+<h4>Example</h4>
+<p>
+Simply tabbing past the default field may suffice.
+</p>
+<h4>Comment</h4>
+<p>
+Employ similar techniques when a user must review the accuracy of
+previously entered data.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.6.7 5.15.6.10</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Displaying Default Values" href="6.html#6.3_15">6.3/15</a>
+</p>
+<h3><a name="1.8_6">1.8/6      +  Temporary Replacement of Default Values</a></h3>
+<p>
+Allow users to replace any data entry default value with a different
+entry, without thereby changing the default definition for subsequent
+transactions.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.6.9</a></li></ul>
+<h3><a name="1.8_7">1.8/7      Automatic Generation of Routine Data</a></h3>
+<p>
+For routine data that can be derived from existing computer records,
+program the computer to access and enter such data automatically.
+</p>
+<h4>Example</h4>
+<p>
+As a negative example, do not require a user to identify a work station
+in order to initiate a transaction, nor to include other routine data
+such as current date and transaction sequence codes.
+</p>
+<h4>Exception</h4>
+<p>
+Some data entry routines may be imposed in the interest of security, but
+at the risk of hindering a user in achieving effective task performance.
+Other means of ensuring data security should be considered.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.4.2</a><li><a href="index.html#ms">MS 5.15.2.1.6</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Easy LOG-ON" href="6.html#6.1_1">6.1/1</a>
+&nbsp;|&nbsp;
+<a title="Automatic Data Generation" href="6.html#6.3_14">6.3/14</a>
+</p>
+<h3><a name="1.8_8">1.8/8      Automatic Computation of Derived Data</a></h3>
+<p>
+Provide automatic computation of derived data, so that a user does not
+have to calculate and enter any number that can be derived from data
+already accessible to the computer.
+</p>
+<h4>Example</h4>
+<p>
+Statistical descriptors such as sums, means, etc., can all be derived
+automatically by appropriate software.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.2.1.6</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Automatic Data Generation" href="6.html#6.3_14">6.3/14</a>
+</p>
+<h3><a name="1.8_9">1.8/9      User Review of Prior Entries</a></h3>
+<p>
+When data entries made in one transaction are relevant to a subsequent
+transaction, program the computer to retrieve and display them for user
+review rather than requiring re-entry of those data.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.4.2</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Data Entered Only Once" href="1.html#1.0_1">1.0/1</a>
+&nbsp;|&nbsp;
+<a title="Data Verification by User Review" href="6.html#6.3_13">6.3/13</a>
+</p>
+<h3><a name="1.8_10">1.8/10     Automatic Entry of Redundant Data</a></h3>
+<p>
+If data are accessible to the computer that are logically related to
+other entries, program the computer to retrieve and enter those
+redundant data items automatically.
+</p>
+<h4>Example</h4>
+<p>
+As a negative example, a user should not have to enter both an item name
+and identification code when either one defines the other.
+</p>
+<h4>Exception</h4>
+<p>
+Redundant entry may be needed for resolving ambiguous entries, for user
+training, or for security (e.g., user identification).
+</p>
+<h4>Comment</h4>
+<p>
+When verification of previously entered data is required, ask users to
+review and confirm data items rather than re-enter them.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#bb">BB 2.4.2 4.3.6</a><li><a href="index.html#eg">EG 6.3.10</a><li><a href="index.html#ms">MS 5.15.2.1.6</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Automatic Data Generation" href="6.html#6.3_14">6.3/14</a>
+</p>
+<h3><a name="1.8_11">1.8/11     Automatic Cross-File Updating</a></h3>
+<p>
+Provide automatic cross-file updating whenever necessary, so that a user
+does not have to enter the same data twice.
+</p>
+<h4>Example</h4>
+<p>
+If an aircraft has been assigned to a mission, the computer should
+automatically update both aircraft status and mission assignment files
+to indicate that commitment.
+</p>
+<h4>Reference</h4>
+<ul>
+<li><a href="index.html#ms">MS 5.15.2.1.6</a></li></ul>
+<h4>See also</h4>
+<p>
+<a title="Data Entered Only Once" href="1.html#1.0_1">1.0/1</a>
+&nbsp;|&nbsp;
+<a title="Automatic Data Generation" href="6.html#6.3_14">6.3/14</a>
+</p>
+<h3><a name="1.8_12">1.8/12     Aids for Entering Hierarchic Data</a></h3>
+<p>
+When data must be entered in an organized hierarchic structure, in
+different sections and at different levels of increasing detail, provide
+computer aids for that purpose.
+</p>
+<h4>Comment</h4>
+<p>
+At the least, the computer should provide the user a schematic summary
+display of any defined data structure for general orientation, with its
+branches and levels labeled for convenient reference.  When a user
+specifies any portion of the structure for data entry or editing, the
+computer should display that section of data appropriately labeled, and
+perhaps show in the display margin a diagram indicating what portion of
+the overall data structure is currently being displayed.
+</p>
+<h4>Comment</h4>
+<p>
+When data at one level in a hierarchy are dependent on data entries at
+other (usually subordinate) levels, the computer should handle
+cross-level bookkeeping automatically, just as for cross-file updating.
+</p>
+<h4>Comment</h4>
+<p>
+For entering hierarchic data, a user must specify where in the data
+structure any new data should be added.  If the data structure is
+complex, it may help if the computer automatically prompts the user to
+make the appropriate data entries at different levels.
+</p>
+<h4>Comment</h4>
+<p>
+If a user may need to change the data structure, then computer aids may
+be needed for that purpose as well as for data entry.  The computer
+should bookkeep automatically any changing relations among the data in
+different sections that might result from changes to the overall data
+structure.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Aids for Entering Hierarchic Data" href="1.html#1.0_31">1.0/31</a>
+&nbsp;|&nbsp;
+<a title="Aids for Entering Hierarchic Data" href="1.html#1.6_18">1.6/18</a>
+&nbsp;|&nbsp;
+<a title="Show Overview Position of Visible Section" href="2.html#2.4.8_11">2.4.8/11</a>
+</p><h2><a name="1.9">1.9    Design Change</a></h2>
+<p>
+Design change of software supporting data entry functions may be needed
+to meet changing operational requirements.
+</p>
+<h3><a name="1.9_1">1.9/1      Flexible Design for Data Entry</a></h3>
+<p>
+When data entry requirements may change, which is often the case,
+provide some means for users (or a system administrator) to make
+necessary changes to data entry functions.
+</p>
+<h4>Comment</h4>
+<p>
+Data entry functions that may need to be changed are those represented
+in these guidelines, including changes to procedures, entry formats,
+data validation logic, and other associated data processing.
+</p>
+<h4>Comment</h4>
+<p>
+Many of the preceding guidelines in this section imply a need for design
+flexibility.  Much of that needed flexibility can be provided in initial
+interface design.  Some guidelines, however, suggest a possible need for
+subsequent design change, and those guidelines are cited below.
+</p>
+<h4>See also</h4>
+<p>
+<a title="Storing User-Defined Formats" href="1.html#1.3_22">1.3/22</a>
+&nbsp;|&nbsp;
+<a title="Form Compatible with Source Documents" href="1.html#1.4_25">1.4/25</a>
+&nbsp;|&nbsp;
+<a title="Automatic Data Validation" href="1.html#1.7_1">1.7/1</a>
+&nbsp;|&nbsp;
+<a title="User Definition of Default Values" href="1.html#1.8_3">1.8/3</a>
+&nbsp;|&nbsp;
+<a title="Automatic Computation of Derived Data" href="1.html#1.8_8">1.8/8</a>
+&nbsp;|&nbsp;
+<a title="Automatic Entry of Redundant Data" href="1.html#1.8_10">1.8/10</a>
+&nbsp;|&nbsp;
+<a title="Automatic Cross-File Updating" href="1.html#1.8_11">1.8/11</a>
+</p><br/>
+<table summary='Page Footer' bgcolor='#DDDDCC' width='100%' border='0' cellpadding='5' cellspacing='0'>
+	<tr><td align='center' style='font-size: 80%'>
+		
+	</td></tr>
+</table>
+<div align='center'>
+<table summary='Navigation Menu' border='0' cellpadding='2' cellspacing='0'><tr valign='top'>
+<td>
+<a  accesskey='k' href='#endnav'><img src='2x2.gif' border='0' height='1' width='1' alt='skip navigation' /></a>
+</td>
+<td align='center'><a href="index.html" title="Introduction"><font size='1'>Introduction</font></a></td>
+<td valign='middle'>|</td>
+<td align='center' bgcolor="#DDDDCC" style='font-size: 80%'><b title="1. Data Entry">Data Entry</b></td>
+<td valign='middle'>|</td>
+<td align='center'><a href="2.html" title="2. Data Display"><font size='1'>Data Display</font></a></td>
+<td valign='middle'>|</td>
+<td align='center'><a href="3.html" title="3. Sequence Control"><font size='1'>Sequence Control</font></a></td>
+<td valign='middle'>|</td>
+<td align='center'><a href="4.html" title="4. User Guidance"><font size='1'>User Guidance</font></a></td>
+<td valign='middle'>|</td>
+<td align='center'><a href="5.html" title="5. Data Transmission"><font size='1'>Data Transmission</font></a></td>
+<td valign='middle'>|</td>
+<td align='center'><a href="6.html" title="6. Data Protection"><font size='1'>Data Protection</font></a></td>
+<td valign='middle'>|</td>
+<td align='center'><a href="contents.html" title="Table of Contents with All Guidelines"><font size='1'>Table of Contents</font></a></td>
+<td valign='middle'>|</td>
+<td><font size='1'><a href="#top">Top</a></font></td>
+</tr></table></div>
+
+</body>
+</html>

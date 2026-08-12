@@ -1,0 +1,76 @@
+<!-- received="Sat Jan 16 19:13:16 1993 PDT" -->
+<!-- sent="Sat, 16 Jan 93 13:26:25 est" -->
+<!-- name="Jim Whitescarver" -->
+<!-- email="jim@wilbur.njit.edu" -->
+<!-- subject="INPUT tag (was: Searching)" -->
+<!-- id="9301161828.AA08431@njitgw.njit.edu" -->
+<!-- inreplyto="" -->
+<title>WWW-Talk Jan-Mar 1993: INPUT tag (was: Searching)</title>
+<h1>INPUT tag (was: Searching)</h1>
+Jim Whitescarver (<i>jim@wilbur.njit.edu</i>)<br>
+<i>Sat, 16 Jan 93 13:26:25 est</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#79">[ date ]</a><a href="index.html#79">[ thread ]</a><a href="subject.html#79">[ subject ]</a><a href="author.html#79">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0080.html">Tim Berners-Lee: "Re: Usenet news and WWW"</a>
+<li> <b>Previous message:</b> <a href="0078.html">Dan Connolly: "Re: Usenet news and WWW"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0083.html">Dan Connolly: "Re: INPUT tag (was: Searching)"</a>
+</ul>
+<hr>
+<!-- body="start" -->
+Tony, I'll copy my reply to your query about the INPUT tag specs to www-talk.<br>
+We have an old spec for INPUT which was implimented pre web. It will be redone.<br>
+There is little agreement on the input tag, except that it will include<br>
+attributes for width, name, default, and help.  <br>
+<p>
+With this limited definition, the client can impliment default search keys<br>
+and get proper resource for help.<br>
+<p>
+We may create a default text to be used with the comment feature, which<br>
+will give all input/var field values in rfc822 style for mail based submission.<br>
+<p>
+At issue are:<br>
+<p>
+- handling typed inputs, including texts.<br>
+- applying inputs to search defaults. positional? named? override mech?<br>
+- applying inputs to go to defaults?<br>
+- getting data from users environment, e.g. users mail address.<br>
+- how the fields will be substituted into hrefs within the sgml context. scope?<br>
+- saving updated input values in bookmarks?<br>
+- communicating variables to activity scripts. (our "do" choice)<br>
+<p>
+We need a mechanism to assign arbitrary attributes to anchores and documents.<br>
+These may share name space with input variables and VAR tagged data.<br>
+<p>
+If the INPUT and VAR tags could assign an entity value that we can use as<br>
+&amp;name; within hrefs, that would serve us well enough.  But, is that legal sgml?<br>
+It will require a second html parse of hrefs when they are selected.<br>
+<p>
+Our expertise with sgml is limited-- we need a quick and dirty way to pass<br>
+data to activity scripts.  We are far from being able to make a final<br>
+proposal to the web community.  The minimal may be:<br>
+<p>
+Tag	Attributes<br>
+<p>
+INPUT	name, length, default, help<br>
+VAR	name, timeout<br>
+<p>
+The default search would positionally concatonate inputs into keyword positions.<br>
+Documents containg VAR info would not be cached longer than timeout.<br>
+<p>
+It seems that there is interest in fully interactive hypermedia within the web<br>
+context.  All proposals/feedback is welcomed.  Hopefully we can do it together.<br>
+<p>
+jim<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0080.html">Tim Berners-Lee: "Re: Usenet news and WWW"</a>
+<li> <b>Previous message:</b> <a href="0078.html">Dan Connolly: "Re: Usenet news and WWW"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0083.html">Dan Connolly: "Re: INPUT tag (was: Searching)"</a>
+</ul>

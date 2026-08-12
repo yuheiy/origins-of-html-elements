@@ -1,0 +1,152 @@
+<TITLE>EMail Msg &lt;9306181218.AA29318@manuel.hpl.hp.com&gt;</TITLE>
+<H1>Re: HTML+ and Tables</H1><ADDRESS>Dave_Raggett &lt;dsr@hplb.hpl.hp.com&gt;</ADDRESS>
+<UL><LI><B>Mail folder: </B><A HREF="../www-talk-1993q2.index.html#548.html">WWW Talk Apr-Jun 1993 Archives</A><LI><B>Next message: </B><A HREF="549.html">Peter Lister, Cranfield Computer Centre: &quot;How can one use '#' in a URL? &quot;</A><LI><B>Previous message: </B><A HREF="547.html">N F Drakos: &quot;Re: HTML+ support for eqn &amp; Postscript&quot;</A><LI><B>Reply: </B><A HREF="558.html">Rob Raisch: &quot;Re: HTML+ and Tables&quot;</A></UL>
+<PRE>From: Dave_Raggett &lt;dsr@hplb.hpl.hp.com&gt;
+Message-id: <A HREF="548.html">&lt;9306181218.AA29318@manuel.hpl.hp.com&gt;</A>
+Subject: Re: HTML+ and Tables
+To: grobe@ukanaix.cc.ukans.edu
+Date: Fri, 18 Jun 93 13:18:01 BST
+Cc: www-talk@nxoc01.cern.ch
+Mailer: Elm [revision: 66.36.1.1]
+</PRE><PRE>
+This is in response to Michael Grobe's message of Tue, 15 Jun 1993
+( Message-Id: <A HREF="503.html">&lt;9306152358.AA37602@ukanaix.cc.ukans.edu&gt;</A> )
+
+Dear Michael,
+
+Comments on LINK and mailTo:
+---------------------------
+&gt; first, i mentioned that we are planning to use something like:
+
+&gt;      &lt;link rev=made href=&quot;mailto:...whatever...&quot; &gt;
+
+&gt; to allow info providers to provide a path for readers (through their
+&gt; clients) to contact them with comments.  note that this is a (static) &quot;link&quot;
+&gt; rather than an (executable link, or) anchor, whereas your MSG tag is an
+&gt; &quot;executable&quot; link.  lynx will support a command that will search out 
+&gt; the static info and open a mail screen for the user with the address already
+&gt; in place.
+
+What do you mean by static link? Do you mean a browser menu option that lets
+users mail comments back to authors? Sounds like a good idea. How do you
+specify values for the subject and other header fields? I guess you could
+use the TITLE attribute for the subject, but that seems pushing the notation
+too far from its original concept.
+
+{\begin aside}
+
+While I think about it, the attribute &quot;REV&quot; and Tim's suggested values aren't
+particularly transparent. Perhaps HTML+ should use &quot;REL&quot; for relationship
+rather than &quot;REV&quot; (why &quot;REV&quot;?). Also &quot;author&quot; might be better than &quot;made&quot;.
+What is the METHODS attribute intended for? Does anyone use it?
+
+What are your views on the attributes for LINK?
+
+{\end aside}
+
+My latest version of the HTML+ DTD includes a FORM tag in place of MSG.
+
+        &lt;!ELEMENT FORM - - (MH*, (%main;|INPUT|SELECT)*)&gt;
+        &lt;!ATTLIST FORM
+            id      ID        #IMPLIED
+            action  %URL;     #IMPLIED&gt;
+
+        &lt;!ELEMENT MH - - CDATA -- RFC 822 header fields --&gt;
+
+The idea is that you could have multiple forms in each document. The FORM
+tag acts as a wrapper for each form and defines the action to be take when
+the user presses the &quot;commit&quot; key.
+
+By specifying a mailTo URL the form would be mailed to the designated
+person. The MH tag allows you to specify the mail headers is a more
+general way that would be possible with attributes to the FORM tag itself.
+
+        &lt;FORM action=&quot;mailTo:grobe@ukanaix.cc.ukans.edu&quot;&gt;
+            &lt;MH&gt; Subject: comments on proposal
+            &lt;INPUT id=&quot;f1&quot;&gt;Your Comments&lt;/INPUT&gt;
+        &lt;/FORM&gt;
+
+The presence of &quot;mailTo:&quot; in an LINK or A element would imply the need to
+pop-up an editor for the message with the appropriate header fields already
+filled in. The FORM element on the other hand creates the message itself.
+
+If the action starts &quot;http:...&quot;, the form would be sent as a query for
+this URL. The encoding of the forms contents would depend on the METHODS
+attribute and default to an id:value listing following a &quot;?&quot; suffix.
+
+I still need to do some more work on the actual details of the encoding format,
+e.g. escaping white space and dealing with multiple values. In practice, it
+seems much nicer to define a new HTTP method for forms data, than to try and
+force it into the URL syntax.
+
+Comments on Tables
+------------------
+
+I am getting uncomfortable about the detailed column specification format,
+e.g. it defines how wide the fields are without taking into account the width
+of the headers.
+
+A better approach would be to let the browser work this out for itself.
+This fits in well with your suggestion for adding a placement attribute to
+specify center, left, or right justification. In the following I have
+used a separate tag for tables rather than overloading DL:
+
+    &lt;!ELEMENT TBL - - (TT?, TH*, TD*)&gt;
+    &lt;!ATTLIST TBL
+        id      ID        #IMPLIED
+        cols    CDATA     #REQUIRED -- number of columns --
+        compact (compact) #IMPLIED  -- if present use compact style --
+        border  (border)  #IMPLIED  -- if present draw borders --&gt;
+
+    &lt;!ELEMENT TT - O (%text;)+ -- table title --&gt;
+
+    &lt;!ELEMENT TH - O (%text;)+ -- column heading --&gt;
+    &lt;!ATTLIST TH
+        S   NUMBER  1           -- columns spanned --
+        L   (L)     #IMPLIED    -- left aligned --
+        C   (C)     #IMPLIED    -- center aligned --
+        R   (R)     #IMPLIED    -- right aligned --
+        D   (D)     #IMPLIED    -- decimal aligned --&gt;
+
+    &lt;!ELEMENT TD - O (P|UL|OL|%text;)+ -- field data --&gt;
+    &lt;!ATTLIST TD
+        S   NUMBER  1           -- columns spanned --
+        L   (L)     #IMPLIED    -- left aligned --
+        C   (C)     #IMPLIED    -- center aligned --
+        R   (R)     #IMPLIED    -- right aligned --
+        D   (D)     #IMPLIED    -- decimal aligned --&gt;
+
+The above approach allows you to state &lt;TD L&gt; which is perhaps nicer
+than &lt;TD A=Left&gt;. The drawback is I don't know how in SGML to define several
+attributes as being mutually exclusive. *** What do you think? ***
+
+
+                  An Example of a Table
+    ___________________________________________________
+    |          |          average          | other    |
+    |          |   height    |     weight  | category |
+    |_________________________________________________|
+    | males    |    1.9      |      .003   | yyy      |
+    |_________________________________________________|
+    | females  |    1.7      |      .002   |      xxx |
+    ___________________________________________________
+
+    &lt;tbl cols=&quot;4&quot; border&gt;
+        &lt;tt&gt; An Example of a Table
+        &lt;th&gt; &lt;th s=&quot;2&quot;&gt; average &lt;th l&gt; other
+        &lt;th&gt; &lt;th&gt; height &lt;th&gt; weight &lt;th l&gt; category
+        &lt;td&gt; males &lt;td&gt; 1.9 &lt;td&gt; .003 &lt;td l&gt; yyy
+        &lt;td&gt; females &lt;td&gt; 1.7 &lt;td&gt; .002 &lt;td r&gt; xxx
+    &lt;/tbl&gt;
+
+The browser works through the table to determine the types and widths of
+each field and how much room to allocate for each column. Using a fixed font
+for tables would speed things up a bit. By default headers are centred while
+text fields are left aligned. Numbers are vertically aligned on the units,
+making them harder to deal with.
+
+How does that sound?
+
+Dave Raggett
+
+</PRE>

@@ -1,0 +1,150 @@
+<!-- received="Tue Jan 19 07:22:45 1993 PDT" -->
+<!-- sent="Tue, 19 Jan 93 00:37:01 CST" -->
+<!-- name="Dan Connolly" -->
+<!-- email="connolly@pixel.convex.com" -->
+<!-- subject="Re: INPUT tag (was: Searching)" -->
+<!-- id="9301190637.AA19993@pixel.convex.com" -->
+<!-- inreplyto="9301161828.AA08431@njitgw.njit.edu" -->
+<title>WWW-Talk Jan-Mar 1993: Re: INPUT tag (was: Searching)</title>
+<h1>Re: INPUT tag (was: Searching)</h1>
+Dan Connolly (<i>connolly@pixel.convex.com</i>)<br>
+<i>Tue, 19 Jan 93 00:37:01 CST</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#83">[ date ]</a><a href="index.html#83">[ thread ]</a><a href="subject.html#83">[ subject ]</a><a href="author.html#83">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0084.html">Dave_Raggett: "HTML and Lists"</a>
+<li> <b>Previous message:</b> <a href="0082.html">Bob Jackson: "Limited Search Ability"</a>
+<li> <b>In reply to:</b> <a href="0079.html">Jim Whitescarver: "INPUT tag (was: Searching)"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0093.html">Jim Whitescarver: "Re: INPUT tag (was: Searching)"</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<i>&gt;We may create a default text to be used with the comment feature, which</i><br>
+<i>&gt;will give all input/var field values in rfc822 style for mail based submission</i><br>
+.<br>
+<i>&gt;</i><br>
+<i>&gt;At issue are:</i><br>
+<i>&gt;</i><br>
+<i>&gt;- handling typed inputs, including texts.</i><br>
+<i>&gt;- applying inputs to search defaults. positional? named? override mech?</i><br>
+<i>&gt;- applying inputs to go to defaults?</i><br>
+<i>&gt;- getting data from users environment, e.g. users mail address.</i><br>
+<i>&gt;- how the fields will be substituted into hrefs within the sgml context. scope</i><br>
+?<br>
+<i>&gt;- saving updated input values in bookmarks?</i><br>
+<i>&gt;- communicating variables to activity scripts. (our "do" choice)</i><br>
+<i>&gt;</i><br>
+<i>&gt;We need a mechanism to assign arbitrary attributes to anchores and documents.</i><br>
+<i>&gt;These may share name space with input variables and VAR tagged data.</i><br>
+<i>&gt;</i><br>
+<i>&gt;If the INPUT and VAR tags could assign an entity value that we can use as</i><br>
+<i>&gt;&amp;name; within hrefs, that would serve us well enough.  But, is that legal sgml</i><br>
+?<br>
+<i>&gt;It will require a second html parse of hrefs when they are selected.</i><br>
+<i>&gt;</i><br>
+<i>&gt;Our expertise with sgml is limited-- we need a quick and dirty way to pass</i><br>
+<i>&gt;data to activity scripts.  We are far from being able to make a final</i><br>
+<i>&gt;proposal to the web community.  The minimal may be:</i><br>
+<i>&gt;</i><br>
+<i>&gt;Tag	Attributes</i><br>
+<i>&gt;</i><br>
+<i>&gt;INPUT	name, length, default, help</i><br>
+<i>&gt;VAR	name, timeout</i><br>
+<i>&gt;</i><br>
+<i>&gt;The default search would positionally concatonate inputs into keyword position</i><br>
+s.<br>
+<i>&gt;Documents containg VAR info would not be cached longer than timeout.</i><br>
+<i>&gt;</i><br>
+<i>&gt;It seems that there is interest in fully interactive hypermedia within the web</i><br>
+<i>&gt;context.  All proposals/feedback is welcomed.  Hopefully we can do it together</i><br>
+<p>
+[I'm going over old mail, replying to stuff I missed. I confess I<br>
+can't make much of this sketch. But from what I understand...]<br>
+<p>
+I need examples to help me think. Tell me if this example matches<br>
+your model:<br>
+<p>
+The client C sends GET foo to server S. S returns:<br>
+<p>
+&lt;HEAD&gt;<br>
+&lt;TITLE&gt;Search Template&lt;/TITLE&gt;<br>
+&lt;QUERYFORM base="medibase"&gt;diagnose condition where age is &lt;recall name="age"&gt;<br>
+and symptoms includes (&lt;if name="headache"&gt;headache&lt;/if&gt;<br>
+&lt;if name="blackouts"&gt;blackouts&lt;/if&gt;)<br>
+&lt;/queryform&gt;<br>
+&lt;/HEAD&gt;<br>
+&lt;BODY&gt;<br>
+How old are you? &lt;input name="age" type="number"<br>
+width="5" help="http:s/help/inputs#age"&gt;<br>
+&lt;P&gt;<br>
+Do you have any of the following symptoms?<br>
+&lt;UL&gt;<br>
+&lt;li&gt;headach? &lt;input name="headache" type="boolean" width="3"&gt;<br>
+&lt;li&gt;blackouts? &lt;input name="blackouts" type="boolean" width="3"&gt;<br>
+&lt;/ul&gt;<br>
+<p>
+The client displays the body of the document with a blank<br>
+for the age, and check-boxes for the symptoms, and a <br>
+"query" button (similar to a "search" button in response<br>
+to &lt;ISINDEX&gt;). The user fills in the blanks and clicks<br>
+the query button. Then the client uses the QUERYFORM<br>
+to compose its query from the inputs. It sends<br>
+<p>
+GET medibase HTRQ/1.0<br>
+Accept: text/plain<br>
+<p>
+diagnose condition where age is 25<br>
+ and symptoms includes (blackouts).<br>
+<p>
+to the server. The server performs the query on the medibase<br>
+database and returns some document.<br>
+<p>
+Where does the volatile data (&lt;VAR&gt; stuff) come in?<br>
+<p>
+This would require some additions to the DTD:<br>
+<p>
+Inside HEAD, we'd allow QUERYFORM:<br>
+&lt;!ELEMENT queryform - - (#PCDATA|recall|if|...)+&gt;<br>
+&lt;!ATTLIST queryform<br>
+	base CDATA #IMPLIED -- URL to search defaults to current doc --<br>
+<i>	&gt;</i><br>
+&lt;!ELEMENT recall - O EMPTY&gt;<br>
+&lt;!ATTLIST recall<br>
+	name IDREF #required -- points to an input element --&gt;<br>
+&lt;!ELEMENT if - O (#PCDATA|if)+&gt;<br>
+&lt;!ATTLIST if<br>
+	name IDREF #required -- points to input element --&gt;<br>
+<p>
+Then inside BODY, we'd add the INPUT element:<br>
+<p>
+&lt;!ELEMENT input - O EMPTY&gt;<br>
+&lt;!ATTLIST input<br>
+	NAME ID #REQUIRED<br>
+	WIDTH NUMBER #IMPLIED<br>
+	DEFAULT CDATA #IMPLIED<br>
+	HELP CDATA #IMPLIED -- url of help info --<br>
+<i>	&gt;</i><br>
+<p>
+This would require changes to both the server and the client,<br>
+but I don't see any way around that.<br>
+<p>
+It's not a major change to HTML -- just a few more elements.<br>
+The way I suggest you associate input variables with things<br>
+in the query is through the ID/IDREF mechanism as above.<br>
+<p>
+Does this jive at all with what you're thinking?<br>
+<p>
+Dan<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0084.html">Dave_Raggett: "HTML and Lists"</a>
+<li> <b>Previous message:</b> <a href="0082.html">Bob Jackson: "Limited Search Ability"</a>
+<li> <b>In reply to:</b> <a href="0079.html">Jim Whitescarver: "INPUT tag (was: Searching)"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0093.html">Jim Whitescarver: "Re: INPUT tag (was: Searching)"</a>
+</ul>

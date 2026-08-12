@@ -1,0 +1,270 @@
+<!-- received="Mon Apr  5 14:45:50 1993 PDT" -->
+<!-- sent="Mon, 5 Apr 93 14:05:40 BST" -->
+<!-- name="Dave_Raggett" -->
+<!-- email="dsr@hplb.hpl.hp.com" -->
+<!-- subject="Re WWW ideas" -->
+<!-- id="9304051305.AA02968@manuel.hpl.hp.com" -->
+<!-- inreplyto="" -->
+<title>WWW-Talk Apr-Jun 1993: Re WWW ideas</title>
+<h1>Re WWW ideas</h1>
+Dave_Raggett (<i>dsr@hplb.hpl.hp.com</i>)<br>
+<i>Mon, 5 Apr 93 14:05:40 BST</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#15">[ date ]</a><a href="index.html#15">[ thread ]</a><a href="subject.html#15">[ subject ]</a><a href="author.html#15">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0016.html">mcclanah@dlgeo.cr.usgs.gov: "NCSA Mosaic for X 0.12 released."</a>
+<li> <b>Previous message:</b> <a href="0014.html">Marc Andreessen: "Mosaic 0.12 resources change"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0017.html">Tony Johnson: "Re: Re WWW ideas"</a>
+</ul>
+<hr>
+<!-- body="start" -->
+Dear Tim<br>
+<p>
+What mechanism do you want to see for adding some simple extensions to HTML<br>
+e.g. to support forms and tables? As you know, I have thought quite a bit<br>
+about both of these. Perhaps an experimental browser and sample docs are<br>
+needed?<br>
+<p>
+What happened to our ideas for having richer forms with support for<br>
+multiple fields? I enclose for you my proposal for extending HTML to <br>
+support such forms. An outstanding issue is how you can escape special<br>
+characters in search string. I seem to remember that &amp;#32; style<br>
+sgml character references are permitted, but this seems to be missing from<br>
+the current addressing bnf doc:<br>
+<p>
+    <a href="http://info.cern.ch:80/hypertext/WWW/Addressing/BNF.html">http://info.cern.ch:80/hypertext/WWW/Addressing/BNF.html</a><br>
+<p>
+<p>
+The following is part of an exchange I had with Dan Connolly in January on<br>
+the modifications to HTML needed for such forms:<br>
+<p>
+    1)  server sends whole form in response to a GET command<br>
+<p>
+    2)  user interacts with client only to fill out form<br>
+<p>
+    3)  user instructs client to send completed form to server<br>
+<p>
+    4)  client sends form contents to server as a query string<br>
+<p>
+    5)  server executes query and returns results<br>
+<p>
+A smarter/more sophistocated system would include scripts as part of the<br>
+queryform document, which apply the constraints locally WITHOUT any network<br>
+delays. BUT that seems too open-ended and complex for us to put in HTML for<br>
+now!<br>
+<p>
+Best wishes,<br>
+<p>
+Dave Raggett<br>
+<p>
+p.s. Did you get my suggestions for tables in HTML?<br>
+<p>
+<p>
+---A brief explanation of HTML forms:---------------------------------------<br>
+<p>
+Forms are composed from the following elements<br>
+<p>
+    o   checkbox (boolean)<br>
+    o   text field<br>
+    o   numeric field (integer and floating point)<br>
+    o   radio-button groups<br>
+    o   one-from-many menu<br>
+    o   n-from-m menu<br>
+<p>
+These are specified with 4 new tags:<br>
+<p>
+        &lt;queryform&gt;     appears between &lt;head&gt; and &lt;/head&gt;<br>
+                        to indicate that this document is a query form, it<br>
+                        optionally specifies an href for processing the query<br>
+<p>
+        &lt;input&gt;         boolean values, text, integer and floats<br>
+<p>
+        &lt;select&gt;        radio buttons and selection menus<br>
+<p>
+        &lt;choice&gt;        specifying alternatives for &lt;select&gt;<br>
+<p>
+A formal definition is given later on as an extension to the DTD. An informal<br>
+definition is given first:<br>
+<p>
+When the browser finds the &lt;queryform&gt; the user can fill in the form<br>
+and use it to make a request. The browser should offer a search button or<br>
+menu action. The &lt;input&gt; and &lt;select&gt; tags are then used to build the text<br>
+search string to send to the user.<br>
+<p>
+The format for sending form contents back to the server has been chosen to<br>
+be backwards compatible with older HTTP servers. Thus the search string is<br>
+restricted to letters, digits, and chars from the string "$_@!%^&amp;*()."<br>
+<p>
+    QUERY  ::=  FIELD [+QUERY]<br>
+    FIELD  ::=  name@value | name@(VALUES)<br>
+    VALUES ::=  value [&amp;VALUE]<br>
+<p>
+e.g. "name@value+name@(value&amp;value)<br>
+<p>
+The use of brackets for multiple values allows servers to continue to treat<br>
+the characters &amp;, ^, ! for logical operators.<br>
+<p>
+The tags for form fields look like (more detail in the DTD):<br>
+<p>
+    &lt;input name=FIELDNAME type=FIELDTYPE [width=FIELDWIDTH]&gt;<br>
+<p>
+    FIELDNAME is a unique identifier for this form<br>
+    FIELDTYPE ::= "boolean" | "text" | "date" | "integer" | "float"<br>
+<p>
+    The [ ] brackets denote optional attributes.<br>
+    <br>
+The width can be optional, since the browser can support sideways scrolling<br>
+of the input field when the entry exceeds the current display width. For line<br>
+mode browsers, this requires a cursor addressing functionality, like CURSES.<br>
+<p>
+The "date" format accepts a date in one of the following formats:<br>
+<p>
+    o   12th June 1992<br>
+    o   June 12th 1992<br>
+    o   12/6/92<br>
+    0   6/12/92<br>
+    o   12-6-92<br>
+    o   12 Jun 92<br>
+<p>
+The format is indifferent to MM/DD/YY or DD/MM/YY, and the form's text should<br>
+make it clear which is expected.<br>
+<p>
+Multiple choice items need a richer structure, e.g.<br>
+<p>
+    &lt;select name=FIELDNAME type=CHOICETYPE [value=VALUE]&gt;<br>
+        &lt;choice&gt;item 1<br>
+        &lt;choice&gt;item 2<br>
+        &lt;choice&gt;item 3<br>
+    &lt;/select&gt;<br>
+<p>
+    CHOICETYPE ::= "radio" | "single" | "multiple"<br>
+<p>
+The choice initially shown is given by the value attribute for the &lt;select&gt;<br>
+token, defaulting to the first choice. The value returned is the item text<br>
+unless a "value" attribute is defined for that &lt;choice&gt;.<br>
+<p>
+    &lt;choice value=VALUETEXT&gt;<br>
+<p>
+I think that &lt;a&gt; tags should be permissible for &lt;choice&gt; text so that you can<br>
+provide further explanations upon request for each choice. If there isn't a<br>
+value attribute then the displayable text for the anchor would form part of<br>
+that choice in the obvious manner. The DTD includes a help parameter which<br>
+would permit browsers to offer help on form elements.<br>
+<p>
+Forms generally involve additional ideas:<br>
+<p>
+    a)  expressions and queries for output fields<br>
+<p>
+    b)  edits (constraints) on input field values<br>
+<p>
+    c)  dependencies between fields<br>
+<p>
+These can all be handled by the server, albeit with a performance penalty as<br>
+perceived by the user.<br>
+<p>
+It is important to be able to show the current values as currently being in<br>
+error (along with an explanation). For example you could have a form for<br>
+configuring a computer system, which gives you choices for the number of hard<br>
+and soft drives:<br>
+<p>
+ ---------------------------------------------------------------------------<br>
+     *  Fixed Drive(s): [2 x 512 Gb disk]<br>
+     *  Soft Drive(s):  [1 x 1.44 Mb 3.5" floppy]<br>
+<p>
+ (*) Error: you are only allowed a combined total of 2 fixed and soft drives<br>
+ ---------------------------------------------------------------------------<br>
+<p>
+So we need to provide attributes to:<br>
+<p>
+    a)  signify that the current choice is in error in some way<br>
+    b)  that a given choice is not currently permissible (grayed out)<br>
+<p>
+This can be done with two attributes (both default to "yes"):<br>
+<p>
+    ok="yes" | "no"             ;;  for &lt;input&gt; and &lt;select&gt;<br>
+    enabled="yes" | "no"        ;;  for &lt;choice&gt;<br>
+<p>
+-----Additions to HTML DTD for QueryForms----------------------------------<br>
+<p>
+&lt;!-- uses Dan's definition for %URL, %inline and %text --&gt;<br>
+<p>
+&lt;!-- The queryform element needs adding to the spec for HEAD --&gt;<br>
+<p>
+&lt;!ELEMENT HEAD - - (TITLE ? &amp; ISINDEX ? &amp; QUERYFORM ? &amp; NEXTID ? &amp; LINK *<br>
+                        &amp; BASE ? )&gt;<br>
+<p>
+&lt;!ELEMENT QUERYFORM - 0 EMPTY]<br>
+&lt;!ATTLIST QUERYFORM HREF %URL; #IMPLIED&gt;<br>
+<p>
+&lt;!-- The following defines the &lt;input&gt; tag with the attributes:<br>
+<p>
+    name    (required)<br>
+        unique name used to identify field to server<br>
+<p>
+    type    (required)<br>
+        indicates type of input value (boolean, text, date, integer, float)<br>
+<p>
+    width   (optional, defaults to 20)<br>
+        width for field in terms of average char width<br>
+        browsers should allow users to type up to this number of chars<br>
+        and no more (except for dealing with control keys e.g. backspace)<br>
+<p>
+    value   (optional, defaults to null or "")<br>
+        initial value to display in the input field<br>
+<p>
+    ok      (optional, defaults to yes)<br>
+        when no, signifies that the current value is in error.<br>
+<p>
+    enabled (optional, default to yes)<br>
+        when no, prevents user from changing this field's value<br>
+<p>
+    help    (optional, default provided by application)<br>
+        a URI which would provide explanatory information for this field<br>
+--&gt;<br>
+<p>
+&lt;!ENTITY % url "CDATA" -- this is kind of a DTD macro &gt;<br>
+&lt;!ELEMENT input - O EMPTY&gt;<br>
+&lt;!ATTLIST input<br>
+    name ID #REQUIRED<br>
+    type (boolean|text|date|integer|float) #REQUIRED<br>
+    width NUMBER "20"<br>
+    value CDATA ""<br>
+    ok (yes|no) "yes"<br>
+    enabled (yes|no) "yes"<br>
+    help %URL; #IMPLIED<br>
+<i>&gt;</i><br>
+<p>
+&lt;!-- The following defines the &lt;select&gt; tag for selection menus --&gt;<br>
+<p>
+&lt;!ENTITY SELECT - - (CHOICE)*&gt;<br>
+<p>
+&lt;!ATTLIST select<br>
+    name ID #REQUIRED<br>
+    type (radio|single|multiple) #REQUIRED<br>
+    value PCDATA ""<br>
+    ok (yes|no) "yes"<br>
+    enabled (yes|no) "yes"<br>
+    help %URL; #IMPLIED    <br>
+<i>&gt;</i><br>
+<p>
+&lt;!-- The following defines the &lt;choice&gt; tag which is<br>
+        used to specify choices for the &lt;select&gt; tag  --&gt;<br>
+<p>
+&lt;!ENTITY CHOICE - O (%text; | CHOICE)*&gt;<br>
+<p>
+&lt;!ATTLIST choice<br>
+    value PCDATA "" #REQUIRED<br>
+    enabled (yes|no) "yes"<br>
+<i>&gt;</i><br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0016.html">mcclanah@dlgeo.cr.usgs.gov: "NCSA Mosaic for X 0.12 released."</a>
+<li> <b>Previous message:</b> <a href="0014.html">Marc Andreessen: "Mosaic 0.12 resources change"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0017.html">Tony Johnson: "Re: Re WWW ideas"</a>
+</ul>

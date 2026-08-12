@@ -63,7 +63,7 @@ status: 完成
 - [`<figcaption>`](elements/figcaption.md): 2010年1月、HTML5草案の`figure` キャプションを`dt`／`dd`で表す方式が意味、構造、後方互換性の問題を指摘され、専用の`figcaption`へ変更された。
 - [`<figure>`](elements/figure.md): 出版の図版・キャプション慣習を意味と名称の上流とし、HTML+ `FIG`／`CAPTION`と既存Webの実例調査・提案を受けて2006年に採用された。一般的な伝達路として文書変換ツール、個別の制作単位としてMediaWiki、ニュース発行テンプレート、学術誌の複数形式出版工程を確認できるが、各システムが参照した先行語彙は不明である。
 - [`<footer>`](elements/footer.md): 2004年からWHATWGの意味的要素集合に現れ、典型的サイトマークアップからの集合単位の導入は確認できるが、`footer`個別の対応は不明である。
-- [`<form>`](elements/form.md): HTML+のフォームからHTML 2.0へ導出されたフォームコンテナーで、特定GUIツールキットとの直接関係は未確認である。
+- [`<form>`](elements/form.md): `ISINDEX`とwww-talkの複数入力案、HyperCardに触発されたHP Protek Pilotの業務用フォーム経験からHTML+ `FORM`が形成され、HTML 2.0へ導出された。記入用紙は画面入力慣習の上流だが、特定様式からの直接移植は未確認である。
 - [`<h1>`〜`<h6>`](elements/h1-h6.md): `h1`〜`h6`は、AAPタグセットの見出し定義がCERN SGMLガイドを経て初期HTMLへ保持された、共通の直接史料を持つ6段階の見出し要素群である。
 - [`<head>`](elements/head.md): 1992年のヘッダー／本文分離案から`HEADING`案を経て1993年の`HEAD`へ至るが、最終トークンの選定記録は未回収である。
 - [`<header>`](elements/header.md): 2005年の見出しグループ用`header`を2009年に`hgroup`へ移し、直後に見出し、検索、ナビゲーション等をまとめる現行系統を新設した。

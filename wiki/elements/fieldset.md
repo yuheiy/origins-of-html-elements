@@ -58,7 +58,7 @@ Cougarの`FIELDSET`は、先行草案のラベル付きグループを、視覚�
 
 WAI HTML & CSS Review WGの勧告から`FIELDSET`がHTML 4へ入ったという説明。同WGはHTML 4 FPWD後の1997年9月に設置され、10月のレビュー報告にも`FIELDSET`導入要求はない。[設置メール](../../raw/lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0026.html)（[公開元](https://lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0026.html)） [review report](../../raw/www.w3.org/WAI/PF/report.html)（[公開元](https://www.w3.org/WAI/PF/report.html)）
 
-特定のGUIツールキットまたは紙フォームから直接借用したという説明。1996年草案は当時一般的だったUIの慣習を明記するが、特定の採用元は示さない。
+特定のGUIツールキットまたは記入用紙から直接借用したという説明。1996年草案は当時一般的だったUIの慣習を明記するが、特定の採用元は示さない。
 
 ## 未解決
 

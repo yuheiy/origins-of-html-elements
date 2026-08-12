@@ -57,7 +57,7 @@ Cougarフォーム草案からHTML 4への採録、`CAPTION`から`LEGEND`へ続
 
 WAI HTML & CSS Review WGの勧告から`LEGEND`がHTML 4へ入ったという説明。同WGはHTML 4 FPWD後の1997年9月に設置され、10月のレビュー報告にも`LEGEND`導入要求はない。[設置メール](../../raw/lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0026.html)（[公開元](https://lists.w3.org/Archives/Public/w3c-wai-ig/1997JulSep/0026.html)） [review report](../../raw/www.w3.org/WAI/PF/report.html)（[公開元](https://www.w3.org/WAI/PF/report.html)）
 
-特定GUIツールキットの凡例や紙フォームの見出しから直接借用したという説明。1996年草案は当時一般的だったUIの慣習を明記するが、特定の採用元は示さない。
+特定GUIツールキットの凡例や記入用紙の見出しから直接借用したという説明。1996年草案は当時一般的だったUIの慣習を明記するが、特定の採用元は示さない。
 
 ## 未解決
 

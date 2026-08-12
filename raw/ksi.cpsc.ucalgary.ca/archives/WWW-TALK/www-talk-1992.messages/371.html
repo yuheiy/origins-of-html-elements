@@ -1,0 +1,74 @@
+<TITLE>EMail Msg &lt;9211272055.AA12117@njitgw.njit.edu&gt;</TITLE>
+<H1>interactive hypermedia</H1><ADDRESS>jim@wilbur.njit.edu (Jim Whitescarver)</ADDRESS>
+<UL><LI><B>Mail folder: </B><A HREF="../www-talk-1992.index.html#371.html">WWW Talk 1992 Archives</A><LI><B>Next message: </B><A HREF="372.html">Jim Whitescarver: &quot;Re: The &lt;PRE&gt; tag&quot;</A><LI><B>Previous message: </B><A HREF="370.html">Dan Connolly: &quot;An HTML specification and Implementors' Guide&quot;</A></UL>
+<PRE>Message-id: <A HREF="371.html">&lt;9211272055.AA12117@njitgw.njit.edu&gt;</A>
+Date: Fri, 27 Nov 92 15:53:44 est
+From: jim@wilbur.njit.edu (Jim Whitescarver)
+To: www-talk@nxoc01.cern.ch
+Subject: interactive hypermedia
+Cc: al@eies2.njit.edu, murray@eies2.njit.edu, reddy@eies2.njit.edu
+</PRE><PRE>
+At NJIT we are going beyond the scope of the WWW.  We will support HTML
+for access, plus extensions for interactive group hypermedia.  Some issues
+involve the larger WWW community others may be better suited for another
+forum.  Although nothing is cast in stone, we must impliment these capabilities
+now, before the standards arrive.  We seek to maximize our WWW compliance.
+This is a summary of our current direction for your comments.
+
+We will NOT obey the pricipal that the same reference always accesses the
+same hypertext object.  We plan a &lt;VAR&gt; tag to indicate variable data in
+the text.  Text within the &lt;VAR&gt; to &lt;/VAR&gt; should not be cached.  It would
+be helpful if other clients supported this convention.  Initially, we will
+not cache the entire document is it contains one or more &lt;VAR&gt;, later we
+want to be able to request only the &lt;VAR&gt; fields for the document and
+merge them with a cached version with minimal communication.  VAR should
+have a TIMEOUT parameter ultimately.
+
+We will add an &lt;INPUT&gt; tag, with parameters for length, type, and default.
+We will allow inputs to be sent using the format of search keywords over
+http.  It would be helpful if other browsers allow serches on documents
+containing the &lt;INPUT&gt; tag.  The length suggests how much space to leave
+for the input, not a maximum necesarily.  Text through &lt;/INPUT&gt;  may be
+the prompt. A name parameter will allow addressing inputs like anchors.
+An input is, afterall, like an achor for keyboard data.  In addition to
+query (search) for input data, we will also require a submit, as http
+has no PUT operation, we will use mail (as with comments, see below).
+
+We eventually want an &lt;INCLUDE&gt; tag with an HREF parameter.  This will allow
+breaking documents into smaller pieces that can be maintained independantly.
+
+A fallback mechanism will be required.  I don't know if that issue has 
+been settled.  We will need a rules file capability for the client back 
+end and support for fallback entries in our rules file.  We should consider
+restructuring our rules mechanism to better support caching of documents.
+
+We look forward to the dust settling in the multi-media mechanisms for the
+web.  In the mean time, and in addition, we plan to support file name
+conventions to determine the type of the document when it is otherwise
+unspecified.  Innitially we will support .html, .man, .mm, .ms, .jpeg, .gif,
+.au, .tar and the .Z suffix. Support for .mime might also be quite nice
+dispite the recursion.  We have not resolved all the issues of supporting
+this over an http link or dividing the responsibilities between the
+client back end and the server.  We may innitially restrict this to
+local and ftp file addresses.
+
+We have tenativly selected tcl as our machine independant procedure
+language to define group activities accociated with the WEB &quot;group
+memory&quot;.  Though we prefer Smalltalk, tcl provides a sufficient meta
+language capability across Unix, pc's and mac's in the public domain.
+The wish (tk) extensions to tcl for Xwindows and tkWWW are an added
+plus.  I'd like feedback from others on the use of tcl.
+
+I've been planning an interactive service via <A HREF="http://eies2.njit.edu/">http://eies2.njit.edu/</A>
+(or <A HREF="telnet://www@eies2.njit.edu/)">telnet://www@eies2.njit.edu/)</A>, but lacked time to make it releasable.
+I promise to get around to it soon.  Comments are sent to www@eies2.njit.edu
+as mail with the HREF as the subject and the text of the comment after
+a blank line in the message body.  If the comment does not begin with
+an HTML markup, &lt;FIXED&gt; will be assumed, &lt;&gt; quoted (i.e. \&lt;\&gt;), and anchors
+added for imbedded HREFS.   (Yes, we do plan to support MIME eventually).
+Hopefully the service will be up soon enough for your comments.
+Check <A HREF="http://eies2.njit.edu/interactive.">http://eies2.njit.edu/interactive.</A>
+
+jim
+
+</PRE>

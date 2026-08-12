@@ -1,0 +1,211 @@
+<!-- received="Fri Jun 18 17:01:45 1993 PDT" -->
+<!-- sent="Fri, 18 Jun 93 16:21:52 BST" -->
+<!-- name="Dave_Raggett" -->
+<!-- email="dsr@hplb.hpl.hp.com" -->
+<!-- subject="Re: HTML+ Forms" -->
+<!-- id="9306181521.AA29719@manuel.hpl.hp.com" -->
+<!-- inreplyto="HTML+ Forms" -->
+<title>WWW-Talk Apr-Jun 1993: Re: HTML+ Forms</title>
+<h1>Re: HTML+ Forms</h1>
+Dave_Raggett (<i>dsr@hplb.hpl.hp.com</i>)<br>
+<i>Fri, 18 Jun 93 16:21:52 BST</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#557">[ date ]</a><a href="index.html#557">[ thread ]</a><a href="subject.html#557">[ subject ]</a><a href="author.html#557">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0558.html">Andrew_Marc_Greene@frankston.com: "Remove me please..."</a>
+<li> <b>Previous message:</b> <a href="0556.html">Tony Sanders: "Re: HTML+ support for eqn &amp; Postscript"</a>
+<!-- nextthread="start" -->
+</ul>
+<hr>
+<!-- body="start" -->
+Hi Tony,<br>
+<p>
+Sorry for the delay in getting back to you, I am rather snowed under<br>
+these days.<br>
+<p>
+<i>&gt; Hi Dave, do I take it from this comment that some examples exist of the </i><br>
+<i>&gt; use of &lt;INPUT&gt; and other form stuff? If so can I access them somewhere? I </i><br>
+<i>&gt; have a preliminary implementation of Forms for MidasWWW and would like </i><br>
+<i>&gt; some examples to try them out on.</i><br>
+<p>
+Can you tell more about your implementation of Forms for MidasWWW?<br>
+<p>
+I enclose the current HTML+ definitions for forms at the end of this<br>
+message. The new FORM tag allows several forms to be included in<br>
+the same document. This tag also defines what to do when the user<br>
+presses the "commit" key (normally the Return key), e.g. to send the<br>
+form's contents as a query to a server or to send it to a designated<br>
+person as an email message. The new MH tag allows you to define<br>
+arbitrary email header fields at the start of each message.<br>
+<p>
+We still need to pin down how form contents can be passed to<br>
+servers as queries etc. and I would be very grateful for some<br>
+help in this regard. Some ideas for doing this with URLs are given<br>
+later on.<br>
+<p>
+Now for an example which supposes that a server has been set up to help<br>
+sales staff configure quotes for computer workstations. It is based on<br>
+an expert system I worked on a couple of years ago.<br>
+<p>
+    &lt;FORM action="<a href="http://ukrc.hp.com:8002/s720">http://ukrc.hp.com:8002/s720</a>"&gt;<br>
+        &lt;H1&gt;HP 9000 Series 720 Workstation&lt;/H1&gt;<br>
+<p>
+        &lt;UL&gt;<br>
+            &lt;LI&gt; 50 MHz PA-RISC CPU<br>
+            &lt;LI&gt; Wide range of graphics options<br>
+            &lt;LI&gt; 16 to 128 Mb ECC RAM and 2 optional disks<br>
+        &lt;/UL&gt;<br>
+<p>
+        &lt;INPUT id="f1" type="INT" width="2" value="1"&gt; Quantity &lt;/INPUT&gt;<br>
+<p>
+        &lt;SELECT id="f2" compact&gt; Graphics<br>
+            &lt;ITEM id="i1" selected&gt; Mono GRX<br>
+            &lt;ITEM id="i2"&gt; Color CRX<br>
+            &lt;ITEM id="i3"&gt; 2D Color VRX<br>
+        &lt;/SELECT&gt;<br>
+<p>
+        &lt;SELECT id="f3" compact&gt; Internal hard disks<br>
+            &lt;ITEM id="i4"&gt; 1 x 420 Mb<br>
+            &lt;ITEM id="i5" selected error&gt; 2 x 420 Mb<br>
+        &lt;/SELECT&gt;<br>
+    <br>
+        &lt;INPUT id="f4" type="bool" value="true" error&gt; 3.5 inch floppy drive<br>
+<p>
+        &lt;P&gt;<br>
+        *** You are only allowed two internal drives! ***<br>
+    &lt;/FORM&gt;<br>
+<p>
+The form starts with a header and a list of features for the workstation.<br>
+A quantity field follows which allows users to type a two digit integer.<br>
+It is initialised to the value "1".<br>
+<p>
+Next there is a selection menu. Users have to choose one of a range of<br>
+graphics options. The initial value is the first item as indicated by<br>
+the selected attribute. The compact attribute tells the browser to render<br>
+the menu in a compact style, e.g. as a button with a drop down menu. For<br>
+menus supporting multiple selections, you would need to show the current<br>
+selections as a (truncated) list next to the dropdown button. The normal<br>
+(uncompact) style would be a permanently visible list, perhaps with some<br>
+kind of button to the left of each item, but visually distinct from<br>
+bulleted lists defined with the UL tag.<br>
+<p>
+Fields can be marked as being in error or greyed out (disabled). The latter<br>
+case means the field cannot be altered - perhaps because its value is<br>
+constrained by the values of other fields.<br>
+<p>
+The next field is also a selection menu. In this case the selected item<br>
+is marked as being in error and needing to be changed. The browser could<br>
+indicate this by a red splash next to the menu item.<br>
+<p>
+The last field is a boolean checkbox, currently checked. It too is marked<br>
+as being in error and needing to be changed. The static text message which<br>
+follows indicates the nature of the problem.<br>
+<p>
+Menus and checkboxes can be altered by clicking the mouse. Other kinds of<br>
+input fields require the user to set the input focus to that field, e.g.<br>
+by clicking with the mouse or using the tab/shift tab keys. Input fields<br>
+needing keyboard input show a cursor (blinking?) when they have the input<br>
+focus.<br>
+<p>
+Pressing the Return key sends the form's content to the server designated<br>
+by the URL in the FORM tag. The server evaluates the form's contents<br>
+and in this case replies by sending a document containing the form, but<br>
+marked up to indicate the user has made some inconsistent choices for<br>
+disk drives.<br>
+<p>
+This assumes that the browser encodes the form's contents as a<br>
+list of field ids and values following a "?" suffix after the URL.<br>
+It may be better to define a HTTP method for form data with a clean<br>
+encoding.<br>
+<p>
+A suggested URL encoding:<br>
+<p>
+    ? FIELD [ + FIELD ]*        -- ie FIELDs seperated by "+" --<br>
+<p>
+where FIELD is:<br>
+    id:value                    -- single valued fields --<br>
+    id:(value[+value]*)         -- multi valued fields --<br>
+<p>
+Selections would use the item id in place of the actual<br>
+string value.<br>
+<p>
+Special characters should be replaced by "%" followed by the<br>
+two hex digits encoding the ASCII value.<br>
+<p>
+The special chars are (based on Tim's URL spec for xalphas:<br>
+<p>
+        + - % ( ) ! ^ &amp; * $         (and all white space chars)<br>
+<p>
+Note that URLs would then be of arbitrary length!<br>
+<p>
+Best wishes,<br>
+<p>
+Dave Raggett<br>
+<p>
+------------------------------------------------------------------------<br>
+<p>
+&lt;!-- Forms: these are composed from input fields and selection menus<br>
+<p>
+    These elements define fields which users can type into or select<br>
+    with mouse clicks. The browser should manage the input focus<br>
+    e.g. with the tab/shift tab keys and mouse clicks.<br>
+<p>
+    The enter/return key is then taken to mean the use has filled<br>
+    in the form and wants the apppropriate action taken:<br>
+<p>
+        -   send as query/update to WWW server<br>
+        -   email/fax to designated person<br>
+<p>
+    The action is specified as a URL, e.g. "<a href="mailto:dsr@hplb.hpl.hp.com">mailto:dsr@hplb.hpl.hp.com</a><br>
+<p>
+    You can specify additional mail headers with the MH tag:<br>
+<p>
+    &lt;MH&gt;Subject: Please add me to tennis tournament&lt;/MH&gt;<br>
+ --&gt;<br>
+<p>
+&lt;!ELEMENT FORM - - (MH*, (%main;|INPUT|SELECT)*)&gt;<br>
+&lt;!ATTLIST FORM<br>
+    id      ID        #IMPLIED<br>
+    action  %URL;     #IMPLIED&gt;<br>
+<p>
+&lt;!ELEMENT MH - - CDATA -- RFC 822 header fields --&gt;<br>
+<p>
+&lt;!ELEMENT INPUT - - (%text;)&gt;<br>
+&lt;!ATTLIST INPUT<br>
+    id      ID      #IMPLIED<br>
+    type    CDATA   #IMPLIED    -- URL, INT, FLOAT, DATE, BOOL, TEXT --<br>
+    width   CDATA   #IMPLIED    -- precision e.g."32x4" for multiline text --<br>
+    value   CDATA   #IMPLIED    -- the current value (yes/no for boolean fields) --<br>
+    disabled (disabled) #IMPLIED    -- if grayed out --<br>
+    error   (error)    #IMPLIED    -- if in error --&gt;<br>
+<p>
+&lt;!-- Menu selections one from many and many from many<br>
+<p>
+  The compact attribute is a suggestion that the browser renders<br>
+  the list in compact style, e.g. as a dropdown menu.<br>
+<p>
+  The multi attribute means the menu permits multiple selections --&gt;<br>
+<p>
+&lt;!ELEMENT SELECT - - ((%text;)*, ITEM*)&gt;<br>
+&lt;!ATTLIST SELECT<br>
+    id      ID        #IMPLIED<br>
+    compact (compact) #IMPLIED<br>
+    multi   (multi)   #IMPLIED&gt;<br>
+<p>
+&lt;!-- menu items with attributes for menu selections --&gt;<br>
+&lt;!ELEMENT ITEM - O (%text;)&gt;<br>
+&lt;!ATTLIST ITEM<br>
+    id          ID         #IMPLIED<br>
+    selected    (selected) #IMPLIED -- if selected in list --<br>
+    disabled    (disabled) #IMPLIED -- if grayed out --<br>
+    error       (error)    #IMPLIED -- if in error --&gt;<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0558.html">Andrew_Marc_Greene@frankston.com: "Remove me please..."</a>
+<li> <b>Previous message:</b> <a href="0556.html">Tony Sanders: "Re: HTML+ support for eqn &amp; Postscript"</a>
+<!-- nextthread="start" -->
+</ul>

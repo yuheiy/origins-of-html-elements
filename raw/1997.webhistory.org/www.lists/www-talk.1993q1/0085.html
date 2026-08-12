@@ -1,0 +1,150 @@
+<!-- received="Tue Jan 19 16:43:10 1993 PDT" -->
+<!-- sent="Tue, 19 Jan 93 15:59:34 GMT" -->
+<!-- name="Dave_Raggett" -->
+<!-- email="dsr@hplb.hpl.hp.com" -->
+<!-- subject="QueryForms and Input tag" -->
+<!-- id="9301191559.AA05466@manuel.hpl.hp.com" -->
+<!-- inreplyto="" -->
+<title>WWW-Talk Jan-Mar 1993: QueryForms and Input tag</title>
+<h1>QueryForms and Input tag</h1>
+Dave_Raggett (<i>dsr@hplb.hpl.hp.com</i>)<br>
+<i>Tue, 19 Jan 93 15:59:34 GMT</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#85">[ date ]</a><a href="index.html#85">[ thread ]</a><a href="subject.html#85">[ subject ]</a><a href="author.html#85">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0086.html">Tim Berners-Lee: "Re: HTML and Lists"</a>
+<li> <b>Previous message:</b> <a href="0084.html">Dave_Raggett: "HTML and Lists"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0088.html">Dan Connolly: "Re: QueryForms and Input tag"</a>
+</ul>
+<hr>
+<!-- body="start" -->
+Dan, I have some further suggestions for &lt;queryform&gt; which would greatly<br>
+broaden the opportunities for html interfaces to databases.<br>
+<p>
+Let me know if you want me to see how these additions can be formalised<br>
+within your DTD, as I know you are being kept rather busy.<br>
+<p>
+--------------<br>
+<p>
+(in: Dan Connolly Tue, 19 Jan 93 Re: INPUT tag - was: Searching)<br>
+<p>
+    The client C sends GET foo to server S. S returns:<br>
+<p>
+    &lt;HEAD&gt;<br>
+      &lt;TITLE&gt;Search Template&lt;/TITLE&gt;<br>
+      &lt;QUERYFORM base="medibase"&gt;diagnose condition where age is<br>
+        &lt;recall name="age"&gt;and symptoms includes (&lt;if name="headache"&gt;<br>
+        headache&lt;/if&gt;&lt;if name="blackouts"&gt;blackouts&lt;/if&gt;)<br>
+      &lt;/QUERYFORM&gt;<br>
+    &lt;/HEAD&gt;<br>
+    &lt;BODY&gt;<br>
+      How old are you? &lt;input name="age" type="number"<br>
+      width="5" help="http:s/help/inputs#age"&gt;<br>
+      &lt;P&gt;<br>
+      Do you have any of the following symptoms?<br>
+      &lt;UL&gt;<br>
+        &lt;LI&gt;headache? &lt;input name="headache" type="boolean" width="3"&gt;<br>
+        &lt;LI&gt;blackouts? &lt;input name="blackouts" type="boolean" width="3"&gt;<br>
+      &lt;/UL&gt;<br>
+<p>
+I like the idea, and am glad to see people are now taking an interest in html<br>
+and forms. Study of related projects suggests you need several things:<br>
+<p>
+A variety of input fields:<br>
+<p>
+    o   checkbox (boolean)<br>
+    o   text field<br>
+    o   numeric field (integer and floating point)<br>
+    o   radio-button groups<br>
+    o   one-from-many menu<br>
+    o   n-from-m menu<br>
+<p>
+Summarising what you suggest above:<br>
+<p>
+    &lt;input name=FIELDNAME type=FIELDTYPE [width=FIELDWIDTH] [help=HELPUDI]&gt;<br>
+<p>
+    FIELDNAME is a unique identifier for this form<br>
+    FIELDTYPE ::= "boolean" | "text" | "integer" | "float"<br>
+<p>
+    The [ ] brackets denote optional attributes.<br>
+    <br>
+The width can be optional, since the browser can support sideways scrolling<br>
+of the input field when the entry exceeds the current display width.<br>
+<p>
+Multiple choice items need a richer structure, e.g.<br>
+<p>
+    &lt;select name=FIELDNAME type=CHOICETYPE [value=VALUE] [help=HELPUDI]&gt;<br>
+        &lt;choice&gt;item 1<br>
+        &lt;choice&gt;item 2<br>
+        &lt;choice&gt;item 3<br>
+    &lt;/select&gt;<br>
+<p>
+    CHOICETYPE ::= "radio" | "single" | "multiple"<br>
+<p>
+The choice initially shown is given by the value attribute for the &lt;select&gt;<br>
+token, defaulting to the first choice. The value returned is the item text<br>
+unless a "value" attribute is defined for that &lt;choice&gt;.<br>
+<p>
+    &lt;choice value=VALUETEXT&gt;<br>
+<p>
+I think that &lt;a&gt; tags should be permissible for &lt;choice&gt; text so that you can<br>
+provide further explanations upon request for each choice. If there isn't a<br>
+value attribute then the displayable text for the anchor would form part of<br>
+that choice in the obvious manner.<br>
+<p>
+It is also useful to distinguish form decorations from output fields. I think<br>
+this can be adequately handled using the existing emphasis tags though.<br>
+<p>
+How will the &lt;queryform&gt; tag take over from the &lt;ISINDEX&gt; mechanism? Right<br>
+now, the browser provides an input field and search button, but I assume that<br>
+in future, searchable documents will use the queryform approach instead.<br>
+<p>
+Forms generally involve additional ideas:<br>
+<p>
+    a)  expressions and queries for output fields<br>
+<p>
+    b)  edits (constraints) on input field values<br>
+<p>
+    c)  dependencies between fields<br>
+<p>
+These can all be handled by the server, albeit with a performance penalty as<br>
+perceived by the user.<br>
+<p>
+It is important to be able to show the current values as currently being in<br>
+error (along with an explanation). For example you could have a form for<br>
+configuring a computer system, which gives you choices for the number of hard<br>
+and soft drives:<br>
+<p>
+   ---------------------------------------------------------------------------<br>
+       *  Fixed Drive(s): [2 x 512 Gb disk]<br>
+       *  Soft Drive(s):  [1 x 1.44 Mb 3.5" floppy]<br>
+<p>
+   (*) Error: you are only allowed a combined total of 2 fixed and soft drives<br>
+   ---------------------------------------------------------------------------<br>
+<p>
+So we need to provide attributes to:<br>
+<p>
+    a)  signify that the current choice is in error in some way<br>
+    b)  that a given choice is not currently permissible (grayed out)<br>
+<p>
+This can be done with two attributes (both default to "yes"):<br>
+<p>
+    ok="yes" | "no"             ;;  for &lt;input&gt; and &lt;select&gt;<br>
+    enabled="yes" | "no"        ;;  for &lt;choice&gt;<br>
+<p>
+<p>
+Best wishes<br>
+<p>
+Dave Raggett<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0086.html">Tim Berners-Lee: "Re: HTML and Lists"</a>
+<li> <b>Previous message:</b> <a href="0084.html">Dave_Raggett: "HTML and Lists"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0088.html">Dan Connolly: "Re: QueryForms and Input tag"</a>
+</ul>
