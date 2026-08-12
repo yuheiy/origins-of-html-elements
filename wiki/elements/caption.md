@@ -24,11 +24,11 @@ HTML直前の祖先はHTML+の表モデルである。後続表モデルでは�
 
 ### 証拠
 
-RFC 1942はHTML+の単純モデルに対する後続拡張の一部をCALSにならったと説明する。この記述だけから`CAPTION`の名称をCALSから直接コピーしたとはいえない。[RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)）
+Raggettの1993年5月の設計質問は技術出版物の表を入力とし、6月案は表題用`TT`を置いた。11月のHTML+はこれを表と図に共通の`CAPTION`へ変更した。1995年のCALS比較はHTML側の`CAPTION`に対応するCALS要素を示さない。[設計質問](../../raw/1997.webhistory.org/www.lists/www-talk.1993q2/0271.html)（[公開元](http://1997.webhistory.org/www.lists/www-talk.1993q2/0271.html)） [6月案](../../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/548.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/548.html)） [CALS比較](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)）
 
 ### 解釈
 
-HTML表モデルは複数の既存表モデルを研究したが、確認できる直接接続と一般的な設計影響を分ける。
+表題という出版上の要求をHTML+内で`TT`から共通`CAPTION`へ一般化した内発設計と説明できる。特定の外部マークアップ語彙から`CAPTION`を採用した証拠はない。
 
 ## 系譜
 
@@ -38,6 +38,7 @@ HTML+ `CAPTION`（表用途） → RFC 1942 → HTML 3.2 `CAPTION` → 現行HTM
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
+| 1993-05-11〜06-18 | HTML+表案：[設計質問](../../raw/1997.webhistory.org/www.lists/www-talk.1993q2/0271.html)・[初期案](../../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/548.html)（[公開元1](http://1997.webhistory.org/www.lists/www-talk.1993q2/0271.html)・[公開元2](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/548.html)） | www-talkメール | 技術出版の表を検討対象とし、初期案では表題を`TT`としたことを示す。 | 2026-08-12 |
 | 1993-11-08 | [HTML+ §9](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)） | Internet-Draft | `CAPTION`を含む単純表モデルを定義する。 | 2026-08-09 |
 | 1996-05 | [RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)） | Experimental RFC | 表モデルがHTML+とHTML 3草案から発展したと明記する。 | 2026-08-09 |
 | 1997-01-14 | [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32#table)） | W3C Recommendation | 広く実装された表部分集合として`CAPTION`を採録する。 | 2026-08-09 |
@@ -54,4 +55,4 @@ RFC 1942がHTML+の表に関する作業からの発展を明記し、後続採�
 
 ## 未解決
 
-- HTML+で表と図に共有された`CAPTION`から、現行`caption`と`figcaption`へ分岐した具体的経路は何か。
+- 初期案の`TT`を表と図に共通する`CAPTION`へ変更した判断記録は残っているか。

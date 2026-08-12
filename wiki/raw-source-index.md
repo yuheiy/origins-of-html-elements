@@ -2,9 +2,9 @@
 
 > このファイルは`tools/generate-raw-source-index.js`による生成物である。直接編集せず、このツールを実行して再生成する。
 
-Rawに保存された639ファイルを、39の取得元ホストごとに収録する。
+Rawに保存された641ファイルを、39の取得元ホストごとに収録する。
 
-## `1997.webhistory.org`（18ファイル）
+## `1997.webhistory.org`（19ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
@@ -21,6 +21,7 @@ Rawに保存された639ファイルを、39の取得元ホストごとに収録
 | [www.lists/www-talk.1993q1/0257.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0257.html) | WWW-Talk Jan-Mar 1993: Re: proposed new tag: IMG |
 | [www.lists/www-talk.1993q1/0262.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q1/0262.html) | WWW-Talk Jan-Mar 1993: NCSA Mosaic for X 0.10 released |
 | [www.lists/www-talk.1993q2/0015.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q2/0015.html) | WWW-Talk Apr-Jun 1993: Re WWW ideas |
+| [www.lists/www-talk.1993q2/0271.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q2/0271.html) | WWW-Talk Apr-Jun 1993: Tables and HTML+ |
 | [www.lists/www-talk.1993q2/0557.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q2/0557.html) | WWW-Talk Apr-Jun 1993: Re: HTML+ Forms |
 | [www.lists/www-talk.1993q3/0143.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q3/0143.html) | WWW-Talk Jul-Sep 1993: XMosaic 1.2 and HTML+ |
 | [www.lists/www-talk.1993q3/0816.html](../raw/1997.webhistory.org/www.lists/www-talk.1993q3/0816.html) | WWW-Talk Jul-Sep 1993: Fill-out form support |
@@ -336,13 +337,14 @@ Rawに保存された639ファイルを、39の取得元ホストごとに収録
 | [multipage/tables.html](../raw/html.spec.whatwg.org/multipage/tables.html) | HTML Standard |
 | [multipage/text-level-semantics.html](../raw/html.spec.whatwg.org/multipage/text-level-semantics.html) | HTML Standard |
 
-## `ksi.cpsc.ucalgary.ca`（12ファイル）
+## `ksi.cpsc.ucalgary.ca`（13ファイル）
 
 | Rawファイル | 文書タイトル |
 |---|---|
 | [archives/HTML-WG/html-archive.messages/2.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/2.html) | EMail Msg &lt;9406101612.AA07777@ulua.hal.com&gt; |
 | [archives/HTML-WG/html-archive.messages/340.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/340.html) | EMail Msg &lt;9409091612.aa09611@dali.scocan.sco.COM&gt; |
 | [archives/HTML-WG/html-archive.messages/361.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-archive.messages/361.html) | EMail Msg &lt;9409121257.AA14263@dragget.hpl.hp.com&gt; |
+| [archives/HTML-WG/html-wg-95q1.messages/0869.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q1.messages/0869.html) | html-wg-95q1: Re: HTML table model suggestion |
 | [archives/HTML-WG/html-wg-95q2.messages/0278.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0278.html) | html-wg-95q2: Re: More comments on the HTML 3.0 draft |
 | [archives/HTML-WG/html-wg-95q2.messages/0432.html](../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html) | html-wg-95q2: Re: HTML/CALS/ICADD Table Prop |
 | [archives/WWW-TALK/www-talk-1992.messages/371.html](../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1992.messages/371.html) | EMail Msg &lt;9211272055.AA12117@njitgw.njit.edu&gt; |

@@ -24,11 +24,11 @@ HTML直前の祖先はHTML+の表モデルである。1994年レビューまで�
 
 ### 証拠
 
-RFC 1942はHTML+の単純モデルに対する後続拡張の一部をCALSにならったと説明する。この記述だけから`TR`の名称をCALSから直接コピーしたとはいえない。[RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)）
+1993年6月案は行要素を置かず、セルを順に並べて列数から行を決めた。11月のHTML+は空の`TR`を行区切りとして追加し、1994年までに行コンテナーへ変えた。1995年のCALS共同著者による比較は、後続HTMLモデルの`TR`がCALS `ROW`に対応すると明記する。[6月案](../../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/548.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/548.html)） [CALS比較](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)）
 
 ### 解釈
 
-HTML表モデルは複数の既存表モデルを研究したが、確認できる直接接続と一般的な設計影響を分ける。
+`TR`はHTML+内で追加・再設計されたが、現行の行コンテナーという役割にはCALS `ROW`との要素単位の対応も確認できる。名称をCALSから借りたのではなく、外部の行モデルをHTML+由来の短いトークンへ写したものと説明できる。
 
 ## 系譜
 
@@ -38,7 +38,9 @@ HTML+ `TR`（区切り） → HTML+ `TR`（コンテナー） → RFC 1942 → H
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
+| 1993-06-18 | [Raggett, “Re: HTML+ and Tables”](../../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/548.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/548.html)） | www-talkメール | 行要素を置かずセル列から行を決める初期案を示す。 | 2026-08-12 |
 | 1993-11-08 | [HTML+ §9](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)） | Internet-Draft | `TR`を含む単純表モデルを定義する。 | 2026-08-09 |
+| 1995-04-29 | [Bingham, “Re: HTML/CALS/ICADD Table Prop”](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)） | HTML WGメール | CALS `ROW`からHTML `TR`への要素単位の対応を明記する。 | 2026-08-12 |
 | 1996-05 | [RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)） | Experimental RFC | 表モデルがHTML+とHTML 3草案から発展したと明記する。 | 2026-08-09 |
 | 1997-01-14 | [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32#table)） | W3C Recommendation | 広く実装された表部分集合として`TR`を採録する。 | 2026-08-09 |
 
@@ -50,7 +52,7 @@ RFC 1942がHTML+の表に関する作業からの発展を明記し、後続採�
 
 ## 否定された仮説
 
-`TR`をCALSから直接コピーしたという説明。RFC 1942がCALS由来と明記する拡張と、HTML+から継承した単純モデルを区別する。
+`TR`という名称をCALSから直接コピーしたという説明。CALS側の要素名は`ROW`であり、確認できるのは現行型の行コンテナーへの設計対応である。
 
 ## 未解決
 

@@ -24,11 +24,11 @@ HTML直前の祖先はHTML+の表モデルである。RFC 1942で表モデルの
 
 ### 証拠
 
-RFC 1942はHTML+の単純モデルに対する後続拡張の一部をCALSにならったと説明する。この記述だけから`TH`の名称をCALSから直接コピーしたとはいえない。[RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)）
+1993年6月の初期案は`TH`を列見出しとして新しいHTML表語彙へ置いた。1995年のCALS共同著者による比較は、後続HTMLモデルがCALS `ENTRY`を見出しセル`TH`とデータセル`TD`へ分けたと明記する。[初期案](../../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/548.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/548.html)） [CALS比較](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)）
 
 ### 解釈
 
-HTML表モデルは複数の既存表モデルを研究したが、確認できる直接接続と一般的な設計影響を分ける。
+`TH`のトークンと見出し／データの区別はHTML+の初期案にすでにある。後続モデルでは、同じ役割分離がCALSの単一`ENTRY`をHTMLの`TH`／`TD`へ写す方法として明示された。
 
 ## 系譜
 
@@ -38,7 +38,9 @@ HTML+ `TH` → RFC 1942 → HTML 3.2 `TH` → 現行HTML `<th>`
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
+| 1993-06-18 | [Raggett, “Re: HTML+ and Tables”](../../raw/ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/548.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/548.html)） | www-talkメール | `TH`を列見出しとする初期表案を提示する。 | 2026-08-12 |
 | 1993-11-08 | [HTML+ §9](../../raw/www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)（[公開元](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_39.html)） | Internet-Draft | `TH`を含む単純表モデルを定義する。 | 2026-08-09 |
+| 1995-04-29 | [Bingham, “Re: HTML/CALS/ICADD Table Prop”](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)） | HTML WGメール | CALS `ENTRY`をHTMLの`TH`／`TD`へ分ける対応を明記する。 | 2026-08-12 |
 | 1996-05 | [RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)） | Experimental RFC | 表モデルがHTML+とHTML 3草案から発展したと明記する。 | 2026-08-09 |
 | 1997-01-14 | [HTML 3.2](../../raw/www.w3.org/TR/REC-html32)（[公開元](https://www.w3.org/TR/REC-html32#table)） | W3C Recommendation | 広く実装された表部分集合として`TH`を採録する。 | 2026-08-09 |
 
@@ -54,4 +56,4 @@ RFC 1942がHTML+の表に関する作業からの発展を明記し、後続採�
 
 ## 未解決
 
-- `TH`という個別名称のHTML+以前の祖先。
+- `TH`という短縮名を選んだ記録と、6月案より前の草稿は残っているか。

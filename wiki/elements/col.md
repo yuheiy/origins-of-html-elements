@@ -26,11 +26,11 @@ WHATWG HTML Living Standardでは、親`colgroup`が親`table`を持つとき、
 
 ### 証拠
 
-RFC 1942は表モデル全体が既存SGML表モデル、ワード処理系、紙媒体の表配置研究から発展し、CALS表の取り込み簡略化を副目標としたと記す。また`COL`の相対幅に使う`*` 接尾辞はCALS表現からの取り込みを簡略化するためと明記する。これは`COL`要素そのものの祖先を特定する証拠ではない。[RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)）
+1995年4月、RaggettはCALSの`COLSPEC`を、行・列範囲の幅と配置を指定するHTML `TSPEC`へ一般化する案を提示した。CALS共同著者は、これは`COLSPEC`と`SPANSPEC`をまとめた別構造だと分析した。7月草案の`COLW`／`HSPEC`／`VSPEC`、9月草案の`COL`へ至る機能再編の中間記録はないが、相対幅の`*`表記はCALS取り込みを簡略化するためだとRFC 1942も明記する。[CALS比較](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)） [RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)）
 
 ### 解釈
 
-`COL`はHTML 3.0の`COLSPEC`、リビジョン00の`COLW`が扱った幅指定、`HSPEC`／`VSPEC`が扱った配置指定を一要素へ統合したように見えるが、その設計変更を明示する記録がないため、初出以前の系譜には接続しない。初出後に列群の役割を`COLGROUP`へ移した変更は草案本文が明示するため、こちらは系譜へ含める。
+列単位の幅・配置指定という要求にはCALS `COLSPEC`からHTML `TSPEC`への明示的な翻案があるが、`TSPEC`から`COLW`／`HSPEC`／`VSPEC`、さらに`COL`へ至る中間経路は欠ける。したがってCALSを`COL`要素の直接祖先とはせず、CALS由来の列指定要求をHTML表モデル内で再編した外部候補付きの内発設計と位置づける。
 
 ## 系譜
 
@@ -40,6 +40,7 @@ RFC 1942は表モデル全体が既存SGML表モデル、ワード処理系、�
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
+| 1995-04-21〜29 | [Bingham, “Re: HTML/CALS/ICADD Table Prop”](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)） | HTML WGメール | Raggettの`TSPEC`案とCALS `COLSPEC`／`SPANSPEC`の対応および差異を記録する。 | 2026-08-12 |
 | 1995-04-25 | [HTML 3.0 Internet-Draft, “Tables”](../../raw/www.w3.org/MarkUp/html3/tables.html)（[公開元](https://www.w3.org/MarkUp/html3/tables.html)） | 失効したIETF Working Draft | 列幅を`TABLE`の`COLSPEC`属性で指定し、`COL`要素は定義しない。 | 2026-08-09 |
 | 1995-09-25 | W3C Working Draft `WD-tables-950925`, *The HTML3 Table Model*：[W3C Working Draft](../../raw/www.w3.org/TR/WD-tables-950925.html)・[revision 00](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt)（[公開元1](https://www.w3.org/TR/WD-tables-950925.html)・[公開元2](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-00.txt)） | W3C Working Draft | 公開仕様上の`COL`初出を確認できる。リビジョン00の`COLW`、`HSPEC`、`VSPEC`に代わり、幅、範囲、水平・垂直配置既定値を一要素で扱うが、変更理由は記さない。 | 2026-08-10 |
 | 1995-10-27 | [`draft-ietf-html-tables-03`](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)） | IETF Internet-Draft | 同じ幅の列群しか表せない`COL SPAN`の制約に対し、異なる幅の子`COL`を持つ`COLGROUP`を追加。 | 2026-08-12 |
@@ -61,4 +62,4 @@ RFC 1942は表モデル全体が既存SGML表モデル、ワード処理系、�
 ## 未解決
 
 - `COLSPEC`属性またはリビジョン00の`COLW`／`HSPEC`／`VSPEC`から`COL`要素への機能統合と命名を決めた人物・議論。
-- `COL`要素自体へ影響したSGML表モデルがあるか。
+- CALS `COLSPEC`からHTML `TSPEC`、`COLW`／`HSPEC`／`VSPEC`、`COL`へ至る欠落した編集記録は残っているか。

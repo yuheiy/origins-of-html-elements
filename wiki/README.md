@@ -42,11 +42,11 @@ status: 完成
 - [`<br>`](elements/br.md): 1993年7月のHTML+で意味を持つ改行として提案され、同月末に基礎HTMLへの追加が決まったが、HTML+からの要素単位の採用因果は未確認である。
 - [`<button>`](elements/button.md): `button`は1997年、既存の`input`による送信／リセット／スクリプト用ボタンと同じ動作を保ちながら、HTML内容を持つ豊かなボタンを作るためW3CのHTML 4へ導入された。
 - [`<canvas>`](elements/canvas.md): Richard WilliamsonがDashboard向けにWebKitへ`CANVAS`を初めて実装し、その実装からWHATWGのキャンバス機能が設計されたことを、WebKit変更履歴とWHATWG自身の謝辞で確認できる。
-- [`<caption>`](elements/caption.md): HTML+の表モデルのキャプションからRFC 1942を経て標準化された要素で、HTML+の図用途とは区別する。
+- [`<caption>`](elements/caption.md): 技術出版の表題要求を受けたHTML+の`TT`案が共有`CAPTION`へ一般化され、RFC 1942を経て標準化された。
 - [`<cite>`](elements/cite.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した論理的な文字強調要素で、同時代Texinfoの`@cite`との対応を確認できる。
 - [`<code>`](elements/code.md): 1993年HTML草案がTexinfoのマクロ名由来と明記した論理的な文字強調要素で、同時代Texinfoの`@code`との対応を確認できる。
-- [`<col>`](elements/col.md): 1995年のHTML Tables草案が逐次表示用の列事前定義のため導入したが、`COL`自体のCALS由来は未確認である。
-- [`<colgroup>`](elements/colgroup.md): 1995年のHTML Tables草案が、旧`COL` グループ化モデルでグループ内を異なる幅にできない制約を解くため導入した。
+- [`<col>`](elements/col.md): CALSの列指定要求をHTML向けの`TSPEC`等へ組み替えた後、1995年に逐次表示用の`COL`として現れたが、その中間編集記録は未確認である。
+- [`<colgroup>`](elements/colgroup.md): 1995年のHTML Tables草案が、旧`COL`グループ化モデルでグループ内を異なる幅にできない制約を解くため内部で新設した。
 - [`<data>`](elements/data.md): `time`の機械可読値という用途を日付・時刻以外へ一般化する案として2011年に提案され、WHATWG追加とHTML Working Groupの合意・決定を経て導入された。
 - [`<datalist>`](elements/datalist.md): `datalist`は2004年のWeb Forms 2.0で、任意入力を許す`input`へ著者が指定した候補と、非対応UA向けの代替内容を与えるため導入された。
 - [`<dd>`](elements/dd.md): CERN-SGMLから初期HTMLへ入ったリスト集合の一つだが、`DD`個別の対応は明記されない。
@@ -119,17 +119,17 @@ status: 完成
 - [`<summary>`](elements/summary.md): `summary`は2010年、`details`のキャプションを`legend`または`dt`／`dd`で表す方式を専用要素へ置換して導入された。
 - [`<sup>`](elements/sup.md): HTML+のDTDが一般テキストでも許可した`SUP`をHTML 3.0へ引き継ぐ設計意図を、Dave Raggettの同時代メールで確認できる。
 - [`<svg>`](elements/svg.md): SVG 1.0で定義済みのSVG名前空間のルートを、2008年にHTMLパーサーへ統合し、一度削除した後、意見を受けて2009年に再導入したものである。
-- [`<table>`](elements/table.md): CALSの縮小移植ではなくブラウザー向けの単純なHTML+案として選ばれ、RFC 1942を経て標準化された表コンテナーである。
+- [`<table>`](elements/table.md): 技術出版の表要求を集めてHTML+内で単純なブラウザー向けモデルとして設計され、後にCALSの交換要件を部分的に取り込んでRFC 1942へ至った。
 - [`<tbody>`](elements/tbody.md): CALSの`TBODY`を1995年のRaggett案がHTMLへ取り込み、IETF草案とRFC 1942を経てHTML 4が標準化した。
-- [`<td>`](elements/td.md): HTML+の表モデルのデータセルからRFC 1942を経て標準化された要素である。
+- [`<td>`](elements/td.md): HTML+で新設されたデータセルが、後のモデルでCALS `ENTRY`のデータセル側にも対応し、RFC 1942を経て標準化された。
 - [`<template>`](elements/template.md): 利用前のHTML断片を不活性DOM部分木として保持・複製するため2011年に提案され、Web Components作業を経て2013年にWHATWG HTMLへ統合された。
 - [`<textarea>`](elements/textarea.md): 長い複数行値を`INPUT`属性へ置くSGML上の問題からHTML+で分離され、HTML 2.0へ採録された要素である。
 - [`<tfoot>`](elements/tfoot.md): CALSの`TFOOT`を1995年のRaggett案がHTMLへ取り込み、IETF草案とRFC 1942を経てHTML 4が標準化した。
-- [`<th>`](elements/th.md): HTML+の表モデルのヘッダーセルからRFC 1942を経て標準化された要素である。
+- [`<th>`](elements/th.md): HTML+で新設されたヘッダーセルが、後のモデルでCALS `ENTRY`のヘッダー側にも対応し、RFC 1942を経て標準化された。
 - [`<thead>`](elements/thead.md): CALSの`THEAD`を1995年のRaggett案がHTMLへ取り込み、IETF草案とRFC 1942を経てHTML 4が標準化した。
 - [`<time>`](elements/time.md): Microformats、CSS、出版等の要求から2006年に具体化された`<t>`を、可読性の提案に基づき改名し、2011年の`data`への置換と両要素の併存を経て現行設計へ続く。`<t>`の正確な追加記録と単文字名の理由は未解決である。
 - [`<title>`](elements/title.md): SGMLのタグ対構文を用いつつ、ノードを文脈外で識別してウィンドウ名や履歴へ使うWWW固有のプロパティとして1991年に確認できる。
-- [`<tr>`](elements/tr.md): HTML+作業中に行区切りから行コンテナーへ変化し、RFC 1942を経て標準化された要素である。
+- [`<tr>`](elements/tr.md): HTML+作業中に行区切りから行コンテナーへ変化し、後のモデルでCALS `ROW`に対応してRFC 1942へ至った。
 - [`<track>`](elements/track.md): `track`は2010年、メディア要素へ外部字幕、キャプション、説明、章、メタデータを関連づける時間指定トラック機構として導入された。
 - [`<u>`](elements/u.md): 1993年のTexinfo由来とする集合記述に個別対応がなく、HTML 3.2での再出現と2011年の適合化の間にも系譜の欠落が残る。
 - [`<ul>`](elements/ul.md): CERN-SGMLから初期HTMLへ入ったリスト集合の一つだが、`UL`個別の対応は明記されない。

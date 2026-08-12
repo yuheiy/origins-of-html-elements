@@ -24,11 +24,11 @@ HTML直前の設計上の祖先はリビジョン02までの`COL`による列グ
 
 ### 証拠
 
-1995年草案とRFC 1942は表モデル全体が既存SGML表モデル、ワード処理系、紙媒体の表配置研究から発展し、CALS表の取り込み簡略化を副目標としたと記す。しかしHTML外の`COLGROUP`個別祖先は特定しない。[1995年草案](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)） [RFC 1942](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)）
+1995年4月のHTML／CALS比較ではCALS `COLSPEC`／`SPANSPEC`を一般化するHTML `TSPEC`案を確認できるが、`COLGROUP`は現れない。10月の草案が`COLGROUP`を新要素と明記し、従来の`COL SPAN`では列群内を異なる幅にできないというHTML表モデル自身の制約を導入理由としている。[CALS比較](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)） [1995年草案](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)（[公開元](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)）
 
 ### 解釈
 
-旧`COL`モデルの同一幅制約を、各列に異なるプロパティを与えられる明示的なコンテナーへ分離して解消したと説明できる。
+`COLGROUP`は外部語彙の移植ではなく、CALSとの交換も考慮していたHTML表モデル内で、旧`COL`の同一幅制約を解くため新設した内発要素と確認できる。
 
 ## 系譜
 
@@ -38,6 +38,7 @@ HTML直前の設計上の祖先はリビジョン02までの`COL`による列グ
 
 | 年月日 | 資料 | 種別 | この資料から確認できる内容 | 閲覧日 |
 |---|---|---|---|---|
+| 1995-04-21〜29 | [Bingham, “Re: HTML/CALS/ICADD Table Prop”](../../raw/ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)（[公開元](https://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-95q2.messages/0432.html)） | HTML WGメール | CALS列指定を翻案した先行`TSPEC`案を記録するが、`COLGROUP`は含まない。 | 2026-08-12 |
 | 1995-10-27 | `draft-ietf-html-tables-03`：[revision 02](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt)・[revision 03](../../raw/datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)（[公開元1](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-02.txt)・[公開元2](https://datatracker.ietf.org/doc/html/draft-ietf-html-tables-03.txt)） | IETF Internet-Draft | リビジョン02までの`COL` グループではグループ内を異なる幅にできない制約を示し、異なる幅と配置プロパティを与えられる新要素`COLGROUP`を導入する。 | 2026-08-09 |
 | 1996-01-18〜23 | `draft-ietf-html-tables`：[revision 04](../../raw/www.ietf.org/archive/id/draft-ietf-html-tables-04.txt)・[revision 05](../../raw/www.ietf.org/archive/id/draft-ietf-html-tables-05.txt)（[公開元1](https://www.ietf.org/archive/id/draft-ietf-html-tables-04.txt)・[公開元2](https://www.ietf.org/archive/id/draft-ietf-html-tables-05.txt)） | IETF Internet-Draft | `SPAN`と既定属性を`COLGROUP`へ移し、`COL`を列の属性共有へ限定して両要素の役割を分離。 | 2026-08-12 |
 | 1996-05 | [RFC 1942, *HTML Tables*](../../raw/www.rfc-editor.org/rfc/rfc1942.txt)（[公開元](https://www.rfc-editor.org/rfc/rfc1942.html)） | Experimental RFC | `COLGROUP`を異なる幅と配置プロパティを持つ列集合のための新要素として導入し、DTDとプロパティ継承を定義する。 | 2026-08-09 |
@@ -58,4 +59,3 @@ HTML直前の設計上の祖先はリビジョン02までの`COL`による列グ
 
 - リビジョン03の本文外で`COLGROUP`を提案・合意した人物と議論。
 - RFC 1942からHTML 4へ`COLGROUP`を移した要素単位の議論または編集履歴。
-- `COLGROUP`要素自体へ影響したSGML表モデルがあるか。

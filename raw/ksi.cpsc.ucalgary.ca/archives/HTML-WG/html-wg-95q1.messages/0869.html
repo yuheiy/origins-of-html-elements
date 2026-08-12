@@ -1,0 +1,71 @@
+<!-- received="Thu Mar 30 03:39:18 1995 MDT" -->
+<!-- sent="Thu, 30 Mar 95 05:35:48 EST" -->
+<!-- name="Dave Raggett" -->
+<!-- email="dsr@hplb.hpl.hp.com" -->
+<!-- subject="Re: HTML table model suggestion" -->
+<!-- id="199503301033.AA106369628@dragget.hpl.hp.com" -->
+<!-- inreplyto="HTML table model suggestion" -->
+<title>html-wg-95q1: Re: HTML table model suggestion</title>
+<h1>Re: HTML table model suggestion</h1>
+Dave Raggett (<i>dsr@hplb.hpl.hp.com</i>)<br>
+<i>Thu, 30 Mar 95 05:35:48 EST</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="index.html#869">[ date ]</a><a href="thread.html#869">[ thread ]</a><a href="subject.html#869">[ subject ]</a><a href="author.html#869">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0870.html">Murray Maloney: "Re: HTML table model suggestion"</a>
+<li> <b>Previous message:</b> <a href="0868.html">John.R.R.Leavitt@NL.CS.CMU.EDU: "input type=file"</a>
+<li> <b>Maybe in reply to:</b> <a href="0860.html">Paul Grosso: "HTML table model suggestion"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0870.html">Murray Maloney: "Re: HTML table model suggestion"</a>
+<!-- reply="end" -->
+</ul>
+<!-- body="start" -->
+Paul Grosso wants us to drop a simple format string in favor of<br>
+a much lengthier way of specifying exactly the same information.<br>
+<p>
+For instance:<br>
+<p>
+   &lt;table colspec="L1 C2 C2 L4" units=relative&gt;<br>
+<p>
+becomes:<br>
+<p>
+   &lt;table&gt;<br>
+        &lt;COLSPEC colname=1 colwidth="1*" ALIGN=LEFT&gt;<br>
+        &lt;COLSPEC colname=2 colwidth="2*" ALIGN=CENTER&gt;<br>
+        &lt;COLSPEC colname=3 colwidth="2*" ALIGN=CENTER&gt;<br>
+        &lt;COLSPEC colname=4 colwidth="4*" ALIGN=LEFT&gt;<br>
+<p>
+The motivation given is:<br>
+<p>
+<i>&gt; I would like to see HTML adopt the CALS subset.  Not only does this have </i><br>
+<i>&gt; the advantage of existing implementations as well as years of experience </i><br>
+<i>&gt; understanding its semantics, but it has an obvious enhancement path when </i><br>
+<i>&gt; HTML wants real headers and footers, multiple tgroups, individual rule </i><br>
+<i>&gt; segment types, etc.  I hope my presentation shows that it isn't much more </i><br>
+<i>&gt; complex than Dave's model.</i><br>
+<p>
+The semantics of the current HTML 3 proposal seem clear enough, and the<br>
+Internet Draft (see <a href="http://www.hpl.hp.co.uk/people/dsr">http://www.hpl.hp.co.uk/people/dsr</a>) shows how you<br>
+can subclass rows for real headers and footers etc. The treatment of<br>
+these is browser dependent of course - what's appropriate for Windows<br>
+won't be for speech output!<br>
+<p>
+Given, that the philosophy of HTML is to keep it simple, and that<br>
+significant numbers of people will want to continue to edit HTML<br>
+directly, why should we complicate HTML for the sake of minor<br>
+simplifications to CALS filters?<br>
+<p>
+-- Dave Raggett &lt;dsr@w3.org&gt; tel: +44 117 922 8046 fax: +44 117 922 8924<br>
+  Hewlett Packard Laboratories, Filton Road, Bristol BS12 6QZ, United Kingdom<br>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0870.html">Murray Maloney: "Re: HTML table model suggestion"</a>
+<li> <b>Previous message:</b> <a href="0868.html">John.R.R.Leavitt@NL.CS.CMU.EDU: "input type=file"</a>
+<li> <b>Maybe in reply to:</b> <a href="0860.html">Paul Grosso: "HTML table model suggestion"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0870.html">Murray Maloney: "Re: HTML table model suggestion"</a>
+<!-- reply="end" -->
+</ul>
